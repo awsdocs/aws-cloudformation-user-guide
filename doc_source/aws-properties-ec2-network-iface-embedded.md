@@ -94,6 +94,7 @@ The IPv6 addresses associated with the network interface\.
 
 `NetworkInterfaceId`  <a name="aws-properties-ec2-network-iface-embedded-network-iface"></a>
 The ID of the network interface\.  
+If you are creating a Spot Fleet, omit this parameter because you can’t specify a network interface ID in a launch specification\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

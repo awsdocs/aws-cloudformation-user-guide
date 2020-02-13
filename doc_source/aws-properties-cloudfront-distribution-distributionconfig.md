@@ -161,7 +161,7 @@ A complex type that identifies ways in which you want to restrict distribution o
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewerCertificate`  <a name="cfn-cloudfront-distribution-distributionconfig-viewercertificate"></a>
-A complex type that specifies whether you want viewers to use HTTP or HTTPS to request your objects, whether you're using an alternate domain name with HTTPS, and if so, if you're using AWS Certificate Manager \(ACM\) or a third\-party certificate authority\.  
+A complex type that determines the distribution’s SSL/TLS configuration for communicating with viewers\.  
 *Required*: No  
 *Type*: [ViewerCertificate](aws-properties-cloudfront-distribution-viewercertificate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

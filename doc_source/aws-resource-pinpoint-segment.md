@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment<a name="aws-resource-pinpoint-segment"></a>
 
-Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application\.
+A *segment* designates which users receive messages from a campaign or journey, typically a group of customers that share certain attributes\. The AWS::Pinpoint::Segment resource defines the configuration, dimension, and other settings for a segment\.
 
 ## Syntax<a name="aws-resource-pinpoint-segment-syntax"></a>
 

@@ -17,6 +17,36 @@ To use private resource providers\-\-either ones you develop yourself, or provid
 
 You can register a resource provider using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a resource provider using the CloudFormation CLI, see [Registering Resource Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
 
+### IAM Permissions for Registering a Resource Provider<a name="registry-register-permissions"></a>
+
+As part of registering a resource provider, you specify an S3 bucket which contains the schema handler package\. This package contains the schema, event handlers, and associated files for the resource provider you want to register\. CloudFormation requires the following IAM permissions in order to access this S3 bucket and the schema handler package\. \(This is true whether you're either using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\.\)
++ `s3:ListBucket`
++ `s3:GetObject`
+
+Make sure you grant the `cloudformation.amazonaws.com` service these permissions for the appropriate S3 bucket before you attempt to register the resource provider\. For example:
+
+```
+  ArtifactCopyPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ArtifactBucket
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: Allow CloudFormation to copy artifacts from the bucket
+            Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+            Action:
+              - s3:ListBucket
+              - s3:GetObject
+            Resource:
+              - !Sub "arn:${AWS::Partition}:s3:::${ArtifactBucket}"
+              - !Sub "arn:${AWS::Partition}:s3:::${ArtifactBucket}/*"
+```
+
+For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
+
 **To Register a Resource Provider Using the AWS CLI**
 
 1. Locate the S3 bucket that contains the resource provider package for the resource provider you want to register in your account\.

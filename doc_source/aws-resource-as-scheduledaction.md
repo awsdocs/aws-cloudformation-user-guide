@@ -111,26 +111,28 @@ The following template snippet includes two scheduled actions that scale the num
 
 ```
 {
-  "ScheduledActionOut":{
-    "Type":"AWS::AutoScaling::ScheduledAction",
-    "Properties":{
-      "AutoScalingGroupName":{
-        "Ref":"myASG"
-      },
-      "MaxSize":"10",
-      "MinSize":"5",
-      "Recurrence":"0 7 * * *"
-    }
-  },
-  "ScheduledActionIn":{
-    "Type":"AWS::AutoScaling::ScheduledAction",
-    "Properties":{
-      "AutoScalingGroupName":{
-        "Ref":"myASG"
-      },
-      "MaxSize":"1",
-      "MinSize":"1",
-      "Recurrence":"0 19 * * *"
+  "Resources":{
+    "ScheduledActionOut":{
+      "Type":"AWS::AutoScaling::ScheduledAction",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "MaxSize":"10",
+        "MinSize":"5",
+        "Recurrence":"0 7 * * *"
+      }
+    },
+    "ScheduledActionIn":{
+      "Type":"AWS::AutoScaling::ScheduledAction",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "MaxSize":"1",
+        "MinSize":"1",
+        "Recurrence":"0 19 * * *"
+      }
     }
   }
 }
@@ -139,20 +141,21 @@ The following template snippet includes two scheduled actions that scale the num
 #### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_Scaling_Action--yaml"></a>
 
 ```
-ScheduledActionOut: 
-  Type: AWS::AutoScaling::ScheduledAction
-  Properties:
-    AutoScalingGroupName: 
-      Ref: "myASG"
-    MaxSize: 10
-    MinSize: 5
-    Recurrence: "0 7 * * *"
-ScheduledActionIn: 
-  Type: AWS::AutoScaling::ScheduledAction
-  Properties:
-    AutoScalingGroupName: 
-      Ref: "myASG"
-    MaxSize: 1
-    MinSize: 1
-    Recurrence: "0 19 * * *"
+Resources:
+  ScheduledActionOut: 
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: 
+        Ref: "myASG"
+      MaxSize: 10
+      MinSize: 5
+      Recurrence: "0 7 * * *"
+  ScheduledActionIn: 
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: 
+        Ref: "myASG"
+      MaxSize: 1
+      MinSize: 1
+      Recurrence: "0 19 * * *"
 ```

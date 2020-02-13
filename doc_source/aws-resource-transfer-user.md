@@ -13,6 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Transfer::User",
   "Properties" : {
       "[HomeDirectory](#cfn-transfer-user-homedirectory)" : String,
+      "[HomeDirectoryMappings](#cfn-transfer-user-homedirectorymappings)" : [ [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md), ... ],
+      "[HomeDirectoryType](#cfn-transfer-user-homedirectorytype)" : String,
       "[Policy](#cfn-transfer-user-policy)" : String,
       "[Role](#cfn-transfer-user-role)" : String,
       "[ServerId](#cfn-transfer-user-serverid)" : String,
@@ -29,6 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Transfer::User
 Properties: 
   [HomeDirectory](#cfn-transfer-user-homedirectory): String
+  [HomeDirectoryMappings](#cfn-transfer-user-homedirectorymappings): 
+    - [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)
+  [HomeDirectoryType](#cfn-transfer-user-homedirectorytype): String
   [Policy](#cfn-transfer-user-policy): String
   [Role](#cfn-transfer-user-role): String
   [ServerId](#cfn-transfer-user-serverid): String
@@ -48,6 +53,22 @@ An example is <`your-Amazon-S3-bucket-name>/home/username`\.
 *Type*: String  
 *Maximum*: `1024`  
 *Pattern*: `^$|/.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HomeDirectoryMappings`  <a name="cfn-transfer-user-homedirectorymappings"></a>
+Logical directory mappings that you specified for what S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your AWS IAM Role provides access to paths in `Target`\.  
+In most cases, you can use this value instead of the scope down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.   
+In most cases, you can use this value instead of the scope down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
+*Required*: No  
+*Type*: List of [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HomeDirectoryType`  <a name="cfn-transfer-user-homedirectorytype"></a>
+The type of landing directory \(folder\) you mapped for your users' to see when they log into the SFTP server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket paths as is in their SFTP clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make S3 paths visible to your user\.  
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `LOGICAL | PATH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-transfer-user-policy"></a>

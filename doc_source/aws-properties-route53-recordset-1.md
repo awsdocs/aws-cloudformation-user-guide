@@ -89,7 +89,7 @@ For more information about configuring failover for Route 53, see the following 
 
 `GeoLocation`  <a name="cfn-route53-recordset-geolocation"></a>
  *Geolocation resource record sets only:* A complex type that lets you control how Amazon Route 53 responds to DNS queries based on the geographic origin of the query\. For example, if you want all queries from Africa to be routed to a web server with an IP address of `192.0.2.111`, create a resource record set with a `Type` of `A` and a `ContinentCode` of `AF`\.  
-Creating geolocation and geolocation alias resource record sets in private hosted zones is not supported\.
+Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed, it's not supported\.
 If you create separate resource record sets for overlapping geographic regions \(for example, one resource record set for a continent and one for a country on the same continent\), priority goes to the smallest geographic region\. This allows you to route most queries for a continent to one resource and to route queries for a country on that continent to a different resource\.  
 You can't create two geolocation resource record sets that specify the same geographic location\.  
 The value `*` in the `CountryCode` element matches all geographic locations that aren't specified in other geolocation resource record sets that have the same values for the `Name` and `Type` elements\.  
@@ -145,7 +145,7 @@ Health check results will be unpredictable if you do the following:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostedZoneId`  <a name="cfn-route53-recordset-hostedzoneid"></a>
-The ID of the hosted zone that you want to create the record in\.  
+The ID of the hosted zone that you want to create records in\.  
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.   
 *Required*: No  
 *Type*: String  
@@ -193,7 +193,7 @@ You can use the \* wildcard as the leftmost label in a domain name, for example,
 
 `Region`  <a name="cfn-route53-recordset-region"></a>
  *Latency\-based resource record sets only:* The Amazon EC2 Region where you created the resource that this resource record set refers to\. The resource typically is an AWS resource, such as an EC2 instance or an ELB load balancer, and is referred to by an IP address or a DNS domain name, depending on the record type\.  
-Creating latency and latency alias resource record sets in private hosted zones is not supported\.
+Although creating latency and latency alias resource record sets in a private hosted zone is allowed, it's not supported\.
 When Amazon Route 53 receives a DNS query for a domain name and type for which you have created latency resource record sets, Route 53 selects the latency resource record set that has the lowest latency between the end user and the associated Amazon EC2 Region\. Route 53 then returns the value that is associated with the selected resource record set\.  
 Note the following:  
 + You can only specify one `ResourceRecord` per latency resource record set\.

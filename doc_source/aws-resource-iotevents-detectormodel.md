@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition)" : [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md),
       "[DetectorModelDescription](#cfn-iotevents-detectormodel-detectormodeldescription)" : String,
       "[DetectorModelName](#cfn-iotevents-detectormodel-detectormodelname)" : String,
+      "[EvaluationMethod](#cfn-iotevents-detectormodel-evaluationmethod)" : String,
       "[Key](#cfn-iotevents-detectormodel-key)" : String,
       "[RoleArn](#cfn-iotevents-detectormodel-rolearn)" : String,
       "[Tags](#cfn-iotevents-detectormodel-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -37,6 +38,7 @@ Properties:
     [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md)
   [DetectorModelDescription](#cfn-iotevents-detectormodel-detectormodeldescription): String
   [DetectorModelName](#cfn-iotevents-detectormodel-detectormodelname): String
+  [EvaluationMethod](#cfn-iotevents-detectormodel-evaluationmethod): String
   [Key](#cfn-iotevents-detectormodel-key): String
   [RoleArn](#cfn-iotevents-detectormodel-rolearn): String
   [Tags](#cfn-iotevents-detectormodel-tags): 
@@ -66,6 +68,13 @@ The name of the detector model\.
 *Maximum*: `128`  
 *Pattern*: `^[a-zA-Z0-9_-]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EvaluationMethod`  <a name="cfn-iotevents-detectormodel-evaluationmethod"></a>
+Information about the order in which events are evaluated and how actions are executed\.   
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `BATCH | SERIAL`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-iotevents-detectormodel-key"></a>
 The input attribute key used to identify a device or system in order to create a detector \(an instance of the detector model\) and then to route each input received to the appropriate detector \(instance\)\. This parameter uses a JSON\-path expression to specify the attribute\-value pair in the message payload of each input that is used to identify the device associated with the input\.  

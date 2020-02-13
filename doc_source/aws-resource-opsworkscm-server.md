@@ -31,7 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids)" : [ String, ... ],
       "[ServerName](#cfn-opsworkscm-server-servername)" : String,
       "[ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn)" : String,
-      "[SubnetIds](#cfn-opsworkscm-server-subnetids)" : [ String, ... ]
+      "[SubnetIds](#cfn-opsworkscm-server-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-opsworkscm-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -64,6 +65,8 @@ Properties:
   [ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn): String
   [SubnetIds](#cfn-opsworkscm-server-subnetids): 
     - String
+  [Tags](#cfn-opsworkscm-server-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-opsworkscm-server-properties"></a>
@@ -238,6 +241,18 @@ For more information about supported Amazon EC2 platforms, see [Supported Platfo
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Tags`  <a name="cfn-opsworkscm-server-tags"></a>
+A map that contains tag keys and tag values to attach to an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise server\.  
++ The key cannot be empty\.
++ The key can be a maximum of 127 characters, and can contain only Unicode letters, numbers, or separators, or the following special characters: `+ - = . _ : /` 
++ The value can be a maximum 255 characters, and contain only Unicode letters, numbers, or separators, or the following special characters: `+ - = . _ : /` 
++ Leading and trailing white spaces are trimmed from both the key and value\.
++ A maximum of 50 user\-applied tags is allowed for any AWS OpsWorks\-CM server\.
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return Values<a name="aws-resource-opsworkscm-server-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworkscm-server-return-values-ref"></a>
@@ -310,6 +325,16 @@ The following example creates an AWS OpsWorks for Chef Automate server\.
                 "PreferredBackupWindow": "08:00",
                 "PreferredMaintenanceWindow": "Fri:08:00",
                 "ServiceRoleArn": "SERVICE-ROLE-ARN"
+                "Tags": [ 
+                    { 
+                       "Key": "Stage",
+                       "Value": "Production"
+                    },
+                    { 
+                       "Key": "Name",
+                       "Value": "test-owcm-server"
+                    }
+                ]
             }
         }
     },
@@ -360,6 +385,11 @@ Resources:
       PreferredBackupWindow: '08:00'
       PreferredMaintenanceWindow: 'Fri:08:00'
       ServiceRoleArn: "SERVICE-ROLE-ARN"
+      Tags:
+          - Key: "Stage"
+            Value: "Production"
+          - Key: "Name"
+            Value: "test-owcm-server"
 Outputs:
   endpoint:
     Description: OpsWorksCM Server Endpoint
@@ -404,6 +434,16 @@ The following example creates an AWS OpsWorks for Puppet Enterprise server\.
                 "PreferredBackupWindow": "08:00",
                 "PreferredMaintenanceWindow": "Fri:08:00",
                 "ServiceRoleArn": "arn:aws:iam::123456789012:role/MyServiceRole"
+                "Tags": [ 
+                    { 
+                       "Key": "Stage",
+                       "Value": "Production"
+                    },
+                    { 
+                       "Key": "Name",
+                       "Value": "test-owcm-server"
+                    }
+                ]
             }
         }
     }
@@ -414,7 +454,7 @@ The following example creates an AWS OpsWorks for Puppet Enterprise server\.
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
-Description: IAM Resources for the AWS OpsWorks Managed Server.
+             Description: My OpsWorksCM managed server.
 Parameters:
     AdminPassword:
         Type: String
@@ -436,6 +476,11 @@ Resources:
       PreferredBackupWindow: '08:00'
       PreferredMaintenanceWindow: 'Fri:08:00'
       ServiceRoleArn: "SERVICE-ROLE-ARN"
+      Tags:
+          - Key: "Stage"
+            Value: "Production"
+          - Key: "Name"
+            Value: "test-owcm-server"
 Outputs:
     endpoint:
       Description: OpsWorksCM Server Endpoint

@@ -72,7 +72,7 @@ When set to `true`, enables raw message delivery\. Raw messages don't contain an
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedrivePolicy`  <a name="cfn-sns-subscription-redrivepolicy"></a>
-Not currently supported by AWS CloudFormation\.  
+When specified, sends undeliverable messages to the specified Amazon SQS dead\-letter queue\. Messages that can't be delivered due to client errors \(for example, when the subscribed endpoint is unreachable\) or server errors \(for example, when the service that powers the subscribed endpoint becomes unavailable\) are held in the dead\-letter queue for further analysis or reprocessing\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

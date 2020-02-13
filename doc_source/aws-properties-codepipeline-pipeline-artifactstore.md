@@ -1,6 +1,6 @@
 # AWS::CodePipeline::Pipeline ArtifactStore<a name="aws-properties-codepipeline-pipeline-artifactstore"></a>
 
-The Amazon S3 bucket where artifacts for the pipeline are stored\.
+The S3 bucket where artifacts for the pipeline are stored\.
 
 **Note**  
 You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot use both\. If you create a cross\-region action in your pipeline, you must use `artifactStores`\.
@@ -37,7 +37,7 @@ The encryption key used to encrypt the data in the artifact store, such as an AW
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Location`  <a name="cfn-codepipeline-pipeline-artifactstore-location"></a>
-The Amazon S3 bucket used for storing the artifacts for a pipeline\. You can specify the name of an S3 bucket but not a folder in the bucket\. A folder to contain the pipeline artifacts is created for you based on the name of the pipeline\. You can use any Amazon S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts\.  
+The S3 bucket used for storing the artifacts for a pipeline\. You can specify the name of an S3 bucket but not a folder in the bucket\. A folder to contain the pipeline artifacts is created for you based on the name of the pipeline\. You can use any S3 bucket in the same AWS Region as the pipeline to store your pipeline artifacts\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  

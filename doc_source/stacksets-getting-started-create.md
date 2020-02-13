@@ -1,8 +1,22 @@
-# Create a New Stack Set<a name="stacksets-getting-started-create"></a>
+# Create a Stack Set<a name="stacksets-getting-started-create"></a>
 
-You can create a stack set in either the AWS Management Console, or by using AWS CloudFormation commands in the AWS CLI\.
+You can create a stack set using the AWS Management Console or using AWS CloudFormation commands in the AWS CLI\. You can create a stack set with either `self-managed` or `service-managed` permissions\. 
 
-**To create a stack set by using the AWS Management Console**
+With `self-managed` permissions, you can deploy stack instances to select AWS accounts in select Regions\. To do this, you must first create the necessary IAM roles to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\.
+
+With `service-managed` permissions, you can deploy stack instances to accounts managed by AWS Organizations in select Regions\. With this model, you don't have to create the necessary IAM roles; StackSets creates the IAM roles on your behalf\. You can also enable automatic deployments to accounts that are added to a target organization or organizational unit \(OU\) in the future\. With automatic deployments enabled, StackSets will also automatically delete stack instances from an account if it is removed from a target organization or OU\. 
+
+**Topics**
++ [Create a Stack Set with Self\-Managed Permissions](#stacksets-getting-started-create-self-managed)
++ [Create a Stack Set with Service\-Managed Permissions](#stacksets-orgs-associate-stackset-with-org)
+
+## Create a Stack Set with Self\-Managed Permissions<a name="stacksets-getting-started-create-self-managed"></a>
+
+**Topics**
++ [Create a Stack Set with Self\-Managed Permissions Using the AWS Management Console](#stacksets-getting-started-create-self-managed-console)
++ [Create a Stack Set with Self\-Managed Permissions Using the AWS CLI](#stacksets-getting-started-self-managed-cli)
+
+### Create a Stack Set with Self\-Managed Permissions Using the AWS Management Console<a name="stacksets-getting-started-create-self-managed-console"></a>
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
@@ -57,7 +71,7 @@ You can create a stack set in either the AWS Management Console, or by using AWS
 1. AWS CloudFormation starts creating your stack set\. View the progress and status of the creation of the stacks in your stack set in the stack set details page that opens when you choose **Submit**\.  
 ![\[Operations tab of the StackSets details page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-operations.png)
 
-**To create a stack set by using the AWS CLI**
+### Create a Stack Set with Self\-Managed Permissions Using the AWS CLI<a name="stacksets-getting-started-self-managed-cli"></a>
 
 When you create stack sets by using AWS CLI commands, you run two separate commands: `create-stack-set` to upload your template and create the stack set container, and `create-stack-instances` to create the stacks within your stack set\. Start by running an AWS CLI command, `create-stack-set`, to upload the sample AWS CloudFormation template that enables AWS Config, and then start stack set creation\.
 
@@ -90,3 +104,91 @@ Wait until an operation is complete before starting another one\. You can run on
    ```
    aws cloudformation describe-stack-set-operation --stack-set-name my-awsconfig-stackset --operation-id operation_ID
    ```
+
+## Create a Stack Set with Service\-Managed Permissions<a name="stacksets-orgs-associate-stackset-with-org"></a>
+
+**Topics**
++ [Considerations when Creating a Stack Set with Service\-Managed Permissions](#stacksets-orgs-considerations)
++ [Create a Stack Set with Service\-Managed Permissions Using the AWS CloudFormation Console](#stacksets-orgs-associate-stackset-with-org-console)
++ [Create a Stack Set with Service\-Managed Permissions Using the AWS CLI](#stacksets-orgs-associate-stackset-with-org-cli)
+
+### Considerations when Creating a Stack Set with Service\-Managed Permissions<a name="stacksets-orgs-considerations"></a>
++ Your stack set can target your entire organization or specified organizational units \(OUs\)\. If your stack set targets your organization, it also targets all accounts in all OUs in the organization\. If your stack set targets specified OUs, it also targets all accounts in those OUs\.
++ If your stack set targets a parent OU, the stack set also targets any child OUs\.
++ Multiple stack sets can target the same organization or OU\.
++ Your stack set cannot target accounts outside your organization\.
++ Your stack set cannot deploy nested stacks\.
++ StackSets will not deploy stack instances to the organization master account, even if the master account is in your organization or an OU in your organization\.
++ Automatic deployment is set at the stack set level\. You cannot adjust automatic deployments selectively for OUs, accounts, or Regions\.
++ The permissions of the IAM principal entity \(user, role, or group\) you use to log in to the organization master account determine whether you are authorized to deploy with StackSets\. For an example IAM policy that grants permissions to deploy to an organization, see [Sample policy that grants service\-managed stack set permissions](using-iam-template.md#resource-level-permissions-service-managed-stack-set)\.
+
+### Create a Stack Set with Service\-Managed Permissions Using the AWS CloudFormation Console<a name="stacksets-orgs-associate-stackset-with-org-console"></a>
+
+1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation)\.
+
+1. From the navigation pane, choose **StackSets**\.
+
+1. At the top of the **StackSets** page, choose **Create StackSet**\.
+
+1. Under **Prepare template**, choose **Template is ready**\.
+
+1. Under **Specify template**, choose to either specify the URL for the S3 bucket that contains your stack template or upload a stack template file\. Choose **Next**\.
+
+1. On the **Specify StackSet details** page, provide a name for the stack set, specify any parameters, and then choose **Next**\.
+
+1. On the **Configure StackSet options** page, under **Tags**, specify any tags to apply to resources in your stack\.
+
+1. Under **Permissions**, choose **Service\-managed permissions**\.
+
+   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required in order to create or update a stack set with service\-managed permissions\. Only the account administrator in the organization master account has permissions to [enable trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
+![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
+
+1. Choose **Next** to proceed and to enable trusted access if not already enabled\.
+
+1. On the **Set deployment options** page, under **Deployment targets**, choose the accounts in your organization to deploy to\.
+   + Choose **Deploy to organization** to deploy to all accounts in your organization\.  
+![\[Deploy stack instances to all accounts in your organization.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-deploy-to-org.png)
+   + Choose **Deploy to organizational units \(OUs\)** to deploy to all accounts in select OUs\. Choose **Add an OU**, and then paste the target OU ID in the text box\. Repeat for each new target OU\.  
+![\[Deploy stack instances to all accounts in select OUs within your organization.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-deploy-to-organizational-units.png)
+
+1. Under **Automatic deployment**, choose whether StackSets will automatically deploy to accounts that are added to the target organization or OUs in the future\.  
+![\[Automatic deployment settings for stack sets with service-managed permissions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-auto-deploy.png)
+
+1. If you enabled automatic deployment, under **Account removal behavior**, choose whether stack resources will be retained or deleted when an account is removed from a target organization or OU\.  
+![\[Account removal behavior settings for stack sets with service-managed permissions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-account-removal-retain.png)
+**Note**  
+With **Retain stacks** selected, stack instances are removed from your stack set, but the stacks and their associated resources are retained\. The resources stay in their current state, but will no longer be part of the stack set\. The stacks cannot be reassociated with an existing or new stack set\.
+
+1. Under **Deployment regions**, choose the Regions in which you want to deploy stack instances\. Choose **Next**\.
+
+1. On the **Review** page, verify that StackSets will deploy to the correct accounts in the correct Regions, and then choose **Create StackSet**\.
+
+The **StackSet details** page opens\. You can view the progress and status of the creation of the stacks in your stack set here\.
+
+### Create a Stack Set with Service\-Managed Permissions Using the AWS CLI<a name="stacksets-orgs-associate-stackset-with-org-cli"></a>
+
+When you create stack sets using the AWS CLI, you run two separate commands\. During `create-stack-set`, you upload your template, create the stack set container, and manage automatic deployments\. During `create-stack-instances`, you create stack instances in select target accounts\.
+
+1. Open the AWS CLI\.
+
+1. Run the `create-stack-set` command\. In the following example, we enable auto deployment to allow StackSets to automatically deploy to accounts that are added to the target organization or OUs in the future, and opt to retain stack resources when an account is removed from a target organization or OU\.
+
+   ```
+   aws cloudformation create-stack-set --stack-set-name StackSet_myApp --template-url https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/MyApp.template --permission-model SERVICE_MANAGED --auto-deployment Enabled=true,RetainStacksOnAccountRemoval=true
+   ```
+
+1. After your `create-stack-set` command is finished, run the `list-stack-sets` command to confirm that your stack set has been created\. Your new stack set is listed in the results\.
+
+   ```
+   aws cloudformation list-stack-sets
+   ```
+
+1. Run the `create-stack-instances` command to add stack instances to your stack set\. For the `--deployment-targets` parameter, specify the organization root ID to deploy to all accounts in your organization, or specify select OU IDs to deploy to all accounts in those OUs\. In this example, we specify OUs with the IDs `ou-rcuk-1x5j1lwo` and `ou-rcuk-slr5lh0a`\.
+
+   ```
+   aws cloudformation create-stack-instances --stack-set-name StackSet_myApp --deployment-targets OrganizationalUnitIds=["ou-rcuk-1x5j1lwo", "ou-rcuk-slr5lh0a"] --regions ["eu-west-1"]
+   ```
+**Important**  
+Wait until an operation is complete before starting another one\. You can run only one operation at a time\.
+
+1. Using the `operation-id` that was returned as part of the `create-stack-instances` output in step 4, run `describe-stack-set-operation` to verify that your stack instances were created successfully\.

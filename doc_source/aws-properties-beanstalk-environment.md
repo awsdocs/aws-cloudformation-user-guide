@@ -87,7 +87,6 @@ If you specify a name, you cannot perform updates that require replacement of th
 
 `OptionSettings`  <a name="cfn-beanstalk-environment-optionsettings"></a>
 Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)\. If you remove any options during a stack update, the removed options retain their current values\.  
- *Required*: Yes\. The `IamInstanceProfile` option is required\.  
 *Required*: No  
 *Type*: List of [OptionSetting](aws-properties-beanstalk-option-settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

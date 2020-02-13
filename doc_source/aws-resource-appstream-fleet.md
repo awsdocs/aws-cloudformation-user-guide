@@ -121,7 +121,7 @@ If you enable this feature, we recommend that you specify a value that correspon
 The ARN of the public, private, or shared image to use\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws:[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.-]{0,1023}$`  
+*Pattern*: `^arn:aws(?:\-cn|\-iso\-b|\-iso|\-us\-gov)?:[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.\\-]{0,1023}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageName`  <a name="cfn-appstream-fleet-imagename"></a>
@@ -173,7 +173,7 @@ Specify a value between 600 and 360000\.
 
 `Name`  <a name="cfn-appstream-fleet-name"></a>
 A unique name for the fleet\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,100}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

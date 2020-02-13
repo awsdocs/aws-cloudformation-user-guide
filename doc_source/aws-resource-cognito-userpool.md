@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPool",
   "Properties" : {
+      "[AccountRecoverySetting](#cfn-cognito-userpool-accountrecoverysetting)" : [AccountRecoverySetting](aws-properties-cognito-userpool-accountrecoverysetting.md),
       "[AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig)" : [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md),
       "[AliasAttributes](#cfn-cognito-userpool-aliasattributes)" : [ String, ... ],
       "[AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes)" : [ String, ... ],
@@ -41,6 +42,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Cognito::UserPool
 Properties: 
+  [AccountRecoverySetting](#cfn-cognito-userpool-accountrecoverysetting): 
+    [AccountRecoverySetting](aws-properties-cognito-userpool-accountrecoverysetting.md)
   [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig): 
     [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md)
   [AliasAttributes](#cfn-cognito-userpool-aliasattributes): 
@@ -77,6 +80,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-cognito-userpool-properties"></a>
+
+`AccountRecoverySetting`  <a name="cfn-cognito-userpool-accountrecoverysetting"></a>
+Use this setting to define which verified available method a user can use to recover their password when they call `ForgotPassword`\. It allows you to define a preferred method when a user has more than one method available\. With this setting, SMS does not qualify for a valid password recovery mechanism if the user also has SMS MFA enabled\. In the absence of this setting, Cognito uses the legacy behavior to determine the recovery method where SMS is preferred over email\.  
+*Required*: No  
+*Type*: [AccountRecoverySetting](aws-properties-cognito-userpool-accountrecoverysetting.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdminCreateUserConfig`  <a name="cfn-cognito-userpool-admincreateuserconfig"></a>
 The configuration for creating a new user profile\.  
@@ -162,7 +171,7 @@ The policy associated with a user pool\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schema`  <a name="cfn-cognito-userpool-schema"></a>
-The schema attributes for the new user pool\. These attributes can be standard or custom attributes\.  
+An array of schema attributes for the new user pool\. These attributes can be standard or custom attributes\.  
  During a user pool update, you can add new schema attributes but you cannot modify or delete an existing schema attribute\.
 *Required*: No  
 *Type*: List of [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md)  

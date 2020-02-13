@@ -1,6 +1,9 @@
 # AWS::KMS::Key<a name="aws-resource-kms-key"></a>
 
-The `AWS::KMS::Key` resource specifies a [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\. Authorized users can use the CMK to encrypt and decrypt small amounts of data \(up to 4096 bytes\), but they are more commonly used to generate data keys\. You can also use CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration) or within their applications\. For more information, see [What is the AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
+The `AWS::KMS::Key` resource specifies a symmetric [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\. You can use symmetric CMKs to encrypt and decrypt small amounts of data, but they are more commonly used to generate symmetric data keys and asymmetric data key pairs\. You can also use symmetric CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration)\. For more information, see [What is the AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
+
+**Note**  
+AWS KMS does not currently support creating asymmetric CMKs with a CloudFormation template\.
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 
@@ -79,14 +82,10 @@ If you are unsure of which policy to use, consider the *default key policy*\. Th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
-Determines the cryptographic operations for which you can use the CMK\. The default value is `ENCRYPT_DECRYPT`\. This parameter is required only for asymmetric CMKs\. You can't change the `KeyUsage` value after the CMK is created\.  
-Select only one valid value\.  
-+ For symmetric CMKs, omit the parameter or specify `ENCRYPT_DECRYPT`\.
-+ For asymmetric CMKs with RSA key material, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY`\.
-+ For asymmetric CMKs with ECC key material, specify `SIGN_VERIFY`\.
+Determines the cryptographic operations for which you can use the CMK\. The default value, `ENCRYPT_DECRYPT`, is the only valid value for symmetric CMKs\. You can't change the `KeyUsage` value after the CMK is created\.  
+*Allowed Values*: ENCRYPT\_DECRYPT  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ENCRYPT_DECRYPT | SIGN_VERIFY`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
@@ -129,11 +128,11 @@ For help with finding the ARN of a CMK, see [Finding the Key ID and ARN](https:/
 
 ## Examples<a name="aws-resource-kms-key--examples"></a>
 
-### Create a customer master key<a name="aws-resource-kms-key--examples--Create_a_customer_master_key"></a>
+### Create a symmetric CMK<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK"></a>
 
-The following example creates a customer managed CMK\. The key policy for the CMK allows `Alice` to manage the key and allows `Bob` to view the CMK and use it in cryptographic operations\. It also allows the AWS account \(root\) full access to the key\. This prevents you from losing control of the key if both `Alice` and `Bob` are deleted from the account\.
+The following example creates a symmetric CMK\. The key policy for the CMK allows `Alice` to manage the key and allows `Bob` to view the CMK and use it in cryptographic operations\. It also allows the AWS account \(root\) full access to the key\. This prevents you from losing control of the key if both `Alice` and `Bob` are deleted from the account\.
 
-#### JSON<a name="aws-resource-kms-key--examples--Create_a_customer_master_key--json"></a>
+#### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK--json"></a>
 
 ```
 "myKey" : {
@@ -191,7 +190,7 @@ The following example creates a customer managed CMK\. The key policy for the CM
 }
 ```
 
-#### YAML<a name="aws-resource-kms-key--examples--Create_a_customer_master_key--yaml"></a>
+#### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK--yaml"></a>
 
 ```
 myKey:
@@ -243,11 +242,11 @@ myKey:
           Resource: "*"
 ```
 
-### Create a CMK with a tag<a name="aws-resource-kms-key--examples--Create_a_CMK_with_a_tag"></a>
+### Create a symmetric CMK with a resource tag<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag"></a>
 
-The following example creates a custom CMK with a single tag\.
+The following example creates a symmetric CMK with one resource tag\.
 
-#### JSON<a name="aws-resource-kms-key--examples--Create_a_CMK_with_a_tag--json"></a>
+#### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag--json"></a>
 
 ```
 {
@@ -290,7 +289,7 @@ The following example creates a custom CMK with a single tag\.
 }
 ```
 
-#### YAML<a name="aws-resource-kms-key--examples--Create_a_CMK_with_a_tag--yaml"></a>
+#### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag--yaml"></a>
 
 ```
 Resources:

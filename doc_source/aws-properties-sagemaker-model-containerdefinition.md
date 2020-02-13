@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname)" : String,
   "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : Json,
   "[Image](#cfn-sagemaker-model-containerdefinition-image)" : String,
+  "[Mode](#cfn-sagemaker-model-containerdefinition-mode)" : String,
   "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String
 }
 ```
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ContainerHostname](#cfn-sagemaker-model-containerdefinition-containerhostname): String
   [Environment](#cfn-sagemaker-model-containerdefinition-environment): Json
   [Image](#cfn-sagemaker-model-containerdefinition-image): String
+  [Mode](#cfn-sagemaker-model-containerdefinition-mode): String
   [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
 ```
 
@@ -49,6 +51,13 @@ The Amazon EC2 Container Registry \(Amazon ECR\) path where inference code is st
 *Type*: String  
 *Maximum*: `255`  
 *Pattern*: `[\S]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Mode`  <a name="cfn-sagemaker-model-containerdefinition-mode"></a>
+Whether the container hosts a single model or multiple models\.  
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `MultiModel | SingleModel`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelDataUrl`  <a name="cfn-sagemaker-model-containerdefinition-modeldataurl"></a>

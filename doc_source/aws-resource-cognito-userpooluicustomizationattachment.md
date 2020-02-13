@@ -2,12 +2,12 @@
 
 The `AWS::Cognito::UserPoolUICustomizationAttachment` resource sets the UI customization information for a user pool's built\-in app UI\.
 
-You can specify app UI customization settings for a single client \(with a specific `clientId`\) or for all clients \(by setting the `clientId` to `ALL`\)\. If you specify `ALL`, the default configuration is used for every client that has had no UI customization set previously\. If you specify UI customization settings for a particular client, it no longer falls back to the `ALL` configuration\.
+You can specify app UI customization settings for a single client \(with a specific `clientId`\) or for all clients \(by setting the `clientId` to `ALL`\)\. If you specify `ALL`, the default configuration is used for every client that has had no UI customization set previously\. If you specify UI customization settings for a particular client, it no longer falls back to the `ALL` configuration\. 
 
 **Note**  
-Before you create this resource, your user pool must have a domain associated with it\. You can create an `AWS::Cognito::UserPoolDomain` resource first in this user pool\.
+Before you create this resource, your user pool must have a domain associated with it\. You can create an `AWS::Cognito::UserPoolDomain` resource first in this user pool\. 
 
-Setting a logo image isn't supported from AWS CloudFormation\. Use the Amazon Cognito [SetUICustomization](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUICustomization.html#API_SetUICustomization_RequestSyntax) API operation to set the image\.
+Setting a logo image isn't supported from AWS CloudFormation\. Use the Amazon Cognito [SetUICustomization](cognito-user-identity-pools/latest/APIReference/API_SetUICustomization.html#API_SetUICustomization_RequestSyntax) API operation to set the image\.
 
 ## Syntax<a name="aws-resource-cognito-userpooluicustomizationattachment-syntax"></a>
 
@@ -84,26 +84,27 @@ The following example sets UI customization settings in the referenced user pool
 
 ```
 {
-        "UserPoolUICustomization": {
-            "Type": "AWS::Cognito::UserPoolUICustomizationAttachment",
-            "Properties": {
-                "UserPoolId": {"Ref": "UserPool"},
-                "ClientId": {"Ref": "Client"},
-                "CSS": ".banner-customizable {\nbackground: linear-gradient(#9940B8, #C27BDB)\n}"
-              }
-            }
+   "UserPoolUICustomization":{
+      "Type":"AWS::Cognito::UserPoolUICustomizationAttachment",
+      "Properties":{
+         "UserPoolId":{
+            "Ref":"UserPool"
+         },
+         "ClientId":{
+            "Ref":"Client"
+         },
+         "CSS":".banner-customizable {\nbackground:
+        linear-gradient(#9940B8, #C27BDB)\n}"
       }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpooluicustomizationattachment--examples--Creating_a_new_UI_customization_attachment_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolUICustomization:
-        Type: AWS::Cognito::UserPoolUICustomizationAttachment
-        Properties:
-          UserPoolId: !Ref UserPool
-          ClientId: !Ref Client
-          CSS: ".banner-customizable {
-                     background: linear-gradient(#9940B8, #C27BDB) 
-                }"
+UserPoolUICustomization: Type:
+        AWS::Cognito::UserPoolUICustomizationAttachment Properties: UserPoolId: !Ref UserPool
+        ClientId: !Ref Client CSS: ".banner-customizable { background: linear-gradient(#9940B8,
+        #C27BDB) }"
 ```

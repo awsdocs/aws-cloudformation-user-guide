@@ -87,19 +87,80 @@ The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs
 
 ### Creating an Amazon ECS cluster<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster"></a>
 
-The following sample declares an Amazon ECS cluster:
+The following example creates an empty cluster named `MyCluster`\.
 
 #### JSON<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster--json"></a>
 
 ```
-"MyCluster": {
-  "Type": "AWS::ECS::Cluster"
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MyCluster": {
+            "Type": "AWS::ECS::Cluster",
+            "Properties": {
+                "ClusterName": "MyCluster"
+            }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster--yaml"></a>
 
 ```
-MyCluster:
-  Type: AWS::ECS::Cluster
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyCluster:
+    Type: 'AWS::ECS::Cluster'
+    Properties:
+      ClusterName: MyCluster
+```
+
+### Creating an empty Amazon ECS cluster with tags with CloudWatch Container Insights enabled<a name="aws-resource-ecs-cluster--examples--Creating_an_empty_Amazon_ECS_cluster_with_tags_with_CloudWatch_Container_Insights_enabled"></a>
+
+The following example creates an empty cluster named `MyCluster` with CloudWatch Container Insights enabled that is tagged with the key `environment` and the value `production`\.
+
+#### JSON<a name="aws-resource-ecs-cluster--examples--Creating_an_empty_Amazon_ECS_cluster_with_tags_with_CloudWatch_Container_Insights_enabled--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "ECSCluster": {
+            "Type": "AWS::ECS::Cluster",
+            "Properties": {
+                "ClusterName": "MyCluster",
+                "ClusterSettings": [
+                    {
+                        "Name": "containerInsights",
+                        "Value": "enabled"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "environment",
+                        "Value": "production"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-cluster--examples--Creating_an_empty_Amazon_ECS_cluster_with_tags_with_CloudWatch_Container_Insights_enabled--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ECSCluster:
+    Type: 'AWS::ECS::Cluster'
+    Properties:
+      ClusterName: MyCluster
+      ClusterSettings:
+        - Name: containerInsights
+          Value: enabled
+      Tags:
+        - Key: environment
+          Value: production
 ```

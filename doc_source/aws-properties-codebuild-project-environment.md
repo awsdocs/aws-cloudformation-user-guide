@@ -103,8 +103,8 @@ If the operating system's base image is Alpine Linux and the previous command do
 `Type`  <a name="cfn-codebuild-project-environment-type"></a>
 The type of build environment to use for related builds\.  
 + The environment type `ARM_CONTAINER` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), EU \(Ireland\), Asia Pacific \(Mumbai\), Asia Pacific \(Tokyo\), Asia Pacific \(Sydney\), and EU \(Frankfurt\)\.
-+ The environment type `LINUX_CONTAINER` with compute type `build.general1.2xlarge` is available only in regions US East \(N\. Virginia\), US East \(N\. Virginia\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), China \(Beijing\), and China \(Ningxia\)\.
-+ The environment type `LINUX_GPU_CONTAINER` is available only in regions US East \(N\. Virginia\), US East \(N\. Virginia\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\) , China \(Beijing\), and China \(Ningxia\)\.
++ The environment type `LINUX_CONTAINER` with compute type `build.general1.2xlarge` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), China \(Beijing\), and China \(Ningxia\)\.
++ The environment type `LINUX_GPU_CONTAINER` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\) , China \(Beijing\), and China \(Ningxia\)\.
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `ARM_CONTAINER | LINUX_CONTAINER | LINUX_GPU_CONTAINER | WINDOWS_CONTAINER`  

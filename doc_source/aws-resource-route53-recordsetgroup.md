@@ -42,7 +42,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostedZoneId`  <a name="cfn-route53-recordsetgroup-hostedzoneid"></a>
-The ID of the hosted zone that you want to create the record in\.  
+The ID of the hosted zone that you want to create records in\.  
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.   
 *Required*: No  
 *Type*: String  

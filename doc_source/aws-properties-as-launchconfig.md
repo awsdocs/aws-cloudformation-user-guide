@@ -246,59 +246,61 @@ This example shows a launch configuration with a `BlockDeviceMappings` property 
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "KeyName":{
-        "Ref":"KeyName"
-      },
-      "ImageId":{
-        "Fn::FindInMap":[
-          "AWSRegionArch2AMI",
-          {
-            "Ref":"AWS::Region"
-          },
-          {
-            "Fn::FindInMap":[
-              "AWSInstanceType2Arch",
-              {
-                "Ref":"InstanceType"
-              },
-              "Arch"
-            ]
-          }
-        ]
-      },
-      "UserData":{
-        "Fn::Base64":{
-          "Ref":"WebServerPort"
-        }
-      },
-      "SecurityGroups":[
-        {
-          "Ref":"InstanceSecurityGroup"
-        }
-      ],
-      "InstanceType":{
-        "Ref":"InstanceType"
-      },
-      "BlockDeviceMappings":[
-        {
-          "DeviceName":"/dev/sda1",
-          "Ebs":{
-            "VolumeSize":"50",
-            "VolumeType":"io1",
-            "Iops":200
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "KeyName":{
+          "Ref":"KeyName"
+        },
+        "ImageId":{
+          "Fn::FindInMap":[
+            "AWSRegionArch2AMI",
+            {
+              "Ref":"AWS::Region"
+            },
+            {
+              "Fn::FindInMap":[
+                "AWSInstanceType2Arch",
+                {
+                  "Ref":"InstanceType"
+                },
+                "Arch"
+              ]
+            }
+          ]
+        },
+        "UserData":{
+          "Fn::Base64":{
+            "Ref":"WebServerPort"
           }
         },
-        {
-          "DeviceName":"/dev/sdm",
-          "Ebs":{
-            "VolumeSize":"100",
-            "DeleteOnTermination":"false"
+        "SecurityGroups":[
+          {
+            "Ref":"InstanceSecurityGroup"
           }
-        }
-      ]
+        ],
+        "InstanceType":{
+          "Ref":"InstanceType"
+        },
+        "BlockDeviceMappings":[
+          {
+            "DeviceName":"/dev/sda1",
+            "Ebs":{
+              "VolumeSize":"50",
+              "VolumeType":"io1",
+              "Iops":200
+            }
+          },
+          {
+            "DeviceName":"/dev/sdm",
+            "Ebs":{
+              "VolumeSize":"100",
+              "DeleteOnTermination":"false"
+            }
+          }
+        ]
+      }
     }
   }
 }
@@ -307,36 +309,37 @@ This example shows a launch configuration with a `BlockDeviceMappings` property 
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Block_Device_Mappings--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    KeyName: 
-      Ref: "KeyName"
-    ImageId: 
-      Fn::FindInMap: 
-        - "AWSRegionArch2AMI"
-        - Ref: "AWS::Region"
-        - Fn::FindInMap: 
-            - "AWSInstanceType2Arch"
-            - Ref: "InstanceType"
-            - "Arch"
-    UserData: 
-      Fn::Base64: 
-        Ref: "WebServerPort"
-    SecurityGroups: 
-      - Ref: "InstanceSecurityGroup"
-    InstanceType: 
-      Ref: "InstanceType"
-    BlockDeviceMappings: 
-      - DeviceName: /dev/sda1
-        Ebs: 
-          VolumeSize: 50
-          VolumeType: "io1"
-          Iops: 200
-      - DeviceName: /dev/sdm
-        Ebs: 
-          VolumeSize: 100
-          DeleteOnTermination: "false"
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      KeyName: 
+        Ref: "KeyName"
+      ImageId: 
+        Fn::FindInMap: 
+          - "AWSRegionArch2AMI"
+          - Ref: "AWS::Region"
+          - Fn::FindInMap: 
+              - "AWSInstanceType2Arch"
+              - Ref: "InstanceType"
+              - "Arch"
+      UserData: 
+        Fn::Base64: 
+          Ref: "WebServerPort"
+      SecurityGroups: 
+        - Ref: "InstanceSecurityGroup"
+      InstanceType: 
+        Ref: "InstanceType"
+      BlockDeviceMappings: 
+        - DeviceName: /dev/sda1
+          Ebs: 
+            VolumeSize: 50
+            VolumeType: "io1"
+            Iops: 200
+        - DeviceName: /dev/sdm
+          Ebs: 
+            VolumeSize: 100
+            DeleteOnTermination: "false"
 ```
 
 ### Launch Configuration with Spot Price<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price"></a>
@@ -347,37 +350,39 @@ This example shows a launch configuration that launches Spot Instances in the Au
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "KeyName":{
-        "Ref":"KeyName"
-      },
-      "ImageId":{
-        "Fn::FindInMap":[
-          "AWSRegionArch2AMI",
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "KeyName":{
+          "Ref":"KeyName"
+        },
+        "ImageId":{
+          "Fn::FindInMap":[
+            "AWSRegionArch2AMI",
+            {
+              "Ref":"AWS::Region"
+            },
+            {
+              "Fn::FindInMap":[
+                "AWSInstanceType2Arch",
+                {
+                  "Ref":"InstanceType"
+                },
+                "Arch"
+              ]
+            }
+          ]
+        },
+        "SecurityGroups":[
           {
-            "Ref":"AWS::Region"
-          },
-          {
-            "Fn::FindInMap":[
-              "AWSInstanceType2Arch",
-              {
-                "Ref":"InstanceType"
-              },
-              "Arch"
-            ]
+            "Ref":"InstanceSecurityGroup"
           }
-        ]
-      },
-      "SecurityGroups":[
-        {
-          "Ref":"InstanceSecurityGroup"
+        ],
+        "SpotPrice":"0.05",
+        "InstanceType":{
+          "Ref":"InstanceType"
         }
-      ],
-      "SpotPrice":"0.05",
-      "InstanceType":{
-        "Ref":"InstanceType"
       }
     }
   }
@@ -387,24 +392,25 @@ This example shows a launch configuration that launches Spot Instances in the Au
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    KeyName: 
-      Ref: "KeyName"
-    ImageId: 
-      Fn::FindInMap: 
-        - "AWSRegionArch2AMI"
-        - Ref: "AWS::Region"
-        - Fn::FindInMap: 
-            - "AWSInstanceType2Arch"
-            - Ref: "InstanceType"
-            - "Arch"
-    SecurityGroups: 
-      - Ref: "InstanceSecurityGroup"
-    SpotPrice: "0.05"
-    InstanceType: 
-      Ref: "InstanceType"
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      KeyName: 
+        Ref: "KeyName"
+      ImageId: 
+        Fn::FindInMap: 
+          - "AWSRegionArch2AMI"
+          - Ref: "AWS::Region"
+          - Fn::FindInMap: 
+              - "AWSInstanceType2Arch"
+              - Ref: "InstanceType"
+              - "Arch"
+      SecurityGroups: 
+        - Ref: "InstanceSecurityGroup"
+      SpotPrice: "0.05"
+      InstanceType: 
+        Ref: "InstanceType"
 ```
 
 ### Launch Configuration with IAM Instance Profile<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile"></a>
@@ -415,31 +421,33 @@ This example demonstrates a launch configuration that uses the `IamInstanceProfi
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "ImageId":{
-        "Fn::FindInMap":[
-          "AWSRegionArch2AMI",
-          {
-            "Ref":"AWS::Region"
-          },
-          {
-            "Fn::FindInMap":[
-              "AWSInstanceType2Arch",
-              {
-                "Ref":"InstanceType"
-              },
-              "Arch"
-            ]
-          }
-        ]
-      },
-      "InstanceType":{
-        "Ref":"InstanceType"
-      },
-      "IamInstanceProfile":{
-        "Ref":"RootInstanceProfile"
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "ImageId":{
+          "Fn::FindInMap":[
+            "AWSRegionArch2AMI",
+            {
+              "Ref":"AWS::Region"
+            },
+            {
+              "Fn::FindInMap":[
+                "AWSInstanceType2Arch",
+                {
+                  "Ref":"InstanceType"
+                },
+                "Arch"
+              ]
+            }
+          ]
+        },
+        "InstanceType":{
+          "Ref":"InstanceType"
+        },
+        "IamInstanceProfile":{
+          "Ref":"RootInstanceProfile"
+        }
       }
     }
   }
@@ -449,21 +457,22 @@ This example demonstrates a launch configuration that uses the `IamInstanceProfi
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    ImageId: 
-      Fn::FindInMap: 
-        - "AWSRegionArch2AMI"
-        - Ref: "AWS::Region"
-        - Fn::FindInMap: 
-            - "AWSInstanceType2Arch"
-            - Ref: "InstanceType"
-            - "Arch"
-    InstanceType: 
-      Ref: "InstanceType"
-    IamInstanceProfile: 
-      Ref: "RootInstanceProfile"
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      ImageId: 
+        Fn::FindInMap: 
+          - "AWSRegionArch2AMI"
+          - Ref: "AWS::Region"
+          - Fn::FindInMap: 
+              - "AWSInstanceType2Arch"
+              - Ref: "InstanceType"
+              - "Arch"
+      InstanceType: 
+        Ref: "InstanceType"
+      IamInstanceProfile: 
+        Ref: "RootInstanceProfile"
 ```
 
 ### Launch Configuration with a Provisioned IOPS EBS Volume<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume"></a>
@@ -486,26 +495,28 @@ For more performance tips, see [Amazon EBS Volume Performance on Linux Instances
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "KeyName":{
-        "Ref":"KeyName"
-      },
-      "ImageId":"ami-7430ba44",
-      "UserData":{
-        "Fn::Base64":{
-          "Ref":"WebServerPort"
-        }
-      },
-      "SecurityGroups":[
-        {
-          "Ref":"InstanceSecurityGroup"
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "KeyName":{
+          "Ref":"KeyName"
         },
-        "sg-903004f8" 
-      ],
-      "InstanceType":"m1.large",
-      "EbsOptimized":"true"
+        "ImageId":"ami-7430ba44",
+        "UserData":{
+          "Fn::Base64":{
+            "Ref":"WebServerPort"
+          }
+        },
+        "SecurityGroups":[
+          {
+            "Ref":"InstanceSecurityGroup"
+          },
+          "sg-903004f8"
+        ],
+        "InstanceType":"m1.large",
+        "EbsOptimized":"true"
+      }
     }
   }
 }
@@ -514,18 +525,19 @@ For more performance tips, see [Amazon EBS Volume Performance on Linux Instances
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    KeyName: 
-      Ref: "KeyName"
-    ImageId: "ami-7430ba44"
-    UserData: 
-      Fn::Base64: 
-        Ref: "WebServerPort"
-    SecurityGroups: 
-      - Ref: "InstanceSecurityGroup"
-      - sg-903004f8
-    InstanceType: "m1.large"
-    EbsOptimized: "true"
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      KeyName: 
+        Ref: "KeyName"
+      ImageId: "ami-7430ba44"
+      UserData: 
+        Fn::Base64: 
+          Ref: "WebServerPort"
+      SecurityGroups: 
+        - Ref: "InstanceSecurityGroup"
+        - sg-903004f8
+      InstanceType: "m1.large"
+      EbsOptimized: "true"
 ```

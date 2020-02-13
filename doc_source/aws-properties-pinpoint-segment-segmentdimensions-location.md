@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment Location<a name="aws-properties-pinpoint-segment-segmentdimensions-location"></a>
 
-Specifies location\-based criteria, such as region or GPS coordinates, for the segment\.
+Specifies location\-based criteria, such as country or region, for a segment\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-location-syntax"></a>
 
@@ -33,7 +33,7 @@ The country or region code, in ISO 3166\-1 alpha\-2 format, for the segment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GPSPoint`  <a name="cfn-pinpoint-segment-segmentdimensions-location-gpspoint"></a>
-The GPS point dimension for the segment\.  
+The GPS location and range for the segment\.  
 *Required*: No  
 *Type*: [GPSPoint](aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

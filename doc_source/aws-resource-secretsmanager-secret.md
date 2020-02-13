@@ -2,7 +2,7 @@
 
 The `AWS::SecretsManager::Secret` resource creates a secret and stores it in Secrets Manager\. For more information, see [Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_secret) in the *AWS Secrets Manager User Guide*, and the [CreateSecret API](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) in the *AWS Secrets Manager API Reference*\.
 
-To specify the `SecretString` encrypted value for the secret, specify either the `SecretString` or the `GenerateSecretString` property in this resource\. You must specify one or the other, but you can't specify both\. See the [first two examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-hardcoded) later in this topic\.
+To specify the `SecretString` encrypted value for the secret, specify either the `SecretString` or the `GenerateSecretString` property in this resource\. You must specify one or the other, but not both\. Leaving both empty creates a secret without a secret version\. See the [first two examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-hardcoded) later in this topic\.
 
 **Note**  
 You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\. You can only create a `SecretString` text\-based secret value\.
@@ -113,7 +113,7 @@ When you pass the logical ID of an `AWS::SecretsManager::Secret` resource to the
 
 If you know the ARN of a secret, you can reference a secret that you created in one part of the stack template from within the definition of another resource in the same template\. You typically use the `Ref` function with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type to get references to both the secret and its associated database\.
 
-For more information about using the `Ref` function, see [Ref](url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ## Examples<a name="aws-resource-secretsmanager-secret--examples"></a>
 

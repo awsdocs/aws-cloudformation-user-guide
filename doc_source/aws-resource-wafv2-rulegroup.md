@@ -51,7 +51,7 @@ Properties:
 The web ACL capacity units \(WCUs\) required for this rule group\.  
 When you create your own rule group, you define this, and you cannot change it after creation\. When you add or modify the rules in a rule group, AWS WAF enforces this limit\. You can check the capacity for a set of rules using CheckCapacity\.  
 AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs\. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule\. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power\. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group\. The WCU limit for web ACLs is 1,500\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -66,7 +66,7 @@ A friendly description of the rule group\. You cannot change the description of 
 
 `Name`  <a name="cfn-wafv2-rulegroup-name"></a>
 A friendly name of the rule group\. You cannot change the name of a rule group after you create it\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -93,7 +93,7 @@ Key:value pairs associated with an AWS resource\. The key:value pair can be anyt
 
 `VisibilityConfig`  <a name="cfn-wafv2-rulegroup-visibilityconfig"></a>
 Defines and enables Amazon CloudWatch metrics and web request sample collection\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

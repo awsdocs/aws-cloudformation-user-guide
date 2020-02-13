@@ -60,7 +60,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-statementone-properties"></a>
 
 `AndStatement`  <a name="cfn-wafv2-webacl-statementone-andstatement"></a>
-Logical OR statement used in statement nesting\.  
+Logical AND statement used in statement nesting\.  
 *Required*: No  
 *Type*: [AndStatementOne](aws-properties-wafv2-webacl-andstatementone.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,7 @@ Statement that references a managed rule group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotStatement`  <a name="cfn-wafv2-webacl-statementone-notstatement"></a>
-Logical OR statement used in statement nesting\.  
+Logical NOT statement used in statement nesting\.  
 *Required*: No  
 *Type*: [NotStatementOne](aws-properties-wafv2-webacl-notstatementone.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

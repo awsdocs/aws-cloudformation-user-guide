@@ -67,8 +67,10 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolclient-properties"></a>
 
 `AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
-The allowed OAuth flows\. Possible values are: `code`, `implicit`, and `client_credentials`\.  
+The allowed OAuth flows\.  
 Set to `code` to initiate a code grant flow, which provides an authorization code as the response\. This code can be exchanged for access tokens with the token endpoint\.  
+Set to `implicit` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) directly\.  
+Set to `client_credentials` to specify that the client should get the access token \(and, optionally, ID token, based on scopes\) from the token endpoint using a combination of client and client\_secret\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `3`  

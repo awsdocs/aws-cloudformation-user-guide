@@ -61,7 +61,7 @@ The number of shards that the stream uses\. For greater provisioned throughput, 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamEncryption`  <a name="cfn-kinesis-stream-streamencryption"></a>
-Enables or updates server\-side encryption using an AWS KMS key for a specified stream\.   
+When specified, enables or updates server\-side encryption using an AWS KMS key for a specified stream\. Removing this property from your stack template and updating your stack disables encryption\.  
 *Required*: No  
 *Type*: [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

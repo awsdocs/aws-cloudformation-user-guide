@@ -23,6 +23,14 @@ After you've defined a stack set, you can create, update, or delete stacks in th
 
 A stack set is a regional resource\. If you create a stack set in one region, you cannot see it or change it in other regions\.
 
+**Permission models for stack sets**
+
+Stack sets can be created using either *self\-managed* permissions or *service\-managed* permissions\.
+
+With *self\-managed* permissions, you directly create and deploy the IAM roles required by StackSets to deploy across accounts and regions\. These roles are necessary to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\. Using this permission model, StackSets can deploy to any AWS account in which you have permissions to create an IAM role\.
+
+With *service\-managed* permissions, you can deploy stack instances to accounts managed by AWS Organizations\. Using this permission model, you don't have to create the necessary IAM roles; StackSets creates the necessary IAM roles on your behalf\. With this model, you can also enable automatic deployments to accounts that are added to your organization in the future\.
+
 ## Stack instances<a name="stacksets-concepts-stackinstances"></a>
 
 A *stack instance* is a reference to a stack in a target account within a region\. A stack instance can exist without a stack; for example, if the stack could not be created for some reason, the stack instance shows the reason for stack creation failure\. A stack instance is associated with only one stack set\.
@@ -90,6 +98,7 @@ The following table describes status codes for stack set operations\.
 |  `RUNNING`  |  The operation is currently in progress\.  | 
 |  `SUCCEEDED`  |  The operation finished without exceeding the failure tolerance for the operation\.  | 
 |  `FAILED`  |  The number of stacks on which the operation could not be completed exceeded the user\-defined failure tolerance\. The failure tolerance value you've set for an operation is applied for each region during stack creation and update operations\. If the number of failed stacks within a region exceeds the failure tolerance, the status of the operation in the region is set to `FAILED`\. The status of the operation as a whole is also set to `FAILED`, and AWS CloudFormation cancels the operation in any remaining regions\.  | 
+|  `QUEUED`  |  `QUEUED`: \[Service\-managed permissions\] For automatic deployments that require a sequence of operations\. The operation is queued to be performed\. For example: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html)  | 
 |  `STOPPING`  |  The operation is in the process of stopping, at the user's request\.  | 
 | STOPPED |  The operation has been stopped, at the user's request\.  | 
 

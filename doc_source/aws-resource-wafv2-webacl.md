@@ -48,7 +48,7 @@ Properties:
 
 `DefaultAction`  <a name="cfn-wafv2-webacl-defaultaction"></a>
 The action to perform if none of the `Rules` contained in the `WebACL` match\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [DefaultAction](aws-properties-wafv2-webacl-defaultaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -63,7 +63,7 @@ A friendly description of the Web ACL\. You cannot change the description of a W
 
 `Name`  <a name="cfn-wafv2-webacl-name"></a>
 A friendly name of the Web ACL\. You cannot change the name of a Web ACL after you create it\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -90,7 +90,7 @@ Key:value pairs associated with an AWS resource\. The key:value pair can be anyt
 
 `VisibilityConfig`  <a name="cfn-wafv2-webacl-visibilityconfig"></a>
 Defines and enables Amazon CloudWatch metrics and web request sample collection\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -41,10 +41,10 @@ StackSets is supported in the following regions:
 + Asia Pacific \(Singapore\)
 + Asia Pacific \(Sydney\)
 + Asia Pacific \(Tokyo\)
-+ EU \(Frankfurt\)
-+ EU \(Ireland\)
-+ EU \(London\)
-+ EU \(Paris\)
++ Europe \(Frankfurt\)
++ Europe \(Ireland\)
++ Europe \(London\)
++ Europe \(Paris\)
 + South America \(São Paulo\)
 
 ## StackSets and Macros<a name="stacksets-macros"></a>

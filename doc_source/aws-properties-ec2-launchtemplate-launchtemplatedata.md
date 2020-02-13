@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[KernelId](#cfn-ec2-launchtemplate-launchtemplatedata-kernelid)" : String,
   "[KeyName](#cfn-ec2-launchtemplate-launchtemplatedata-keyname)" : String,
   "[LicenseSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-licensespecifications)" : [ [LicenseSpecification](aws-properties-ec2-launchtemplate-licensespecification.md), ... ],
+  "[MetadataOptions](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions)" : [MetadataOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.md),
   "[Monitoring](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring)" : [Monitoring](aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring.md),
   "[NetworkInterfaces](#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces)" : [ [NetworkInterface](aws-properties-ec2-launchtemplate-networkinterface.md), ... ],
   "[Placement](#cfn-ec2-launchtemplate-launchtemplatedata-placement)" : [Placement](aws-properties-ec2-launchtemplate-launchtemplatedata-placement.md),
@@ -68,6 +69,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [KeyName](#cfn-ec2-launchtemplate-launchtemplatedata-keyname): String
   [LicenseSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-licensespecifications): 
     - [LicenseSpecification](aws-properties-ec2-launchtemplate-licensespecification.md)
+  [MetadataOptions](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions): 
+    [MetadataOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.md)
   [Monitoring](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring): 
     [Monitoring](aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring.md)
   [NetworkInterfaces](#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces): 
@@ -191,6 +194,12 @@ If you do not specify a key pair, you can't connect to the instance unless you c
 The license configurations\.  
 *Required*: No  
 *Type*: List of [LicenseSpecification](aws-properties-ec2-launchtemplate-licensespecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MetadataOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions"></a>
+The metadata options for the instance\. For more information, see [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+*Required*: No  
+*Type*: [MetadataOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Monitoring`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-monitoring"></a>

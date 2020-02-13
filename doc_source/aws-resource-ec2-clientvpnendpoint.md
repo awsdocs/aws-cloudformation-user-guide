@@ -20,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn)" : String,
       "[SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel)" : Boolean,
       "[TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications)" : [ [TagSpecification](aws-properties-ec2-clientvpnendpoint-tagspecification.md), ... ],
-      "[TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol)" : String
+      "[TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol)" : String,
+      "[VpnPort](#cfn-ec2-clientvpnendpoint-vpnport)" : Integer
     }
 }
 ```
@@ -43,6 +44,7 @@ Properties:
   [TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications): 
     - [TagSpecification](aws-properties-ec2-clientvpnendpoint-tagspecification.md)
   [TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol): String
+  [VpnPort](#cfn-ec2-clientvpnendpoint-vpnport): Integer
 ```
 
 ## Properties<a name="aws-resource-ec2-clientvpnendpoint-properties"></a>
@@ -109,6 +111,14 @@ Default value: `udp`
 *Type*: String  
 *Allowed Values*: `tcp | udp`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`VpnPort`  <a name="cfn-ec2-clientvpnendpoint-vpnport"></a>
+The port number to assign to the Client VPN endpoint for TCP and UDP traffic\.  
+Valid Values: `443` \| `1194`   
+Default Value: `443`   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-ec2-clientvpnendpoint-return-values"></a>
 

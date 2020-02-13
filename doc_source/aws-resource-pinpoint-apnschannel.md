@@ -2,7 +2,7 @@
 
 A *channel* is a type of platform that you can deliver messages to\. You can use the APNs channel to send push notification messages to the Apple Push Notification service \(APNs\)\. Before you can use Amazon Pinpoint to send notifications to APNs, you have to enable the APNs channel for an Amazon Pinpoint application\.
 
-The APNSChannel resource represents the status and authentication settings for the APNs channel for an application\.
+The AWS::Pinpoint::APNSChannel resource defines the status and authentication settings of the APNs channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-apnschannel-syntax"></a>
 
@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-apnschannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-apnschannel-applicationid"></a>
-The unique identifier for the Amazon Pinpoint application that the APNs channel applies to\.  
+The unique identifier for the application that the APNs channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -58,13 +58,13 @@ The bundle identifier that's assigned to your iOS app\. This identifier is used 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Certificate`  <a name="cfn-pinpoint-apnschannel-certificate"></a>
-The APNs client certificate that you received from Apple\. Specify this value if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate\.  
+The APNs client certificate that you received from Apple, if you want Amazon Pinpoint to communicate with APNs by using an APNs certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultAuthenticationMethod`  <a name="cfn-pinpoint-apnschannel-defaultauthenticationmethod"></a>
-The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs\. Valid options are `key` or `certificate`\.  
+The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs, key or certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -82,7 +82,7 @@ The private key for the APNs client certificate that you want Amazon Pinpoint to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TeamId`  <a name="cfn-pinpoint-apnschannel-teamid"></a>
-The identifier that's assigned to your Apple Developer Account team\. This identifier is used for APNs tokens\.  
+The identifier that's assigned to your Apple developer account team\. This identifier is used for APNs tokens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,7 +94,7 @@ The authentication key to use for APNs tokens\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenKeyId`  <a name="cfn-pinpoint-apnschannel-tokenkeyid"></a>
-The key identifier that's assigned to your APNs signing key\. Specify this value if you want Amazon Pinpoint to communicate with APNs by using APNs tokens\.  
+The key identifier that's assigned to your APNs signing key, if you want Amazon Pinpoint to communicate with APNs by using APNs tokens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

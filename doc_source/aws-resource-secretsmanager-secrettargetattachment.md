@@ -38,7 +38,7 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-secrettargetattachment-properties"></a>
 
 `SecretId`  <a name="cfn-secretsmanager-secrettargetattachment-secretid"></a>
-The Amazon Resource Name \(ARN\) or the friendly name of the secret that contains the credentials that you want to use with the specified service or database\. To reference a secret also created in this template, use the see [Ref](https://docs.aws.amazon.com/url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
+The Amazon Resource Name \(ARN\) or the friendly name of the secret that contains the credentials that you want to use with the specified service or database\. To reference a secret also created in this template, use the see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,7 +72,7 @@ When you pass the logical ID of an `AWS::SecretsManager::SecretTargetAttachement
 
 This enables you to reference a secret you created in one part of the stack template from within the definition of another resource from a different part of the same template\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ## Examples<a name="aws-resource-secretsmanager-secrettargetattachment--examples"></a>
 
@@ -180,41 +180,19 @@ This example template creates a Redshift Cluster database and secret\.
 #### JSON<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_Secret_on_a_Redshift_Cluster--json"></a>
 
 ```
-{
-      "AWSTemplateFormatVersion": "2010-09-09",
-      "Resources": {
-        "MyRedshiftSecret": {
-          "Type": "AWS::SecretsManager::Secret",
-          "Properties": {
-            "Description": "This is a Secrets Manager secret for a Redshift cluster",
-            "GenerateSecretString": {
-              "SecretStringTemplate": "{\"username\": \"admin\"}",
-              "GenerateStringKey": "password",
-              "PasswordLength": 16,
-              "ExcludeCharacters": "\"'@/\\"
-            }
-          }
-        },
-        "MyRedshiftCluster": {
-          "Type": "AWS::Redshift::Cluster",
-          "Properties": {
-            "DBName": "myjsondb",
-            "MasterUsername": {"Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"},
-            "MasterUserPassword": {"Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"},
-            "NodeType": "ds2.xlarge",
-            "ClusterType": "single-node"
-          }
-        },
-        "SecretRedshiftAttachment": {
-          "Type": "AWS::SecretsManager::SecretTargetAttachment",
-          "Properties": {
-            "SecretId": {"Ref": "MyRedshiftSecret"},
-            "TargetId": {"Ref": "MyRedshiftCluster"},
-            "TargetType": "AWS::Redshift::Cluster"
-          }
-        }
-      }
-    }
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+        "MyRedshiftSecret": { "Type": "AWS::SecretsManager::Secret", "Properties": { "Description":
+        "This is a Secrets Manager secret for a Redshift cluster", "GenerateSecretString": {
+        "SecretStringTemplate": "{\"username\": \"admin\"}", "GenerateStringKey": "password",
+        "PasswordLength": 16, "ExcludeCharacters": "\"'@/\\" } } }, "MyRedshiftCluster": { "Type":
+        "AWS::Redshift::Cluster", "Properties": { "DBName": "myjsondb", "MasterUsername":
+        {"Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"},
+        "MasterUserPassword": {"Fn::Sub":
+        "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"}, "NodeType": "ds2.xlarge",
+        "ClusterType": "single-node" } }, "SecretRedshiftAttachment": { "Type":
+        "AWS::SecretsManager::SecretTargetAttachment", "Properties": { "SecretId": {"Ref":
+        "MyRedshiftSecret"}, "TargetId": {"Ref": "MyRedshiftCluster"}, "TargetType":
+        "AWS::Redshift::Cluster" } } } }
 ```
 
 ### Creating a Redshift Cluster using YAML<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_Redshift_Cluster_using_YAML"></a>
@@ -222,41 +200,25 @@ This example template creates a Redshift Cluster database and secret\.
 #### YAML<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_Redshift_Cluster_using_YAML--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-    Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager.
-    Resources:
-      #This is a Secret resource with a randomly generated password in its SecretString JSON.
-      MyRedshiftSecret:
-        Type: "AWS::SecretsManager::Secret"
-        Properties:
-          Description: "This is a Secrets Manager secret for an Redshift cluster"
-          GenerateSecretString:
-            SecretStringTemplate: '{"username": "admin"}'
-            GenerateStringKey: "password"
-            PasswordLength: 16
-            ExcludeCharacters: "\"@'/\\"
-     
-      # This is a Redshift cluster resource. The master username and password use dynamic references
-      # to resolve values from Secrets Manager. The dynamic reference guarantees that CloudFormation
-      # will not log or persist the resolved value. We use a Ref to the secret resource's logical id
-      # to construct the dynamic reference, since the secret name is generated by CloudFormation.
-      MyRedshiftCluster:
-        Type: AWS::Redshift::Cluster
-        Properties:
-          DBName: "myyamldb"
-          MasterUsername: !Sub '{{resolve:secretsmanager:${MyRedshiftSecret}::username}}'
-          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyRedshiftSecret}::password}}'
-          NodeType: "ds2.xlarge"
-          ClusterType: "single-node"
-     
-      # This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
-      # the referenced Redshift cluster
-      SecretRedshiftAttachment:
-        Type: "AWS::SecretsManager::SecretTargetAttachment"
-        Properties:
-          SecretId: !Ref MyRedshiftSecret
-          TargetId: !Ref MyRedshiftCluster
-          TargetType: AWS::Redshift::Cluster
+AWSTemplateFormatVersion: 2010-09-09 Description: "This is an example
+        template to demonstrate CloudFormation resources for Secrets Manager. Resources: #This is a
+        Secret resource with a randomly generated password in its SecretString JSON.
+        MyRedshiftSecret: Type: "AWS::SecretsManager::Secret" Properties: Description: "This is a
+        Secrets Manager secret for an Redshift cluster" GenerateSecretString: SecretStringTemplate:
+        '{"username": "admin"}' GenerateStringKey: "password" PasswordLength: 16 ExcludeCharacters:
+        "\"@'/\\" # This is a Redshift cluster resource. The master username and password use
+        dynamic references # to resolve values from Secrets Manager. The dynamic reference
+        guarantees that CloudFormation # will not log or persist the resolved value. We use a Ref to
+        the secret resource's logical id # to construct the dynamic reference, since the secret name
+        is generated by CloudFormation. MyRedshiftCluster: Type: AWS::Redshift::Cluster Properties:
+        DBName: "myyamldb" MasterUsername: !Sub
+        '{{resolve:secretsmanager:${MyRedshiftSecret}::username}}' MasterUserPassword: !Sub
+        '{{resolve:secretsmanager:${MyRedshiftSecret}::password}}' NodeType: "ds2.xlarge"
+        ClusterType: "single-node" # This is a SecretTargetAttachment resource which updates the
+        referenced Secret resource with properties about # the referenced Redshift cluster
+        SecretRedshiftAttachment: Type: "AWS::SecretsManager::SecretTargetAttachment" Properties:
+        SecretId: !Ref MyRedshiftSecret TargetId: !Ref MyRedshiftCluster TargetType:
+        AWS::Redshift::Cluster
 ```
 
 ## See Also<a name="aws-resource-secretsmanager-secrettargetattachment--seealso"></a>

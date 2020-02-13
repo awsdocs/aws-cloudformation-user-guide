@@ -45,7 +45,7 @@ Configuration information for coordination with the AWS Glue ETL \(extract, tran
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-iotanalytics-dataset-s3destinationconfiguration-key"></a>
-The key of the data set contents object\. Each object in an Amazon S3 bucket has a key that is its unique identifier within the bucket \(each object in a bucket has exactly one key\)\. To produce a unique key, you can use "\!\{iotanalytics:scheduleTime\}" to insert the time of the scheduled SQL query run, or "\!\{iotanalytics:versioned\} to insert a unique hash identifying the data set, for example: "/DataSet/\!\{iotanalytics:scheduleTime\}/\!\{iotanalytics:versioned\}\.csv"\.  
+The key of the data set contents object\. Each object in an Amazon S3 bucket has a key that is its unique identifier within the bucket \(each object in a bucket has exactly one key\)\. To produce a unique key, you can use "\!\{iotanalytics:scheduleTime\}" to insert the time of the scheduled SQL query run, or "\!\{iotanalytics:versionId\} to insert a unique hash identifying the data set, for example: "/DataSet/\!\{iotanalytics:scheduleTime\}/\!\{iotanalytics:versionId\}\.csv"\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

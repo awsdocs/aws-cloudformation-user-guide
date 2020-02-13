@@ -231,7 +231,7 @@ You must specify `MasterUsername`, unless you specify `SnapshotIdentifier`\. In 
 
 `MasterUserPassword`  <a name="cfn-rds-dbcluster-masteruserpassword"></a>
 The master password for the DB instance\.  
-If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
+If you specify the `SourceDBInstanceIdentifier` or `SnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -313,7 +313,7 @@ The AWS Region which contains the source DB cluster when replicating a DB cluste
 
 `StorageEncrypted`  <a name="cfn-rds-dbcluster-storageencrypted"></a>
 Indicates whether the DB instance is encrypted\.  
-If you specify the `DBClusterIdentifier`, `DBSnapshotIdentifier`, or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the cluster, snapshot, or source DB instance\.   
+If you specify the `DBClusterIdentifier`, `SnapshotIdentifier`, or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the cluster, snapshot, or source DB instance\.   
 If you specify the `KmsKeyId` property, then you must enable encryption\.
 *Required*: No  
 *Type*: Boolean  
@@ -364,14 +364,14 @@ The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1a
 
 ## Examples<a name="aws-resource-rds-dbcluster--examples"></a>
 
-### <a name="aws-resource-rds-dbcluster--examples--"></a>
+### Creating an Amazon Aurora DB Cluster with Two DB Instances<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_with_Two_DB_Instances"></a>
 
 The following example creates an Amazon Aurora DB cluster and adds two DB instances to it\. Because Amazon RDS automatically assigns a writer and reader DB instances in the cluster, use the cluster endpoint to read and write data, not the individual DB instance endpoints\. 
 
 **Note**  
 The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL, use the `timezone` parameter instead\.
 
-#### JSON<a name="aws-resource-rds-dbcluster--examples----json"></a>
+#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_with_Two_DB_Instances--json"></a>
 
 ```
 {
@@ -462,7 +462,7 @@ The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL,
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbcluster--examples----yaml"></a>
+#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_with_Two_DB_Instances--yaml"></a>
 
 ```
 --- 
@@ -526,4 +526,248 @@ RDSDBParameterGroup:
     Parameters: 
       sql_mode: IGNORE_SPACE
   Type: "AWS::RDS::DBParameterGroup"
+```
+
+### Creating an Amazon Aurora DB Cluster That Exports Logs to Amazon CloudWatch Logs<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_That_Exports_Logs_to_Amazon_CloudWatch_Logs"></a>
+
+The following example creates an Amazon Aurora PostgreSQL DB cluster that exports logs to Amazon CloudWatch Logs\. For more information about exporting Aurora DB cluster logs to Amazon CloudWatch Logs, see [ Publishing Database Logs to Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Aurora User Guide*\.
+
+#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_That_Exports_Logs_to_Amazon_CloudWatch_Logs--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+
+  "Description" : "AWS CloudFormation Sample Template for sending Aurora DB cluster logs to CloudWatch Logs: Sample template showing how to create an Aurora PostgreSQL DB cluster that exports logs to CloudWatch Logs. **WARNING** This template enables log exports to CloudWatch Logs. You will be billed for the AWS resources used if you create a stack from this template.",
+
+
+  "Parameters" : {
+      "DBUsername" : {
+        "NoEcho" : "true",
+        "Description" : "Username for MySQL database access",
+
+        "Type" : "String",
+        "MinLength" : "1",
+        "MaxLength" : "16",
+        "AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*",
+        "ConstraintDescription" : "must begin with a letter and contain only alphanumeric characters."
+      },
+      "DBPassword" : {
+        "NoEcho" : "true",
+        "Description" : "Password MySQL database access",
+
+        "Type" : "String",
+        "MinLength" : "8",
+
+        "MaxLength" : "41",
+        "AllowedPattern" : "[a-zA-Z0-9]*",
+        "ConstraintDescription" : "must contain only alphanumeric characters."
+      }
+  },
+
+  "Resources" : {
+      "RDSCluster" : {
+          "Type": "AWS::RDS::DBCluster",
+          "Properties" : {
+              "MasterUsername" : {
+                  "Ref" : "DBUsername"
+              },
+              "MasterUserPassword" : {
+                  "Ref" : "DBPassword"
+              },
+              "DBClusterIdentifier" : "aurora-postgresql-cluster",
+              "Engine" : "aurora-postgresql",
+              "EngineVersion" : "10.7",
+              "DBClusterParameterGroupName" : "default.aurora-postgresql10",
+              "EnableCloudwatchLogsExports" : ["postgresql"]
+          }
+      },
+  "RDSDBInstance1": {
+        "Type" : "AWS::RDS::DBInstance",
+        "Properties" : {
+            "DBInstanceIdentifier" : "aurora-postgresql-instance1",
+            "Engine" : "aurora-postgresql",
+            "DBClusterIdentifier" : {
+                "Ref" : "RDSCluster"
+            },
+            "PubliclyAccessible" : "true",
+            "DBInstanceClass" : "db.r4.large"
+        }
+    },
+  "RDSDBInstance2": {
+        "Type" : "AWS::RDS::DBInstance",
+        "Properties" : {
+            "DBInstanceIdentifier" : "aurora-postgresql-instance2",
+            "Engine" : "aurora-postgresql",
+            "DBClusterIdentifier" : {
+                "Ref" : "RDSCluster"
+            },
+            "PubliclyAccessible" : "true",
+            "DBInstanceClass" : "db.r4.large"
+        }
+    },
+  }
+}
+```
+
+#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_That_Exports_Logs_to_Amazon_CloudWatch_Logs--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  AWS CloudFormation Sample Template for sending Aurora DB cluster logs to
+  CloudWatch Logs: Sample template showing how to create an Aurora PostgreSQL DB
+  cluster that exports logs to CloudWatch Logs. **WARNING** This template
+  enables log exports to CloudWatch Logs. You will be billed for the AWS
+  resources used if you create a stack from this template.
+Parameters:
+  DBUsername:
+    NoEcho: 'true'
+    Description: Username for MySQL database access
+    Type: String
+    MinLength: '1'
+    MaxLength: '16'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+  DBPassword:
+    NoEcho: 'true'
+    Description: Password MySQL database access
+    Type: String
+    MinLength: '8'
+    MaxLength: '41'
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+Resources:
+  RDSCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      MasterUsername: !Ref DBUsername
+      MasterUserPassword: !Ref DBPassword
+      DBClusterIdentifier: aurora-postgresql-cluster
+      Engine: aurora-postgresql
+      EngineVersion: '10.7'
+      DBClusterParameterGroupName: default.aurora-postgresql10
+      EnableCloudwatchLogsExports:
+        - postgresql
+  RDSDBInstance1:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBInstanceIdentifier: aurora-postgresql-instance1
+      Engine: aurora-postgresql
+      DBClusterIdentifier: !Ref RDSCluster
+      PubliclyAccessible: 'true'
+      DBInstanceClass: db.r4.large
+  RDSDBInstance2:
+    Type: 'AWS::RDS::DBInstance'
+    Properties:
+      DBInstanceIdentifier: aurora-postgresql-instance2
+      Engine: aurora-postgresql
+      DBClusterIdentifier: !Ref RDSCluster
+      PubliclyAccessible: 'true'
+      DBInstanceClass: db.r4.large
+```
+
+### Creating an Amazon Aurora Serverless DB Cluster<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster"></a>
+
+The following example creates an Amazon Aurora Serverless DB cluster\. An Aurora Serverless DB cluster is a DB cluster that automatically starts up, shuts down, and scales up or down its compute capacity based on your application's needs\. For more information about Aurora Serverless DB clusters, see [Using Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html) in the *Amazon Aurora User Guide*\.
+
+**Note**  
+This example creates an Aurora MySQL Serverless DB cluster by setting `Engine` to `aurora` and `EngineVersion` to `5.6.10a`\. To create an Aurora PostgreSQL Serverless DB cluster, set `Engine` to `aurora-postgresql` and `EngineVersion` to `10.7`\.
+
+#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Description" : "AWS CloudFormation Sample Template AuroraServerlessDBCluster: Sample template showing how to create an Amazon Aurora Serverless DB cluster. **WARNING** This template creates an Amazon Aurora DB cluster. You will be billed for the AWS resources used if you create a stack from this template.",
+
+  "Parameters" : {
+      "DBUsername" : {
+        "NoEcho" : "true",
+        "Description" : "Username for MySQL database access",
+        "Type" : "String",
+        "MinLength" : "1",
+        "MaxLength" : "16",
+        "AllowedPattern" : "[a-zA-Z][a-zA-Z0-9]*",
+        "ConstraintDescription" : "must begin with a letter and contain only alphanumeric characters."
+      },
+      "DBPassword" : {
+        "NoEcho" : "true",
+        "Description" : "Password MySQL database access",
+        "Type" : "String",
+        "MinLength" : "8",
+        "MaxLength" : "41",
+        "AllowedPattern" : "[a-zA-Z0-9]*",
+        "ConstraintDescription" : "must contain only alphanumeric characters."
+      }
+  },
+  "Resources" : {
+      "RDSCluster" : {
+          "Type": "AWS::RDS::DBCluster",
+          "Properties" : {
+              "MasterUsername" : {
+                  "Ref": "DBUsername"
+              },
+              "MasterUserPassword" : {
+                  "Ref": "DBPassword"
+              },
+              "DBClusterIdentifier" : "my-serverless-cluster",
+              "Engine" : "aurora",
+              "EngineVersion" : "5.6.10a",
+              "EngineMode" : "serverless",
+              "ScalingConfiguration" : {
+                  "AutoPause" : true,
+                  "MinCapacity" : 4,
+                  "MaxCapacity" : 32,
+                  "SecondsUntilAutoPause" : 1000
+              }
+          }
+      }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  AWS CloudFormation Sample Template AuroraServerlessDBCluster: Sample template
+  showing how to create an Amazon Aurora Serverless DB cluster. **WARNING** This
+  template creates an Amazon Aurora DB cluster. You will be billed for the AWS
+  resources used if you create a stack from this template.
+Parameters:
+  DBUsername:
+    NoEcho: 'true'
+    Description: Username for MySQL database access
+    Type: String
+    MinLength: '1'
+    MaxLength: '16'
+    AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
+  DBPassword:
+    NoEcho: 'true'
+    Description: Password MySQL database access
+    Type: String
+    MinLength: '8'
+    MaxLength: '41'
+    AllowedPattern: '[a-zA-Z0-9]*'
+    ConstraintDescription: must contain only alphanumeric characters.
+Resources:
+  RDSCluster:
+    Type: 'AWS::RDS::DBCluster'
+    Properties:
+      MasterUsername: !Ref DBUsername
+      MasterUserPassword: !Ref DBPassword
+      DBClusterIdentifier: my-serverless-cluster
+      Engine: aurora
+      EngineVersion: 5.6.10a
+      EngineMode: serverless
+      ScalingConfiguration:
+        AutoPause: true
+        MinCapacity: 4
+        MaxCapacity: 32
+        SecondsUntilAutoPause: 1000
 ```

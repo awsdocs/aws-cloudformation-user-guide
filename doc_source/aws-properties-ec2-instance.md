@@ -131,6 +131,7 @@ Indicates whether the instance is associated with a dedicated host\. If you want
 `AvailabilityZone`  <a name="cfn-ec2-instance-availabilityzone"></a>
 The Availability Zone of the instance\.  
 If not specified, an Availability Zone will be automatically chosen for you based on the load balancing criteria for the Region\.  
+This parameter is not supported by [DescribeImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeImageAttribute.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -182,7 +183,7 @@ An elastic inference accelerator to associate with the instance\. Elastic infere
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HibernationOptions`  <a name="cfn-ec2-instance-hibernationoptions"></a>
-Indicates whether the instance is enabled for hibernation\.  
+Indicates whether an instance is enabled for hibernation\. For more information, see [Hibernate Your Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -195,6 +196,7 @@ If you specify host for the `Affinity` property, the ID of a dedicated host that
 
 `HostResourceGroupArn`  <a name="cfn-ec2-instance-hostresourcegrouparn"></a>
 The ARN of the host resource group in which to launch the instances\. If you specify a host resource group ARN, omit the **Tenancy** parameter or set it to `host`\.  
+This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

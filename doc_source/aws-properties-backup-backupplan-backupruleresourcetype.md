@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Double,
+  "[CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions)" : [ [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md), ... ],
   "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md),
   "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : Json,
   "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Double
+  [CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions): 
+    - [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)
   [Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle): 
     [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md)
   [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): Json
@@ -39,6 +42,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A value in minutes after a backup job is successfully started before it must be completed or it is canceled by AWS Backup\.  
 *Required*: No  
 *Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CopyActions`  <a name="cfn-backup-backupplan-backupruleresourcetype-copyactions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Lifecycle`  <a name="cfn-backup-backupplan-backupruleresourcetype-lifecycle"></a>

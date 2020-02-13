@@ -60,7 +60,7 @@ The priority for the launch template override\. If **AllocationStrategy** is set
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-subnetid"></a>
-The ID of the subnet in which to launch the instances\.  
+The IDs of the subnets in which to launch the instances\. Separate multiple subnet IDs using commas \(for example, `subnet-1234abcdeexample1, subnet-0987cdef6example2`\)\. A request of type `instant` can have only one subnet ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,7 +2,7 @@
 
 ## EC2 Block Device Mapping Examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 Instance with Block Device Mapping<a name="w5508ab1c20c23c39b3b2"></a>
+### EC2 Instance with Block Device Mapping<a name="w5587ab1c20c23c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 Instance with Ephemeral Drives<a name="w5508ab1c20c23c39b3b4"></a>
+### EC2 Instance with Ephemeral Drives<a name="w5587ab1c20c23c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -167,7 +167,7 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ## Elastic Network Interface \(ENI\) Template Snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w5508ab1c20c23c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w5587ab1c20c23c39c13b3"></a>
 
 Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
 

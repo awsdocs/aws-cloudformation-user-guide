@@ -85,5 +85,5 @@ Description: "Example Hub with Tags"
                     "key2" : "value2"
             Outputs:
                 HubArn:
-                    Ref: !Ref ExampleHubWithTags
+                    Value: !Ref ExampleHubWithTags
 ```

@@ -66,7 +66,7 @@ An API key selection expression\. Supported only for WebSocket APIs\. See [API K
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BasePath`  <a name="cfn-apigatewayv2-api-basepath"></a>
-Represents the base path of the imported API\. Supported only for HTTP APIs\.  
+Specifies how to interpret the base path of the API during import\. Valid values are `ignore`, `prepend`, and `split`\. The default value is `ignore`\. To learn more, see [Set the OpenAPI basePath Property](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-import-api-basePath.html)\. Supported only for HTTP APIs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

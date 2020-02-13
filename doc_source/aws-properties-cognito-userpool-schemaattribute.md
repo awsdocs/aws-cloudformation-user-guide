@@ -45,7 +45,7 @@ The attribute data type\.
 
 `DeveloperOnlyAttribute`  <a name="cfn-cognito-userpool-schemaattribute-developeronlyattribute"></a>
 We recommend that you use [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes) in the user pool client to control how attributes can be mutated for new use cases instead of using `DeveloperOnlyAttribute`\.
-Specifies whether the attribute type is developer only\. This attribute can only be modified by an administrator\. Users will not be able to modify this attribute using their access token\.  
+Specifies whether the attribute type is developer only\. This attribute can only be modified by an administrator\. Users will not be able to modify this attribute using their access token\. For example, `DeveloperOnlyAttribute` can be modified using the API\_AdminUpdateUserAttributes API but cannot be updated using the API\_UpdateUserAttributes API\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

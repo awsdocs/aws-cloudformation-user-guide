@@ -41,7 +41,7 @@ Client secret from Login with Amazon \(LWA\)\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshToken`  <a name="cfn-ask-skill-authenticationconfiguration-refreshtoken"></a>
-Refresh token from Login with Amazon \(LWA\)\.  
+Refresh token from Login with Amazon \(LWA\)\. This token is secret\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

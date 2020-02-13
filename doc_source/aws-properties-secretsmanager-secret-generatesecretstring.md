@@ -107,7 +107,7 @@ Specifies whether the generated password must include at least one of every allo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretStringTemplate`  <a name="cfn-secretsmanager-secret-generatesecretstring-secretstringtemplate"></a>
-A properly structured JSON string that the generated password can be added to\. If you specify this parameter, then you must also specify `GenerateStringKey`\. The key is combined with the generated random string and inserted into the JSON structure specified by this parameter\. The merged JSON string is returned as the completed `SecretString` of the secret\. The default value is that the generated random password string is returned by itself, and isn't embeded in a JSON structure\.  
+A properly structured JSON string where you can the generated password\. If you specify this parameter, then you must also specify `GenerateStringKey`\. The key is combined with the generated random string and inserted into the JSON structure specified by this parameter\. The merged JSON string is returned as the completed `SecretString` of the secret\. The default value for the generated random password string is returned by itself, and isn't embeded in a JSON structure\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

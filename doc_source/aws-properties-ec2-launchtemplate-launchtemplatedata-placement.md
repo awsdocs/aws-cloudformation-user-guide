@@ -16,6 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone)" : String,
   "[GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname)" : String,
   "[HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid)" : String,
+  "[HostResourceGroupArn](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn)" : String,
+  "[PartitionNumber](#cfn-ec2-launchtemplate-launchtemplatedata-placement-partitionnumber)" : Integer,
+  "[SpreadDomain](#cfn-ec2-launchtemplate-launchtemplatedata-placement-spreaddomain)" : String,
   "[Tenancy](#cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy)" : String
 }
 ```
@@ -27,6 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone): String
   [GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname): String
   [HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid): String
+  [HostResourceGroupArn](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn): String
+  [PartitionNumber](#cfn-ec2-launchtemplate-launchtemplatedata-placement-partitionnumber): Integer
+  [SpreadDomain](#cfn-ec2-launchtemplate-launchtemplatedata-placement-spreaddomain): String
   [Tenancy](#cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy): String
 ```
 
@@ -52,6 +58,24 @@ The name of the placement group for the instance\.
 
 `HostId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid"></a>
 The ID of the Dedicated Host for the instance\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HostResourceGroupArn`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn"></a>
+The ARN of the host resource group in which to launch the instances\. If you specify a host resource group ARN, omit the **Tenancy** parameter or set it to `host`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PartitionNumber`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-partitionnumber"></a>
+The number of the partition the instance should launch in\. Valid only if the placement group strategy is set to `partition`\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SpreadDomain`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-spreaddomain"></a>
+Reserved for future use\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

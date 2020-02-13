@@ -57,7 +57,7 @@ For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Ser
 `Path`  <a name="cfn-iam-group-path"></a>
  The path to the group\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
-This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(\\u0021\) through the DEL character \(\\u007F\), including most punctuation characters, digits, and upper and lowercased letters\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

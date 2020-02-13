@@ -1,6 +1,6 @@
 # AWS::EC2::VPNConnection VpnTunnelOptionsSpecification<a name="aws-properties-ec2-vpnconnection-vpntunneloptionsspecification"></a>
 
-The tunnel options for a VPN connection\.
+The tunnel options for a single VPN tunnel\.
 
 ## Syntax<a name="aws-properties-ec2-vpnconnection-vpntunneloptionsspecification-syntax"></a>
 

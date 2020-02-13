@@ -53,7 +53,7 @@ A friendly description of the set\. You cannot change the description of a set a
 
 `Name`  <a name="cfn-wafv2-regexpatternset-name"></a>
 A friendly name of the set\. You cannot change the name after you create the set\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -62,7 +62,7 @@ A friendly name of the set\. You cannot change the name after you create the set
 
 `RegularExpressionList`  <a name="cfn-wafv2-regexpatternset-regularexpressionlist"></a>
 The regular expression patterns in the set\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -4,7 +4,9 @@ With Elastic Beanstalk, you can quickly deploy and manage applications in AWS wi
 
 ## Elastic Beanstalk Sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
 
-The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The Elastic Beanstalk environment is 64\-bit Amazon Linux 2018\.03 v2\.8\.15 running PHP 7\.2\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+
+Replace `solution-stack` with a solution stack name \(platform version\)\. For a list of available solution stacks, use the AWS CLI command `aws elasticbeanstalk list-available-solution-stacks`\.
 
 ### JSON<a name="quickref-elasticbeanstalk-example-1.json"></a>
 
@@ -51,7 +53,7 @@ The following sample template deploys a sample PHP web application that is store
             "Value": "LoadBalanced"
           }
         ],
-        "SolutionStackName": "64bit Amazon Linux 2018.03 v2.8.15 running PHP 7.2"
+        "SolutionStackName": "solution-stack"
       }
     },
     "sampleEnvironment": {
@@ -101,7 +103,7 @@ Resources:
       - Namespace: aws:elasticbeanstalk:environment
         OptionName: EnvironmentType
         Value: LoadBalanced
-      SolutionStackName: 64bit Amazon Linux 2018.03 v2.8.15 running PHP 7.2
+      SolutionStackName: solution-stack
   sampleEnvironment:
     Type: AWS::ElasticBeanstalk::Environment
     Properties:

@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment GPSPoint<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint"></a>
 
-Specifies the GPS coordinates of the endpoint location\.
+Specifies GPS\-based criteria for including or excluding endpoints from a segment\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-syntax"></a>
 

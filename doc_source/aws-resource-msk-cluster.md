@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KafkaVersion](#cfn-msk-cluster-kafkaversion)" : String,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
       "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md),
-      "[Tags](#cfn-msk-cluster-tags)" : {Key : Value, ...}
+      "[Tags](#cfn-msk-cluster-tags)" : Json
     }
 }
 ```
@@ -45,8 +45,7 @@ Properties:
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
   [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
     [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md)
-  [Tags](#cfn-msk-cluster-tags): 
-    Key : Value
+  [Tags](#cfn-msk-cluster-tags): Json
 ```
 
 ## Properties<a name="aws-resource-msk-cluster-properties"></a>
@@ -108,7 +107,7 @@ The settings for open monitoring\.
 `Tags`  <a name="cfn-msk-cluster-tags"></a>
 A map of key:value pairs to apply to this resource\. Both key and value are of type String\.  
 *Required*: No  
-*Type*: Map  
+*Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-msk-cluster-return-values"></a>
