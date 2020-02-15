@@ -149,13 +149,13 @@ The import operation fails if you modify existing parameters that trigger a crea
 1. Review the change set to make sure the correct resources will be imported\.
 
    ```
-   > aws cloudformation describe-change-set --change-set-name ImportChangeSet
+   > aws cloudformation describe-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
 1. Run the change set to import the resources\. On successful completion of the operation `(IMPORT_COMPLETE)`, the resources are successfully imported\.
 
    ```
-   > aws cloudformation execute-change-set --change-set-name ImportChangeSet
+   > aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
 1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information on detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
