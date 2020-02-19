@@ -2,7 +2,6 @@
 
 The `AWS::Cognito::IdentityPool` resource creates an Amazon Cognito identity pool\.
 
-**Note**  
 To avoid deleting the resource accidentally from AWS CloudFormation, use [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) and the [UpdateReplacePolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html) to retain the resource on deletion or replacement\.
 
 ## Syntax<a name="aws-resource-cognito-identitypool-syntax"></a>
@@ -74,7 +73,7 @@ The events to configure\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CognitoIdentityProviders`  <a name="cfn-cognito-identitypool-cognitoidentityproviders"></a>
-An array of Amazon Cognito user pools and their client IDs\.  
+The Amazon Cognito user pools and their client IDs\.  
 *Required*: No  
 *Type*: List of [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,19 +102,19 @@ The name of your Amazon Cognito identity pool\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenIdConnectProviderARNs`  <a name="cfn-cognito-identitypool-openidconnectproviderarns"></a>
-A list of ARNs for the OpendID Connect provider\.  
+The Amazon Resource Names \(ARNs\) of the OpenID connect providers\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PushSync`  <a name="cfn-cognito-identitypool-pushsync"></a>
-Configuration options to be applied to the identity pool\.  
+The configuration options to be applied to the identity pool\.  
 *Required*: No  
 *Type*: [PushSync](aws-properties-cognito-identitypool-pushsync.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SamlProviderARNs`  <a name="cfn-cognito-identitypool-samlproviderarns"></a>
-A list of Amazon Resource Names \(ARNs\) of Security Assertion Markup Language \(SAML\) providers\.  
+The Amazon Resource Names \(ARNs\) of the Security Assertion Markup Language \(SAML\) providers\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

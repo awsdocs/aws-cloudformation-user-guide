@@ -127,7 +127,7 @@ The following example shows how to create three records for a mail server:
 
 ```
 myExampleDotComEmailServer:
-  Type: AWS::Route53::RecordSetGroup,
+  Type: AWS::Route53::RecordSetGroup
   Properties:
     Comment: Creating records for mail server
     HostedZoneId: Z1PA6795UKMFR9

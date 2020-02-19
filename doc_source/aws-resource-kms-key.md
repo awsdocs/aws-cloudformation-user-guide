@@ -138,7 +138,7 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
 "myKey" : {
   "Type" : "AWS::KMS::Key",
   "Properties" : {
-    "Description" : "An example CMK",
+    "Description" : "An example symmetric CMK",
     "KeyPolicy" : {
       "Version": "2012-10-17",
       "Id": "key-default-1",
@@ -196,50 +196,47 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
 myKey:
   Type: AWS::KMS::Key
   Properties:
-    Description: "An example CMK"
+    Description: An example symmetric CMK
     KeyPolicy:
-      Version: "2012-10-17"
-      Id: "key-default-1"
+      Version: '2012-10-17'
+      Id: key-default-1
       Statement:
-       -
-          Sid: "Enable IAM User Permissions"
-          Effect: "Allow"
-          Principal:
-            - AWS: "arn:aws:iam::111122223333:root"
-          Action: "kms:*"
-          Resource: "*"
-       - 
-          Sid: "Allow administration of the key"
-          Effect: "Allow"
-          Principal:
-            - AWS: "arn:aws:iam::123456789012:user/Alice"
-          Action: 
-            - "kms:Create*"
-            - "kms:Describe*"
-            - "kms:Enable*"
-            - "kms:List*"
-            - "kms:Put*"
-            - "kms:Update*"
-            - "kms:Revoke*"
-            - "kms:Disable*"
-            - "kms:Get*"
-            - "kms:Delete*"
-            - "kms:ScheduleKeyDeletion"
-            - "kms:CancelKeyDeletion"
-          Resource: "*"
-        - 
-          Sid: "Allow use of the key"
-          Effect: "Allow"
-          Principal:
-            - AWS: "arn:aws:iam::123456789012:user/Bob"
-          Action:
-            - "kms:DescribeKey"
-            - "kms:Encrypt"
-            - "kms:Decrypt"
-            - "kms:ReEncrypt*"
-            - "kms:GenerateDataKey"
-            - "kms:GenerateDataKeyWithoutPlaintext"
-          Resource: "*"
+      - Sid: Enable IAM User Permissions
+        Effect: Allow
+        Principal:
+          AWS: arn:aws:iam::111122223333:root
+        Action: kms:*
+        Resource: '*'
+      - Sid: Allow administration of the key
+        Effect: Allow
+        Principal:
+          AWS: arn:aws:iam::123456789012:user/Alice
+        Action:
+        - kms:Create*
+        - kms:Describe*
+        - kms:Enable*
+        - kms:List*
+        - kms:Put*
+        - kms:Update*
+        - kms:Revoke*
+        - kms:Disable*
+        - kms:Get*
+        - kms:Delete*
+        - kms:ScheduleKeyDeletion
+        - kms:CancelKeyDeletion
+        Resource: '*'
+      - Sid: Allow use of the key
+        Effect: Allow
+        Principal:
+          AWS: arn:aws:iam::123456789012:user/Bob
+        Action:
+        - kms:DescribeKey
+        - kms:Encrypt
+        - kms:Decrypt
+        - kms:ReEncrypt*
+        - kms:GenerateDataKey
+        - kms:GenerateDataKeyWithoutPlaintext
+        Resource: '*'
 ```
 
 ### Create a symmetric CMK with a resource tag<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag"></a>
@@ -297,22 +294,25 @@ Resources:
     Type: AWS::KMS::Key
     Properties:
       KeyPolicy:
-        Version: 2012-10-17
+        Version: '2012-10-17'
         Id: key-default-1
         Statement:
-          - Sid: Enable IAM User Permissions
-            Effect: Allow
-            Principal:
-              AWS: !Join 
-                - ''
-                - - 'arn:aws:iam::'
-                  - !Ref 'AWS::AccountId'
-                  - ':root'
-            Action: 'kms:*'
-            Resource: '*'
+        - Sid: Enable IAM User Permissions
+          Effect: Allow
+          Principal:
+            AWS:
+              Fn::Join:
+              - ''
+              - - 'arn:aws:iam::'
+                - Ref: AWS::AccountId
+                - :root
+          Action: kms:*
+          Resource: '*'
       Tags:
-        - Key: !Ref Key
-          Value: !Ref Value
+      - Key:
+          Ref: Key
+        Value:
+          Ref: Value
 Parameters:
   Key:
     Type: String

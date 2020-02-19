@@ -1,6 +1,6 @@
 # AWS::Transfer::User HomeDirectoryMapEntry<a name="aws-properties-transfer-user-homedirectorymapentry"></a>
 
-Represents an object that contains entries and a targets for `HomeDirectoryMappings`\.
+Represents an object that contains entries and targets for `HomeDirectoryMappings`\.
 
 ## Syntax<a name="aws-properties-transfer-user-homedirectorymapentry-syntax"></a>
 
@@ -39,3 +39,7 @@ Represents the map target that is used in a `HomeDirectorymapEntry`\.
 *Maximum*: `1024`  
 *Pattern*: `^/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-transfer-user-homedirectorymapentry--seealso"></a>
+
+[HomeDirectoryMapEntry](https://docs.aws.amazon.com/transfer/latest/userguide/API_HomeDirectoryMapEntry.html) in the *AWS Transfer for SFTP User Guide*\.

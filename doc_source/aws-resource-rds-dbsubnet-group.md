@@ -36,21 +36,21 @@ Properties:
 ## Properties<a name="aws-resource-rds-dbsubnet-group-properties"></a>
 
 `DBSubnetGroupDescription`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupdescription"></a>
-The description for the DB subnet group\.  
+The description for the DB Subnet Group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupname"></a>
-The name for the DB subnet group\. This value is stored as a lowercase string\.  
-Constraints: Must contain no more than 255 letters, numbers, periods, underscores, spaces, or hyphens\. Must not be default\.  
+The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
+Constraints: Must contain no more than 255 alphanumeric characters or hyphens\. Must not be "Default"\.  
 Example: `mySubnetgroup`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-rds-dbsubnetgroup-subnetids"></a>
-The EC2 Subnet IDs for the DB subnet group\.  
+The EC2 Subnet IDs for the DB Subnet Group\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,10 +2,6 @@
 
  `VpcConfig` is a property of the [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource that enable AWS CodeBuild to access resources in an Amazon VPC\. For more information, see [Use AWS CodeBuild with Amazon Virtual Private Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS CodeBuild User Guide*\. 
 
- To use an AWS CloudFormation template to delete a Virtual Private Cloud \(VPC\) from an AWS [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource, specify the following in the the template for your project\. 
-+ For JSON: `"VpcConfig": {}`
-+ For YAML: `VpcConfig: {}`
-
 ## Syntax<a name="aws-properties-codebuild-project-vpcconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

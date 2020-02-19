@@ -44,7 +44,7 @@ The name of the rule\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuleState`  <a name="cfn-cloudwatch-insightrule-rulestate"></a>
-The current state of the rule\.  
+The current state of the rule\. Valid values are `ENABLED` and `DISABLED`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

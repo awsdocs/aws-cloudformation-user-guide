@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appconfig-configurationprofile-validators-properties"></a>
 
 `Content`  <a name="cfn-appconfig-configurationprofile-validators-content"></a>
-Either the JSON Schema content or an AWS Lambda function name\.  
+Either the JSON Schema content or the Amazon Resource Name \(ARN\) of an AWS Lambda function\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

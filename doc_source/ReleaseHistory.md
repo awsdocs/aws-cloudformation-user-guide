@@ -4,6 +4,68 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New resources](AWS_EC2.md) | The following resources were added: AWS::EC2::LocalGatewayRoute and AWS::EC2::LocalGatewayRouteTableVPCAssociation\. 
+
+ [AWS::EC2::LocalGatewayRoute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html)   
+Use the `LocalGatewayRoute` resource to associate the specified VPC with the specified local gateway route table\. 
+
+ [AWS::EC2::LocalGatewayRouteTableVPCAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html)   
+Use the `LocalGatewayRouteTableVPCAssociation` resource to associate the specified VPC with the specified local gateway route table\.  | February 14, 2020 | 
+| [Updated resources](AWS_Transfer.md) | The following resources were updated: AWS::Transfer::Server and AWS::Transfer::User\. 
+
+ [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `AddressAllocationIds` property to add a list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint\.  
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SubnetIds` property to add a list of subnet IDs that are required to host your SFTP server endpoint in your virtual private cloud \(VPC\)\.   
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `VpcId` property to add the VPC ID in which the SFTP server's endpoint will be hosted\.  
+
+ [AWS::Transfer::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)   
+Use the`HomeDirectoryMappings` property to set the logical directory mappings that specify what S3 paths and keys should be visible to your user and how to want to make them visible\.  
+Use the `HomeDirectoryType` property to set the type of landing directory \(folder\) you want your users' home directory to be when they log into the SFTP server\.  | February 13, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::Transfer::Server and AWS::Transfer::User\. 
+
+ [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type:  
++ Use the `AddressAllocationIds` property to add a list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint\.
++ Use the `SubnetIds` property to add a list of subnet IDs that are required to host your SFTP server endpoint in your virtual private cloud \(VPC\)\. 
++ Use the `VpcId` property to add the VPC ID in which the SFTP server's endpoint will be hosted\.  
+
+ [AWS::Transfer::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)   
+Use the `HomeDirectoryMappings` property to set the logical directory mappings that specify what S3 paths and keys should be visible to your user and how to want to make them visible\.  
+Use the `HomeDirectoryType` property to set the type of landing directory \(folder\) you want your users' home directory to be when they log into the SFTP server\.  | February 13, 2020 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::Config::ConformancePack, AWS::Config::OrganizationConformancePack, AWS::EC2::LocalGatewayRoute, AWS::EC2::LocalGatewayRouteTableVPCAssociation, AWS::FMS::NotificationChannel, and AWS::FMS::Policy 
+
+ [ AWS::Config::ConformancePack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html)   
+Use the `AWS::Config::ConformancePack` resource to create a Conformance Pack that is a collection of AWS Config rules that can be easily deployed in an account and a region and across AWS Organization\. 
+
+ [ AWS::Config::OrganizationConformancePack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html)   
+Use the `AWS::Config::OrganizationConformancePack` resource to create an OrganizationConformancePack that has information about conformance packs that AWS Config creates in the member accounts\. 
+
+ [AWS::EC2::LocalGatewayRoute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html)   
+Use the `LocalGatewayRoute` resource to associate the specified VPC with the specified local gateway route table\. 
+
+ [AWS::EC2::LocalGatewayRouteTableVPCAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html)   
+Use the `LocalGatewayRouteTableVPCAssociation` resource to associate the specified VPC with the specified local gateway route table\. 
+
+ [AWS::FMS::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html)   
+Use the `AWS::FMS::NotificationChannel` resource to designate the IAM role and Amazon Simple Notification Service \(SNS\) topic that AWS Firewall Manager uses to record SNS logs\. 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
+Use the `AWS::FMS::Policy` resource to specify an AWS Firewall Manager policy\.  | February 13, 2020 | 
+| [New resource ](AWS_Config.md) | The following resources was added: AWS::Config::ConformancePack 
+
+ [ AWS::Config::ConformancePack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html)   
+Use the `AWS::Config::ConformancePack` resource to create a Conformance Pack that is a collection of AWS Config rules that can be easily deployed in an account and a region and across AWS Organization\.  | February 13, 2020 | 
+| [New resource ](AWS_Config.md) | The following resources was added: AWS::Config::OrganizationConformancePack 
+
+ [ AWS::Config::OrganizationConformancePack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html)   
+Use the `AWS::Config::OrganizationConformancePack` resource to create an OrganizationConformancePack that has information about conformance packs that AWS Config creates in the member accounts\.  | February 13, 2020 | 
+| [New resource](AWS_FMS.md) | The following resources were added: AWS::FMS::NotificationChannel and AWS::FMS::Policy 
+
+ [AWS::FMS::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html)   
+Use the `AWS::FMS::NotificationChannel` resource to designate the IAM role and Amazon Simple Notification Service \(SNS\) topic that AWS Firewall Manager uses to record SNS logs\. 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
+Use the `AWS::FMS::Policy` resource to specify an AWS Firewall Manager policy\.  | February 13, 2020 | 
 | [AWS CloudFormation StackSets integrates with AWS Organizations](#ReleaseHistory) | Use StackSets to centrally manage deployments to all the accounts in your organization or specific organizational units \(OUs\) in AWS Organizations\. You will also be able to enable automatic deployments to any new accounts added to your organization or OUs\. The permissions needed to deploy across accounts will automatically be taken care of by the StackSets service\. For more information, see [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\. | February 11, 2020 | 
 | [Updated resources](AWS_EC2.md) | The following resources were updated: AWS::EC2::LaunchTemplate and AWS::EC2::ClientVpnEndpoint 
 
@@ -19,6 +81,10 @@ Use the `VpnPort` property to assign a port number for TCP and UDP traffic\.  | 
 
  [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
 When the property `xrayEnabled` is set to `TRUE`, X\-Ray tracing is enabled for this `GraphqlApi`\.  | February 6, 2020 | 
+| [Updated resource](AWS_CodeBuild.md) | The following resources was updated: AWS::CodeBuild::Project 
+
+ [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)   
+Use the `ProjectFileSystemLocation` property to specify a file system that your AWS CodeBuild build project mounts\. You use Amazon Elastic File System \(EFS\) to create the file system\. For more information, see [Amazon Elastic File System Sample for CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-efs.html)\.  | February 6, 2020 | 
 | [Updated resource](AWS_Cognito.md) | The following resource was updated: AWS::Cognito::UserPool 
 
  [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool.html)   

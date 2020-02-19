@@ -18,6 +18,8 @@
 + [AWS::EC2::Instance](aws-properties-ec2-instance.md)
 + [AWS::EC2::InternetGateway](aws-resource-ec2-internetgateway.md)
 + [AWS::EC2::LaunchTemplate](aws-resource-ec2-launchtemplate.md)
++ [AWS::EC2::LocalGatewayRoute](aws-resource-ec2-localgatewayroute.md)
++ [AWS::EC2::LocalGatewayRouteTableVPCAssociation](aws-resource-ec2-localgatewayroutetablevpcassociation.md)
 + [AWS::EC2::NatGateway](aws-resource-ec2-natgateway.md)
 + [AWS::EC2::NetworkAcl](aws-resource-ec2-network-acl.md)
 + [AWS::EC2::NetworkAclEntry](aws-resource-ec2-network-acl-entry.md)

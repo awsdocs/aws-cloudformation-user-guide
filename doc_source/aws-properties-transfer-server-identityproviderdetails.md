@@ -39,3 +39,7 @@ The `Url` parameter provides contains the location of the service endpoint used 
 *Type*: String  
 *Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
+
+[IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer for SFTP User Guide*\.

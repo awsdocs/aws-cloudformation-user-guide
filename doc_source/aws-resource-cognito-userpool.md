@@ -171,7 +171,7 @@ The policy associated with a user pool\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schema`  <a name="cfn-cognito-userpool-schema"></a>
-An array of schema attributes for the new user pool\. These attributes can be standard or custom attributes\.  
+The schema attributes for the new user pool\. These attributes can be standard or custom attributes\.  
  During a user pool update, you can add new schema attributes but you cannot modify or delete an existing schema attribute\.
 *Required*: No  
 *Type*: List of [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md)  

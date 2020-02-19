@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-identitypool-pushsync-properties"></a>
 
 `ApplicationArns`  <a name="cfn-cognito-identitypool-pushsync-applicationarns"></a>
-A list of Amazon SNS platform application ARNs that could be used by clients\.  
+The ARNs of the Amazon SNS platform applications that could be used by clients\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

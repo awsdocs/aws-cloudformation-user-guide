@@ -1,6 +1,6 @@
 # AWS::Transfer::User<a name="aws-resource-transfer-user"></a>
 
-Creates a user and associates them with an existing Secure File Transfer Protocol \(SFTP\) server\. You can only create and associate users with SFTP servers that have the `IdentityProviderType` set to `SERVICE_MANAGED`\. Using parameters for `CreateUser`, you can specify the user name, set the home directory, store the user's public key, and assign the user's AWS Identity and Access Management \(IAM\) role\. You can also optionally add a scope\-down policy, and assign metadata with tags that can be used to group and search for users\.
+The `AWS::Transfer::User` resource creates a user and associates them with an existing Secure File Transfer Protocol \(SFTP\) server\. You can only create and associate users with SFTP servers that have the `IdentityProviderType` set to `SERVICE_MANAGED`\. Using parameters for `CreateUser`, you can specify the user name, set the home directory, store the user's public key, and assign the user's AWS Identity and Access Management \(IAM\) role\. You can also optionally add a scope\-down policy, and assign metadata with tags that can be used to group and search for users\.
 
 ## Syntax<a name="aws-resource-transfer-user-syntax"></a>
 
@@ -56,16 +56,17 @@ An example is <`your-Amazon-S3-bucket-name>/home/username`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryMappings`  <a name="cfn-transfer-user-homedirectorymappings"></a>
-Logical directory mappings that you specified for what S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your AWS IAM Role provides access to paths in `Target`\.  
+Logical directory mappings that specify what S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your AWS IAM Role provides access to paths in `Target`\. The following is an example\.  
+ `'[ "/bucket2/documentation", { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]'`   
 In most cases, you can use this value instead of the scope down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.   
-In most cases, you can use this value instead of the scope down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
+If the target of a logical directory entry does not exist in S3, the entry will be ignored\. As a workaround, you can use the S3 api to create 0 byte objects as place holders for your directory\. If using the CLI, use the s3api call instead of s3 so you can use the put\-object operation\. For example, you use the following: `aws s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a / for it to be considered a folder\. 
 *Required*: No  
 *Type*: List of [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryType`  <a name="cfn-transfer-user-homedirectorytype"></a>
-The type of landing directory \(folder\) you mapped for your users' to see when they log into the SFTP server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket paths as is in their SFTP clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make S3 paths visible to your user\.  
+The type of landing directory \(folder\) you want your users' home directory to be when they log into the SFTP server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket paths as is in their SFTP clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make S3 paths visible to your user\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `LOGICAL | PATH`  
@@ -126,7 +127,7 @@ A unique string that identifies a user and is associated with a server as specif
 
 ### Ref<a name="aws-resource-transfer-user-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the username, such as `sftp_user`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the username, such as `sftp_user`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -149,3 +150,81 @@ An example `ServerId` is `s-01234567890abcdef`\.
 `UserName`  <a name="UserName-fn::getatt"></a>
 A unique string that identifies a user account associated with an SFTP server\.  
 An example `UserName` is `sftp-user-1`\.
+
+## Examples<a name="aws-resource-transfer-user--examples"></a>
+
+### SFTP Server User<a name="aws-resource-transfer-user--examples--SFTP_Server_User"></a>
+
+The following example associates a user with an SFTP server\.
+
+#### JSON<a name="aws-resource-transfer-user--examples--SFTP_Server_User--json"></a>
+
+```
+{
+  "sftp_user": {
+    "Type": "AWS::Transfer::Server",
+    "Properties": {
+      "HomeDirectoryMappings": [
+        {
+          "Entry": "our-personal-report.pdf"
+        },
+        {
+          "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf"
+        }
+      ],
+      "HomeDirectoryType": "LOGICAL",
+      "Policy": {
+        "Version": "2012-10-17T00:00:00.000Z",
+        "Statement": {
+          "Sid": "AllowFullAccessToBucket",
+          "Action": "s3:*",
+          "Effect": "Allow",
+          "Resource": "arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*"
+        }
+      },
+      "Role": "arn:aws:iam::176354371281:role/SFTP_role",
+      "ServerId": "s-01234567890abcdef",
+      "SshPublicKeys": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6",
+      "Tags": [
+        {
+          "Key": "Group",
+          "Value": "UserGroup1"
+        }
+      ],
+      "UserName": "sftp_user"
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-transfer-user--examples--SFTP_Server_User--yaml"></a>
+
+```
+sftp_user:
+  Type : AWS::Transfer::Server
+  Properties :
+    HomeDirectoryMappings: 
+      - Entry: our-personal-report.pdf
+      - Target: /bucket3/customized-reports/${transfer:UserName}.pdf
+    HomeDirectoryType: LOGICAL
+    Policy:
+      Version: 2012-10-17
+      Statement:
+        Sid: AllowFullAccessToBucket
+        Action: s3:*
+        Effect: Allow
+        Resource:
+          arn:aws:s3:::bucket_name
+          arn:aws:s3:::bucket_name/*
+    Role: arn:aws:iam::176354371281:role/SFTP_role
+    ServerId: s-01234567890abcdef
+    SshPublicKeys: AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
+    Tags:
+      - Key: Group
+        Value: UserGroup1
+    UserName: sftp_user
+```
+
+## See Also<a name="aws-resource-transfer-user--seealso"></a>
+
+[CreateUser](https://docs.aws.amazon.com/transfer/latest/userguide/API_CreateUser.html) in the *AWS Transfer for SFTP User Guide*\.

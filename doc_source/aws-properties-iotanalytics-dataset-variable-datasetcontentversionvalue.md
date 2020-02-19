@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset DatasetContentVersionValue<a name="aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue"></a>
 
-The data set whose latest contents are used as input to the notebook or application\.
+The dataset whose latest contents are used as input to the notebook or application\.
 
 ## Syntax<a name="aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue-properties"></a>
 
 `DatasetName`  <a name="cfn-iotanalytics-dataset-variable-datasetcontentversionvalue-datasetname"></a>
-The name of the data set whose latest contents are used as input to the notebook or application\.  
+The name of the dataset whose latest contents are used as input to the notebook or application\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

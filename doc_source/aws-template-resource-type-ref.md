@@ -63,6 +63,7 @@ service-provider::service-name::data-type-name
 + [ElasticLoadBalancingV2](AWS_ElasticLoadBalancingV2.md)
 + [Amazon EMR](AWS_EMR.md)
 + [EventSchemas](AWS_EventSchemas.md)
++ [FMS](AWS_FMS.md)
 + [FSx](AWS_FSx.md)
 + [GameLift](AWS_GameLift.md)
 + [AWS Glue](AWS_Glue.md)
