@@ -47,7 +47,7 @@ The action that AWS WAF should take on a web request when it matches the rule's 
 
 `Name`  <a name="cfn-wafv2-webacl-rule-name"></a>
 A friendly name of the rule\. You can't change the name of a `Rule` after you create it\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
