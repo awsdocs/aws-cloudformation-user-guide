@@ -46,6 +46,6 @@ A friendly name of the CloudWatch metric\. The name can contain only alphanumeri
 
 `SampledRequestsEnabled`  <a name="cfn-wafv2-webacl-visibilityconfig-sampledrequestsenabled"></a>
 A boolean indicating whether AWS WAF should store a sampling of the web requests that match the rules\. You can view the sampled requests through the AWS WAF console\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
