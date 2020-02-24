@@ -139,14 +139,35 @@ The following example sets roles for an identity pool\. It sets “authenticated
 
 #### YAML<a name="aws-resource-cognito-identitypoolroleattachment--examples--Setting_the_roles_for_an_identity_pool--yaml"></a>
 
-```
-IdentityPoolRoleAttachment: Type:
-        AWS::Cognito::IdentityPoolRoleAttachment Properties: IdentityPoolId: !Ref IdentityPool
-        Roles: "authenticated": !GetAtt AuthenticatedRole.Arn "unauthenticated": !GetAtt
-        UnAuthenticatedRole.Arn RoleMappings: "graph.facebook.com": IdentityProvider:
-        "graph.facebook.com" AmbiguousRoleResolution: Deny Type: Rules RulesConfiguration: Rules: -
-        Claim: "sub" MatchType: "Equals" RoleARN: !GetAtt AuthenticatedRole.Arn Value: "goodvalue"
-        "userpool1": IdentityProvider: !Ref CognitoUserPool AmbiguousRoleResolution: Deny Type:
-        Rules RulesConfiguration: Rules: - Claim: "sub" MatchType: "Equals" RoleARN: !GetAtt
-        AuthenticatedRole.Arn Value: "goodvalue"
+``` YAML
+IdentityPoolRoleAttachment:
+  Type: AWS::Cognito::IdentityPoolRoleAttachment
+  Properties:
+    IdentityPoolId:
+      Ref: IdentityPool
+    Roles:
+      authenticated: !GetAtt AuthenticatedRole.Arn
+      unauthenticated: !GetAtt UnAuthenticatedRole.Arn
+    RoleMappings:
+      graph.facebook.com:
+        IdentityProvider: graph.facebook.com
+        AmbiguousRoleResolution: Deny
+        Type: Rules
+        RulesConfiguration:
+          Rules:
+          - Claim: sub
+            MatchType: Equals
+            RoleARN: !GetAtt AuthenticatedRole.Arn
+            Value: goodvalue
+      userpool1:
+        IdentityProvider:
+          Ref: CognitoUserPool
+        AmbiguousRoleResolution: Deny
+        Type: Rules
+        RulesConfiguration:
+          Rules:
+          - Claim: sub
+            MatchType: Equals
+            RoleARN: !GetAtt AuthenticatedRole.Arn
+            Value: goodvalue
 ```
