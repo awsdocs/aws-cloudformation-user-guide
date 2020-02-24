@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::IdentityPoolRoleAttachment
-Properties: 
+Properties:
   [IdentityPoolId](#cfn-cognito-identitypoolroleattachment-identitypoolid): String
   [RoleMappings](#cfn-cognito-identitypoolroleattachment-rolemappings): Json
   [Roles](#cfn-cognito-identitypoolroleattachment-roles): Json
@@ -32,22 +32,22 @@ Properties:
 ## Properties<a name="aws-resource-cognito-identitypoolroleattachment-properties"></a>
 
 `IdentityPoolId`  <a name="cfn-cognito-identitypoolroleattachment-identitypoolid"></a>
-An identity pool ID in the format `REGION:GUID`\.  
-*Required*: Yes  
-*Type*: String  
+An identity pool ID in the format `REGION:GUID`\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleMappings`  <a name="cfn-cognito-identitypoolroleattachment-rolemappings"></a>
-How users for a specific identity provider are mapped to roles\. This is a string to the `RoleMapping` object map\. The string identifies the identity provider\. For example: "graph\.facebook\.com" or "cognito\-idp\.us\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id"\.  
-If the `IdentityProvider` field isn't provided in this object, the string is used as the identity provider name\.  
-*Required*: No  
-*Type*: Json  
+How users for a specific identity provider are mapped to roles\. This is a string to the `RoleMapping` object map\. The string identifies the identity provider\. For example: "graph\.facebook\.com" or "cognito\-idp\.us\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id"\.
+If the `IdentityProvider` field isn't provided in this object, the string is used as the identity provider name\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Roles`  <a name="cfn-cognito-identitypoolroleattachment-roles"></a>
-The map of the roles associated with this pool\. For a given role, the key is either "authenticated" or "unauthenticated"\. The value is the role ARN\.  
-*Required*: No  
-*Type*: Json  
+The map of the roles associated with this pool\. For a given role, the key is either "authenticated" or "unauthenticated"\. The value is the role ARN\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
@@ -143,8 +143,7 @@ The following example sets roles for an identity pool\. It sets “authenticated
 IdentityPoolRoleAttachment:
   Type: AWS::Cognito::IdentityPoolRoleAttachment
   Properties:
-    IdentityPoolId:
-      Ref: IdentityPool
+    IdentityPoolId: !Ref IdentityPool
     Roles:
       authenticated: !GetAtt AuthenticatedRole.Arn
       unauthenticated: !GetAtt UnAuthenticatedRole.Arn
@@ -160,8 +159,7 @@ IdentityPoolRoleAttachment:
             RoleARN: !GetAtt AuthenticatedRole.Arn
             Value: goodvalue
       userpool1:
-        IdentityProvider:
-          Ref: CognitoUserPool
+        IdentityProvider: !Ref CognitoUserPool
         AmbiguousRoleResolution: Deny
         Type: Rules
         RulesConfiguration:
