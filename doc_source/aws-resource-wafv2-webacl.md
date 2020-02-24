@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-wafv2-webacl-name)" : String,
       "[Rules](#cfn-wafv2-webacl-rules)" : [Rules](aws-properties-wafv2-webacl-rules.md),
       "[Scope](#cfn-wafv2-webacl-scope)" : String,
-      "[Tags](#cfn-wafv2-webacl-tags)" : [TagList](aws-properties-wafv2-webacl-taglist.md),
+      "[Tags](#cfn-wafv2-webacl-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
     }
 }
@@ -39,7 +39,7 @@ Properties:
     [Rules](aws-properties-wafv2-webacl-rules.md)
   [Scope](#cfn-wafv2-webacl-scope): String
   [Tags](#cfn-wafv2-webacl-tags): 
-    [TagList](aws-properties-wafv2-webacl-taglist.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig): 
     [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
 ```
@@ -85,7 +85,7 @@ Specifies whether this is for an AWS CloudFront distribution or for a regional a
 `Tags`  <a name="cfn-wafv2-webacl-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-wafv2-webacl-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibilityConfig`  <a name="cfn-wafv2-webacl-visibilityconfig"></a>
