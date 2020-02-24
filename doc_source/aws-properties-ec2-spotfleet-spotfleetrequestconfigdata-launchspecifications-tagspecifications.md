@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications-properties"></a>
 
 `ResourceType`  <a name="cfn-ec2-spotfleet-spotfleettagspecification-resourcetype"></a>
-The type of resource\. Currently, the only resource types that are supported are `spot-fleet-request` and `instance`\.  
+The type of resource\. Currently, the only resource type that is supported is `instance`\. To tag the Spot Fleet request on creation, use the `TagSpecifications` parameter in [ `SpotFleetRequestConfigData` ](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotFleetRequestConfigData.html)\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `client-vpn-endpoint | customer-gateway | dedicated-host | dhcp-options | elastic-ip | fleet | fpga-image | host-reservation | image | instance | internet-gateway | key-pair | launch-template | natgateway | network-acl | network-interface | placement-group | reserved-instances | route-table | security-group | snapshot | spot-fleet-request | spot-instances-request | subnet | traffic-mirror-filter | traffic-mirror-session | traffic-mirror-target | transit-gateway | transit-gateway-attachment | transit-gateway-multicast-domain | transit-gateway-route-table | volume | vpc | vpc-peering-connection | vpn-connection | vpn-gateway`  

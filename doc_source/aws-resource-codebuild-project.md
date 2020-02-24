@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-codebuild-project-description)" : String,
       "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
       "[Environment](#cfn-codebuild-project-environment)" : [Environment](aws-properties-codebuild-project-environment.md),
+      "[FileSystemLocations](#cfn-codebuild-project-filesystemlocations)" : [ [ProjectFileSystemLocation](aws-properties-codebuild-project-projectfilesystemlocation.md), ... ],
       "[LogsConfig](#cfn-codebuild-project-logsconfig)" : [LogsConfig](aws-properties-codebuild-project-logsconfig.md),
       "[Name](#cfn-codebuild-project-name)" : String,
       "[QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes)" : Integer,
@@ -49,6 +50,8 @@ Properties:
   [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
   [Environment](#cfn-codebuild-project-environment): 
     [Environment](aws-properties-codebuild-project-environment.md)
+  [FileSystemLocations](#cfn-codebuild-project-filesystemlocations): 
+    - [ProjectFileSystemLocation](aws-properties-codebuild-project-projectfilesystemlocation.md)
   [LogsConfig](#cfn-codebuild-project-logsconfig): 
     [LogsConfig](aws-properties-codebuild-project-logsconfig.md)
   [Name](#cfn-codebuild-project-name): String
@@ -114,6 +117,12 @@ A description that makes the build project easy to identify\.
  The build environment settings for the project, such as the environment type or the environment variables to use for the build environment\.   
 *Required*: Yes  
 *Type*: [Environment](aws-properties-codebuild-project-environment.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FileSystemLocations`  <a name="cfn-codebuild-project-filesystemlocations"></a>
+ An array of `ProjectFileSystemLocation` objects for a CodeBuild build project\. A `ProjectFileSystemLocation` object specifies the `identifier`, `location`, `mountOptions`, `mountPoint`, and `type` of a file system created using Amazon Elastic File System\.   
+*Required*: No  
+*Type*: List of [ProjectFileSystemLocation](aws-properties-codebuild-project-projectfilesystemlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogsConfig`  <a name="cfn-codebuild-project-logsconfig"></a>

@@ -2,7 +2,7 @@
 
 The period of time during which a certificate issued by your private certificate authority \(CA\) is valid\. The expiration can be absolute \(expressed as an explicit date and time\) or relative \(expressed as a period of time after issuance in days, months, or years\)\. For more information, see [Validity](https://tools.ietf.org/html/rfc5280#section-4.1.2.5) in RFC 5280\.
 
-You can issue a certificate by calling the IssueCertificate action\.
+You can issue a certificate by calling the [IssueCertificate](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html) action\.
 
 ## Syntax<a name="aws-properties-acmpca-certificate-validity-syntax"></a>
 

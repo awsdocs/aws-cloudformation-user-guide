@@ -35,7 +35,12 @@ Properties:
 ## Properties<a name="aws-resource-ssm-document-properties"></a>
 
 `Content`  <a name="cfn-ssm-document-content"></a>
-A valid JSON or YAML string\.  
+The content for the new SSM document, in valid JSON or YAML format\.  
+We recommend storing the contents for your new document in an external JSON or YAML file and referencing the file in a command\.  
+For examples, see the following topics in the *AWS Systems Manager User Guide*\.  
++  [Create an SSM Document \(AWS API\)](https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html) 
++  [Create an SSM Document \(AWS CLI\)](https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html) 
++  [Create an SSM Document \(Tools for Windows PowerShell\)](https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-ps.html) 
 *Required*: Yes  
 *Type*: Json  
 *Minimum*: `1`  

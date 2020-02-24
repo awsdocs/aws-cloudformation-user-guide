@@ -3,11 +3,11 @@
 When you build a CodePipeline pipeline, you add a `Deploy` action to the pipeline with AWS CloudFormation as a provider\. You then must specify which AWS CloudFormation action the pipeline invokes and the action's settings\. This topic describes the AWS CloudFormation configuration properties\. To specify properties, you can use the CodePipeline console, or you can create a [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) to use for the AWS CLI, CodePipeline API, or AWS CloudFormation templates\.
 
 **Topics**
-+ [Configuration Properties \(Console\)](#w5635ab1c13c14b7)
-+ [Configuration Properties \(JSON Object\)](#w5635ab1c13c14b9)
-+ [See Also](#w5635ab1c13c14c13)
++ [Configuration Properties \(Console\)](#w5653ab1c13c14b7)
++ [Configuration Properties \(JSON Object\)](#w5653ab1c13c14b9)
++ [See Also](#w5653ab1c13c14c13)
 
-## Configuration Properties \(Console\)<a name="w5635ab1c13c14b7"></a>
+## Configuration Properties \(Console\)<a name="w5653ab1c13c14b7"></a>
 
 The CodePipeline [console](https://console.aws.amazon.com/codepipeline/) shows the configuration properties and indicates the properties that are required based on the action mode that you choose\.
 
@@ -59,7 +59,7 @@ The following example defines a value for the `ParameterName` parameter by using
 }
 ```
 
-## Configuration Properties \(JSON Object\)<a name="w5635ab1c13c14b9"></a>
+## Configuration Properties \(JSON Object\)<a name="w5653ab1c13c14b9"></a>
 
 When you specify `CloudFormation` as a provider for a stage action, define the following properties in the `Configuration` property\. Use the [JSON object](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-pipelines.html#how-to-create-pipeline-cli) for the AWS CLI, CodePipeline API, or AWS CloudFormation templates\. For examples, see [Walkthrough: Building a Pipeline for Test and Production Stacks](continuous-delivery-codepipeline-basic-walkthrough.md) and [AWS CloudFormation Configuration Properties Reference](#continuous-delivery-codepipeline-action-reference)\.
 
@@ -176,7 +176,7 @@ This property is optional\.
 ```
 This property is required for the following action modes: `CREATE_UPDATE`, `REPLACE_ON_FAILURE`, and `CHANGE_SET_REPLACE`\. For all other action modes, this property is ignored\.
 
-## See Also<a name="w5635ab1c13c14c13"></a>
+## See Also<a name="w5653ab1c13c14c13"></a>
 
 The following related resources can help you as you work with these parameters\.
 + For more information about the AWS CloudFormation action parameters in CodePipeline, see the [AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CloudFormation.html) action configuration reference in the *AWS CodePipeline User Guide*\.

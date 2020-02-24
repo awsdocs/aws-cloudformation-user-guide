@@ -60,7 +60,7 @@ Name inserted into the certificate **CRL Distribution Points** extension that en
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-enabled"></a>
-Boolean value that specifies whether certificate revocation lists \(CRLs\) are enabled\. You can use this value to enable certificate revocation for a new CA when you call the CreateCertificateAuthority action or for an existing CA when you call the UpdateCertificateAuthority action\.   
+Boolean value that specifies whether certificate revocation lists \(CRLs\) are enabled\. You can use this value to enable certificate revocation for a new CA when you call the [CreateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CreateCertificateAuthority.html) action or for an existing CA when you call the [UpdateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html) action\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -74,7 +74,7 @@ Number of days until a certificate expires\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketName`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname"></a>
-Name of the S3 bucket that contains the CRL\. If you do not provide a value for the **CustomCname** argument, the name of your S3 bucket is placed into the **CRL Distribution Points** extension of the issued certificate\. You can change the name of your bucket by calling the UpdateCertificateAuthority action\. You must specify a bucket policy that allows ACM Private CA to write the CRL to your bucket\.  
+Name of the S3 bucket that contains the CRL\. If you do not provide a value for the **CustomCname** argument, the name of your S3 bucket is placed into the **CRL Distribution Points** extension of the issued certificate\. You can change the name of your bucket by calling the [UpdateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html) action\. You must specify a bucket policy that allows ACM Private CA to write the CRL to your bucket\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  

@@ -29,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SmsConfiguration](#cfn-cognito-userpool-smsconfiguration)" : [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md),
       "[SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage)" : String,
       "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)" : [ String, ... ],
+      "[UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration)" : [UsernameConfiguration](aws-properties-cognito-userpool-usernameconfiguration.md),
       "[UserPoolAddOns](#cfn-cognito-userpool-userpooladdons)" : [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md),
       "[UserPoolName](#cfn-cognito-userpool-userpoolname)" : String,
       "[UserPoolTags](#cfn-cognito-userpool-userpooltags)" : Json,
@@ -71,6 +72,8 @@ Properties:
   [SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage): String
   [UsernameAttributes](#cfn-cognito-userpool-usernameattributes): 
     - String
+  [UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration): 
+    [UsernameConfiguration](aws-properties-cognito-userpool-usernameconfiguration.md)
   [UserPoolAddOns](#cfn-cognito-userpool-userpooladdons): 
     [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)
   [UserPoolName](#cfn-cognito-userpool-userpoolname): String
@@ -207,6 +210,12 @@ Determines whether email addresses or phone numbers can be specified as user nam
 This user pool property cannot be updated\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UsernameConfiguration`  <a name="cfn-cognito-userpool-usernameconfiguration"></a>
+You can choose to set case sensitivity on the username input for the selected sign\-in option\. For example, when this is set to `False`, users will be able to sign in using either "username" or "Username"\. This configuration is immutable once it has been set\.  
+*Required*: No  
+*Type*: [UsernameConfiguration](aws-properties-cognito-userpool-usernameconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolAddOns`  <a name="cfn-cognito-userpool-userpooladdons"></a>

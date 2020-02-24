@@ -109,7 +109,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
-The maximum amount of time to gather records before invoking the function, in seconds\.  
+\(Streams\) The maximum amount of time to gather records before invoking the function, in seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

@@ -10,9 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[DeploymentType](#cfn-fsx-filesystem-lustreconfiguration-deploymenttype)" : String,
   "[ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath)" : String,
   "[ImportedFileChunkSize](#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize)" : Integer,
   "[ImportPath](#cfn-fsx-filesystem-lustreconfiguration-importpath)" : String,
+  "[PerUnitStorageThroughput](#cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput)" : Integer,
   "[WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime)" : String
 }
 ```
@@ -20,13 +22,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-fsx-filesystem-lustreconfiguration-syntax.yaml"></a>
 
 ```
+  [DeploymentType](#cfn-fsx-filesystem-lustreconfiguration-deploymenttype): String
   [ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath): String
   [ImportedFileChunkSize](#cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize): Integer
   [ImportPath](#cfn-fsx-filesystem-lustreconfiguration-importpath): String
+  [PerUnitStorageThroughput](#cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput): Integer
   [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime): String
 ```
 
 ## Properties<a name="aws-properties-fsx-filesystem-lustreconfiguration-properties"></a>
+
+`DeploymentType`  <a name="cfn-fsx-filesystem-lustreconfiguration-deploymenttype"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExportPath`  <a name="cfn-fsx-filesystem-lustreconfiguration-exportpath"></a>
 \(Optional\) The path in Amazon S3 where the root of your Amazon FSx file system is exported\. The path must use the same Amazon S3 bucket as specified in ImportPath\. You can provide an optional prefix to which new and changed data is to be exported from your Amazon FSx for Lustre file system\. If an `ExportPath` value is not provided, Amazon FSx sets a default export path, `s3://import-bucket/FSxLustre[creation-timestamp]`\. The timestamp is in UTC format, for example `s3://import-bucket/FSxLustre20181105T222312Z`\.  
@@ -54,6 +64,12 @@ The chunk size default is 1,024 MiB \(1 GiB\) and can go as high as 512,000 MiB 
 *Minimum*: `3`  
 *Maximum*: `900`  
 *Pattern*: `^.{3,900}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PerUnitStorageThroughput`  <a name="cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WeeklyMaintenanceStartTime`  <a name="cfn-fsx-filesystem-lustreconfiguration-weeklymaintenancestarttime"></a>

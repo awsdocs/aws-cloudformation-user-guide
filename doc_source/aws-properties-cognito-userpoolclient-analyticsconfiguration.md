@@ -2,6 +2,9 @@
 
 The Amazon Pinpoint analytics configuration for collecting metrics for a user pool\.
 
+**Note**  
+Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East \(N\. Virginia\) us\-east\-1 Region, regardless of the region in which the user pool resides\.
+
 ## Syntax<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

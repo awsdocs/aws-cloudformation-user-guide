@@ -47,6 +47,25 @@ Make sure you grant the `cloudformation.amazonaws.com` service these permissions
 
 For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 
+In addition, both the [execution role](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) and the [logging role](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) you specify when registering the resource provider must specify a trust relationship that allows the CloudFormation service principal to assume that role\. For example:
+
+```
+  {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "Service": "resources.cloudformation.amazonaws.com"
+        },
+        "Action": "sts:AssumeRole"
+      }
+    ]
+  }
+```
+
+For more information, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *AWS Identity and Access Management User Guide*\.
+
 **To Register a Resource Provider Using the AWS CLI**
 
 1. Locate the S3 bucket that contains the resource provider package for the resource provider you want to register in your account\.
