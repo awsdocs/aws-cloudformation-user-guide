@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)" : String,
   "[SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)" : String
+  "[PrivateIPv4Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)" : String
 }
 ```
 
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid): String
   [SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid): String
+  [PrivateIPv4Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-properties"></a>
@@ -33,5 +35,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `SubnetId`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid"></a>
 The ID of the subnet\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PrivateIPv4Address` <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address"></a>
+\[Network Load Balancers\] The CIDR of a private address for an internal\-facing load balancer\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
