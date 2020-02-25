@@ -246,10 +246,10 @@ Resources:
       Tags:
       - Key: Role
         Value: Test Instance
-UserData:
-  Fn::Base64: !Sub |
-    #!/bin/bash -xe
-    yum install ec2-net-utils -y
-    ec2ifup eth1
-    service httpd start
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -xe
+          yum install ec2-net-utils -y
+          ec2ifup eth1
+          service httpd start
 ```
