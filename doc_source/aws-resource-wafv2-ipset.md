@@ -3,7 +3,7 @@
 **Note**  
 This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
-Use an [AWS::WAFv2::IPSet](#aws-resource-wafv2-ipset) to identify web requests that originate from specific IP addresses or ranges of IP addresses\. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can configure AWS WAF to block them using an IP set that lists those IP addresses\. 
+The `AWS::WAFv2::IPSet` is used to identify web requests that originate from specific IP addresses or ranges of IP addresses\. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can configure AWS WAF to block them using an IP set that lists those IP addresses\. 
 
 You use an IP set by providing its Amazon Resource Name \(ARN\) to the rule statement `IPSetReferenceStatement`, when you add a rule to a rule group or web ACL\. 
 
@@ -17,12 +17,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::IPSet",
   "Properties" : {
-      "[Addresses](#cfn-wafv2-ipset-addresses)" : [IPAddresses](aws-properties-wafv2-ipset-ipaddresses.md),
+      "[Addresses](#cfn-wafv2-ipset-addresses)" : [ String, ... ],
       "[Description](#cfn-wafv2-ipset-description)" : String,
       "[IPAddressVersion](#cfn-wafv2-ipset-ipaddressversion)" : String,
       "[Name](#cfn-wafv2-ipset-name)" : String,
       "[Scope](#cfn-wafv2-ipset-scope)" : String,
-      "[Tags](#cfn-wafv2-ipset-tags)" : [TagList](aws-properties-wafv2-ipset-taglist.md)
+      "[Tags](#cfn-wafv2-ipset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],      
     }
 }
 ```
@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFv2::IPSet
 Properties: 
   [Addresses](#cfn-wafv2-ipset-addresses): 
-    [IPAddresses](aws-properties-wafv2-ipset-ipaddresses.md)
+    - String
   [Description](#cfn-wafv2-ipset-description): String
   [IPAddressVersion](#cfn-wafv2-ipset-ipaddressversion): String
   [Name](#cfn-wafv2-ipset-name): String
   [Scope](#cfn-wafv2-ipset-scope): String
   [Tags](#cfn-wafv2-ipset-tags): 
-    [TagList](aws-properties-wafv2-ipset-taglist.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-wafv2-ipset-properties"></a>
@@ -53,7 +53,7 @@ Examples:
 + To configure AWS WAF to allow, block, or count requests that originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify `1111:0000:0000:0000:0000:0000:0000:0000/64`\.
 For more information about CIDR notation, see the Wikipedia entry [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)\.  
 *Required*: Yes  
-*Type*: [IPAddresses](aws-properties-wafv2-ipset-ipaddresses.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-wafv2-ipset-description"></a>
@@ -90,7 +90,7 @@ Specifies whether this is for an AWS CloudFront distribution or for a regional a
 `Tags`  <a name="cfn-wafv2-ipset-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-wafv2-ipset-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-wafv2-ipset-return-values"></a>

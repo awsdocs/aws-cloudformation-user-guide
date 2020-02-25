@@ -1973,8 +1973,6 @@ Amazon's trademarks and trade dress may not be used in
             + [AWS::WAF::XssMatchSet XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)
       + [WAFv2 Resource Type Reference](AWS_WAFv2.md)
          + [AWS::WAFv2::IPSet](aws-resource-wafv2-ipset.md)
-            + [AWS::WAFv2::IPSet IPAddresses](aws-properties-wafv2-ipset-ipaddresses.md)
-            + [AWS::WAFv2::IPSet TagList](aws-properties-wafv2-ipset-taglist.md)
          + [AWS::WAFv2::RegexPatternSet](aws-resource-wafv2-regexpatternset.md)
             + [AWS::WAFv2::RegexPatternSet Regex](aws-properties-wafv2-regexpatternset-regex.md)
             + [AWS::WAFv2::RegexPatternSet RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)
