@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-wafv2-regexpatternset-name)" : String,
       "[RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist)" : [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md),
       "[Scope](#cfn-wafv2-regexpatternset-scope)" : String,
-      "[Tags](#cfn-wafv2-regexpatternset-tags)" : [TagList](aws-properties-wafv2-regexpatternset-taglist.md)
+      "[Tags](#cfn-wafv2-regexpatternset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
     }
 }
 ```
@@ -37,7 +37,7 @@ Properties:
     [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)
   [Scope](#cfn-wafv2-regexpatternset-scope): String
   [Tags](#cfn-wafv2-regexpatternset-tags): 
-    [TagList](aws-properties-wafv2-regexpatternset-taglist.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-wafv2-regexpatternset-properties"></a>
@@ -75,7 +75,7 @@ Specifies whether this is for an AWS CloudFront distribution or for a regional a
 `Tags`  <a name="cfn-wafv2-regexpatternset-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-wafv2-regexpatternset-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-wafv2-regexpatternset-return-values"></a>

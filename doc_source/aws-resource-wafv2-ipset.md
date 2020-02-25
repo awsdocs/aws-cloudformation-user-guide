@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IPAddressVersion](#cfn-wafv2-ipset-ipaddressversion)" : String,
       "[Name](#cfn-wafv2-ipset-name)" : String,
       "[Scope](#cfn-wafv2-ipset-scope)" : String,
-      "[Tags](#cfn-wafv2-ipset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],      
+      "[Tags](#cfn-wafv2-ipset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
     }
 }
 ```
