@@ -358,9 +358,9 @@ This example shows an Outputs section with two output assignments\. One is based
 ```
 1. Outputs:
 2.   SNSTopic:
-3.     Value: Ref: MyNotificationTopic
+3.     Value: !Ref MyNotificationTopic
 4.   StackName:
-5.     Value: Ref: AWS::StackName
+5.     Value: !Ref AWS::StackName
 ```
 
 ## Outputs Section with an Output Based on a Function, a Literal String, a Reference, and a Pseudo Parameter<a name="scenario-output-with-complex-spec"></a>
