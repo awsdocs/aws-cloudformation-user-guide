@@ -380,7 +380,7 @@ The following example creates a SAML identity provider "YourProviderName" in the
          },
          "ProviderType": "SAML",
          "AttributeMapping": {
-            "Email": "Attribute"
+            "email": "Attribute"
          },
          "IdpIdentifiers": [
             "IdpIdentifier"
@@ -402,7 +402,7 @@ UserPoolIdentityProvider:
       MetadataURL: "YourMetadataURL"
     ProviderType: "SAML"
     AttributeMapping:
-      Email: "Attribute"
+      email: "Attribute"
     IdpIdentifiers:
       - "IdpIdentifier"
 ```
