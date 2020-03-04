@@ -299,7 +299,7 @@ Windows containers can mount whole directories on the same drive as `$env:Progra
 
 `Name`  <a name="cfn-ecs-taskdefinition-containerdefinition-name"></a>
 The name of a container\. If you are linking multiple containers together in a task definition, the `name` of one container can be entered in the `links` of another container to connect the containers\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. This parameter maps to `name` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--name` option to [docker run](https://docs.docker.com/engine/reference/run/)\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
