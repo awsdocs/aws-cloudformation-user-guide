@@ -128,7 +128,52 @@ Optional metadata that you assign to a resource in the form of an arbitrary set 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+## Examples<a name="aws-resource-ssm-maintenancewindow--examples"></a>
+
+### AWS Systems Manager Maintenance Window Example<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example"></a>
+
+The following example creates a Systems Manager maintenance window that runs for two hours with a one hour cutoff every Sunday at 04:00 AM US Eastern Time\. The maintenance window also doesn't allow unregistered targets\.
+
+#### JSON<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example--json"></a>
+
+```
+{
+    "Resources": {
+        "MaintenanceWindow": {
+            "Type": "AWS::SSM::MaintenanceWindow",
+            "Properties": {
+                "AllowUnassociatedTargets": false,
+                "Cutoff": 1,
+                "Description": "Maintenance Window to update SSM Agent",
+                "Duration": 2,
+                "Name": "UpdateSSMAgentMaintenanceWindow",
+                "Schedule": "cron(0 4 ? * SUN *)",
+                "ScheduleTimezone": "US/Eastern"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example--yaml"></a>
+
+```
+---
+Resources:
+  MaintenanceWindow:
+    Type: AWS::SSM::MaintenanceWindow
+    Properties:
+      AllowUnassociatedTargets: false
+      Cutoff: 1
+      Description: Maintenance Window to update SSM Agent
+      Duration: 2
+      Name: UpdateSSMAgentMaintenanceWindow
+      Schedule: cron(0 4 ? * SUN *)
+      ScheduleTimezone: US/Eastern
+```
+
 ## See Also<a name="aws-resource-ssm-maintenancewindow--seealso"></a>
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
 +  [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) 
-+  [CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference* 
++  [CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference\.* 
++  [Reference: Cron and Rate Expressions for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html) 

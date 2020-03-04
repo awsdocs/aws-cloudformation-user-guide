@@ -2,7 +2,7 @@
 
 Creates a virtual node within a service mesh\.
 
-A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment\. When you create a virtual node, you must specify the DNS service discovery hostname for your task group\.
+A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment\. When you create a virtual node, you can specify the service discovery information for your task group\.
 
 Any inbound traffic that your virtual node expects should be specified as a `listener`\. Any outbound traffic that your virtual node expects to reach should be specified as a `backend`\.
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualnode-meshname)" : String,
       "[Spec](#cfn-appmesh-virtualnode-spec)" : [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md),
-      "[Tags](#cfn-appmesh-virtualnode-tags)" : [ [TagRef](aws-properties-appmesh-virtualnode-tagref.md), ... ],
+      "[Tags](#cfn-appmesh-virtualnode-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename)" : String
     }
 }
@@ -38,7 +38,7 @@ Properties:
   [Spec](#cfn-appmesh-virtualnode-spec): 
     [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
   [Tags](#cfn-appmesh-virtualnode-tags): 
-    - [TagRef](aws-properties-appmesh-virtualnode-tagref.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename): String
 ```
 
@@ -59,7 +59,7 @@ The virtual node specification to apply\.
 `Tags`  <a name="cfn-appmesh-virtualnode-tags"></a>
 Optional metadata that you can apply to the virtual node to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
 *Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-virtualnode-tagref.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualNodeName`  <a name="cfn-appmesh-virtualnode-virtualnodename"></a>
@@ -132,7 +132,7 @@ This example creates a virtual node with two backends and a listener with a heal
                ],
                "Listeners": [
                   {
-                     "HealthCheckPolicy": {
+                     "HealthCheck": {
                         "HealthyThreshold": 2,
                         "IntervalMillis": 5000,
                         "Path": "Path",
@@ -231,7 +231,7 @@ Resources:
         - VirtualService:
             VirtualServiceName: "Backend_2"
         Listeners:
-        - HealthCheckPolicy:
+        - HealthCheck:
             HealthyThreshold: 2
             IntervalMillis: 5000
             Path: "Path"

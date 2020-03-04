@@ -74,7 +74,7 @@ The prefix that is prepended to all inventory results\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleFrequency`  <a name="cfn-s3-bucket-inventoryconfiguration-schedulefrequency"></a>
-Specifies the schedule for generating inventory results\.  
+Specifies the schedule for generating inventory results\. Valid Values: Daily \| Weekly\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -8,6 +8,8 @@ In the rule, you also define the rate limit as 15,000\.
 
 Requests that meet both of these conditions and exceed 15,000 requests every five minutes trigger the rule's action \(block or count\), which is defined in the web ACL\.
 
+Note you can only create rate\-based rules using a CloudFormation template\. To add the rate\-based rules created through CloudFormation to a web ACL, use the AWS WAF console, API, or command line interface \(CLI\)\. For more information, see [UpdateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateWebACL.html)\.
+
 ## Syntax<a name="aws-resource-wafregional-ratebasedrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -125,5 +127,5 @@ MyIPSetRateBasedRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-    Type: "IPMatch"
+        Type: "IPMatch"
 ```

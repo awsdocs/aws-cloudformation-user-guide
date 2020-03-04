@@ -33,7 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ApproveAfterDays`  <a name="cfn-ssm-patchbaseline-rule-approveafterdays"></a>
 The number of days after the release date of each patch matched by the rule that the patch is marked as approved in the patch baseline\. For example, a value of `7` means that patches are approved seven days after they are released\.   
-*Required*: No  
+You must specify a value for `ApproveAfterDays`\.  
+*Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `100`  

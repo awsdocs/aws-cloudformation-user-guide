@@ -1,6 +1,6 @@
 # AWS::EC2::VPCCidrBlock<a name="aws-resource-ec2-vpccidrblock"></a>
 
-Associates a CIDR block with your VPC\. You can only associate a single IPv6 CIDR block with your VPC\. An IPv6 CIDR block must have a prefix length of /64\.
+Associates a CIDR block with your VPC\. You can only associate a single IPv6 CIDR block with your VPC\. The IPv6 CIDR block size is fixed at /56\.
 
 For more information about associating CIDR blocks with your VPC and applicable restrictions, see [VPC and Subnet Sizing](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#VPC_Sizing) in the *Amazon Virtual Private Cloud User Guide*\.
 
@@ -55,7 +55,7 @@ The ID of the VPC\.
 
 ### Ref<a name="aws-resource-ec2-vpccidrblock-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPC CIDR block\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the VPC CIDR block\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

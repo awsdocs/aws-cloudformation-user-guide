@@ -31,8 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IamRoles](#cfn-redshift-cluster-iamroles)" : [ String, ... ],
       "[KmsKeyId](#cfn-redshift-cluster-kmskeyid)" : String,
       "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md),
-      "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
       "[MasterUsername](#cfn-redshift-cluster-masterusername)" : String,
+      "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
       "[NodeType](#cfn-redshift-cluster-nodetype)" : String,
       "[NumberOfNodes](#cfn-redshift-cluster-nodetype)" : Integer,
       "[OwnerAccount](#cfn-redshift-cluster-owneraccount)" : String,
@@ -72,8 +72,8 @@ Properties:
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
   [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
     [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
-  [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
+  [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String
   [NumberOfNodes](#cfn-redshift-cluster-nodetype): Integer
   [OwnerAccount](#cfn-redshift-cluster-owneraccount): String
@@ -109,7 +109,7 @@ Constraints: Must be a value from 0 to 35\.
 `AvailabilityZone`  <a name="cfn-redshift-cluster-availabilityzone"></a>
 The EC2 Availability Zone \(AZ\) in which you want Amazon Redshift to provision the cluster\. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency\.  
 Default: A random, system\-chosen Availability Zone in the region that is specified by the endpoint\.  
-Example: `us-east-1d`   
+Example: `us-east-2d`   
 Constraint: The specified Availability Zone must be in the same region as the current endpoint\.  
 *Required*: No  
 *Type*: String  
@@ -229,6 +229,16 @@ Specifies logging information, such as queries and connection attempts, for the 
 *Type*: [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
+The user name associated with the master user account for the cluster that is being created\.  
+Constraints:  
++ Must be 1 \- 128 alphanumeric characters\. The user name can't be `PUBLIC`\.
++ First character must be a letter\.
++ Cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `MasterUserPassword`  <a name="cfn-redshift-cluster-masteruserpassword"></a>
 The password associated with the master user account for the cluster that is being created\.  
 Constraints:  
@@ -241,19 +251,9 @@ Constraints:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
-The user name associated with the master user account for the cluster that is being created\.  
-Constraints:  
-+ Must be 1 \- 128 alphanumeric characters\. The user name can't be `PUBLIC`\.
-+ First character must be a letter\.
-+ Cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `NodeType`  <a name="cfn-redshift-cluster-nodetype"></a>
 The node type to be provisioned for the cluster\. For information about node types, go to [ Working with Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes) in the *Amazon Redshift Cluster Management Guide*\.   
-Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge`   
+Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge` \| `ra3.16xlarge`   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

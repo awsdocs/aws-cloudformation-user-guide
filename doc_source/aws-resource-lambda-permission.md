@@ -80,7 +80,7 @@ The AWS service or account that invokes the function\. If you specify a service,
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccount`  <a name="cfn-lambda-permission-sourceaccount"></a>
-For AWS services, the ID of the account that owns the resource\. Use this instead of `SourceArn` to grant permission to resources that are owned by another account \(for example, all of an account's Amazon S3 buckets\)\. Or use it together with `SourceArn` to ensure that the resource is owned by the specified account\. For example, an Amazon S3 bucket could be deleted by its owner and recreated by another account\.  
+For Amazon S3, the ID of the account that owns the resource\. Use this together with `SourceArn` to ensure that the resource is owned by the specified account\. It is possible for an Amazon S3 bucket to be deleted by its owner and recreated by another account\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `\d{12}`  
@@ -95,19 +95,34 @@ For AWS services, the ARN of the AWS resource that invokes the function\. For ex
 
 ## Examples<a name="aws-resource-lambda-permission--examples"></a>
 
-### Function Permission<a name="aws-resource-lambda-permission--examples--Function_Permission"></a>
+### Cross Account Invoke<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke"></a>
 
-Grant Amazon S3 permission to invoke `MyLambdaFunction`\.
+Grant account 123456789012 permission to invoke a function resource named `function` created in the same template\.
 
-#### JSON<a name="aws-resource-lambda-permission--examples--Function_Permission--json"></a>
+#### YAML<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke--yaml"></a>
 
 ```
-"LambdaInvokePermission": {
+  permission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt function.Arn
+      Action: lambda:InvokeFunction
+      Principal: 123456789012
+```
+
+### Amazon S3 Notifications<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications"></a>
+
+Grant Amazon S3 permission to invoke a function resource named `function` created in the same template, to process notifications for a bucket resource named `bucket`\.
+
+#### JSON<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--json"></a>
+
+```
+"s3Permission": {
     "Type": "AWS::Lambda::Permission",
     "Properties": {
         "FunctionName": {
             "Fn::GetAtt": [
-                "MyLambdaFunction",
+                "function",
                 "Arn"
             ]
         },
@@ -118,7 +133,7 @@ Grant Amazon S3 permission to invoke `MyLambdaFunction`\.
         },
         "SourceArn": {
             "Fn::GetAtt": [
-                "MyBucket",
+                "bucket",
                 "Arn"
             ]
         }
@@ -126,19 +141,15 @@ Grant Amazon S3 permission to invoke `MyLambdaFunction`\.
 }
 ```
 
-#### YAML<a name="aws-resource-lambda-permission--examples--Function_Permission--yaml"></a>
+#### YAML<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--yaml"></a>
 
 ```
-LambdaInvokePermission:
+s3Permission:
   Type: AWS::Lambda::Permission
   Properties:
-    FunctionName: !GetAtt 
-      - MyLambdaFunction
-      - Arn
-    Action: 'lambda:InvokeFunction'
+    FunctionName: !GetAtt function.Arn
+    Action: lambda:InvokeFunction
     Principal: s3.amazonaws.com
     SourceAccount: !Ref 'AWS::AccountId'
-    SourceArn: !GetAtt 
-      - MyBucket
-      - Arn
+    SourceArn: !GetAtt bucket.Arn
 ```

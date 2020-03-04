@@ -60,7 +60,3 @@ A structure for the resource\.
 *Required*: Yes  
 *Type*: [Resource](aws-properties-lakeformation-permissions-resource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## Return Values<a name="aws-resource-lakeformation-permissions-return-values"></a>
-
-### Ref<a name="aws-resource-lakeformation-permissions-return-values-ref"></a>

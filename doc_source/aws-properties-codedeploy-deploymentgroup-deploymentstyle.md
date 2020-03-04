@@ -26,9 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DeploymentOption`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption"></a>
 Indicates whether to route deployment traffic behind a load balancer\.  
+ An EC2 Application Load Balancer or Network Load Balancer is required for an Amazon ECS deployment\. 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `WITHOUT_TRAFFIC_CONTROL | WITH_TRAFFIC_CONTROL`  
+*Allowed Values*: `WITH_TRAFFIC_CONTROL | WITHOUT_TRAFFIC_CONTROL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentType`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype"></a>

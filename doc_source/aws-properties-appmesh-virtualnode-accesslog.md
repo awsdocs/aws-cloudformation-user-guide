@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode AccessLog<a name="aws-properties-appmesh-virtualnode-accesslog"></a>
 
-An object representing the access logging information for a virtual node\.
+An object that represents the access logging information for a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-accesslog-syntax"></a>
 

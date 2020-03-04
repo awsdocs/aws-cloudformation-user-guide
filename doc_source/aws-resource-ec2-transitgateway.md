@@ -51,7 +51,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgateway-properties"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-transitgateway-amazonsideasn"></a>
-A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs and 4200000000 to 4294967294 for 32\-bit ASNs\.  
+A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -107,7 +107,7 @@ Indicates whether Equal Cost Multipath Protocol support is enabled\.
 
 ### Ref<a name="aws-resource-ec2-transitgateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the transit gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the transit gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

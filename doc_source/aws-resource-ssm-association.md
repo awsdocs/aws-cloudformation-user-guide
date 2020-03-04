@@ -59,8 +59,8 @@ The version of the SSM document to associate with the target\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceId`  <a name="cfn-ssm-association-instanceid"></a>
-The ID of the instance that the SSM document is associated with\.  
-You must specify the `InstanceId` or `Targets` property\.  
+The ID of the instance that the SSM document is associated with\. You must specify the `InstanceId` or `Targets` property\.  
+`InstanceId` has been deprecated\. To specify an instance ID for an association, use the `Targets` parameter\. If you use the parameter `InstanceId`, you cannot use the parameters `AssociationName`, `DocumentVersion`, `MaxErrors`, `MaxConcurrency`, `OutputLocation`, or `ScheduleExpression`\. To use these parameters, you must use the `Targets` parameter\.
 *Required*: Conditional  
 *Type*: String  
 *Pattern*: `(^i-(\w{8}|\w{17})$)|(^mi-\w{17}$)`  
@@ -94,8 +94,7 @@ A cron expression that specifies a schedule when the association runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>
-The targets that the SSM document sends commands to\.   
-You must specify the `InstanceId` or `Targets` property\.  
+The targets for the association\. You must specify the `InstanceId` or `Targets` property\.  
 *Required*: Conditional  
 *Type*: List of [Target](aws-properties-ssm-association-target.md)  
 *Maximum*: `5`  
@@ -110,21 +109,25 @@ The following example associates an SSM document with a specific instance\. The 
 #### JSON<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_a_specific_instance--json"></a>
 
 ```
-"association": {
-  "Type": "AWS::SSM::Association",
-  "Properties": {
-    "Name": {
-      "Ref": "document"
-    },
-    "Parameters": {
-      "Directory": ["myWorkSpace"]
-    },
-    "Targets": [{
-      "Key": "InstanceIds",
-      "Values": [{
-        "Ref": "myInstanceId"
-      }]
-    }]
+{
+  "Resources": {
+    "Association": {
+      "Type": "AWS::SSM::Association",
+      "Properties": {
+        "Name": {
+          "Ref": "document"
+        },
+        "Parameters": {
+          "Directory": ["myWorkSpace"]
+        },
+        "Targets": [{
+          "Key": "InstanceIds",
+          "Values": [{
+            "Ref": "myInstanceId"
+          }]
+        }]
+      }
+    }
   }
 }
 ```
@@ -132,15 +135,112 @@ The following example associates an SSM document with a specific instance\. The 
 #### YAML<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_a_specific_instance--yaml"></a>
 
 ```
-association:
-  Type: AWS::SSM::Association
-  Properties:
-    Name: !Ref 'document'
-    Parameters:
-      Directory: ["myWorkSpace"]
-    Targets:
-    - Key: InstanceIds
-      Values: [!Ref 'myInstanceId']
+---
+Resources:
+  Association:
+    Type: AWS::SSM::Association
+    Properties:
+      Name:
+        Ref: document
+      Parameters:
+        Directory:
+        - myWorkSpace
+      Targets:
+      - Key: InstanceIds
+        Values:
+        - Ref: myInstanceId
+```
+
+### Associate a Systems Manager document with all managed instances<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_all_managed_instances"></a>
+
+The following example associates the document `AWS-UpdateSSMAgent` with all instances registered with Systems Manager\.
+
+#### JSON<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_all_managed_instances--json"></a>
+
+```
+{
+  "Resources": {
+    "UpdateSSMAgent": {
+      "Type": "AWS::SSM::Association",
+      "Properties": {
+        "AssociationName": "UpdateSSMAgent",
+        "Name": "AWS-UpdateSSMAgent",
+        "ScheduleExpression": "cron(0 2 ? * SUN *)",
+        "Targets": [
+          {
+            "Key": "InstanceIds",
+            "Values": [
+              "*"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_all_managed_instances--yaml"></a>
+
+```
+---
+Resources:
+  UpdateSSMAgent:
+    Type: AWS::SSM::Association
+    Properties:
+      AssociationName: UpdateSSMAgent
+      Name: AWS-UpdateSSMAgent
+      ScheduleExpression: cron(0 2 ? * SUN *)
+      Targets:
+      - Key: InstanceIds
+        Values:
+        - "*"
+```
+
+### Associate a Systems Manager document with a specific tag<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_a_specific_tag"></a>
+
+The following example associates the document `AWS-UpdateSSMAgent` with instances that have the tag key `ENV` and value `DEV`\.
+
+#### JSON<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_a_specific_tag--json"></a>
+
+```
+{
+  "Resources": {
+    "UpdateSSMAgent": {
+      "Type": "AWS::SSM::Association",
+      "Properties": {
+        "AssociationName": "UpdateSSMAgent",
+        "Name": "AWS-UpdateSSMAgent",
+        "ScheduleExpression": "cron(0 2 ? * SUN *)",
+        "Targets": [
+          {
+            "Key": "tag:ENV",
+            "Values": [
+              "DEV"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-association--examples--Associate_a_Systems_Manager_document_with_a_specific_tag--yaml"></a>
+
+```
+---
+Resources:
+  UpdateSSMAgent:
+    Type: AWS::SSM::Association
+    Properties:
+      AssociationName: UpdateSSMAgent
+      Name: AWS-UpdateSSMAgent
+      ScheduleExpression: cron(0 2 ? * SUN *)
+      Targets:
+      - Key: tag:ENV
+        Values:
+        - DEV
 ```
 
 ## See Also<a name="aws-resource-ssm-association--seealso"></a>

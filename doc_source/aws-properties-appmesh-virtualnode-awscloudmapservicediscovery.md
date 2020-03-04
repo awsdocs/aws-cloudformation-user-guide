@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode AwsCloudMapServiceDiscovery<a name="aws-properties-appmesh-virtualnode-awscloudmapservicediscovery"></a>
 
-An object representing the AWS Cloud Map service discovery information for your virtual node\.
+An object that represents the AWS Cloud Map service discovery information for your virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-awscloudmapservicediscovery-syntax"></a>
 

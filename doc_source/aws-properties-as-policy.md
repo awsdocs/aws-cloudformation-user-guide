@@ -146,7 +146,7 @@ The following examples specify scaling policies for an Auto Scaling group\.
 
 ### Target Tracking Scaling Policy<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy"></a>
 
-The following example is a target tracking scaling policy based on the `ASGAverageCPUUtilization` metric\. The `TargetValue` property of the scaling policy references a `PolicyTargetValue` [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value from the same template\.
+The following example creates an Auto Scaling group with two target tracking scaling policies based on the `ASGAverageCPUUtilization` and `ALBRequestCountPerTarget` metrics\. The properties of each of these policies include a `TargetValue` property that references a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value from the same template\.
 
 #### JSON<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy--json"></a>
 
@@ -160,14 +160,54 @@ The following example is a target tracking scaling policy based on the `ASGAvera
     "Subnets":{
       "Type":"CommaDelimitedList"
     },
-    "AZs":{
-      "Type":"CommaDelimitedList"
+    "VPC":{
+      "Type":"String"
     },
-    "PolicyTargetValue":{
+    "CPUPolicyTargetValue":{
+      "Type":"String"
+    },
+    "ALBRequestCountTargetValue":{
       "Type":"String"
     }
   },
   "Resources":{
+    "myLoadBalancer":{
+      "Type":"AWS::ElasticLoadBalancingV2::LoadBalancer",
+      "Properties":{
+        "Subnets":{
+          "Ref":"Subnets"
+        }
+      }
+    },
+    "myLoadBalancerListener":{
+      "Type":"AWS::ElasticLoadBalancingV2::Listener",
+      "Properties":{
+        "DefaultActions":[
+          {
+            "TargetGroupArn":{
+              "Ref":"myTargetGroup"
+            },
+            "Type":"forward"
+          }
+        ],
+        "LoadBalancerArn":{
+          "Ref":"myLoadBalancer"
+        },
+        "Port":80,
+        "Protocol":"HTTP"
+      }
+    },
+    "myTargetGroup":{
+      "Type":"AWS::ElasticLoadBalancingV2::TargetGroup",
+      "Properties":{
+        "Name":"myTargetGroup",
+        "Port":80,
+        "Protocol":"HTTP",
+        "VpcId":{
+          "Ref":"VPC"
+        }
+      }
+    },
     "myLaunchConfig":{
       "Type":"AWS::AutoScaling::LaunchConfiguration",
       "Properties":{
@@ -175,6 +215,24 @@ The following example is a target tracking scaling policy based on the `ASGAvera
           "Ref":"AMI"
         },
         "InstanceType":"t2.large"
+      }
+    },
+    "myASG":{
+      "Type":"AWS::AutoScaling::AutoScalingGroup",
+      "Properties":{
+        "MaxSize":"2",
+        "MinSize":"1",
+        "VPCZoneIdentifier":{
+          "Ref":"Subnets"
+        },
+        "LaunchConfigurationName":{
+          "Ref":"myLaunchConfig"
+        },
+        "TargetGroupARNs":[
+          {
+            "Ref":"myTargetGroup"
+          }
+        ]
       }
     },
     "myCPUPolicy":{
@@ -189,24 +247,44 @@ The following example is a target tracking scaling policy based on the `ASGAvera
             "PredefinedMetricType":"ASGAverageCPUUtilization"
           },
           "TargetValue":{
-            "Ref":"PolicyTargetValue"
+            "Ref":"CPUPolicyTargetValue"
           }
         }
       }
     },
-    "myASG":{
-      "Type":"AWS::AutoScaling::AutoScalingGroup",
+    "myALBRequestCountPolicy":{
+      "Type":"AWS::AutoScaling::ScalingPolicy",
       "Properties":{
-        "MaxSize":"2",
-        "AvailabilityZones":{
-          "Ref":"AZs"
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
         },
-        "VPCZoneIdentifier":{
-          "Ref":"Subnets"
-        },
-        "MinSize":"1",
-        "LaunchConfigurationName":{
-          "Ref":"myLaunchConfig"
+        "PolicyType":"TargetTrackingScaling",
+        "TargetTrackingConfiguration":{
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ALBRequestCountPerTarget",
+            "ResourceLabel":{
+              "Fn::Join":[
+                "/",
+                [
+                  {
+                    "Fn::GetAtt":[
+                      "myLoadBalancer",
+                      "LoadBalancerFullName"
+                    ]
+                  },
+                  {
+                    "Fn::GetAtt":[
+                      "myTargetGroup",
+                      "TargetGroupFullName"
+                    ]
+                  }
+                ]
+              ]
+            }
+          },
+          "TargetValue":{
+            "Ref":"ALBRequestCountTargetValue"
+          }
         }
       }
     }
@@ -223,16 +301,47 @@ Parameters:
     Type: String
   Subnets:
     Type: CommaDelimitedList
-  AZs:
-    Type: CommaDelimitedList
-  PolicyTargetValue:
+  VPC:
+    Type: String
+  CPUPolicyTargetValue:
+    Type: String
+  ALBRequestCountTargetValue:
     Type: String
 Resources:
+  myLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Subnets: !Ref Subnets
+  myLoadBalancerListener:
+    Type: "AWS::ElasticLoadBalancingV2::Listener"
+    Properties:
+      DefaultActions:
+        - TargetGroupArn: !Ref myTargetGroup
+          Type: forward
+      LoadBalancerArn: !Ref myLoadBalancer
+      Port: 80
+      Protocol: HTTP
+  myTargetGroup:
+    Type: "AWS::ElasticLoadBalancingV2::TargetGroup"
+    Properties:
+      Name: myTargetGroup
+      Port: 80
+      Protocol: HTTP
+      VpcId: !Ref VPC
   myLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     Properties:
       ImageId: !Ref AMI
       InstanceType: t2.large
+  myASG:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      MaxSize: '2'
+      MinSize: '1'
+      VPCZoneIdentifier: !Ref Subnets
+      LaunchConfigurationName: !Ref myLaunchConfig
+      TargetGroupARNs:
+        - !Ref myTargetGroup
   myCPUPolicy:
     Type: AWS::AutoScaling::ScalingPolicy
     Properties:
@@ -241,15 +350,20 @@ Resources:
       TargetTrackingConfiguration:
         PredefinedMetricSpecification:
           PredefinedMetricType: ASGAverageCPUUtilization
-        TargetValue: !Ref PolicyTargetValue
-  myASG:
-    Type: AWS::AutoScaling::AutoScalingGroup
+        TargetValue: !Ref CPUPolicyTargetValue
+  myALBRequestCountPolicy:
+    Type: AWS::AutoScaling::ScalingPolicy
     Properties:
-      MaxSize: '2'
-      AvailabilityZones: !Ref AZs
-      VPCZoneIdentifier: !Ref Subnets
-      MinSize: '1'
-      LaunchConfigurationName: !Ref myLaunchConfig
+      AutoScalingGroupName: !Ref myASG
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ALBRequestCountPerTarget
+          ResourceLabel: !Join 
+            - '/' 
+            - - !GetAtt myLoadBalancer.LoadBalancerFullName
+              - !GetAtt myTargetGroup.TargetGroupFullName
+        TargetValue: !Ref ALBRequestCountTargetValue
 ```
 
 ### Step Scaling Policy<a name="aws-properties-as-policy--examples--Step_Scaling_Policy"></a>
@@ -260,27 +374,29 @@ The following example is a step scaling policy that increases the number instanc
 
 ```
 {
-  "ASGScaleOutPolicy":{
-    "Type":"AWS::AutoScaling::ScalingPolicy",
-    "Properties":{
-      "AdjustmentType":"ChangeInCapacity",
-      "AutoScalingGroupName":{
-        "Ref":"myASG"
-      },
-      "PolicyType":"StepScaling",
-      "MetricAggregationType":"Average",
-      "EstimatedInstanceWarmup":"60",
-      "StepAdjustments":[
-        {
-          "MetricIntervalLowerBound":"0",
-          "MetricIntervalUpperBound":"50",
-          "ScalingAdjustment":"1"
+  "Resources":{
+    "ASGScaleOutPolicy":{
+      "Type":"AWS::AutoScaling::ScalingPolicy",
+      "Properties":{
+        "AdjustmentType":"ChangeInCapacity",
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
         },
-        {
-          "MetricIntervalLowerBound":"50",
-          "ScalingAdjustment":"2"
-        }
-      ]
+        "PolicyType":"StepScaling",
+        "MetricAggregationType":"Average",
+        "EstimatedInstanceWarmup":"60",
+        "StepAdjustments":[
+          {
+            "MetricIntervalLowerBound":"0",
+            "MetricIntervalUpperBound":"50",
+            "ScalingAdjustment":"1"
+          },
+          {
+            "MetricIntervalLowerBound":"50",
+            "ScalingAdjustment":"2"
+          }
+        ]
+      }
     }
   }
 }
@@ -289,23 +405,22 @@ The following example is a step scaling policy that increases the number instanc
 #### YAML<a name="aws-properties-as-policy--examples--Step_Scaling_Policy--yaml"></a>
 
 ```
-ASGScaleOutPolicy: 
-  Type: AWS::AutoScaling::ScalingPolicy
-  Properties: 
-    AdjustmentType: "ChangeInCapacity"
-    AutoScalingGroupName: 
-      Ref: "myASG"
-    PolicyType: "StepScaling"
-    MetricAggregationType: "Average"
-    EstimatedInstanceWarmup: "60"
-    StepAdjustments: 
-      - 
-        MetricIntervalLowerBound: "0"
-        MetricIntervalUpperBound: "50"
-        ScalingAdjustment: "1"
-      - 
-        MetricIntervalLowerBound: "50"
-        ScalingAdjustment: "2"
+Resources:
+  ASGScaleOutPolicy: 
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties: 
+      AdjustmentType: "ChangeInCapacity"
+      AutoScalingGroupName: 
+        Ref: "myASG"
+      PolicyType: "StepScaling"
+      MetricAggregationType: "Average"
+      EstimatedInstanceWarmup: "60"
+      StepAdjustments: 
+        - MetricIntervalLowerBound: "0"
+          MetricIntervalUpperBound: "50"
+          ScalingAdjustment: "1"
+        - MetricIntervalLowerBound: "50"
+          ScalingAdjustment: "2"
 ```
 
 ### Simple Scaling Policy<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy"></a>
@@ -316,16 +431,18 @@ The following example is a simple scaling policy that increases the number insta
 
 ```
 {
-  "ASGScaleOutPolicy":{
-    "Type":"AWS::AutoScaling::ScalingPolicy",
-    "Properties":{
-      "AdjustmentType":"ChangeInCapacity",
-      "PolicyType":"SimpleScaling",
-      "Cooldown":"60",
-      "AutoScalingGroupName":{
-        "Ref":"myASG"
-      },
-      "ScalingAdjustment":1
+  "Resources":{
+    "ASGScaleOutPolicy":{
+      "Type":"AWS::AutoScaling::ScalingPolicy",
+      "Properties":{
+        "AdjustmentType":"ChangeInCapacity",
+        "PolicyType":"SimpleScaling",
+        "Cooldown":"300",
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "ScalingAdjustment":1
+      }
     }
   }
 }
@@ -334,13 +451,14 @@ The following example is a simple scaling policy that increases the number insta
 #### YAML<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy--yaml"></a>
 
 ```
-ASGScaleOutPolicy: 
-  Type: AWS::AutoScaling::ScalingPolicy
-  Properties: 
-    AdjustmentType: "ChangeInCapacity"
-    PolicyType: "SimpleScaling"
-    Cooldown: "60"
-    AutoScalingGroupName: 
-      Ref: "myASG"
-    ScalingAdjustment: 1
+Resources:
+  ASGScaleOutPolicy: 
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties: 
+      AdjustmentType: "ChangeInCapacity"
+      PolicyType: "SimpleScaling"
+      Cooldown: "300"
+      AutoScalingGroupName: 
+        Ref: "myASG"
+      ScalingAdjustment: 1
 ```

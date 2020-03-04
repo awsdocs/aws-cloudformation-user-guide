@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment<a name="aws-resource-pinpoint-segment"></a>
 
-Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application\.
+A *segment* designates which users receive messages from a campaign or journey, typically a group of customers that share certain attributes\. The AWS::Pinpoint::Segment resource defines the configuration, dimension, and other settings for a segment\.
 
 ## Syntax<a name="aws-resource-pinpoint-segment-syntax"></a>
 
@@ -38,7 +38,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-segment-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-segment-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that the segment is associated with\.  
+The unique identifier for the Amazon Pinpoint application that the segment is associated with\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -71,7 +71,7 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 
 ### Ref<a name="aws-resource-pinpoint-segment-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the segment is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the segment is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

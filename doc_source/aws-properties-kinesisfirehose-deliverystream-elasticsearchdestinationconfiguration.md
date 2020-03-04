@@ -121,6 +121,6 @@ The S3 bucket where Kinesis Data Firehose backs up incoming data\.
 The Elasticsearch type name that Amazon ES adds to documents when indexing data\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

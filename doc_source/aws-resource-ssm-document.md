@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Content](#cfn-ssm-document-content)" : Json,
       "[DocumentType](#cfn-ssm-document-documenttype)" : String,
+      "[Name](#cfn-ssm-document-name)" : String,
       "[Tags](#cfn-ssm-document-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,6 +27,7 @@ Type: AWS::SSM::Document
 Properties: 
   [Content](#cfn-ssm-document-content): Json
   [DocumentType](#cfn-ssm-document-documenttype): String
+  [Name](#cfn-ssm-document-name): String
   [Tags](#cfn-ssm-document-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -33,17 +35,33 @@ Properties:
 ## Properties<a name="aws-resource-ssm-document-properties"></a>
 
 `Content`  <a name="cfn-ssm-document-content"></a>
-A valid JSON or YAML string\.  
+The content for the new SSM document, in valid JSON or YAML format\.  
+We recommend storing the contents for your new document in an external JSON or YAML file and referencing the file in a command\.  
+For examples, see the following topics in the *AWS Systems Manager User Guide*\.  
++  [Create an SSM Document \(AWS API\)](https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-api.html) 
++  [Create an SSM Document \(AWS CLI\)](https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-cli.html) 
++  [Create an SSM Document \(Tools for Windows PowerShell\)](https://docs.aws.amazon.com/systems-manager/latest/userguide/create-ssm-document-ps.html) 
 *Required*: Yes  
 *Type*: Json  
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DocumentType`  <a name="cfn-ssm-document-documenttype"></a>
-The type of document to create\. Valid document types include: `Command`, `Policy`, `Automation`, `Session`, and `Package`\.  
+The type of document to create\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Automation | Command | Package | Policy | Session`  
+*Allowed Values*: `ApplicationConfiguration | ApplicationConfigurationSchema | Automation | ChangeCalendar | Command | DeploymentStrategy | Package | Policy | Session`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Name`  <a name="cfn-ssm-document-name"></a>
+A name for the Systems Manager document\.  
+Do not use the following to begin the names of documents you create\. They are reserved by AWS for use as document prefixes:  
++  `aws` 
++  `amazon` 
++  `amzn` 
+*Required*: No  
+*Type*: String  
+*Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ssm-document-tags"></a>

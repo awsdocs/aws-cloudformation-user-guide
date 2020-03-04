@@ -1,6 +1,12 @@
 # AWS::S3::Bucket ObjectLockConfiguration<a name="aws-properties-s3-bucket-objectlockconfiguration"></a>
 
-Places an object lock configuration on the specified bucket\. The rule specified in the object lock configuration will be applied by default to every new object placed in the specified bucket\.
+Places an Object Lock configuration on the specified bucket\. The rule specified in the Object Lock configuration will be applied by default to every new object placed in the specified bucket\.
+
+**Note**  
+ `DefaultRetention` requires either Days or Years\. You can't specify both at the same time\.
+
+**Related Resources**
++  [Locking Objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html) 
 
 ## Syntax<a name="aws-properties-s3-bucket-objectlockconfiguration-syntax"></a>
 
@@ -26,14 +32,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-objectlockconfiguration-properties"></a>
 
 `ObjectLockEnabled`  <a name="cfn-s3-bucket-objectlockconfiguration-objectlockenabled"></a>
-Indicates whether this bucket has an object lock configuration enabled\.  
+Indicates whether this bucket has an Object Lock configuration enabled\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rule`  <a name="cfn-s3-bucket-objectlockconfiguration-rule"></a>
-The object lock rule in place for the specified object\.  
+The Object Lock rule in place for the specified object\.  
 *Required*: No  
 *Type*: [ObjectLockRule](aws-properties-s3-bucket-objectlockrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode Listener<a name="aws-properties-appmesh-virtualnode-listener"></a>
 
-An object representing a listener for a virtual node\.
+An object that represents a listener for a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-listener-syntax"></a>
 

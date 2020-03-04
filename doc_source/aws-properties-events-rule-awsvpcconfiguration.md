@@ -1,6 +1,6 @@
 # AWS::Events::Rule AwsVpcConfiguration<a name="aws-properties-events-rule-awsvpcconfiguration"></a>
 
-This structure specifies the VPC subnets and security groups for the task and whether a public IP address is to be used\. This structure is relevant only for ECS tasks that use the `awsvpc` network mode\.
+This structure specifies the VPC subnets and security groups for the task, and whether a public IP address is to be used\. This structure is relevant only for ECS tasks that use the `awsvpc` network mode\.
 
 ## Syntax<a name="aws-properties-events-rule-awsvpcconfiguration-syntax"></a>
 
@@ -36,7 +36,7 @@ Specifies whether the task's elastic network interface receives a public IP addr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-events-rule-awsvpcconfiguration-securitygroups"></a>
-Specifies the security groups associated with the task\. These security groups must all be in the same VPC\. You can specify as many as five security groups\. If you don't specify a security group, the default security group for the VPC is used\.  
+Specifies the security groups associated with the task\. These security groups must all be in the same VPC\. You can specify as many as five security groups\. If you do not specify a security group, the default security group for the VPC is used\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

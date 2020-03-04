@@ -98,32 +98,34 @@ The database endpoint identifier\. Identifiers must begin with a letter; must co
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointType`  <a name="cfn-dms-endpoint-endpointtype"></a>
-The type of endpoint\.  
+The type of endpoint\. Valid values are `source` and `target`\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `source | target`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values, depending on the `EndPointType` value, include `mysql`, `oracle`, `postgres`, `mariadb`, `aurora`, `aurora-postgresql`, `redshift`, `s3`, `db2`, `azuredb`, `sybase`, `dynamodb`, `mongodb`, and `sqlserver`\.  
+The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `mysql`, `oracle`, `postgres`, `mariadb`, `aurora`, `aurora-postgresql`, `redshift`, `s3`, `db2`, `azuredb`, `sybase`, `dynamodb`, `mongodb`, and `sqlserver`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExtraConnectionAttributes`  <a name="cfn-dms-endpoint-extraconnectionattributes"></a>
-Additional attributes associated with the connection\.  
+Additional attributes associated with the connection\. Each attribute is specified as a name\-value pair associated by an equal sign \(=\)\. Multiple attributes are separated by a semicolon \(;\) with no additional white space\. For information on the attributes available for connecting your source or target endpoint, see [Working with AWS DMS Endpoints](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Endpoints.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisSettings`  <a name="cfn-dms-endpoint-kinesissettings"></a>
-Settings in JSON format for the target Amazon Kinesis Data Streams endpoint\. For more information about the available settings, see [Using Object Mapping to Migrate Data to a Kinesis Data Stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping             ) in the *AWS Database Migration User Guide\.*   
+Settings in JSON format for the target Amazon Kinesis Data Streams endpoint\. For more information about the available settings, see [Using Object Mapping to Migrate Data to a Kinesis Data Stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping) in the *AWS Database Migration User Guide\.*   
 *Required*: No  
 *Type*: [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-dms-endpoint-kmskeyid"></a>
-The AWS KMS key identifier to use to encrypt the connection parameters\. If you don't specify a value for the `KmsKeyId` parameter, then AWS DMS uses your default encryption key\. AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
+An AWS KMS key identifier that is used to encrypt the connection parameters for the endpoint\.  
+If you don't specify a value for the `KmsKeyId` parameter, then AWS DMS uses your default encryption key\.  
+AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -159,14 +161,14 @@ The name of the server where the endpoint database resides\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslMode`  <a name="cfn-dms-endpoint-sslmode"></a>
-The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The SSL mode can be one of four values: `none`, `require`, `verify-ca`, `verify-full`\. The default value is `none`\.  
+The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The default is `none`   
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `none | require | verify-ca | verify-full`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-endpoint-tags"></a>
-Tags to be added to the endpoint\.  
+One or more tags to be assigned to the endpoint\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

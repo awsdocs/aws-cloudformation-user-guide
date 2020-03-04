@@ -50,7 +50,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-network-iface-embedded-properties"></a>
 
 `AssociatePublicIpAddress`  <a name="aws-properties-ec2-network-iface-embedded-associatepubip"></a>
-Whether or not to associates a public IPv4 address with eth0\.
+Indicates whether to assign a public IPv4 address to an instance you launch in a VPC\. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one\. You cannot specify more than one network interface in the request\. If launching into a default subnet, the default value is `true`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,7 +70,7 @@ The description of the network interface\. Applies only if creating a network in
 `DeviceIndex`  <a name="aws-properties-ec2-network-iface-embedded-deviceindex"></a>
 The position of the network interface in the attachment order\. A primary network interface has a device index of 0\.  
 If you specify a network interface when launching an instance, you must specify the device index\.  
-*Required*: Yes  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -94,6 +94,7 @@ The IPv6 addresses associated with the network interface\.
 
 `NetworkInterfaceId`  <a name="aws-properties-ec2-network-iface-embedded-network-iface"></a>
 The ID of the network interface\.  
+If you are creating a Spot Fleet, omit this parameter because you can’t specify a network interface ID in a launch specification\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

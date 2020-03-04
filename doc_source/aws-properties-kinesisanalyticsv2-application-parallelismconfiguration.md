@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application ParallelismConfiguration<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration"></a>
 
-Describes parameters for how a Java\-based Amazon Kinesis Data Analytics application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-stable/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.6/)\.
+Describes parameters for how a Java\-based Amazon Kinesis Data Analytics application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-syntax"></a>
 
@@ -35,7 +35,7 @@ Describes whether the Kinesis Data Analytics service can increase the parallelis
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfigurationType`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-configurationtype"></a>
-Describes whether the application uses the default parallelism for the Kinesis Data Analytics service\.  
+Describes whether the application uses the default parallelism for the Kinesis Data Analytics service\. You must set this property to `CUSTOM` in order to change your application's `AutoScalingEnabled`, `Parallelism`, or `ParallelismPerKPU` properties\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `CUSTOM | DEFAULT`  

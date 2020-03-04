@@ -1,6 +1,6 @@
 # AWS::IoTEvents::DetectorModel Action<a name="aws-properties-iotevents-detectormodel-action"></a>
 
-An action to be performed when the `"condition"` is TRUE\.
+An action to be performed when the `condition` is TRUE\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-action-syntax"></a>
 

@@ -2,6 +2,8 @@
 
 Specifies an entry, known as a rule, in a network ACL with a rule number you specify\. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules\.
 
+ For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority \(IANA\) website\. 
+
 ## Syntax<a name="aws-resource-ec2-network-acl-entry-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -47,7 +49,7 @@ Properties:
 
 `CidrBlock`  <a name="cfn-ec2-networkaclentry-cidrblock"></a>
 The IPv4 CIDR range to allow or deny, in CIDR notation \(for example, 172\.16\.0\.0/24\)\. Requirement is conditional: You must specify the `CidrBlock` or `Ipv6CidrBlock` property\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

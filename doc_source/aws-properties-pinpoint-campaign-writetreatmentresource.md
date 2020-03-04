@@ -51,7 +51,7 @@ The allocated percentage of users \(segment members\) to send the treatment to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription"></a>
-The custom description of the treatment\.  
+A custom description of the treatment\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

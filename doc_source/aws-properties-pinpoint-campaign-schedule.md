@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-schedule-properties"></a>
 
 `EndTime`  <a name="cfn-pinpoint-campaign-schedule-endtime"></a>
-The scheduled time, in ISO 8601 format, for the campaign to end\.  
+The scheduled time, in ISO 8601 format, when the campaign ended or will end\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,16 +62,16 @@ Specifies whether the start and end times for the campaign schedule use each rec
 
 `QuietTime`  <a name="cfn-pinpoint-campaign-schedule-quiettime"></a>
 The default quiet time for the campaign\. Quiet time is a specific time range when a campaign doesn't send messages to endpoints, if all the following conditions are met:  
-\- The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value\.  
-\- The current time in the endpoint's time zone is later than or equal to the time specified by the `QuietTime.Start` property for the campaign\.  
-\- The current time in the endpoint's time zone is earlier than or equal to the time specified by the `QuietTime.End` property for the campaign\.  
++ The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value\.
++ The current time in the endpoint's time zone is later than or equal to the time specified by the `QuietTime.Start` property for the campaign\.
++ The current time in the endpoint's time zone is earlier than or equal to the time specified by the `QuietTime.End` property for the campaign\.
 If any of the preceding conditions isn't met, the endpoint will receive messages from the campaign, even if quiet time is enabled\.  
 *Required*: No  
 *Type*: [QuietTime](aws-properties-pinpoint-campaign-schedule-quiettime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartTime`  <a name="cfn-pinpoint-campaign-schedule-starttime"></a>
-The scheduled time, in ISO 8601 format, for the campaign to begin\.  
+The scheduled time when the campaign began or will begin\. Valid values are: `IMMEDIATE`, to start the campaign immediately; or, a specific time in ISO 8601 format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

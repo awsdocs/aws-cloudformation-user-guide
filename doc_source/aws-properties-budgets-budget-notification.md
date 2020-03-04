@@ -51,7 +51,7 @@ Whether the notification is for how much you have spent \(`ACTUAL`\) or for how 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Threshold`  <a name="cfn-budgets-budget-notification-threshold"></a>
-The threshold that is associated with a notification\. Thresholds are always a percentage\.  
+The threshold that is associated with a notification\. Thresholds are always a percentage, and many customers find value being alerted between 50% \- 200% of the budgeted amount\. The maximum limit for your threshold is 1,000,000% above the budgeted amount\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

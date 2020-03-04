@@ -1,6 +1,6 @@
 # AWS::IoTEvents::DetectorModel Event<a name="aws-properties-iotevents-detectormodel-event"></a>
 
-Specifies the `"actions"` to be performed when the `"condition"` evaluates to TRUE\.
+Specifies the `actions` to be performed when the `condition` evaluates to TRUE\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-event-syntax"></a>
 
@@ -34,7 +34,7 @@ The actions to be performed\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Condition`  <a name="cfn-iotevents-detectormodel-event-condition"></a>
-\[Optional\] The Boolean expression that when TRUE causes the `"actions"` to be performed\. If not present, the actions are performed \(=TRUE\); if the expression result is not a Boolean value, the actions are NOT performed \(=FALSE\)\.  
+Optional\. The Boolean expression that, when TRUE, causes the `actions` to be performed\. If not present, the actions are performed \(=TRUE\)\. If the expression result is not a Boolean value, the actions are not performed \(=FALSE\)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `512`  

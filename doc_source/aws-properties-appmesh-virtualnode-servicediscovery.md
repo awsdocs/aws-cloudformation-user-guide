@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode ServiceDiscovery<a name="aws-properties-appmesh-virtualnode-servicediscovery"></a>
 
-An object representing the service discovery information for a virtual node\.
+An object that represents the service discovery information for a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-servicediscovery-syntax"></a>
 

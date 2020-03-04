@@ -1,8 +1,11 @@
 # AWS::CloudFront::Distribution Origin<a name="aws-properties-cloudfront-distribution-origin"></a>
 
-A complex type that describes the Amazon S3 bucket, HTTP server \(for example, a web server\), Amazon MediaStore, or other server from which CloudFront gets your files\. This can also be an origin group, if you've created an origin group\. You must specify at least one origin or origin group\.
+A complex type that describes the Amazon S3 bucket, HTTP server \(for example, a web server\), Amazon MediaStore, or other server from which CloudFront gets your files\. This can also be an origin group, if you’ve created an origin group\. You must specify at least one origin or origin group\.
 
-For the current limit on the number of origins or origin groups that you can specify for a distribution, see [Amazon CloudFront Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_cloudfront) in the *AWS General Reference*\.
+For the current quota \(limit\) on the number of origins or origin groups that you can specify for a distribution, see [Quotas](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) in the *Amazon CloudFront Developer Guide*\.
+
+**Note**  
+If you use CloudFormation to create a CloudFront distribution and an S3 bucket origin at the same time, the distribution might return `HTTP 307 Temporary Redirect` responses for up to 24 hours\. It can take up to 24 hours for the S3 bucket name to propagate to all AWS Regions\. When the propagation is complete, the CloudFront distribution will automatically stop sending these redirect responses; you don’t need to take any action\. For more information, see [Why am I getting an HTTP 307 Temporary Redirect response from Amazon S3?](http://aws.amazon.com/premiumsupport/knowledge-center/s3-http-307-response/) and [Temporary Request Redirection](https://docs.aws.amazon.com/AmazonS3/latest/dev/Redirects.html#TemporaryRedirection)\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-origin-syntax"></a>
 
@@ -39,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CustomOriginConfig`  <a name="cfn-cloudfront-distribution-origin-customoriginconfig"></a>
 A complex type that contains information about a custom origin\. If the origin is an Amazon S3 bucket, use the `S3OriginConfig` element instead\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -86,7 +89,7 @@ When a user enters `example.com/acme/index.html` in a browser, CloudFront sends 
 
 `S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
 A complex type that contains information about the Amazon S3 origin\. If the origin is a custom origin, use the `CustomOriginConfig` element instead\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

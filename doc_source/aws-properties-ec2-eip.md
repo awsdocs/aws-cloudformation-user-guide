@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Domain](#cfn-ec2-eip-domain)" : String,
       "[InstanceId](#cfn-ec2-eip-instanceid)" : String,
-      "[PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool)" : String
+      "[PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool)" : String,
+      "[Tags](#cfn-ec2-eip-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -35,6 +36,8 @@ Properties:
   [Domain](#cfn-ec2-eip-domain): String
   [InstanceId](#cfn-ec2-eip-instanceid): String
   [PublicIpv4Pool](#cfn-ec2-eip-publicipv4pool): String
+  [Tags](#cfn-ec2-eip-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-properties-ec2-eip-properties"></a>
@@ -51,14 +54,23 @@ Required when allocating an address to a VPC
 
 `InstanceId`  <a name="cfn-ec2-eip-instanceid"></a>
 The ID of the instance\.  
+Updates to the `InstanceId` property may require *some interruptions*\. Updates on an EIP reassociates the address on its associated resource\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PublicIpv4Pool`  <a name="cfn-ec2-eip-publicipv4pool"></a>
 The ID of an address pool that you own\. Use this parameter to let Amazon EC2 select an address from the address pool\.  
+Updates to the `PublicIpv4Pool` property may require *some interruptions*\. Updates on an EIP reassociates the address on its associated resource\.
 *Required*: No  
 *Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`Tags`  <a name="cfn-ec2-eip-tags"></a>
+Any tags assigned to the Elastic IP address\.  
+Updates to the `Tags` property may require *some interruptions*\. Updates on an EIP reassociates the address on its associated resource\.
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-properties-ec2-eip-return-values"></a>

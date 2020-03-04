@@ -48,7 +48,7 @@ The ID of the virtual private gateway that is attached to a VPC\. The virtual pr
 
 ### Ref<a name="aws-resource-ec2-vpn-gatewayrouteprop-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPN gateway resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -73,13 +73,11 @@ The following example enables route propagation for the private route table name
 #### YAML<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_Gateway_Route_Propagation--yaml"></a>
 
 ```
-myVPNGatewayRouteProp:
 Type: AWS::EC2::VPNGatewayRoutePropagation
    Properties:
        RouteTableIds: 
         - !Ref PrivateRouteTable
-       VpnGatewayId: 
-        - !Ref VPNGateway
+       VpnGatewayId: !Ref VPNGateway
 ```
 
 ## See Also<a name="aws-resource-ec2-vpn-gatewayrouteprop--seealso"></a>

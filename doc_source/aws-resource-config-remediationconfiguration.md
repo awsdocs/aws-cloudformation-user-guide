@@ -179,7 +179,7 @@ BasicRemediationConfiguration:
             StaticValue:
                 Values:
                     - instanceId
-    TargetId: "AWS-StartEC2Instance"
-    TargetType: "SSM_DOCUMENT"
-    TargetVersion: "1"
+        TargetId: "AWS-StartEC2Instance"
+        TargetType: "SSM_DOCUMENT"
+        TargetVersion: "1"
 ```

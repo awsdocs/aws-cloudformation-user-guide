@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-datastore-retentionperiod-properties"></a>
 
 `NumberOfDays`  <a name="cfn-iotanalytics-datastore-retentionperiod-numberofdays"></a>
-The number of days that message data is kept\. The "unlimited" parameter must be false\.  
+The number of days that message data is kept\. The `unlimited` parameter must be false\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

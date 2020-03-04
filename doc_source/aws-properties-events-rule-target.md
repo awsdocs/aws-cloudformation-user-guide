@@ -1,8 +1,8 @@
 # AWS::Events::Rule Target<a name="aws-properties-events-rule-target"></a>
 
-The `Target` property type specifies a target, such as an AWS Lambda function or an Amazon Kinesis data stream, that CloudWatch Events invokes when a rule is triggered\. 
+The `Target` property type specifies a target, such as an AWS Lambda function or an Amazon Kinesis data stream, that EventBridge invokes when a rule is triggered\. 
 
- `Targets` property of the [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html) resource contains a list of one or more `Target` property types\.
+The `Targets` property of the [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html) resource contains a list of one or more `Target` property types\.
 
 ## Syntax<a name="aws-properties-events-rule-target-syntax"></a>
 
@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-events-rule-target-arn)" : String,
+  "[BatchParameters](#cfn-events-rule-target-batchparameters)" : [BatchParameters](aws-properties-events-rule-batchparameters.md),
   "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : [EcsParameters](aws-properties-events-rule-ecsparameters.md),
   "[Id](#cfn-events-rule-target-id)" : String,
   "[Input](#cfn-events-rule-target-input)" : String,
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Arn](#cfn-events-rule-target-arn): String
+  [BatchParameters](#cfn-events-rule-target-batchparameters): 
+    [BatchParameters](aws-properties-events-rule-batchparameters.md)
   [EcsParameters](#cfn-events-rule-target-ecsparameters): 
     [EcsParameters](aws-properties-events-rule-ecsparameters.md)
   [Id](#cfn-events-rule-target-id): String
@@ -55,6 +58,12 @@ The Amazon Resource Name \(ARN\) of the target\.
 *Maximum*: `1600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`BatchParameters`  <a name="cfn-events-rule-target-batchparameters"></a>
+If the event target is an AWS Batch job, this contains the job definition, job name, and other parameters\. For more information, see [Jobs](https://docs.aws.amazon.com/batch/latest/userguide/jobs.html) in the *AWS Batch User Guide*\.  
+*Required*: No  
+*Type*: [BatchParameters](aws-properties-events-rule-batchparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EcsParameters`  <a name="cfn-events-rule-target-ecsparameters"></a>
 Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
 *Required*: No  
@@ -62,7 +71,8 @@ Contains the Amazon ECS task definition and task count to be used, if the event 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>
-The ID of the target\. It can include alphanumeric characters, periods \(\.\), hyphens \(\-\), and underscores \(\_\)\.  
+A name for the target\. Use a string that will help you identify the target\. Each target associated with a rule must have an Id unique for that rule\.  
+The `Id` can include alphanumeric characters, periods \(\.\), hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -98,6 +108,7 @@ The custom parameter you can use to control the shard assignment, when the targe
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
+If you're setting an event bus in another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a `RoleArn` with proper permissions here in this parameter\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

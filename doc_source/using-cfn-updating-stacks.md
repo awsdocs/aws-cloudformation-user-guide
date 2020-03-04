@@ -1,4 +1,4 @@
-# AWS CloudFormation Stacks Updates<a name="using-cfn-updating-stacks"></a>
+# AWS CloudFormation Stack Updates<a name="using-cfn-updating-stacks"></a>
 
 When you need to make changes to a stack's settings or change its resources, you update the stack instead of deleting it and creating a new stack\. For example, if you have a stack with an EC2 instance, you can update the stack to change the instance's AMI ID\.
 

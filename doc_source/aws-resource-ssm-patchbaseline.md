@@ -168,5 +168,158 @@ The ID of the default patch baseline provided by AWS is an ARN, for example `arn
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+## Examples<a name="aws-resource-ssm-patchbaseline--examples"></a>
+
+### AWS Systems Manager Patch Baseline Example<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example"></a>
+
+The following example creates a Systems Manager patch baseline that approves patches for Windows Server 2019 instances seven days after they are released by Microsoft\. The patch baseline also approves patches for Active Directory seven days after they are released by Microsoft\.
+
+#### JSON<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--json"></a>
+
+```
+{
+    "Resources": {
+        "myPatchBaseline": {
+            "Type": "AWS::SSM::PatchBaseline",
+            "Properties": {
+                "Name": "myPatchBaseline",
+                "Description": "Baseline containing all updates approved for Windows instances",
+                "OperatingSystem": "WINDOWS",
+                "PatchGroups": [
+                    "myPatchGroup"
+                ],
+                "ApprovalRules": {
+                    "PatchRules": [
+                        {
+                            "PatchFilterGroup": {
+                                "PatchFilters": [
+                                    {
+                                        "Values": [
+                                            "Critical",
+                                            "Important",
+                                            "Moderate"
+                                        ],
+                                        "Key": "MSRC_SEVERITY"
+                                    },
+                                    {
+                                        "Values": [
+                                            "SecurityUpdates",
+                                            "CriticalUpdates"
+                                        ],
+                                        "Key": "CLASSIFICATION"
+                                    },
+                                    {
+                                        "Values": [
+                                            "WindowsServer2019"
+                                        ],
+                                        "Key": "PRODUCT"
+                                    }
+                                ]
+                            },
+                            "ApproveAfterDays": 7,
+                            "ComplianceLevel": "CRITICAL"
+                        },
+                        {
+                            "PatchFilterGroup": {
+                                "PatchFilters": [
+                                    {
+                                        "Values": [
+                                            "Critical",
+                                            "Important",
+                                            "Moderate"
+                                        ],
+                                        "Key": "MSRC_SEVERITY"
+                                    },
+                                    {
+                                        "Values": [
+                                            "*"
+                                        ],
+                                        "Key": "CLASSIFICATION"
+                                    },
+                                    {
+                                        "Values": [
+                                            "APPLICATION"
+                                        ],
+                                        "Key": "PATCH_SET"
+                                    },
+                                    {
+                                        "Values": [
+                                            "Active Directory Rights Management Services Client 2.0"
+                                        ],
+                                        "Key": "PRODUCT"
+                                    },
+                                    {
+                                        "Values": [
+                                            "Active Directory"
+                                        ],
+                                        "Key": "PRODUCT_FAMILY"
+                                    }
+                                ]
+                            },
+                            "ApproveAfterDays": 7,
+                            "ComplianceLevel": "CRITICAL"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--yaml"></a>
+
+```
+---
+Resources:
+  myPatchBaseline:
+    Type: AWS::SSM::PatchBaseline
+    Properties:
+      Name: myPatchBaseline
+      Description: Baseline containing all updates approved for Windows instances
+      OperatingSystem: WINDOWS
+      PatchGroups:
+      - myPatchGroup
+      ApprovalRules:
+        PatchRules:
+        - PatchFilterGroup:
+            PatchFilters:
+            - Values:
+              - Critical
+              - Important
+              - Moderate
+              Key: MSRC_SEVERITY
+            - Values:
+              - SecurityUpdates
+              - CriticalUpdates
+              Key: CLASSIFICATION
+            - Values:
+              - WindowsServer2019
+              Key: PRODUCT
+          ApproveAfterDays: 7
+          ComplianceLevel: CRITICAL
+        - PatchFilterGroup:
+            PatchFilters:
+            - Values:
+              - Critical
+              - Important
+              - Moderate
+              Key: MSRC_SEVERITY
+            - Values:
+              - "*"
+              Key: CLASSIFICATION
+            - Values:
+              - APPLICATION
+              Key: PATCH_SET
+            - Values:
+              - Active Directory Rights Management Services Client 2.0
+              Key: PRODUCT
+            - Values:
+              - Active Directory
+              Key: PRODUCT_FAMILY
+          ApproveAfterDays: 7
+          ComplianceLevel: CRITICAL
+```
+
 ## See Also<a name="aws-resource-ssm-patchbaseline--seealso"></a>
 +  [CreatePatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *AWS Systems Manager API Reference*\.

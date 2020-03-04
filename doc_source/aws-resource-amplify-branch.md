@@ -18,7 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BuildSpec](#cfn-amplify-branch-buildspec)" : String,
       "[Description](#cfn-amplify-branch-description)" : String,
       "[EnableAutoBuild](#cfn-amplify-branch-enableautobuild)" : Boolean,
+      "[EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview)" : Boolean,
       "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md), ... ],
+      "[PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname)" : String,
       "[Stage](#cfn-amplify-branch-stage)" : String,
       "[Tags](#cfn-amplify-branch-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -37,8 +39,10 @@ Properties:
   [BuildSpec](#cfn-amplify-branch-buildspec): String
   [Description](#cfn-amplify-branch-description): String
   [EnableAutoBuild](#cfn-amplify-branch-enableautobuild): Boolean
+  [EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-branch-environmentvariables): 
     - [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)
+  [PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname): String
   [Stage](#cfn-amplify-branch-stage): String
   [Tags](#cfn-amplify-branch-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -82,10 +86,27 @@ Properties:
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EnablePullRequestPreview`  <a name="cfn-amplify-branch-enablepullrequestpreview"></a>
+Sets whether the Amplify Console creates a preview for each pull request that is made for this branch\. If this property is enabled, the Amplify Console deploys your app to a unique preview URL after each pull request is opened\. Development and QA teams can use this preview to test the pull request before it's merged into a production or integration branch\.  
+To provide backend support for your preview, the Amplify Console automatically provisions a temporary backend environment that it deletes when the pull request is closed\. If you want to specify a dedicated backend environment for your previews, use the `PullRequestEnvironmentName` property\.  
+For more information, see [Web Previews](https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html) in the *AWS Amplify Console User Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EnvironmentVariables`  <a name="cfn-amplify-branch-environmentvariables"></a>
  Environment Variables for the branch\.   
 *Required*: No  
 *Type*: List of [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PullRequestEnvironmentName`  <a name="cfn-amplify-branch-pullrequestenvironmentname"></a>
+If pull request previews are enabled for this branch, you can use this property to specify a dedicated backend environment for your previews\. For example, you could specify an environment named `prod`, `test`, or `dev` that you initialized with the Amplify CLI and mapped to this branch\.  
+To enable pull request previews, set the `EnablePullRequestPreview` property to `true`\.  
+If you don't specify an environment, the Amplify Console provides backend support for each preview by automatically provisioning a temporary backend environment\. Amplify Console deletes this environment when the pull request is closed\.  
+For more information about creating backend environments, see [Feature Branch Deployments and Team Workflows](https://docs.aws.amazon.com/amplify/latest/userguide/multi-environments.html) in the *AWS Amplify Console User Guide*\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Stage`  <a name="cfn-amplify-branch-stage"></a>

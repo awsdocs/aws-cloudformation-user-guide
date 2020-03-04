@@ -49,44 +49,95 @@ The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrins
 #### JSON<a name="aws-properties-cw-dimension--examples--Two_CloudWatch_alarms_with_dimension_values_supplied_by_the_Ref_function--json"></a>
 
 ```
-"CPUAlarmHigh": {
-   "Type": "AWS::CloudWatch::Alarm",
-   "Properties": {
-      "AlarmDescription": "Scale-up if CPU is greater than 90% for 10 minutes",
-      "MetricName": "CPUUtilization",
-      "Namespace": "AWS/EC2",
-      "Statistic": "Average",
-      "Period": "300",
-      "EvaluationPeriods": "2",
-      "Threshold": "90",
-      "AlarmActions": [ { "Ref": "WebServerScaleUpPolicy" } ],
-      "Dimensions": [
-         {
-            "Name": "AutoScalingGroupName",
-            "Value": { "Ref": "WebServerGroup" }
-         }
-      ],
-      "ComparisonOperator": "GreaterThanThreshold"
-   }
-},
-"CPUAlarmLow": {
-   "Type": "AWS::CloudWatch::Alarm",
-   "Properties": {
-      "AlarmDescription": "Scale-down if CPU is less than 70% for 10 minutes",
-      "MetricName": "CPUUtilization",
-      "Namespace": "AWS/EC2",
-      "Statistic": "Average",
-      "Period": "300",
-      "EvaluationPeriods": "2",
-      "Threshold": "70",
-      "AlarmActions": [ { "Ref": "WebServerScaleDownPolicy" } ],
-      "Dimensions": [
-         {
-            "Name": "AutoScalingGroupName",
-            "Value": { "Ref": "WebServerGroup" }
-         }
-      ],
-      "ComparisonOperator": "LessThanThreshold"
-   }
+{
+    "CPUAlarmHigh": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+            "AlarmDescription": "Scale-up if CPU is greater than 90% for 10 minutes",
+            "MetricName": "CPUUtilization",
+            "Namespace": "AWS/EC2",
+            "Statistic": "Average",
+            "Period": "300",
+            "EvaluationPeriods": "2",
+            "Threshold": "90",
+            "AlarmActions": [
+                {
+                    "Ref": "WebServerScaleUpPolicy"
+                }
+            ],
+            "Dimensions": [
+                {
+                    "Name": "AutoScalingGroupName",
+                    "Value": {
+                        "Ref": "WebServerGroup"
+                    }
+                }
+            ],
+            "ComparisonOperator": "GreaterThanThreshold"
+        }
+    },
+    "CPUAlarmLow": {
+        "Type": "AWS::CloudWatch::Alarm",
+        "Properties": {
+            "AlarmDescription": "Scale-down if CPU is less than 70% for 10 minutes",
+            "MetricName": "CPUUtilization",
+            "Namespace": "AWS/EC2",
+            "Statistic": "Average",
+            "Period": "300",
+            "EvaluationPeriods": "2",
+            "Threshold": "70",
+            "AlarmActions": [
+                {
+                    "Ref": "WebServerScaleDownPolicy"
+                }
+            ],
+            "Dimensions": [
+                {
+                    "Name": "AutoScalingGroupName",
+                    "Value": {
+                        "Ref": "WebServerGroup"
+                    }
+                }
+            ],
+            "ComparisonOperator": "LessThanThreshold"
+        }
+    }
 }
+```
+
+#### YAML<a name="aws-properties-cw-dimension--examples--Two_CloudWatch_alarms_with_dimension_values_supplied_by_the_Ref_function--yaml"></a>
+
+```
+CPUAlarmHigh:
+  Type: 'AWS::CloudWatch::Alarm'
+  Properties:
+    AlarmDescription: Scale-up if CPU is greater than 90% for 10 minutes
+    MetricName: CPUUtilization
+    Namespace: AWS/EC2
+    Statistic: Average
+    Period: '300'
+    EvaluationPeriods: '2'
+    Threshold: '90'
+    AlarmActions:
+      - !Ref WebServerScaleUpPolicy
+    Dimensions:
+      - Name: AutoScalingGroupName
+        Value: !Ref WebServerGroup
+    ComparisonOperator: GreaterThanThreshold
+CPUAlarmLow:
+  Type: 'AWS::CloudWatch::Alarm'
+  Properties:
+    AlarmDescription: Scale-down if CPU is less than 70% for 10 minutes
+    MetricName: CPUUtilization
+    Namespace: AWS/EC2
+    Statistic: Average
+    Period: '300'
+    EvaluationPeriods: '2'
+    Threshold: '70'
+    AlarmActions:
+      - !Ref WebServerScaleDownPolicy
+    Dimensions:
+      - Name: AutoScalingGroupName
+        Value: !Ref WebServerGroup
+    ComparisonOperator: LessThanThreshold
 ```

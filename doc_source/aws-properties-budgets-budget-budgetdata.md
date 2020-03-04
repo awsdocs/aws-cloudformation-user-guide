@@ -4,7 +4,7 @@ Represents the output of the `CreateBudget` operation\. The content consists of 
 
 This is the ARN pattern for a budget: 
 
- `arn:aws:budgetservice::AccountId:budget/budgetName` 
+ `arn:aws:budgets::AccountId:budget/budgetName` 
 
 ## Syntax<a name="aws-properties-budgets-budget-budgetdata-syntax"></a>
 
@@ -44,8 +44,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-budgets-budget-budgetdata-properties"></a>
 
 `BudgetLimit`  <a name="cfn-budgets-budget-budgetdata-budgetlimit"></a>
-The total amount of cost, usage, RI utilization, or RI coverage that you want to track with your budget\.  
- `BudgetLimit` is required for cost or usage budgets, but optional for RI utilization or coverage budgets\. RI utilization or coverage budgets default to `100`, which is the only valid value for RI utilization or coverage budgets\. You can't use `BudgetLimit` with `PlannedBudgetLimits` for `CreateBudget` and `UpdateBudget` actions\.   
+The total amount of cost, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage that you want to track with your budget\.  
+ `BudgetLimit` is required for cost or usage budgets, but optional for RI or Savings Plans utilization or coverage budgets\. RI and Savings Plans utilization or coverage budgets default to `100`, which is the only valid value for RI or Savings Plans utilization or coverage budgets\. You can't use `BudgetLimit` with `PlannedBudgetLimits` for `CreateBudget` and `UpdateBudget` actions\.   
 *Required*: No  
 *Type*: [Spend](aws-properties-budgets-budget-spend.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,10 +57,10 @@ The name of a budget\. The value must be unique within an account\. `BudgetName`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BudgetType`  <a name="cfn-budgets-budget-budgetdata-budgettype"></a>
-Whether this budget tracks costs, usage, RI utilization, or RI coverage\.  
+Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `COST | RI_COVERAGE | RI_UTILIZATION | USAGE`  
+*Allowed Values*: `COST | RI_COVERAGE | RI_UTILIZATION | SAVINGS_PLANS_COVERAGE | SAVINGS_PLANS_UTILIZATION | USAGE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
@@ -77,7 +77,7 @@ AWS Budgets supports the following services as a filter for RI budgets:
 
 `CostTypes`  <a name="cfn-budgets-budget-budgetdata-costtypes"></a>
 The types of costs that are included in this `COST` budget\.  
- `USAGE`, `RI_UTILIZATION`, and `RI_COVERAGE` budgets do not have `CostTypes`\.  
+ `USAGE`, `RI_UTILIZATION`, `RI_COVERAGE`, `SAVINGS_PLANS_UTILIZATION`, and `SAVINGS_PLANS_COVERAGE` budgets do not have `CostTypes`\.  
 *Required*: No  
 *Type*: [CostTypes](aws-properties-budgets-budget-costtypes.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

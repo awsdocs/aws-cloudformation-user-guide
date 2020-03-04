@@ -66,7 +66,7 @@ The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For v
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ZoneAwarenessConfig`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig"></a>
-Specifies zone awareness configuration options\. Only required if `ZoneAwarenessEnabled` is `true`\.  
+Specifies zone awareness configuration options\. Only use if `ZoneAwarenessEnabled` is `true`\.  
 *Required*: No  
 *Type*: [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

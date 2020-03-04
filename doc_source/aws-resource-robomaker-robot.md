@@ -54,6 +54,7 @@ The Greengrass group associated with the robot\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1224`  
+*Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-robomaker-robot-name"></a>

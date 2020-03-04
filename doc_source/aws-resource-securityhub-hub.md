@@ -51,24 +51,23 @@ The following example shows how to declare a Security Hub `Hub` resource:
 
 ```
 {
-    "Description": "Example Hub with Tags",
-        "Resources" : {
-            "ExampleHubWithTags" : {
-                "Type" : "AWS::SecurityHub::Hub",
-                    "Properties" : {
-                        "Tags" : {
-                            "key1" : "value1",
-                            "key2" : "value2"
-                        }
-                    }
-            }
-        },
-        "Outputs" : {
-            "HubArn" : {
-                "Value" : {"Ref" : "ExampleHubWithTags"}
-            }
+  "Description": "Example Hub with Tags",
+  "Resources" : {
+      "ExampleHubWithTags" : {
+          "Type" : "AWS::SecurityHub::Hub",
+          "Properties" : {
+              "Tags" : {
+                  "key1" : "value1",
+                  "key2" : "value2"
+              }
+          }
+      }
+    },
+    "Outputs" : {
+        "HubArn" : {
+            "Value" : {"Ref" : "ExampleHubWithTags"}
         }
-            
+    }
 }
 ```
 
@@ -76,14 +75,14 @@ The following example shows how to declare a Security Hub `Hub` resource:
 
 ```
 Description: "Example Hub with Tags"
-    Resources:
-        ExampleHubWithTags:
-            Type: "AWS::SecurityHub::Hub"
-            Properties:
-                Tags:
-                    "key1" : "value1"
-                    "key2" : "value2"
-            Outputs:
-                HubArn:
-                    Ref: !Ref ExampleHubWithTags
+Resources:
+    ExampleHubWithTags:
+        Type: "AWS::SecurityHub::Hub"
+        Properties:
+            Tags:
+                "key1" : "value1"
+                "key2" : "value2"
+Outputs:
+    HubArn:
+        Value: !Ref ExampleHubWithTags
 ```

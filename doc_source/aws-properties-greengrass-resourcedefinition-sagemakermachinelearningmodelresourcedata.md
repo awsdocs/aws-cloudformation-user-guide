@@ -33,7 +33,7 @@ The absolute local path of the resource inside the Lambda environment\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SageMakerJobArn`  <a name="cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn"></a>
-The Amazon Resource Name \(ARN\) of the Secrets Manager training job that represents the source model\.  
+The Amazon Resource Name \(ARN\) of the Amazon SageMaker training job that represents the source model\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

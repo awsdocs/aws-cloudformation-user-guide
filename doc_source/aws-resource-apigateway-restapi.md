@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
       "[Name](#cfn-apigateway-restapi-name)" : String,
       "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key : Value, ...},
-      "[Policy](#cfn-apigateway-restapi-policy)" : Json
+      "[Policy](#cfn-apigateway-restapi-policy)" : Json,
+      "[Tags](#cfn-apigateway-restapi-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -52,6 +53,8 @@ Properties:
   [Parameters](#cfn-apigateway-restapi-parameters): 
     Key : Value
   [Policy](#cfn-apigateway-restapi-policy): Json
+  [Tags](#cfn-apigateway-restapi-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-apigateway-restapi-properties"></a>
@@ -65,7 +68,7 @@ The source of the API key for metering requests according to a usage plan\. Vali
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  
+The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. Slashes must be escaped with `~1`\. For example, `image/png` would be `image~1png` in the `BinaryMediaTypes` list\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -125,9 +128,15 @@ Custom header parameters for the request\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-apigateway-restapi-policy"></a>
-A policy document that contains the permissions for the `RestApi` resource, in JSON format\.  
+A policy document that contains the permissions for the `RestApi` resource, in JSON format\. To set the ARN for the policy, use the `!Join` intrinsic function with `""` as delimiter and values of `"execute-api:/"` and `"*"`\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigateway-restapi-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the API\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-apigateway-restapi-return-values"></a>

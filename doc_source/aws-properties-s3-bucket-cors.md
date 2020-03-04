@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-cors-properties"></a>
 
 `CorsRules`  <a name="cfn-s3-bucket-cors-corsrule"></a>
-A set of allowed origins and methods\.  
+A set of origins and methods \(cross\-origin access that you want to allow\)\. You can add up to 100 rules to the configuration\.  
 *Required*: Yes  
 *Type*: List of [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

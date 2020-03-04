@@ -38,3 +38,6 @@ Certain stack operations, such as stack updates, should be initiated from the ro
 1. Expand the **Resources** section\.
 
    Look for resources of type **AWS::CloudFormation::Stack**\.
+
+**Topics**
++ [Nesting an Existing Stack](resource-import-nested-stacks.md)

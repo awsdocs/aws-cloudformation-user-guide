@@ -1,6 +1,6 @@
 # AWS::Config::RemediationConfiguration SsmControls<a name="aws-properties-config-remediationconfiguration-ssmcontrols"></a>
 
-AWS Systems Manager \(SSM\) specific remediation controls\.
+<a name="aws-properties-config-remediationconfiguration-ssmcontrols-description"></a>The `SsmControls` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Config::RemediationConfiguration](aws-resource-config-remediationconfiguration.md)\.
 
 ## Syntax<a name="aws-properties-config-remediationconfiguration-ssmcontrols-syntax"></a>
 

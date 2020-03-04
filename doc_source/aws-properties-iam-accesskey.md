@@ -80,6 +80,40 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `SecretAccessKey`  <a name="SecretAccessKey-fn::getatt"></a>
 Returns the secret access key for the specified AWS::IAM::AccessKey resource\. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY\.
 
+## Examples<a name="aws-properties-iam-accesskey--examples"></a>
+
+### Access Key<a name="aws-properties-iam-accesskey--examples--Access_Key"></a>
+
+In this example, create an access key for the user named "MyUser"\.
+
+#### JSON<a name="aws-properties-iam-accesskey--examples--Access_Key--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources": {
+      "CFNKeys" : {
+         "Type" : "AWS::IAM::AccessKey",
+         "Properties" : {
+           "UserName" : { "Ref": "MyUser" }
+         }
+      }
+   }            
+}
+```
+
+#### YAML<a name="aws-properties-iam-accesskey--examples--Access_Key--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  CFNKeys:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName:
+        Ref: MyUser
+```
+
 ## See Also<a name="aws-properties-iam-accesskey--seealso"></a>
 + To view `AWS::IAM::AccessKey` template example snippets, see [Declaring an IAM Access Key Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-accesskey)\. 
 +  [CreateAccessKey](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccessKey.html) in the *AWS Identity and Access Management API Reference* 

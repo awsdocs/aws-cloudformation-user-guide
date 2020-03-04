@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MeshName](#cfn-appmesh-route-meshname)" : String,
       "[RouteName](#cfn-appmesh-route-routename)" : String,
       "[Spec](#cfn-appmesh-route-spec)" : [RouteSpec](aws-properties-appmesh-route-routespec.md),
-      "[Tags](#cfn-appmesh-route-tags)" : [ [TagRef](aws-properties-appmesh-route-tagref.md), ... ],
+      "[Tags](#cfn-appmesh-route-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualRouterName](#cfn-appmesh-route-virtualroutername)" : String
     }
 }
@@ -35,7 +35,7 @@ Properties:
   [Spec](#cfn-appmesh-route-spec): 
     [RouteSpec](aws-properties-appmesh-route-routespec.md)
   [Tags](#cfn-appmesh-route-tags): 
-    - [TagRef](aws-properties-appmesh-route-tagref.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualRouterName](#cfn-appmesh-route-virtualroutername): String
 ```
 
@@ -62,7 +62,7 @@ The route specification to apply\.
 `Tags`  <a name="cfn-appmesh-route-tags"></a>
 Optional metadata that you can apply to the route to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
 *Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-route-tagref.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualRouterName`  <a name="cfn-appmesh-route-virtualroutername"></a>

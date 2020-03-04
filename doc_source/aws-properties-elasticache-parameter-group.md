@@ -77,30 +77,32 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-properties-elasticache-parameter-group--examples----json"></a>
 
 ```
-"MyParameterGroup": {
- "Type": "AWS::ElastiCache::ParameterGroup",
- "Properties": {
-    "Description": "MyNewParameterGroup",
-       "CacheParameterGroupFamily": "memcached1.4",
-          "Properties" : {
-            "cas_disabled" : "1",
-            "chunk_size_growth_factor" : "1.02"
-      }
-   }
+{
+    "MyParameterGroup": {
+        "Type": "AWS::ElastiCache::ParameterGroup",
+        "Properties": {
+            "Description": "MyNewParameterGroup",
+            "CacheParameterGroupFamily": "memcached1.4",
+            "Properties": {
+                "cas_disabled": "1",
+                "chunk_size_growth_factor": "1.02"
+            }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-properties-elasticache-parameter-group--examples----yaml"></a>
 
 ```
-MyParameterGroup: 
-   Type: AWS::ElastiCache::ParameterGroup
-   Properties: 
-      Description: "MyNewParameterGroup"
-      CacheParameterGroupFamily: "memcached1.4"
-      Properties: 
-         cas_disabled: "1"
-         chunk_size_growth_factor: "1.02"
+MyParameterGroup:
+  Type: 'AWS::ElastiCache::ParameterGroup'
+  Properties:
+    Description: MyNewParameterGroup
+    CacheParameterGroupFamily: memcached1.4
+    Properties:
+      cas_disabled: '1'
+      chunk_size_growth_factor: '1.02'
 ```
 
 ## See Also<a name="aws-properties-elasticache-parameter-group--seealso"></a>

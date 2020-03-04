@@ -77,7 +77,7 @@ Properties:
 ## Properties<a name="aws-properties-cw-alarm-properties"></a>
 
 `ActionsEnabled`  <a name="cfn-cloudwatch-alarms-actionsenabled"></a>
-Indicates whether actions should be executed during any changes to the alarm state\.  
+Indicates whether actions should be executed during any changes to the alarm state\. The default is TRUE\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -190,7 +190,8 @@ The actions to execute when this alarm transitions to the `OK` state from any ot
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Period`  <a name="cfn-cloudwatch-alarms-period"></a>
-The period, in seconds, over which the statistic is applied\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
+The period, in seconds, over which the statistic is applied\. This is required for an alarm based on a metric\. Valid values are 10, 30, 60, and any multiple of 60\.  
+For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -252,6 +253,87 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
+
+## Examples<a name="aws-properties-cw-alarm--examples"></a>
+
+### Alarm Based on an Anomaly Detector<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector"></a>
+
+This example creates an alarm that is based on an anomaly detector\.
+
+#### JSON<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector--json"></a>
+
+```
+"Resources": {
+    "LambdaInvocationsAnomalyDetector": {
+       "Type": "AWS::CloudWatch::AnomalyDetector",
+       "Properties": {
+          "MetricName": "Invocations",
+          "Namespace": "AWS/Lambda",
+          "Stat": "Sum"
+       }
+    },
+    "LambdaInvocationsAlarm": {
+       "Type": "AWS::CloudWatch::Alarm",
+       "Properties": {
+          "AlarmDescription": "Lambda invocations",
+          "AlarmName": "LambdaInvocationsAlarm",
+          "ComparisonOperator": "LessThanLowerOrGreaterThanUpperThreshold",
+          "EvaluationPeriods": 1,
+          "Metrics": [
+             {
+                "Expression": "ANOMALY_DETECTION_BAND(m1, 2)",
+                "Id": "ad1"
+             },
+             {
+                "Id": "m1",
+                "MetricStat": {
+                   "Metric": {
+                      "MetricName": "Invocations",
+                      "Namespace": "AWS/Lambda"
+                   },
+                   "Period": 86400,
+                   "Stat": "Sum"
+                }
+             }
+          ],
+          "ThresholdMetricId": "ad1",
+          "TreatMissingData": "breaching"
+       }
+    }
+ }
+```
+
+#### YAML<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector--yaml"></a>
+
+```
+Resources:
+  LambdaInvocationsAnomalyDetector:
+    Type: AWS::CloudWatch::AnomalyDetector
+    Properties:
+      MetricName: Invocations
+      Namespace: AWS/Lambda
+      Stat: Sum
+
+  LambdaInvocationsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Lambda invocations
+      AlarmName: LambdaInvocationsAlarm
+      ComparisonOperator: LessThanLowerOrGreaterThanUpperThreshold
+      EvaluationPeriods: 1
+      Metrics:
+      - Expression: ANOMALY_DETECTION_BAND(m1, 2)
+        Id: ad1
+      - Id: m1
+        MetricStat:
+          Metric:
+            MetricName: Invocations
+            Namespace: AWS/Lambda
+          Period: !!int 86400
+          Stat: Sum
+      ThresholdMetricId: ad1
+      TreatMissingData: breaching
+```
 
 ## See Also<a name="aws-properties-cw-alarm--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 

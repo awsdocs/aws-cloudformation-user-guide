@@ -50,7 +50,8 @@ You can specify either `VirtualName` or `Ebs`, but not both\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-as-launchconfig-blockdev-mapping-nodevice"></a>
-Suppresses the device mapping\. If this property is set to `true` for the root device, the instance might fail the Amazon EC2 health check\. Amazon EC2 Auto Scaling launches a replacement instance if the instance fails the health check\.   
+Suppresses the device mapping\. The only permitted value for this property is `true`\.  
+If this property is set to `true` for the root device, the instance might fail the Amazon EC2 health check\. Amazon EC2 Auto Scaling launches a replacement instance if the instance fails the health check\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

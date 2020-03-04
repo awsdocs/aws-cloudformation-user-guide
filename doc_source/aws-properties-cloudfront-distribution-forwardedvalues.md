@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution ForwardedValues<a name="aws-properties-cloudfront-distribution-forwardedvalues"></a>
 
-A complex type that specifies how CloudFront handles query strings and cookies\.
+A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-forwardedvalues-syntax"></a>
 
@@ -39,7 +39,7 @@ A complex type that specifies whether you want CloudFront to forward cookies to 
 
 `Headers`  <a name="cfn-cloudfront-distribution-forwardedvalues-headers"></a>
 A complex type that specifies the `Headers`, if any, that you want CloudFront to forward to the origin for this cache behavior \(whitelisted headers\)\. For the headers that you specify, CloudFront also caches separate versions of a specified object that is based on the header values in viewer requests\.  
-For more information, see [Caching Content Based on Request Headers](https://docs.aws.amazon.com/Cookies.html) in the *Amazon CloudFront Developer Guide*\.  
+For more information, see [ Caching Content Based on Request Headers](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/header-caching.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

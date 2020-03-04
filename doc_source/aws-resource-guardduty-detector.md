@@ -36,7 +36,7 @@ Specifies whether or not to enable the detector\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>
-A enumeration value that specifies how frequently finding updates are published\.  
+A enumeration value that specifies how frequently finding updates are published\. Valid values include: FIFTEEN\_MINUTES \| ONE\_HOUR \| SIX\_HOURS\. The default value is SIX\_HOURS\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,7 +70,7 @@ The following example shows how to declare a GuardDuty `Detector` resource:
 #### YAML<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource--yaml"></a>
 
 ```
-mydectector:
+mydetector:
     Type: AWS::GuardDuty::Detector
     Properties:
         Enable: True

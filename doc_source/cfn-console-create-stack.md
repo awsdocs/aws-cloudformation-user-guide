@@ -13,7 +13,7 @@ Creating a stack on the AWS CloudFormation console is an easy, wizard\-driven pr
 
 1. [Specifying stack parameters](cfn-using-console-create-stack-parameters.md)
 
-1. [Setting Stack Options](cfn-console-add-tags.md)
+1. [Setting AWS CloudFormation Stack Options](cfn-console-add-tags.md)
 
 1. [Reviewing your stack](cfn-using-console-create-stack-review.md)
 
@@ -26,13 +26,8 @@ After creating a stack, you can monitor the stack's progress, view the stack's r
 1. Log in to the AWS Management Console and select **CloudFormation** in the **Services** menu\.
 
 1. Create a new stack by using one of the following options:
-   + Click **Create Stack**\. This is the *only* option if you have a currently running stack\.  
-![\[The Create Stack menu button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-button2.png)
-   + Click **Create New Stack** in the **CloudFormation Stacks** main window\. This option is visible only if you have no running stacks\.  
-![\[The Create New Stack button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-button1.png)
-   + Click **Launch CloudFormer** in the **CloudFormation Stacks** main window to create a stack from currently running resources\. This option is visible only if you have no running stacks\.  
-![\[The Launch CloudFormer button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-cloudformer-button.png)
-
-     For more information about using CloudFormer to create AWS CloudFormation stacks, see [Using CloudFormer \(Beta\) to Create Templates](cfn-using-cloudformer.md)\.
+   + Click **Create Stack**\. This is the *only* option if you have a currently running stack\.
+   + Click **Create Stack** on the **Stacks** page\. This option is visible only if you have no running stacks\.  
+![\[The Create Stack button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-stacks-create-stack.png)
 
 Next, you [choose a stack template](cfn-using-console-create-stack-template.md)\.

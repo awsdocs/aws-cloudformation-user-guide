@@ -69,8 +69,6 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
-
 #### <a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-fn--getatt-fn--getatt"></a>
 
 `NotebookInstanceLifecycleConfigName`  <a name="NotebookInstanceLifecycleConfigName-fn::getatt"></a>
@@ -78,11 +76,11 @@ The name of the lifecycle configuration, such as `MyLifecycleConfig`\.
 
 ## Examples<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples"></a>
 
-### SageMaker NotebookInstanceLifecycleConfig Example<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Example"></a>
+### SageMaker NotebookInstanceLifecycleConfig Examples<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Examples"></a>
 
 The following example creates a notebook instance with an associated lifecycle configuration\.
 
-#### JSON<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Example--json"></a>
+#### JSON<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Examples--json"></a>
 
 ```
 {
@@ -156,7 +154,7 @@ The following example creates a notebook instance with an associated lifecycle c
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Example--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig--examples--SageMaker_NotebookInstanceLifecycleConfig_Examples--yaml"></a>
 
 ```
 Description: "Basic NotebookInstance test"

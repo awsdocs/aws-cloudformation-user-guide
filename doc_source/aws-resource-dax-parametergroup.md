@@ -53,7 +53,7 @@ An array of name\-value pairs for the parameters in the group\. Each element in 
 
 ### Ref<a name="aws-resource-dax-parametergroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created parameter group\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created parameter group\. For example: 
 
 ```
 { "Ref": "MyDAXParameterGroup" }

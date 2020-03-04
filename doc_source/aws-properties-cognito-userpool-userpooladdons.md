@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool UserPoolAddOns<a name="aws-properties-cognito-userpool-userpooladdons"></a>
 
-`UserPoolAddOns` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that enables advanced security risk detection\.
+The user pool add\-ons type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-userpooladdons-syntax"></a>
 

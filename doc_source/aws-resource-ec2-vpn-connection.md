@@ -1,6 +1,10 @@
 # AWS::EC2::VPNConnection<a name="aws-resource-ec2-vpn-connection"></a>
 
-Specifies a VPN connection between a virtual private gateway and a VPN customer gateway\.
+Specifies a VPN connection between a virtual private gateway and a VPN customer gateway or a transit gateway and a VPN customer gateway\.
+
+To specify a VPN connection between a transit gateway and customer gateway, use the `TransitGatewayId` and `CustomerGatewayId` properties\.
+
+To specify a VPN connection between a virtual private gateway and customer gateway, use the `VpnGatewayId` and `CustomerGatewayId` properties\.
 
 For more information, see [AWS Site\-to\-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) in the *AWS Site\-to\-Site VPN User Guide*\.
 
@@ -84,7 +88,7 @@ You must specify either `TransitGatewayId` or `VpnGatewayId`, but not both\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpnTunnelOptionsSpecifications`  <a name="cfn-ec2-vpnconnection-vpntunneloptionsspecifications"></a>
-The tunnel options for a VPN connection\.  
+The tunnel options for the VPN connection\.  
 *Required*: No  
 *Type*: List of [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -132,4 +136,4 @@ The following example specifies a VPN connection between myVPNGateway and MyCust
 ```
 
 ## See Also<a name="aws-resource-ec2-vpn-connection--seealso"></a>
-+  [VPNConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VPNConnection.html) in the *Amazon EC2 API Reference*
++  [VPNConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html) in the *Amazon EC2 API Reference*

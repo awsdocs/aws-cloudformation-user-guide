@@ -51,7 +51,7 @@ The running mode\. For more information, see [Manage the WorkSpace Running Mode]
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RunningModeAutoStopTimeoutInMinutes`  <a name="cfn-workspaces-workspace-workspaceproperties-runningmodeautostoptimeoutinminutes"></a>
-The time after a user logs off when WorkSpaces are automatically stopped\. Configured in 60 minute intervals\.  
+The time after a user logs off when WorkSpaces are automatically stopped\. Configured in 60\-minute intervals\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

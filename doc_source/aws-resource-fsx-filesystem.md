@@ -55,43 +55,44 @@ The ID of the backup\. Specifies the backup to use if you're creating a file sys
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemType`  <a name="cfn-fsx-filesystem-filesystemtype"></a>
-Type of file system\. Currently the only supported type is WINDOWS\.  
-*Required*: No  
+The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.  
+*Required*: Yes  
 *Type*: String  
 *Allowed Values*: `LUSTRE | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for an Amazon FSx for Windows File Server file system\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for an Amazon FSx for Windows File Server file system\. Amazon FSx for Lustre does not support KMS encryption\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LustreConfiguration`  <a name="cfn-fsx-filesystem-lustreconfiguration"></a>
-The configuration object for Lustre file systems used in the `CreateFileSystem` operation\.  
-*Required*: No  
+The Lustre configuration for the file system being created\. This value is required if `FileSystemType` is set to `LUSTRE`\.  
+*Required*: Conditional  
 *Type*: [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-fsx-filesystem-securitygroupids"></a>
-A list of IDs for the security groups that apply to the specified network interfaces created for file system access\. These security groups will apply to all network interfaces\. This list isn't returned in later describe requests\.  
+A list of IDs specifying the security groups to apply to all network interfaces created for file system access\. This list isn't returned in later requests to describe the file system\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
-The storage capacity of the file system\.  
-For Windows file systems, the storage capacity has a minimum of 300 GiB, and a maximum of 65,536 GiB\.  
-For Lustre file systems, the storage capacity has a minimum of 3,600 GiB\. Storage capacity is provisioned in increments of 3,600 GiB\.  
+The storage capacity of the file system being created\.  
+For Windows file systems, valid values are 32 GiB \- 65,536 GiB\.  
+For Lustre file systems, valid values are 1,200, 2,400, 3,600, then continuing in increments of 3600 GiB\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-The IDs of the subnets to contain the endpoint for the file system\. One and only one is supported\. The file system is launched in the Availability Zone associated with this subnet\.  
-*Required*: No  
+Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\.  
+For Windows `SINGLE_AZ_1` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
+*Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -105,8 +106,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WindowsConfiguration`  <a name="cfn-fsx-filesystem-windowsconfiguration"></a>
-The configuration object for the Microsoft Windows file system you are creating\.   
-*Required*: No  
+The configuration object for the Microsoft Windows file system you are creating\. This value is required if `FileSystemType` is set to `WINDOWS`\.  
+*Required*: Conditional  
 *Type*: [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -132,41 +133,63 @@ The following examples create an Amazon FSx for Lustre file system\.
 
 ```
 {
-   "Resources": {
-	  "BasicS3LinkedLustreFileSystem": {
-		 "Type": "AWS::FSx::FileSystem",
-		  "Properties": {
-			 "FileSystemType": "LUSTRE",
-			 "StorageCapacity": 3600,
-			 "SubnetIds": [
-				null
-			],
-			"SecurityGroupIds": [
-				null
-			],
-			"Tags": [
-			   {
-				  "Key": "Name",
-				  "Value": "s3linkedLustre"
-			   },
-			   {
-				  "Key": "StorageCapacity",
-				  "Value": "3600GB"
-			   }
-			],
-			"LustreConfiguration": {
-			   "ImportPath": null,
-			   "ExportPath": null,
-			   "WeeklyMaintenanceStartTime": "2:20:30"
-			  }
-	    }
-	  }
-	},
-	"Outputs": {
-	   "FileSystemId": {
-		  "Value": null
-		}
-	}
+    "Resources": {
+        "BasicS3LinkedLustreFileSystem": {
+            "Type": "AWS::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "LUSTRE",
+                "StorageCapacity": 1200,
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "MySubnet01"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "LustreIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "CFNs3linkedLustre"
+                    }
+                ],
+                "LustreConfiguration": {
+                    "ImportPath": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "s3://",
+                                {
+                                    "Fn::ImportValue": "LustreCFNS3ImportBucketName"
+                                }
+                            ]
+                        ]
+                    },
+                    "ExportPath": {
+                        "Fn::Join": [
+                            "",
+                            [
+                                "s3://",
+                                {
+                                    "Fn::ImportValue": "LustreCFNS3ImportBucketName"
+                                }
+                            ]
+                        ]
+                    },
+                    "WeeklyMaintenanceStartTime": "2:20:30"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+            "Value": {
+                "Ref": "BasicS3LinkedLustreFileSystem"
+            }
+        }
+    }
 }
 ```
 
@@ -178,98 +201,247 @@ Resources:
     Type: AWS::FSx::FileSystem
     Properties:
       FileSystemType: "LUSTRE"
-      StorageCapacity: 3600
-      SubnetIds: [!ImportValue CustomerPublicSubnet01]
+      StorageCapacity: 1200
+      SubnetIds: [!ImportValue MySubnet01]
       SecurityGroupIds: [!ImportValue LustreIngressSecurityGroupId]
       Tags:
         - Key: "Name"
-          Value: "s3linkedLustre"
-        - Key: "StorageCapacity"
-          Value: "3600GB"
+          Value: "CFNs3linkedLustre"
       LustreConfiguration:
-        ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNTestS3ImportBucketName]]
-        ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNTestS3ImportBucketName]]
+        ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
+        ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
         WeeklyMaintenanceStartTime: "2:20:30"
 Outputs:
   FileSystemId:
-    Value: !Ref BasicS3LinkedLustreFileSystemOutputs:
-  FileSystemId:
-Value: !Ref BasicS3LinkedLustreFileSystem
+    Value: !Ref BasicS3LinkedLustreFileSystem
 ```
 
-### Create an Amazon FSx for Windows File Server File System<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System"></a>
+### Create an Amazon FSx for Windows File Server File System in a Self\-managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory"></a>
 
-The following examples create an Amazon FSx for Windows File Server file system\.
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a Self\-managed active directory\.
 
-#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System--json"></a>
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory--json"></a>
 
 ```
 {
-   "Resources": {
-      "WindowsFileSystemWithAllConfigs": {
-         "Type": "AWS::FSx::FileSystem",
-         "Properties": {
-            "FileSystemType": "WINDOWS",
-            "StorageCapacity": 300,
-            "SubnetIds": [
-               null
-            ],
-            "SecurityGroupIds": [
-               null
-            ],
-            "Tags": [
-               {
-                  "Key": "Name",
-                  "Value": "windows"
-               },
-               {
-                  "Key": "ThroughputCapacity",
-                  "Value": "16"
-               }
-            ],
-            "WindowsConfiguration": {
-               "ActiveDirectoryId": null,
-               "ThroughputCapacity": 8,
-               "WeeklyMaintenanceStartTime": "4:16:30",
-               "DailyAutomaticBackupStartTime": "01:00",
-               "AutomaticBackupRetentionDays": 2,
-               "CopyTagsToBackups": false
+    "Resources": {
+        "WindowsSelfManagedADFileSystemWithAllConfigs": {
+            "Type": "AWS::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "WINDOWS",
+                "StorageCapacity": 32,
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "MySubnet01"
+                    },
+                    {
+                        "Fn::ImportValue": "MySubnet02"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "WindowsIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "windows"
+                    }
+                ],
+                "WindowsConfiguration": {
+                    "ThroughputCapacity": 8,
+                    "WeeklyMaintenanceStartTime": "4:16:30",
+                    "DailyAutomaticBackupStartTime": "01:00",
+                    "AutomaticBackupRetentionDays": 2,
+                    "CopyTagsToBackups": false,
+                    "DeploymentType": "MULTI_AZ_1",
+                    "PreferredSubnetId": {
+                        "Fn:ImportValue": "MySubnet01"
+                    },
+                    "SelfManagedActiveDirectoryConfiguration": {
+                        "DnsIps": [
+                            {
+                                "Fn::Select": [
+                                    0,
+                                    {
+                                        "Fn::Split": [
+                                            ",",
+                                            {
+                                                "Fn::ImportValue": "MySelfManagedADDnsIpAddresses"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "DomainName": {
+                            "Fn::ImprtValue": "SelfManagedADDomainName"
+                        },
+                        "FileSystemAdministratorsGroup": "MyDomainAdminGroup",
+                        "OrganizationalUnitDistinguishedName": "OU=FileSystems,DC=corp,DC=example,DC=com",
+                        "Username": "Admin",
+                        "Password": {
+                            "Fn::Join": [
+                                ":",
+                                [
+                                    "{{resolve:secretsmanager",
+                                    {
+                                        "Fn::ImportValue": "MySelfManagedADCredentialName"
+                                    },
+                                    "SecretString}}"
+                                ]
+                            ]
+                        }
+                    }
+                }
             }
-         }
-      }
-   },
-   "Outputs": {
-      "FileSystemId": {
-         "Value": null
-      }
-   }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+            "Value": {
+                "Ref": "WindowsSelfManagedADFileSystemWithAllConfigs"
+            }
+        }
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System--yaml"></a>
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory--yaml"></a>
 
 ```
 Resources:
-  WindowsFileSystemWithAllConfigs:
-    Type: "AWS::FSx::FileSystem"
+  WindowsSelfManagedADFileSystemWithAllConfigs:
+    Type: 'AWS::FSx::FileSystem'
     Properties:
-      FileSystemType: "WINDOWS"
-      StorageCapacity: 300
-      SubnetIds: [!ImportValue CustomerPublicSubnet01]
-      SecurityGroupIds: [!ImportValue LustreIngressSecurityGroupId]
+      FileSystemType: WINDOWS
+      StorageCapacity: 32
+      SubnetIds:
+        - !ImportValue MySubnet01
+        - !ImportValue MySubnet02
+      SecurityGroupIds:
+        - !ImportValue WindowsIngressSecurityGroupId
       Tags:
-        - Key: "Name"
-          Value: "windows"
-        - Key: "ThroughputCapacity"
-          Value: "16"
+        - Key: Name
+          Value: windows
       WindowsConfiguration:
-        ActiveDirectoryId: !ImportValue CustomerDirectoryServiceId
         ThroughputCapacity: 8
-        WeeklyMaintenanceStartTime: "4:16:30"
-        DailyAutomaticBackupStartTime: "01:00"
+        WeeklyMaintenanceStartTime: '4:16:30'
+        DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 2
+        CopyTagsToBackups: false
+        DeploymentType: MULTI_AZ_1
+        PreferredSubnetId: !ImportValue MySubnet01
+        SelfManagedActiveDirectoryConfiguration:
+          DnsIps:
+            - !Select 
+              - 0
+              - !Split 
+                - ','
+                - !ImportValue MySelfManagedADDnsIpAddresses
+          DomainName:
+            'Fn::ImprtValue': SelfManagedADDomainName
+          FileSystemAdministratorsGroup: MyDomainAdminGroup
+          OrganizationalUnitDistinguishedName: 'OU=FileSystems,DC=corp,DC=example,DC=com'
+          Username: Admin
+          Password: !Join 
+            - ':'
+            - - '{{resolve:secretsmanager'
+              - !ImportValue MySelfManagedADCredentialName
+              - 'SecretString}}'
+Outputs:
+  FileSystemId:
+    Value: !Ref WindowsSelfManagedADFileSystemWithAllConfigs
+```
+
+### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory"></a>
+
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to an AWS Managed Active Directory\.
+
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--json"></a>
+
+```
+{
+    "Resources": {
+        "WindowsMadFileSystemWithAllConfigs": {
+            "Type": "AWS::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "WINDOWS",
+                "StorageCapacity": 32,
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    },
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet02"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "WindowsIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "windows"
+                    }
+                ],
+                "WindowsConfiguration": {
+                    "ActiveDirectoryId": {
+                        "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
+                    },
+                    "ThroughputCapacity": 8,
+                    "WeeklyMaintenanceStartTime": "4:16:30",
+                    "DailyAutomaticBackupStartTime": "01:00",
+                    "AutomaticBackupRetentionDays": 2,
+                    "CopyTagsToBackups": false,
+                    "DeploymentType": "MULTI_AZ_1",
+                    "PreferredSubnetId": {
+                        "Fn:ImportValue": "CfnFsxMadSubnet01"
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+            "Value": {
+                "Ref": "WindowsMadFileSystemWithAllConfigs"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--yaml"></a>
+
+```
+Resources:
+  WindowsMadFileSystemWithAllConfigs:
+    Type: 'AWS::FSx::FileSystem'
+    Properties:
+      FileSystemType: WINDOWS
+      StorageCapacity: 300
+      SubnetIds:
+        - !ImportValue CfnFsxMadSubnet01
+        - !ImportValue CfnFsxMadSubnet02
+      SecurityGroupIds:
+        - !ImportValue WindowsIngressSecurityGroupId
+      Tags:
+        - Key: Name
+          Value: windows
+      WindowsConfiguration:
+        ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
+        ThroughputCapacity: 8
+        WeeklyMaintenanceStartTime: '4:16:30'
+        DailyAutomaticBackupStartTime: '01:00'
+        AutomaticBackupRetentionDays: 2
+        DeploymentType: MULTI_AZ_1
+        PreferredSubnetId: !ImportValue CfnFsxMadSubnet01
         CopyTagsToBackups: false
 Outputs:
   FileSystemId:
-Value: !Ref WindowsFileSystemWithAllConfigs
+    Value: !Ref WindowsMadFileSystemWithAllConfigs
 ```
