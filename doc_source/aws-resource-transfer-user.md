@@ -162,7 +162,7 @@ The following example associates a user with an SFTP server\.
 ```
 {
   "sftp_user": {
-    "Type": "AWS::Transfer::Server",
+    "Type": "AWS::Transfer::User",
     "Properties": {
       "HomeDirectoryMappings": [
         {
@@ -201,7 +201,7 @@ The following example associates a user with an SFTP server\.
 
 ```
 sftp_user:
-  Type : AWS::Transfer::Server
+  Type : AWS::Transfer::User
   Properties :
     HomeDirectoryMappings: 
       - Entry: our-personal-report.pdf
