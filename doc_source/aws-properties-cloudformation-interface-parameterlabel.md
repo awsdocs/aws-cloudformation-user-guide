@@ -1,4 +1,4 @@
-# AWS CloudFormation Interface ParameterLabel<a name="aws-properties-cloudformation-interface-parameterlabel"></a>
+# AWS::CloudFormation::Interface ParameterLabel<a name="aws-properties-cloudformation-interface-parameterlabel"></a>
 
 `ParameterLabel` is a property of the [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md) resource that specifies a friendly name or description for a parameter that the AWS CloudFormation console shows instead of the parameter's logical ID\.
 

@@ -1,4 +1,4 @@
-# AWS CloudFormation Interface Label<a name="aws-properties-cloudformation-interface-label"></a>
+# AWS::CloudFormation::Interface Label<a name="aws-properties-cloudformation-interface-label"></a>
 
 `Label` is a property of the [ParameterGroup](aws-properties-cloudformation-interface-parametergroup.md) and [ParameterLabel](aws-properties-cloudformation-interface-parameterlabel.md) properties that defines name for a parameter group or parameter\.
 

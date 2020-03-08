@@ -1,4 +1,4 @@
-# AWS CloudFormation Interface ParameterGroup<a name="aws-properties-cloudformation-interface-parametergroup"></a>
+# AWS::CloudFormation::Interface ParameterGroup<a name="aws-properties-cloudformation-interface-parametergroup"></a>
 
 `ParameterGroup` is a property of the [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md) resource that defines a parameter group and the parameters to include in the group\.
 
