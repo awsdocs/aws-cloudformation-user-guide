@@ -138,6 +138,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
 24.               - - 'arn:aws:s3:::'
 25.                 - !Ref S3Bucket
 26.                 - /*
+# Outputs Block must start with Italic font. Last line Bucket is coming in Italic
 27.       Bucket: !Ref S3Bucket
 28. Outputs:
 29.   WebsiteURL:
