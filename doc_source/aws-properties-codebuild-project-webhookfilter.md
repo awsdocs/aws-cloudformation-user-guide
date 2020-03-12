@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Type`  <a name="cfn-codebuild-project-webhookfilter-type"></a>
  The type of webhook filter\. There are five webhook filter types: `EVENT`, `ACTOR_ACCOUNT_ID`, `HEAD_REF`, `BASE_REF`, and `FILE_PATH`\.     
  EVENT   
- A webhook event triggers a build when the provided `pattern` matches one of four event types: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, and `PULL_REQUEST_REOPENED`\. The `EVENT` patterns are specified as a comma\-separated string\. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request created, and pull request updated events\.   
+ A webhook event triggers a build when the provided `pattern` matches one of five event types: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`, and `PULL_REQUEST_MERGED`\. The `EVENT` patterns are specified as a comma\-separated string\. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request created, and pull request updated events\.   
  The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only\.   
  ACTOR\_ACCOUNT\_ID   
  A webhook event triggers a build when a GitHub, GitHub Enterprise, or Bitbucket account ID matches the regular expression `pattern`\.   

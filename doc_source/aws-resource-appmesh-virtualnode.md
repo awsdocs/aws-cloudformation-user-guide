@@ -11,6 +11,8 @@ The response metadata for your new virtual node contains the `arn` that is assoc
 **Note**  
 If you require your Envoy stats or tracing to use a different name, you can override the `node.cluster` value that is set by `APPMESH_VIRTUAL_NODE_NAME` with the `APPMESH_VIRTUAL_NODE_CLUSTER` environment variable\.
 
+For more information about virtual nodes, see [Virtual Nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)\.
+
 ## Syntax<a name="aws-resource-appmesh-virtualnode-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -93,6 +95,12 @@ The full Amazon Resource Name \(ARN\) for the virtual node\.
 
 `MeshName`  <a name="MeshName-fn::getatt"></a>
 The name of the service mesh that the virtual node resides in\.
+
+`MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the virtual node\.

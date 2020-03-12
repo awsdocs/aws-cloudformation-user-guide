@@ -60,7 +60,8 @@ A name for the AWS Config rule\. If you don't specify a name, AWS CloudFormation
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `64`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-config-configrule-description"></a>

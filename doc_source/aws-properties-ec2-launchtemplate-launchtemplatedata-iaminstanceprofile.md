@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate IamInstanceProfile<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile"></a>
 
-Specifies an IAM instance profile\. You must provide either the name or the ARN of the instance profile\.
+Specifies an IAM instance profile\. If you are creating the Launch Template for use with an Amazon EC2 Auto Scaling group, you can specify either the name or the ARN of the instance profile, but not both\.
 
  `IamInstanceProfile` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
 

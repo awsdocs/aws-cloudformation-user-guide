@@ -58,7 +58,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
 
 `AcceleratorTypes`  <a name="cfn-sagemaker-notebookinstance-acceleratortypes"></a>
-A list of Elastic Inference \(EI\) instance types to associate with this notebook instance\. Currently, only one instance type can be associated with a notebook instance\. For more information, see Using Elastic Inference in Amazon SageMaker\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -182,6 +182,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
 #### <a name="aws-resource-sagemaker-notebookinstance-return-values-fn--getatt-fn--getatt"></a>
 
 `NotebookInstanceName`  <a name="NotebookInstanceName-fn::getatt"></a>
@@ -189,11 +191,11 @@ The name of the notebook instance, such as `MyNotebookInstance`\.
 
 ## Examples<a name="aws-resource-sagemaker-notebookinstance--examples"></a>
 
-### SageMaker Notebook Instance Examples<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Examples"></a>
+### SageMaker Notebook Instance Example<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example"></a>
 
 The following example creates a notebook instance\.
 
-#### JSON<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Examples--json"></a>
+#### JSON<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example--json"></a>
 
 ```
 {
@@ -253,7 +255,7 @@ The following example creates a notebook instance\.
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Examples--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example--yaml"></a>
 
 ```
 Description: "Basic NotebookInstance test update to a different instance type"

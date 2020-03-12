@@ -66,19 +66,11 @@ For example, assume that you have a load balancer configuration that you use for
 
 ## Do Not Embed Credentials in Your Templates<a name="creds"></a>
 
-Rather than embedding sensitive information in your AWS CloudFormation templates, we strongly suggest you do one of the following: 
-+ Use input parameters to pass in information whenever you create or update a stack, using the `NoEcho` property to obfuscate the parameter value\.
-+ Use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the Systems Manager Parameter Store or Secrets Manager\. 
+Rather than embedding sensitive information in your AWS CloudFormation templates, we recommend you use *dynamic references* in your stack template\.
 
-### Using Input Parameters with NoEcho for Credentials<a name="creds-noecho"></a>
+Dynamic references provide a compact, powerful way for you to reference external values that are stored and managed in other services, such as the AWS Systems Manager Parameter Store or AWS Secrets Manager\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations, and passes the value to the appropriate resource\. However, CloudFormation never stores the actual reference value\. For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
 
-Define input parameters in your stack template, so that users can pass in sensitive information whenever they create or update a stack\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\. 
-
-For example, suppose your stack creates a new database instance\. When the database is created, AWS CloudFormation needs to pass a database administrator password\. You can pass in a password by using an input parameter instead of embedding it in your template\. For more information, see [Parameters](parameters-section-structure.md)\.
-
-### Using Dynamic References to Retrieve Credentials<a name="creds-dynamic-reference"></a>
-
-Dynamic references provide a compact, powerful way for you to reference external values that are stored and managed in other services, such as the Systems Manager Parameter Store or Secrets Manager\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations, and passes the value to the appropriate resource\. However, CloudFormation never stores the actual parameter value\. For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
+[AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) helps you to securely encrypt, store, and retrieve credentials for your databases and other services\. The [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) provides secure, hierarchical storage for configuration data management\. 
 
 For more information on defining template parameters, see [Parameters](parameters-section-structure.md)\.
 

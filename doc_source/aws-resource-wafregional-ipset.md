@@ -37,7 +37,7 @@ Properties:
 ## Properties<a name="aws-resource-wafregional-ipset-properties"></a>
 
 `IPSetDescriptors`  <a name="cfn-wafregional-ipset-ipsetdescriptors"></a>
-The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR notation\) that web requests originate from\. If the `WebACL` is associated with a CloudFront distribution and the viewer did not use an HTTP proxy or a load balancer to send the request, this is the value of the c\-ip field in the CloudFront access logs\.  
+The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR notation\) that web requests originate from\.   
 *Required*: No  
 *Type*: List of [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

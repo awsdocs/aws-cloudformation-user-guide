@@ -42,7 +42,7 @@ To override parameter values for specific stack *instances*, see [Override Param
 
 1. On the **Set deployment options** page, keep the default value of **1** and **By number** for **Maximum concurrent accounts**\. Keep the default **Failure tolerance** of **0**, and keep the **By number** default option\. Choose **Next**\.
 **Note**  
-You cannot change accounts and regions here; that is, you cannot deploy stack set changes to stacks in some accounts and regions, but not others\.
+You cannot change accounts and Regions here; that is, you cannot deploy stack set changes to stacks in some accounts and Regions, but not others\.
 
 1. On the **Review** page, review your choices and your stack set's properties\. To make changes, choose **Edit** in the upper\-right corner of an area in which you want to change properties\. Before you can update the stack set, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are updating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM Resources in AWS CloudFormation Templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready to create your stack set, choose **Submit**\.
 

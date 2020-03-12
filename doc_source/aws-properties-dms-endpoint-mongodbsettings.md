@@ -1,5 +1,7 @@
 # AWS::DMS::Endpoint MongoDbSettings<a name="aws-properties-dms-endpoint-mongodbsettings"></a>
 
+Provides information that defines a MongoDB endpoint\.
+
 ## Syntax<a name="aws-properties-dms-endpoint-mongodbsettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -43,14 +45,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AuthMechanism`  <a name="cfn-dms-endpoint-mongodbsettings-authmechanism"></a>
  The authentication mechanism you use to access the MongoDB source endpoint\.  
 Valid values: DEFAULT, MONGODB\_CR, SCRAM\_SHA\_1   
-DEFAULT – For MongoDB version 2\.x, use MONGODB\_CR\. For MongoDB version 3\.x, use SCRAM\_SHA\_1\. This setting is not used when authType=No\.  
+DEFAULT – For MongoDB version 2\.x, use MONGODB\_CR\. For MongoDB version 3\.x, use SCRAM\_SHA\_1\. This setting isn't used when authType=No\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `default | mongodb_cr | scram_sha_1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthSource`  <a name="cfn-dms-endpoint-mongodbsettings-authsource"></a>
- The MongoDB database name\. This setting is not used when `authType=NO`\.   
+ The MongoDB database name\. This setting isn't used when `authType=NO`\.   
 The default is admin\.  
 *Required*: No  
 *Type*: String  

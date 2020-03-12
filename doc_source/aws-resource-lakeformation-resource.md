@@ -1,6 +1,6 @@
 # AWS::LakeFormation::Resource<a name="aws-resource-lakeformation-resource"></a>
 
-The AWS::LakeFormation::Resource is an AWS Lake Formation resource type that defines the resources to which permissions are to be granted\.
+The `AWS::LakeFormation::Resource` represents the data \(Amazon S3 buckets and folders\) that is being registered with AWS Lake Formation\. When a `Resource` type CloudFormation template is uploaded, an AWS Lake Formation [https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-RegisterResource](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-RegisterResource) API call is made to register the resource\. When a `Resource` type CloudFormation template is removed, the AWS Lake Formation [https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-DeregisterResource](https://docs.aws.amazon.com/lake-formation/latest/dg/aws-lake-formation-api-credential-vending.html#aws-lake-formation-api-credential-vending-DeregisterResource) API is called\.
 
 ## Syntax<a name="aws-resource-lakeformation-resource-syntax"></a>
 

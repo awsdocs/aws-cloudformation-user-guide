@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Statements](#cfn-wafv2-webacl-andstatementtwo-statements)" : [StatementThrees](aws-properties-wafv2-webacl-statementthrees.md)
+  "[Statements](#cfn-wafv2-webacl-andstatementtwo-statements)" : [ [StatementThree](aws-properties-wafv2-webacl-statementthree.md), ... ]
 }
 ```
 
@@ -18,13 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Statements](#cfn-wafv2-webacl-andstatementtwo-statements): 
-    [StatementThrees](aws-properties-wafv2-webacl-statementthrees.md)
+    - [StatementThree](aws-properties-wafv2-webacl-statementthree.md)
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-andstatementtwo-properties"></a>
 
 `Statements`  <a name="cfn-wafv2-webacl-andstatementtwo-statements"></a>
 Logical AND statements used in statement nesting\.  
-*Required*: No  
-*Type*: [StatementThrees](aws-properties-wafv2-webacl-statementthrees.md)  
+*Required*: Yes  
+*Type*: List of [StatementThree](aws-properties-wafv2-webacl-statementthree.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

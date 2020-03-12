@@ -13,21 +13,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Allow](#cfn-wafv2-webacl-ruleaction-allow)" : [AllowAction](aws-properties-wafv2-webacl-allowaction.md),
-  "[Block](#cfn-wafv2-webacl-ruleaction-block)" : [BlockAction](aws-properties-wafv2-webacl-blockaction.md),
-  "[Count](#cfn-wafv2-webacl-ruleaction-count)" : [CountAction](aws-properties-wafv2-webacl-countaction.md)
+  "[Allow](#cfn-wafv2-webacl-ruleaction-allow)" : Json,
+  "[Block](#cfn-wafv2-webacl-ruleaction-block)" : Json,
+  "[Count](#cfn-wafv2-webacl-ruleaction-count)" : Json
 }
 ```
 
 ### YAML<a name="aws-properties-wafv2-webacl-ruleaction-syntax.yaml"></a>
 
 ```
-  [Allow](#cfn-wafv2-webacl-ruleaction-allow): 
-    [AllowAction](aws-properties-wafv2-webacl-allowaction.md)
-  [Block](#cfn-wafv2-webacl-ruleaction-block): 
-    [BlockAction](aws-properties-wafv2-webacl-blockaction.md)
-  [Count](#cfn-wafv2-webacl-ruleaction-count): 
-    [CountAction](aws-properties-wafv2-webacl-countaction.md)
+  [Allow](#cfn-wafv2-webacl-ruleaction-allow): Json
+  [Block](#cfn-wafv2-webacl-ruleaction-block): Json
+  [Count](#cfn-wafv2-webacl-ruleaction-count): Json
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-ruleaction-properties"></a>
@@ -35,17 +32,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Allow`  <a name="cfn-wafv2-webacl-ruleaction-allow"></a>
 Instructs AWS WAF to allow the web request\.  
 *Required*: No  
-*Type*: [AllowAction](aws-properties-wafv2-webacl-allowaction.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Block`  <a name="cfn-wafv2-webacl-ruleaction-block"></a>
 Instructs AWS WAF to block the web request\.  
 *Required*: No  
-*Type*: [BlockAction](aws-properties-wafv2-webacl-blockaction.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Count`  <a name="cfn-wafv2-webacl-ruleaction-count"></a>
 Instructs AWS WAF to count the web request and allow it\.  
 *Required*: No  
-*Type*: [CountAction](aws-properties-wafv2-webacl-countaction.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

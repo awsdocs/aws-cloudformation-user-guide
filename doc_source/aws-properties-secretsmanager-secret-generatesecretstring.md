@@ -1,6 +1,6 @@
 # AWS::SecretsManager::Secret GenerateSecretString<a name="aws-properties-secretsmanager-secret-generatesecretstring"></a>
 
-Use the `GenerateSecretString` property as part of the [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html) resource type to dynamically generate a random text string to use as a password\. It is an alternative to hardcoding a password directly in the `SecretString` property\. When you generate a [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html) resource type, you must include one or the other, but not both\.
+Use the `GenerateSecretString` property as part of the [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html) resource type to dynamically generate a random text string to use as a password\. You use this an alternative to hardcoding a password directly in the `SecretString` property\. When you generate a [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html) resource type, you must include one or the other, but not both\.
 
 `SecretString` enables you to place a literal value directly into the secret, an action not recommended\. Instead, we recommend that you use the `GenerateSecretString` property to dynamically generate a random password\. The operation returns a complete JSON structure to use as the secret value\. The structure begins with the string you supply using the `SecretStringTemplate`\. This template string must be a properly formatted JSON string that contains all of the secret value information except the password\. The operation then generates a random password using the rules specified by the other parameters\. Finally, the operations inserts the generated password into the secret value structure along with the JSON key name specified by the `GenerateStringKey` parameter\.
 
@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-secretsmanager-secret-generatesecretstring-properties"></a>
 
 `ExcludeCharacters`  <a name="cfn-secretsmanager-secret-generatesecretstring-excludecharacters"></a>
-A string that excludes characters in the generated password\. The default value is that all characters from the included sets can be used\. The string can be a minimum length of 0 characters and a maximum length of 7168 characters\.  
+A string that excludes characters in the generated password\. By default, all characters from the included sets can be used\. The string can be a minimum length of 0 characters and a maximum length of 7168 characters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -61,7 +61,7 @@ Specifies the generated password should not include lowercase letters\. The defa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeNumbers`  <a name="cfn-secretsmanager-secret-generatesecretstring-excludenumbers"></a>
-Specifies that the generated password should exclude digits\. The default is `False`, and the generated password can include digits\.  
+Specifies that the generated password should exclude digits\. By default, Secrets Manager does not enable the parameter, `False`, and the generated password can include digits\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -85,7 +85,7 @@ The JSON key name used to add the generated password to the JSON structure speci
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `10240`  
+*Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeSpace`  <a name="cfn-secretsmanager-secret-generatesecretstring-includespace"></a>
@@ -107,11 +107,11 @@ Specifies whether the generated password must include at least one of every allo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretStringTemplate`  <a name="cfn-secretsmanager-secret-generatesecretstring-secretstringtemplate"></a>
-A properly structured JSON string where you can the generated password\. If you specify this parameter, then you must also specify `GenerateStringKey`\. The key is combined with the generated random string and inserted into the JSON structure specified by this parameter\. The merged JSON string is returned as the completed `SecretString` of the secret\. The default value for the generated random password string is returned by itself, and isn't embeded in a JSON structure\.  
+A properly structured JSON string that the generated password can be added to\. If you specify this parameter, then you must also specify `GenerateStringKey`\. The key is combined with the generated random string and inserted into the JSON structure specified by this parameter\. The merged JSON string is returned as the completed `SecretString` of the secret\. By default, Secrets Manager does not return the generated random password string, and doesn't embed it in a JSON structure\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `10240`  
+*Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-secretsmanager-secret-generatesecretstring--seealso"></a>

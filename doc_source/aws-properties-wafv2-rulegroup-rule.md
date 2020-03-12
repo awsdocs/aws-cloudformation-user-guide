@@ -44,7 +44,7 @@ The action that AWS WAF should take on a web request when it matches the rule's 
 
 `Name`  <a name="cfn-wafv2-rulegroup-rule-name"></a>
 A friendly name of the rule\. You can't change the name of a `Rule` after you create it\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -53,19 +53,19 @@ A friendly name of the rule\. You can't change the name of a `Rule` after you cr
 
 `Priority`  <a name="cfn-wafv2-rulegroup-rule-priority"></a>
 If you define more than one `Rule` in a `WebACL`, AWS WAF evaluates each request against the `Rules` in order based on the value of `Priority`\. AWS WAF processes rules with lower priority first\. The priorities don't need to be consecutive, but they must all be different\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statement`  <a name="cfn-wafv2-rulegroup-rule-statement"></a>
 The AWS WAF processing statement for the rule, for example ByteMatchStatement or SizeConstraintStatement\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [StatementOne](aws-properties-wafv2-rulegroup-statementone.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibilityConfig`  <a name="cfn-wafv2-rulegroup-rule-visibilityconfig"></a>
 Defines and enables Amazon CloudWatch metrics and web request sample collection\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

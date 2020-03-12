@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ExcludedRules](aws-properties-wafv2-webacl-excludedrules.md),
+  "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md), ... ],
   "[Name](#cfn-wafv2-webacl-managedrulegroupstatement-name)" : String,
   "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String
 }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules): 
-    [ExcludedRules](aws-properties-wafv2-webacl-excludedrules.md)
+    - [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)
   [Name](#cfn-wafv2-webacl-managedrulegroupstatement-name): String
   [VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname): String
 ```
@@ -35,12 +35,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `ExcludedRules`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-excludedrules"></a>
 The rules whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule\. This effectively excludes the rule from acting on web requests\.   
 *Required*: No  
-*Type*: [ExcludedRules](aws-properties-wafv2-webacl-excludedrules.md)  
+*Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-name"></a>
 The name of the managed rule group\. You use this, along with the vendor name, to identify the rule group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -49,7 +49,7 @@ The name of the managed rule group\. You use this, along with the vendor name, t
 
 `VendorName`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-vendorname"></a>
 The name of the managed rule group vendor\. You use this, along with the rule group name, to identify the rule group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

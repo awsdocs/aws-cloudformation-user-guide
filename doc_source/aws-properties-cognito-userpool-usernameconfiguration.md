@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool UsernameConfiguration<a name="aws-properties-cognito-userpool-usernameconfiguration"></a>
 
-Used to configure username case insensitivity\.
+<a name="aws-properties-cognito-userpool-usernameconfiguration-description"></a>The `UsernameConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Cognito::UserPool](aws-resource-cognito-userpool.md)\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-usernameconfiguration-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-usernameconfiguration-properties"></a>
 
 `CaseSensitive`  <a name="cfn-cognito-userpool-usernameconfiguration-casesensitive"></a>
-Set to `False` if you want `username`, `email` alias and `preferred_username` alias to be case insensitive\. For example, when set to `False`, users will be able to sign in using either "username" or "Username"\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,8 @@
 # Override Parameters on Stack Instances<a name="stackinstances-override"></a>
 
-In certain cases, you might want stack instances in certain regions or accounts to have different property values than those specified in the stack set itself\. For example, you might want to specify a different value for a given parameter based on whether an account is used for development or production\. For these situations, AWS CloudFormation allows you to override parameter values in stack instances by account and region\. You can override template parameter values when you first create the stack instances, and you can override parameter values for existing stack instances\. You can only set parameters you've previously overridden in stack instances back to the values specified in the stack set\.
+In certain cases, you might want stack instances in certain Regions or accounts to have different property values than those specified in the stack set itself\. For example, you might want to specify a different value for a given parameter based on whether an account is used for development or production\. For these situations, AWS CloudFormation allows you to override parameter values in stack instances by account and Region\. You can override template parameter values when you first create the stack instances, and you can override parameter values for existing stack instances\. You can only set parameters you've previously overridden in stack instances back to the values specified in the stack set\.
 
-Parameter value overrides apply to stack instances in the accounts and regions you select\. During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their overridden value\. 
+Parameter value overrides apply to stack instances in the accounts and Regions you select\. During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their overridden value\. 
 
 You can only override parameter *values* that are specified in the stack set; to add or delete a parameter itself, you need to update the stack set template\. If you add a parameter to a stack set template, then before you can override that parameter value in a stack instance you must first update all stack instances with the new parameter and value specified in the stack set\. Once all stack instances have been updated with the new parameter, you can then override the parameter value in individual stack instances as desired\.
 
@@ -21,9 +21,9 @@ To learn how to override stack set parameter values when you create stack instan
 1. With the stack set selected, choose **Override StackSet parameters** from the **Actions** menu\.  
 ![\[Manage stacks in stack set page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-action-override-parameters.png)
 
-1. On the **Set deployment options** page, provide the accounts and regions for the stack instances whose parameters you want to override\. 
+1. On the **Set deployment options** page, provide the accounts and Regions for the stack instances whose parameters you want to override\. 
 
-   AWS CloudFormation will deploy stacks in the specified accounts within the first region, then moves on to the next, and so on, as long as a region's deployment failures do not exceed a specified failure tolerance\.
+   AWS CloudFormation will deploy stacks in the specified accounts within the first Region, then moves on to the next, and so on, as long as a Region's deployment failures do not exceed a specified failure tolerance\.
 
    1. \[Self\-managed permissions\] For **Deployment targets**, choose **Deploy stacks in accounts**\. Paste some or all the target account IDs that you used to create your stack set in [Create a Stack Set](stacksets-getting-started-create.md)\.
 
@@ -33,9 +33,9 @@ To learn how to override stack set parameter values when you create stack instan
       + Choose **Deploy to accounts**\. Paste some or all of the target OU IDs or account IDs that you used to create your stack set in [Create a Stack Set](stacksets-getting-started-create.md)\.  
 ![\[Deploy parameter overrides to select accounts in your organization.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-deploy-param-overrides-to-accounts.png)
 
-   1. For **Deployment regions**, add one or more of the regions into which you have deployed stack instances for this stack set\. 
+   1. For **Deployment regions**, add one or more of the Regions into which you have deployed stack instances for this stack set\. 
 
-      If you add multiple regions, the order of the regions under **Specify regions** determines their deployment order\.
+      If you add multiple Regions, the order of the Regions under **Specify regions** determines their deployment order\.
 
    1. For **Deployment options**: 
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
@@ -43,14 +43,14 @@ To learn how to override stack set parameter values when you create stack instan
         This means that AWS CloudFormation deploys your stack in only one account at one time\.
       + For **Failure tolerance**, keep the defauls of **Number** and **0**\.
 
-        This means that a maximum of one stack deployment can fail in one of your specified regions before AWS CloudFormation stops deployment in the current region, and cancels deployment in remaining regions\.
+        This means that a maximum of one stack deployment can fail in one of your specified Regions before AWS CloudFormation stops deployment in the current Region, and cancels deployment in remaining Regions\.
 
       Choose **Next**\.
 
 1. On the **Specify Overrides** page, check the **Frequency** parameter and then choose **Override StackSet value** from the **Edit override value** menu\.  
 ![\[Select parameters to override and then select Override StackSet value\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-override-parameters-edit-value.png)
 
-1. In **Override StackSet parameter values**, select **6hours** for the **Frequency** parameter, and choose **Save changes**\. You are instructing AWS CloudFormation to override the **Frequency** parameter value and use **6hours** for all the stack instances for the specified accounts in the specified regions\. Choose **Next**\.
+1. In **Override StackSet parameter values**, select **6hours** for the **Frequency** parameter, and choose **Save changes**\. You are instructing AWS CloudFormation to override the **Frequency** parameter value and use **6hours** for all the stack instances for the specified accounts in the specified Regions\. Choose **Next**\.
 **Note**  
 To set any overridden parameters back to using the value specified in the stack set, check all parameters and choose **Set to StackSet value** from the **Edit override value** menu\. Doing so removes all overridden values once you update the stack instances\.
 
@@ -66,17 +66,17 @@ Run the `update-stack-instances` AWS CLI command, specifying `--parameter-overri
 
 In the example command shown here, we change the default snapshot delivery frequency for delivery channel configuration from **TwentyFour\_Hours** to **Twelve\_Hours** for the specified stack instances\. Because we are still using the current template, we add the `--use-previous-template` parameter\.
 
-1. Run the following command\. For *\-\-stack\-set\-name*, specify the stack set name `my-awsconfig-stackset`\.
+1. Run the following command\. For `--stack-set-name`, specify the stack set name *my\-awsconfig\-stackset*\.
 
-   Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
+   Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For this walkthrough, we are using count, not percentage\.
 
-   \[Self\-managed permissions\] Provide the accounts IDs for which you want to override parameter values on stack instances\.
+   \[Self\-managed permissions\] Provide the account IDs for which you want to override parameter values on stack instances\.
 
    ```
    aws cloudformation update-stack-instances --stack-set-name my-awsconfig-stackset --use-previous-template --parameter-overrides ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --accounts ["012345678901"] --regions ["eu-west-1", "us-west-2"]
    ```
 
-   \[Service\-managed permissions\] Provide the organization root ID, OU IDs, or AWS Organizations account IDs for which you want to override parameters on stack instances\. In this example, we override parameter values for stack instances in all accounts in the OU with ID `ou-rcuk-1x5j1lwo`\.
+   \[Service\-managed permissions\] Provide the organization root ID, OU IDs, or AWS Organizations account IDs for which you want to override parameters on stack instances\. In this example, we override parameter values for stack instances in all accounts in the OU with the *ou\-rcuk\-1x5j1lwo* ID\.
 
    The overridden parameter values only apply to the accounts that are currently in the target OU and its child OUs\. Accounts added to the target OU and its child OUs in the future will use the stack set default values and not the overridden values\.
 

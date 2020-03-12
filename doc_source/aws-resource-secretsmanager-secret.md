@@ -2,7 +2,7 @@
 
 The `AWS::SecretsManager::Secret` resource creates a secret and stores it in Secrets Manager\. For more information, see [Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_secret) in the *AWS Secrets Manager User Guide*, and the [CreateSecret API](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) in the *AWS Secrets Manager API Reference*\.
 
-To specify the `SecretString` encrypted value for the secret, specify either the `SecretString` or the `GenerateSecretString` property in this resource\. You must specify one or the other, but not both\. Leaving both empty creates a secret without a secret version\. See the [first two examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-hardcoded) later in this topic\.
+To specify the `SecretString` encrypted value for the secret, specify either the `SecretString` or the `GenerateSecretString` property in this resource\. You must specify one or the other, but you can't specify both\. See the [first two examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-hardcoded) later in this topic\.
 
 **Note**  
 You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\. You can only create a `SecretString` text\-based secret value\.
@@ -11,8 +11,8 @@ You can't generate a secret with a `SecretBinary` secret value using AWS CloudFo
 Do not create a dynamic reference using a backslash `(\)` as the final value\. AWS CloudFormation cannot resolve those references, which causes a resource failure\. 
 
 After you create the basic secret, you can do any of the following:
-+ Configure your secret with details of the [Secrets Manager supported database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) with credentials stored in this secret\. 
-+ Attach a resource\-based permissions policy to the secret\. To do this, define a [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type\.
++ Configure your secret with details of the Secrets Manager supported [database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) with credentials stored in this secret\. 
++ Attaches a resource\-based permissions policy to the secret\. To do this, define a [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type\.
 + You can optionally configure a secret to rotate after a specified number of days\. See [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)\.
 
 ## Syntax<a name="aws-resource-secretsmanager-secret-syntax"></a>
@@ -54,7 +54,7 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-secret-properties"></a>
 
 `Description`  <a name="cfn-secretsmanager-secret-description"></a>
-Specifies a user\-provided description of the secret\.  
+\(Optional\) Specifies a user\-provided description of the secret\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2048`  
@@ -66,12 +66,12 @@ Either `SecretString` or `GenerateSecretString` must have a value, but not both\
 *Required*: No  
 *Type*: [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md)  
 *Minimum*: `0`  
-*Maximum*: `10240`  
+*Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-secretsmanager-secret-kmskeyid"></a>
-Specifies the ARN, Key ID, or alias of the AWS KMS customer master key \(CMK\) used to encrypt the `SecretString` or `SecretBinary` values for versions of this secret\. If you don't specify this value, then Secrets Manager defaults to the AWS account CMK, `aws/secretsmanager`\. If an AWS KMS CMK with that name doesn't exist, Secrets Manager creates the CMK for you automatically the first time it encrypts a version `SecretString` or `SecretBinary` fields\.  
-You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from the same account that owns the secret\. If the secret is in a different account, then you must create a custom CMK and specify the ARN in this field\. 
+\(Optional\) Specifies the ARN, Key ID, or alias of the AWS KMS customer master key \(CMK\) used to encrypt the `SecretString` or `SecretBinary` values for versions of this secret\. If you don't specify this value, then Secrets Manager defaults to the AWS account CMK, `aws/secretsmanager`\. If an AWS KMS CMK with that name doesn't exist, Secrets Manager creates the CMK for you automatically the first time it encrypts a version `SecretString` or `SecretBinary` fields\.  
+You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from the same account that owns the secret\. If you use a secret from a different account, then you must create a custom CMK and specify the ARN in this field\. 
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -87,10 +87,12 @@ The friendly name of the secret\. You can use forward slashes in the name to rep
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecretString`  <a name="cfn-secretsmanager-secret-secretstring"></a>
-Specifies a literal string to use as the secret value for the secret\. You can use any text you like, but remember that Lambda rotation functions require a specific JSON structure to be present in this field\.   
-Alternatively, instead of hardcoding the password in this string parameter, we recommend you use the `GenerateSecretString` parameter instead\.  
-You must specify either `SecretString` or `GenerateSecretString`, but not both\.  
-Stack updates that modify a `SecretString` property, immediately changes the secret value\. 
+\(Optional\) Specifies text data you want to encrypt and store in this new version of the secret\.   
+Either `SecretString` or `SecretBinary` must have a value, but not both\. They cannot both be empty\.  
+If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text in only the `SecretString` parameter\. The Secrets Manager console stores the information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse\.  
+For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs\. For information on how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json) in the *AWS CLI User Guide*\. For example:  
+`{"username":"bob","password":"abc123xyz456"}`  
+If your command\-line tool or SDK requires quotation marks around the parameter, you should use single quotes to avoid confusion with the double quotes required in the JSON text\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -98,7 +100,7 @@ Stack updates that modify a `SecretString` property, immediately changes the sec
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-secretsmanager-secret-tags"></a>
-The list of user\-defined tags that are associated with the secret\. Use tags to manage your AWS resources\. For additional information about tags, see [TagResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+The list of user\-defined tags associated with the secret\. Use tags to manage your AWS resources\. For additional information about tags, see [TagResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,13 +109,13 @@ The list of user\-defined tags that are associated with the secret\. Use tags to
 
 ### Ref<a name="aws-resource-secretsmanager-secret-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::SecretsManager::Secret` resource to the intrinsic `Ref` function, the function returns the ARN of the secret being configured, such as:
+When you pass the logical ID of an `AWS::SecretsManager::Secret` resource to the intrinsic `Ref` function, the function returns the ARN of the secret configured such as:
 
 `arn:aws:secretsmanager:us-west-2:123456789012:secret:my-path/my-secret-name-1a2b3c`
 
-If you know the ARN of a secret, you can reference a secret that you created in one part of the stack template from within the definition of another resource in the same template\. You typically use the `Ref` function with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type to get references to both the secret and its associated database\.
+If you know the ARN of a secret, you can reference a secret you created in one part of the stack template from within the definition of another resource in the same template\. You typically use the `Ref` function with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type to get references to both the secret and its associated database\.
 
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+For more information about using the `Ref` function, see [Ref](url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ## Examples<a name="aws-resource-secretsmanager-secret--examples"></a>
 

@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction-properties"></a>
 
 `EndTime`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime"></a>
-The date and time that the action is scheduled to end\.  
+The date and time for the recurring schedule to end\.  
 *Required*: No  
 *Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -61,7 +61,7 @@ For more information about cron expressions, see [Cron Expressions](https://docs
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduledActionName`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname"></a>
-The name of the scheduled action\.  
+The name of the scheduled action\. This name must be unique among all other scheduled actions on the specified scalable target\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -70,7 +70,7 @@ The name of the scheduled action\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartTime`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime"></a>
-The date and time that the action is scheduled to begin\.  
+The date and time that the action is scheduled to start\.  
 *Required*: No  
 *Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

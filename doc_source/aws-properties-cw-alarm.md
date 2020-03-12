@@ -168,7 +168,7 @@ The name of the metric associated with the alarm\. This is required for an alarm
 
 `Metrics`  <a name="cfn-cloudwatch-alarm-metrics"></a>
 An array that enables you to create an alarm based on the result of a metric math expression\. Each item in the array either retrieves a metric or performs a math expression\.  
-If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimensions`, `Period`, `Namespace`, `Statistic`, or `ExtendedStatistic`\.   
+If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimensions`, `Period`, `Namespace`, `Statistic`, `ExtendedStatistic`, or `Unit`\.   
 *Required*: No  
 *Type*: List of [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -229,7 +229,8 @@ If you omit this parameter, the default behavior of `missing` is used\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-cloudwatch-alarms-unit"></a>
-The unit of the metric associated with the alarm\. You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, or None\.  
+The unit of the metric associated with the alarm\. Specify this only if you are creating an alarm based on a single metric\. Do not specify this if you are specifying a `Metrics` array\.  
+ You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, or None\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `Bits | Bits/Second | Bytes | Bytes/Second | Count | Count/Second | Gigabits | Gigabits/Second | Gigabytes | Gigabytes/Second | Kilobits | Kilobits/Second | Kilobytes | Kilobytes/Second | Megabits | Megabits/Second | Megabytes | Megabytes/Second | Microseconds | Milliseconds | None | Percent | Seconds | Terabits | Terabits/Second | Terabytes | Terabytes/Second`  
@@ -269,7 +270,7 @@ This example creates an alarm that is based on an anomaly detector\.
        "Properties": {
           "MetricName": "Invocations",
           "Namespace": "AWS/Lambda",
-          "Stat": "Sum"
+          "Statistic": "Sum"
        }
     },
     "LambdaInvocationsAlarm": {

@@ -145,7 +145,7 @@ A custom description of a variation of the campaign to use for A/B testing\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-treatmentname"></a>
-The custom name of a variation of the campaign to use for A/B testing\.  
+A custom name for a variation of the campaign to use for A/B testing\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

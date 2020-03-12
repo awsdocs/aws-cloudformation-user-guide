@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AggregateKeyType`  <a name="cfn-wafv2-rulegroup-ratebasedstatementtwo-aggregatekeytype"></a>
 Setting that indicates how to aggregate the request counts\. Currently, you must set this to IP\. The request counts are aggregated on IP addresses\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Limit`  <a name="cfn-wafv2-rulegroup-ratebasedstatementtwo-limit"></a>
 Limit on the web request that match any nested statement criteria in any 5 minute period\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

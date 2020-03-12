@@ -46,13 +46,13 @@ Properties:
 ## Properties<a name="aws-resource-applicationautoscaling-scalabletarget-properties"></a>
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-maxcapacity"></a>
-The maximum value to scale to in response to a scale\-out event\.  
+The maximum value that you plan to scale out to\. When a scaling policy is in effect, Application Auto Scaling can scale out \(expand\) as needed to the maximum capacity limit in response to changing demand\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-mincapacity"></a>
-The minimum value to scale to in response to a scale\-in event\.  
+The minimum value that you plan to scale in to\. When a scaling policy is in effect, Application Auto Scaling can scale in \(contract\) as needed to the minimum capacity limit in response to changing demand\.   
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -116,7 +116,7 @@ Each scalable target has a service namespace, scalable dimension, and resource I
 
 ### Register a Scalable Target<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target"></a>
 
-The following example creates a scalable target for an [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)\. Application Auto Scaling can scale the number of fleet instances at a minimum of 1 instance and a maximum of 20\. 
+The following example creates a scalable target for an AppStream fleet \([AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)\)\. Application Auto Scaling can scale the number of fleet instances at a minimum of 1 instance and a maximum of 20\. 
 
 To register a different resource supported by Application Auto Scaling, specify its namespace in `ServiceNamespace`, its scalable dimension in `ScalableDimension`, its resource ID in `ResourceId`, and its service\-linked role in `RoleARN`\.
 
@@ -152,13 +152,13 @@ ScalableTarget:
     ResourceId: fleet/sample-fleet
 ```
 
-### Register a Scalable Target with Fn::Join and Fn::Sub<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub"></a>
+### Lambda with a Scheduled Action<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Lambda_with_a_Scheduled_Action"></a>
 
-The following example registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) called BLUE, with a minimum capacity of 1 and a maximum capacity of 100\.
+The following example registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) called BLUE, with a minimum capacity of 1 and a maximum capacity of 100\. It also creates a scheduled action with a recurring schedule using a cron expression\.
 
 This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions in the `RoleARN` property to specify the ARN of the service\-linked role\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` property\. 
 
-#### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub--json"></a>
+#### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Lambda_with_a_Scheduled_Action--json"></a>
 
 ```
 {
@@ -183,63 +183,13 @@ This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/l
       "ScalableDimension":"lambda:function:ProvisionedConcurrency",
       "ResourceId":{
         "Fn::Sub":"function:${MyFunction}:BLUE"
-      }
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target_with_Fn::Join_and_Fn::Sub--yaml"></a>
-
-```
-ScalableTarget:
-  Type: AWS::ApplicationAutoScaling::ScalableTarget
-  Properties:
-    MaxCapacity: 100
-    MinCapacity: 1
-    RoleARN: !Join 
-      - ':'
-      - - 'arn:aws:iam:'
-        - !Ref 'AWS::AccountId'
-        - role/aws-service-role/lambda.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_Lambda
-    ServiceNamespace: lambda
-    ScalableDimension: lambda:function:ProvisionedConcurrency
-    ResourceId: !Sub function:${MyFunction}:BLUE
-```
-
-### Spot Fleet with a Scheduled Action<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Spot_Fleet_with_a_Scheduled_Action"></a>
-
-The following example registers an [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html) as a scalable target and creates a scheduled action\. It uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions to construct the `ResourceId` property\. 
-
-#### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Spot_Fleet_with_a_Scheduled_Action--json"></a>
-
-```
-{
-  "SpotFleetScalableTarget":{
-    "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
-    "Properties":{
-      "MaxCapacity":2,
-      "MinCapacity":1,
-      "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/ec2.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_EC2SpotFleetRequest",
-      "ServiceNamespace":"ec2",
-      "ScalableDimension":"ec2:spot-fleet-request:TargetCapacity",
-      "ResourceId":{
-        "Fn::Join":[
-          "/",
-          [
-            "spot-fleet-request",
-            {
-              "Ref":"ECSSpotFleet"
-            }
-          ]
-        ]
       },
       "ScheduledActions":[
         {
           "EndTime":"2019-12-31T12:00:00.000Z",
           "ScalableTargetAction":{
-            "MaxCapacity":"20",
-            "MinCapacity":"5"
+            "MaxCapacity":"500",
+            "MinCapacity":"50"
           },
           "ScheduledActionName":"First",
           "StartTime":"2019-12-25T12:00:00.000Z",
@@ -251,26 +201,27 @@ The following example registers an [AWS::EC2::SpotFleet](https://docs.aws.amazon
 }
 ```
 
-#### YAML<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Spot_Fleet_with_a_Scheduled_Action--yaml"></a>
+#### YAML<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Lambda_with_a_Scheduled_Action--yaml"></a>
 
 ```
-SpotFleetScalableTarget:
+ScalableTarget:
   Type: AWS::ApplicationAutoScaling::ScalableTarget
   Properties:
-    MaxCapacity: 2
+    MaxCapacity: 100
     MinCapacity: 1
-    RoleARN: arn:aws:iam::012345678910:role/aws-service-role/ec2.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_EC2SpotFleetRequest
-    ServiceNamespace: ec2
-    ScalableDimension: 'ec2:spot-fleet-request:TargetCapacity'
-    ResourceId: !Join 
-      - /
-      - - spot-fleet-request
-        - !Ref ECSSpotFleet
+    RoleARN: !Join 
+      - ':'
+      - - 'arn:aws:iam:'
+        - !Ref 'AWS::AccountId'
+        - role/aws-service-role/lambda.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_LambdaConcurrency
+    ServiceNamespace: lambda
+    ScalableDimension: lambda:function:ProvisionedConcurrency
+    ResourceId: !Sub function:${MyFunction}:BLUE
     ScheduledActions:
       - EndTime: '2019-12-31T12:00:00.000Z'
         ScalableTargetAction:
-          MaxCapacity: '20'
-          MinCapacity: '5'
+          MaxCapacity: '500'
+          MinCapacity: '50'
         ScheduledActionName: First
         StartTime: '2019-12-25T12:00:00.000Z'
         Schedule: 'cron(0 18 * * ? *)'
@@ -278,7 +229,7 @@ SpotFleetScalableTarget:
 
 ### Amazon DynamoDB<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB"></a>
 
-This example registers the read and write capacity \(throughput\) of an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
+This example registers the read and write capacity throughput of a DyanmoDB table \([AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB--json"></a>
 

@@ -1,6 +1,6 @@
 # AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping<a name="aws-properties-as-launchconfig-blockdev-mapping"></a>
 
- `BlockDeviceMapping` is a property of [LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) that describes a block device mapping for an Amazon EC2 Auto Scaling group\.
+ `BlockDeviceMapping` is a property of [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) that describes a block device mapping for an Auto Scaling group\.
 
 Each instance that is launched has an associated root device volume, either an Amazon EBS volume or an instance store volume\. You can use block device mappings to specify additional EBS volumes or instance store volumes to attach to an instance when it is launched\. 
 
@@ -43,15 +43,16 @@ The device name exposed to the EC2 instance \(for example, `/dev/sdh` or `xvdh`\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ebs`  <a name="cfn-as-launchconfig-blockdev-mapping-ebs"></a>
-The information about the Amazon EBS volume\.   
-You can specify either `VirtualName` or `Ebs`, but not both\.   
+Parameters used to automatically set up EBS volumes when an instance is launched\.  
+You can specify either `VirtualName` or `Ebs`, but not both\.  
 *Required*: No  
 *Type*: [BlockDevice](aws-properties-as-launchconfig-blockdev-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-as-launchconfig-blockdev-mapping-nodevice"></a>
-Suppresses the device mapping\. The only permitted value for this property is `true`\.  
-If this property is set to `true` for the root device, the instance might fail the Amazon EC2 health check\. Amazon EC2 Auto Scaling launches a replacement instance if the instance fails the health check\.   
+Setting this value to `true` suppresses the specified device included in the block device mapping of the AMI\.  
+If `NoDevice` is `true` for the root device, instances might fail the EC2 health check\. In that case, Amazon EC2 Auto Scaling launches replacement instances\.  
+You can specify either `NoDevice` or `Ebs`, but not both\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,10 +1,10 @@
 # AWS::AutoScaling::LaunchConfiguration<a name="aws-properties-as-launchconfig"></a>
 
-Specifies an Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
+The `LaunchConfiguration` resource specifies the Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
 **Important**  
 When you update the launch configuration, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the Auto Scaling group\. In other words, after you associate a new launch configuration with an Auto Scaling group, all new instances will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as any other Auto Scaling group that uses a launch configuration\.   
-If you want to update existing instances when you update the `LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\. 
+If you want to update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\. 
 
 For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference* and [Launch Configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
@@ -182,7 +182,7 @@ The name of the launch configuration\. This name must be unique per Region per a
 
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
 The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs on isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
-If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
+If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
 For more information, see [Instance Placement Tenancy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-vpc-tenancy) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: String  
@@ -309,6 +309,7 @@ This example shows a launch configuration with a `BlockDeviceMappings` property 
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Block_Device_Mappings--yaml"></a>
 
 ```
+---
 Resources:
   myLaunchConfig: 
     Type: AWS::AutoScaling::LaunchConfiguration
@@ -392,6 +393,7 @@ This example shows a launch configuration that launches Spot Instances in the Au
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price--yaml"></a>
 
 ```
+---
 Resources:
   myLaunchConfig: 
     Type: AWS::AutoScaling::LaunchConfiguration
@@ -457,6 +459,7 @@ This example demonstrates a launch configuration that uses the `IamInstanceProfi
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile--yaml"></a>
 
 ```
+---
 Resources:
   myLaunchConfig: 
     Type: AWS::AutoScaling::LaunchConfiguration
@@ -525,6 +528,7 @@ For more performance tips, see [Amazon EBS Volume Performance on Linux Instances
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume--yaml"></a>
 
 ```
+---
 Resources:
   myLaunchConfig: 
     Type: AWS::AutoScaling::LaunchConfiguration

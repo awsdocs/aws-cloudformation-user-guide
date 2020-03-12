@@ -65,6 +65,7 @@ Properties:
 The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type, which uses the Amazon EKS\-optimized Linux AMI with GPU support\. Non\-GPU instances should use the `AL2_x86_64` AMI type, which uses the Amazon EKS\-optimized Linux AMI\.  
 *Required*: No  
 *Type*: String  
+*Allowed Values*: `AL2_x86_64 | AL2_x86_64_GPU`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterName`  <a name="cfn-eks-nodegroup-clustername"></a>

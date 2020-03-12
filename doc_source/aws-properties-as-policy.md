@@ -1,6 +1,6 @@
 # AWS::AutoScaling::ScalingPolicy<a name="aws-properties-as-policy"></a>
 
-Specifies a scaling policy for an Amazon EC2 Auto Scaling group\. 
+Specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can change the number of instances available for your application in response to changing demand\.
 
 To update an existing scaling policy, use the existing policy name and set the property to change\. If you leave a property unspecified when updating a scaling policy, the corresponding value remains unchanged\.
 
@@ -405,6 +405,7 @@ The following example is a step scaling policy that increases the number instanc
 #### YAML<a name="aws-properties-as-policy--examples--Step_Scaling_Policy--yaml"></a>
 
 ```
+---
 Resources:
   ASGScaleOutPolicy: 
     Type: AWS::AutoScaling::ScalingPolicy
@@ -451,6 +452,7 @@ The following example is a simple scaling policy that increases the number insta
 #### YAML<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy--yaml"></a>
 
 ```
+---
 Resources:
   ASGScaleOutPolicy: 
     Type: AWS::AutoScaling::ScalingPolicy

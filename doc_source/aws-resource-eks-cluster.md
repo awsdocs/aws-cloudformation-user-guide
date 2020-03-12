@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EKS::Cluster",
   "Properties" : {
+      "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md), ... ],
       "[Name](#cfn-eks-cluster-name)" : String,
       "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md),
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
@@ -33,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EKS::Cluster
 Properties: 
+  [EncryptionConfig](#cfn-eks-cluster-encryptionconfig): 
+    - [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md)
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
     [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
@@ -42,10 +45,20 @@ Properties:
 
 ## Properties<a name="aws-resource-eks-cluster-properties"></a>
 
+`EncryptionConfig`  <a name="cfn-eks-cluster-encryptionconfig"></a>
+The encryption configuration for the cluster\.  
+*Required*: No  
+*Type*: [List](aws-properties-eks-cluster-encryptionconfig.md) of [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md)  
+*Maximum*: `1`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Name`  <a name="cfn-eks-cluster-name"></a>
 The unique name to give to your cluster\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^[0-9A-Za-z][A-Za-z0-9\-_]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourcesVpcConfig`  <a name="cfn-eks-cluster-resourcesvpcconfig"></a>
@@ -95,6 +108,9 @@ The `certificate-authority-data` for your cluster\.
 `ClusterSecurityGroupId`  <a name="ClusterSecurityGroupId-fn::getatt"></a>
 The cluster security group that was created by Amazon EKS for the cluster\. Managed node groups use this security group for control plane to data plane communication\.  
 This parameter is only returned by Amazon EKS clusters that support managed node groups\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
+
+`EncryptionConfigKeyArn`  <a name="EncryptionConfigKeyArn-fn::getatt"></a>
+Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.

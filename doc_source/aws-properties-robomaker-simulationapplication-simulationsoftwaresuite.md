@@ -35,5 +35,7 @@ The name of the simulation software suite\.
 The version of the simulation software suite\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
 *Pattern*: `7|9|Kinetic|Melodic|Dashing`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

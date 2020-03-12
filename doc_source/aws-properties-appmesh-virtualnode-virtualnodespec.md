@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BackendDefaults](#cfn-appmesh-virtualnode-virtualnodespec-backenddefaults)" : [BackendDefaults](aws-properties-appmesh-virtualnode-backenddefaults.md),
   "[Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends)" : [ [Backend](aws-properties-appmesh-virtualnode-backend.md), ... ],
   "[Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners)" : [ [Listener](aws-properties-appmesh-virtualnode-listener.md), ... ],
   "[Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging)" : [Logging](aws-properties-appmesh-virtualnode-logging.md),
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-virtualnodespec-syntax.yaml"></a>
 
 ```
+  [BackendDefaults](#cfn-appmesh-virtualnode-virtualnodespec-backenddefaults): 
+    [BackendDefaults](aws-properties-appmesh-virtualnode-backenddefaults.md)
   [Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends): 
     - [Backend](aws-properties-appmesh-virtualnode-backend.md)
   [Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners): 
@@ -31,6 +34,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-virtualnodespec-properties"></a>
+
+`BackendDefaults`  <a name="cfn-appmesh-virtualnode-virtualnodespec-backenddefaults"></a>
+A reference to an object that represents the defaults for backends\.  
+*Required*: No  
+*Type*: [BackendDefaults](aws-properties-appmesh-virtualnode-backenddefaults.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Backends`  <a name="cfn-appmesh-virtualnode-virtualnodespec-backends"></a>
 The backends that the virtual node is expected to send outbound traffic to\.  

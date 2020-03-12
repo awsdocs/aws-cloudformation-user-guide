@@ -196,7 +196,6 @@ If you specify host for the `Affinity` property, the ID of a dedicated host that
 
 `HostResourceGroupArn`  <a name="cfn-ec2-instance-hostresourcegrouparn"></a>
 The ARN of the host resource group in which to launch the instances\. If you specify a host resource group ARN, omit the **Tenancy** parameter or set it to `host`\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

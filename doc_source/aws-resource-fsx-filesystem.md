@@ -62,7 +62,7 @@ The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for an Amazon FSx for Windows File Server file system\. Amazon FSx for Lustre does not support KMS encryption\.   
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. In either case, if not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the *AWS Key Management Service API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -83,7 +83,7 @@ A list of IDs specifying the security groups to apply to all network interfaces 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
 The storage capacity of the file system being created\.  
 For Windows file systems, valid values are 32 GiB \- 65,536 GiB\.  
-For Lustre file systems, valid values are 1,200, 2,400, 3,600, then continuing in increments of 3600 GiB\.  
+For Lustre `SCRATCH_2` and `PERSISTENT_1` file systems, valid values are 1200, 2400, then continuing in increments of 2400 GiB\. For Lustre `SCRATCH_1` file systems, valid values are 1,200, 2,400, 3,600, then continuing in increments of 3600 GiB\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -127,7 +127,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Create an Amazon FSx for Lustre File System<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Lustre_File_System"></a>
 
-The following examples create an Amazon FSx for Lustre file system\.
+The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file system, with a `PerUnitStorageThroughput` of 200 MB/s/TiB\.
 
 #### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Lustre_File_System--json"></a>
 
@@ -156,6 +156,8 @@ The following examples create an Amazon FSx for Lustre file system\.
                     }
                 ],
                 "LustreConfiguration": {
+                    "DeploymentType": "PERSISTENT_1",
+                    "PerUnitStorageThroughput": 200,                    
                     "ImportPath": {
                         "Fn::Join": [
                             "",
@@ -208,6 +210,8 @@ Resources:
         - Key: "Name"
           Value: "CFNs3linkedLustre"
       LustreConfiguration:
+        DeploymentType: "PERSISTENT_1"
+        PerUnitStorageThroughput: 200
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
         ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
         WeeklyMaintenanceStartTime: "2:20:30"
@@ -280,7 +284,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                         },
                         "FileSystemAdministratorsGroup": "MyDomainAdminGroup",
                         "OrganizationalUnitDistinguishedName": "OU=FileSystems,DC=corp,DC=example,DC=com",
-                        "Username": "Admin",
+                        "UserName": "Admin",
                         "Password": {
                             "Fn::Join": [
                                 ":",

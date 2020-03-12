@@ -4,11 +4,11 @@ To set up the required permissions to create a stack set with **self\-managed** 
 
 Before you create a stack set with **service\-managed** permissions, you must first complete the following tasks:
 + [Enable all features](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) in AWS Organizations\. With only consolidated billing features enabled, you cannot create a stack set with service\-managed permissions\.
-+ Enable trusted access with AWS Organizations\. Once trusted access is enabled, StackSets creates the necessary IAM roles in the administrator \(AWS Organizations master\) account and target accounts when you create stack sets with service\-managed permissions\.
++ Enable trusted access with AWS Organizations\. After trusted access is enabled, StackSets creates the necessary IAM roles in the administrator \(AWS Organizations master\) account and target accounts when you create stack sets with service\-managed permissions\.
 **Note**  
 The IAM service\-linked role created in the organization master account has the suffix `CloudFormationStackSetsOrgAdmin`\. You can modify or delete this role only if trusted access with AWS Organizations is disabled\. The IAM service\-linked role created in each target account has the suffix `CloudFormationStackSetsOrgMember`\. You can modify or delete this role only if trusted access with AWS Organizations is disabled, or if the account is removed from the target organization or organizational unit \(OU\)\.
 
-This topic covers how to enable trusted access with AWS Organizations\.
+This topic describes how to enable trusted access with AWS Organizations\.
 
 Only an account administrator in an AWS Organizations master account has permissions to enable trusted access\. An *administrator user* is an *IAM user* with full permissions to your AWS account\. For more information, see [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users) and [Creating Your First IAM Admin User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the IAM User Guide\.
 
@@ -27,7 +27,15 @@ See [Create a Stack Set with Service\-Managed Permissions](https://docs.aws.amaz
 1. From the navigation pane, choose **StackSets**\. If trusted access is disabled, a banner displays that prompts you to enable trusted access\.  
 ![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-enable-trusted-access-from-stacksets-list.png)
 
-1. In the banner, choose **Enable trusted access**\.
+1. Choose **Enable trusted access**\.
 
    Trusted access is successfully enabled when the following banner displays\.  
 ![\[Trusted access is successfully enabled banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-trusted-access-enabled-banner.png)
+
+**To enable trusted access in the **Trusted access for AWS services** page of the AWS Organizations console:**
+
+See [AWS CloudFormation StackSets and AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html) in the AWS Organizations User Guide\.
+
+**To disable trusted access:**
+
+See [AWS CloudFormation StackSets and AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html) in the AWS Organizations User Guide\. 

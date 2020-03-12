@@ -1,5 +1,7 @@
 # AWS::DMS::Endpoint ElasticsearchSettings<a name="aws-properties-dms-endpoint-elasticsearchsettings"></a>
 
+Provides information that defines an Elasticsearch endpoint\.
+
 ## Syntax<a name="aws-properties-dms-endpoint-elasticsearchsettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -33,7 +35,7 @@ The endpoint for the Elasticsearch cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ErrorRetryDuration`  <a name="cfn-dms-endpoint-elasticsearchsettings-errorretryduration"></a>
-The maximum number of seconds that DMS retries failed API requests to the Elasticsearch cluster\.  
+The maximum number of seconds for which DMS retries failed API requests to the Elasticsearch cluster\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

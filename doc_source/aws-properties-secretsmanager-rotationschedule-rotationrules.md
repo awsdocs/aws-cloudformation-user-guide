@@ -1,6 +1,6 @@
 # AWS::SecretsManager::RotationSchedule RotationRules<a name="aws-properties-secretsmanager-rotationschedule-rotationrules"></a>
 
- The `RotationRules` property used as part of the [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type to configure how and when Secrets Manager performs rotation for the associated secret\.
+ The `RotationRules` property is used as part of the [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type to configure how and when Secrets Manager performs rotation for the associated secret\.
 
 ## Syntax<a name="aws-properties-secretsmanager-rotationschedule-rotationrules-syntax"></a>
 
