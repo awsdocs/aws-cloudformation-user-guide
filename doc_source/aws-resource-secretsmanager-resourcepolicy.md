@@ -73,7 +73,7 @@ The following examples shows how to attach a resource\-based policy to the speci
                            "Ref" : "MySecret"
                          },
                         "ResourcePolicy" : {
-                           "Version" : "2019-10-19",
+                           "Version" : "2012-10-17",
                            "Statement" : [
                               {
                                    "Resource" : "*",
