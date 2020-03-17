@@ -76,3 +76,33 @@ A custom symbol to denote what combines content into a single column value\. It 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples
+
+
+The following example creates a custom csvclassifier in AWS Glue. 
+
+
+```
+{
+  "Description": "AWS Glue Custom  classifier Test",
+  "Resources": {
+    "MyCSVclassifier": {
+  "Type" : "AWS::Glue::Classifier",
+  "Properties" : {
+      "CsvClassifier" : {
+  "AllowSingleColumn" : true,
+  "ContainsHeader" : "PRESENT",
+  "Delimiter" : ",",
+  "Header" : [ "id","name" ],
+  "Name" : csvclassify,
+  "QuoteSymbol" : "\""
+}
+     
+    }
+}
+  }
+}
+
+```
+
