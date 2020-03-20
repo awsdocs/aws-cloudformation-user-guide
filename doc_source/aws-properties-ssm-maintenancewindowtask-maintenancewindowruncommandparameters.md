@@ -86,8 +86,22 @@ The Amazon S3 bucket subfolder\.
 `Parameters`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters"></a>
 The parameters for the `RUN_COMMAND` task execution\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Object with properties that represent the parameters for the `RUN_COMMAND` task
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+This is an object that defines the items like `executionTimeout` and `commands` for the `RUN_COMMAND` task.
+YAML example:
+```YAML
+          Parameters:
+            executionTimeout:
+              - "3600"
+            commands:
+              - |
+                Get-Service myImportantService | Restart-Service
+                Get-ExecutionPolicy -List
+                Set-ExecutionPolicy -Scope Process AllSigned
+                ## .. do the other important things here
+```
 
 `ServiceRoleArn`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn"></a>
 The ARN of the IAM service role to use to publish Amazon Simple Notification Service \(Amazon SNS\) notifications for maintenance window Run Command tasks\.  
