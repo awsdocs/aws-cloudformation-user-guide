@@ -64,7 +64,7 @@ If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), omit th
 
 `IamCertificateId`  <a name="cfn-cloudfront-distribution-viewercertificate-iamcertificateid"></a>
 If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [AWS Identity and Access Management \(AWS IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html), provide the ID of the IAM certificate\.  
-If you specify an IAM certificate ID, you must also specify values for `MinimumProtocolVerison` and `SslSupportMethod`\.   
+If you specify an IAM certificate ID, you must also specify values for `MinimumProtocolVersion` and `SslSupportMethod`\.   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

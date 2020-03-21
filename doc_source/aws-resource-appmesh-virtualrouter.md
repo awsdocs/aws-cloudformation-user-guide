@@ -6,6 +6,8 @@ Any inbound traffic that your virtual router expects should be specified as a `l
 
 Virtual routers handle traffic for one or more virtual services within your mesh\. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes\.
 
+For more information about virtual routers, see [Virtual Routers](https://docs.aws.amazon.com/app-mesh/latest/userguide//virtual_routers.html)\.
+
 ## Syntax<a name="aws-resource-appmesh-virtualrouter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -88,6 +90,12 @@ The full Amazon Resource Name \(ARN\) for the virtual router\.
 
 `MeshName`  <a name="MeshName-fn::getatt"></a>
 The name of the service mesh that the virtual router resides in\.
+
+`MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the virtual router\.

@@ -69,7 +69,7 @@ This parameter must be set to `true` when specifying a value for the `EngineVers
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-dms-replicationinstance-autominorversionupgrade"></a>
-Indicates whether minor engine upgrades will be applied automatically to the replication instance during the maintenance window\. This parameter defaults to `true`\.  
+A value that indicates whether minor engine upgrades are applied automatically to the replication instance during the maintenance window\. This parameter defaults to `true`\.  
 Default: `true`   
 *Required*: No  
 *Type*: Boolean  
@@ -97,7 +97,7 @@ AWS KMS creates the default encryption key for your AWS account\. Your AWS accou
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MultiAZ`  <a name="cfn-dms-replicationinstance-multiaz"></a>
- Specifies whether the replication instance is a Multi\-AZ deployment\. You cannot set the `AvailabilityZone` parameter if the Multi\-AZ parameter is set to `true`\.   
+ Specifies whether the replication instance is a Multi\-AZ deployment\. You can't set the `AvailabilityZone` parameter if the Multi\-AZ parameter is set to `true`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -130,7 +130,7 @@ The replication instance identifier\. This parameter is stored as a lowercase st
 Constraints:  
 + Must contain from 1 to 63 alphanumeric characters or hyphens\.
 + First character must be a letter\.
-+ Cannot end with a hyphen or contain two consecutive hyphens\.
++ Can't end with a hyphen or contain two consecutive hyphens\.
 Example: `myrepinstance`   
 *Required*: No  
 *Type*: String  

@@ -1,6 +1,8 @@
 # AWS::WAFRegional::WebACL<a name="aws-resource-wafregional-webacl"></a>
 
-Contains the `Rules` that identify the requests that you want to allow, block, or count\. In a `WebACL`, you also specify a default action \(`ALLOW` or `BLOCK`\), and the action for each `Rule` that you add to a `WebACL`, for example, block requests from specified IP addresses or block requests from specified referrers\. You also associate the `WebACL` with a CloudFront distribution to identify the requests that you want AWS WAF to filter\. If you add more than one `Rule` to a `WebACL`, a request needs to match only one of the specifications to be allowed, blocked, or counted\.
+Contains the `Rules` that identify the requests that you want to allow, block, or count\. In a `WebACL`, you also specify a default action \(`ALLOW` or `BLOCK`\), and the action for each `Rule` that you add to a `WebACL`, for example, block requests from specified IP addresses or block requests from specified referrers\. If you add more than one `Rule` to a `WebACL`, a request needs to match only one of the specifications to be allowed, blocked, or counted\.
+
+To identify the requests that you want AWS WAF to filter, you associate the `WebACL` with an API Gateway API or an Application Load Balancer\. 
 
 ## Syntax<a name="aws-resource-wafregional-webacl-syntax"></a>
 
@@ -142,105 +144,4 @@ MyWebACL:
         Priority: 3
         RuleId: 
           Ref: "SqlInjRule"
-```
-
-### Associate a Web ACL with a CloudFront Distribution<a name="aws-resource-wafregional-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution"></a>
-
-The follow example associates the `MyWebACL` web ACL with a CloudFront distribution\. The web ACL restricts which requests can access content served by CloudFront\.
-
-#### JSON<a name="aws-resource-wafregional-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution--json"></a>
-
-```
-"myDistribution": {
-  "Type": "AWS::CloudFront::Distribution",
-  "Properties": {
-    "DistributionConfig": {    
-      "WebACLId": { "Ref" : "MyWebACL" },
-      "Origins": [
-        {
-          "DomainName": "test.example.com",
-          "Id": "myCustomOrigin",
-          "CustomOriginConfig": {
-            "HTTPPort": "80",
-            "HTTPSPort": "443",
-            "OriginProtocolPolicy": "http-only"
-          }
-        }
-      ],
-      "Enabled": "true",
-      "Comment": "TestDistribution",
-      "DefaultRootObject": "index.html",
-      "DefaultCacheBehavior": {
-        "TargetOriginId": "myCustomOrigin",
-        "SmoothStreaming" : "false",
-        "ForwardedValues": {
-          "QueryString": "false",
-          "Cookies" : { "Forward" : "all" }
-        },
-        "ViewerProtocolPolicy": "allow-all"
-      },
-      "CustomErrorResponses" : [
-        {
-          "ErrorCode" : "404",
-          "ResponsePagePath" : "/error-pages/404.html",
-          "ResponseCode" : "200",
-          "ErrorCachingMinTTL" : "30"
-        }
-      ],
-      "PriceClass" : "PriceClass_200",
-      "Restrictions" : {
-        "GeoRestriction" : {
-          "RestrictionType" : "whitelist",
-          "Locations" : [ "AQ", "CV" ]
-        }
-      },
-      "ViewerCertificate" : { "CloudFrontDefaultCertificate" : "true" }
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-resource-wafregional-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution--yaml"></a>
-
-```
-myDistribution: 
-  Type: "AWS::CloudFront::Distribution"
-  Properties: 
-    DistributionConfig: 
-      WebACLId: 
-        Ref: "MyWebACL"
-      Origins: 
-        - 
-          DomainName: "test.example.com"
-          Id: "myCustomOrigin"
-          CustomOriginConfig: 
-            HTTPPort: "80"
-            HTTPSPort: "443"
-            OriginProtocolPolicy: "http-only"
-      Enabled: "true"
-      Comment: "TestDistribution"
-      DefaultRootObject: "index.html"
-      DefaultCacheBehavior: 
-        TargetOriginId: "myCustomOrigin"
-        SmoothStreaming: "false"
-        ForwardedValues: 
-          QueryString: "false"
-          Cookies: 
-            Forward: "all"
-        ViewerProtocolPolicy: "allow-all"
-      CustomErrorResponses: 
-        - 
-          ErrorCode: "404"
-          ResponsePagePath: "/error-pages/404.html"
-          ResponseCode: "200"
-          ErrorCachingMinTTL: "30"
-      PriceClass: "PriceClass_200"
-      Restrictions: 
-        GeoRestriction: 
-          RestrictionType: "whitelist"
-          Locations: 
-            - "AQ"
-            - "CV"
-      ViewerCertificate: 
-      CloudFrontDefaultCertificate: "true"
 ```

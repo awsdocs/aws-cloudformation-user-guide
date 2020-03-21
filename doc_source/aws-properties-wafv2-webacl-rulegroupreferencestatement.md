@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-wafv2-webacl-rulegroupreferencestatement-arn)" : String,
-  "[ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules)" : [ExcludedRules](aws-properties-wafv2-webacl-excludedrules.md)
+  "[ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules)" : [ [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md), ... ]
 }
 ```
 
@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Arn](#cfn-wafv2-webacl-rulegroupreferencestatement-arn): String
   [ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules): 
-    [ExcludedRules](aws-properties-wafv2-webacl-excludedrules.md)
+    - [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-rulegroupreferencestatement-properties"></a>
 
 `Arn`  <a name="cfn-wafv2-webacl-rulegroupreferencestatement-arn"></a>
 The Amazon Resource Name \(ARN\) of the entity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
@@ -42,5 +42,5 @@ The Amazon Resource Name \(ARN\) of the entity\.
 `ExcludedRules`  <a name="cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules"></a>
 The names of rules that are in the referenced rule group, but that you want AWS WAF to exclude from processing for this rule statement\.   
 *Required*: No  
-*Type*: [ExcludedRules](aws-properties-wafv2-webacl-excludedrules.md)  
+*Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

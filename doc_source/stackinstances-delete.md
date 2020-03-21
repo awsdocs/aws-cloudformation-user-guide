@@ -21,12 +21,12 @@ For a stack set with service\-managed permissions, if you delete stack instances
 
    1. \[Self\-managed permissions\] For **Accounts**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
 
-      \[Service\-managed permissions\] For **Accounts**, choose **Deploy stacks in organizational units**\. Paste the IDs of the OUs your stack set targets\.
+      \[Service\-managed permissions\] For **Accounts**, choose **Deploy stacks in organizational units**\. Paste the IDs of the OUs that your stack set targets\.
 **Note**  
-StackSets will also delete stack instances from any child OUs of the specified target OUs\.  
+StackSets also deletes stack instances from any child OUs of the specified target OUs\.  
 ![\[Select the organizational units from which to delete stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-delete-stack-instances-in-ous.png)
 
-   1. For **Deployment regions**, choose the regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
+   1. For **Deployment regions**, choose the Regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
 
    1. For **Deployment options**: 
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
@@ -57,9 +57,9 @@ StackSets will also delete stack instances from any child OUs of the specified t
    aws cloudformation delete-stack-instances --stack-set-name my-awsconfig-stackset --accounts '["0123456789012"]' --regions '["eu-west-1"]' --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --no-retain-stacks
    ```
 
-   \[Service\-managed permissions\] For *`--deployment-targets`*, specify the organization \(root\) ID or OU IDs in which you created stack instances\.
+   \[Service\-managed permissions\] For `--deployment-targets`, specify the organization \(root\) ID or OU IDs in which you created stack instances\.
 **Note**  
-StackSets will also delete stack instances from any child OUs of the specified target OUs\.
+StackSets also deletes stack instances from any child OUs of the specified target OUs\.
 
    ```
    aws cloudformation delete-stack-instances -stack-set-name my-awsconfig-stackset --deployment-targets OrganizationalUnitIds=["ou-rcuk-1x5jlwo", "ou-rcuk-slr5lh0a"] --regions ["eu-west-1"] --no-retain-stacks

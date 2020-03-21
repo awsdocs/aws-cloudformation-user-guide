@@ -6,6 +6,8 @@ You can use the `prefix` parameter in your route specification for path\-based r
 
 If your route matches a request, you can distribute traffic to one or more target virtual nodes with relative weighting\.
 
+For more information about routes, see [Routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html)\.
+
 ## Syntax<a name="aws-resource-appmesh-route-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -96,6 +98,12 @@ The full Amazon Resource Name \(ARN\) for the route\.
 
 `MeshName`  <a name="MeshName-fn::getatt"></a>
 The name of the service mesh that the route resides in\.
+
+`MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `RouteName`  <a name="RouteName-fn::getatt"></a>
 The name of the route\.

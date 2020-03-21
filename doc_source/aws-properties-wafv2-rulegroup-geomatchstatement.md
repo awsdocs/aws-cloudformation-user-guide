@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CountryCodes](#cfn-wafv2-rulegroup-geomatchstatement-countrycodes)" : [CountryCodes](aws-properties-wafv2-rulegroup-countrycodes.md)
+  "[CountryCodes](#cfn-wafv2-rulegroup-geomatchstatement-countrycodes)" : [ String, ... ]
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CountryCodes](#cfn-wafv2-rulegroup-geomatchstatement-countrycodes): 
-    [CountryCodes](aws-properties-wafv2-rulegroup-countrycodes.md)
+    - String
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-geomatchstatement-properties"></a>
@@ -29,5 +29,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CountryCodes`  <a name="cfn-wafv2-rulegroup-geomatchstatement-countrycodes"></a>
 An array of two\-character country codes, for example, `[ "US", "CN" ]`, from the alpha\-2 country ISO codes of the ISO 3166 international standard\.   
 *Required*: No  
-*Type*: [CountryCodes](aws-properties-wafv2-rulegroup-countrycodes.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

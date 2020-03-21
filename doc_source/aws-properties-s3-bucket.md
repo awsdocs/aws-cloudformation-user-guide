@@ -233,6 +233,7 @@ Example: `mystack-mybucket.s3.us-east-2.amazonaws.com`
 
 `WebsiteURL`  <a name="WebsiteURL-fn::getatt"></a>
 Returns the Amazon S3 website endpoint for the specified bucket\.  
+
 Example \(IPv4\): `http://mystack-mybucket.s3-website-us-east-2.amazonaws.com/`   
 Example \(IPv6\): `http://mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com/` 
 

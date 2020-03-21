@@ -63,7 +63,7 @@ Properties:
 ## Properties<a name="aws-resource-dynamodb-table-properties"></a>
 
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
-A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.   
+A list of attributes that describe the key schema for the table and indexes\.  
 This property is required to create a DynamoDB table\.  
 Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\. Replacement if you edit an existing AttributeDefinition\.   
 *Required*: Conditional  
@@ -78,7 +78,6 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>

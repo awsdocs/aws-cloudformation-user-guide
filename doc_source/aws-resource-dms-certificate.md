@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-dms-certificate-properties"></a>
 
 `CertificateIdentifier`  <a name="cfn-dms-certificate-certificateidentifier"></a>
-A customer\-assigned name for the certificate\. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens\.  
+A customer\-assigned name for the certificate\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen or contain two consecutive hyphens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

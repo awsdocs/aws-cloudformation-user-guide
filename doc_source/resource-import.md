@@ -42,7 +42,6 @@ This table describes the various status types used with `resource import`\.
 + You cannot import the same resource into multiple stacks\.
 + You can use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions) IAM policy condition to control which resource types IAM users can work with during an import operation\.
 + The AWS CloudFormation stack limits apply when importing resources\. For more information on limits, see [AWS CloudFormation Limits](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html)\.
-+ `Resource import` is available in the US East \(N\. Virginia\), US East \(Ohio\), US West \(N\. California\), US West \(Oregon\), Canada \(Central\), Asia Pacific \(Mumbai\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Asia Pacific \(Tokyo\), Europe \(Frankfurt\), Europe \(Ireland\), Europe \(London\), Europe \(Paris\), and South America \(São Paulo\) Regions\.
 
 ## Getting Started with Resource Import<a name="resource-import-getting-started"></a>
 + [Creating a Stack From Existing Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-new-stack.html)

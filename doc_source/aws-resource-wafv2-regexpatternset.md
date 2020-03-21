@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-wafv2-regexpatternset-description)" : String,
       "[Name](#cfn-wafv2-regexpatternset-name)" : String,
-      "[RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist)" : [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md),
+      "[RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist)" : [ String, ... ],
       "[Scope](#cfn-wafv2-regexpatternset-scope)" : String,
-      "[Tags](#cfn-wafv2-regexpatternset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Tags](#cfn-wafv2-regexpatternset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [Description](#cfn-wafv2-regexpatternset-description): String
   [Name](#cfn-wafv2-regexpatternset-name): String
   [RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist): 
-    [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)
+    - String
   [Scope](#cfn-wafv2-regexpatternset-scope): String
   [Tags](#cfn-wafv2-regexpatternset-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -63,7 +63,7 @@ A friendly name of the set\. You cannot change the name after you create the set
 `RegularExpressionList`  <a name="cfn-wafv2-regexpatternset-regularexpressionlist"></a>
 The regular expression patterns in the set\.  
 *Required*: Yes  
-*Type*: [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-regexpatternset-scope"></a>

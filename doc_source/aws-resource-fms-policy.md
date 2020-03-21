@@ -4,7 +4,7 @@ An AWS Firewall Manager policy\.
 
 Firewall Manager provides the following types of policies: 
 + A Shield Advanced policy, which applies Shield Advanced protection to specified accounts and resources\.
-+ An AWS WAF policy, which contains a rule group and defines which resources are to be protected by that rule group\.
++ An AWS WAF policy, which contains a rule group and defines which resources are to be protected by that rule group\. AWS WAF doesn't support rule groups in CloudFormation, so, to create WAF policies through CloudFormation, you first need to create your rule groups outside of CloudFormation\. 
 + A security group policy, which manages VPC security groups across your AWS organization\. 
 
 Each policy is specific to one of the types\. If you want to enforce more than one policy type across accounts, create multiple policies\. You can create multiple policies for each type\.
@@ -134,6 +134,27 @@ An array of `ResourceType`\.
 
 `SecurityServicePolicyData`  <a name="cfn-fms-policy-securityservicepolicydata"></a>
 Details about the security service that is being used to protect the resources\.  
+This contains the following settings:   
++ Type \- Indicates the service type that the policy uses to protect the resource\. For security group policies, Firewall Manager supports one security group for each common policy and for each content audit policy\. This is an adjustable limit that you can increase by contacting AWS Support\. 
+
+  Valid values: `WAF` \| `SHIELD_ADVANCED` \| `SECURITY_GROUPS_COMMON` \| `SECURITY_GROUPS_CONTENT_AUDIT` \| `SECURITY_GROUPS_USAGE_AUDIT`\. 
++ ManagedServiceData \- Details about the service that are specific to the service type, in JSON format\. For `SHIELD_ADVANCED`, this is an empty string\.
+  + Example: `WAF` 
+
+    `"ManagedServiceData": "{\"type\": \"WAF\", \"ruleGroups\": [{\"id\": \"12345678-1bcd-9012-efga-0987654321ab\", \"overrideAction\" : {\"type\": \"COUNT\"}}], \"defaultAction\": {\"type\": \"BLOCK\"}}`
+
+    AWS WAF doesn't support rule groups in CloudFormation\. To create a WAF policy through CloudFormation, create your rule group outside of CloudFormation, then provide the rule group ID in the WAF managed service data specification\.
+  + Example: `SECURITY_GROUPS_COMMON` 
+
+    `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_COMMON","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_COMMON\",\"revertManualSecurityGroupChanges\":false,\"exclusiveResourceSecurityGroupMngment\":false,\"securityGroups\":[{\"id\":\" sg-000e55995d61a06bd\"}]}"},"RemediationEnabled":false,"ResourceType":"AWS::EC2::NetworkInterface"}`
+  + Example: `SECURITY_GROUPS_CONTENT_AUDIT`
+
+    `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_CONTENT_AUDIT","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_CONTENT_AUDIT\",\"securityGroups\":[{\"id\":\" sg-000e55995d61a06bd \"}],\"securityGroupAction\":{\"type\":\"ALLOW\"}}"},"RemediationEnabled":false,"ResourceType":"AWS::EC2::NetworkInterface"}`
+
+    The security group action for content audit can be `ALLOW` or `DENY`\. For `ALLOW`, all in\-scope security group rules must be within the allowed range of the policy's security group rules\. For `DENY`, all in\-scope security group rules must not contain a value or a range that matches a rule value or range in the policy security group\.
+  + Example: `SECURITY_GROUPS_USAGE_AUDIT`
+
+    `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_USAGE_AUDIT","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_USAGE_AUDIT\",\"deleteUnusedSecurityGroups\":true,\"coalesceRedundantSecurityGroups\":true}"},"RemediationEnabled":false,"Resou rceType":"AWS::EC2::SecurityGroup"}`
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -165,6 +186,53 @@ The Amazon Resource Name \(ARN\) of the policy\.
 The ID of the policy\.
 
 ## Examples<a name="aws-resource-fms-policy--examples"></a>
+
+### Create a Firewall Manager AWS WAF Classic Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy"></a>
+
+The following shows an example Firewall Manager AWS WAF policy\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy--yaml"></a>
+
+```
+PolicyWAF:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: Policy
+      RemediationEnabled: false
+      ResourceType: AWS::ElasticLoadBalancingV2::LoadBalancer
+      SecurityServicePolicyData:
+        Type: WAF
+        ManagedServiceData: !Sub '{"type":"WAF",
+                                  "defaultAction":{"type":"BLOCK"},
+                                  "overrideCustomerWebACLAssociation":false,
+                                  "ruleGroups":[
+                                    {
+                                      "id":"${RuleGroupId}",
+                                      "overrideAction":{"type":"NONE"}
+                                    }
+                                  ]}'
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy--json"></a>
+
+```
+"PolicyWAF": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+        "ExcludeResourceTags": false,
+        "PolicyName": "Policy",
+        "RemediationEnabled": false,
+        "ResourceType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+        "SecurityServicePolicyData": {
+            "Type": "WAF",
+            "ManagedServiceData": {
+                "Fn::Sub": "{\"type\":\"WAF\",\"defaultAction\":{\"type\":\"BLOCK\"},\"overrideCustomerWebACLAssociation\":false,\"ruleGroups\":[{\"id\":\"${RuleGroupId}\",\"overrideAction\":{\"type\":\"NONE\"}}]}"
+            }
+        }
+    }
+}
+```
 
 ### Create a Firewall Manager Shield Advanced policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_Shield_Advanced_policy"></a>
 
@@ -284,6 +352,91 @@ Policy:
             "Type": "SECURITY_GROUPS_COMMON",
             "ManagedServiceData": {
                 "Fn::Sub": "{\"type\":\"SECURITY_GROUPS_COMMON\",\"revertManualSecurityGroupChanges\":true,\"securityGroups\":[{\"id\":\"${SecurityGroup.GroupId}\"}]}"
+            }
+        }
+    }
+}
+```
+
+### Create a Firewall Manager content audit security group policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_content_audit_security_group_policy"></a>
+
+The following shows an example Firewall Manager usage audit security group policy\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_content_audit_security_group_policy--yaml"></a>
+
+```
+PolicySGContentAudit:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: Policy
+      RemediationEnabled: false
+      ResourceType: AWS::EC2::Instance
+      SecurityServicePolicyData:
+        Type: SECURITY_GROUPS_CONTENT_AUDIT
+        ManagedServiceData: !Sub '{"type":"SECURITY_GROUPS_CONTENT_AUDIT",
+                                  "securityGroupAction":{"type":"ALLOW"},
+                                  "securityGroups":[
+                                    {"id":"${SecurityGroup.GroupId}"}
+                                  ]}
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_content_audit_security_group_policy--json"></a>
+
+```
+"PolicySGContentAudit": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+            "ExcludeResourceTags": false,
+            "PolicyName": "Policy",
+            "RemediationEnabled": false,
+            "ResourceType": "AWS::EC2::Instance",
+            "SecurityServicePolicyData": {
+                "Type": "SECURITY_GROUPS_CONTENT_AUDIT",
+                "ManagedServiceData": {
+                    "Fn::Sub": "{\"type\":\"SECURITY_GROUPS_CONTENT_AUDIT\",\"securityGroupAction\":{\"type\":\"ALLOW\"},\"securityGroups\":[{\"id\":\"${SecurityGroup.GroupId}\"}]}"
+                }
+            }
+        }
+    }
+```
+
+### Create a Firewall Manager usage audit security group policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_usage_audit_security_group_policy"></a>
+
+The following shows an example Firewall Manager usage audit security group policy\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_usage_audit_security_group_policy--yaml"></a>
+
+```
+PolicySGUsageAudit:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: Policy
+      RemediationEnabled: false
+      ResourceType: AWS::EC2::SecurityGroup
+      SecurityServicePolicyData:
+        Type: SECURITY_GROUPS_USAGE_AUDIT
+        ManagedServiceData: !Sub '{"type":"SECURITY_GROUPS_USAGE_AUDIT",
+                                  "deleteUnusedSecurityGroups":false,
+                                  "coalesceRedundantSecurityGroups":false,
+                                  "optionalDelayForUnusedInMinutes":null}'
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_usage_audit_security_group_policy--json"></a>
+
+```
+"PolicySGUsageAudit": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+        "ExcludeResourceTags": false,
+        "PolicyName": "PolicySGUsageAudit",
+        "RemediationEnabled": false,
+        "ResourceType": "AWS::EC2::SecurityGroup",
+        "SecurityServicePolicyData": {
+            "Type": "SECURITY_GROUPS_USAGE_AUDIT",
+            "ManagedServiceData": {
+                "Fn::Sub": "{\"type\":\"SECURITY_GROUPS_USAGE_AUDIT\",\"deleteUnusedSecurityGroups\":false,\"coalesceRedundantSecurityGroups\":false,\"optionalDelayForUnusedInMinutes\":null}"
             }
         }
     }

@@ -175,10 +175,10 @@ BasicRemediationConfiguration:
                 StaticValue:
                     Values: 
                     - automationAssumeRole
-        InstanceId:
-            StaticValue:
-                Values:
-                    - instanceId
+            InstanceId:
+                StaticValue:
+                    Values:
+                        - instanceId
         TargetId: "AWS-StartEC2Instance"
         TargetType: "SSM_DOCUMENT"
         TargetVersion: "1"

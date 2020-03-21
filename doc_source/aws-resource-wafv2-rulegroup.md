@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
-      "[Rules](#cfn-wafv2-rulegroup-rules)" : [Rules](aws-properties-wafv2-rulegroup-rules.md),
+      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ [Rule](aws-properties-wafv2-rulegroup-rule.md), ... ],
       "[Scope](#cfn-wafv2-rulegroup-scope)" : String,
       "[Tags](#cfn-wafv2-rulegroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
@@ -37,7 +37,7 @@ Properties:
   [Description](#cfn-wafv2-rulegroup-description): String
   [Name](#cfn-wafv2-rulegroup-name): String
   [Rules](#cfn-wafv2-rulegroup-rules): 
-    [Rules](aws-properties-wafv2-rulegroup-rules.md)
+    - [Rule](aws-properties-wafv2-rulegroup-rule.md)
   [Scope](#cfn-wafv2-rulegroup-scope): String
   [Tags](#cfn-wafv2-rulegroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -76,7 +76,7 @@ A friendly name of the rule group\. You cannot change the name of a rule group a
 `Rules`  <a name="cfn-wafv2-rulegroup-rules"></a>
 The Rule statements used to identify the web requests that you want to allow, block, or count\. Each rule includes one top\-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\.   
 *Required*: No  
-*Type*: [Rules](aws-properties-wafv2-rulegroup-rules.md)  
+*Type*: List of [Rule](aws-properties-wafv2-rulegroup-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-rulegroup-scope"></a>

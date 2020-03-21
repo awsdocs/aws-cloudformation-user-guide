@@ -63,7 +63,7 @@ Represents the criteria to be used in the filter for querying findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-guardduty-filter-name"></a>
-The name of the filter\.  
+The name of the filter\. Minimum length of 3\. Maximum length of 64\. Valid characters include alphanumeric characters, dot \(\.\), underscore \(\_\), and dash \(\-\)\. Spaces are not allowed\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[PositionalConstraint](#cfn-wafv2-webacl-bytematchstatement-positionalconstraint)" : String,
   "[SearchString](#cfn-wafv2-webacl-bytematchstatement-searchstring)" : String,
   "[SearchStringBase64](#cfn-wafv2-webacl-bytematchstatement-searchstringbase64)" : String,
-  "[TextTransformations](#cfn-wafv2-webacl-bytematchstatement-texttransformations)" : [TextTransformations](aws-properties-wafv2-webacl-texttransformations.md)
+  "[TextTransformations](#cfn-wafv2-webacl-bytematchstatement-texttransformations)" : [ [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md), ... ]
 }
 ```
 
@@ -32,14 +32,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SearchStringBase64](#cfn-wafv2-webacl-bytematchstatement-searchstringbase64): 
     String
   [TextTransformations](#cfn-wafv2-webacl-bytematchstatement-texttransformations): 
-    [TextTransformations](aws-properties-wafv2-webacl-texttransformations.md)
+    - [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md)
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-bytematchstatement-properties"></a>
 
 `FieldToMatch`  <a name="cfn-wafv2-webacl-bytematchstatement-fieldtomatch"></a>
 The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -57,7 +57,7 @@ The value of the specified part of the web request must exactly match the value 
 The value of `SearchString` must appear at the beginning of the specified part of the web request\.  
  **ENDS\_WITH**   
 The value of `SearchString` must appear at the end of the specified part of the web request\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Allowed Values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,7 +67,7 @@ A string value that you want AWS WAF to search for\. AWS WAF searches only in th
 Don't encode this string\. Provide the value that you want AWS WAF to search for\. AWS CloudFormation automatically base64 encodes the value for you\.  
 For example, suppose the value of `Type` is `HEADER` and the value of `Data` is `User-Agent`\. If you want to search the `User-Agent` header for the value `BadBot`, you provide the string `BadBot` in the value of `SearchString`\.  
 You must specify either `SearchString` or `SearchStringBase64` in a `ByteMatchStatement`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -80,6 +80,6 @@ You must specify either `SearchString` or `SearchStringBase64` in a `ByteMatchSt
 
 `TextTransformations`  <a name="cfn-wafv2-webacl-bytematchstatement-texttransformations"></a>
 Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection\. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content identified by `FieldToMatch`, starting from the lowest priority setting, before inspecting the content for a match\.  
-*Required*: No  
-*Type*: [TextTransformations](aws-properties-wafv2-webacl-texttransformations.md)  
+*Required*: Yes  
+*Type*: List of [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

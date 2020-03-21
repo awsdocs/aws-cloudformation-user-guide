@@ -35,5 +35,7 @@ The name of the rendering engine\.
 The version of the rendering engine\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4`  
 *Pattern*: `1.x`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

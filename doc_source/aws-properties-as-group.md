@@ -145,7 +145,7 @@ You must specify one of the following properties: `LaunchConfigurationName`, `La
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchConfigurationName`  <a name="cfn-as-group-launchconfigurationname"></a>
-The name of the [LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) to use to launch instances\.  
+The name of the [launch configuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) to use to launch instances\.  
 You must specify one of the following properties: `LaunchConfigurationName`, `LaunchTemplate`, `InstanceId`, or `MixedInstancesPolicy`\.  
 When you update `LaunchConfigurationName`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. 
 *Required*: Conditional  
@@ -156,7 +156,7 @@ When you update `LaunchConfigurationName`, existing Amazon EC2 instances continu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplate`  <a name="cfn-as-group-launchtemplate"></a>
-The [LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
+The [EC2 launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
 You must specify one of the following properties: `LaunchConfigurationName`, `LaunchTemplate`, `InstanceId`, or `MixedInstancesPolicy`\.  
 When you update `LaunchTemplate`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\.
 *Required*: Conditional  
@@ -326,6 +326,7 @@ It also specifies the launch configuration that the Auto Scaling group uses to l
 #### YAML<a name="aws-properties-as-group--examples--Auto_Scaling_Group_with_Load_Balancer_and_Multiple_Properties--yaml"></a>
 
 ```
+---
 myASG: 
   Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
@@ -338,8 +339,7 @@ myASG:
     LoadBalancerNames: 
       - Ref: "myLoadBalancer"
     MetricsCollection: 
-      - 
-        Granularity: "1Minute"
+      - Granularity: "1Minute"
         Metrics: 
           - "GroupMinSize"
           - "GroupMaxSize"
@@ -399,6 +399,7 @@ While the stack update is in progress, the following Auto Scaling processes are 
 #### YAML<a name="aws-properties-as-group--examples--Rolling_Updates_with_Batch_Update_Policy--yaml"></a>
 
 ```
+---
 myASG: 
   UpdatePolicy: 
     AutoScalingRollingUpdate: 
@@ -466,6 +467,7 @@ The following example demonstrates a batch update policy that instructs CloudFor
 #### YAML<a name="aws-properties-as-group--examples--Batch_Update_Policy_with_Wait_Condition--yaml"></a>
 
 ```
+---
 myASG: 
   UpdatePolicy: 
     AutoScalingRollingUpdate: 
@@ -492,7 +494,7 @@ myASG:
 
 ### Auto Scaling Group and Launch Template<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template"></a>
 
-The following example creates an Auto Scaling group and a launch template that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
+The following example creates an Auto Scaling group and a launch template \([AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)\) that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
 
 The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. By referencing a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value for `ImageId`, the AMI is specified when launching the stack\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
 
@@ -509,7 +511,7 @@ The example stack creates an Auto Scaling group with a minimum size of 1 and a m
     }
   },
   "Resources":{
-    "LaunchTemplate":{
+    "myLaunchTemplate":{
       "Type":"AWS::EC2::LaunchTemplate",
       "Properties":{
         "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
@@ -538,11 +540,11 @@ The example stack creates an Auto Scaling group with a minimum size of 1 and a m
         "HealthCheckGracePeriod":300,
         "LaunchTemplate":{
           "LaunchTemplateId":{
-            "Ref":"LaunchTemplate"
+            "Ref":"myLaunchTemplate"
           },
           "Version":{
             "Fn::GetAtt":[
-              "LaunchTemplate",
+              "myLaunchTemplate",
               "LatestVersionNumber"
             ]
           }
@@ -562,7 +564,7 @@ Parameters:
   myImageId:
     Type: AWS::EC2::Image::Id
 Resources:
-  LaunchTemplate:
+  myLaunchTemplate:
     Type: AWS::EC2::LaunchTemplate
     Properties: 
       LaunchTemplateName: !Sub ${AWS::StackName}-launch-template
@@ -590,8 +592,8 @@ Resources:
       DesiredCapacity: "2"
       HealthCheckGracePeriod: 300
       LaunchTemplate:
-        LaunchTemplateId: !Ref LaunchTemplate
-        Version: !GetAtt LaunchTemplate.LatestVersionNumber
+        LaunchTemplateId: !Ref myLaunchTemplate
+        Version: !GetAtt myLaunchTemplate.LatestVersionNumber
       VPCZoneIdentifier:
         - subnet-5ea0c127
         - subnet-6194ea3b

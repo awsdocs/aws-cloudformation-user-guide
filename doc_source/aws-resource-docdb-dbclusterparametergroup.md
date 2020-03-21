@@ -56,9 +56,9 @@ The cluster parameter group family name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-docdb-dbclusterparametergroup-name"></a>
-The name of the cluster parameter group\.  
+The name of the DB cluster parameter group\.  
 Constraints:  
-+ Must match the name of an existing `DBClusterParameterGroup`\.
++ Must not match the name of an existing `DBClusterParameterGroup`\.
 This value is stored as a lowercase string\.
 *Required*: No  
 *Type*: String  

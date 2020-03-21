@@ -14,7 +14,7 @@ The `aws:` prefix is reserved for AWS use\. This prefix is case\-insensitive\. I
 
 All stack\-level tags, including automatically created tags, are propagated to resources that AWS CloudFormation supports\. Currently, tags are not propagated to Amazon EBS volumes that are created from block device mappings\.
 
-## Syntax<a name="w5653ab1c26c10d228c13c15"></a>
+## Syntax<a name="w5792ab1c25c10d234c13c15"></a>
 
 ### JSON<a name="aws-properties-resource-tags-syntax.json"></a>
 
@@ -32,7 +32,7 @@ All stack\-level tags, including automatically created tags, are propagated to r
 [Value](#cfn-resource-tags-value): String
 ```
 
-## Properties<a name="w5653ab1c26c10d228c13c17"></a>
+## Properties<a name="w5792ab1c25c10d234c13c17"></a>
 
 `Key`  <a name="cfn-resource-tags-key"></a>
 The key name of the tag\. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
@@ -75,6 +75,6 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 7.     Value: "value2"
 ```
 
-## See Also<a name="w5653ab1c26c10d228c13c21"></a>
+## See Also<a name="w5792ab1c25c10d234c13c21"></a>
 + [Setting AWS CloudFormation Stack Options](cfn-console-add-tags.md)
 + [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)

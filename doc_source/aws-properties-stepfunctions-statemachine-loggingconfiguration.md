@@ -3,7 +3,7 @@
 Defines what execution history events are logged and where they are logged\.
 
 **Note**  
-The `loggingConfiguration` parameter is only valid when `type` is set to `EXPRESS`\. By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
+By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
 
 ## Syntax<a name="aws-properties-stepfunctions-statemachine-loggingconfiguration-syntax"></a>
 

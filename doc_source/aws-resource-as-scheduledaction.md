@@ -1,6 +1,6 @@
 # AWS::AutoScaling::ScheduledAction<a name="aws-resource-as-scheduledaction"></a>
 
-Specifies a scheduled scaling action for an Amazon EC2 Auto Scaling group, changing the number of servers available for your application in response to predictable load changes\. 
+Specifies an Amazon EC2 Auto Scaling scheduled action so that the Auto Scaling group can change the number of instances available for your application in response to predictable load changes\. 
 
 **Important**  
 When you update a stack with an Auto Scaling group and scheduled action, AWS CloudFormation always sets the min size, max size, and desired capacity properties of your group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template\. However, you might not want CloudFormation to do that when you have a scheduled action in effect\. You can use an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to prevent CloudFormation from changing the min size, max size, or desired capacity property values during a stack update unless you modified the individual values in your template\.   
@@ -141,6 +141,7 @@ The following template snippet includes two scheduled actions that scale the num
 #### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_Scaling_Action--yaml"></a>
 
 ```
+---
 Resources:
   ScheduledActionOut: 
     Type: AWS::AutoScaling::ScheduledAction

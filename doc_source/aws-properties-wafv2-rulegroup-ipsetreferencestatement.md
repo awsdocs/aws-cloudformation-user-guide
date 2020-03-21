@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Arn`  <a name="cfn-wafv2-rulegroup-ipsetreferencestatement-arn"></a>
 The Amazon Resource Name \(ARN\) of the IPSet that this statement references\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  

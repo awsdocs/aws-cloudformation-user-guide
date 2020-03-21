@@ -197,9 +197,7 @@ The following example depicts a valid Parameters section declaration in which a 
 The following example depicts a valid Parameters section declaration in which a single `CommaDelimitedList` type parameter is declared\. The NoEcho property is set to `TRUE`, which will mask its value with asterisks \(\*\*\*\*\*\) in the `aws cloudformation describe-stacks` output\.
 
 **Important**  
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we strongly suggest you do one of the following:   
-Use input parameters to pass in information whenever you create or update a stack, using the `NoEcho` property to obfuscate the parameter value\.
-Use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the Systems Manager Parameter Store or Secrets Manager\.
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ### JSON<a name="quickref-general-example-7.json"></a>

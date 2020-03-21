@@ -92,6 +92,8 @@ A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the model, such as `arn:aws:sagemaker:us-west-2:012345678901:model/mymodel`\.
 
+When you pass the logical ID of an `AWS::SageMaker::Model` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the model, such as `arn:aws:sagemaker:us-west-2:012345678901:model/mymodel`\.
+
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-sagemaker-model-return-values-fn--getatt"></a>
@@ -100,6 +102,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+
 #### <a name="aws-resource-sagemaker-model-return-values-fn--getatt-fn--getatt"></a>
 
 `ModelName`  <a name="ModelName-fn::getatt"></a>
@@ -107,11 +111,11 @@ The name of the model, such as `MyModel`\.
 
 ## Examples<a name="aws-resource-sagemaker-model--examples"></a>
 
-### SageMaker Model Endpoint Examples<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Examples"></a>
+### SageMaker Model Endpoint Example<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Example"></a>
 
 The following example creates an endpoint configuration from a trained model, and then creates an endpoint\.
 
-#### JSON<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Examples--json"></a>
+#### JSON<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Example--json"></a>
 
 ```
 {
@@ -225,7 +229,7 @@ The following example creates an endpoint configuration from a trained model, an
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Examples--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Example--yaml"></a>
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."

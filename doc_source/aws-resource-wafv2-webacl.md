@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultAction](#cfn-wafv2-webacl-defaultaction)" : [DefaultAction](aws-properties-wafv2-webacl-defaultaction.md),
       "[Description](#cfn-wafv2-webacl-description)" : String,
       "[Name](#cfn-wafv2-webacl-name)" : String,
-      "[Rules](#cfn-wafv2-webacl-rules)" : [Rules](aws-properties-wafv2-webacl-rules.md),
+      "[Rules](#cfn-wafv2-webacl-rules)" : [ [Rule](aws-properties-wafv2-webacl-rule.md), ... ],
       "[Scope](#cfn-wafv2-webacl-scope)" : String,
       "[Tags](#cfn-wafv2-webacl-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
@@ -36,7 +36,7 @@ Properties:
   [Description](#cfn-wafv2-webacl-description): String
   [Name](#cfn-wafv2-webacl-name): String
   [Rules](#cfn-wafv2-webacl-rules): 
-    [Rules](aws-properties-wafv2-webacl-rules.md)
+    - [Rule](aws-properties-wafv2-webacl-rule.md)
   [Scope](#cfn-wafv2-webacl-scope): String
   [Tags](#cfn-wafv2-webacl-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -73,7 +73,7 @@ A friendly name of the Web ACL\. You cannot change the name of a Web ACL after y
 `Rules`  <a name="cfn-wafv2-webacl-rules"></a>
 The Rule statements used to identify the web requests that you want to allow, block, or count\. Each rule includes one top\-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\.   
 *Required*: No  
-*Type*: [Rules](aws-properties-wafv2-webacl-rules.md)  
+*Type*: List of [Rule](aws-properties-wafv2-webacl-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-webacl-scope"></a>

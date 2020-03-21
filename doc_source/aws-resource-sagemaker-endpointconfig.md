@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
 
 `EndpointConfigName`  <a name="cfn-sagemaker-endpointconfig-endpointconfigname"></a>
-The name of the endpoint configuration\. You specify this name in a [CreateEndpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html) request\.   
+The name of the endpoint configuration\. You specify this name in a CreateEndpoint request\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
@@ -45,12 +45,11 @@ The name of the endpoint configuration\. You specify this name in a [CreateEndpo
 
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
-The KmsKeyId can be any of the following formats:   
-+ Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab` 
-+ Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab` 
-+ Alias name: `alias/ExampleAlias` 
-+ Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias` 
-The KMS key policy must grant permission to the IAM role that you specify in your `CreateEndpoint`, `UpdateEndpoint` requests\. For more information, refer to the AWS Key Management Service section[ Using Key Policies in AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)   
++ Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
++ Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
++ Alias name: `alias/ExampleAlias`
++ Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+The KMS key policy must grant permission to the IAM role that you specify in your `CreateEndpoint`, `UpdateEndpoint` requests\. For more information, refer to the AWS Key Management Service section[ Using Key Policies in AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)  
 Certain Nitro\-based instances include local storage, dependent on the instance type\. Local storage volumes are encrypted using a hardware module on the instance\. You can't request a `KmsKeyId` when using an instance type with local storage\. If any of the models that you specify in the `ProductionVariants` parameter use nitro\-based instances with local storage, do not specify a value for the `KmsKeyId` parameter\. If you specify a value for `KmsKeyId` when using any nitro\-based instances with local storage, the call to `CreateEndpointConfig` fails\.  
 For a list of instance types that support local instance storage, see [Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)\.  
 For more information about local instance storage encryption, see [SSD Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html)\.
@@ -89,6 +88,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
 #### <a name="aws-resource-sagemaker-endpointconfig-return-values-fn--getatt-fn--getatt"></a>
 
 `EndpointConfigName`  <a name="EndpointConfigName-fn::getatt"></a>
@@ -96,11 +97,11 @@ The name of the endpoint configuration, such as `MyEndpointConfiguration`\.
 
 ## Examples<a name="aws-resource-sagemaker-endpointconfig--examples"></a>
 
-### SageMaker EndpointConfig Examples<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Examples"></a>
+### SageMaker EndpointConfig Example<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Example"></a>
 
 The following example creates an endpoint configuration from a trained model, and then creates an endpoint\.
 
-#### JSON<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Examples--json"></a>
+#### JSON<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Example--json"></a>
 
 ```
 {
@@ -214,7 +215,7 @@ The following example creates an endpoint configuration from a trained model, an
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Examples--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Example--yaml"></a>
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."

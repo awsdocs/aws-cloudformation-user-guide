@@ -63,11 +63,9 @@ Configures SNS notifications of available or expiring work items for work teams\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sagemaker-workteam-tags"></a>
-A list of key\-value pairs to apply to this resource\.  
-For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the * AWS Billing and Cost Management User Guide*\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkteamName`  <a name="cfn-sagemaker-workteam-workteamname"></a>
@@ -83,19 +81,9 @@ The name of the work team\.
 
 ### Ref<a name="aws-resource-sagemaker-workteam-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns details about a labeling work team\.
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
 ### Fn::GetAtt<a name="aws-resource-sagemaker-workteam-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
-
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 #### <a name="aws-resource-sagemaker-workteam-return-values-fn--getatt-fn--getatt"></a>
 
 `WorkteamName`  <a name="WorkteamName-fn::getatt"></a>
-The name of the work team\.
+Not currently supported by AWS CloudFormation\.

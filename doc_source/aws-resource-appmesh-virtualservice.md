@@ -4,6 +4,8 @@ Creates a virtual service within a service mesh\.
 
 A virtual service is an abstraction of a real service that is provided by a virtual node directly or indirectly by means of a virtual router\. Dependent services call your virtual service by its `virtualServiceName`, and those requests are routed to the virtual node or virtual router that is specified as the provider for the virtual service\.
 
+For more information about virtual services, see [Virtual Services](https://docs.aws.amazon.com/app-mesh/latest/userguide//virtual_services.html)\.
+
 ## Syntax<a name="aws-resource-appmesh-virtualservice-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -86,6 +88,12 @@ The full Amazon Resource Name \(ARN\) for the virtual service\.
 
 `MeshName`  <a name="MeshName-fn::getatt"></a>
 The name of the service mesh that the virtual service resides in\.
+
+`MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the virtual service\.

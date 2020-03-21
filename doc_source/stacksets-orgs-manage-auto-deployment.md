@@ -29,7 +29,7 @@ With **Retain stacks** selected, stack instances are removed from your stack set
 
 1. Open the AWS CLI\.
 
-1. Run the `update-stack-set` command, specifying the the stack set that you created in [Creating a Stack Set with Service\-Managed Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-associate-stackset-with-org.html)\. Automatic deployment is set at the stack set level\. If you specify *\-\-auto\-deployment* in your stack set update, you cannot specify *\-\-deployment\-targets* or *\-\-regions*\.
+1. Run the `update-stack-set` command, specifying the stack set that you created in [Creating a Stack Set with Service\-Managed Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-associate-stackset-with-org.html)\. Automatic deployment is set at the stack set level\. If you specify *\-\-auto\-deployment* in your stack set update, you cannot specify *\-\-deployment\-targets* or *\-\-regions*\.
 
    ```
    aws cloudformation update-stack-set --stack-set-name StackSet_myApp --auto-deployment Enabled=false
@@ -43,8 +43,8 @@ With **Retain stacks** selected, stack instances are removed from your stack set
 
 ## Auto Deployment Example<a name="stacksets-orgs-auto-deployment-example"></a>
 
-With automatic deployments enabled, automatic deployments are triggered when accounts are added to a target organization or OU, removed from a target organization or OU, or moved between target OUs\.
+When you enable automatic deployments, they are triggered when accounts are added to a target organization or OU, removed from a target organization or OU, or moved between target OUs\.
 
-For example, a stack set `StackSet1` targets the OU `OU1` in the `us-east-1` region, and a stack set `StackSet2` targets the OU `OU2` in the `us-east-1` region\. `OU1` contains the account `AccountA`\.
+For example, a stack set, `StackSet1`, targets an OU, `OU1`, in the `us-east-1` Region\. A stack set, `StackSet2`, targets an OU, `OU2`, in the `us-east-1` Region\. `OU1` contains an account, `AccountA`\.
 
-If we move `AccountA` from `OU1` to `OU2` with automatic deployments enabled, StackSets automatically runs a delete operation to remove the `StackSet1` instance from `AccountA` and queues a create operation that will add the `StackSet2` instance to `AccountA`\. After the `StackSet1` instance is deleted, the `StackSet2` instance is created\.
+If we move `AccountA` from `OU1` to `OU2` with automatic deployments enabled, StackSets automatically runs a delete operation to remove the `StackSet1` instance from `AccountA` and queues a create operation that adds the `StackSet2` instance to `AccountA`\. After the `StackSet1` instance is deleted, the `StackSet2` instance is created\.

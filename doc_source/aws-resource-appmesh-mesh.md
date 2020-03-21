@@ -79,6 +79,12 @@ The full Amazon Resource Name \(ARN\) for the mesh\.
 `MeshName`  <a name="MeshName-fn::getatt"></a>
 The name of the service mesh\.
 
+`MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the mesh\.
 

@@ -182,16 +182,45 @@ The following example sets risk configurations in the referenced user pool and c
 #### YAML<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples--Creating_a_new_risk_configuration_attachment_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolRiskConfiguration: Type:
-        AWS::Cognito::UserPoolRiskConfigurationAttachment Properties: UserPoolId: !Ref UserPool
-        ClientId: !Ref Client AccountTakeoverRiskConfiguration: Actions: HighAction: EventAction:
-        "MFA_REQUIRED" Notify: True MediumAction: EventAction: "MFA_IF_CONFIGURED" Notify: True
-        LowAction: EventAction: !Ref LowEventAction Notify: False NotifyConfiguration: BlockEmail:
-        HtmlBody: "html body" Subject: "Your account got blocked" TextBody: "Your account got
-        blocked" MfaEmail: HtmlBody: "html body" Subject: : "Your account needs MFA verification"
-        TextBody: "Your account needs MFA verification" NoActionEmail: HtmlBody: !Ref HtmlBody
-        Subject: !Ref Subject TextBody: !Ref TextBody From: "your-from-email@amazon.com" SourceArn:
-        !Ref SourceArn ReplyTo: "your-reply-to@amazon.com" CompromisedCredentialsRiskConfiguration:
-        Actions: EventAction: "BLOCKED" EventFilter: - !Ref EventFilter RiskExceptionConfiguration:
-        BlockedIPRangeList: - "198.0.0.1" SkippedIPRangeList: - "198.0.0.1"
+UserPoolRiskConfiguration: 
+  Type: AWS::Cognito::UserPoolRiskConfigurationAttachment 
+  Properties: 
+    UserPoolId: !Ref UserPool
+    ClientId: !Ref Client 
+    AccountTakeoverRiskConfiguration: 
+      Actions: 
+        HighAction: 
+          EventAction: "MFA_REQUIRED" 
+          Notify: True 
+        MediumAction: 
+          EventAction: "MFA_IF_CONFIGURED" 
+          Notify: True
+        LowAction: 
+          EventAction: !Ref LowEventAction 
+          Notify: False 
+      NotifyConfiguration: 
+        BlockEmail:
+          HtmlBody: "html body" 
+          Subject: "Your account got blocked" 
+          TextBody: "Your account got blocked" 
+        MfaEmail: 
+          HtmlBody: "html body" 
+          Subject: "Your account needs MFA verification"
+          TextBody: "Your account needs MFA verification" 
+        NoActionEmail: 
+          HtmlBody: !Ref HtmlBody
+          Subject: !Ref Subject 
+          TextBody: !Ref TextBody 
+        From: "your-from-email@amazon.com" 
+        SourceArn: !Ref SourceArn 
+        ReplyTo: "your-reply-to@amazon.com" 
+    CompromisedCredentialsRiskConfiguration:
+      Actions: 
+        EventAction: "BLOCKED" 
+        EventFilter: - !Ref EventFilter 
+    RiskExceptionConfiguration:
+        BlockedIPRangeList: 
+          - "198.0.0.1" 
+        SkippedIPRangeList: 
+          - "198.0.0.1"
 ```

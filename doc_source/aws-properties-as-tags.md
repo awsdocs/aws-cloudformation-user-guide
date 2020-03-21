@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup TagProperty<a name="aws-properties-as-tags"></a>
 
- `TagProperty` specifies a list of tags for the `Tag` property of [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `TagProperty` adds tags to all associated instances in an Amazon EC2 Auto Scaling group\. 
+ `TagProperty` specifies a list of tags for the `Tag` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `TagProperty` adds tags to all associated instances in an Auto Scaling group\. 
 
 For more information, see [Tagging Auto Scaling Groups and Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the *Amazon EC2 Auto Scaling User Guide*\. You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\.
 

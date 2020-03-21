@@ -80,7 +80,7 @@ The name of the endpoint database\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DynamoDbSettings`  <a name="cfn-dms-endpoint-dynamodbsettings"></a>
-Settings in JSON format for the target Amazon DynamoDB endpoint\. For more information about the available settings, see [Using Object Mapping to Migrate Data to DynamoDB](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.DynamoDB.html) in the *AWS Database Migration Service User Guide\.*   
+Settings in JSON format for the target Amazon DynamoDB endpoint\. For information about other available settings, see [Using Object Mapping to Migrate Data to DynamoDB](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.DynamoDB.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: [DynamoDbSettings](aws-properties-dms-endpoint-dynamodbsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,7 +92,7 @@ Settings in JSON format for the target Elasticsearch endpoint\. For more informa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointIdentifier`  <a name="cfn-dms-endpoint-endpointidentifier"></a>
-The database endpoint identifier\. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens\.  
+The database endpoint identifier\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen or contain two consecutive hyphens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -105,7 +105,7 @@ The type of endpoint\. Valid values are `source` and `target`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `mysql`, `oracle`, `postgres`, `mariadb`, `aurora`, `aurora-postgresql`, `redshift`, `s3`, `db2`, `azuredb`, `sybase`, `dynamodb`, `mongodb`, and `sqlserver`\.  
+The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"documentdb"`, and `"sqlserver"`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -117,7 +117,7 @@ Additional attributes associated with the connection\. Each attribute is specifi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisSettings`  <a name="cfn-dms-endpoint-kinesissettings"></a>
-Settings in JSON format for the target Amazon Kinesis Data Streams endpoint\. For more information about the available settings, see [Using Object Mapping to Migrate Data to a Kinesis Data Stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping) in the *AWS Database Migration User Guide\.*   
+Settings in JSON format for the target endpoint for Amazon Kinesis Data Streams\. For information about other available settings, see [Using Object Mapping to Migrate Data to a Kinesis Data Stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping) in the *AWS Database Migration User Guide\.*   
 *Required*: No  
 *Type*: [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -131,7 +131,7 @@ AWS KMS creates the default encryption key for your AWS account\. Your AWS accou
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MongoDbSettings`  <a name="cfn-dms-endpoint-mongodbsettings"></a>
-Settings in JSON format for the source MongoDB endpoint\. For more information about the available settings, see the configuration properties section in [ Using MongoDB as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html) in the *AWS Database Migration Service User Guide\.*   
+Settings in JSON format for the source MongoDB endpoint\. For more information about the available settings, see the configuration properties section in [Using MongoDB as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

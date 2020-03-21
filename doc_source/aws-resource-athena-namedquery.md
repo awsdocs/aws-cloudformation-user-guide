@@ -1,6 +1,6 @@
 # AWS::Athena::NamedQuery<a name="aws-resource-athena-namedquery"></a>
 
-The AWS::Athena::NamedQuery resource specifies an Amazon Athena query, where `QueryString` is the list of SQL query statements that comprise the query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena API Reference*\. 
+The AWS::Athena::NamedQuery resource specifies an Amazon Athena query, where `QueryString` is the list of SQL query statements that comprise the query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena API Reference*\.
 
 ## Syntax<a name="aws-resource-athena-namedquery-syntax"></a>
 

@@ -12,9 +12,7 @@ The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM ro
 The example defines the `MysqlRootPassword` parameter with its `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\.
 
 **Important**  
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we strongly suggest you do one of the following:   
-Use input parameters to pass in information whenever you create or update a stack, using the `NoEcho` property to obfuscate the parameter value\.
-Use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the Systems Manager Parameter Store or Secrets Manager\.
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ### JSON<a name="quickref-opsworks-example-1.json"></a>

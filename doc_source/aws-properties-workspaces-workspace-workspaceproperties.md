@@ -38,7 +38,7 @@ The compute type\. For more information, see [Amazon WorkSpaces Bundles](http://
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RootVolumeSizeGib`  <a name="cfn-workspaces-workspace-workspaceproperties-rootvolumesizegib"></a>
-The size of the root volume\.  
+The size of the root volume\. For important information about how to modify the size of the root and user volumes, see [Modify a WorkSpace](https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,7 +57,7 @@ The time after a user logs off when WorkSpaces are automatically stopped\. Confi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserVolumeSizeGib`  <a name="cfn-workspaces-workspace-workspaceproperties-uservolumesizegib"></a>
-The size of the user storage\.  
+The size of the user storage\. For important information about how to modify the size of the root and user volumes, see [Modify a WorkSpace](https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
