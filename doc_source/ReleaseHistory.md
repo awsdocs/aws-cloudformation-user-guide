@@ -1,6 +1,6 @@
 # Release History<a name="ReleaseHistory"></a>
 
-The following table describes important changes in each release of the AWS CloudFormation User Guide after May 2018\. For notification about updates to this documentation, you can subscribe to an RSS feed\.
+The following table describes important changes in each release of the AWS CloudFormation User Guide after May 2018\. For notification about updates to this documentation, you can subscribe to the [RSS feed](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-cloudformation-release-notes.rss).
 
 | Change | Description | Date | 
 | --- |--- |--- |
