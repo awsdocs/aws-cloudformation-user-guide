@@ -240,7 +240,7 @@ The resource record cache time to live \(TTL\), in seconds\. Note the following:
 + All of the resource record sets in a group of weighted resource record sets must have the same value for `TTL`\.
 + If a group of weighted resource record sets includes one or more weighted alias resource record sets for which the alias target is an ELB load balancer, we recommend that you specify a `TTL` of 60 seconds for all of the non\-alias weighted resource record sets that have the same name and type\. Values other than 60 seconds \(the TTL for load balancers\) will change the effect of the values that you specify for `Weight`\.
 *Required*: No  
-*Type*: String  
+*Type*: Long  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-route53-recordset-type"></a>
