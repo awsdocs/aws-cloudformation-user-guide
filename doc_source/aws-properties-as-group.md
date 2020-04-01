@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LaunchTemplate](#cfn-as-group-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md),
       "[LifecycleHookSpecificationList](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist)" : [ [LifecycleHookSpecification](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md), ... ],
       "[LoadBalancerNames](#cfn-as-group-loadbalancernames)" : [ String, ... ],
+      "[MaxInstanceLifetime](#cfn-as-group-maxinstancelifetime)" : Integer,
       "[MaxSize](#cfn-as-group-maxsize)" : String,
       "[MetricsCollection](#cfn-as-group-metricscollection)" : [ [MetricsCollection](aws-properties-as-metricscollection.md), ... ],
       "[MinSize](#cfn-as-group-minsize)" : String,
@@ -65,6 +66,7 @@ Properties:
     - [LifecycleHookSpecification](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md)
   [LoadBalancerNames](#cfn-as-group-loadbalancernames): 
     - String
+  [MaxInstanceLifetime](#cfn-as-group-maxinstancelifetime): Integer
   [MaxSize](#cfn-as-group-maxsize): String
   [MetricsCollection](#cfn-as-group-metricscollection): 
     - [MetricsCollection](aws-properties-as-metricscollection.md)
@@ -111,7 +113,8 @@ Used only when a scaling\-specific cooldown is not specified and not supported f
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DesiredCapacity`  <a name="cfn-as-group-desiredcapacity"></a>
-The number of Amazon EC2 instances that the Auto Scaling group attempts to maintain\. The number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group\. If you do not specify a desired capacity, the default is the minimum size of the group\.  
+The desired capacity is the initial capacity of the Auto Scaling group at the time of its creation and the capacity it attempts to maintain\. It can scale beyond this capacity if you configure automatic scaling\.  
+The number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group\. If you do not specify a desired capacity, the default is the minimum size of the group\.  
 CloudFormation marks the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) when the desired capacity is reached\. However, if `SpotPrice` is set in the [launch configuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html), then desired capacity is not used as a criteria for success, because whether your request is fulfilled depends on Spot Instance capacity and your maximum price\. If the current Spot price is less than your specified maximum price, Amazon EC2 Auto Scaling uses `DesiredCapacity` as the target capacity for the group\.   
 *Required*: No  
 *Type*: String  
@@ -176,8 +179,16 @@ For more information, see [Using a Load Balancer with an Auto Scaling Group](htt
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MaxInstanceLifetime`  <a name="cfn-as-group-maxinstancelifetime"></a>
+The maximum amount of time, in seconds, that an instance can be in service\.  
+Valid Range: Minimum value of 604800\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `MaxSize`  <a name="cfn-as-group-maxsize"></a>
-The maximum number of Amazon EC2 instances in the Auto Scaling group\.  
+The maximum size of the Auto Scaling group\.  
+With a mixed instances policy that uses instance weighting, Amazon EC2 Auto Scaling may need to go above `MaxSize` to meet your capacity requirements\. In this event, Amazon EC2 Auto Scaling will never go above `MaxSize` by more than your maximum instance weight \(weights that define how many capacity units each instance contributes to the capacity of the group\)\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -189,7 +200,7 @@ Enables the monitoring of group metrics of an Auto Scaling group\. By default, t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinSize`  <a name="cfn-as-group-minsize"></a>
-The minimum number of Amazon EC2 instances in the Auto Scaling group\.  
+The minimum size of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -228,7 +239,7 @@ The Amazon Resource Name \(ARN\) of the service\-linked role that the Auto Scali
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-as-group-tags"></a>
-The tags for the group\.  
+One or more tags\. You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it launches\.  
 *Required*: No  
 *Type*: List of [TagProperty](aws-properties-as-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

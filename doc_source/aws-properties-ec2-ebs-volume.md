@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Encrypted](#cfn-ec2-ebs-volume-encrypted)" : Boolean,
       "[Iops](#cfn-ec2-ebs-volume-iops)" : Integer,
       "[KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid)" : String,
+      "[MultiAttachEnabled](#cfn-ec2-ebs-volume-multiattachenabled)" : Boolean,
       "[Size](#cfn-ec2-ebs-volume-size)" : Integer,
       "[SnapshotId](#cfn-ec2-ebs-volume-snapshotid)" : String,
       "[Tags](#cfn-ec2-ebs-volume-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -52,6 +53,7 @@ Properties:
   [Encrypted](#cfn-ec2-ebs-volume-encrypted): Boolean
   [Iops](#cfn-ec2-ebs-volume-iops): Integer
   [KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid): String
+  [MultiAttachEnabled](#cfn-ec2-ebs-volume-multiattachenabled): Boolean
   [Size](#cfn-ec2-ebs-volume-size): Integer
   [SnapshotId](#cfn-ec2-ebs-volume-snapshotid): String
   [Tags](#cfn-ec2-ebs-volume-tags): 
@@ -65,7 +67,7 @@ Properties:
 Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\.   
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `AvailabilityZone`  <a name="cfn-ec2-ebs-volume-availabilityzone"></a>
 The Availability Zone in which to create the volume\.  
@@ -99,6 +101,12 @@ AWS authenticates the CMK asynchronously\. Therefore, if you specify an ID, alia
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
+`MultiAttachEnabled`  <a name="cfn-ec2-ebs-volume-multiattachenabled"></a>
+Indicates whether Amazon EBS Multi\-Attach is enabled\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>
 The size of the volume, in GiBs\. You must specify either a snapshot ID or a volume size\.  
 Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.  
@@ -117,7 +125,7 @@ The snapshot from which to create the volume\. You must specify either a snapsho
 The tags to apply to the volume during creation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
 The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  

@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppMesh::Route",
   "Properties" : {
       "[MeshName](#cfn-appmesh-route-meshname)" : String,
+      "[MeshOwner](#cfn-appmesh-route-meshowner)" : String,
       "[RouteName](#cfn-appmesh-route-routename)" : String,
       "[Spec](#cfn-appmesh-route-spec)" : [RouteSpec](aws-properties-appmesh-route-routespec.md),
       "[Tags](#cfn-appmesh-route-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -33,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::Route
 Properties: 
   [MeshName](#cfn-appmesh-route-meshname): String
+  [MeshOwner](#cfn-appmesh-route-meshowner): String
   [RouteName](#cfn-appmesh-route-routename): String
   [Spec](#cfn-appmesh-route-spec): 
     [RouteSpec](aws-properties-appmesh-route-routespec.md)
@@ -46,6 +48,12 @@ Properties:
 `MeshName`  <a name="cfn-appmesh-route-meshname"></a>
 The name of the service mesh to create the route in\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MeshOwner`  <a name="cfn-appmesh-route-meshowner"></a>
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -68,7 +76,7 @@ Optional metadata that you can apply to the route to assist with categorization 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualRouterName`  <a name="cfn-appmesh-route-virtualroutername"></a>
-The name of the virtual router in which to create the route\.  
+The name of the virtual router in which to create the route\. If the virtual router is in a shared mesh, then you must be the owner of the virtual router resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -100,10 +108,10 @@ The full Amazon Resource Name \(ARN\) for the route\.
 The name of the service mesh that the route resides in\.
 
 `MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `RouteName`  <a name="RouteName-fn::getatt"></a>
 The name of the route\.

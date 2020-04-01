@@ -4,7 +4,7 @@ Creates a virtual service within a service mesh\.
 
 A virtual service is an abstraction of a real service that is provided by a virtual node directly or indirectly by means of a virtual router\. Dependent services call your virtual service by its `virtualServiceName`, and those requests are routed to the virtual node or virtual router that is specified as the provider for the virtual service\.
 
-For more information about virtual services, see [Virtual Services](https://docs.aws.amazon.com/app-mesh/latest/userguide//virtual_services.html)\.
+For more information about virtual services, see [Virtual Services](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html)\.
 
 ## Syntax<a name="aws-resource-appmesh-virtualservice-syntax"></a>
 
@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppMesh::VirtualService",
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualservice-meshname)" : String,
+      "[MeshOwner](#cfn-appmesh-virtualservice-meshowner)" : String,
       "[Spec](#cfn-appmesh-virtualservice-spec)" : [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md),
       "[Tags](#cfn-appmesh-virtualservice-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename)" : String
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::VirtualService
 Properties: 
   [MeshName](#cfn-appmesh-virtualservice-meshname): String
+  [MeshOwner](#cfn-appmesh-virtualservice-meshowner): String
   [Spec](#cfn-appmesh-virtualservice-spec): 
     [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)
   [Tags](#cfn-appmesh-virtualservice-tags): 
@@ -42,6 +44,12 @@ Properties:
 `MeshName`  <a name="cfn-appmesh-virtualservice-meshname"></a>
 The name of the service mesh to create the virtual service in\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MeshOwner`  <a name="cfn-appmesh-virtualservice-meshowner"></a>
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -90,10 +98,10 @@ The full Amazon Resource Name \(ARN\) for the virtual service\.
 The name of the service mesh that the virtual service resides in\.
 
 `MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the virtual service\.

@@ -16,7 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)" : [DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md),
   "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)" : [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md),
   "[Firehose](#cfn-iot-topicrule-action-firehose)" : [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md),
+  "[Http](#cfn-iot-topicrule-action-http)" : [HttpAction](aws-properties-iot-topicrule-httpaction.md),
   "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)" : [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md),
+  "[IotEvents](#cfn-iot-topicrule-action-iotevents)" : [IotEventsAction](aws-properties-iot-topicrule-ioteventsaction.md),
+  "[IotSiteWise](#cfn-iot-topicrule-action-iotsitewise)" : [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md),
   "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : [KinesisAction](aws-properties-iot-topicrule-kinesisaction.md),
   "[Lambda](#cfn-iot-topicrule-action-lambda)" : [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md),
   "[Republish](#cfn-iot-topicrule-action-republish)" : [RepublishAction](aws-properties-iot-topicrule-republishaction.md),
@@ -42,8 +45,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md)
   [Firehose](#cfn-iot-topicrule-action-firehose): 
     [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)
+  [Http](#cfn-iot-topicrule-action-http): 
+    [HttpAction](aws-properties-iot-topicrule-httpaction.md)
   [IotAnalytics](#cfn-iot-topicrule-action-iotanalytics): 
     [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md)
+  [IotEvents](#cfn-iot-topicrule-action-iotevents): 
+    [IotEventsAction](aws-properties-iot-topicrule-ioteventsaction.md)
+  [IotSiteWise](#cfn-iot-topicrule-action-iotsitewise): 
+    [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md)
   [Kinesis](#cfn-iot-topicrule-action-kinesis): 
     [KinesisAction](aws-properties-iot-topicrule-kinesisaction.md)
   [Lambda](#cfn-iot-topicrule-action-lambda): 
@@ -98,10 +107,28 @@ Write to an Amazon Kinesis Firehose stream\.
 *Type*: [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Http`  <a name="cfn-iot-topicrule-action-http"></a>
+Send data to an HTTPS endpoint\.  
+*Required*: No  
+*Type*: [HttpAction](aws-properties-iot-topicrule-httpaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IotAnalytics`  <a name="cfn-iot-topicrule-action-iotanalytics"></a>
 Sends message data to an AWS IoT Analytics channel\.  
 *Required*: No  
 *Type*: [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IotEvents`  <a name="cfn-iot-topicrule-action-iotevents"></a>
+Sends an input to an AWS IoT Events detector\.  
+*Required*: No  
+*Type*: [IotEventsAction](aws-properties-iot-topicrule-ioteventsaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IotSiteWise`  <a name="cfn-iot-topicrule-action-iotsitewise"></a>
+Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties\.  
+*Required*: No  
+*Type*: [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Kinesis`  <a name="cfn-iot-topicrule-action-kinesis"></a>

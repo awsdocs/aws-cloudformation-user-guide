@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EndpointType](#cfn-dms-endpoint-endpointtype)" : String,
       "[EngineName](#cfn-dms-endpoint-enginename)" : String,
       "[ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes)" : String,
+      "[KafkaSettings](#cfn-dms-endpoint-kafkasettings)" : [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md),
       "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md),
       "[KmsKeyId](#cfn-dms-endpoint-kmskeyid)" : String,
       "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md),
@@ -49,6 +50,8 @@ Properties:
   [EndpointType](#cfn-dms-endpoint-endpointtype): String
   [EngineName](#cfn-dms-endpoint-enginename): String
   [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes): String
+  [KafkaSettings](#cfn-dms-endpoint-kafkasettings): 
+    [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md)
   [KinesisSettings](#cfn-dms-endpoint-kinesissettings): 
     [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)
   [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
@@ -114,6 +117,12 @@ The type of engine for the endpoint\. Valid values, depending on the `EndpointTy
 Additional attributes associated with the connection\. Each attribute is specified as a name\-value pair associated by an equal sign \(=\)\. Multiple attributes are separated by a semicolon \(;\) with no additional white space\. For information on the attributes available for connecting your source or target endpoint, see [Working with AWS DMS Endpoints](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Endpoints.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`KafkaSettings`  <a name="cfn-dms-endpoint-kafkasettings"></a>
+Settings in JSON format for the target Apache Kafka endpoint\. For information about other available settings, see [Using Object Mapping to Migrate Data to Apache Kafka](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html#CHAP_Target.Kafka.ObjectMapping) in the *AWS Database Migration User Guide\.*   
+*Required*: No  
+*Type*: [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisSettings`  <a name="cfn-dms-endpoint-kinesissettings"></a>
