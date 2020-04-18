@@ -66,7 +66,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
  3.     "", [
  4.       "arn:",
  5.       {
- 6.         "Ref": "Partition"
+ 6.         "Ref": "AWS::Partition"
  7.       },
  8.       ":s3:::elasticbeanstalk-*-",
  9.       {
@@ -83,7 +83,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 1. !Join
 2.   - ''
 3.   - - 'arn:'
-4.     - !Ref Partition
+4.     - !Ref 'AWS::Partition'
 5.     - ':s3:::elasticbeanstalk-*-'
 6.     - !Ref 'AWS::AccountId'
 ```
