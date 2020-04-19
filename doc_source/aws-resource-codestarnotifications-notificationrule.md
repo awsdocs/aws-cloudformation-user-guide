@@ -49,7 +49,8 @@ The level of detail to include in the notifications for this resource\. BASIC wi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventTypeIds`  <a name="cfn-codestarnotifications-notificationrule-eventtypeids"></a>
-A list of event types associated with this notification rule\.   
+A list of event types associated with this notification rule. See [list-event-types](https://docs.aws.amazon.com/cli/latest/reference/codestar-notifications/list-event-types.html) for list of EventTypeIds\.
+
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
