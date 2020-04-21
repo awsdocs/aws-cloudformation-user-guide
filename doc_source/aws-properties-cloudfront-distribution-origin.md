@@ -41,13 +41,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-distribution-origin-properties"></a>
 
 `CustomOriginConfig`  <a name="cfn-cloudfront-distribution-origin-customoriginconfig"></a>
-A complex type that contains information about a custom origin\. If the origin is an Amazon S3 bucket, use the `S3OriginConfig` element instead\.  
+A complex type that contains information about a custom origin\. If the origin is an Amazon S3 bucket (but not configured as a static website), use the `S3OriginConfig` element instead\.  
 *Required*: Conditional  
 *Type*: [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-cloudfront-distribution-origin-domainname"></a>
- **Amazon S3 origins**: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this origin, for example, `myawsbucket.s3.amazonaws.com`\. If you set up your bucket to be configured as a website endpoint, enter the Amazon S3 static website hosting endpoint for the bucket\.  
+ **Amazon S3 origins**: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this origin, for example, `myawsbucket.s3.amazonaws.com`\. 
+Please note, if you set up your bucket to be configured as a website endpoint, you need to use `CustomOriginConfig` and enter the Amazon S3 static website hosting endpoint for the bucket without the leading `http://`\.  
 For more information about specifying this value for different types of origins, see [Origin Domain Name](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesDomainName) in the *Amazon CloudFront Developer Guide*\.  
 Constraints for Amazon S3 origins:   
 + If you configured Amazon S3 Transfer Acceleration for your bucket, don't specify the `s3-accelerate` endpoint for `DomainName`\.
@@ -88,7 +89,7 @@ When a user enters `example.com/acme/index.html` in a browser, CloudFront sends 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
-A complex type that contains information about the Amazon S3 origin\. If the origin is a custom origin, use the `CustomOriginConfig` element instead\.  
+A complex type that contains information about the Amazon S3 origin\. If the origin is a custom origin or an S3 bucket set up as a website endpoint, use the `CustomOriginConfig` element instead\.  
 *Required*: Conditional  
 *Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
