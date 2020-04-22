@@ -46,7 +46,7 @@ The `DomainName` of an [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-basepathmapping-restapiid"></a>
-The name of the API\.  
+The ARN of the API\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
