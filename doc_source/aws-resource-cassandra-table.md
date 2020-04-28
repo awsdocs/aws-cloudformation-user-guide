@@ -167,35 +167,35 @@ The following example creates a table with specific read and write capacity\.
         ],
         "RegularColumns":[
           {
-            "ColumName":"name",
+            "ColumnName":"name",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"region",
+            "ColumnName":"region",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"division",
+            "ColumnName":"division",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"project",
+            "ColumnName":"project",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"role",
+            "ColumnName":"role",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"pay_scale",
+            "ColumnName":"pay_scale",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"vacation_hrs",
+            "ColumnName":"vacation_hrs",
             "ColumnType":"FLOAT"
           },
           {
-            "ColumName":"manager_id",
+            "ColumnName":"manager_id",
             "ColumnType":"TEXT"
           }
         ],
@@ -231,21 +231,21 @@ Resources:
           ColumnType: ASCII
         OrderBy: ASC
       RegularColumns:
-      - ColumName: name
+      - ColumnName: name
         ColumnType: TEXT
-      - ColumName: region
+      - ColumnName: region
         ColumnType: TEXT
-      - ColumName: division
+      - ColumnName: division
         ColumnType: TEXT
-      - ColumName: project
+      - ColumnName: project
         ColumnType: TEXT
-      - ColumName: role
+      - ColumnName: role
         ColumnType: TEXT
-      - ColumName: pay_scale
+      - ColumnName: pay_scale
         ColumnType: TEXT
-      - ColumName: vacation_hrs
+      - ColumnName: vacation_hrs
         ColumnType: FLOAT
-      - ColumName: manager_id
+      - ColumnName: manager_id
         ColumnType: TEXT
       BillingMode:
         Mode: PROVISIONED
