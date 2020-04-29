@@ -116,7 +116,7 @@ Each scalable target has a service namespace, scalable dimension, and resource I
 
 ### Register a Scalable Target<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target"></a>
 
-The following example creates a scalable target for an AppStream fleet \([AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)\)\. Application Auto Scaling can scale the number of fleet instances at a minimum of 1 instance and a maximum of 20\. 
+The following example creates a scalable target for an Amazon Keyspaces \(for Apache Cassandra\) table \([AWS::Cassandra::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)\)\. Application Auto Scaling can scale the write capacity throughput at a minimum of 1 capacity unit and a maximum of 20\. For more information about scaling Amazon Keyspaces tables, see [Managing Amazon Keyspaces Throughput Capacity with Application Auto Scaling](https://docs.aws.amazon.com/keyspaces/latest/devguide/autoscaling.html) in the *Amazon Keyspaces \(for Apache Cassandra\) Developer Guide*\.
 
 To register a different resource supported by Application Auto Scaling, specify its namespace in `ServiceNamespace`, its scalable dimension in `ScalableDimension`, its resource ID in `ResourceId`, and its service\-linked role in `RoleARN`\.
 
@@ -129,10 +129,12 @@ To register a different resource supported by Application Auto Scaling, specify 
     "Properties":{
       "MaxCapacity":20,
       "MinCapacity":1,
-      "RoleARN": "arn:aws:iam::012345678910:role/aws-service-role/appstream.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_AppStreamFleet",
-      "ServiceNamespace":"appstream",
-      "ScalableDimension":"appstream:fleet:DesiredCapacity",
-      "ResourceId":"fleet/sample-fleet"
+      "RoleARN":{
+        "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable"
+      },
+      "ServiceNamespace":"cassandra",
+      "ScalableDimension":"cassandra:table:WriteCapacityUnits",
+      "ResourceId":"keyspace/mykeyspace/table/mytable"
     }
   }
 }
@@ -146,10 +148,11 @@ ScalableTarget:
   Properties:
     MaxCapacity: 20
     MinCapacity: 1
-    RoleARN: arn:aws:iam::012345678910:role/aws-service-role/appstream.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_AppStreamFleet
-    ServiceNamespace: appstream
-    ScalableDimension: appstream:fleet:DesiredCapacity
-    ResourceId: fleet/sample-fleet
+    RoleARN: 
+      Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable'
+    ServiceNamespace: cassandra
+    ScalableDimension: cassandra:table:WriteCapacityUnits
+    ResourceId: keyspace/mykeyspace/table/mytable
 ```
 
 ### Lambda with a Scheduled Action<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Lambda_with_a_Scheduled_Action"></a>
@@ -229,7 +232,7 @@ ScalableTarget:
 
 ### Amazon DynamoDB<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB"></a>
 
-This example registers the read and write capacity throughput of a DyanmoDB table \([AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
+This example registers the read and write capacity throughput of a DynamoDB table \([AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB--json"></a>
 
@@ -278,7 +281,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:table:WriteCapacityUnits",
         "ResourceId":{
@@ -291,7 +296,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:table:ReadCapacityUnits",
         "ResourceId":{
@@ -304,7 +311,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:index:WriteCapacityUnits",
         "ResourceId":{
@@ -317,7 +326,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:index:ReadCapacityUnits",
         "ResourceId":{
@@ -360,7 +371,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ResourceId: !Sub table/${DDBTable} 
@@ -369,7 +381,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:table:ReadCapacityUnits
       ResourceId: !Sub table/${DDBTable}
@@ -378,7 +391,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN:
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:index:WriteCapacityUnits
       ResourceId: !Sub table/${DDBTable}/index/GSI
@@ -387,7 +401,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:index:ReadCapacityUnits
       ResourceId: !Sub table/${DDBTable}/index/GSI

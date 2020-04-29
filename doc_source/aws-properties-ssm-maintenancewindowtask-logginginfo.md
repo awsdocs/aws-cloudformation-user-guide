@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-logginginfo-properties"></a>
 
 `Region`  <a name="cfn-ssm-maintenancewindowtask-logginginfo-region"></a>
-The region where the Amazon S3 bucket is located\.  
+The Region where the S3 bucket is located\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  
@@ -40,7 +40,7 @@ The region where the Amazon S3 bucket is located\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Bucket`  <a name="cfn-ssm-maintenancewindowtask-logginginfo-s3bucket"></a>
-The name of an Amazon S3 bucket where execution logs are stored \.  
+The name of an S3 bucket where execution logs are stored \.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  

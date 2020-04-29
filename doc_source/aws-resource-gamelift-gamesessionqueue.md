@@ -46,8 +46,8 @@ A descriptive label that is associated with game session queue\. Queue names mus
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `256`  
-*Pattern*: `[a-zA-Z0-9-]+|^arn:.*:gamesessionqueue\/[a-zA-Z0-9-]+`  
+*Maximum*: `128`  
+*Pattern*: `[a-zA-Z0-9-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlayerLatencyPolicies`  <a name="cfn-gamelift-gamesessionqueue-playerlatencypolicies"></a>

@@ -7,7 +7,7 @@ Limitations and rules apply to a VPC peering connection\. For more information, 
 
 The owner of the accepter VPC must accept the peering request to activate the peering connection\. The VPC peering connection request expires after 7 days, after which it cannot be accepted or rejected\.
 
-If you create a VPC peering connection request between VPCs with overlapping CIDR blocks, the VPC peering connection has a status of `failed`\.
+If you create a VPC peering connection request between VPCs with overlapping CIDR blocks, the VPC peering connection has a status of `failed`\. If you get a `VpcPeeringConnection failed to stabilize` error, review the troubleshooting steps in this [Knowledge Center article](http://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-vpc-peering-error/)\.
 
 ## Syntax<a name="aws-resource-ec2-vpcpeeringconnection-syntax"></a>
 

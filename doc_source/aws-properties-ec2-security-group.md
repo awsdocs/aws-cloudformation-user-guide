@@ -64,13 +64,13 @@ Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroupEgress`  <a name="cfn-ec2-securitygroup-securitygroupegress"></a>
-\[VPC only\] The outbound rules associated with the security group\.  
+\[VPC only\] The outbound rules associated with the security group\. There is a short interruption during which you cannot connect to the security group\.  
 *Required*: No  
 *Type*: List of [Egress](aws-properties-ec2-security-group-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIngress`  <a name="cfn-ec2-securitygroup-securitygroupingress"></a>
-The inbound rules associated with the security group\.  
+The inbound rules associated with the security group\. There is a short interruption during which you cannot connect to the security group\.  
 *Required*: No  
 *Type*: List of [Ingress](aws-properties-ec2-security-group-rule-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

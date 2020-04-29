@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings)" : [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md),
       "[Category](#cfn-mediaconvert-jobtemplate-category)" : String,
       "[Description](#cfn-mediaconvert-jobtemplate-description)" : String,
+      "[HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations)" : [ [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md), ... ],
       "[Name](#cfn-mediaconvert-jobtemplate-name)" : String,
       "[Priority](#cfn-mediaconvert-jobtemplate-priority)" : Integer,
       "[Queue](#cfn-mediaconvert-jobtemplate-queue)" : String,
@@ -38,6 +39,8 @@ Properties:
     [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)
   [Category](#cfn-mediaconvert-jobtemplate-category): String
   [Description](#cfn-mediaconvert-jobtemplate-description): String
+  [HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations): 
+    - [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)
   [Name](#cfn-mediaconvert-jobtemplate-name): String
   [Priority](#cfn-mediaconvert-jobtemplate-priority): Integer
   [Queue](#cfn-mediaconvert-jobtemplate-queue): String
@@ -65,6 +68,12 @@ Optional\. A category for the job template you are creating
 Optional\. A description of the job template you are creating\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HopDestinations`  <a name="cfn-mediaconvert-jobtemplate-hopdestinations"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-mediaconvert-jobtemplate-name"></a>

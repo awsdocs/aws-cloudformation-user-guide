@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign WriteTreatmentResource<a name="aws-properties-pinpoint-campaign-writetreatmentresource"></a>
 
-Specifies the settings for a campaign treatment\. A treatment is a variation of a campaign that's used for A/B testing of a campaign\.
+Specifies the settings for a campaign treatment\. A *treatment* is a variation of a campaign that's used for A/B testing of a campaign\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-writetreatmentresource-syntax"></a>
 
@@ -57,7 +57,7 @@ A custom description of the treatment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-writetreatmentresource-treatmentname"></a>
-A custom name for the treatment\. A treatment is a variation of a campaign that's used for A/B testing of a campaign\.  
+A custom name for the treatment\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

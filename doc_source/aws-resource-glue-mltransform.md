@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-glue-mltransform-name)" : String,
       "[NumberOfWorkers](#cfn-glue-mltransform-numberofworkers)" : Integer,
       "[Role](#cfn-glue-mltransform-role)" : String,
+      "[Tags](#cfn-glue-mltransform-tags)" : Json,
       "[Timeout](#cfn-glue-mltransform-timeout)" : Integer,
       "[TransformParameters](#cfn-glue-mltransform-transformparameters)" : [TransformParameters](aws-properties-glue-mltransform-transformparameters.md),
       "[WorkerType](#cfn-glue-mltransform-workertype)" : String
@@ -41,6 +42,7 @@ Properties:
   [Name](#cfn-glue-mltransform-name): String
   [NumberOfWorkers](#cfn-glue-mltransform-numberofworkers): Integer
   [Role](#cfn-glue-mltransform-role): String
+  [Tags](#cfn-glue-mltransform-tags): Json
   [Timeout](#cfn-glue-mltransform-timeout): Integer
   [TransformParameters](#cfn-glue-mltransform-transformparameters): 
     [TransformParameters](aws-properties-glue-mltransform-transformparameters.md)
@@ -106,6 +108,12 @@ The name or Amazon Resource Name \(ARN\) of the IAM role with the required permi
 + This role needs permission to your Amazon Simple Storage Service \(Amazon S3\) sources, targets, temporary directory, scripts, and any libraries used by the task run for this transform\.
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-glue-mltransform-tags"></a>
+The tags to use with this machine learning transform\. You may use tags to limit access to the machine learning transform\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-glue-mltransform-timeout"></a>

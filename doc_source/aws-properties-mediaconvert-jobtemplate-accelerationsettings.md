@@ -1,6 +1,6 @@
 # AWS::MediaConvert::JobTemplate AccelerationSettings<a name="aws-properties-mediaconvert-jobtemplate-accelerationsettings"></a>
 
-Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, see the AWS Elemental MediaConvert User Guide\.
+Accelerated transcoding can significantly speed up jobs with long, visually complex content\.
 
 ## Syntax<a name="aws-properties-mediaconvert-jobtemplate-accelerationsettings-syntax"></a>
 

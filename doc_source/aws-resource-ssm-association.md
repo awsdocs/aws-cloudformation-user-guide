@@ -74,7 +74,7 @@ The name of the Systems Manager document\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OutputLocation`  <a name="cfn-ssm-association-outputlocation"></a>
-An Amazon S3 bucket where you want to store the output details of the request\.  
+An S3 bucket where you want to store the output details of the request\.  
 *Required*: No  
 *Type*: [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

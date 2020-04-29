@@ -89,13 +89,15 @@ If the `AZMode` and `PreferredAvailabilityZones` are not specified, ElastiCache 
 
 `CacheNodeType`  <a name="cfn-elasticache-cachecluster-cachenodetype"></a>
 The compute and memory capacity of the nodes in the node group \(shard\)\.  
-The following node types are supported by ElastiCache\. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts\.  
+The following node types are supported by ElastiCache\. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts\. Changing the CacheNodeType of a Memcached instance is currently not supported\. If you need to scale using Memcached, we recommend forcing a replacement update by changing the `LogicalResourceId` of the resource\.  
 + General purpose:
   + Current generation: 
 
     **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
+
+    **T3 node types:** `cache.t3.micro`, `cache.t3.small`, `cache.t3.medium`
 
     **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium`
   + Previous generation: \(not recommended\)
@@ -152,7 +154,7 @@ If you're going to launch your cluster in an Amazon VPC, you need to create a su
 
 `ClusterName`  <a name="cfn-elasticache-cachecluster-clustername"></a>
 A name for the cache cluster\. If you don't specify a name, AWSCloudFormation generates a unique physical ID and uses that ID for the cache cluster\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
-The name must contain 1 to 20 alphanumeric characters or hyphens\. The name must start with a letter and cannot end with a hyphen or contain two consecutive hyphens\.  
+The name must contain 1 to 50 alphanumeric characters or hyphens\. The name must start with a letter and cannot end with a hyphen or contain two consecutive hyphens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

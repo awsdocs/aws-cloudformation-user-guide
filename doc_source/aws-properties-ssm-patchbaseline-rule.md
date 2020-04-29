@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ApproveAfterDays](#cfn-ssm-patchbaseline-rule-approveafterdays)" : Integer,
+  "[ApproveUntilDate](#cfn-ssm-patchbaseline-rule-approveuntildate)" : [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md),
   "[ComplianceLevel](#cfn-ssm-patchbaseline-rule-compliancelevel)" : String,
   "[EnableNonSecurity](#cfn-ssm-patchbaseline-rule-enablenonsecurity)" : Boolean,
   "[PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup)" : [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ApproveAfterDays](#cfn-ssm-patchbaseline-rule-approveafterdays): Integer
+  [ApproveUntilDate](#cfn-ssm-patchbaseline-rule-approveuntildate): 
+    [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md)
   [ComplianceLevel](#cfn-ssm-patchbaseline-rule-compliancelevel): String
   [EnableNonSecurity](#cfn-ssm-patchbaseline-rule-enablenonsecurity): Boolean
   [PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup): 
@@ -38,6 +41,12 @@ You must specify a value for `ApproveAfterDays`\.
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ApproveUntilDate`  <a name="cfn-ssm-patchbaseline-rule-approveuntildate"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ComplianceLevel`  <a name="cfn-ssm-patchbaseline-rule-compliancelevel"></a>

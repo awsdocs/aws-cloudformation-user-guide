@@ -166,7 +166,7 @@ The following template example defines an EC2 security group with an ingress rul
 "SGBaseIngress": {
    "Type": "AWS::EC2::SecurityGroupIngress",
    "Properties": {
-      "GroupName": {
+   "GroupId": {
          "Ref": "SGBase"
       },
       "IpProtocol": "tcp",
@@ -197,7 +197,7 @@ SGBase:
 SGBaseIngress:
    Type: 'AWS::EC2::SecurityGroupIngress'
    Properties:
-      GroupName: !Ref SGBase
+   GroupId: !Ref SGBase
       IpProtocol: tcp
       FromPort: 80
       ToPort: 80

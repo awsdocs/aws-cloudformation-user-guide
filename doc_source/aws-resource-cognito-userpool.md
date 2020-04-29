@@ -213,7 +213,7 @@ This user pool property cannot be updated\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UsernameConfiguration`  <a name="cfn-cognito-userpool-usernameconfiguration"></a>
-You can choose to set case sensitivity on the username input for the selected sign\-in option\. For example, when this is set to `False`, users will be able to sign in using either "username" or "Username"\. This configuration is immutable once it has been set\. For more information, see [UsernameConfigurationType](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UsernameConfigurationType.html)\.  
+You can choose to set case sensitivity on the username input for the selected sign\-in option\. For example, when this is set to `False`, users will be able to sign in using either "username" or "Username"\. This configuration is immutable once it has been set\.  
 *Required*: No  
 *Type*: [UsernameConfiguration](aws-properties-cognito-userpool-usernameconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -69,7 +69,7 @@ An ExecutionControls object\.
 
 `MaximumAutomaticAttempts`  <a name="cfn-config-remediationconfiguration-maximumautomaticattempts"></a>
 The maximum number of failed attempts for auto\-remediation\. If you do not select a number, the default is 5\.  
-For example, if you specify MaximumAutomaticAttempts as 5 with RetryAttemptsSeconds as 50 seconds, AWS Config throws an exception after the 5th failed attempt within 50 seconds\.  
+For example, if you specify MaximumAutomaticAttempts as 5 with RetryAttemptsSeconds as 50 seconds, AWS Config will put a RemediationException on your behalf for the failing resource after the 5th failed attempt within 50 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -91,7 +91,7 @@ The type of a resource\.
 
 `RetryAttemptSeconds`  <a name="cfn-config-remediationconfiguration-retryattemptseconds"></a>
 Maximum time in seconds that AWS Config runs auto\-remediation\. If you do not select a number, the default is 60 seconds\.   
-For example, if you specify RetryAttemptsSeconds as 50 seconds and MaximumAutomaticAttempts as 5, AWS Config will run auto\-remediations 5 times within 50 seconds before throwing an exception\.   
+For example, if you specify RetryAttemptsSeconds as 50 seconds and MaximumAutomaticAttempts as 5, AWS Config will run auto\-remediations 5 times within 50 seconds before throwing an exception\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -113,6 +113,7 @@ The type of the target\. Target executes remediation\. For example, SSM document
 
 `TargetVersion`  <a name="cfn-config-remediationconfiguration-targetversion"></a>
 Version of the target\. For example, version of the SSM document\.  
+If you make backward incompatible changes to the SSM document, you must call PutRemediationConfiguration API again to ensure the remediations can run\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

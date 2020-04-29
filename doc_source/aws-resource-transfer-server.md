@@ -12,11 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Transfer::Server",
   "Properties" : {
+      "[Certificate](#cfn-transfer-server-certificate)" : String,
       "[EndpointDetails](#cfn-transfer-server-endpointdetails)" : [EndpointDetails](aws-properties-transfer-server-endpointdetails.md),
       "[EndpointType](#cfn-transfer-server-endpointtype)" : String,
       "[IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails)" : [IdentityProviderDetails](aws-properties-transfer-server-identityproviderdetails.md),
       "[IdentityProviderType](#cfn-transfer-server-identityprovidertype)" : String,
       "[LoggingRole](#cfn-transfer-server-loggingrole)" : String,
+      "[Protocols](#cfn-transfer-server-protocols)" : [ [Protocol](aws-properties-transfer-server-protocol.md), ... ],
       "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -27,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Transfer::Server
 Properties: 
+  [Certificate](#cfn-transfer-server-certificate): String
   [EndpointDetails](#cfn-transfer-server-endpointdetails): 
     [EndpointDetails](aws-properties-transfer-server-endpointdetails.md)
   [EndpointType](#cfn-transfer-server-endpointtype): String
@@ -34,11 +37,20 @@ Properties:
     [IdentityProviderDetails](aws-properties-transfer-server-identityproviderdetails.md)
   [IdentityProviderType](#cfn-transfer-server-identityprovidertype): String
   [LoggingRole](#cfn-transfer-server-loggingrole): String
+  [Protocols](#cfn-transfer-server-protocols): 
+    - [Protocol](aws-properties-transfer-server-protocol.md)
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-transfer-server-properties"></a>
+
+`Certificate`  <a name="cfn-transfer-server-certificate"></a>
+The Amazon Resource Name \(ARN\) of the AWS Certificate Manager \(ACM\) certificate\. Required when `Protocols` is set to `FTPS`\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `1600`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointDetails`  <a name="cfn-transfer-server-endpointdetails"></a>
 The virtual private cloud \(VPC\) endpoint settings that are configured for your SFTP server\. When you host your endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic IPs and make it accessible to clients over the internet\. You VPC's default security groups are automatically assigned to your endpoint\.  
@@ -55,20 +67,20 @@ It is recommended that you use `VPC` as the `EndpointType`\. With this endpoint 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityProviderDetails`  <a name="cfn-transfer-server-identityproviderdetails"></a>
-This parameter is required when the `IdentityProviderType` is set to `API_GATEWAY`\. Accepts an array containing all of the information required to call a customer\-supplied authentication API, including the API Gateway URL\. This property is not required when the `IdentityProviderType` is set to `SERVICE_MANAGED`\.  
+Required when `IdentityProviderType` is set to `API_GATEWAY`\. Accepts an array containing all of the information required to call a customer\-supplied authentication API, including the API Gateway URL\. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED`\.  
 *Required*: No  
 *Type*: [IdentityProviderDetails](aws-properties-transfer-server-identityproviderdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityProviderType`  <a name="cfn-transfer-server-identityprovidertype"></a>
-Specifies the mode of authentication for the SFTP server\. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the AWS Transfer for SFTP service\. Use the `API_GATEWAY` value to integrate with an identity provider of your choosing\. The `API_GATEWAY` setting requires you to provide an API Gateway endpoint URL to call for authentication using the `IdentityProviderDetails` parameter\.  
+Specifies the mode of authentication for a file transfer protocol\-enabled server\. The default value is `SERVICE_MANAGED`, which allows you to store and access user credentials within the AWS Transfer Family service\. Use the `API_GATEWAY` value to integrate with an identity provider of your choosing\. The `API_GATEWAY` setting requires you to provide an API Gateway endpoint URL to call for authentication using the `IdentityProviderDetails` parameter\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `API_GATEWAY | SERVICE_MANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoggingRole`  <a name="cfn-transfer-server-loggingrole"></a>
-A value that allows the service to write your SFTP users' activity to your Amazon CloudWatch logs for monitoring and auditing purposes\.  
+Allows the service to write your users' activity to your Amazon CloudWatch logs for monitoring and auditing purposes\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
@@ -76,8 +88,18 @@ A value that allows the service to write your SFTP users' activity to your Amazo
 *Pattern*: `arn:.*role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Protocols`  <a name="cfn-transfer-server-protocols"></a>
+Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to your server's endpoint\. The available protocols are:  
++ Secure Shell \(SSH\) File Transfer Protocol \(SFTP\): File transfer over SSH
++ File Transfer Protocol Secure \(FTPS\): File transfer with TLS encryption
++ File Transfer Protocol \(FTP\): Unencrypted file transfer
+*Required*: No  
+*Type*: List of [Protocol](aws-properties-transfer-server-protocol.md)  
+*Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-transfer-server-tags"></a>
-Key\-value pairs that can be used to group and search for servers\.  
+Key\-value pairs that can be used to group and search for file transfer protocol\-enabled servers\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  

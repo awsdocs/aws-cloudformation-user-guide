@@ -40,14 +40,15 @@ Properties:
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listener-properties"></a>
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
-The default SSL server certificate\. You must provide exactly one certificate if the listener protocol is HTTPS or TLS\.  
-To create a certificate list for the listener, use [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)\.  
+The default SSL server certificate for a secure listener\. You must provide exactly one certificate if the listener protocol is HTTPS or TLS\.  
+To create a certificate list for a secure listener, use [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)\.  
 *Required*: Conditional  
 *Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultActions`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions"></a>
-The actions for the default rule\.  
+The actions for the default rule\. You cannot define a condition for a default rule\.  
+To create additional rules for an Application Load Balancer, use [AWS::ElasticLoadBalancingV2::ListenerRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html)\.  
 *Required*: Yes  
 *Type*: List of [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -22,13 +22,13 @@ All query parameter names are case sensitive\. Users can overwrite these values 
 
 ## Example<a name="cfn-console-create-stacks-quick-create-links-example"></a>
 
-The following example is based on the [ WordPress basic single instance](https://s3-eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template) sample template\. The query string includes the required `templateURL` parameter and the `stackName`, `DBName`, `InstanceType`, and `KeyName` parameters\.
+The following example is based on the [ WordPress basic single instance](https://s3.eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template) sample template\. The query string includes the required `templateURL` parameter and the `stackName`, `DBName`, `InstanceType`, and `KeyName` parameters\.
 
 The following URL has line breaks added for clarity\.
 
 ```
 https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review
-   ?templateURL=https://s3-eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template
+   ?templateURL=https://s3.eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template
    &stackName=MyWPBlog
    &param_DBName=mywpblog
    &param_InstanceType=t2.medium
@@ -38,7 +38,7 @@ https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-centra
 The following URL includes the same parameters as the previous example, but the line breaks are removed\. This is the actual URL format\.
 
 ```
-https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?templateURL=https://s3-eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template&stackName=MyWPBlog&param_DBName=mywpblog&param_InstanceType=t2.medium&param_KeyName=MyKeyPair
+https://eu-central-1.console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/create/review?templateURL=https://s3.eu-central-1.amazonaws.com/cloudformation-templates-eu-central-1/WordPress_Single_Instance.template&stackName=MyWPBlog&param_DBName=mywpblog&param_InstanceType=t2.medium&param_KeyName=MyKeyPair
 ```
 
 The example URL opens the **Create Stack Wizard** in the console, with the supplied values automatically used for the parameters\.

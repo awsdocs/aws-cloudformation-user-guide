@@ -77,7 +77,7 @@ The following example creates a public DNS namespace named `example.com`\.
 {
 "Type" : "AWS::ServiceDiscovery::PublicDnsNamespace",
 "Properties" : {
-  "Description" : "Cloud Map public DNS namespace for example.com website",
+  "Description" : "AWS Cloud Map public DNS namespace for example.com website",
   "Name" : "example.com"
   }
 }
@@ -88,7 +88,7 @@ The following example creates a public DNS namespace named `example.com`\.
 ```
 Type: 'AWS::ServiceDiscovery::PublicDnsNamespace'
 Properties:
-  Description: Cloud Map public DNS namespace for example.com website
+  Description: AWS Cloud Map public DNS namespace for example.com website
   Name: example.com
 ```
 

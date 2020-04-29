@@ -68,7 +68,7 @@ A set of rules used to include patches in the baseline\.
 
 `ApprovedPatches`  <a name="cfn-ssm-patchbaseline-approvedpatches"></a>
 A list of explicitly approved patches for the baseline\.  
-For information about accepted formats for lists of approved patches and rejected patches, see [Package Name Formats for Approved and Rejected Patch Lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
+For information about accepted formats for lists of approved patches and rejected patches, see [About package name formats for approved and rejected patch lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
@@ -128,7 +128,7 @@ The name of the patch group that should be registered with the patch baseline\.
 
 `RejectedPatches`  <a name="cfn-ssm-patchbaseline-rejectedpatches"></a>
 A list of explicitly rejected patches for the baseline\.  
-For information about accepted formats for lists of approved patches and rejected patches, see [Package Name Formats for Approved and Rejected Patch Lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
+For information about accepted formats for lists of approved patches and rejected patches, see [About package name formats for approved and rejected patch lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  

@@ -97,9 +97,8 @@ Valid only if the policy type is `StepScaling`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinAdjustmentMagnitude`  <a name="cfn-as-scalingpolicy-minadjustmentmagnitude"></a>
-The minimum number of instances to scale\. If the value of `AdjustmentType` is `PercentChangeInCapacity`, the scaling policy changes the `DesiredCapacity` of the Auto Scaling group by at least this many instances\. This property replaces the `MinAdjustmentStep` property\.   
-For example, suppose that you create a step scaling policy to scale out an Auto Scaling group by 25 percent and you specify a `MinAdjustmentMagnitude` of 2\. If the group has 4 instances and the scaling policy is performed, 25 percent of 4 is 1\. However, because you specified a `MinAdjustmentMagnitude` of 2, Amazon EC2 Auto Scaling scales out the group by 2 instances\.   
-Valid only if the policy type is `StepScaling` or `SimpleScaling`\.   
+The minimum value to scale by when scaling by percentages\. For example, suppose that you create a step scaling policy to scale out an Auto Scaling group by 25 percent and you specify a `MinAdjustmentMagnitude` of 2\. If the group has 4 instances and the scaling policy is performed, 25 percent of 4 is 1\. However, because you specified a `MinAdjustmentMagnitude` of 2, Amazon EC2 Auto Scaling scales out the group by 2 instances\.   
+Valid only if the policy type is `StepScaling` or `SimpleScaling` and the adjustment type is `PercentChangeInCapacity`\. For more information, see [Scaling Adjustment Types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-adjustment) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -368,14 +367,17 @@ Resources:
 
 ### Step Scaling Policy<a name="aws-properties-as-policy--examples--Step_Scaling_Policy"></a>
 
-The following example is a step scaling policy that increases the number instances by one or two, depending on the size of the alarm breach\. For a breach that is less than 50 units than the threshold value, the policy increases the number of instances by one\. For a breach that is 50 units or more higher than the threshold, the policy increases the number of instances by two\.
+The following example creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. When an associated alarm is triggered, the policy increases the capacity of the Auto Scaling group based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
++ Increase capacity by 1 when the value of the metric is greater than or equal to 70 percent but less than 85 percent 
++ Increase capacity by 2 when the value of the metric is greater than or equal to 85 percent but less than 95 percent 
++ Increase capacity by 3 when the value of the metric is greater than or equal to 95 percent 
 
 #### JSON<a name="aws-properties-as-policy--examples--Step_Scaling_Policy--json"></a>
 
 ```
 {
   "Resources":{
-    "ASGScaleOutPolicy":{
+    "ASGScalingPolicyHigh":{
       "Type":"AWS::AutoScaling::ScalingPolicy",
       "Properties":{
         "AdjustmentType":"ChangeInCapacity",
@@ -384,16 +386,21 @@ The following example is a step scaling policy that increases the number instanc
         },
         "PolicyType":"StepScaling",
         "MetricAggregationType":"Average",
-        "EstimatedInstanceWarmup":"60",
+        "EstimatedInstanceWarmup":60,
         "StepAdjustments":[
           {
-            "MetricIntervalLowerBound":"0",
-            "MetricIntervalUpperBound":"50",
-            "ScalingAdjustment":"1"
+            "MetricIntervalLowerBound":0,
+            "MetricIntervalUpperBound":15,
+            "ScalingAdjustment":1
           },
           {
-            "MetricIntervalLowerBound":"50",
-            "ScalingAdjustment":"2"
+            "MetricIntervalLowerBound":15,
+            "MetricIntervalUpperBound":25,
+            "ScalingAdjustment":2
+          },
+          {
+            "MetricIntervalLowerBound":25,
+            "ScalingAdjustment":3
           }
         ]
       }
@@ -407,7 +414,7 @@ The following example is a step scaling policy that increases the number instanc
 ```
 ---
 Resources:
-  ASGScaleOutPolicy: 
+  ASGScalingPolicyHigh: 
     Type: AWS::AutoScaling::ScalingPolicy
     Properties: 
       AdjustmentType: "ChangeInCapacity"
@@ -415,25 +422,28 @@ Resources:
         Ref: "myASG"
       PolicyType: "StepScaling"
       MetricAggregationType: "Average"
-      EstimatedInstanceWarmup: "60"
+      EstimatedInstanceWarmup: 60
       StepAdjustments: 
-        - MetricIntervalLowerBound: "0"
-          MetricIntervalUpperBound: "50"
-          ScalingAdjustment: "1"
-        - MetricIntervalLowerBound: "50"
-          ScalingAdjustment: "2"
+        - MetricIntervalLowerBound: 0
+          MetricIntervalUpperBound: 15
+          ScalingAdjustment: 1
+        - MetricIntervalLowerBound: 15
+          MetricIntervalUpperBound: 25
+          ScalingAdjustment: 2
+        - MetricIntervalLowerBound: 25
+          ScalingAdjustment: 3
 ```
 
 ### Simple Scaling Policy<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy"></a>
 
-The following example is a simple scaling policy that increases the number instances by one when it is triggered\.
+The following example creates a scaling policy with the `SimpleScaling` policy type and the `ChangeInCapacity` adjustment type\. The policy increases capacity by one when it is triggered\.
 
 #### JSON<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy--json"></a>
 
 ```
 {
   "Resources":{
-    "ASGScaleOutPolicy":{
+    "ASGScalingPolicyHigh":{
       "Type":"AWS::AutoScaling::ScalingPolicy",
       "Properties":{
         "AdjustmentType":"ChangeInCapacity",
@@ -454,7 +464,7 @@ The following example is a simple scaling policy that increases the number insta
 ```
 ---
 Resources:
-  ASGScaleOutPolicy: 
+  ASGScalingPolicyHigh: 
     Type: AWS::AutoScaling::ScalingPolicy
     Properties: 
       AdjustmentType: "ChangeInCapacity"

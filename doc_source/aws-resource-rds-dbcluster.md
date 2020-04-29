@@ -195,6 +195,7 @@ Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(f
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
 The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
+ `global` engine mode only applies for global database clusters created with Aurora MySQL version 5\.6\.10a\. For higher Aurora MySQL versions, the clusters in a global database use `provisioned` engine mode\. 
 Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
 +  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
 +  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
@@ -266,7 +267,7 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationSourceIdentifier`  <a name="cfn-rds-dbcluster-replicationsourceidentifier"></a>
-The Amazon Resource Name \(ARN\) of the source DB instance or DB cluster if this DB cluster is created as a Read Replica\.  
+The Amazon Resource Name \(ARN\) of the source DB instance or DB cluster if this DB cluster is created as a read replica\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -312,8 +313,8 @@ The AWS Region which contains the source DB cluster when replicating a DB cluste
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageEncrypted`  <a name="cfn-rds-dbcluster-storageencrypted"></a>
-Indicates whether the DB instance is encrypted\.  
-If you specify the `DBClusterIdentifier`, `SnapshotIdentifier`, or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the cluster, snapshot, or source DB instance\.   
+Indicates whether the DB cluster is encrypted\.  
+If you specify the `SnapshotIdentifier` or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the snapshot or source DB instance\.   
 If you specify the `KmsKeyId` property, then you must enable encryption\.
 *Required*: No  
 *Type*: Boolean  

@@ -60,6 +60,9 @@ The amount of time that Kinesis Data Firehose waits to receive an acknowledgment
 The HTTP Event Collector \(HEC\) endpoint to which Kinesis Data Firehose sends your data\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HECEndpointType`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype"></a>
@@ -73,6 +76,9 @@ This type can be either `Raw` or `Event`\.
 This is a GUID that you obtain from your Splunk cluster when you create a new HEC endpoint\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration"></a>

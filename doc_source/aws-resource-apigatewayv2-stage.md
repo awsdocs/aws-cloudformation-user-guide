@@ -104,7 +104,7 @@ The stage name\. Stage names can only contain alphanumeric characters, hyphens, 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageVariables`  <a name="cfn-apigatewayv2-stage-stagevariables"></a>
-A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\. Supported only for WebSocket APIs\.  
+A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

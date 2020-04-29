@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname)" : String,
+      "[DeletionProtection](#cfn-docdb-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-docdb-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
       "[EngineVersion](#cfn-docdb-dbcluster-engineversion)" : String,
       "[KmsKeyId](#cfn-docdb-dbcluster-kmskeyid)" : String,
@@ -44,6 +45,7 @@ Properties:
   [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname): String
+  [DeletionProtection](#cfn-docdb-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-docdb-dbcluster-enablecloudwatchlogsexports): 
     - String
   [EngineVersion](#cfn-docdb-dbcluster-engineversion): String
@@ -102,6 +104,12 @@ Example: `mySubnetgroup`
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DeletionProtection`  <a name="cfn-docdb-dbcluster-deletionprotection"></a>
+Protects clusters from being accidentally deleted\. If enabled, the cluster cannot be deleted unless it is modified and `DeletionProtection` is disabled\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableCloudwatchLogsExports`  <a name="cfn-docdb-dbcluster-enablecloudwatchlogsexports"></a>
 A list of log types that need to be enabled for exporting to Amazon CloudWatch Logs\.  

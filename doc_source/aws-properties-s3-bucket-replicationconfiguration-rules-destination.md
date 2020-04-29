@@ -58,7 +58,7 @@ Specifies encryption\-related information\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageClass`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass"></a>
- The storage class to use when replicating objects, such as standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
+ The storage class to use when replicating objects, such as S3 Standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
 For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
 *Required*: No  
 *Type*: String  

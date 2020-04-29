@@ -90,7 +90,7 @@ Information about the DNS servers to be used for DNS resolution\. A Client VPN e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-ec2-clientvpnendpoint-securitygroupids"></a>
-The IDs of the security groups for the target network\.  
+The IDs of one or more security groups to apply to the target network\. You must also specify the ID of the VPC that contains the security groups\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -124,7 +124,7 @@ Default value: `udp`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-clientvpnendpoint-vpcid"></a>
-The ID of the VPC\.  
+The ID of the VPC to associate with the Client VPN endpoint\. If no security group IDs are specified in the request, the default security group for the VPC is applied\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -74,6 +74,7 @@ The name of the Elasticsearch index to which Kinesis Data Firehose adds data for
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `80`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexRotationPeriod`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod"></a>
@@ -123,4 +124,5 @@ The Elasticsearch type name that Amazon ES adds to documents when indexing data\
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `100`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -5,6 +5,7 @@ This section details the supported resources, type names, intrinsic functions, a
 **Topics**
 + [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)
 + [AWS CloudFormation Resource Specification](cfn-resource-specification.md)
++ [CloudFormation Resource Provider Schemas](resource-type-schemas.md)
 + [Resource Attribute Reference](aws-product-attribute-reference.md)
 + [Intrinsic Function Reference](intrinsic-function-reference.md)
 + [Pseudo Parameters Reference](pseudo-parameter-reference.md)

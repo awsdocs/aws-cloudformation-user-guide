@@ -129,7 +129,9 @@ This example both registers a DynamoDB table \([AWS::DynamoDB::Table](https://do
       "Properties":{
         "MaxCapacity":15,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:table:WriteCapacityUnits",
         "ResourceId":{
@@ -177,7 +179,8 @@ Resources:
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ResourceId: !Join
@@ -198,11 +201,11 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-### Target Tracking Scaling Policy for Scale Out Only for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service"></a>
+### Target Tracking Scaling Policies for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policies_for_an_ECS_Service"></a>
 
-The following example both registers an ECS service \([AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)\) as a scalable target and creates a scaling policy with the `TargetTrackingScaling` policy type\. The policy is used to add capacity to the ECS service when the average CPU utilization metric exceeds the target utilization\. Because the value of `DisableScaleIn` is set to true, the target tracking policy won't remove capacity from the scalable target\.
+The following example both registers an ECS service \([AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)\) as a scalable target and creates two scaling policies with the `TargetTrackingScaling` policy type\. The policies are used to scale the ECS service based on the service's average CPU and memory usage\. 
 
-#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--json"></a>
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policies_for_an_ECS_Service--json"></a>
 
 ```
 {
@@ -212,7 +215,9 @@ The following example both registers an ECS service \([AWS::ECS::Service](https:
       "Properties":{
         "MaxCapacity":"2",
         "MinCapacity":"1",
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+        },
         "ServiceNamespace":"ecs",
         "ScalableDimension":"ecs:service:DesiredCount",
         "ResourceId":{
@@ -234,21 +239,118 @@ The following example both registers an ECS service \([AWS::ECS::Service](https:
         }
       }
     },
-    "TargetTrackingScalingPolicy":{
+    "ServiceScalingPolicyCPU":{
       "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
       "Properties":{
-        "PolicyName":"TargetTrackingScalingPolicy",
+        "PolicyName":{"Fn::Sub":"${AWS::StackName}-target-tracking-cpu70"},
         "PolicyType":"TargetTrackingScaling",
         "ScalingTargetId":{
           "Ref":"ECSScalableTarget"
         },
         "TargetTrackingScalingPolicyConfiguration":{
           "TargetValue":70.0,
+          "ScaleInCooldown":180,
+          "ScaleOutCooldown":60,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ECSServiceAverageCPUUtilization"
+          }
+        }
+      }
+    },
+    "ServiceScalingPolicyMem":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":{"Fn::Sub":"${AWS::StackName}-target-tracking-mem90"},
+        "PolicyType":"TargetTrackingScaling",
+        "ScalingTargetId":{
+          "Ref":"ECSScalableTarget"
+        },
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":90.0,
+          "ScaleInCooldown":180,
+          "ScaleOutCooldown":60,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ECSServiceAverageMemoryUtilization"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policies_for_an_ECS_Service--yaml"></a>
+
+```
+---
+Resources:
+  ECSScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: '2'
+      MinCapacity: '1'  
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService'
+      ServiceNamespace: ecs
+      ScalableDimension: 'ecs:service:DesiredCount'
+      ResourceId: !Join 
+        - /
+        - - service
+          - !Ref cluster
+          - !GetAtt service.Name
+  ServiceScalingPolicyCPU:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${AWS::StackName}-target-tracking-cpu70
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId:
+        Ref: ECSScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 70.0
+        ScaleInCooldown: 180
+        ScaleOutCooldown: 60
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+  ServiceScalingPolicyMem:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${AWS::StackName}-target-tracking-mem90
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId:
+        Ref: ECSScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 90.0
+        ScaleInCooldown: 180
+        ScaleOutCooldown: 60
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageMemoryUtilization
+```
+
+### Target Tracking Scaling Policy for Scale Out Only for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service"></a>
+
+The following example applies a target tracking scaling policy with the `ALBRequestCountPerTarget` metric type to an ECS service called `web-app` in the default cluster\. The policy is used to add capacity to the ECS service when the request count per target exceeds the target value\. Because the value of `DisableScaleIn` is set to true, the target tracking policy won't remove capacity from the scalable target\.
+
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--json"></a>
+
+```
+{
+  "Resources":{
+    "ServiceScalingPolicyALB":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":"alb-scale-out-target-tracking-scaling-policy",
+        "PolicyType":"TargetTrackingScaling",
+        "ServiceNamespace":"ecs",
+        "ScalableDimension":"ecs:service:DesiredCount",
+        "ResourceId":"service/default/web-app",
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":1000.0,
           "ScaleInCooldown":60,
           "ScaleOutCooldown":60,
           "DisableScaleIn":true,
           "PredefinedMetricSpecification":{
-            "PredefinedMetricType":"ECSServiceAverageCPUUtilization"
+            "PredefinedMetricType":"ALBRequestCountPerTarget",
+            "ResourceLabel": "app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d"
           }
         }
       }
@@ -262,40 +364,32 @@ The following example both registers an ECS service \([AWS::ECS::Service](https:
 ```
 ---
 Resources:
-  ECSScalableTarget:
-    Type: AWS::ApplicationAutoScaling::ScalableTarget
-    Properties:
-      MaxCapacity: '2'
-      MinCapacity: '1'
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService
-      ServiceNamespace: ecs
-      ScalableDimension: 'ecs:service:DesiredCount'
-      ResourceId: !Join 
-        - /
-        - - service
-          - !Ref cluster
-          - !GetAtt service.Name
-  TargetTrackingScalingPolicy:
+  ServiceScalingPolicyALB:
     Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
-      PolicyName: TargetTrackingScalingPolicy
+      PolicyName: alb-scale-out-target-tracking-scaling-policy
       PolicyType: TargetTrackingScaling
-      ScalingTargetId:
-        Ref: ECSScalableTarget
+      ServiceNamespace: ecs
+      ScalableDimension: ecs:service:DesiredCount
+      ResourceId: service/default/web-app
       TargetTrackingScalingPolicyConfiguration:
-        TargetValue: 70.0
+        TargetValue: 1000.0
         ScaleInCooldown: 60
         ScaleOutCooldown: 60
         DisableScaleIn: true
         PredefinedMetricSpecification:
-          PredefinedMetricType: ECSServiceAverageCPUUtilization
+          PredefinedMetricType: ALBRequestCountPerTarget
+          ResourceLabel: app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d
 ```
 
 ### Step Scaling Policy for Scale Out Only for a Spot Fleet<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out_Only_for_a_Spot_Fleet"></a>
 
 The following example registers a Spot Fleet \([AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html)\) as a scalable target, creates a scheduled action, and creates a scaling policy\. It uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions to construct the `ResourceId` property\. 
 
-It creates a scaling policy with the `StepScaling` policy type\. When an associated alarm is triggered, the policy increases the capacity of the scalable target based on a set of scaling adjustments, with a cooldown period of 600 seconds\.
+It creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. When an associated alarm is triggered, the policy increases the capacity of the scalable target based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
++ Increase capacity by 1 when the value of the metric is greater than or equal to 70 percent but less than 85 percent 
++ Increase capacity by 2 when the value of the metric is greater than or equal to 85 percent but less than 95 percent 
++ Increase capacity by 3 when the value of the metric is greater than or equal to 95 percent 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out_Only_for_a_Spot_Fleet--json"></a>
 

@@ -11,9 +11,9 @@ You can't generate a secret with a `SecretBinary` secret value using AWS CloudFo
 Do not create a dynamic reference using a backslash `(\)` as the final value\. AWS CloudFormation cannot resolve those references, which causes a resource failure\. 
 
 After you create the basic secret, you can do any of the following:
-+ Configure the secret with details of the Secrets Manager supported [database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) with credentials stored in the secret\. 
-+ Attach a resource\-based permissions policy to the secret by defining a [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type\.
-+ Configure the secret to rotate after a specified number of days by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
++ Configure your secret with details of the Secrets Manager supported [database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) with credentials stored in this secret\. 
++ Attaches a resource\-based permissions policy to the secret\. To do this, define a [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type\.
++ You can optionally configure a secret to rotate after a specified number of days\. See [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)\.
 
 ## Syntax<a name="aws-resource-secretsmanager-secret-syntax"></a>
 
@@ -87,16 +87,16 @@ The friendly name of the secret\. You can use forward slashes in the name to rep
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecretString`  <a name="cfn-secretsmanager-secret-secretstring"></a>
-\(Optional\) Specifies text data you want to encrypt and store in this new version of the secret\.   
+\(Optional\) Specifies text data that you want to encrypt and store in this new version of the secret\.  
 Either `SecretString` or `SecretBinary` must have a value, but not both\. They cannot both be empty\.  
 If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text in only the `SecretString` parameter\. The Secrets Manager console stores the information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse\.  
 For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs\. For information on how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json) in the *AWS CLI User Guide*\. For example:  
-`{"username":"bob","password":"abc123xyz456"}`  
+ `{"username":"bob","password":"abc123xyz456"}`   
 If your command\-line tool or SDK requires quotation marks around the parameter, you should use single quotes to avoid confusion with the double quotes required in the JSON text\.   
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `256`  
+*Minimum*: `0`  
+*Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-secretsmanager-secret-tags"></a>

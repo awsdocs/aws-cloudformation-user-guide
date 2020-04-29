@@ -174,7 +174,7 @@ When you create stack sets using the AWS CLI, you run two separate commands\. Du
 1. Run the `create-stack-set` command\. In the following example, we enable automatic deployments to allow StackSets to automatically deploy to accounts that are added to the target organization or OUs in the future\. We also retain stack resources when an account is removed from a target organization or OU\.
 
    ```
-   aws cloudformation create-stack-set --stack-set-name StackSet_myApp --template-url https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/MyApp.template --permission-model SERVICE_MANAGED --auto-deployment Enabled=true,RetainStacksOnAccountRemoval=true
+   aws cloudformation create-stack-set --stack-set-name StackSet_myApp --template-url https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/MyApp.template --permission-model SERVICE_MANAGED --auto-deployment Enabled=true,RetainStacksOnAccountRemoval=true
    ```
 
 1. After your `create-stack-set` command is finished, run the `list-stack-sets` command to confirm that your stack set was created\. Your new stack set is listed in the results\.

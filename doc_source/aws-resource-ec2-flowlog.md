@@ -72,7 +72,6 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 
 `ResourceId`  <a name="cfn-ec2-flowlog-resourceid"></a>
 The ID of the subnet, network interface, or VPC for which you want to create a flow log\.  
-Constraints: Maximum of 1000 resources  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

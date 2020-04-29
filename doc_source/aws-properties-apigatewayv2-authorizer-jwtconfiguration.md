@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigatewayv2-authorizer-jwtconfiguration-properties"></a>
 
 `Audience`  <a name="cfn-apigatewayv2-authorizer-jwtconfiguration-audience"></a>
-A list of the intended recipients of the JWT\. A valid JWT must provide an `aud` that matches at least one entry in this list\. See [RFC 7519](https://tools.ietf.org/html/rfc7519#section-4.1.3)\. Supported only for HTTP APIs\.  
+A list of the intended recipients of the JWT\. A valid JWT must provide an `aud` that matches at least one entry in this list\. See [RFC 7519](https://tools.ietf.org/html/rfc7519#section-4.1.3)\. Required for the `JWT` authorizer type\. Supported only for HTTP APIs\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

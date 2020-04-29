@@ -75,7 +75,7 @@ The Amazon CloudWatch logging options for your delivery stream\.
 The compression format\. If no value is specified, the default is `UNCOMPRESSED`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GZIP | Snappy | UNCOMPRESSED | ZIP`  
+*Allowed Values*: `GZIP | HADOOP_SNAPPY | Snappy | UNCOMPRESSED | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataFormatConversionConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration"></a>
@@ -94,12 +94,18 @@ The encryption configuration for the Kinesis Data Firehose delivery stream\. The
 A prefix that Kinesis Data Firehose evaluates and adds to failed records before writing them to S3\. This prefix appears immediately following the bucket name\. For information about how to specify this prefix, see [Custom Prefixes for Amazon S3 Objects](https://docs.aws.amazon.com/firehose/latest/dev/s3-prefixes.html)\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix"></a>
 The `YYYY/MM/DD/HH` time format prefix is automatically used for delivered Amazon S3 files\. For more information, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-processingconfiguration"></a>

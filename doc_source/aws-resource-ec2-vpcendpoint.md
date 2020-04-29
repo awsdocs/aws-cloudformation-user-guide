@@ -164,14 +164,14 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
 ```
 Type: AWS::EC2::VPCEndpoint
 Properties:
-  PolicyDocument: '{
-    "Version":"2012-10-17",
-    "Statement":[{
-      "Effect":"Allow",
-      "Principal": "*",
-      "Action":["s3:GetObject"],
-      "Resource":["arn:aws:s3:::examplebucket/*"]
-    }]
+   PolicyDocument: '{
+     "Version":"2012-10-17",
+     "Statement":[{
+       "Effect":"Allow",
+       "Principal": "*",
+       "Action":["s3:GetObject"],
+       "Resource":["arn:aws:s3:::examplebucket/*"]
+     }]
   }'
   RouteTableIds:
     - !Ref routetableA

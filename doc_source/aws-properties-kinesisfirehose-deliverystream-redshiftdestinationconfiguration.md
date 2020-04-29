@@ -51,6 +51,7 @@ The connection string that Kinesis Data Firehose uses to connect to the Amazon R
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
+*Maximum*: `512`  
 *Pattern*: `jdbc:(redshift|postgresql)://((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+redshift\.([a-zA-Z0-9\.]+):\d{1,5}/[a-zA-Z0-9_$]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -65,6 +66,8 @@ The password for the Amazon Redshift user that you specified in the `Username` p
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `6`  
+*Maximum*: `512`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration"></a>
@@ -93,4 +96,6 @@ The Amazon Redshift user that has permission to access the Amazon Redshift clust
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
