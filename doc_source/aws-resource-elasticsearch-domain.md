@@ -112,7 +112,7 @@ Whether the domain should encrypt data at rest, and if so, the AWS Key Managemen
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogPublishingOptions`  <a name="cfn-elasticsearch-domain-logpublishingoptions"></a>
-Key\-value pairs to configure slow log publishing\.  
+Key\-value pairs to configure slow log publishing\.  This should be a object where keys are from the following `[SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, INDEX_SLOW_LOGS]`, and value formatted in the form of `LogPublishingOption`. 
 *Required*: No  
 *Type*: Map of [LogPublishingOption](aws-properties-elasticsearch-domain-logpublishingoption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
