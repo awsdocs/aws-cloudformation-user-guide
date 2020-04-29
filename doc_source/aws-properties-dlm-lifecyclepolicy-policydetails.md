@@ -51,6 +51,7 @@ The valid target resource types and actions a policy can manage\. The default is
 The resource type\.  
 *Required*: Yes  
 *Type*: List of String  
+*Allowed Values*: `VOLUME | INSTANCE` 
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
