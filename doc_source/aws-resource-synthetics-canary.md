@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Synthetics::Canary",
   "Properties" : {
+      "[Name](#cfn-synthetics-canary-name)" : String,
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
       "[Code](#cfn-synthetics-canary-code)" : [Code](aws-properties-synthetics-canary-code.md),
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
@@ -36,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Synthetics::Canary
 Properties: 
+  [Name](#cfn-synthetics-canary-name): String
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
     [Code](aws-properties-synthetics-canary-code.md)
@@ -55,6 +57,15 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-synthetics-canary-properties"></a>
+  
+`Name`   <a name="cfn-synthetics-canary-name"></a>
+The canary name. Name should be 21 lowercase letters, numbers, hyphens or underscores with no spaces.
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `21`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 
 `ArtifactS3Location`  <a name="cfn-synthetics-canary-artifacts3location"></a>
 The location in Amazon S3 where Synthetics stores artifacts from the runs of this canary\. Artifacts include the log file, screenshots, and HAR files\. Specify the full location path, including `s3://` at the beginning of the path\.  
