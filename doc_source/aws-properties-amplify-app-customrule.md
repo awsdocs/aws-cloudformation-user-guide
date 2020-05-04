@@ -42,6 +42,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Status`  <a name="cfn-amplify-app-customrule-status"></a>
  The status code for a URL rewrite or redirect rule\.   
+ 
+|Value    |Represents                |
+|---------|--------------------------|
+|`200`    |200 (Rewrite)             |
+|`301`    |301 (Redirect - Permanent)|
+|`302`    |302 (Redirect - Temporary)|
+|`404`    |404 (Redirect)            |
+|`404-200`|404 (Rewrite)             |
+
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
