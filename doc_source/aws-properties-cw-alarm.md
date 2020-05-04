@@ -214,9 +214,7 @@ The value to compare with the specified statistic\.
 `ThresholdMetricId`  <a name="cfn-cloudwatch-alarms-dynamic-threshold"></a>
 In an alarm based on an anomaly detection model, this is the ID of the `ANOMALY_DETECTION_BAND` function used as the threshold for the alarm\.  
 *Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
+*Type*: String   
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatMissingData`  <a name="cfn-cloudwatch-alarms-treatmissingdata"></a>
@@ -224,8 +222,6 @@ Sets how this alarm is to handle missing data points\. Valid values are `breachi
 If you omit this parameter, the default behavior of `missing` is used\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-cloudwatch-alarms-unit"></a>
