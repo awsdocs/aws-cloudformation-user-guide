@@ -113,6 +113,7 @@ Whether the domain should encrypt data at rest, and if so, the AWS Key Managemen
 
 `LogPublishingOptions`  <a name="cfn-elasticsearch-domain-logpublishingoptions"></a>
 Key\-value pairs to configure slow log publishing\.  
+This should be a object where keys are from the following `[SEARCH_SLOW_LOGS, ES_APPLICATION_LOGS, INDEX_SLOW_LOGS]`, depending on the types of logs needed to publish. Each of the keys should have a valid `LogPublishingOption` value.
 *Required*: No  
 *Type*: Map of [LogPublishingOption](aws-properties-elasticsearch-domain-logpublishingoption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -311,6 +312,16 @@ The following example creates a domain with VPC options\.
             "Resource": "*"
           }]
         },
+        "LogPublishingOptions":{
+          "SEARCH_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs",
+            "Enabled": "true"
+          },
+          "INDEX_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs",
+            "Enabled": "true"
+          }
+        },
         "AdvancedOptions": {
           "rest.action.multi.allow_explicit_index": "true"
         },
@@ -432,6 +443,13 @@ Resources:
             Resource: '*'
       AdvancedOptions:
         rest.action.multi.allow_explicit_index: 'true'
+      LogPublishingOptions:
+        SEARCH_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs
+          Enabled: 'true'
+        INDEX_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs
+          Enabled: 'true'
       Tags:
         - Key: foo
           Value: bar
