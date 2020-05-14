@@ -377,7 +377,7 @@ Resources:
             'Fn::ImprtValue': SelfManagedADDomainName
           FileSystemAdministratorsGroup: MyDomainAdminGroup
           OrganizationalUnitDistinguishedName: 'OU=FileSystems,DC=corp,DC=example,DC=com'
-          Username: Admin
+          UserName: Admin
           Password: !Join 
             - ':'
             - - '{{resolve:secretsmanager'
