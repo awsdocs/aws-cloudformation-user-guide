@@ -20,7 +20,7 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       CodeUri: /home/user/code/lambdafunction
 ```
 
@@ -44,6 +44,6 @@ Resources:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
       CodeUri: s3://mybucket/lambdafunction.zip
 ```

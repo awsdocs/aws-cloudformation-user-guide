@@ -88,7 +88,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
             "};"
           ]]}
         },
-        "Runtime": "nodejs8.10"
+        "Runtime": "nodejs12.x"
       }
     },
     "MyEC2Instance" : {
@@ -221,7 +221,7 @@ Resources:
              responseData.Value.push(event.ResourceProperties.AppendedItem);
              response.send(event, context, response.SUCCESS, responseData);
           };
-      Runtime: nodejs8.10
+      Runtime: nodejs12.x
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
