@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DedicatedMasterEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled)" : Boolean,
   "[DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype)" : String,
   "[InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount)" : Integer,
-  "[InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype)" : String,
+  "[InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancetype)" : String,
   "[ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig)" : [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md),
   "[ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled)" : Boolean
 }
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DedicatedMasterEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled): Boolean
   [DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype): String
   [InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount): Integer
-  [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype): String
+  [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancetype): String
   [ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig): 
     [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)
   [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
@@ -59,7 +59,7 @@ The number of data nodes \(instances\) to use in the Amazon ES domain\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`InstanceType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype"></a>
+`InstanceType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-instancetype"></a>
 The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For valid values, see [Supported Instance Types](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
