@@ -30,7 +30,7 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 
    1. For **Deployment options**: 
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
-      + For **Failure tolerance**, keep the defauls of **Number** and **0**\.
+      + For **Failure tolerance**, keep the defaults of **Number** and **0**\.
 
       In the **Retain stacks** area, keep the default setting of disabled\.
 

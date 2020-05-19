@@ -55,7 +55,7 @@ The ID of the VPC\.
 
 ### Ref<a name="aws-resource-ec2-vpccidrblock-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the VPC CIDR block\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the association ID for the VPC CIDR block\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

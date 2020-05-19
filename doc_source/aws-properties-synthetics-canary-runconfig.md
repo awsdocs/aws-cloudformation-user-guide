@@ -1,6 +1,6 @@
 # AWS::Synthetics::Canary RunConfig<a name="aws-properties-synthetics-canary-runconfig"></a>
 
-A structure that contains input information for a canary run\.
+A structure that contains input information for a canary run\. This structure is required\.
 
 ## Syntax<a name="aws-properties-synthetics-canary-runconfig-syntax"></a>
 

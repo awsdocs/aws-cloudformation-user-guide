@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application ParallelismConfiguration<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration"></a>
 
-Describes parameters for how a Java\-based Amazon Kinesis Data Analytics application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
+Describes parameters for how a Flink\-based Kinesis Data Analytics application application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-syntax"></a>
 

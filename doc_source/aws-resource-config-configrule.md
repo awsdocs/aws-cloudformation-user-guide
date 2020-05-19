@@ -227,7 +227,7 @@ The following example creates a custom configuration rule that uses a Lambda fun
       ]]}
     },
     "Handler": "index.handler",
-    "Runtime": "nodejs12.x",
+    "Runtime": "nodejs8.10",
     "Timeout": "30",
     "Role": {"Fn::GetAtt": ["LambdaExecutionRole", "Arn"]}
   }
@@ -304,7 +304,7 @@ VolumeAutoEnableIOComplianceCheck:
                 });
             }
     Handler: "index.handler"
-    Runtime: nodejs12.x
+    Runtime: nodejs8.10
     Timeout: 30
     Role: 
       Fn::GetAtt: 

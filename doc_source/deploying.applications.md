@@ -106,7 +106,7 @@ scripts to install the packages and files necessary to deploy the Apache web ser
     } 
   },
 
-{      
+      
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -161,8 +161,8 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
-      "cc2.8xlarge" : { "Arch" : "HVM64"  }
-    },
+      "cc2.8xlarge" : { "Arch" : "HVM64"  },
+
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
       "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},

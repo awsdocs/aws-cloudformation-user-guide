@@ -42,4 +42,4 @@ Contains the location of the service endpoint used to authenticate users\.
 
 ## See Also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
 
-[IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer for SFTP User Guide*\.
+[IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer Family User Guide*\.

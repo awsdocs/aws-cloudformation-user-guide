@@ -61,7 +61,7 @@ A friendly name that lets you easily find a configuration in the Resolver dashbo
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-route53resolver-resolverendpoint-securitygroupids"></a>
@@ -74,6 +74,7 @@ The ID of one or more security groups that control access to this VPC\. The secu
 A list of the tag keys and values that you want to associate with the endpoint\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-route53resolver-resolverendpoint-return-values"></a>

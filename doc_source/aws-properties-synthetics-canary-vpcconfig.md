@@ -43,7 +43,7 @@ The IDs of the subnets where this canary is to run\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-synthetics-canary-vpcconfig-vpcid"></a>
-The IDs of the VPC where this canary is to run\.  
+The ID of the VPC where this canary is to run\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

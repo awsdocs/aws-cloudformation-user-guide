@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-distributionconfiguration-distribution-properties"></a>
 
 `AmiDistributionConfiguration`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration"></a>
- The specific AMI settings, such as launch permissions and AMI tags\.   
+ The specific AMI settings, such as launch permissions and AMI tags\. For details, see example schema below\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -46,3 +46,48 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples"></a>
+
+### Example AmiDistributionConfiguration schema<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema"></a>
+
+The following example shows the schema for the AmiDistributionConfiguration property\.
+
+#### YAML<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema--yaml"></a>
+
+```
+AmiDistributionConfiguration:
+  Name: 'AmiCopyConfiguration - {{ imagebuilder:buildDate }}'
+  Description: 'description'
+  AmiTags:
+    AmiTagKey: 'AmiTagValue'
+  LaunchPermissionConfiguration:
+    UserGroups:
+      - 'String - group name 1'
+      - 'String - group name 1'
+    UserIds:
+      - 'String - account id 1'
+      - 'String - account id 2'
+```
+
+#### JSON<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema--json"></a>
+
+```
+"AmiDistributionConfiguration": {
+    "Name": "AmiCopyConfiguration - {{ imagebuilder:buildDate }}",
+    "Description": "description",
+    "AmiTags": {
+        "AmiTagKey": "AmiTagValue"
+    },
+    "LaunchPermissionConfiguration": {
+        "UserGroups": [
+            "GroupName1",
+            "GroupName2"
+        ],
+        "UserIds": [
+            "123456789012",
+            "345678901234"
+        ]
+    }
+}
+```

@@ -308,7 +308,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                             }
                         ],
                         "DomainName": {
-                            "Fn::ImportValue": "SelfManagedADDomainName"
+                            "Fn::ImprtValue": "SelfManagedADDomainName"
                         },
                         "FileSystemAdministratorsGroup": "MyDomainAdminGroup",
                         "OrganizationalUnitDistinguishedName": "OU=FileSystems,DC=corp,DC=example,DC=com",
@@ -374,10 +374,10 @@ Resources:
                 - ','
                 - !ImportValue MySelfManagedADDnsIpAddresses
           DomainName:
-            'Fn::ImportValue': SelfManagedADDomainName
+            'Fn::ImprtValue': SelfManagedADDomainName
           FileSystemAdministratorsGroup: MyDomainAdminGroup
           OrganizationalUnitDistinguishedName: 'OU=FileSystems,DC=corp,DC=example,DC=com'
-          UserName: Admin
+          Username: Admin
           Password: !Join 
             - ':'
             - - '{{resolve:secretsmanager'

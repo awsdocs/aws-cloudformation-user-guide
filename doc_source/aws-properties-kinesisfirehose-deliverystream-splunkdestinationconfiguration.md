@@ -94,7 +94,8 @@ The retry behavior in case Kinesis Data Firehose is unable to deliver data to Sp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BackupMode`  <a name="cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode"></a>
-Defines how documents should be delivered to Amazon S3\. When set to `FailedDocumentsOnly`, Kinesis Data Firehose writes any data that could not be indexed to the configured Amazon S3 destination\. When set to `AllDocuments`, Kinesis Data Firehose delivers all incoming records to Amazon S3, and also writes failed documents to Amazon S3\. Default value is `FailedDocumentsOnly`\.   
+Defines how documents should be delivered to Amazon S3\. When set to `FailedEventsOnly`, Kinesis Data Firehose writes any data that could not be indexed to the configured Amazon S3 destination\. When set to `AllEvents`, Kinesis Data Firehose delivers all incoming records to Amazon S3, and also writes failed documents to Amazon S3\. The default value is `FailedEventsOnly`\.  
+You can update this backup mode from `FailedEventsOnly` to `AllEvents`\. You can't update it from `AllEvents` to `FailedEventsOnly`\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `AllEvents | FailedEventsOnly`  

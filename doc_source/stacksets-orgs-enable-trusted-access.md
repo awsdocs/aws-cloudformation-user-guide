@@ -22,7 +22,7 @@ See [Create a Stack Set with Service\-Managed Permissions](https://docs.aws.amaz
 
    Stack sets are created in this administrator \(master\) account\. A *target account* is the account to which stack instances are deployed\.
 
-1. Sign in to AWS as an administrator of the master account and open the AWS CloudFormation console at [https://console.aws.amazon.com/cloudformation.](https://console.aws.amazon.com/cloudformation.)
+1. Sign in to AWS as an administrator of the master account and open the AWS CloudFormation console at [https://console.aws.amazon.com/](https://console.aws.amazon.com/)\.
 
 1. From the navigation pane, choose **StackSets**\. If trusted access is disabled, a banner displays that prompts you to enable trusted access\.  
 ![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-enable-trusted-access-from-stacksets-list.png)

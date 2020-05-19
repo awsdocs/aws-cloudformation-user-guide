@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ImageBuilder::Component",
   "Properties" : {
       "[ChangeDescription](#cfn-imagebuilder-component-changedescription)" : String,
+      "[Data](#cfn-imagebuilder-component-data)" : String,
       "[Description](#cfn-imagebuilder-component-description)" : String,
       "[KmsKeyId](#cfn-imagebuilder-component-kmskeyid)" : String,
       "[Name](#cfn-imagebuilder-component-name)" : String,
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ImageBuilder::Component
 Properties: 
   [ChangeDescription](#cfn-imagebuilder-component-changedescription): String
+  [Data](#cfn-imagebuilder-component-data): String
   [Description](#cfn-imagebuilder-component-description): String
   [KmsKeyId](#cfn-imagebuilder-component-kmskeyid): String
   [Name](#cfn-imagebuilder-component-name): String
@@ -48,6 +50,12 @@ A change description of the component\. For example `initial version`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Data`  <a name="cfn-imagebuilder-component-data"></a>
+The data of the component\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-imagebuilder-component-description"></a>
@@ -126,38 +134,53 @@ Returns the component type\. For example, `BUILD` or `TEST`\.
 
 ## Examples<a name="aws-resource-imagebuilder-component--examples"></a>
 
-### Creating a component<a name="aws-resource-imagebuilder-component--examples--Creating_a_component"></a>
+### Component creation with Data field details<a name="aws-resource-imagebuilder-component--examples--Component_creation_with_Data_field_details"></a>
 
-The following example creates a component and includes the required `Data` field\.
+The following example shows the component creation document in both YAML and JSON format with details for the `Data` field \. You can use either the`Data` or `Uri` fields to reference the component document\.
 
-#### YAML<a name="aws-resource-imagebuilder-component--examples--Creating_a_component--yaml"></a>
+#### YAML<a name="aws-resource-imagebuilder-component--examples--Component_creation_with_Data_field_details--yaml"></a>
 
 ```
-       Data: |
-        name: HelloWorldTestingLinuxDoc - InlineData
-        description: This is hello world testing doc
-        schemaVersion: 1.0
- 
-        phases:
-          - name: build
-            steps:
-              - name: HelloWorldStep
-                action: ExecuteBash
-                inputs:
-                  commands:
-                    - echo "Hello World! Build."
-          - name: validate
-            steps:
-              - name: HelloWorldStep
-                action: ExecuteBash
-                inputs:
-                  commands:
-                    - echo "Hello World! Validate."
-          - name: test
-            steps:
-              - name: HelloWorldStep
-                action: ExecuteBash
-                inputs:
-                  commands:
-                    - echo "Hello World! Test."
+Type: AWS::ImageBuilder::Component
+Properties: 
+  ChangeDescription: String
+  Description: String
+  KmsKeyId: String
+  Name: String
+  Platform: String
+  Tags: 
+    Key : Value
+  Version: String
+  Data: |
+    name: Python 3
+    description: Install the latest version of Python 3.
+    schemaVersion: 1.0
+    phases:
+      - name: build
+        steps:
+          - name: InstallPython3
+            action: ExecuteBash
+            inputs:
+              commands:
+                - sudo yum install python3 -y
+```
+
+#### JSON<a name="aws-resource-imagebuilder-component--examples--Component_creation_with_Data_field_details--json"></a>
+
+```
+{
+    "Type": "AWS::ImageBuilder::Component",
+    "Properties": {
+        "ChangeDescription": "String",
+        "Description": "String",
+        "KmsKeyId": "String",
+        "Name": "String",
+        "Platform": "String",
+        "Tags": {
+            "Key": "Value"
+        },
+        "Version": "String",
+        "Data": "name: Python 3\ndescription: Install the latest version of Python 3.\nschemaVersion: 1.0\nphases:\n  - name: build\n    steps:\n      - name: InstallPython3\n        action: ExecuteBash\n        inputs:\n          commands:\n            - sudo yum install python3 -y\n"
+    }
+}
 ```

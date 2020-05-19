@@ -53,7 +53,7 @@ Properties:
 ## Properties<a name="aws-resource-mediaconvert-jobtemplate-properties"></a>
 
 `AccelerationSettings`  <a name="cfn-mediaconvert-jobtemplate-accelerationsettings"></a>
-Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, see the AWS Elemental MediaConvert User Guide\.  
+Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, For more information, see [Job Limitations for Accelerated Transcoding in AWS Elemental MediaConvert](https://docs.aws.amazon.com/mediaconvert/latest/ug/job-requirements.html) in the *AWS Elemental MediaConvert User Guide*\.  
 *Required*: No  
 *Type*: [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,7 +71,7 @@ Optional\. A description of the job template you are creating\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HopDestinations`  <a name="cfn-mediaconvert-jobtemplate-hopdestinations"></a>
-Not currently supported by AWS CloudFormation\.  
+Optional\. Configuration for a destination queue to which the job can hop once a customer\-defined minimum wait time has passed\. For more information, see [Setting Up Queue Hopping to Avoid Long Waits](https://docs.aws.amazon.com/mediaconvert/latest/ug/setting-up-queue-hopping-to-avoid-long-waits.html) in the *AWS Elemental MediaConvert User Guide*\.  
 *Required*: No  
 *Type*: List of [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

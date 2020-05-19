@@ -48,6 +48,7 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-waf-ipset-return-values"></a>

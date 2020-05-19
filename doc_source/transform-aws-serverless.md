@@ -13,7 +13,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: nodejs12.x
+      Runtime: nodejs8.10
       CodeUri: 's3://testBucket/mySourceCode.zip'
 ```
 
@@ -33,7 +33,7 @@ When creating a change set from the template, AWS CloudFormation expands the AWS
         "Role": {
           "Fn::GetAtt": ["FunctionNameRole", "Arn"]
         },
-        "Runtime": "nodejs12.x"
+        "Runtime": "nodejs8.10"
       }
     },
     "FunctionNameRole": {

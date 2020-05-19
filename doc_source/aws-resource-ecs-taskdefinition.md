@@ -80,7 +80,7 @@ The number of `cpu` units used by the task\. If you are using the EC2 launch typ
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the task execution role that containers in this task can assume\. All containers in this task are granted the permissions that are specified in this role\.  
+The Amazon Resource Name \(ARN\) of the task execution role that grants the container agent permission to make AWS API calls on your behalf\. For more information, see [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

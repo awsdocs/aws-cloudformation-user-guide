@@ -70,7 +70,7 @@ The name of the image recipe\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParentImage`  <a name="cfn-imagebuilder-imagerecipe-parentimage"></a>
-The parent image of the image recipe\.  
+The parent image of the image recipe\. The string must be either an Image ARN \(SemVers is ok\) or an AMI ID\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -108,3 +108,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/mybasicrecipe/2019.12.03`\.
+
+## See Also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
++ [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *EC2 Image Builder User Guide*\.

@@ -1,4 +1,4 @@
-# AWS::ServiceCatalog::CloudFormationProduct<a name="aws-resource-servicecatalog-cloudformationproduct"></a>
+# AWS::ServiceCatalog::CloudformationProduct<a name="aws-resource-servicecatalog-cloudformationproduct"></a>
 
 Specifies a product\.
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type" : "AWS::ServiceCatalog::CloudFormationProduct",
+  "Type" : "AWS::ServiceCatalog::CloudformationProduct",
   "Properties" : {
       "[AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage)" : String,
       "[Description](#cfn-servicecatalog-cloudformationproduct-description)" : String,
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-servicecatalog-cloudformationproduct-name)" : String,
       "[Owner](#cfn-servicecatalog-cloudformationproduct-owner)" : String,
       "[ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)" : [ [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md), ... ],
+      "[ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts)" : Boolean,
       "[SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription)" : String,
       "[SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail)" : String,
       "[SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl)" : String,
@@ -29,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-servicecatalog-cloudformationproduct-syntax.yaml"></a>
 
 ```
-Type: AWS::ServiceCatalog::CloudFormationProduct
+Type: AWS::ServiceCatalog::CloudformationProduct
 Properties: 
   [AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage): String
   [Description](#cfn-servicecatalog-cloudformationproduct-description): String
@@ -38,6 +39,7 @@ Properties:
   [Owner](#cfn-servicecatalog-cloudformationproduct-owner): String
   [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters): 
     - [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)
+  [ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts): Boolean
   [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription): String
   [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail): String
   [SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl): String
@@ -89,6 +91,13 @@ The owner of the product\.
 The configuration of the provisioning artifact \(also known as a version\)\.  
 *Required*: Yes  
 *Type*: List of [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ReplaceProvisioningArtifacts`  <a name="cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts"></a>
+This property is turned off by default\. If turned off, you can update provisioning artifacts or product attributes \(such as description, distributor, name, owner, and more\) and the associated provisioning artifacts will retain the same unique identifier\. Provisioning artifacts are matched within the CloudFormationProduct resource, and only those that have been updated will be changed\. Provisioning artifacts are matched by a combinaton of provisioning artifact template URL and name\.  
+If turned on, provisioning artifacts will be given a new unique identifier when you update the product or provisioning artifacts\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportDescription`  <a name="cfn-servicecatalog-cloudformationproduct-supportdescription"></a>
@@ -143,6 +152,3 @@ The IDs of the provisioning artifacts\.
 
 `ProvisioningArtifactNames`  <a name="ProvisioningArtifactNames-fn::getatt"></a>
 The names of the provisioning artifacts\.
-
-## See Also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
-+ [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog API Reference*

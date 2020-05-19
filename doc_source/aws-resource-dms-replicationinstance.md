@@ -128,7 +128,7 @@ The compute and memory capacity of the replication instance as specified by the 
 `ReplicationInstanceIdentifier`  <a name="cfn-dms-replicationinstance-replicationinstanceidentifier"></a>
 The replication instance identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ Must contain from 1 to 63 alphanumeric characters or hyphens\.
++ Must contain 1\-63 alphanumeric characters or hyphens\.
 + First character must be a letter\.
 + Can't end with a hyphen or contain two consecutive hyphens\.
 Example: `myrepinstance`   
@@ -183,28 +183,17 @@ One or more public IP addresses for the replication instance\.
 #### JSON<a name="aws-resource-dms-replicationinstance--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "BasicReplicationInstance": {
-            "Type": "AWS::DMS::ReplicationInstance",
-            "Properties": {
-                "ReplicationInstanceClass": "dms.t2.small"
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+                "BasicReplicationInstance": { "Type": "AWS::DMS::ReplicationInstance", "Properties":
+                { "ReplicationInstanceClass": "dms.t2.small" } } } }
 ```
 
 #### YAML<a name="aws-resource-dms-replicationinstance--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources: 
-  BasicReplicationInstance: 
-    Properties: 
-      ReplicationInstanceClass: dms.t2.small
-    Type: "AWS::DMS::ReplicationInstance"
+AWSTemplateFormatVersion: 2010-09-09 Resources:
+                BasicReplicationInstance: Properties: ReplicationInstanceClass: dms.t2.small Type:
+                "AWS::DMS::ReplicationInstance"
 ```
 
 ## See Also<a name="aws-resource-dms-replicationinstance--seealso"></a>
