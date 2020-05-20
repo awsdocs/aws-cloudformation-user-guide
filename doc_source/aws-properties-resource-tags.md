@@ -67,12 +67,10 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 
 ```
 1. Tags: 
-2.   - 
-3.     Key: "keyname1"
-4.     Value: "value1"
-5.   - 
-6.     Key: "keyname2"
-7.     Value: "value2"
+2.   - Key: "keyname1"
+3.     Value: "value1"
+4.   - Key: "keyname2"
+5.     Value: "value2"
 ```
 
 ## See Also<a name="w6074ab1c25c10d254c13c21"></a>
