@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FunctionName](#cfn-lambda-alias-functionname)" : String,
       "[FunctionVersion](#cfn-lambda-alias-functionversion)" : String,
       "[Name](#cfn-lambda-alias-name)" : String,
+      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md),
       "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
     }
 }
@@ -32,6 +33,8 @@ Properties:
   [FunctionName](#cfn-lambda-alias-functionname): String
   [FunctionVersion](#cfn-lambda-alias-functionversion): String
   [Name](#cfn-lambda-alias-name): String
+  [ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig): 
+    [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)
   [RoutingConfig](#cfn-lambda-alias-routingconfig): 
     [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
 ```
@@ -79,6 +82,12 @@ The name of the alias\.
 *Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ProvisionedConcurrencyConfig`  <a name="cfn-lambda-alias-provisionedconcurrencyconfig"></a>
+Specifies a provisioned concurrency configuration for a function's alias\.  
+*Required*: No  
+*Type*: [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RoutingConfig`  <a name="cfn-lambda-alias-routingconfig"></a>
 The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-traffic-shifting-using-aliases.html) of the alias\.  
 *Required*: No  
@@ -97,39 +106,87 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Alias<a name="aws-resource-lambda-alias--examples--Alias"></a>
 
-Create an alias named `PROD` that maps to a version created in the same template\.
-
-#### JSON<a name="aws-resource-lambda-alias--examples--Alias--json"></a>
-
-```
-"AliasForMyApp": {
-    "Type": "AWS::Lambda::Alias",
-    "Properties": {
-        "FunctionName": {
-            "Ref": "MyFunction"
-        },
-        "FunctionVersion": {
-            "Fn::GetAtt": [
-                "MyVersion",
-                "Version"
-            ]
-        },
-        "Name": "PROD"
-    }
-}
-```
+A Node\.js function with a version and alias\.
 
 #### YAML<a name="aws-resource-lambda-alias--examples--Alias--yaml"></a>
 
 ```
-AliasForMyApp: 
-  Type: AWS::Lambda::Alias
-  Properties: 
-    FunctionName: 
-      Ref: "MyFunction"
-    FunctionVersion: 
-      Fn::GetAtt: 
-        - "TestingNewFeature"
-        - "Version"
-    Name: "TestingForMyApp"
+Resources:
+  function:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Code:
+        ZipFile: |
+          exports.handler = function(event){
+              console.log(JSON.stringify(event, null, 2))
+              const response = {
+                  statusCode: 200,
+                  body: JSON.stringify('Hello from Lambda!')
+              }
+              return response
+          };
+      Runtime: nodejs12.x
+      TracingConfig:
+        Mode: Active
+  version:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref function
+      Description: v1
+  alias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref function
+      FunctionVersion: !GetAtt version.Version
+      Name: BLUE
+```
+
+### Weighted Alias<a name="aws-resource-lambda-alias--examples--Weighted_Alias"></a>
+
+An alias that routes requests to two versions\.
+
+#### YAML<a name="aws-resource-lambda-alias--examples--Weighted_Alias--yaml"></a>
+
+```
+Resources:
+  function:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Code:
+        ZipFile: |
+          exports.handler = function(event){
+              console.log(JSON.stringify(event, null, 2))
+              const response = {
+                  statusCode: 200,
+                  body: JSON.stringify('Hello again from Lambda!')
+              }
+              return response
+          }
+      Runtime: nodejs12.x
+      TracingConfig:
+        Mode: Active
+  version:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref function
+      Description: v1
+  newVersion:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref function
+      Description: v2
+  alias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref function
+      FunctionVersion: !GetAtt newVersion.Version
+      Name: BLUE
+      RoutingConfig:
+        AdditionalVersionWeights:
+          - FunctionVersion: !GetAtt version.Version
+            FunctionWeight: 0.5
 ```

@@ -53,7 +53,7 @@ The `EC2VpcId` property is for backward compatibility with older regions, and is
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupDescription`  <a name="cfn-rds-dbsecuritygroup-groupdescription"></a>
-Provides the description of the DB Security Group\.  
+Provides the description of the DB security group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -92,7 +92,7 @@ The following example creates a single VPC security group, referred to by `EC2Se
                     }
                 ],
                 "AllocatedStorage": "5",
-                "DBInstanceClass": "db.m1.small",
+                "DBInstanceClass": "db.t3.small",
                 "Engine": "MySQL",
                 "MasterUsername": "YourName",
                 "MasterUserPassword": "YourPassword"
@@ -130,7 +130,7 @@ Resources:
         - 
           Ref: "DbSecurityByEC2SecurityGroup"
       AllocatedStorage: "5"
-      DBInstanceClass: "db.m1.small"
+      DBInstanceClass: "db.t3.small"
       Engine: "MySQL"
       MasterUsername: "YourName"
       MasterUserPassword: "YourPassword"
@@ -150,7 +150,7 @@ Resources:
 
 ### Multiple VPC security groups<a name="aws-properties-rds-security-group--examples--Multiple_VPC_security_groups"></a>
 
-The following example createsor updates multiple VPC security groups\. 
+The following example creates or updates multiple VPC security groups\. 
 
 #### JSON<a name="aws-properties-rds-security-group--examples--Multiple_VPC_security_groups--json"></a>
 

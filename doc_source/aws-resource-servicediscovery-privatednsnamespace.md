@@ -86,7 +86,7 @@ The following example creates a private DNS namespace named `private-example.com
 {
   "Type" : "AWS::ServiceDiscovery::PrivateDnsNamespace",
   "Properties" : {
-    "Description" : "Cloud Map private DNS namespace for resources for example.com website",
+    "Description" : "AWS Cloud Map private DNS namespace for resources for example.com website",
     "Vpc" : "vpc-12345678",
     "Name" : "private-example.com"
   }
@@ -98,7 +98,7 @@ The following example creates a private DNS namespace named `private-example.com
 ```
 Type: 'AWS::ServiceDiscovery::PrivateDnsNamespace'
 Properties:
-  Description: Cloud Map private DNS namespace for resources for example.com website
+  Description: AWS Cloud Map private DNS namespace for resources for example.com website
   Vpc: vpc-12345678
   Name: private-example.com
 ```

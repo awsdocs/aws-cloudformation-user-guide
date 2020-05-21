@@ -1,6 +1,6 @@
 # AWS::S3::Bucket RoutingRuleCondition<a name="aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition"></a>
 
-Specifies a condition that must be met for a redirect to apply\. 
+A container for describing a condition that must be met for the specified redirect to apply\. For example, 1\. If request is for pages in the `/docs` folder, redirect to the `/documents` folder\. 2\. If request results in HTTP error 4xx, redirect request to another host where you might process the error\.
 
 ## Syntax<a name="aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition-syntax"></a>
 

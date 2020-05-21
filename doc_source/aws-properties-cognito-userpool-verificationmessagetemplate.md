@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool VerificationMessageTemplate<a name="aws-properties-cognito-userpool-verificationmessagetemplate"></a>
 
-`VerificationMessageTemplate` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the template for verification messages\.
+The template for verification messages\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-verificationmessagetemplate-syntax"></a>
 

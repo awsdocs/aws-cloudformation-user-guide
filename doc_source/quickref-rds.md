@@ -6,7 +6,7 @@
 + [Amazon RDS DBSecurityGroup Resource for CIDR Range](#scenario-rds-security-group-cidr)
 + [Amazon RDS DBSecurityGroup with an Amazon EC2 security group](#scenario-rds-security-group-ec2)
 + [Multiple VPC security groups](#scenario-multiple-vpc-security-groups)
-+ [Amazon RDS Database Instance in a VPC Security Group](#w4784ab1c17c23c77c15)
++ [Amazon RDS Database Instance in a VPC Security Group](#w6074ab1c19c23c77c15)
 
 ## Amazon RDS DB Instance Resource<a name="scenario-rds-instance"></a>
 
@@ -277,7 +277,7 @@ Resources:
         EC2SecurityGroupOwnerId: '111122223333'
 ```
 
-## Amazon RDS Database Instance in a VPC Security Group<a name="w4784ab1c17c23c77c15"></a>
+## Amazon RDS Database Instance in a VPC Security Group<a name="w6074ab1c19c23c77c15"></a>
 
 This example shows an Amazon RDS database instance associated with an Amazon EC2 VPC security group\.
 

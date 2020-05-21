@@ -40,6 +40,7 @@ A name must *not* contain:
 + wildcard characters `? *` 
 + special characters `" # % \ ^ | ~ ` $ & , ; : /` 
 + control characters \(`U+0000-001F`, `U+007F-009F`\)
+To enable logging with CloudWatch Logs, the name should only contain 0\-9, A\-Z, a\-z, \- and \_\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

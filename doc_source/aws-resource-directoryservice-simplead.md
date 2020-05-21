@@ -50,7 +50,7 @@ After an alias has been created, it cannot be deleted or reused, so this operati
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-directoryservice-simplead-description"></a>
-A textual description for the directory\.  
+A description for the directory\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -73,16 +73,17 @@ The fully qualified name for the directory, such as `corp.example.com`\.
 
 `Password`  <a name="cfn-directoryservice-simplead-password"></a>
 The password for the directory administrator\. The directory creation process creates a directory administrator account with the user name `Administrator` and this password\.  
+If you need to change the password for the administrator account, see the [ResetUserPassword](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ResetUserPassword.html) API call in the *AWS Directory Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `(?=^.{8,64}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])|(?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s]))^.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ShortName`  <a name="cfn-directoryservice-simplead-shortname"></a>
-The short name of the directory, such as `CORP`\.  
+The NetBIOS name of the directory, such as `CORP`\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+*Pattern*: `^[^\\/:*?"<>|.]+[^\\/:*?"<>|]*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Size`  <a name="cfn-directoryservice-simplead-size"></a>

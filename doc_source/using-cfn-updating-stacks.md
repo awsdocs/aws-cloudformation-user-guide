@@ -1,4 +1,4 @@
-# AWS CloudFormation Stacks Updates<a name="using-cfn-updating-stacks"></a>
+# AWS CloudFormation Stack Updates<a name="using-cfn-updating-stacks"></a>
 
 When you need to make changes to a stack's settings or change its resources, you update the stack instead of deleting it and creating a new stack\. For example, if you have a stack with an EC2 instance, you can update the stack to change the instance's AMI ID\.
 
@@ -7,7 +7,7 @@ When you update a stack, you submit changes, such as new input parameter values 
 **Note**  
 When updating a stack, AWS CloudFormation might interrupt resources or replace updated resources, depending on which properties you update\. For more information about resource update behaviors, see [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
-Update Methods
+ **Update Methods** 
 
 AWS CloudFormation provides two methods for updating stacks: *direct update* or creating and executing *change sets*\. When you directly update a stack, you submit changes and AWS CloudFormation immediately deploys them\. Use direct updates when you want to quickly deploy your updates\.
 

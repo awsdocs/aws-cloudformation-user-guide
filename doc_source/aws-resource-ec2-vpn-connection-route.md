@@ -47,7 +47,7 @@ The ID of the VPN connection\.
 
 ### Ref<a name="aws-resource-ec2-vpn-connection-route-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPN connection route\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN connection route\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

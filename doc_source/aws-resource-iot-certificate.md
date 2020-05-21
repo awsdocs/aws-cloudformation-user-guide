@@ -1,6 +1,6 @@
 # AWS::IoT::Certificate<a name="aws-resource-iot-certificate"></a>
 
-Use the `AWS::IoT::Certificate` resource to declare an AWS IoT X\.509 certificate\. For information about working with X\.509 certificates, see [Authentication in AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/x509-certs.html) in the *AWS IoT Developer Guide*\.
+Use the `AWS::IoT::Certificate` resource to declare an AWS IoT X\.509 certificate\. For information about working with X\.509 certificates, see [X\.509 Client Certificates](https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html) in the *AWS IoT Developer Guide*\.
 
 ## Syntax<a name="aws-resource-iot-certificate-syntax"></a>
 
@@ -37,6 +37,7 @@ The certificate signing request \(CSR\)\.
 
 `Status`  <a name="cfn-iot-certificate-status"></a>
 The status of the certificate\.  
+Valid values are ACTIVE, INACTIVE, REVOKED, PENDING\_TRANSFER, and PENDING\_ACTIVATION\.  
 The status value REGISTER\_INACTIVE is deprecated and should not be used\.  
 *Required*: Yes  
 *Type*: String  

@@ -12,7 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy)" : String
+  "[AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy)" : String,
+  "[CapacityReservationOptions](#cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions)" : [CapacityReservationOptionsRequest](aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.md),
+  "[MaxTotalPrice](#cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice)" : String,
+  "[MinTargetCapacity](#cfn-ec2-ec2fleet-ondemandoptionsrequest-mintargetcapacity)" : Integer,
+  "[SingleAvailabilityZone](#cfn-ec2-ec2fleet-ondemandoptionsrequest-singleavailabilityzone)" : Boolean,
+  "[SingleInstanceType](#cfn-ec2-ec2fleet-ondemandoptionsrequest-singleinstancetype)" : Boolean
 }
 ```
 
@@ -20,6 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy): String
+  [CapacityReservationOptions](#cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions): 
+    [CapacityReservationOptionsRequest](aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.md)
+  [MaxTotalPrice](#cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice): String
+  [MinTargetCapacity](#cfn-ec2-ec2fleet-ondemandoptionsrequest-mintargetcapacity): Integer
+  [SingleAvailabilityZone](#cfn-ec2-ec2fleet-ondemandoptionsrequest-singleavailabilityzone): Boolean
+  [SingleInstanceType](#cfn-ec2-ec2fleet-ondemandoptionsrequest-singleinstancetype): Boolean
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest-properties"></a>
@@ -29,7 +40,37 @@ The order of the launch template overrides to use in fulfilling On\-Demand capac
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `lowest-price | prioritized`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CapacityReservationOptions`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions"></a>
+The strategy for using unused Capacity Reservations for fulfilling On\-Demand capacity\. Supported only for fleets of type `instant`\.  
+*Required*: No  
+*Type*: [CapacityReservationOptionsRequest](aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MaxTotalPrice`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice"></a>
+The maximum amount per hour for On\-Demand Instances that you're willing to pay\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MinTargetCapacity`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-mintargetcapacity"></a>
+The minimum target capacity for On\-Demand Instances in the fleet\. If the minimum target capacity is not reached, the fleet launches no instances\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SingleAvailabilityZone`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-singleavailabilityzone"></a>
+Indicates that the fleet launches all On\-Demand Instances into a single Availability Zone\. Supported only for fleets of type `instant`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SingleInstanceType`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-singleinstancetype"></a>
+Indicates that the fleet uses a single instance type to launch all On\-Demand Instances in the fleet\. Supported only for fleets of type `instant`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See Also<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest--seealso"></a>
 +  [ OnDemandOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_OnDemandOptionsRequest.html) in the *Amazon EC2 API Reference*

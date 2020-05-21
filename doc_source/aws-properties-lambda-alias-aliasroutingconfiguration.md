@@ -24,7 +24,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lambda-alias-aliasroutingconfiguration-properties"></a>
 
 `AdditionalVersionWeights`  <a name="cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights"></a>
-The name of the second alias, and the percentage of traffic that's routed to it\.  
+The second version, and the percentage of traffic that's routed to it\.  
 *Required*: Yes  
 *Type*: List of [VersionWeight](aws-properties-lambda-alias-versionweight.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples"></a>
+
+### Routing Configuration<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples--Routing_Configuration"></a>
+
+An alias that routes half of incoming requests to a second version\.
+
+#### YAML<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples--Routing_Configuration--yaml"></a>
+
+```
+  alias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref function
+      FunctionVersion: !GetAtt newVersion.Version
+      Name: BLUE
+      RoutingConfig:
+        AdditionalVersionWeights:
+          - FunctionVersion: !GetAtt version.Version
+            FunctionWeight: 0.5
+```

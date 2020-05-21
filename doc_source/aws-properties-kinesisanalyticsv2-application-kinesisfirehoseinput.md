@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application KinesisFirehoseInput<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery stream as the streaming source\. You provide the delivery stream's Amazon Resource Name \(ARN\)\.
+For a SQL\-based Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery stream as the streaming source\. You provide the delivery stream's Amazon Resource Name \(ARN\)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput-syntax"></a>
 

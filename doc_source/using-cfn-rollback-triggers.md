@@ -16,21 +16,23 @@ Be aware that access to Amazon CloudWatch requires credentials\. Those credentia
 
 **To add rollback triggers during stack creation or updating**
 
-1. During [creating](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html) or [updating](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) a stack, on the **Options** page, go to **Rollback Triggers**\.
+1. During [creating](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html) or [updating](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) a stack, on the **Configure stack options** page, under **Advanced options**, go to **Rollback configuration**\.
 
 1. Specify a monitoring time between 0 and 180 minutes\. The default is 0\.
 
-1. Enter the ARN of the Cloudwatch alarm you want to use as a rollback trigger, and click the plus icon\. You can add a maximum of five rollback triggers\.
+1. Enter the ARN of the Cloudwatch alarm you want to use as a rollback trigger, and click **Add CloudWatch alarm ARN**\. 
+
+   You can add a maximum of five rollback triggers\.
 
 **To add rollback triggers to a change set**
 
-1. During [creating](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-create.html) or updating a change set, on the **Options** page, go to **Rollback Triggers**\.
+1. During [creating](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-create.html) or updating a change set, on the **Configure stack options** page, under **Advanced options**, go to **Rollback configuration**\.
 
 1. Specify a monitoring time between 0 and 180 minutes\. The default is 0\.
 
-1. Enter the ARN of the Cloudwatch alarm you want to use as a rollback trigger, and click the plus icon\. You can add a maximum of five rollback triggers\.
+1. Enter the ARN of the Cloudwatch alarm you want to use as a rollback trigger, and click **Add CloudWatch alarm ARN**\.
+
+   You can add a maximum of five rollback triggers\.
 
 **To view rollback triggers for a stack**
-+ There are two ways to view rollback triggers for a given stack:
-  + On the **Stacks** page, select the checkbox for the stack you wish to view, and then select the **Rollback Triggers** tab in the detail section\.
-  + On the **Stack Detail** page, go to the **Rollback Triggers** section\.
++ On the **Stacks** page, select the stack you wish to view from the list on the left\. On the **Stack info** tab, under **Advanced options**, expand the **Rollback configuration** section\.

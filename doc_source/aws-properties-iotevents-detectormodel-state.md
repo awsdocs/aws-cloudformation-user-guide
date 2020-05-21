@@ -32,19 +32,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotevents-detectormodel-state-properties"></a>
 
 `OnEnter`  <a name="cfn-iotevents-detectormodel-state-onenter"></a>
-When entering this state, perform these `"actions"` if the `"condition"` is TRUE\.  
+When entering this state, perform these `actions` if the `condition` is TRUE\.  
 *Required*: No  
 *Type*: [OnEnter](aws-properties-iotevents-detectormodel-onenter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnExit`  <a name="cfn-iotevents-detectormodel-state-onexit"></a>
-When exiting this state, perform these `"actions"` if the specified `"condition"` is TRUE\.  
+When exiting this state, perform these `actions` if the specified `condition` is `TRUE`\.  
 *Required*: No  
 *Type*: [OnExit](aws-properties-iotevents-detectormodel-onexit.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnInput`  <a name="cfn-iotevents-detectormodel-state-oninput"></a>
-When an input is received and the `"condition"` is TRUE, perform the specified `"actions"`\.  
+When an input is received and the `condition` is TRUE, perform the specified `actions`\.  
 *Required*: No  
 *Type*: [OnInput](aws-properties-iotevents-detectormodel-oninput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

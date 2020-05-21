@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup NotificationConfiguration<a name="aws-properties-as-notificationconfigurations"></a>
 
- `NotificationConfiguration` specifies a list of notification configurations for the `NotificationConfigurations` property of [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `NotificationConfiguration` specifies the events that the Amazon EC2 Auto Scaling group sends notifications for\.
+ `NotificationConfiguration` specifies a list of notification configurations for the `NotificationConfigurations` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `NotificationConfiguration` specifies the events that the Amazon EC2 Auto Scaling group sends notifications for\.
 
 For example snippets, see [Auto Scaling Group with Notifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-as-notification)\.
 
@@ -28,17 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-as-notificationconfigurations-properties"></a>
 
 `NotificationTypes`  <a name="cfn-as-group-notificationconfigurations-notificationtypes"></a>
-A list of event types that trigger a notification\. Event types can include any of the following types:   
-+ `autoscaling:EC2_INSTANCE_LAUNCH`
-+ `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`
-+ `autoscaling:EC2_INSTANCE_TERMINATE`
-+ `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`
-+ `autoscaling:TEST_NOTIFICATION`
+A list of event types that trigger a notification\. Event types can include any of the following types\.   
+*Allowed Values*:  
++  `autoscaling:EC2_INSTANCE_LAUNCH` 
++  `autoscaling:EC2_INSTANCE_LAUNCH_ERROR` 
++  `autoscaling:EC2_INSTANCE_TERMINATE` 
++  `autoscaling:EC2_INSTANCE_TERMINATE_ERROR` 
++  `autoscaling:TEST_NOTIFICATION` 
 *Required*: No  
 *Type*: List of String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicARN`  <a name="cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn"></a>

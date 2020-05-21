@@ -64,46 +64,42 @@ Information for a host header condition\. Specify only when `Field` is `host-hea
 
 `HttpHeaderConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-rulecondition-httpheaderconfig"></a>
 Information for an HTTP header condition\. Specify only when `Field` is `http-header`\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [HttpHeaderConfig](aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpRequestMethodConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-rulecondition-httprequestmethodconfig"></a>
 Information for an HTTP method condition\. Specify only when `Field` is `http-request-method`\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [HttpRequestMethodConfig](aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PathPatternConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-rulecondition-pathpatternconfig"></a>
 Information for a path pattern condition\. Specify only when `Field` is `path-pattern`\.  
-Conditional: Required if `HttpHeaderConfig` is used\.  
 *Required*: No  
 *Type*: [PathPatternConfig](aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueryStringConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-rulecondition-querystringconfig"></a>
 Information for a query string condition\. Specify only when `Field` is `query-string`\.  
-Conditional: Required if `HttpHeaderConfig` is used\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [QueryStringConfig](aws-properties-elasticloadbalancingv2-listenerrule-querystringconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceIpConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-rulecondition-sourceipconfig"></a>
 Information for a source IP condition\. Specify only when `Field` is `source-ip`\.  
-Conditional: Required if `HttpHeaderConfig` is used\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [SourceIpConfig](aws-properties-elasticloadbalancingv2-listenerrule-sourceipconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions-values"></a>
-The condition value\.   
-You can only use `Values` if the condition type is `host-header` and `path-pattern`\. You can not specify both `Values` and `HostHeaderConfig` at the same time\.  
-If `Field` is `host-header`, you can specify a single host name \(for example, my\.example\.com\)\. A host name is case insensitive, can be up to 128 characters in length, and can contain any of the following characters\.  
+The condition value\. Specify only when `Field` is `host-header` or `path-pattern`\. Alternatively, to specify multiple host names or multiple path patterns, use `HostHeaderConfig` or `PathPatternConfig`\.  
+If `Field` is `host-header` and you're not using `HostHeaderConfig`, you can specify a single host name \(for example, my\.example\.com\)\. A host name is case insensitive, can be up to 128 characters in length, and can contain any of the following characters\.  
 + A\-Z, a\-z, 0\-9
 + \- \.
 + \* \(matches 0 or more characters\)
 + ? \(matches exactly 1 character\)
-If `Field` is `path-pattern`, you can specify a single path pattern \(for example, /img/\*\)\. A path pattern is case\-sensitive, can be up to 128 characters in length, and can contain any of the following characters\.  
+If `Field` is `path-pattern` and you're not using `PathPatternConfig`, you can specify a single path pattern \(for example, /img/\*\)\. A path pattern is case\-sensitive, can be up to 128 characters in length, and can contain any of the following characters\.  
 + A\-Z, a\-z, 0\-9
 + \_ \- \. $ / \~ " ' @ : \+
 + & \(using &amp;\)

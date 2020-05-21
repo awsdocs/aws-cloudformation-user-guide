@@ -45,6 +45,9 @@ The action to perform if none of the `Rules` contained in the `WebACL` match\. T
 A friendly name or description for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-waf-webacl-name"></a>
@@ -53,6 +56,7 @@ A friendly name or description of the `WebACL`\. You can't change the name of a 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rules`  <a name="cfn-waf-webacl-rules"></a>
@@ -141,7 +145,7 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 3
         RuleId: 
-Ref: "SqlInjRule"
+          Ref: "SqlInjRule"
 ```
 
 ### Associate a Web ACL with a CloudFront Distribution<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution"></a>
@@ -242,5 +246,5 @@ myDistribution:
             - "AQ"
             - "CV"
       ViewerCertificate: 
-CloudFrontDefaultCertificate: "true"
+        CloudFrontDefaultCertificate: "true"
 ```

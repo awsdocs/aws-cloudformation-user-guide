@@ -71,7 +71,7 @@ The code for the function\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeadLetterConfig`  <a name="cfn-lambda-function-deadletterconfig"></a>
-A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing\. For more information, see [Dead Letter Queues](https://docs.aws.amazon.com/lambda/latest/dg/dlq.html)\.  
+A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing\. For more information, see [Dead Letter Queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#dlq)\.  
 *Required*: No  
 *Type*: [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -95,9 +95,6 @@ The name of the Lambda function, up to 64 characters in length\. If you don't sp
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `140`  
-*Pattern*: `(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Handler`  <a name="cfn-lambda-function-handler"></a>
@@ -147,7 +144,7 @@ The Amazon Resource Name \(ARN\) of the function's execution role\.
 The identifier of the function's [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `dotnetcore1.0 | dotnetcore2.1 | go1.x | java8 | nodejs10.x | nodejs8.10 | provided | python2.7 | python3.6 | python3.7 | ruby2.5`  
+*Allowed Values*: `dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | nodejs10.x | nodejs12.x | provided | python2.7 | python3.6 | python3.7 | python3.8 | ruby2.5 | ruby2.7`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-lambda-function-tags"></a>
@@ -170,7 +167,7 @@ Set `Mode` to `Active` to sample and trace a subset of incoming requests with AW
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfig`  <a name="cfn-lambda-function-vpcconfig"></a>
-For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC\. When you connect a function to a VPC, it can only access resources and the internet through that VPC\. For more information, see [VPC Settings](https://docs.aws.amazon.com/lambda/latest/dg/vpc.html)\.  
+For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC\.  
 *Required*: No  
 *Type*: [VpcConfig](aws-properties-lambda-function-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -217,7 +214,7 @@ Create a Node\.js function\.
             "S3Bucket": "lambda-functions",
             "S3Key": "amilookup.zip"
         },
-        "Runtime": "nodejs8.10",
+        "Runtime": "nodejs12.x",
         "Timeout": 25,
         "TracingConfig": {
             "Mode": "Active"
@@ -226,22 +223,77 @@ Create a Node\.js function\.
 }
 ```
 
-#### YAML<a name="aws-resource-lambda-function--examples--Function--yaml"></a>
+### Inline Function<a name="aws-resource-lambda-function--examples--Inline_Function"></a>
+
+Inline Node\.js function that uses the cfn\-response library\.
+
+#### YAML<a name="aws-resource-lambda-function--examples--Inline_Function--yaml"></a>
 
 ```
-AMIIDLookup: 
-  Type: "AWS::Lambda::Function"
-  Properties: 
-    Handler: "index.handler"
-    Role: 
-      Fn::GetAtt: 
-        - "LambdaExecutionRole"
-        - "Arn"
-    Code: 
-      S3Bucket: "lambda-functions"
-      S3Key: "amilookup.zip"
-    Runtime: "nodejs8.10"
-    Timeout: 25
-    TracingConfig:
-      Mode: "Active"
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Lambda function with cfn-response.
+Resources:
+  primer:
+    Type: AWS::Lambda::Function
+    Properties:
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          var aws = require('aws-sdk')
+          var response = require('cfn-response')
+          exports.handler = function(event, context) {
+              console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
+              // For Delete requests, immediately send a SUCCESS response.
+              if (event.RequestType == "Delete") {
+                  response.send(event, context, "SUCCESS")
+                  return
+              }
+              var responseStatus = "FAILED"
+              var responseData = {}
+              var functionName = event.ResourceProperties.FunctionName
+              var lambda = new aws.Lambda()
+              lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+                  if (err) {
+                      responseData = {Error: "Invoke call failed"}
+                      console.log(responseData.Error + ":\n", err)
+                  }
+                  else responseStatus = "SUCCESS"
+                  response.send(event, context, responseStatus, responseData)
+              })
+          }
+      Description: Invoke a function during stack creation.
+      TracingConfig:
+        Mode: Active
+```
+
+### VPC Function<a name="aws-resource-lambda-function--examples--VPC_Function"></a>
+
+Function connected to a VPC\.
+
+#### YAML<a name="aws-resource-lambda-function--examples--VPC_Function--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Description: VPC function.
+Resources:
+  Function: 
+    Type: AWS::Lambda::Function
+    Properties: 
+      Handler: index.handler
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Code: 
+        S3Bucket: my-bucket
+        S3Key: function.zip
+      Runtime: nodejs12.x
+      Timeout: 5
+      TracingConfig:
+        Mode: Active
+      VpcConfig: 
+        SecurityGroupIds: 
+          - sg-085912345678492fb
+        SubnetIds: 
+          - subnet-071f712345678e7c8
+          - subnet-07fd123456788a036
 ```

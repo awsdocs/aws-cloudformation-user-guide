@@ -107,7 +107,7 @@ For detailed information about the request and response objects involved in `Cre
 
 ### Step 2: Stack Updates<a name="crpg-walkthrough-stack-updates"></a>
 
-To update an existing stack, you must submit a template that specifies updates for the properties of resources in the stack, as shown in the example below\. AWS CloudFormation updates only the resources that have changes specified in the template\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
+To update an existing stack, you must submit a template that specifies updates for the properties of resources in the stack, as shown in the example below\. AWS CloudFormation updates only the resources that have changes specified in the template\. For more information about updating stacks, see [AWS CloudFormation Stack Updates](using-cfn-updating-stacks.md)\.
 
 You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in an AWS CloudFormation template, AWS CloudFormation sends an update request to that custom resource\. If a custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When AWS CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, AWS CloudFormation recognizes the update as a replacement and sends a delete request to the old resource, as shown in [Step 3: Stack Deletion](#crpg-walkthrough-stack-deletion)\. 
 
@@ -238,7 +238,7 @@ For detailed information about the request and response objects involved in `Upd
 
 For detailed information about the request and response objects involved in `Delete` requests, see [Delete](crpg-ref-requesttypes-delete.md) in the [Custom Resource Reference](crpg-ref.md)\.
 
-### See Also<a name="w4784ab1c17c25c12b5c12"></a>
+### See Also<a name="w6074ab1c19c25c12b5c12"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)
 + [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)
 + [Fn::GetAtt](intrinsic-function-reference-getatt.md)

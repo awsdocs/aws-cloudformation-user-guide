@@ -51,13 +51,13 @@ The identifier for the replication subnet group\. If you don't specify a name, A
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-dms-replicationsubnetgroup-subnetids"></a>
-The EC2 subnet IDs for the subnet group\.  
+One or more subnet IDs to be assigned to the subnet group\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-replicationsubnetgroup-tags"></a>
-The tag to be assigned to the subnet group\.  
+One or more tags to be assigned to the subnet group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -77,47 +77,22 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-resource-dms-replicationsubnetgroup--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "myReplicationSubnetGroup": {
-            "Type": "AWS::DMS::ReplicationSubnetGroup",
-            "Properties": {
-                "ReplicationSubnetGroupIdentifier": "identifier",
-                "ReplicationSubnetGroupDescription": "description",
-                "SubnetIds": [
-                    "subnet-7b5b4112",
-                    "subnet-7b5b4115"
-                ],
-                "Tags": [
-                    {
-                        "Key": "String",
-                        "Value": "String"
-                    }
-                ]
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+                "myReplicationSubnetGroup": { "Type": "AWS::DMS::ReplicationSubnetGroup",
+                "Properties": { "ReplicationSubnetGroupIdentifier": "identifier",
+                "ReplicationSubnetGroupDescription": "description", "SubnetIds": [
+                "subnet-7b5b4112", "subnet-7b5b4115" ], "Tags": [ { "Key": "String", "Value":
+                "String" } ] } } } }
 ```
 
 #### YAML<a name="aws-resource-dms-replicationsubnetgroup--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources: 
-  myReplicationSubnetGroup: 
-    Properties: 
-      ReplicationSubnetGroupDescription: description
-      ReplicationSubnetGroupIdentifier: identifier
-      SubnetIds: 
-        - subnet-7b5b4112
-        - subnet-7b5b4115
-      Tags: 
-        - 
-          Key: String
-          Value: String
-    Type: "AWS::DMS::ReplicationSubnetGroup"
+AWSTemplateFormatVersion: 2010-09-09 Resources:
+                myReplicationSubnetGroup: Properties: ReplicationSubnetGroupDescription: description
+                ReplicationSubnetGroupIdentifier: identifier SubnetIds: - subnet-7b5b4112 -
+                subnet-7b5b4115 Tags: - Key: String Value: String Type:
+                "AWS::DMS::ReplicationSubnetGroup"
 ```
 
 ## See Also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>

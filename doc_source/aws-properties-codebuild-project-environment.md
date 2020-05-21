@@ -49,6 +49,7 @@ The type of compute environment\. This determines the number of CPU cores and me
 +  `BUILD_GENERAL1_SMALL`: Use up to 3 GB memory and 2 vCPUs for builds\.
 +  `BUILD_GENERAL1_MEDIUM`: Use up to 7 GB memory and 4 vCPUs for builds\.
 +  `BUILD_GENERAL1_LARGE`: Use up to 15 GB memory and 8 vCPUs for builds\.
+ For more information, see [Build Environment Compute Types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the *AWS CodeBuild User Guide\.*   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,15 +80,14 @@ The image tag or image digest that identifies the Docker image to use for this b
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivilegedMode`  <a name="cfn-codebuild-project-environment-privilegedmode"></a>
-Indicates how the project builds Docker images\. Specify `true` to enable running the Docker daemon inside a Docker container\.  
-This value must be set to `true` only if this build project will be used to build Docker images, and the specified build environment image is not one provided by AWS CodeBuild with Docker support\. Otherwise, all associated builds that attempt to interact with the Docker daemon fail\. For more information, see the [ `privilegedMode` ](https://docs.aws.amazon.com/codebuild/latest/userguide/create-project.html#create-project-cli) field in the *AWS CodeBuild User Guide*\.  
-You must also start the Docker daemon so that builds can interact with it\. One way to do this is to initialize the Docker daemon during the install phase of your build spec by running the following build commands\. \(Do not run these commands if the specified build environment image is provided by AWS CodeBuild with Docker support\.\)  
+Enables running the Docker daemon inside a Docker container\. Set to true only if the build project is used to build Docker images\. Otherwise, a build that attempts to interact with the Docker daemon fails\. The default setting is `false`\.  
+You can initialize the Docker daemon during the install phase of your build by adding one of the following sets of commands to the install phase of your buildspec file:  
 If the operating system's base image is Ubuntu Linux:  
- `- nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=overlay&`   
- `- timeout 15 sh -c "until docker info; do echo .; sleep 1; done"`   
-If the operating system's base image is Alpine Linux, add the `-t` argument to `timeout`:  
- `- nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=overlay&`   
- `- timeout -t 15 sh -c "until docker info; do echo .; sleep 1; done"`   
+`- nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=overlay&`   
+`- timeout 15 sh -c "until docker info; do echo .; sleep 1; done"`   
+If the operating system's base image is Alpine Linux and the previous command does not work, add the `-t` argument to `timeout`:  
+`- nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=overlay&`  
+`- timeout -t 15 sh -c "until docker info; do echo .; sleep 1; done"`   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,7 +102,10 @@ If the operating system's base image is Alpine Linux, add the `-t` argument to `
 
 `Type`  <a name="cfn-codebuild-project-environment-type"></a>
 The type of build environment to use for related builds\.  
++ The environment type `ARM_CONTAINER` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), EU \(Ireland\), Asia Pacific \(Mumbai\), Asia Pacific \(Tokyo\), Asia Pacific \(Sydney\), and EU \(Frankfurt\)\.
++ The environment type `LINUX_CONTAINER` with compute type `build.general1.2xlarge` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), China \(Beijing\), and China \(Ningxia\)\.
++ The environment type `LINUX_GPU_CONTAINER` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\) , China \(Beijing\), and China \(Ningxia\)\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `LINUX_CONTAINER | WINDOWS_CONTAINER`  
+*Allowed Values*: `ARM_CONTAINER | LINUX_CONTAINER | LINUX_GPU_CONTAINER | WINDOWS_CONTAINER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

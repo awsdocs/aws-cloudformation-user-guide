@@ -1,5 +1,9 @@
 # AWS::WAF::ByteMatchSet FieldToMatch<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch"></a>
 
+**Note**  
+This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 Specifies where in a web request to look for `TargetString`\.
 
 ## Syntax<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-syntax"></a>
@@ -30,6 +34,9 @@ When the value of `Type` is `SINGLE_QUERY_ARG`, enter the name of the parameter 
 If the value of `Type` is any other value, omit `Data`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-waf-bytematchset-bytematchtuples-fieldtomatch-type"></a>

@@ -15,7 +15,7 @@ You can use the `DependsOn` attribute with any resource\. Here are some typical 
 **Note**  
 During a stack update, resources that depend on updated resources are updated automatically\. AWS CloudFormation makes no changes to the automatically\-updated resources, but, if a stack policy is associated with these resources, your account must have the permissions to update them\.
 
-## Syntax<a name="w4784ab1c21c19c15c13"></a>
+## Syntax<a name="w6074ab1c25c23c15c13"></a>
 
 The `DependsOn` attribute can take a single string or list of strings\.
 
@@ -23,7 +23,7 @@ The `DependsOn` attribute can take a single string or list of strings\.
 "DependsOn" : [ String, ... ]
 ```
 
-## Example<a name="w4784ab1c21c19c15c15"></a>
+## Example<a name="w6074ab1c25c23c15c15"></a>
 
 The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource with a `DependsOn` attribute that specifies myDB, an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. When AWS CloudFormation creates this stack, it first creates myDB, then creates Ec2Instance\.
 
@@ -234,7 +234,7 @@ EC2Host:
         Ref: PublicSubnet
 ```
 
-### Amazon ECS Service and Auto Scaling Group<a name="w4784ab1c21c19c15c17c18"></a>
+### Amazon ECS Service and Auto Scaling Group<a name="w6074ab1c25c23c15c17c18"></a>
 
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service\.
 
@@ -292,7 +292,7 @@ service:
       Ref: taskdefinition
 ```
 
-### IAM Role Policy<a name="w4784ab1c21c19c15c17c20"></a>
+### IAM Role Policy<a name="w6074ab1c25c23c15c17c20"></a>
 
 Resources that make additional calls to AWS require a service role, which permits a service to make calls to AWS on your behalf\. For example, the `AWS::CodeDeploy::DeploymentGroup` resource requires a service role so that CodeDeploy has permissions to deploy applications to your instances\. When you have a single template that defines a service role, the role's policy \(by using the `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy` resource\), and a resource that uses the role, add a dependency so that the resource depends on the role's policy\. This dependency ensures that the policy is available throughout the resource's lifecycle\.
 

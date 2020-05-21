@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign Limits<a name="aws-properties-pinpoint-campaign-limits"></a>
 
-Specifies the limits on the messages that a campaign can send\.
+Specifies limits on the messages that a campaign can send\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-limits-syntax"></a>
 

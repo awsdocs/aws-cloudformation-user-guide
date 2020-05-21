@@ -53,11 +53,11 @@ The Amazon Resource Name \(ARN\) that specifies the resource group that is creat
 
 ## Examples<a name="aws-resource-inspector-resourcegroup--examples"></a>
 
-### Declaring an Amazon Inspector Reource Group Resource<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource"></a>
+### Declaring an Amazon Inspector Resource Group Resource<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource"></a>
 
 The following example shows how to declare an `AWS::Inspector::ResourceGroup` resource to create an Amazon Inspector resource group\.
 
-#### JSON<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource--json"></a>
+#### JSON<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource--json"></a>
 
 ```
 "myresourcegroup": {
@@ -73,7 +73,7 @@ The following example shows how to declare an `AWS::Inspector::ResourceGroup` re
 }
 ```
 
-#### YAML<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource--yaml"></a>
+#### YAML<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource--yaml"></a>
 
 ```
 myresourcegroup: 

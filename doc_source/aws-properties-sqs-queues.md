@@ -86,7 +86,7 @@ A shorter time period provides better security, but results in more calls to AWS
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsMasterKeyId`  <a name="aws-sqs-queue-kmsmasterkeyid"></a>
-The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the alias `alias/aws/sqs`\. For more information, see the following:  
+The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the \(default\) alias `alias/aws/sqs`\. For more information, see the following:  
 +  [Protecting Data Using Server\-Side Encryption \(SSE\) and AWS KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon Simple Queue Service Developer Guide* 
 +  [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon Simple Queue Service API Reference* 
 +  The Customer Master Keys section of the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper 
@@ -154,7 +154,7 @@ For more information about Amazon SQS queue visibility timeouts, see [Visibility
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the queue URL\. For example: 
 
- `{ "Ref": "https://sqs.us-east-2.amazonaws.com/123456789012/aa4-MyQueue-Z5NOSZO2PZE9" }` 
+ `{ "Ref": "https://sqs.us-east-2.amazonaws.com/123456789012/ab1-MyQueue-A2BCDEF3GHI4" }` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

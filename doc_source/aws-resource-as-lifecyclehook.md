@@ -1,6 +1,6 @@
 # AWS::AutoScaling::LifecycleHook<a name="aws-resource-as-lifecyclehook"></a>
 
-Defines lifecycle hooks for an Amazon EC2 Auto Scaling group\. Lifecycle hooks specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. When you use a lifecycle hook, the Auto Scaling group pauses the instance either after it is launched \(before it is put into service\) or as it is terminated \(before it is fully terminated\)\. 
+Defines lifecycle hooks for an Auto Scaling group\. Lifecycle hooks specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. When you use a lifecycle hook, the Auto Scaling group pauses the instance either after it is launched \(before it is put into service\) or as it is terminated \(before it is fully terminated\)\. 
 
 For more information, see [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference* and [Amazon EC2 Auto Scaling Lifecycle Hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
@@ -122,7 +122,7 @@ The following examples specify lifecycle hooks\.
 
 ### Lifecycle Hook for Instance Termination<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_Hook_for_Instance_Termination"></a>
 
-The following example specifies a lifecycle hook that supports a custom action at instance termination\. It uses the `Ref` intrinsic function to refer to an Auto Scaling group \(whose logical name is `myASGroup`\) that is declared elsewhere in the same template\.
+The following example specifies a lifecycle hook that supports a custom action at instance termination\. It uses the `Ref` intrinsic function to refer to an Auto Scaling group \(whose logical name is `myASG`\) that is declared elsewhere in the same template\.
 
 Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties to specify the Amazon SNS topic and IAM role to use to receive notification when a lifecycle action occurs\.
 
@@ -134,7 +134,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
     "Type":"AWS::AutoScaling::LifecycleHook",
     "Properties":{
       "AutoScalingGroupName":{
-        "Ref":"myASGroup"
+        "Ref":"myASG"
       },
       "LifecycleTransition":"autoscaling:EC2_INSTANCE_TERMINATING",
       "NotificationTargetARN":{
@@ -154,11 +154,12 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 #### YAML<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_Hook_for_Instance_Termination--yaml"></a>
 
 ```
+---
 myLifecycleHook: 
   Type: AWS::AutoScaling::LifecycleHook
   Properties: 
     AutoScalingGroupName: 
-      Ref: myASGroup
+      Ref: myASG
     LifecycleTransition: "autoscaling:EC2_INSTANCE_TERMINATING"
     NotificationTargetARN: 
       Ref: lifecycleHookTopic
@@ -178,7 +179,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 
 ```
 {
-  "AWSTemplateFormatVersion":"2018-09-09",
+  "AWSTemplateFormatVersion":"2010-09-09",
   "Parameters":{
     "Subnets":{
       "Type":"CommaDelimitedList"
@@ -188,7 +189,7 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
     }
   },
   "Resources":{
-    "myASGroup":{
+    "myASG":{
       "Type":"AWS::AutoScaling::AutoScalingGroup",
       "Properties":{
         "AvailabilityZones":[
@@ -242,14 +243,14 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 #### YAML<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_Hook_for_Instance_Launch--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2018-09-09
+AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   Subnets:
     Type: CommaDelimitedList
   AZs:
     Type: CommaDelimitedList
 Resources:
-  myASGroup:
+  myASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       AvailabilityZones:

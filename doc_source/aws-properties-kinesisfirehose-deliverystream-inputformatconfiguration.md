@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream InputFormatConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration"></a>
 
-Specifies the deserializer you want to use to convert the format of the input data\.
+Specifies the deserializer you want to use to convert the format of the input data\. This parameter is required if `Enabled` is set to true\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration-syntax"></a>
 

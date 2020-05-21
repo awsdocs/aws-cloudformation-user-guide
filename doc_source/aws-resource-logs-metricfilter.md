@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-logs-metricfilter-properties"></a>
 
 `FilterPattern`  <a name="cfn-cwl-metricfilter-filterpattern"></a>
-A filter pattern for extracting metric data out of ingested log events\.  
+A filter pattern for extracting metric data out of ingested log events\. For more information, see [Filter and Pattern Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

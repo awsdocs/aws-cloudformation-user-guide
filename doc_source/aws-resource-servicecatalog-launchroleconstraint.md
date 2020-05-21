@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceptLanguage](#cfn-servicecatalog-launchroleconstraint-acceptlanguage)" : String,
       "[Description](#cfn-servicecatalog-launchroleconstraint-description)" : String,
+      "[LocalRoleName](#cfn-servicecatalog-launchroleconstraint-localrolename)" : String,
       "[PortfolioId](#cfn-servicecatalog-launchroleconstraint-portfolioid)" : String,
       "[ProductId](#cfn-servicecatalog-launchroleconstraint-productid)" : String,
       "[RoleArn](#cfn-servicecatalog-launchroleconstraint-rolearn)" : String
@@ -28,6 +29,7 @@ Type: AWS::ServiceCatalog::LaunchRoleConstraint
 Properties: 
   [AcceptLanguage](#cfn-servicecatalog-launchroleconstraint-acceptlanguage): String
   [Description](#cfn-servicecatalog-launchroleconstraint-description): String
+  [LocalRoleName](#cfn-servicecatalog-launchroleconstraint-localrolename): String
   [PortfolioId](#cfn-servicecatalog-launchroleconstraint-portfolioid): String
   [ProductId](#cfn-servicecatalog-launchroleconstraint-productid): String
   [RoleArn](#cfn-servicecatalog-launchroleconstraint-rolearn): String
@@ -52,6 +54,14 @@ The description of the constraint\.
 *Maximum*: `2000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`LocalRoleName`  <a name="cfn-servicecatalog-launchroleconstraint-localrolename"></a>
+You are required to specify either the `RoleArn` or the `LocalRoleName` but can't use both\.   
+If you specify the `LocalRoleName` property, when an account uses the launch constraint, the IAM role with that name in the account will be used\. This allows launch\-role constraints to be account\-agnostic so the administrator can create fewer resources per shared account\.   
+The given role name must exist in the account used to create the launch constraint and the account of the user who launches a product with this launch constraint\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `PortfolioId`  <a name="cfn-servicecatalog-launchroleconstraint-portfolioid"></a>
 The portfolio identifier\.  
 *Required*: Yes  
@@ -72,7 +82,8 @@ The product identifier\.
 
 `RoleArn`  <a name="cfn-servicecatalog-launchroleconstraint-rolearn"></a>
 The ARN of the launch role\.  
-*Required*: Yes  
+You are required to specify `RoleArn` or `LocalRoleName` but can't use both\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

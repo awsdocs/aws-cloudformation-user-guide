@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
 
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
-Creates or updates a lifecycle policy\. For information about lifecycle policy syntax, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
+Creates or updates the lifecycle policy for the specified repository\. For more information, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
 *Required*: No  
 *Type*: [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,7 +52,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
-The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policy Examples](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html) in the *Amazon Elastic Container Registry User Guide*\.  
+The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Minimum*: `0`  

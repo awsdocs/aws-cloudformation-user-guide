@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::ListenerRule<a name="aws-resource-elasticloadbalancingv2-listenerrule"></a>
 
-Specifies a listener rule\.
+Specifies a listener rule\. The listener must be associated with an Application Load Balancer\. Each rule consists of a priority, one or more actions, and one or more conditions\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listenerrule-syntax"></a>
 
@@ -37,12 +37,14 @@ Properties:
 
 `Actions`  <a name="cfn-elasticloadbalancingv2-listenerrule-actions"></a>
 The actions\.  
+The rule must include exactly one of the following types of actions: `forward`, `fixed-response`, or `redirect`, and it must be the last action to be performed\. If the rule is for an HTTPS listener, it can also optionally include an authentication action\.  
 *Required*: Yes  
 *Type*: List of [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Conditions`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions"></a>
 The conditions\.  
+The rule can optionally include up to one of each of the following conditions: `http-request-method`, `host-header`, `path-pattern`, and `source-ip`\. A rule can also optionally include one or more of each of the following conditions: `http-header` and `query-string`\.  
 *Required*: Yes  
 *Type*: List of [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,6 +57,7 @@ The Amazon Resource Name \(ARN\) of the listener\.
 
 `Priority`  <a name="cfn-elasticloadbalancingv2-listenerrule-priority"></a>
 The rule priority\. A listener can't have multiple rules with the same priority\.  
+If you try to reorder rules by updating their priorities, do not specify a new priority if an existing rule already uses this priority, as this can cause an error\. If you need to reuse a priority with a different rule, you must remove it as a priority first, and then specify it in a subsequent update\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  

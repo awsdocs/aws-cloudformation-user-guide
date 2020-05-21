@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-appsync-graphqlapi-name)" : String,
       "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md),
       "[Tags](#cfn-appsync-graphqlapi-tags)" : [Tags](aws-properties-appsync-graphqlapi-tags.md),
-      "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
+      "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md),
+      "[XrayEnabled](#cfn-appsync-graphqlapi-xrayenabled)" : Boolean
     }
 }
 ```
@@ -40,6 +41,7 @@ Properties:
     [Tags](aws-properties-appsync-graphqlapi-tags.md)
   [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig): 
     [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
+  [XrayEnabled](#cfn-appsync-graphqlapi-xrayenabled): Boolean
 ```
 
 ## Properties<a name="aws-resource-appsync-graphqlapi-properties"></a>
@@ -84,6 +86,12 @@ An arbitrary set of tags \(key\-value pairs\) for this GraphQL API\.
 Optional authorization configuration for using Amazon Cognito user pools with your GraphQL endpoint\.   
 *Required*: No  
 *Type*: [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`XrayEnabled`  <a name="cfn-appsync-graphqlapi-xrayenabled"></a>
+A flag representing whether X\-Ray tracing is enabled for this `GraphqlApi`\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-appsync-graphqlapi-return-values"></a>

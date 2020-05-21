@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application CSVMappingParameters<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters"></a>
 
-For an SQL\-based application, provides additional mapping information when the record format uses delimiters, such as CSV\. For example, the following sample records use CSV format, where the records use the *'\\n'* as the row delimiter and a comma \(","\) as the column delimiter: 
+For a SQL\-based Kinesis Data Analytics application, provides additional mapping information when the record format uses delimiters, such as CSV\. For example, the following sample records use CSV format, where the records use the *'\\n'* as the row delimiter and a comma \(","\) as the column delimiter: 
 
  `"name1", "address1"` 
 

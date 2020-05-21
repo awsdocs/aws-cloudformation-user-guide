@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails)" : [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md),
       "[Provider](#cfn-codepipeline-customactiontype-provider)" : String,
       "[Settings](#cfn-codepipeline-customactiontype-settings)" : [Settings](aws-properties-codepipeline-customactiontype-settings.md),
+      "[Tags](#cfn-codepipeline-customactiontype-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Version](#cfn-codepipeline-customactiontype-version)" : String
     }
 }
@@ -38,6 +39,8 @@ Properties:
   [Provider](#cfn-codepipeline-customactiontype-provider): String
   [Settings](#cfn-codepipeline-customactiontype-settings): 
     [Settings](aws-properties-codepipeline-customactiontype-settings.md)
+  [Tags](#cfn-codepipeline-customactiontype-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Version](#cfn-codepipeline-customactiontype-version): String
 ```
 
@@ -45,7 +48,6 @@ Properties:
 
 `Category`  <a name="cfn-codepipeline-customactiontype-category"></a>
 The category of the custom action, such as a build action or a test action\.  
-Although `Source` and `Approval` are listed as valid values, they are not currently functional\. These values are reserved for future use\.
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `Approval | Build | Deploy | Invoke | Source | Test`  
@@ -86,9 +88,15 @@ URLs that provide users information about this custom action\.
 *Type*: [Settings](aws-properties-codepipeline-customactiontype-settings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Tags`  <a name="cfn-codepipeline-customactiontype-tags"></a>
+The tags for the custom action\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Version`  <a name="cfn-codepipeline-customactiontype-version"></a>
 The version identifier of the custom action\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `9`  
@@ -140,7 +148,17 @@ The following example is a custom build action that requires users to specify on
     "Settings": {
       "EntityUrlTemplate": "https://my-build-instance/job/{Config:ProjectName}/",
       "ExecutionUrlTemplate": "https://my-build-instance/job/{Config:ProjectName}/lastSuccessfulBuild/{ExternalExecutionId}/"
-    } 
+    },
+    "Tags": [
+      {
+        "Key": "Project",
+        "Value": "ProjectA"
+      },
+      {
+        "Key": "Team",
+        "Value": "Admins"
+      }
+    ]
   } 
 }
 ```
@@ -174,4 +192,9 @@ MyCustomActionType:
     Settings: 
       EntityUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/" 
       ExecutionUrlTemplate: "https://my-build-instance/job/{Config:ProjectName}/lastSuccessfulBuild/{ExternalExecutionId}/"
+    Tags:
+      - Key: Project
+        Value: ProjectA
+      - Key: Team
+        Value: Admins
 ```

@@ -54,7 +54,7 @@ A list of VPC subnet IDs for the subnet group\.
 
 ### Ref<a name="aws-resource-dax-subnetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created activity\. For example 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created subnet group\. For example 
 
 ```
 { "Ref": "MyDAXSubnetGroup" }

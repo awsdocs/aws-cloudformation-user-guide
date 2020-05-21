@@ -136,7 +136,7 @@ To unmap a device defined in the AMI, set the `NoDevice` property to an empty ma
 ```
 BlockDeviceMappings:
   - DeviceName: /dev/sde
-    NoDevice:
+    NoDevice: {}
 ```
 
 ## See Also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>

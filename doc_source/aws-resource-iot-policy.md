@@ -66,25 +66,22 @@ The Amazon Resource Name \(ARN\) of the AWS IoT policy, such as `arn:aws:iot:us-
 
 ### <a name="aws-resource-iot-policy--examples--"></a>
 
-The following example declares an AWS IoT Policy\.
+The following example declares an AWS IoT Policy\. This example grants permission to connect to AWS IoT with client ID client1\.
 
 #### JSON<a name="aws-resource-iot-policy--examples----json"></a>
 
 ```
-{
-   "Type": "AWS::IoT::Policy",
-   "Properties": {
-      "PolicyDocument": JSON object,
-      "PolicyName": String
-   }
-}
+{ "Type": "AWS::IoT::Policy", "Properties": { "PolicyDocument": {
+            "Version": "2012-10-17", "Statement": [ { "Effect": "Allow", "Action": [ "iot:Connect"
+            ], "Resource": [ "arn:aws:iot:us-east-1:123456789012:client/client1" ] } ] },
+            "PolicyName": "PolicyName" } }
 ```
 
 #### YAML<a name="aws-resource-iot-policy--examples----yaml"></a>
 
 ```
-Type: AWS::IoT::Policy
-Properties:
-   PolicyDocument: JSON object
-   PolicyName: String
+Type: AWS::IoT::Policy Properties: PolicyDocument: "{ 'Version':
+            '2012-10-17', 'Statement': [ { 'Effect': 'Allow', 'Action': [ 'iot:Connect' ],
+            'Resource': [ 'arn:aws:iot:us-east-1:123456789012:client/client1' ] } ] }" PolicyName:
+            "PolicyName"
 ```

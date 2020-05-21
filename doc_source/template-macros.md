@@ -88,7 +88,7 @@ AWS CloudFormation expects the underlying function to return a response in the f
   The ID of the request invoking this function\. This must match the request ID provided by AWS CloudFormation when invoking the function\.
 + **status**
 
-  The status of the request \(case\-insensitive\)\. Should be set to "success\." AWS CloudFormation treats any other response as a failure\.
+  The status of the request \(case\-insensitive\)\. Should be set to "success"\. AWS CloudFormation treats any other response as a failure\.
 + **fragment**
 
   The processed template content for AWS CloudFormation to include in the processed template, including siblings\. AWS CloudFormation replaces the template content that is passed to the Lambda function with the template fragment it receives in the Lambda response\. 

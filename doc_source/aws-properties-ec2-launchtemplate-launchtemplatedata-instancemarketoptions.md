@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `MarketType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype"></a>
 The market type\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Allowed Values*: `spot`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

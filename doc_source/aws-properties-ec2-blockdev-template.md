@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DeleteOnTermination](#cfn-ec2-blockdev-template-deleteontermination)" : Boolean,
   "[Encrypted](#cfn-ec2-blockdev-template-encrypted)" : Boolean,
   "[Iops](#cfn-ec2-blockdev-template-iops)" : Integer,
+  "[KmsKeyId](#cfn-ec2-instance-ebs-kmskeyid)" : String,
   "[SnapshotId](#cfn-ec2-blockdev-template-snapshotid)" : String,
   "[VolumeSize](#cfn-ec2-blockdev-template-volumesize)" : Integer,
   "[VolumeType](#cfn-ec2-blockdev-template-volumetype)" : String
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeleteOnTermination](#cfn-ec2-blockdev-template-deleteontermination): Boolean
   [Encrypted](#cfn-ec2-blockdev-template-encrypted): Boolean
   [Iops](#cfn-ec2-blockdev-template-iops): Integer
+  [KmsKeyId](#cfn-ec2-instance-ebs-kmskeyid): String
   [SnapshotId](#cfn-ec2-blockdev-template-snapshotid): String
   [VolumeSize](#cfn-ec2-blockdev-template-volumesize): Integer
   [VolumeType](#cfn-ec2-blockdev-template-volumetype): String
@@ -35,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-blockdev-template-properties"></a>
 
 `DeleteOnTermination`  <a name="cfn-ec2-blockdev-template-deleteontermination"></a>
-Indicates whether the EBS volume is deleted on instance termination\.  
+Indicates whether the EBS volume is deleted on instance termination\. For more information, see [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) in the Amazon Elastic Compute Cloud User Guide\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,6 +57,12 @@ Condition: This parameter is required for requests to create `io1` volumes; it i
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`KmsKeyId`  <a name="cfn-ec2-instance-ebs-kmskeyid"></a>
+Identifier \(key ID, key alias, ID ARN, or alias ARN\) for a customer managed CMK under which the EBS volume is encrypted\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SnapshotId`  <a name="cfn-ec2-blockdev-template-snapshotid"></a>
 The ID of the snapshot\.  
 If you specify both `SnapshotId` and `VolumeSize`,`VolumeSize` must be equal or greater than the size of the snapshot\.  
@@ -71,8 +79,8 @@ Constraints: 1\-16384 for General Purpose SSD \(`gp2`\), 4\-16384 for Provisione
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-blockdev-template-volumetype"></a>
-The volume type\. If you set the type to `io1`, you must also set the **Iops** property\.  
-Default: `standard`   
+The volume type\. If you set the type to `io1`, you must also specify the **Iops** parameter\. If you set the type to `gp2`, `st1`, `sc1`, or `standard`, you must omit the **Iops** parameter\.  
+Default: `gp2`   
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  

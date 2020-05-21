@@ -65,11 +65,11 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 If you don't use the `--stack-name` option to limit the output to one stack, information on all your running stacks is returned\.
 
-## Stack Status Codes<a name="w4784ab1c15c15c17c11"></a>
+## Stack Status Codes<a name="w6074ab1c15c15c17c11"></a>
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w4784ab1c15c15c17c11b4"></a>
+### <a name="w6074ab1c15c15c17c11b4"></a>
 
 
 | Stack Status | Description | 
@@ -91,3 +91,8 @@ You can specify one or more stack status codes to list only stacks with the spec
 |  `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of new resources for one or more stacks after a failed stack update\. In this state, the stack has been rolled back to its previous working state and is usable, but AWS CloudFormation is still deleting any new resources it created during the stack update\.  | 
 |  `UPDATE_ROLLBACK_FAILED`  |  Unsuccessful return of one or more stacks to a previous working state after a failed stack update\. When in this state, you can delete the stack or [continue rollback](using-cfn-updating-stacks-continueupdaterollback.md)\. You might need to fix errors before your stack can return to a working state\. Or, you can contact customer support to restore the stack to a usable state\.  | 
 |  `UPDATE_ROLLBACK_IN_PROGRESS`  |  Ongoing return of one or more stacks to the previous working state after failed stack update\.  | 
+|  `IMPORT_IN_PROGRESS`  |  The import operation is currently in progress\.  | 
+|  `IMPORT_COMPLETE`  |  The import operation successfully completed for all resources in the stack that support `resource import`\.   | 
+|  `IMPORT_ROLLBACK_IN_PROGRESS`  |  Import will roll back to the previous template configuration\.  | 
+|  `IMPORT_ROLLBACK_FAILED`  |  The import rollback operation failed for at least one resource in the stack\. Results will be available for the resources CloudFormation successfully imported\.  | 
+|  `IMPORT_ROLLBACK_COMPLETE`  |  Import successfully rolled back to the previous template configuration\.  | 

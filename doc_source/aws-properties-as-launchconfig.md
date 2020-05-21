@@ -1,10 +1,10 @@
 # AWS::AutoScaling::LaunchConfiguration<a name="aws-properties-as-launchconfig"></a>
 
-Specifies an Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
+The `LaunchConfiguration` resource specifies the Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
 **Important**  
 When you update the launch configuration, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the Auto Scaling group\. In other words, after you associate a new launch configuration with an Auto Scaling group, all new instances will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as any other Auto Scaling group that uses a launch configuration\.   
-If you want to update existing instances when you update the `LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\. 
+If you want to update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\. 
 
 For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference* and [Launch Configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
@@ -71,10 +71,9 @@ Properties:
 ## Properties<a name="aws-properties-as-launchconfig-properties"></a>
 
 `AssociatePublicIpAddress`  <a name="cf-as-launchconfig-associatepubip"></a>
-Used for groups that launch instances into a virtual private cloud \(VPC\)\. Specifies whether to assign a public IP address to each instance\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\.   
-For more information, see [Launching Auto Scaling Instances in a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
-Default: If the instance is launched into a default subnet, the default is to assign a public IP address\. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address\.   
-If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.
+For Auto Scaling groups that are running in a virtual private cloud \(VPC\), specifies whether to assign a public IP address to the group's instances\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\. For more information, see [Launching Auto Scaling Instances in a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+If an instance receives a public IP address and is also in a VPC that is defined in the same stack template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.   
+If the instance is launched into a default subnet, the default is to assign a public IP address, unless you disabled the option to assign a public IP address on the subnet\. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address, unless you enabled the option to assign a public IP address on the subnet\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -182,8 +181,8 @@ The name of the launch configuration\. This name must be unique per Region per a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
-The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs in an isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
-If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
+The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs on isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
+If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
 For more information, see [Instance Placement Tenancy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-vpc-tenancy) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: String  
@@ -203,16 +202,15 @@ We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-as-launchconfig-securitygroups"></a>
-A list that contains the security groups to assign to the instances in the Auto Scaling group\. The list can contain the IDs of existing security groups or references to [SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.   
+A list that contains the security groups to assign to the instances in the Auto Scaling group\. The list can contain both the IDs of existing security groups and references to [SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.  
 For more information, see [Security Groups for Your VPC](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon Virtual Private Cloud User Guide*\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SpotPrice`  <a name="cfn-as-launchconfig-spotprice"></a>
-The maximum hourly price to be paid for any Spot Instance launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot market price\. For more information, see [Launching Spot Instances in your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
-If a Spot price is set, then the Auto Scaling group will only launch when the Spot price has been met, regardless of the setting in the Auto Scaling group's `DesiredCapacity`\.   
-When you change your Spot price by creating a new launch configuration, running instances will continue to run as long as the Spot price for those running instances is higher than the current Spot market price\.
+The maximum hourly price to be paid for any Spot Instance launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot price\. For more information, see [Launching Spot Instances in your Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -220,7 +218,7 @@ When you change your Spot price by creating a new launch configuration, running 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserData`  <a name="cfn-as-launchconfig-userdata"></a>
-The user data available to the launched EC2 instances\.   
+The Base64\-encoded user data to make available to the launched EC2 instances\.  
 For more information, see [Instance Metadata and User Data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: String  
@@ -248,59 +246,61 @@ This example shows a launch configuration with a `BlockDeviceMappings` property 
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "KeyName":{
-        "Ref":"KeyName"
-      },
-      "ImageId":{
-        "Fn::FindInMap":[
-          "AWSRegionArch2AMI",
-          {
-            "Ref":"AWS::Region"
-          },
-          {
-            "Fn::FindInMap":[
-              "AWSInstanceType2Arch",
-              {
-                "Ref":"InstanceType"
-              },
-              "Arch"
-            ]
-          }
-        ]
-      },
-      "UserData":{
-        "Fn::Base64":{
-          "Ref":"WebServerPort"
-        }
-      },
-      "SecurityGroups":[
-        {
-          "Ref":"InstanceSecurityGroup"
-        }
-      ],
-      "InstanceType":{
-        "Ref":"InstanceType"
-      },
-      "BlockDeviceMappings":[
-        {
-          "DeviceName":"/dev/sda1",
-          "Ebs":{
-            "VolumeSize":"50",
-            "VolumeType":"io1",
-            "Iops":200
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "KeyName":{
+          "Ref":"KeyName"
+        },
+        "ImageId":{
+          "Fn::FindInMap":[
+            "AWSRegionArch2AMI",
+            {
+              "Ref":"AWS::Region"
+            },
+            {
+              "Fn::FindInMap":[
+                "AWSInstanceType2Arch",
+                {
+                  "Ref":"InstanceType"
+                },
+                "Arch"
+              ]
+            }
+          ]
+        },
+        "UserData":{
+          "Fn::Base64":{
+            "Ref":"WebServerPort"
           }
         },
-        {
-          "DeviceName":"/dev/sdm",
-          "Ebs":{
-            "VolumeSize":"100",
-            "DeleteOnTermination":"false"
+        "SecurityGroups":[
+          {
+            "Ref":"InstanceSecurityGroup"
           }
-        }
-      ]
+        ],
+        "InstanceType":{
+          "Ref":"InstanceType"
+        },
+        "BlockDeviceMappings":[
+          {
+            "DeviceName":"/dev/sda1",
+            "Ebs":{
+              "VolumeSize":"50",
+              "VolumeType":"io1",
+              "Iops":200
+            }
+          },
+          {
+            "DeviceName":"/dev/sdm",
+            "Ebs":{
+              "VolumeSize":"100",
+              "DeleteOnTermination":"false"
+            }
+          }
+        ]
+      }
     }
   }
 }
@@ -309,77 +309,81 @@ This example shows a launch configuration with a `BlockDeviceMappings` property 
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Block_Device_Mappings--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    KeyName: 
-      Ref: "KeyName"
-    ImageId: 
-      Fn::FindInMap: 
-        - "AWSRegionArch2AMI"
-        - Ref: "AWS::Region"
-        - Fn::FindInMap: 
-            - "AWSInstanceType2Arch"
-            - Ref: "InstanceType"
-            - "Arch"
-    UserData: 
-      Fn::Base64: 
-        Ref: "WebServerPort"
-    SecurityGroups: 
-      - Ref: "InstanceSecurityGroup"
-    InstanceType: 
-      Ref: "InstanceType"
-    BlockDeviceMappings: 
-      - DeviceName: "/dev/sda1"
-        Ebs: 
-          VolumeSize: "50"
-          VolumeType: "io1"
-          Iops: 200
-      - DeviceName: "/dev/sdm"
-        Ebs: 
-          VolumeSize: "100"
-          DeleteOnTermination: "false"
+---
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      KeyName: 
+        Ref: "KeyName"
+      ImageId: 
+        Fn::FindInMap: 
+          - "AWSRegionArch2AMI"
+          - Ref: "AWS::Region"
+          - Fn::FindInMap: 
+              - "AWSInstanceType2Arch"
+              - Ref: "InstanceType"
+              - "Arch"
+      UserData: 
+        Fn::Base64: 
+          Ref: "WebServerPort"
+      SecurityGroups: 
+        - Ref: "InstanceSecurityGroup"
+      InstanceType: 
+        Ref: "InstanceType"
+      BlockDeviceMappings: 
+        - DeviceName: /dev/sda1
+          Ebs: 
+            VolumeSize: 50
+            VolumeType: "io1"
+            Iops: 200
+        - DeviceName: /dev/sdm
+          Ebs: 
+            VolumeSize: 100
+            DeleteOnTermination: "false"
 ```
 
 ### Launch Configuration with Spot Price<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price"></a>
 
-This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot market price is less than the price in the template specification \(0\.05\)\.
+This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot price is less than the price in the template specification \(0\.05\)\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price--json"></a>
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "KeyName":{
-        "Ref":"KeyName"
-      },
-      "ImageId":{
-        "Fn::FindInMap":[
-          "AWSRegionArch2AMI",
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "KeyName":{
+          "Ref":"KeyName"
+        },
+        "ImageId":{
+          "Fn::FindInMap":[
+            "AWSRegionArch2AMI",
+            {
+              "Ref":"AWS::Region"
+            },
+            {
+              "Fn::FindInMap":[
+                "AWSInstanceType2Arch",
+                {
+                  "Ref":"InstanceType"
+                },
+                "Arch"
+              ]
+            }
+          ]
+        },
+        "SecurityGroups":[
           {
-            "Ref":"AWS::Region"
-          },
-          {
-            "Fn::FindInMap":[
-              "AWSInstanceType2Arch",
-              {
-                "Ref":"InstanceType"
-              },
-              "Arch"
-            ]
+            "Ref":"InstanceSecurityGroup"
           }
-        ]
-      },
-      "SecurityGroups":[
-        {
-          "Ref":"InstanceSecurityGroup"
+        ],
+        "SpotPrice":"0.05",
+        "InstanceType":{
+          "Ref":"InstanceType"
         }
-      ],
-      "SpotPrice":"0.05",
-      "InstanceType":{
-        "Ref":"InstanceType"
       }
     }
   }
@@ -389,24 +393,26 @@ This example shows a launch configuration that launches Spot Instances in the Au
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Spot_Price--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    KeyName: 
-      Ref: "KeyName"
-    ImageId: 
-      Fn::FindInMap: 
-        - "AWSRegionArch2AMI"
-        - Ref: "AWS::Region"
-        - Fn::FindInMap: 
-            - "AWSInstanceType2Arch"
-            - Ref: "InstanceType"
-            - "Arch"
-    SecurityGroups: 
-      - Ref: "InstanceSecurityGroup"
-    SpotPrice: "0.05"
-    InstanceType: 
-      Ref: "InstanceType"
+---
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      KeyName: 
+        Ref: "KeyName"
+      ImageId: 
+        Fn::FindInMap: 
+          - "AWSRegionArch2AMI"
+          - Ref: "AWS::Region"
+          - Fn::FindInMap: 
+              - "AWSInstanceType2Arch"
+              - Ref: "InstanceType"
+              - "Arch"
+      SecurityGroups: 
+        - Ref: "InstanceSecurityGroup"
+      SpotPrice: "0.05"
+      InstanceType: 
+        Ref: "InstanceType"
 ```
 
 ### Launch Configuration with IAM Instance Profile<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile"></a>
@@ -417,31 +423,33 @@ This example demonstrates a launch configuration that uses the `IamInstanceProfi
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "ImageId":{
-        "Fn::FindInMap":[
-          "AWSRegionArch2AMI",
-          {
-            "Ref":"AWS::Region"
-          },
-          {
-            "Fn::FindInMap":[
-              "AWSInstanceType2Arch",
-              {
-                "Ref":"InstanceType"
-              },
-              "Arch"
-            ]
-          }
-        ]
-      },
-      "InstanceType":{
-        "Ref":"InstanceType"
-      },
-      "IamInstanceProfile":{
-        "Ref":"RootInstanceProfile"
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "ImageId":{
+          "Fn::FindInMap":[
+            "AWSRegionArch2AMI",
+            {
+              "Ref":"AWS::Region"
+            },
+            {
+              "Fn::FindInMap":[
+                "AWSInstanceType2Arch",
+                {
+                  "Ref":"InstanceType"
+                },
+                "Arch"
+              ]
+            }
+          ]
+        },
+        "InstanceType":{
+          "Ref":"InstanceType"
+        },
+        "IamInstanceProfile":{
+          "Ref":"RootInstanceProfile"
+        }
       }
     }
   }
@@ -451,21 +459,23 @@ This example demonstrates a launch configuration that uses the `IamInstanceProfi
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_IAM_Instance_Profile--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    ImageId: 
-      Fn::FindInMap: 
-        - "AWSRegionArch2AMI"
-        - Ref: "AWS::Region"
-        - Fn::FindInMap: 
-            - "AWSInstanceType2Arch"
-            - Ref: "InstanceType"
-            - "Arch"
-    InstanceType: 
-      Ref: "InstanceType"
-    IamInstanceProfile: 
-      Ref: "RootInstanceProfile"
+---
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      ImageId: 
+        Fn::FindInMap: 
+          - "AWSRegionArch2AMI"
+          - Ref: "AWS::Region"
+          - Fn::FindInMap: 
+              - "AWSInstanceType2Arch"
+              - Ref: "InstanceType"
+              - "Arch"
+      InstanceType: 
+        Ref: "InstanceType"
+      IamInstanceProfile: 
+        Ref: "RootInstanceProfile"
 ```
 
 ### Launch Configuration with a Provisioned IOPS EBS Volume<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume"></a>
@@ -488,25 +498,28 @@ For more performance tips, see [Amazon EBS Volume Performance on Linux Instances
 
 ```
 {
-  "myLaunchConfig":{
-    "Type":"AWS::AutoScaling::LaunchConfiguration",
-    "Properties":{
-      "KeyName":{
-        "Ref":"KeyName"
-      },
-      "ImageId":"ami-7430ba44",
-      "UserData":{
-        "Fn::Base64":{
-          "Ref":"WebServerPort"
-        }
-      },
-      "SecurityGroups":[
-        {
-          "Ref":"InstanceSecurityGroup"
-        }
-      ],
-      "InstanceType":"m1.large",
-      "EbsOptimized":"true"
+  "Resources":{
+    "myLaunchConfig":{
+      "Type":"AWS::AutoScaling::LaunchConfiguration",
+      "Properties":{
+        "KeyName":{
+          "Ref":"KeyName"
+        },
+        "ImageId":"ami-7430ba44",
+        "UserData":{
+          "Fn::Base64":{
+            "Ref":"WebServerPort"
+          }
+        },
+        "SecurityGroups":[
+          {
+            "Ref":"InstanceSecurityGroup"
+          },
+          "sg-903004f8"
+        ],
+        "InstanceType":"m1.large",
+        "EbsOptimized":"true"
+      }
     }
   }
 }
@@ -515,17 +528,20 @@ For more performance tips, see [Amazon EBS Volume Performance on Linux Instances
 #### YAML<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_a_Provisioned_IOPS_EBS_Volume--yaml"></a>
 
 ```
-myLaunchConfig: 
-  Type: AWS::AutoScaling::LaunchConfiguration
-  Properties: 
-    KeyName: 
-      Ref: "KeyName"
-    ImageId: "ami-7430ba44"
-    UserData: 
-      Fn::Base64: 
-        Ref: "WebServerPort"
-    SecurityGroups: 
-      - Ref: "InstanceSecurityGroup"
-    InstanceType: "m1.large"
-    EbsOptimized: "true"
+---
+Resources:
+  myLaunchConfig: 
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties: 
+      KeyName: 
+        Ref: "KeyName"
+      ImageId: "ami-7430ba44"
+      UserData: 
+        Fn::Base64: 
+          Ref: "WebServerPort"
+      SecurityGroups: 
+        - Ref: "InstanceSecurityGroup"
+        - sg-903004f8
+      InstanceType: "m1.large"
+      EbsOptimized: "true"
 ```

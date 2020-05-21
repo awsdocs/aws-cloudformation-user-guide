@@ -35,7 +35,7 @@ A cluster query language expression to apply to the constraint\. For more inform
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-ecs-taskdefinition-taskdefinitionplacementconstraint-type"></a>
-The type of constraint\. The `DistinctInstance` constraint ensures that each task in a particular group is running on a different container instance\. The `MemberOf` constraint restricts selection to be from a group of valid candidates\.  
+The type of constraint\. The `MemberOf` constraint restricts selection to be from a group of valid candidates\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `memberOf`  

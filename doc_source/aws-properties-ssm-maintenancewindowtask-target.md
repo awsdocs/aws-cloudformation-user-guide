@@ -32,8 +32,8 @@ User\-defined criteria for sending commands that target instances that meet the 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `^[\p{L}\p{Z}\p{N}_.:/=\-@]*$`  
+*Maximum*: `163`  
+*Pattern*: `^[\p{L}\p{Z}\p{N}_.:/=\-@]*$|resource-groups:ResourceTypeFilters|resource-groups:Name`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-maintenancewindowtask-target-values"></a>

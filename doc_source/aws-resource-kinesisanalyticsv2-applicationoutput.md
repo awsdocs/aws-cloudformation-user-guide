@@ -46,7 +46,7 @@ The name of the application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Output`  <a name="cfn-kinesisanalyticsv2-applicationoutput-output"></a>
- Describes an SQL\-based Amazon Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\.   
+ Describes a SQL\-based Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\.   
 *Required*: Yes  
 *Type*: [Output](aws-properties-kinesisanalyticsv2-applicationoutput-output.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

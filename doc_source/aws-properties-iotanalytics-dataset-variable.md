@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset Variable<a name="aws-properties-iotanalytics-dataset-variable"></a>
 
-An instance of a variable to be passed to the "containerAction" execution\. Each variable must have a name and a value given by one of "stringValue", "datasetContentVersionValue", or "outputFileUriValue"\.
+An instance of a variable to be passed to the `containerAction` execution\. Each variable must have a name and a value given by one of `stringValue`, `datasetContentVersionValue`, or `outputFileUriValue`\.
 
 ## Syntax<a name="aws-properties-iotanalytics-dataset-variable-syntax"></a>
 
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-dataset-variable-properties"></a>
 
 `DatasetContentVersionValue`  <a name="cfn-iotanalytics-dataset-variable-datasetcontentversionvalue"></a>
-The value of the variable as a structure that specifies a data set content version\.  
+The value of the variable as a structure that specifies a dataset content version\.  
 *Required*: No  
 *Type*: [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

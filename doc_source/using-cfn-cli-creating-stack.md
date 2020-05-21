@@ -10,6 +10,10 @@ You can use your own bucket and manage its permissions by manually uploading tem
 
 By default, `aws cloudformation describe-stacks` returns parameter values\. To prevent sensitive parameter values such as passwords from being returned, include a `NoEcho` property set to `TRUE` in your AWS CloudFormation template\.
 
+**Important**  
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+
 The following example creates the `myteststack` stack:
 
 ```

@@ -51,8 +51,6 @@ If you specify a name, you cannot perform updates that require replacement of th
 The number of hours for the data records that are stored in shards to remain accessible\. The default value is 24\. For more information about the stream retention period, see [Changing the Data Retention Period](https://docs.aws.amazon.com/streams/latest/dev/kinesis-extended-retention.html) in the Amazon Kinesis Developer Guide\.   
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `168`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShardCount`  <a name="cfn-kinesis-stream-shardcount"></a>
@@ -60,11 +58,10 @@ The number of shards that the stream uses\. For greater provisioned throughput, 
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
-*Maximum*: `100000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamEncryption`  <a name="cfn-kinesis-stream-streamencryption"></a>
-Enables or updates server\-side encryption using an AWS KMS key for a specified stream\.   
+When specified, enables or updates server\-side encryption using an AWS KMS key for a specified stream\. Removing this property from your stack template and updating your stack disables encryption\.  
 *Required*: No  
 *Type*: [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

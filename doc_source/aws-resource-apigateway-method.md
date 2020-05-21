@@ -69,7 +69,7 @@ A list of authorization scopes configured on the method\. The scopes are used wi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizationType`  <a name="cfn-apigateway-method-authorizationtype"></a>
-The method's authorization type\. For valid values, see [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *API Gateway API Reference*\.  
+The method's authorization type\. This parameter is required\. For valid values, see [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *API Gateway API Reference*\.  
 If you specify the `AuthorizerId` property, specify `CUSTOM` for this property\.
 *Required*: No  
 *Type*: String  
@@ -106,7 +106,7 @@ A friendly operation name for the method\. For example, you can assign the `Oper
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestModels`  <a name="cfn-apigateway-method-requestmodels"></a>
-The resources that are used for the response's content type\. Specify response models as key\-value pairs \(string\-to\-string mapping\), with a content type as the key and a `Model` resource name as the value\.   
+The resources that are used for the request's content type\. Specify request models as key\-value pairs \(string\-to\-string mapping\), with a content type as the key and a `Model` resource name as the value\.   
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -153,26 +153,22 @@ The following example creates a mock GET method for the `MyApi` API\.
 
 ```
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "RestApi": {
-            "Type": "AWS::ApiGateway::RestApi",
-            "Properties": {
-                "Name": "myRestApi"
-            }
-        },
-        "GatewayResponse": {
-            "Type": "AWS::ApiGateway::GatewayResponse",
-            "Properties": {
-                "ResponseParameters": {
-                    "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
-                    "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
-                },
-                "ResponseType": "MISSING_AUTHENTICATION_TOKEN",
-                "RestApiId": {
-                    "Ref": "RestApi"
-                },
-                "StatusCode": "404"
+    "MockMethod": {
+        "Type": "AWS::ApiGateway::Method",
+        "Properties": {
+            "RestApiId": {
+                "Ref": "MyApi"
+            },
+            "ResourceId": {
+                "Fn::GetAtt": [
+                    "MyApi",
+                    "RootResourceId"
+                ]
+            },
+            "HttpMethod": "GET",
+            "AuthorizationType": "NONE",
+            "Integration": {
+                "Type": "MOCK"
             }
         }
     }
@@ -182,21 +178,17 @@ The following example creates a mock GET method for the `MyApi` API\.
 #### YAML<a name="aws-resource-apigateway-method--examples--Mock_Method--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  RestApi:
-    Type: AWS::ApiGateway::RestApi
-    Properties:
-      Name: myRestApi
-  GatewayResponse:
-    Type: AWS::ApiGateway::GatewayResponse
-    Properties:
-      ResponseParameters:
-        gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
-        gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
-      ResponseType: MISSING_AUTHENTICATION_TOKEN
-      RestApiId: !Ref RestApi
-      StatusCode: '404'
+MockMethod:
+  Type: 'AWS::ApiGateway::Method'
+  Properties:
+    RestApiId: !Ref MyApi
+    ResourceId: !GetAtt 
+      - MyApi
+      - RootResourceId
+    HttpMethod: GET
+    AuthorizationType: NONE
+    Integration:
+      Type: MOCK
 ```
 
 ### Lambda Proxy<a name="aws-resource-apigateway-method--examples--Lambda_Proxy"></a>
@@ -210,51 +202,37 @@ Use the [AWS::Lambda::Permission](https://docs.aws.amazon.com/AWSCloudFormation/
 
 ```
 {
-    "Parameters": {
-        "apiName": {
-            "Type": "String"
-        },
-        "responseParameter1": {
-            "Type": "String"
-        },
-        "responseParameter2": {
-            "Type": "String"
-        },
-        "responseType": {
-            "Type": "String"
-        },
-        "statusCode": {
-            "Type": "String"
+    "ProxyResource": {
+        "Type": "AWS::ApiGateway::Resource",
+        "Properties": {
+            "RestApiId": {
+                "Ref": "LambdaSimpleProxy"
+            },
+            "ParentId": {
+                "Fn::GetAtt": [
+                    "LambdaSimpleProxy",
+                    "RootResourceId"
+                ]
+            },
+            "PathPart": "{proxy+}"
         }
     },
-    "Resources": {
-        "RestApi": {
-            "Type": "AWS::ApiGateway::RestApi",
-            "Properties": {
-                "Name": {
-                    "Ref": "apiName"
-                }
-            }
-        },
-        "GatewayResponse": {
-            "Type": "AWS::ApiGateway::GatewayResponse",
-            "Properties": {
-                "ResponseParameters": {
-                    "gatewayresponse.header.k1": {
-                        "Ref": "responseParameter1"
-                    },
-                    "gatewayresponse.header.k2": {
-                        "Ref": "responseParameter2"
-                    }
-                },
-                "ResponseType": {
-                    "Ref": "responseType"
-                },
-                "RestApiId": {
-                    "Ref": "RestApi"
-                },
-                "StatusCode": {
-                    "Ref": "statusCode"
+    "ProxyResourceANY": {
+        "Type": "AWS::ApiGateway::Method",
+        "Properties": {
+            "RestApiId": {
+                "Ref": "LambdaSimpleProxy"
+            },
+            "ResourceId": {
+                "Ref": "ProxyResource"
+            },
+            "HttpMethod": "ANY",
+            "AuthorizationType": "NONE",
+            "Integration": {
+                "Type": "AWS_PROXY",
+                "IntegrationHttpMethod": "POST",
+                "Uri": {
+                    "Fn::Sub": "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaForSimpleProxy.Arn}/invocations"
                 }
             }
         }
@@ -265,31 +243,26 @@ Use the [AWS::Lambda::Permission](https://docs.aws.amazon.com/AWSCloudFormation/
 #### YAML<a name="aws-resource-apigateway-method--examples--Lambda_Proxy--yaml"></a>
 
 ```
-Parameters:
-    apiName :
-        Type : String
-    responseParameter1:
-        Type : String
-    responseParameter2:
-        Type : String
-    responseType:
-        Type : String
-    statusCode:
-        Type : String
-Resources :
-    RestApi:
-        Type: AWS::ApiGateway::RestApi
-        Properties:
-            Name: !Ref apiName
-    GatewayResponse:
-        Type: AWS::ApiGateway::GatewayResponse
-        Properties:
-            ResponseParameters:
-                gatewayresponse.header.k1 : !Ref responseParameter1
-                gatewayresponse.header.k2 : !Ref responseParameter2
-            ResponseType: !Ref responseType
-            RestApiId: !Ref RestApi
-            StatusCode: !Ref statusCode
+ProxyResource:
+  Type: 'AWS::ApiGateway::Resource'
+  Properties:
+    RestApiId: !Ref LambdaSimpleProxy
+    ParentId: !GetAtt 
+      - LambdaSimpleProxy
+      - RootResourceId
+    PathPart: '{proxy+}'
+ProxyResourceANY:
+  Type: 'AWS::ApiGateway::Method'
+  Properties:
+    RestApiId: !Ref LambdaSimpleProxy
+    ResourceId: !Ref ProxyResource
+    HttpMethod: ANY
+    AuthorizationType: NONE
+    Integration:
+      Type: AWS_PROXY
+      IntegrationHttpMethod: POST
+      Uri: !Sub >-
+        arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${LambdaForSimpleProxy.Arn}/invocations
 ```
 
 ### Associated Request Validator<a name="aws-resource-apigateway-method--examples--Associated_Request_Validator"></a>

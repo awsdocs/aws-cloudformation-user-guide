@@ -41,35 +41,34 @@ Properties:
 ## Properties<a name="aws-resource-docdb-dbinstance-properties"></a>
 
 `AutoMinorVersionUpgrade`  <a name="cfn-docdb-dbinstance-autominorversionupgrade"></a>
-Indicates that minor engine upgrades are applied automatically to the DB instance during the maintenance window\.  
+Indicates that minor engine upgrades are applied automatically to the instance during the maintenance window\.  
 Default: `true`   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-docdb-dbinstance-availabilityzone"></a>
- The Amazon EC2 Availability Zone that the DB instance is created in\.  
+The Amazon EC2 Availability Zone that the instance is created in\.   
 Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
- Example: `us-east-1d`   
- Constraint: The `AvailabilityZone` parameter can't be specified if the `MultiAZ` parameter is set to `true`\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.   
+Example: `us-east-1d`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBClusterIdentifier`  <a name="cfn-docdb-dbinstance-dbclusteridentifier"></a>
-The identifier of the DB cluster that the instance will belong to\.  
+The identifier of the cluster that the instance will belong to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBInstanceClass`  <a name="cfn-docdb-dbinstance-dbinstanceclass"></a>
-The compute and memory capacity of the DB instance; for example, `db.m4.large`\. If you change the class of an instance there can be some interruption in the cluster's service\.  
+The compute and memory capacity of the instance; for example, `db.m4.large`\. If you change the class of an instance there can be some interruption in the cluster's service\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBInstanceIdentifier`  <a name="cfn-docdb-dbinstance-dbinstanceidentifier"></a>
-The DB instance identifier\. This parameter is stored as a lowercase string\.  
+The instance identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
 + Must contain from 1 to 63 letters, numbers, or hyphens\.
 + The first character must be a letter\.
@@ -90,7 +89,7 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-docdb-dbinstance-tags"></a>
-The tags to be assigned to the DB instance\.  
+The tags to be assigned to the instance\. You can assign up to 10 tags to an instance\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,7 +111,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-docdb-dbinstance-return-values-fn--getatt-fn--getatt"></a>
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
-The connection endpoint for the DB instance\. For example: `sample-cluster.cluster-abcdefghijkl.us-east-1.docdb.amazonaws.com`\.
+The connection endpoint for the instance\. For example: `sample-cluster.cluster-abcdefghijkl.us-east-1.docdb.amazonaws.com`\.
 
 `Port`  <a name="Port-fn::getatt"></a>
 The port number on which the database accepts connections, such as `27017`\.
@@ -127,13 +126,13 @@ The port number on which the database accepts connections, such as `27017`\.
 {
    "Type" : "AWS::DocDB::DBInstance",
    "Properties" : {
-      "AutoMinorVersionUpgrade" : Boolean,
-      "AvailabilityZone" : String,
-      "DBClusterIdentifier" : String,
-      "DBInstanceClass" : String,
-      "DBInstanceIdentifier" : String,
-      "PreferredMaintenanceWindow" : String,
-      "Tags" : [ Tag, ... ]
+      "AutoMinorVersionUpgrade" : true,
+      "AvailabilityZone" : "us-east-1c",
+      "DBClusterIdentifier" : "sample-cluster",
+      "DBInstanceClass" : "db.r5.large",
+      "DBInstanceIdentifier" : "sample-cluster-instance-0",
+      "PreferredMaintenanceWindow" : "sat:06:54-sat:07:24",
+      "Tags" : [{ "Key": "String","Value": "String" }]
    }
 }
 ```
@@ -143,14 +142,16 @@ The port number on which the database accepts connections, such as `27017`\.
 ```
 Type: "AWS::DocDB::DBInstance"
 Properties:
-   AutoMinorVersionUpgrade: Boolean
-   AvailabilityZone: String
-   DBClusterIdentifier: String
-   DBInstanceClass: String
-   DBInstanceIdentifier: String
-   PreferredMaintenanceWindow: String
+   AutoMinorVersionUpgrade: true
+   AvailabilityZone: "us-east-1c"
+   DBClusterIdentifier: "sample-cluster"
+   DBInstanceClass: "db.r5.large"
+   DBInstanceIdentifier: "sample-cluster-instance-0"
+   PreferredMaintenanceWindow: "sat:06:54-sat:07:24"
    Tags:
-      - Tag
+      - 
+         Key: "String"
+         Value: "String"
 ```
 
 ## See Also<a name="aws-resource-docdb-dbinstance--seealso"></a>

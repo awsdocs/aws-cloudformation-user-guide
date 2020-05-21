@@ -49,18 +49,23 @@ Properties:
 The identifier of the bundle for the WorkSpace\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^wsb-[0-9a-z]{8,63}$`
+*Pattern*: `^wsb-[0-9a-z]{8,63}$`  
+*Update requires*: Updates are not supported\.
 
 `DirectoryId`  <a name="cfn-workspaces-workspace-directoryid"></a>
 The identifier of the AWS Directory Service directory for the WorkSpace\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^d-[0-9a-f]{8,63}$`
+*Minimum*: `10`  
+*Maximum*: `65`  
+*Pattern*: `^d-[0-9a-f]{8,63}$`  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `RootVolumeEncryptionEnabled`  <a name="cfn-workspaces-workspace-rootvolumeencryptionenabled"></a>
 Indicates whether the data stored on the root volume is encrypted\.  
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: Updates are not supported\.
 
 `Tags`  <a name="cfn-workspaces-workspace-tags"></a>
 The tags for the WorkSpace\.  
@@ -69,7 +74,7 @@ The tags for the WorkSpace\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserName`  <a name="cfn-workspaces-workspace-username"></a>
-The username of the user for the WorkSpace\. This username must exist in the AWS Directory Service directory for the WorkSpace\.  
+The user name of the user for the WorkSpace\. This user name must exist in the AWS Directory Service directory for the WorkSpace\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -79,12 +84,14 @@ The username of the user for the WorkSpace\. This username must exist in the AWS
 `UserVolumeEncryptionEnabled`  <a name="cfn-workspaces-workspace-uservolumeencryptionenabled"></a>
 Indicates whether the data stored on the user volume is encrypted\.  
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: Updates are not supported\.
 
 `VolumeEncryptionKey`  <a name="cfn-workspaces-workspace-volumeencryptionkey"></a>
-The KMS key used to encrypt data stored on your WorkSpace\.  
+The symmetric AWS KMS customer master key \(CMK\) used to encrypt data stored on your WorkSpace\. Amazon WorkSpaces does not support asymmetric CMKs\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: Updates are not supported\.
 
 `WorkspaceProperties`  <a name="cfn-workspaces-workspace-workspaceproperties"></a>
 The WorkSpace properties\.  

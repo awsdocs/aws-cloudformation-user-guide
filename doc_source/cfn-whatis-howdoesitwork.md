@@ -50,14 +50,14 @@ AWS CloudFormation provisions and configures resources by making calls to the AW
 
 After all the resources have been created, AWS CloudFormation reports that your stack has been created\. You can then start using the resources in your stack\. If stack creation fails, AWS CloudFormation rolls back your changes by deleting the resources that it created\.
 
-## Updating a Stack with Change Sets<a name="w4784ab1b5c17c17"></a>
+## Updating a Stack with Change Sets<a name="w6074ab1b5c17c17"></a>
 
 When you need to update your stack's resources, you can modify the stack's template\. You don't need to create a new stack and delete the old one\. To update a stack, create a change set by submitting a modified version of the original stack template, different input parameter values, or both\. AWS CloudFormation compares the modified template with the original template and generates a change set\. The change set lists the proposed changes\. After reviewing the changes, you can execute the change set to update your stack or you can create a new change set\. The following diagram summarizes the workflow for updating a stack\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/update-stack-diagram.png)
 
 **Important**  
-Updates can cause interruptions\. Depending on the resource and properties that you are updating, an update might interrupt or even replace an existing resource\. For more information, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
+Updates can cause interruptions\. Depending on the resource and properties that you are updating, an update might interrupt or even replace an existing resource\. For more information, see [AWS CloudFormation Stack Updates](using-cfn-updating-stacks.md)\.
 
 1. You can modify an AWS CloudFormation stack template by using [AWS CloudFormation Designer](https://console.aws.amazon.com/cloudformation/designer) or a text editor\. For example, if you want to change the instance type for an EC2 instance, you would change the value of the `InstanceType` property in the original stack's template\.
 
@@ -77,7 +77,7 @@ Change sets don't indicate whether your stack update will be successful\. For ex
 
 1. Execute the change set that you want to apply to your stack\. AWS CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, AWS CloudFormation rolls back changes to restore the stack to the last known working state\.
 
-## Deleting a Stack<a name="w4784ab1b5c17c19"></a>
+## Deleting a Stack<a name="w6074ab1b5c17c19"></a>
 
 When you delete a stack, you specify the stack to delete, and AWS CloudFormation deletes the stack and all the resources in that stack\. You can delete stacks by using the AWS CloudFormation [console](cfn-console-delete-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.html)\.
 
@@ -85,6 +85,6 @@ If you want to delete a stack but want to retain some resources in that stack, y
 
 After all the resources have been deleted, AWS CloudFormation signals that your stack has been successfully deleted\. If AWS CloudFormation cannot delete a resource, the stack will not be deleted\. Any resources that haven't been deleted will remain until you can successfully delete the stack\.
 
-## Additional Resources<a name="w4784ab1b5c17c21"></a>
+## Additional Resources<a name="w6074ab1b5c17c21"></a>
 + For more information about creating AWS CloudFormation templates, see [Template Anatomy](template-anatomy.md)\.
 + For more information about creating, updating, or deleting stacks, see [Working with Stacks](stacks.md)\.

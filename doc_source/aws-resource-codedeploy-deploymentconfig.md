@@ -73,7 +73,7 @@ The following example requires at least 75% of the fleet to be healthy\. For exa
   "Properties" : {
     "MinimumHealthyHosts" : {
     "Type" : "FLEET_PERCENT",
-    "Value" : "75"
+    "Value" : 75
     }
   }
 }

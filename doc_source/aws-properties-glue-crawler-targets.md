@@ -10,6 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md), ... ],
+  "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md), ... ],
   "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md), ... ],
   "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ [S3Target](aws-properties-glue-crawler-s3target.md), ... ]
 }
@@ -18,6 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-crawler-targets-syntax.yaml"></a>
 
 ```
+  [CatalogTargets](#cfn-glue-crawler-targets-catalogtargets): 
+    - [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md)
+  [DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets): 
+    - [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md)
   [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
     - [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)
   [S3Targets](#cfn-glue-crawler-targets-s3targets): 
@@ -25,6 +31,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-targets-properties"></a>
+
+`CatalogTargets`  <a name="cfn-glue-crawler-targets-catalogtargets"></a>
+Specifies AWS Glue Data Catalog targets\.  
+*Required*: No  
+*Type*: List of [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DynamoDBTargets`  <a name="cfn-glue-crawler-targets-dynamodbtargets"></a>
+Specifies Amazon DynamoDB targets\.  
+*Required*: No  
+*Type*: List of [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JdbcTargets`  <a name="cfn-glue-crawler-targets-jdbctargets"></a>
 Specifies JDBC targets\.  

@@ -46,9 +46,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Action`  <a name="cfn-pinpoint-campaign-message-action"></a>
 The action to occur if a recipient taps the push notification\. Valid values are:  
-+ OPEN\_APP \- Your app opens or it becomes the foreground app if it was sent to the background\. This is the default action\.
-+ DEEP\_LINK \- Your app opens and displays a designated user interface in the app\. This setting uses the deep\-linking features of iOS and Android\.
-+ URL \- The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify\.
++  `OPEN_APP` \- Your app opens or it becomes the foreground app if it was sent to the background\. This is the default action\.
++  `DEEP_LINK` \- Your app opens and displays a designated user interface in the app\. This setting uses the deep\-linking features of iOS and Android\.
++  `URL` \- The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,7 @@ The URL of the image or video to display in the push notification\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RawContent`  <a name="cfn-pinpoint-campaign-message-rawcontent"></a>
-The raw, JSON\-formatted string to use as the payload for the notification message\. This value overrides other values for the message\.  
+The raw, JSON\-formatted string to use as the payload for the notification message\. If specified, this value overrides all other content for the message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

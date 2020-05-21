@@ -42,17 +42,20 @@ A description of the lifecycle policy\. The characters ^\[0\-9A\-Za\-z \_\-\]\+$
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `500`  
+*Pattern*: `[0-9A-Za-z _-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleArn`  <a name="cfn-dlm-lifecyclepolicy-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used to run the operations specified by the lifecycle policy\.  
 *Required*: Conditional  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `arn:aws:iam::\d+:role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyDetails`  <a name="cfn-dlm-lifecyclepolicy-policydetails"></a>
 The configuration details of the lifecycle policy\.  
-Target tags cannot be re\-used across lifecycle policies\.  
 *Required*: Conditional  
 *Type*: [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -47,7 +47,7 @@ The ID of the subnet\.
 
 ### Ref<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the subnet network ACL association\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the subnet network ACL association\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

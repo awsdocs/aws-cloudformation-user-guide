@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-metricsconfiguration-properties"></a>
 
 `Id`  <a name="cfn-s3-bucket-metricsconfiguration-id"></a>
-The ID used to identify the metrics configuration\.  
+The ID used to identify the metrics configuration\. This can be any value you choose that helps you identify your metrics configuration\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

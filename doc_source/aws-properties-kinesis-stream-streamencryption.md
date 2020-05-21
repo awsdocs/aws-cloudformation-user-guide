@@ -34,7 +34,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The encryption type to use\. The only valid value is `KMS`\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `KMS | NONE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyId`  <a name="cfn-kinesis-stream-streamencryption-keyid"></a>

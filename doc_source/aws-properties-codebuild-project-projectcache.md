@@ -1,6 +1,6 @@
 # AWS::CodeBuild::Project ProjectCache<a name="aws-properties-codebuild-project-projectcache"></a>
 
- `ProjectCache` is a property of the [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource that specifies information about the cache for the build project\.
+ `ProjectCache` is a property of the [AWS CodeBuild Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html) resource that specifies information about the cache for the build project\. If `ProjectCache` is not specified, then both of its properties default to `NO_CACHE`\.
 
 ## Syntax<a name="aws-properties-codebuild-project-projectcache-syntax"></a>
 
@@ -46,7 +46,7 @@ Information about the cache location:
 +  `LOCAL_CUSTOM_CACHE` mode caches directories you specify in the buildspec file\. This mode is a good choice if your build scenario is not suited to one of the other three local cache modes\. If you use a custom cache: 
   +  Only directories can be specified for caching\. You cannot specify individual files\. 
   +  Symlinks are used to reference cached directories\. 
-  +  Cached directories are linked to your build before it downloads its project sources\. Cached items are overriden if a source item has the same name\. Directories are specified using cache paths in the buildspec file\. 
+  +  Cached directories are linked to your build before it downloads its project sources\. Cached items are overridden if a source item has the same name\. Directories are specified using cache paths in the buildspec file\. 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
