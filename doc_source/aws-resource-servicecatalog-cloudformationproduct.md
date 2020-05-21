@@ -1,4 +1,4 @@
-# AWS::ServiceCatalog::CloudformationProduct<a name="aws-resource-servicecatalog-cloudformationproduct"></a>
+# AWS::ServiceCatalog::CloudFormationProduct<a name="aws-resource-servicecatalog-cloudformationproduct"></a>
 
 Specifies a product\.
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type" : "AWS::ServiceCatalog::CloudformationProduct",
+  "Type" : "AWS::ServiceCatalog::CloudFormationProduct",
   "Properties" : {
       "[AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage)" : String,
       "[Description](#cfn-servicecatalog-cloudformationproduct-description)" : String,
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-resource-servicecatalog-cloudformationproduct-syntax.yaml"></a>
 
 ```
-Type: AWS::ServiceCatalog::CloudformationProduct
+Type: AWS::ServiceCatalog::CloudFormationProduct
 Properties: 
   [AcceptLanguage](#cfn-servicecatalog-cloudformationproduct-acceptlanguage): String
   [Description](#cfn-servicecatalog-cloudformationproduct-description): String
