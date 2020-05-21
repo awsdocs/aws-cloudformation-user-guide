@@ -42,7 +42,7 @@ The ID of the Active Directory group to grant access\. Required when `AuthorizeA
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AuthorizeAllGroups`  <a name="cfn-ec2-clientvpnauthorizationrule-authorizeallgroups"></a>
-Indicates whether to grant access to all clients\. Use `true` to grant all clients who successfully establish a VPN connection access to the network\. Must be specified as `true` when no `AccessGroupId` is specified\.  
+Indicates whether to grant access to all clients\. Use `true` to grant all clients who successfully establish a VPN connection access to the network\. Must be set to `true` if `AccessGroupId` is not specified\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
