@@ -305,6 +305,5 @@ When you create alias resource record sets, you must specify `Z2FDTNDATAQYW2` fo
  9.       Type: A
 10.       AliasTarget:
 11.         HostedZoneId: Z2FDTNDATAQYW2
-12.         DNSName:
-13.           !GetAtt: myCloudFrontDistribution.DomainName
+12.         DNSName: GetAtt 'myCloudFrontDistribution.DomainName'
 ```
