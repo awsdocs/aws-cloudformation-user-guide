@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DirectoryService::MicrosoftAD",
   "Properties" : {
-      "[CreateAlias](#cfn-directoryservice-microsoftad-createalias)" : Boolean,
+      "[CreateAlias](#cfn-directoryservice-microsoftad-createalias)" : String,
       "[Edition](#cfn-directoryservice-microsoftad-edition)" : String,
       "[EnableSso](#cfn-directoryservice-microsoftad-enablesso)" : Boolean,
       "[Name](#cfn-directoryservice-microsoftad-name)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DirectoryService::MicrosoftAD
 Properties: 
-  [CreateAlias](#cfn-directoryservice-microsoftad-createalias): Boolean
+  [CreateAlias](#cfn-directoryservice-microsoftad-createalias): String
   [Edition](#cfn-directoryservice-microsoftad-edition): String
   [EnableSso](#cfn-directoryservice-microsoftad-enablesso): Boolean
   [Name](#cfn-directoryservice-microsoftad-name): String
@@ -44,7 +44,7 @@ Properties:
 Specifies an alias for a directory and assigns the alias to the directory\. The alias is used to construct the access URL for the directory, such as `http://<alias>.awsapps.com`\. By default, AWS CloudFormation does not create an alias\.  
 After an alias has been created, it cannot be deleted or reused, so this operation should only be used when absolutely necessary\.
 *Required*: No  
-*Type*: Boolean  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Edition`  <a name="cfn-directoryservice-microsoftad-edition"></a>
