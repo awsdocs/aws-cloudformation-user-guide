@@ -62,7 +62,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-servicediscovery-httpnamespace-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the namespace, such as `arn:aws:service-discovery:us-east-1:123456789012:http-namespace/http-namespace-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the namespace, such as `arn:aws:servicediscovery:us-east-1:123456789012:http-namespace/http-namespace-a1bzhi`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the namespace\.
