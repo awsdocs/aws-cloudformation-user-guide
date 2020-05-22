@@ -1,8 +1,6 @@
-# Amazon SageMaker Model VpcConfig<a name="aws-properties-sagemaker-model-vpcconfig"></a>
+# AWS::SageMaker::Model VpcConfig<a name="aws-properties-sagemaker-model-vpcconfig"></a>
 
-<a name="aws-properties-sagemaker-model-vpcconfig-description"></a>The `VpcConfig` property type specifies a VPC that your hosted models have access to\. Control access to and from your training and model containers by configuring the VPC\. For more information, see [Protect Models by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com//sagemaker/latest/dg/host-vpc.html)\.
-
-<a name="aws-properties-sagemaker-model-vpcconfig-inheritance"></a> `VpcConfig` is a property of the [AWS::SageMaker::Model](aws-resource-sagemaker-model.md) resource\.
+Specifies a VPC that your training jobs and hosted models have access to\. Control access to and from your training and model containers by configuring the VPC\. For more information, see [Protect Endpoints by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Training Jobs by Using an Amazon Virtual Private Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html)\. 
 
 ## Syntax<a name="aws-properties-sagemaker-model-vpcconfig-syntax"></a>
 
@@ -12,30 +10,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Subnets](#cfn-sagemaker-model-vpcconfig-subnets)" : [String, ... ],
-  "[SecurityGroupIds](#cfn-sagemaker-model-vpcconfig-securitygroupids): [String, ... ]
+  "[SecurityGroupIds](#cfn-sagemaker-model-vpcconfig-securitygroupids)" : [ String, ... ],
+  "[Subnets](#cfn-sagemaker-model-vpcconfig-subnets)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-sagemaker-model-vpcconfig-syntax.yaml"></a>
 
 ```
-[Subnets](#cfn-sagemaker-model-vpcconfig-subnets): 
+  [SecurityGroupIds](#cfn-sagemaker-model-vpcconfig-securitygroupids): 
     - String
-[SecurityGroupIds](#cfn-sagemaker-model-vpcconfig-securitygroupids): 
+  [Subnets](#cfn-sagemaker-model-vpcconfig-subnets): 
     - String
 ```
 
 ## Properties<a name="aws-properties-sagemaker-model-vpcconfig-properties"></a>
 
-`Subnets`  <a name="cfn-sagemaker-model-vpcconfig-subnets"></a>
-The ID of the subnets in the VPC to which you want to connect your training job or model\.   
- *Required*: Yes  
- *Type*: List of String values  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
 `SecurityGroupIds`  <a name="cfn-sagemaker-model-vpcconfig-securitygroupids"></a>
-The VPC security group IDs, in the form sg\-xxxxxxxx\. Specify the security groups for the VPC that is specified in the Subnets field\.   
- *Required*: Yes  
- *Type*: List of String values  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The VPC security group IDs, in the form sg\-xxxxxxxx\. Specify the security groups for the VPC that is specified in the `Subnets` field\.  
+*Required*: Yes  
+*Type*: List of String  
+*Maximum*: `5`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Subnets`  <a name="cfn-sagemaker-model-vpcconfig-subnets"></a>
+The ID of the subnets in the VPC to which you want to connect your training job or model\. For information about the availability of specific instance types, see [Supported Instance Types and Availability Zones](https://docs.aws.amazon.com/sagemaker/latest/dg/instance-types-az.html)\.  
+*Required*: Yes  
+*Type*: List of String  
+*Maximum*: `16`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

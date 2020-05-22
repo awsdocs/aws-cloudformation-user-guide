@@ -8,10 +8,10 @@ This section helps you get started using StackSets, and answers common questions
 
 **Topics**
 + [StackSets Concepts](stacksets-concepts.md)
-+ [Prerequisites: Granting Permissions for Stack Set Operations](stacksets-prereqs.md)
++ [Prerequisites for Stack Set Operations](stacksets-prereqs.md)
 + [Getting Started with AWS CloudFormation StackSets](stacksets-getting-started.md)
 + [Configuring a target account gate in AWS CloudFormation StackSets](stacksets-account-gating.md)
++ [Detecting Unmanaged Configuration Changes in Stack Sets](stacksets-drift.md)
 + [Best Practices](stacksets-bestpractices.md)
-+ [Limitations of StackSets](stacksets-limitations.md)
 + [AWS CloudFormation StackSets Sample Templates](stacksets-sampletemplates.md)
 + [Troubleshooting AWS CloudFormation StackSets](stacksets-troubleshooting.md)

@@ -1,6 +1,6 @@
 # AWS::ApiGateway::RestApi<a name="aws-resource-apigateway-restapi"></a>
 
-The `AWS::ApiGateway::RestApi` resource contains a collection of Amazon API Gateway resources and methods that can be invoked through HTTPS endpoints\. For more information, see [restapi:create](https://docs.aws.amazon.com//apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*\.
+The `AWS::ApiGateway::RestApi` resource creates a REST API\. For more information, see [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*\.
 
 **Note**  
 On January 1, 2016, the Swagger Specification was donated to the [OpenAPI initiative](https://www.openapis.org/), becoming the foundation of the OpenAPI Specification\.
@@ -14,20 +14,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "Type" : "AWS::ApiGateway::RestApi",
-  "Properties" : {  
-    "[ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype)" : String,
-    "[BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes)" : [ String, ... ],
-    "[Body](#cfn-apigateway-restapi-body)" : JSON object,
-    "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : [*S3Location*](aws-properties-apitgateway-restapi-bodys3location.md),
-    "[CloneFrom](#cfn-apigateway-restapi-clonefrom)" : String,
-    "[Description](#cfn-apigateway-restapi-description)" : String,      
-    "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : [*EndpointConfiguration*](aws-properties-apigateway-restapi-endpointconfiguration.md),
-    "[FailOnWarnings](#cfn-apigateway-restapi-failonwarning)" : Boolean,
-    "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
-    "[Name](#cfn-apigateway-restapi-name)" : String,
-    "[Parameters](#cfn-apigateway-restapi-parameters)" : { String:String, ... },
-    "[Policy](#cfn-apigateway-restapi-policy)" : JSON object
-  }
+  "Properties" : {
+      "[ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype)" : String,
+      "[BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes)" : [ String, ... ],
+      "[Body](#cfn-apigateway-restapi-body)" : Json,
+      "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : [S3Location](aws-properties-apigateway-restapi-s3location.md),
+      "[CloneFrom](#cfn-apigateway-restapi-clonefrom)" : String,
+      "[Description](#cfn-apigateway-restapi-description)" : String,
+      "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md),
+      "[FailOnWarnings](#cfn-apigateway-restapi-failonwarnings)" : Boolean,
+      "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
+      "[Name](#cfn-apigateway-restapi-name)" : String,
+      "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key : Value, ...},
+      "[Policy](#cfn-apigateway-restapi-policy)" : Json,
+      "[Tags](#cfn-apigateway-restapi-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -35,156 +36,168 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::RestApi
-Properties:
+Properties: 
   [ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype): String
-  [BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes):
+  [BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes): 
     - String
-  [Body](#cfn-apigateway-restapi-body): JSON object
-  [BodyS3Location](#cfn-apigateway-restapi-bodys3location):
-    [*S3Location*](aws-properties-apitgateway-restapi-bodys3location.md)
+  [Body](#cfn-apigateway-restapi-body): Json
+  [BodyS3Location](#cfn-apigateway-restapi-bodys3location): 
+    [S3Location](aws-properties-apigateway-restapi-s3location.md)
   [CloneFrom](#cfn-apigateway-restapi-clonefrom): String
   [Description](#cfn-apigateway-restapi-description): String
-  [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): [*EndpointConfiguration*](aws-properties-apigateway-restapi-endpointconfiguration.md)
-  [FailOnWarnings](#cfn-apigateway-restapi-failonwarning): Boolean
+  [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): 
+    [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md)
+  [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings): Boolean
   [MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize): Integer
   [Name](#cfn-apigateway-restapi-name): String
-  [Parameters](#cfn-apigateway-restapi-parameters):
-    String: String
-  [Policy](#cfn-apigateway-restapi-policy): JSON object
+  [Parameters](#cfn-apigateway-restapi-parameters): 
+    Key : Value
+  [Policy](#cfn-apigateway-restapi-policy): Json
+  [Tags](#cfn-apigateway-restapi-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w13ab1c21c10c20c72c11"></a>
+## Properties<a name="aws-resource-apigateway-restapi-properties"></a>
 
 `ApiKeySourceType`  <a name="cfn-apigateway-restapi-apikeysourcetype"></a>
 The source of the API key for metering requests according to a usage plan\. Valid values are:  
 + `HEADER` to read the API key from the `X-API-Key` header of a request\.
-+ `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from a custom authorizer\.
++ `AUTHORIZER` to read the API key from the `UsageIdentifierKey` from a Lambda authorizer\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com//apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\. Duplicates are not allowed\.  
+The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Body`  <a name="cfn-apigateway-restapi-body"></a>
-An OpenAPI specification that defines a set of RESTful APIs in the JSON format\. For YAML templates, you can also provide the specification in the YAML format\.  
+An OpenAPI specification that defines a set of RESTful APIs in JSON format\. For YAML templates, you can also provide the specification in YAML format\.  
 *Required*: No  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BodyS3Location`  <a name="cfn-apigateway-restapi-bodys3location"></a>
 The Amazon Simple Storage Service \(Amazon S3\) location that points to an OpenAPI file, which defines a set of RESTful APIs in JSON or YAML format\.  
 *Required*: No  
-*Type*: [Amazon API Gateway RestApi S3Location](aws-properties-apitgateway-restapi-bodys3location.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [S3Location](aws-properties-apigateway-restapi-s3location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloneFrom`  <a name="cfn-apigateway-restapi-clonefrom"></a>
-The ID of the API Gateway `RestApi` resource that you want to clone\.  
+The ID of the `RestApi` resource that you want to clone\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-restapi-description"></a>
-A description of the purpose of this API Gateway `RestApi` resource\.  
+A description of the `RestApi` resource\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointConfiguration`  <a name="cfn-apigateway-restapi-endpointconfiguration"></a>
 A list of the endpoint types of the API\. Use this property when creating an API\. When importing an existing API, specify the endpoint configuration types using the `Parameters` property\.  
- *Required*: No  
- *Type*: [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`FailOnWarnings`  <a name="cfn-apigateway-restapi-failonwarning"></a>
+`FailOnWarnings`  <a name="cfn-apigateway-restapi-failonwarnings"></a>
 Indicates whether to roll back the resource if a warning occurs while API Gateway is creating the `RestApi` resource\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinimumCompressionSize`  <a name="cfn-apigateway-restapi-minimumcompressionsize"></a>
 A nullable integer that is used to enable compression \(with non\-negative between 0 and 10485760 \(10M\) bytes, inclusive\) or disable compression \(with a null value\) on an API\. When compression is enabled, compression or decompression is not applied on the payload if the payload size is smaller than this value\. Setting it to zero allows compression for any payload size\.  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-restapi-name"></a>
-A name for the API Gateway `RestApi` resource\.  
-*Required*: Conditional\. Required if you don't specify a OpenAPI definition\.  
+A name for the `RestApi` resource\.  
+*Required*: Conditional  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-apigateway-restapi-parameters"></a>
 Custom header parameters for the request\.  
-For more information on specifying parameters when importing an API, see [import\-rest\-api](https://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*\.  
 *Required*: No  
-*Type*: String to String map  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-apigateway-restapi-policy"></a>
-A policy document that contains the permissions for this `RestApi` resource, in JSON format\.  
+A policy document that contains the permissions for the `RestApi` resource, in JSON format\. To set the ARN for the policy, use the `!Join` intrinsic function with `""` as delimiter and values of `"execute-api:/"` and `"*"`\.  
 *Required*: No  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-restapi-returnvalues"></a>
+`Tags`  <a name="cfn-apigateway-restapi-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the API\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-apigateway-restapi-ref"></a>
+## Return Values<a name="aws-resource-apigateway-restapi-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the `RestApi` ID, such as `a1bcdef2gh`\.
+### Ref<a name="aws-resource-apigateway-restapi-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `RestApi` ID, such as `a1bcdef2gh`\.
 
-### Fn::GetAtt<a name="aws-resource-apigateway-restapi-examplegetatt"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attribute and a sample return value\.
+### Fn::GetAtt<a name="aws-resource-apigateway-restapi-return-values-fn--getatt"></a>
 
-`RootResourceId`  
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-restapi-return-values-fn--getatt-fn--getatt"></a>
+
+`RootResourceId`  <a name="RootResourceId-fn::getatt"></a>
 The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+## Examples<a name="aws-resource-apigateway-restapi--examples"></a>
 
-## Examples<a name="aws-resource-apigateway-restapi-examples"></a>
+### Based on OpenAPI specification<a name="aws-resource-apigateway-restapi--examples--Based_on_OpenAPI_specification"></a>
 
-### <a name="aws-resource-apigateway-restapi-example1"></a>
+The following example creates an API Gateway RestApi resource based on an OpenAPI specification\.
 
-The following example creates an API Gateway `RestApi` resource based on an OpenAPI specification\.
-
-#### JSON<a name="aws-resource-apigateway-restapi-example1.json"></a>
+#### JSON<a name="aws-resource-apigateway-restapi--examples--Based_on_OpenAPI_specification--json"></a>
 
 ```
-"MyRestApi": {
-  "Type": "AWS::ApiGateway::RestApi",
-  "Properties": {
-    "Body": {
-      OpenAPI specification
+{
+    "MyRestApi": {
+        "Type": "AWS::ApiGateway::RestApi",
+        "Properties": {
+            "Body": {
+                "OpenAPI specification": null
+            },
+            "Description": "A test API",
+            "Name": "MyRestAPI"
+        }
     }
-    "Description": "A test API",
-    "Name": "MyRestAPI"
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-restapi-example1.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-restapi--examples--Based_on_OpenAPI_specification--yaml"></a>
 
 ```
-MyRestApi: 
-  Type: AWS::ApiGateway::RestApi
+MyRestApi:
+  Type: 'AWS::ApiGateway::RestApi'
   Properties:
     Body:
-      OpenAPI specification    
-    Description: "A test API"
-    Name: "MyRestAPI"
+      OpenAPI specification: null
+    Description: A test API
+    Name: MyRestAPI
 ```
 
-### <a name="aws-resource-apigateway-restapi-example2"></a>
+### With endpoint type<a name="aws-resource-apigateway-restapi--examples--With_endpoint_type"></a>
 
-The following example creates an API Gateway `RestApi` resource with an endpoint type\.
+The following example creates an API Gateway RestApi resource with an endpoint type\.
 
-#### JSON<a name="aws-resource-apigateway-restapi-example2.json"></a>
+#### JSON<a name="aws-resource-apigateway-restapi--examples--With_endpoint_type--json"></a>
 
 ```
 {
@@ -216,7 +229,7 @@ The following example creates an API Gateway `RestApi` resource with an endpoint
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-restapi-example.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-restapi--examples--With_endpoint_type--yaml"></a>
 
 ```
 Parameters:
@@ -234,11 +247,11 @@ Resources:
       Name: !Ref apiName
 ```
 
-### <a name="aws-resource-apigateway-restapi-example3"></a>
+### With REGIONAL endpoint type<a name="aws-resource-apigateway-restapi--examples--With_REGIONAL_endpoint_type"></a>
 
-The following example imports an API Gateway `RestApi` resource with an endpoint type of REGIONAL\.
+The following example imports an API Gateway RestApi resource with an endpoint type of REGIONAL\.
 
-#### JSON<a name="aws-resource-apigateway-restapi-example3.json"></a>
+#### JSON<a name="aws-resource-apigateway-restapi--examples--With_REGIONAL_endpoint_type--json"></a>
 
 ```
 {
@@ -272,7 +285,7 @@ The following example imports an API Gateway `RestApi` resource with an endpoint
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-restapi-example3.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-restapi--examples--With_REGIONAL_endpoint_type--yaml"></a>
 
 ```
 Resources :
@@ -295,11 +308,11 @@ Resources :
                 endpointConfigurationTypes: REGIONAL
 ```
 
-### <a name="aws-resource-apigateway-restapi-example4"></a>
+### With ApiKeySourceType<a name="aws-resource-apigateway-restapi--examples--With_ApiKeySourceType"></a>
 
-The following example creates an API Gateway `RestApi` resource with ApiKeySourceType, BinaryMediaTypes and MinimumCompressionSize\.
+The following example creates an API Gateway RestApi resource with ApiKeySourceType, BinaryMediaTypes and MinimumCompressionSize\.
 
-#### JSON<a name="aws-resource-apigateway-restapi-example4.json"></a>
+#### JSON<a name="aws-resource-apigateway-restapi--examples--With_ApiKeySourceType--json"></a>
 
 ```
 {
@@ -347,7 +360,7 @@ The following example creates an API Gateway `RestApi` resource with ApiKeySourc
 }
 ```
 
-#### YAML<a name="aws-resource-apigateway-restapi-example4.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-restapi--examples--With_ApiKeySourceType--yaml"></a>
 
 ```
 Parameters:
@@ -373,6 +386,5 @@ Resources:
             Name: !Ref apiName
 ```
 
-## See Also<a name="aws-resource-apigateway-restapi-seealso"></a>
-+ [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) operation in the *Amazon API Gateway REST API Reference*
-+ [import\-rest\-api](https://docs.aws.amazon.com/cli/latest/reference/apigateway/import-rest-api.html) operation in the *AWS CLI Command Reference*
+## See Also<a name="aws-resource-apigateway-restapi--seealso"></a>
++ [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*

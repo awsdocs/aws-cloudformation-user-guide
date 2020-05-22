@@ -1,11 +1,6 @@
 # AWS::ServiceCatalog::Portfolio<a name="aws-resource-servicecatalog-portfolio"></a>
 
-Creates a portfolio for AWS Service Catalog\. For more information, see [CreatePortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolio.html) in the *AWS Service Catalog Developer Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-servicecatalog-portfolio-syntax)
-+ [Properties](#aws-resource-servicecatalog-portfolio-properties)
-+ [Return Values](#aws-resource-servicecatalog-portfolio-returnvalues)
+Specifies a portfolio\.
 
 ## Syntax<a name="aws-resource-servicecatalog-portfolio-syntax"></a>
 
@@ -17,73 +12,88 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceCatalog::Portfolio",
   "Properties" : {
-    "[ProviderName](#cfn-servicecatalog-portfolio-providername)" : String,
-    "[Description](#cfn-servicecatalog-portfolio-description)" : String,
-    "[DisplayName](#cfn-servicecatalog-portfolio-displayname)" : String,
-    "[AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage)" : String,
-    "[Tags](#cfn-servicecatalog-portfolio-tags)" : [ [*Resource Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage)" : String,
+      "[Description](#cfn-servicecatalog-portfolio-description)" : String,
+      "[DisplayName](#cfn-servicecatalog-portfolio-displayname)" : String,
+      "[ProviderName](#cfn-servicecatalog-portfolio-providername)" : String,
+      "[Tags](#cfn-servicecatalog-portfolio-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-servicecatalog-portfolio-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceCatalog::Portfolio"
-Properties:
-  [ProviderName](#cfn-servicecatalog-portfolio-providername): String
+Type: AWS::ServiceCatalog::Portfolio
+Properties: 
+  [AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage): String
   [Description](#cfn-servicecatalog-portfolio-description): String
   [DisplayName](#cfn-servicecatalog-portfolio-displayname): String
-  [AcceptLanguage](#cfn-servicecatalog-portfolio-acceptlanguage): String
+  [ProviderName](#cfn-servicecatalog-portfolio-providername): String
   [Tags](#cfn-servicecatalog-portfolio-tags): 
-    - [*Resource Tag*](aws-properties-resource-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-portfolio-properties"></a>
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolio-acceptlanguage"></a>
 The language code\.  
++  `en` \- English \(default\)
++  `jp` \- Japanese
++  `zh` \- Chinese
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalog-portfolio-description"></a>
 The description of the portfolio\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Maximum*: `2000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisplayName`  <a name="cfn-servicecatalog-portfolio-displayname"></a>
 The name to use for display purposes\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProviderName`  <a name="cfn-servicecatalog-portfolio-providername"></a>
 The name of the portfolio provider\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-servicecatalog-portfolio-tags"></a>
 One or more tags\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `20`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-portfolio-returnvalues"></a>
+## Return Values<a name="aws-resource-servicecatalog-portfolio-return-values"></a>
 
-### Ref<a name="aws-resource-servicecatalog-portfolio-ref"></a>
+### Ref<a name="aws-resource-servicecatalog-portfolio-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::ServiceCatalog::Portfolio` resource to the intrinsic `Ref` function, the function returns the portfolio identifier\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the portfolio identifier\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-servicecatalog-portfolio-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-servicecatalog-portfolio-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`PortfolioName`  
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-servicecatalog-portfolio-return-values-fn--getatt-fn--getatt"></a>
+
+`PortfolioName`  <a name="PortfolioName-fn::getatt"></a>
 The name of the portfolio\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+## See Also<a name="aws-resource-servicecatalog-portfolio--seealso"></a>
++ [CreatePortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolio.html) in the *AWS Service Catalog API Reference*

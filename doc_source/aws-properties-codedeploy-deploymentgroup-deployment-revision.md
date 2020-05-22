@@ -1,42 +1,52 @@
-# CodeDeploy DeploymentGroup Revision<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision"></a>
+# AWS::CodeDeploy::DeploymentGroup RevisionLocation<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision"></a>
 
-`Revision` is a property of the [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md) property that defines the location of the CodeDeploy application revision to deploy\.
+ `RevisionLocation` is a property that defines the location of the CodeDeploy application revision to deploy\. 
 
-## Syntax<a name="w13ab1c21c10c78c21c61b5"></a>
+## Syntax<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-syntax.json"></a>
 
 ```
 {
-  "[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation)" : GitHubLocation,
+  "[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation)" : [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md),
   "[RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype)" : String,
-  "[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location)" : S3Location
+  "[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location)" : [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-syntax.yaml"></a>
 
 ```
-[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation):
-  GitHubLocation
-[RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype): String
-[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location):
-  S3Location
+  [GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation): 
+    [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)
+  [RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype): String
+  [S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location): 
+    [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
 ```
 
-## Properties<a name="w13ab1c21c10c78c21c61b7"></a>
+## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-properties"></a>
 
 `GitHubLocation`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation"></a>
-If your application revision is stored in GitHub, information about the location where it is stored\.  
+Information about the location of application artifacts stored in GitHub\.  
 *Required*: No  
-*Type*: [CodeDeploy DeploymentGroup Deployment Revision GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)
+*Type*: [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RevisionType`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype"></a>
-The application revision's location, such as in an S3 bucket or GitHub repository\. For valid values, see [RevisionLocation](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_RevisionLocation.html) in the *AWS CodeDeploy API Reference*\.  
+The type of application revision:  
++ S3: An application revision stored in Amazon S3\.
++ GitHub: An application revision stored in GitHub \(EC2/On\-premises deployments only\)\.
++ String: A YAML\-formatted or JSON\-formatted string \(AWS Lambda deployments only\)\.
++ AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file for an AWS Lambda or Amazon ECS deployment\. The content is formatted as JSON or YAML stored as a RawString\.
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `AppSpecContent | GitHub | S3 | String`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Location`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
-If the application revision is stored in an S3 bucket, information about the location\.  
+Information about the location of a revision stored in Amazon S3\.   
 *Required*: No  
-*Type*: [CodeDeploy DeploymentGroup Deployment Revision S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
+*Type*: [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

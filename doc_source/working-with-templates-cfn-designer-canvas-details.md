@@ -2,7 +2,7 @@
 
 Designer displays your template resources as a diagram in the **canvas** pane\. You can modify the diagram's layout, add or remove resources, and add or remove connections between resources in this pane\. For example, you can add an Auto Scaling group and a launch configuration from the **Resource types** pane to the **canvas** pane\. To connect these related resources, you simply drag a connection between them\.
 
-## How Does Designer Model Resources?<a name="w13ab1c17c17c13c15b5"></a>
+## How Does Designer Model Resources?<a name="w6074ab1c19c17c13c15b5"></a>
 
 When you drag a resource from the **Resource types** pane to the **canvas** pane, Designer models it as a container or as a square object\.
 
@@ -18,7 +18,7 @@ Square objects resources can't be resized or contain other resources\. For examp
 
 ![\[Example of a square object.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-canvas-square.png)
 
-## Connecting Resources<a name="w13ab1c17c17c13c15b7"></a>
+## Connecting Resources<a name="w6074ab1c19c17c13c15b7"></a>
 
 You connect resources to create associations between related resources\. For example, when you add an Internet gateway and a VPC to the **canvas** pane, they have no relationship\. To attach the gateway to the VPC, you must connect them\. The method for connecting resources depends on the resource type and how Designer models the resource\. The following descriptions and figures explain each method\.
 
@@ -132,7 +132,7 @@ WebServerSecurityGroup:
         CidrIp: !Ref SSHLocation
 ```
 
-## Accessing Common Resource Actions with the Resource Menu<a name="w13ab1c17c17c13c15b9"></a>
+## Accessing Common Resource Actions with the Resource Menu<a name="w6074ab1c19c17c13c15b9"></a>
 
 The **Resource** menu provides easy access to common resource actions: editing resource properties, duplicating a resource, deleting a resource, or viewing the documentation for the resource\. To view the **Resource** menu, right\-click on a resource in the **canvas** pane\. The documentation link goes to the [template reference](aws-template-resource-type-ref.md), which describes the properties and syntax for that resource\.
 
@@ -140,7 +140,7 @@ The **Resource** menu provides easy access to common resource actions: editing r
 
 ![\[The resource menu with its four buttons.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-canvas-resourcemenu.png)
 
-## Defining Explicit Dependencies<a name="w13ab1c17c17c13c15c11"></a>
+## Defining Explicit Dependencies<a name="w6074ab1c19c17c13c15c11"></a>
 
 To specify the order in which AWS CloudFormation creates and deletes resources, you can create explicit dependencies\. Explicit dependencies are useful for overriding parallel resource creation and deletion\. AWS CloudFormation automatically determines which resources in a template can be processed in parallel and which cannot\. When you specify a property that references an attribute from another source \(using the `Ref` intrinsic function\) or gets an attribute from another resource \(with the `Fn::GetAtt` intrinsic function\) in the same template, this implies a dependency and AWS CloudFormation builds them in the correct order\.
 

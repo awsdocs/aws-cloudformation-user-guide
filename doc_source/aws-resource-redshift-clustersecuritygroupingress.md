@@ -1,12 +1,12 @@
 # AWS::Redshift::ClusterSecurityGroupIngress<a name="aws-resource-redshift-clustersecuritygroupingress"></a>
 
-Specifies inbound \(ingress\) rules for an Amazon Redshift security group\.
+Adds an inbound \(ingress\) rule to an Amazon Redshift security group\. Depending on whether the application accessing your cluster is running on the Internet or an Amazon EC2 instance, you can authorize inbound access to either a Classless Interdomain Routing \(CIDR\)/Internet Protocol \(IP\) range or to an Amazon EC2 security group\. You can add as many as 20 ingress rules to an Amazon Redshift security group\.
 
-**Topics**
-+ [Syntax](#aws-resource-redshift-clustersecuritygroupingress-syntax)
-+ [Properties](#w13ab1c21c10d195c30b9)
-+ [Template Snippet](#w13ab1c21c10d195c30c11)
-+ [See Also](#w13ab1c21c10d195c30c13)
+If you authorize access to an Amazon EC2 security group, specify *EC2SecurityGroupName* and *EC2SecurityGroupOwnerId*\. The Amazon EC2 security group and Amazon Redshift cluster must be in the same AWS Region\. 
+
+If you authorize access to a CIDR/IP address range, specify *CIDRIP*\. For an overview of CIDR blocks, see the Wikipedia article on [Classless Inter\-Domain Routing](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)\. 
+
+You must also associate the security group with a cluster so that clients running on these IP addresses or the EC2 instance are authorized to connect to the cluster\. For information about managing security groups, go to [Working with Security Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 ## Syntax<a name="aws-resource-redshift-clustersecuritygroupingress-syntax"></a>
 
@@ -18,56 +18,60 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Redshift::ClusterSecurityGroupIngress",
   "Properties" : {
-    "[ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname)" : String,
-    "[CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip)" : String,
-    "[EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname)" : String,
-    "[EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid)" : String
-  }
+      "[CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip)" : String,
+      "[ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname)" : String,
+      "[EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname)" : String,
+      "[EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-redshift-clustersecuritygroupingress-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterSecurityGroupIngress"
+Type: AWS::Redshift::ClusterSecurityGroupIngress
 Properties: 
-  [ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname): String
   [CIDRIP](#cfn-redshift-clustersecuritygroupingress-cidrip): String
+  [ClusterSecurityGroupName](#cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname): String
   [EC2SecurityGroupName](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupname): String
   [EC2SecurityGroupOwnerId](#cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid): String
 ```
 
-## Properties<a name="w13ab1c21c10d195c30b9"></a>
-
-`ClusterSecurityGroupName`  <a name="cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname"></a>
-The name of the Amazon Redshift security group that will be associated with the ingress rule\.  
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+## Properties<a name="aws-resource-redshift-clustersecuritygroupingress-properties"></a>
 
 `CIDRIP`  <a name="cfn-redshift-clustersecuritygroupingress-cidrip"></a>
-The IP address range that has inbound access to the Amazon Redshift security group\.  
+The IP range to be added the Amazon Redshift security group\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ClusterSecurityGroupName`  <a name="cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname"></a>
+The name of the security group to which the ingress rule is added\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EC2SecurityGroupName`  <a name="cfn-redshift-clustersecuritygroupingress-ec2securitygroupname"></a>
-The Amazon EC2 security group that will be added the Amazon Redshift security group\.  
+The EC2 security group to be added the Amazon Redshift security group\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EC2SecurityGroupOwnerId`  <a name="cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid"></a>
-The 12\-digit AWS account number of the owner of the Amazon EC2 security group that is specified by the `EC2SecurityGroupName` parameter\.  
-*Required*: Conditional\. If you specify the `EC2SecurityGroupName` property, you must specify this property\.  
+The AWS account number of the owner of the security group specified by the *EC2SecurityGroupName* parameter\. The AWS Access Key ID is not an acceptable value\.   
+Example: `111122223333`   
+Conditional\. If you specify the `EC2SecurityGroupName` property, you must specify this property\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Template Snippet<a name="w13ab1c21c10d195c30c11"></a>
+## Examples<a name="aws-resource-redshift-clustersecuritygroupingress--examples"></a>
 
-The following snippet describes a ingress rules for an Amazon Redshift cluster security group:
+### Ingress Rules<a name="aws-resource-redshift-clustersecuritygroupingress--examples--Ingress_Rules"></a>
 
-### JSON<a name="aws-resource-redshift-clustersecuritygroupingress-example.json"></a>
+The following snippet describes a ingress rules for an Amazon Redshift cluster security group\.
+
+#### JSON<a name="aws-resource-redshift-clustersecuritygroupingress--examples--Ingress_Rules--json"></a>
 
 ```
 "myClusterSecurityGroupIngressIP" : {
@@ -79,16 +83,13 @@ The following snippet describes a ingress rules for an Amazon Redshift cluster s
 }
 ```
 
-### YAML<a name="aws-resource-redshift-clustersecuritygroupingress-example.yaml"></a>
+#### YAML<a name="aws-resource-redshift-clustersecuritygroupingress--examples--Ingress_Rules--yaml"></a>
 
 ```
 myClusterSecurityGroupIngressIP: 
   Type: "AWS::Redshift::ClusterSecurityGroupIngress"
   Properties: 
     ClusterSecurityGroupName: 
-      Ref: "myClusterSecurityGroup"
+    Ref: "myClusterSecurityGroup"
     CIDRIP: "10.0.0.0/16"
 ```
-
-## See Also<a name="w13ab1c21c10d195c30c13"></a>
-+ [AWS::Redshift::ClusterSecurityGroup](aws-resource-redshift-clustersecuritygroup.md)

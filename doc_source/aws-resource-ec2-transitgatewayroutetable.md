@@ -1,12 +1,6 @@
 # AWS::EC2::TransitGatewayRouteTable<a name="aws-resource-ec2-transitgatewayroutetable"></a>
 
-Creates a route table for a transit gateway\. For more information, see [Amazon VPC Transit Gateways](https://docs.aws.amazon.com/vpc/latest/tgw/)\.
-
-**Topics**
-+ [Syntax](#aws-resource-ec2-transitgatewayroutetable-syntax)
-+ [Properties](#aws-resource-ec2-transitgatewayroutetable-properties)
-+ [Return Values](#aws-resource-ec2-transitgatewayroutetable-returnvalues)
-+ [See Also](#aws-resource-ec2-transitgatewayroutetable-seealso)
+Specifies a route table for a transit gateway\.
 
 ## Syntax<a name="aws-resource-ec2-transitgatewayroutetable-syntax"></a>
 
@@ -18,43 +12,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::TransitGatewayRouteTable",
   "Properties" : {
-    "[Tags](#cfn-ec2-transitgatewayroutetable-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ],
-    "[TransitGatewayId](#cfn-ec2-transitgatewayroutetable-transitgatewayid)" : String
-  }
+      "[Tags](#cfn-ec2-transitgatewayroutetable-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TransitGatewayId](#cfn-ec2-transitgatewayroutetable-transitgatewayid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ec2-transitgatewayroutetable-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::TransitGatewayRouteTable"
-Properties:
+Type: AWS::EC2::TransitGatewayRouteTable
+Properties: 
   [Tags](#cfn-ec2-transitgatewayroutetable-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)  
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitGatewayId](#cfn-ec2-transitgatewayroutetable-transitgatewayid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewayroutetable-properties"></a>
 
 `Tags`  <a name="cfn-ec2-transitgatewayroutetable-tags"></a>
-The tags to apply to the transit gateway route table\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+Any tags assigned to the route table\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewayroutetable-transitgatewayid"></a>
 The ID of the transit gateway\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-transitgatewayroutetable-returnvalues"></a>
+## Return Values<a name="aws-resource-ec2-transitgatewayroutetable-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-transitgatewayroutetable-ref"></a>
+### Ref<a name="aws-resource-ec2-transitgatewayroutetable-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::EC2::TransitGatewayRouteTable` resource to the intrinsic `Ref` function, the function returns the ID of the transit gateway route table, such as `tgw-rtb-020b99a6568edc33a`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the transit gateway route table\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-transitgatewayroutetable-seealso"></a>
-+ [CreateTransitGatewayRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayRouteTable.html) in the *Amazon EC2 API Reference*
+## See Also<a name="aws-resource-ec2-transitgatewayroutetable--seealso"></a>
++  [CreateTransitGatewayRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayRouteTable.html) in the *Amazon EC2 API Reference*

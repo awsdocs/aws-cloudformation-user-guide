@@ -1,8 +1,6 @@
-# AWS Glue Trigger Predicate<a name="aws-properties-glue-trigger-predicate"></a>
+# AWS::Glue::Trigger Predicate<a name="aws-properties-glue-trigger-predicate"></a>
 
-<a name="aws-properties-glue-trigger-predicate-description"></a>The `Predicate` property type specifies the predicate of an AWS Glue job trigger, which determines when it fires\.
-
-<a name="aws-properties-glue-trigger-predicate-inheritance"></a> `Predicate` is a property of the [AWS::Glue::Trigger](aws-resource-glue-trigger.md) resource\.
+Defines the predicate of the trigger, which determines when it fires\.
 
 ## Syntax<a name="aws-properties-glue-trigger-predicate-syntax"></a>
 
@@ -12,33 +10,32 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Logical](#cfn-glue-trigger-predicate-logical)" : String,
-  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ [*Condition*](aws-properties-glue-trigger-condition.md), ... ]
+  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ [Condition](aws-properties-glue-trigger-condition.md), ... ],
+  "[Logical](#cfn-glue-trigger-predicate-logical)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-glue-trigger-predicate-syntax.yaml"></a>
 
 ```
-[Logical](#cfn-glue-trigger-predicate-logical): String
-[Conditions](#cfn-glue-trigger-predicate-conditions): 
-  - [*Condition*](aws-properties-glue-trigger-condition.md)
+  [Conditions](#cfn-glue-trigger-predicate-conditions): 
+    - [Condition](aws-properties-glue-trigger-condition.md)
+  [Logical](#cfn-glue-trigger-predicate-logical): String
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-predicate-properties"></a>
 
-`Logical`  <a name="cfn-glue-trigger-predicate-logical"></a>
-The logical operator for the predicate\.  
-*Valid values*: `AND`  
- *Required*: Optional field if only one condition is listed\. If multiple conditions are listed, then this field is required\.  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `Conditions`  <a name="cfn-glue-trigger-predicate-conditions"></a>
-The conditions that determine when the trigger fires\.  
- *Required*: No  
- *Type*: List of [Condition](aws-properties-glue-trigger-condition.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A list of the conditions that determine when the trigger will fire\.  
+*Required*: No  
+*Type*: List of [Condition](aws-properties-glue-trigger-condition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-trigger-predicate-seealso"></a>
-+ [ Predicate Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Predicate) in the *AWS Glue Developer Guide*
+`Logical`  <a name="cfn-glue-trigger-predicate-logical"></a>
+An optional field if only one condition is listed\. If multiple conditions are listed, then this field is required\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-glue-trigger-predicate--seealso"></a>
++  [Predicate Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Predicate) in the *AWS Glue Developer Guide* 

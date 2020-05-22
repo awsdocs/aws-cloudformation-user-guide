@@ -1,31 +1,26 @@
 # AWS::EC2::VPNConnectionRoute<a name="aws-resource-ec2-vpn-connection-route"></a>
 
-A static route that is associated with a VPN connection between an existing virtual private gateway and a VPN customer gateway\. The static route allows traffic to be routed from the virtual private gateway to the VPN customer gateway\.
+Specifies a static route for a VPN connection between an existing virtual private gateway and a VPN customer gateway\. The static route allows traffic to be routed from the virtual private gateway to the VPN customer gateway\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-vpnconnectionroute-syntax)
-+ [Properties](#w13ab1c21c10d111d212b9)
-+ [Return Values](#w13ab1c21c10d111d212c11)
-+ [Example](#w13ab1c21c10d111d212c13)
-+ [See Also](#w13ab1c21c10d111d212c15)
+For more information, see [AWS Site\-to\-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) in the *AWS Site\-to\-Site VPN User Guide*\.
 
-## Syntax<a name="aws-resource-ec2-vpnconnectionroute-syntax"></a>
+## Syntax<a name="aws-resource-ec2-vpn-connection-route-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-vpnconnectionroute-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-vpn-connection-route-syntax.json"></a>
 
 ```
 {
-   "Type" : "AWS::EC2::VPNConnectionRoute",
-   "Properties" : {
+  "Type" : "AWS::EC2::VPNConnectionRoute",
+  "Properties" : {
       "[DestinationCidrBlock](#cfn-ec2-vpnconnectionroute-cidrblock)" : String,
       "[VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid)" : String
-   }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpnconnectionroute-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-vpn-connection-route-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::VPNConnectionRoute
@@ -34,52 +29,56 @@ Properties:
   [VpnConnectionId](#cfn-ec2-vpnconnectionroute-connectionid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d212b9"></a>
+## Properties<a name="aws-resource-ec2-vpn-connection-route-properties"></a>
 
 `DestinationCidrBlock`  <a name="cfn-ec2-vpnconnectionroute-cidrblock"></a>
-The CIDR block that is associated with the local subnet of the customer network\.  
-*Required*: Yes\.  
+The CIDR block associated with the local subnet of the customer network\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpnConnectionId`  <a name="cfn-ec2-vpnconnectionroute-connectionid"></a>
 The ID of the VPN connection\.  
-*Required*: Yes\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d111d212c11"></a>
+## Return Values<a name="aws-resource-ec2-vpn-connection-route-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d111d212c11b2"></a>
+### Ref<a name="aws-resource-ec2-vpn-connection-route-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN connection route\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10d111d212c13"></a>
+## Examples<a name="aws-resource-ec2-vpn-connection-route--examples"></a>
 
-### JSON<a name="aws-resource-ec2-vpnconnectionroute-example.json"></a>
+### VPN Connection Route<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route"></a>
+
+The following example specifies a VPN connection route\.
+
+#### JSON<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route--json"></a>
 
 ```
 "MyConnectionRoute0" : {
    "Type" : "AWS::EC2::VPNConnectionRoute",
-   "Properties" : {
-      "DestinationCidrBlock" : "10.0.0.0/16",
-      "VpnConnectionId" : {"Ref" : "Connection0"}
-   }
+    "Properties" : {
+       "DestinationCidrBlock" : "10.0.0.0/16",
+       "VpnConnectionId" : {"Ref" : "Connection0"}
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpnconnectionroute-example.yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route--yaml"></a>
 
 ```
 MyConnectionRoute0: 
   Type: AWS::EC2::VPNConnectionRoute
   Properties: 
-    DestinationCidrBlock: 10.0.0.0/16
-    VpnConnectionId: 
-      !Ref Connection0
+     DestinationCidrBlock: 10.0.0.0/16
+     VpnConnectionId: 
+     !Ref Connection0
 ```
 
-## See Also<a name="w13ab1c21c10d111d212c15"></a>
-+ [CreateVpnConnectionRoute](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnConnectionRoute.html) in the *Amazon EC2 API Reference*\.
+## See Also<a name="aws-resource-ec2-vpn-connection-route--seealso"></a>
++  [CreateVpnConnectionRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpnConnectionRoute.html) in the *Amazon EC2 API Reference*

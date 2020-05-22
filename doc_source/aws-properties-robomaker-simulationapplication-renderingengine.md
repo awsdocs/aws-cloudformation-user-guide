@@ -1,8 +1,6 @@
-# RoboMaker SimulationApplication RenderingEngine<a name="aws-properties-robomaker-simulationapplication-renderingengine"></a>
+# AWS::RoboMaker::SimulationApplication RenderingEngine<a name="aws-properties-robomaker-simulationapplication-renderingengine"></a>
 
-<a name="aws-properties-robomaker-simulationapplication-renderingengine-description"></a>The `RenderingEngine` property type specifies the rendering engine for an AWS RoboMaker simulation application\.
-
-<a name="aws-properties-robomaker-simulationapplication-renderingengine-inheritance"></a> `RenderingEngine` is a property of the [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md) resource\.
+Information about a rendering engine\.
 
 ## Syntax<a name="aws-properties-robomaker-simulationapplication-renderingengine-syntax"></a>
 
@@ -20,23 +18,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-robomaker-simulationapplication-renderingengine-syntax.yaml"></a>
 
 ```
-[Name](#cfn-robomaker-simulationapplication-renderingengine-name) : String,
-[Version](#cfn-robomaker-simulationapplication-renderingengine-version): String
+  [Name](#cfn-robomaker-simulationapplication-renderingengine-name): String
+  [Version](#cfn-robomaker-simulationapplication-renderingengine-version): String
 ```
 
 ## Properties<a name="aws-properties-robomaker-simulationapplication-renderingengine-properties"></a>
 
 `Name`  <a name="cfn-robomaker-simulationapplication-renderingengine-name"></a>
 The name of the rendering engine\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Allowed Values*: `OGRE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-robomaker-simulationapplication-renderingengine-version"></a>
 The version of the rendering engine\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-robomaker-simulationapplication-renderingengine-seealso"></a>
-+ [RenderingEngine](https://docs.aws.amazon.com/robomaker/latest/dg/API_RenderingEngine) in the *RoboMaker Developer Guide*
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4`  
+*Pattern*: `1.x`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

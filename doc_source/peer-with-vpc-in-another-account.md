@@ -1,6 +1,6 @@
 # Walkthrough: Peer with an Amazon VPC in Another AWS Account<a name="peer-with-vpc-in-another-account"></a>
 
-You can peer with a virtual private cloud \(VPC\) in another AWS account by using [AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md)\. This creates a networking connection between two VPCs that enables you to route traffic between them so they can communicate as if they were within the same network\. A VPC peering connection can help facilitate data access and data transfer\.
+You can peer with a virtual private cloud \(VPC\) in another AWS account by using [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html)\. This creates a networking connection between two VPCs that enables you to route traffic between them so they can communicate as if they were within the same network\. A VPC peering connection can help facilitate data access and data transfer\.
 
 To establish a VPC peering connection, you need to authorize two separate AWS accounts within a single AWS CloudFormation stack\.
 
@@ -22,11 +22,11 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
 1. In the AWS Management Console, choose **AWS CloudFormation**\.
 
-1. Choose **Create Stack**\.
+1. Choose **Create stack**\.
 
-1. You have several options\. To use AWS CloudFormation Designer to create a new, blank template, choose **Design template**\.
+1. You have several options\. To use AWS CloudFormation Designer to create a new, blank template, choose **Create template in Designer**\.
 
-   If you are creating the template in another text editor, choose **Upload a template to Amazon S3** or **Specify an Amazon S3 template URL**, as appropriate\.
+   If you are creating the template in another text editor, choose **Template is ready** and then **Amazon S3 URL** or **Upload a template file**, as appropriate\.
 
 1. Use the following example template to create the VPC and the cross\-account role allowing another account to achieve peering\.  
 **Example JSON**  
@@ -154,21 +154,21 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
 1. Accept the defaults, and then choose **Next**\.
 
-1. Choose **I acknowledge that AWS CloudFormation might create IAM resources**, and then choose **Create**\.
+1. Choose **I acknowledge that AWS CloudFormation might create IAM resources**, and then choose **Create stack**\.
 
 ## Step 2: Create a Template That Includes AWS::EC2::VPCPeeringConnection<a name="step-2-create-template-for-vpc-peering-connection-owner"></a>
 
 Now that you've created the VPC and cross\-account role, you can peer with the VPC using another AWS account \(the *requester account*\)\.
 
- **To create a template that includes the [AWS::EC2::VPCPeeringConnection](aws-resource-ec2-vpcpeeringconnection.md) resource \(example\)** 
+ **To create a template that includes the [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource \(example\)** 
 
 1. Go back to the AWS CloudFormation console home page\. 
 
-1. Choose **Create Stack**\.
+1. Choose **Create stack**\.
 
-1. Choose **Design template** to use AWS CloudFormation Designer to create a new, blank template\.
+1. Choose **Create template in Designer** to use AWS CloudFormation Designer to create a new, blank template\.
 
-   If you are creating the template in another text editor, choose **Upload a template to Amazon S3** or **Specify an Amazon S3 template URL**, as appropriate\.
+   If you are creating the template in another text editor, choose **Template is ready** and then **Amazon S3 URL** or **Upload a template file**, as appropriate\.
 
 1. Use the following example template to create a VPC and a VPC peering connection using the peer role you created in Step 1\.  
 **Example JSON**  
@@ -270,7 +270,7 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
 
 1. Accept the defaults, and then choose **Next**\.
 
-1. Choose **I acknowledge that AWS CloudFormation might create IAM resources**, and then choose **Create**\.
+1. Choose **I acknowledge that AWS CloudFormation might create IAM resources**, and then choose **Create stack**\.
 
 ## Creating a Template with a Highly Restrictive Policy<a name="create-template-with-highly-restrictive-policy"></a>
 

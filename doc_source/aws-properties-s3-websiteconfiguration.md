@@ -1,8 +1,10 @@
-# Amazon S3 Website Configuration Property<a name="aws-properties-s3-websiteconfiguration"></a>
+# AWS::S3::Bucket WebsiteConfiguration<a name="aws-properties-s3-websiteconfiguration"></a>
 
-`WebsiteConfiguration` is a property of the [ AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
+Specifies website configuration parameters for an Amazon S3 bucket\.
 
-## Syntax<a name="w13ab1c21c10d204c13d178b5"></a>
+## Syntax<a name="aws-properties-s3-websiteconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-syntax.json"></a>
 
@@ -10,60 +12,45 @@
 {
   "[ErrorDocument](#cfn-s3-websiteconfiguration-errordocument)" : String,
   "[IndexDocument](#cfn-s3-websiteconfiguration-indexdocument)" : String,
-  "[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo)" : Redirect all requests rule,
-  "[RoutingRules](#cfn-s3-websiteconfiguration-routingrules)" : [ Routing rule, ... ]
+  "[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo)" : [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md),
+  "[RoutingRules](#cfn-s3-websiteconfiguration-routingrules)" : [ [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-s3-websiteconfiguration-syntax.yaml"></a>
 
 ```
-[ErrorDocument](#cfn-s3-websiteconfiguration-errordocument): String
-[IndexDocument](#cfn-s3-websiteconfiguration-indexdocument): String
-[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo):
-  Redirect all requests rule
-[RoutingRules](#cfn-s3-websiteconfiguration-routingrules):
-  - Routing rule
+  [ErrorDocument](#cfn-s3-websiteconfiguration-errordocument): String
+  [IndexDocument](#cfn-s3-websiteconfiguration-indexdocument): String
+  [RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo): 
+    [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
+  [RoutingRules](#cfn-s3-websiteconfiguration-routingrules): 
+    - [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)
 ```
 
-## Properties<a name="w13ab1c21c10d204c13d178b7"></a>
+## Properties<a name="aws-properties-s3-websiteconfiguration-properties"></a>
 
 `ErrorDocument`  <a name="cfn-s3-websiteconfiguration-errordocument"></a>
 The name of the error document for the website\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexDocument`  <a name="cfn-s3-websiteconfiguration-indexdocument"></a>
 The name of the index document for the website\.  
-*Required*: Yes  
-*Type*: String
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedirectAllRequestsTo`  <a name="cfn-s3-websiteconfiguration-redirectallrequeststo"></a>
 The redirect behavior for every request to this bucket's website endpoint\.  
-If you specify this property, you cannot specify any other property\.
+If you specify this property, you can't specify any other property\.
 *Required*: No  
-*Type*: [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
+*Type*: [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoutingRules`  <a name="cfn-s3-websiteconfiguration-routingrules"></a>
 Rules that define when a redirect is applied and the redirect behavior\.  
 *Required*: No  
-*Type*: List of [RoutingRules](aws-properties-s3-websiteconfiguration-routingrules.md)
-
-## Example<a name="w13ab1c21c10d204c13d178b9"></a>
-
-```
-"S3Bucket" : {
-   "Type" : "AWS::S3::Bucket",
-   "Properties" : {
-      "AccessControl" : "PublicRead",
-      "WebsiteConfiguration" : {
-         "IndexDocument" : "index.html",
-         "ErrorDocument" : "error.html"
-      }
-   }
-}
-```
-
-## See Also<a name="w13ab1c21c10d204c13d178c11"></a>
-+ [Custom Error Document Support](http://docs.aws.amazon.com/AmazonS3/latest/dev/CustomErrorDocSupport.html) in the *Amazon Simple Storage Service Developer Guide*
-+ [Index Document Support](http://docs.aws.amazon.com/AmazonS3/latest/dev/IndexDocumentSupport.html) in the *Amazon Simple Storage Service Developer Guide*
+*Type*: List of [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,6 @@
-# AWS IoT Analytics Channel RetentionPeriod<a name="aws-properties-iotanalytics-channel-retentionperiod"></a>
+# AWS::IoTAnalytics::Channel RetentionPeriod<a name="aws-properties-iotanalytics-channel-retentionperiod"></a>
 
-<a name="aws-properties-iotanalytics-channel-retentionperiod-description"></a>The `RetentionPeriod` property type specifies how long, in days, message data is kept for an AWS IoT Analytics channel\.
-
-<a name="aws-properties-iotanalytics-channel-retentionperiod-inheritance"></a> `RetentionPeriod` is a property of the [AWS::IoTAnalytics::Channel](aws-resource-iotanalytics-channel.md) resource\.
+How long, in days, message data is kept\.
 
 ## Syntax<a name="aws-properties-iotanalytics-channel-retentionperiod-syntax"></a>
 
@@ -20,23 +18,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-channel-retentionperiod-syntax.yaml"></a>
 
 ```
-[NumberOfDays](#cfn-iotanalytics-channel-retentionperiod-numberofdays): Integer
-[Unlimited](#cfn-iotanalytics-channel-retentionperiod-unlimited): Boolean
+  [NumberOfDays](#cfn-iotanalytics-channel-retentionperiod-numberofdays): Integer
+  [Unlimited](#cfn-iotanalytics-channel-retentionperiod-unlimited): Boolean
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-channel-retentionperiod-properties"></a>
 
 `NumberOfDays`  <a name="cfn-iotanalytics-channel-retentionperiod-numberofdays"></a>
-The number of days that message data is kept\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The number of days that message data is kept\. The `unlimited` parameter must be false\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unlimited`  <a name="cfn-iotanalytics-channel-retentionperiod-unlimited"></a>
 If true, message data is kept indefinitely\.  
- *Required*: No  
- *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-iotanalytics-channel-retentionperiod-seealso"></a>
-+ [ CreateChannel](https://docs.aws.amazon.com/iotanalytics/latest/userguide/api.html#cli-iotanalytics-createchannel) in the *AWS IoT Analytics User Guide*
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

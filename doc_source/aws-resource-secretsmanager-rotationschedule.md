@@ -1,17 +1,9 @@
 # AWS::SecretsManager::RotationSchedule<a name="aws-resource-secretsmanager-rotationschedule"></a>
 
-The `AWS::SecretsManager::RotationSchedule` resource configures rotation for a secret\. The secret must already be configured with the details of the database or service\. If you define both the secret and the database or service in a AWS CloudFormation template, then define the [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
+The `AWS::SecretsManager::RotationSchedule` resource configures rotation for a secret\. You must have already configured the secret with the details of the database or service\. If you define both the secret and the database or service in an AWS CloudFormation template, then define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
 
 **Important**  
-When you configure rotation for a secret, Secrets Manager automatically rotates the secret one time\. Ensure that you configure all your clients to retrieve the secret using Secrets Manager before configuring rotation to prevent breaking them\.
-
-**Topics**
-+ [Syntax](#aws-resource-secretsmanager-rotationschedule-syntax)
-+ [Properties](#aws-resource-secretsmanager-rotationschedule-properties)
-+ [Return Values](#aws-resource-secretsmanager-rotationschedule-returnvalues)
-+ [Examples](#aws-resource-secretsmanager-rotationschedule-examples)
-+ [See Also](#aws-resource-secretsmanager-rotationschedule-seealso)
-+ [Secrets Manager RotationSchedule RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
+When you configure rotation for a secret, AWS CloudFormation automatically rotates the secret one time\. Be sure you configure all your clients to retrieve the secret using Secrets Manager before configuring rotation to prevent breaking them\.
 
 ## Syntax<a name="aws-resource-secretsmanager-rotationschedule-syntax"></a>
 
@@ -23,367 +15,468 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SecretsManager::RotationSchedule",
   "Properties" : {
-    "[SecretId](#cfn-secretsmanager-rotationschedule-secretid)" : String,
-    "[RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn)" : String,
-    "[RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules)" : [*RotationRules*](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
-  }
+      "[RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn)" : String,
+      "[RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules)" : [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md),
+      "[SecretId](#cfn-secretsmanager-rotationschedule-secretid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-secretsmanager-rotationschedule-syntax.yaml"></a>
 
 ```
-Type: "AWS::SecretsManager::RotationSchedule"
-Properties:
-  [SecretId](#cfn-secretsmanager-rotationschedule-secretid): String
+Type: AWS::SecretsManager::RotationSchedule
+Properties: 
   [RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn): String
-  [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules): [*RotationRules*](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
+  [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules): 
+    [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)
+  [SecretId](#cfn-secretsmanager-rotationschedule-secretid): String
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-rotationschedule-properties"></a>
 
-`SecretId`  <a name="cfn-secretsmanager-rotationschedule-secretid"></a>
-Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret that you want to rotate\. To reference a secret also that's created in this template, use the [Ref](intrinsic-function-reference-ref.md) function with the secret's logical ID\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
 `RotationLambdaARN`  <a name="cfn-secretsmanager-rotationschedule-rotationlambdaarn"></a>
-Specifies the ARN of the Lambda function that can rotate the secret\. If you don't specify this parameter, then the secret must already have the ARN of a Lambda function configured\. To reference a Lambda function that's also created in this template, use the [Ref](intrinsic-function-reference-ref.md) function with the function's logical ID\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the ARN of the Lambda function that can rotate the secret\. If you don't specify this parameter, then the secret must already have the ARN of a Lambda function configured\. To reference a Lambda function also created in this template, use the [Ref](https://docs.aws.amazon.com/git statusAWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the function's logical ID\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationRules`  <a name="cfn-secretsmanager-rotationschedule-rotationrules"></a>
 Specifies a structure that defines the rotation schedule for this secret\.  
- *Required*: No  
- *Type*: [Secrets Manager RotationSchedule RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: [RotationRules](aws-properties-secretsmanager-rotationschedule-rotationrules.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-secretsmanager-rotationschedule-returnvalues"></a>
+`SecretId`  <a name="cfn-secretsmanager-rotationschedule-secretid"></a>
+Specifies the ARN or the friendly name of the secret that you want to rotate\. To reference a secret also created in this template, use the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-### Ref<a name="aws-resource-secretsmanager-rotationschedule-ref"></a>
+## Return Values<a name="aws-resource-secretsmanager-rotationschedule-return-values"></a>
 
-When you pass the logical ID of an `AWS::SecretsManager::RotationSchedule` resource to the intrinsic `Ref` function, the function returns the ARN of the secret that's being configured, such as:
+### Ref<a name="aws-resource-secretsmanager-rotationschedule-return-values-ref"></a>
 
-`arn:aws:secretsmanager:us-west-2:123456789012:secret:my-path/my-secret-name-1a2b3c`
+When you pass the logical ID of an `AWS::SecretsManager::RotationSchedule` resource to the intrinsic `Ref` function, the function returns the ARN of the secret being configured, such as:
 
-This enables you to reference a secret that you create in one part of the stack template from within the definition of another resource later, in the same template\. You typically do this when you define the [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md) resource type\.
+*arn:aws:secretsmanager: us\-west\-2*:*123456789012*:secret:*my\-path/my\-secret\-name*\-*1a2b3c* 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+This enables you to reference a secret you create in one part of the stack template from within the definition of another resource later, in the same template\. You typically do this when you define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type\.
 
-### Fn::GetAtt<a name="aws-resource-secretsmanager-rotationschedule-getatt"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. This section lists the available attributes and a sample return value\.
+## Examples<a name="aws-resource-secretsmanager-rotationschedule--examples"></a>
 
-`VersionId`  
-The unique version ID of the new version of the secret created by the initial rotation that's triggered by this request\.
+The following examples display complete examples of creating a secret, creating an RDS database instance associated with the secret and configuring rotation\. The example shows how to define a Lambda rotation function, attach the required trust and permissions policies, and associate the function with the secret on a defined schedule\.
 
-## Examples<a name="aws-resource-secretsmanager-rotationschedule-examples"></a>
+RDS Secret Rotation
 
-### Configuring a Secret to Rotate<a name="aws-resource-secretsmanager-rotationschedule-addingrotation"></a>
+### Configuring RDS DB Secret Rotation<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_DB_Secret_Rotation"></a>
 
-The following example shows a complete example of creating a secret, creating an RDS DB instance that's associated with the secret, and configuring it to rotate\. It shows how to define a Lambda rotation function, attach the required trust and permissions policies, and then associate the function with the secret on a defined schedule\.
-
-**Note**  
-The JSON specification doesn't allow any kind of comments\. See the YAML example for comments\.
-
-#### JSON<a name="aws-resource-secretsmanager-rotationschedule-addingrotation.json"></a>
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_DB_Secret_Rotation--json"></a>
 
 ```
 {
-  "MyRDSInstanceRotationSecret": {
-    "Type": "AWS::SecretsManager::Secret",
-    "Properties": {
-      "Description": "This is my rds instance secret",
-      "GenerateSecretString": {
-        "SecretStringTemplate": "{\"username\": \"admin\"}",
-        "GenerateStringKey": "password",
-        "PasswordLength": 16,
-        "ExcludeCharacters": "\"@/\\"
-      }
-    }
-  },
-  "SecretRDSInstanceAttachment": {
-    "Type": "AWS::SecretsManager::SecretTargetAttachment",
-    "Properties": {
-      "SecretId": {"Ref": "MyRDSInstanceRotationSecret"},
-      "TargetId": {"Ref": "MyDBInstance"},
-      "TargetType": "AWS::RDS::DBInstance"
-    }
-  },
-  "MyDBInstance": {
-    "Type": "AWS::RDS::DBInstance",
-    "Properties": {
-      "AllocatedStorage": "’20’",
-      "DBInstanceClass": "db.t2.micro",
-      "Engine": "mysql",
-      "MasterUsername": {"Fn::Join": [
-        "",
-        ["{{resolve:secretsmanager:",{"Ref": "MyRDSInstanceRotationSecret"},"::username}}"]
-      ]},
-      "MasterUserPassword": {"Fn::Join": [
-        "",
-        ["{{resolve:secretsmanager:",{"Ref": "MyRDSInstanceRotationSecret"},"::password}}"]
-      ]},
-      "BackupRetentionPeriod": 0,
-      "DBInstanceIdentifier": "rotation-instance"
-    }
-  },
-  "MySecretRotationSchedule": {
-    "Type": "“AWS::SecretsManager::RotationSchedule\"",
-    "DependsOn": "SecretRDSInstanceAttachment",
-    "Properties": {
-      "SecretId": {"Ref": "MyRDSInstanceRotationSecret"},
-      "RotationLambdaARN": {"Fn::GetAtt": ["MyRotationLambda", "Arn"]},
-      "RotationRules": {
-        "AutomaticallyAfterDays": 5
-      }
-    }
-  },
-  "LambdaInvokePermission": {
-    "Type": "AWS::Lambda::Permission",
-    "DependsOn": "MyRotationLambda",
-    "Properties": {
-      "FunctionName": "cfn-rotation-lambda",
-      "Action": "lambda:InvokeFunction",
-      "Principal": "secretsmanager.amazonaws.com"
-    }
-  },
-  "MyLambdaExecutionRole": {
-    "Type": "AWS::IAM::Role",
-    "Properties": {
-      "RoleName": "cfn-rotation-lambda-role",
-      "AssumeRolePolicyDocument": {
-        "Version": "2012-10-17",
-        "Statement": [
-          {
-            "Effect": "Allow",
-            "Principal": {
-              "Service": [
-                "lambda.amazonaws.com"
-              ]
+      "AWSTemplateFormatVersion": "2010-09-09",
+      "Transform": "AWS::Serverless-2016-10-31",
+      "Resources": {
+        "MyRDSInstanceRotationSecret": {
+          "Type": "AWS::SecretsManager::Secret",
+          "Properties": {
+            "Description": "A Secrets Manager secret for my RDS DB instance",
+            "GenerateSecretString": {
+              "SecretStringTemplate": "{\"username\": \"admin\"}",
+              "GenerateStringKey": "password",
+              "PasswordLength": 16,
+              "ExcludeCharacters": "\"@/\\"
+            }
+          }
+        },
+        "SecretRDSInstanceAttachment": {
+          "Type": "AWS::SecretsManager::SecretTargetAttachment",
+          "Properties": {
+            "SecretId": {"Ref": "MyRDSInstanceRotationSecret"},
+            "TargetId": {"Ref": "MyDBInstance"},
+            "TargetType": "AWS::RDS::DBInstance"
+          }
+        },
+        "MyDBInstance": {
+          "Type": "AWS::RDS::DBInstance",
+          "Properties": {
+            "AllocatedStorage": 20,
+            "DBInstanceClass": "db.t2.micro",
+            "Engine": "mysql",
+            "MasterUsername": {"Fn::Sub": "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}"},
+            "MasterUserPassword": {"Fn::Sub": "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}"},
+            "BackupRetentionPeriod": 0
+          }
+        },
+        "MySecretRotationSchedule": {
+          "Type": "AWS::SecretsManager::RotationSchedule",
+          "DependsOn": "SecretRDSInstanceAttachment",
+          "Properties": {
+            "SecretId": {"Ref": "MyRDSInstanceRotationSecret"},
+            "RotationLambdaARN": {"Fn::GetAtt": ["MyRotationServerlessApp","Outputs.RotationLambdaARN"]},
+            "RotationRules": {
+              "AutomaticallyAfterDays": 30
+            }
+          }
+        },
+        "MyRotationServerlessApp": {
+          "Type": "AWS::Serverless::Application",
+          "Properties":{
+            "Location": {
+              "ApplicationId": "arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerRDSMySQLRotationSingleUser",
+              "SemanticVersion": "1.1.0"
             },
-            "Action": [
-              "sts:AssumeRole"
-            ]
-          }
-        ]
-      },
-      "Policies": [
-        {
-          "PolicyName": "AWSSecretsManagerRotationPolicy",
-          "PolicyDocument": {
-            "Version": "2012-10-17",
-            "Statement": [
-              {
-                "Effect": "Allow",
-                "Action": [
-                  "secretsmanager:DescribeSecret",
-                  "secretsmanager:GetSecretValue",
-                  "secretsmanager:PutSecretValue",
-                  "secretsmanager:UpdateSecretVersionStage"
-                ],
-                "Resource": {"Fn::Sub": "arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*"},
-                "Condition": {
-                  "StringEquals": {
-                    "secretsmanager:resource/AllowRotationLambdaArn": {
-                      "Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:cfn-rotation-lambda"
-                    }
-                  }
-                }
-              },
-              {
-                "Effect": "Allow",
-                "Action": [
-                  "secretsmanager:GetRandomPassword"
-                ],
-                "Resource": "*"
-              },
-              {
-                "Effect": "Allow",
-                "Action": [
-                  "logs:CreateLogGroup",
-                  "logs:CreateLogStream",
-                  "logs:PutLogEvents"
-                ],
-                "Resource": "arn:aws:logs:*:*:*"
-              },
-              {
-                "Effect": "Allow",
-                "Action": [
-                  "kms:Decrypt",
-                  "kms:DescribeKey",
-                  "kms:GenerateDataKey"
-                ],
-                "Resource": "*"
-              }
-            ]
+            "Parameters": {
+              "endpoint": {"Fn::Sub": "https://secretsmanager.${AWS::Region}.amazonaws.com"},
+              "functionName": "SecretsManagerMySQLRotationLambda"
+            }
           }
         }
-      ]
-    }
-  },
-  "MyRotationLambda": {
-    "Type": "AWS::Lambda::Function",
-    "Properties": {
-      "Runtime": "python2.7",
-      "Role": {"Fn::GetAtt": ["MyLambdaExecutionRole","Arn"]},
-      "Handler": "lambda_function.lambda_handler",
-      "Description": "This is a lambda to rotate MySql user passwd",
-      "FunctionName": "cfn-rotation-lambda",
-      "Environment": {
-        "Variables": {
-          "SECRETS_MANAGER_ENDPOINT": {"Fn::Sub": "https://secretsmanager.${AWS::Region}.amazonaws.com"}
-        }
-      },
-      "Code": {
-        "S3Bucket": "<% replace-this-with-name-of-s3-bucket-that-contains-lambda-function-code %>",
-        "S3Key": "<% replace-this-with-path-and-filename-of-zip-file-that-contains-lambda-function-code %>",
-        "S3ObjectVersion": "<% replace-this-with-lambda-zip-file-version-if-s3-bucket-versioning-is-enabled %>"
       }
     }
-  }
-}
 ```
 
-#### YAML<a name="aws-resource-secretsmanager-secret-addingrotation.yaml"></a>
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_DB_Secret_Rotation--yaml"></a>
 
 ```
-#This is a Secret resource with a randomly generated password in its SecretString JSON.
-  MyRDSInstanceRotationSecret:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Description: "This is my rds instance secret"
-      GenerateSecretString:
-        SecretStringTemplate: '{"username": "admin"}'
-        GenerateStringKey: "password"
-        PasswordLength: 16
-        ExcludeCharacters: '"@/\'
-
-  # This is an RDS instance resource. The master username and password use dynamic references
-  # to resolve values from Secrets Manager. The dynamic reference guarantees that CloudFormation
-  # will not log or persist the resolved value. We use a Ref to the secret resource's logical id
-  # to construct the dynamic reference, since the secret name is generated by CloudFormation.
-  MyDBInstance:
-    Type: AWS::RDS::DBInstance
-    Properties:
-      AllocatedStorage: 20
-      DBInstanceClass: db.t2.micro
-      Engine: mysql
-      MasterUsername: !Join ['', ['{{resolve:secretsmanager:', !Ref MyRDSInstanceRotationSecret, '::username}}' ]]
-      MasterUserPassword: !Join ['', ['{{resolve:secretsmanager:', !Ref MyRDSInstanceRotationSecret, '::password}}' ]]
-      BackupRetentionPeriod: 0
-      DBInstanceIdentifier: 'rotation-instance'
-
-  #This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
-  #the referenced RDS instance
-  SecretRDSInstanceAttachment:
-    Type: AWS::SecretsManager::SecretTargetAttachment
-    Properties:
-      SecretId: !Ref MyRDSInstanceRotationSecret
-      TargetId: !Ref MyDBInstance
-      TargetType: AWS::RDS::DBInstance
-
-  # This is a RotationSchedule resource. It configures rotation of the password for the referenced
-  # secret using a Lambda rotation function. The first rotation happens immediately when
-  # CloudFormation processes this resource type. All subsequent rotations are scheduled according to
-  # the configured rotation rules. We explicitly depend on the SecretTargetAttachment resource to
-  # ensure that the secret contains all the information necessary for rotation to succeed.
-  MySecretRotationSchedule:
-    Type: AWS::SecretsManager::RotationSchedule
-    DependsOn: SecretRDSInstanceAttachment
-    Properties:
-      SecretId: !Ref MyRDSInstanceRotationSecret
-      RotationLambdaARN: !GetAtt MyRotationLambda.Arn
-      RotationRules:
-        AutomaticallyAfterDays: 5
-
-  #This is a Lambda Permission resource that grants Secrets Manager permission to invoke the function
-  LambdaInvokePermission:
-    Type: AWS::Lambda::Permission
-    DependsOn: MyRotationLambda
-    Properties:
-      FunctionName: 'cfn-rotation-lambda'
-      Action: 'lambda:InvokeFunction'
-      Principal: secretsmanager.amazonaws.com
-
-  # This is an IAM Role resource. It gets attached to the Lambda rotation function and grants
-  # permissions to the function to retrieve and update the secret as part of the rotation process.
-  # It also includes the required KMS permissions and CloudWatch logging permissions.
-  MyLambdaExecutionRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: 'cfn-rotation-lambda-role'
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          -
-            Effect: "Allow"
-            Principal:
-              Service:
-                - "lambda.amazonaws.com"
-            Action:
-              - "sts:AssumeRole"
-      Policies:
-        -
-          PolicyName: "AWSSecretsManagerRotationPolicy"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              -
-                Effect: "Allow"
-                Action:
-                  - "secretsmanager:DescribeSecret"
-                  - "secretsmanager:GetSecretValue"
-                  - "secretsmanager:PutSecretValue"
-                  - "secretsmanager:UpdateSecretVersionStage"
-                Resource: !Sub 'arn:${AWS::Partition}:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*'
-                Condition:
-                  StringEquals:
-                    secretsmanager:resource/AllowRotationLambdaArn: !Sub 'arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:cfn-rotation-lambda'
-              -
-                Effect: "Allow"
-                Action:
-                  - "secretsmanager:GetRandomPassword"
-                Resource: "*"
-              -
-                Effect: "Allow"
-                Action:
-                  - "logs:CreateLogGroup"
-                  - "logs:CreateLogStream"
-                  - "logs:PutLogEvents"
-                Resource: "arn:aws:logs:*:*:*"
-              -
-                Effect: "Allow"
-                Action:
-                  - "kms:Decrypt"
-                  - "kms:DescribeKey"
-                  - "kms:GenerateDataKey"
-                Resource: "*"
-
-  # This is a Lambda Function resource. We use this to create the rotation function that rotate
-  # our secret. For details about rotation Lambdas, see:
-  # https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html
-  # This example assumes that the Lambda code is already present in an S3 bucket, and that it
-  # is coded to rotate a MySQL database password
-  MyRotationLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Runtime: python2.7
-      Role: !GetAtt MyLambdaExecutionRole.Arn
-      Handler: lambda_function.lambda_handler
-      Description: 'This is a lambda to rotate MySql user passwd'
-      FunctionName: 'cfn-rotation-lambda'
-      Environment:
-        Variables:
-          SECRETS_MANAGER_ENDPOINT: !Sub 'https://secretsmanager.${AWS::Region}.amazonaws.com'
-      Code:
-        S3Bucket: <% replace-this-with-name-of-s3-bucket-that-contains-lambda-function-code %>
-        S3Key: <% replace-this-with-path-and-filename-of-zip-file-that-contains-lambda-function-code %>
-        S3ObjectVersion: <% replace-this-with-lambda-zip-file-version-if-s3-bucket-versioning-is-enabled %>
+AWSTemplateFormatVersion: 2010-09-09
+    Transform: AWS::Serverless-2016-10-31
+    Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager"
+    Resources:
+      #This is a Secret resource with a randomly generated password in its SecretString JSON.
+      MyRDSInstanceRotationSecret:
+        Type: AWS::SecretsManager::Secret
+        Properties:
+          Description: 'This is my rds instance secret'
+          GenerateSecretString:
+            SecretStringTemplate: '{"username": "admin"}'
+            GenerateStringKey: 'password'
+            PasswordLength: 16
+            ExcludeCharacters: '"@/\'
+          Tags:
+            -
+              Key: AppName
+              Value: MyApp
+     
+      #This is an RDS instance resource. Its master username and password use dynamic references to resolve values from
+      #SecretsManager. The dynamic reference guarantees that CloudFormation will not log or persist the resolved value
+      #We sub the Secret resource's logical id in order to construct the dynamic reference, since the Secret's name is being
+      #generated by CloudFormation
+      MyDBInstance:
+        Type: AWS::RDS::DBInstance
+        Properties:
+          AllocatedStorage: 20
+          DBInstanceClass: db.t2.micro
+          Engine: mysql
+          MasterUsername: !Sub '{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}'
+          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}'
+          BackupRetentionPeriod: 0
+     
+      #This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
+      #the referenced RDS instance
+      SecretRDSInstanceAttachment:
+        Type: AWS::SecretsManager::SecretTargetAttachment
+        Properties:
+          SecretId: !Ref MyRDSInstanceRotationSecret
+          TargetId: !Ref MyDBInstance
+          TargetType: AWS::RDS::DBInstance
+     
+      #This is a RotationSchedule resource. It configures rotation of password for the referenced secret using a rotation lambda
+      #The first rotation happens at resource creation time, with subsequent rotations scheduled according to the rotation rules
+      #We explicitly depend on the SecretTargetAttachment resource being created to ensure that the secret contains all the
+      #information necessary for rotation to succeed
+      MySecretRotationSchedule:
+        Type: AWS::SecretsManager::RotationSchedule
+        DependsOn: SecretRDSInstanceAttachment
+        Properties:
+          SecretId: !Ref MyRDSInstanceRotationSecret
+          RotationLambdaARN: !GetAtt MyRotationServerlessApp.Outputs.RotationLambdaARN
+          RotationRules:
+            AutomaticallyAfterDays: 30
+     
+      # This is a AWS::Serverless::Application resource. The Location property is hardcoded to use the SecretsManager team's
+      # MySQL single user rotation. The resource creates an IAM role and a Lambda function which uses the role. The Lambda function
+      # is passed as the rotation lambda ref to the RotationSchedule resource
+      MyRotationServerlessApp:
+        Type: AWS::Serverless::Application
+        Properties:
+          Location:
+            ApplicationId: 'arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerRDSMySQLRotationSingleUser'
+            SemanticVersion: 1.1.0
+          Parameters:
+            endpoint: !Sub 'https://secretsmanager.${AWS::Region}.amazonaws.com'
+            functionName: SecretsManagerMySQLRotationLambda
 ```
 
-## See Also<a name="aws-resource-secretsmanager-rotationschedule-seealso"></a>
-+ [RotateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_RotateSecret.html) in the *AWS Secrets Manager API Reference*
-+ [Rotating Your AWS Secrets Manager Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the *AWS Secrets Manager User Guide*
+### Redshift Cluster Secret Rotation Example<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_Cluster_Secret_Rotation_Example"></a>
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_Cluster_Secret_Rotation_Example--json"></a>
+
+```
+{
+      "AWSTemplateFormatVersion": "2010-09-09",
+      "Transform": "AWS::Serverless-2016-10-31",
+      "Resources": {
+        "MyRedshiftSecret": {
+          "Type": "AWS::SecretsManager::Secret",
+          "Properties": {
+            "Description": "This is a Secrets Manager secret for a Redshift cluster",
+            "GenerateSecretString": {
+              "SecretStringTemplate": "{\"username\": \"admin\"}",
+              "GenerateStringKey": "password",
+              "PasswordLength": 16,
+              "ExcludeCharacters": "\"'@/\\"
+            }
+          }
+        },
+        "MyRedshiftCluster": {
+          "Type": "AWS::Redshift::Cluster",
+          "Properties": {
+            "DBName": "myjsondb",
+            "MasterUsername": {"Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"},
+            "MasterUserPassword": {"Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"},
+            "NodeType": "ds2.xlarge",
+            "ClusterType": "single-node"
+          }
+        },
+        "SecretRedshiftAttachment": {
+          "Type": "AWS::SecretsManager::SecretTargetAttachment",
+          "Properties": {
+            "SecretId": {"Ref": "MyRedshiftSecret"},
+            "TargetId": {"Ref": "MyRedshiftCluster"},
+            "TargetType": "AWS::Redshift::Cluster"
+          }
+        },
+        "MySecretRotationSchedule": {
+          "Type": "AWS::SecretsManager::RotationSchedule",
+          "DependsOn": "SecretRedshiftAttachment",
+          "Properties": {
+            "SecretId": {"Ref": "MyRedshiftSecret"},
+            "RotationLambdaARN": {"Fn::GetAtt": ["MyRotationServerlessApp","Outputs.RotationLambdaARN"]},
+            "RotationRules": {
+              "AutomaticallyAfterDays": 30
+            }
+          }
+        },
+        "MyRotationServerlessApp": {
+          "Type": "AWS::Serverless::Application",
+          "Properties":{
+            "Location": {
+              "ApplicationId": "arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerRedshiftRotationSingleUser",
+              "SemanticVersion": "1.1.0"
+            },
+            "Parameters": {
+              "endpoint": {"Fn::Sub": "https://secretsmanager.${AWS::Region}.amazonaws.com"},
+              "functionName": "SecretsManagerRedshiftRotationLambda"
+            }
+          }
+        }
+      }
+    }
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_Cluster_Secret_Rotation_Example--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+    Transform: AWS::Serverless-2016-10-31
+    Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager"
+    Resources:
+      #This is a Secret resource with a randomly generated password in its SecretString JSON.
+      MyRedshiftSecret:
+        Type: "AWS::SecretsManager::Secret"
+        Properties:
+          Description: "This is a Secrets Manager secret for an Redshift cluster"
+          GenerateSecretString:
+            SecretStringTemplate: '{"username": "admin"}'
+            GenerateStringKey: "password"
+            PasswordLength: 16
+            ExcludeCharacters: "\"@'/\\"
+     
+      # This is a Redshift cluster resource. The master username and password use dynamic references
+      # to resolve values from Secrets Manager. The dynamic reference guarantees that CloudFormation
+      # will not log or persist the resolved value. We use a Ref to the secret resource's logical id
+      # to construct the dynamic reference, since the secret name is generated by CloudFormation.
+      MyRedshiftCluster:
+        Type: AWS::Redshift::Cluster
+        Properties:
+          DBName: "myyamldb"
+          MasterUsername: !Sub '{{resolve:secretsmanager:${MyRedshiftSecret}::username}}'
+          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyRedshiftSecret}::password}}'
+          NodeType: "ds2.xlarge"
+          ClusterType: "single-node"
+     
+      # This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
+      # the referenced Redshift cluster
+      SecretRedshiftAttachment:
+        Type: "AWS::SecretsManager::SecretTargetAttachment"
+        Properties:
+          SecretId: !Ref MyRedshiftSecret
+          TargetId: !Ref MyRedshiftCluster
+          TargetType: AWS::Redshift::Cluster
+     
+      #This is a RotationSchedule resource. It configures rotation of password for the referenced secret using a rotation lambda
+      #The first rotation happens at resource creation time, with subsequent rotations scheduled according to the rotation rules
+      #We explicitly depend on the SecretTargetAttachment resource being created to ensure that the secret contains all the
+      #information necessary for rotation to succeed
+      MySecretRotationSchedule:
+        Type: AWS::SecretsManager::RotationSchedule
+        DependsOn: SecretRedshiftAttachment
+        Properties:
+          SecretId: !Ref MyRedshiftSecret
+          RotationLambdaARN: !GetAtt MyRotationServerlessApp.Outputs.RotationLambdaARN
+          RotationRules:
+            AutomaticallyAfterDays: 30
+     
+      # This is a AWS::Serverless::Application resource. The Location property is hardcoded to use the SecretsManager team's
+      # MySQL single user rotation. The resource creates an IAM role and a Lambda function which uses the role. The Lambda function
+      # is passed as the rotation lambda ref to the RotationSchedule resource
+      MyRotationServerlessApp:
+        Type: AWS::Serverless::Application
+        Properties:
+          Location:
+            ApplicationId: 'arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerRedshiftRotationSingleUser'
+            SemanticVersion: 1.1.0
+          Parameters:
+            endpoint: !Sub 'https://secretsmanager.${AWS::Region}.amazonaws.com'
+            functionName: SecretsManagerRedshiftRotationLambda
+```
+
+### DocumentDB Cluster Secret Rotation Example<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_Cluster_Secret_Rotation_Example"></a>
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_Cluster_Secret_Rotation_Example--json"></a>
+
+```
+    {
+      "AWSTemplateFormatVersion": "2010-09-09",
+      "Transform": "AWS::Serverless-2016-10-31",
+      "Resources": {
+        "MyDocDBClusterRotationSecret": {
+          "Type": "AWS::SecretsManager::Secret",
+          "Properties": {
+            "Description": "A Secrets Manager secret for my DocDB Cluster",
+            "GenerateSecretString": {
+              "SecretStringTemplate": "{\"username\": \"someadmin\"}",
+              "GenerateStringKey": "password",
+              "PasswordLength": 16,
+              "ExcludeCharacters": "\"@/"
+            }
+          }
+        },
+        "SecretDocDBClusterAttachment": {
+          "Type": "AWS::SecretsManager::SecretTargetAttachment",
+          "Properties": {
+            "SecretId": {"Ref": "MyDocDBClusterRotationSecret"},
+            "TargetId": {"Ref": "MyDocDBCluster"},
+            "TargetType": "AWS::DocDB::DBCluster"
+          }
+        },
+        "MyDocDBCluster": {
+          "Type": "AWS::DocDB::DBCluster",
+          "Properties": {
+            "MasterUsername": {"Fn::Sub": "{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}"},
+            "MasterUserPassword": {"Fn::Sub": "{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}"},
+          }
+        },
+        "MySecretRotationSchedule": {
+          "Type": "AWS::SecretsManager::RotationSchedule",
+          "DependsOn": "SecretDocDBClusterAttachment",
+          "Properties": {
+            "SecretId": {"Ref": "MyDocDBClusterRotationSecret"},
+            "RotationLambdaARN": {"Fn::GetAtt": ["MyRotationServerlessApp","Outputs.RotationLambdaARN"]},
+            "RotationRules": {
+              "AutomaticallyAfterDays": 30
+            }
+          }
+        },
+        "MyRotationServerlessApp": {
+          "Type": "AWS::Serverless::Application",
+          "Properties":{
+            "Location": {
+              "ApplicationId": "arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerMongoDBRotationSingleUser",
+              "SemanticVersion": "1.1.0"
+            },
+            "Parameters": {
+              "endpoint": {"Fn::Sub": "https://secretsmanager.${AWS::Region}.amazonaws.com"},
+              "functionName": "SecretsManagerDocDBRotationLambda"
+            }
+          }
+        }
+      }
+    }
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_Cluster_Secret_Rotation_Example--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+    Transform: AWS::Serverless-2016-10-31
+    Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager"
+    Resources:
+      #This is a Secret resource with a randomly generated password in its SecretString JSON.
+      MyDocDBClusterRotationSecret:
+        Type: AWS::SecretsManager::Secret
+        Properties:
+          Description: 'This is my DocDB cluster secret'
+          GenerateSecretString:
+            SecretStringTemplate: '{"username": "someadmin"}'
+            GenerateStringKey: 'password'
+            PasswordLength: 16
+            ExcludeCharacters: '"@/'
+          Tags:
+            -
+              Key: AppName
+              Value: MyApp
+     
+      #This is an DocDB cluster resource. Its master username and password use dynamic references to resolve values from
+      #SecretsManager. The dynamic reference guarantees that CloudFormation will not log or persist the resolved value
+      #We sub the Secret resource's logical id in order to construct the dynamic reference, since the Secret's name is being
+      #generated by CloudFormation
+      MyDocDBCluster:
+        Type: AWS::DocDB::DBCluster
+        Properties:
+          MasterUsername: !Sub '{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}'
+          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}'
+     
+      #This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
+      #the referenced DocDB cluster
+      SecretDocDBClusterAttachment:
+        Type: AWS::SecretsManager::SecretTargetAttachment
+        Properties:
+          SecretId: !Ref MyDocDBClusterRotationSecret
+          TargetId: !Ref MyDocDBCluster
+          TargetType: AWS::DocDB::DBCluster
+     
+      #This is a RotationSchedule resource. It configures rotation of password for the referenced secret using a rotation lambda
+      #The first rotation happens at resource creation time, with subsequent rotations scheduled according to the rotation rules
+      #We explicitly depend on the SecretTargetAttachment resource being created to ensure that the secret contains all the
+      #information necessary for rotation to succeed
+      MySecretRotationSchedule:
+        Type: AWS::SecretsManager::RotationSchedule
+        DependsOn: SecretDocDBClusterAttachment
+        Properties:
+          SecretId: !Ref MyDocDBClusterRotationSecret
+          RotationLambdaARN: !GetAtt MyRotationServerlessApp.Outputs.RotationLambdaARN
+          RotationRules:
+            AutomaticallyAfterDays: 30
+     
+      # This is a AWS::Serverless::Application resource. The Location property is hardcoded to use the SecretsManager team's
+      # MongoDB single user rotation. The resource creates an IAM role and a Lambda function which uses the role. The Lambda function
+      # is passed as the rotation lambda ref to the RotationSchedule resource
+      MyRotationServerlessApp:
+        Type: AWS::Serverless::Application
+        Properties:
+          Location:
+            ApplicationId: 'arn:aws:serverlessrepo:us-east-1:297356227824:applications/SecretsManagerMongoDBRotationSingleUser'
+            SemanticVersion: 1.1.0
+          Parameters:
+            endpoint: !Sub 'https://secretsmanager.${AWS::Region}.amazonaws.com'
+            functionName: SecretsManagerDocDBRotationLambda
+```
+
+## See Also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>
++  [RotateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_RotateSecret.html) in the AWS Secrets Manager API Reference
++  [Rotating Your AWS Secrets Manager Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User Guide

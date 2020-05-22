@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application EnvironmentProperties<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties"></a>
+# AWS::KinesisAnalyticsV2::Application EnvironmentProperties<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties"></a>
 
-<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-description"></a>The `EnvironmentProperties` property type specifies execution properties for a Java\-based Kinesis Data Analytics application\.
-
-<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-inheritance"></a> `EnvironmentProperties` is a property of the [ApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-applicationconfiguration.md) property\.
+Describes execution properties for a Flink\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-syntax"></a>
 
@@ -12,21 +10,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)" : [ [*PropertyGroup*](aws-properties-kinesisanalyticsv2-application-propertygroup.md), ... ]
+  "[PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)" : [ [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md), ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-syntax.yaml"></a>
 
 ```
-[PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups): 
-  - [*PropertyGroup*](aws-properties-kinesisanalyticsv2-application-propertygroup.md)
+  [PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups): 
+    - [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-properties"></a>
 
 `PropertyGroups`  <a name="cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups"></a>
 Describes the execution property groups\.  
- *Required*: No  
- *Type*: List of [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: List of [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties--seealso"></a>
++  [EnvironmentProperties](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_EnvironmentProperties.html) in the *Amazon Kinesis Data Analytics API Reference* 

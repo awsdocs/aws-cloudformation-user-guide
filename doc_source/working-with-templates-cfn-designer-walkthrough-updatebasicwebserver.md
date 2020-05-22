@@ -2,7 +2,9 @@
 
 You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use AWS CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\. 
 
-In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
+In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. 
+
+By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
 
 In this walkthrough, we will complete the following steps:
 
@@ -551,7 +553,7 @@ To implement your template changes, we need to update the basic web server stack
 
 1. Ensure that the stack name is correct, and then choose **Update**\.
 
-It can take several minutes for AWS CloudFormation to update your stack\. To monitor progress, view the stack events\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. After the stack is updated, view the stack outputs and go to the website URL to verify that the website is running\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. You successfully updated a template and a stack using AWS CloudFormation Designer\.
+It can take several minutes for AWS CloudFormation to update your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. After the stack is updated, view the stack outputs and go to the website URL to verify that the website is running\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. You successfully updated a template and a stack using AWS CloudFormation Designer\.
 
 To ensure that you are not charged for unwanted services, you can delete this stack\.
 

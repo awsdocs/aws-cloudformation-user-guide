@@ -5,7 +5,7 @@ Amazon CloudWatch Logs can monitor your system, application, and custom log file
 **Topics**
 + [Send Logs to CloudWatch Logs from a Linux Instance](#quickref-cloudwatchlogs-example1)
 + [Send Logs to CloudWatch Logs from a Windows Instance](#quickref-cloudwatchlogs-example2)
-+ [See Also](#w13ab1c17c23c31c11)
++ [See Also](#w6074ab1c19c23c31c11)
 
 ## Send Logs to CloudWatch Logs from a Linux Instance<a name="quickref-cloudwatchlogs-example1"></a>
 
@@ -780,7 +780,7 @@ The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2
                                 }
                             ]
                         },
-                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"],
+                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"],
                         "Path": "/",
                         "Policies": [
                             {
@@ -1283,7 +1283,7 @@ Resources:
           Action:
           - sts:AssumeRole
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+      - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
       Path: /
       Policies:
       - PolicyName: LogRolePolicy
@@ -1583,6 +1583,6 @@ Outputs:
     Value: !Ref 'LogGroup'
 ```
 
-## See Also<a name="w13ab1c17c23c31c11"></a>
+## See Also<a name="w6074ab1c19c23c31c11"></a>
 
-For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md) or [AWS::Logs::MetricFilter](aws-resource-logs-metricfilter.md)\.
+For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWs::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.

@@ -1,8 +1,10 @@
-# Amazon S3 Bucket NoncurrentVersionTransition<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition"></a>
+# AWS::S3::Bucket NoncurrentVersionTransition<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition"></a>
 
-`NoncurrentVersionTransition` is a property of the [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md) property that describes when noncurrent objects transition to a specified storage class\.
+Container for the transition rule that describes when noncurrent objects transition to the `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE` storage class\. If your bucket is versioning\-enabled \(or versioning is suspended\), you can set this action to request that Amazon S3 transition noncurrent object versions to the `STANDARD_IA`, `ONEZONE_IA`, `INTELLIGENT_TIERING`, `GLACIER`, or `DEEP_ARCHIVE` storage class at a specific period in the object's lifetime\.
 
-## Syntax<a name="w13ab1c21c10d204c13c86b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-syntax.json"></a>
 
@@ -16,18 +18,21 @@
 ### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-syntax.yaml"></a>
 
 ```
-[StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass): String
-[TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays): Integer
+  [StorageClass](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass): String
+  [TransitionInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d204c13c86b7"></a>
+## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-properties"></a>
 
 `StorageClass`  <a name="cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-storageclass"></a>
-The storage class to which you want the object to transition, such as `GLACIER`\. For valid values, see the `StorageClass` request element of the [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) action in the *Amazon Simple Storage Service API Reference*\.  
+The class of storage used to store the object\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionInDays`  <a name="cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays"></a>
-The number of days between the time that a new version of the object is uploaded to the bucket and when old versions of the object are transitioned to the specified storage class\.  
+Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action\. For information about the noncurrent days calculations, see [How Amazon S3 Calculates How Long an Object Has Been Noncurrent](https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#non-current-days-calculations) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: Yes  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

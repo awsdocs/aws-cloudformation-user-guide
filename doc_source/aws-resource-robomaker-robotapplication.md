@@ -1,6 +1,6 @@
 # AWS::RoboMaker::RobotApplication<a name="aws-resource-robomaker-robotapplication"></a>
 
-The `AWS::RoboMaker::RobotApplication` resource creates an AWS RoboMaker robot application\. For more information, see [API\_CreateRobotApplication](https://docs.aws.amazon.com/robomaker/latest/dg/API_CreateRobotApplication) in the *RoboMaker Developer Guide*\. 
+The `AWS::RoboMaker::RobotApplication` resource creates an AWS RoboMaker robot application\.
 
 ## Syntax<a name="aws-resource-robomaker-robotapplication-syntax"></a>
 
@@ -12,88 +12,93 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RoboMaker::RobotApplication",
   "Properties" : {
-    "[CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid)" : String,
-    "[Name](#cfn-robomaker-robotapplication-name)" : String,
-    "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : [*RobotSoftwareSuite*](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md),
-    "[Sources](#cfn-robomaker-robotapplication-sources)" : [ [*SourceConfig*](aws-properties-robomaker-robotapplication-sourceconfig.md), ... ],
-    "[Tags](#cfn-robomaker-robotapplication-tags)" : JSON object
-  }
+      "[CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid)" : String,
+      "[Name](#cfn-robomaker-robotapplication-name)" : String,
+      "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md),
+      "[Sources](#cfn-robomaker-robotapplication-sources)" : [ [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md), ... ],
+      "[Tags](#cfn-robomaker-robotapplication-tags)" : Json
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-robomaker-robotapplication-syntax.yaml"></a>
 
 ```
-Type: "AWS::RoboMaker::RobotApplication"
-Properties:
+Type: AWS::RoboMaker::RobotApplication
+Properties: 
   [CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid): String
   [Name](#cfn-robomaker-robotapplication-name): String
   [RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite): 
-    [*RobotSoftwareSuite*](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)
+    [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)
   [Sources](#cfn-robomaker-robotapplication-sources): 
-    - [*SourceConfig*](aws-properties-robomaker-robotapplication-sourceconfig.md)
-  [Tags](#cfn-robomaker-robotapplication-tags): JSON object
+    - [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)
+  [Tags](#cfn-robomaker-robotapplication-tags): Json
 ```
 
 ## Properties<a name="aws-resource-robomaker-robotapplication-properties"></a>
 
 `CurrentRevisionId`  <a name="cfn-robomaker-robotapplication-currentrevisionid"></a>
 The current revision id\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-robomaker-robotapplication-name"></a>
 The name of the robot application\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[a-zA-Z0-9_\-]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-robotapplication-robotsoftwaresuite"></a>
-The robot software suite\.  
- *Required*: Yes  
- *Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+The robot software suite \(ROS distribuition\) used by the robot application\.  
+*Required*: Yes  
+*Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Sources`  <a name="cfn-robomaker-robotapplication-sources"></a>
 The sources of the robot application\.  
- *Required*: Yes  
- *Type*: List of [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md) property types  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: List of [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-robomaker-robotapplication-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
- *Required*: No  
- *Type*: JSON object  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A map that contains tag keys and tag values that are attached to the robot application\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-robotapplication-returnvalues"></a>
+## Return Values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
 
-### Ref<a name="aws-resource-robomaker-robotapplication-ref"></a>
+### Ref<a name="aws-resource-robomaker-robotapplication-return-values-ref"></a>
 
 When you pass the logical ID of an `AWS::RoboMaker::RobotApplication` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-robomaker-robotapplication-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-robomaker-robotapplication-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the robot application, such as `arn:aws:robomaker:us-west-2:123456789012:robot-application/MyRobotApplication/1546541208251`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-`CurrentRevisionId`  
-The current revision id, such as `2`\. 
+#### <a name="aws-resource-robomaker-robotapplication-return-values-fn--getatt-fn--getatt"></a>
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the robot application\.
 
-## Examples<a name="aws-resource-robomaker-robotapplication-examples"></a>
+`CurrentRevisionId`  <a name="CurrentRevisionId-fn::getatt"></a>
+The current revision id\.
 
-### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication-example1"></a>
+## Examples<a name="aws-resource-robomaker-robotapplication--examples"></a>
+
+### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application"></a>
 
 The following example creates a robot application\.
 
-#### JSON<a name="aws-resource-robomaker-robotapplication-example1.json"></a>
+#### JSON<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application--json"></a>
 
 ```
 {
@@ -129,7 +134,7 @@ The following example creates a robot application\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robotapplication-example1.yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application--yaml"></a>
 
 ```
 ---

@@ -1,6 +1,6 @@
 # AWS::Batch::JobQueue<a name="aws-resource-batch-jobqueue"></a>
 
-The `AWS::Batch::JobQueue` resource defines your AWS Batch job queue\. For more information, see [Job Queues](https://docs.aws.amazon.com/batch/latest/userguide/job_queues.html) in the *AWS Batch User Guide*\. 
+The `AWS::Batch::JobQueue` resource specifies the parameters for an AWS Batch job queue definition\. For more information, see [Job Queues](https://docs.aws.amazon.com/batch/latest/userguide/job_queues.html) in the *AWS Batch User Guide*\.
 
 ## Syntax<a name="aws-resource-batch-jobqueue-syntax"></a>
 
@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobQueue",
   "Properties" : {
-    "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ [*ComputeEnvironmentOrder*](aws-properties-batch-jobqueue-computeenvironmentorder.md), ... ],
-    "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
-    "[State](#cfn-batch-jobqueue-state)" : String,
-    "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String
-  }
+      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md), ... ],
+      "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
+      "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
+      "[State](#cfn-batch-jobqueue-state)" : String
+    }
 }
 ```
 
@@ -24,55 +24,56 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Batch::JobQueue
-Properties:
+Properties: 
   [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
-    - [*ComputeEnvironmentOrder*](aws-properties-batch-jobqueue-computeenvironmentorder.md) 
+    - [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
+  [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [State](#cfn-batch-jobqueue-state): String
-  [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
 
 `ComputeEnvironmentOrder`  <a name="cfn-batch-jobqueue-computeenvironmentorder"></a>
-The compute environments that are attached to the job queue and the order in which job placement is preferred\. Compute environments are selected for job placement in ascending order\.  
- *Required*: yes  
- *Type*: List of [AWS Batch JobQueue ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)  
- *Update requires*: No Interruption 
-
-`State`  <a name="cfn-batch-jobqueue-state"></a>
-The status of the job queue \(for example, `CREATING` or `VALID`\)\.  
- *Required*: no  
-*Type*: String  
- *Update requires*: No Interruption 
-
-`Priority`  <a name="cfn-batch-jobqueue-priority"></a>
-The priority of the job queue\.  
- *Required*: yes  
-*Type*: Integer  
- *Update requires*: No Interruption 
+The set of compute environments mapped to a job queue and their order relative to each other\. The job scheduler uses this parameter to determine which compute environment should execute a given job\. Compute environments must be in the `VALID` state before you can associate them with a job queue\. You can associate up to three compute environments with a job queue\.  
+*Required*: Yes  
+*Type*: [List](aws-properties-batch-jobqueue-computeenvironmentorder.md) of [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobQueueName`  <a name="cfn-batch-jobqueue-jobqueuename"></a>
 The name of the job queue\.  
- *Required*: no  
+*Required*: No  
 *Type*: String  
- *Update requires*: Replacement 
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-batch-jobqueue-returnvalues"></a>
+`Priority`  <a name="cfn-batch-jobqueue-priority"></a>
+The priority of the job queue\. Job queues with a higher priority \(or a higher integer value for the `priority` parameter\) are evaluated first when associated with the same compute environment\. Priority is determined in descending order, for example, a job queue with a priority value of `10` is given scheduling preference over a job queue with a priority value of `1`\.  
+*Required*: Yes  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w13ab1c21c10c45c21c11b2"></a>
+`State`  <a name="cfn-batch-jobqueue-state"></a>
+The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.  
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `DISABLED | ENABLED`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-When you pass the logical ID of an `AWS::Batch::JobQueue` resource to the intrinsic `Ref` function, the function returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\. 
+## Return Values<a name="aws-resource-batch-jobqueue-return-values"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+### Ref<a name="aws-resource-batch-jobqueue-return-values-ref"></a>
 
-## Examples<a name="aws-resource-batch-jobqueue-examples"></a>
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\.
 
-### Job queue with two compute environments<a name="aws-resource-batch-jobqueue-example1"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-The following example defines a job queue called `HighPriority` that has two compute environments mapped to it\.
+## Examples<a name="aws-resource-batch-jobqueue--examples"></a>
 
-#### JSON<a name="aws-resource-batch-jobqueue-example1.json"></a>
+### Job queue with two compute environments<a name="aws-resource-batch-jobqueue--examples--Job_queue_with_two_compute_environments"></a>
+
+The following example defines a job queue called HighPriority that has two compute environments mapped to it\.
+
+#### JSON<a name="aws-resource-batch-jobqueue--examples--Job_queue_with_two_compute_environments--json"></a>
 
 ```
 {
@@ -81,8 +82,8 @@ The following example defines a job queue called `HighPriority` that has two com
     "Properties": {
       "ComputeEnvironmentOrder": [
         {
-          "Order": 1,
-          "ComputeEnvironment": "C4OnDemand"
+         "Order": 1,
+         "ComputeEnvironment": "C4OnDemand"
         },
         {
           "Order": 2,
@@ -97,18 +98,18 @@ The following example defines a job queue called `HighPriority` that has two com
 }
 ```
 
-#### YAML<a name="aws-resource-batch-jobqueue-example1.yaml"></a>
+#### YAML<a name="aws-resource-batch-jobqueue--examples--Job_queue_with_two_compute_environments--yaml"></a>
 
 ```
 JobQueue:
   Type: AWS::Batch::JobQueue
   Properties:
-    [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder):
-      - [Order](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-order): 1
-        [ComputeEnvironment](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): C4OnDemand
-      - [Order](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-order): 2
-        [ComputeEnvironment](aws-properties-batch-jobqueue-computeenvironmentorder.md#cfn-batch-jobqueue-computeenvironmentorder-computeenvironment): M4Spot
-    [State](#cfn-batch-jobqueue-state): ENABLED
-    [Priority](#cfn-batch-jobqueue-priority): 1
-    [JobQueueName](#cfn-batch-jobqueue-jobqueuename): HighPriority
+    ComputeEnvironmentOrder:
+      - Order: 1
+        ComputeEnvironment: C4OnDemand
+      - Order: 2
+        ComputeEnvironment: M4Spot
+    State: ENABLED
+    Priority: 1
+    JobQueueName: HighPriority
 ```

@@ -7,7 +7,7 @@
 
 ## Creating an Amazon S3 Bucket with Defaults<a name="scenario-s3-bucket"></a>
 
-This example uses a [AWS::S3::Bucket](aws-properties-s3-bucket.md) to create a bucket with default settings\.
+This example uses a [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) to create a bucket with default settings\.
 
 ### JSON<a name="quickref-s3-example-1.json"></a>
 
@@ -168,14 +168,14 @@ For more information about using a custom domain, see [Setting Up a Static Websi
     "AWSTemplateFormatVersion": "2010-09-09",
     "Mappings" : {
         "RegionMap" : {
-            "us-east-1" : { "S3hostedzoneID" : "Z3AQBSTGFYJSTF", "websiteendpoint" : "s3-website-us-east-1.amazonaws.com" },
-            "us-west-1" : { "S3hostedzoneID" : "Z2F56UZL2M1ACD", "websiteendpoint" : "s3-website-us-west-1.amazonaws.com" },
-            "us-west-2" : { "S3hostedzoneID" : "Z3BJ6K6RIION7M", "websiteendpoint" : "s3-website-us-west-2.amazonaws.com" },            
-            "eu-west-1" : { "S3hostedzoneID" : "Z1BKCTXD74EZPE", "websiteendpoint" : "s3-website-eu-west-1.amazonaws.com" },
-            "ap-southeast-1" : { "S3hostedzoneID" : "Z3O0J2DXBE1FTB", "websiteendpoint" : "s3-website-ap-southeast-1.amazonaws.com" },
-            "ap-southeast-2" : { "S3hostedzoneID" : "Z1WCIGYICN2BYD", "websiteendpoint" : "s3-website-ap-southeast-2.amazonaws.com" },
-            "ap-northeast-1" : { "S3hostedzoneID" : "Z2M4EHUR26P7ZW", "websiteendpoint" : "s3-website-ap-northeast-1.amazonaws.com" },
-            "sa-east-1" : { "S3hostedzoneID" : "Z31GFT0UA1I2HV", "websiteendpoint" : "s3-website-sa-east-1.amazonaws.com" }
+            "us-east-1" : { "S3hostedzoneID" : "Z3AQBSTGFYJSTF", "websiteendpoint" : "s3.website-us-east-1.amazonaws.com" },
+            "us-west-1" : { "S3hostedzoneID" : "Z2F56UZL2M1ACD", "websiteendpoint" : "s3.website-us-west-1.amazonaws.com" },
+            "us-west-2" : { "S3hostedzoneID" : "Z3BJ6K6RIION7M", "websiteendpoint" : "s3.website-us-west-2.amazonaws.com" },            
+            "eu-west-1" : { "S3hostedzoneID" : "Z1BKCTXD74EZPE", "websiteendpoint" : "s3.website-eu-west-1.amazonaws.com" },
+            "ap-southeast-1" : { "S3hostedzoneID" : "Z3O0J2DXBE1FTB", "websiteendpoint" : "s3.website-ap-southeast-1.amazonaws.com" },
+            "ap-southeast-2" : { "S3hostedzoneID" : "Z1WCIGYICN2BYD", "websiteendpoint" : "s3.website-ap-southeast-2.amazonaws.com" },
+            "ap-northeast-1" : { "S3hostedzoneID" : "Z2M4EHUR26P7ZW", "websiteendpoint" : "s3.website-ap-northeast-1.amazonaws.com" },
+            "sa-east-1" : { "S3hostedzoneID" : "Z31GFT0UA1I2HV", "websiteendpoint" : "s3.website-sa-east-1.amazonaws.com" }
         }
     },
     "Parameters": {
@@ -260,28 +260,28 @@ Mappings:
   RegionMap:
     us-east-1:
       S3hostedzoneID: Z3AQBSTGFYJSTF
-      websiteendpoint: s3-website-us-east-1.amazonaws.com
+      websiteendpoint: s3.website-us-east-1.amazonaws.com
     us-west-1:
       S3hostedzoneID: Z2F56UZL2M1ACD
-      websiteendpoint: s3-website-us-west-1.amazonaws.com
+      websiteendpoint: s3.website-us-west-1.amazonaws.com
     us-west-2:
       S3hostedzoneID: Z3BJ6K6RIION7M
-      websiteendpoint: s3-website-us-west-2.amazonaws.com
+      websiteendpoint: s3.website-us-west-2.amazonaws.com
     eu-west-1:
       S3hostedzoneID: Z1BKCTXD74EZPE
-      websiteendpoint: s3-website-eu-west-1.amazonaws.com
+      websiteendpoint: s3.website-eu-west-1.amazonaws.com
     ap-southeast-1:
       S3hostedzoneID: Z3O0J2DXBE1FTB
-      websiteendpoint: s3-website-ap-southeast-1.amazonaws.com
+      websiteendpoint: s3.website-ap-southeast-1.amazonaws.com
     ap-southeast-2:
       S3hostedzoneID: Z1WCIGYICN2BYD
-      websiteendpoint: s3-website-ap-southeast-2.amazonaws.com
+      websiteendpoint: s3.website-ap-southeast-2.amazonaws.com
     ap-northeast-1:
       S3hostedzoneID: Z2M4EHUR26P7ZW
-      websiteendpoint: s3-website-ap-northeast-1.amazonaws.com
+      websiteendpoint: s3.website-ap-northeast-1.amazonaws.com
     sa-east-1:
       S3hostedzoneID: Z31GFT0UA1I2HV
-      websiteendpoint: s3-website-sa-east-1.amazonaws.com
+      websiteendpoint: s3.website-sa-east-1.amazonaws.com
 Resources:
   RootBucket:
     Type: AWS::S3::Bucket

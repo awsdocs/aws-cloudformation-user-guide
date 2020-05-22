@@ -13,8 +13,9 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
 
 ## Update a Stack's Template \(Console\)<a name="using-cfn-updating-stacks-get-stack.CON"></a>
 
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), select the stack that you want to update and then choose the **Actions** and then **View in Designer**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stack-detail-pane-template.png)
+1. On the **Stacks** page of the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), click the name of the stack that you want to update\. 
+
+1. In the stack details pane for the selected stack, select the **Template** pane, and then click **View in Designer**\.
 
    AWS CloudFormation opens a copy of the stack's template in AWS CloudFormation Designer\.
 
@@ -44,7 +45,7 @@ If the values in a mapping are not being used by your stack, you can't update th
 You cannot update conditions by themselves\. You can update conditions only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
    + Add, modify, or delete output value declarations\.
 
-   Some resources or properties may have constraints on property values or changes to those values\. For example, changes to the `AllocatedStorage` property of an [ AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) resource must be greater than the current setting\. If the value specified for the update does not meet those constraints, the update for that resource fails\. For the specific constraints on `AllocatedStorage` changes, see [ ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\.
+   Some resources or properties may have constraints on property values or changes to those values\. For example, changes to the `AllocatedStorage` property of an [ AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource must be greater than the current setting\. If the value specified for the update does not meet those constraints, the update for that resource fails\. For the specific constraints on `AllocatedStorage` changes, see [ ModifyDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)\.
 
    Updates to a resource can affect the properties of other resources\. If you used the [ Ref function ](intrinsic-function-reference-ref.md) or the [ Fn::GetAtt function](intrinsic-function-reference-getatt.md) to specify an attribute from an updated resource as part of a property value in another resource in the template, AWS CloudFormation also updates the resource that contains the reference to the property that has changed\. For example, if you updated the `MasterUsername` property of an `AWS::RDS::DBInstance` resource and you had an `AWS::AutoScaling::LaunchConfiguration` resource that had a `UserData` property that contained a reference to the DB instance name using the `Ref` function, AWS CloudFormation would recreate the DB instance with a new name and also update the `LaunchConfiguration` resource\.
 

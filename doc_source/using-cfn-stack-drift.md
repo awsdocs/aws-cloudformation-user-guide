@@ -1,6 +1,6 @@
 # Detecting Unmanaged Configuration Changes to Stacks and Resources<a name="using-cfn-stack-drift"></a>
 
-Even as you manage your resources through CloudFormation, users can change those resources *outside* of CloudFormation\. Users can edit resources directly by using the underlying service that created the resource\. For example, you can use the Amazon EC2 console to update a server instance that was created as part of an CloudFormation stack\. Some changes may be accidental, and some may be made intentionally to respond to time\-sensitive operational events\. Regardless, changes made outside of CloudFormation can complicate stack update or deletion operations\. You can use drift detection to identify stack resources to which configuration changes have been made outside of CloudFormation management\. You can then take corrective action so that your stack resources are again in synch with their definitions in the stack template, such as updating the drifted resources directly so that they agree with their template definition\. Resolving drift helps to ensure configuration consistency and successful stack operations\.
+Even as you manage your resources through CloudFormation, users can change those resources *outside* of CloudFormation\. Users can edit resources directly by using the underlying service that created the resource\. For example, you can use the Amazon EC2 console to update a server instance that was created as part of a CloudFormation stack\. Some changes may be accidental, and some may be made intentionally to respond to time\-sensitive operational events\. Regardless, changes made outside of CloudFormation can complicate stack update or deletion operations\. You can use drift detection to identify stack resources to which configuration changes have been made outside of CloudFormation management\. You can then take corrective action so that your stack resources are again in sync with their definitions in the stack template, such as updating the drifted resources directly so that they agree with their template definition\. Resolving drift helps to ensure configuration consistency and successful stack operations\.
 
 **Topics**
 + [What Is Drift?](#what-is-drift)
@@ -31,7 +31,13 @@ CloudFormation only determines drift for property values that are explicitly set
 
 The tables in this section describe the various status types used with drift detection:
 + **Drift detection operation status** describes the current state of the drift operation\.
-+ **Stack drift status** describes the drift status of the stack as a whole, based on the drift status of its resources\.
++ **Drift status** 
+
+  For *stack sets*, this describes the drift status of the stack set as a whole, based on the drift status of the stack instances that belong to it\.
+
+  For *stack instances*, this describes the drift status of the stack instance, based on the drift status of its associated stack\.
+
+  For *stacks*, this describes the drift status of the stack as a whole, based on the drift status of its resources\. 
 + **Resource drift status** describes the drift status of an individual resource\.
 
 The following table lists the status codes CloudFormation assigns to stack drift detection operations\.
@@ -46,11 +52,11 @@ The following table lists the status codes CloudFormation assigns to stack drift
 The following table lists the drift status codes CloudFormation assigns to stacks\.
 
 
-| Stack Drift Status | Description | 
+| Drift Status | Description | 
 | --- | --- | 
-|  `DRIFTED`  |  The stack differs, or has *drifted*, from its expected template configuration\. A stack is considered to have drifted if one or more of its resources have drifted\.  | 
-|  `NOT_CHECKED`  |  AWS CloudFormation has not checked if the stack differs from its expected template configuration\.  | 
-|  `IN_SYNC`  |  The current configuration of each supported resource matches its expected template configuration\. A stack with no resources that support drift detection will also have a status of IN\_SYNC\.  | 
+|  `DRIFTED`  |  For stacks: The stack differs, or has *drifted*, from its expected template configuration\. A stack is considered to have drifted if one or more of its resources have drifted\. For stack instances: A stack instance is considered to have drifted if the stack associated with it has drifted\. For stack sets: A stack set is considered to have drifted if one or more stack instances has drifted\.   | 
+|  `NOT_CHECKED`  |  AWS CloudFormation has not checked if the stack, stack set, or stack instance differs from its expected template configuration\.  | 
+|  `IN_SYNC`  |  The current configuration of each supported resource matches its expected template configuration\. A stack, stack set, or stack instance with no resources that support drift detection will also have a status of IN\_SYNC\.  | 
 
 The following table lists the drift status codes CloudFormation assigns to stack resources\.
 
@@ -90,10 +96,9 @@ In certain edge cases, CloudFormation may not be able to always return accurate 
 + There are certain resource properties that you can specify in your stack template that, by their very nature, CloudFormation will not be able to compare to the properties in the resulting stack resources\. These properties therefore cannot be included in drift detection results\. Such properties fall into two broad categories:
   + Property values that CloudFormation cannot map back to their initial resource property value in the stack template\.
 
-    For example, CloudFormation cannot map the source code of a Lambda function back to the [Code](aws-properties-lambda-function-code.md) property type of the [Function](aws-resource-lambda-function.md) resource, and therefore CloudFormation cannot include it in drift detection results\. 
+    For example, CloudFormation cannot map the source code of a Lambda function back to the [Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html) property type of the [Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html) resource, and therefore CloudFormation cannot include it in drift detection results\. 
   + Property values that the service that is responsible for the resource does not return\.
 
-    There are certain property values that, by design, are never returned by the service to which the resource belongs\. These tend to contain confidential information, such as passwords or other sensitive data that should not be exposed\. For example, the IAM service will never return the value of the `Password` property of the [IAM User LoginProfile](aws-properties-iam-user-loginprofile.md) property type, and therefore CloudFormation cannot include it in drift detection results\. 
+    There are certain property values that, by design, are never returned by the service to which the resource belongs\. These tend to contain confidential information, such as passwords or other sensitive data that should not be exposed\. For example, the IAM service will never return the value of the `Password` property of the [IAM User LoginProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-loginprofile.html) property type, and therefore CloudFormation cannot include it in drift detection results\. 
   + Objects in an array: they may be actually service defaults, not drift added manually out\-of\-band\.
-+ Drift detection is available in the US East \(N\. Virginia\), US East \(Ohio\), US West \(N\. California\), US West \(Oregon\), Canada \(Central\), Asia Pacific \(Mumbai\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Asia Pacific \(Tokyo\), Europe \(Frankfurt\), Europe \(Ireland\), Europe \(London\), Europe \(Paris\), and South America \(São Paulo\) regions\.
 + If you encounter any false positive, send us your comments using the feedback link in the CloudFormation console, or reach out to us via the AWS forums at [https://forums\.aws\.amazon\.com](https://forums.aws.amazon.com)\.

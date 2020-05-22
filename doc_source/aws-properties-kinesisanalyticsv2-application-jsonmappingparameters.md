@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application JSONMappingParameters<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters"></a>
+# AWS::KinesisAnalyticsV2::Application JSONMappingParameters<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters"></a>
 
-<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-description"></a>The `JSONMappingParameters` property type specifies additional mapping information for a SQL\-based Kinesis Data Analytics application when JSON is the record format on the streaming source\.
-
-<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-inheritance"></a> `JSONMappingParameters` is a property of the [MappingParameters](aws-properties-kinesisanalyticsv2-application-mappingparameters.md) property\.
+For a SQL\-based Kinesis Data Analytics application, provides additional mapping information when JSON is the record format on the streaming source\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-syntax"></a>
 
@@ -19,13 +17,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-syntax.yaml"></a>
 
 ```
-[RecordRowPath](#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath): String
+  [RecordRowPath](#cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-properties"></a>
 
 `RecordRowPath`  <a name="cfn-kinesisanalyticsv2-application-jsonmappingparameters-recordrowpath"></a>
 The path to the top\-level parent that contains the records\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters--seealso"></a>
++  [JSONMappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_JSONMappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 

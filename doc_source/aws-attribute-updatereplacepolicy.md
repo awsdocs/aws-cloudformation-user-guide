@@ -6,7 +6,7 @@ When you initiate a stack update, AWS CloudFormation updates resources based on 
 
 For resources that support snapshots, such as `AWS::EC2::Volume`, specify `Snapshot` to have AWS CloudFormation create a snapshot before deleting the old resource instance\.
 
-You can apply the UpdateReplacePolicy attribute to any resource\. UpdateReplacePolicy is only executed if you update a resource property whose update behavior is specified as [**Replacement**](using-cfn-updating-stacks-update-behaviors.md#update-replacement), thereby causing AWS CloudFormation to replace the old resource with a new one with a new physical ID\. For example, if you update the `Engine` property of an [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md) resource type, AWS CloudFormation creates a new resource and replaces the current DB instance resource with the new one\. The UpdateReplacePolicy attribute would then dictate whether AWS CloudFormation deleted, retained, or created a snapshot of the old DB instance\. The update behavior for each property of a resource is specified in the reference topic for that resource in the [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\. For more information on resource update behavior, see [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)\.
+You can apply the UpdateReplacePolicy attribute to any resource\. UpdateReplacePolicy is only executed if you update a resource property whose update behavior is specified as [**Replacement**](using-cfn-updating-stacks-update-behaviors.md#update-replacement), thereby causing AWS CloudFormation to replace the old resource with a new one with a new physical ID\. For example, if you update the `Engine` property of an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type, AWS CloudFormation creates a new resource and replaces the current DB instance resource with the new one\. The UpdateReplacePolicy attribute would then dictate whether AWS CloudFormation deleted, retained, or created a snapshot of the old DB instance\. The update behavior for each property of a resource is specified in the reference topic for that resource in the [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\. For more information on resource update behavior, see [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
 The UpdateReplacePolicy attribute applies to [stack updates you perform directly](using-cfn-updating-stacks-direct.md), as well as stack updates performed using [change sets](using-cfn-updating-stacks-changesets.md)\.
 
@@ -57,12 +57,12 @@ If a resource is replaced, the UpdateReplacePolicy retains the old physical reso
 
 Snapshot  
 For resources that support snapshots, AWS CloudFormation creates a snapshot for the resource before deleting it\. Note that snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\.  
-If you specify the `snapshot` option in the UpdateReplacePolicy for a resource that does not support snapshots, CloudFormation reverts to the default option, which is `Delete`\.
+If you specify the `Snapshot` option in the UpdateReplacePolicy for a resource that does not support snapshots, CloudFormation reverts to the default option, which is `Delete`\.
 Resources that support snapshots include:  
-+ `[AWS::EC2::Volume](aws-properties-ec2-ebs-volume.md)`
-+ `[AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)`
-+ `[AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)`
-+ `[AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)`
-+ `[AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)`
-+ `[AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)`
-+ `[AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)`
++ `[AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)`
++ `[AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)`
++ `[AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)`
++ `[AWS::Neptune::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)`
++ `[AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)`
++ `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)`
++ `[AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)`

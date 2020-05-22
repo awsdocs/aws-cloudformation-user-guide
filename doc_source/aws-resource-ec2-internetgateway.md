@@ -1,6 +1,6 @@
 # AWS::EC2::InternetGateway<a name="aws-resource-ec2-internetgateway"></a>
 
-Creates a new Internet gateway in your AWS account\. After creating the Internet gateway, you then attach it to a VPC\.
+Allocates an internet gateway for use with a VPC\. After creating the Internet gateway, you then attach it to a VPC\.
 
 ## Syntax<a name="aws-resource-ec2-internetgateway-syntax"></a>
 
@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-   "Type" : "AWS::EC2::InternetGateway",
-   "Properties" : {
-      "[Tags](#cfn-ec2-internetgateway-tags)" : [ Resource Tag, ... ]
-   }
+  "Type" : "AWS::EC2::InternetGateway",
+  "Properties" : {
+      "[Tags](#cfn-ec2-internetgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -22,49 +22,48 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::InternetGateway
 Properties: 
-  [Tags](#cfn-ec2-internetgateway-tags):
-    - Resource Tag
+  [Tags](#cfn-ec2-internetgateway-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w13ab1c21c10d111c54b7"></a>
+## Properties<a name="aws-resource-ec2-internetgateway-properties"></a>
 
 `Tags`  <a name="cfn-ec2-internetgateway-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this resource\.  
+Any tags to assign to the internet gateway\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d111c54b9"></a>
+## Return Values<a name="aws-resource-ec2-internetgateway-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d111c54b9b2"></a>
+### Ref<a name="aws-resource-ec2-internetgateway-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10d111c54c11"></a>
+## Examples<a name="aws-resource-ec2-internetgateway--examples"></a>
 
-### JSON<a name="aws-resource-ec2-internetgateway-example.json"></a>
+### Creating an Internet Gateway<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway"></a>
+
+The following example creates an Internet gateway and assigns it a tag\.
+
+#### JSON<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway--json"></a>
 
 ```
-{
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Resources" : {
-      "myInternetGateway" : {
-         "Type" : "AWS::EC2::InternetGateway",
-         "Properties" : {
-            "Tags" : [ {"Key" : "foo", "Value" : "bar"}]
-         }
+"Resources" : {
+   "myInternetGateway" : {
+      "Type" : "AWS::EC2::InternetGateway",
+      "Properties" : {
+        "Tags" : [ {"Key" : "foo", "Value" : "bar"}]
       }
    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-internetgateway-example.yaml"></a>
+#### YAML<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
   myInternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
@@ -73,6 +72,7 @@ Resources:
         Value: bar
 ```
 
-## Related Information<a name="w13ab1c21c10d111c54c13"></a>
-+ [CreateInternetGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateInternetGateway.html) in the *Amazon EC2 API Reference*\.
-+ Use the [AWS::EC2::VPCGatewayAttachment](aws-resource-ec2-vpc-gateway-attachment.md) resource to associate an Internet gateway with a VPC\.
+## See Also<a name="aws-resource-ec2-internetgateway--seealso"></a>
++  [ CreateInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateInternetGateway.html) in the *Amazon EC2 API Reference*
++ [InternetGateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon Virtual Private Cloud User Guide*
++ Use the [ AWS::EC2::VPCGatewayAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html) resource to associate an Internet gateway with a VPC

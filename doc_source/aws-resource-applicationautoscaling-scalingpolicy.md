@@ -1,6 +1,10 @@
 # AWS::ApplicationAutoScaling::ScalingPolicy<a name="aws-resource-applicationautoscaling-scalingpolicy"></a>
 
-The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines a scaling policy that Application Auto Scaling uses to adjust your application resources\.
+The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines a scaling policy that Application Auto Scaling uses to adjust your application resources\. 
+
+For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\. For more information about scaling policies, see the [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html)\.
+
+For introductory exercises for scaling specific resources, see [Getting Started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-resource-applicationautoscaling-scalingpolicy-syntax"></a>
 
@@ -12,22 +16,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApplicationAutoScaling::ScalingPolicy",
   "Properties" : {
-    "[PolicyName](#cfn-applicationautoscaling-scalingpolicy-policyname)" : String,
-    "[PolicyType](#cfn-applicationautoscaling-scalingpolicy-policytype)" : String,
-    "[ResourceId](#cfn-applicationautoscaling-scalingpolicy-resourceid)" : String,
-    "[ScalableDimension](#cfn-applicationautoscaling-scalingpolicy-scalabledimension)" : String,
-    "[ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid)" : String,
-    "[ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace)" : String,
-    "[StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration)" : [*StepScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md),
-    "[TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration)" : [*TargetTrackingScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
-  }
+      "[PolicyName](#cfn-applicationautoscaling-scalingpolicy-policyname)" : String,
+      "[PolicyType](#cfn-applicationautoscaling-scalingpolicy-policytype)" : String,
+      "[ResourceId](#cfn-applicationautoscaling-scalingpolicy-resourceid)" : String,
+      "[ScalableDimension](#cfn-applicationautoscaling-scalingpolicy-scalabledimension)" : String,
+      "[ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid)" : String,
+      "[ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace)" : String,
+      "[StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration)" : [StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md),
+      "[TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration)" : [TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy-syntax.yaml"></a>
 
 ```
-Type : "AWS::ApplicationAutoScaling::ScalingPolicy"
+Type: AWS::ApplicationAutoScaling::ScalingPolicy
 Properties: 
   [PolicyName](#cfn-applicationautoscaling-scalingpolicy-policyname): String
   [PolicyType](#cfn-applicationautoscaling-scalingpolicy-policytype): String
@@ -36,256 +40,129 @@ Properties:
   [ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid): String
   [ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace): String
   [StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration): 
-    [*StepScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)
+    [StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)
   [TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration): 
-    [*TargetTrackingScalingPolicyConfiguration*](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
+    [TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
 ```
 
-## Properties<a name="w13ab1c21c10c26c17b9"></a>
+## Properties<a name="aws-resource-applicationautoscaling-scalingpolicy-properties"></a>
 
 `PolicyName`  <a name="cfn-applicationautoscaling-scalingpolicy-policyname"></a>
-A name for the scaling policy\.  
+The name of the scaling policy\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `\p{Print}+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyType`  <a name="cfn-applicationautoscaling-scalingpolicy-policytype"></a>
-An Application Auto Scaling policy type\.  
-For DynamoDB, only `TargetTrackingScaling` is supported\. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported\. For any other service, only `StepScaling` is supported\.
+The Application Auto Scaling policy type\.   
+The following policy types are supported:   
+`TargetTrackingScaling`—Not supported for Amazon EMR  
+`StepScaling`—Not supported for DynamoDB, Comprehend, or Lambda  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceId`  <a name="cfn-applicationautoscaling-scalingpolicy-resourceid"></a>
-The unique resource identifier for the scalable target that this scaling policy applies to\. For more information, see the `ResourceId` parameter for the [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) action in the *Application Auto Scaling API Reference*\.  
-*Required*: Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, don't specify the `ScalingTargetId` property\.  
+The unique resource identifier for the scalable target that this scaling policy applies to\. For valid values, see the `ResourceId` parameter for [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\.  
+You must specify either the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, or the `ScalingTargetId` property, but not both\.  
+*Required*: Conditional  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScalableDimension`  <a name="cfn-applicationautoscaling-scalingpolicy-scalabledimension"></a>
-The scalable dimension of the scalable target that this scaling policy applies to\. The scalable dimension contains the service namespace, resource type, and scaling property, such as ecs:service:DesiredCount for the desired task count of an Amazon ECS service\.  
-*Required*: Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, don't specify the `ScalingTargetId` property\.  
+The scalable dimension of the scalable target that this scaling policy applies to\. The scalable dimension contains the service namespace, resource type, and scaling property, such as `ecs:service:DesiredCount` for the desired task count of an Amazon ECS service\. For valid values, see the `ScalableDimension` parameter for [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\.  
+You must specify either the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, or the `ScalingTargetId` property, but not both\.  
+*Required*: Conditional  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
-
-`ServiceNamespace`  <a name="cfn-applicationautoscaling-scalingpolicy-servicenamespace"></a>
-The AWS service namespace of the scalable target that this scaling policy applies to\. For a list of service namespaces, see [AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
-*Required*: Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, don't specify the `ScalingTargetId` property\.  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScalingTargetId`  <a name="cfn-applicationautoscaling-scalingpolicy-scalingtargetid"></a>
-The AWS CloudFormation\-generated ID of an Application Auto Scaling scalable target\. For more information about the ID, see the Return Value section of the [AWS::ApplicationAutoScaling::ScalableTarget](aws-resource-applicationautoscaling-scalabletarget.md) resource\.  
-*Required*: Conditional\. You must specify either the `ScalingTargetId` property or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\. If you specify this property, don't specify the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties\.  
+The AWS CloudFormation\-generated ID of an Application Auto Scaling scalable target\. For more information about the ID, see the Return Value section of the `AWS::ApplicationAutoScaling::ScalableTarget` resource\.  
+You must specify either the `ScalingTargetId` property, or the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, but not both\.   
+*Required*: Conditional  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ServiceNamespace`  <a name="cfn-applicationautoscaling-scalingpolicy-servicenamespace"></a>
+The namespace of the AWS service that provides the resource or `custom-resource` for a resource provided by your own application or service\. For valid values, see the `ServiceNamespace` parameter for [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\.  
+You must specify either the `ResourceId`, `ScalableDimension`, and `ServiceNamespace` properties, or the `ScalingTargetId` property, but not both\.  
+*Required*: Conditional  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StepScalingPolicyConfiguration`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration"></a>
-A step policy that configures when Application Auto Scaling scales resources up or down, and by how much\.  
+A step scaling policy\.  
 *Required*: No  
-*Type*: [Application Auto Scaling ScalingPolicy StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetTrackingScalingPolicyConfiguration`  <a name="cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration"></a>
-Configures a target tracking scaling policy\.  
-This parameter is required if you are creating a new policy and the policy type is `TargetTrackingScaling`\.  
+A target tracking scaling policy\.  
 *Required*: No  
-*Type*: [Application Auto Scaling ScalingPolicy TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c26c17c11"></a>
+## Return Values<a name="aws-resource-applicationautoscaling-scalingpolicy-return-values"></a>
 
-### Ref<a name="w13ab1c21c10c26c17c11b2"></a>
+### Ref<a name="aws-resource-applicationautoscaling-scalingpolicy-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Application Auto Scaling scaling policy Amazon Resource Name \(ARN\), such as `arn:aws:autoscaling:``us-east-2``:123456789012:scalingPolicy:12ab3c4d-56789-0ef1-2345-6ghi7jk8lm90:resource/ecs/service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH:policyName/MyStepPolicy`\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Application Auto Scaling scaling policy Amazon Resource Name \(ARN\)\. For example: `arn:aws:autoscaling:us-east-2:123456789012:scalingPolicy:12ab3c4d-56789-0ef1-2345-6ghi7jk8lm90:resource/ecs/service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH:policyName/MyStepPolicy`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
-## Examples<a name="w13ab1c21c10c26c17c13"></a>
+## Examples<a name="aws-resource-applicationautoscaling-scalingpolicy--examples"></a>
 
-### Application Auto Scaling Scaling Policy with a Step Policy Configuration<a name="aws-resource-applicationautoscaling-scalingpolicy-example"></a>
+The following examples create scaling policies for a scalable target that is registered with Application Auto Scaling\. For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\.
 
-The following example creates an Application Auto Scaling scaling policy with a step policy configuration\. When an associated alarm is triggered, the policy increases the desired count of the scalable target by 200%, with a cooldown period of 60 seconds\.
+### Target Tracking Scaling Policy with a Predefined Metric Specification for an Amazon DynamoDB Table<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_a_Predefined_Metric_Specification_for_an_Amazon_DynamoDB_Table"></a>
 
-#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy-example.json"></a>
+This example both registers a DynamoDB table \([AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\) as a scalable target and creates a scaling policy with the `TargetTrackingScaling` policy type\. The scaling policy scales the table's write capacity throughput to maintain the target utilization at 50 percent based on the write capacity utilization metric\.
 
-```
-"scalingPolicy" : {
-  "Type" : "AWS::ApplicationAutoScaling::ScalingPolicy",
-  "Properties" : {
-    "PolicyName" : "AStepPolicy",
-    "PolicyType" : "StepScaling",
-    "ScalingTargetId" : {"Ref": "scalableTarget"},
-    "StepScalingPolicyConfiguration" : {
-      "AdjustmentType" : "PercentChangeInCapacity",
-      "Cooldown" : 60,
-      "MetricAggregationType" : "Average",
-      "StepAdjustments" : [{
-        "MetricIntervalLowerBound" : 0,
-        "ScalingAdjustment" : 200
-      }]
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy-example.yaml"></a>
-
-```
-scalingPolicy:
-  Type: AWS::ApplicationAutoScaling::ScalingPolicy
-  Properties:
-    PolicyName: AStepPolicy
-    PolicyType: StepScaling
-    ScalingTargetId:
-      Ref: scalableTarget
-    StepScalingPolicyConfiguration:
-      AdjustmentType: PercentChangeInCapacity
-      Cooldown: 60
-      MetricAggregationType: Average
-      StepAdjustments:
-      - MetricIntervalLowerBound: 0
-        ScalingAdjustment: 200
-```
-
-### Application Auto Scaling Scaling Policy with an Amazon DynamoDB Table<a name="aws-resource-applicationautoscaling-scalingpolicy-ddb-example"></a>
-
-This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resource\. The template defines a `TargetTrackingScaling` scaling policy that scales up the `WriteCapacityUnits` throughput for the table\.
-
-#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy-ddb-example.json"></a>
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_a_Predefined_Metric_Specification_for_an_Amazon_DynamoDB_Table--json"></a>
 
 ```
 {
-  "Resources": {
-    "DDBTable": {
-      "Type": "AWS::DynamoDB::Table",
-      "Properties": {
-        "AttributeDefinitions": [
-          {
-            "AttributeName": "ArtistId",
-            "AttributeType": "S"
-          },
-          {
-            "AttributeName": "Concert",
-            "AttributeType": "S"
-          },
-          {
-            "AttributeName": "TicketSales",
-            "AttributeType": "S"
-          }
-        ],
-        "KeySchema": [
-          {
-            "AttributeName": "ArtistId",
-            "KeyType": "HASH"
-          },
-          {
-            "AttributeName": "Concert",
-            "KeyType": "RANGE"
-          }
-        ],
-        "GlobalSecondaryIndexes": [
-          {
-            "IndexName": "GSI",
-            "KeySchema": [
+  "Resources":{
+    "WriteCapacityScalableTarget":{
+      "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties":{
+        "MaxCapacity":15,
+        "MinCapacity":5,
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
+        "ServiceNamespace":"dynamodb",
+        "ScalableDimension":"dynamodb:table:WriteCapacityUnits",
+        "ResourceId":{
+          "Fn::Join":[
+            "/",
+            [
+              "table",
               {
-                "AttributeName": "TicketSales",
-                "KeyType": "HASH"
+                "Ref":"DDBTable"
               }
-            ],
-            "Projection": {
-              "ProjectionType": "KEYS_ONLY"
-            },
-            "ProvisionedThroughput": {
-              "ReadCapacityUnits": 5,
-              "WriteCapacityUnits": 5
-            }
-          }
-        ],
-        "ProvisionedThroughput": {
-          "ReadCapacityUnits": 5,
-          "WriteCapacityUnits": 5
+            ]
+          ]
         }
       }
     },
-    "WriteCapacityScalableTarget": {
-      "Type": "AWS::ApplicationAutoScaling::ScalableTarget",
-      "Properties": {
-        "MaxCapacity": 15,
-        "MinCapacity": 5,
-        "ResourceId": { "Fn::Join": [
-          "/",
-          [
-            "table",
-            { "Ref": "DDBTable" }
-          ]
-        ] },
-        "RoleARN": {
-          "Fn::GetAtt": ["ScalingRole", "Arn"]
+    "WriteScalingPolicy":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":"WriteAutoScalingPolicy",
+        "PolicyType":"TargetTrackingScaling",
+        "ScalingTargetId":{
+          "Ref":"WriteCapacityScalableTarget"
         },
-        "ScalableDimension": "dynamodb:table:WriteCapacityUnits",
-        "ServiceNamespace": "dynamodb"
-      }
-    },
-    "ScalingRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "application-autoscaling.amazonaws.com"
-                ]
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        },
-        "Path": "/",
-        "Policies": [
-          {
-            "PolicyName": "root",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "dynamodb:DescribeTable",
-                    "dynamodb:UpdateTable",
-                    "cloudwatch:PutMetricAlarm",
-                    "cloudwatch:DescribeAlarms",
-                    "cloudwatch:GetMetricStatistics",
-                    "cloudwatch:SetAlarmState",
-                    "cloudwatch:DeleteAlarms"
-                  ],
-                  "Resource": "*"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "WriteScalingPolicy": {
-      "Type": "AWS::ApplicationAutoScaling::ScalingPolicy",
-      "Properties": {
-        "PolicyName": "WriteAutoScalingPolicy",
-        "PolicyType": "TargetTrackingScaling",
-        "ScalingTargetId": {
-          "Ref": "WriteCapacityScalableTarget"
-        },
-        "TargetTrackingScalingPolicyConfiguration": {
-          "TargetValue": 50.0,
-          "ScaleInCooldown": 60,
-          "ScaleOutCooldown": 60,
-          "PredefinedMetricSpecification": {
-            "PredefinedMetricType": "DynamoDBWriteCapacityUtilization"
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":50.0,
+          "ScaleInCooldown":60,
+          "ScaleOutCooldown":60,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"DynamoDBWriteCapacityUtilization"
           }
         }
       }
@@ -294,88 +171,24 @@ This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resou
 }
 ```
 
-#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy-ddb-example.yaml"></a>
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_with_a_Predefined_Metric_Specification_for_an_Amazon_DynamoDB_Table--yaml"></a>
 
 ```
+---
 Resources:
-  DDBTable:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      AttributeDefinitions:
-        -
-          AttributeName: "ArtistId"
-          AttributeType: "S"
-        -
-          AttributeName: "Concert"
-          AttributeType: "S"
-        -
-          AttributeName: "TicketSales"
-          AttributeType: "S"
-      KeySchema:
-        -
-          AttributeName: "ArtistId"
-          KeyType: "HASH"
-        -
-          AttributeName: "Concert"
-          KeyType: "RANGE"
-      GlobalSecondaryIndexes:
-        -
-          IndexName: "GSI"
-          KeySchema:
-            -
-              AttributeName: "TicketSales"
-              KeyType: "HASH"
-          Projection:
-            ProjectionType: "KEYS_ONLY"
-          ProvisionedThroughput:
-            ReadCapacityUnits: 5
-            WriteCapacityUnits: 5
-      ProvisionedThroughput:
-        ReadCapacityUnits: 5
-        WriteCapacityUnits: 5
   WriteCapacityScalableTarget:
     Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
       MaxCapacity: 15
       MinCapacity: 5
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
+      ServiceNamespace: dynamodb
+      ScalableDimension: dynamodb:table:WriteCapacityUnits
       ResourceId: !Join
         - /
         - - table
           - !Ref DDBTable
-      RoleARN: !GetAtt ScalingRole.Arn
-      ScalableDimension: dynamodb:table:WriteCapacityUnits
-      ServiceNamespace: dynamodb
-  ScalingRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          -
-            Effect: "Allow"
-            Principal:
-              Service:
-                - application-autoscaling.amazonaws.com
-            Action:
-              - "sts:AssumeRole"
-      Path: "/"
-      Policies:
-        -
-          PolicyName: "root"
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              -
-                Effect: "Allow"
-                Action:
-                  - "dynamodb:DescribeTable"
-                  - "dynamodb:UpdateTable"
-                  - "cloudwatch:PutMetricAlarm"
-                  - "cloudwatch:DescribeAlarms"
-                  - "cloudwatch:GetMetricStatistics"
-                  - "cloudwatch:SetAlarmState"
-                  - "cloudwatch:DeleteAlarms"
-                Resource: "*"
   WriteScalingPolicy:
     Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
@@ -389,3 +202,320 @@ Resources:
         PredefinedMetricSpecification:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
+
+### Target Tracking Scaling Policies for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policies_for_an_ECS_Service"></a>
+
+The following example both registers an ECS service \([AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)\) as a scalable target and creates two scaling policies with the `TargetTrackingScaling` policy type\. The policies are used to scale the ECS service based on the service's average CPU and memory usage\. 
+
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policies_for_an_ECS_Service--json"></a>
+
+```
+{
+  "Resources":{
+    "ECSScalableTarget":{
+      "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties":{
+        "MaxCapacity":"2",
+        "MinCapacity":"1",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService"
+        },
+        "ServiceNamespace":"ecs",
+        "ScalableDimension":"ecs:service:DesiredCount",
+        "ResourceId":{
+          "Fn::Join":[
+            "/",
+            [
+              "service",
+              {
+                "Ref":"cluster"
+              },
+              {
+                "Fn::GetAtt":[
+                  "service",
+                  "Name"
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    },
+    "ServiceScalingPolicyCPU":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":{"Fn::Sub":"${AWS::StackName}-target-tracking-cpu70"},
+        "PolicyType":"TargetTrackingScaling",
+        "ScalingTargetId":{
+          "Ref":"ECSScalableTarget"
+        },
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":70.0,
+          "ScaleInCooldown":180,
+          "ScaleOutCooldown":60,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ECSServiceAverageCPUUtilization"
+          }
+        }
+      }
+    },
+    "ServiceScalingPolicyMem":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":{"Fn::Sub":"${AWS::StackName}-target-tracking-mem90"},
+        "PolicyType":"TargetTrackingScaling",
+        "ScalingTargetId":{
+          "Ref":"ECSScalableTarget"
+        },
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":90.0,
+          "ScaleInCooldown":180,
+          "ScaleOutCooldown":60,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ECSServiceAverageMemoryUtilization"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policies_for_an_ECS_Service--yaml"></a>
+
+```
+---
+Resources:
+  ECSScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: '2'
+      MinCapacity: '1'  
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ecs.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_ECSService'
+      ServiceNamespace: ecs
+      ScalableDimension: 'ecs:service:DesiredCount'
+      ResourceId: !Join 
+        - /
+        - - service
+          - !Ref cluster
+          - !GetAtt service.Name
+  ServiceScalingPolicyCPU:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${AWS::StackName}-target-tracking-cpu70
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId:
+        Ref: ECSScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 70.0
+        ScaleInCooldown: 180
+        ScaleOutCooldown: 60
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+  ServiceScalingPolicyMem:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: !Sub ${AWS::StackName}-target-tracking-mem90
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId:
+        Ref: ECSScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 90.0
+        ScaleInCooldown: 180
+        ScaleOutCooldown: 60
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageMemoryUtilization
+```
+
+### Target Tracking Scaling Policy for Scale Out Only for an ECS Service<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service"></a>
+
+The following example applies a target tracking scaling policy with the `ALBRequestCountPerTarget` metric type to an ECS service called `web-app` in the default cluster\. The policy is used to add capacity to the ECS service when the request count per target exceeds the target value\. Because the value of `DisableScaleIn` is set to true, the target tracking policy won't remove capacity from the scalable target\.
+
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--json"></a>
+
+```
+{
+  "Resources":{
+    "ServiceScalingPolicyALB":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":"alb-scale-out-target-tracking-scaling-policy",
+        "PolicyType":"TargetTrackingScaling",
+        "ServiceNamespace":"ecs",
+        "ScalableDimension":"ecs:service:DesiredCount",
+        "ResourceId":"service/default/web-app",
+        "TargetTrackingScalingPolicyConfiguration":{
+          "TargetValue":1000.0,
+          "ScaleInCooldown":60,
+          "ScaleOutCooldown":60,
+          "DisableScaleIn":true,
+          "PredefinedMetricSpecification":{
+            "PredefinedMetricType":"ALBRequestCountPerTarget",
+            "ResourceLabel": "app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_Tracking_Scaling_Policy_for_Scale_Out_Only_for_an_ECS_Service--yaml"></a>
+
+```
+---
+Resources:
+  ServiceScalingPolicyALB:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: alb-scale-out-target-tracking-scaling-policy
+      PolicyType: TargetTrackingScaling
+      ServiceNamespace: ecs
+      ScalableDimension: ecs:service:DesiredCount
+      ResourceId: service/default/web-app
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 1000.0
+        ScaleInCooldown: 60
+        ScaleOutCooldown: 60
+        DisableScaleIn: true
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ALBRequestCountPerTarget
+          ResourceLabel: app/EC2Co-EcsEl-1TKLTMITMM0EO/f37c06a68c1748aa/targetgroup/EC2Co-Defau-LDNM7Q3ZH1ZN/6d4ea56ca2d6a18d
+```
+
+### Step Scaling Policy for Scale Out Only for a Spot Fleet<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out_Only_for_a_Spot_Fleet"></a>
+
+The following example registers a Spot Fleet \([AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html)\) as a scalable target, creates a scheduled action, and creates a scaling policy\. It uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions to construct the `ResourceId` property\. 
+
+It creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. When an associated alarm is triggered, the policy increases the capacity of the scalable target based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
++ Increase capacity by 1 when the value of the metric is greater than or equal to 70 percent but less than 85 percent 
++ Increase capacity by 2 when the value of the metric is greater than or equal to 85 percent but less than 95 percent 
++ Increase capacity by 3 when the value of the metric is greater than or equal to 95 percent 
+
+#### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out_Only_for_a_Spot_Fleet--json"></a>
+
+```
+{
+  "Resources":{
+    "SpotFleetScalableTarget":{
+      "Type":"AWS::ApplicationAutoScaling::ScalableTarget",
+      "Properties":{
+        "MaxCapacity":2,
+        "MinCapacity":1,
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ec2.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_EC2SpotFleetRequest"
+        },
+        "ServiceNamespace":"ec2",
+        "ScalableDimension":"ec2:spot-fleet-request:TargetCapacity",
+        "ResourceId":{
+          "Fn::Join":[
+            "/",
+            [
+              "spot-fleet-request",
+              {
+                "Ref":"ECSSpotFleet"
+              }
+            ]
+          ]
+        },
+        "ScheduledActions":[
+          {
+            "EndTime":"2019-12-31T12:00:00.000Z",
+            "ScalableTargetAction":{
+              "MaxCapacity":"20",
+              "MinCapacity":"5"
+            },
+            "ScheduledActionName":"First",
+            "StartTime":"2019-12-25T12:00:00.000Z",
+            "Schedule":"cron(0 18 * * ? *)"
+          }
+        ]
+      }
+    },
+    "SpotFleetPolicyHigh":{
+      "Type":"AWS::ApplicationAutoScaling::ScalingPolicy",
+      "Properties":{
+        "PolicyName":"SpotFleetPolicyHigh",
+        "PolicyType":"StepScaling",
+        "ScalingTargetId":{
+          "Ref":"SpotFleetScalableTarget"
+        },
+        "StepScalingPolicyConfiguration":{
+          "AdjustmentType":"ChangeInCapacity",
+          "Cooldown":600,
+          "MetricAggregationType":"Average",
+          "StepAdjustments":[
+            {
+              "MetricIntervalLowerBound":0,
+              "MetricIntervalUpperBound":15,
+              "ScalingAdjustment":1
+            },
+            {
+              "MetricIntervalLowerBound":15,
+              "MetricIntervalUpperBound":25,
+              "ScalingAdjustment":2
+            },
+            {
+              "MetricIntervalLowerBound":25,
+              "ScalingAdjustment":3
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_Scaling_Policy_for_Scale_Out_Only_for_a_Spot_Fleet--yaml"></a>
+
+```
+---
+Resources:
+  SpotFleetScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: 2
+      MinCapacity: 1
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/ec2.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_EC2SpotFleetRequest'
+      ServiceNamespace: ec2
+      ScalableDimension: 'ec2:spot-fleet-request:TargetCapacity'
+      ResourceId: !Join 
+        - /
+        - - spot-fleet-request
+          - !Ref ECSSpotFleet
+      ScheduledActions:
+        - EndTime: '2019-12-31T12:00:00.000Z'
+          ScalableTargetAction:
+            MaxCapacity: '20'
+            MinCapacity: '5'
+          ScheduledActionName: First
+          StartTime: '2019-12-25T12:00:00.000Z'
+          Schedule: 'cron(0 18 * * ? *)'
+  SpotFleetPolicyHigh:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: SpotFleetPolicyHigh
+      PolicyType: StepScaling
+      ScalingTargetId:
+        Ref: SpotFleetScalableTarget
+      StepScalingPolicyConfiguration:
+        AdjustmentType: ChangeInCapacity
+        Cooldown: 600
+        MetricAggregationType: Average
+        StepAdjustments:
+        - MetricIntervalLowerBound: 0
+          MetricIntervalUpperBound: 15
+          ScalingAdjustment: 1
+        - MetricIntervalLowerBound: 15
+          MetricIntervalUpperBound: 25
+          ScalingAdjustment: 2
+        - MetricIntervalLowerBound: 25
+          ScalingAdjustment: 3
+```
+
+## See Also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>
++ [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
++ [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/put-scaling-policy.html#examples) of Application Auto Scaling scaling policies in the * AWS CLI Command Reference*

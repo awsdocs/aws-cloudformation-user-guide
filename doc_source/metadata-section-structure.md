@@ -29,10 +29,10 @@ Metadata:
 Some AWS CloudFormation features retrieve settings or configuration information that you define in the `Metadata` section\. You define this information in the following AWS CloudFormation\-specific metadata keys:
 
 `AWS::CloudFormation::Init`  
-Defines configuration tasks for the cfn\-init helper script\. This script is useful for configuring and installing applications on EC2 instances\. For more information, see [AWS::CloudFormation::Init](aws-resource-init.md)\.
+Defines configuration tasks for the cfn\-init helper script\. This script is useful for configuring and installing applications on EC2 instances\. For more information, see `AWS::CloudFormation::Init`\.
 
 `AWS::CloudFormation::Interface`  
-Defines the grouping and ordering of input parameters when they are displayed in the AWS CloudFormation console\. By default, the AWS CloudFormation console alphabetically sorts parameters by their logical ID\. For more information, see [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md)\.
+Defines the grouping and ordering of input parameters when they are displayed in the AWS CloudFormation console\. By default, the AWS CloudFormation console alphabetically sorts parameters by their logical ID\. For more information, see `AWS::CloudFormation::Interface`\.
 
 `AWS::CloudFormation::Designer`  
-Describes how your resources are laid out in AWS CloudFormation Designer \(Designer\)\. Designer automatically adds this information when you use it create and update templates\. For more information, see [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
+Describes how your resources are laid out in AWS CloudFormation Designer \(Designer\)\. Designer automatically adds this information when you use it to create and update templates\. For more information, see [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.

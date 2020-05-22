@@ -1,15 +1,17 @@
-# CodePipeline Pipeline Stages<a name="aws-properties-codepipeline-pipeline-stages"></a>
+# AWS::CodePipeline::Pipeline StageDeclaration<a name="aws-properties-codepipeline-pipeline-stages"></a>
 
-`Stages` is a property of the [AWS::CodePipeline::Pipeline](aws-resource-codepipeline-pipeline.md) resource that specifies a sequence of tasks for CodePipeline to complete on an artifact\.
+Represents information about a stage and its definition\.
 
-## Syntax<a name="w13ab1c21c10c81c17c53b5"></a>
+## Syntax<a name="aws-properties-codepipeline-pipeline-stages-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-syntax.json"></a>
 
 ```
 {
-  "[Actions](#cfn-codepipeline-pipeline-stages-actions)" : [ Actions, ... ],
-  "[Blockers](#cfn-codepipeline-pipeline-stages-blockers)" : [ Blockers, ... ],
+  "[Actions](#cfn-codepipeline-pipeline-stages-actions)" : [ [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md), ... ],
+  "[Blockers](#cfn-codepipeline-pipeline-stages-blockers)" : [ [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md), ... ],
   "[Name](#cfn-codepipeline-pipeline-stages-name)" : String
 }
 ```
@@ -17,26 +19,32 @@
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-syntax.yaml"></a>
 
 ```
-[Actions](#cfn-codepipeline-pipeline-stages-actions):
-  - Actions
-[Blockers](#cfn-codepipeline-pipeline-stages-blockers):
-  - Blockers
-[Name](#cfn-codepipeline-pipeline-stages-name): String
+  [Actions](#cfn-codepipeline-pipeline-stages-actions): 
+    - [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)
+  [Blockers](#cfn-codepipeline-pipeline-stages-blockers): 
+    - [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)
+  [Name](#cfn-codepipeline-pipeline-stages-name): String
 ```
 
-## Properties<a name="w13ab1c21c10c81c17c53b7"></a>
+## Properties<a name="aws-properties-codepipeline-pipeline-stages-properties"></a>
 
 `Actions`  <a name="cfn-codepipeline-pipeline-stages-actions"></a>
-The actions to include in this stage\.  
+The actions included in a stage\.  
 *Required*: Yes  
-*Type*: List of [CodePipeline Pipeline Stages Actions](aws-properties-codepipeline-pipeline-stages-actions.md)
+*Type*: List of [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Blockers`  <a name="cfn-codepipeline-pipeline-stages-blockers"></a>
-The gates included in a stage\.  
+Reserved for future use\.  
 *Required*: No  
-*Type*: List of [CodePipeline Pipeline Stages Blockers](aws-properties-codepipeline-pipeline-stages-blockers.md)
+*Type*: List of [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-name"></a>
-A name for this stage\.  
+The name of the stage\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `[A-Za-z0-9.@\-_]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,10 @@
-# Elastic Load Balancing V2 TargetDescription<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription"></a>
+# AWS::ElasticLoadBalancingV2::TargetGroup TargetDescription<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription"></a>
 
-The `TargetDescription` property of the [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md) resource specifies a target to add to a target group\.
+Specifies a target to add to a target group\.
 
-## Syntax<a name="w13ab1c21c10d138c31c19b5"></a>
+## Syntax<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-syntax.json"></a>
 
@@ -14,27 +16,36 @@ The `TargetDescription` property of the [AWS::ElasticLoadBalancingV2::TargetGrou
 }
 ```
 
-### YAML<a name="elasticloadbalancingv2-targetgroup-targetdescription"></a>
+### YAML<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-syntax.yaml"></a>
 
 ```
-[AvailabilityZone](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone): String
-[Id](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id): String
-[Port](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port): Integer
+  [AvailabilityZone](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone): String
+  [Id](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-id): String
+  [Port](#cfn-elasticloadbalancingv2-targetgroup-targetdescription-port): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d138c31c19b7"></a>
+## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-targetdescription-properties"></a>
 
 `AvailabilityZone`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone"></a>
-The Availability Zone where the IP address is to be registered\. For more information, see [TargetDescription](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_TargetDescription.html) in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+An Availability Zone or `all`\. This determines whether the target receives traffic from the load balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load balancer\.  
+This parameter is not supported if the target type of the target group is `instance`\.  
+If the target type is `ip` and the IP address is in a subnet of the VPC for the target group, the Availability Zone is automatically detected and this parameter is optional\. If the IP address is outside the VPC, this parameter is required\.  
+With an Application Load Balancer, if the target type is `ip` and the IP address is outside the VPC for the target group, the only supported value is `all`\.  
+If the target type is `lambda`, this parameter is optional and the only supported value is `all`\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-id"></a>
-The ID of the target\. If the target type of the target group is `instance`, specify an instance ID\. If the target type is `ip`, specify an IP address\.  
+The ID of the target\. If the target type of the target group is `instance`, specify an instance ID\. If the target type is `ip`, specify an IP address\. If the target type is `lambda`, specify the ARN of the Lambda function\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-port"></a>
-The port number on which the target is listening for traffic\.  
+The port on which the target is listening\. Not used if the target is a Lambda function\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `65535`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

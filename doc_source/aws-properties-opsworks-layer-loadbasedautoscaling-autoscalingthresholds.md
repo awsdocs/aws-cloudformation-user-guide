@@ -1,18 +1,20 @@
-# AWS OpsWorks AutoScalingThresholds Type<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds"></a>
+# AWS::OpsWorks::Layer AutoScalingThresholds<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds"></a>
 
-Describes the scaling thresholds for the [AWS OpsWorks LoadBasedAutoScaling Type](aws-properties-opsworks-layer-loadbasedautoscaling.md) property\. For more information, see [AutoScalingThresholds](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_AutoScalingThresholds.html) in the *AWS OpsWorks Stacks API Reference*\.
+Describes a load\-based auto scaling upscaling or downscaling threshold configuration, which specifies when AWS OpsWorks Stacks starts or stops load\-based instances\.
 
-## Syntax<a name="w13ab1c21c10d183c29c17b5"></a>
+## Syntax<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-syntax.json"></a>
 
 ```
 {
-  "[CpuThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold)" : Number,
+  "[CpuThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold)" : Double,
   "[IgnoreMetricsTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime)" : Integer,
   "[InstanceCount](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount)" : Integer,
-  "[LoadThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold)" : Number,
-  "[MemoryThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold)" : Number,
+  "[LoadThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold)" : Double,
+  "[MemoryThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold)" : Double,
   "[ThresholdsWaitTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime)" : Integer
 }
 ```
@@ -20,42 +22,52 @@ Describes the scaling thresholds for the [AWS OpsWorks LoadBasedAutoScaling Type
 ### YAML<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-syntax.yaml"></a>
 
 ```
-[CpuThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold): Number
-[IgnoreMetricsTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime): Integer
-[InstanceCount](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount): Integer
-[LoadThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold): Number
-[MemoryThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold): Number
-[ThresholdsWaitTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime): Integer
+  [CpuThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold): Double
+  [IgnoreMetricsTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime): Integer
+  [InstanceCount](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount): Integer
+  [LoadThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold): Double
+  [MemoryThreshold](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold): Double
+  [ThresholdsWaitTime](#cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime): Integer
 ```
 
-## Properties<a name="w13ab1c21c10d183c29c17b7"></a>
+## Properties<a name="aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-properties"></a>
 
 `CpuThreshold`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-cputhreshold"></a>
-The percentage of CPU utilization that triggers the starting or stopping of instances \(scaling\)\.  
+The CPU utilization threshold, as a percent of the available CPU\. A value of \-1 disables the threshold\.  
 *Required*: No  
-*Type*: Number
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IgnoreMetricsTime`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-ignoremetricstime"></a>
-The amount of time \(in minutes\) after a scaling event occurs that AWS OpsWorks should ignore metrics and not start any additional scaling events\.  
+The amount of time \(in minutes\) after a scaling event occurs that AWS OpsWorks Stacks should ignore metrics and suppress additional scaling events\. For example, AWS OpsWorks Stacks adds new instances following an upscaling event but the instances won't start reducing the load until they have been booted and configured\. There is no point in raising additional scaling events during that operation, which typically takes several minutes\. `IgnoreMetricsTime` allows you to direct AWS OpsWorks Stacks to suppress scaling events long enough to get the new instances online\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceCount`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-instancecount"></a>
 The number of instances to add or remove when the load exceeds a threshold\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadThreshold`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-loadthreshold"></a>
-The degree of system load that triggers the starting or stopping of instances \(scaling\)\. For more information about how load is computed, see [Load \(computing\)](http://en.wikipedia.org/wiki/Load_%28computing%29)\.  
+The load threshold\. A value of \-1 disables the threshold\. For more information about how load is computed, see [Load \(computing\)](http://en.wikipedia.org/wiki/Load_%28computing%29)\.  
 *Required*: No  
-*Type*: Number
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MemoryThreshold`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-memorythreshold"></a>
-The percentage of memory consumption that triggers the starting or stopping of instances \(scaling\)\.  
+The memory utilization threshold, as a percent of the available memory\. A value of \-1 disables the threshold\.  
 *Required*: No  
-*Type*: Number
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThresholdsWaitTime`  <a name="cfn-opsworks-layer-loadbasedautoscaling-autoscalingthresholds-thresholdwaittime"></a>
-The amount of time, in minutes, that the load must exceed a threshold before instances are added or removed\.  
+The amount of time, in minutes, that the load must exceed a threshold before more instances are added or removed\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

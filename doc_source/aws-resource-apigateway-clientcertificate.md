@@ -1,12 +1,6 @@
 # AWS::ApiGateway::ClientCertificate<a name="aws-resource-apigateway-clientcertificate"></a>
 
-The `AWS::ApiGateway::ClientCertificate` resource creates a client certificate that Amazon API Gateway \(API Gateway\) uses to configure client\-side SSL authentication for sending requests to the integration endpoint\.
-
-**Topics**
-+ [Syntax](#aws-resource-apigateway-clientcertificate-syntax)
-+ [Properties](#w13ab1c21c10c20c29b9)
-+ [Return Value](#w13ab1c21c10c20c29c11)
-+ [Example](#w13ab1c21c10c20c29c13)
+The `AWS::ApiGateway::ClientCertificate` resource creates a client certificate that API Gateway uses to configure client\-side SSL authentication for sending requests to the integration endpoint\.
 
 ## Syntax<a name="aws-resource-apigateway-clientcertificate-syntax"></a>
 
@@ -18,8 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::ClientCertificate",
   "Properties" : {
-    "[Description](#cfn-apigateway-clientcertificate-description)" : String
-  }
+      "[Description](#cfn-apigateway-clientcertificate-description)" : String,
+      "[Tags](#cfn-apigateway-clientcertificate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -27,46 +22,61 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ApiGateway::ClientCertificate
-Properties:
+Properties: 
   [Description](#cfn-apigateway-clientcertificate-description): String
+  [Tags](#cfn-apigateway-clientcertificate-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w13ab1c21c10c20c29b9"></a>
+## Properties<a name="aws-resource-apigateway-clientcertificate-properties"></a>
 
 `Description`  <a name="cfn-apigateway-clientcertificate-description"></a>
 A description of the client certificate\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w13ab1c21c10c20c29c11"></a>
+`Tags`  <a name="cfn-apigateway-clientcertificate-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the client certificate\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w13ab1c21c10c20c29c11b2"></a>
+## Return Values<a name="aws-resource-apigateway-clientcertificate-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the client certificate name, such as `abc123`\.
+### Ref<a name="aws-resource-apigateway-clientcertificate-return-values-ref"></a>
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the client certificate name, such as `abc123`\.
 
-## Example<a name="w13ab1c21c10c20c29c13"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Examples<a name="aws-resource-apigateway-clientcertificate--examples"></a>
+
+### Create client certificate<a name="aws-resource-apigateway-clientcertificate--examples--Create_client_certificate"></a>
 
 The following example creates a client certificate that you can use with an API Gateway deployment and stage\.
 
-### JSON<a name="aws-resource-apigateway-clientcertificate-example.json"></a>
+#### JSON<a name="aws-resource-apigateway-clientcertificate--examples--Create_client_certificate--json"></a>
 
 ```
-"TestClientCertificate": {
-  "Type": "AWS::ApiGateway::ClientCertificate",
-  "Properties": {
-    "Description": "A test client certificate"
-  }
+{
+    "TestClientCertificate": {
+        "Type": "AWS::ApiGateway::ClientCertificate",
+        "Properties": {
+            "Description": "A test client certificate"
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-apigateway-clientcertificate-example.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-clientcertificate--examples--Create_client_certificate--yaml"></a>
 
 ```
-TestClientCertificate: 
-  Type: AWS::ApiGateway::ClientCertificate
-  Properties: 
-    Description: "A test client certificate"
+TestClientCertificate:
+  Type: 'AWS::ApiGateway::ClientCertificate'
+  Properties:
+    Description: A test client certificate
 ```
+
+## See Also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
++ [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/clientcertificate-generate/) in the *Amazon API Gateway REST API Reference*

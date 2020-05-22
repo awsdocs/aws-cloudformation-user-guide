@@ -1,8 +1,10 @@
-# CodePipeline Pipeline ArtifactStore EncryptionKey<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey"></a>
+# AWS::CodePipeline::Pipeline EncryptionKey<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey"></a>
 
-`EncryptionKey` is a property of the [CodePipeline Pipeline ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md) property that specifies which key CodePipeline uses to encrypt data in the artifact store, such as an AWS Key Management Service \(AWS KMS\) key\.
+Represents information about the key used to encrypt data in the artifact store, such as an AWS Key Management Service \(AWS KMS\) key\.
 
-## Syntax<a name="w13ab1c21c10c81c17c41b5"></a>
+## Syntax<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-syntax.json"></a>
 
@@ -16,18 +18,21 @@
 ### YAML<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-syntax.yaml"></a>
 
 ```
-[Id](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-id): String
-[Type](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type): String
+  [Id](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-id): String
+  [Type](#cfn-codepipeline-pipeline-artifactstore-encryptionkey-type): String
 ```
 
-## Properties<a name="w13ab1c21c10c81c17c41b7"></a>
+## Properties<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-properties"></a>
 
 `Id`  <a name="cfn-codepipeline-pipeline-artifactstore-encryptionkey-id"></a>
-The ID of the key\. For an AWS KMS key, specify the key ID or key Amazon Resource Number \(ARN\)\.  
+The ID used to identify the key\. For an AWS KMS key, you can use the key ID, the key ARN, or the alias ARN\.  
+Aliases are recognized only in the account that created the customer master key \(CMK\)\. For cross\-account actions, you can only use the key ID or key ARN to identify the key\.
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codepipeline-pipeline-artifactstore-encryptionkey-type"></a>
-The type of encryption key, such as `KMS`\. For valid values, see [EncryptionKey](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_EncryptionKey.html) in the *AWS CodePipeline API Reference*\.  
+The type of encryption key, such as an AWS Key Management Service \(AWS KMS\) key\. When creating or updating a pipeline, the value must be set to 'KMS'\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,6 @@
-# Amazon S3 Bucket AbortIncompleteMultipartUpload<a name="aws-properties-s3-bucket-abortincompletemultipartupload"></a>
+# AWS::S3::Bucket AbortIncompleteMultipartUpload<a name="aws-properties-s3-bucket-abortincompletemultipartupload"></a>
 
-The `AbortIncompleteMultipartUpload` property type creates a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\. When Amazon S3 aborts a multipart upload, it deletes all parts associated with the multipart upload\. For more information, see [ Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config) in the *Amazon Simple Storage Service Developer Guide*\.
-
- `AbortIncompleteMultipartUpload` is a property of the [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md) property type\.
+Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload\. For more information, see [ Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config) in the *Amazon Simple Storage Service Developer Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-abortincompletemultipartupload-syntax"></a>
 
@@ -19,13 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-abortincompletemultipartupload-syntax.yaml"></a>
 
 ```
-[DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation): Integer
+  [DaysAfterInitiation](#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation): Integer
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-abortincompletemultipartupload-properties"></a>
 
 `DaysAfterInitiation`  <a name="cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation"></a>
-The number of days after the upload is initiated before aborting the upload\.  
- *Required*: Yes  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload\.  
+*Required*: Yes  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

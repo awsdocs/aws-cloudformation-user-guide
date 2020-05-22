@@ -1,12 +1,6 @@
 # AWS::DMS::EventSubscription<a name="aws-resource-dms-eventsubscription"></a>
 
-Use the `AWS::DMS::EventSubscription` resource to get notifications for AWS Database Migration Service events through the Amazon Simple Notification Service\. For more information, see [Using AWS DMS Event Notification](https://docs.aws.amazon.com/dms/latest/userguide/USER_Events.html) in the *AWS Database Migration Service User Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-dms-eventsubscription-syntax)
-+ [Properties](#aws-resource-dms-eventsubscription-properties)
-+ [Return Value](#aws-resource-dms-eventsubscription-returnvalues)
-+ [Example](#aws-resource-dms-eventsubscription-examples)
+Use the `AWS::DMS::EventSubscription` resource to get notifications for AWS Database Migration Service events through the Amazon Simple Notification Service\. For more information, see [Using AWS DMS Event Notification](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html) in the *AWS Database Migration Service User Guide\.* 
 
 ## Syntax<a name="aws-resource-dms-eventsubscription-syntax"></a>
 
@@ -18,14 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DMS::EventSubscription",
   "Properties" : {
-    "[Enabled](#cfn-dms-eventsubscription-enabled)" : Boolean,
-    "[EventCategories](#cfn-dms-eventsubscription-eventcategories)" : [ String, ... ],
-    "[SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn)" : String,
-    "[SourceIds](#cfn-dms-eventsubscription-sourceids)" : [ String, ... ],
-    "[SourceType](#cfn-dms-eventsubscription-sourcetype)" : String,
-    "[SubscriptionName](#cfn-dms-eventsubscription-subscriptionname)" : String,
-    "[Tags](#cfn-dms-eventsubscription-tags)" : [ Resource Tag, ... ]
-  }
+      "[Enabled](#cfn-dms-eventsubscription-enabled)" : Boolean,
+      "[EventCategories](#cfn-dms-eventsubscription-eventcategories)" : [ String, ... ],
+      "[SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn)" : String,
+      "[SourceIds](#cfn-dms-eventsubscription-sourceids)" : [ String, ... ],
+      "[SourceType](#cfn-dms-eventsubscription-sourcetype)" : String,
+      "[SubscriptionName](#cfn-dms-eventsubscription-subscriptionname)" : String,
+      "[Tags](#cfn-dms-eventsubscription-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -38,12 +32,12 @@ Properties:
   [EventCategories](#cfn-dms-eventsubscription-eventcategories): 
     - String
   [SnsTopicArn](#cfn-dms-eventsubscription-snstopicarn): String
-  [SourceIds](#cfn-dms-eventsubscription-sourceids):
+  [SourceIds](#cfn-dms-eventsubscription-sourceids): 
     - String
   [SourceType](#cfn-dms-eventsubscription-sourcetype): String
   [SubscriptionName](#cfn-dms-eventsubscription-subscriptionname): String
   [Tags](#cfn-dms-eventsubscription-tags): 
-    - Resource Tag
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-dms-eventsubscription-properties"></a>
@@ -52,103 +46,85 @@ Properties:
 Indicates whether to activate the subscription\. If you don't specify this property, AWS CloudFormation activates the subscription\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventCategories`  <a name="cfn-dms-eventsubscription-eventcategories"></a>
-A list of event categories that you want to subscribe to for a given source type\. If you don't specify this property, you are notified about all event categories\. For more information, see [Using AWS DMS Event Notification](https://docs.aws.amazon.com/dms/latest/userguide/USER_Events.html) in the *AWS Database Migration Service User Guide*\.  
+A list of event categories for a source type that you want to subscribe to\. If you don't specify this property, you are notified about all event categories\. For more information, see [Working with Events and Notifications](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnsTopicArn`  <a name="cfn-dms-eventsubscription-snstopicarn"></a>
-The Amazon Resource Name \(ARN\) of an Amazon SNS topic that you want to send event notifications to\.  
+ The Amazon Resource Name \(ARN\) of the Amazon SNS topic created for event notification\. The ARN is created by Amazon SNS when you create a topic and subscribe to it\.   
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceIds`  <a name="cfn-dms-eventsubscription-sourceids"></a>
 A list of identifiers for which AWS DMS provides notification events\.  
-If you don't specify a value, notifications are provided for all sources\. If you specify multiple values, they must be of the same type\. For example, if you specify a database instance ID, all other values must be database instance IDs\.  
+If you don't specify a value, notifications are provided for all sources\.  
+If you specify multiple values, they must be of the same type\. For example, if you specify a database instance ID, then all of the other values must be database instance IDs\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceType`  <a name="cfn-dms-eventsubscription-sourcetype"></a>
-The type of source for which AWS DMS provides notification events\. For example, if you want to be notified of events generated by a database instance, set this parameter to `replication-instance`\. If you don't specify a value, notifications are provided for all source types\. For valid values, see the `SourceType` parameter for the [ CreateEventSubscription](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEventSubscription.html) action in the *AWS Database Migration Service API Reference*\.  
-*Required*: Conditional\. If you specify the `SourceIds` or `EventCategories` property, you must specify this property\.  
+ The type of AWS DMS resource that generates the events\. For example, if you want to be notified of events generated by a replication instance, you set this parameter to `replication-instance`\. If this value isn't specified, all events are returned\.   
+Valid values: `replication-instance` \| `replication-task`   
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubscriptionName`  <a name="cfn-dms-eventsubscription-subscriptionname"></a>
-The subscription name\.  
-If you don't specify a value, we create a random value\.   
+The name of the AWS DMS event notification subscription\. This name must be less than 255 characters\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-dms-eventsubscription-tags"></a>
-The tags that you want to attach to the DMS event subscription\.  
+One or more tags to be assigned to the event subscription\.  
 *Required*: No  
-*Type*: List of [resource tags](aws-properties-resource-tags.md) in key\-value format  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="aws-resource-dms-eventsubscription-returnvalues"></a>
+## Return Values<a name="aws-resource-dms-eventsubscription-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+### Ref<a name="aws-resource-dms-eventsubscription-return-values-ref"></a>
 
-```
-{ "Ref": "myEventSubscription" }
-```
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
-For the resource with the logical ID `myEventSubscription`, `Ref` returns the AWS DMS event subscription name, such as: `mystack-myEventSubscription-1DDYF1E3B3I`\.
+ `{ "Ref": "myEventSubscription" }` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For the resource with the logical ID myEventSubscription, Ref returns the AWS DMS event subscription name, such as: mystack\-myEventSubscription\-1DDYF1E3B3I\. 
 
-## Example<a name="aws-resource-dms-eventsubscription-examples"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Examples<a name="aws-resource-dms-eventsubscription--examples"></a>
+
+### <a name="aws-resource-dms-eventsubscription--examples--"></a>
 
 The following snippet creates an event subscription for an existing replication instance `rep-instance-1`, which is declared elsewhere in the same template\.
 
-### JSON<a name="aws-resource-dms-eventsubscription-example.json"></a>
+#### JSON<a name="aws-resource-dms-eventsubscription--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Resources": {
-    "myEventSubscription": {
-      "Type": "AWS::DMS::EventSubscription",
-      "Properties": {
-        "EventCategories": [
-          "configuration change",
-          "failure",
-          "deletion"
-        ],
-        "SnsTopicArn": "arn:aws:sns:us-west-2:123456789012:example-topic",
-        "SourceIds": [
-          "rep-instance-1"
-        ],
-        "SourceType": "replication-instance",
-        "Enabled": false
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+                "myEventSubscription": { "Type": "AWS::DMS::EventSubscription", "Properties": {
+                "EventCategories": [ "configuration change", "failure", "deletion" ], "SnsTopicArn":
+                "arn:aws:sns:us-west-2:123456789012:example-topic", "SourceIds": [ "rep-instance-1"
+                ], "SourceType": "replication-instance", "Enabled": false } } } }
 ```
 
-### YAML<a name="aws-resource-dms-eventsubscription-example.yaml"></a>
+#### YAML<a name="aws-resource-dms-eventsubscription--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  myEventSubscription:
-    Type: AWS::DMS::EventSubscription
-    Properties:
-      EventCategories:
-        - configuration change
-        - failure
-        - deletion
-      SnsTopicArn: 'arn:aws:sns:us-west-2:123456789012:example-topic'
-      SourceIds:
-        - rep-instance-1
-      SourceType: replication-instance
-      Enabled: false
+AWSTemplateFormatVersion: 2010-09-09 Resources:
+                myEventSubscription: Properties: Enabled: false EventCategories: - "configuration
+                change" - failure - deletion SnsTopicArn:
+                "arn:aws:sns:us-west-2:123456789012:example-topic" SourceIds: - rep-instance-1
+                SourceType: replication-instance Type: "AWS::DMS::EventSubscription"
 ```
+
+## See Also<a name="aws-resource-dms-eventsubscription--seealso"></a>
++  [CreateEventSubscription](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEventSubscription.html) in the *AWS Database Migration Service API Reference* 
++  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

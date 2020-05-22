@@ -8,7 +8,7 @@ You cannot include parameters, pseudo parameters, or intrinsic functions in the 
 
 The `Mappings` section consists of the key name `Mappings`\. The keys in mappings must be literal strings\. The values can be `String` or `List` types\.  The following example shows a `Mappings` section containing a single mapping named `Mapping01` \(the logical name\)\.
 
-Within a mapping, each map is a key followed by another mapping\. The key identifies a map of name\-value pairs and must be unique within the mapping\. The name can contain only alphanumeric characters \(A\-Za\-z0\-9\)\.
+Within a mapping, each map is a key followed by another mapping\. The key **must** be a map of name\-value pairs and unique within the mapping\. The name can contain only alphanumeric characters \(A\-Za\-z0\-9\)\.
 
 ### JSON<a name="mappings-section-structure-syntax.json"></a>
 

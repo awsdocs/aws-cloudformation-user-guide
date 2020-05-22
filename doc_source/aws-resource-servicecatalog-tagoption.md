@@ -1,11 +1,6 @@
 # AWS::ServiceCatalog::TagOption<a name="aws-resource-servicecatalog-tagoption"></a>
 
-A TagOption is a key\-value pair managed by AWS Service Catalog that serves as a template for creating an AWS tag\. For more information, see [AWS Service Catalog TagOptionLibrary](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html) in the *AWS Service Catalog Administrator Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-servicecatalog-tagoption-syntax)
-+ [Properties](#aws-resource-servicecatalog-tagoption-properties)
-+ [Return Values](#aws-resource-servicecatalog-tagoption-returnvalues)
+Specifies a TagOption\. A TagOption is a key\-value pair managed by AWS Service Catalog that serves as a template for creating an AWS tag\.
 
 ## Syntax<a name="aws-resource-servicecatalog-tagoption-syntax"></a>
 
@@ -17,47 +12,50 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceCatalog::TagOption",
   "Properties" : {
-    "[Active](#cfn-servicecatalog-tagoption-active)" : Boolean,
-    "[Value](#cfn-servicecatalog-tagoption-value)" : String,
-    "[Key](#cfn-servicecatalog-tagoption-key)" : String
-  }
+      "[Active](#cfn-servicecatalog-tagoption-active)" : Boolean,
+      "[Key](#cfn-servicecatalog-tagoption-key)" : String,
+      "[Value](#cfn-servicecatalog-tagoption-value)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-servicecatalog-tagoption-syntax.yaml"></a>
 
 ```
-Type: "AWS::ServiceCatalog::TagOption"
-Properties:
+Type: AWS::ServiceCatalog::TagOption
+Properties: 
   [Active](#cfn-servicecatalog-tagoption-active): Boolean
-  [Value](#cfn-servicecatalog-tagoption-value): String
   [Key](#cfn-servicecatalog-tagoption-key): String
+  [Value](#cfn-servicecatalog-tagoption-value): String
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-tagoption-properties"></a>
 
 `Active`  <a name="cfn-servicecatalog-tagoption-active"></a>
-Indicates whether the TagOption is active\.  
+The TagOption active state\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-servicecatalog-tagoption-key"></a>
 The TagOption key\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-servicecatalog-tagoption-value"></a>
 The TagOption value\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicecatalog-tagoption-returnvalues"></a>
+## Return Values<a name="aws-resource-servicecatalog-tagoption-return-values"></a>
 
-### Ref<a name="aws-resource-servicecatalog-tagoption-ref"></a>
+### Ref<a name="aws-resource-servicecatalog-tagoption-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::ServiceCatalog::TagOption` resource to the intrinsic `Ref` function, the function returns the TagOption identifier\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the TagOption identifier\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## See Also<a name="aws-resource-servicecatalog-tagoption--seealso"></a>
++ [CreateTagOption](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateTagOption.html) in the *AWS Service Catalog API Reference*

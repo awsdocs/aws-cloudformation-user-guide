@@ -11,7 +11,7 @@ Before using a macro, we first have to do two things: create the Lambda function
 **Note**  
 We'll examine the actual code for the Lambda function later in this topic\. 
 
-The following sample template contains the definition for our example macro\. To make the macro available in a specific CloudFormation account, we create a stack from the template\. The macro definition specifies the macro name, a brief description, and references the ARN of the Lambda function that CloudFormation invokes when this macro is used in a template\. \(We have not included a **LogGroupName** or **LogRoleARN** property for error logging\.\) For more information, see [AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)\.
+The following sample template contains the definition for our example macro\. To make the macro available in a specific CloudFormation account, we create a stack from the template\. The macro definition specifies the macro name, a brief description, and references the ARN of the Lambda function that CloudFormation invokes when this macro is used in a template\. \(We have not included a **LogGroupName** or **LogRoleARN** property for error logging\.\) For more information, see [AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)\.
 
 In this example, assume that the stack created from this template is named **JavaMacroFunc**\. Because the macro `Name` property is set to the stack name, the resulting macro is named **JavaMacroFunc** as well\.
 
@@ -30,13 +30,13 @@ AWSTemplateFormatVersion: 2010-09-09
 
 To use our macro in this case, we're going to include it in a template using the [`Fn::Transform`](intrinsic-function-reference-transform.md) intrinsic function\.
 
-When we create a stack using the template below, CloudFormation calls our example macro\. The underlying Lambda function replaces one specified string with another specified string\. In this case, the result is a blank [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md) is inserted into the processed template\. 
+When we create a stack using the template below, CloudFormation calls our example macro\. The underlying Lambda function replaces one specified string with another specified string\. In this case, the result is a blank [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) is inserted into the processed template\. 
 
 Note the following: 
 + The macro to invoke is specified as **JavaMacroFunc**, which is from the previous macro definition example\.
 + The macro is passed two parameters, `target` and `replacement`, which represent the target string and its desired replacement value\.
 + The macro can operate on the contents of the `Type` node because `Type` is a sibling of the `Fn::Transform` function referencing the macro\.
-+ The resulting [AWS::CloudFormation::WaitConditionHandle](aws-properties-waitconditionhandle.md) is named `2a`\.
++ The resulting [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) is named `2a`\.
 + The template also contains a template parameter, `ExampleParameter`, which the macro also has access to \(but doesn't use in this case\)\.
 
 ```

@@ -1,8 +1,6 @@
-# Application Auto Scaling ScalableTarget ScalableTargetAction<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction"></a>
+# AWS::ApplicationAutoScaling::ScalableTarget ScalableTargetAction<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction"></a>
 
-<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-description"></a>The `ScalableTargetAction` property type specifies the minimum and maximum capacity of a scheduled action for an Application Auto Scaling scalable target\.
-
-<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-inheritance"></a> `ScalableTargetAction` is a property of the [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md) property type\.
+ `ScalableTargetAction` is a subproperty of [ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html) that represents the minimum and maximum capacity for a scheduled action\. 
 
 ## Syntax<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-syntax"></a>
 
@@ -20,20 +18,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-syntax.yaml"></a>
 
 ```
-[MaxCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity): Integer
-[MinCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity): Integer
+  [MaxCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity): Integer
+  [MinCapacity](#cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity): Integer
 ```
 
 ## Properties<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-properties"></a>
 
 `MaxCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-scalabletargetaction-maxcapacity"></a>
 The maximum capacity\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity"></a>
 The minimum capacity\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+For Lambda provisioned concurrency, the minimum value allowed is 0\. For all other resources, the minimum value allowed is 1\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction--seealso"></a>
++ [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
