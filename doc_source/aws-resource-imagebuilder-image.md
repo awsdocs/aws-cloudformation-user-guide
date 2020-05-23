@@ -89,5 +89,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
 
-`OutputResources`  <a name="OutputResources-fn::getatt"></a>
-Returns the output resources produced when creating this image, formatted as an array of AMIs\.
+`ImageId`  <a name="OutputResources-fn::getatt"></a>
+Returns the Amazon Machine Images \(AMI\) ID of the image created\. For example, `ami-03757411db9db0bb1`\.
