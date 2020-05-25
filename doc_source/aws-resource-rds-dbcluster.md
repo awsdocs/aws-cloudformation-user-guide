@@ -116,6 +116,8 @@ Currently, Backtrack is only supported for Aurora MySQL DB clusters\.
 Default: 0  
 Constraints:  
 + If specified, this value must be set to a number from 0 to 259,200 \(72 hours\)\.
++ If this property is added for an Aurora Cluster which does not have Backtrack enabled, the update will require replacement.
+
 *Required*: No  
 *Type*: Long  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
