@@ -257,7 +257,7 @@ A map that contains tag keys and tag values to attach to an AWS OpsWorks for Che
 
 ### Ref<a name="aws-resource-opsworkscm-server-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the server's ARN, such as `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the server's ARN, such as `arn:aws:opsworks-cm:us-east-1:123456789012:server/server-a1bzhi`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -270,7 +270,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-opsworkscm-server-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-east-1:123456789012:server/server-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:opsworks-cm:us-east-1:123456789012:server/server-a1bzhi`\.
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
