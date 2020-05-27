@@ -147,7 +147,7 @@ The following example creates a `stage` resource called `MyStage` and associates
             "DefaultRouteSettings": {
                 "DetailedMetricsEnabled": true,
                 "LoggingLevel": "INFO",
-                "DataTraceEnabled": true,
+                "DataTraceEnabled": false,
                 "ThrottlingBurstLimit": 10,
                 "ThrottlingRateLimit": 10
             },
@@ -173,7 +173,7 @@ MyStage:
     DefaultRouteSettings:
       DetailedMetricsEnabled: true
       LoggingLevel: INFO
-      DataTraceEnabled: true
+      DataTraceEnabled: false
       ThrottlingBurstLimit: 10
       ThrottlingRateLimit: 10
     AccessLogSettings:

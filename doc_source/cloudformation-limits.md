@@ -31,7 +31,11 @@ Your AWS account has AWS CloudFormation limits that you might need to know when 
 ## Feature availability<a name="stacksets-availability"></a>
 
 Not all features of CloudFormation may be available in every region\. For more information on AWS regions, see [Global Infrastructure Region Table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
-+ StackSets is available in the following regions:
++ [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following region:
+  + Asia Pacific \(Osaka\-Local\)
++ [Resource import](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is currently not available in the following region:
+  + Asia Pacific \(Osaka\-Local\)
++ [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) is available in the following regions:
   + US East \(N\. Virginia\)
   + US East \(Ohio\)
   + US West \(N\. California\)
@@ -48,10 +52,12 @@ Not all features of CloudFormation may be available in every region\. For more i
   + Europe \(Paris\)
   + South America \(São Paulo\)
   + AWS GovCloud \(US\-West\)
-+ Drift detection is currently not available in the following region:
-  + Osaka\-Local \(ap\-northeast\-3\)
-+ Resource import is currently not available in the following region:
-  + Osaka\-Local \(ap\-northeast\-3\)
++ [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
+  + Africa \(Cape Town\)
+  + Europe \(Milan\)
+  + Asia Pacific \(Osaka\-Local\)
+  + China \(Beijing\)
+  + China \(Ningxia\)
 
 ## StackSets and macros<a name="stacksets-macros"></a>
 

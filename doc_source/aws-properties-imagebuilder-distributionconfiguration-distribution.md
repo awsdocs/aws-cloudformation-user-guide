@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ### Example AmiDistributionConfiguration schema<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema"></a>
 
-The following example shows the schema for the AmiDistributionConfiguration property\.
+The following example shows the schema for the AmiDistributionConfiguration property in both YAML and JSON format\.
 
 #### YAML<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema--yaml"></a>
 

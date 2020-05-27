@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : [Cors](aws-properties-apigatewayv2-api-cors.md),
       "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-api-description)" : String,
+      "[DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint)" : Boolean,
       "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
       "[FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings)" : Boolean,
       "[Name](#cfn-apigatewayv2-api-name)" : String,
@@ -46,6 +47,7 @@ Properties:
     [Cors](aws-properties-apigatewayv2-api-cors.md)
   [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
   [Description](#cfn-apigatewayv2-api-description): String
+  [DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint): Boolean
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
   [FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings): Boolean
   [Name](#cfn-apigatewayv2-api-name): String
@@ -99,6 +101,12 @@ This property is part of quick create\. It specifies the credentials required fo
 The description of the API\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableExecuteApiEndpoint`  <a name="cfn-apigatewayv2-api-disableexecuteapiendpoint"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableSchemaValidation`  <a name="cfn-apigatewayv2-api-disableschemavalidation"></a>

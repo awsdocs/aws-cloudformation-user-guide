@@ -178,6 +178,7 @@ An elastic GPU to associate with the instance\. An Elastic GPU is a GPU resource
 
 `ElasticInferenceAccelerators`  <a name="cfn-ec2-instance-elasticinferenceaccelerators"></a>
 An elastic inference accelerator to associate with the instance\. Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning \(DL\) inference workloads\.  
+You cannot specify accelerators from different generations in the same request\.  
 *Required*: No  
 *Type*: List of [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

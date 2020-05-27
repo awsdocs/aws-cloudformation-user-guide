@@ -146,3 +146,79 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
+
+## Examples<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples"></a>
+
+### Create an infrastructure configuration<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration"></a>
+
+The following example shows the schema for all of the parameters of the InfrastructureConfiguration resource document in both YAML and JSON format \.
+
+#### YAML<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--yaml"></a>
+
+```
+Resources:
+  InfrastructureConfigurationAll:
+    Type: 'AWS::ImageBuilder::InfrastructureConfiguration'
+    Properties:
+      Name: 'infrastructure-configuration-name'
+      InstanceProfileName: 'instance-profile-name'
+      Description: 'description'
+      InstanceTypes:
+        - 'm4.large'
+        - 'm5.large'
+      KeyPair: 'key-pair'
+      Logging:
+        S3Logs:
+          S3BucketName: 'imagebuilder-logging-bucket'
+          S3KeyPrefix: 'imagebuilder-bucket-prefix'
+      SnsTopicArn: !Ref SnsTopicArn
+      TerminateInstanceOnFailure: true
+      SecurityGroupIds:
+        - 'security-group-id-1'
+        - 'security-group-id-2'
+      SubnetId: 'subnet-id'
+      Tags:
+        CustomerInfraConfigTagKey1: 'CustomerInfraConfigTagValue1'
+        CustomerInfraConfigTagKey2: 'CustomerInfraConfigTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--json"></a>
+
+```
+{
+    "Resources": {
+        "InfrastructureConfigurationAll": {
+            "Type": "AWS::ImageBuilder::InfrastructureConfiguration",
+            "Properties": {
+                "Name": "infrastructure-configuration-name",
+                "InstanceProfileName": "instance-profile-name",
+                "Description": "description",
+                "InstanceTypes": [
+                    "m4.large",
+                    "m5.large"
+                ],
+                "KeyPair": "key-pair",
+                "Logging": {
+                    "S3Logs": {
+                        "S3BucketName": "imagebuilder-logging-bucket",
+                        "S3KeyPrefix": "imagebuilder-bucket-prefix"
+                    }
+                },
+                "SnsTopicArn": {
+                    "Ref": "SnsTopicArn"
+                },
+                "TerminateInstanceOnFailure": true,
+                "SecurityGroupIds": [
+                    "security-group-id-1",
+                    "security-group-id-2"
+                ],
+                "SubnetId": "subnet-id",
+                "Tags": {
+                    "CustomerInfraConfigTagKey1": "CustomerInfraConfigTagValue1",
+                    "CustomerInfraConfigTagKey2": "CustomerInfraConfigTagValue2"
+                }
+            }
+        }
+    }
+}
+```

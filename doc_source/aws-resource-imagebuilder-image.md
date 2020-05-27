@@ -89,6 +89,60 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
 
-`ImageId`  <a name="ImageId-fn::getatt"></a>
-Returns the AMI ID of the EC2 AMI in the Region in which you are using Image
-         Builder.\
+`OutputResources`  <a name="OutputResources-fn::getatt"></a>
+Returns the output resources produced when creating this image, formatted as an array of AMIs\.
+
+## Examples<a name="aws-resource-imagebuilder-image--examples"></a>
+
+### Create an image<a name="aws-resource-imagebuilder-image--examples--Create_an_image"></a>
+
+The following example shows the schema for all of the parameters of the Image resource document in both YAML and JSON format \.
+
+#### YAML<a name="aws-resource-imagebuilder-image--examples--Create_an_image--yaml"></a>
+
+```
+Resources:
+  ImageAllParameters:
+    Type: 'AWS::ImageBuilder::Image'
+    Properties:
+      ImageRecipeArn: !Ref ImageRecipeArn
+      InfrastructureConfigurationArn: !Ref InfrastructureConfigurationArn
+      DistributionConfigurationArn: !Ref DistributionConfigurationArn
+      ImageTestsConfiguration:
+        ImageTestsEnabled: false
+        TimeoutMinutes: 60
+      Tags:
+        CustomerImageTagKey1: 'CustomerImageTagValue1'
+        CustomerImageTagKey2: 'CustomerImageTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-image--examples--Create_an_image--json"></a>
+
+```
+{
+    "Resources": {
+        "ImageAllParameters": {
+            "Type": "AWS::ImageBuilder::Image",
+            "Properties": {
+                "ImageRecipeArn": {
+                    "Ref": "ImageRecipeArn"
+                },
+                "InfrastructureConfigurationArn": {
+                    "Ref": "InfrastructureConfigurationArn"
+                },
+                "DistributionConfigurationArn": {
+                    "Ref": "DistributionConfigurationArn"
+                },
+                "ImageTestsConfiguration": {
+                    "ImageTestsEnabled": false,
+                    "TimeoutMinutes": 60
+                },
+                "Tags": {
+                    "CustomerImageTagKey1": "CustomerImageTagValue1",
+                    "CustomerImageTagKey2": "CustomerImageTagValue2"
+                }
+            }
+        }
+    }
+}
+```

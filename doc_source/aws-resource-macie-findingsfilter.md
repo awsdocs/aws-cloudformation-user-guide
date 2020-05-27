@@ -104,26 +104,28 @@ The following examples demonstrates how to declare an `AWS::Macie::FindingsFilte
 #### JSON<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_using_an_account_ID--json"></a>
 
 ```
-"MyFindingsFilter": {
-  "Type" : "AWS::Macie::FindingsFilter",
-  "DependsOn" : "Session"
-  "Properties" : {
-      "Action" : ARCHIVE,
-      "Description" : "My custom findings filter",
-      "FindingCriteria" : {
-          "Criterion:" {
-              "AccountId:" {
-                  "eq:" ["123456789012"]
-      "Name" : MyFilterName,
-      "Position" : 1
-    }
+{
+	"Type": "AWS::Macie::FindingsFilter",
+	"DependsOn": "Session",
+	"Properties": {
+		"Action": "ARCHIVE",
+		"Description": "My custom findings filter",
+		"FindingCriteria": {
+			"Criterion": {
+				"AccountId": {
+					"eq": "123456789012"
+				},
+				"Name": "MyFilterName",
+				"Position": 1
+			}
+		}
+	}
 }
 ```
 
 #### YAML<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_using_an_account_ID--yaml"></a>
 
 ```
-myFindingsFilter
 Type: AWS::Macie::FindingsFilter
 DependsOn: "Session"
 Properties: 

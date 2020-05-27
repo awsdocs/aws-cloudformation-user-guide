@@ -16,5 +16,6 @@ For details about the supported resources, type names, intrinsic functions, and 
 + [Template Snippets](CHAP_TemplateQuickRef.md)
 + [Custom Resources](template-custom-resources.md)
 + [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)
++ [Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation](blue-green.md)
 + [Using Regular Expressions in AWS CloudFormation Templates](cfn-regexes.md)
 + [Using CloudFormer \(Beta\) to Create AWS CloudFormation Templates from Existing AWS Resources](cfn-using-cloudformer.md)

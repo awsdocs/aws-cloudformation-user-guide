@@ -4,6 +4,31 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_CodeBuild.md) | The following resources was updated: AWS::CodeBuild::ReportGroup 
+
+ [AWS::CodeBuild::ReportGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)   
+Use the `tags` property to specify the name and value of any tags that you want supporting AWS services to use for a report group\.  | May 21, 2020 | 
+| [Updated resource](AWS_StepFunctions.md) | The following resource was updated: `AWS::StepFunctions::StateMachine`\. 
+
+ [AWS::StepFunctions::StateMachine](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)   
+The `AWS::StepFunctions::StateMachine` has two new properties\. You can use the `DefinitionS3Location` property to reference a state machine JSON definition file stored in an S3 bucket\. You can use the `DefinitionString` property to pass variables into the state machine definition file referenced by `DefinitionS3Location`\.  | May 21, 2020 | 
+| [Updated resource](AWS_SSM.md) | The following resource was updated: AWS::SSM::Parameter 
+
+ [AWS::SSM::Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)   
+When you create a `String` parameter, you can now specify a DataType value as `aws:ec2:image` to ensure that the parameter value you enter is a valid Amazon Machine Image \(AMI\) ID format\. Support for AMI ID formats lets you avoid updating all your scripts and templates with a new ID each time the AMI that you want to use in your processes changes\. You can create a parameter with the data type `aws:ec2:image`, and for its value, enter the ID of an AMI\. This is the AMI from which you currently want new instances to be created\. You then reference this parameter in your templates and commands\. When you’re ready to use a different AMI, update the parameter value\. Parameter Store validates the new AMI ID, and you don’t need to update your scripts and templates\.   | May 21, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resources was updated: AWS::CodeBuild::ReportGroup 
+
+ [AWS::CodeBuild::ReportGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)   
+Use the `tags` property to specify the name and value of any tags that you want supporting AWS services to use for a report group\.  | May 21, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::SSM::Parameter 
+
+ [AWS::SSM::Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)   
+When you create a `String` parameter, you can now specify a DataType value as `aws:ec2:image` to ensure that the parameter value you enter is a valid Amazon Machine Image \(AMI\) ID format\. Support for AMI ID formats lets you avoid updating all your scripts and templates with a new ID each time the AMI that you want to use in your processes changes\. You can create a parameter with the data type `aws:ec2:image`, and for its value, enter the ID of an AMI\. This is the AMI from which you currently want new instances to be created\. You then reference this parameter in your templates and commands\. When youâre ready to use a different AMI, update the parameter value\. Parameter Store validates the new AMI ID, and you donât need to update your scripts and templates\.   | May 21, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: `AWS::StepFunctions::StateMachine`\. 
+
+ [AWS::StepFunctions::StateMachine](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)   
+The `AWS::StepFunctions::StateMachine` has two new properties\. You can use the `DefinitionS3Location` property to reference a state machine JSON definition file stored in an S3 bucket\. You can use the `DefinitionString` property to pass variables into the state machine definition file referenced by `DefinitionS3Location`\.  | May 21, 2020 | 
+| [ECS blue/green deployments through CodeDeploy](#ReleaseHistory) | You can now use CloudFormation to perform ECS blue/green deployments through CodeDeploy\. Blue/green deployments are a safe deployment strategy provided by AWS CodeDeploy for minimizing interruptions caused by changing application versions\.For more information, see [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html)\. | May 19, 2020 | 
 | [AWS CloudFormation StackSets Region availability](#ReleaseHistory) | AWS CloudFormation StackSets is now available in the AWS GovCloud \(US\-West\) Region\. | May 18, 2020 | 
 | [Updated resources](AWS_DMS.md) | The following resources were updated: AWS::DMS::Endpoint and AWS::DMS::ReplicationTask 
 
@@ -503,7 +528,7 @@ Use the `ProvisionedConcurrencyConfiguration` property to specify a provisioned 
 | [Updated resource](AWS_StepFunctions.md) | The following resource was updated: `AWS::StepFunctions::StateMachine`\. 
 
  [AWS::StepFunctions::StateMachine](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)   
-The `AWS::StepFunctions::StateMachine` now supports Express workflows using the new `StateMachineType` parameter\. you can also configure CloudWatch Logging information for Express workflows using `LoggingConfiguration`, `LogDestination`, and `CloudWatchLogsLogGroup`\.   | December 3, 2019 | 
+The `AWS::StepFunctions::StateMachine` now supports Express workflows using the new `StateMachineType` parameter\. You can also configure CloudWatch Logging information for Express workflows using `LoggingConfiguration`, `LogDestination`, and `CloudWatchLogsLogGroup`\.   | December 3, 2019 | 
 | [New resource](AWS_S3.md) | The following resource was added: AWS::S3::AccessPoint 
 
  [Access Points](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html)   

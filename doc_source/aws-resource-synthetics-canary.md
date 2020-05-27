@@ -80,7 +80,7 @@ The ARN of the IAM role to be used to run the canary\. This role must already ex
 +  `cloudwatch:PutMetricData` 
 +  `logs:CreateLogGroup` 
 +  `logs:CreateLogStream` 
-+  `logs:CreateLogStream` 
++  `logs:PutLogEvents` 
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso-{0,1}[a-z]{0,1}):[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.-]{0,1023}$`  

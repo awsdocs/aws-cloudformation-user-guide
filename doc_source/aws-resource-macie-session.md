@@ -77,20 +77,19 @@ The following examples demonstrates how to declare an `AWS::Macie::Session` reso
 #### JSON<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--json"></a>
 
 ```
-"EnableMacie": {
-  "Type" : "AWS::Macie::Session",
-  "Properties" : {
-      "FindingPublishingFrequency" : ONE_HOUR,
-      "Status" : ENABLED
-    }
+{
+	"Type": "AWS::Macie::Session",
+	"Properties": {
+		"FindingPublishingFrequency": "ONE_HOUR",
+		"Status": "ENABLED"
+	}
 }
 ```
 
 #### YAML<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--yaml"></a>
 
 ```
-EnableMacie:
-    Type: AWS::Macie::Session
+Type: AWS::Macie::Session
     Properties: 
       FindingPublishingFrequency: ONE_HOUR
       Status: ENABLED

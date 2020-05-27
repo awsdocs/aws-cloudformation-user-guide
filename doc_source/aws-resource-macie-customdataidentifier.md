@@ -2,7 +2,7 @@
 
 The `AWS::Macie::CustomDataIdentifier` resource is a set of criteria that you define to detect sensitive data in one or more data sources\. Each identifier specifies a regular expression \(regex\) that defines a text pattern to match in the data\. It can also specify character sequences, such as words and phrases, and a proximity rule that refine the analysis of a data source\. By using custom data identifiers, you can tailor your analysis to meet your organization's specific needs, and supplement the built\-in data identifiers that Amazon Macie provides\.
 
-A `Session` must exist in the account before you can create a `FindingsFilter`\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
+A `Session` must exist in the account before you can create a `CustomDataIdentifier`\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
 
 ## Syntax<a name="aws-resource-macie-customdataidentifier-syntax"></a>
 
@@ -115,24 +115,23 @@ This example creates a custom data identifier that matches 6 digit employee IDs 
 #### JSON<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier--json"></a>
 
 ```
-"MyCustomDataIdentifier": {
-  "Type" : "AWS::Macie::CustomDataIdentifier",
-  "DependsOn" : {"Session"},
-  "Properties" : {
-      "Description" : "My custom data identifier",
-      "IgnoreWords" : [ 000000, 123456 ],
-      "Keywords" : [ employeeID, "employee ID" ],
-      "MaximumMatchDistance" : 20,
-      "Name" : EmployeeIDCustomDataIdentifier,
-      "Regex" : \d{6}
-    }
+{
+	"Type": "AWS::Macie::CustomDataIdentifier",
+	"DependsOn": "Session",
+	"Properties": {
+		"Description": "My custom data identifier",
+		"IgnoreWords": ["000000", "123456"],
+		"Keywords": ["employeeID", "employee ID"],
+		"MaximumMatchDistance": 20,
+		"Name": "EmployeeIDCustomDataIdentifier",
+		"Regex": "\\d{6}"
+	}
 }
 ```
 
 #### YAML<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier--yaml"></a>
 
 ```
-MyCustomDataIdentifier
 Type: AWS::Macie::CustomDataIdentifier
 DependsOn: "Session"
 Properties: 
@@ -141,7 +140,7 @@ Properties:
     - 000000
     - 123456
   Keywords: 
-    - employeeID
+    - "employeeID"
     - "Employee ID"
   MaximumMatchDistance: 20
   Name: EmployeeIDCustomDataIdentifier

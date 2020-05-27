@@ -53,7 +53,7 @@ A change description of the component\. For example `initial version`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Data`  <a name="cfn-imagebuilder-component-data"></a>
-The data of the component\.  
+The data of the component\. For example, `name: HelloWorldTestingDocument\ndescription: This is hello world testing document.\nschemaVersion: 1.0\n\nphases:\n - name: test\n steps:\n - name: HelloWorldStep\n action: ExecuteBash\n inputs:\n commands:\n - echo \"Hello World! Test.\"\n`\. See Examples below for the schema for creating a component using Data\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -134,53 +134,126 @@ Returns the component type\. For example, `BUILD` or `TEST`\.
 
 ## Examples<a name="aws-resource-imagebuilder-component--examples"></a>
 
-### Component creation with Data field details<a name="aws-resource-imagebuilder-component--examples--Component_creation_with_Data_field_details"></a>
+### Create a component using Data<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_"></a>
 
-The following example shows the component creation document in both YAML and JSON format with details for the `Data` field \. You can use either the`Data` or `Uri` fields to reference the component document\.
+The following example shows the schema for the Component resource document in both YAML and JSON format\. This example includes details for the `Data` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
 
-#### YAML<a name="aws-resource-imagebuilder-component--examples--Component_creation_with_Data_field_details--yaml"></a>
+#### YAML<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--yaml"></a>
 
 ```
-Type: AWS::ImageBuilder::Component
-Properties: 
-  ChangeDescription: String
-  Description: String
-  KmsKeyId: String
-  Name: String
-  Platform: String
-  Tags: 
-    Key : Value
-  Version: String
-  Data: |
-    name: Python 3
-    description: Install the latest version of Python 3.
-    schemaVersion: 1.0
-    phases:
-      - name: build
-        steps:
-          - name: InstallPython3
-            action: ExecuteBash
-            inputs:
-              commands:
-                - sudo yum install python3 -y
+Resources:
+  ComponentAllParameters:
+    Type: 'AWS::ImageBuilder::Component'
+    Properties:
+      Name: 'component-name'
+      Platform: 'Linux'
+      Version: "1.0.0"
+      Description: 'description'
+      ChangeDescription: 'change-description'
+      KmsKeyId: 'customer-kms-key-id'
+      Tags:
+        CustomerComponentTagKey1: 'CustomerComponentTagValue1'
+        CustomerComponentTagKey2: 'CustomerComponentTagValue2'
+      # Require one of 'Data' or 'Uri' for Component template
+      Data: |
+        name: HelloWorldTestingLinuxDoc - InlineData
+        description: This is hello world testing doc
+        schemaVersion: 1.0
+
+        phases:
+          - name: build
+            steps:
+              - name: HelloWorldStep
+                action: ExecuteBash
+                inputs:
+                  commands:
+                    - echo "Hello World! Build."
+          - name: validate
+            steps:
+              - name: HelloWorldStep
+                action: ExecuteBash
+                inputs:
+                  commands:
+                    - echo "Hello World! Validate."
+          - name: test
+            steps:
+              - name: HelloWorldStep
+                action: ExecuteBash
+                inputs:
+                  commands:
+                    - echo "Hello World! Test."
 ```
 
-#### JSON<a name="aws-resource-imagebuilder-component--examples--Component_creation_with_Data_field_details--json"></a>
+#### JSON<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--json"></a>
 
 ```
 {
-    "Type": "AWS::ImageBuilder::Component",
-    "Properties": {
-        "ChangeDescription": "String",
-        "Description": "String",
-        "KmsKeyId": "String",
-        "Name": "String",
-        "Platform": "String",
-        "Tags": {
-            "Key": "Value"
-        },
-        "Version": "String",
-        "Data": "name: Python 3\ndescription: Install the latest version of Python 3.\nschemaVersion: 1.0\nphases:\n  - name: build\n    steps:\n      - name: InstallPython3\n        action: ExecuteBash\n        inputs:\n          commands:\n            - sudo yum install python3 -y\n"
+    "Resources": {
+        "ComponentAllParameters": {
+            "Type": "AWS::ImageBuilder::Component",
+            "Properties": {
+                "Name": "component-name",
+                "Platform": "Linux",
+                "Version": "1.0.0",
+                "Description": "description",
+                "ChangeDescription": "change-description",
+                "KmsKeyId": "customer-kms-key-id",
+                "Tags": {
+                    "CustomerComponentTagKey1": "CustomerComponentTagValue1",
+                    "CustomerComponentTagKey2": "CustomerComponentTagValue2"
+                },
+                "Data": "name: HelloWorldTestingLinuxDoc - InlineData\ndescription: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"
+            }
+        }
+    }
+}
+```
+
+### Create a component using a Uri<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_a_Uri"></a>
+
+The following example shows the schema for the Component resource document in both YAML and JSON format\. This example includes details for the `Uri` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
+
+#### YAML<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_a_Uri--yaml"></a>
+
+```
+Resources:
+  ComponentAllParameters:
+    Type: 'AWS::ImageBuilder::Component'
+    Properties:
+      Name: 'component-name'
+      Platform: 'Linux'
+      Version: "1.0.0"
+      # Require one of 'Data' or 'Uri' for Component template
+      Uri: 's3://imagebuilder/component_document.yml'
+      Description: 'description'
+      ChangeDescription: 'change-description'
+      KmsKeyId: 'customer-kms-key-id'
+      Tags:
+        CustomerComponentTagKey1: 'CustomerComponentTagValue1'
+        CustomerComponentTagKey2: 'CustomerComponentTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_a_Uri--json"></a>
+
+```
+{
+    "Resources": {
+        "ComponentAllParameters": {
+            "Type": "AWS::ImageBuilder::Component",
+            "Properties": {
+                "Name": "component-name",
+                "Platform": "Linux",
+                "Version": "1.0.0",
+                "Uri": "s3://imagebuilder/component_document.yml",
+                "Description": "description",
+                "ChangeDescription": "change-description",
+                "KmsKeyId": "customer-kms-key-id",
+                "Tags": {
+                    "CustomerComponentTagKey1": "CustomerComponentTagValue1",
+                    "CustomerComponentTagKey2": "CustomerComponentTagValue2"
+                }
+            }
+        }
     }
 }
 ```

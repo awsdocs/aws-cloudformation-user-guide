@@ -109,5 +109,94 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/mybasicrecipe/2019.12.03`\.
 
+## Examples<a name="aws-resource-imagebuilder-imagerecipe--examples"></a>
+
+### Create an image recipe<a name="aws-resource-imagebuilder-imagerecipe--examples--Create_an_image_recipe"></a>
+
+The following example shows the schema for all of the parameters of the ImageRecipe resource document in both YAML and JSON format \.
+
+#### YAML<a name="aws-resource-imagebuilder-imagerecipe--examples--Create_an_image_recipe--yaml"></a>
+
+```
+Resources:
+  ImageRecipeAllParameters:
+    Type: 'AWS::ImageBuilder::ImageRecipe'
+    Properties:
+      Name: 'image-recipe-name'
+      Version: '1.0.0'
+      ParentImage: !Ref ParentImage
+      Description: 'description'
+      Components:
+        - ComponentArn: !Ref ComponentArn
+        - ComponentArn: !Ref AnotherComponentArn
+      BlockDeviceMappings:
+        - DeviceName: "device-name"
+          VirtualName: "virtual-name"
+          Ebs:
+            DeleteOnTermination: true
+            Encrypted: true
+            Iops: 100
+            KmsKeyId: !Ref KmsKeyId
+            SnapshotId: "snapshot-id"
+            VolumeType: "gp2"
+            VolumeSize: 100
+      Tags:
+        CustomerImageRecipeTagKey1: 'CustomerImageRecipeTagValue1'
+        CustomerImageRecipeTagKey2: 'CustomerImageRecipeTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-imagerecipe--examples--Create_an_image_recipe--json"></a>
+
+```
+{
+    "Resources": {
+        "ImageRecipeAllParameters": {
+            "Type": "AWS::ImageBuilder::ImageRecipe",
+            "Properties": {
+                "Name": "image-recipe-name",
+                "Version": "1.0.0",
+                "ParentImage": {
+                    "Ref": "ParentImage"
+                },
+                "Description": "description",
+                "Components": [
+                    {
+                        "ComponentArn": {
+                            "Ref": "ComponentArn"
+                        }
+                    },
+                    {
+                        "ComponentArn": {
+                            "Ref": "AnotherComponentArn"
+                        }
+                    }
+                ],
+                "BlockDeviceMappings": [
+                    {
+                        "DeviceName": "device-name",
+                        "VirtualName": "virtual-name",
+                        "Ebs": {
+                            "DeleteOnTermination": true,
+                            "Encrypted": true,
+                            "Iops": 100,
+                            "KmsKeyId": {
+                                "Ref": "KmsKeyId"
+                            },
+                            "SnapshotId": "snapshot-id",
+                            "VolumeType": "gp2",
+                            "VolumeSize": 100
+                        }
+                    }
+                ],
+                "Tags": {
+                    "CustomerImageRecipeTagKey1": "CustomerImageRecipeTagValue1",
+                    "CustomerImageRecipeTagKey2": "CustomerImageRecipeTagValue2"
+                }
+            }
+        }
+    }
+}
+```
+
 ## See Also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
 + [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *EC2 Image Builder User Guide*\.
