@@ -336,20 +336,20 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "CidrIp": "0.0.0.0/0"
                     },
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "8080",
-                        "ToPort": "8080",
+                        "FromPort": 8080,
+                        "ToPort": 8080,
                         "CidrIp": "0.0.0.0/0"
                     },
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "22",
-                        "ToPort": "22",
+                        "FromPort": 22,
+                        "ToPort": 22,
                         "CidrIp": "0.0.0.0/0"
                     }
                 ]
@@ -521,7 +521,7 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
             "Type": "AWS::ECS::TaskDefinition",
             "Properties": {
                 "ExecutionRoleArn": {
-                    "Ref": "ECSTaskExecutionRole"
+                    "Fn::GetAtt": ["ECSTaskExecutionRole", "Arn"]
                 },
                 "ContainerDefinitions": [
                     {
@@ -673,16 +673,16 @@ Resources:
       VpcId: !Ref Vpc
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           CidrIp: 0.0.0.0/0
         - IpProtocol: tcp
-          FromPort: '8080'
-          ToPort: '8080'
+          FromPort: 8080
+          ToPort: 8080
           CidrIp: 0.0.0.0/0
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
   ALBTargetGroupBlue:
     Type: 'AWS::ElasticLoadBalancingV2::TargetGroup'
@@ -781,7 +781,7 @@ Resources:
   BlueTaskDefinition:
     Type: 'AWS::ECS::TaskDefinition'
     Properties:
-      ExecutionRoleArn: !Ref ECSTaskExecutionRole
+      ExecutionRoleArn: !GetAtt ECSTaskExecutionRole.Arn
       ContainerDefinitions:
         - Name: DemoApp
           Image: 'nginxdemos/hello:latest'
