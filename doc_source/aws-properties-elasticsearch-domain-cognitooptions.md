@@ -36,18 +36,18 @@ Whether to enable or disable Amazon Cognito authentication for Kibana\. See [Ama
 
 `IdentityPoolId`  <a name="cfn-elasticsearch-domain-cognitooptions-identitypoolid"></a>
 The Amazon Cognito identity pool ID that you want Amazon ES to use for Kibana authentication\.  
-*Required*: No  
+*Required*: Yes if enabled  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-elasticsearch-domain-cognitooptions-rolearn"></a>
 The `AmazonESCognitoAccess` role that allows Amazon ES to configure your user pool and identity pool\.  
-*Required*: No  
+*Required*: Yes if enabled  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolId`  <a name="cfn-elasticsearch-domain-cognitooptions-userpoolid"></a>
 The Amazon Cognito user pool ID that you want Amazon ES to use for Kibana authentication\.  
-*Required*: No  
+*Required*: Yes if enabled  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
