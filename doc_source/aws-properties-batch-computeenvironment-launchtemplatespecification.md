@@ -1,6 +1,6 @@
 # AWS::Batch::ComputeEnvironment LaunchTemplateSpecification<a name="aws-properties-batch-computeenvironment-launchtemplatespecification"></a>
 
-An object representing a launch template associated with a compute resource\. You must specify either the launch template ID or launch template name in the request, but not both\. 
+An object representing a launch template associated with a compute resource\. You must specify either the launch template ID or launch template name in the request, but not both\.
 
 ## Syntax<a name="aws-properties-batch-computeenvironment-launchtemplatespecification-syntax"></a>
 
@@ -39,8 +39,9 @@ The name of the launch template\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-batch-computeenvironment-launchtemplatespecification-version"></a>
-The version number of the launch template\.  
-Default: The default version of the launch template\.  
+The version number of the launch template, `$Latest`, or `$Default`\.  
+If the value is `$Latest`, the latest version of the launch template is used\. If the value is `$Default`, the default version of the launch template is used\.  
+Default: `$Default`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

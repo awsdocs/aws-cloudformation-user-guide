@@ -4,7 +4,6 @@ The `AWS::SNS::Topic` resource creates a topic to which notifications can be pub
 
 **Note**  
 One user can create a maximum of 100,000 topics\.
-This action is idempotent: If the requester already owns a topic with the specified name, that topic's ARN is returned without creating a new topic\.
 
 ## Syntax<a name="aws-properties-sns-topic-syntax"></a>
 

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-createrule-properties"></a>
 
 `Interval`  <a name="cfn-dlm-lifecyclepolicy-createrule-interval"></a>
-The interval between snapshots\. The supported values are 2, 3, 4, 6, 8, 12, and 24\.  
+The interval between snapshots\. The supported values are 1, 2, 3, 4, 6, 8, 12, and 24\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -43,7 +43,7 @@ The interval unit\.
 
 `Times`  <a name="cfn-dlm-lifecyclepolicy-createrule-times"></a>
 The time, in UTC, to start the operation\. The supported format is hh:mm\.  
-The operation occurs within a one\-hour window following the specified time\.  
+The operation occurs within a one\-hour window following the specified time\. If you do not specify a time, Amazon DLM selects a time within the next 24 hours\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  

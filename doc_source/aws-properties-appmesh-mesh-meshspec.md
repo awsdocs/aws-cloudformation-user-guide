@@ -1,6 +1,6 @@
 # AWS::AppMesh::Mesh MeshSpec<a name="aws-properties-appmesh-mesh-meshspec"></a>
 
-An object representing the specification of a service mesh\.
+An object that represents the specification of a service mesh\.
 
 ## Syntax<a name="aws-properties-appmesh-mesh-meshspec-syntax"></a>
 

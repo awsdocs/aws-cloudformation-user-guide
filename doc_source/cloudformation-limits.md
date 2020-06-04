@@ -23,7 +23,42 @@ Your AWS account has AWS CloudFormation limits that you might need to know when 
 |  [Stacks](stacks.md)  |  Maximum number of AWS CloudFormation stacks that you can create\.  |  200 stacks  |  To create more stacks, delete stacks that you don't need or request an increase in the maximum number of stacks in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
 |  [StackSets](what-is-cfnstacksets.md)  |  Maximum number of AWS CloudFormation stack sets you can create in your administrator account\.  |  100 stack sets  |  To create more stack sets, delete stack sets that you don't need or request an increase in the maximum number of stack sets in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
 |  [Stack instances](what-is-cfnstacksets.md)  |  Maximum number of stack instances you can create per stack set\.  |  2000 stack instances per stack set  |  To create more stack instances, delete stack instances that you don't need or request an increase in the maximum number of stack instances in your AWS account\. For more information, see [AWS Service Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.  | 
-|  [StackSets instance operations](what-is-cfnstacksets.md)  |  Maximum number of stack instance operations you can run in each region at the same time, per administrator account\.  |  3500 operations  |   | 
+|  [StackSets instance operations](what-is-cfnstacksets.md)  |  Maximum number of stack instance operations you can run in each region at the same time, per administrator account\.  |  3500 operations  |  This limit applies *per region*, and is regardless of the number of stack sets involved\. It includes stack instances affected by StackSet creation and update operations, as well as creating, updating, or deleting stack instances directly\.  | 
 |  [Template body size in a request](template-anatomy.md)  |  Maximum size of a template body that you can pass in a `CreateStack`, `UpdateStack`, or `ValidateTemplate` request\.  |  51,200 bytes  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\. Or upload the template to an Amazon S3 bucket\.  | 
 |  [Template body size in an Amazon S3 object](template-anatomy.md)  |  Maximum size of a template body that you can pass in an Amazon S3 object for a `CreateStack`, `UpdateStack`, `ValidateTemplate` request with an Amazon S3 template URL\.  |  460,800 bytes  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
 |  [Template description](template-anatomy.md)  |  Maximum size of a template description\.  |  1,024 bytes  |   | 
+
+## Feature availability<a name="stacksets-availability"></a>
+
+Not all features of CloudFormation may be available in every region\. For more information on AWS regions, see [Global Infrastructure Region Table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
++ [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following region:
+  + Asia Pacific \(Osaka\-Local\)
++ [Resource import](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is currently not available in the following region:
+  + Asia Pacific \(Osaka\-Local\)
++ [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) is available in the following regions:
+  + US East \(N\. Virginia\)
+  + US East \(Ohio\)
+  + US West \(N\. California\)
+  + US West \(Oregon\)
+  + Canada \(Central\)
+  + Asia Pacific \(Mumbai\)
+  + Asia Pacific \(Seoul\)
+  + Asia Pacific \(Singapore\)
+  + Asia Pacific \(Sydney\)
+  + Asia Pacific \(Tokyo\)
+  + Europe \(Frankfurt\)
+  + Europe \(Ireland\)
+  + Europe \(London\)
+  + Europe \(Paris\)
+  + South America \(São Paulo\)
+  + AWS GovCloud \(US\-West\)
++ [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
+  + Africa \(Cape Town\)
+  + Europe \(Milan\)
+  + Asia Pacific \(Osaka\-Local\)
+  + China \(Beijing\)
+  + China \(Ningxia\)
+
+## StackSets and macros<a name="stacksets-macros"></a>
+
+StackSets does not currently support templates that use macros, including transforms, which are macros hosted by AWS CloudFormation\. For more information about macros, see [Template Macros](template-macros.md)\.

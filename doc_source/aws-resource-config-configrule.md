@@ -60,7 +60,8 @@ A name for the AWS Config rule\. If you don't specify a name, AWS CloudFormation
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `64`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-config-configrule-description"></a>
@@ -91,6 +92,7 @@ By default, rules with a periodic trigger are evaluated every 24 hours\. To chan
 
 `Scope`  <a name="cfn-config-configrule-scope"></a>
 Defines which resources can trigger an evaluation for the rule\. The scope can include one or more resource types, a combination of one resource type and one resource ID, or a combination of a tag key and value\. Specify a scope to constrain the resources that can trigger an evaluation for the rule\. If you do not specify a scope, evaluations are triggered when any resource in the recording group changes\.  
+The scope can be empty\. 
 *Required*: No  
 *Type*: [Scope](aws-properties-config-configrule-scope.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -225,7 +227,7 @@ The following example creates a custom configuration rule that uses a Lambda fun
       ]]}
     },
     "Handler": "index.handler",
-    "Runtime": "nodejs8.10",
+    "Runtime": "nodejs12.x",
     "Timeout": "30",
     "Role": {"Fn::GetAtt": ["LambdaExecutionRole", "Arn"]}
   }
@@ -302,7 +304,7 @@ VolumeAutoEnableIOComplianceCheck:
                 });
             }
     Handler: "index.handler"
-    Runtime: nodejs8.10
+    Runtime: nodejs12.x
     Timeout: 30
     Role: 
       Fn::GetAtt: 

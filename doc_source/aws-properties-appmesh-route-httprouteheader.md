@@ -1,6 +1,6 @@
 # AWS::AppMesh::Route HttpRouteHeader<a name="aws-properties-appmesh-route-httprouteheader"></a>
 
-An object representing the HTTP header in the request\.
+An object that represents the HTTP header in the request\.
 
 ## Syntax<a name="aws-properties-appmesh-route-httprouteheader-syntax"></a>
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-route-httprouteheader-properties"></a>
 
 `Invert`  <a name="cfn-appmesh-route-httprouteheader-invert"></a>
-Specify `True` to match the opposite of the `HeaderMatchMethod` method and value\. The default value is `False`\.  
+Specify `True` to match anything except the match criteria\. The default value is `False`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

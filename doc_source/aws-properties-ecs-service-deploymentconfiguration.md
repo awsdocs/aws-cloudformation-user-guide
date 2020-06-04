@@ -1,6 +1,6 @@
 # AWS::ECS::Service DeploymentConfiguration<a name="aws-properties-ecs-service-deploymentconfiguration"></a>
 
-The `DeploymentConfiguration` property specifies optional deployment parameters that control how many tasks run during the deploymentand the ordering of stopping and starting tasks\.
+The `DeploymentConfiguration` property specifies optional deployment parameters that control how many tasks run during the deployment and the ordering of stopping and starting tasks\.
 
 ## Syntax<a name="aws-properties-ecs-service-deploymentconfiguration-syntax"></a>
 

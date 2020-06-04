@@ -1,6 +1,6 @@
 # AWS::EventSchemas::Discoverer<a name="aws-resource-eventschemas-discoverer"></a>
 
-Use the `AWS::EventSchemas::Discoverer` resource to create a *discoverer* that is associated with an event bus\. A discoverer allows EventBridge Schemas to automatically generate schemas based on events on an event bus\. 
+Use the `AWS::EventSchemas::Discoverer` resource to specify a *discoverer* that is associated with an event bus\. A discoverer allows the Amazon EventBridge Schema Registry to automatically generate schemas based on events on an event bus\. 
 
 ## Syntax<a name="aws-resource-eventschemas-discoverer-syntax"></a>
 

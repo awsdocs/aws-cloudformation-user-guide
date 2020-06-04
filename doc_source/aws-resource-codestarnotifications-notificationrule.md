@@ -1,6 +1,6 @@
 # AWS::CodeStarNotifications::NotificationRule<a name="aws-resource-codestarnotifications-notificationrule"></a>
 
-Creates a notification rule for a resource\. The rule specifies the events you want notifications about and the targets \(such as SNS topics\) where you want to receive them\.
+Creates a notification rule for a resource\. The rule specifies the events you want notifications about and the targets \(such as Amazon SNS topics or AWS Chatbot clients configured for Slack\) where you want to receive them\.
 
 ## Syntax<a name="aws-resource-codestarnotifications-notificationrule-syntax"></a>
 
@@ -55,10 +55,12 @@ A list of event types associated with this notification rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codestarnotifications-notificationrule-name"></a>
-The name of the attribute you want to use to filter the returned notification rules\.  
+The name for the notification rule\. Notification rule names must be unique in your AWS account\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CREATED_BY | EVENT_TYPE_ID | RESOURCE | TARGET_ADDRESS`  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `[A-Za-z0-9\-_ ]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Resource`  <a name="cfn-codestarnotifications-notificationrule-resource"></a>
@@ -82,7 +84,7 @@ A list of tags to apply to this notification rule\. Key names cannot start with 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Targets`  <a name="cfn-codestarnotifications-notificationrule-targets"></a>
-A list of Amazon Resource Names \(ARNs\) of SNS topics to associate with the notification rule\.  
+A list of Amazon Resource Names \(ARNs\) of Amazon SNS topics and AWS Chatbot clients to associate with the notification rule\.  
 *Required*: Yes  
 *Type*: List of [Target](aws-properties-codestarnotifications-notificationrule-target.md)  
 *Maximum*: `10`  
@@ -93,3 +95,53 @@ A list of Amazon Resource Names \(ARNs\) of SNS topics to associate with the not
 ### Ref<a name="aws-resource-codestarnotifications-notificationrule-return-values-ref"></a>
 
 When the logical ID of this resource is provided to the Ref intrinsic function, `Ref` returns the notification rule ARN\. 
+
+## Examples<a name="aws-resource-codestarnotifications-notificationrule--examples"></a>
+
+### Example<a name="aws-resource-codestarnotifications-notificationrule--examples--Example"></a>
+
+The following example creates a notification rule with a name of My Notification Rule for Comments on Commits\. The notification rule is tagged with a key\-value pair indicating what team owns the rule\.
+
+#### JSON<a name="aws-resource-codestarnotifications-notificationrule--examples--Example--json"></a>
+
+```
+{
+    "Type": "AWS::CodeStarNotifications::NotificationRule",
+    "Properties": {
+        "Name": "My Notification Rule for Comments on Commits",
+        "DetailType": "FULL",
+        "Resource": "arn:aws:codecommit:us-east-2:123456789012:MyDemoRepo",
+        "EventTypeIds": [
+            "codecommit-repository-comments-on-commits"
+        ],
+        "Targets": [
+            {
+                "TargetType": "SNS",
+                "TargetAddress": {
+                    "Fn::Sub": "arn:aws:sns:us-east-2:123456789012:MyNotificationTopic"
+                }
+            }
+        ],
+        "Tags": {
+            "Team": "Saanvi"
+         }
+     }
+}
+```
+
+#### YAML<a name="aws-resource-codestarnotifications-notificationrule--examples--Example--yaml"></a>
+
+```
+Type: 'AWS::CodeStarNotifications::NotificationRule'
+Properties:
+        Name: 'My Notification Rule for Comments on Commits'
+        DetailType: FULL
+        Resource: 'arn:aws:codecommit:us-east-2:123456789012:MyDemoRepo'
+        EventTypeIds: 
+            - codecommit-repository-comments-on-commits
+        Targets: 
+            - TargetType: SNS, 
+              TargetAddress: 'Fn::Sub': 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
+        Tags: 
+             Team: Saanvi
+```

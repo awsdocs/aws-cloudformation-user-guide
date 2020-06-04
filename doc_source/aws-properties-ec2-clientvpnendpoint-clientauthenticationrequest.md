@@ -1,6 +1,6 @@
 # AWS::EC2::ClientVpnEndpoint ClientAuthenticationRequest<a name="aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest"></a>
 
-Describes the authentication method to be used by a Client VPN endpoint\. Client VPN supports Active Directory and mutual authentication\. For more information, see [Authentication](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/authentication-authrization.html#client-authentication) in the *AWS Client VPN Administrator Guide*\.
+Describes the authentication method to be used by a Client VPN endpoint\. For more information, see [Authentication](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/authentication-authrization.html#client-authentication) in the *AWS Client VPN Administrator Guide*\.
 
 ## Syntax<a name="aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest-syntax"></a>
 
@@ -41,8 +41,8 @@ Information about the authentication certificates to be used, if applicable\. Yo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ec2-clientvpnendpoint-clientauthenticationrequest-type"></a>
-The type of client authentication to be used\. Specify `certificate-authentication` to use certificate\-based authentication, or `directory-service-authentication` to use Active Directory authentication\.  
+The type of client authentication to be used\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `certificate-authentication | directory-service-authentication`  
+*Allowed Values*: `certificate-authentication | directory-service-authentication | federated-authentication`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

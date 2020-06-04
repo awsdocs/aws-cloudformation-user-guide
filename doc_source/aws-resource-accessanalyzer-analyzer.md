@@ -37,7 +37,7 @@ Properties:
 
 `AnalyzerName`  <a name="cfn-accessanalyzer-analyzer-analyzername"></a>
 The name of the analyzer\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

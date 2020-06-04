@@ -34,13 +34,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction-properties"></a>
 
 `EndTime`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime"></a>
-The date and time that the action is scheduled to end\.  
+The date and time for the recurring schedule to end\.  
 *Required*: No  
 *Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalableTargetAction`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction"></a>
-The new minimum and maximum capacity\. You can set both values or just one\. During the scheduled time, if the current capacity is below the minimum capacity, Application Auto Scaling scales out to the minimum capacity\. If the current capacity is above the maximum capacity, Application Auto Scaling scales in to the maximum capacity\.  
+The new minimum and maximum capacity\. You can set both values or just one\. At the scheduled time, if the current capacity is below the minimum capacity, Application Auto Scaling scales out to the minimum capacity\. If the current capacity is above the maximum capacity, Application Auto Scaling scales in to the maximum capacity\.  
 *Required*: No  
 *Type*: [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,7 +50,7 @@ The schedule for this action\. The following formats are supported:
 + At expressions \- "`at(yyyy-mm-ddThh:mm:ss)`"
 + Rate expressions \- "`rate(value unit)`"
 + Cron expressions \- "`cron(fields)`"
-At expressions are useful for one\-time schedules\. Specify the time, in UTC\.  
+At expressions are useful for one\-time schedules\. Specify the time in UTC\.  
 For rate expressions, *value* is a positive integer and *unit* is `minute` \| `minutes` \| `hour` \| `hours` \| `day` \| `days`\.  
 For more information about cron expressions, see [Cron Expressions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions) in the *Amazon CloudWatch Events User Guide*\.  
 *Required*: Yes  
@@ -61,7 +61,7 @@ For more information about cron expressions, see [Cron Expressions](https://docs
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduledActionName`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname"></a>
-The name of the scheduled action\.  
+The name of the scheduled action\. This name must be unique among all other scheduled actions on the specified scalable target\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -70,7 +70,7 @@ The name of the scheduled action\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartTime`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime"></a>
-The date and time that the action is scheduled to begin\.  
+The date and time that the action is scheduled to start\.  
 *Required*: No  
 *Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

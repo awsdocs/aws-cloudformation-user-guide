@@ -5,7 +5,7 @@ The intrinsic function `Fn::Select` returns a single object from a list of objec
 **Important**  
 Fn::Select does not check for null values or if the index is out of bounds of the array\. Both conditions will result in a stack error, so you should be certain that the index you choose is valid, and that the list contains non\-null values\.
 
-## Declaration<a name="w4784ab1c21c24c51b7"></a>
+## Declaration<a name="w6131ab1c25c28c51b7"></a>
 
 ### JSON<a name="intrinsic-function-reference-select-syntax.json"></a>
 
@@ -27,7 +27,7 @@ Syntax for the short form:
 !Select [ index, listOfObjects ]
 ```
 
-## Parameters<a name="w4784ab1c21c24c51b9"></a>
+## Parameters<a name="w6131ab1c25c28c51b9"></a>
 
 index  
 The index of the object to retrieve\. This must be a value from zero to N\-1, where N represents the number of elements in the array\.
@@ -35,13 +35,13 @@ The index of the object to retrieve\. This must be a value from zero to N\-1, wh
 listOfObjects  
 The list of objects to select from\. This list must not be null, nor can it have null entries\.
 
-## Return Value<a name="w4784ab1c21c24c51c11"></a>
+## Return Value<a name="w6131ab1c25c28c51c11"></a>
 
 The selected object\.
 
-## Examples<a name="w4784ab1c21c24c51c13"></a>
+## Examples<a name="w6131ab1c25c28c51c13"></a>
 
-### Basic Example<a name="w4784ab1c21c24c51c13b2"></a>
+### Basic Example<a name="w6131ab1c25c28c51c13b2"></a>
 
 The following example returns: `"grapes"`\.
 
@@ -59,7 +59,7 @@ The following example returns: `"grapes"`\.
 
  
 
-### Comma\-delimited List Parameter Type<a name="w4784ab1c21c24c51c13b4"></a>
+### Comma\-delimited List Parameter Type<a name="w6131ab1c25c28c51c13b4"></a>
 
 You can use `Fn::Select` to select an object from a `CommaDelimitedList` parameter\. You might use a `CommaDelimitedList` parameter to combine the values of related parameters, which reduces the total number of parameters in your template\. For example, the following parameter specifies a comma\-delimited list of three CIDR blocks:
 
@@ -111,7 +111,7 @@ Subnet0:
 
  
 
-### Nested Functions with Short Form YAML<a name="w4784ab1c21c24c51c13b6"></a>
+### Nested Functions with Short Form YAML<a name="w6131ab1c25c28c51c13b6"></a>
 
 The following examples show valid patterns for using nested intrinsic functions with the `!Select` short form\. You can't nest short form functions consecutively, so a pattern like `!GetAZs !Ref` is invalid\.
 
@@ -132,7 +132,7 @@ The following examples show valid patterns for using nested intrinsic functions 
 3.   - Fn::GetAZs: !Ref 'AWS::Region'
 ```
 
-## Supported Functions<a name="w4784ab1c21c24c51c15"></a>
+## Supported Functions<a name="w6131ab1c25c28c51c15"></a>
 
 For the `Fn::Select` index value, you can use the `Ref` and `Fn::FindInMap` functions\.
 

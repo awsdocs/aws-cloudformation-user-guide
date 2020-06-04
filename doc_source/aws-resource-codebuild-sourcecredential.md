@@ -1,6 +1,6 @@
 # AWS::CodeBuild::SourceCredential<a name="aws-resource-codebuild-sourcecredential"></a>
 
- Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository\. We strongly recommend that you use AWS Secrets Manager to store your credentials or the `NoEcho` parameter to mask your credentials\. If you use Secrets Manager, you must have secrets in your secrets manager\. For more information, see [ Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\. 
+ Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository\. We strongly recommend that you use AWS Secrets Manager to store your credentials\. If you use Secrets Manager, you must have secrets in your secrets manager\. For more information, see [ Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\. 
 
 **Important**  
  For security purposes, do not use plain text in your CloudFormation template to store your credentials\. 
@@ -158,142 +158,140 @@ Resources:
 }
 ```
 
-### Create Bitbucket source credentials using NoEcho<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_NoEcho"></a>
+### Import source credentials for Bitbucket<a name="aws-resource-codebuild-sourcecredential--examples--Import_source_credentials_for_Bitbucket"></a>
 
-#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_NoEcho--yaml"></a>
+#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Import_source_credentials_for_Bitbucket--yaml"></a>
 
 ```
-Parameters:
-    BitbucketToken:
-      Type: String
-      NoEcho: true
-    BitbucketUsername:
-      Type: String
-      NoEcho: true
 Resources:
-  CodeBuildSourceCredential:
-    Type: AWS::CodeBuild::SourceCredential
+  MySourceCreds:
+    Type: 'AWS::CodeBuild::SourceCredential'
     Properties:
-      Token: !Ref BitbucketToken
-      Username: !Ref BitbucketUsername
+      Token: '{{resolve:secretsmanager:bitbucket:SecretString:token}}'
       ServerType: BITBUCKET
+      Username: '{{resolve:secretsmanager:bitbucket:SecretString:username}}'
       AuthType: BASIC_AUTH
+  MyProject:
+    Type: 'AWS::CodeBuild::Project'
+    Properties:
+      Name: myProjectName
+      Description: A description about my project
+      ServiceRole: testServiceRoleArn
+      Artifacts:
+        Type: NO_ARTIFACTS
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: 'aws/codebuild/standard:2.0'
+      Source:
+        Type: BITBUCKET
+        Location: 'your-bitbucket-repo-url'
+    DependsOn: MySourceCreds
 ```
 
-#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_NoEcho--json"></a>
+#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Import_source_credentials_for_Bitbucket--json"></a>
 
 ```
 {
-   "Parameters": {
-      "BitbucketToken": {
-         "Type": "String",
-         "NoEcho": true
-      },
-      "BitbucketUsername": {
-         "Type": "String",
-         "NoEcho": true
-      }
-   },
-   "Resources": {
-      "CodeBuildSourceCredential": {
-         "Type": "AWS::CodeBuild::SourceCredential",
-         "Properties": {
-            "Token": {
-               "Ref" : "BitbucketToken"
+    "Resources": {
+        "MySourceCreds": {
+            "Type": "AWS::CodeBuild::SourceCredential",
+            "Properties": {
+                "Token": "{{resolve:secretsmanager:bitbucket:SecretString:token}}",
+                "ServerType": "BITBUCKET",
+                "Username": "{{resolve:secretsmanager:bitbucket:SecretString:username}}",
+                "AuthType": "BASIC_AUTH"
+            }
+        },
+        "MyProject": {
+            "Type": "AWS::CodeBuild::Project",
+            "Properties": {
+                "Name": "myProjectName",
+                "Description": "A description about my project",
+                "ServiceRole": "testServiceRoleAr",
+                "Artifacts": {
+                    "Type": "NO_ARTIFACTS"
+                },
+                "Environment": {
+                    "Type": "LINUX_CONTAINER",
+                    "ComputeType": "BUILD_GENERAL1_SMALL",
+                    "Image": "aws/codebuild/standard:2.0"
+                },
+                "Source": {
+                    "Type": "BITBUCKET",
+                    "Location": "your-bitbucket-repo-url"
+                }
             },
-            "Username": {
-               "Ref" : "BitbucketUsername"
-            },
-            "ServerType": "BITBUCKET",
-            "AuthType": "BASIC_AUTH"
-         }
-      }
-   }
+            "DependsOn": "MySourceCreds"
+        }
+    }
 }
 ```
 
-### Create GitHub Enterprise source credentials using NoEcho<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_NoEcho"></a>
+### Import source credentials for Github<a name="aws-resource-codebuild-sourcecredential--examples--Import_source_credentials_for_Github"></a>
 
-#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_NoEcho--yaml"></a>
+#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Import_source_credentials_for_Github--yaml"></a>
 
 ```
-Parameters:
-    GitHubEnterpriseToken:
-      Type: String
-      NoEcho: true
 Resources:
-  CodeBuildSourceCredential:
+  MySourceCreds:
     Type: 'AWS::CodeBuild::SourceCredential'
-    Properties:
-      Token: !Ref GitHubEnterpriseToken
-      ServerType: GITHUB_ENTERPRISE
-      AuthType: PERSONAL_ACCESS_TOKEN
-```
-
-#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_NoEcho--json"></a>
-
-```
-{
-   "Parameters": {
-      "GitHubEnterpriseToken": {
-         "Type": "String",
-         "NoEcho": true
-      }
-   },
-   "Resources": {
-      "CodeBuildSourceCredential": {
-         "Type": "AWS::CodeBuild::SourceCredential",
-         "Properties": {
-            "Token": {
-               "Ref" : "GitHubEnterpriseToken"
-            },
-            "ServerType": "GITHUB_ENTERPRISE",
-            "AuthType": "PERSONAL_ACCESS_TOKEN"
-         }
-      }
-   }
-}
-```
-
-### Create GitHub source credentials using NoEcho<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_NoEcho"></a>
-
-#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_NoEcho--yaml"></a>
-
-```
-Parameters:
-    GitHubToken:
-      Type: String
-      NoEcho: true
-Resources:
-  CodeBuildSourceCredential:
-    Type: 'AWS::CodeBuild::SourceCredential'
-    Properties:
-      Token: !Ref GitHubToken
+    Properties: 
+      Token: '{{resolve:secretsmanager:github:SecretString:token}}'
       ServerType: GITHUB
       AuthType: PERSONAL_ACCESS_TOKEN
+  MyProject:
+    Type: 'AWS::CodeBuild::Project'
+    Properties: 
+      Name: myProjectName
+      Description: A description about my project
+      ServiceRole: testServiceRoleArn
+      Artifacts:
+        Type: NO_ARTIFACTS
+      Environment:
+        Type: LINUX_CONTAINER
+        ComputeType: BUILD_GENERAL1_SMALL
+        Image: 'aws/codebuild/standard:2.0'
+      Source:
+        Type: GITHUB
+        Location: 'your-github-repo-url'
+    DependsOn: MySourceCreds
 ```
 
-#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_NoEcho--json"></a>
+#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Import_source_credentials_for_Github--json"></a>
 
 ```
 {
-   "Parameters": {
-      "GitHubToken": {
-         "Type": "String",
-         "NoEcho": true
-      }
-   },
-   "Resources": {
-      "CodeBuildSourceCredential": {
-         "Type": "AWS::CodeBuild::SourceCredential",
-         "Properties": {
-            "Token": {
-               "Ref" : "GitHubToken"
+    "Resources": {
+        "MySourceCreds": {
+            "Type": "AWS::CodeBuild::SourceCredential",
+            "Properties": {
+                "Token": "{{resolve:secretsmanager:github:SecretString:token}}",
+                "ServerType": "GITHUB",
+                "AuthType": "PERSONAL_ACCESS_TOKEN"
+            }
+        },
+        "MyProject": {
+            "Type": "AWS::CodeBuild::Project",
+            "Properties": {
+                "Name": "myProjectName",
+                "Description": "A description about my project",
+                "ServiceRole": "testServiceRoleArn",
+                "Artifacts": {
+                    "Type": "NO_ARTIFACTS"
+                },
+                "Environment": {
+                    "Type": "LINUX_CONTAINER",
+                    "ComputeType": "BUILD_GENERAL1_SMALL",
+                    "Image": "aws/codebuild/standard:2.0"
+                },
+                "Source": {
+                    "Type": "GITHUB",
+                    "Location": "your-github-repo-url"
+                }
             },
-            "ServerType": "GITHUB",
-            "AuthType": "PERSONAL_ACCESS_TOKEN"
-         }
-      }
-   }
+            "DependsOn": "MySourceCreds"
+        }
+    }
 }
 ```

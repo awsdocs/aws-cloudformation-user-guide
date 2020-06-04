@@ -38,19 +38,19 @@ Defaults to `true`\. Set it to `false` if you want to disable format conversion 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputFormatConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-inputformatconfiguration"></a>
-Specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON\.  
+Specifies the deserializer that you want Kinesis Data Firehose to use to convert the format of your data from JSON\. This parameter is required if `Enabled` is set to true\.  
 *Required*: Yes  
 *Type*: [InputFormatConfiguration](aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputFormatConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-outputformatconfiguration"></a>
-Specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format\.  
+Specifies the serializer that you want Kinesis Data Firehose to use to convert the format of your data to the Parquet or ORC format\. This parameter is required if `Enabled` is set to true\.  
 *Required*: Yes  
 *Type*: [OutputFormatConfiguration](aws-properties-kinesisfirehose-deliverystream-outputformatconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchemaConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-schemaconfiguration"></a>
-Specifies the AWS Glue Data Catalog table that contains the column information\.  
+Specifies the AWS Glue Data Catalog table that contains the column information\. This parameter is required if `Enabled` is set to true\.  
 *Required*: Yes  
 *Type*: [SchemaConfiguration](aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

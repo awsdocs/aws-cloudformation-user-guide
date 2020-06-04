@@ -60,7 +60,7 @@ The name of the receipt rule\. The name must:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Recipients`  <a name="cfn-ses-receiptrule-rule-recipients"></a>
-Containts the recipient domains and email addresses that the receipt rule applies to\. If this field isn't specified, this rule matches all recipients on all verified domains\.  
+Contains the recipient domains and email addresses that the receipt rule applies to\. If this field isn't specified, this rule matches all recipients on all verified domains\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

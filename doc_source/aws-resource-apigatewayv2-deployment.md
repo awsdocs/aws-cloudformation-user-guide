@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Deployment<a name="aws-resource-apigatewayv2-deployment"></a>
 
-The `AWS::ApiGatewayV2::Deployment` resource creates a deployment for an API\. For more information, see [Deploy a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-websocket-deployment.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGatewayV2::Deployment` resource creates a deployment for an API\.
 
 ## Syntax<a name="aws-resource-apigatewayv2-deployment-syntax"></a>
 

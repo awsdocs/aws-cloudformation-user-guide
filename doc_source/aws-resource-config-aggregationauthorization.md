@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Config::AggregationAuthorization",
   "Properties" : {
       "[AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid)" : String,
-      "[AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion)" : String
+      "[AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion)" : String,
+      "[Tags](#cfn-config-aggregationauthorization-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::Config::AggregationAuthorization
 Properties: 
   [AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid): String
   [AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion): String
+  [Tags](#cfn-config-aggregationauthorization-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-config-aggregationauthorization-properties"></a>
@@ -43,6 +46,13 @@ The region authorized to collect aggregated data\.
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-config-aggregationauthorization-tags"></a>
+An array of tag object\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
 
@@ -121,7 +131,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
                     "default": "Aggregator account"
                 },
                 "AggregatorRegion": {
-                    "default": "Aggregator account"
+                    "default": "Aggregator region"
                 },
                 "SourceAccounts": {
                     "default": "Source accounts"
@@ -336,10 +346,10 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
             }
         },
         "ConfigAggregator": {
-            "Type": "AWS::Config::ConfigurationAggregator",
+            "Type": "AWS::Config::ConfigurationAggregatorName",
             "Condition": "CreateAggregator",
             "Properties": {
-                "Name": "default",
+                "Name": "name",
                 "AccountAggregationSources": [
                     {
                         "AccountIds": {
@@ -394,7 +404,7 @@ Metadata:
       AggregatorAccount:
         default: Aggregator account
       AggregatorRegion:
-        default: Aggregator account
+        default: Aggregator region
       SourceAccounts:
         default: Source accounts
       SourceRegions:
@@ -518,10 +528,10 @@ Resources:
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
 
   ConfigAggregator:
-    Type: AWS::Config::ConfigurationAggregator
+    Type: AWS::Config::ConfigurationAggregatorName
     Condition: CreateAggregator
     Properties:
-      Name: default
+    ConfigurationAggregatorName: name
       AccountAggregationSources:
         - AccountIds: !Ref SourceAccounts
           AwsRegions: !Ref SourceRegions

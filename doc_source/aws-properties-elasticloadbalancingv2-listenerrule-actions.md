@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig)" : [AuthenticateCognitoConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.md),
   "[AuthenticateOidcConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticateoidcconfig)" : [AuthenticateOidcConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.md),
   "[FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig)" : [FixedResponseConfig](aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.md),
+  "[ForwardConfig](#cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig)" : [ForwardConfig](aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.md),
   "[Order](#cfn-elasticloadbalancingv2-listenerrule-action-order)" : Integer,
   "[RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig)" : [RedirectConfig](aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.md),
   "[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)" : String,
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [AuthenticateOidcConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.md)
   [FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig): 
     [FixedResponseConfig](aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.md)
+  [ForwardConfig](#cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig): 
+    [ForwardConfig](aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.md)
   [Order](#cfn-elasticloadbalancingv2-listenerrule-action-order): Integer
   [RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig): 
     [RedirectConfig](aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.md)
@@ -56,8 +59,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [FixedResponseConfig](aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ForwardConfig`  <a name="cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig"></a>
+Information for creating an action that distributes requests among one or more target groups\. For Network Load Balancers, you can specify a single target group\. Specify only when `Type` is `forward`\. If you specify both `ForwardConfig` and `TargetGroupArn`, you can specify only one target group using `ForwardConfig` and it must be the same target group specified in `TargetGroupArn`\.  
+*Required*: No  
+*Type*: [ForwardConfig](aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Order`  <a name="cfn-elasticloadbalancingv2-listenerrule-action-order"></a>
-The order for the action\. This value is required for rules with multiple actions\. The action with the lowest value for order is performed first\. The final action to be performed must be a `forward` or a `fixed-response` action\.  
+The order for the action\. This value is required for rules with multiple actions\. The action with the lowest value for order is performed first\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -71,13 +80,13 @@ The order for the action\. This value is required for rules with multiple action
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-actions-targetgrouparn"></a>
-The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` is `forward`\.  
+The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` is `forward` and you want to route to a single target group\. To route to one or more target groups, use `ForwardConfig` instead\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-elasticloadbalancingv2-listener-actions-type"></a>
-The type of action\. Each rule must include exactly one of the following types of actions: `forward`, `fixed-response`, or `redirect`\.  
+The type of action\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  

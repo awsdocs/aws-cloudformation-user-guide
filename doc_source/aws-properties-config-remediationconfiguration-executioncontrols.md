@@ -1,6 +1,6 @@
 # AWS::Config::RemediationConfiguration ExecutionControls<a name="aws-properties-config-remediationconfiguration-executioncontrols"></a>
 
-The controls that AWS Config uses for executing remediations\.
+An ExecutionControls object\.
 
 ## Syntax<a name="aws-properties-config-remediationconfiguration-executioncontrols-syntax"></a>
 

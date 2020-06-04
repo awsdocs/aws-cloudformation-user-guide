@@ -27,11 +27,11 @@ AWS CloudFormation does not check that the template configuration matches the ac
 This table describes the various status types used with `resource import`\.
 
 
-| Drift Detection Operation Status | Description | 
+| Import Operation Status | Description | 
 | --- | --- | 
 |  `IMPORT_IN_PROGRESS`  |  The import operation is currently in progress\.  | 
 |  `IMPORT_COMPLETE`  |  The import operation successfully completed for all resources in the stack that support `resource import`\.   | 
-|  `IMPORT_ROLLBACK_IN_PROGRESS`  |  Import will roll back to the previous template configuration, not necessarily the actual configuration\.  | 
+|  `IMPORT_ROLLBACK_IN_PROGRESS`  |  Import will roll back to the previous template configuration\.  | 
 |  `IMPORT_ROLLBACK_FAILED`  |  The import rollback operation failed for at least one resource in the stack\. Results will be available for the resources CloudFormation successfully imported\.  | 
 |  `IMPORT_ROLLBACK_COMPLETE`  |  Import successfully rolled back to the previous template configuration\.  | 
 
@@ -40,9 +40,8 @@ This table describes the various status types used with `resource import`\.
 + Import operations don't allow new resource creations, resource deletions, or changes to property configurations\.
 + Each resource to import must have a `DeletionPolicy` attribute for the import operation to succeed\. The `DeletionPolicy` can be set to any possible value\. Only target resources need a `DeletionPolicy`\. Resources that are already part of the stack don't need a `DeletionPolicy`\.
 + You cannot import the same resource into multiple stacks\.
-+ You can use the [cloudformation:ImportResourceTypes](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions) IAM policy condition to control which resource types IAM users can work with during an import operation\.
++ You can use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions) IAM policy condition to control which resource types IAM users can work with during an import operation\.
 + The AWS CloudFormation stack limits apply when importing resources\. For more information on limits, see [AWS CloudFormation Limits](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html)\.
-+ `Resource import` is available in the US East \(N\. Virginia\), US East \(Ohio\), US West \(N\. California\), US West \(Oregon\), Canada \(Central\), Asia Pacific \(Mumbai\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Asia Pacific \(Tokyo\), Europe \(Frankfurt\), Europe \(Ireland\), Europe \(London\), Europe \(Paris\), and South America \(São Paulo\) Regions\.
 
 ## Getting Started with Resource Import<a name="resource-import-getting-started"></a>
 + [Creating a Stack From Existing Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-new-stack.html)

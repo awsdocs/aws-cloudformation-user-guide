@@ -49,7 +49,7 @@ The name to use for this execution of the job, if the target is an AWS Batch job
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryStrategy`  <a name="cfn-events-rule-batchparameters-retrystrategy"></a>
-The retry strategy to use for failed jobs if the target is an AWS Batch job\. The retry strategy is the number of times to retry the failed job execution\. Valid values are 1–10\. When you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.  
+The retry strategy to use for failed jobs, if the target is an AWS Batch job\. The retry strategy is the number of times to retry the failed job execution\. Valid values are 1–10\. When you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.  
 *Required*: No  
 *Type*: [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

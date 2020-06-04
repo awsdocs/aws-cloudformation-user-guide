@@ -155,7 +155,7 @@ ComputeEnvironment:
         - c4.4xlarge
         - c4.8xlarge
       Ec2KeyPair: id_rsa
-      Tags: '{"Name": "Batch Instance - C4OnDemand"}'
+      Tags: {"Name" : "Batch Instance - C4OnDemand"}
       DesiredvCpus: 48
     State: ENABLED
 ```

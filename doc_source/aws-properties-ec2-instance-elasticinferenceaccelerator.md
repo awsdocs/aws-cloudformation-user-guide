@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Count](#cfn-ec2-instance-elasticinferenceaccelerator-count)" : Integer,
   "[Type](#cfn-ec2-instance-elasticinferenceaccelerator-type)" : String
 }
 ```
@@ -19,13 +20,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-instance-elasticinferenceaccelerator-syntax.yaml"></a>
 
 ```
+  [Count](#cfn-ec2-instance-elasticinferenceaccelerator-count): Integer
   [Type](#cfn-ec2-instance-elasticinferenceaccelerator-type): String
 ```
 
 ## Properties<a name="aws-properties-ec2-instance-elasticinferenceaccelerator-properties"></a>
 
+`Count`  <a name="cfn-ec2-instance-elasticinferenceaccelerator-count"></a>
+The number of elastic inference accelerators to attach to the instance\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Type`  <a name="cfn-ec2-instance-elasticinferenceaccelerator-type"></a>
- The type of elastic inference accelerator\. The possible values are `eia1.small`, `eia1.medium`, and `eia1.large`\.   
+ The type of elastic inference accelerator\. The possible values are `eia1.medium`, `eia1.large`, and `eia1.xlarge`\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

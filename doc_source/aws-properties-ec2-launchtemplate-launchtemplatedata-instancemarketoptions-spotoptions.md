@@ -2,7 +2,7 @@
 
 Specifies options for Spot instances\.
 
- `SpotOptions` is a property of the [Amazon EC2 LaunchTemplate InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html) property type\.
+ `SpotOptions` is a property of the [Amazon EC2 LaunchTemplate InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html) property type\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-syntax"></a>
 
@@ -53,6 +53,7 @@ The maximum hourly price you're willing to pay for the Spot Instances\.
 
 `SpotInstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype"></a>
 The Spot Instance request type\.  
+If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is below its desired capacity\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `one-time | persistent`  

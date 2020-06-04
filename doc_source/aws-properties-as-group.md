@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LaunchTemplate](#cfn-as-group-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md),
       "[LifecycleHookSpecificationList](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist)" : [ [LifecycleHookSpecification](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md), ... ],
       "[LoadBalancerNames](#cfn-as-group-loadbalancernames)" : [ String, ... ],
+      "[MaxInstanceLifetime](#cfn-as-group-maxinstancelifetime)" : Integer,
       "[MaxSize](#cfn-as-group-maxsize)" : String,
       "[MetricsCollection](#cfn-as-group-metricscollection)" : [ [MetricsCollection](aws-properties-as-metricscollection.md), ... ],
       "[MinSize](#cfn-as-group-minsize)" : String,
@@ -65,6 +66,7 @@ Properties:
     - [LifecycleHookSpecification](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md)
   [LoadBalancerNames](#cfn-as-group-loadbalancernames): 
     - String
+  [MaxInstanceLifetime](#cfn-as-group-maxinstancelifetime): Integer
   [MaxSize](#cfn-as-group-maxsize): String
   [MetricsCollection](#cfn-as-group-metricscollection): 
     - [MetricsCollection](aws-properties-as-metricscollection.md)
@@ -111,7 +113,8 @@ Used only when a scaling\-specific cooldown is not specified and not supported f
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DesiredCapacity`  <a name="cfn-as-group-desiredcapacity"></a>
-The number of Amazon EC2 instances that the Auto Scaling group attempts to maintain\. The number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group\. If you do not specify a desired capacity, the default is the minimum size of the group\.  
+The desired capacity is the initial capacity of the Auto Scaling group at the time of its creation and the capacity it attempts to maintain\. It can scale beyond this capacity if you configure automatic scaling\.  
+The number must be greater than or equal to the minimum size of the group and less than or equal to the maximum size of the group\. If you do not specify a desired capacity, the default is the minimum size of the group\.  
 CloudFormation marks the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) when the desired capacity is reached\. However, if `SpotPrice` is set in the [launch configuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html), then desired capacity is not used as a criteria for success, because whether your request is fulfilled depends on Spot Instance capacity and your maximum price\. If the current Spot price is less than your specified maximum price, Amazon EC2 Auto Scaling uses `DesiredCapacity` as the target capacity for the group\.   
 *Required*: No  
 *Type*: String  
@@ -145,7 +148,7 @@ You must specify one of the following properties: `LaunchConfigurationName`, `La
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchConfigurationName`  <a name="cfn-as-group-launchconfigurationname"></a>
-The name of the [LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) to use to launch instances\.  
+The name of the [launch configuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) to use to launch instances\.  
 You must specify one of the following properties: `LaunchConfigurationName`, `LaunchTemplate`, `InstanceId`, or `MixedInstancesPolicy`\.  
 When you update `LaunchConfigurationName`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. 
 *Required*: Conditional  
@@ -156,7 +159,7 @@ When you update `LaunchConfigurationName`, existing Amazon EC2 instances continu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplate`  <a name="cfn-as-group-launchtemplate"></a>
-The [LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
+The [EC2 launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
 You must specify one of the following properties: `LaunchConfigurationName`, `LaunchTemplate`, `InstanceId`, or `MixedInstancesPolicy`\.  
 When you update `LaunchTemplate`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\.
 *Required*: Conditional  
@@ -176,8 +179,16 @@ For more information, see [Using a Load Balancer with an Auto Scaling Group](htt
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MaxInstanceLifetime`  <a name="cfn-as-group-maxinstancelifetime"></a>
+The maximum amount of time, in seconds, that an instance can be in service\.  
+Valid Range: Minimum value of 0\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `MaxSize`  <a name="cfn-as-group-maxsize"></a>
-The maximum number of Amazon EC2 instances in the Auto Scaling group\.  
+The maximum size of the Auto Scaling group\.  
+With a mixed instances policy that uses instance weighting, Amazon EC2 Auto Scaling may need to go above `MaxSize` to meet your capacity requirements\. In this event, Amazon EC2 Auto Scaling will never go above `MaxSize` by more than your maximum instance weight \(weights that define how many capacity units each instance contributes to the capacity of the group\)\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -189,7 +200,7 @@ Enables the monitoring of group metrics of an Auto Scaling group\. By default, t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinSize`  <a name="cfn-as-group-minsize"></a>
-The minimum number of Amazon EC2 instances in the Auto Scaling group\.  
+The minimum size of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -228,7 +239,7 @@ The Amazon Resource Name \(ARN\) of the service\-linked role that the Auto Scali
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-as-group-tags"></a>
-The tags for the group\.  
+One or more tags\. You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it launches\.  
 *Required*: No  
 *Type*: List of [TagProperty](aws-properties-as-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -326,6 +337,7 @@ It also specifies the launch configuration that the Auto Scaling group uses to l
 #### YAML<a name="aws-properties-as-group--examples--Auto_Scaling_Group_with_Load_Balancer_and_Multiple_Properties--yaml"></a>
 
 ```
+---
 myASG: 
   Type: AWS::AutoScaling::AutoScalingGroup
   Properties: 
@@ -338,8 +350,7 @@ myASG:
     LoadBalancerNames: 
       - Ref: "myLoadBalancer"
     MetricsCollection: 
-      - 
-        Granularity: "1Minute"
+      - Granularity: "1Minute"
         Metrics: 
           - "GroupMinSize"
           - "GroupMaxSize"
@@ -399,6 +410,7 @@ While the stack update is in progress, the following Auto Scaling processes are 
 #### YAML<a name="aws-properties-as-group--examples--Rolling_Updates_with_Batch_Update_Policy--yaml"></a>
 
 ```
+---
 myASG: 
   UpdatePolicy: 
     AutoScalingRollingUpdate: 
@@ -466,6 +478,7 @@ The following example demonstrates a batch update policy that instructs CloudFor
 #### YAML<a name="aws-properties-as-group--examples--Batch_Update_Policy_with_Wait_Condition--yaml"></a>
 
 ```
+---
 myASG: 
   UpdatePolicy: 
     AutoScalingRollingUpdate: 
@@ -492,7 +505,7 @@ myASG:
 
 ### Auto Scaling Group and Launch Template<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template"></a>
 
-The following example creates an Auto Scaling group and a launch template that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
+The following example creates an Auto Scaling group and a launch template \([AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)\) that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
 
 The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. By referencing a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value for `ImageId`, the AMI is specified when launching the stack\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
 
@@ -509,7 +522,7 @@ The example stack creates an Auto Scaling group with a minimum size of 1 and a m
     }
   },
   "Resources":{
-    "LaunchTemplate":{
+    "myLaunchTemplate":{
       "Type":"AWS::EC2::LaunchTemplate",
       "Properties":{
         "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
@@ -538,11 +551,11 @@ The example stack creates an Auto Scaling group with a minimum size of 1 and a m
         "HealthCheckGracePeriod":300,
         "LaunchTemplate":{
           "LaunchTemplateId":{
-            "Ref":"LaunchTemplate"
+            "Ref":"myLaunchTemplate"
           },
           "Version":{
             "Fn::GetAtt":[
-              "LaunchTemplate",
+              "myLaunchTemplate",
               "LatestVersionNumber"
             ]
           }
@@ -562,7 +575,7 @@ Parameters:
   myImageId:
     Type: AWS::EC2::Image::Id
 Resources:
-  LaunchTemplate:
+  myLaunchTemplate:
     Type: AWS::EC2::LaunchTemplate
     Properties: 
       LaunchTemplateName: !Sub ${AWS::StackName}-launch-template
@@ -590,8 +603,8 @@ Resources:
       DesiredCapacity: "2"
       HealthCheckGracePeriod: 300
       LaunchTemplate:
-        LaunchTemplateId: !Ref LaunchTemplate
-        Version: !GetAtt LaunchTemplate.LatestVersionNumber
+        LaunchTemplateId: !Ref myLaunchTemplate
+        Version: !GetAtt myLaunchTemplate.LatestVersionNumber
       VPCZoneIdentifier:
         - subnet-5ea0c127
         - subnet-6194ea3b

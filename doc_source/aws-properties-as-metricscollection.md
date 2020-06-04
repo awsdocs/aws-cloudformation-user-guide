@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup MetricsCollection<a name="aws-properties-as-metricscollection"></a>
 
- `MetricsCollection` is a property of [AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) that describes the group metrics that an Amazon EC2 Auto Scaling group sends to Amazon CloudWatch\. These metrics describe the group rather than any of its instances\. 
+ `MetricsCollection` is a property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) that describes the group metrics that an Amazon EC2 Auto Scaling group sends to Amazon CloudWatch\. These metrics describe the group rather than any of its instances\. 
 
 For more information, see [Monitoring Your Auto Scaling Groups and Instances Using Amazon CloudWatch](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-instance-monitoring.html) in the *Amazon EC2 Auto Scaling User Guide*\. You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\.
 
@@ -37,14 +37,14 @@ The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWat
 `Metrics`  <a name="cfn-as-metricscollection-metrics"></a>
 The list of Auto Scaling group metrics to collect\. If you specify `Granularity` and don't specify any metrics, all metrics are enabled\.   
 *Allowed Values*:  
-+ `GroupMinSize`
-+ `GroupMaxSize`
-+ `GroupDesiredCapacity`
-+ `GroupInServiceInstances`
-+ `GroupPendingInstances`
-+ `GroupStandbyInstances`
-+ `GroupTerminatingInstances`
-+ `GroupTotalInstances`
++  `GroupMinSize` 
++  `GroupMaxSize` 
++  `GroupDesiredCapacity` 
++  `GroupInServiceInstances` 
++  `GroupPendingInstances` 
++  `GroupStandbyInstances` 
++  `GroupTerminatingInstances` 
++  `GroupTotalInstances` 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::EventSchemas::Registry<a name="aws-resource-eventschemas-registry"></a>
 
-Use the `AWS::EventSchemas::Registry` to create a schema registry\. Schema registries are containers for Schemas\. Registries collect and organize schemas so that your schemas are in logical groups\.
+Use the `AWS::EventSchemas::Registry` to specify a schema registry\. Schema registries are containers for Schemas\. Registries collect and organize schemas so that your schemas are in logical groups\.
 
 ## Syntax<a name="aws-resource-eventschemas-registry-syntax"></a>
 
@@ -39,7 +39,7 @@ A description of the registry to be created\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryName`  <a name="cfn-eventschemas-registry-registryname"></a>
-The name of the schema registry\.  
+The name of the registry\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

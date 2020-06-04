@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Double,
+  "[CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions)" : [ [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md), ... ],
   "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md),
   "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : Json,
   "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Double
+  [CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions): 
+    - [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)
   [Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle): 
     [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md)
   [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): Json
@@ -41,6 +44,12 @@ A value in minutes after a backup job is successfully started before it must be 
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CopyActions`  <a name="cfn-backup-backupplan-backupruleresourcetype-copyactions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Lifecycle`  <a name="cfn-backup-backupplan-backupruleresourcetype-lifecycle"></a>
 The lifecycle defines when a protected resource is transitioned to cold storage and when it expires\. AWS Backup transitions and expires backups automatically according to the lifecycle that you define\.  
 *Required*: No  
@@ -54,7 +63,7 @@ To help organize your resources, you can assign your own metadata to the resourc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleName`  <a name="cfn-backup-backupplan-backupruleresourcetype-rulename"></a>
-An optional display name for a backup rule\.  
+A display name for a backup rule\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

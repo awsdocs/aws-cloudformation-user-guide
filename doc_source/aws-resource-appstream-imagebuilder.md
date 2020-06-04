@@ -100,7 +100,7 @@ Enables or disables default internet access for the image builder\.
 The ARN of the public, private, or shared image to use\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws:[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.-]{0,1023}$`  
+*Pattern*: `^arn:aws(?:\-cn|\-iso\-b|\-iso|\-us\-gov)?:[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.\\-]{0,1023}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageName`  <a name="cfn-appstream-imagebuilder-imagename"></a>
@@ -124,11 +124,23 @@ The instance type to use when launching the image builder\. The following instan
 + stream\.memory\.2xlarge
 + stream\.memory\.4xlarge
 + stream\.memory\.8xlarge
++ stream\.memory\.z1d\.large
++ stream\.memory\.z1d\.xlarge
++ stream\.memory\.z1d\.2xlarge
++ stream\.memory\.z1d\.3xlarge
++ stream\.memory\.z1d\.6xlarge
++ stream\.memory\.z1d\.12xlarge
 + stream\.graphics\-design\.large
 + stream\.graphics\-design\.xlarge
 + stream\.graphics\-design\.2xlarge
 + stream\.graphics\-design\.4xlarge
 + stream\.graphics\-desktop\.2xlarge
++ stream\.graphics\.g4dn\.xlarge
++ stream\.graphics\.g4dn\.2xlarge
++ stream\.graphics\.g4dn\.4xlarge
++ stream\.graphics\.g4dn\.8xlarge
++ stream\.graphics\.g4dn\.12xlarge
++ stream\.graphics\.g4dn\.16xlarge
 + stream\.graphics\-pro\.4xlarge
 + stream\.graphics\-pro\.8xlarge
 + stream\.graphics\-pro\.16xlarge
@@ -139,7 +151,7 @@ The instance type to use when launching the image builder\. The following instan
 
 `Name`  <a name="cfn-appstream-imagebuilder-name"></a>
 A unique name for the image builder\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,100}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

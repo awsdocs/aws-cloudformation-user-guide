@@ -167,7 +167,7 @@ It's not necessary to run drift detection on the parent stack after this import 
    > aws cloudformation describe-change-set --change-set-name ImportChangeSet
    ```
 
-1. Execute the change set to import the stack into the source parent stack\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\. On successful completion of the import operation `(IMPORT_COMPLETE)`, the stack is successfully nested\.
+1. Execute the change set to import stack into the source parent stack\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\. On successful completion of the import operation `(IMPORT_COMPLETE)`, the stack is successfully nested\.
 
    ```
    > aws cloudformation execute-change-set --change-set-name ImportChangeSet

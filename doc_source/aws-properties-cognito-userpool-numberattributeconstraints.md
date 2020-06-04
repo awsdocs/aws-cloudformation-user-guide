@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool NumberAttributeConstraints<a name="aws-properties-cognito-userpool-numberattributeconstraints"></a>
 
-The `NumberAttributeConstraints` property type defines the number attribute constraints of an Amazon Cognito User Pool\. `NumberAttributeConstraints` is a subproperty of the [SchemaAttribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html) property type\.
+The minimum and maximum value of an attribute that is of the number data type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-numberattributeconstraints-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream SchemaConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-schemaconfiguration"></a>
 
-Specifies the schema to which you want Kinesis Data Firehose to configure your data before it writes it to Amazon S3\.
+Specifies the schema to which you want Kinesis Data Firehose to configure your data before it writes it to Amazon S3\. This parameter is required if `Enabled` is set to true\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-schemaconfiguration-syntax"></a>
 
@@ -36,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The ID of the AWS Glue Data Catalog\. If you don't supply this, the AWS account ID is used by default\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Pattern*: `^\S+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -43,6 +45,8 @@ The ID of the AWS Glue Data Catalog\. If you don't supply this, the AWS account 
 Specifies the name of the AWS Glue database that contains the schema for the output data\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Pattern*: `^\S+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -50,6 +54,8 @@ Specifies the name of the AWS Glue database that contains the schema for the out
 If you don't specify an AWS Region, the default is the current Region\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Pattern*: `^\S+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -57,6 +63,8 @@ If you don't specify an AWS Region, the default is the current Region\.
 The role that Kinesis Data Firehose can use to access AWS Glue\. This role must be in the same account you use for Kinesis Data Firehose\. Cross\-account roles aren't allowed\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Pattern*: `^\S+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -64,6 +72,8 @@ The role that Kinesis Data Firehose can use to access AWS Glue\. This role must 
 Specifies the AWS Glue table that contains the column information that constitutes your data schema\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Pattern*: `^\S+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -71,5 +81,7 @@ Specifies the AWS Glue table that contains the column information that constitut
 Specifies the table version for the output data schema\. If you don't specify this version ID, or if you set it to `LATEST`, Kinesis Data Firehose uses the most recent version\. This means that any updates to the table are automatically picked up\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Pattern*: `^\S+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

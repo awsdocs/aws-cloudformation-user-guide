@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool SchemaAttribute<a name="aws-properties-cognito-userpool-schemaattribute"></a>
 
-`SchemaAttribute` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the schema attributes of an Amazon Cognito User Pool\.
+Contains information about the schema attribute\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-schemaattribute-syntax"></a>
 
@@ -44,7 +44,8 @@ The attribute data type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeveloperOnlyAttribute`  <a name="cfn-cognito-userpool-schemaattribute-developeronlyattribute"></a>
-Specifies whether the attribute type is developer only\.  
+We recommend that you use [WriteAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UserPoolClientType.html#CognitoUserPools-Type-UserPoolClientType-WriteAttributes) in the user pool client to control how attributes can be mutated for new use cases instead of using `DeveloperOnlyAttribute`\.
+Specifies whether the attribute type is developer only\. This attribute can only be modified by an administrator\. Users will not be able to modify this attribute using their access token\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

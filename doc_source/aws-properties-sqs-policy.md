@@ -41,3 +41,54 @@ The URLs of the queues to which you want to add the policy\. You can use the `[R
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-sqs-policy--examples"></a>
+
+### Amazon SQS Queue Policy<a name="aws-properties-sqs-policy--examples--Amazon_SQS_Queue_Policy"></a>
+
+The following sample is a queue policy that allows AWS account 111122223333 to send and receive messages on queue queue2\.
+
+#### JSON<a name="aws-properties-sqs-policy--examples--Amazon_SQS_Queue_Policy--json"></a>
+
+```
+ 
+"SampleSQSPolicy" : {
+  "Type" : "AWS::S3::QueuePolicy",
+  "Properties" : {
+    "Queues" :  "arn:aws:sqs:us-east-2:444455556666:queue2",
+    "PolicyDocument": {
+      "Statement":[{
+        "Action":["sqs:SendMessage", "sqs:ReceiveMessage"],
+        "Effect":"Allow",
+        "Resource": "arn:aws:sqs:us-east-2:444455556666:queue2",
+        "Principal": {
+          "AWS": [
+            "111122223333"]
+        }
+      }]
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-properties-sqs-policy--examples--Amazon_SQS_Queue_Policy--yaml"></a>
+
+```
+ 
+SampleBucketPolicy: 
+  Type: AWS::S3::QueuePolicy
+  Properties: 
+    Queues: 
+      Ref: "arn:aws:sqs:us-east-2:444455556666:queue2"
+    PolicyDocument: 
+      Statement: 
+        - 
+          Action: 
+            - "sqs:SendMessage" 
+            - "sqs:ReceiveMessage"
+          Effect: "Allow"
+          Resource: 
+            Ref: "arn:aws:sqs:us-east-2:444455556666:queue2"
+          Principal:  
+            - AWS: "111122223333"
+```

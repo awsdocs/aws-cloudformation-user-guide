@@ -2,8 +2,6 @@
 
  Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket\.
 
-For more information, see [GET Bucket analytics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETAnalyticsConfig.html) in the *Amazon Simple Storage Service API Reference*\. 
-
 ## Syntax<a name="aws-properties-s3-bucket-analyticsconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

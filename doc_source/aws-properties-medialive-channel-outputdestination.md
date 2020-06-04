@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Id](#cfn-medialive-channel-outputdestination-id)" : String,
   "[MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings)" : [ [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md), ... ],
+  "[MultiplexSettings](#cfn-medialive-channel-outputdestination-multiplexsettings)" : [MultiplexProgramChannelDestinationSettings](aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.md),
   "[Settings](#cfn-medialive-channel-outputdestination-settings)" : [ [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md), ... ]
 }
 ```
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Id](#cfn-medialive-channel-outputdestination-id): String
   [MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings): 
     - [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)
+  [MultiplexSettings](#cfn-medialive-channel-outputdestination-multiplexsettings): 
+    [MultiplexProgramChannelDestinationSettings](aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.md)
   [Settings](#cfn-medialive-channel-outputdestination-settings): 
     - [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md)
 ```
@@ -40,6 +43,12 @@ The ID for this destination\.
 The destination settings for a MediaPackage output\.  
 *Required*: No  
 *Type*: List of [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MultiplexSettings`  <a name="cfn-medialive-channel-outputdestination-multiplexsettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [MultiplexProgramChannelDestinationSettings](aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Settings`  <a name="cfn-medialive-channel-outputdestination-settings"></a>

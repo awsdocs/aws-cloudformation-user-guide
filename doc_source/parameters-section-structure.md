@@ -135,7 +135,9 @@ A numeric value that determines the smallest numeric value you want to allow for
 *Required*: No
 
 `NoEcho`  
-Whether to mask the parameter value when a call is made that describes the stack\. If you set the value to `true`, the parameter value is masked with asterisks \(`*****`\)\.  
+Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\.   
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 *Required*: No
 
 `Type`  <a name="parameters-section-structure-properties-type"></a>
@@ -231,7 +233,7 @@ An array of Amazon Route 53 hosted zone IDs, such as `Z23YXV4OVPL04A, Z23YXV4OV
 
 `SSM` parameter types correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information about Systems Manager parameters, see [ Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html) in the *AWS Systems Manager User Guide*\.
 
-You can also use the `ssm` or `ssm-secure` dynamic parameter pattern to specify parameter *values* in your template\. For more information, see [Using Dynamic References to Specify Template Values](dynamic-references.md)\.
+You can also use the `ssm` or `ssm-secure` dynamic parameter pattern to specify parameter *values* in your template\. For more information, see [Using dynamic references to specify template values](dynamic-references.md)\.
 
 When you create or update stacks and create change sets, AWS CloudFormation uses whatever values exist in Parameter Store at the time the operation is run\. If a specified parameter doesn't exist in Parameter Store under the caller's AWS account, AWS CloudFormation returns a validation error\.
 
@@ -276,7 +278,7 @@ A Systems Manager parameter whose value is a list of [AWS\-specific parameter ty
 AWS CloudFormation doesn't support the following `SSM` parameter type:
 + Lists of `SSM` parameter types—for example: `List<AWS::SSM::Parameter::Value<String>>`
 
-In addition, AWS CloudFormation does not support defining template parameters as `SecureString` Systems Manager parameter types\. However, you can specify Secure Strings as parameter *values* for certain resources by using dynamic parameter patterns\. For more information, see [Using Dynamic References to Specify Template Values](dynamic-references.md)\.
+In addition, AWS CloudFormation does not support defining template parameters as `SecureString` Systems Manager parameter types\. However, you can specify Secure Strings as parameter *values* for certain resources by using dynamic parameter patterns\. For more information, see [Using dynamic references to specify template values](dynamic-references.md)\.
 
 ## Grouping and Sorting Parameters in the AWS CloudFormation Console<a name="parameters-section-structure-grouping"></a>
 

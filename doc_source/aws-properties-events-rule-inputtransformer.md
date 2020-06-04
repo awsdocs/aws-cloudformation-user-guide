@@ -1,6 +1,6 @@
 # AWS::Events::Rule InputTransformer<a name="aws-properties-events-rule-inputtransformer"></a>
 
-The `InputTransformer` property type specifies settings that provide custom input to an Amazon CloudWatch Events target based on certain event data\.
+The `InputTransformer` property type specifies settings that provide custom input to an EventBridge target based on certain event data\.
 
  `InputTransformer` is a property of the [Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html) property type\.
 

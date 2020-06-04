@@ -1,5 +1,9 @@
 # AWS::WAFRegional::SqlInjectionMatchSet<a name="aws-resource-wafregional-sqlinjectionmatchset"></a>
 
+**Note**  
+This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 A complex type that contains `SqlInjectionMatchTuple` objects, which specify the parts of web requests that you want AWS WAF to inspect for snippets of malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header\. If a `SqlInjectionMatchSet` contains more than one `SqlInjectionMatchTuple` object, a request needs to include snippets of SQL code in only one of the specified parts of the request to be considered a match\.
 
 ## Syntax<a name="aws-resource-wafregional-sqlinjectionmatchset-syntax"></a>
@@ -36,6 +40,7 @@ The name, if any, of the `SqlInjectionMatchSet`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SqlInjectionMatchTuples`  <a name="cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples"></a>
@@ -88,7 +93,7 @@ SqlInjDetection:
       - 
         FieldToMatch: 
           Type: "QUERY_STRING"
-TextTransformation: "URL_DECODE"
+        TextTransformation: "URL_DECODE"
 ```
 
 ### Associate a SQL Injection Match Set with a Web ACL Rule<a name="aws-resource-wafregional-sqlinjectionmatchset--examples--Associate_a_SQL_Injection_Match_Set_with_a_Web_ACL_Rule"></a>
@@ -127,7 +132,7 @@ SqlInjRule:
         DataId: 
           Ref: "SqlInjDetection"
         Negated: false
-Type: "SqlInjectionMatch"
+        Type: "SqlInjectionMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-wafregional-sqlinjectionmatchset--examples--Create_a_Web_ACL"></a>
@@ -174,5 +179,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-Ref: "SqlInjRule"
+          Ref: "SqlInjRule"
 ```

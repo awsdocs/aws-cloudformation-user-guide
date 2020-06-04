@@ -2,6 +2,7 @@
 
 **Resource Types**
 + [AWS::Lambda::Alias](aws-resource-lambda-alias.md)
++ [AWS::Lambda::EventInvokeConfig](aws-resource-lambda-eventinvokeconfig.md)
 + [AWS::Lambda::EventSourceMapping](aws-resource-lambda-eventsourcemapping.md)
 + [AWS::Lambda::Function](aws-resource-lambda-function.md)
 + [AWS::Lambda::LayerVersion](aws-resource-lambda-layerversion.md)

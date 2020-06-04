@@ -13,8 +13,9 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
 
 ## Update a Stack's Template \(Console\)<a name="using-cfn-updating-stacks-get-stack.CON"></a>
 
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), select the stack that you want to update and then choose the **Actions** and then **View in Designer**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stack-detail-pane-template.png)
+1. On the **Stacks** page of the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), click the name of the stack that you want to update\. 
+
+1. In the stack details pane for the selected stack, select the **Template** pane, and then click **View in Designer**\.
 
    AWS CloudFormation opens a copy of the stack's template in AWS CloudFormation Designer\.
 

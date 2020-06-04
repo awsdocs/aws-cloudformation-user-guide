@@ -62,7 +62,7 @@ Indicates whether the API key can be used by clients\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateDistinctId`  <a name="cfn-apigateway-apikey-generatedistinctid"></a>
-Specifies whether the key identifier is distinct from the created API key value\.  
+Specifies whether the key identifier is distinct from the created API key value\. This parameter is deprecated and should not be used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

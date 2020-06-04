@@ -4,3 +4,4 @@ When you associate a Lambda function with a custom resource, the function is inv
 
 **Topics**
 + [Walkthrough: Looking Up Amazon Machine Image IDs](walkthrough-custom-resources-lambda-lookup-amiids.md)
++ [`cfn-response` Module](cfn-lambda-function-code-cfnresponsemodule.md)

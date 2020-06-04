@@ -89,8 +89,8 @@ The ID of the client certificate that API Gateway uses to call your integration 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentId`  <a name="cfn-apigateway-stage-deploymentid"></a>
-The ID of the deployment that the stage is associated with\.  
-*Required*: No  
+The ID of the deployment that the stage is associated with\. This parameter is required to create a stage\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -187,20 +187,20 @@ The following example creates a stage for the `TestDeployment` deployment\. The 
                         "ResourcePath": "/",
                         "HttpMethod": "GET",
                         "MetricsEnabled": "true",
-                        "DataTraceEnabled": "true"
+                        "DataTraceEnabled": "false"
                     },
                     {
                         "ResourcePath": "/stack",
                         "HttpMethod": "POST",
                         "MetricsEnabled": "true",
-                        "DataTraceEnabled": "true",
+                        "DataTraceEnabled": "false",
                         "ThrottlingBurstLimit": "999"
                     },
                     {
                         "ResourcePath": "/stack",
                         "HttpMethod": "GET",
                         "MetricsEnabled": "true",
-                        "DataTraceEnabled": "true",
+                        "DataTraceEnabled": "false",
                         "ThrottlingBurstLimit": "555"
                     }
                 ]
@@ -229,16 +229,16 @@ Resources:
         - ResourcePath: /
           HttpMethod: GET
           MetricsEnabled: 'true'
-          DataTraceEnabled: 'true'
+          DataTraceEnabled: 'false'
         - ResourcePath: /stack
           HttpMethod: POST
           MetricsEnabled: 'true'
-          DataTraceEnabled: 'true'
+          DataTraceEnabled: 'false'
           ThrottlingBurstLimit: '999'
         - ResourcePath: /stack
           HttpMethod: GET
           MetricsEnabled: 'true'
-          DataTraceEnabled: 'true'
+          DataTraceEnabled: 'false'
           ThrottlingBurstLimit: '555'
 ```
 

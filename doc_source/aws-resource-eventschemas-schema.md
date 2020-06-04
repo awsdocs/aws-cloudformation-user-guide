@@ -1,6 +1,6 @@
 # AWS::EventSchemas::Schema<a name="aws-resource-eventschemas-schema"></a>
 
-Use the `AWS::EventSchemas::Schema` resource to create an event schema\.
+Use the `AWS::EventSchemas::Schema` resource to specify an event schema\.
 
 ## Syntax<a name="aws-resource-eventschemas-schema-syntax"></a>
 
@@ -51,7 +51,7 @@ A description of the schema\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryName`  <a name="cfn-eventschemas-schema-registryname"></a>
-The name of the schema registry\.  
+The name of the registry\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -115,7 +115,7 @@ The version number of the schema\.
 Resources:
   ExecutionStatusChangeSchema:
     Type: AWS::EventSchemas::Schema
-    Properties:
+    Properties:Ref
       Registry: 'aws.events'
       Name: ExecutionStatusChange
       Description: 'event emitted when the status of a state machine execution change'

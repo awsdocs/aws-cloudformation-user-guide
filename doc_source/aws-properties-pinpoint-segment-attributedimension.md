@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment AttributeDimension<a name="aws-properties-pinpoint-segment-attributedimension"></a>
 
-Specifies the criteria for including or excluding endpoints from a segment\.
+Specifies attribute\-based criteria for including or excluding endpoints from a segment\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-attributedimension-syntax"></a>
 

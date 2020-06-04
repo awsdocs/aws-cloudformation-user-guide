@@ -42,6 +42,6 @@ Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | 
 
 `Size`  <a name="cfn-ecs-taskdefinition-tmpfs-size"></a>
 The size \(in MiB\) of the tmpfs volume\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

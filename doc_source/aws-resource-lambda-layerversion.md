@@ -116,12 +116,12 @@ Create a layer named `my-layer`\.
 
 ```
 MyLayer:
-  Type: "AWS::Lambda::LayerVersion"
+  Type: AWS::Lambda::LayerVersion
   Properties:
-    CompatibleRuntimes: 
+    CompatibleRuntimes:
       - python3.6
       - python3.7
-    Content: 
+    Content:
       S3Bucket: my-bucket-us-west-2-123456789012
       S3Key: layer.zip
     Description: My layer

@@ -47,7 +47,7 @@ Properties:
 ## Properties<a name="aws-resource-codepipeline-pipeline-properties"></a>
 
 `ArtifactStore`  <a name="cfn-codepipeline-pipeline-artifactstore"></a>
-The Amazon S3 bucket where artifacts for the pipeline are stored\.  
+The S3 bucket where artifacts for the pipeline are stored\.  
 You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot use both\. If you create a cross\-region action in your pipeline, you must use `artifactStores`\.
 *Required*: Conditional  
 *Type*: [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)  
@@ -209,8 +209,11 @@ The following example creates a pipeline with a source, beta, and release stage\
     ], 
     "ArtifactStore": { 
       "Type": "S3",
-      "Location": { "Ref" : "ArtifactStoreS3Location" } 
-    }, 
+      "Location": { "Ref" : "ArtifactStoreS3Location" },
+      "EncryptionKey": {
+        "Id": "arn:aws:kms:useast-1:ACCOUNT-ID:key/KEY-ID",
+        "Type": "KMS"
+      }, 
     "DisableInboundStageTransitions": [ 
       {
         "StageName": "Release", 
@@ -301,6 +304,9 @@ AppPipeline:
       Type: S3 
       Location:
         Ref: ArtifactStoreS3Location 
+      EncryptionKey:
+        Id: arn:aws:kms:useast-1:ACCOUNT-ID:key/KEY-ID
+        Type: KMS
     DisableInboundStageTransitions: 
       - 
         StageName: Release 

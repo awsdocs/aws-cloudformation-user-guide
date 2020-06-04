@@ -53,7 +53,7 @@ In this walkthrough, we provide the following example template, called `template
                 ],
                 "ProvisionedThroughput": {
                     "ReadCapacityUnits": 5,
-                    "WriteCapacityUnis": 1
+                    "WriteCapacityUnits": 1
                 }
             }
         }
@@ -87,12 +87,20 @@ In this walkthrough, we provide the following example template, called `template
 **Important**  
 The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
 
-1. On the **Review *stack\-name*** page, confirm that the correct resources are being imported, and then choose **Import resources**\. This automatically runs the change set created in the last step\.
+1. On the **Review *stack\-name*** page, confirm that the correct resources are being imported, and then choose **Import resources**\. This automatically executes the change set created in the last step\.
 
-1. The **Events** pane of the **Stack details** page for your new stack displays\.  
+   The **Events** pane of the **Stack details** page for your new stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 
 1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
+
+1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.
+
+   1. [Revert the import operation](resource-import-revert.md#resource-import-revert-console) for the affected resources\.
+
+   1. Add the import targets to your template again, making sure that the template configurations match the actual configurations\.
+
+   1. Repeat steps 2\-8 using the modified template to import the resources again\.
 
 ## Create a Stack from Existing Resources Using the AWS CLI<a name="resource-import-new-stack-cli"></a>
 
@@ -149,13 +157,13 @@ The import operation fails if you modify existing parameters that trigger a crea
 1. Review the change set to make sure the correct resources will be imported\.
 
    ```
-   > aws cloudformation describe-change-set --change-set-name ImportChangeSet
+   > aws cloudformation describe-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
-1. Run the change set to import the resources\. On successful completion of the operation `(IMPORT_COMPLETE)`, the resources are successfully imported\.
+1. Execute the change set to import the resources\. On successful completion of the operation `(IMPORT_COMPLETE)`, the resources are successfully imported\.
 
    ```
-   > aws cloudformation execute-change-set --change-set-name ImportChangeSet
+   > aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
 1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information on detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
@@ -171,7 +179,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
 1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.
 
-   1. [Revert the import operation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-revert.html) for the affected resources\.
+   1. [Revert the import operation](resource-import-revert.md#resource-import-revert-cli) for the affected resources\.
 
    1. Add the import targets to your template again, making sure that the template configurations match the actual configurations\.
 

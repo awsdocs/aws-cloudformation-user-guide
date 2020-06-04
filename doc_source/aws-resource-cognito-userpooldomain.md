@@ -39,7 +39,7 @@ The configuration for a custom domain that hosts the sign\-up and sign\-in pages
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Domain`  <a name="cfn-cognito-userpooldomain-domain"></a>
-The domain name for the domain that hosts the sign\-up and sign\-in pages for your application\. For example: `auth.example.com`\.   
+The domain name for the domain that hosts the sign\-up and sign\-in pages for your application\. For example: `auth.example.com`\. If you're using a prefix domain, this field denotes the first part of the domain before `.auth.[region].amazoncognito.com`\.  
 This string can include only lowercase letters, numbers, and hyphens\. Don't use a hyphen for the first or last character\. Use periods to separate subdomain names\.  
 *Required*: Yes  
 *Type*: String  
@@ -79,13 +79,17 @@ The following example creates a custom domain, "my\-test\-user\-pool\-domain", i
 
 ```
 {
-   "UserPoolDomain": {
-      "Type": "AWS::Cognito::UserPoolDomain",
-      "Properties": {
-         "UserPoolId": {"Ref" : "UserPool"},
-         "Domain": "my-test-user-pool-domain.myapplication.com",
-         "CustomDomainConfig": {
-            "CertificateArn": {"Ref" : "CertificateArn"}
+   "UserPoolDomain":{
+      "Type":"AWS::Cognito::UserPoolDomain",
+      "Properties":{
+         "UserPoolId":{
+            "Ref":"UserPool"
+         },
+         "Domain":"my-test-user-pool-domain.myapplication.com",
+         "CustomDomainConfig":{
+            "CertificateArn":{
+               "Ref":"CertificateArn"
+            }
          }
       }
    }
@@ -95,12 +99,12 @@ The following example creates a custom domain, "my\-test\-user\-pool\-domain", i
 #### YAML<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolDomain:
-  Type: AWS::Cognito::UserPoolDomain
+UserPoolDomain: 
+  Type: AWS::Cognito::UserPoolDomain 
   Properties:
-    UserPoolId: !Ref UserPool
+    UserPoolId: !Ref UserPool 
     Domain: "my-test-user-pool-domain.myapplication.com"
-    CustomDomainConfig:
+    CustomDomainConfig: 
       CertificateArn: !Ref CertificateArn
 ```
 
@@ -112,11 +116,13 @@ The following example creates a new default domain, "my\-test\-user\-pool\-domai
 
 ```
 {
-   "UserPoolDomain": {
-      "Type": "AWS::Cognito::UserPoolDomain",
-      "Properties": {
-         "UserPoolId": {"Ref" : "UserPool"},
-         "Domain": "my-test-user-pool-domain"
+   "UserPoolDomain":{
+      "Type":"AWS::Cognito::UserPoolDomain",
+      "Properties":{
+         "UserPoolId":{
+            "Ref":"UserPool"
+         },
+         "Domain":"my-test-user-pool-domain"
       }
    }
 }
@@ -125,9 +131,9 @@ The following example creates a new default domain, "my\-test\-user\-pool\-domai
 #### YAML<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolDomain:
-  Type: AWS::Cognito::UserPoolDomain
+UserPoolDomain: 
+  Type: AWS::Cognito::UserPoolDomain 
   Properties:
-    UserPoolId: !Ref UserPool
+    UserPoolId: !Ref UserPool 
     Domain: "my-test-user-pool-domain"
 ```

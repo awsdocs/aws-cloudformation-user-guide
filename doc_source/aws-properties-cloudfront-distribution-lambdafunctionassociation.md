@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EventType](#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype)" : String,
+  "[IncludeBody](#cfn-cloudfront-distribution-lambdafunctionassociation-includebody)" : Boolean,
   "[LambdaFunctionARN](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn)" : String
 }
 ```
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EventType](#cfn-cloudfront-distribution-lambdafunctionassociation-eventtype): String
+  [IncludeBody](#cfn-cloudfront-distribution-lambdafunctionassociation-includebody): Boolean
   [LambdaFunctionARN](#cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn): String
 ```
 
@@ -35,6 +37,12 @@ Specifies the event type that triggers a Lambda function invocation\. You can sp
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `origin-request | origin-response | viewer-request | viewer-response`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncludeBody`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-includebody"></a>
+A flag that allows a Lambda function to have read access to the body content\. For more information, see [Accessing the Request Body by Choosing the Include Body Option](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-include-body-access.html) in the Amazon CloudFront Developer Guide\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaFunctionARN`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-lambdafunctionarn"></a>

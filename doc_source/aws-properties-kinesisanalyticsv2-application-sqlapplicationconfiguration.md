@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application SqlApplicationConfiguration<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration"></a>
 
-Describes the inputs, outputs, and reference data sources for an SQL\-based Kinesis Data Analytics application\.
+Describes the inputs, outputs, and reference data sources for a SQL\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-syntax"></a>
 

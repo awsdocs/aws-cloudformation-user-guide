@@ -18,12 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-ec2-trafficmirrorfilterrule-description)" : String,
       "[DestinationCidrBlock](#cfn-ec2-trafficmirrorfilterrule-destinationcidrblock)" : String,
-      "[DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange)" : [TrafficMirrorPortRangeRequest](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrangerequest.md),
+      "[DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange)" : [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md),
       "[Protocol](#cfn-ec2-trafficmirrorfilterrule-protocol)" : Integer,
       "[RuleAction](#cfn-ec2-trafficmirrorfilterrule-ruleaction)" : String,
       "[RuleNumber](#cfn-ec2-trafficmirrorfilterrule-rulenumber)" : Integer,
       "[SourceCidrBlock](#cfn-ec2-trafficmirrorfilterrule-sourcecidrblock)" : String,
-      "[SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange)" : [TrafficMirrorPortRangeRequest](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrangerequest.md),
+      "[SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange)" : [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md),
       "[TrafficDirection](#cfn-ec2-trafficmirrorfilterrule-trafficdirection)" : String,
       "[TrafficMirrorFilterId](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid)" : String
     }
@@ -38,13 +38,13 @@ Properties:
   [Description](#cfn-ec2-trafficmirrorfilterrule-description): String
   [DestinationCidrBlock](#cfn-ec2-trafficmirrorfilterrule-destinationcidrblock): String
   [DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange): 
-    [TrafficMirrorPortRangeRequest](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrangerequest.md)
+    [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)
   [Protocol](#cfn-ec2-trafficmirrorfilterrule-protocol): Integer
   [RuleAction](#cfn-ec2-trafficmirrorfilterrule-ruleaction): String
   [RuleNumber](#cfn-ec2-trafficmirrorfilterrule-rulenumber): Integer
   [SourceCidrBlock](#cfn-ec2-trafficmirrorfilterrule-sourcecidrblock): String
   [SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange): 
-    [TrafficMirrorPortRangeRequest](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrangerequest.md)
+    [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)
   [TrafficDirection](#cfn-ec2-trafficmirrorfilterrule-trafficdirection): String
   [TrafficMirrorFilterId](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid): String
 ```
@@ -66,7 +66,7 @@ The destination CIDR block to assign to the Traffic Mirror rule\.
 `DestinationPortRange`  <a name="cfn-ec2-trafficmirrorfilterrule-destinationportrange"></a>
 The destination port range\.  
 *Required*: No  
-*Type*: [TrafficMirrorPortRangeRequest](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrangerequest.md)  
+*Type*: [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-ec2-trafficmirrorfilterrule-protocol"></a>
@@ -98,7 +98,7 @@ The source CIDR block to assign to the Traffic Mirror rule\.
 `SourcePortRange`  <a name="cfn-ec2-trafficmirrorfilterrule-sourceportrange"></a>
 The source port range\.  
 *Required*: No  
-*Type*: [TrafficMirrorPortRangeRequest](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrangerequest.md)  
+*Type*: [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficDirection`  <a name="cfn-ec2-trafficmirrorfilterrule-trafficdirection"></a>

@@ -48,7 +48,7 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 
 `LogDestination`  <a name="cfn-ec2-flowlog-logdestination"></a>
 Specifies the destination to which the flow log data is to be published\. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for `LogDestinationType`\.  
-If LogDestinationType is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\.  
+If `LogDestinationType` is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\. For example, to publish to a log group called `my-logs`, specify `arn:aws:logs:us-east-1:123456789012:log-group:my-logs`\. Alternatively, use `LogGroupName` instead\.  
 If LogDestinationType is `s3`, specify the ARN of the Amazon S3 bucket\. You can also specify a subfolder in the bucket\. To specify a subfolder in the bucket, use the following ARN format: `bucket_ARN/subfolder_name/`\. For example, to specify a subfolder named `my-logs` in a bucket named `my-bucket`, use the following ARN: `arn:aws:s3:::my-bucket/my-logs/`\. You cannot use `AWSLogs` as a subfolder name\. This is a reserved term\.  
 *Required*: No  
 *Type*: String  
@@ -72,7 +72,6 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 
 `ResourceId`  <a name="cfn-ec2-flowlog-resourceid"></a>
 The ID of the subnet, network interface, or VPC for which you want to create a flow log\.  
-Constraints: Maximum of 1000 resources  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

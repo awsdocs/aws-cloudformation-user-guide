@@ -90,7 +90,8 @@ Information about a policy for application\-controlled session stickiness\.
 The Availability Zones for the load balancer\. For load balancers in a VPC, specify `Subnets` instead\.  
 Update requires replacement if you did not previously specify an Availability Zone or if you are removing all Availability Zones\. Otherwise, update requires no interruption\.  
 *Required*: No  
-*Type*: List of String
+*Type*: List of String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ConnectionDrainingPolicy`  <a name="cfn-ec2-elb-connectiondrainingpolicy"></a>
 If enabled, the load balancer allows existing requests to complete before the load balancer shifts traffic away from a deregistered or unhealthy instance\.  
@@ -117,7 +118,8 @@ For more information, see [Configure Cross\-Zone Load Balancing](https://docs.aw
 The health check settings to use when evaluating the health of your EC2 instances\.  
 Update requires replacement if you did not previously specify health check settings or if you are removing the health check settings\. Otherwise, update requires no interruption\.  
 *Required*: No  
-*Type*: [HealthCheck](aws-properties-ec2-elb-health-check.md)
+*Type*: [HealthCheck](aws-properties-ec2-elb-health-check.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Instances`  <a name="cfn-ec2-elb-instances"></a>
 The IDs of the instances for the load balancer\.  
@@ -169,7 +171,8 @@ The security groups for the load balancer\. Valid only for load balancers in a V
 The IDs of the subnets for the load balancer\. You can specify at most one subnet per Availability Zone\.  
 Update requires replacement if you did not previously specify a subnet or if you are removing all subnets\. Otherwise, update requires no interruption\. To update to a different subnet in the current Availability Zone, you must first update to a subnet in a different Availability Zone, then update to the new subnet in the original Availability Zone\.  
 *Required*: No  
-*Type*: List of String
+*Type*: List of String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Tags`  <a name="cfn-elasticloadbalancing-loadbalancer-tags"></a>
 The tags associated with a load balancer\.  

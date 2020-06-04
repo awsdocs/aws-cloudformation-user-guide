@@ -1,13 +1,13 @@
 # `cfn-response` Module<a name="cfn-lambda-function-code-cfnresponsemodule"></a>
 
-When you use the `ZipFile` property to specify your function's source code and that function interacts with an AWS CloudFormation custom resource, you can load the `cfn-response` module to send responses to those resources\. The module contains a `send` method, which sends a [response object](crpg-ref-responses.md) to a custom resource by way of an Amazon S3 presigned URL \(the `ResponseURL`\)\.
+When you use the `ZipFile` property to specify your [function's](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html) source code and that function interacts with an AWS CloudFormation custom resource, you can load the `cfn-response` module to send responses to those resources\. The module contains a `send` method, which sends a [response object](crpg-ref-responses.md) to a custom resource by way of an Amazon S3 presigned URL \(the `ResponseURL`\)\.
 
 After executing the `send` method, the Lambda function terminates, so anything you write after that method is ignored\.
 
 **Note**  
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
-## Loading the `cfn-response` Module<a name="w4297ab1c17c25c14b9b9"></a>
+## Loading the `cfn-response` Module<a name="w6131ab1c19c25c14b9b9"></a>
 
 For Node\.js functions, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
@@ -24,7 +24,7 @@ Use this exact import statement\. If you use other variants of the import statem
 import cfnresponse
 ```
 
-## `send` Method Parameters<a name="w4297ab1c17c25c14b9c11"></a>
+## `send` Method Parameters<a name="w6131ab1c19c25c14b9c11"></a>
 
 You can use the following parameters with the `send` method\.
 
@@ -44,11 +44,12 @@ The `Data` field of a custom resource [response object](crpg-ref-responses.md)\.
 Optional\. The unique identifier of the custom resource that invoked the function\. By default, the module uses the name of the Amazon CloudWatch Logs log stream that's associated with the Lambda function\.
 
 `noEcho`  
-Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.
+Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.  
+For more information about using `NoEcho` to mask sensitive information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-## Examples<a name="w4297ab1c17c25c14b9c13"></a>
+## Examples<a name="w6131ab1c19c25c14b9c13"></a>
 
-### Node\.js<a name="w4297ab1c17c25c14b9c13b3"></a>
+### Node\.js<a name="w6131ab1c19c25c14b9c13b3"></a>
 
 In the following Node\.js example, the inline Lambda function takes an input value and multiplies it by 5\. Inline functions are especially useful for smaller functions because they allow you to specify the source code directly in the template, instead of creating a package and uploading it to an Amazon S3 bucket\. The function uses the `cfn-response` `send` method to send the result back to the custom resource that invoked it\.
 
@@ -77,7 +78,7 @@ ZipFile: >
   };
 ```
 
-### Python<a name="w4297ab1c17c25c14b9c13b5"></a>
+### Python<a name="w6131ab1c19c25c14b9c13b5"></a>
 
 In the following Python example, the inline Lambda function takes an integer value and multiplies it by 5\.
 
@@ -108,7 +109,7 @@ ZipFile: |
     cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
 ```
 
-## Module Source Code<a name="w4297ab1c17c25c14b9c15"></a>
+## Module Source Code<a name="w6131ab1c19c25c14b9c15"></a>
 
 The following is the response module source code for the Node\.js functions\. Review it to understand what the module does and for help with implementing your own response functions\.
 

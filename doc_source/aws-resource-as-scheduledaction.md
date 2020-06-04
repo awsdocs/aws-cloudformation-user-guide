@@ -1,6 +1,6 @@
 # AWS::AutoScaling::ScheduledAction<a name="aws-resource-as-scheduledaction"></a>
 
-Specifies a scheduled scaling action for an Amazon EC2 Auto Scaling group, changing the number of servers available for your application in response to predictable load changes\. 
+Specifies an Amazon EC2 Auto Scaling scheduled action so that the Auto Scaling group can change the number of instances available for your application in response to predictable load changes\. 
 
 **Important**  
 When you update a stack with an Auto Scaling group and scheduled action, AWS CloudFormation always sets the min size, max size, and desired capacity properties of your group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template\. However, you might not want CloudFormation to do that when you have a scheduled action in effect\. You can use an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to prevent CloudFormation from changing the min size, max size, or desired capacity property values during a stack update unless you modified the individual values in your template\.   
@@ -52,7 +52,7 @@ The name or Amazon Resource Name \(ARN\) of the Auto Scaling group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredCapacity`  <a name="cfn-as-scheduledaction-desiredcapacity"></a>
-The number of Amazon EC2 instances that should be running in the Auto Scaling group\.  
+The desired capacity is the initial capacity of the Auto Scaling group after the scheduled action runs and the capacity it attempts to maintain\. It can scale beyond this capacity if you add more scaling conditions\.  
 You must specify at least one of the following properties: `MaxSize`, `MinSize`, or `DesiredCapacity`\.   
 *Required*: Conditional  
 *Type*: Integer  
@@ -65,14 +65,14 @@ The date and time in UTC for the recurring schedule to end\. For example, `"2019
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSize`  <a name="cfn-as-scheduledaction-maxsize"></a>
-The maximum number of Amazon EC2 instances in the Auto Scaling group\.  
+The maximum size of the Auto Scaling group\.  
 You must specify at least one of the following properties: `MaxSize`, `MinSize`, or `DesiredCapacity`\.   
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinSize`  <a name="cfn-as-scheduledaction-minsize"></a>
-The minimum number of Amazon EC2 instances in the Auto Scaling group\.  
+The minimum size of the Auto Scaling group\.  
 You must specify at least one of the following properties: `MaxSize`, `MinSize`, or `DesiredCapacity`\.   
 *Required*: Conditional  
 *Type*: Integer  
@@ -111,26 +111,28 @@ The following template snippet includes two scheduled actions that scale the num
 
 ```
 {
-  "ScheduledActionOut":{
-    "Type":"AWS::AutoScaling::ScheduledAction",
-    "Properties":{
-      "AutoScalingGroupName":{
-        "Ref":"myASG"
-      },
-      "MaxSize":"10",
-      "MinSize":"5",
-      "Recurrence":"0 7 * * *"
-    }
-  },
-  "ScheduledActionIn":{
-    "Type":"AWS::AutoScaling::ScheduledAction",
-    "Properties":{
-      "AutoScalingGroupName":{
-        "Ref":"myASG"
-      },
-      "MaxSize":"1",
-      "MinSize":"1",
-      "Recurrence":"0 19 * * *"
+  "Resources":{
+    "ScheduledActionOut":{
+      "Type":"AWS::AutoScaling::ScheduledAction",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "MaxSize":"10",
+        "MinSize":"5",
+        "Recurrence":"0 7 * * *"
+      }
+    },
+    "ScheduledActionIn":{
+      "Type":"AWS::AutoScaling::ScheduledAction",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "MaxSize":"1",
+        "MinSize":"1",
+        "Recurrence":"0 19 * * *"
+      }
     }
   }
 }
@@ -139,20 +141,22 @@ The following template snippet includes two scheduled actions that scale the num
 #### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_Scaling_Action--yaml"></a>
 
 ```
-ScheduledActionOut: 
-  Type: AWS::AutoScaling::ScheduledAction
-  Properties:
-    AutoScalingGroupName: 
-      Ref: "myASG"
-    MaxSize: 10
-    MinSize: 5
-    Recurrence: "0 7 * * *"
-ScheduledActionIn: 
-  Type: AWS::AutoScaling::ScheduledAction
-  Properties:
-    AutoScalingGroupName: 
-      Ref: "myASG"
-    MaxSize: 1
-    MinSize: 1
-    Recurrence: "0 19 * * *"
+---
+Resources:
+  ScheduledActionOut: 
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: 
+        Ref: "myASG"
+      MaxSize: 10
+      MinSize: 5
+      Recurrence: "0 7 * * *"
+  ScheduledActionIn: 
+    Type: AWS::AutoScaling::ScheduledAction
+    Properties:
+      AutoScalingGroupName: 
+        Ref: "myASG"
+      MaxSize: 1
+      MinSize: 1
+      Recurrence: "0 19 * * *"
 ```

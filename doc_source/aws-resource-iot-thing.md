@@ -40,6 +40,7 @@ A string that contains up to three key–value pairs\. Maximum length of 800\. D
 
 `ThingName`  <a name="cfn-iot-thing-thingname"></a>
 The name of the thing to update\.  
+You can't change a thing's name\. To change a thing's name, you must create a new thing, give it the new name, and then delete the old thing\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -67,79 +68,24 @@ The following example declares a thing and the values of its attributes\.
 #### JSON<a name="aws-resource-iot-thing--examples----json"></a>
 
 ```
-{
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources": {
-      "MyThing": {
-         "Type": "AWS::IoT::Thing",
-         "Properties": {
-            "ThingName": {
-               "Ref": "NameParameter"
-            },
-            "AttributePayload": {
-               "Attributes": {
-                  "myAttributeA": {
-                     "Ref": "MyAttributeValueA"
-                  },
-                  "myAttributeB": {
-                     "Ref": "MyAttributeValueB"
-                  },
-                  "myAttributeC": {
-                     "Ref": "MyAttributeValueC"
-                  }
-               }
-            }
-         }  
-      }
-   },
-   "Parameters": {
-      "NameParameter": {
-         "Type": "String"
-      },
-      "MyAttributeValueA": {
-         "Type": "String",
-         "Default": "myStringA123"
-      },
-      "MyAttributeValueB": {
-         "Type": "String",
-         "Default": "myStringB123"
-      },
-      "MyAttributeValueC": {
-         "Type": "String",
-         "Default": "myStringC123"
-      }
-   }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+            "MyThing": { "Type": "AWS::IoT::Thing", "Properties": { "ThingName": { "Ref":
+            "NameParameter" }, "AttributePayload": { "Attributes": { "myAttributeA": { "Ref":
+            "MyAttributeValueA" }, "myAttributeB": { "Ref": "MyAttributeValueB" }, "myAttributeC": {
+            "Ref": "MyAttributeValueC" } } } } } }, "Parameters": { "NameParameter": { "Type":
+            "String" }, "MyAttributeValueA": { "Type": "String", "Default": "myStringA123" },
+            "MyAttributeValueB": { "Type": "String", "Default": "myStringB123" },
+            "MyAttributeValueC": { "Type": "String", "Default": "myStringC123" } } }
 ```
 
 #### YAML<a name="aws-resource-iot-thing--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-   MyThing: 
-      Type: AWS::IoT::Thing
-      Properties: 
-         ThingName: 
-            Ref: "NameParameter"
-         AttributePayload: 
-            Attributes: 
-               myAttributeA: 
-                  Ref: "MyAttributeValueA"
-               myAttributeB: 
-                  Ref: "MyAttributeValueB"
-               myAttributeC: 
-                  Ref: "MyAttributeValueC"
-Parameters: 
-   NameParameter: 
-      Type: "String"
-   MyAttributeValueA: 
-      Type: "String"
-      Default: "myStringA123"
-   MyAttributeValueB: 
-      Type: "String"
-      Default: "myStringB123"
-   MyAttributeValueC: 
-      Type: "String"
-      Default: "myStringC123"
+AWSTemplateFormatVersion: "2010-09-09" Resources: MyThing: Type:
+            AWS::IoT::Thing Properties: ThingName: Ref: "NameParameter" AttributePayload:
+            Attributes: myAttributeA: Ref: "MyAttributeValueA" myAttributeB: Ref:
+            "MyAttributeValueB" myAttributeC: Ref: "MyAttributeValueC" Parameters: NameParameter:
+            Type: "String" MyAttributeValueA: Type: "String" Default: "myStringA123"
+            MyAttributeValueB: Type: "String" Default: "myStringB123" MyAttributeValueC: Type:
+            "String" Default: "myStringC123"
 ```

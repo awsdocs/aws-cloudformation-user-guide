@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::Service HealthCheckConfig<a name="aws-properties-servicediscovery-service-healthcheckconfig"></a>
 
- *Public DNS namespaces only\.* A complex type that contains settings for an optional health check\. If you specify settings for a health check, AWS Cloud Map associates the health check with the records that you specify in `DnsConfig`\.
+ *Public DNS and HTTP namespaces only\.* A complex type that contains settings for an optional health check\. If you specify settings for a health check, AWS Cloud Map associates the health check with the records that you specify in `DnsConfig`\.
 
 **Important**  
 If you specify a health check configuration, you can specify either `HealthCheckCustomConfig` or `HealthCheckConfig` but not both\.
@@ -93,4 +93,5 @@ For more information, see [How Route 53 Determines Whether an Endpoint Is Health
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See Also<a name="aws-properties-servicediscovery-service-healthcheckconfig--seealso"></a>
++  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [HealthCheckConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckConfig.html) in the *AWS Cloud Map API Reference* 

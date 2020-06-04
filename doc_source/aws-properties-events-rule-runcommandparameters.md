@@ -1,6 +1,6 @@
 # AWS::Events::Rule RunCommandParameters<a name="aws-properties-events-rule-runcommandparameters"></a>
 
-The `RunCommandParameters` property type specifies the parameters to use when an Amazon CloudWatch Events rule invokes the AWS Systems Manager Run Command\. 
+The `RunCommandParameters` property type specifies the parameters to use when a rule invokes the AWS Systems Manager Run Command\. 
 
  `RunCommandParameters` is a property of the [Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html) property type\.
 

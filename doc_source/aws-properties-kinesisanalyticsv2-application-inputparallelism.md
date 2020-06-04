@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application InputParallelism<a name="aws-properties-kinesisanalyticsv2-application-inputparallelism"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, describes the number of in\-application streams to create for a given streaming source\. 
+For a SQL\-based Kinesis Data Analytics application, describes the number of in\-application streams to create for a given streaming source\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-inputparallelism-syntax"></a>
 

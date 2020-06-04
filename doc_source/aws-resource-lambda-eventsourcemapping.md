@@ -18,10 +18,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Lambda::EventSourceMapping",
   "Properties" : {
       "[BatchSize](#cfn-lambda-eventsourcemapping-batchsize)" : Integer,
+      "[BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)" : Boolean,
+      "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md),
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
       "[MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)" : Integer,
+      "[MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)" : Integer,
+      "[MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts)" : Integer,
+      "[ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor)" : Integer,
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String
     }
 }
@@ -33,10 +38,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Lambda::EventSourceMapping
 Properties: 
   [BatchSize](#cfn-lambda-eventsourcemapping-batchsize): Integer
+  [BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror): Boolean
+  [DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig): 
+    [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
   [MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds): Integer
+  [MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds): Integer
+  [MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts): Integer
+  [ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor): Integer
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
 ```
 
@@ -51,6 +62,18 @@ The maximum number of items to retrieve in a single batch\.
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `10000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BisectBatchOnFunctionError`  <a name="cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror"></a>
+\(Streams\) If the function returns an error, split the batch in two and retry\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DestinationConfig`  <a name="cfn-lambda-eventsourcemapping-destinationconfig"></a>
+\(Streams\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.  
+*Required*: No  
+*Type*: [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lambda-eventsourcemapping-enabled"></a>
@@ -86,25 +109,50 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
-The maximum amount of time to gather records before invoking the function, in seconds\.  
+\(Streams\) The maximum amount of time to gather records before invoking the function, in seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
+\(Streams\) The maximum age of a record that Lambda sends to a function for processing\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `60`  
+*Maximum*: `604800`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaximumRetryAttempts`  <a name="cfn-lambda-eventsourcemapping-maximumretryattempts"></a>
+\(Streams\) The maximum number of times to retry when the function returns an error\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `10000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ParallelizationFactor`  <a name="cfn-lambda-eventsourcemapping-parallelizationfactor"></a>
+\(Streams\) The number of batches to process from each shard concurrently\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `10`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `StartingPosition`  <a name="cfn-lambda-eventsourcemapping-startingposition"></a>
-The position in a stream from which to start reading\. Required for Amazon Kinesis and Amazon DynamoDB Streams sources\. `AT_TIMESTAMP` is only supported for Amazon Kinesis streams\.  
+The position in a stream from which to start reading\. Required for Amazon Kinesis and Amazon DynamoDB Streams sources\.  
++ **LATEST** \- Read only new records\.
++ **TRIM\_HORIZON** \- Process all available records\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AT_TIMESTAMP | LATEST | TRIM_HORIZON`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-lambda-eventsourcemapping-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-eventsourcemapping-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the mapping's ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

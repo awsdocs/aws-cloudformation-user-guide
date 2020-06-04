@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution<a name="aws-resource-cloudfront-streamingdistribution"></a>
 
-A streaming distribution\. 
+A streaming distribution tells CloudFront where you want RTMP content to be delivered from, and the details about how to track and manage content delivery\.
 
 ## Syntax<a name="aws-resource-cloudfront-streamingdistribution-syntax"></a>
 
@@ -60,7 +60,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-cloudfront-streamingdistribution-return-values-fn--getatt-fn--getatt"></a>
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-The domain name of the resource, such as `sct27g85mgx04.cloudfront.net`\. 
+The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 ## Examples<a name="aws-resource-cloudfront-streamingdistribution--examples"></a>
 

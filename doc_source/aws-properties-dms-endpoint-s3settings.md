@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dms-endpoint-s3settings-properties"></a>
 
 `BucketFolder`  <a name="cfn-dms-endpoint-s3settings-bucketfolder"></a>
- An optional parameter to set a folder name in the S3 bucket\. If provided, tables are created in the path `<bucketFolder>/<schema_name>/<table_name>/`\. If this parameter is not specified, then the path used is `<schema_name>/<table_name>/`\.   
+ An optional parameter to set a folder name in the S3 bucket\. If provided, tables are created in the path ` bucketFolder/schema_name/table_name/`\. If this parameter isn't specified, then the path used is ` schema_name/table_name/`\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CompressionType`  <a name="cfn-dms-endpoint-s3settings-compressiontype"></a>
- An optional parameter to use GZIP to compress the target files\. Set to GZIP to compress the target files\. Set to NONE \(the default\) or do not use to leave the files uncompressed\. Applies to both CSV and PARQUET data formats\.   
+An optional parameter to use GZIP to compress the target files\. Set to GZIP to compress the target files\. Either set this parameter to NONE \(the default\) or don't use it to leave the files uncompressed\. This parameter applies to both \.csv and \.parquet file formats\.   
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `gzip | none`  

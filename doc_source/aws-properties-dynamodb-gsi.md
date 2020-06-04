@@ -35,16 +35,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the global secondary index\. The name must be unique among all other indexes on this table\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `255`  
+*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeySchema`  <a name="cfn-dynamodb-gsi-keyschema"></a>
 The complete key schema for a global secondary index, which consists of one or more pairs of attribute names and key types:  
 +  `HASH` \- partition key
 +  `RANGE` \- sort key
-The partition key of an item is also known as its *hash attribute*\. The term "hash attribute" derives from DynamoDB' usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values\.  
+The partition key of an item is also known as its *hash attribute*\. The term "hash attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values\.  
 The sort key of an item is also known as its *range attribute*\. The term "range attribute" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value\.
 *Required*: Yes  
 *Type*: [List](aws-properties-dynamodb-keyschema.md) of [KeySchema](aws-properties-dynamodb-keyschema.md)  
+*Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Projection`  <a name="cfn-dynamodb-gsi-projection"></a>

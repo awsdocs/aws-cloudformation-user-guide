@@ -47,7 +47,7 @@ A description of the workflow
 
 `Name`  <a name="cfn-glue-workflow-name"></a>
 The name of the workflow representing the flow  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

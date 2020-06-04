@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Stage<a name="aws-resource-apigatewayv2-stage"></a>
 
-The `AWS::ApiGatewayV2::Stage` resource updates a stage for a WebSocket API\. For more information, see [Deploy a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-websocket-deployment.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGatewayV2::Stage` resource updates a stage for an API\.
 
 ## Syntax<a name="aws-resource-apigatewayv2-stage-syntax"></a>
 
@@ -14,13 +14,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md),
       "[ApiId](#cfn-apigatewayv2-stage-apiid)" : String,
+      "[AutoDeploy](#cfn-apigatewayv2-stage-autodeploy)" : Boolean,
       "[ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid)" : String,
       "[DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings)" : [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md),
       "[DeploymentId](#cfn-apigatewayv2-stage-deploymentid)" : String,
       "[Description](#cfn-apigatewayv2-stage-description)" : String,
       "[RouteSettings](#cfn-apigatewayv2-stage-routesettings)" : [Json](aws-properties-apigatewayv2-stage-routesettings.md),
       "[StageName](#cfn-apigatewayv2-stage-stagename)" : String,
-      "[StageVariables](#cfn-apigatewayv2-stage-stagevariables)" : Json
+      "[StageVariables](#cfn-apigatewayv2-stage-stagevariables)" : Json,
+      "[Tags](#cfn-apigatewayv2-stage-tags)" : Json
     }
 }
 ```
@@ -33,6 +35,7 @@ Properties:
   [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
     [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)
   [ApiId](#cfn-apigatewayv2-stage-apiid): String
+  [AutoDeploy](#cfn-apigatewayv2-stage-autodeploy): Boolean
   [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
   [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings): 
     [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)
@@ -41,6 +44,7 @@ Properties:
   [RouteSettings](#cfn-apigatewayv2-stage-routesettings): [Json](aws-properties-apigatewayv2-stage-routesettings.md)
   [StageName](#cfn-apigatewayv2-stage-stagename): String
   [StageVariables](#cfn-apigatewayv2-stage-stagevariables): Json
+  [Tags](#cfn-apigatewayv2-stage-tags): Json
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-stage-properties"></a>
@@ -57,8 +61,14 @@ The API identifier\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`AutoDeploy`  <a name="cfn-apigatewayv2-stage-autodeploy"></a>
+Specifies whether updates to an API automatically trigger a new deployment\. The default value is `false`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ClientCertificateId`  <a name="cfn-apigatewayv2-stage-clientcertificateid"></a>
-The identifier of a client certificate for a `Stage`\.  
+The identifier of a client certificate for a `Stage`\. Supported only for WebSocket APIs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,8 +80,8 @@ The default route settings for the stage\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentId`  <a name="cfn-apigatewayv2-stage-deploymentid"></a>
-The deployment identifier for the API stage\.  
-*Required*: Yes  
+The deployment identifier for the API stage\. Can't be updated if `autoDeploy` is enabled\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -95,6 +105,12 @@ The stage name\. Stage names can only contain alphanumeric characters, hyphens, 
 
 `StageVariables`  <a name="cfn-apigatewayv2-stage-stagevariables"></a>
 A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigatewayv2-stage-tags"></a>
+The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -131,7 +147,7 @@ The following example creates a `stage` resource called `MyStage` and associates
             "DefaultRouteSettings": {
                 "DetailedMetricsEnabled": true,
                 "LoggingLevel": "INFO",
-                "DataTraceEnabled": true,
+                "DataTraceEnabled": false,
                 "ThrottlingBurstLimit": 10,
                 "ThrottlingRateLimit": 10
             },
@@ -157,7 +173,7 @@ MyStage:
     DefaultRouteSettings:
       DetailedMetricsEnabled: true
       LoggingLevel: INFO
-      DataTraceEnabled: true
+      DataTraceEnabled: false
       ThrottlingBurstLimit: 10
       ThrottlingRateLimit: 10
     AccessLogSettings:

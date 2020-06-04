@@ -1,6 +1,6 @@
 # AWS::S3::Bucket ObjectLockRule<a name="aws-properties-s3-bucket-objectlockrule"></a>
 
-The object lock rule in place for the specified object\.
+The Object Lock rule in place for the specified object\.
 
 ## Syntax<a name="aws-properties-s3-bucket-objectlockrule-syntax"></a>
 

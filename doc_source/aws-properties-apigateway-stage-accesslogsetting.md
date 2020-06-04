@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-stage-accesslogsetting-properties"></a>
 
 `DestinationArn`  <a name="cfn-apigateway-stage-accesslogsetting-destinationarn"></a>
-The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group to receive access logs\.  
+The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs\. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with `amazon-apigateway-`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

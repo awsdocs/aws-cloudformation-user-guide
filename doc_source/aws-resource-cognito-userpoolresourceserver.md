@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolresourceserver-properties"></a>
 
 `Identifier`  <a name="cfn-cognito-userpoolresourceserver-identifier"></a>
-A unique resource server identifier for the resource server\. This could be an HTTPS endpoint where the resource server is located\. For example, `https://my-weather-api.example.com`\.  
+A unique resource server identifier for the resource server\. This could be an HTTPS endpoint where the resource server is located\. For example: `https://my-weather-api.example.com`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -53,7 +53,7 @@ A friendly name for the resource server\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scopes`  <a name="cfn-cognito-userpoolresourceserver-scopes"></a>
-A list of scopes\. Each scope is map, where the keys are `name` and `description`\.  
+The scopes\. Each scope is a map, where the keys are `name` and the values are `description` for the scope\.  
 *Required*: No  
 *Type*: List of [ResourceServerScopeType](aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.md)  
 *Maximum*: `100`  
@@ -90,39 +90,38 @@ The following example creates a resource server "Name" with the identifier "Iden
 
 ```
 {
-   "UserPoolResourceServer": {
-      "Type": "AWS::Cognito::UserPoolResourceServer",
-      "Properties": {
-         "UserPoolId": {"Ref": "UserPool"},
-         "Identifier": "Identifier",
-         "Name": "Name",
-         "Scopes": [
-            {
-               "ScopeName": "ScopeName1",
-               "ScopeDescription": "description"
-            },
-            {
-               "ScopeName": "ScopeName2",
-               "ScopeDescription": "description"
-            }
-         ]
-      }
-   }
+	"UserPoolResourceServer": {
+		"Type": "AWS::Cognito::UserPoolResourceServer",
+		"Properties": {
+			"UserPoolId": {
+				"Ref": "UserPool"
+			},
+			"Identifier": "Identifier",
+			"Name": "Name",
+			"Scopes": [{
+				"ScopeName": "ScopeName1",
+				"ScopeDescription": "description"
+			}, {
+				"ScopeName": "ScopeName2",
+				"ScopeDescription": "description"
+			}]
+		}
+	}
 }
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolResourceServer:
+UserPoolResourceServer: 
   Type: AWS::Cognito::UserPoolResourceServer
-  Properties:
-    UserPoolId: !Ref UserPool
-    Identifier: "Identifier"
-    Name: "Name"
-    Scopes:
-      - ScopeName: "ScopeName1"
-        ScopeDescription: "description"
-      - ScopeName: "ScopeName2"
-        ScopeDescription: "description"
+  Properties: 
+    UserPoolId: !Ref UserPool 
+    Identifier: "Identifier" 
+    Name: "Name" 
+    Scopes: 
+     - ScopeName: "ScopeName1" 
+       ScopeDescription: "description" 
+     - ScopeName: "ScopeName2"
+       ScopeDescription: "description"
 ```

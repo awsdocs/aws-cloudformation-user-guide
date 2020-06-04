@@ -48,7 +48,6 @@ Properties:
 
 `Category`  <a name="cfn-codepipeline-customactiontype-category"></a>
 The category of the custom action, such as a build action or a test action\.  
-Although `Source` and `Approval` are listed as valid values, they are not currently functional\. These values are reserved for future use\.
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `Approval | Build | Deploy | Invoke | Source | Test`  

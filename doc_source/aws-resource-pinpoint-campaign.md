@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign<a name="aws-resource-pinpoint-campaign"></a>
 
-Updates the settings for a campaign\.
+A *campaign* is a messaging initiative that engages a specific segment of users for an Amazon Pinpoint application\. The AWS::Pinpoint::Campaign resource defines the configuration and other settings for a campaign\.
 
 ## Syntax<a name="aws-resource-pinpoint-campaign-syntax"></a>
 
@@ -67,7 +67,7 @@ An array of requests that defines additional treatments for the campaign, in add
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationId`  <a name="cfn-pinpoint-campaign-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that the campaign is associated with\.  
+The unique identifier for the Amazon Pinpoint application that the campaign is associated with\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -79,7 +79,7 @@ Specifies the AWS Lambda function to use as a code hook for a campaign\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-pinpoint-campaign-description"></a>
-The custom description of the campaign\.  
+A custom description of the campaign\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,7 +91,7 @@ The allocated percentage of users \(segment members\) who shouldn't receive mess
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsPaused`  <a name="cfn-pinpoint-campaign-ispaused"></a>
-Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by setting this value to `false`\.  
+Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,7 +109,7 @@ The message configuration settings for the campaign\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-pinpoint-campaign-name"></a>
-The name of the message template to use for the message\. If specified, this value must match the name of an existing message template\.  
+The name of the campaign\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,13 +139,13 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-treatmentdescription"></a>
-The custom description of a variation of the campaign to use for A/B testing\.  
+A custom description of the default treatment for the campaign\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-treatmentname"></a>
-The custom name of a variation of the campaign to use for A/B testing\.  
+A custom name of the default treatment for the campaign, if the campaign has multiple treatments\. A *treatment* is a variation of a campaign that's used for A/B testing\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -154,7 +154,7 @@ The custom name of a variation of the campaign to use for A/B testing\.
 
 ### Ref<a name="aws-resource-pinpoint-campaign-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the ID of the Amazon Pinpoint app with the ID of the segment that the campaign targets\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -170,4 +170,4 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the campaign\.
 
 `CampaignId`  <a name="CampaignId-fn::getatt"></a>
-The unique ID of the campaign\.
+The unique identifier for the campaign\.

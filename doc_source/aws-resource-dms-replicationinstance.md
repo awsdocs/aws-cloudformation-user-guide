@@ -62,14 +62,14 @@ The amount of storage \(in gigabytes\) to be initially allocated for the replica
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowMajorVersionUpgrade`  <a name="cfn-dms-replicationinstance-allowmajorversionupgrade"></a>
-Indicates that major version upgrades are allowed\. Changing this parameter does not result in an outage and the change is asynchronously applied as soon as possible\.  
-Constraints: This parameter must be set to true when specifying a value for the `EngineVersion` parameter that is a different major version than the replication instance's current version\.  
+Indicates that major version upgrades are allowed\. Changing this parameter does not result in an outage, and the change is asynchronously applied as soon as possible\.  
+This parameter must be set to `true` when specifying a value for the `EngineVersion` parameter that is a different major version than the replication instance's current version\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-dms-replicationinstance-autominorversionupgrade"></a>
-Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window\.  
+A value that indicates whether minor engine upgrades are applied automatically to the replication instance during the maintenance window\. This parameter defaults to `true`\.  
 Default: `true`   
 *Required*: No  
 *Type*: Boolean  
@@ -89,13 +89,15 @@ The engine version number of the replication instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-dms-replicationinstance-kmskeyid"></a>
-The AWS KMS key identifier that is used to encrypt the content on the replication instance\. If you don't specify a value for the `KmsKeyId` parameter, then AWS DMS uses your default encryption key\. AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
+An AWS KMS key identifier that is used to encrypt the data on the replication instance\.  
+If you don't specify a value for the `KmsKeyId` parameter, then AWS DMS uses your default encryption key\.  
+AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MultiAZ`  <a name="cfn-dms-replicationinstance-multiaz"></a>
- Specifies if the replication instance is a Multi\-AZ deployment\. You cannot set the `AvailabilityZone` parameter if the Multi\-AZ parameter is set to `true`\.   
+ Specifies whether the replication instance is a Multi\-AZ deployment\. You can't set the `AvailabilityZone` parameter if the Multi\-AZ parameter is set to `true`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,7 +105,7 @@ The AWS KMS key identifier that is used to encrypt the content on the replicatio
 `PreferredMaintenanceWindow`  <a name="cfn-dms-replicationinstance-preferredmaintenancewindow"></a>
 The weekly time range during which system maintenance can occur, in Universal Coordinated Time \(UTC\)\.  
  Format: `ddd:hh24:mi-ddd:hh24:mi`   
-Default: A 30\-minute window selected at random from an 8\-hour block of time per region, occurring on a random day of the week\.  
+Default: A 30\-minute window selected at random from an 8\-hour block of time per AWS Region, occurring on a random day of the week\.  
 Valid Days: Mon, Tue, Wed, Thu, Fri, Sat, Sun  
 Constraints: Minimum 30\-minute window\.  
 *Required*: No  
@@ -126,9 +128,9 @@ The compute and memory capacity of the replication instance as specified by the 
 `ReplicationInstanceIdentifier`  <a name="cfn-dms-replicationinstance-replicationinstanceidentifier"></a>
 The replication instance identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ Must contain from 1 to 63 alphanumeric characters or hyphens\.
++ Must contain 1\-63 alphanumeric characters or hyphens\.
 + First character must be a letter\.
-+ Cannot end with a hyphen or contain two consecutive hyphens\.
++ Can't end with a hyphen or contain two consecutive hyphens\.
 Example: `myrepinstance`   
 *Required*: No  
 *Type*: String  
@@ -141,7 +143,7 @@ A subnet group to associate with the replication instance\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-dms-replicationinstance-tags"></a>
-Tags to be associated with the replication instance\.  
+One or more tags to be assigned to the replication instance\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -181,28 +183,17 @@ One or more public IP addresses for the replication instance\.
 #### JSON<a name="aws-resource-dms-replicationinstance--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "BasicReplicationInstance": {
-            "Type": "AWS::DMS::ReplicationInstance",
-            "Properties": {
-                "ReplicationInstanceClass": "dms.t2.small"
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+                "BasicReplicationInstance": { "Type": "AWS::DMS::ReplicationInstance", "Properties":
+                { "ReplicationInstanceClass": "dms.t2.small" } } } }
 ```
 
 #### YAML<a name="aws-resource-dms-replicationinstance--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources: 
-  BasicReplicationInstance: 
-    Properties: 
-      ReplicationInstanceClass: dms.t2.small
-    Type: "AWS::DMS::ReplicationInstance"
+AWSTemplateFormatVersion: 2010-09-09 Resources:
+                BasicReplicationInstance: Properties: ReplicationInstanceClass: dms.t2.small Type:
+                "AWS::DMS::ReplicationInstance"
 ```
 
 ## See Also<a name="aws-resource-dms-replicationinstance--seealso"></a>

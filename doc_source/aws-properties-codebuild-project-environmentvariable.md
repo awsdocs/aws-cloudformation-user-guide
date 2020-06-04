@@ -35,16 +35,17 @@ The name or key of the environment variable\.
 
 `Type`  <a name="cfn-codebuild-project-environmentvariable-type"></a>
 The type of environment variable\. Valid values include:  
-+  `PARAMETER_STORE`: An environment variable stored in Amazon EC2 Systems Manager Parameter Store\.
-+  `PLAINTEXT`: An environment variable in plaintext format\.
++  `PARAMETER_STORE`: An environment variable stored in Amazon EC2 Systems Manager Parameter Store\. To learn how to specify a parameter store environment variable, see [ parameter store reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#parameter-store-build-spec)\.
++  `PLAINTEXT`: An environment variable in plain text format\. This is the default value\.
++  `SECRETS_MANAGER`: An environment variable stored in AWS Secrets Manager\. To learn how to specify a secrets manager environment variable, see [ secrets manager reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#secrets-manager-build-spec)\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PARAMETER_STORE | PLAINTEXT`  
+*Allowed Values*: `PARAMETER_STORE | PLAINTEXT | SECRETS_MANAGER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codebuild-project-environmentvariable-value"></a>
 The value of the environment variable\.  
-We strongly discourage the use of environment variables to store sensitive values, especially AWS secret key IDs and secret access keys\. Environment variables can be displayed in plain text using the AWS CodeBuild console and the AWS Command Line Interface \(AWS CLI\)\.
+We strongly discourage the use of `PLAINTEXT` environment variables to store sensitive values, especially AWS secret key IDs and secret access keys\. `PLAINTEXT` environment variables can be displayed in plain text using the AWS CodeBuild console and the AWS Command Line Interface \(AWS CLI\)\. For sensitive values, we recommend you use an environment variable of type `PARAMETER_STORE` or `SECRETS_MANAGER`\. 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

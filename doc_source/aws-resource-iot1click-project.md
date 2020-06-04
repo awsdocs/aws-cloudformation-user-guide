@@ -67,10 +67,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-iot1click-project-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The name of the project, such as `project-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the project, such as `arn:aws:iot1click:us-east-1:123456789012:projects/project-a1bzhi`\.
 
 `ProjectName`  <a name="ProjectName-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the project, such as `arn:aws:iot1click:us-east-1:123456789012:projects/project-a1bzhi`\.
+The name of the project, such as `project-a1bzhi`\.
 
 ## Examples<a name="aws-resource-iot1click-project--examples"></a>
 

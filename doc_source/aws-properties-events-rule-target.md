@@ -65,7 +65,7 @@ If the event target is an AWS Batch job, this contains the job definition, job n
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EcsParameters`  <a name="cfn-events-rule-target-ecsparameters"></a>
-Contains the Amazon ECS task definition and task count to be used if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
+Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: [EcsParameters](aws-properties-events-rule-ecsparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,7 +101,7 @@ Settings to enable you to provide custom input to a target based on certain even
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisParameters`  <a name="cfn-events-rule-target-kinesisparameters"></a>
-The custom parameter that you can use to control the shard assignment when the target is a Kinesis data stream\. If you don't include this parameter, the default is to use the `eventId` as the partition key\.  
+The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream\. If you do not include this parameter, the default is to use the `eventId` as the partition key\.  
 *Required*: No  
 *Type*: [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

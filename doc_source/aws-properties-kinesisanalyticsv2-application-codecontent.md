@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application CodeContent<a name="aws-properties-kinesisanalyticsv2-application-codecontent"></a>
 
-Specifies either the application code, or the location of the application code, for a Java\-based Amazon Kinesis Data Analytics application\. 
+Specifies either the application code, or the location of the application code, for a Flink\-based Kinesis Data Analytics application\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-codecontent-syntax"></a>
 
@@ -34,7 +34,7 @@ Information about the Amazon S3 bucket containing the application code\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextContent`  <a name="cfn-kinesisanalyticsv2-application-codecontent-textcontent"></a>
-The text\-format code for a Java\-based Kinesis Data Analytics application\.  
+The text\-format code for a Flink\-based Kinesis Data Analytics application\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -42,7 +42,7 @@ The text\-format code for a Java\-based Kinesis Data Analytics application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ZipFileContent`  <a name="cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent"></a>
-The zip\-format code for a Java\-based Kinesis Data Analytics application\.  
+The zip\-format code for a Flink\-based Kinesis Data Analytics application\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

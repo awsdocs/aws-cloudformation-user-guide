@@ -196,6 +196,10 @@ The following example depicts a valid Parameters section declaration in which a 
 
 The following example depicts a valid Parameters section declaration in which a single `CommaDelimitedList` type parameter is declared\. The NoEcho property is set to `TRUE`, which will mask its value with asterisks \(\*\*\*\*\*\) in the `aws cloudformation describe-stacks` output\.
 
+**Important**  
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+
 ### JSON<a name="quickref-general-example-7.json"></a>
 
 ```
@@ -352,9 +356,9 @@ This example shows an Outputs section with two output assignments\. One is based
 ```
 1. Outputs:
 2.   SNSTopic:
-3.     Value: Ref: MyNotificationTopic
+3.     Value: !Ref MyNotificationTopic
 4.   StackName:
-5.     Value: Ref: AWS::StackName
+5.     Value: !Ref AWS::StackName
 ```
 
 ## Outputs Section with an Output Based on a Function, a Literal String, a Reference, and a Pseudo Parameter<a name="scenario-output-with-complex-spec"></a>

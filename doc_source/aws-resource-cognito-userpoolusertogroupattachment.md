@@ -1,6 +1,8 @@
 # AWS::Cognito::UserPoolUserToGroupAttachment<a name="aws-resource-cognito-userpoolusertogroupattachment"></a>
 
-The `AWS::Cognito::UserPoolUserToGroupAttachment` resource attaches a user to an Amazon Cognito user pool user group\.
+Adds the specified user to the specified group\.
+
+Calling this action requires developer credentials\.
 
 ## Syntax<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax"></a>
 
@@ -13,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Cognito::UserPoolUserToGroupAttachment",
   "Properties" : {
       "[GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname)" : String,
-      "[UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String,
-      "[Username](#cfn-cognito-userpoolusertogroupattachment-username)" : String
+      "[Username](#cfn-cognito-userpoolusertogroupattachment-username)" : String,
+      "[UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String
     }
 }
 ```
@@ -25,14 +27,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPoolUserToGroupAttachment
 Properties: 
   [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname): String
-  [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
   [Username](#cfn-cognito-userpoolusertogroupattachment-username): String
+  [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpoolusertogroupattachment-properties"></a>
 
 `GroupName`  <a name="cfn-cognito-userpoolusertogroupattachment-groupname"></a>
 The group name\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Username`  <a name="cfn-cognito-userpoolusertogroupattachment-username"></a>
+The username for the user\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -47,15 +58,6 @@ The user pool ID for the user pool\.
 *Minimum*: `1`  
 *Maximum*: `55`  
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Username`  <a name="cfn-cognito-userpoolusertogroupattachment-username"></a>
-The username for the user\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-cognito-userpoolusertogroupattachment-return-values"></a>

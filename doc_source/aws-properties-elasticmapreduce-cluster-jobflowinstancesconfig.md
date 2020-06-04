@@ -94,8 +94,7 @@ The name of the EC2 key pair that can be used to ssh to the master node as the u
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2SubnetId`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid"></a>
-Applies to clusters that use the uniform instance group configuration\. To launch the cluster in Amazon Virtual Private Cloud \(Amazon VPC\), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch\. If you do not specify this value, the cluster launches in the normal Amazon Web Services cloud, outside of an Amazon VPC, if the account launching the cluster supports EC2 Classic networks in the region where the cluster launches\.  
-Amazon VPC currently does not support cluster compute quadruple extra large \(cc1\.4xlarge\) instances\. Thus you cannot specify the cc1\.4xlarge instance type for clusters launched in an Amazon VPC\.  
+Applies to clusters that use the uniform instance group configuration\. To launch the cluster in Amazon Virtual Private Cloud \(Amazon VPC\), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch\. If you do not specify this value and your account supports EC2\-Classic, the cluster launches in EC2\-Classic\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

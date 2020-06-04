@@ -56,7 +56,7 @@ Condition: This parameter is required for requests to create io1 volumes; it is 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs-kmskeyid"></a>
-The ARN of the AWS Key Management Service \(AWS KMS\) CMK used for encryption\.  
+The ARN of the symmetric AWS Key Management Service \(AWS KMS\) CMK used for encryption\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

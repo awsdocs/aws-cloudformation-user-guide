@@ -124,7 +124,8 @@ The size, in GiB, of the EBS root device volume of the Linux AMI that is used fo
 `Instances`  <a name="cfn-elasticmapreduce-cluster-instances"></a>
 A specification of the number and type of Amazon EC2 instances\.  
 *Required*: Yes  
-*Type*: [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)
+*Type*: [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `JobFlowRole`  <a name="cfn-elasticmapreduce-cluster-jobflowrole"></a>
 Also called instance profile and EC2 role\. An IAM role for an EMR cluster\. The EC2 instances of the cluster assume this role\. The default role is `EMR_EC2_DefaultRole`\. In order to use the default role, you must have already created it using the CLI or console\.  
@@ -154,7 +155,7 @@ The name of the cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-releaselabel"></a>
-The Amazon EMR release label, which determines the version of open\-source application packages installed on the cluster\. Release labels are in the form `emr-x.x.x`, where x\.x\.x is an Amazon EMR release version, for example, `emr-5.14.0`\. For more information about Amazon EMR release versions and included application versions and features, see [https://docs.aws.amazon.com/emr/latest/ReleaseGuide/](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/)\. The release label applies only to Amazon EMR releases versions 4\.x and later\. Earlier versions use `AmiVersion`\.  
+The Amazon EMR release label, which determines the version of open\-source application packages installed on the cluster\. Release labels are in the form `emr-x.x.x`, where x\.x\.x is an Amazon EMR release version such as `emr-5.14.0`\. For more information about Amazon EMR release versions and included application versions and features, see [https://docs.aws.amazon.com/emr/latest/ReleaseGuide/](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/)\. The release label applies only to Amazon EMR releases version 4\.0 and later\. Earlier versions use `AmiVersion`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -194,7 +195,8 @@ A list of tags associated with a cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VisibleToAllUsers`  <a name="cfn-elasticmapreduce-cluster-visibletoallusers"></a>
-Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster\. The default value, `true`, indicates that all IAM users in the AWS account can perform cluster actions if they have the proper IAM policy permissions\. If this value is `false`, only the IAM user that created the cluster can perform actions\. This value can be changed on a running cluster by using the SetVisibleToAllUsers action\. You can override the default value of `true` when you create a cluster by using the `VisibleToAllUsers` parameter of the `RunJobFlow` action\.  
+Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster\. If this value is set to `true`, all IAM users of that AWS account can view and manage the cluster if they have the proper policy permissions set\. If this value is `false`, only the IAM user that created the cluster can view and manage it\. This value can be changed using the SetVisibleToAllUsers action\.  
+When you create clusters directly through the EMR console or API, this value is set to `true` by default\. However, for `AWS::EMR::Cluster` resources in CloudFormation, the default is `false`\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -203,7 +205,7 @@ Indicates whether the cluster is visible to all IAM users of the AWS account ass
 
 ### Ref<a name="aws-resource-elasticmapreduce-cluster-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the cluster ID, such as j\-1ABCD123AB1A\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the cluster ID, such as j\-1ABCD123AB1A\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

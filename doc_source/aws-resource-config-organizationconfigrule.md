@@ -51,6 +51,7 @@ The name that you assign to organization config rule\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationCustomRuleMetadata`  <a name="cfn-config-organizationconfigrule-organizationcustomrulemetadata"></a>

@@ -106,7 +106,7 @@ scripts to install the packages and files necessary to deploy the Apache web ser
     } 
   },
 
-{      
+      
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -161,8 +161,8 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
-      "cc2.8xlarge" : { "Arch" : "HVM64"  }
-    },
+      "cc2.8xlarge" : { "Arch" : "HVM64"  },
+
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
       "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
@@ -370,6 +370,12 @@ The `UserData` property runs two shell commands: install the AWS CloudFormation 
 ## LAMP Configuration<a name="deployment-walkthrough-config"></a>
 
 Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll need to expand the template so that it automatically configures and runs Apache, MySQL, and PHP\. In the following example, we expand on the `Parameters` section, `AWS::CloudFormation::Init` resource, and `UserData` property to complete the configuration\. As with the previous template, sections marked with an ellipsis \(\.\.\.\) are omitted for brevity\. Additions to the template are shown in red italic text\.
+
+Note that the example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\.
+
+**Important**  
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ```
 {
@@ -618,7 +624,9 @@ The creation policy attribute uses the ISO 8601 format to define a timeout perio
 
 In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails, cfn\-signal sends a failure signal that causes the resource creation to fail\. The resource creation also fails if AWS CloudFormation doesn't receive a success signal within the timeout period\.
 
-The following example shows final complete template\. You can also view the template at the following location:
+The following example shows the final complete template\.
+
+You can also view the template at the following location:
 
 [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/LAMP\_Single\_Instance\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template)
 

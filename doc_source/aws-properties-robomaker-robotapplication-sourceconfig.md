@@ -39,7 +39,7 @@ The Amazon S3 bucket name\.
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `63`  
-*Pattern*: `[a-z0-9][a-z0-9\-]*[a-z0-9]`  
+*Pattern*: `[a-z0-9][a-z0-9.\-]*[a-z0-9]`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Key`  <a name="cfn-robomaker-robotapplication-sourceconfig-s3key"></a>
