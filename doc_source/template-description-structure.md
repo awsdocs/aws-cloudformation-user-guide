@@ -1,6 +1,6 @@
 # Description<a name="template-description-structure"></a>
 
-The `Description` section \(optional\) enables you to include comments about your template\. The `Description` must follow the `AWSTemplateFormatVersion` section\.
+The `Description` section \(optional\) enables you to include comments about your template\.
 
 The value for the description declaration must be a literal string that is between 0 and 1024 bytes in length\. You cannot use a parameter or function to specify the description\. The following snippet is an example of a description declaration:
 
