@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInterface InstanceIpv6Address<a name="aws-properties-ec2-networkinterface-instanceipv6address"></a>
 
-Describes an IPv6 address to associate with the network interface\.
+Describes a list of IPv6 addresses to associate with the network interface\.
 
 ## Syntax<a name="aws-properties-ec2-networkinterface-instanceipv6address-syntax"></a>
 
@@ -9,15 +9,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### JSON<a name="aws-properties-ec2-networkinterface-instanceipv6address-syntax.json"></a>
 
 ```
-{
-  "[Ipv6Address](#cfn-ec2-networkinterface-instanceipv6address-ipv6address)" : String
-}
+[
+  {
+    "[Ipv6Address](#cfn-ec2-networkinterface-instanceipv6address-ipv6address)" : String
+  }
+  ...
+]
 ```
 
 ### YAML<a name="aws-properties-ec2-networkinterface-instanceipv6address-syntax.yaml"></a>
 
 ```
-  [Ipv6Address](#cfn-ec2-networkinterface-instanceipv6address-ipv6address): String
+  - [Ipv6Address](#cfn-ec2-networkinterface-instanceipv6address-ipv6address): String
 ```
 
 ## Properties<a name="aws-properties-ec2-networkinterface-instanceipv6address-properties"></a>
