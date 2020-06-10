@@ -65,13 +65,13 @@ The maximum number of items to retrieve in a single batch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BisectBatchOnFunctionError`  <a name="cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror"></a>
-\(Streams\) If the function returns an error, split the batch in two and retry\.  
+\(Streams only\) If the function returns an error, split the batch in two and retry\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationConfig`  <a name="cfn-lambda-eventsourcemapping-destinationconfig"></a>
-\(Streams\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.  
+\(Streams only\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.  
 *Required*: No  
 *Type*: [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,7 +109,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
-\(Streams\) The maximum amount of time to gather records before invoking the function, in seconds\.  
+\(Streams only\) The maximum amount of time to gather records before invoking the function, in seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -117,7 +117,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
-\(Streams\) The maximum age of a record that Lambda sends to a function for processing\.  
+\(Streams only\) The maximum age of a record that Lambda sends to a function for processing\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `60`  
@@ -125,7 +125,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRetryAttempts`  <a name="cfn-lambda-eventsourcemapping-maximumretryattempts"></a>
-\(Streams\) The maximum number of times to retry when the function returns an error\.  
+\(Streams only\) The maximum number of times to retry when the function returns an error\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -133,7 +133,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelizationFactor`  <a name="cfn-lambda-eventsourcemapping-parallelizationfactor"></a>
-\(Streams\) The number of batches to process from each shard concurrently\.  
+\(Streams only\) The number of batches to process from each shard concurrently\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
