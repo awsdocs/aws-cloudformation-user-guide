@@ -1,4 +1,4 @@
-# Creating a Stack From Existing Resources<a name="resource-import-new-stack"></a>
+# Creating a Stack From Existing Templates<a name="resource-import-new-stack"></a>
 
 During this import operation, you need to provide the following\.
 + A template that describes the resources that will be in the new stack and the resource configurations\. Each resource in your template must have a [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) attribute\.
@@ -61,7 +61,7 @@ In this walkthrough, we provide the following example template, called `template
 }
 ```
 
-## Create a Stack from Existing Resources Using the AWS CloudFormation Console<a name="resource-import-new-stack-console"></a>
+## Create a Stack from Existing Templates Using the AWS CloudFormation Console<a name="resource-import-new-stack-console"></a>
 
 1. Open the AWS CloudFormation console\.
 
@@ -102,7 +102,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    1. Repeat steps 2\-8 using the modified template to import the resources again\.
 
-## Create a Stack from Existing Resources Using the AWS CLI<a name="resource-import-new-stack-cli"></a>
+## Create a Stack from Existing Template Using the AWS CLI<a name="resource-import-new-stack-cli"></a>
 
 1. Open the AWS CLI\.
 
