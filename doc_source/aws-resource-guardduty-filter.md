@@ -101,7 +101,9 @@ The following example shows how to declare a GuardDuty `Filter` resource:
             "Criterion": {
                 "updatedAt": {
                 "Gte": 0
-                }
+                },
+                "severity": {
+                "Gte": 0
         }
     },
     "Rank": 1,
@@ -121,6 +123,8 @@ Properties:
     FindingCriteria : 
         Criterion:
             "updatedAt":
+                Gte: 0	
+            "severity":
                 Gte: 0	
     Rank : 1
     Name : "SampleFilter"

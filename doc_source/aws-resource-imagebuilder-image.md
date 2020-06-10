@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
       "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md),
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn)" : String,
+      "[OutputResources](#cfn-imagebuilder-image-outputresources)" : [OutputResources](aws-properties-imagebuilder-image-outputresources.md),
       "[Tags](#cfn-imagebuilder-image-tags)" : {Key : Value, ...}
     }
 }
@@ -31,6 +32,8 @@ Properties:
   [ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration): 
     [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md)
   [InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn): String
+  [OutputResources](#cfn-imagebuilder-image-outputresources): 
+    [OutputResources](aws-properties-imagebuilder-image-outputresources.md)
   [Tags](#cfn-imagebuilder-image-tags): 
     Key : Value
 ```
@@ -64,6 +67,12 @@ The Amazon Resource Name \(ARN\) of the infrastructure configuration used to cre
 *Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OutputResources`  <a name="cfn-imagebuilder-image-outputresources"></a>
+The output resources produced when creating this image\.  
+*Required*: No  
+*Type*: [OutputResources](aws-properties-imagebuilder-image-outputresources.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-imagebuilder-image-tags"></a>
 The tags of the image\.  
 *Required*: No  
@@ -89,8 +98,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
 
-`OutputResources`  <a name="OutputResources-fn::getatt"></a>
-Returns the output resources produced when creating this image, formatted as an array of AMIs\.
+`ImageId`  <a name="ImageId-fn::getatt"></a>
+Returns the AMI ID of the EC2 AMI in the Region in which you are using Image Builder\.
 
 ## Examples<a name="aws-resource-imagebuilder-image--examples"></a>
 

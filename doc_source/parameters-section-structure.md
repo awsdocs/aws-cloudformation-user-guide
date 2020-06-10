@@ -159,7 +159,7 @@ For example, users could specify `"test,dev,prod"`, and a `Ref` would result in 
 AWS\-Specific Parameter Types  
 AWS values such as Amazon EC2 key pair names and VPC IDs\. For more information, see [AWS\-Specific Parameter Types](#aws-specific-parameter-types)\.  
 `SSM` Parameter Types  
-Parameters that correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information, see [SSM Parameter Types](#aws-ssm-parameter-types)\.  
+Parameters that correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information, see [SSM Parameter Types](#aws-ssm-parameter-types)\.
 
 ## AWS\-Specific Parameter Types<a name="aws-specific-parameter-types"></a>
 

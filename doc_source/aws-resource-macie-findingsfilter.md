@@ -55,14 +55,14 @@ We strongly recommend that you avoid including any sensitive data in the descrip
 
 `FindingCriteria`  <a name="cfn-macie-findingsfilter-findingcriteria"></a>
 The criteria to use to filter findings\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [FindingCriteria](aws-properties-macie-findingsfilter-findingcriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-macie-findingsfilter-name"></a>
 A custom name for the filter\. The name must contain at least 3 characters and can contain as many as 64 characters\.  
 We strongly recommend that you avoid including any sensitive data in the name of a filter\. Other users might be able to see the filter's name, depending on the actions that they're allowed to perform in Amazon Macie\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

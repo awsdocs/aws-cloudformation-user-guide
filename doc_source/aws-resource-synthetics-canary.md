@@ -126,6 +126,7 @@ A structure that contains information about how often the canary is to run, and 
 
 `StartCanaryAfterCreation`  <a name="cfn-synthetics-canary-startcanaryaftercreation"></a>
 Specify TRUE to have the canary start making runs immediately after it is created\.  
+A canary that you create using CloudFormation can't be used to monitor the CloudFormation stack that creates the canary or to roll back that stack if there is a failure\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

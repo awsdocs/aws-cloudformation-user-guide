@@ -50,7 +50,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket to send data to\.
 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints"></a>
 Configures how Kinesis Data Firehose buffers incoming data while delivering it to the Amazon S3 bucket\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -62,7 +62,7 @@ The CloudWatch logging options for your delivery stream\.
 
 `CompressionFormat`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat"></a>
 The type of compression that Kinesis Data Firehose uses to compress the data that it delivers to the Amazon S3 bucket\. For valid values, see the `CompressionFormat` content for the [S3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_S3DestinationConfiguration.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed Values*: `GZIP | HADOOP_SNAPPY | Snappy | UNCOMPRESSED | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

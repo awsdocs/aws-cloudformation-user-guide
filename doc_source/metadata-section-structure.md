@@ -35,5 +35,4 @@ Defines configuration tasks for the cfn\-init helper script\. This script is use
 Defines the grouping and ordering of input parameters when they are displayed in the AWS CloudFormation console\. By default, the AWS CloudFormation console alphabetically sorts parameters by their logical ID\. For more information, see `AWS::CloudFormation::Interface`\.
 
 `AWS::CloudFormation::Designer`  
-
 Describes how your resources are laid out in AWS CloudFormation Designer \(Designer\)\. Designer automatically adds this information when you use it to create and update templates\. For more information, see [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.

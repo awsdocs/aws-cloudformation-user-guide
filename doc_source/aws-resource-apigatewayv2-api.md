@@ -19,7 +19,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : [Cors](aws-properties-apigatewayv2-api-cors.md),
       "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-api-description)" : String,
-      "[DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint)" : Boolean,
       "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
       "[FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings)" : Boolean,
       "[Name](#cfn-apigatewayv2-api-name)" : String,
@@ -47,7 +46,6 @@ Properties:
     [Cors](aws-properties-apigatewayv2-api-cors.md)
   [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
   [Description](#cfn-apigatewayv2-api-description): String
-  [DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint): Boolean
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
   [FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings): Boolean
   [Name](#cfn-apigatewayv2-api-name): String
@@ -103,12 +101,6 @@ The description of the API\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`DisableExecuteApiEndpoint`  <a name="cfn-apigatewayv2-api-disableexecuteapiendpoint"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `DisableSchemaValidation`  <a name="cfn-apigatewayv2-api-disableschemavalidation"></a>
 Avoid validating models when creating a deployment\. Supported only for WebSocket APIs\.  
 *Required*: No  
@@ -128,7 +120,7 @@ The name of the API\. Required unless you specify an OpenAPI definition for `Bod
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolType`  <a name="cfn-apigatewayv2-api-protocoltype"></a>
-The API protocol\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
+The API protocol\. Valid values are `WEBSOCKET` or `HTTP`\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,8 +1,11 @@
 # AWS::CodeStarConnections::Connection<a name="aws-resource-codestarconnections-connection"></a>
 
+**Important**  
+The CodeStar Connections feature is in preview release and is subject to change\.
+
 The AWS::CodeStarConnections::Connection resource can be used to connect external source providers with services like AWS CodePipeline\.
 
- **Note:** A connection created through CloudFormation is in `PENDING` status by default\. You can make its status `AVAILABLE` by editing the connection in the CodePipeline console\.
+ **Note:** A connection created through CloudFormation is in `PENDING` status by default\. You can make its status `AVAILABLE` by updating the connection in the console\.
 
 ## Syntax<a name="aws-resource-codestarconnections-connection-syntax"></a>
 
@@ -43,7 +46,7 @@ The name of the connection\. Connection names must be unique in an AWS user acco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProviderType`  <a name="cfn-codestarconnections-connection-providertype"></a>
-The name of the external provider where your third\-party code repository is configured\. Currently, the valid provider type is Bitbucket\.  
+The name of the external provider where your third\-party code repository is configured\. The valid provider type is Bitbucket\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `Bitbucket`  

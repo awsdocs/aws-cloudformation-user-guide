@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Join` appends a set of values into a single value, separated by the specified delimiter\. If a delimiter is the empty string, the set of values are concatenated with no delimiter\.
 
-## Declaration<a name="w6131ab1c25c28c46b5"></a>
+## Declaration<a name="w6232ab1c25c28c46b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-join-syntax.json"></a>
 
@@ -83,7 +83,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 1. !Join
 2.   - ''
 3.   - - 'arn:'
-4.     - !Ref 'AWS::Partition'
+4.     - !Ref AWS::Partition
 5.     - ':s3:::elasticbeanstalk-*-'
 6.     - !Ref 'AWS::AccountId'
 ```

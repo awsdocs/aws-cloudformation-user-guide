@@ -34,6 +34,8 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic or AWS Chatbot client\.
 
 `TargetType`  <a name="cfn-codestarnotifications-notificationrule-target-targettype"></a>
 The target type\. Can be an Amazon SNS topic or AWS Chatbot client\.  
++ Amazon SNS topics are specified as `SNS`\.
++ AWS Chatbot clients are specified as `AWSChatbotSlack`\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[A-Za-z]+$`  

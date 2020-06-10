@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DurationInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds"></a>
 After an initial failure to deliver to Amazon ES, the total amount of time during which Kinesis Data Firehose re\-attempts delivery \(including the first attempt\)\. If Kinesis Data Firehose can't deliver the data within the specified time, it writes the data to the backup S3 bucket\. For valid values, see the `DurationInSeconds` content for the [ElasticsearchRetryOptions](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ElasticsearchRetryOptions.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `7200`  

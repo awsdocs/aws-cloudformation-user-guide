@@ -61,7 +61,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see 
 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints"></a>
 The buffering option\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -73,7 +73,7 @@ The Amazon CloudWatch logging options for your delivery stream\.
 
 `CompressionFormat`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat"></a>
 The compression format\. If no value is specified, the default is `UNCOMPRESSED`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed Values*: `GZIP | HADOOP_SNAPPY | Snappy | UNCOMPRESSED | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

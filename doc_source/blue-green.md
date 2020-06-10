@@ -57,7 +57,7 @@ You cannot include updates to the above resources with updates to other resource
 You should consider the following when defining your blue/green deployment using CloudFormation:
 + Only updates to certain resources will trigger a green deployment, as discussed in [Resource Updates that Trigger ECS Blue/Green Deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-resources)\.
 + You cannot include updates to resources that trigger green deployments and updates to other resources in the same stack update, as discussed in [Resource Updates that Trigger ECS Blue/Green Deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-resources)\.
-+ You can only specify a single ECS application as the deployment target\.
++ You can only specify a single ECS service as the deployment target\.
 + Parameters whose values are obfuscated by CloudFormation cannot be updated by the CodeDeploy service during a green deployment, and will lead to an error and stack update failure\. These include:
   + Parameters defined with the `NoEcho` attribute\.
   + Parameters that use dynamic references to retrieve their values from external services\. For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
@@ -781,7 +781,7 @@ Resources:
   BlueTaskDefinition:
     Type: 'AWS::ECS::TaskDefinition'
     Properties:
-      ExecutionRoleArn: !GetAtt ECSTaskExecutionRole.Arn
+      ExecutionRoleArn: !Ref ECSTaskExecutionRole
       ContainerDefinitions:
         - Name: DemoApp
           Image: 'nginxdemos/hello:latest'
