@@ -1,6 +1,6 @@
 # AWS::Synthetics::Canary RunConfig<a name="aws-properties-synthetics-canary-runconfig"></a>
 
-A structure that contains input information for a canary run\.
+A structure that contains input information for a canary run\. This structure is required\.
 
 ## Syntax<a name="aws-properties-synthetics-canary-runconfig-syntax"></a>
 
@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-synthetics-canary-runconfig-properties"></a>
 
 `TimeoutInSeconds`  <a name="cfn-synthetics-canary-runconfig-timeoutinseconds"></a>
-How long the canary is allowed to run before it must stop\. If you omit this field, the frequency of the canary is used as this value, up to a maximum of 900 seconds\.  
+How long the canary is allowed to run before it must stop\. You can't set this time to be longer than the frequency of the runs of this canary\.  
+If you omit this field, the frequency of the canary is used as this value, up to a maximum of 900 seconds\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `60`  

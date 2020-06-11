@@ -41,7 +41,11 @@ These key\-value pairs define parameters for the connection\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionType`  <a name="cfn-glue-connection-connectioninput-connectiontype"></a>
-The type of the connection\. Currently, only JDBC is supported; SFTP is not supported\.  
+The type of the connection\. Currently, these types are supported:  
++  `JDBC` \- Designates a connection to a database through Java Database Connectivity \(JDBC\)\.
++  `KAFKA` \- Designates a connection to an Apache Kafka streaming platform\.
++  `MONGODB` \- Designates a connection to a MongoDB document database\.
+SFTP is not supported\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

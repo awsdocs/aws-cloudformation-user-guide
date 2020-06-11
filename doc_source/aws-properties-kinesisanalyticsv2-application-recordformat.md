@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application RecordFormat<a name="aws-properties-kinesisanalyticsv2-application-recordformat"></a>
 
- For an SQL\-based Amazon Kinesis Data Analytics application, describes the record format and relevant mapping information that should be applied to schematize the records on the stream\. 
+ For a SQL\-based Kinesis Data Analytics application, describes the record format and relevant mapping information that should be applied to schematize the records on the stream\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-recordformat-syntax"></a>
 

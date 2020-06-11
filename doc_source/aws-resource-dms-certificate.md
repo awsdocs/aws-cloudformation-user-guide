@@ -64,33 +64,22 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-resource-dms-certificate--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Certificate test",
-    "Resources": {
-        "BasicCertificate": {
-            "Type": "AWS::DMS::Certificate",
-            "Properties": {
-                "CertificatePem": "-----BEGIN CERTIFICATE-----\n MIID/DCCAuSgAwIBAgIBUDANBgkqhkiG9w0BAQsFADCBijELMAkGA1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==\n -----END CERTIFICATE-----\n"
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description":
+                "Certificate test", "Resources": { "BasicCertificate": { "Type":
+                "AWS::DMS::Certificate", "Properties": { "CertificatePem": "-----BEGIN
+                CERTIFICATE-----\n
+                MIID/DCCAuSgAwIBAgIBUDANBgkqhkiG9w0BAQsFADCBijELMAkGA1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==\n
+                -----END CERTIFICATE-----\n" } } } }
 ```
 
 #### YAML<a name="aws-resource-dms-certificate--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: "Certificate test"
-Resources: 
-  BasicCertificate: 
-    Properties: 
-      CertificatePem: |-
-          -----BEGIN CERTIFICATE-----
-           MIID/DCCAuSgAwIBAgABCDEFgkqhkiG9w0BAQsFADCBijEXAMPLE1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==
-           -----END CERTIFICATE-----
-    Type: "AWS::DMS::Certificate"
+AWSTemplateFormatVersion: 2010-09-09 Description: "Certificate
+                test" Resources: BasicCertificate: Properties: CertificatePem: |- -----BEGIN
+                CERTIFICATE-----
+                MIID/DCCAuSgAwIBAgABCDEFgkqhkiG9w0BAQsFADCBijEXAMPLE1UEBhMCVVMx...mqfEEuC7uUoPofXdBp2ObQ==
+                -----END CERTIFICATE----- Type: "AWS::DMS::Certificate"
 ```
 
 ## See Also<a name="aws-resource-dms-certificate--seealso"></a>

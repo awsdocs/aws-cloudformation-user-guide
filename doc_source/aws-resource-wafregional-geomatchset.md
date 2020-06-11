@@ -46,6 +46,7 @@ A friendly name or description of the [AWS::WAFRegional::GeoMatchSet](#aws-resou
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-wafregional-geomatchset-return-values"></a>

@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SSM::Parameter",
   "Properties" : {
       "[AllowedPattern](#cfn-ssm-parameter-allowedpattern)" : String,
+      "[DataType](#cfn-ssm-parameter-datatype)" : String,
       "[Description](#cfn-ssm-parameter-description)" : String,
       "[Name](#cfn-ssm-parameter-name)" : String,
       "[Policies](#cfn-ssm-parameter-policies)" : String,
@@ -36,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SSM::Parameter
 Properties: 
   [AllowedPattern](#cfn-ssm-parameter-allowedpattern): String
+  [DataType](#cfn-ssm-parameter-datatype): String
   [Description](#cfn-ssm-parameter-description): String
   [Name](#cfn-ssm-parameter-name): String
   [Policies](#cfn-ssm-parameter-policies): String
@@ -53,6 +55,14 @@ A regular expression used to validate the parameter value\. For example, for Str
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataType`  <a name="cfn-ssm-parameter-datatype"></a>
+The data type of the parameter, such as `text` or `aws:ec2:image`\. The default is `text`\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ssm-parameter-description"></a>

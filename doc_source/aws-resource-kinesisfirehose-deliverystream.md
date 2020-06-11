@@ -384,7 +384,7 @@ Resources:
                     - ''
                     - - 'arn:aws:s3:::'
                       - !Ref s3bucket
-                      - '*'
+                      - '/*'
               - Effect: Allow
                 Action: 'glue:GetTableVersions'
                 Resource: '*'

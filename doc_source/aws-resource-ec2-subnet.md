@@ -74,7 +74,7 @@ If you specify `AssignIpv6AddressOnCreation`, you must also specify `Ipv6CidrBlo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MapPublicIpOnLaunch`  <a name="cfn-ec2-subnet-mappubliciponlaunch"></a>
-Indicates whether instances launched in this subnet receive a public IPv4 address\.  
+Indicates whether instances launched in this subnet receive a public IPv4 address\. The default value is `false`\.  
 If you specify `MapPublicIpOnLaunch`, you cannot specify `AssignIpv6AddressOnCreation`\.  
 *Required*: No  
 *Type*: Boolean  

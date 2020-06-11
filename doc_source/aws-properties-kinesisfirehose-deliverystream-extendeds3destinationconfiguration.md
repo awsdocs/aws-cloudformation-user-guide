@@ -61,7 +61,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see 
 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints"></a>
 The buffering option\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -73,7 +73,7 @@ The Amazon CloudWatch logging options for your delivery stream\.
 
 `CompressionFormat`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat"></a>
 The compression format\. If no value is specified, the default is `UNCOMPRESSED`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed Values*: `GZIP | HADOOP_SNAPPY | Snappy | UNCOMPRESSED | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -130,7 +130,7 @@ The configuration for backup in Amazon S3\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BackupMode`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode"></a>
-The Amazon S3 backup mode\.  
+The Amazon S3 backup mode\. After you create a delivery stream, you can update it to enable Amazon S3 backup if it is disabled\. If backup is enabled, you can't update the delivery stream to disable it\.   
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `Disabled | Enabled`  

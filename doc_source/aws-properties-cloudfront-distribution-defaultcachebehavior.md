@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution DefaultCacheBehavior<a name="aws-properties-cloudfront-distribution-defaultcachebehavior"></a>
 
-A complex type that describes the default cache behavior if you don't specify a `CacheBehavior` element or if files don't match any of the values of `PathPattern` in `CacheBehavior` elements\. You must create exactly one default cache behavior\.
+A complex type that describes the default cache behavior if you don’t specify a `CacheBehavior` element or if request URLs don’t match any of the values of `PathPattern` in `CacheBehavior` elements\. You must create exactly one default cache behavior\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-defaultcachebehavior-syntax"></a>
 
@@ -83,7 +83,7 @@ The default amount of time that you want objects to stay in CloudFront caches be
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldLevelEncryptionId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid"></a>
-The value of `ID` for the field\-level encryption configuration that you want CloudFront to use for encrypting specific fields of data for a cache behavior or for the default cache behavior in your distribution\.  
+The value of `ID` for the field\-level encryption configuration that you want CloudFront to use for encrypting specific fields of data for the default cache behavior\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,7 +120,7 @@ Indicates whether you want to distribute media files in the Microsoft Smooth Str
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetOriginId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid"></a>
-The value of `ID` for the origin that you want CloudFront to route requests to when a request matches the path pattern either for a cache behavior or for the default cache behavior in your distribution\.  
+The value of `ID` for the origin that you want CloudFront to route requests to when they use the default cache behavior\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -137,8 +137,8 @@ The protocol that viewers can use to access the files in the origin specified by
 +  `allow-all`: Viewers can use HTTP or HTTPS\.
 +  `redirect-to-https`: If a viewer submits an HTTP request, CloudFront returns an HTTP status code of 301 \(Moved Permanently\) to the viewer along with the HTTPS URL\. The viewer then resubmits the request using the new URL\.
 +  `https-only`: If a viewer sends an HTTP request, CloudFront returns an HTTP status code of 403 \(Forbidden\)\.
-For more information about requiring the HTTPS protocol, see [Using an HTTPS Connection to Access Your Objects](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/SecureConnections.html) in the *Amazon CloudFront Developer Guide*\.  
-The only way to guarantee that viewers retrieve an object that was fetched from the origin using HTTPS is never to use any other protocol to fetch the object\. If you have recently changed from HTTP to HTTPS, we recommend that you clear your objects' cache because cached objects are protocol agnostic\. That means that an edge location will return an object from the cache regardless of whether the current request protocol matches the protocol used previously\. For more information, see [Managing How Long Content Stays in an Edge Cache \(Expiration\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.
+For more information about requiring the HTTPS protocol, see [Requiring HTTPS Between Viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https-viewers-to-cloudfront.html) in the *Amazon CloudFront Developer Guide*\.  
+The only way to guarantee that viewers retrieve an object that was fetched from the origin using HTTPS is never to use any other protocol to fetch the object\. If you have recently changed from HTTP to HTTPS, we recommend that you clear your objects’ cache because cached objects are protocol agnostic\. That means that an edge location will return an object from the cache regardless of whether the current request protocol matches the protocol used previously\. For more information, see [Managing Cache Expiration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `allow-all | https-only | redirect-to-https`  

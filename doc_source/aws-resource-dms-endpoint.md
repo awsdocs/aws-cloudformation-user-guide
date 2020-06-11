@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md),
       "[KmsKeyId](#cfn-dms-endpoint-kmskeyid)" : String,
       "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md),
+      "[NeptuneSettings](#cfn-dms-endpoint-neptunesettings)" : [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md),
       "[Password](#cfn-dms-endpoint-password)" : String,
       "[Port](#cfn-dms-endpoint-port)" : Integer,
       "[S3Settings](#cfn-dms-endpoint-s3settings)" : [S3Settings](aws-properties-dms-endpoint-s3settings.md),
@@ -57,6 +58,8 @@ Properties:
   [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
   [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings): 
     [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)
+  [NeptuneSettings](#cfn-dms-endpoint-neptunesettings): 
+    [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)
   [Password](#cfn-dms-endpoint-password): String
   [Port](#cfn-dms-endpoint-port): Integer
   [S3Settings](#cfn-dms-endpoint-s3settings): 
@@ -89,7 +92,7 @@ Settings in JSON format for the target Amazon DynamoDB endpoint\. For informatio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ElasticsearchSettings`  <a name="cfn-dms-endpoint-elasticsearchsettings"></a>
-Settings in JSON format for the target Elasticsearch endpoint\. For more information about the available settings, see [Extra Connection Attributes When Using Elasticsearch as a Target for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration) in the *AWS Database Migration User Guide\.*   
+Settings in JSON format for the target Elasticsearch endpoint\. For more information about the available settings, see [Extra Connection Attributes When Using Elasticsearch as a Target for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration) in the *AWS Database Migration Service User Guide*\.  
 *Required*: No  
 *Type*: [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,13 +123,13 @@ Additional attributes associated with the connection\. Each attribute is specifi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KafkaSettings`  <a name="cfn-dms-endpoint-kafkasettings"></a>
-Settings in JSON format for the target Apache Kafka endpoint\. For information about other available settings, see [Using Object Mapping to Migrate Data to Apache Kafka](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html#CHAP_Target.Kafka.ObjectMapping) in the *AWS Database Migration User Guide\.*   
+Settings in JSON format for the target Apache Kafka endpoint\. For more information about the available settings, see [Using Apache Kafka as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisSettings`  <a name="cfn-dms-endpoint-kinesissettings"></a>
-Settings in JSON format for the target endpoint for Amazon Kinesis Data Streams\. For information about other available settings, see [Using Object Mapping to Migrate Data to a Kinesis Data Stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping) in the *AWS Database Migration User Guide\.*   
+Settings in JSON format for the target endpoint for Amazon Kinesis Data Streams\. For more information about the available settings, see [Using Amazon Kinesis Data Streams as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -140,9 +143,15 @@ AWS KMS creates the default encryption key for your AWS account\. Your AWS accou
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MongoDbSettings`  <a name="cfn-dms-endpoint-mongodbsettings"></a>
-Settings in JSON format for the source MongoDB endpoint\. For more information about the available settings, see the configuration properties section in [Using MongoDB as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html) in the *AWS Database Migration Service User Guide\.*   
+Settings in JSON format for the source MongoDB endpoint\. For more information about the available settings, see [Using MongoDB as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html#CHAP_Source.MongoDB.Configuration) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NeptuneSettings`  <a name="cfn-dms-endpoint-neptunesettings"></a>
+Settings in JSON format for the target Amazon Neptune endpoint\. For more information about the available settings, see [Specifying Endpoint Settings for Amazon Neptune as a Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.EndpointSettings) in the *AWS Database Migration Service User Guide\.*   
+*Required*: No  
+*Type*: [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-dms-endpoint-password"></a>
@@ -214,47 +223,21 @@ A value that can be used for cross\-account validation\.
 #### JSON<a name="aws-resource-dms-endpoint--examples----json"></a>
 
 ```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Resources": {
-    "myBasicEndpoint": {
-      "Type": "AWS::DMS::Endpoint",
-      "Properties": {
-        "EngineName": "mysql",
-        "EndpointType": "source",
-        "Username": "username",
-        "Password": {
-          "Ref": "PasswordParameter"
-        },
-        "ServerName": "source.db.amazon.com",
-        "Port": 1234,
-        "DatabaseName": "source-db"
-      }
-    }
-  }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+                "myBasicEndpoint": { "Type": "AWS::DMS::Endpoint", "Properties": { "EngineName":
+                "mysql", "EndpointType": "source", "Username": "username", "Password": { "Ref":
+                "PasswordParameter" }, "ServerName": "source.db.amazon.com", "Port": 1234,
+                "DatabaseName": "source-db" } } } }
 ```
 
 #### YAML<a name="aws-resource-dms-endpoint--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: "Endpoint test"
-Resources: 
-  BasicEndpoint: 
-    Properties: 
-      DatabaseName: my-db
-      EndpointType: target
-      EngineName: mysql
-      Password: PasswordParameter
-      Port: 1234
-      ServerName: server.db.amazon.com
-      Tags: 
-        - 
-          Key: type
-          Value: new
-      Username: username
-    Type: "AWS::DMS::Endpoint"
+AWSTemplateFormatVersion: 2010-09-09 Description: "Endpoint
+                test" Resources: BasicEndpoint: Properties: DatabaseName: my-db EndpointType: target
+                EngineName: mysql Password: PasswordParameter Port: 1234 ServerName:
+                server.db.amazon.com Tags: - Key: type Value: new Username: username Type:
+                "AWS::DMS::Endpoint"
 ```
 
 ## See Also<a name="aws-resource-dms-endpoint--seealso"></a>

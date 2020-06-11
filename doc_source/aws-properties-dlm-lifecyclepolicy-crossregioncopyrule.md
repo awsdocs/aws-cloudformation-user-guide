@@ -48,7 +48,7 @@ Copy all user\-defined tags from the source snapshot to the copied snapshot\.
 
 `Encrypted`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted"></a>
 To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter\. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -60,7 +60,7 @@ The retention rule\.
 
 `TargetRegion`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion"></a>
 The target Region\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `16`  

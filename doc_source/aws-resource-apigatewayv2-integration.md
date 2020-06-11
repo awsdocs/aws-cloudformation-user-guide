@@ -132,7 +132,7 @@ Specifies the pass\-through behavior for incoming requests based on the `Content
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PayloadFormatVersion`  <a name="cfn-apigatewayv2-integration-payloadformatversion"></a>
-Specifies the format of the payload sent to an integration\. Required for HTTP APIs\.  
+Specifies the format of the payload sent to an integration\. Required for HTTP APIs\. For HTTP APIs, supported values for Lambda proxy integrations are `1.0` and `2.0`\. For all other integrations, `1.0` is the only supported value\. To learn more, see [Working with AWS Lambda proxy integrations for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

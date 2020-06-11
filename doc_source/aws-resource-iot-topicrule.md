@@ -50,7 +50,7 @@ The rule payload\.
 
  `{ "Ref": "MyTopicRule" }` 
 
-For a stack named My\-Stack \(the – character is omitted\), a value similar to the following is returned:
+For a stack named My\-Stack \(the \- character is omitted\), a value similar to the following is returned:
 
  `MyStackMyTopicRule12ABC3D456EFG` 
 

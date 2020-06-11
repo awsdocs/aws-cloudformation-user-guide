@@ -39,7 +39,7 @@ The entry point to use for the source code when running the canary\. This value 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Bucket`  <a name="cfn-synthetics-canary-code-s3bucket"></a>
-If your canary script is located in S3, specify the full bucket name here\. The bucket must already exist\. Specify the full bucket name, including `s3://` as the start of the bucket name\.  
+If your canary script is located in S3, specify the bucket name here\. The bucket must already exist\.   
 *Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  

@@ -80,3 +80,101 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
+
+## Examples<a name="aws-resource-imagebuilder-distributionconfiguration--examples"></a>
+
+### Create a distribution configuration<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration"></a>
+
+The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format \.
+
+#### YAML<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--yaml"></a>
+
+```
+Resources:
+  DistributionConfigurationAllParameters:
+    Type: 'AWS::ImageBuilder::DistributionConfiguration'
+    Properties:
+      Name: 'distribution-configuration-name'
+      Description: 'description'
+      Distributions:
+        - Region: 'us-west-2'
+          AmiDistributionConfiguration:
+            Name: 'ami-distro-config-name-1 {{ imagebuilder:buildDate }}'
+            Description: 'description'
+            AmiTags:
+              AmiTagKey: 'ami-tag-key'
+            LaunchPermission:
+              LaunchPermissionConfiguration:
+                UserGroups:
+                  - 'DummyGroup1'
+                  - 'DummyGroup2'
+                UserIds:
+                  - '123123123123' # Dummy account Id A
+                  - '321321321321' # Dummy account Id B
+          LicenseConfigurationArns:
+            - 'example-license-configuration-arn'
+        - Region: 'us-east-1'
+          AmiDistributionConfiguration:
+            Name: 'ami-distro-config-name-2 {{ imagebuilder:buildDate }}'
+            Description: 'description'
+      Tags:
+        CustomerDistributionConfigTagKey1: 'CustomerDistributionConfigTagValue1'
+        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--json"></a>
+
+```
+{
+    "Resources": {
+        "DistributionConfigurationAllParameters": {
+            "Type": "AWS::ImageBuilder::DistributionConfiguration",
+            "Properties": {
+                "Name": "distribution-configuration-name",
+                "Description": "description",
+                "Distributions": [
+                    {
+                        "Region": "us-west-2",
+                        "AmiDistributionConfiguration": {
+                            "Name": "ami-distro-config-name-1 {{ imagebuilder:buildDate }}",
+                            "Description": "description",
+                            "AmiTags": {
+                                "AmiTagKey": "ami-tag-key"
+                            },
+                            "LaunchPermission": {
+                                "LaunchPermissionConfiguration": {
+                                    "UserGroups": [
+                                        "DummyGroup1",
+                                        "DummyGroup2"
+                                    ],
+                                    "UserIds": [
+                                        "123123123123",
+                                        "321321321321"
+                                    ]
+                                }
+                            }
+                        },
+                        "LicenseConfigurationArns": [
+                            "example-license-configuration-arn"
+                        ]
+                    },
+                    {
+                        "Region": "us-east-1",
+                        "AmiDistributionConfiguration": {
+                            "Name": "ami-distro-config-name-2 {{ imagebuilder:buildDate }}",
+                            "Description": "description"
+                        }
+                    }
+                ],
+                "Tags": {
+                    "CustomerDistributionConfigTagKey1": "CustomerDistributionConfigTagValue1",
+                    "CustomerDistributionConfigTagKey2": "CustomerDistributionConfigTagValue2"
+                }
+            }
+        }
+    }
+}
+```
+
+## See Also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
++ [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *EC2 Image Builder User Guide*\.

@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Serializer`  <a name="cfn-kinesisfirehose-deliverystream-outputformatconfiguration-serializer"></a>
 Specifies which serializer to use\. You can choose either the ORC SerDe or the Parquet SerDe\. If both are non\-null, the server rejects the request\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [Serializer](aws-properties-kinesisfirehose-deliverystream-serializer.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

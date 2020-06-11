@@ -32,9 +32,12 @@ The condition configures when the pipeline should trigger a new image build\. Wh
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-imagebuilder-imagepipeline-schedule-scheduleexpression"></a>
-The expression determines how often EC2 Image Builder evaluates your `pipelineExecutionStartCondition`\.  
+The cron expression determines how often EC2 Image Builder evaluates your `pipelineExecutionStartCondition`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See Also<a name="aws-properties-imagebuilder-imagepipeline-schedule--seealso"></a>
++ [Create an image pipeline](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-image-pipeline) in the *EC2 Image Builder User Guide*\.

@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Code](#cfn-synthetics-canary-code)" : [Code](aws-properties-synthetics-canary-code.md),
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
       "[FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod)" : Integer,
+      "[Name](#cfn-synthetics-canary-name)" : String,
       "[RunConfig](#cfn-synthetics-canary-runconfig)" : [RunConfig](aws-properties-synthetics-canary-runconfig.md),
       "[RuntimeVersion](#cfn-synthetics-canary-runtimeversion)" : String,
       "[Schedule](#cfn-synthetics-canary-schedule)" : [Schedule](aws-properties-synthetics-canary-schedule.md),
@@ -41,6 +42,7 @@ Properties:
     [Code](aws-properties-synthetics-canary-code.md)
   [ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn): String
   [FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod): Integer
+  [Name](#cfn-synthetics-canary-name): String
   [RunConfig](#cfn-synthetics-canary-runconfig): 
     [RunConfig](aws-properties-synthetics-canary-runconfig.md)
   [RuntimeVersion](#cfn-synthetics-canary-runtimeversion): String
@@ -78,7 +80,7 @@ The ARN of the IAM role to be used to run the canary\. This role must already ex
 +  `cloudwatch:PutMetricData` 
 +  `logs:CreateLogGroup` 
 +  `logs:CreateLogStream` 
-+  `logs:CreateLogStream` 
++  `logs:PutLogEvents` 
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso-{0,1}[a-z]{0,1}):[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.-]{0,1023}$`  
@@ -92,9 +94,19 @@ The number of days to retain data about failed runs of this canary\. If you omit
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Name`  <a name="cfn-synthetics-canary-name"></a>
+The name for this canary\. Be sure to give it a descriptive name that distinguishes it from other canaries in your account\.  
+Do not include secrets or proprietary information in your canary names\. The canary name makes up part of the canary ARN, and the ARN is included in outbound calls over the internet\. For more information, see [Security Considerations for Synthetics Canaries](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/servicelens_canaries_security.html)\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `21`  
+*Pattern*: `^[0-9a-z_\-]+$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `RunConfig`  <a name="cfn-synthetics-canary-runconfig"></a>
-A structure that contains input information for a canary run\.  
-*Required*: No  
+A structure that contains input information for a canary run\. This structure is required\.  
+*Required*: Yes  
 *Type*: [RunConfig](aws-properties-synthetics-canary-runconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -113,7 +125,8 @@ A structure that contains information about how often the canary is to run, and 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartCanaryAfterCreation`  <a name="cfn-synthetics-canary-startcanaryaftercreation"></a>
-Specify TRUE to have the canary start making runs immediately when it is created\.  
+Specify TRUE to have the canary start making runs immediately after it is created\.  
+A canary that you create using CloudFormation can't be used to monitor the CloudFormation stack that creates the canary or to roll back that stack if there is a failure\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -157,8 +170,142 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the canary\.
 
-`Name`  <a name="Name-fn::getatt"></a>
-The name of the canary\. For example, `MyCanary`\.
-
 `State`  <a name="State-fn::getatt"></a>
 The state of the canary\. For example, `RUNNING`\.
+
+## Examples<a name="aws-resource-synthetics-canary--examples"></a>
+
+### Canary with script stored in an Amazon S3 bucket<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket"></a>
+
+This example creates a canary that uses an existing script stored in an S3 bucket\.
+
+#### JSON<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Resources": {
+        "SyntheticsCanary": {
+            "Type": "AWS::Synthetics::Canary",
+            "Properties": {
+                "Name": {
+                    "Ref": "samplecanary"
+                },
+                "ExecutionRoleArn": {
+                    "Ref": "arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary"
+                },
+                "Code": {
+                    "Handler": "pageLoadBlueprint.handler",
+                    "S3Bucket": "aws-synthetics-code-myaccount-canary1",
+                    "S3Key": "my-script-location"
+                },
+                "ArtifactS3Location": "s3://my-results-bucket",
+                "RuntimeVersion": "syn-1.0",
+                "Schedule": {
+                    "Expression": "rate(1 minute)",
+                    "DurationInSeconds": 3600
+                },
+                "RunConfig": {
+                    "TimeoutInSeconds": 60
+                },
+                "FailureRetentionPeriod": 30,
+                "SuccessRetentionPeriod": 30,
+                "Tags": [
+                    {
+                        "Id": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket--yaml"></a>
+
+```
+Resources:
+    SyntheticsCanary:
+        Type: 'AWS::Synthetics::Canary'
+        Properties:
+            Name: samplecanary
+            ExecutionRoleArn: 'arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary'
+            Code: {Handler: pageLoadBlueprint.handler, S3Bucket: aws-synthetics-code-myaccount-canary1, S3Key: my-script-location}
+            ArtifactS3Location: s3://my-results-bucket
+            RuntimeVersion: syn-1.0
+            Schedule: {Expression: 'rate(1 minute)', DurationInSeconds: 3600}
+            RunConfig: {TimeoutInSeconds: 60}
+            FailureRetentionPeriod: 30
+            SuccessRetentionPeriod: 30
+            Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
+            StartCanaryAfterCreation: false
+```
+
+### Canary with script passed through CloudFormation<a name="aws-resource-synthetics-canary--examples--Canary_with_script_passed_through_CloudFormation"></a>
+
+This example creates a canary and passes the script code directly into the canary\.
+
+#### JSON<a name="aws-resource-synthetics-canary--examples--Canary_with_script_passed_through_CloudFormation--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Resources": {
+        "SyntheticsCanary": {
+            "Type": "AWS::Synthetics::Canary",
+            "Properties": {
+                "Name": {
+                    "Ref": "samplecanary"
+                },
+                "ExecutionRoleArn": {
+                    "Ref": "arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary"
+                },
+                "Code": {
+                    "Handler": "pageLoadBlueprint.handler",
+                    "Script": "var synthetics = require('Synthetics');\nconst log = require('SyntheticsLogger');\n\nconst pageLoadBlueprint = async function () {\n\n    // INSERT URL here\n    const URL = \"https://amazon.com\";\n\n    let page = await synthetics.getPage();\n    const response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});\n    //Wait for page to render.\n    //Increase or decrease wait time based on endpoint being monitored.\n    await page.waitFor(15000);\n    await synthetics.takeScreenshot('loaded', 'loaded');\n    let pageTitle = await page.title();\n    log.info('Page title: ' + pageTitle);\n    if (response.status() !== 200) {\n        throw \"Failed to load page!\";\n    }\n};\n\nexports.handler = async () => {\n    return await pageLoadBlueprint();\n};\n"
+                },
+                "ArtifactS3Location": "s3://my-results-bucket",
+                "RuntimeVersion": "syn-1.0",
+                "Schedule": {
+                    "Expression": "rate(1 minute)",
+                    "DurationInSeconds": 3600
+                },
+                "RunConfig": {
+                    "TimeoutInSeconds": 60
+                },
+                "FailureRetentionPeriod": 30,
+                "SuccessRetentionPeriod": 30
+            },
+            "Tags": [
+                {
+                    "Id": "key00AtCreate",
+                    "Value": "value001AtCreate"
+                }
+            ]
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-synthetics-canary--examples--Canary_with_script_passed_through_CloudFormation--yaml"></a>
+
+```
+Resources:
+    SyntheticsCanary:
+        Type: 'AWS::Synthetics::Canary'
+        Properties:
+            Name: samplecanary
+            ExecutionRoleArn: 'arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary'
+            Code: {Handler: pageLoadBlueprint.handler, Script: "var synthetics = require('Synthetics');\nconst log = require('SyntheticsLogger');\nconst pageLoadBlueprint = async function () {\n// INSERT URL here\nconst URL = \"https://amazon.com\";\n\nlet page = await synthetics.getPage();\nconst response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});\n//Wait for page to render.\n//Increase or decrease wait time based on endpoint being monitored.\nawait page.waitFor(15000);\nawait synthetics.takeScreenshot('loaded', 'loaded');\nlet pageTitle = await page.title();\nlog.info('Page title: ' + pageTitle);\nif (response.status() !== 200) {\n     throw \"Failed to load page!\";\n}\n};\n\nexports.handler = async () => {\nreturn await pageLoadBlueprint();\n};\n"}
+            ArtifactS3Location: s3://my-results-bucket
+            RuntimeVersion: syn-1.0
+            Schedule: {Expression: 'rate(1 minute)', DurationInSeconds: 3600}
+            RunConfig: {TimeoutInSeconds: 60}
+            FailureRetentionPeriod: 30
+            SuccessRetentionPeriod: 30
+            Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
+            StartCanaryAfterCreation: false
+```

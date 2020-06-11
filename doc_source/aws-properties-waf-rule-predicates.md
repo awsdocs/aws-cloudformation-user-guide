@@ -32,6 +32,7 @@ A unique identifier for a predicate in a `Rule`, such as `ByteMatchSetId` or `IP
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Negated`  <a name="cfn-waf-rule-predicates-negated"></a>

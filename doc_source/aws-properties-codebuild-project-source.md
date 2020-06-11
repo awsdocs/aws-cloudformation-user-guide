@@ -103,8 +103,8 @@ The type of repository that contains the source code to be built\. Valid values 
 +  `BITBUCKET`: The source code is in a Bitbucket repository\.
 +  `CODECOMMIT`: The source code is in an AWS CodeCommit repository\.
 +  `CODEPIPELINE`: The source code settings are specified in the source action of a pipeline in AWS CodePipeline\.
-+  `GITHUB`: The source code is in a GitHub repository\.
-+  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise repository\.
++  `GITHUB`: The source code is in a GitHub or GitHub Enterprise Cloud repository\.
++  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise Server repository\.
 +  `NO_SOURCE`: The project does not have input source code\.
 +  `S3`: The source code is in an Amazon Simple Storage Service \(Amazon S3\) input bucket\.
 *Required*: Yes  

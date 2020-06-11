@@ -52,7 +52,7 @@ The name for the Resolver rule, which you specified when you created the Resolve
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResolverEndpointId`  <a name="cfn-route53resolver-resolverrule-resolverendpointid"></a>
@@ -77,6 +77,7 @@ Currently, only Resolver can create rules that have a value of `RECURSIVE` for `
 A list of the tag keys and values that you want to associate with the endpoint\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetIps`  <a name="cfn-route53resolver-resolverrule-targetips"></a>

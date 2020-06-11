@@ -35,7 +35,7 @@ This parameter is specified when you are using Docker volumes\. Docker volumes a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Host`  <a name="cfn-ecs-taskdefinition-volumes-host"></a>
-This parameter is specified when you are using bind mount host volumes\. Bind mount host volumes are supported when you are using either the EC2 or Fargate launch types\. The contents of the `host` parameter determine whether your bind mount host volume persists on the host container instance and where it is stored\. If the `host` parameter is empty, then the Docker daemon assigns a host path for your data volume\. However, the data is not guaranteed to persist after the containers associated with it stop running\.  
+This parameter is specified when you are using bind mount host volumes\. The contents of the `host` parameter determine whether your bind mount host volume persists on the host container instance and where it is stored\. If the `host` parameter is empty, then the Docker daemon assigns a host path for your data volume\. However, the data is not guaranteed to persist after the containers associated with it stop running\.  
 Windows containers can mount whole directories on the same drive as `$env:ProgramData`\. Windows containers cannot mount directories on a different drive, and mount point cannot be across drives\. For example, you can mount `C:\my\path:C:\my\path` and `D:\:D:\`, but not `D:\my\path:C:\my\path` or `D:\:C:\my\path`\.  
 *Required*: No  
 *Type*: [HostVolumeProperties](aws-properties-ecs-taskdefinition-volumes-host.md)  

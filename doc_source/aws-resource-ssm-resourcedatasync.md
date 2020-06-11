@@ -166,7 +166,7 @@ The following example synchronizes Systems Manager Inventory metadata in the US 
 #### YAML<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncToDestination--yaml"></a>
 
 ```
- ---
+---
 Description: Create a Resource Data Sync for Systems Manager
 Resources:
   BasicResourceDataSync:

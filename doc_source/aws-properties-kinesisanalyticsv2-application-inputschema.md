@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application InputSchema<a name="aws-properties-kinesisanalyticsv2-application-inputschema"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\. 
+For a SQL\-based Kinesis Data Analytics application, describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-inputschema-syntax"></a>
 

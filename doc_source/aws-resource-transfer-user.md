@@ -1,6 +1,6 @@
 # AWS::Transfer::User<a name="aws-resource-transfer-user"></a>
 
-The `AWS::Transfer::User` resource creates a user and associates them with an existing Secure File Transfer Protocol \(SFTP\) server\. You can only create and associate users with SFTP servers that have the `IdentityProviderType` set to `SERVICE_MANAGED`\. Using parameters for `CreateUser`, you can specify the user name, set the home directory, store the user's public key, and assign the user's AWS Identity and Access Management \(IAM\) role\. You can also optionally add a scope\-down policy, and assign metadata with tags that can be used to group and search for users\.
+The `AWS::Transfer::User` resource creates a user and associates them with an existing server\. You can only create and associate users with servers that have the `IdentityProviderType` set to `SERVICE_MANAGED`\. Using parameters for `CreateUser`, you can specify the user name, set the home directory, store the user's public key, and assign the user's AWS Identity and Access Management \(IAM\) role\. You can also optionally add a scope\-down policy, and assign metadata with tags that can be used to group and search for users\.
 
 ## Syntax<a name="aws-resource-transfer-user-syntax"></a>
 
@@ -74,7 +74,7 @@ The type of landing directory \(folder\) you want your users' home directory to 
 
 `Policy`  <a name="cfn-transfer-user-policy"></a>
 A scope\-down policy for your user so you can use the same IAM role across multiple users\. This policy scopes down user access to portions of their Amazon S3 bucket\. Variables that you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`\.  
-For scope\-down policies, AWS Transfer for SFTP stores the policy as a JSON blob, instead of the Amazon Resource Name \(ARN\) of the policy\. You save the policy as a JSON blob and pass it in the `Policy` argument\.  
+For scope\-down policies, AWS Transfer Family stores the policy as a JSON blob, instead of the Amazon Resource Name \(ARN\) of the policy\. You save the policy as a JSON blob and pass it in the `Policy` argument\.  
 For an example of a scope\-down policy, see [Creating a Scope\-Down Policy](https://docs.aws.amazon.com/transfer/latest/userguide/users.html#users-policies-scope-down)\.  
 For more information, see [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) in the *AWS Security Token Service API Reference*\.
 *Required*: No  
@@ -127,7 +127,7 @@ A unique string that identifies a user and is associated with a file transfer pr
 
 ### Ref<a name="aws-resource-transfer-user-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the username, such as `sftp_user`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the username, such as `transfer_user`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -140,35 +140,33 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-transfer-user-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name associated with the AWS Transfer SFTP user, in the form `arn:aws:transfer:region:account-id:user/server-id/username`\.  
+The Amazon Resource Name associated with the user, in the form `arn:aws:transfer:region:account-id:user/server-id/username`\.  
 An example of a user ARN is: `arn:aws:transfer:us-east-1:123456789012:user/user1`\.
 
 `ServerId`  <a name="ServerId-fn::getatt"></a>
-The ID of the SFTP server to which the user is attached\.  
+The ID of the server to which the user is attached\.  
 An example `ServerId` is `s-01234567890abcdef`\.
 
 `UserName`  <a name="UserName-fn::getatt"></a>
-A unique string that identifies a user account associated with an SFTP server\.  
-An example `UserName` is `sftp-user-1`\.
+A unique string that identifies a user account associated with a server\.  
+An example `UserName` is `transfer-user-1`\.
 
 ## Examples<a name="aws-resource-transfer-user--examples"></a>
 
-### SFTP Server User<a name="aws-resource-transfer-user--examples--SFTP_Server_User"></a>
+### Associate a user with a server<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server"></a>
 
-The following example associates a user with an SFTP server\.
+The following example associates a user with a server\.
 
-#### JSON<a name="aws-resource-transfer-user--examples--SFTP_Server_User--json"></a>
+#### JSON<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server--json"></a>
 
 ```
 {
-  "sftp_user": {
+  "transfer_user": {
     "Type": "AWS::Transfer::User",
     "Properties": {
       "HomeDirectoryMappings": [
         {
-          "Entry": "our-personal-report.pdf"
-        },
-        {
+          "Entry": "/our-personal-report.pdf",
           "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf"
         }
       ],
@@ -182,7 +180,7 @@ The following example associates a user with an SFTP server\.
           "Resource": "arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*"
         }
       },
-      "Role": "arn:aws:iam::176354371281:role/SFTP_role",
+      "Role": "arn:aws:iam::176354371281:role/Transfer_role",
       "ServerId": "s-01234567890abcdef",
       "SshPublicKeys": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6",
       "Tags": [
@@ -191,21 +189,21 @@ The following example associates a user with an SFTP server\.
           "Value": "UserGroup1"
         }
       ],
-      "UserName": "sftp_user"
+      "UserName": "transfer_user"
     }
   }
 }
 ```
 
-#### YAML<a name="aws-resource-transfer-user--examples--SFTP_Server_User--yaml"></a>
+#### YAML<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server--yaml"></a>
 
 ```
-sftp_user:
+transfer_user:
   Type : AWS::Transfer::User
   Properties :
     HomeDirectoryMappings: 
-      - Entry: our-personal-report.pdf
-      - Target: /bucket3/customized-reports/${transfer:UserName}.pdf
+      - Entry: /our-personal-report.pdf
+        Target: /bucket3/customized-reports/${transfer:UserName}.pdf
     HomeDirectoryType: LOGICAL
     Policy:
       Version: 2012-10-17
@@ -216,15 +214,15 @@ sftp_user:
         Resource:
           arn:aws:s3:::bucket_name
           arn:aws:s3:::bucket_name/*
-    Role: arn:aws:iam::176354371281:role/SFTP_role
+    Role: arn:aws:iam::176354371281:role/Transfer_role
     ServerId: s-01234567890abcdef
     SshPublicKeys: AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
     Tags:
       - Key: Group
         Value: UserGroup1
-    UserName: sftp_user
+    UserName: transfer_user
 ```
 
 ## See Also<a name="aws-resource-transfer-user--seealso"></a>
 
-[CreateUser](https://docs.aws.amazon.com/transfer/latest/userguide/API_CreateUser.html) in the *AWS Transfer for SFTP User Guide*\.
+[CreateUser](https://docs.aws.amazon.com/transfer/latest/userguide/API_CreateUser.html) in the *AWS Transfer Family User Guide*\.

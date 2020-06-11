@@ -137,7 +137,9 @@ This example creates composite alarms named "HighResourceUsage" and "DeploymentI
         "Properties": {
             "AlarmName": "HighResourceUsage",
             "AlarmRule": "(ALARM(HighCPUUsage) OR ALARM(HighMemoryUsage)) AND NOT ALARM(DeploymentInProgress)",
-            "AlarmActions": "arn:aws:sns:us-west-2:123456789012:my-sns-topic",
+            "AlarmActions": [
+                "arn:aws:sns:us-west-2:123456789012:my-sns-topic"
+            ],
             "AlarmDescription": "Indicates that the system resource usage is high while no known 
             deployment is in progress"
         },
@@ -197,12 +199,13 @@ Resources:
     Properties:
       AlarmName: HighResourceUsage
       AlarmRule: (ALARM(HighCPUUsage) OR ALARM(HighMemoryUsage)) AND NOT ALARM(DeploymentInProgress)
-      AlarmActions: arn:aws:sns:us-west-2:123456789012:my-sns-topic
+      AlarmActions:
+        - arn:aws:sns:us-west-2:123456789012:my-sns-topic
       AlarmDescription: Indicates that the system resource usage is high while no known deployment is in progress
     DependsOn:
-    - DeploymentInProgress
-    - HighCPUUsage
-    - HighMemoryUsage
+      - DeploymentInProgress
+      - HighCPUUsage
+      - HighMemoryUsage
   DeploymentInProgress:
     Type: AWS::CloudWatch::CompositeAlarm
     Properties:

@@ -88,7 +88,7 @@ Resources:
 
 If you want to create more than one config key and to have cfn\-init process them in a specific order, create a configset that contains the config keys in the desired order\. 
 
-### Single Configset<a name="w5979ab1c19c15c15c21c13b4"></a>
+### Single Configset<a name="w6232ab1c19c15c15c21c13b4"></a>
 
 The following template snippet creates configsets named `ascending` and `descending` that each contain two config keys\.
 
@@ -148,7 +148,7 @@ AWS::CloudFormation::Init:
         cwd: "~"
 ```
 
-#### Related cfn\-init Calls<a name="w5979ab1c19c15c15c21c13b4b8"></a>
+#### Related cfn\-init Calls<a name="w6232ab1c19c15c15c21c13b4b8"></a>
 
 The following example calls to cfn\-init refer to the preceding example configsets\. The example calls are abbreviated for clarity, see [cfn\-init](cfn-init.md) for the complete syntax\.
 + If a call to cfn\-init specifies the `ascending` configset:
@@ -166,7 +166,7 @@ The following example calls to cfn\-init refer to the preceding example configse
 
   the script processes `config2` and then processes `config1` and the test\.txt file would contain the text `I come from config1`\.
 
-### Multiple Configsets<a name="w5979ab1c19c15c15c21c13b6"></a>
+### Multiple Configsets<a name="w6232ab1c19c15c15c21c13b6"></a>
 
 You can create multiple configsets, and call a series of them using your cfn\-init script\. Each configset can contain a list of config keys or references to other configsets\. For example, the following template snippet creates three configsets\. The first configset, `test1`, contains one config key named `1`\. The second configset, `test2`, contains a reference to the `test1` configset and one config key named `2`\. The third configset, default, contains a reference to the configset `test2`\.
 
@@ -230,7 +230,7 @@ AWS::CloudFormation::Init:
         ConfigSet: "test2"
 ```
 
-#### Related cfn\-init Calls<a name="w5979ab1c19c15c15c21c13b6b8"></a>
+#### Related cfn\-init Calls<a name="w6232ab1c19c15c15c21c13b6b8"></a>
 
 The following calls to cfn\-init refer to the configSets declared in the preceding template snippet\. The example calls are abbreviated for clarity, see [cfn\-init](cfn-init.md) for the complete syntax\.
 + If you specify `test1` only:
@@ -269,7 +269,7 @@ You can use the commands key to execute commands on the EC2 instance\. The comma
 |  ignoreErrors  |  Optional\. A Boolean value that determines whether cfn\-init continues to run if the command in contained in the command key fails \(returns a non\-zero value\)\. Set to `true` if you want cfn\-init to continue running even if the command fails\. Set to `false` if you want cfn\-init to stop running if the command fails\. The default value is `false`\.  | 
 |  waitAfterCompletion  |  Optional\. For Windows systems only\. Specifies how long to wait \(in seconds\) after a command has finished in case the command causes a reboot\. The default value is 60 seconds and a value of "forever" directs cfn\-init to exit and resume only after the reboot is complete\. Set this value to `0` if you do not want to wait for every command\.   | 
 
-### Example<a name="w5979ab1c19c15c15c21c15b6"></a>
+### Example<a name="w6232ab1c19c15c15c21c15b6"></a>
 
 The following example snippet calls the echo command if the `~/test.txt` file doesn't exist\.
 
@@ -330,7 +330,7 @@ You can use the `files` key to create files on the EC2 instance\. The content ca
 |  authentication  |  The name of an authentication method to use\. This overrides any default authentication\. You can use this property to select an authentication method you define with the [AWS::CloudFormation::Authentication](aws-resource-authentication.md) resource\.  | 
 |  context  |  Specifies a context for files that are to be processed as [Mustache templates](http://mustache.github.com/mustache.5.html)\. To use this key, you must have installed aws\-cfn\-bootstrap 1\.3\-11 or later as well as [pystache](https://github.com/defunkt/pystache)\.  | 
 
-### Examples<a name="w5979ab1c19c15c15c21c17b6"></a>
+### Examples<a name="w6232ab1c19c15c15c21c17b6"></a>
 
 The following example snippet creates a file named setup\.mysql as part of a larger installation\.
 
@@ -359,7 +359,7 @@ The following example snippet creates a file named setup\.mysql as part of a lar
 ```
 files: 
   /tmp/setup.mysql: 
-    content: !Sub | 
+    content: !Sub |
       CREATE DATABASE ${DBName};
       CREATE USER '${DBUsername}'@'localhost' IDENTIFIED BY '${DBPassword}';
       GRANT ALL ON ${DBName}.* TO '${DBUsername}'@'localhost';
@@ -471,7 +471,7 @@ If you specify a version of a package, cfn\-init will attempt to install that ve
 
 ### Example snippets<a name="aws-resource-init-packages-snippet"></a>
 
-#### RPM, yum, and Rubygems<a name="w5979ab1c19c15c15c21c21b8b2"></a>
+#### RPM, yum, and Rubygems<a name="w6232ab1c19c15c15c21c21b8b2"></a>
 
 The following snippet specifies a version URL for rpm, requests the latest versions from yum, and version 0\.10\.2 of chef from rubygems:
 
@@ -505,7 +505,7 @@ rubygems:
     - "0.10.2"
 ```
 
-#### MSI Package<a name="w5979ab1c19c15c15c21c21b8b4"></a>
+#### MSI Package<a name="w6232ab1c19c15c15c21c21b8b4"></a>
 
 The following snippet specifies a URL for an MSI package:
 
@@ -542,9 +542,9 @@ The following table lists the supported keys\.
 |  packages  |  A map of package manager to list of package names\. If cfn\-init installs or updates one of these packages, this service will be restarted\.  | 
 |  commands  |  A list of command names\. If cfn\-init runs the specified command, this service will be restarted\.  | 
 
-### Examples<a name="w5979ab1c19c15c15c21c23c10"></a>
+### Examples<a name="w6232ab1c19c15c15c21c23c10"></a>
 
-#### Linux<a name="w5979ab1c19c15c15c21c23c10b2"></a>
+#### Linux<a name="w6232ab1c19c15c15c21c23c10b2"></a>
 
 The following Linux snippet configures the services as follows:
 + The nginx service will be restarted if either /etc/nginx/nginx\.conf or /var/www/html are modified by cfn\-init\.
@@ -599,7 +599,7 @@ services:
       ensureRunning: "false"
 ```
 
-#### Windows<a name="w5979ab1c19c15c15c21c23c10b4"></a>
+#### Windows<a name="w6232ab1c19c15c15c21c23c10b4"></a>
 
 The following Windows snippet starts the `cfn-hup` service, sets it to automatic, and restarts the service if `cfn-init` modifies the specified configuration files:
 
@@ -637,9 +637,9 @@ You can use the sources key to download an archive file and unpack it in a targe
 **Supported formats**  
 Supported formats are tar, tar\+gzip, tar\+bz2 and zip\.
 
-### Examples<a name="w5979ab1c19c15c15c21c25b6"></a>
+### Examples<a name="w6232ab1c19c15c15c21c25b6"></a>
 
-#### GitHub<a name="w5979ab1c19c15c15c21c25b6b2"></a>
+#### GitHub<a name="w6232ab1c19c15c15c21c25b6b2"></a>
 
 If you use GitHub as a source control system, you can use cfn\-init and the sources package mechanism to pull a specific version of your application\. GitHub allows you to create a zip or a tar from a specific version via a URL as follows:
 
@@ -664,7 +664,7 @@ sources:
   /etc/puppet: "https://github.com/user1/cfn-demo/tarball/master"
 ```
 
-#### S3 Bucket<a name="w5979ab1c19c15c15c21c25b6b4"></a>
+#### S3 Bucket<a name="w6232ab1c19c15c15c21c25b6b4"></a>
 
 The following example downloads a zip file from an Amazon S3 bucket and unpacks it into /etc/myapp:
 
@@ -700,7 +700,7 @@ The following table lists the supported keys\.
 |  groups  |  A list of group names\. The user will be added to each group in the list\.  | 
 |  homeDir  |  The user's home directory\.  | 
 
-### Example<a name="w5979ab1c19c15c15c21c27b8"></a>
+### Example<a name="w6232ab1c19c15c15c21c27b8"></a>
 
 Users are created as non\-interactive system users with a shell of /sbin/nologin\. This is by design and cannot be modified\.
 

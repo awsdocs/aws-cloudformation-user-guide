@@ -51,7 +51,7 @@ The Amazon Resource Name \(ARN\) of the IAM role used to run the operations spec
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `2048`  
-*Pattern*: `arn:aws:iam::\d+:role/.*`  
+*Pattern*: `arn:aws(-[a-z]{1,3}){0,2}:iam::\d+:role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyDetails`  <a name="cfn-dlm-lifecyclepolicy-policydetails"></a>

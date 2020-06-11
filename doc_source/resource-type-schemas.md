@@ -33,6 +33,7 @@ To learn more about resource provider schemas, including schema format and defin
 |  Europe \(London\)  |  [eu\-west\-2](https://schema.cloudformation.eu-west-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Paris\)  |  [eu\-west\-3](https://schema.cloudformation.eu-west-3.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Stockholm\)  |  [eu\-north\-1](https://schema.cloudformation.eu-north-1.amazonaws.com/CloudformationSchema.zip)  | 
+|  Europe \(Milan\)  |  [eu\-south\-1](https://schema.cloudformation.eu-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Middle East \(Bahrain\)  |  [me\-south\-1](https://schema.cloudformation.me-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  South America \(São Paulo\)  |  [sa\-east\-1](https://schema.cloudformation.sa-east-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  AWS GovCloud \(US\-East\)  |  [us\-gov\-east\-1](https://schema.cloudformation.us-gov-east-1.amazonaws.com/CloudformationSchema.zip)  | 

@@ -93,6 +93,7 @@ For Windows file systems:
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
@@ -308,7 +309,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                             }
                         ],
                         "DomainName": {
-                            "Fn::ImprtValue": "SelfManagedADDomainName"
+                            "Fn::ImportValue": "SelfManagedADDomainName"
                         },
                         "FileSystemAdministratorsGroup": "MyDomainAdminGroup",
                         "OrganizationalUnitDistinguishedName": "OU=FileSystems,DC=corp,DC=example,DC=com",
@@ -374,10 +375,10 @@ Resources:
                 - ','
                 - !ImportValue MySelfManagedADDnsIpAddresses
           DomainName:
-            'Fn::ImprtValue': SelfManagedADDomainName
+            'Fn::ImportValue': SelfManagedADDomainName
           FileSystemAdministratorsGroup: MyDomainAdminGroup
           OrganizationalUnitDistinguishedName: 'OU=FileSystems,DC=corp,DC=example,DC=com'
-          Username: Admin
+          UserName: Admin
           Password: !Join 
             - ':'
             - - '{{resolve:secretsmanager'

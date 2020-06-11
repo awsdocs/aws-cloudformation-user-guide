@@ -5,7 +5,7 @@ The CodeStar Connections feature is in preview release and is subject to change\
 
 The AWS::CodeStarConnections::Connection resource can be used to connect external source providers with services like AWS CodePipeline\.
 
- **Note:** A connection created through CloudFormation is in `PENDING` status by default\. You can make its status `AVAILABLE` by editing the connection in the CodePipeline console\.
+ **Note:** A connection created through CloudFormation is in `PENDING` status by default\. You can make its status `AVAILABLE` by updating the connection in the console\.
 
 ## Syntax<a name="aws-resource-codestarconnections-connection-syntax"></a>
 
@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeStarConnections::Connection",
   "Properties" : {
       "[ConnectionName](#cfn-codestarconnections-connection-connectionname)" : String,
-      "[ProviderType](#cfn-codestarconnections-connection-providertype)" : String
+      "[ProviderType](#cfn-codestarconnections-connection-providertype)" : String,
+      "[Tags](#cfn-codestarconnections-connection-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -30,6 +31,8 @@ Type: AWS::CodeStarConnections::Connection
 Properties: 
   [ConnectionName](#cfn-codestarconnections-connection-connectionname): String
   [ProviderType](#cfn-codestarconnections-connection-providertype): String
+  [Tags](#cfn-codestarconnections-connection-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-codestarconnections-connection-properties"></a>
@@ -43,11 +46,18 @@ The name of the connection\. Connection names must be unique in an AWS user acco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProviderType`  <a name="cfn-codestarconnections-connection-providertype"></a>
-The name of the external provider where your third\-party code repository is configured\. Currently, the valid provider type is Bitbucket\.  
+The name of the external provider where your third\-party code repository is configured\. The valid provider type is Bitbucket\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `Bitbucket`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-codestarconnections-connection-tags"></a>
+Specifies the tags applied to the resource\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-codestarconnections-connection-return-values"></a>
 
@@ -92,7 +102,13 @@ The following example creates a Connection with Bitbucket\.
             "Type": "AWS::CodeStarConnections::Connection",
             "Properties": {
                 "ConnectionName": "MyConnection",
-                "ProviderType": "Bitbucket"
+                "ProviderType": "Bitbucket",
+                "Tags": [
+                    {
+                        "Key": "Project",
+                        "Value": "ProjectB"
+                    }
+                ]
             }
         }
     }
@@ -102,11 +118,14 @@ The following example creates a Connection with Bitbucket\.
 #### YAML<a name="aws-resource-codestarconnections-connection--examples--Bitbucket_Connection_Configuration--yaml"></a>
 
 ```
- AWSTemplateFormatVersion: 2010-09-09
- Resources:
-    SampleConnection:
-        Type: AWS::CodeStarConnections::Connection
-        Properties:
-            ConnectionName: MyConnection
-            ProviderType: Bitbucket
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  SampleConnection:
+    Type: 'AWS::CodeStarConnections::Connection'
+    Properties:
+      ConnectionName: MyConnection
+      ProviderType: Bitbucket
+      Tags:
+        - Key: Project
+          Value: ProjectB
 ```

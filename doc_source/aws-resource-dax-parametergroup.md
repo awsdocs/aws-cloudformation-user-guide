@@ -45,6 +45,7 @@ The name of the parameter group\.
 
 `ParameterNameValues`  <a name="cfn-dax-parametergroup-parameternamevalues"></a>
 An array of name\-value pairs for the parameters in the group\. Each element in the array represents a single parameter\.  
+ `record-ttl-millis` and `query-ttl-millis` are the only supported parameter names\. For more details, see [Configuring TTL Settings](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.cluster-management.html#DAX.cluster-management.custom-settings.ttl)\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

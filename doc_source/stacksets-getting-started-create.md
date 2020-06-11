@@ -58,7 +58,7 @@ With `service-managed` permissions, you can deploy stack instances to accounts m
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
 
         This means that AWS CloudFormation deploys your stack in only one account at one time\.
-      + For **Failure tolerance**, keep the defauls of **Number** and **0**\.
+      + For **Failure tolerance**, keep the defaults of **Number** and **0**\.
 
         This means that a maximum of one stack deployment can fail in one of your specified Regions before AWS CloudFormation stops deployment in the current Region, and cancels deployment in remaining Regions\.
 
