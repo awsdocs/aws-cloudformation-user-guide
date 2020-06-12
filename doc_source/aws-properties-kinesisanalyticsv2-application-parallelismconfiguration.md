@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application ParallelismConfiguration<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration"></a>
 
-Describes parameters for how a Java\-based Amazon Kinesis Data Analytics application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
+Describes parameters for how a Flink\-based Kinesis Data Analytics application application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-syntax"></a>
 
@@ -49,7 +49,7 @@ Describes the initial number of parallel tasks that a Java\-based Kinesis Data A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelismPerKPU`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu"></a>
-Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform per Kinesis Processing Unit \(KPU\) used by the application\. For more information about KPUs, see [Amazon Kinesis Data Analytics Pricing](http://aws.amazon.com/kinesis/data-analytics/pricing/)\.  
+Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform per Kinesis Processing Unit \(KPU\) used by the application\. For more information about KPUs, see [Amazon Kinesis Data Analytics Pricing](https://aws.amazon.com/kinesis/data-analytics/pricing/)\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

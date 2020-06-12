@@ -37,7 +37,7 @@ User\-defined criteria for sending commands that target instances that meet the 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-maintenancewindowtarget-targets-values"></a>
-User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify `value:WebServer` to run a command on instances that include Amazon EC2 tags of `ServerRole,WebServer`\.   
+User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify `value:WebServer` to run a command on instances that include EC2 tags of `ServerRole,WebServer`\.   
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  

@@ -49,13 +49,13 @@ Specifies the logging level for this route: `INFO`, `ERROR`, or `OFF`\. This pro
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThrottlingBurstLimit`  <a name="cfn-apigatewayv2-stage-routesettings-throttlingburstlimit"></a>
-Specifies the throttling burst limit\. Supported only for WebSocket APIs\.  
+Specifies the throttling burst limit\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThrottlingRateLimit`  <a name="cfn-apigatewayv2-stage-routesettings-throttlingratelimit"></a>
-Specifies the throttling rate limit\. Supported only for WebSocket APIs\.  
+Specifies the throttling rate limit\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

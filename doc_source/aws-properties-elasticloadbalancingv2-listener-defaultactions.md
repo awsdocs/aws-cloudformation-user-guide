@@ -66,7 +66,7 @@ Information for creating an action that distributes requests among one or more t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Order`  <a name="cfn-elasticloadbalancingv2-listener-action-order"></a>
-The order for the action\. This value is required for rules with multiple actions\. The action with the lowest value for order is performed first\. The last action to be performed must be one of the following types of actions: a `forward`, `fixed-response`, or `redirect`\.  
+The order for the action\. This value is required for rules with multiple actions\. The action with the lowest value for order is performed first\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

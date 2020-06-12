@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::ApplicationOutput KinesisStreamsOutput<a name="aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput"></a>
 
-When you configure an SQL\-based Amazon Kinesis Data Analytics application's output, identifies a Kinesis data stream as the destination\. You provide the stream Amazon Resource Name \(ARN\)\. 
+When you configure a SQL\-based Kinesis Data Analytics application's output, identifies a Kinesis data stream as the destination\. You provide the stream Amazon Resource Name \(ARN\)\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput-syntax"></a>
 

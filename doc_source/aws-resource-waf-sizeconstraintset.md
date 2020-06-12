@@ -40,6 +40,7 @@ The name, if any, of the `SizeConstraintSet`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SizeConstraints`  <a name="cfn-waf-sizeconstraintset-sizeconstraints"></a>

@@ -68,7 +68,7 @@ The message to include with the invitation sent to the member accounts\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-guardduty-member-status"></a>
-You can use the `Status` property to update the status of the relationship between the member account and its master account\. Valid values are `Created` and `Invited` when using a `AWS::GuardDuty::Member` resource\. If the value for this property is not provided or set to `Created`, a member account is created but not invited\. If the value of this property is set to `Invited`, a member account is created and invited\.  
+You can use the `Status` property to update the status of the relationship between the member account and its master account\. Valid values are `Created` and `Invited` when using an `AWS::GuardDuty::Member` resource\. If the value for this property is not provided or set to `Created`, a member account is created but not invited\. If the value of this property is set to `Invited`, a member account is created and invited\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::EFS::FileSystem<a name="aws-resource-efs-filesystem"></a>
 
-The `AWS::EFS::FileSystem` resource creates a new, empty file system in Amazon Elastic File System \(Amazon EFS\)\. You must create a mount target \([AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)\) to mount your EFS file system on an Amazon Elastic Compute Cloud \(Amazon EC2\) instance or another resource\. 
+The `AWS::EFS::FileSystem` resource creates a new, empty file system in Amazon Elastic File System \(Amazon EFS\)\. You must create a mount target \([AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)\) to mount your EFS file system on an Amazon Elastic Compute Cloud \(Amazon EC2\) instance or another compute resource\. 
 
 ## Syntax<a name="aws-resource-efs-filesystem-syntax"></a>
 
@@ -54,7 +54,7 @@ A value that specifies to create one or more tags associated with the file syste
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-efs-filesystem-kmskeyid"></a>
-The ID of the AWS KMS CMK to be used to protect the encrypted file system\. This parameter is only required if you want to use a nondefault CMK\. If this parameter is not specified, the default CMK for Amazon EFS is used\. This ID can be in one of the following formats:  
+The ID of the AWS KMS customer master key \(CMK\) to be used to protect the encrypted file system\. This parameter is only required if you want to use a nondefault CMK\. If this parameter is not specified, the default CMK for Amazon EFS is used\. This ID can be in one of the following formats:  
 + Key ID \- A unique identifier of the key, for example `1234abcd-12ab-34cd-56ef-1234567890ab`\.
 + ARN \- An Amazon Resource Name \(ARN\) for the key, for example `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`\.
 + Key alias \- A previously created display name for a key, for example `alias/projectKey1`\.
@@ -113,18 +113,62 @@ The following example declares an encrypted Amazon EFS file system\.
 #### JSON<a name="aws-resource-efs-filesystem--examples--Create_an_Encrypted_File_System--json"></a>
 
 ```
-"Resources": {
-        "filesystem": {
+"{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MountTargetVPC": {
+            "Type": "AWS::EC2::VPC",
+            "Properties": {
+                "CidrBlock": "172.31.0.0/16"
+            }
+        },
+        "MountTargetSubnetOne": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "CidrBlock": "172.31.1.0/24",
+                "VpcId": {
+                    "Ref": "MountTargetVPC"
+                },
+                "AvailabilityZone": "us-east-1a"
+            }
+        },
+        "MountTargetSubnetTwo": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "CidrBlock": "172.31.2.0/24",
+                "VpcId": {
+                    "Ref": "MountTargetVPC"
+                },
+                "AvailabilityZone": "us-east-1a"
+            }
+        },
+        "MountTargetSubnetThree": {
+            "Type": "AWS::EC2::Subnet",
+            "Properties": {
+                "CidrBlock": "172.31.3.0/24",
+                "VpcId": {
+                    "Ref": "MountTargetVPC"
+                },
+                "AvailabilityZone": "us-east-1a"
+            }
+        },
+       "FileSystemResource": {
             "Type": "AWS::EFS::FileSystem",
             "Properties": {
+                "PerformanceMode": "maxIO",
+                "LifecyclePolicies":[
+                    {
+                        "TransitionToIA" : "AFTER_30_DAYS"
+                    }
+                ],    
                 "Encrypted": true,
-                "KmsKeyId": {
-                    "Fn::GetAtt": [
-                        "key",
-                        "Arn"
-                    ]
-                }
-            }
+                "FileSystemTags": [
+                    {
+                        "Key": "Name",
+                        "Value": "TestFileSystem"
+                    }
+                ]
+            }  
         },
         "key": {
             "Type": "AWS::KMS::Key",
@@ -153,20 +197,92 @@ The following example declares an encrypted Amazon EFS file system\.
                             "Action": [
                                 "kms:*"
                             ],
-                            "Resource": "*"
+                            "Resource": "*",
+                            "AWS": "*"
                         }
                     ]
                 }
             }
-        }
-    },
-    "Outputs": {
-        "KeyId": {
-            "Value": {
-                "Fn::GetAtt": [
-                    "key",
-                    "Arn"
+        },
+        "MountTargetResource1": {
+            "Type": "AWS::EFS::MountTarget",
+            "Properties": {
+                "FileSystemId": {
+                    "Ref": "FileSystemResource"
+                },
+                "SubnetId": {
+                    "Ref": "MountTargetSubnetOne"
+                },
+                "SecurityGroups": [
+                    {
+                        "Fn::GetAtt": [
+                            "MountTargetVPC",
+                            "DefaultSecurityGroup"
+                        ]
+                    }
                 ]
+            }
+        },
+        "MountTargetResource2": {
+            "Type": "AWS::EFS::MountTarget",
+            "Properties": {
+                "FileSystemId": {
+                    "Ref": "FileSystemResource"
+                },
+                "SubnetId": {
+                    "Ref": "MountTargetSubnetTwo"
+                },
+                "SecurityGroups": [
+                    {
+                        "Fn::GetAtt": [
+                            "MountTargetVPC",
+                            "DefaultSecurityGroup"
+                        ]
+                    }
+                ]
+            }
+        },
+        "MountTargetResource3": {
+            "Type": "AWS::EFS::MountTarget",
+            "Properties": {
+                "FileSystemId": {
+                    "Ref": "FileSystemResource"
+                },
+                "SubnetId": {
+                    "Ref": "MountTargetSubnetThree"
+                },
+                "SecurityGroups": [
+                    {
+                        "Fn::GetAtt": [
+                            "MountTargetVPC",
+                            "DefaultSecurityGroup"
+                        ]
+                    }
+                ]
+            }
+        },
+        "AccessPointResource": {
+            "Type": "AWS::EFS::AccessPoint",
+            "Properties": {
+                "FileSystemId": {
+                    "Ref": "FileSystemResource"
+                },
+                "PosixUser": {
+                    "Uid": "13234",
+                    "Gid": "1322",
+                    "SecondaryGids": [
+                        "1344",
+                        "1452"
+                    ]
+                },
+                "RootDirectory": {
+                    "CreationInfo": {
+                        "OwnerGid": "708798",
+                        "OwnerUid": "7987987",
+                        "Permissions": "0755"
+                    },
+                    "Path": "/testcfn/abc"
+                }
             }
         }
     }
@@ -176,11 +292,45 @@ The following example declares an encrypted Amazon EFS file system\.
 #### YAML<a name="aws-resource-efs-filesystem--examples--Create_an_Encrypted_File_System--yaml"></a>
 
 ```
+AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  filesystem:
-    Type: AWS::EFS::FileSystem
+  MountTargetVPC:
+    Type: AWS::EC2::VPC
     Properties:
+      CidrBlock: 172.31.0.0/16
+ 
+  MountTargetSubnetOne:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 172.31.1.0/24
+      VpcId: !Ref MountTargetVPC
+      AvailabilityZone: "us-east-1a"
+
+  MountTargetSubnetTwo:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 172.31.2.0/24
+      VpcId: !Ref MountTargetVPC
+      AvailabilityZone: "us-east-1a"
+
+  MountTargetSubnetThree:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 172.31.3.0/24
+      VpcId: !Ref MountTargetVPC
+      AvailabilityZone: "us-east-1a"
+ 
+  FileSystemResource:
+    Type: 'AWS::EFS::FileSystem'
+    Properties:
+      PerformanceMode: maxIO
       Encrypted: true
+      LifecyclePolicies:
+        - TransitionToIA: AFTER_30_DAYS
+      FileSystemTags:
+        - Key: Name
+          Value: TestFileSystem
+      
       KmsKeyId: !GetAtt 
         - key
         - Arn
@@ -202,11 +352,48 @@ Resources:
             Action:
               - 'kms:*'
             Resource: '*'
-Outputs:
-  KeyId:
-    Value: !GetAtt 
-      - key
-- Arn
+            AWS: "*"
+
+  MountTargetResource1:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref FileSystemResource
+      SubnetId: !Ref MountTargetSubnetOne
+      SecurityGroups:
+      - !GetAtt MountTargetVPC.DefaultSecurityGroup
+
+  MountTargetResource2:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref FileSystemResource
+      SubnetId: !Ref MountTargetSubnetTwo
+      SecurityGroups:
+      - !GetAtt MountTargetVPC.DefaultSecurityGroup
+
+  MountTargetResource3:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref FileSystemResource
+      SubnetId: !Ref MountTargetSubnetThree
+      SecurityGroups:
+      - !GetAtt MountTargetVPC.DefaultSecurityGroup
+ 
+  AccessPointResource:
+    Type: 'AWS::EFS::AccessPoint'
+    Properties:
+      FileSystemId: !Ref FileSystemResource
+      PosixUser:
+        Uid: "13234"
+        Gid: "1322"
+        SecondaryGids:
+          - "1344"
+          - "1452"
+      RootDirectory:
+        CreationInfo:
+          OwnerGid: "708798"
+          OwnerUid: "7987987"
+          Permissions: "0755"
+        Path: "/testcfn/abc"
 ```
 
 ## See Also<a name="aws-resource-efs-filesystem--seealso"></a>

@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings)" : [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md),
       "[Category](#cfn-mediaconvert-jobtemplate-category)" : String,
       "[Description](#cfn-mediaconvert-jobtemplate-description)" : String,
+      "[HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations)" : [ [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md), ... ],
       "[Name](#cfn-mediaconvert-jobtemplate-name)" : String,
       "[Priority](#cfn-mediaconvert-jobtemplate-priority)" : Integer,
       "[Queue](#cfn-mediaconvert-jobtemplate-queue)" : String,
@@ -38,6 +39,8 @@ Properties:
     [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)
   [Category](#cfn-mediaconvert-jobtemplate-category): String
   [Description](#cfn-mediaconvert-jobtemplate-description): String
+  [HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations): 
+    - [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)
   [Name](#cfn-mediaconvert-jobtemplate-name): String
   [Priority](#cfn-mediaconvert-jobtemplate-priority): Integer
   [Queue](#cfn-mediaconvert-jobtemplate-queue): String
@@ -50,7 +53,7 @@ Properties:
 ## Properties<a name="aws-resource-mediaconvert-jobtemplate-properties"></a>
 
 `AccelerationSettings`  <a name="cfn-mediaconvert-jobtemplate-accelerationsettings"></a>
-Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, see the AWS Elemental MediaConvert User Guide\.  
+Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, For more information, see [Job Limitations for Accelerated Transcoding in AWS Elemental MediaConvert](https://docs.aws.amazon.com/mediaconvert/latest/ug/job-requirements.html) in the *AWS Elemental MediaConvert User Guide*\.  
 *Required*: No  
 *Type*: [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -65,6 +68,12 @@ Optional\. A category for the job template you are creating
 Optional\. A description of the job template you are creating\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HopDestinations`  <a name="cfn-mediaconvert-jobtemplate-hopdestinations"></a>
+Optional\. Configuration for a destination queue to which the job can hop once a customer\-defined minimum wait time has passed\. For more information, see [Setting Up Queue Hopping to Avoid Long Waits](https://docs.aws.amazon.com/mediaconvert/latest/ug/setting-up-queue-hopping-to-avoid-long-waits.html) in the *AWS Elemental MediaConvert User Guide*\.  
+*Required*: No  
+*Type*: List of [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-mediaconvert-jobtemplate-name"></a>

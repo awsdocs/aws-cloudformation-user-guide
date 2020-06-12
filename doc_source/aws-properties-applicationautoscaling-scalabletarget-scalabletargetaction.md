@@ -32,6 +32,7 @@ The maximum capacity\.
 
 `MinCapacity`  <a name="cfn-applicationautoscaling-scalabletarget-scalabletargetaction-mincapacity"></a>
 The minimum capacity\.  
+For Lambda provisioned concurrency, the minimum value allowed is 0\. For all other resources, the minimum value allowed is 1\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

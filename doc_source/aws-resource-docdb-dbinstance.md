@@ -48,10 +48,9 @@ Default: `true`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-docdb-dbinstance-availabilityzone"></a>
- The Amazon EC2 Availability Zone that the instance is created in\.  
+The Amazon EC2 Availability Zone that the instance is created in\.   
 Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
- Example: `us-east-1d`   
- Constraint: The `AvailabilityZone` parameter can't be specified if the `MultiAZ` parameter is set to `true`\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.   
+Example: `us-east-1d`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

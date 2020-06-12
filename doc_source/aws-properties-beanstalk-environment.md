@@ -92,7 +92,7 @@ Key\-value pairs defining configuration options for this environment, such as th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
-The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `PlatformArn`, don't specify `SolutionStackName`\.
 *Required*: No  
 *Type*: String  

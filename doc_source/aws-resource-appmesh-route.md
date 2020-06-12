@@ -2,9 +2,7 @@
 
 Creates a route that is associated with a virtual router\.
 
-You can use the `prefix` parameter in your route specification for path\-based routing of requests\. For example, if your virtual service name is `my-service.local` and you want the route to match requests to `my-service.local/metrics`, your prefix should be `/metrics`\.
-
-If your route matches a request, you can distribute traffic to one or more target virtual nodes with relative weighting\.
+ You can route several different protocols and define a retry policy for a route\. Traffic can be routed to one or more virtual nodes\.
 
 For more information about routes, see [Routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html)\.
 
@@ -52,7 +50,7 @@ The name of the service mesh to create the route in\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MeshOwner`  <a name="cfn-appmesh-route-meshowner"></a>
-The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

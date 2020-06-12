@@ -75,7 +75,7 @@ The name of the cluster\.
 The Amazon MSK configuration to use for the cluster\.  
 *Required*: No  
 *Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionInfo`  <a name="cfn-msk-cluster-encryptioninfo"></a>
 Includes all encryption\-related information\.  
@@ -93,7 +93,7 @@ Specifies the level of monitoring for the MSK cluster\. The possible values are 
 The version of Apache Kafka\. You can use Amazon MSK to create clusters that use Apache Kafka versions 1\.1\.1 and 2\.2\.1\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingInfo`  <a name="cfn-msk-cluster-logginginfo"></a>
 You can configure your MSK cluster to send broker logs to different destination types\. This is a container for the configuration details related to broker logs\.  

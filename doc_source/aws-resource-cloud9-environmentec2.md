@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Cloud9::EnvironmentEC2",
   "Properties" : {
       "[AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes)" : Integer,
+      "[ConnectionType](#cfn-cloud9-environmentec2-connectiontype)" : String,
       "[Description](#cfn-cloud9-environmentec2-description)" : String,
       "[InstanceType](#cfn-cloud9-environmentec2-instancetype)" : String,
       "[Name](#cfn-cloud9-environmentec2-name)" : String,
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cloud9::EnvironmentEC2
 Properties: 
   [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes): Integer
+  [ConnectionType](#cfn-cloud9-environmentec2-connectiontype): String
   [Description](#cfn-cloud9-environmentec2-description): String
   [InstanceType](#cfn-cloud9-environmentec2-instancetype): String
   [Name](#cfn-cloud9-environmentec2-name): String
@@ -48,6 +50,12 @@ The number of minutes until the running instance is shut down after the environm
 *Required*: No  
 *Type*: Integer  
 *Maximum*: `20160`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ConnectionType`  <a name="cfn-cloud9-environmentec2-connectiontype"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-cloud9-environmentec2-description"></a>

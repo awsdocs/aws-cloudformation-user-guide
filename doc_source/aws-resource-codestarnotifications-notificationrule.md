@@ -1,6 +1,6 @@
 # AWS::CodeStarNotifications::NotificationRule<a name="aws-resource-codestarnotifications-notificationrule"></a>
 
-Creates a notification rule for a resource\. The rule specifies the events you want notifications about and the targets \(such as SNS topics\) where you want to receive them\.
+Creates a notification rule for a resource\. The rule specifies the events you want notifications about and the targets \(such as Amazon SNS topics or AWS Chatbot clients configured for Slack\) where you want to receive them\.
 
 ## Syntax<a name="aws-resource-codestarnotifications-notificationrule-syntax"></a>
 
@@ -49,7 +49,9 @@ The level of detail to include in the notifications for this resource\. BASIC wi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventTypeIds`  <a name="cfn-codestarnotifications-notificationrule-eventtypeids"></a>
-A list of event types associated with this notification rule\.   
+
+A list of event types associated with this notification rule\. For a complete list of event types and IDs, see [Notification concepts](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api) in the *Developer Tools Console User Guide*\.   
+
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,7 +86,7 @@ A list of tags to apply to this notification rule\. Key names cannot start with 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Targets`  <a name="cfn-codestarnotifications-notificationrule-targets"></a>
-A list of Amazon Resource Names \(ARNs\) of SNS topics to associate with the notification rule\.  
+A list of Amazon Resource Names \(ARNs\) of Amazon SNS topics and AWS Chatbot clients to associate with the notification rule\.  
 *Required*: Yes  
 *Type*: List of [Target](aws-properties-codestarnotifications-notificationrule-target.md)  
 *Maximum*: `10`  
@@ -140,7 +142,7 @@ Properties:
         EventTypeIds: 
             - codecommit-repository-comments-on-commits
         Targets: 
-            - TargetType: SNS, 
+            - TargetType: SNS 
               TargetAddress: 'Fn::Sub': 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
         Tags: 
              Team: Saanvi

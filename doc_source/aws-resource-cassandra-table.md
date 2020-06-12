@@ -1,6 +1,6 @@
 # AWS::Cassandra::Table<a name="aws-resource-cassandra-table"></a>
 
-The `AWS::Cassandra::Table` resource allows you to create a new table in Amazon Managed Apache Cassandra Service\. For more information, see [Create a Keyspace and a Table](https://docs.aws.amazon.com/mcs/latest/devguide/getting-started.ddl.html) in the *Amazon Managed Cassandra Service Developer Guide*\.
+The `AWS::Cassandra::Table` resource allows you to create a new table in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a Keyspace and a Table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
 
 ## Syntax<a name="aws-resource-cassandra-table-syntax"></a>
 
@@ -87,9 +87,9 @@ If you specify a name, you cannot perform updates that require replacement of th
 
 ### Ref<a name="aws-resource-cassandra-table-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the table\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the table and the keyspace where the table exists \(delimited by '\|'\)\. For example:
 
- `{ "Ref": "myTable" }` 
+ `{ "Ref": "myKeyspace|myTable" }` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -167,35 +167,35 @@ The following example creates a table with specific read and write capacity\.
         ],
         "RegularColumns":[
           {
-            "ColumName":"name",
+            "ColumnName":"name",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"region",
+            "ColumnName":"region",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"division",
+            "ColumnName":"division",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"project",
+            "ColumnName":"project",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"role",
+            "ColumnName":"role",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"pay_scale",
+            "ColumnName":"pay_scale",
             "ColumnType":"TEXT"
           },
           {
-            "ColumName":"vacation_hrs",
+            "ColumnName":"vacation_hrs",
             "ColumnType":"FLOAT"
           },
           {
-            "ColumName":"manager_id",
+            "ColumnName":"manager_id",
             "ColumnType":"TEXT"
           }
         ],
@@ -231,21 +231,21 @@ Resources:
           ColumnType: ASCII
         OrderBy: ASC
       RegularColumns:
-      - ColumName: name
+      - ColumnName: name
         ColumnType: TEXT
-      - ColumName: region
+      - ColumnName: region
         ColumnType: TEXT
-      - ColumName: division
+      - ColumnName: division
         ColumnType: TEXT
-      - ColumName: project
+      - ColumnName: project
         ColumnType: TEXT
-      - ColumName: role
+      - ColumnName: role
         ColumnType: TEXT
-      - ColumName: pay_scale
+      - ColumnName: pay_scale
         ColumnType: TEXT
-      - ColumName: vacation_hrs
+      - ColumnName: vacation_hrs
         ColumnType: FLOAT
-      - ColumName: manager_id
+      - ColumnName: manager_id
         ColumnType: TEXT
       BillingMode:
         Mode: PROVISIONED

@@ -1,6 +1,6 @@
 # AWS::EC2::SubnetCidrBlock<a name="aws-resource-ec2-subnetcidrblock"></a>
 
-Associates a single IPv6 CIDR block with a VPC subnet\.
+Associates a CIDR block with your subnet\. You can only associate a single IPv6 CIDR block with your subnet\. An IPv6 CIDR block must have a prefix length of /64\.
 
 ## Syntax<a name="aws-resource-ec2-subnetcidrblock-syntax"></a>
 
@@ -53,7 +53,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Subnet CIDR Block Association<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association"></a>
 
-The following example associates an IPv6 CIDR block \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\. 
+The following example associates an IPv6 CIDR block by using the Ref function to specify the IPv6 of the Ipv6SubnetCidrBlock resource \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\.
 
 #### JSON<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association--json"></a>
 

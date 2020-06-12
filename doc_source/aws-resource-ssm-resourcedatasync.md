@@ -58,7 +58,7 @@ Properties:
 ## Properties<a name="aws-resource-ssm-resourcedatasync-properties"></a>
 
 `BucketName`  <a name="cfn-ssm-resourcedatasync-bucketname"></a>
-The name of the Amazon S3 bucket where the aggregated data is stored\.  
+The name of the S3 bucket where the aggregated data is stored\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -74,7 +74,7 @@ An Amazon S3 prefix for the bucket\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BucketRegion`  <a name="cfn-ssm-resourcedatasync-bucketregion"></a>
-The AWS Region with the Amazon S3 bucket targeted by the Resource Data Sync\.  
+The AWS Region with the S3 bucket targeted by the Resource Data Sync\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,7 +91,7 @@ The ARN of an encryption key for a destination in Amazon S3\. You can use a KMS 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3Destination`  <a name="cfn-ssm-resourcedatasync-s3destination"></a>
-Configuration information for the target Amazon S3 bucket\.  
+Configuration information for the target S3 bucket\.  
 *Required*: No  
 *Type*: [S3Destination](aws-properties-ssm-resourcedatasync-s3destination.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -118,7 +118,7 @@ Information about the source where the data was synchronized\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncType`  <a name="cfn-ssm-resourcedatasync-synctype"></a>
-The type of resource data sync\. If `SyncType` is `SyncToDestination`, then the resource data sync synchronizes data to an Amazon S3 bucket\. If the `SyncType` is `SyncFromSource` then the resource data sync synchronizes data from AWS Organizations or from multiple AWS Regions\.  
+The type of resource data sync\. If `SyncType` is `SyncToDestination`, then the resource data sync synchronizes data to an S3 bucket\. If the `SyncType` is `SyncFromSource` then the resource data sync synchronizes data from AWS Organizations or from multiple AWS Regions\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -166,7 +166,7 @@ The following example synchronizes Systems Manager Inventory metadata in the US 
 #### YAML<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncToDestination--yaml"></a>
 
 ```
- ---
+---
 Description: Create a Resource Data Sync for Systems Manager
 Resources:
   BasicResourceDataSync:

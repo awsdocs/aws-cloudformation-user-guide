@@ -36,7 +36,7 @@ The name of an association between a Resolver rule and a VPC\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResolverRuleId`  <a name="cfn-route53resolver-resolverruleassociation-resolverruleid"></a>

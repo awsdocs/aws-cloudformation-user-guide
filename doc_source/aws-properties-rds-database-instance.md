@@ -214,6 +214,8 @@ Constraints:
 `CACertificateIdentifier`  <a name="cfn-rds-dbinstance-cacertificateidentifier"></a>
 The identifier of the CA certificate for this DB instance\.  
 Specifying or updating this property triggers a reboot\.
+For more information about CA certificate identifiers for RDS DB engines, see [ Rotating Your SSL/TLS Certificate](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL-certificate-rotation.html) in the *Amazon RDS User Guide*\.  
+For more information about CA certificate identifiers for Aurora DB engines, see [ Rotating Your SSL/TLS Certificate](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.SSL-certificate-rotation.html) in the *Amazon Aurora User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -376,7 +378,7 @@ Not applicable\. You can enable or disable deletion protection for the DB cluste
 `Domain`  <a name="cfn-rds-dbinstance-domain"></a>
 The Active Directory directory ID to create the DB instance in\. Currently, only Microsoft SQL Server and Oracle DB instances can be created in an Active Directory Domain\.  
 For Microsoft SQL Server DB instances, Amazon RDS can use Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.  
-For Oracle DB instance, Amazon RDS can use Kerberos Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Kerberos Authentication with Amazon RDS for Oracle](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-kerberos.html) in the *Amazon RDS User Guide*\.  
+For Oracle DB instances, Amazon RDS can use Kerberos Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Kerberos Authentication with Amazon RDS for Oracle](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-kerberos.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

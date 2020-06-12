@@ -22,10 +22,7 @@ You start with a basic template that defines a single Amazon EC2 instance with a
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "AWS CloudFormation sample template LAMP_Single_Instance: Create a LAMP stack using a single EC2
-instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap
-scripts to install the packages and files necessary to deploy the Apache web server, PHP, and MySQL at instance launch time.
-**WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
+  "Description" : "AWS CloudFormation sample template LAMP_Single_Instance: Create a LAMP stack using a single EC2 instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap scripts to install the packages and files necessary to deploy the Apache web server, PHP, and MySQL at instance launch time. **WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
 
   "Parameters" : {
     "KeyName": {
@@ -106,7 +103,7 @@ scripts to install the packages and files necessary to deploy the Apache web ser
     } 
   },
 
-{      
+      
   "Mappings" : {
     "AWSInstanceType2Arch" : {
       "t1.micro"    : { "Arch" : "HVM64"  },
@@ -163,6 +160,7 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
       "cc2.8xlarge" : { "Arch" : "HVM64"  }
     },
+
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
       "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},

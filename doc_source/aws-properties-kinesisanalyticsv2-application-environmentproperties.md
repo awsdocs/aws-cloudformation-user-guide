@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application EnvironmentProperties<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties"></a>
 
-Describes execution properties for a Java\-based Kinesis Data Analytics application\.
+Describes execution properties for a Flink\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-syntax"></a>
 

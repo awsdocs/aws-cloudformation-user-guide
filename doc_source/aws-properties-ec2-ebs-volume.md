@@ -67,7 +67,7 @@ Properties:
 Indicates whether the volume is auto\-enabled for I/O operations\. By default, Amazon EBS disables I/O to the volume from attached EC2 instances when it determines that a volume's data is potentially inconsistent\. If the consistency of the volume is not a concern, and you prefer that the volume be made available immediately if it's impaired, you can configure the volume to automatically enable I/O\.   
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-ebs-volume-availabilityzone"></a>
 The Availability Zone in which to create the volume\.  
@@ -103,6 +103,7 @@ AWS authenticates the CMK asynchronously\. Therefore, if you specify an ID, alia
 
 `MultiAttachEnabled`  <a name="cfn-ec2-ebs-volume-multiattachenabled"></a>
 Indicates whether Amazon EBS Multi\-Attach is enabled\.  
+AWS CloudFormation does not currently support updating a single\-attach volume to be multi\-attach enabled, updating a multi\-attach enabled volume to be single\-attach, or updating the size or number of I/O operations per second \(IOPS\) of a multi\-attach enabled volume\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -125,7 +126,7 @@ The snapshot from which to create the volume\. You must specify either a snapsho
 The tags to apply to the volume during creation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
 The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  

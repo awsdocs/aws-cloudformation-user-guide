@@ -65,7 +65,7 @@ Additional FQDNs to be included in the Subject Alternative Name extension of the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-certificatemanager-certificate-tags"></a>
-Key\-value pairs that can identity the certificate\.  
+Key\-value pairs that can identify the certificate\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  

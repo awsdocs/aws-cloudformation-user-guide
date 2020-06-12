@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ExportConfig](#cfn-codebuild-reportgroup-exportconfig)" : [ReportExportConfig](aws-properties-codebuild-reportgroup-reportexportconfig.md),
       "[Name](#cfn-codebuild-reportgroup-name)" : String,
+      "[Tags](#cfn-codebuild-reportgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-codebuild-reportgroup-type)" : String
     }
 }
@@ -27,6 +28,8 @@ Properties:
   [ExportConfig](#cfn-codebuild-reportgroup-exportconfig): 
     [ReportExportConfig](aws-properties-codebuild-reportgroup-reportexportconfig.md)
   [Name](#cfn-codebuild-reportgroup-name): String
+  [Tags](#cfn-codebuild-reportgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-codebuild-reportgroup-type): String
 ```
 
@@ -45,6 +48,14 @@ Properties:
 *Minimum*: `2`  
 *Maximum*: `128`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-codebuild-reportgroup-tags"></a>
+ A list of tag key and value pairs associated with this report group\.   
+These tags are available for use by AWS services that support AWS CodeBuild report group tags\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codebuild-reportgroup-type"></a>
  The type of the `ReportGroup`\. The one valid value is `TEST`\.   

@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application JSONMappingParameters<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, provides additional mapping information when JSON is the record format on the streaming source\.
+For a SQL\-based Kinesis Data Analytics application, provides additional mapping information when JSON is the record format on the streaming source\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters-syntax"></a>
 

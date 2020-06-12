@@ -109,8 +109,8 @@ When passing secret parameters, do not enter the value directly into the templat
         "Properties": {
             "Code": {
                 "S3": {
-                    "S3Bucket": "my-bucket",
-                    "S3Key": "sourcecode.zip",
+                    "Bucket": "my-bucket",
+                    "Key": "sourcecode.zip",
                     "ObjectVersion": "1"
                 }
             },
@@ -133,8 +133,8 @@ MyRepo:
   Properties:
     Code:
       S3:
-        S3Bucket: "my-bucket" 
-        S3Key: "sourcecode.zip" 
+        Bucket: "my-bucket" 
+        Key: "sourcecode.zip" 
         ObjectVersion: "1"
     EnableIssues: true
     IsPrivate: true

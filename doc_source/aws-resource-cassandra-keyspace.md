@@ -1,6 +1,6 @@
 # AWS::Cassandra::Keyspace<a name="aws-resource-cassandra-keyspace"></a>
 
-The `AWS::Cassandra::Keyspace` resource allows you to create a new keyspace in Amazon Managed Apache Cassandra Service\. For more information, see [Create a Keyspace and a Table](https://docs.aws.amazon.com/mcs/latest/devguide/getting-started.ddl.html) in the *Amazon Managed Cassandra Service Developer Guide*\.
+The `AWS::Cassandra::Keyspace` resource allows you to create a new keyspace in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a Keyspace and a Table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
 
 ## Syntax<a name="aws-resource-cassandra-keyspace-syntax"></a>
 

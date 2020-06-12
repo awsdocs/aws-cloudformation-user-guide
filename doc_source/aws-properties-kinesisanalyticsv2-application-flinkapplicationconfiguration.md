@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application FlinkApplicationConfiguration<a name="aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration"></a>
 
-Describes configuration parameters for a Java\-based Amazon Kinesis Data Analytics application\.
+Describes configuration parameters for a Flink\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration-syntax"></a>
 

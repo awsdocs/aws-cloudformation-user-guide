@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-distribution-restrictions-properties"></a>
 
 `GeoRestriction`  <a name="cfn-cloudfront-distribution-restrictions-georestriction"></a>
-A complex type that controls the countries in which your content is distributed\. CloudFront determines the location of your users using `MaxMind` GeoIP databases\.  
+A complex type that controls the countries in which your content is distributed\. CloudFront determines the location of your users using `MaxMind` GeoIP databases\. To disable geo restriction, remove the [Restrictions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-restrictions) property from your stack template\.  
 *Required*: Yes  
 *Type*: [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

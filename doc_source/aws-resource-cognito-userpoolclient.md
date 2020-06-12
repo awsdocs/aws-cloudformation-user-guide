@@ -91,7 +91,7 @@ The allowed OAuth scopes\. Possible values provided by OAuth are: `phone`, `emai
 
 `AnalyticsConfiguration`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration"></a>
 The Amazon Pinpoint analytics configuration for collecting metrics for this user pool\.  
-Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East \(N\. Virginia\) us\-east\-1 Region, regardless of the region in which the user pool resides\.
+In regions where Pinpoint is not available, Cognito User Pools only supports sending events to Amazon Pinpoint projects in us\-east\-1\. In regions where Pinpoint is available, Cognito User Pools will support sending events to Amazon Pinpoint projects within that same region\. 
 *Required*: No  
 *Type*: [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::ServiceCatalog::PortfolioShare<a name="aws-resource-servicecatalog-portfolioshare"></a>
 
-Shares the specified portfolio with the specified account or organization node\. Shares to an organization node can only be created by the master account of an Organization\. AWSOrganizationsAccess must be enabled in order to create a portfolio share to an organization node\.
+Shares the specified portfolio with the specified account\.
 
 ## Syntax<a name="aws-resource-servicecatalog-portfolioshare-syntax"></a>
 

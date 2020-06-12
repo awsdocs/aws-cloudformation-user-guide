@@ -68,5 +68,73 @@ The default version of a launch template cannot be specified in AWS CloudFormati
 `LatestVersionNumber`  <a name="LatestVersionNumber-fn::getatt"></a>
 The latest version of the launch template, such as `5`\.
 
+## Examples<a name="aws-resource-ec2-launchtemplate--examples"></a>
+
+### Launch Template with an IAM Instance Profile<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile"></a>
+
+#### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile--yaml"></a>
+
+```
+Resources:
+  MyIamInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: MyIamInstanceProfile
+      Path: "/"
+      Roles:
+      - MyAdminRole
+  MyLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateData:
+        InstanceType: c4.large
+        DisableApiTermination: 'true'
+        KeyName: MyKeyPair
+        ImageId: ami-04d5cc9b88example
+        IamInstanceProfile:
+          Arn:
+            Fn::GetAtt:
+            - MyIamInstanceProfile
+            - Arn
+        SecurityGroupIds:
+        - sg-083cd3bfb8example
+      LaunchTemplateName: MyLaunchTemplate
+```
+
+### <a name="aws-resource-ec2-launchtemplate--examples--"></a>
+
+#### JSON<a name="aws-resource-ec2-launchtemplate--examples----json"></a>
+
+```
+{
+    "Resources": {
+        "MyIamInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "InstanceProfileName" : "MyIamInstanceProfile",
+                    "Path" : "/",
+                    "Roles" : ["MyAdminRole"]
+            }
+        },
+        "MyLaunchTemplate": {
+            "Type": "AWS::EC2::LaunchTemplate",
+            "Properties": {
+                "LaunchTemplateData" : {
+                    "InstanceType" : "c4.large",
+                    "DisableApiTermination" : "true",
+                    "KeyName" : "MyKeyPair",
+                    "ImageId" : "ami-04d5cc9b88example",
+                    "IamInstanceProfile" : {
+                    "Arn" : {"Fn::GetAtt": ["MyIamInstanceProfile", "Arn"]}
+                    },
+                    "SecurityGroupIds" : ["sg-083cd3bfb8example"]
+                },
+                "LaunchTemplateName" : "MyLaunchTemplate"
+            }
+        }		
+    }
+}
+```
+
 ## See Also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
 + [ CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference* 

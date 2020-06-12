@@ -1,6 +1,6 @@
 # AWS::CloudWatch::Alarm Dimension<a name="aws-properties-cw-dimension"></a>
 
-Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type\. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric\. You can specify a maximum of 10 dimensions for a given metric\.
+Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type\. Dimensions are name/value pairs that can be associated with a CloudWatch metric\. You can specify a maximum of 10 dimensions for a given metric\.
 
 ## Syntax<a name="aws-properties-cw-dimension-syntax"></a>
 

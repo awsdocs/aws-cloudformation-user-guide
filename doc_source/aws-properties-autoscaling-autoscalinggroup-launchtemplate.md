@@ -33,7 +33,8 @@ The EC2 launch template to use\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-as-group-launchtemplate-overrides"></a>
-An optional setting\. Any properties that you specify override the same properties in the launch template\. Currently, the only supported override is instance type\. You can specify between 1 and 20 instance types\.  
+Any properties that you specify override the same properties in the launch template\. Currently, the only supported override is instance type\. You can specify between 1 and 20 instance types\.  
+If not provided, Amazon EC2 Auto Scaling will use the instance type specified in the launch template to launch instances\.   
 *Required*: No  
 *Type*: List of [LaunchTemplateOverrides](aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

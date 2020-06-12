@@ -2,11 +2,9 @@
 
 Creates a virtual router within a service mesh\.
 
-Any inbound traffic that your virtual router expects should be specified as a `listener`\. 
+Specify a `listener` for any inbound traffic that your virtual router receives\. Create a virtual router for each protocol and port that you need to route\. Virtual routers handle traffic for one or more virtual services within your mesh\. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes\.
 
-Virtual routers handle traffic for one or more virtual services within your mesh\. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes\.
-
-For more information about virtual routers, see [Virtual Routers](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html)\.
+For more information about virtual routers, see [Virtual routers](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html)\.
 
 ## Syntax<a name="aws-resource-appmesh-virtualrouter-syntax"></a>
 
@@ -50,7 +48,7 @@ The name of the service mesh to create the virtual router in\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MeshOwner`  <a name="cfn-appmesh-virtualrouter-meshowner"></a>
-The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
