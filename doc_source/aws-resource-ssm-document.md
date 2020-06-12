@@ -216,35 +216,36 @@ The following example shows how to associate the SSM document with an instance\.
 #### YAML<a name="aws-resource-ssm-document--examples--Associate_the_Systems_Manager_document_with_an_instance--yaml"></a>
 
 ```
-myEC2: Type: AWS::EC2::Instance
-Properties:
-  ImageId:
-    Ref: myImageId
-  InstanceType: t2.micro
-  SsmAssociations:
-  - DocumentName:
-      Ref: document
-    AssociationParameters:
-    - Key: directoryId
-      Value:
-      - Ref: myDirectory
-    - Key: directoryName
-      Value:
-      - testDirectory.example.com
-    - Key: dnsIpAddresses
-      Value:
-        Fn::GetAtt:
-        - myDirectory
-        - DnsIpAddresses
-  IamInstanceProfile:
-    Ref: myInstanceProfile
-  NetworkInterfaces:
-  - DeviceIndex: '0'
-    AssociatePublicIpAddress: 'true'
-    SubnetId:
-      Ref: mySubnet
-  KeyName:
-    Ref: myKeyName
+myEC2:
+  Type: AWS::EC2::Instance
+  Properties:
+    ImageId:
+      Ref: myImageId
+    InstanceType: t2.micro
+    SsmAssociations:
+    - DocumentName:
+        Ref: document
+      AssociationParameters:
+      - Key: directoryId
+        Value:
+        - Ref: myDirectory
+      - Key: directoryName
+        Value:
+        - testDirectory.example.com
+      - Key: dnsIpAddresses
+        Value:
+          Fn::GetAtt:
+          - myDirectory
+          - DnsIpAddresses
+    IamInstanceProfile:
+      Ref: myInstanceProfile
+    NetworkInterfaces:
+    - DeviceIndex: '0'
+      AssociatePublicIpAddress: 'true'
+      SubnetId:
+        Ref: mySubnet
+    KeyName:
+      Ref: myKeyName
 ```
 
 ## See Also<a name="aws-resource-ssm-document--seealso"></a>
