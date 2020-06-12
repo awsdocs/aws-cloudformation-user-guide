@@ -5,6 +5,7 @@ Defines a destination for `LoggingConfiguration`\.
 **Note**  
 For more information on logging with `EXPRESS` workflows, see [Logging Express Workflows Using CloudWatch Logs](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html)\.
 
+
 ## Syntax<a name="aws-properties-stepfunctions-statemachine-logdestination-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
