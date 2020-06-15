@@ -221,13 +221,24 @@ To invoke a Lambda integration, API Gateway must have the required permissions\.
 #### YAML<a name="aws-resource-apigatewayv2-api--examples--Quick_create_HTTP_API--yaml"></a>
 
 ```
+LambdaFunction:
+  Type: AWS::Lambda::Function
+  Properties:
+    Runtime: python3.7
+    Role: arn:aws:iam::123456789012:role/lambda-role
+    Handler: index.handler
+    Code:
+      ZipFile: |
+        import json
+        def lambda_handler(event, context):
+            return {'statusCode': 200,'body': json.dumps('Hello from AWS Lambda')}
 HttpApi:
   Type: AWS::ApiGatewayV2::Api
   Properties:
     Name: Lambda Proxy
     Description: Lambda proxy using quick create
     ProtocolType: HTTP
-    Target: arn:aws:apigateway:{region}:lambda:path/2015-03-31/functions/arn:aws:lambda:{region}:{account-id}:function:{function-name}/invocations
+    Target: !Sub 'arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunction}/invocations'
 ```
 
 ## See Also<a name="aws-resource-apigatewayv2-api--seealso"></a>
