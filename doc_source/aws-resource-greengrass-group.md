@@ -437,6 +437,11 @@ After you create the group version in your AWS CloudFormation template, you can 
                     "ResourceDefinitionVersionArn": {
                         "Ref": "TestResourceDefinitionVersion"
                     }
+                },
+                "Tags": {
+                    "KeyName0": "value",
+                    "KeyName1": "value",
+                    "KeyName2": "value"
                 }
             }
         }
@@ -614,6 +619,10 @@ Resources:
         SubscriptionDefinitionVersionArn: !Ref TestSubscriptionDefinitionVersion
         LoggerDefinitionVersionArn: !Ref TestLoggerDefinitionVersion
         ResourceDefinitionVersionArn: !Ref TestResourceDefinitionVersion
+      Tags:
+        KeyName0: value
+        KeyName1: value
+        KeyName2: value
 ```
 
 ## See Also<a name="aws-resource-greengrass-group--seealso"></a>

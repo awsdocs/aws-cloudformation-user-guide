@@ -86,7 +86,7 @@ The IPv4 address of the mount target\.
 
 ### Declare a Mount Target for an EFS File System<a name="aws-resource-efs-mounttarget--examples--Declare_a_Mount_Target_for_an_EFS_File_System"></a>
 
-The following example declares a mount target that is associated with a file system, subnet, and security group, which are all declared in the same template\. EC2 instances that are in the same Availability Zone \(AZ\) as the mount target can use the mount target to connect to the associated file system\. For information about mounting file systems on EC2 instances, see [Mounting File Systems](efs/latest/ug/mounting-fs.html) in the *EFS User Guide*\.
+The following example declares a mount target that is associated with a file system, subnet, and security group, which are all declared in the same template\. EC2 instances that are in the same Availability Zone \(AZ\) as the mount target can use the mount target to connect to the associated file system\. For information about mounting file systems on EC2 instances, see [Mounting File Systems](https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html) in the *EFS User Guide*\.
 
 #### JSON<a name="aws-resource-efs-mounttarget--examples--Declare_a_Mount_Target_for_an_EFS_File_System--json"></a>
 

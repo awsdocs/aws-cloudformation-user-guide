@@ -74,6 +74,13 @@ The SQL query statements that comprise the query\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-athena-namedquery-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-athena-namedquery-return-values-fn--getatt-fn--getatt"></a>
+
+`NamedQueryId`  <a name="NamedQueryId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-athena-namedquery--examples"></a>
 
 The following example creates a named query\.

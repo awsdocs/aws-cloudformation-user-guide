@@ -42,4 +42,4 @@ Represents the map target that is used in a `HomeDirectorymapEntry`\.
 
 ## See Also<a name="aws-properties-transfer-user-homedirectorymapentry--seealso"></a>
 
-[HomeDirectoryMapEntry](https://docs.aws.amazon.com/transfer/latest/userguide/API_HomeDirectoryMapEntry.html) in the *AWS Transfer for SFTP User Guide*\.
+[HomeDirectoryMapEntry](https://docs.aws.amazon.com/transfer/latest/userguide/API_HomeDirectoryMapEntry.html) in the *AWS Transfer Family User Guide*\.

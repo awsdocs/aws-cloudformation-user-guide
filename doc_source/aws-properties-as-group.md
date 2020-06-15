@@ -181,7 +181,7 @@ For more information, see [Using a Load Balancer with an Auto Scaling Group](htt
 
 `MaxInstanceLifetime`  <a name="cfn-as-group-maxinstancelifetime"></a>
 The maximum amount of time, in seconds, that an instance can be in service\.  
-Valid Range: Minimum value of 604800\.  
+Valid Range: Minimum value of 0\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -45,6 +45,7 @@ If deletion protection is enabled, you must first disable it before you can dele
 
 `Name`  <a name="cfn-qldb-ledger-name"></a>
 The name of the ledger that you want to create\. The name must be unique among all of your ledgers in the current AWS Region\.  
+Naming constraints for ledger names are defined in [Quotas in Amazon QLDB](https://docs.aws.amazon.com/qldb/latest/developerguide/limits.html#limits.naming) in the *Amazon QLDB Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

@@ -22,7 +22,7 @@ During a stack operation, sends a request to a service token that is specified i
 
  The template developer and custom resource provider can be the same person or entity, but the process is the same\. The following steps describe the general process:
 
-1. The template developer defines a custom resource in his or her template, which includes a service token and any input data parameters\. Depending on the custom resource, the input data might be required; however, the service token is always required\.
+1. The template developer defines a custom resource in their template, which includes a service token and any input data parameters\. Depending on the custom resource, the input data might be required; however, the service token is always required\.
 
    The service token specifies where AWS CloudFormation sends requests to, such as to an Amazon SNS topic ARN or to an AWS Lambda function ARN\. For more information, see [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)\. The service token and the structure of the input data is defined by the custom resource provider\.
 

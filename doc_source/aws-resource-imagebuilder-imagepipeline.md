@@ -122,3 +122,71 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
+
+## Examples<a name="aws-resource-imagebuilder-imagepipeline--examples"></a>
+
+### Create an image pipeline<a name="aws-resource-imagebuilder-imagepipeline--examples--Create_an_image_pipeline"></a>
+
+The following example shows the schema for all of the parameters of the ImagePipeline resource document in both YAML and JSON format \.
+
+#### YAML<a name="aws-resource-imagebuilder-imagepipeline--examples--Create_an_image_pipeline--yaml"></a>
+
+```
+Resources:
+  ImagePipelineAllParameters:
+    Type: 'AWS::ImageBuilder::ImagePipeline'
+    Properties:
+      Name: 'image-pipeline-name'
+      Description: 'description'
+      ImageRecipeArn: !Ref ImageRecipeArn
+      InfrastructureConfigurationArn: !Ref InfrastructureConfigurationArn
+      DistributionConfigurationArn: !Ref DistributionConfigurationArn
+      ImageTestsConfiguration:
+        ImageTestsEnabled: false
+        TimeoutMinutes: 90
+      Schedule:
+        ScheduleExpression: 'cron(0 0 * * 0)'
+        PipelineExecutionStartCondition: 'EXPRESSION_MATCH_ONLY'
+      Status: 'DISABLED'
+      Tags:
+        CustomerImagePipelineTagKey1: 'CustomerImagePipelineTagValue1'
+        CustomerImagePipelineTagKey2: 'CustomerImagePipelineTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-imagepipeline--examples--Create_an_image_pipeline--json"></a>
+
+```
+{
+    "Resources": {
+        "ImagePipelineAllParameters": {
+            "Type": "AWS::ImageBuilder::ImagePipeline",
+            "Properties": {
+                "Name": "image-pipeline-name",
+                "Description": "description",
+                "ImageRecipeArn": {
+                    "Ref": "ImageRecipeArn"
+                },
+                "InfrastructureConfigurationArn": {
+                    "Ref": "InfrastructureConfigurationArn"
+                },
+                "DistributionConfigurationArn": {
+                    "Ref": "DistributionConfigurationArn"
+                },
+                "ImageTestsConfiguration": {
+                    "ImageTestsEnabled": false,
+                    "TimeoutMinutes": 90
+                },
+                "Schedule": {
+                    "ScheduleExpression": "cron(0 0 * * 0)",
+                    "PipelineExecutionStartCondition": "EXPRESSION_MATCH_ONLY"
+                },
+                "Status": "DISABLED",
+                "Tags": {
+                    "CustomerImagePipelineTagKey1": "CustomerImagePipelineTagValue1",
+                    "CustomerImagePipelineTagKey2": "CustomerImagePipelineTagValue2"
+                }
+            }
+        }
+    }
+}
+```

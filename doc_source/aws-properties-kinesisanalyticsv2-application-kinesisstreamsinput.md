@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application KinesisStreamsInput<a name="aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput"></a>
 
- Identifies an Amazon Kinesis data stream as the streaming source\. You provide the stream's Amazon Resource Name \(ARN\)\.
+ Identifies a Kinesis data stream as the streaming source\. You provide the stream's Amazon Resource Name \(ARN\)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput-syntax"></a>
 

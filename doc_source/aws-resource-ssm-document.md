@@ -1,6 +1,6 @@
 # AWS::SSM::Document<a name="aws-resource-ssm-document"></a>
 
-The `AWS::SSM::Document` resource creates an SSM document in AWS Systems Manager that defines the actions that Systems Manager performs, which you can use to set up and run commands on your instances\.
+The `AWS::SSM::Document` resource creates an SSM document in AWS Systems Manager\. This document defines the actions that Systems Manager performs on your AWS resources\.
 
 ## Syntax<a name="aws-resource-ssm-document-syntax"></a>
 
@@ -51,7 +51,7 @@ The type of document to create\.
 `Name`  <a name="cfn-ssm-document-name"></a>
 A name for the Systems Manager document\.  
 You can't use the following strings as document name prefixes\. These are reserved by AWS for use as document name prefixes:  
-+  `aws` 
++  `aws-` 
 +  `amazon` 
 +  `amzn` 
 *Required*: No  
@@ -70,7 +70,7 @@ AWS CloudFormation resource tags to apply to the document\. Use tags to help you
 
 ### Ref<a name="aws-resource-ssm-document-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Systems Manager document name, such as `ssm-myinstanceconfig-ABCNPH3XCAO6`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Systems Manager document name, such as `MyNewSSMDocument`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -84,69 +84,68 @@ The following Systems Manager document joins instances to a directory in AWS Dir
 
 ```
 "document" : {
-  "Type" : "AWS::SSM::Document",
-  "Properties" : {
-    "Content" : {
-      "schemaVersion":"1.2",
-      "description":"Join instances to an AWS Directory Service domain.",
-      "parameters":{
-        "directoryId":{
-          "type":"String",
-          "description":"(Required) The ID of the AWS Directory Service directory."
-        },
-        "directoryName":{
-          "type":"String",
-          "description":"(Required) The name of the directory; for example, test.example.com"
-        },
-        "dnsIpAddresses":{
-          "type":"StringList",
-          "default":[
-          ],
-          "description":"(Optional) The IP addresses of the DNS servers in the directory. Required when DHCP is not configured. For more information, see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_dns.html",
-          "allowedPattern":"((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+    "Type": "AWS::SSM::Document",
+    "Properties": {
+        "Content": {
+            "schemaVersion": "1.2",
+            "description": "Join instances to an AWS Directory Service domain.",
+            "parameters": {
+                "directoryId": {
+                    "type": "String",
+                    "description": "(Required) The ID of the AWS Directory Service directory."
+                },
+                "directoryName": {
+                    "type": "String",
+                    "description": "(Required) The name of the directory. For example, test.example.com"
+                },
+                "dnsIpAddresses": {
+                    "type": "StringList",
+                    "default": [],
+                    "description": "(Optional) The IP addresses of the DNS servers in the directory. Required when DHCP is not configured. For more information, see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_dns.html",
+                    "allowedPattern": "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+                }
+            },
+            "runtimeConfig": {
+                "aws:domainJoin": {
+                    "properties": {
+                        "directoryId": "{{ directoryId}}",
+                        "directoryName": "{{ directoryName }}",
+                        "dnsIpAddresses": "{{ dnsIpAddresses }}"
+                    }
+                }
+            }
         }
-      },
-      "runtimeConfig":{
-        "aws:domainJoin":{
-          "properties":{
-            "directoryId":"{{ directoryId }}",
-            "directoryName":"{{ directoryName }}",
-            "dnsIpAddresses":"{{ dnsIpAddresses }}"
-          }
-        }
-      }
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_AWS_Directory_Service--yaml"></a>
 
 ```
-document: 
-  Type: "AWS::SSM::Document"
-  Properties: 
-    Content: 
-      schemaVersion: "1.2"
-      description: "Join instances to an AWS Directory Service domain."
-      parameters: 
-        directoryId: 
-          type: "String"
-          description: "(Required) The ID of the AWS Directory Service directory."
-        directoryName: 
-          type: "String"
-          description: "(Required) The name of the directory; for example, test.example.com"
-        dnsIpAddresses: 
-          type: "StringList"
-          default: []
-          description: "(Optional) The IP addresses of the DNS servers in the directory. Required when DHCP is not configured. Learn more at http://docs.aws.amazon.com/directoryservice/latest/simple-ad/join_get_dns_addresses.html"
-          allowedPattern: "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
-      runtimeConfig: 
-        aws:domainJoin: 
-          properties: 
-            directoryId: "{{ directoryId }}"
-            directoryName: "{{ directoryName }}"
-            dnsIpAddresses: "{{ dnsIpAddresses }}"
+document: Type: AWS::SSM::Document
+Properties:
+  Content:
+    schemaVersion: '1.2'
+    description: Join instances to an AWS Directory Service domain.
+    parameters:
+      directoryId:
+        type: String
+        description: "(Required) The ID of the AWS Directory Service directory."
+      directoryName:
+        type: String
+        description: "(Required) The name of the directory. For example, test.example.com"
+      dnsIpAddresses:
+        type: StringList
+        default: []
+        description: "(Optional) The IP addresses of the DNS servers in the directory.
+          Required when DHCP is not configured. For more information, see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_dns.html"
+        allowedPattern: "((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+    runtimeConfig:
+      aws:domainJoin:
+        properties:
+          directoryId: "{{ directoryId}}"
+          directoryName: "{{ directoryName }}"
+          dnsIpAddresses: "{{ dnsIpAddresses }}"
 ```
 
 ### Associate the Systems Manager document with an instance<a name="aws-resource-ssm-document--examples--Associate_the_Systems_Manager_document_with_an_instance"></a>
@@ -157,68 +156,96 @@ The following example shows how to associate the SSM document with an instance\.
 
 ```
 "myEC2" : {
-  "Type" : "AWS::EC2::Instance",
-  "Properties" : {
-    "ImageId" : {"Ref" : "myImageId"},
-    "InstanceType" : "t2.micro",
-    "SsmAssociations" : [ {
-      "DocumentName" : {"Ref" : "document"},
-      "AssociationParameters" : [
-        { "Key" : "directoryId", "Value" : [ { "Ref" : "myDirectory" } ] },
-        { "Key" : "directoryName", "Value" : ["testDirectory.example.com"] },
-        { "Key" : "dnsIpAddresses", "Value" : { "Fn::GetAtt" : ["myDirectory", "DnsIpAddresses"] } }
-      ]
-    } ],
-    "IamInstanceProfile" : {"Ref" : "myInstanceProfile"},
-    "NetworkInterfaces" : [ {
-      "DeviceIndex" : "0",
-      "AssociatePublicIpAddress" : "true",
-      "SubnetId" : {"Ref" : "mySubnet"}
-    } ],
-    "KeyName" : {"Ref" : "myKeyName"}
-  }
+    "Type": "AWS::EC2::Instance",
+    "Properties": {
+        "ImageId": {
+            "Ref": "myImageId"
+        },
+        "InstanceType": "t2.micro",
+        "SsmAssociations": [
+            {
+                "DocumentName": {
+                    "Ref": "document"
+                },
+                "AssociationParameters": [
+                    {
+                        "Key": "directoryId",
+                        "Value": [
+                            {
+                                "Ref": "myDirectory"
+                            }
+                        ]
+                    },
+                    {
+                        "Key": "directoryName",
+                        "Value": [
+                            "testDirectory.example.com"
+                        ]
+                    },
+                    {
+                        "Key": "dnsIpAddresses",
+                        "Value": {
+                            "Fn::GetAtt": [
+                                "myDirectory",
+                                "DnsIpAddresses"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "IamInstanceProfile": {
+            "Ref": "myInstanceProfile"
+        },
+        "NetworkInterfaces": [
+            {
+                "DeviceIndex": "0",
+                "AssociatePublicIpAddress": "true",
+                "SubnetId": {
+                    "Ref": "mySubnet"
+                }
+            }
+        ],
+        "KeyName": {
+            "Ref": "myKeyName"
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-ssm-document--examples--Associate_the_Systems_Manager_document_with_an_instance--yaml"></a>
 
 ```
-myEC2: 
-  Type: "AWS::EC2::Instance"
-  Properties: 
-    ImageId: 
-      Ref: "myImageId"
-    InstanceType: "t2.micro"
-    SsmAssociations: 
-      - 
-        DocumentName: 
-          Ref: "document"
-        AssociationParameters: 
-          - 
-            Key: "directoryId"
-            Value: 
-              - 
-                Ref: "myDirectory"
-          - 
-            Key: "directoryName"
-            Value: 
-              - "testDirectory.example.com"
-          - 
-            Key: "dnsIpAddresses"
-            Value: 
-              Fn::GetAtt: 
-                - "myDirectory"
-                - "DnsIpAddresses"
-    IamInstanceProfile: 
-      Ref: "myInstanceProfile"
-    NetworkInterfaces: 
-      - 
-        DeviceIndex: "0"
-        AssociatePublicIpAddress: "true"
-        SubnetId: 
-          Ref: "mySubnet"
-    KeyName: 
-      Ref: "myKeyName"
+myEC2:
+  Type: AWS::EC2::Instance
+  Properties:
+    ImageId:
+      Ref: myImageId
+    InstanceType: t2.micro
+    SsmAssociations:
+    - DocumentName:
+        Ref: document
+      AssociationParameters:
+      - Key: directoryId
+        Value:
+        - Ref: myDirectory
+      - Key: directoryName
+        Value:
+        - testDirectory.example.com
+      - Key: dnsIpAddresses
+        Value:
+          Fn::GetAtt:
+          - myDirectory
+          - DnsIpAddresses
+    IamInstanceProfile:
+      Ref: myInstanceProfile
+    NetworkInterfaces:
+    - DeviceIndex: '0'
+      AssociatePublicIpAddress: 'true'
+      SubnetId:
+        Ref: mySubnet
+    KeyName:
+      Ref: myKeyName
 ```
 
 ## See Also<a name="aws-resource-ssm-document--seealso"></a>

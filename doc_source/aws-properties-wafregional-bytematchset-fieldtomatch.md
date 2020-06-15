@@ -34,6 +34,9 @@ When the value of `Type` is `SINGLE_QUERY_ARG`, enter the name of the parameter 
 If the value of `Type` is any other value, omit `Data`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-wafregional-bytematchset-fieldtomatch-type"></a>

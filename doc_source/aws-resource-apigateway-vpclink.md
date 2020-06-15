@@ -45,7 +45,7 @@ A name for the VPC link\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArns`  <a name="cfn-apigateway-vpclink-targetarns"></a>
-The ARNs of network load balancers of the VPC targeted by the VPC link\. The network load balancers must be owned by the same AWS account of the API owner\.  
+The ARN of network load balancer of the VPC targeted by the VPC link\. The network load balancer must be owned by the same AWS account of the API owner\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -40,7 +40,7 @@ The name of the stage to associate with the usage plan\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throttle`  <a name="cfn-apigateway-usageplan-apistage-throttle"></a>
-Map containing method\-level throttling information for API stage in a usage plan\.  
+Map containing method\-level throttling information for an API stage in a usage plan\. The key for the map is the path and method for which to configure custom throttling, for example, "/pets/GET"\.  
 Duplicates are not allowed\.  
 *Required*: No  
 *Type*: Map of [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  

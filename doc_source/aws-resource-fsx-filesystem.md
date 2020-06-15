@@ -93,6 +93,7 @@ For Windows file systems:
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>

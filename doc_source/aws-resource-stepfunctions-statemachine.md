@@ -12,7 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::StateMachine",
   "Properties" : {
+      "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : [S3Location](aws-properties-stepfunctions-statemachine-s3location.md),
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md),
       "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md),
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
@@ -27,8 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::StepFunctions::StateMachine
 Properties: 
+  [DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location): 
+    [S3Location](aws-properties-stepfunctions-statemachine-s3location.md)
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
+  [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
+    [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md)
   [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
     [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md)
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
@@ -40,15 +46,27 @@ Properties:
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
 
+`DefinitionS3Location`  <a name="cfn-stepfunctions-statemachine-definitions3location"></a>
+The name of the S3 bucket where the state machine definition is stored\. The state machine definition must be a JSON file\.  
+*Required*: No  
+*Type*: [S3Location](aws-properties-stepfunctions-statemachine-s3location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DefinitionString`  <a name="cfn-stepfunctions-statemachine-definitionstring"></a>
 The Amazon States Language definition of the state machine\. See [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DefinitionSubstitutions`  <a name="cfn-stepfunctions-statemachine-definitionsubstitutions"></a>
+A map \(string to string\) that specifies the mappings for placeholder variables in the state machine definition\. This enables the customer to inject values obtained at runtime, for example from intrinsic functions, in the state machine definition\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\.   
+*Required*: No  
+*Type*: [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingConfiguration`  <a name="cfn-stepfunctions-statemachine-loggingconfiguration"></a>
 Defines what execution history events are logged and where they are logged\.  
-The `loggingConfiguration` parameter is only valid when `StateMachineType` is set to `EXPRESS`\. By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
+By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
 *Required*: No  
 *Type*: [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -221,4 +239,45 @@ Resources:
         -
           Key: "keyname2"
           Value: "value2"
+```
+
+### Using DefinitionSubstitutions<a name="aws-resource-stepfunctions-statemachine--examples--Using_DefinitionSubstitutions"></a>
+
+In this example template, `HelloFunction:` is defined for the `DefinitionSubstitutions` property\. In the `hello_world.json` definition file, that follows`${HelloFunction}` will be replaced by `arn:aws:lambda:us-east-1:111122223333:function:HelloFunction`\.
+
+#### YAML<a name="aws-resource-stepfunctions-statemachine--examples--Using_DefinitionSubstitutions--yaml"></a>
+
+```
+AWSTemplateFormatVersion: "2010-09-09"
+Description: An example template for a Step Functions state machine.
+  Resources:
+    MyStateMachine:
+      Type: AWS::StepFunctions::StateMachine
+      Properties:
+        StateMachineName: HelloWorld-StateMachine
+        DefinitionS3Location:
+          Bucket: example_bucket
+          Key: hello_world.json
+        DefinitionSubstitutions:
+          HelloFunction: arn:aws:lambda:us-east-1:111122223333:function:HelloFunction
+        RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+```
+
+### hello\_world\.json<a name="aws-resource-stepfunctions-statemachine--examples--hello_world.json"></a>
+
+ A definition file where `${HelloFunction}` will be replaced by `arn:aws:lambda:us-east-1:111122223333:function:HelloFunction`\. from the preceding example template\.
+
+#### JSON<a name="aws-resource-stepfunctions-statemachine--examples--hello_world.json--json"></a>
+
+```
+{
+  "StartAt": "HelloWorld",
+  "States": {
+    "HelloWorld": {
+      "Type": "Task",
+      "Resource": "${HelloFunction}",
+      "End": true
+    }
+  }
+}
 ```

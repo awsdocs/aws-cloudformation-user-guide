@@ -28,10 +28,14 @@ Your AWS account has AWS CloudFormation limits that you might need to know when 
 |  [Template body size in an Amazon S3 object](template-anatomy.md)  |  Maximum size of a template body that you can pass in an Amazon S3 object for a `CreateStack`, `UpdateStack`, `ValidateTemplate` request with an Amazon S3 template URL\.  |  460,800 bytes  |  To use a larger template body, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
 |  [Template description](template-anatomy.md)  |  Maximum size of a template description\.  |  1,024 bytes  |   | 
 
-## Feature Availability<a name="stacksets-availability"></a>
+## Feature availability<a name="stacksets-availability"></a>
 
 Not all features of CloudFormation may be available in every region\. For more information on AWS regions, see [Global Infrastructure Region Table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
-+ StackSets is available in the following regions:
++ [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following region:
+  + Asia Pacific \(Osaka\-Local\)
++ [Resource import](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is currently not available in the following region:
+  + Asia Pacific \(Osaka\-Local\)
++ [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) is available in the following regions:
   + US East \(N\. Virginia\)
   + US East \(Ohio\)
   + US West \(N\. California\)
@@ -47,11 +51,14 @@ Not all features of CloudFormation may be available in every region\. For more i
   + Europe \(London\)
   + Europe \(Paris\)
   + South America \(São Paulo\)
-+ Drift detection is currently not available in the following region:
-  + Osaka\-Local \(ap\-northeast\-3\)
-+ Resource import is currently not available in the following region:
-  + Osaka\-Local \(ap\-northeast\-3\)
+  + AWS GovCloud \(US\-West\)
++ [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
+  + Africa \(Cape Town\)
+  + Europe \(Milan\)
+  + Asia Pacific \(Osaka\-Local\)
+  + China \(Beijing\)
+  + China \(Ningxia\)
 
-## StackSets and Macros<a name="stacksets-macros"></a>
+## StackSets and macros<a name="stacksets-macros"></a>
 
 StackSets does not currently support templates that use macros, including transforms, which are macros hosted by AWS CloudFormation\. For more information about macros, see [Template Macros](template-macros.md)\.

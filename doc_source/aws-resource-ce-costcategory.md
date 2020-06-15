@@ -70,9 +70,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The unique identifier for your Cost Category\.
 
-`EffectiveEnd`  <a name="EffectiveEnd-fn::getatt"></a>
-The Cost Category's effective end date\.
-
 `EffectiveStart`  <a name="EffectiveStart-fn::getatt"></a>
 The Cost Category's effective start date\.
 

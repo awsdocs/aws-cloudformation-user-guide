@@ -112,6 +112,7 @@ A list of Availability Zones \(AZs\) where instances in the DB cluster can be cr
 
 `BacktrackWindow`  <a name="cfn-rds-dbcluster-backtrackwindow"></a>
 The target backtrack window, in seconds\. To disable backtracking, set this value to 0\.   
+Currently, Backtrack is only supported for Aurora MySQL DB clusters\.
 Default: 0  
 Constraints:  
 + If specified, this value must be set to a number from 0 to 259,200 \(72 hours\)\.
@@ -238,8 +239,8 @@ If you specify the `SourceDBInstanceIdentifier` or `SnapshotIdentifier` property
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-rds-dbcluster-port"></a>
-The port number on which the instances in the DB cluster accept connections\.  
- Default: `3306` if engine is set as aurora or `5432` if set to aurora\-postgresql\.   
+The port number on which the DB instances in the DB cluster accept connections\.  
+ Default: `3306` \(for both Aurora MySQL and Aurora PostgreSQL\)   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

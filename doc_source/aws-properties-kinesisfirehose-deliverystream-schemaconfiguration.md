@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CatalogId`  <a name="cfn-kinesisfirehose-deliverystream-schemaconfiguration-catalogid"></a>
 The ID of the AWS Glue Data Catalog\. If you don't supply this, the AWS account ID is used by default\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -43,7 +43,7 @@ The ID of the AWS Glue Data Catalog\. If you don't supply this, the AWS account 
 
 `DatabaseName`  <a name="cfn-kinesisfirehose-deliverystream-schemaconfiguration-databasename"></a>
 Specifies the name of the AWS Glue database that contains the schema for the output data\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -52,7 +52,7 @@ Specifies the name of the AWS Glue database that contains the schema for the out
 
 `Region`  <a name="cfn-kinesisfirehose-deliverystream-schemaconfiguration-region"></a>
 If you don't specify an AWS Region, the default is the current Region\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -61,7 +61,7 @@ If you don't specify an AWS Region, the default is the current Region\.
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-schemaconfiguration-rolearn"></a>
 The role that Kinesis Data Firehose can use to access AWS Glue\. This role must be in the same account you use for Kinesis Data Firehose\. Cross\-account roles aren't allowed\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -70,7 +70,7 @@ The role that Kinesis Data Firehose can use to access AWS Glue\. This role must 
 
 `TableName`  <a name="cfn-kinesisfirehose-deliverystream-schemaconfiguration-tablename"></a>
 Specifies the AWS Glue table that contains the column information that constitutes your data schema\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -79,7 +79,7 @@ Specifies the AWS Glue table that contains the column information that constitut
 
 `VersionId`  <a name="cfn-kinesisfirehose-deliverystream-schemaconfiguration-versionid"></a>
 Specifies the table version for the output data schema\. If you don't specify this version ID, or if you set it to `LATEST`, Kinesis Data Firehose uses the most recent version\. This means that any updates to the table are automatically picked up\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  

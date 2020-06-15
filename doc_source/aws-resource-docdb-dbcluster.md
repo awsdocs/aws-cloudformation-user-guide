@@ -112,7 +112,7 @@ Protects clusters from being accidentally deleted\. If enabled, the cluster cann
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableCloudwatchLogsExports`  <a name="cfn-docdb-dbcluster-enablecloudwatchlogsexports"></a>
-A list of log types that need to be enabled for exporting to Amazon CloudWatch Logs\.  
+The list of log types that need to be enabled for exporting to Amazon CloudWatch Logs\. You can enable audit logs or profiler logs\. For more information, see [Auditing Amazon DocumentDB Events](https://docs.aws.amazon.com/documentdb/latest/developerguide/event-auditing.html) and [Profiling Amazon DocumentDB Operations](https://docs.aws.amazon.com/documentdb/latest/developerguide/profiling.html)\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

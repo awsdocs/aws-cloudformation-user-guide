@@ -4,4 +4,4 @@ Provides information about the public Secure Shell \(SSH\) key that is associate
 
 ## See Also<a name="aws-properties-transfer-user-sshpublickey--seealso"></a>
 
-[SshPublicKey](https://docs.aws.amazon.com/transfer/latest/userguide/API_SshPublicKey.html) in the *AWS Transfer for SFTP User Guide*\.
+[SshPublicKey](https://docs.aws.amazon.com/transfer/latest/userguide/API_SshPublicKey.html) in the *AWS Transfer Family User Guide*\.

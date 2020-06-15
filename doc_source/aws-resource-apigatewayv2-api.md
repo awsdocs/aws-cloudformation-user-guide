@@ -120,7 +120,7 @@ The name of the API\. Required unless you specify an OpenAPI definition for `Bod
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolType`  <a name="cfn-apigatewayv2-api-protocoltype"></a>
-The API protocol\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
+The API protocol\. Valid values are `WEBSOCKET` or `HTTP`\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

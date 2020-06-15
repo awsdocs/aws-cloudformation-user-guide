@@ -200,7 +200,7 @@ Information used to configure the bucket as a static website\. For more informat
 
 ### Ref<a name="aws-properties-s3-bucket-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the bucket name\.
 
 Example: `mystack-mybucket-kdwwxmddtr2g` 
 

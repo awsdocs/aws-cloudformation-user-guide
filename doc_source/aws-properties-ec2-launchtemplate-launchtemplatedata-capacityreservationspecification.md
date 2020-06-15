@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference)" : [CapacityReservationPreference](aws-properties-ec2-launchtemplate-capacityreservationpreference.md),
+  "[CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference)" : String,
   "[CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget)" : [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
 }
 ```
@@ -20,8 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-syntax.yaml"></a>
 
 ```
-  [CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference): 
-    [CapacityReservationPreference](aws-properties-ec2-launchtemplate-capacityreservationpreference.md)
+  [CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference): String
   [CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget): 
     [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
 ```
@@ -33,7 +32,7 @@ Indicates the instance's Capacity Reservation preferences\. Possible preferences
 +  `open` \- The instance can run in any `open` Capacity Reservation that has matching attributes \(instance type, platform, Availability Zone\)\.
 +  `none` \- The instance avoids running in a Capacity Reservation even if one is available\. The instance runs in On\-Demand capacity\.
 *Required*: No  
-*Type*: [CapacityReservationPreference](aws-properties-ec2-launchtemplate-capacityreservationpreference.md)  
+*Type*: String  
 *Allowed Values*: `none | open`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

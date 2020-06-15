@@ -38,6 +38,7 @@ A friendly name or description of the [AWS::WAFRegional::RegexPatternSet](#aws-r
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RegexPatternStrings`  <a name="cfn-wafregional-regexpatternset-regexpatternstrings"></a>
