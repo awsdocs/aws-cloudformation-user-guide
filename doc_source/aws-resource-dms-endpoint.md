@@ -182,7 +182,7 @@ The name of the server where the endpoint database resides\.
 The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The default is `none`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `none | require | verify-ca | verify-full`  
+*Allowed Values*: `none | require | verify-ca | verify-full` Note: When `engine_name` is set to `S3` then the only alowed value is `none`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-endpoint-tags"></a>
