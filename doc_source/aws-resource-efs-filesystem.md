@@ -13,12 +13,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EFS::FileSystem",
   "Properties" : {
       "[Encrypted](#cfn-efs-filesystem-encrypted)" : Boolean,
-      "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ [ElasticFileSystemTag](aws-properties-efs-filesystem-filesystemtags.md), ... ],
+      "[FileSystemPolicy](#cfn-efs-filesystem-filesystempolicy)" : Json,
+      "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ [ElasticFileSystemTag](aws-properties-efs-filesystem-elasticfilesystemtag.md), ... ],
       "[KmsKeyId](#cfn-efs-filesystem-kmskeyid)" : String,
-      "[LifecyclePolicies](#cfn-elasticfilesystem-filesystem-lifecyclepolicies)" : [ [LifecyclePolicy](aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.md), ... ],
+      "[LifecyclePolicies](#cfn-efs-filesystem-lifecyclepolicies)" : [ [LifecyclePolicy](aws-properties-efs-filesystem-lifecyclepolicy.md), ... ],
       "[PerformanceMode](#cfn-efs-filesystem-performancemode)" : String,
-      "[ProvisionedThroughputInMibps](#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps)" : Double,
-      "[ThroughputMode](#cfn-elasticfilesystem-filesystem-throughputmode)" : String
+      "[ProvisionedThroughputInMibps](#cfn-efs-filesystem-provisionedthroughputinmibps)" : Double,
+      "[ThroughputMode](#cfn-efs-filesystem-throughputmode)" : String
     }
 }
 ```
@@ -29,14 +30,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EFS::FileSystem
 Properties: 
   [Encrypted](#cfn-efs-filesystem-encrypted): Boolean
+  [FileSystemPolicy](#cfn-efs-filesystem-filesystempolicy): Json
   [FileSystemTags](#cfn-efs-filesystem-filesystemtags): 
-    - [ElasticFileSystemTag](aws-properties-efs-filesystem-filesystemtags.md)
+    - [ElasticFileSystemTag](aws-properties-efs-filesystem-elasticfilesystemtag.md)
   [KmsKeyId](#cfn-efs-filesystem-kmskeyid): String
-  [LifecyclePolicies](#cfn-elasticfilesystem-filesystem-lifecyclepolicies): 
-    - [LifecyclePolicy](aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.md)
+  [LifecyclePolicies](#cfn-efs-filesystem-lifecyclepolicies): 
+    - [LifecyclePolicy](aws-properties-efs-filesystem-lifecyclepolicy.md)
   [PerformanceMode](#cfn-efs-filesystem-performancemode): String
-  [ProvisionedThroughputInMibps](#cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps): Double
-  [ThroughputMode](#cfn-elasticfilesystem-filesystem-throughputmode): String
+  [ProvisionedThroughputInMibps](#cfn-efs-filesystem-provisionedthroughputinmibps): Double
+  [ThroughputMode](#cfn-efs-filesystem-throughputmode): String
 ```
 
 ## Properties<a name="aws-resource-efs-filesystem-properties"></a>
@@ -47,10 +49,16 @@ A Boolean value that, if true, creates an encrypted file system\. When creating 
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`FileSystemPolicy`  <a name="cfn-efs-filesystem-filesystempolicy"></a>
+The `FileSystemPolicy` for the EFS file system\. A file system policy is an IAM resource policy used to control NFS access to an EFS file system\. For more information, see [Using IAM to Control NFS Access to Amazon EFS](https://docs.aws.amazon.com/efs/latest/ug/iam-access-control-nfs-efs.html) in the *Amazon EFS User Guide*\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `FileSystemTags`  <a name="cfn-efs-filesystem-filesystemtags"></a>
 A value that specifies to create one or more tags associated with the file system\. Each tag is a user\-defined key\-value pair\. Name your file system on creation by including a `"Key":"Name","Value":"{value}"` key\-value pair\.  
 *Required*: No  
-*Type*: List of [ElasticFileSystemTag](aws-properties-efs-filesystem-filesystemtags.md)  
+*Type*: List of [ElasticFileSystemTag](aws-properties-efs-filesystem-elasticfilesystemtag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-efs-filesystem-kmskeyid"></a>
@@ -66,10 +74,10 @@ If `KmsKeyId` is specified, the `Encrypted` parameter must be set to true\.
 *Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`LifecyclePolicies`  <a name="cfn-elasticfilesystem-filesystem-lifecyclepolicies"></a>
+`LifecyclePolicies`  <a name="cfn-efs-filesystem-lifecyclepolicies"></a>
 A list of policies used by EFS lifecycle management to transition files to the Infrequent Access \(IA\) storage class\.  
 *Required*: No  
-*Type*: List of [LifecyclePolicy](aws-properties-elasticfilesystem-filesystem-lifecyclepolicy.md)  
+*Type*: List of [LifecyclePolicy](aws-properties-efs-filesystem-lifecyclepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PerformanceMode`  <a name="cfn-efs-filesystem-performancemode"></a>
@@ -79,13 +87,13 @@ The performance mode of the file system\. We recommend `generalPurpose` performa
 *Allowed Values*: `generalPurpose | maxIO`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ProvisionedThroughputInMibps`  <a name="cfn-elasticfilesystem-filesystem-provisionedthroughputinmibps"></a>
+`ProvisionedThroughputInMibps`  <a name="cfn-efs-filesystem-provisionedthroughputinmibps"></a>
 The throughput, measured in MiB/s, that you want to provision for a file system that you're creating\. Valid values are 1\-1024\. Required if `ThroughputMode` is set to `provisioned`\. The upper limit for throughput is 1024 MiB/s\. You can get this limit increased by contacting AWS Support\. For more information, see [Amazon EFS Limits That You Can Increase](https://docs.aws.amazon.com/efs/latest/ug/limits.html#soft-limits) in the *Amazon EFS User Guide\.*   
 *Required*: Conditional  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ThroughputMode`  <a name="cfn-elasticfilesystem-filesystem-throughputmode"></a>
+`ThroughputMode`  <a name="cfn-efs-filesystem-throughputmode"></a>
 The throughput mode for the file system to be created\. There are two throughput modes to choose from for your file system: `bursting` and `provisioned`\. If you set `ThroughputMode` to `provisioned`, you must also set a value for `ProvisionedThroughPutInMibps`\. You can decrease your file system's throughput in Provisioned Throughput mode or change between the throughput modes as long as it’s been more than 24 hours since the last decrease or throughput mode change\. For more, see [Specifying Throughput with Provisioned Mode](https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput) in the *Amazon EFS User Guide\.*   
 *Required*: No  
 *Type*: String  
@@ -103,6 +111,17 @@ The throughput mode for the file system to be created\. There are two throughput
 For the Amazon EFS file system `fs-12345678`, Ref returns the file system ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-efs-filesystem-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-efs-filesystem-return-values-fn--getatt-fn--getatt"></a>
+
+`FileSystemId`  <a name="FileSystemId-fn::getatt"></a>
+The ID of the EFS file system\. For example: `fs-0123456`
 
 ## Examples<a name="aws-resource-efs-filesystem--examples"></a>
 
@@ -167,8 +186,26 @@ The following example declares an encrypted Amazon EFS file system\.
                         "Key": "Name",
                         "Value": "TestFileSystem"
                     }
-                ]
-            }  
+                ],
+                "FileSystemPolicy": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Action": [
+                                "elasticfilesystem:ClientMount"
+                            ],
+                            "Principal":  {"AWS": "arn:aws:iam::111122223333:root"}
+                        }
+                    ]
+                },
+                "KmsKeyId": {
+                    "Fn::GetAtt": [
+                        "key",
+                        "Arn"
+                    ]
+                }
+            } 
         },
         "key": {
             "Type": "AWS::KMS::Key",
@@ -330,7 +367,13 @@ Resources:
       FileSystemTags:
         - Key: Name
           Value: TestFileSystem
-      
+      FileSystemPolicy:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Action:
+              - "elasticfilesystem:ClientMount"
+            Principal:'arn:aws:iam::111122223333:root'
       KmsKeyId: !GetAtt 
         - key
         - Arn

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cw-dimension-properties"></a>
 
 `Name`  <a name="cfn-cloudwatch-alarm-dimension-name"></a>
-The name of the dimension, from 1–255 characters in length\.  
+The name of the dimension, from 1–255 characters in length\. This dimension name must have been included when the metric was published\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

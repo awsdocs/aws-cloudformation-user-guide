@@ -16,7 +16,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Use Parameter Constraints](#parmconstraints)
 + [Use AWS::CloudFormation::Init to Deploy Software Applications on Amazon EC2 Instances](#cfninit)
 + [Use the Latest Helper Scripts](#helper-scripts)
-+ [Validate Templates Before Using Them](#validate)
++ [Validate templates before using them](#validate)
 
 **Managing stacks**  
 + [Manage All Stack Resources Through AWS CloudFormation](#donttouch)
@@ -98,11 +98,24 @@ yum install -y aws-cfn-bootstrap
 
 For more information about getting the latest helper scripts, see the [CloudFormation Helper Scripts Reference](cfn-helper-scripts-reference.md)\.
 
-## Validate Templates Before Using Them<a name="validate"></a>
+## Validate templates before using them<a name="validate"></a>
 
 Before you use a template to create or update a stack, you can use AWS CloudFormation to validate it\. Validating a template can help you catch syntax and some semantic errors, such as circular dependencies, before AWS CloudFormation creates any resources\. If you use the AWS CloudFormation console, the console automatically validates the template after you specify input parameters\. For the AWS CLI or AWS CloudFormation API, use the [aws cloudformation validate\-template](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command or [ValidateTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ValidateTemplate.html) action\.
 
 During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, AWS CloudFormation checks if the template is valid YAML\. If both checks fail, AWS CloudFormation returns a template validation error\.
+
+### Validate templates for organization policy compliance<a name="validate-compliance"></a>
+
+You can also validate your template for compliance to organization policy guidelines\. AWS CloudFormation Guard \(`cfn-guard`\) is an open\-source command\-line\-interface \(CLI\) tool that provides a policy\-as\-code language to define rules that can check for both required and prohibited resource configurations\. It then enables you to validate your templates against those rules\. For example, administrators can create rules to ensure that users always create encrypted Amazon S3 buckets\.
+
+You can use `cfn-guard` either locally, while editing templates, or automatically as part of a CI/CD pipeline to stop deployment of non\-compliant resources\.
+
+In addition, you can use another open\-source CLI tool, `cfn-guard-rulegen`, to extract rules from existing templates that are compliant\. 
+
+**Note**  
+The `cfn-guard` and `cfn-guard-rulegen` tools are currently in preview\.
+
+For more information, see the [cfn\-guard](https://github.com/aws-cloudformation/cloudformation-guard) and [cfn\-guard\-rulegen](https://github.com/aws-cloudformation/cloudformation-guard/cfn-guard-rulegen) repositories on GitHub\.
 
 ## Manage All Stack Resources Through AWS CloudFormation<a name="donttouch"></a>
 

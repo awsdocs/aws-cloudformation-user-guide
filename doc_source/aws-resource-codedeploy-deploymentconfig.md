@@ -72,8 +72,8 @@ The following example requires at least 75% of the fleet to be healthy\. For exa
   "Type" : "AWS::CodeDeploy::DeploymentConfig",
   "Properties" : {
     "MinimumHealthyHosts" : {
-    "Type" : "FLEET_PERCENT",
-    "Value" : 75
+      "Type" : "FLEET_PERCENT",
+      "Value" : 75
     }
   }
 }
@@ -86,6 +86,6 @@ TwentyFivePercentAtATime:
   Type: AWS::CodeDeploy::DeploymentConfig
   Properties: 
     MinimumHealthyHosts: 
-    Type: "FLEET_PERCENT"
-    Value: 75
+      Type: "FLEET_PERCENT"
+      Value: 75
 ```

@@ -48,7 +48,7 @@ Properties:
 
 `HomeDirectory`  <a name="cfn-transfer-user-homedirectory"></a>
 The landing directory \(folder\) for a user when they log in to the file transfer protocol\-enabled server using the client\.  
-An example is `your-Amazon-S3-bucket-name>/home/username`\.  
+An example is * `your-Amazon-S3-bucket-name>/home/username` *\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
@@ -56,7 +56,7 @@ An example is `your-Amazon-S3-bucket-name>/home/username`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryMappings`  <a name="cfn-transfer-user-homedirectorymappings"></a>
-Logical directory mappings that specify what Amazon S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your AWS IAM Role provides access to paths in `Target`\. The following is an example\.  
+Logical directory mappings that specify what Amazon S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your IAM role provides access to paths in `Target`\. The following is an example\.  
  `'[ "/bucket2/documentation", { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]'`   
 In most cases, you can use this value instead of the scope\-down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
 If the target of a logical directory entry does not exist in Amazon S3, the entry will be ignored\. As a workaround, you can use the Amazon S3 api to create 0 byte objects as place holders for your directory\. If using the CLI, use the `s3api` call instead of `s3` so you can use the put\-object operation\. For example, you use the following: `aws s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a '/' for it to be considered a folder\.
@@ -101,7 +101,7 @@ A system\-assigned unique identifier for a file transfer protocol\-enabled serve
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SshPublicKeys`  <a name="cfn-transfer-user-sshpublickeys"></a>
-Contains the public key portion of the Secure Shell \(SSH\) keys stored for the described user\.  
+Specifies the public key portion of the Secure Shell \(SSH\) keys stored for the described user\.  
 *Required*: No  
 *Type*: List of [SshPublicKey](aws-properties-transfer-user-sshpublickey.md)  
 *Maximum*: `5`  

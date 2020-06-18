@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Iops](#cfn-ec2-ebs-volume-iops)" : Integer,
       "[KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid)" : String,
       "[MultiAttachEnabled](#cfn-ec2-ebs-volume-multiattachenabled)" : Boolean,
+      "[OutpostArn](#cfn-ec2-ebs-volume-outpostarn)" : String,
       "[Size](#cfn-ec2-ebs-volume-size)" : Integer,
       "[SnapshotId](#cfn-ec2-ebs-volume-snapshotid)" : String,
       "[Tags](#cfn-ec2-ebs-volume-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -54,6 +55,7 @@ Properties:
   [Iops](#cfn-ec2-ebs-volume-iops): Integer
   [KmsKeyId](#cfn-ec2-ebs-volume-kmskeyid): String
   [MultiAttachEnabled](#cfn-ec2-ebs-volume-multiattachenabled): Boolean
+  [OutpostArn](#cfn-ec2-ebs-volume-outpostarn): String
   [Size](#cfn-ec2-ebs-volume-size): Integer
   [SnapshotId](#cfn-ec2-ebs-volume-snapshotid): String
   [Tags](#cfn-ec2-ebs-volume-tags): 
@@ -106,6 +108,12 @@ Indicates whether Amazon EBS Multi\-Attach is enabled\.
 AWS CloudFormation does not currently support updating a single\-attach volume to be multi\-attach enabled, updating a multi\-attach enabled volume to be single\-attach, or updating the size or number of I/O operations per second \(IOPS\) of a multi\-attach enabled volume\.
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OutpostArn`  <a name="cfn-ec2-ebs-volume-outpostarn"></a>
+The Amazon Resource Name \(ARN\) of the Outpost\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>

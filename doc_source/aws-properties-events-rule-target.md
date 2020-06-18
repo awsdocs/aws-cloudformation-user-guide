@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Arn](#cfn-events-rule-target-arn)" : String,
   "[BatchParameters](#cfn-events-rule-target-batchparameters)" : [BatchParameters](aws-properties-events-rule-batchparameters.md),
   "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : [EcsParameters](aws-properties-events-rule-ecsparameters.md),
+  "[HttpParameters](#cfn-events-rule-target-httpparameters)" : [HttpParameters](aws-properties-events-rule-httpparameters.md),
   "[Id](#cfn-events-rule-target-id)" : String,
   "[Input](#cfn-events-rule-target-input)" : String,
   "[InputPath](#cfn-events-rule-target-inputpath)" : String,
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [BatchParameters](aws-properties-events-rule-batchparameters.md)
   [EcsParameters](#cfn-events-rule-target-ecsparameters): 
     [EcsParameters](aws-properties-events-rule-ecsparameters.md)
+  [HttpParameters](#cfn-events-rule-target-httpparameters): 
+    [HttpParameters](aws-properties-events-rule-httpparameters.md)
   [Id](#cfn-events-rule-target-id): String
   [Input](#cfn-events-rule-target-input): String
   [InputPath](#cfn-events-rule-target-inputpath): String
@@ -68,6 +71,12 @@ If the event target is an AWS Batch job, this contains the job definition, job n
 Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: [EcsParameters](aws-properties-events-rule-ecsparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HttpParameters`  <a name="cfn-events-rule-target-httpparameters"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [HttpParameters](aws-properties-events-rule-httpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>

@@ -81,19 +81,23 @@ The directory on the Amazon EFS file system that the access point exposes as the
 
  `{"Ref":"fsap-0123456789abcdef0"}`\.
 
-For the Amazon EFS file system access point `fsap-0123456789abcdef0`, Ref returns the access point ID\.
+ Ref returns the access point ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-efs-accesspoint-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-efs-accesspoint-return-values-fn--getatt-fn--getatt"></a>
 
 `AccessPointId`  <a name="AccessPointId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the EFS access point\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the access point\.
 
 ## Examples<a name="aws-resource-efs-accesspoint--examples"></a>
 

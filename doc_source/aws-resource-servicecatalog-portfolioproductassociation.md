@@ -2,6 +2,8 @@
 
 Associates the specified product with the specified portfolio\.
 
+A delegated admin is authorized to invoke this command\.
+
 ## Syntax<a name="aws-resource-servicecatalog-portfolioproductassociation-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

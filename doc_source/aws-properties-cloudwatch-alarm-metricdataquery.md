@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Id](#cfn-cloudwatch-alarm-metricdataquery-id)" : String,
   "[Label](#cfn-cloudwatch-alarm-metricdataquery-label)" : String,
   "[MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat)" : [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md),
+  "[Period](#cfn-cloudwatch-alarm-metricdataquery-period)" : Integer,
   "[ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata)" : Boolean
 }
 ```
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Label](#cfn-cloudwatch-alarm-metricdataquery-label): String
   [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat): 
     [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)
+  [Period](#cfn-cloudwatch-alarm-metricdataquery-period): Integer
   [ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata): Boolean
 ```
 
@@ -61,6 +63,13 @@ The metric to be returned, along with statistics, period, and units\. Use this p
 Within one MetricDataQuery object, you must specify either `Expression` or `MetricStat` but not both\.  
 *Required*: No  
 *Type*: [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Period`  <a name="cfn-cloudwatch-alarm-metricdataquery-period"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReturnData`  <a name="cfn-cloudwatch-alarm-metricdataquery-returndata"></a>

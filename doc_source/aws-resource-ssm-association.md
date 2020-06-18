@@ -1,6 +1,6 @@
 # AWS::SSM::Association<a name="aws-resource-ssm-association"></a>
 
-The `AWS::SSM::Association` resource associates an SSM document in AWS Systems Manager with managed instances that contain a configuration agent to process the document\.
+The `AWS::SSM::Association` resource creates a State Manager association for your managed instances\. A State Manager association defines the state that you want to maintain on your instances\. For example, an association can specify that anti\-virus software must be installed and running on your instances, or that certain ports must be closed\. For static targets, the association specifies a schedule for when the configuration is reapplied\. For dynamic targets, such as an AWS Resource Group or an AWS Autoscaling Group, State Manager applies the configuration when new instances are added to the group\. The association also specifies actions to take when applying the configuration\. For example, an association for anti\-virus software might run once a day\. If the software is not installed, then State Manager installs it\. If the software is installed, but the service is not running, then the association might instruct State Manager to start the service\. 
 
 ## Syntax<a name="aws-resource-ssm-association-syntax"></a>
 
@@ -141,12 +141,9 @@ A cron expression that specifies a schedule when the association runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncCompliance`  <a name="cfn-ssm-association-synccompliance"></a>
-The mode for generating association compliance\. You can specify `AUTO` or `MANUAL`\. In `AUTO` mode, the system uses the status of the association execution to determine the compliance status\. If the association execution runs successfully, then the association is `COMPLIANT`\. If the association execution doesn't run successfully, the association is `NON-COMPLIANT`\.  
-In `MANUAL` mode, you must specify the `AssociationId` as a parameter for the PutComplianceItems API action\. In this case, compliance data is not managed by State Manager\. It is managed by your direct call to the PutComplianceItems API action\.  
-By default, all associations use `AUTO` mode\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AUTO | MANUAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>
@@ -200,9 +197,9 @@ The following example creates an association that uses the AWS\-RunShellScript S
           ],
           "workingDirectory": [
             "/"
-          ],
+          ]
+        },
         "WaitForSuccessTimeoutSeconds": 300
-        }
       }
     }
   }
@@ -227,7 +224,7 @@ Resources:
         - ls
         workingDirectory:
         - "/"
-        WaitForSuccessTimeoutSeconds: 300
+      WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association for all managed instances in your AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account"></a>
@@ -250,10 +247,10 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
             "Key": "InstanceIds",
             "Values": [
               "*"
-            ],
-        "WaitForSuccessTimeoutSeconds": 300
+            ]
           }
-        ]
+        ],
+        "WaitForSuccessTimeoutSeconds": 300
       }
     }
   }
@@ -275,7 +272,7 @@ Resources:
       - Key: InstanceIds
         Values:
         - "*"
-        WaitForSuccessTimeoutSeconds: 300
+      WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association for a specific tag<a name="aws-resource-ssm-association--examples--Create_an_association_for_a_specific_tag"></a>

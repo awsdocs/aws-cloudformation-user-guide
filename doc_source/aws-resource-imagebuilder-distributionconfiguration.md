@@ -103,14 +103,13 @@ Resources:
             Description: 'description'
             AmiTags:
               AmiTagKey: 'ami-tag-key'
-            LaunchPermission:
-              LaunchPermissionConfiguration:
-                UserGroups:
-                  - 'DummyGroup1'
-                  - 'DummyGroup2'
-                UserIds:
-                  - '123123123123' # Dummy account Id A
-                  - '321321321321' # Dummy account Id B
+            LaunchPermissionConfiguration:
+              UserGroups:
+                - 'DummyGroup1'
+                - 'DummyGroup2'
+              UserIds:
+                - '123123123123' # Dummy account Id A
+                - '321321321321' # Dummy account Id B
           LicenseConfigurationArns:
             - 'example-license-configuration-arn'
         - Region: 'us-east-1'
@@ -119,7 +118,7 @@ Resources:
             Description: 'description'
       Tags:
         CustomerDistributionConfigTagKey1: 'CustomerDistributionConfigTagValue1'
-        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'
+        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'br
 ```
 
 #### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--json"></a>
@@ -141,17 +140,15 @@ Resources:
                             "AmiTags": {
                                 "AmiTagKey": "ami-tag-key"
                             },
-                            "LaunchPermission": {
-                                "LaunchPermissionConfiguration": {
-                                    "UserGroups": [
-                                        "DummyGroup1",
-                                        "DummyGroup2"
-                                    ],
-                                    "UserIds": [
-                                        "123123123123",
-                                        "321321321321"
-                                    ]
-                                }
+                            "LaunchPermissionConfiguration": {
+                                "UserGroups": [
+                                    "DummyGroup1",
+                                    "DummyGroup2"
+                                ],
+                                "UserIds": [
+                                    "123123123123",
+                                    "321321321321"
+                                ]
                             }
                         },
                         "LicenseConfigurationArns": [

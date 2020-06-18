@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Chatbot::SlackChannelConfiguration",
   "Properties" : {
-      "[Arn](#cfn-chatbot-slackchannelconfiguration-arn)" : String,
       "[ConfigurationName](#cfn-chatbot-slackchannelconfiguration-configurationname)" : String,
       "[IamRoleArn](#cfn-chatbot-slackchannelconfiguration-iamrolearn)" : String,
       "[LoggingLevel](#cfn-chatbot-slackchannelconfiguration-logginglevel)" : String,
@@ -30,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Chatbot::SlackChannelConfiguration
 Properties: 
-  [Arn](#cfn-chatbot-slackchannelconfiguration-arn): String
   [ConfigurationName](#cfn-chatbot-slackchannelconfiguration-configurationname): String
   [IamRoleArn](#cfn-chatbot-slackchannelconfiguration-iamrolearn): String
   [LoggingLevel](#cfn-chatbot-slackchannelconfiguration-logginglevel): String
@@ -41,12 +39,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-chatbot-slackchannelconfiguration-properties"></a>
-
-`Arn`  <a name="cfn-chatbot-slackchannelconfiguration-arn"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfigurationName`  <a name="cfn-chatbot-slackchannelconfiguration-configurationname"></a>
 The name of the configuration\.  
@@ -93,6 +85,13 @@ The ARNs of the SNS topics that deliver notifications to AWS Chatbot\.
 ### Ref<a name="aws-resource-chatbot-slackchannelconfiguration-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic Ref function, Ref returns the ARN of the configuration created\.
+
+### Fn::GetAtt<a name="aws-resource-chatbot-slackchannelconfiguration-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-chatbot-slackchannelconfiguration-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Remarks<a name="aws-resource-chatbot-slackchannelconfiguration--remarks"></a>
 

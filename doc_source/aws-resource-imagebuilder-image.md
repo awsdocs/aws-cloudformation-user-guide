@@ -16,7 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
       "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md),
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn)" : String,
-      "[OutputResources](#cfn-imagebuilder-image-outputresources)" : [OutputResources](aws-properties-imagebuilder-image-outputresources.md),
       "[Tags](#cfn-imagebuilder-image-tags)" : {Key : Value, ...}
     }
 }
@@ -32,8 +31,6 @@ Properties:
   [ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration): 
     [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md)
   [InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn): String
-  [OutputResources](#cfn-imagebuilder-image-outputresources): 
-    [OutputResources](aws-properties-imagebuilder-image-outputresources.md)
   [Tags](#cfn-imagebuilder-image-tags): 
     Key : Value
 ```
@@ -66,12 +63,6 @@ The Amazon Resource Name \(ARN\) of the infrastructure configuration used to cre
 *Type*: String  
 *Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`OutputResources`  <a name="cfn-imagebuilder-image-outputresources"></a>
-The output resources produced when creating this image\.  
-*Required*: No  
-*Type*: [OutputResources](aws-properties-imagebuilder-image-outputresources.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-imagebuilder-image-tags"></a>
 The tags of the image\.  

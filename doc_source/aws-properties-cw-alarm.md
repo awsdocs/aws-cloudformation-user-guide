@@ -115,14 +115,11 @@ You can specify the following values: `GreaterThanThreshold`, `GreaterThanOrEqua
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatapointsToAlarm`  <a name="cfn-cloudwatch-alarm-datapointstoalarm"></a>
-
-The number of datapoints that must be breaching to trigger the alarm\. This is used only if you are setting an "M out of N" alarm\. In that case, this value is the M\. For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
-If you omit this parameter, the default value is that of `EvaluationPeriods` (sets an "N consecutive" alarm)\.  
-
+The number of datapoints that must be breaching to trigger the alarm\. This is used only if you are setting an "M out of N" alarm\. In that case, this value is the M, and the value that you set for `EvaluationPeriods` is the N value\. For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
+If you omit this parameter, CloudWatch uses the same value here that you set for `EvaluationPeriods`, and the alarm goes to alarm state if that many consecutive periods are breaching\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
-*Maximum*: `EvaluationPeriods`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Dimensions`  <a name="cfn-cloudwatch-alarms-dimension"></a>
@@ -141,7 +138,8 @@ Used only for alarms based on percentiles\. If `ignore`, the alarm state does no
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluationPeriods`  <a name="cfn-cloudwatch-alarms-evaluationperiods"></a>
-The number of periods over which data is compared to the specified threshold\.  If you are setting an alarm that requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that number. If you are setting an "M out of N" alarm, this value is the N, and `DataspointsToAlarm` is the M. For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
+The number of periods over which data is compared to the specified threshold\. If you are setting an alarm that requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that number\. If you are setting an "M out of N" alarm, this value is the N, and `DatapointsToAlarm` is the M\.  
+For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -178,7 +176,8 @@ If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimens
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Namespace`  <a name="cfn-cloudwatch-alarms-namespace"></a>
-The namespace of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Namespace` and you use `Metrics` instead\. Refer to [AWS Services That Publish CloudWatch Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html) for a list of AWS Namespaces\.  
+The namespace of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Namespace` and you use `Metrics` instead\.  
+For a list of namespaces for metrics from AWS services, see [ AWS Services That Publish CloudWatch Metrics\. ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

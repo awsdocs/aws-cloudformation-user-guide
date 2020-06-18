@@ -41,7 +41,7 @@ Properties:
 ## Properties<a name="aws-properties-rds-dbparametergroup-properties"></a>
 
 `Description`  <a name="cfn-rds-dbparametergroup-description"></a>
-Provides the customer\-specified description for this DB parameter group\.  
+Provides the customer\-specified description for this DB Parameter Group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

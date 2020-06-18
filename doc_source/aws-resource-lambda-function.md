@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md),
       "[Description](#cfn-lambda-function-description)" : String,
       "[Environment](#cfn-lambda-function-environment)" : [Environment](aws-properties-lambda-function-environment.md),
+      "[FileSystemConfigs](#cfn-lambda-function-filesystemconfigs)" : [ [FileSystemConfig](aws-properties-lambda-function-filesystemconfig.md), ... ],
       "[FunctionName](#cfn-lambda-function-functionname)" : String,
       "[Handler](#cfn-lambda-function-handler)" : String,
       "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
@@ -44,6 +45,8 @@ Properties:
   [Description](#cfn-lambda-function-description): String
   [Environment](#cfn-lambda-function-environment): 
     [Environment](aws-properties-lambda-function-environment.md)
+  [FileSystemConfigs](#cfn-lambda-function-filesystemconfigs): 
+    - [FileSystemConfig](aws-properties-lambda-function-filesystemconfig.md)
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
@@ -88,6 +91,14 @@ A description of the function\.
 Environment variables that are accessible from function code during execution\.  
 *Required*: No  
 *Type*: [Environment](aws-properties-lambda-function-environment.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FileSystemConfigs`  <a name="cfn-lambda-function-filesystemconfigs"></a>
+Connection settings for an Amazon EFS file system\. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to\. If your template contains an [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html) resource, you must also specify a `DependsOn` attribute to ensure that the mount target is created or updated before the function\.  
+For more information about using the `DependsOn` attribute, see [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.   
+*Required*: No  
+*Type*: List of [FileSystemConfig](aws-properties-lambda-function-filesystemconfig.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-function-functionname"></a>

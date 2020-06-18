@@ -35,29 +35,11 @@ Not all features of CloudFormation may be available in every region\. For more i
   + Asia Pacific \(Osaka\-Local\)
 + [Resource import](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is currently not available in the following region:
   + Asia Pacific \(Osaka\-Local\)
-+ [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) is available in the following regions:
-  + US East \(N\. Virginia\)
-  + US East \(Ohio\)
-  + US West \(N\. California\)
-  + US West \(Oregon\)
-  + Canada \(Central\)
-  + Asia Pacific \(Mumbai\)
-  + Asia Pacific \(Seoul\)
-  + Asia Pacific \(Singapore\)
-  + Asia Pacific \(Sydney\)
-  + Asia Pacific \(Tokyo\)
-  + Europe \(Frankfurt\)
-  + Europe \(Ireland\)
-  + Europe \(London\)
-  + Europe \(Paris\)
-  + South America \(São Paulo\)
-  + AWS GovCloud \(US\-West\)
++ For a list of regions in which AWS CloudFormation StackSets is available, refer to the [Global Infrastructure Region Table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
 + [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
   + Africa \(Cape Town\)
   + Europe \(Milan\)
   + Asia Pacific \(Osaka\-Local\)
-  + China \(Beijing\)
-  + China \(Ningxia\)
 
 ## StackSets and macros<a name="stacksets-macros"></a>
 

@@ -1,28 +1,28 @@
-# AWS::EFS::FileSystem LifecyclePolicy<a name="aws-properties-elasticfilesystem-filesystem-lifecyclepolicy"></a>
+# AWS::EFS::FileSystem LifecyclePolicy<a name="aws-properties-efs-filesystem-lifecyclepolicy"></a>
 
 Describes a policy used by EFS lifecycle management to transition files to the Infrequent Access \(IA\) storage class\. For more information, see [EFS Lifecycle Management](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html) in the *Amazon EFS User Guide*\.
 
-## Syntax<a name="aws-properties-elasticfilesystem-filesystem-lifecyclepolicy-syntax"></a>
+## Syntax<a name="aws-properties-efs-filesystem-lifecyclepolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-elasticfilesystem-filesystem-lifecyclepolicy-syntax.json"></a>
+### JSON<a name="aws-properties-efs-filesystem-lifecyclepolicy-syntax.json"></a>
 
 ```
 {
-  "[TransitionToIA](#cfn-elasticfilesystem-filesystem-lifecyclepolicy-transitiontoia)" : String
+  "[TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)" : String
 }
 ```
 
-### YAML<a name="aws-properties-elasticfilesystem-filesystem-lifecyclepolicy-syntax.yaml"></a>
+### YAML<a name="aws-properties-efs-filesystem-lifecyclepolicy-syntax.yaml"></a>
 
 ```
-  [TransitionToIA](#cfn-elasticfilesystem-filesystem-lifecyclepolicy-transitiontoia): String
+  [TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia): String
 ```
 
-## Properties<a name="aws-properties-elasticfilesystem-filesystem-lifecyclepolicy-properties"></a>
+## Properties<a name="aws-properties-efs-filesystem-lifecyclepolicy-properties"></a>
 
-`TransitionToIA`  <a name="cfn-elasticfilesystem-filesystem-lifecyclepolicy-transitiontoia"></a>
+`TransitionToIA`  <a name="cfn-efs-filesystem-lifecyclepolicy-transitiontoia"></a>
  A value that describes the period of time that a file is not accessed, after which it transitions to the IA storage class\. Metadata operations such as listing the contents of a directory don't count as file access events\.  
 *Required*: Yes  
 *Type*: String  
