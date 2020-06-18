@@ -189,7 +189,7 @@ Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret 
 
 ### Important considerations when using dynamic parameters for Secrets Manager secrets<a name="dynamic-references-secretsmanager-considerations"></a>
 
-You should take the following important security considerations into account when using dynamice parameters to specify Secrets Manager secrets in your stack templates:
+You should take the following important security considerations into account when using dynamic parameters to specify Secrets Manager secrets in your stack templates:
 + The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs or persists any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
 + Updating a secret in Secrets Manager does not automatically update the secret in CloudFormation\. In order for CloudFormation to update a `secretsmanager` dynamic reference, you must perform a stack update that updates the resource containing the dynamic reference, either by updating the resource property that contains the `secretsmanager` dynamic reference, or updating another of the resource's properties\. 
 
