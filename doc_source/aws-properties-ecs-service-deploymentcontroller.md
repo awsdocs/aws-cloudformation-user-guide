@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Type`  <a name="cfn-ecs-service-deploymentcontroller-type"></a>
 The deployment controller type to use\.  
-There are two deployment controller types available:    
+There are three deployment controller types available:    
 ECS  
 The rolling update \(`ECS`\) deployment type involves replacing the current running version of the container with the latest version\. The number of containers Amazon ECS adds or removes from the service during a rolling update is controlled by adjusting the minimum and maximum number of healthy tasks allowed during a service deployment, as specified in the [DeploymentConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeploymentConfiguration.html)\.  
 CODE\_DEPLOY  
