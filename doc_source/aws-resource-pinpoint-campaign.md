@@ -91,7 +91,7 @@ The allocated percentage of users \(segment members\) who shouldn't receive mess
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsPaused`  <a name="cfn-pinpoint-campaign-ispaused"></a>
-Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by setting this value to `false`\.  
+Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,13 +139,13 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-treatmentdescription"></a>
-A custom description of a variation of the campaign to use for A/B testing\.  
+A custom description of the default treatment for the campaign\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-treatmentname"></a>
-A custom name for a variation of the campaign to use for A/B testing\.  
+A custom name of the default treatment for the campaign, if the campaign has multiple treatments\. A *treatment* is a variation of a campaign that's used for A/B testing\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

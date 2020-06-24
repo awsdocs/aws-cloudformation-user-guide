@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application PropertyGroup<a name="aws-properties-kinesisanalyticsv2-application-propertygroup"></a>
 
-Property key\-value pairs passed into a Java\-based Kinesis Data Analytics application\.
+Property key\-value pairs passed into a Flink\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-propertygroup-syntax"></a>
 

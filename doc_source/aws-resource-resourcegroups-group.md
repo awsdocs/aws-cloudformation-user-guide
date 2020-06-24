@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-resourcegroups-group-description)" : String,
       "[Name](#cfn-resourcegroups-group-name)" : String,
       "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md),
-      "[Tags](#cfn-resourcegroups-group-tags)" : [ Json, ... ]
+      "[Tags](#cfn-resourcegroups-group-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -30,7 +30,7 @@ Properties:
   [ResourceQuery](#cfn-resourcegroups-group-resourcequery): 
     [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md)
   [Tags](#cfn-resourcegroups-group-tags): 
-    - Json
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-resourcegroups-group-properties"></a>
@@ -56,7 +56,7 @@ The resource query that determines which AWS resources are members of the associ
 `Tags`  <a name="cfn-resourcegroups-group-tags"></a>
 The tags associated with the specified resource group\.  
 *Required*: No  
-*Type*: List of Json  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-resourcegroups-group-return-values"></a>
@@ -82,12 +82,12 @@ This example creates a CloudFormation stack\-based group using defaults\. It inc
 
 ```
 {
-  "ResourceGroup": {
-    "Type": "AWS::ResourceGroups::Group",
-    "Properties": {
-      "Name": "MyResourceGroup"
-    }
-  }
+    "ResourceGroup": { 
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyResourceGroup" 
+        }
+    } 
 }
 ```
 
@@ -95,7 +95,7 @@ This example creates a CloudFormation stack\-based group using defaults\. It inc
 
 ```
 ResourceGroup:
-  Type: "AWS::ResourceGroups::Group"
+  Type: "AWS::ResourceGroups::Group" 
   Properties:
     Name: "MyMinimalResourceGroup"
 ```
@@ -108,20 +108,20 @@ This example creates a CloudFormation stack\-based group that's similar to the g
 
 ```
 {
-  "CloudFormationStackGroupForSelectedResourceTypes": {
-    "Type": "AWS::ResourceGroups::Group",
-    "Properties": {
-      "Name": "MyCloudFormationResourceGroup-Filters",
-      "ResourceQuery": {
-        "Query": {
-          "ResourceTypeFilters": [
-            "AWS::EC2::Instance",
-            "AWS::DynamoDB::Table"
-          ]
+    "CloudFormationStackGroupForSelectedResourceTypes": {
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyCloudFormationResourceGroup-Filters",
+            "ResourceQuery": {
+                "Query": {
+                    "ResourceTypeFilters": [
+                        "AWS::EC2::Instance",
+                        "AWS::DynamoDB::Table" 
+                    ] 
+                } 
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -129,13 +129,13 @@ This example creates a CloudFormation stack\-based group that's similar to the g
 
 ```
 CloudFormationStackGroupForSelectedResourceTypes:
-  Type: "AWS::ResourceGroups::Group"
-  Properties:
-    Name: "MyCloudFormationResourceGroup-Filters"
-    ResourceQuery:
+  Type: "AWS::ResourceGroups::Group" 
+  Properties: 
+    Name: "MyCloudFormationResourceGroup-Filters" 
+    ResourceQuery: 
       Query: 
-        ResourceTypeFilters:
-          - "AWS::EC2::Instance"
+        ResourceTypeFilters: 
+          - "AWS::EC2::Instance" 
           - "AWS::DynamoDB::Table"
 ```
 
@@ -147,28 +147,28 @@ This example creates a group that's built from another stack\. The `StackIdentif
 
 ```
 {
-  "CloudFormationStackGroupForAnotherStack": {
-    "Type": "AWS::ResourceGroups::Group",
-    "Properties": {
-      "Name": "MyCloudFormationResourceGroupForAnotherStack",
-      "Description": "A group that is created via CFN",
-      "ResourceQuery": {
-        "Type": "CLOUDFORMATION_STACK_1_0",
-        "Query": {
-          "ResourceTypeFilters": [
-            "AWS::AllSupported"
-          ],
-          "StackIdentifier": "arn:aws:cloudformation:us-east-1:0123456789:stack/stack-name/9b6f8604-4a39-490c-870b-44b0ebdd38b9"
+    "CloudFormationStackGroupForAnotherStack": {
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyCloudFormationResourceGroupForAnotherStack",
+            "Description": "A group that is created via CFN",
+            "ResourceQuery": { 
+                "Type": "CLOUDFORMATION_STACK_1_0",
+                "Query": {
+                    "ResourceTypeFilters": [
+                        "AWS::AllSupported" 
+                    ],
+                    "StackIdentifier": "arn:aws:cloudformation:us-east-1:0123456789:stack/stack-name/9b6f8604-4a39-490c-870b-44b0ebdd38b9"
+                }
+            },
+            "Tags": [
+                {
+                    "Key": "TagKey",
+                    "Value": "TagValue" 
+                }
+            ]
         }
-      },
-      "Tags": [
-        {
-          "Key": "TagKey",
-          "Value": "TagValue"
-        }
-      ]
     }
-  }
 }
 ```
 
@@ -176,20 +176,20 @@ This example creates a group that's built from another stack\. The `StackIdentif
 
 ```
 CloudFormationStackGroupForAnotherStack:
-  Type: "AWS::ResourceGroups::Group"
-  Properties:
-    Name: "MyCloudFormationResourceGroupForAnotherStack"
-    Description: "A group that is created via CFN"
-    ResourceQuery:
-      Type: "CLOUDFORMATION_STACK_1_0"
+  Type: "AWS::ResourceGroups::Group" 
+  Properties: 
+    Name: "MyCloudFormationResourceGroupForAnotherStack" 
+    Description: "A group that is created via CFN" 
+    ResourceQuery: 
+      Type: "CLOUDFORMATION_STACK_1_0" 
       Query: 
         ResourceTypeFilters:
-          - "AWS::AllSupported"
+          - "AWS::AllSupported" 
         StackIdentifier: "arn:aws:cloudformation:us-east-1:0123456789:stack/stack-name/9b6f8604-4a39-490c-870b-44b0ebdd38b9"
-    Tags:
+    Tags: 
       -
-       Key: "TagKey"
-       Value: "TagValue"
+        Key: "TagKey" 
+        Value: "TagValue"
 ```
 
 ### Creating a Tag\-Based Group<a name="aws-resource-resourcegroups-group--examples--Creating_a_Tag-Based_Group"></a>
@@ -200,29 +200,29 @@ This example shows how to create a group based on tags\. All resources that are 
 
 ```
 {
-  "TagBasedGroup": {
-    "Type": "AWS::ResourceGroups::Group",
-    "Properties": {
-      "Name": "MyTagBasedResourceGroup",
-      "Description": "A group that is created via CFN",
-      "ResourceQuery": {
-        "Type": "TAG_FILTERS_1_0",
-        "Query": {
-          "ResourceTypeFilters": [
-            "AWS::AllSupported"
-          ],
-          "TagFilters": [
-            {
-              "Key": "Usage",
-              "Values": [
-                "Integration Tests"
-              ]
+    "TagBasedGroup": {
+        "Type": "AWS::ResourceGroups::Group",
+        "Properties": {
+            "Name": "MyTagBasedResourceGroup",
+            "Description": "A group that is created via CFN",
+            "ResourceQuery": {
+                "Type": "TAG_FILTERS_1_0",
+                "Query": {
+                    "ResourceTypeFilters": [
+                        "AWS::AllSupported" 
+                    ],
+                    "TagFilters": [
+                        {
+                            "Key": "Usage",
+                            "Values": [
+                                "Integration Tests" 
+                            ]
+                        }
+                    ]
+                }
             }
-          ]
         }
-      }
     }
-  }
 }
 ```
 
@@ -232,16 +232,17 @@ This example shows how to create a group based on tags\. All resources that are 
 TagBasedGroup:
   Type: "AWS::ResourceGroups::Group"
   Properties:
-   Name: "MyTagBasedResourceGroup"
-   Description: "A group that is created via CFN"
-   ResourceQuery:
-     Type: "TAG_FILTERS_1_0"
-     Query: 
-       ResourceTypeFilters:
-        - "AWS::AllSupported"
-       TagFilters:
-         -
-           Key: "Usage"
-           Values: 
-             - "Integration Tests"
+    Name: "MyTagBasedResourceGroup"
+    Description: "A group that is created via CFN"
+    ResourceQuery:
+      Type:
+        "TAG_FILTERS_1_0" 
+        Query:
+          ResourceTypeFilters: 
+            - "AWS::AllSupported" 
+          TagFilters:
+            - 
+              Key: "Usage" 
+              Values: 
+                - "Integration Tests"
 ```

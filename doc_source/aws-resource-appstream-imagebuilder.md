@@ -135,6 +135,12 @@ The instance type to use when launching the image builder\. The following instan
 + stream\.graphics\-design\.2xlarge
 + stream\.graphics\-design\.4xlarge
 + stream\.graphics\-desktop\.2xlarge
++ stream\.graphics\.g4dn\.xlarge
++ stream\.graphics\.g4dn\.2xlarge
++ stream\.graphics\.g4dn\.4xlarge
++ stream\.graphics\.g4dn\.8xlarge
++ stream\.graphics\.g4dn\.12xlarge
++ stream\.graphics\.g4dn\.16xlarge
 + stream\.graphics\-pro\.4xlarge
 + stream\.graphics\-pro\.8xlarge
 + stream\.graphics\-pro\.16xlarge

@@ -6,7 +6,7 @@ The `AWS::SecretsManager::SecretTargetAttachment` resource completes the final l
 
 1. Next, define the service or database\. Include the reference to the secret to use stored credentials to define the database master user and password\.
 
-1. Finally, define a `SecretTargetAttachment` resource type to finish configuring the secret with the required database engine type and the connection details of the service or database\. The rotation function requires the details, if you attach one later by defining a [AWS::SecretsManager::RotationSchedule ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
+1. Finally, define a `SecretTargetAttachment` resource type to finish configuring the secret with the required database engine type and the connection details of the service or database\. The rotation function requires the details, if you attach one later by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
 
 ## Syntax<a name="aws-resource-secretsmanager-secrettargetattachment-syntax"></a>
 

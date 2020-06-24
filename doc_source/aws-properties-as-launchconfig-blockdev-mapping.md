@@ -52,7 +52,7 @@ You can specify either `VirtualName` or `Ebs`, but not both\.
 `NoDevice`  <a name="cfn-as-launchconfig-blockdev-mapping-nodevice"></a>
 Setting this value to `true` suppresses the specified device included in the block device mapping of the AMI\.  
 If `NoDevice` is `true` for the root device, instances might fail the EC2 health check\. In that case, Amazon EC2 Auto Scaling launches replacement instances\.  
-You can specify either `NoDevice` or `Ebs`, but not both\.  
+If you specify `NoDevice`, you cannot specify `Ebs`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration-properties"></a>
 
 `CheckpointingEnabled`  <a name="cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointingenabled"></a>
-Describes whether checkpointing is enabled for a Java\-based Kinesis Data Analytics application\.  
+Describes whether checkpointing is enabled for a Flink\-based Kinesis Data Analytics application\.  
 If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application will use a `CheckpointingEnabled` value of `true`, even if this value is set to another value using this API or in application code\.
 *Required*: No  
 *Type*: Boolean  
@@ -43,7 +43,7 @@ If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application wil
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfigurationType`  <a name="cfn-kinesisanalyticsv2-application-checkpointconfiguration-configurationtype"></a>
-Describes whether the application uses Amazon Kinesis Data Analytics' default checkpointing behavior\. You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled`, `CheckpointInterval`, or `MinPauseBetweenCheckpoints` parameters\.  
+Describes whether the application uses Kinesis Data Analytics' default checkpointing behavior\. You must set this property to `CUSTOM` in order to set the `CheckpointingEnabled`, `CheckpointInterval`, or `MinPauseBetweenCheckpoints` parameters\.  
 If this value is set to `DEFAULT`, the application will use the following values, even if they are set to other values using APIs or application code:  
 +  **CheckpointingEnabled:** true
 +  **CheckpointInterval:** 60000

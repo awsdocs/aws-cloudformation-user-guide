@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A unique identifier for a fleet that the alias points to\. If you specify `SIMPLE` for the `Type` property, you must specify this property\.  
 *Required*: Conditional  
 *Type*: String  
-*Pattern*: `^fleet-\S+|^arn:.*:fleet\/fleet-\S+`  
+*Pattern*: `^fleet-\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Message`  <a name="cfn-gamelift-alias-routingstrategy-message"></a>

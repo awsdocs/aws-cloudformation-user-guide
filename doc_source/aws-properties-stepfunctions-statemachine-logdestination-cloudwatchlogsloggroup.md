@@ -3,7 +3,7 @@
 Defines a CloudWatch log group\.
 
 **Note**  
-`CloudWatchLogsLogGroup` is only valid when `StateMachineType` is set to `EXPRESS`\. For more information see [Standard Versus Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html) in the AWS Step Functions Developer Guide\.
+For more information see [Standard Versus Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html) in the AWS Step Functions Developer Guide\.
 
 ## Syntax<a name="aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup-syntax"></a>
 

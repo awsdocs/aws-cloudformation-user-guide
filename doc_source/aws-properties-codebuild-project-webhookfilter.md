@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codebuild-project-webhookfilter-type"></a>
- The type of webhook filter\. There are five webhook filter types: `EVENT`, `ACTOR_ACCOUNT_ID`, `HEAD_REF`, `BASE_REF`, and `FILE_PATH`\.     
+ The type of webhook filter\. There are six webhook filter types: `EVENT`, `ACTOR_ACCOUNT_ID`, `HEAD_REF`, `BASE_REF`, `FILE_PATH`, and `COMMIT_MESSAGE`\.     
  EVENT   
  A webhook event triggers a build when the provided `pattern` matches one of five event types: `PUSH`, `PULL_REQUEST_CREATED`, `PULL_REQUEST_UPDATED`, `PULL_REQUEST_REOPENED`, and `PULL_REQUEST_MERGED`\. The `EVENT` patterns are specified as a comma\-separated string\. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request created, and pull request updated events\.   
  The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only\.   
@@ -54,8 +54,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  Works with pull request events only\.   
  FILE\_PATH   
  A webhook triggers a build when the path of a changed file matches the regular expression `pattern`\.   
- Works with GitHub and GitHub Enterprise push events only\. 
+ Works with GitHub and Bitbucket events push and pull requests events\. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events\.   
+COMMIT\_MESSAGE  
+A webhook triggers a build when the head commit message matches the regular expression `pattern`\.  
+ Works with GitHub and Bitbucket events push and pull requests events\. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events\. 
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ACTOR_ACCOUNT_ID | BASE_REF | EVENT | FILE_PATH | HEAD_REF`  
+*Allowed Values*: `ACTOR_ACCOUNT_ID | BASE_REF | COMMIT_MESSAGE | EVENT | FILE_PATH | HEAD_REF`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

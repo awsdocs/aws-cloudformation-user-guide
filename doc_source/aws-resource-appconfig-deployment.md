@@ -75,7 +75,7 @@ The configuration version to deploy\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `128`  
+*Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeploymentStrategyId`  <a name="cfn-appconfig-deployment-deploymentstrategyid"></a>

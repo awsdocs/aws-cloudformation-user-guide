@@ -83,7 +83,7 @@ If you need to change the password for the administrator account, see the [Reset
 The NetBIOS name of the directory, such as `CORP`\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+*Pattern*: `^[^\\/:*?"<>|.]+[^\\/:*?"<>|]*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Size`  <a name="cfn-directoryservice-simplead-size"></a>

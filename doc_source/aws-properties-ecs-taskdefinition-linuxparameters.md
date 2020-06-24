@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Capabilities`  <a name="cfn-ecs-taskdefinition-linuxparameters-capabilities"></a>
 The Linux capabilities for the container that are added to or dropped from the default configuration provided by Docker\.  
-If you are using tasks that use the Fargate launch type, `capabilities` is supported but the `add` parameter is not supported\.
+For tasks that use the Fargate launch type, `capabilities` is supported for all platform versions but the `add` parameter is only supported if using platform version 1\.4\.0 or later\.
 *Required*: No  
 *Type*: [KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

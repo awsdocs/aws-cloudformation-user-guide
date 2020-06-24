@@ -7,10 +7,6 @@ You can create up to 5000 log groups per account\. You must use the following gu
 + Log group names can be between 1 and 512 characters long\.
 + Log group names consist of the following characters: a\-z, A\-Z, 0\-9, '\_' \(underscore\), '\-' \(hyphen\), '/' \(forward slash\), and '\.' \(period\)\.
 
-If you associate a AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) with the log group, ingested data is encrypted using the CMK\. This association is stored as long as the data encrypted with the CMK is still within Amazon CloudWatch Logs\. This enables Amazon CloudWatch Logs to decrypt this data whenever it is requested\.
-
-If you attempt to associate a CMK with the log group but the CMK doesn't exist or the CMK is disabled, you will receive an `InvalidParameterException` error\. 
-
 ## Syntax<a name="aws-resource-logs-loggroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

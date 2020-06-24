@@ -34,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-basepathmapping-properties"></a>
 
 `BasePath`  <a name="cfn-apigateway-basepathmapping-basepath"></a>
-The base path name that callers of the API must provide in the URL after the domain name\. If you specify this property, it can't be an empty string\.  
+The base path name that callers of the API must provide in the URL after the domain name\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

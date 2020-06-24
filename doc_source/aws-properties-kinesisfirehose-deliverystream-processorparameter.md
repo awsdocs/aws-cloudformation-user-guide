@@ -37,4 +37,5 @@ The parameter value\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
+*Pattern*: `^(?!\s*$).+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

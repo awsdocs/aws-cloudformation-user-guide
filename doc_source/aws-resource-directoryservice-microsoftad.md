@@ -79,7 +79,7 @@ If you need to change the password for the administrator account, see the [Reset
 The NetBIOS name for your domain, such as `CORP`\. If you don't specify a NetBIOS name, it will default to the first part of your directory DNS\. For example, `CORP` for the directory DNS `corp.example.com`\.   
 *Required*: No  
 *Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+*Pattern*: `^[^\\/:*?"<>|.]+[^\\/:*?"<>|]*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSettings`  <a name="cfn-directoryservice-microsoftad-vpcsettings"></a>

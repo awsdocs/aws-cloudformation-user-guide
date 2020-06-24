@@ -15,6 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CertificateManager::Certificate",
   "Properties" : {
+      "[CertificateAuthorityArn](#cfn-certificatemanager-certificate-certificateauthorityarn)" : String,
+      "[CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference)" : String,
       "[DomainName](#cfn-certificatemanager-certificate-domainname)" : String,
       "[DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions)" : [ [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md), ... ],
       "[SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames)" : [ String, ... ],
@@ -29,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CertificateManager::Certificate
 Properties: 
+  [CertificateAuthorityArn](#cfn-certificatemanager-certificate-certificateauthorityarn): String
+  [CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference): String
   [DomainName](#cfn-certificatemanager-certificate-domainname): String
   [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions): 
     - [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)
@@ -40,6 +44,25 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-certificatemanager-certificate-properties"></a>
+
+`CertificateAuthorityArn`  <a name="cfn-certificatemanager-certificate-certificateauthorityarn"></a>
+The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Certificate Manager Private Certificate Authority \(PCA\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
+ `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012`   
+*Required*: No  
+*Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CertificateTransparencyLoggingPreference`  <a name="cfn-certificatemanager-certificate-certificatetransparencyloggingpreference"></a>
+You can opt out of certificate transparency logging by specifying the `DISABLED` option\. Opt in by specifying `ENABLED`\.  
+If you do not specify a certificate transparency logging preference on a new CloudFormation template, or if you remove the logging preference from an existing template, this is the same as explicitly enabling the preference\.  
+Changing the certificate transparency logging preference will update the existing resource by calling `UpdateCertificateOptions` on the certificate\. This action will not create a new resource\.  
+*Required*: No  
+*Type*: String  
+*Allowed Values*: `DISABLED | ENABLED`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-certificatemanager-certificate-domainname"></a>
 The fully qualified domain name \(FQDN\), such as www\.example\.com, with which you want to secure an ACM certificate\. Use an asterisk \(\*\) to create a wildcard certificate that protects several sites in the same domain\. For example, `*.example.com` protects `www.example.com`, `site.example.com`, and `images.example.com.`   

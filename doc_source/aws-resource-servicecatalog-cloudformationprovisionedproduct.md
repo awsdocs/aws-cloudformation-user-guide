@@ -126,6 +126,7 @@ The name of the provisioning artifact \(also known as a version\) for the produc
 You must specify either the name or the ID of the provisioning artifact, but not both\.
 *Required*: Conditional  
 *Type*: String  
+*Maximum*: `8192`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisioningParameters`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters"></a>

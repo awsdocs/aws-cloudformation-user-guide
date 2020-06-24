@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Api<a name="aws-resource-apigatewayv2-api"></a>
 
-The `AWS::ApiGatewayV2::Api` resource creates an API\. WebSocket APIs and HTTP APIs \(beta\) are supported\. For more information about WebSocket APIs, see [About WebSocket APIs in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview.html) in the *API Gateway Developer Guide*\. For more information about HTTP APIs, see [HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) in the *API Gateway Developer Guide\.*
+The `AWS::ApiGatewayV2::Api` resource creates an API\. WebSocket APIs and HTTP APIs are supported\. For more information about WebSocket APIs, see [About WebSocket APIs in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview.html) in the *API Gateway Developer Guide*\. For more information about HTTP APIs, see [HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) in the *API Gateway Developer Guide\.*
 
 ## Syntax<a name="aws-resource-apigatewayv2-api-syntax"></a>
 
@@ -108,7 +108,7 @@ Avoid validating models when creating a deployment\. Supported only for WebSocke
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailOnWarnings`  <a name="cfn-apigatewayv2-api-failonwarnings"></a>
-Specifies whether to rollback the API creation \(`true`\) or not \(`false`\) when a warning is encountered\. The default value is `false`\.  
+Specifies whether to rollback the API creation when a warning is encountered\. By default, API creation continues if a warning is encountered\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,7 +120,7 @@ The name of the API\. Required unless you specify an OpenAPI definition for `Bod
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolType`  <a name="cfn-apigatewayv2-api-protocoltype"></a>
-The API protocol\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
+The API protocol\. Valid values are `WEBSOCKET` or `HTTP`\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

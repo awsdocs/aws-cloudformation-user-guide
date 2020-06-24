@@ -166,7 +166,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    
    > aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
                
-   > aws cloudformation describe-stack-resource-drifts --stackname TargetStack
+   > aws cloudformation describe-stack-resource-drifts --stack-name TargetStack
    ```
 
 1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.

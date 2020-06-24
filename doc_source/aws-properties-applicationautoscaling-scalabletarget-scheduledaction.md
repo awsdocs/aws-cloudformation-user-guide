@@ -50,7 +50,7 @@ The schedule for this action\. The following formats are supported:
 + At expressions \- "`at(yyyy-mm-ddThh:mm:ss)`"
 + Rate expressions \- "`rate(value unit)`"
 + Cron expressions \- "`cron(fields)`"
-At expressions are useful for one\-time schedules\. Specify the time, in UTC\.  
+At expressions are useful for one\-time schedules\. Specify the time in UTC\.  
 For rate expressions, *value* is a positive integer and *unit* is `minute` \| `minutes` \| `hour` \| `hours` \| `day` \| `days`\.  
 For more information about cron expressions, see [Cron Expressions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions) in the *Amazon CloudWatch Events User Guide*\.  
 *Required*: Yes  

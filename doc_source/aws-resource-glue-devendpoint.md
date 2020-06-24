@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NumberOfNodes](#cfn-glue-devendpoint-numberofnodes)" : Integer,
       "[NumberOfWorkers](#cfn-glue-devendpoint-numberofworkers)" : Integer,
       "[PublicKey](#cfn-glue-devendpoint-publickey)" : String,
+      "[PublicKeys](#cfn-glue-devendpoint-publickeys)" : [ String, ... ],
       "[RoleArn](#cfn-glue-devendpoint-rolearn)" : String,
       "[SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration)" : String,
       "[SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids)" : [ String, ... ],
@@ -43,6 +44,8 @@ Properties:
   [NumberOfNodes](#cfn-glue-devendpoint-numberofnodes): Integer
   [NumberOfWorkers](#cfn-glue-devendpoint-numberofworkers): Integer
   [PublicKey](#cfn-glue-devendpoint-publickey): String
+  [PublicKeys](#cfn-glue-devendpoint-publickeys): 
+    - String
   [RoleArn](#cfn-glue-devendpoint-rolearn): String
   [SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration): String
   [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids): 
@@ -111,6 +114,13 @@ The maximum number of workers you can define are 299 for `G.1X`, and 149 for `G.
 The public key to be used by this `DevEndpoint` for authentication\. This attribute is provided for backward compatibility because the recommended attribute to use is public keys\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PublicKeys`  <a name="cfn-glue-devendpoint-publickeys"></a>
+A list of public keys to be used by the `DevEndpoints` for authentication\. Using this attribute is preferred over a single public key because the public keys allow you to have a different private key per client\.  
+If you previously created an endpoint with a public key, you must remove that key to be able to set a list of public keys\. Call the `UpdateDevEndpoint` API operation with the public key content in the `deletePublicKeys` attribute, and the list of new keys in the `addPublicKeys` attribute\.
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-glue-devendpoint-rolearn"></a>

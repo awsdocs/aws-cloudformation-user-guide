@@ -41,7 +41,7 @@ Describes the verbosity of the CloudWatch Logs for an application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricsLevel`  <a name="cfn-kinesisanalyticsv2-application-monitoringconfiguration-metricslevel"></a>
-Describes the granularity of the CloudWatch Logs for an application\.  
+Describes the granularity of the CloudWatch Logs for an application\. The `Parallelism` level is not recommended for applications with a Parallelism over 64 due to excessive costs\.  
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `APPLICATION | OPERATOR | PARALLELISM | TASK`  

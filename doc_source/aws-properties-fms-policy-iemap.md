@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ACCOUNT](#cfn-fms-policy-iemap-account)" : [ String, ... ]
+  "[ACCOUNT](#cfn-fms-policy-iemap-account)" : [ String, ... ],
+  "[ORGUNIT](#cfn-fms-policy-iemap-orgunit)" : [ String, ... ]
 }
 ```
 
@@ -21,12 +22,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ACCOUNT](#cfn-fms-policy-iemap-account): 
     - String
+  [ORGUNIT](#cfn-fms-policy-iemap-orgunit): 
+    - String
 ```
 
 ## Properties<a name="aws-properties-fms-policy-iemap-properties"></a>
 
 `ACCOUNT`  <a name="cfn-fms-policy-iemap-account"></a>
 The account list for the map\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ORGUNIT`  <a name="cfn-fms-policy-iemap-orgunit"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::AppConfig::ConfigurationProfile<a name="aws-resource-appconfig-configurationprofile"></a>
 
-The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\. Valid configuration sources include Systems Manager \(SSM\) documents and SSM Parameter Store parameters\. A configuration profile includes the following information\.
+The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\. Valid configuration sources include Systems Manager \(SSM\) documents, SSM Parameter Store parameters, and Amazon S3\. A configuration profile includes the following information\.
 + The Uri location of the configuration data\.
 + The AWS Identity and Access Management \(IAM\) role that provides access to the configuration data\.
 + A validator for the configuration data\. Available validators include either a JSON Schema or the Amazon Resource Name \(ARN\) of an AWS Lambda function\.
@@ -74,7 +74,7 @@ A description of the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-appconfig-configurationprofile-locationuri"></a>
-A URI to locate the configuration\. You can specify either a Systems Manager \(SSM\) document or an SSM Parameter Store parameter\. For an SSM document, specify either the document name in the format `ssm-document://<Document name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter name>` or the ARN\.  
+A URI to locate the configuration\. You can specify the AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: s3://my\-bucket/my\-app/us\-east\-1/my\-config\.json  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,11 +91,12 @@ A name for the configuration profile\.
 
 `RetrievalRoleArn`  <a name="cfn-appconfig-configurationprofile-retrievalrolearn"></a>
 The ARN of an IAM role with permission to access the configuration at the specified LocationUri\.  
+A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store\. It is required for all other sources that store your configuration\. 
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
-*Pattern*: `arn:(aws[a-zA-Z-]*)?:[a-z]+:([a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-\d{1})?:(\d{12})?:[a-zA-Z0-9-_/:.]+`  
+*Pattern*: `^((arn):(aws|aws-cn|aws-iso|aws-iso-[a-z]{1}|aws-us-gov):(iam)::\d{12}:role[/].*)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appconfig-configurationprofile-tags"></a>

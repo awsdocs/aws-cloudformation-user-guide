@@ -50,7 +50,7 @@ The certificate signing request \(CSR\) for the certificate\.
 
 `SigningAlgorithm`  <a name="cfn-acmpca-certificate-signingalgorithm"></a>
 The name of the algorithm that will be used to sign the certificate to be issued\.   
-This parameter should not be confused with the `SigningAlgorithm` parameter used to sign a CSR \.  
+This parameter should not be confused with the `SigningAlgorithm` parameter used to sign a CSR\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  

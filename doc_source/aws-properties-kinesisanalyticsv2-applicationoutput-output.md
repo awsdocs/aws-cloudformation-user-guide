@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::ApplicationOutput Output<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output"></a>
 
- Describes an SQL\-based Amazon Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\. 
+ Describes a SQL\-based Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output-syntax"></a>
 
@@ -41,13 +41,13 @@ Describes the data format when records are written to the destination\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisFirehoseOutput`  <a name="cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput"></a>
-Identifies an Amazon Kinesis Data Firehose delivery stream as the destination\.  
+Identifies a Kinesis Data Firehose delivery stream as the destination\.  
 *Required*: No  
 *Type*: [KinesisFirehoseOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisStreamsOutput`  <a name="cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput"></a>
-Identifies an Amazon Kinesis data stream as the destination\.  
+Identifies a Kinesis data stream as the destination\.  
 *Required*: No  
 *Type*: [KinesisStreamsOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

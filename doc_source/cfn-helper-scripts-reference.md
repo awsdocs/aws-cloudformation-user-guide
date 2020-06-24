@@ -17,7 +17,7 @@ The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI image
 + On the latest Amazon Linux AMI version, the scripts are installed in `/opt/aws/bin`\.
 + On previous Amazon Linux AMI versions, the aws\-cfn\-bootstrap package that contains the scripts is located in the Yum repository\.
 
-## Downloading Packages for Other Platforms<a name="cfn-helper-scripts-reference-downloads"></a>
+## Downloading packages for other platforms<a name="cfn-helper-scripts-reference-downloads"></a>
 
 <a name="cfn-helper-scripts-reference-downloads"></a>For Linux/Unix distributions other than Amazon Linux AMI images and for Microsoft Windows \(2008 or later\), you can download the aws\-cfn\-bootstrap package\.
 
@@ -44,7 +44,7 @@ If you do specify an option, keep in mind which permissions the various helper s
 
 For more information on using AWS CloudFormation\-specific actions and condition context keys in IAM policies, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\.
 
-## Using the Latest Version<a name="cfn-helper-scripts-reference-latest-version"></a>
+## Using the latest version<a name="cfn-helper-scripts-reference-latest-version"></a>
 
 The helper scripts are updated periodically\. If you use the helper scripts, ensure that your launched instances are using the latest version of the scripts:
 + Include the following command in the `UserData` property of your template before you call the scripts\. This command ensures that you get the latest version:
@@ -53,20 +53,24 @@ The helper scripts are updated periodically\. If you use the helper scripts, ens
 + If you don't include the `yum install` command and you use the `cfn-init`, `cfn-signal`, or `cfn-get-metadata` scripts, then you'll need to manually update the scripts in each Amazon EC2 Linux instance using this command:
 
   `sudo yum install -y aws-cfn-bootstrap`
+**Note**  
+Running `sudo yum install -y aws-cfn-bootstrap` installs the helper scripts from the `yum` repository\. Currently, the `yum` repo contains version 1\.4\-32 of the helper scripts, which does not support Python 2\.6\.
 + If you don't include the `yum install` command and you use the `cfn-hup` script, then you'll need to manually update the script in each Amazon EC2 Linux instance using these commands:
 
   `sudo yum install -y aws-cfn-bootstrap`
 
   `sudo /sbin/service cfn-hup restart`
+**Note**  
+Running `sudo yum install -y aws-cfn-bootstrap` installs the helper scripts from the `yum` repository\. Currently, the `yum` repo contains version 1\.4\-32 of the helper scripts, which does not support Python 2\.6\.
 + If you use the source code for the scripts to work with another version of Linux or a different platform, and you have created your own certificate trust store, you'll also need to keep the trust store updated\.
 
 For the version history of the aws\-cfn\-bootstrap package, see [Release History for AWS CloudFormation Helper Scripts](releasehistory-aws-cfn-bootstrap.md)\.
 
 **Topics**
 + [Amazon Linux AMI Images](#cfn-helper-scripts-reference-amazon-amis)
-+ [Downloading Packages for Other Platforms](#cfn-helper-scripts-reference-downloads)
++ [Downloading packages for other platforms](#cfn-helper-scripts-reference-downloads)
 + [Permissions for helper scripts](#cfn-helper-scripts-reference-permissions)
-+ [Using the Latest Version](#cfn-helper-scripts-reference-latest-version)
++ [Using the latest version](#cfn-helper-scripts-reference-latest-version)
 + [cfn\-init](cfn-init.md)
 + [cfn\-signal](cfn-signal.md)
 + [cfn\-get\-metadata](cfn-get-metadata.md)

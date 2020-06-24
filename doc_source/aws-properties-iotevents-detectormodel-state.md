@@ -38,7 +38,7 @@ When entering this state, perform these `actions` if the `condition` is TRUE\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnExit`  <a name="cfn-iotevents-detectormodel-state-onexit"></a>
-When exiting this state, perform these `actions` if the specified `condition` is TRUE\.  
+When exiting this state, perform these `actions` if the specified `condition` is `TRUE`\.  
 *Required*: No  
 *Type*: [OnExit](aws-properties-iotevents-detectormodel-onexit.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

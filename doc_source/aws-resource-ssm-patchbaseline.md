@@ -68,7 +68,7 @@ A set of rules used to include patches in the baseline\.
 
 `ApprovedPatches`  <a name="cfn-ssm-patchbaseline-approvedpatches"></a>
 A list of explicitly approved patches for the baseline\.  
-For information about accepted formats for lists of approved patches and rejected patches, see [Package Name Formats for Approved and Rejected Patch Lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
+For information about accepted formats for lists of approved patches and rejected patches, see [About package name formats for approved and rejected patch lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
@@ -114,7 +114,7 @@ The name of the patch baseline\.
 Defines the operating system the patch baseline applies to\. The Default value is WINDOWS\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
+*Allowed Values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | DEBIAN | ORACLE_LINUX | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PatchGroups`  <a name="cfn-ssm-patchbaseline-patchgroups"></a>
@@ -128,7 +128,7 @@ The name of the patch group that should be registered with the patch baseline\.
 
 `RejectedPatches`  <a name="cfn-ssm-patchbaseline-rejectedpatches"></a>
 A list of explicitly rejected patches for the baseline\.  
-For information about accepted formats for lists of approved patches and rejected patches, see [Package Name Formats for Approved and Rejected Patch Lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
+For information about accepted formats for lists of approved patches and rejected patches, see [About package name formats for approved and rejected patch lists](https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager-approved-rejected-package-name-formats.html) in the *AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
@@ -174,7 +174,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 The following example creates a Systems Manager patch baseline that approves patches for Windows Server 2019 instances seven days after they are released by Microsoft\. The patch baseline also approves patches for Active Directory seven days after they are released by Microsoft\.
 
-#### JSON<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--json"></a>
+#### <a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--language_owl_wvr_qlb"></a>
 
 ```
 {

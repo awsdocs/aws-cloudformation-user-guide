@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::HttpNamespace<a name="aws-resource-servicediscovery-httpnamespace"></a>
 
-The `HttpNamespace` resource is a Cloud Map resource type that contains information about an HTTP namespace\. Service instances that you register using an HTTP namespace can be discovered using a `DiscoverInstances` request but can't be discovered using DNS\. 
+The `HttpNamespace` resource is an AWS Cloud Map resource type that contains information about an HTTP namespace\. Service instances that you register using an HTTP namespace can be discovered using a `DiscoverInstances` request but can't be discovered using DNS\. 
 
 For the current limit on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
 
@@ -79,7 +79,7 @@ The following example creates an HTTP namespace named `example-namespace`\.
 {
   "Type" : "AWS::ServiceDiscovery::HttpNamespace",
   "Properties" : {
-    "Description" : "Cloud Map HTTP namespace for resources for example.com website",
+    "Description" : "AWS Cloud Map HTTP namespace for resources for example.com website",
     "Name" : "example-namespace"
   }
 }
@@ -90,7 +90,7 @@ The following example creates an HTTP namespace named `example-namespace`\.
 ```
 Type: 'AWS::ServiceDiscovery::HttpNamespace'
 Properties:
-  Description: Cloud Map HTTP namespace for resources for example.com website
+  Description: AWS Cloud Map HTTP namespace for resources for example.com website
   Name: example-namespace
 ```
 
