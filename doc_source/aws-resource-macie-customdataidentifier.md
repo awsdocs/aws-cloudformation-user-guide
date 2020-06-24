@@ -2,7 +2,7 @@
 
 The `AWS::Macie::CustomDataIdentifier` resource is a set of criteria that you define to detect sensitive data in one or more data sources\. Each identifier specifies a regular expression \(regex\) that defines a text pattern to match in the data\. It can also specify character sequences, such as words and phrases, and a proximity rule that refine the analysis of a data source\. By using custom data identifiers, you can tailor your analysis to meet your organization's specific needs, and supplement the built\-in data identifiers that Amazon Macie provides\.
 
-A `Session` must exist in the account before you can create a `CustomDataIdentifier`\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
+A `Session` must exist for the account before you can create a `CustomDataIdentifier`\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
 
 ## Syntax<a name="aws-resource-macie-customdataidentifier-syntax"></a>
 
@@ -54,13 +54,13 @@ An array that lists specific character sequences \(ignore words\) to exclude fro
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Keywords`  <a name="cfn-macie-customdataidentifier-keywords"></a>
-An array that lists specific character sequences \(keywords\), one of which must be within proximity \(`maximumMatchDistance`\) of the regular expression to match\. The array can contain as many as 50 keywords\. Each keyword can contain 4 \- 90 characters\.   
+An array that lists specific character sequences \(keywords\), one of which must be within proximity \(`MaximumMatchDistance`\) of the regular expression to match\. The array can contain as many as 50 keywords\. Each keyword can contain 4 \- 90 characters\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaximumMatchDistance`  <a name="cfn-macie-customdataidentifier-maximummatchdistance"></a>
-The maximum number of characters that can exist between text that matches the regex pattern and the character sequences specified by the keywords array\. Macie includes or excludes a result based on the proximity of a keyword to text that matches the regex pattern\. The distance can be 1 \- 300 characters\. The default value is 50\.  
+The maximum number of characters that can exist between text that matches the regex pattern and the character sequences specified by the `Keywords` array\. Amazon Macie includes or excludes a result based on the proximity of a keyword to text that matches the regex pattern\. The distance can be 1 \- 300 characters\. The default value is 50\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -99,50 +99,34 @@ The Amazon Resource Name \(ARN\) of the custom data identifier\.
 The date and time, in UTC and extended ISO 8601 format, when the custom data identifier was created\.
 
 `Deleted`  <a name="Deleted-fn::getatt"></a>
-Specifies whether the custom data identifier was deleted\. If you delete a custom data identifier, Amazon Macie doesn't delete it permanently\. Instead, it soft deletes the identifier\. 
+Specifies whether the custom data identifier was deleted\. If you delete a custom data identifier, Amazon Macie doesn't delete it permanently\. Instead, it soft deletes the identifier\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The unique identifier for the custom data identifier that was created\.
 
 ## Examples<a name="aws-resource-macie-customdataidentifier--examples"></a>
 
-The following examples demonstrates how to declare an `AWS::Macie::CustomDataIdentifier` resource:
+The following examples demonstrates how to declare an `AWS::Macie::CustomDataIdentifier` resource\.
 
 ### Creating a Macie CustomDataIdentifier<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier"></a>
 
-This example creates a custom data identifier that matches 6 digit employee IDs that are located near the specified keywords\. If the match is a sample value, such as those provided in the ignore words, it is skipped\.
+This example creates a custom data identifier that detects 6\-digit employee IDs that are located near the specified keywords\. If the match is a sample value, such as those provided in the ignore words, it is skipped\.
 
 #### JSON<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier--json"></a>
 
 ```
-{
-	"Type": "AWS::Macie::CustomDataIdentifier",
-	"DependsOn": "Session",
-	"Properties": {
-		"Description": "My custom data identifier",
-		"IgnoreWords": ["000000", "123456"],
-		"Keywords": ["employeeID", "employee ID"],
-		"MaximumMatchDistance": 20,
-		"Name": "EmployeeIDCustomDataIdentifier",
-		"Regex": "\\d{6}"
-	}
-}
+{ "Type": "AWS::Macie::CustomDataIdentifier", "DependsOn":
+                "Session", "Properties": { "Description": "My custom data identifier",
+                "IgnoreWords": ["000000", "123456"], "Keywords": ["employeeID", "employee ID"],
+                "MaximumMatchDistance": 20, "Name": "EmployeeIDCustomDataIdentifier", "Regex":
+                "\\d{6}" } }
 ```
 
 #### YAML<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier--yaml"></a>
 
 ```
-Type: AWS::Macie::CustomDataIdentifier
-DependsOn: "Session"
-Properties: 
-  Description: "My custom data identifier"
-  IgnoreWords: 
-    - 000000
-    - 123456
-  Keywords: 
-    - "employeeID"
-    - "Employee ID"
-  MaximumMatchDistance: 20
-  Name: EmployeeIDCustomDataIdentifier
-  Regex: \d{6}
+Type: AWS::Macie::CustomDataIdentifier DependsOn: "Session"
+                Properties: Description: "My custom data identifier" IgnoreWords: - 000000 - 123456
+                Keywords: - "employeeID" - "Employee ID" MaximumMatchDistance: 20 Name:
+                EmployeeIDCustomDataIdentifier Regex: \d{6}
 ```

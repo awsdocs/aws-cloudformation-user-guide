@@ -12,8 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::Cluster",
   "Properties" : {
+      "[CapacityProviders](#cfn-ecs-cluster-capacityproviders)" : [ String, ... ],
       "[ClusterName](#cfn-ecs-cluster-clustername)" : String,
       "[ClusterSettings](#cfn-ecs-cluster-clustersettings)" : [ [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md), ... ],
+      "[DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy)" : [ [CapacityProviderStrategyItem](aws-properties-ecs-cluster-capacityproviderstrategyitem.md), ... ],
       "[Tags](#cfn-ecs-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,14 +26,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECS::Cluster
 Properties: 
+  [CapacityProviders](#cfn-ecs-cluster-capacityproviders): 
+    - String
   [ClusterName](#cfn-ecs-cluster-clustername): String
   [ClusterSettings](#cfn-ecs-cluster-clustersettings): 
     - [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md)
+  [DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy): 
+    - [CapacityProviderStrategyItem](aws-properties-ecs-cluster-capacityproviderstrategyitem.md)
   [Tags](#cfn-ecs-cluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ecs-cluster-properties"></a>
+
+`CapacityProviders`  <a name="cfn-ecs-cluster-capacityproviders"></a>
+The capacity providers associated with the cluster\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterName`  <a name="cfn-ecs-cluster-clustername"></a>
 A user\-generated string that you use to identify your cluster\. If you don't specify a name, AWS CloudFormation generates a unique physical ID for the name\.  
@@ -43,6 +55,12 @@ A user\-generated string that you use to identify your cluster\. If you don't sp
 The setting to use when creating a cluster\. This parameter is used to enable CloudWatch Container Insights for a cluster\. If this value is specified, it will override the `containerInsights` value set with [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html) or [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)\.  
 *Required*: No  
 *Type*: [List](aws-properties-ecs-cluster-clustersettings.md) of [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DefaultCapacityProviderStrategy`  <a name="cfn-ecs-cluster-defaultcapacityproviderstrategy"></a>
+The default capacity provider strategy for the cluster\. When services or tasks are run in the cluster with no launch type or capacity provider strategy specified, the default capacity provider strategy is used\.  
+*Required*: No  
+*Type*: List of [CapacityProviderStrategyItem](aws-properties-ecs-cluster-capacityproviderstrategyitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ecs-cluster-tags"></a>

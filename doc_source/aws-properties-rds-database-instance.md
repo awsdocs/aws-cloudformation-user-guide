@@ -170,8 +170,8 @@ If any value is set in the `Iops` parameter, `AllocatedStorage` must be at least
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowMajorVersionUpgrade`  <a name="cfn-rds-dbinstance-allowmajorversionupgrade"></a>
-Indicates that major version upgrades are allowed\. Changing this parameter does not result in an outage and the change is asynchronously applied as soon as possible\.  
-Constraints: This parameter must be set to true when specifying a value for the EngineVersion parameter that is a different major version than the DB Instance's current version\.  
+A value that indicates whether major version upgrades are allowed\. Changing this parameter doesn't result in an outage and the change is asynchronously applied as soon as possible\.  
+Constraints: Major version upgrades must be allowed when specifying a value for the `EngineVersion` parameter that is a different major version than the DB instance's current version\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -183,8 +183,7 @@ Constraints: This parameter must be set to true when specifying a value for the 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-rds-dbinstance-autominorversionupgrade"></a>
-Indicates that minor engine upgrades will be applied automatically to the DB Instance during the maintenance window\.  
-Default: `true`   
+A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the maintenance window\. By default, minor engine upgrades are applied automatically\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -220,7 +219,9 @@ For more information about CA certificate identifiers for Aurora DB engines, see
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CharacterSetName`  <a name="cfn-rds-dbinstance-charactersetname"></a>
-For supported engines, indicates that the DB Instance should be associated with the specified CharacterSet\.  
+For supported engines, indicates that the DB instance should be associated with the specified character set\.  
+ **Amazon Aurora**   
+Not applicable\. The character set is managed by the DB cluster\. For more information, see [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -515,7 +516,8 @@ Specifies whether the database instance is a multiple Availability Zone deployme
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `OptionGroupName`  <a name="cfn-rds-dbinstance-optiongroupname"></a>
-Indicates that the DB Instance should be associated with the specified option group\.  
+Indicates that the DB instance should be associated with the specified option group\.  
+Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option group\. Also, that option group can't be removed from a DB instance once it is associated with a DB instance\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

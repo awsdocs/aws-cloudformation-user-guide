@@ -1,8 +1,8 @@
 # AWS::EC2::LaunchTemplate SpotOptions<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions"></a>
 
-Specifies options for Spot instances\.
+Specifies options for Spot Instances\.
 
- `SpotOptions` is a property of the [Amazon EC2 LaunchTemplate InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html) property type\.
+`SpotOptions` is a property of [AWS::EC2::LaunchTemplate InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 Specifies an entry, known as a rule, in a network ACL with a rule number you specify\. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules\.
 
- For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority \(IANA\) website\. 
+ For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority \(IANA\) website\.
 
 ## Syntax<a name="aws-resource-ec2-network-acl-entry-syntax"></a>
 

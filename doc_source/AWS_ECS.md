@@ -1,6 +1,7 @@
 # ECS Resource Type Reference<a name="AWS_ECS"></a>
 
 **Resource Types**
++ [AWS::ECS::CapacityProvider](aws-resource-ecs-capacityprovider.md)
 + [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)
 + [AWS::ECS::PrimaryTaskSet](aws-resource-ecs-primarytaskset.md)
 + [AWS::ECS::Service](aws-resource-ecs-service.md)

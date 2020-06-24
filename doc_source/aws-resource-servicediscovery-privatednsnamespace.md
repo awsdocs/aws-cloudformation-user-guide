@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-servicediscovery-privatednsnamespace-description)" : String,
       "[Name](#cfn-servicediscovery-privatednsnamespace-name)" : String,
+      "[Tags](#cfn-servicediscovery-privatednsnamespace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Vpc](#cfn-servicediscovery-privatednsnamespace-vpc)" : String
     }
 }
@@ -26,6 +27,8 @@ Type: AWS::ServiceDiscovery::PrivateDnsNamespace
 Properties: 
   [Description](#cfn-servicediscovery-privatednsnamespace-description): String
   [Name](#cfn-servicediscovery-privatednsnamespace-name): String
+  [Tags](#cfn-servicediscovery-privatednsnamespace-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc): String
 ```
 
@@ -44,6 +47,13 @@ The name that you want to assign to this namespace\. When you create a private D
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-servicediscovery-privatednsnamespace-tags"></a>
+The tags for the namespace\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vpc`  <a name="cfn-servicediscovery-privatednsnamespace-vpc"></a>
 The ID of the Amazon VPC that you want to associate the namespace with\.  

@@ -341,7 +341,7 @@ If you specify a network interface, you must specify any subnets as part of the 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-instance-tags"></a>
-The tags to apply to the instance during launch\. These tags are not applied to the EBS volumes, such as the root volume\.  
+The tags to add to the instance\. These tags are not applied to the EBS volumes, such as the root volume\. AWS CloudFormation adds these tags after launching the instance\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,7 +2,7 @@
 
 Specifies the market \(purchasing\) option for an instance\.
 
- `InstanceMarketOptions` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+`InstanceMarketOptions` is a property of the [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-syntax"></a>
 

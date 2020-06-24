@@ -4,6 +4,44 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_ServiceDiscovery.md) | The following resources were updated: `AWS::ServiceDiscovery::HttpNamespace` `AWS::ServiceDiscovery::PrivateDnsNamespace` `AWS::ServiceDiscovery::PublicDnsNamespac`e `AWS::ServiceDiscovery::Service`  
+
+ [AWS::ServiceDiscovery::HttpNamespace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap HTTP namespace\. 
+
+ [AWS::ServiceDiscovery::PrivateDnsNamespace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap private DNS namespace\. 
+
+ [AWS::ServiceDiscovery::PublicDnsNamespace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap public DNS namespace\. 
+
+ [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap service\.  | June 22, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: `AWS::ServiceDiscovery::HttpNamespace` `AWS::ServiceDiscovery::PrivateDnsNamespace` `AWS::ServiceDiscovery::PublicDnsNamespac`e `AWS::ServiceDiscovery::Service`  
+
+ [AWS::ServiceDiscovery::HttpNamespace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-httpnamespace.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap HTTP namespace\. 
+
+ [AWS::ServiceDiscovery::PrivateDnsNamespace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap private DNS namespace\. 
+
+ [AWS::ServiceDiscovery::PublicDnsNamespace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap public DNS namespace\. 
+
+ [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)   
+Use the `Tags` property to add tag keys and values to an AWS CloudMap service\.  | June 22, 2020 | 
+| [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::Cluster 
+
+ [AWS::ECS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html)   
+Use the `CapacityProviderStrategyItem` property to specify the capacity provider strategy when creating a cluster\.  | June 18, 2020 | 
+| [Updated resource](AWS_FMS.md) | The following resources were updated: AWS::FMS::Policy IEMap 
+
+ [AWS::FMS::Policy IEMap](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-iemap.html)   
+The `AWS::FMS::Policy IEMap` resource now allows you to specify accounts using AWS Organizations organizational units \(OUs\), in addition to account IDs\.   | June 18, 2020 | 
+| [New resources](AWS_ECS.md) | The following resources were added: AWS::ECS::CapacityProvider\. 
+
+ [AWS::ECS::CapacityProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html)   
+Use the `AWS::ECS::CapacityProvider` resource to create a new capacity provider\.  | June 18, 2020 | 
 | [Updated resource](AWS_EFS.md) | The following resource was updated: AWS::EFS::FileSystem 
 
 [AWS::EFS::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)  
@@ -13,18 +51,6 @@ Use the `FileSystemPolicy` property to create a new resource policy to control N
 [AWS::EFS::AccessPoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html)  
 Fn::GetAtt now returns the `AccessPointId` and `Arn` attributes\.  | June 16, 2020 | 
 | [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::Function\. 
-
- [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   
-Use the `FileSystemConfigs` property to specify connection settings for an Amazon EFS file system\.  | June 16, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EFS::FileSystem 
-
-[AWS::EFS::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)  
-Use the `FileSystemPolicy` property to create a new resource policy to control NFS access to your Amazon EFS file system\.  | June 16, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EFS::AccessPoint 
-
-[AWS::EFS::AccessPoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html)  
-Fn::GetAtt now returns the `AccessPointId` and `Arn` attributes\.  | June 16, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Lambda::Function\. 
 
  [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   
 Use the `FileSystemConfigs` property to specify connection settings for an Amazon EFS file system\.  | June 16, 2020 | 
@@ -476,26 +502,22 @@ Use the `AWS::ACMPCA::CertificateAuthority` resource to create a private CA\.
 
  [AWS::ACMPCA::CertificateAuthorityActivation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthorityactivation.html)   
 The `AWS::ACMPCA::CertificateAuthorityActivation` resource creates and installs a CA certificate on a CA\.   | January 23, 2020 | 
-| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::Application 
+| [New resource](AWS_AppConfig.md) | The following resources were added: AWS::AppConfig::Application, AWS::AppConfig::ConfigurationProfile, AWS::AppConfig::Deployment, AWS::AppConfig::Environment, and AWS::AppConfig::DeploymentStrategy 
 
  [AWS::AppConfig::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-application.html)   
-The `AWS::AppConfig::Application` resource creates an application, which is a logical unit of code that provides capabilities for your customers\.  | January 23, 2020 | 
-| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::ConfigurationProfile 
+The `AWS::AppConfig::Application` resource creates an application, which is a logical unit of code that provides capabilities for your customers\. 
 
  [AWS::AppConfig::ConfigurationProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html)   
-The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\. Valid configuration sources include Systems Manager \(SSM\) documents and SSM Parameter Store parameters\.  | January 23, 2020 | 
-| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::Deployment 
+The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\.  
 
  [AWS::AppConfig::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html)   
-The `AWS::AppConfig::Deployment` resource starts a deployment\. Starting a deployment in AWS AppConfig calls the `StartDeployment` API action\. This call includes the IDs of the AppConfig application, the environment, the configuration profile, and \(optionally\) the configuration data version to deploy\. The call also includes the ID of the deployment strategy to use, which determines how the configuration data is deployed\.  | January 23, 2020 | 
-| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::Environment 
+The `AWS::AppConfig::Deployment` resource starts a deployment\.  
 
  [AWS::AppConfig::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html)   
-The `AWS::AppConfig::Environment` resource creates an environment, which is a logical deployment group of AppConfig targets, such as applications in a `Beta` or `Production` environment\. You define one or more environments for each AppConfig application\. You can also define environments for application subcomponents such as the `Web`, `Mobile` and `Back-end` components for your application\. You can configure Amazon CloudWatch alarms for each environment\. The system monitors alarms during a configuration deployment\. If an alarm is triggered, the system rolls back the configuration\.  | January 23, 2020 | 
-| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::DeploymentStrategy 
+The `AWS::AppConfig::Environment` resource creates an environment, which is a logical deployment group of AppConfig targets, such as applications in a `Beta` or `Production` environment\. 
 
  [AWS::AppConfig::DeploymentStrategy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html)   
-The `AWS::AppConfig::DeploymentStrategy` resource creates an AppConfig deployment strategy\. A deployment strategy defines important criteria for rolling out your configuration to the designated targets\. A deployment strategy includes: the overall duration required, a percentage of targets to receive the deployment during each interval, an algorithm that defines how percentage grows, and bake time\.  | January 23, 2020 | 
+The `AWS::AppConfig::DeploymentStrategy` resource creates an AppConfig deployment strategy\.   | January 23, 2020 | 
 | [Updated resources](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::Function\. 
 
  [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   

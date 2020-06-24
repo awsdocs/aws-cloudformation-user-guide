@@ -108,7 +108,7 @@ The CPU options for the instance\. For more information, see [Optimizing CPU Opt
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CreditSpecification`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-creditspecification"></a>
-The credit option for CPU usage of the instance\. Valid for T2 or T3 instances only\.  
+The credit option for CPU usage of the instance\. Valid for T2, T3, or T3a instances only\.  
 *Required*: No  
 *Type*: [CreditSpecification](aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

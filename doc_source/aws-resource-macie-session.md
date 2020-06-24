@@ -1,8 +1,8 @@
 # AWS::Macie::Session<a name="aws-resource-macie-session"></a>
 
-The `AWS::Macie::Session` resource represents the Macie service and configuration settings in your account\. A `Session` is created for each Region in which you enable Macie\. 
+The `AWS::Macie::Session` resource represents the Amazon Macie service and configuration settings for an account\. A `Session` is created for each AWS Region in which you enable Macie\. 
 
-You must create a `Session` in an account before you can create a `AWS::Macie::FindingsFilter` or `AWS::Macie::CustomDataIdentifier` resource\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
+You must create a `Session` for an account before you can create an `AWS::Macie::FindingsFilter` or `AWS::Macie::CustomDataIdentifier` resource\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
 
 ## Syntax<a name="aws-resource-macie-session-syntax"></a>
 
@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-macie-session-properties"></a>
 
 `FindingPublishingFrequency`  <a name="cfn-macie-session-findingpublishingfrequency"></a>
-The frequency with which Amazon Macie publishes findings for an account\. This includes adding findings to AWS Security Hub and exporting finding events to Amazon CloudWatch\. Valid values are:  
+The frequency with which Amazon Macie publishes updates to policy findings for an account\. This includes publishing updates to AWS Security Hub and Amazon EventBridge \(formerly called Amazon CloudWatch Events\)\. Valid values are:  
 + FIFTEEN\_MINUTES
 + ONE\_HOUR
 + SIX\_HOURS
@@ -41,7 +41,7 @@ The frequency with which Amazon Macie publishes findings for an account\. This i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-macie-session-status"></a>
-The `MacieStatus` of the `Session`\. Values include `ENABLED` or `PAUSED`\.  
+The `MacieStatus` of the `Session`\. Valid values include `ENABLED` and `PAUSED`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -63,34 +63,29 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-macie-session-return-values-fn--getatt-fn--getatt"></a>
 
 `AwsAccountId`  <a name="AwsAccountId-fn::getatt"></a>
-The account ID of the account in which the `Session` is created\.
+The account ID for the AWS account in which the `Session` is created\.
 
 `ServiceRole`  <a name="ServiceRole-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the service\-level role that allows Amazon Macie to monitor and analyze data in AWS resources for the account\.
+The Amazon Resource Name \(ARN\) of the service\-linked role that allows Amazon Macie to monitor and analyze data in AWS resources for the account\.
 
 ## Examples<a name="aws-resource-macie-session--examples"></a>
 
-The following examples demonstrates how to declare an `AWS::Macie::Session` resource:
+The following examples demonstrates how to declare an `AWS::Macie::Session` resource\.
 
 ### Creating a Macie Session<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session"></a>
+
+This example enables Amazon Macie for an account\. It also configures Macie to publish updated findings every hour for the account\.
 
 #### JSON<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--json"></a>
 
 ```
-{
-	"Type": "AWS::Macie::Session",
-	"Properties": {
-		"FindingPublishingFrequency": "ONE_HOUR",
-		"Status": "ENABLED"
-	}
-}
+{ "Type": "AWS::Macie::Session", "Properties": {
+                "FindingPublishingFrequency": "ONE_HOUR", "Status": "ENABLED" } }
 ```
 
 #### YAML<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--yaml"></a>
 
 ```
-Type: AWS::Macie::Session
-    Properties: 
-      FindingPublishingFrequency: ONE_HOUR
-      Status: ENABLED
+Type: AWS::Macie::Session Properties:
+                FindingPublishingFrequency: ONE_HOUR Status: ENABLED
 ```

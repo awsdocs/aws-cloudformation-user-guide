@@ -2,7 +2,7 @@
 
 Specifies a secondary private IPv4 address for a network interface\.
 
- `PrivateIpAdd` is a property of the [Amazon EC2 LaunchTemplate NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html) property type\.
+`PrivateIpAdd` is a property of [AWS::EC2::LaunchTemplate NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-privateipadd-syntax"></a>
 

@@ -6,3 +6,4 @@
 + [AWS::AppConfig::Deployment](aws-resource-appconfig-deployment.md)
 + [AWS::AppConfig::DeploymentStrategy](aws-resource-appconfig-deploymentstrategy.md)
 + [AWS::AppConfig::Environment](aws-resource-appconfig-environment.md)
++ [AWS::AppConfig::HostedConfigurationVersion](aws-resource-appconfig-hostedconfigurationversion.md)

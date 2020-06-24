@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ServiceDiscovery::PublicDnsNamespace",
   "Properties" : {
       "[Description](#cfn-servicediscovery-publicdnsnamespace-description)" : String,
-      "[Name](#cfn-servicediscovery-publicdnsnamespace-name)" : String
+      "[Name](#cfn-servicediscovery-publicdnsnamespace-name)" : String,
+      "[Tags](#cfn-servicediscovery-publicdnsnamespace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::ServiceDiscovery::PublicDnsNamespace
 Properties: 
   [Description](#cfn-servicediscovery-publicdnsnamespace-description): String
   [Name](#cfn-servicediscovery-publicdnsnamespace-name): String
+  [Tags](#cfn-servicediscovery-publicdnsnamespace-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-publicdnsnamespace-properties"></a>
@@ -42,6 +45,13 @@ The name that you want to assign to this namespace\.
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-servicediscovery-publicdnsnamespace-tags"></a>
+The tags for the namespace\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return Values<a name="aws-resource-servicediscovery-publicdnsnamespace-return-values"></a>
 

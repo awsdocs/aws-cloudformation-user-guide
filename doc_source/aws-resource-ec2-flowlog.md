@@ -98,6 +98,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-flowlog-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ec2-flowlog-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-ec2-flowlog--examples"></a>
 
 ### Creating a flow log that monitors all traffic types<a name="aws-resource-ec2-flowlog--examples--Creating_a_flow_log_that_monitors_all_traffic_types"></a>

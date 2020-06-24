@@ -2,7 +2,7 @@
 
 Parameters for a block device for an EBS volume in an Amazon EC2 launch template\.
 
- `Ebs` is a property of the [ Amazon EC2 LaunchTemplate BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html) property type\.
+ `Ebs` is a property of [ AWS::EC2::LaunchTemplate BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs-syntax"></a>
 

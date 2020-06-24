@@ -107,7 +107,7 @@ If your account supports EC2\-Classic and VPC, this property is required to crea
 
 `Cooldown`  <a name="cfn-as-group-cooldown"></a>
 The amount of time, in seconds, after a scaling activity completes before another scaling activity can start\. The default value is `300`\.   
-Used only when a scaling\-specific cooldown is not specified and not supported for target tracking scaling policies, step scaling policies, or scheduled scaling\. For more information, see [Scaling Cooldowns](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+This setting applies when using simple scaling policies, but not when using other scaling policies or scheduled scaling\. For more information, see [Scaling Cooldowns for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -121,7 +121,8 @@ CloudFormation marks the Auto Scaling group as successful \(by setting its statu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckGracePeriod`  <a name="cfn-as-group-healthcheckgraceperiod"></a>
-The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service\. The default value is `0`\.  
+The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service\.   
+If you don't specify a value, AWS CloudFormation uses the API default value of `0` seconds\.  
 For more information, see [Health Checks for Auto Scaling Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 If you are adding an `ELB` health check, you must specify this property\.  
 *Required*: Conditional  
@@ -181,7 +182,8 @@ For more information, see [Using a Load Balancer with an Auto Scaling Group](htt
 
 `MaxInstanceLifetime`  <a name="cfn-as-group-maxinstancelifetime"></a>
 The maximum amount of time, in seconds, that an instance can be in service\.  
-Valid Range: Minimum value of 0\.  
+ You must specify a value of at least 604,800 seconds \(7 days\)\.  
+For more information, see [Replacing Auto Scaling Instances Based on Maximum Instance Lifetime](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
