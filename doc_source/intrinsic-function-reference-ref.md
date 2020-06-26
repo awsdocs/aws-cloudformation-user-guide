@@ -2,7 +2,7 @@
 
 The intrinsic function `Ref` returns the value of the specified *parameter* or *resource*\.
 + When you specify a parameter's logical name, it returns the value of the parameter\.
-+ When you specify a resource's logical name, it returns a value that you can typically use to refer to that resource, such as a [physical ID](resources-section-structure.md)\.
++ When you specify a resource's logical name, case-sensitive, it returns a value that you can typically use to refer to that resource, such as a [physical ID](resources-section-structure.md)\.
 
 When you are declaring a resource in a template and you need to specify another template resource by name, you can use the `Ref` to refer to that other resource\. In general, `Ref` returns the name of the resource\. For example, a reference to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) returns the name of that Auto Scaling group resource\.
 
