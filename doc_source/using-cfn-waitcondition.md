@@ -131,7 +131,7 @@ Where:
 "WaitConditionData" : {
   "Value" : { "Fn::GetAtt" : [ "mywaitcondition", "Data" ]},
   "Description" : "The data passed back as part of signalling the WaitCondition"
-}
+},
 ```
 
 The Fn::GetAtt function returns the UniqueId and Data as a name/value pair within a JSON structure\. The following is an example of the Data attribute returned by the WaitConditionData output value defined above:
