@@ -50,7 +50,7 @@ The following list provides a summary of how a wait condition with a wait condit
    3.     "DependsOn" : "Ec2Instance",
    4.     "Properties" : {
    5.         "Handle" : { "Ref" : "myWaitHandle" },
-   6.          "Timeout" : "4500"
+   6.         "Timeout" : "4500"
    7.     }
    8. }
    ```
@@ -114,7 +114,7 @@ When you signal a wait condition, you must use the following JSON format:
 3.   "UniqueId" : "Some UniqueId",
 4.   "Data" : "Some Data",
 5.   "Reason" : "Some Reason"
-6.   }
+6. }
 ```
 
 Where:
@@ -128,10 +128,10 @@ Where:
 *Data* is any information that you want to send back with the signal\. The Data value can be accessed by calling the [Fn::GetAtt function](intrinsic-function-reference-getatt.md) within the template\. For example, if you create the following output value for the wait condition mywaitcondition, you can use the `aws cloudformation describe-stacks` command, [DescribeStacks action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStacks.html), or Outputs tab of the CloudFormation console to view the Data sent by valid signals sent to AWS CloudFormation: 
 
 ```
-        "WaitConditionData" : {
-            "Value" : { "Fn::GetAtt" : [ "mywaitcondition", "Data" ]},
-            "Description" : "The data passed back as part of signalling the WaitCondition"
-        },
+"WaitConditionData" : {
+  "Value" : { "Fn::GetAtt" : [ "mywaitcondition", "Data" ]},
+  "Description" : "The data passed back as part of signalling the WaitCondition"
+},
 ```
 
 The Fn::GetAtt function returns the UniqueId and Data as a name/value pair within a JSON structure\. The following is an example of the Data attribute returned by the WaitConditionData output value defined above:
