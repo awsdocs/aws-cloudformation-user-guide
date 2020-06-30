@@ -5,6 +5,9 @@ You can use the optional `Metadata` section to include arbitrary JSON or YAML ob
 **Important**  
 During a stack update, you cannot update the `Metadata` section by itself\. You can update it only when you include changes that add, modify, or delete resources\.
 
+**Important**  
+CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. Because of this, we strongly recommend you do not use this section to store sensitive information, such as passwords or secrets\.
+
 ## JSON<a name="metadata-section-structure-example.json"></a>
 
 ```

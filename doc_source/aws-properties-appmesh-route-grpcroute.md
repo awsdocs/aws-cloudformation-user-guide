@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Action](#cfn-appmesh-route-grpcroute-action)" : [GrpcRouteAction](aws-properties-appmesh-route-grpcrouteaction.md),
   "[Match](#cfn-appmesh-route-grpcroute-match)" : [GrpcRouteMatch](aws-properties-appmesh-route-grpcroutematch.md),
-  "[RetryPolicy](#cfn-appmesh-route-grpcroute-retrypolicy)" : [GrpcRetryPolicy](aws-properties-appmesh-route-grpcretrypolicy.md)
+  "[RetryPolicy](#cfn-appmesh-route-grpcroute-retrypolicy)" : [GrpcRetryPolicy](aws-properties-appmesh-route-grpcretrypolicy.md),
+  "[Timeout](#cfn-appmesh-route-grpcroute-timeout)" : [GrpcTimeout](aws-properties-appmesh-route-grpctimeout.md)
 }
 ```
 
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [GrpcRouteMatch](aws-properties-appmesh-route-grpcroutematch.md)
   [RetryPolicy](#cfn-appmesh-route-grpcroute-retrypolicy): 
     [GrpcRetryPolicy](aws-properties-appmesh-route-grpcretrypolicy.md)
+  [Timeout](#cfn-appmesh-route-grpcroute-timeout): 
+    [GrpcTimeout](aws-properties-appmesh-route-grpctimeout.md)
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-grpcroute-properties"></a>
@@ -45,4 +48,10 @@ An object that represents the criteria for determining a request match\.
 An object that represents a retry policy\.  
 *Required*: No  
 *Type*: [GrpcRetryPolicy](aws-properties-appmesh-route-grpcretrypolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Timeout`  <a name="cfn-appmesh-route-grpcroute-timeout"></a>
+An object that represents types of timeouts\.   
+*Required*: No  
+*Type*: [GrpcTimeout](aws-properties-appmesh-route-grpctimeout.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

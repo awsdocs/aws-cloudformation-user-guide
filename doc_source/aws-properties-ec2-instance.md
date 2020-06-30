@@ -150,7 +150,7 @@ The CPU options for the instance\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CreditSpecification`  <a name="cfn-ec2-instance-creditspecification"></a>
-The credit option for CPU usage of the burstable performance instance\. Valid values are `standard` and `unlimited`\. To change this attribute after launch, use [ ModifyInstanceCreditSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html)\. For more information, see [Burstable Performance Instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The credit option for CPU usage of the burstable performance instance\. Valid values are `standard` and `unlimited`\. To change this attribute after launch, use [ ModifyInstanceCreditSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html)\. For more information, see [Burstable performance instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 Default: `standard` \(T2 instances\) or `unlimited` \(T3/T3a instances\)  
 *Required*: No  
 *Type*: [CreditSpecification](aws-properties-ec2-instance-creditspecification.md)  
@@ -184,7 +184,7 @@ You cannot specify accelerators from different generations in the same request\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HibernationOptions`  <a name="cfn-ec2-instance-hibernationoptions"></a>
-Indicates whether an instance is enabled for hibernation\. For more information, see [Hibernate Your Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Indicates whether an instance is enabled for hibernation\. For more information, see [Hibernate your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -222,7 +222,7 @@ Default: `stop`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-instance-instancetype"></a>
-The instance type\. For more information, see [Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The instance type\. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 Default: `m1.small`   
 *Required*: No  
 *Type*: String  
@@ -354,7 +354,7 @@ The tenancy of the instance \(if the instance is running in a VPC\)\. An instanc
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `UserData`  <a name="cfn-ec2-instance-userdata"></a>
-The user data to make available to the instance\. For more information, see [Running Commands on Your Linux Instance at Launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) \(Linux\) and [Adding User Data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) \(Windows\)\. If you are using a command line tool, base64\-encoding is performed for you, and you can load the text from a file\. Otherwise, you must provide base64\-encoded text\. User data is limited to 16 KB\.  
+The user data to make available to the instance\. For more information, see [Running commands on your Linux instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) \(Linux\) and [Adding User Data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) \(Windows\)\. If you are using a command line tool, base64\-encoding is performed for you, and you can load the text from a file\. Otherwise, you must provide base64\-encoded text\. User data is limited to 16 KB\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

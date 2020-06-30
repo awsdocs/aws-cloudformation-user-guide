@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-properties"></a>
 
 `SpotSpecification`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification"></a>
-The launch specification for Spot instances in the fleet, which determines the defined duration and provisioning timeout behavior\.  
+The launch specification for Spot instances in the fleet, which determines the defined duration, provisioning timeout behavior, and allocation strategy\.  
 *Required*: Yes  
 *Type*: [SpotProvisioningSpecification](aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

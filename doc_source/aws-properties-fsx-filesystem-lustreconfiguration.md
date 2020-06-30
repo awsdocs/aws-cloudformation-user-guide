@@ -33,7 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-fsx-filesystem-lustreconfiguration-properties"></a>
 
 `DeploymentType`  <a name="cfn-fsx-filesystem-lustreconfiguration-deploymenttype"></a>
-\(Optional\) Choose `SCRATCH_1` and `SCRATCH_2` deployment types when you need temporary storage and shorter\-term processing of data\. The `SCRATCH_2` deployment type provides in\-transit encryption of data and higher burst throughput capacity than `SCRATCH_1`\.  
+ Choose `SCRATCH_1` and `SCRATCH_2` deployment types when you need temporary storage and shorter\-term processing of data\. The `SCRATCH_2` deployment type provides in\-transit encryption of data and higher burst throughput capacity than `SCRATCH_1`\.  
+This option can only be set for for PERSISTENT\_1 deployments types\.
 Choose `PERSISTENT_1` deployment type for longer\-term storage and workloads and encryption of data in transit\. To learn more about deployment types, see [ FSx for Lustre Deployment Options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html)\.  
 Encryption of data in\-transit is automatically enabled when you access a `SCRATCH_2` or `PERSISTENT_1` file system from Amazon EC2 instances that [support this feature](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data-                 protection.html)\. \(Default = `SCRATCH_1`\)   
 Encryption of data in\-transit for `SCRATCH_2` and `PERSISTENT_1` deployment types is supported when accessed from supported instance types in supported AWS Regions\. To learn more, [Encrypting Data in Transit](https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html)\.  
@@ -49,7 +50,7 @@ The Amazon S3 export bucket must be the same as the import bucket specified by `
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `900`  
-*Pattern*: `^.{3,900}$`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{3,4357}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImportedFileChunkSize`  <a name="cfn-fsx-filesystem-lustreconfiguration-importedfilechunksize"></a>
@@ -67,7 +68,7 @@ The default chunk size is 1,024 MiB \(1 GiB\) and can go as high as 512,000 MiB 
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `900`  
-*Pattern*: `^.{3,900}$`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{3,4357}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PerUnitStorageThroughput`  <a name="cfn-fsx-filesystem-lustreconfiguration-perunitstoragethroughput"></a>

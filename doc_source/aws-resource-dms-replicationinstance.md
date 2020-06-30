@@ -119,8 +119,8 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReplicationInstanceClass`  <a name="cfn-dms-replicationinstance-replicationinstanceclass"></a>
-The compute and memory capacity of the replication instance as specified by the replication instance class\.  
- Valid Values: `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge `   
+The compute and memory capacity of the replication instance as defined for the specified replication instance class\. For example to specify the instance class dms\.c4\.large, set this parameter to `"dms.c4.large"`\.  
+For more information on the settings and capacities for the available replication instance classes, see [ Selecting the right AWS DMS replication instance for your migration](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.InDepth)\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

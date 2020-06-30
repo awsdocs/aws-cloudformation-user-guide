@@ -9,7 +9,14 @@ The following sample template creates an Amazon Redshift cluster according to th
 **Note**  
 The template includes the `IsMultiNodeCluster` condition so that the `NumberOfNodes` parameter is declared only when the `ClusterType` parameter value is set to `multi-node`\.
 
-The example defines the `MysqlRootPassword` parameter with its `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\.
+The example defines the `MysqlRootPassword` parameter with its `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
+
+**Important**  
+Using the `NoEcho` attribute does not mask any information stored in the following:  
+The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
+The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
+The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
+We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
 
 **Important**  
 Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
@@ -384,6 +391,6 @@ Outputs:
       Ref: SecurityGroup
 ```
 
-## See Also<a name="w6291ab1c19c23c73b7"></a>
+## See Also<a name="w6342ab1c19c23c73b7"></a>
 
 [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)

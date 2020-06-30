@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck)" : [HealthCheck](aws-properties-appmesh-virtualnode-healthcheck.md),
   "[PortMapping](#cfn-appmesh-virtualnode-listener-portmapping)" : [PortMapping](aws-properties-appmesh-virtualnode-portmapping.md),
+  "[Timeout](#cfn-appmesh-virtualnode-listener-timeout)" : [ListenerTimeout](aws-properties-appmesh-virtualnode-listenertimeout.md),
   "[TLS](#cfn-appmesh-virtualnode-listener-tls)" : [ListenerTls](aws-properties-appmesh-virtualnode-listenertls.md)
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     [HealthCheck](aws-properties-appmesh-virtualnode-healthcheck.md)
   [PortMapping](#cfn-appmesh-virtualnode-listener-portmapping): 
     [PortMapping](aws-properties-appmesh-virtualnode-portmapping.md)
+  [Timeout](#cfn-appmesh-virtualnode-listener-timeout): 
+    [ListenerTimeout](aws-properties-appmesh-virtualnode-listenertimeout.md)
   [TLS](#cfn-appmesh-virtualnode-listener-tls): 
     [ListenerTls](aws-properties-appmesh-virtualnode-listenertls.md)
 ```
@@ -39,6 +42,12 @@ The health check information for the listener\.
 The port mapping information for the listener\.  
 *Required*: Yes  
 *Type*: [PortMapping](aws-properties-appmesh-virtualnode-portmapping.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Timeout`  <a name="cfn-appmesh-virtualnode-listener-timeout"></a>
+An object that represents timeouts for different protocols\.  
+*Required*: No  
+*Type*: [ListenerTimeout](aws-properties-appmesh-virtualnode-listenertimeout.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TLS`  <a name="cfn-appmesh-virtualnode-listener-tls"></a>

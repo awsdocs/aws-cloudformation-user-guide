@@ -5,9 +5,12 @@ The Metadata attribute enables you to associate structured data with a resource\
 **Note**  
 AWS CloudFormation does not validate the syntax within the Metadata attribute\.
 
+**Important**  
+CloudFormation does not redact or obfuscate any information you include in the Metadata attribute\. We strongly recommend you do not use this section to store sensitive information, such as passwords or secrets\.
+
 You can retrieve this data using the AWS command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html)\.
 
-## Example<a name="w6291ab1c25c23c19b9"></a>
+## Example<a name="w6342ab1c25c23c19c11"></a>
 
 The following template contains an Amazon S3 bucket resource with a Metadata attribute\.
 

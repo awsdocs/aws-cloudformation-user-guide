@@ -46,10 +46,10 @@ The name of the connection\. Connection names must be unique in an AWS user acco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProviderType`  <a name="cfn-codestarconnections-connection-providertype"></a>
-The name of the external provider where your third\-party code repository is configured\. The valid provider type is Bitbucket\.  
+The name of the external provider where your third\-party code repository is configured\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Bitbucket`  
+*Allowed Values*: `Bitbucket | GitHubEnterpriseServer`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codestarconnections-connection-tags"></a>

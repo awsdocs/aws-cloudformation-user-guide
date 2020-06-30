@@ -2,6 +2,8 @@
 
 **To delete a stack**
 
+1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
+
 1. On the **Stacks** page in the CloudFormation console, select the stack that you want to delete\. The stack must be currently running\.
 
 1. In the stack details pane, choose **Delete**\.

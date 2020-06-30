@@ -17,7 +17,7 @@ Before you create a stack set with **self\-managed** permissions, you need to es
 
 1. Create the necessary IAM service roles in your administrator and target accounts to define the permissions you want\.
 **Important**  
-The role in your administrator account must be named **AWSCloudFormationStackSetAdministrationRole**\. The role in each of your target accounts must be named **AWSCloudFormationStackSetExecutionRole**\.
+The role in your administrator account should be named **AWSCloudFormationStackSetAdministrationRole**\. The role in each of your target accounts should be named **AWSCloudFormationStackSetExecutionRole**\.
 
 ## Set Up Basic Permissions for Stack Sets Operations<a name="stacksets-prereqs-accountsetup"></a>
 

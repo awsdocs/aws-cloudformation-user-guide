@@ -2,6 +2,9 @@
 
 The optional `Outputs` section declares output values that you can [import into other stacks](intrinsic-function-reference-importvalue.md) \(to [create cross\-stack references](walkthrough-crossstackref.md)\), return in response \(to describe stack calls\), or [view on the AWS CloudFormation console](cfn-console-view-stack-data-resources.md)\. For example, you can output the S3 bucket name for a stack to make the bucket easier to find\.
 
+**Important**  
+CloudFormation does not redact or obfuscate any information you include in the Outputs section\. We strongly recommend you do not use this section to output sensitive information, such as passwords or secrets\.
+
 ## Syntax<a name="outputs-section-syntax"></a>
 
 The `Outputs` section consists of the key name `Outputs`, followed by a space and a single colon\. You can declare a maximum of 60 outputs in a template\.

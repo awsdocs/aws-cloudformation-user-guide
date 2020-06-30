@@ -171,3 +171,7 @@ Resources:
         - Key: Env
           Value: test
 ```
+
+## See Also<a name="aws-resource-appconfig-deployment--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Deploying a configuration](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-deploying.html)

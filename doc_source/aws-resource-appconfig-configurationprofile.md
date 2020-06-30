@@ -190,3 +190,7 @@ Resources:
         - Key: Env
           Value: test
 ```
+
+## See Also<a name="aws-resource-appconfig-configurationprofile--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html)

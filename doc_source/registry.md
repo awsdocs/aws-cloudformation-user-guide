@@ -143,7 +143,7 @@ By design, resource properties defined as write\-only are not returned in the sc
 
 For more information on configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 
-### Preventing senstive properties being recorded in a configuration item<a name="registry-config-record-sensitive"></a>
+### Preventing sensitive properties being recorded in a configuration item<a name="registry-config-record-sensitive"></a>
 
 Your resource type may contain properties that you consider sensitive information, such as passwords, secrets, or other sensitive data, that you don't want recorded as part of the configuration item\. To prevent a property from being recorded in the configuration item, you can include that property in the `writeOnlyproperties` list in your resource type schema\. Resource properties listed as `writeOnlyproperties` can be specified by the user, but will not be returned by a `read` or `list` request\.
 

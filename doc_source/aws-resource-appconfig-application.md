@@ -111,3 +111,7 @@ BasicApplication:
         - Key: Env
           Value: test
 ```
+
+## See Also<a name="aws-resource-appconfig-application--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Creating an Application](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-application.html)

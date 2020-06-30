@@ -33,19 +33,19 @@ Properties:
 ## Properties<a name="aws-resource-amplify-domain-properties"></a>
 
 `AppId`  <a name="cfn-amplify-domain-appid"></a>
- Unique Id for an Amplify App\.   
+ The unique ID for an Amplify app\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DomainName`  <a name="cfn-amplify-domain-domainname"></a>
- Domain name for the Domain Association\.   
+ The domain name for the domain association\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubDomainSettings`  <a name="cfn-amplify-domain-subdomainsettings"></a>
- Setting structure for the Subdomain\.   
+ The setting for the subdomain\.   
 *Required*: Yes  
 *Type*: List of [SubDomainSetting](aws-properties-amplify-domain-subdomainsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

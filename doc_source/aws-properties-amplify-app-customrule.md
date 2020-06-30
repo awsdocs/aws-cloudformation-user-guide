@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplify-app-customrule-properties"></a>
 
 `Condition`  <a name="cfn-amplify-app-customrule-condition"></a>
- The condition for a URL rewrite or redirect rule, e\.g\. country code\.   
+ The condition for a URL rewrite or redirect rule, such as a country code\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

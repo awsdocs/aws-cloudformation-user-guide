@@ -177,7 +177,7 @@ The state of the canary\. For example, `RUNNING`\.
 
 ### Canary with script stored in an Amazon S3 bucket<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket"></a>
 
-This example creates a canary that uses an existing script stored in an S3 bucket\.
+This example creates a canary that uses an existing script stored in an S3 bucket\. The canary is started as soon as it is created\.
 
 #### JSON<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket--json"></a>
 
@@ -211,6 +211,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
                 },
                 "FailureRetentionPeriod": 30,
                 "SuccessRetentionPeriod": 30,
+                "StartCanaryAfterCreation": true,
                 "Tags": [
                     {
                         "Id": "key00AtCreate",
@@ -240,7 +241,7 @@ Resources:
             FailureRetentionPeriod: 30
             SuccessRetentionPeriod: 30
             Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
-            StartCanaryAfterCreation: false
+            StartCanaryAfterCreation: true
 ```
 
 ### Canary with script passed through CloudFormation<a name="aws-resource-synthetics-canary--examples--Canary_with_script_passed_through_CloudFormation"></a>
@@ -277,9 +278,9 @@ This example creates a canary and passes the script code directly into the canar
                     "TimeoutInSeconds": 60
                 },
                 "FailureRetentionPeriod": 30,
-                "SuccessRetentionPeriod": 30
-            },
-            "Tags": [
+                "SuccessRetentionPeriod": 30,
+                "StartCanaryAfterCreation": false,
+                "Tags": [
                 {
                     "Id": "key00AtCreate",
                     "Value": "value001AtCreate"
