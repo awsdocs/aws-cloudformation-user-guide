@@ -110,3 +110,8 @@ The following table describes status codes for stack instances within stack sets
 |  `CURRENT`  |  The stack is currently up to date with the stack set\.  | 
 |  `OUTDATED`  |  The stack is not currently up to date with the stack set for one of the following reasons\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html)  | 
 |  `INOPERABLE`  |  A `DeleteStackInstances` operation has failed and left the stack in an unstable state\. Stacks in this state are excluded from further `UpdateStackSet` operations\. You might need to perform a `DeleteStackInstances` operation, with `RetainStacks` set to `true`, to delete the stack instance, and then delete the stack manually\.  | 
+|  `CANCELLED`  |  The operation in the specified account and Region has been cancelled\. This is either because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation has been exceeded\.  | 
+|  `FAILED`  |  The operation in the specified account and Region failed\. If the stack set operation fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole might be exceeded\.  | 
+|  `PENDING`  |  The operation in the specified account and Region has yet to start\.  | 
+|  `RUNNING`  |  The operation in the specified account and Region is currently in progress\.  | 
+|  `SUCCEEDED`  |  The operation in the specified account and Region completed successfully\.  | 

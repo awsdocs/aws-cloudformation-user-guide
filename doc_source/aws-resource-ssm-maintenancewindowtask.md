@@ -147,7 +147,7 @@ The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FU
 *Required*: Yes  
 *Type*: String  
 *Allowed Values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
 The ID of the maintenance window where the task is registered\.  

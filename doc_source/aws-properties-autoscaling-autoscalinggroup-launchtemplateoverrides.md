@@ -4,6 +4,8 @@
 
 The maximum number of instance type overrides that can be associated with an Auto Scaling group is 20\.
 
+Every Auto Scaling group has three size parameters \(`DesiredCapacity`, `MaxSize`, and `MinSize`\)\. Usually, you set these sizes based on a specific number of instances\. However, if you configure a mixed instances policy that defines weights for the instance types, you must specify these sizes with the same units that you use for weighting instances\. 
+
 ## Syntax<a name="aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

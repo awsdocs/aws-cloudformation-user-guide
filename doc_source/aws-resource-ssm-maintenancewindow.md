@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EndDate](#cfn-ssm-maintenancewindow-enddate)" : String,
       "[Name](#cfn-ssm-maintenancewindow-name)" : String,
       "[Schedule](#cfn-ssm-maintenancewindow-schedule)" : String,
+      "[ScheduleOffset](#cfn-ssm-maintenancewindow-scheduleoffset)" : Integer,
       "[ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone)" : String,
       "[StartDate](#cfn-ssm-maintenancewindow-startdate)" : String,
       "[Tags](#cfn-ssm-maintenancewindow-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -40,6 +41,7 @@ Properties:
   [EndDate](#cfn-ssm-maintenancewindow-enddate): String
   [Name](#cfn-ssm-maintenancewindow-name): String
   [Schedule](#cfn-ssm-maintenancewindow-schedule): String
+  [ScheduleOffset](#cfn-ssm-maintenancewindow-scheduleoffset): Integer
   [ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone): String
   [StartDate](#cfn-ssm-maintenancewindow-startdate): String
   [Tags](#cfn-ssm-maintenancewindow-tags): 
@@ -99,6 +101,14 @@ The schedule of the maintenance window in the form of a cron or rate expression\
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ScheduleOffset`  <a name="cfn-ssm-maintenancewindow-scheduleoffset"></a>
+The number of days to wait to run a maintenance window after the scheduled CRON expression date and time\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleTimezone`  <a name="cfn-ssm-maintenancewindow-scheduletimezone"></a>

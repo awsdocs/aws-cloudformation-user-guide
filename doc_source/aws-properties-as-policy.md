@@ -52,7 +52,7 @@ Properties:
 ## Properties<a name="aws-properties-as-policy-properties"></a>
 
 `AdjustmentType`  <a name="cfn-as-scalingpolicy-adjustmenttype"></a>
-Specifies how the scaling adjustment is interpreted \(either an absolute number or a percentage\)\. The valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`\.   
+Specifies how the scaling adjustment is interpreted\. The valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`\.   
 Required if the policy type is `StepScaling` or `SimpleScaling`\. For more information, see [Scaling Adjustment Types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-adjustment) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: Conditional  
 *Type*: String  

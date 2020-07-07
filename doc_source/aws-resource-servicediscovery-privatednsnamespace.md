@@ -53,7 +53,7 @@ The tags for the namespace\. Each tag consists of a key and an optional value, b
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Vpc`  <a name="cfn-servicediscovery-privatednsnamespace-vpc"></a>
 The ID of the Amazon VPC that you want to associate the namespace with\.  

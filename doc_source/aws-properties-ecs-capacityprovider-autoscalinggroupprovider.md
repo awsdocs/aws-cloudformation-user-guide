@@ -1,6 +1,6 @@
 # AWS::ECS::CapacityProvider AutoScalingGroupProvider<a name="aws-properties-ecs-capacityprovider-autoscalinggroupprovider"></a>
 
-The `AutoScalingGroupProvider` property specifies the details of the Auto Scaling group for the capacity provider\. The Auto Scaling group 
+The `AutoScalingGroupProvider` property specifies the details of the Auto Scaling group for the capacity provider\.
 
 ## Syntax<a name="aws-properties-ecs-capacityprovider-autoscalinggroupprovider-syntax"></a>
 

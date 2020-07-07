@@ -38,7 +38,8 @@ Properties:
 ## Properties<a name="aws-resource-kms-alias-properties"></a>
 
 `AliasName`  <a name="cfn-kms-alias-aliasname"></a>
-Specifies the alias name\. This value must begin with `alias/` followed by a name, such as `alias/ExampleAlias`\. The alias name cannot begin with `alias/aws/`\. The `alias/aws/` prefix is reserved for AWS managed CMKs\.  
+Specifies the alias name\. This value must begin with `alias/` followed by a name, such as `alias/ExampleAlias`\.   
+The alias must be string of 1\-256 characters\. It can contain only alphanumeric characters, forward slashes \(/\), underscores \(\_\), and dashes \(\-\)\. The alias name cannot begin with `alias/aws/`\. The `alias/aws/` prefix is reserved for [AWS managed CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -47,7 +48,14 @@ Specifies the alias name\. This value must begin with `alias/` followed by a nam
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetKeyId`  <a name="cfn-kms-alias-targetkeyid"></a>
-Identifies the CMK to which the alias refers\. Specify the key ID or the Amazon Resource Name \(ARN\) of the CMK\. You cannot specify another alias\. For help finding the key ID and ARN, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.  
+Associates the alias with the specified [customer managed CMK](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#customer-cmk)\. The CMK must be in the same AWS Region\.   
+A valid CMK ID is required\. If you supply a null or empty string value, this operation returns an error\.  
+For help finding the key ID and ARN, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.  
+Specify the key ID or the Amazon Resource Name \(ARN\) of the CMK\.  
+For example:  
++ Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab` 
++ Key ARN: `arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab` 
+To get the key ID and key ARN for a CMK, use ListKeys or DescribeKey\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

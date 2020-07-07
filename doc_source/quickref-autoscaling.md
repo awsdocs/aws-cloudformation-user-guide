@@ -5,7 +5,7 @@
 + [Auto Scaling Group Resource](#scenario-as-group)
 + [Auto Scaling Policy Triggered by CloudWatch Alarm](#scenario-as-policy)
 + [Auto Scaling Group with Notifications](#scenario-as-notification)
-+ [Auto Scaling with an UpdatePolicy](#w6342ab1c19c23c15c13)
++ [Auto Scaling with an UpdatePolicy](#w6345ab1c19c23c15c13)
 
 ## Auto Scaling Launch Configuration Resource<a name="scenario-as-launch-config"></a>
 
@@ -207,7 +207,7 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amaz
 18.       - autoscaling:EC2_INSTANCE_TERMINATE_ERROR
 ```
 
-## Auto Scaling with an UpdatePolicy<a name="w6342ab1c19c23c15c13"></a>
+## Auto Scaling with an UpdatePolicy<a name="w6345ab1c19c23c15c13"></a>
 
 This example shows how to use an [UpdatePolicy Attribute](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
 

@@ -352,7 +352,7 @@ The sample WordPress stack creates a WordPress website\. You can continue with t
 
    The `WebsiteURL` output value is the URL of the installation script for the WordPress website that you created with the stack\.
 
-1. On the web page for the WordPress installation, follow the on\-screen instructions to complete the WordPress installation\. For more information about installing WordPress, see [http://codex\.wordpress\.org/Installing\_WordPress](http://codex.wordpress.org/Installing_WordPress)\.
+1. On the web page for the WordPress installation, follow the on\-screen instructions to complete the WordPress installation\. For more information about installing WordPress, see [https://wordpress\.org/support/article/how\-to\-install\-wordpress/](https://wordpress.org/support/article/how-to-install-wordpress/)\.
 
    After you complete the installation and log in, you are directed to the dashboard where you can set additional options for your WordPress blog\. Then, you can start writing posts for your blog that you successfully created by using a AWS CloudFormation template\.
 

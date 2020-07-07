@@ -1,8 +1,5 @@
 # AWS::RDS::DBProxy<a name="aws-resource-rds-dbproxy"></a>
 
-**Note**  
-This is prerelease documentation for the RDS Database Proxy feature in preview release\. It is subject to change\.
-
 The `AWS::RDS::DBProxy` resource creates or updates a DB proxy\.
 
 For information about RDS Proxy for Amazon RDS, see [ Managing Connections with Amazon RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html) in the *Amazon RDS User Guide*\.

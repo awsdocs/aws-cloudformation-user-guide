@@ -1,8 +1,5 @@
 # AWS::RDS::DBProxyTargetGroup<a name="aws-resource-rds-dbproxytargetgroup"></a>
 
-**Note**  
-This is prerelease documentation for the RDS Database Proxy feature in preview release\. It is subject to change\.
-
 The `AWS::RDS::DBProxyTargetGroup` resource represents a set of RDS DB instances, Aurora DB clusters, or both that a proxy can connect to\. Currently, each target group is associated with exactly one RDS DB instance or Aurora DB cluster\.
 
 This data type is used as a response element in the `DescribeDBProxyTargetGroups` action\.
@@ -85,4 +82,5 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The Amazon Resource Name \(ARN\) representing the target group\.
 
 `TargetGroupName`  <a name="TargetGroupName-fn::getatt"></a>
-The identifier for the target group\. This name must be unique for all target groups owned by your AWS account in the specified AWS Region\.
+The identifier for the target group\.  
+Currently, this property must be set to `default`\.

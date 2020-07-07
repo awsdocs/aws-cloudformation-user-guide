@@ -147,6 +147,7 @@ For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/Amaz
 
 `ExtendedStatistic`  <a name="cfn-cloudwatch-alarms-extendedstatistic"></a>
 The percentile statistic for the metric associated with the alarm\. Specify a value between p0\.0 and p100\.  
+For an alarm based on a metric, you must specify either `Statistic` or `ExtendedStatistic` but not both\.  
 For an alarm based on a math expression, you can't specify `ExtendedStatistic`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: String  
@@ -202,6 +203,7 @@ For an alarm based on a math expression, you can't specify `Period`, and instead
 
 `Statistic`  <a name="cfn-cloudwatch-alarms-statistic"></a>
 The statistic for the metric associated with the alarm, other than percentile\. For percentile statistics, use `ExtendedStatistic`\.  
+For an alarm based on a metric, you must specify either `Statistic` or `ExtendedStatistic` but not both\.  
 For an alarm based on a math expression, you can't specify `Statistic`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: String  

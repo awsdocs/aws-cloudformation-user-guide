@@ -104,12 +104,12 @@ Default: `false`
 
 `AuthToken`  <a name="cfn-elasticache-replicationgroup-authtoken"></a>
  **Reserved parameter\.** The password used to access a password protected server\.  
- `AuthToken` can be specified only on replication groups where `TransitEncryptionEnabled` is `true`\.  
+ `AuthToken` can be specified only on replication groups where `TransitEncryptionEnabled` is `true`\. For more information, see [Authenticating Users with the Redis AUTH Command](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html)\.  
 For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an `AuthToken`, and a `CacheSubnetGroup`\.
 Password constraints:  
 + Must be only printable ASCII characters\.
 + Must be at least 16 characters and no more than 128 characters in length\.
-+ The only permitted printable special characters are \!, &, \#, $, ^, <, >, and \-\. Other printable special characters cannot be used in the AUTH token\.
++ Cannot contain any of the following characters: '/', '"', or '@'\. 
 For more information, see [AUTH password](http://redis.io/commands/AUTH) at http://redis\.io/commands/AUTH\.  
 *Required*: No  
 *Type*: String  

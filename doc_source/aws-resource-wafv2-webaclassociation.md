@@ -44,7 +44,7 @@ The ARN must be in one of the following formats:
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `.*\S.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WebACLArn`  <a name="cfn-wafv2-webaclassociation-webaclarn"></a>
 The Amazon Resource Name \(ARN\) of the Web ACL that you want to associate with the resource\.  
@@ -53,7 +53,7 @@ The Amazon Resource Name \(ARN\) of the Web ACL that you want to associate with 
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `.*\S.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return Values<a name="aws-resource-wafv2-webaclassociation-return-values"></a>
 

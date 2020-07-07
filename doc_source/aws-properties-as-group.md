@@ -2,9 +2,8 @@
 
 Defines an Amazon EC2 Auto Scaling group with the specified name and attributes\. 
 
-To configure Amazon EC2 instances launched as part of the group, you can specify a launch template or a launch configuration\. We recommend that you use a launch template to make sure that you can use the latest features of Amazon EC2, such as T2 Unlimited instances\. For more information, see [Creating a Launch Template for an Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\.
+To configure Amazon EC2 instances launched as part of the group, you can specify a launch template or a launch configuration\. We recommend that you use a launch template to make sure that you can use the latest features of Amazon EC2, such as Dedicated Hosts and T2 Unlimited instances\. For more information, see [Creating a Launch Template for an Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\.
 
-**Important**  
 You can add an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to your Auto Scaling group to perform rolling updates \(or replace the group\) when a change has been made to the group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section\.
 
 For more information, see [CreateAutoScalingGroup](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateAutoScalingGroup.html) and [UpdateAutoScalingGroup](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_UpdateAutoScalingGroup.html) in the *Amazon EC2 Auto Scaling API Reference*\. For more information about Amazon EC2 Auto Scaling, see the [Amazon EC2 Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html)\. 
@@ -160,7 +159,7 @@ When you update `LaunchConfigurationName`, existing Amazon EC2 instances continu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplate`  <a name="cfn-as-group-launchtemplate"></a>
-The [EC2 launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to use to launch instances\.  
+Parameters used to specify the [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) and version to use when an instance is launched\.  
 You must specify one of the following properties: `LaunchConfigurationName`, `LaunchTemplate`, `InstanceId`, or `MixedInstancesPolicy`\.  
 When you update `LaunchTemplate`, existing Amazon EC2 instances continue to run with the configuration that they were originally launched with\. To update existing instances, specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\.
 *Required*: Conditional  
@@ -182,7 +181,7 @@ For more information, see [Using a Load Balancer with an Auto Scaling Group](htt
 
 `MaxInstanceLifetime`  <a name="cfn-as-group-maxinstancelifetime"></a>
 The maximum amount of time, in seconds, that an instance can be in service\.  
- You must specify a value of at least 604,800 seconds \(7 days\)\.  
+You must specify a value of at least 604,800 seconds \(7 days\)\.  
 For more information, see [Replacing Auto Scaling Instances Based on Maximum Instance Lifetime](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Integer  
@@ -190,7 +189,7 @@ For more information, see [Replacing Auto Scaling Instances Based on Maximum Ins
 
 `MaxSize`  <a name="cfn-as-group-maxsize"></a>
 The maximum size of the Auto Scaling group\.  
-With a mixed instances policy that uses instance weighting, Amazon EC2 Auto Scaling may need to go above `MaxSize` to meet your capacity requirements\. In this event, Amazon EC2 Auto Scaling will never go above `MaxSize` by more than your maximum instance weight \(weights that define how many capacity units each instance contributes to the capacity of the group\)\.
+With a mixed instances policy that uses instance weighting, Amazon EC2 Auto Scaling may need to go above `MaxSize` to meet your capacity requirements\. In this event, Amazon EC2 Auto Scaling will never go above `MaxSize` by more than your largest instance weight \(weights that define how many units each instance contributes to the desired capacity of the group\)\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -283,6 +282,114 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## Examples<a name="aws-properties-as-group--examples"></a>
 
 The following examples create or make changes to an Auto Scaling group\. To view more examples, see [Auto Scaling Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
+
+### Auto Scaling Group and Launch Template<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template"></a>
+
+The following example creates an Auto Scaling group and a launch template \([AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)\) that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
+
+The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. By referencing a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value for `ImageId`, the AMI is specified when launching the stack\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
+
+The example stack creates an Auto Scaling group with a minimum size of 1 and a maximum size of 6\. The initial size of the group is 2 based on the value for `DesiredCapacity`\. The `VPCZoneIdentifier` property specifies the subnets where the instances will be created\. Each instance has 300 seconds to warm up before receiving its first health check\. 
+
+#### JSON<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Parameters":{
+    "myImageId":{
+      "Type":"AWS::EC2::Image::Id"
+    }
+  },
+  "Resources":{
+    "myLaunchTemplate":{
+      "Type":"AWS::EC2::LaunchTemplate",
+      "Properties":{
+        "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
+        "LaunchTemplateData":{
+          "BlockDeviceMappings":[{
+            "Ebs":{"VolumeSize":8},
+            "DeviceName":"/dev/sdf"}],
+          "CreditSpecification":{
+            "CpuCredits":"unlimited"
+          },
+          "ImageId":{"Ref":"myImageId"},
+          "KeyName":"my-key-pair-useast2",
+          "InstanceType":"t2.micro",
+          "Monitoring":{"Enabled":true},
+          "SecurityGroupIds":["sg-7c227019", "sg-903004f8"]
+        }
+      }
+    },
+    "myASG":{
+      "Type":"AWS::AutoScaling::AutoScalingGroup",
+      "Properties":{
+        "AutoScalingGroupName":"myASG",
+        "MinSize":1,
+        "MaxSize":6,
+        "DesiredCapacity":2,
+        "HealthCheckGracePeriod":300,
+        "LaunchTemplate":{
+          "LaunchTemplateId":{
+            "Ref":"myLaunchTemplate"
+          },
+          "Version":{
+            "Fn::GetAtt":[
+              "myLaunchTemplate",
+              "LatestVersionNumber"
+            ]
+          }
+        },
+        "VPCZoneIdentifier":["subnet-5ea0c127", "subnet-6194ea3b", "subnet-c934b782"]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Parameters:
+  myImageId:
+    Type: AWS::EC2::Image::Id
+Resources:
+  myLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties: 
+      LaunchTemplateName: !Sub ${AWS::StackName}-launch-template
+      LaunchTemplateData: 
+        BlockDeviceMappings: 
+          - Ebs:
+              VolumeSize: 8
+            DeviceName: /dev/sdf
+        CreditSpecification: 
+          CpuCredits: Unlimited
+        ImageId: !Ref myImageId
+        InstanceType: t2.micro
+        KeyName: my-key-pair-useast2
+        Monitoring: 
+          Enabled: true
+        SecurityGroupIds: 
+          - sg-7c227019
+          - sg-903004f8
+  myASG:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AutoScalingGroupName: myASG
+      MinSize: "1"
+      MaxSize: "6"
+      DesiredCapacity: "2"
+      HealthCheckGracePeriod: 300
+      LaunchTemplate:
+        LaunchTemplateId: !Ref myLaunchTemplate
+        Version: !GetAtt myLaunchTemplate.LatestVersionNumber
+      VPCZoneIdentifier:
+        - subnet-5ea0c127
+        - subnet-6194ea3b
+        - subnet-c934b782
+```
 
 ### Auto Scaling Group with Load Balancer and Multiple Properties<a name="aws-properties-as-group--examples--Auto_Scaling_Group_with_Load_Balancer_and_Multiple_Properties"></a>
 
@@ -503,114 +610,6 @@ myASG:
       Ref: "myLaunchConfig"
     MaxSize: "3"
     MinSize: "1"
-```
-
-### Auto Scaling Group and Launch Template<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template"></a>
-
-The following example creates an Auto Scaling group and a launch template \([AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)\) that the Auto Scaling group uses to launch EC2 instances\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to customize the name of the launch template to include the stack name\.
-
-The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. By referencing a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value for `ImageId`, the AMI is specified when launching the stack\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
-
-The example stack creates an Auto Scaling group with a minimum size of 1 and a maximum size of 6\. The initial size of the group is 2 based on the value for `DesiredCapacity`\. The `VPCZoneIdentifier` property specifies the subnets where the instances will be created\. Each instance has 300 seconds to warm up before receiving its first health check\. 
-
-#### JSON<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template--json"></a>
-
-```
-{
-  "AWSTemplateFormatVersion":"2010-09-09",
-  "Parameters":{
-    "myImageId":{
-      "Type":"AWS::EC2::Image::Id"
-    }
-  },
-  "Resources":{
-    "myLaunchTemplate":{
-      "Type":"AWS::EC2::LaunchTemplate",
-      "Properties":{
-        "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
-        "LaunchTemplateData":{
-          "BlockDeviceMappings":[{
-            "Ebs":{"VolumeSize":8},
-            "DeviceName":"/dev/sdf"}],
-          "CreditSpecification":{
-            "CpuCredits":"unlimited"
-          },
-          "ImageId":{"Ref":"myImageId"},
-          "KeyName":"my-key-pair-useast2",
-          "InstanceType":"t2.micro",
-          "Monitoring":{"Enabled":true},
-          "SecurityGroupIds":["sg-7c227019", "sg-903004f8"]
-        }
-      }
-    },
-    "myASG":{
-      "Type":"AWS::AutoScaling::AutoScalingGroup",
-      "Properties":{
-        "AutoScalingGroupName":"myASG",
-        "MinSize":1,
-        "MaxSize":6,
-        "DesiredCapacity":2,
-        "HealthCheckGracePeriod":300,
-        "LaunchTemplate":{
-          "LaunchTemplateId":{
-            "Ref":"myLaunchTemplate"
-          },
-          "Version":{
-            "Fn::GetAtt":[
-              "myLaunchTemplate",
-              "LatestVersionNumber"
-            ]
-          }
-        },
-        "VPCZoneIdentifier":["subnet-5ea0c127", "subnet-6194ea3b", "subnet-c934b782"]
-      }
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-properties-as-group--examples--Auto_Scaling_Group_and_Launch_Template--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Parameters:
-  myImageId:
-    Type: AWS::EC2::Image::Id
-Resources:
-  myLaunchTemplate:
-    Type: AWS::EC2::LaunchTemplate
-    Properties: 
-      LaunchTemplateName: !Sub ${AWS::StackName}-launch-template
-      LaunchTemplateData: 
-        BlockDeviceMappings: 
-          - Ebs:
-              VolumeSize: 8
-            DeviceName: /dev/sdf
-        CreditSpecification: 
-          CpuCredits: Unlimited
-        ImageId: !Ref myImageId
-        InstanceType: t2.micro
-        KeyName: my-key-pair-useast2
-        Monitoring: 
-          Enabled: true
-        SecurityGroupIds: 
-          - sg-7c227019
-          - sg-903004f8
-  myASG:
-    Type: AWS::AutoScaling::AutoScalingGroup
-    Properties:
-      AutoScalingGroupName: myASG
-      MinSize: "1"
-      MaxSize: "6"
-      DesiredCapacity: "2"
-      HealthCheckGracePeriod: 300
-      LaunchTemplate:
-        LaunchTemplateId: !Ref myLaunchTemplate
-        Version: !GetAtt myLaunchTemplate.LatestVersionNumber
-      VPCZoneIdentifier:
-        - subnet-5ea0c127
-        - subnet-6194ea3b
-        - subnet-c934b782
 ```
 
 ## See Also<a name="aws-properties-as-group--seealso"></a>

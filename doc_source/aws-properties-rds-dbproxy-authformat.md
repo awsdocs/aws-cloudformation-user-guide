@@ -1,8 +1,5 @@
 # AWS::RDS::DBProxy AuthFormat<a name="aws-properties-rds-dbproxy-authformat"></a>
 
-**Note**  
-This is prerelease documentation for the RDS Database Proxy feature in preview release\. It is subject to change\.
-
 Specifies the details of authentication used by a proxy to log in as a specific database user\.
 
 ## Syntax<a name="aws-properties-rds-dbproxy-authformat-syntax"></a>
