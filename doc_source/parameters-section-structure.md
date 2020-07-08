@@ -271,11 +271,11 @@ A Systems Manager parameter whose value is a list of strings\. This corresponds 
 
 `AWS::SSM::Parameter::Value<AWS-specific parameter type>`  
 A Systems Manager parameter whose value is an [AWS\-specific parameter type](#aws-specific-parameter-types)\. For example, the following specifies the `AWS::EC2::KeyPair::KeyName` type:  
-`AWS::SSM::Parameter::Value<AWS::EC2::KeyPair::KeyPairName>`
+`AWS::SSM::Parameter::Value<AWS::EC2::KeyPair::KeyName>`
 
 `AWS::SSM::Parameter::Value<List<AWS-specific parameter type>>`  
 A Systems Manager parameter whose value is a list of [AWS\-specific parameter types](#aws-specific-parameter-types)\. For example, the following specifies a list of `AWS::EC2::KeyPair::KeyName` types:  
-`AWS::SSM::Parameter::Value<List<AWS::EC2::KeyPair::KeyPairName>>`
+`AWS::SSM::Parameter::Value<List<AWS::EC2::KeyPair::KeyName>>`
 
 ### Unsupported SSM Parameter Types<a name="aws-ssm-parameter-types-unsupported"></a>
 
