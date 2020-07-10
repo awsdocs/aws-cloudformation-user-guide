@@ -21,7 +21,7 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  4.      "DBSecurityGroups" : [
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
  6.      "AllocatedStorage" : "5",
- 7.      "DBInstanceClass" : "db.m1.small",
+ 7.      "DBInstanceClass" : "db.t2.small",
  8.      "Engine" : "MySQL",
  9.      "MasterUsername" : "MyName",
 10.      "MasterUserPassword" : "MyPassword"
@@ -40,7 +40,7 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  5.     - Ref: MyDbSecurityByEC2SecurityGroup
  6.     - Ref: MyDbSecurityByCIDRIPGroup
  7.     AllocatedStorage: '5'
- 8.     DBInstanceClass: db.m1.small
+ 8.     DBInstanceClass: db.t2.small
  9.     Engine: MySQL
 10.     MasterUsername: MyName
 11.     MasterUserPassword: MyPassword
@@ -60,7 +60,7 @@ This example creates an Oracle Database DB Instance resource by specifying the E
  4.      "DBSecurityGroups" : [
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
  6.      "AllocatedStorage" : "5",
- 7.      "DBInstanceClass" : "db.m1.small",
+ 7.      "DBInstanceClass" : "db.t2.small",
  8.      "Engine" : "oracle-ee",
  9.      "LicenseModel" : "bring-your-own-license",
 10.      "MasterUsername" : "master",
@@ -80,7 +80,7 @@ This example creates an Oracle Database DB Instance resource by specifying the E
  5.     - Ref: MyDbSecurityByEC2SecurityGroup
  6.     - Ref: MyDbSecurityByCIDRIPGroup
  7.     AllocatedStorage: '5'
- 8.     DBInstanceClass: db.m1.small
+ 8.     DBInstanceClass: db.t2.small
  9.     Engine: oracle-ee
 10.     LicenseModel: bring-your-own-license
 11.     MasterUsername: master
@@ -215,7 +215,7 @@ This example shows an [AWS::RDS::DBSecurityGroup](https://docs.aws.amazon.com/AW
          "Type" : "AWS::RDS::DBInstance",
          "Properties" : {
             "AllocatedStorage" : "5",
-            "DBInstanceClass" : "db.m1.small",
+            "DBInstanceClass" : "db.t2.small",
            "DBName" : {"Ref": "MyDBName" },
             "DBSecurityGroups" : [ { "Ref" : "DbSecurityByEC2SecurityGroup" } ],
             "DBSubnetGroupName" : { "Ref" : "MyDBSubnetGroup" },
@@ -251,7 +251,7 @@ Resources:
     Type: AWS::RDS::DBInstance
     Properties:
       AllocatedStorage: '5'
-      DBInstanceClass: db.m1.small
+      DBInstanceClass: db.t2.small
       DBName:
         Ref: MyDBName
       DBSecurityGroups:
