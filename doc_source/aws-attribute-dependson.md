@@ -71,7 +71,7 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 39.             "Type" : "AWS::RDS::DBInstance",
 40.             "Properties" : {
 41.                "AllocatedStorage" : "5",
-42.                "DBInstanceClass" : "db.m1.small",
+42.                "DBInstanceClass" : "db.t2.small",
 43.                "Engine" : "MySQL",
 44.                "EngineVersion" : "5.5",
 45.                "MasterUsername" : "MyName",
