@@ -5,6 +5,7 @@ The `AWS::ApiGateway::Account` resource specifies the IAM role that Amazon API G
 **Important**  
 If an API Gateway resource has never been created in your AWS account, you must add a dependency on another API Gateway resource, such as an [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html) or [AWS::ApiGateway::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html) resource\.  
 If an API Gateway resource has been created in your AWS account, no dependency is required \(even if the resource was deleted\)\.
+The `AWS::ApiGateway::Account` resources is an account-level resource meaning that you should not create multiple stacks in the same AWS account containing this resource otherwise one stack may overwrite the Api Gateway account configuration set by another stack.
 
 ## Syntax<a name="aws-resource-apigateway-account-syntax"></a>
 
