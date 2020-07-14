@@ -84,5 +84,68 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+## Examples
+### An Amazon Service Catalog Constraint with two rules
+#### JSON
+```
+"LaunchConstriant": {
+            "Type": "AWS::ServiceCatalog::LaunchTemplateConstraint",
+            "Properties": {
+                "PortfolioId": { "Ref": "ServiceCatalogPortfolio" },
+                "ProductId": { "Ref": "ServiceCatalogProduct"},
+                "Rules": "{\n    \"Rule1\": {\n        \"Assertions\": [\n            {\n                \"Assert\": {\n                    \"Fn::Not\": [\n                        {\n                            \"Fn::Equals\": [\n                                \"\",\n                                {\n                                    \"Ref\": \"ProjectNumber\"\n                                }\n                            ]\n                        }\n                    ]\n                },\n                \"AssertDescription\": \"Project Number cannot be empty\"\n            }\n        ]\n    },\n    \"Rule2\": {\n        \"Assertions\": [\n            {\n                \"Assert\": {\n                    \"Fn::Not\": [\n                        {\n                            \"Fn::Equals\": [\n                                \"0.0.0.0/0\",\n                                {\n                                    \"Ref\": \"RemoteAccessCidr\"\n                                }\n                            ]\n                        }\n                    ]\n                },\n                \"AssertDescription\": \"Remote Access cannot be open to the world\"\n            }\n        ]\n    }\n}\n"
+            }
+        }
+```
+#### YAML
+```
+LaunchConstriant:
+    Type: AWS::ServiceCatalog::LaunchTemplateConstraint
+    Properties: 
+      PortfolioId: !Ref ServiceCatalogPortfolio
+      ProductId: !Ref ServiceCatalogProduct
+      Rules: >
+        {
+            "Rule1": {
+                "Assertions": [
+                    {
+                        "Assert": {
+                            "Fn::Not": [
+                                {
+                                    "Fn::Equals": [
+                                        "",
+                                        {
+                                            "Ref": "ProjectNumber"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "AssertDescription": "Project Number cannot be empty"
+                    }
+                ]
+            },
+            "Rule2": {
+                "Assertions": [
+                    {
+                        "Assert": {
+                            "Fn::Not": [
+                                {
+                                    "Fn::Equals": [
+                                        "0.0.0.0/0",
+                                        {
+                                            "Ref": "RemoteAccessCidr"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "AssertDescription": "Remote Access cannot be open to the world"
+                    }
+                ]
+            }
+        }
+ ```
+
 ## See Also<a name="aws-resource-servicecatalog-launchtemplateconstraint--seealso"></a>
 + [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*
