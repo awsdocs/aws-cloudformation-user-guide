@@ -2,6 +2,9 @@
 
 The `AWS::ApiGateway::Deployment` resource deploys an API Gateway `RestApi` resource to a stage so that clients can call the API over the internet\. The stage acts as an environment\.
 
+**Important**
+It is strongly recommended that for non-trivial cases that you use a [`AWS::ApiGateway::Stage`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html) resource to define your Stage instead of this as updates involving Stages are not fully supported and may result in unexpected behaviour and errors.
+
 ## Syntax<a name="aws-resource-apigateway-deployment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -65,7 +68,7 @@ Configures the stage that API Gateway creates with this deployment\.
 A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Not supported.
 
 ## Return Values<a name="aws-resource-apigateway-deployment-return-values"></a>
 
