@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ManagedBlockchain::Member
-Properties: 
+Properties:
   [InvitationId](#cfn-managedblockchain-member-invitationid): String
-  [MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration): 
+  [MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration):
     [MemberConfiguration](aws-properties-managedblockchain-member-memberconfiguration.md)
-  [NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration): 
+  [NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration):
     [NetworkConfiguration](aws-properties-managedblockchain-member-networkconfiguration.md)
   [NetworkId](#cfn-managedblockchain-member-networkid): String
 ```
@@ -243,9 +243,10 @@ Resources:
       MemberConfiguration:
         Name: !Ref MemberName
         Description: !Ref MemberDescription
-        FabricMemberConfiguration:
-          AdminUsername: !Ref MemberAdminUsername
-          AdminPassword: !Ref MemberAdminPassword
+        MemberFrameworkConfiguration:
+          MemberFabricConfiguration:
+            AdminUsername: !Ref MemberAdminUsername
+            AdminPassword: !Ref MemberAdminPassword
       NetworkId: !Ref NetworkId
       InvitationId: !Ref InvitationId
 ```
@@ -282,9 +283,11 @@ Resources:
         "MemberConfiguration": {
           "Name": "MemberName",
           "Description": "MemberDescription",
-          "FabricMemberConfiguration": {
-            "AdminUsername": "MemberAdminUsername",
-            "AdminPassword": "MemberAdminPassword"
+          "MemberFrameworkConfiguration": {
+            "MemberFabricConfiguration": {
+              "AdminUsername": "MemberAdminUsername",
+              "AdminPassword": "MemberAdminPassword"
+            }
           }
         },
         "NetworkId": "NetworkId",
