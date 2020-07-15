@@ -42,7 +42,7 @@ A workflow's definition document\.
 *Type*: [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iotthingsgraph-flowtemplate-return-values"></a>
+## Return values<a name="aws-resource-iotthingsgraph-flowtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-iotthingsgraph-flowtemplate-return-values-ref"></a>
 

@@ -95,7 +95,7 @@ The schedule of the image pipeline\. A schedule configures how often and when a 
 The status of the image pipeline\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-imagebuilder-imagepipeline-tags"></a>
@@ -104,7 +104,7 @@ The tags of this image pipeline\.
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-imagebuilder-imagepipeline-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-imagepipeline-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-imagepipeline-return-values-ref"></a>
 

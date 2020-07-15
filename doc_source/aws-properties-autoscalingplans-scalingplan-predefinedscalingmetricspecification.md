@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The metric type\. The `ALBRequestCountPerTarget` metric type applies only to Auto Scaling groups, Spot Fleet requests, and ECS services\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ALBRequestCountPerTarget | ASGAverageCPUUtilization | ASGAverageNetworkIn | ASGAverageNetworkOut | DynamoDBReadCapacityUtilization | DynamoDBWriteCapacityUtilization | EC2SpotFleetRequestAverageCPUUtilization | EC2SpotFleetRequestAverageNetworkIn | EC2SpotFleetRequestAverageNetworkOut | ECSServiceAverageCPUUtilization | ECSServiceAverageMemoryUtilization | RDSReaderAverageCPUUtilization | RDSReaderAverageDatabaseConnections`  
+*Allowed values*: `ALBRequestCountPerTarget | ASGAverageCPUUtilization | ASGAverageNetworkIn | ASGAverageNetworkOut | DynamoDBReadCapacityUtilization | DynamoDBWriteCapacityUtilization | EC2SpotFleetRequestAverageCPUUtilization | EC2SpotFleetRequestAverageNetworkIn | EC2SpotFleetRequestAverageNetworkOut | ECSServiceAverageCPUUtilization | ECSServiceAverageMemoryUtilization | RDSReaderAverageCPUUtilization | RDSReaderAverageDatabaseConnections`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceLabel`  <a name="cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel"></a>
@@ -43,5 +43,5 @@ To find the ARN for an Application Load Balancer, use the [DescribeLoadBalancers
 *Maximum*: `1023`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification--seealso"></a>
+## See also<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification--seealso"></a>
 + [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

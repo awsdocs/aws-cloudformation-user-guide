@@ -69,7 +69,7 @@ If the target of a logical directory entry does not exist in Amazon S3, the entr
 The type of landing directory \(folder\) you want your users' home directory to be when they log into the file transfer protocol\-enabled server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 paths visible to your users\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `LOGICAL | PATH`  
+*Allowed values*: `LOGICAL | PATH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-transfer-user-policy"></a>
@@ -123,7 +123,7 @@ A unique string that identifies a user and is associated with a file transfer pr
 *Pattern*: `^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,31}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-transfer-user-return-values"></a>
+## Return values<a name="aws-resource-transfer-user-return-values"></a>
 
 ### Ref<a name="aws-resource-transfer-user-return-values-ref"></a>
 
@@ -223,6 +223,6 @@ transfer_user:
     UserName: transfer_user
 ```
 
-## See Also<a name="aws-resource-transfer-user--seealso"></a>
+## See also<a name="aws-resource-transfer-user--seealso"></a>
 
 [CreateUser](https://docs.aws.amazon.com/transfer/latest/userguide/API_CreateUser.html) in the *AWS Transfer Family User Guide*\.

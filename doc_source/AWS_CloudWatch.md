@@ -1,6 +1,6 @@
-# CloudWatch Resource Type Reference<a name="AWS_CloudWatch"></a>
+# CloudWatch resource type reference<a name="AWS_CloudWatch"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)
 + [AWS::CloudWatch::AnomalyDetector](aws-resource-cloudwatch-anomalydetector.md)
 + [AWS::CloudWatch::CompositeAlarm](aws-resource-cloudwatch-compositealarm.md)

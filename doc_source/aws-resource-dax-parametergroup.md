@@ -50,7 +50,7 @@ An array of name\-value pairs for the parameters in the group\. Each element in 
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dax-parametergroup-return-values"></a>
+## Return values<a name="aws-resource-dax-parametergroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dax-parametergroup-return-values-ref"></a>
 

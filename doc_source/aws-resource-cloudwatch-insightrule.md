@@ -60,7 +60,7 @@ To be able to associate tags with a rule, you must have the `cloudwatch:TagResou
 *Type*: [Tags](aws-properties-cloudwatch-insightrule-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudwatch-insightrule-return-values"></a>
+## Return values<a name="aws-resource-cloudwatch-insightrule-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudwatch-insightrule-return-values-ref"></a>
 

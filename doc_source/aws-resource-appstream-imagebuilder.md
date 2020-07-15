@@ -168,7 +168,7 @@ The VPC configuration for the image builder\. You can specify only one subnet\.
 *Type*: [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appstream-imagebuilder-return-values"></a>
+## Return values<a name="aws-resource-appstream-imagebuilder-return-values"></a>
 
 ### Ref<a name="aws-resource-appstream-imagebuilder-return-values-ref"></a>
 
@@ -183,5 +183,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `StreamingUrl`  <a name="StreamingUrl-fn::getatt"></a>
 The URL to start an image builder streaming session, returned as a string\.
 
-## See Also<a name="aws-resource-appstream-imagebuilder--seealso"></a>
+## See also<a name="aws-resource-appstream-imagebuilder--seealso"></a>
 +  [CreateImageBuilder](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateImageBuilder.html) in the *Amazon AppStream 2\.0 API Reference* 

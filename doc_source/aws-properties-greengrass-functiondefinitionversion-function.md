@@ -47,6 +47,6 @@ A descriptive or arbitrary ID for the function\. This value must be unique withi
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinitionversion-function--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinitionversion-function--seealso"></a>
 +  [Function](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-function.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

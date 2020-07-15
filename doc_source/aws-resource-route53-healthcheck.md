@@ -56,7 +56,7 @@ The `HealthCheckTags` property describes key\-value pairs that are associated wi
 *Type*: List of [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53-healthcheck-return-values"></a>
+## Return values<a name="aws-resource-route53-healthcheck-return-values"></a>
 
 ### Ref<a name="aws-resource-route53-healthcheck-return-values-ref"></a>
 
@@ -124,5 +124,5 @@ myHealthCheck:
         Value: SampleValue2
 ```
 
-## See Also<a name="aws-resource-route53-healthcheck--seealso"></a>
+## See also<a name="aws-resource-route53-healthcheck--seealso"></a>
 +  [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*

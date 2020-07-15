@@ -59,7 +59,7 @@ The ID of the subnet to add the mount target in\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-efs-mounttarget-return-values"></a>
+## Return values<a name="aws-resource-efs-mounttarget-return-values"></a>
 
 ### Ref<a name="aws-resource-efs-mounttarget-return-values-ref"></a>
 
@@ -116,7 +116,7 @@ MountTarget:
 Ref: "MountTargetSecurityGroup"
 ```
 
-## See Also<a name="aws-resource-efs-mounttarget--seealso"></a>
+## See also<a name="aws-resource-efs-mounttarget--seealso"></a>
 +  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
 +  [Creating Mount Targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
 +  [Walkthrough: Mounting a File System On\-Premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 

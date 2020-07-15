@@ -62,7 +62,7 @@ A string that defines the type of service or database associated with the secret
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-secretsmanager-secrettargetattachment-return-values"></a>
+## Return values<a name="aws-resource-secretsmanager-secrettargetattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-secretsmanager-secrettargetattachment-return-values-ref"></a>
 
@@ -259,7 +259,7 @@ AWSTemplateFormatVersion: 2010-09-09
           TargetType: AWS::Redshift::Cluster
 ```
 
-## See Also<a name="aws-resource-secretsmanager-secrettargetattachment--seealso"></a>
+## See also<a name="aws-resource-secretsmanager-secrettargetattachment--seealso"></a>
 +  [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
 +  [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
 +  [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)

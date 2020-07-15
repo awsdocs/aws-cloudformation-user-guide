@@ -155,6 +155,6 @@ Resources:
           Value: "value2"
 ```
 
-## See Also<a name="aws-resource-iotanalytics-datastore--seealso"></a>
+## See also<a name="aws-resource-iotanalytics-datastore--seealso"></a>
 +  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide* 
 +  [CreateDatastore](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreateDatastore.html) in the *AWS IoT Analytics API Reference* 

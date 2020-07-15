@@ -108,7 +108,7 @@ An array of key\-value pairs that will be associated with the new AWS Cloud9 dev
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloud9-environmentec2-return-values"></a>
+## Return values<a name="aws-resource-cloud9-environmentec2-return-values"></a>
 
 ### Ref<a name="aws-resource-cloud9-environmentec2-return-values-ref"></a>
 

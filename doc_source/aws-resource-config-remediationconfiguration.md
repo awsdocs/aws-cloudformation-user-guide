@@ -108,7 +108,7 @@ Target ID is the name of the public document\.
 The type of the target\. Target executes remediation\. For example, SSM document\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SSM_DOCUMENT`  
+*Allowed values*: `SSM_DOCUMENT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetVersion`  <a name="cfn-config-remediationconfiguration-targetversion"></a>
@@ -118,7 +118,7 @@ If you make backward incompatible changes to the SSM document, you must call Put
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-remediationconfiguration-return-values"></a>
+## Return values<a name="aws-resource-config-remediationconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-config-remediationconfiguration-return-values-ref"></a>
 

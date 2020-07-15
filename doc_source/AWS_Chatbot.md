@@ -1,4 +1,4 @@
-# Chatbot Resource Type Reference<a name="AWS_Chatbot"></a>
+# Chatbot resource type reference<a name="AWS_Chatbot"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Chatbot::SlackChannelConfiguration](aws-resource-chatbot-slackchannelconfiguration.md)

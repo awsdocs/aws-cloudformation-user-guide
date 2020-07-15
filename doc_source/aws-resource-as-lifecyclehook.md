@@ -108,7 +108,7 @@ The ARN of the IAM role that allows the Auto Scaling group to publish to the spe
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-as-lifecyclehook-return-values"></a>
+## Return values<a name="aws-resource-as-lifecyclehook-return-values"></a>
 
 ### Ref<a name="aws-resource-as-lifecyclehook-return-values-ref"></a>
 

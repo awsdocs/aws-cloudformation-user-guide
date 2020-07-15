@@ -1,21 +1,21 @@
-# Learn Template Basics<a name="gettingstarted.templatebasics"></a>
+# Learn template basics<a name="gettingstarted.templatebasics"></a>
 
 **Topics**
-+ [What is an AWS CloudFormation Template?](#gettingstarted.templatebasics.what)
++ [What is an AWS CloudFormation template?](#gettingstarted.templatebasics.what)
 + [Resources: Hello Bucket\!](#gettingstarted.templatebasics.simple)
-+ [Resource Properties and Using Resources Together](#gettingstarted.templatebasics.multiple)
-+ [Receiving User Input Using Input Parameters](#gettingstarted.templatebasics.parameters)
-+ [Specifying Conditional Values Using Mappings](#gettingstarted.templatebasics.mappings)
-+ [Constructed Values and Output Values](#gettingstarted.templatebasics.outputs)
-+ [Next Steps](#gettingstarted.templatebasics.learnmore)
++ [Resource properties and using resources together](#gettingstarted.templatebasics.multiple)
++ [Receiving user input using input parameters](#gettingstarted.templatebasics.parameters)
++ [Specifying conditional values using mappings](#gettingstarted.templatebasics.mappings)
++ [Constructed values and output values](#gettingstarted.templatebasics.outputs)
++ [Next steps](#gettingstarted.templatebasics.learnmore)
 
-In [Get Started](GettingStarted.Walkthrough.md), you learned how to use a template to create a stack\. You saw resources declared in a template and how they map to resources in the stack\. We also touched on input parameters and how they enable you to pass in specific values when you create a stack from a template\. In this section, we'll go deeper into resources and parameters\. We'll also cover the other components of templates so that you'll know how to use these components together to create templates that produce the AWS resources you want\.
+In [Get started](GettingStarted.Walkthrough.md), you learned how to use a template to create a stack\. You saw resources declared in a template and how they map to resources in the stack\. We also touched on input parameters and how they enable you to pass in specific values when you create a stack from a template\. In this section, we'll go deeper into resources and parameters\. We'll also cover the other components of templates so that you'll know how to use these components together to create templates that produce the AWS resources you want\.
 
-## What is an AWS CloudFormation Template?<a name="gettingstarted.templatebasics.what"></a>
+## What is an AWS CloudFormation template?<a name="gettingstarted.templatebasics.what"></a>
 
-A template is a declaration of the AWS resources that make up a stack\. The template is stored as a text file whose format complies with the JavaScript Object Notation \(JSON\) or YAML standard\. Because they are just text files, you can create and edit them in any text editor and manage them in your source control system with the rest of your source code\. For more information about the template formats, see [AWS CloudFormation Template Formats](template-formats.md)\.
+A template is a declaration of the AWS resources that make up a stack\. The template is stored as a text file whose format complies with the JavaScript Object Notation \(JSON\) or YAML standard\. Because they are just text files, you can create and edit them in any text editor and manage them in your source control system with the rest of your source code\. For more information about the template formats, see [AWS CloudFormation template formats](template-formats.md)\.
 
-In the template, you declare the AWS resources you want to create and configure\. You declare an object as a name\-value pair or a pairing of a name with a set of child objects enclosed\. The syntax depends on the format you use\. For more information, see the [Template Anatomy](template-anatomy.md)\. The only required top\-level object is the Resources object, which must declare at least one resource\. Let's start with the most basic template containing only a Resources object, which contains a single resource declaration\.
+In the template, you declare the AWS resources you want to create and configure\. You declare an object as a name\-value pair or a pairing of a name with a set of child objects enclosed\. The syntax depends on the format you use\. For more information, see the [Template anatomy](template-anatomy.md)\. The only required top\-level object is the Resources object, which must declare at least one resource\. Let's start with the most basic template containing only a Resources object, which contains a single resource declaration\.
 
 ## Resources: Hello Bucket\!<a name="gettingstarted.templatebasics.simple"></a>
 
@@ -25,7 +25,7 @@ The Resources object contains a list of resource objects\. A resource declaratio
 AWS::ProductIdentifier::ResourceType
 ```
 
-For example, the resource type for an Amazon S3 bucket is [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)\. For a full list of resource types, see [Template Reference](template-reference.md)\.
+For example, the resource type for an Amazon S3 bucket is [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)\. For a full list of resource types, see [Template reference](template-reference.md)\.
 
 Let's take a look at a very basic template\. The following template declares a single resource of type AWS::S3::Bucket: with the name HelloBucket\.
 
@@ -53,9 +53,9 @@ If you use this template to create a stack, AWS CloudFormation will create an Am
 
  Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the AWS::S3::Bucket resource, so specifying a value for those properties is optional\. Other properties are not required but may add functionality that you want, such as the WebsiteConfiguration property of the AWS::S3::Bucket resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the AWS::S3::Bucket resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\. 
 
- To view the properties for each resource type, see the topics in [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
+ To view the properties for each resource type, see the topics in [AWS resource and property types reference](aws-template-resource-type-ref.md)\.
 
-## Resource Properties and Using Resources Together<a name="gettingstarted.templatebasics.multiple"></a>
+## Resource properties and using resources together<a name="gettingstarted.templatebasics.multiple"></a>
 
 Usually, a property for a resource is simply a string value\. For example, the following template specifies a canned ACL \(PublicRead\) for the AccessControl property of the bucket\.
 
@@ -382,7 +382,7 @@ Resources:
 
 The Fn::GetAtt function takes two parameters, the logical name of the resource and the name of the attribute to be retrieved\. For a full list of available attributes for resources, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. You'll notice that the Fn::GetAtt function lists its two parameters in an array\. For functions that take multiple parameters, you use an array to specify their parameters\.
 
-## Receiving User Input Using Input Parameters<a name="gettingstarted.templatebasics.parameters"></a>
+## Receiving user input using input parameters<a name="gettingstarted.templatebasics.parameters"></a>
 
 So far, you've learned about resources and a little bit about how to use them together within a template\. You've learned how to refer to input parameters, but we haven't gone deeply into how to define the input parameters themselves\. Let's take a look at parameter declarations and how you can restrict and validate user input\.
 
@@ -461,9 +461,9 @@ We strongly recommend you do not use these mechanisms to include sensitive infor
 
 **Important**  
 Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
-For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-## Specifying Conditional Values Using Mappings<a name="gettingstarted.templatebasics.mappings"></a>
+## Specifying conditional values using mappings<a name="gettingstarted.templatebasics.mappings"></a>
 
 Parameters are a great way to enable users to specify unique or sensitive values for use in the properties of stack resources; however, there may be settings that are region dependent or are somewhat complex for users to figure out because of other conditions or dependencies\. In these cases, you would want to put some logic in the template itself so that users can specify simpler values \(or none at all\) to get the results that they want\. In an earlier example, we hardcoded the AMI ID for the ImageId property of our EC2 instance\. This works fine in the US\-East region, where it represents the AMI that we want\. However, if the user tries to build the stack in a different region he or she will get the wrong AMI or no AMI at all\. \(AMI IDs are unique to a region, so the same AMI ID in a different region may not represent any AMI or a completely different one\.\) 
 
@@ -561,7 +561,7 @@ In the RegionMap, each region is mapped to a name\-value pair\. The name\-value 
 **Tip**  
 The AWS::Region pseudo parameter enables you to get the region where the stack is created\. Some resources, such as [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html), [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), and [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html), have a property that specifies availability zones\. You can use the [Fn::GetAZs function](intrinsic-function-reference-getavailabilityzones.md) to get the list of all availability zones in a region\.
 
-## Constructed Values and Output Values<a name="gettingstarted.templatebasics.outputs"></a>
+## Constructed values and output values<a name="gettingstarted.templatebasics.outputs"></a>
 
 Parameters and mappings are an excellent way to pass or determine specific values at stack creation time, but there can be situations where a value from a parameter or other resource attribute is only part of the value you need\. For example, in the following fragment from the WordPress template, the Fn::Join function constructs the Target subproperty of the HealthCheck property for the ElasticLoadBalancer resource by concatenating the WebServerPort parameter with other literal strings to form the value needed\.
 
@@ -723,7 +723,7 @@ http://mywptests-elasticl-1gb51l6sl8y5v-206169572.us-east-2.elb.amazonaws.com/wp
 
 In the Get Started tutorial, we used this link to conveniently go to the installation page for the WordPress blog that we created\. AWS CloudFormation generates the output values after it finishes creating the stack\. You can view output values in the Outputs tab of the AWS CloudFormation console or by using the aws cloudformation describe\-stacks command\.
 
-## Next Steps<a name="gettingstarted.templatebasics.learnmore"></a>
+## Next steps<a name="gettingstarted.templatebasics.learnmore"></a>
 
 We just walked through the basic parts of a template and how to use them\. You learned the following about templates:
 + Declaring resources and their properties
@@ -733,7 +733,7 @@ We just walked through the basic parts of a template and how to use them\. You l
 + Using the Fn::Join function to construct values based on parameters, resource attributes, and other strings
 + Using output values to capture information about the stack's resources\.
 
-We didn't cover two top level objects in a template: AWSTemplateFormatVersion and Description\. AWSTemplateFormatVersion is simply the version of the template format—if you don't specify it, AWS CloudFormation will use the latest version\. The Description is any valid JSON or YAML string\. This description appears in the Specify Parameters page of the Create Stack wizard\. For more information, see [Format Version](format-version-structure.md) and [Description](template-description-structure.md)\.
+We didn't cover two top level objects in a template: AWSTemplateFormatVersion and Description\. AWSTemplateFormatVersion is simply the version of the template format—if you don't specify it, AWS CloudFormation will use the latest version\. The Description is any valid JSON or YAML string\. This description appears in the Specify Parameters page of the Create Stack wizard\. For more information, see [Format version](format-version-structure.md) and [Description](template-description-structure.md)\.
 
 Of course, there are more advanced template and stack features\. Here is a list of a few important ones that you'll want to learn more about:
 

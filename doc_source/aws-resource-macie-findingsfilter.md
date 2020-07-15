@@ -72,7 +72,7 @@ The position of the filter in the list of saved filters on the Amazon Macie cons
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-macie-findingsfilter-return-values"></a>
+## Return values<a name="aws-resource-macie-findingsfilter-return-values"></a>
 
 ### Ref<a name="aws-resource-macie-findingsfilter-return-values-ref"></a>
 

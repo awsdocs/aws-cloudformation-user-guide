@@ -41,7 +41,7 @@ The ID of the route table\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-gatewayroutetableassociation-return-values"></a>
+## Return values<a name="aws-resource-ec2-gatewayroutetableassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-gatewayroutetableassociation-return-values-ref"></a>
 

@@ -53,5 +53,5 @@ Information about the authentication certificates to be used, if applicable\. Yo
 The type of client authentication to be used\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `certificate-authentication | directory-service-authentication | federated-authentication`  
+*Allowed values*: `certificate-authentication | directory-service-authentication | federated-authentication`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

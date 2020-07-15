@@ -105,8 +105,8 @@ Do not include secrets or proprietary information in your canary names\. The can
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RunConfig`  <a name="cfn-synthetics-canary-runconfig"></a>
-A structure that contains input information for a canary run\. This structure is required\.  
-*Required*: Yes  
+A structure that contains input information for a canary run\. If you omit this structure, the frequency of the canary is used as canary's timeout value, up to a maximum of 900 seconds\.  
+*Required*: No  
 *Type*: [RunConfig](aws-properties-synthetics-canary-runconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -151,7 +151,7 @@ If this canary is to test an endpoint in a VPC, this structure contains informat
 *Type*: [VPCConfig](aws-properties-synthetics-canary-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-synthetics-canary-return-values"></a>
+## Return values<a name="aws-resource-synthetics-canary-return-values"></a>
 
 ### Ref<a name="aws-resource-synthetics-canary-return-values-ref"></a>
 

@@ -39,5 +39,5 @@ A list of subscribers who are subscribed to this notification\.
 *Maximum*: `11`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-notificationwithsubscribers--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-notificationwithsubscribers--seealso"></a>
 +  [NotificationWithSubscribers](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_NotificationWithSubscribers.html) in the *AWS Cost Explorer Service Cost Management APIs* 

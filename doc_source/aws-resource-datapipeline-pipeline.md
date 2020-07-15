@@ -101,7 +101,7 @@ A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, wh
 *Type*: List of [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-datapipeline-pipeline-return-values"></a>
+## Return values<a name="aws-resource-datapipeline-pipeline-return-values"></a>
 
 ### Ref<a name="aws-resource-datapipeline-pipeline-return-values-ref"></a>
 
@@ -517,6 +517,6 @@ DynamoDBInputS3OutputHive:
             StringValue: "EmrCluster"
 ```
 
-## See Also<a name="aws-resource-datapipeline-pipeline--seealso"></a>
+## See also<a name="aws-resource-datapipeline-pipeline--seealso"></a>
 +  [Pipeline Object Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html) in the *AWS Data Pipeline Developer Guide*\.
 +  [PutPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_PutPipelineDefinition.html) in the *AWS Data Pipeline API Reference*\.

@@ -1,4 +1,4 @@
-# Logging In to the AWS CloudFormation Console<a name="cfn-console-login"></a>
+# Logging in to the AWS CloudFormation console<a name="cfn-console-login"></a>
 
  The AWS CloudFormation console allows you to create, monitor, update, and delete your AWS CloudFormation stacks with a web\-based interface\. It is part of the AWS Management Console\. 
 
@@ -12,5 +12,5 @@
 
 If you don't have any AWS CloudFormation stacks running, you are presented with the option to **Create a stack**\. Otherwise, you see a list of your currently\-running stacks\.
 
-## See Also<a name="cfn-console-login-seealso"></a>
-+ [Creating a Stack on the AWS CloudFormation Console](cfn-console-create-stack.md)
+## See also<a name="cfn-console-login-seealso"></a>
++ [Creating a stack on the AWS CloudFormation console](cfn-console-create-stack.md)

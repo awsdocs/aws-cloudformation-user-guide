@@ -61,7 +61,7 @@ The name of the role to associate with the instance profile\. Only one role can 
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-instanceprofile-return-values"></a>
+## Return values<a name="aws-resource-iam-instanceprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-instanceprofile-return-values-ref"></a>
 
@@ -125,5 +125,5 @@ Resources:
           Ref: "MyRole"
 ```
 
-## See Also<a name="aws-resource-iam-instanceprofile--seealso"></a>
+## See also<a name="aws-resource-iam-instanceprofile--seealso"></a>
 +  [CreateInstanceProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html) in the *AWS Identity and Access Management API Reference* 

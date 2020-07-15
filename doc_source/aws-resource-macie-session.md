@@ -46,7 +46,7 @@ The `MacieStatus` of the `Session`\. Valid values include `ENABLED` and `PAUSED`
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-macie-session-return-values"></a>
+## Return values<a name="aws-resource-macie-session-return-values"></a>
 
 ### Ref<a name="aws-resource-macie-session-return-values-ref"></a>
 

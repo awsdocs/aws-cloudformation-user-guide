@@ -61,10 +61,10 @@ These tags are available for use by AWS services that support AWS CodeBuild repo
  The type of the `ReportGroup`\. The one valid value is `TEST`\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `TEST`  
+*Allowed values*: `TEST`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codebuild-reportgroup-return-values"></a>
+## Return values<a name="aws-resource-codebuild-reportgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-codebuild-reportgroup-return-values-ref"></a>
 

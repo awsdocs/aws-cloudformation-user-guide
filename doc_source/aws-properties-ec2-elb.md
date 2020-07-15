@@ -180,7 +180,7 @@ The tags associated with a load balancer\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-ec2-elb-return-values"></a>
+## Return values<a name="aws-properties-ec2-elb-return-values"></a>
 
 ### Ref<a name="aws-properties-ec2-elb-return-values-ref"></a>
 
@@ -211,7 +211,7 @@ The name of the security group that you can use as part of your inbound rules fo
 `SourceSecurityGroup.OwnerAlias`  <a name="SourceSecurityGroup.OwnerAlias-fn::getatt"></a>
 The owner of the source security group\.
 
-## See Also<a name="aws-properties-ec2-elb--seealso"></a>
+## See also<a name="aws-properties-ec2-elb--seealso"></a>
 +  [Elastic Load Balancing Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elb.html) 
 +  [CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [ModifyLoadBalancerAttributes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ModifyLoadBalancerAttributes.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 

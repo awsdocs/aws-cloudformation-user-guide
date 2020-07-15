@@ -29,5 +29,5 @@ Use this structure to specify the VPC subnets and security groups for the task, 
 *Type*: [AwsVpcConfiguration](aws-properties-events-rule-awsvpcconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-events-rule-networkconfiguration--seealso"></a>
+## See also<a name="aws-properties-events-rule-networkconfiguration--seealso"></a>
 + [NetworkConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_NetworkConfiguration.html)

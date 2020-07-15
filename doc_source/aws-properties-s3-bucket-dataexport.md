@@ -35,5 +35,5 @@ The place to store the data for an analysis\.
 The version of the output schema to use when exporting data\. Must be `V_1`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `V_1`  
+*Allowed values*: `V_1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

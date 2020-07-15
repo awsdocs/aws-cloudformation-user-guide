@@ -99,7 +99,7 @@ The description of the integration\.
 
 `IntegrationMethod`  <a name="cfn-apigatewayv2-integration-integrationmethod"></a>
 Specifies the integration's HTTP method type\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -133,7 +133,7 @@ Specifies the pass\-through behavior for incoming requests based on the `Content
 
 `PayloadFormatVersion`  <a name="cfn-apigatewayv2-integration-payloadformatversion"></a>
 Specifies the format of the payload sent to an integration\. Required for HTTP APIs\. For HTTP APIs, supported values for Lambda proxy integrations are `1.0` and `2.0`\. For all other integrations, `1.0` is the only supported value\. To learn more, see [Working with AWS Lambda proxy integrations for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -167,7 +167,7 @@ The TLS configuration for a private integration\. If you specify a TLS configura
 *Type*: [TlsConfig](aws-properties-apigatewayv2-integration-tlsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-integration-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-integration-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-integration-return-values-ref"></a>
 
@@ -244,5 +244,5 @@ MyIntegration:
     ConnectionType: INTERNET
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-integration--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-integration--seealso"></a>
 + [CreateIntegration](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-integrations.html#CreateIntegration) in the *Amazon API Gateway Version 2 API Reference*

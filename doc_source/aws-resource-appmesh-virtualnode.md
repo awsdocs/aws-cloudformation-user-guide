@@ -78,7 +78,7 @@ The name to use for the virtual node\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-virtualnode-return-values"></a>
+## Return values<a name="aws-resource-appmesh-virtualnode-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-virtualnode-return-values-ref"></a>
 
@@ -298,6 +298,6 @@ Outputs:
       - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-virtualnode--seealso"></a>
+## See also<a name="aws-resource-appmesh-virtualnode--seealso"></a>
 +  [Virtual Nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualNode](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualNode.html) in the * AWS App Mesh API Reference *\.

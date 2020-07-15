@@ -61,7 +61,7 @@ A classifier for XML content\.
 *Type*: [XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-classifier-return-values"></a>
+## Return values<a name="aws-resource-glue-classifier-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-classifier-return-values-ref"></a>
 

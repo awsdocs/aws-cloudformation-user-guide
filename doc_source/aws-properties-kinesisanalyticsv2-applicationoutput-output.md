@@ -66,5 +66,5 @@ The name of the in\-application stream\.
 *Maximum*: `32`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>
 +  [Output](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Output.html) in the *Amazon Kinesis Data Analytics API Reference* 

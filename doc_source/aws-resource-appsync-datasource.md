@@ -117,7 +117,7 @@ The type of the data source\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-datasource-return-values"></a>
+## Return values<a name="aws-resource-appsync-datasource-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-datasource-return-values-ref"></a>
 
@@ -226,5 +226,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-datasource--seealso"></a>
+## See also<a name="aws-resource-appsync-datasource--seealso"></a>
 +  [CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*\.

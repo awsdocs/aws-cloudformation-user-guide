@@ -1,6 +1,6 @@
-# Elastic Load Balancing Template Snippets<a name="quickref-elb"></a>
+# Elastic Load Balancing template snippets<a name="quickref-elb"></a>
 
-## Elastic Load Balancing Load Balancer Resource<a name="scenario-elb-load-balancer"></a>
+## Elastic Load Balancing load balancer resource<a name="scenario-elb-load-balancer"></a>
 
 This example shows an Elastic Load Balancing load balancer with a single listener, and no instances\.
 
@@ -34,7 +34,7 @@ This example shows an Elastic Load Balancing load balancer with a single listene
 9.       Protocol: HTTP
 ```
 
-## Elastic Load Balancing Load Balancer Resource with Health Check<a name="scenario-elb-load-balancer-with-healthcheck"></a>
+## Elastic Load Balancing load balancer resource with health check<a name="scenario-elb-load-balancer-with-healthcheck"></a>
 
 This example shows an Elastic Load Balancing load balancer with two Amazon EC2 instances, a single listener and a health check\.
 

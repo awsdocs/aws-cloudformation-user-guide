@@ -126,7 +126,7 @@ The GraphQL type that invokes this resolver\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appsync-resolver-return-values"></a>
+## Return values<a name="aws-resource-appsync-resolver-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-resolver-return-values-ref"></a>
 
@@ -243,5 +243,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-resolver--seealso"></a>
+## See also<a name="aws-resource-appsync-resolver--seealso"></a>
 +  [CreateResolver](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateResolver.html) operation in the *AWS AppSync API Reference*\.

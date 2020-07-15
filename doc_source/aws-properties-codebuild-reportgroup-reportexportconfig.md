@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 +  `NO_EXPORT`: The report results are not exported\. 
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `NO_EXPORT | S3`  
+*Allowed values*: `NO_EXPORT | S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Destination`  <a name="cfn-codebuild-reportgroup-reportexportconfig-s3destination"></a>

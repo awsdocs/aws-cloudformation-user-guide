@@ -87,7 +87,7 @@ One or more tags to be assigned to the event subscription\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-eventsubscription-return-values"></a>
+## Return values<a name="aws-resource-dms-eventsubscription-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-eventsubscription-return-values-ref"></a>
 
@@ -125,6 +125,6 @@ AWSTemplateFormatVersion: 2010-09-09 Resources:
                 SourceType: replication-instance Type: "AWS::DMS::EventSubscription"
 ```
 
-## See Also<a name="aws-resource-dms-eventsubscription--seealso"></a>
+## See also<a name="aws-resource-dms-eventsubscription--seealso"></a>
 +  [CreateEventSubscription](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEventSubscription.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

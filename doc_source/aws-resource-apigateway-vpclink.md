@@ -50,7 +50,7 @@ The ARN of network load balancer of the VPC targeted by the VPC link\. The netwo
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-apigateway-vpclink-return-values"></a>
+## Return values<a name="aws-resource-apigateway-vpclink-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-vpclink-return-values-ref"></a>
 
@@ -175,5 +175,5 @@ Resources:
             InternetGatewayId: !Ref MyInternetGateway
 ```
 
-## See Also<a name="aws-resource-apigateway-vpclink--seealso"></a>
+## See also<a name="aws-resource-apigateway-vpclink--seealso"></a>
 + [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the *Amazon API Gateway REST API Reference*

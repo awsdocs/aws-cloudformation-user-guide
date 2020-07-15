@@ -102,7 +102,7 @@ For more information, see [Suspending and Resuming Scaling](https://docs.aws.ama
 *Type*: [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-applicationautoscaling-scalabletarget-return-values"></a>
+## Return values<a name="aws-resource-applicationautoscaling-scalabletarget-return-values"></a>
 
 ### Ref<a name="aws-resource-applicationautoscaling-scalabletarget-return-values-ref"></a>
 
@@ -412,6 +412,6 @@ Resources:
       ResourceId: !Sub table/${DDBTable}/index/GSI
 ```
 
-## See Also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
+## See also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
 + [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/register-scalable-target.html#examples) of Application Auto Scaling scalable targets in the * AWS CLI Command Reference*

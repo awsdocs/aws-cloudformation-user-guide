@@ -46,7 +46,7 @@ A descriptive label that is associated with a build\. Build names do not need to
 The operating system that the game server binaries are built to run on\. This value determines the type of fleet resources that you can use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. If an operating system is not specified when creating a build, Amazon GameLift uses the default value \(WINDOWS\_2012\)\. This value cannot be changed later\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012`  
+*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
@@ -63,7 +63,7 @@ Version information that is associated with this build\. Version strings do not 
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-gamelift-build-return-values"></a>
+## Return values<a name="aws-resource-gamelift-build-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-build-return-values-ref"></a>
 
@@ -187,7 +187,7 @@ Resources:
         RoleArn: !GetAtt IAMRole.Arn
 ```
 
-## See Also<a name="aws-resource-gamelift-build--seealso"></a>
+## See also<a name="aws-resource-gamelift-build--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Create a Build with Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
 + [ Upload Script Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*

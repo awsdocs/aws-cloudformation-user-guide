@@ -74,5 +74,5 @@ The volume type\. If you set the type to `io1`, you must also specify the **Iops
 Default: `gp2`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | io1 | sc1 | st1 | standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -125,7 +125,7 @@ Key\-value pairs that map provider names to provider app IDs\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cognito-identitypool-return-values"></a>
+## Return values<a name="aws-resource-cognito-identitypool-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-identitypool-return-values-ref"></a>
 

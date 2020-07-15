@@ -72,7 +72,7 @@ The identifier of the source portfolio\.
 *Pattern*: `^[a-zA-Z0-9_\-]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicecatalog-portfolioproductassociation-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-portfolioproductassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-portfolioproductassociation-return-values-ref"></a>
 
@@ -80,5 +80,5 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-servicecatalog-portfolioproductassociation--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-portfolioproductassociation--seealso"></a>
 + [AssociateProductWithPortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateProductWithPortfolio.html) in the *AWS Service Catalog API Reference*

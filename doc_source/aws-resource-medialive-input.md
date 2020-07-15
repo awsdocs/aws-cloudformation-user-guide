@@ -104,7 +104,7 @@ Settings that apply only if the input is an Amazon VPC input\.
 *Type*: [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-medialive-input-return-values"></a>
+## Return values<a name="aws-resource-medialive-input-return-values"></a>
 
 ### Ref<a name="aws-resource-medialive-input-return-values-ref"></a>
 

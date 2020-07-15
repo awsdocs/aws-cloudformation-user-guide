@@ -77,7 +77,7 @@ The name of the work team\.
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-sagemaker-workteam-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-workteam-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-workteam-return-values-ref"></a>
 

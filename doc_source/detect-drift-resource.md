@@ -1,4 +1,4 @@
-# Detect Drift on Individual Stack Resources<a name="detect-drift-resource"></a>
+# Detect drift on individual stack resources<a name="detect-drift-resource"></a>
 
 You can detect drift on specific resources within a stack, rather than the entire stack\. This is especially useful when you only need to determine if specific resources now match their expected template configurations again\. 
 

@@ -143,7 +143,7 @@ Specifies the name of the trail\. The name must meet the following requirements:
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cloudtrail-trail-return-values"></a>
+## Return values<a name="aws-resource-cloudtrail-trail-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudtrail-trail-return-values-ref"></a>
 

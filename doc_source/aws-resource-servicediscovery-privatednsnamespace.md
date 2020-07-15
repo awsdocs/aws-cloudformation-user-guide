@@ -53,7 +53,7 @@ The tags for the namespace\. Each tag consists of a key and an optional value, b
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: Updates are not supported\.
 
 `Vpc`  <a name="cfn-servicediscovery-privatednsnamespace-vpc"></a>
 The ID of the Amazon VPC that you want to associate the namespace with\.  
@@ -62,7 +62,7 @@ The ID of the Amazon VPC that you want to associate the namespace with\.
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicediscovery-privatednsnamespace-return-values"></a>
+## Return values<a name="aws-resource-servicediscovery-privatednsnamespace-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-privatednsnamespace-return-values-ref"></a>
 
@@ -113,5 +113,5 @@ Properties:
   Name: private-example.com
 ```
 
-## See Also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
+## See also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
 +  [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference* 

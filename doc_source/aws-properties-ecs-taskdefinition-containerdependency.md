@@ -37,7 +37,7 @@ The dependency condition of the container\. The following are the available cond
 +  `HEALTHY` \- This condition validates that the dependent container passes its Docker health check before permitting other containers to start\. This requires that the dependent container has health checks configured\. This condition is confirmed only at task startup\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `COMPLETE | HEALTHY | START | SUCCESS`  
+*Allowed values*: `COMPLETE | HEALTHY | START | SUCCESS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ContainerName`  <a name="cfn-ecs-taskdefinition-containerdependency-containername"></a>

@@ -84,7 +84,7 @@ A list of policies used by EFS lifecycle management to transition files to the I
 The performance mode of the file system\. We recommend `generalPurpose` performance mode for most file systems\. File systems using the `maxIO` performance mode can scale to higher levels of aggregate throughput and operations per second with a tradeoff of slightly higher latencies for most file operations\. The performance mode can't be changed after the file system has been created\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `generalPurpose | maxIO`  
+*Allowed values*: `generalPurpose | maxIO`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProvisionedThroughputInMibps`  <a name="cfn-efs-filesystem-provisionedthroughputinmibps"></a>
@@ -97,10 +97,10 @@ The throughput, measured in MiB/s, that you want to provision for a file system 
 The throughput mode for the file system to be created\. There are two throughput modes to choose from for your file system: `bursting` and `provisioned`\. If you set `ThroughputMode` to `provisioned`, you must also set a value for `ProvisionedThroughPutInMibps`\. You can decrease your file system's throughput in Provisioned Throughput mode or change between the throughput modes as long as it’s been more than 24 hours since the last decrease or throughput mode change\. For more, see [Specifying Throughput with Provisioned Mode](https://docs.aws.amazon.com/efs/latest/ug/performance.html#provisioned-throughput) in the *Amazon EFS User Guide\.*   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `bursting | provisioned`  
+*Allowed values*: `bursting | provisioned`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-efs-filesystem-return-values"></a>
+## Return values<a name="aws-resource-efs-filesystem-return-values"></a>
 
 ### Ref<a name="aws-resource-efs-filesystem-return-values-ref"></a>
 
@@ -439,6 +439,6 @@ Resources:
         Path: "/testcfn/abc"
 ```
 
-## See Also<a name="aws-resource-efs-filesystem--seealso"></a>
+## See also<a name="aws-resource-efs-filesystem--seealso"></a>
 +  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
 +  [Creating an Amazon Elastic File System](https://docs.aws.amazon.com/efs/latest/ug/creating-using-fs.html) 

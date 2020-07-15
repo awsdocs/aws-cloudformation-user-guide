@@ -82,7 +82,7 @@ The ID of the service that you want to use for settings for the instance\.
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicediscovery-instance-return-values"></a>
+## Return values<a name="aws-resource-servicediscovery-instance-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-instance-return-values-ref"></a>
 
@@ -124,5 +124,5 @@ Properties:
   ServiceId: srv-e4anhexample0004
 ```
 
-## See Also<a name="aws-resource-servicediscovery-instance--seealso"></a>
+## See also<a name="aws-resource-servicediscovery-instance--seealso"></a>
 +  [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference* 

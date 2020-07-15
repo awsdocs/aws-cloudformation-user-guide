@@ -13,7 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Amplify::Domain",
   "Properties" : {
       "[AppId](#cfn-amplify-domain-appid)" : String,
+      "[AutoSubDomainCreationPatterns](#cfn-amplify-domain-autosubdomaincreationpatterns)" : [ String, ... ],
+      "[AutoSubDomainIAMRole](#cfn-amplify-domain-autosubdomainiamrole)" : String,
       "[DomainName](#cfn-amplify-domain-domainname)" : String,
+      "[EnableAutoSubDomain](#cfn-amplify-domain-enableautosubdomain)" : Boolean,
       "[SubDomainSettings](#cfn-amplify-domain-subdomainsettings)" : [ [SubDomainSetting](aws-properties-amplify-domain-subdomainsetting.md), ... ]
     }
 }
@@ -25,7 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Amplify::Domain
 Properties: 
   [AppId](#cfn-amplify-domain-appid): String
+  [AutoSubDomainCreationPatterns](#cfn-amplify-domain-autosubdomaincreationpatterns): 
+    - String
+  [AutoSubDomainIAMRole](#cfn-amplify-domain-autosubdomainiamrole): String
   [DomainName](#cfn-amplify-domain-domainname): String
+  [EnableAutoSubDomain](#cfn-amplify-domain-enableautosubdomain): Boolean
   [SubDomainSettings](#cfn-amplify-domain-subdomainsettings): 
     - [SubDomainSetting](aws-properties-amplify-domain-subdomainsetting.md)
 ```
@@ -38,11 +45,29 @@ Properties:
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`AutoSubDomainCreationPatterns`  <a name="cfn-amplify-domain-autosubdomaincreationpatterns"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AutoSubDomainIAMRole`  <a name="cfn-amplify-domain-autosubdomainiamrole"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DomainName`  <a name="cfn-amplify-domain-domainname"></a>
  The domain name for the domain association\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableAutoSubDomain`  <a name="cfn-amplify-domain-enableautosubdomain"></a>
+ Enables the automated creation of subdomains for branches\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubDomainSettings`  <a name="cfn-amplify-domain-subdomainsettings"></a>
  The setting for the subdomain\.   
@@ -50,7 +75,7 @@ Properties:
 *Type*: List of [SubDomainSetting](aws-properties-amplify-domain-subdomainsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amplify-domain-return-values"></a>
+## Return values<a name="aws-resource-amplify-domain-return-values"></a>
 
 ### Fn::GetAtt<a name="aws-resource-amplify-domain-return-values-fn--getatt"></a>
 
@@ -58,6 +83,12 @@ Properties:
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 ARN for the Domain Association\.
+
+`AutoSubDomainCreationPatterns`  <a name="AutoSubDomainCreationPatterns-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`AutoSubDomainIAMRole`  <a name="AutoSubDomainIAMRole-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `CertificateRecord`  <a name="CertificateRecord-fn::getatt"></a>
 DNS Record for certificate verification\.
@@ -67,6 +98,9 @@ Name of the domain\.
 
 `DomainStatus`  <a name="DomainStatus-fn::getatt"></a>
 Status fo the Domain Association\.
+
+`EnableAutoSubDomain`  <a name="EnableAutoSubDomain-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `StatusReason`  <a name="StatusReason-fn::getatt"></a>
 Reason for the current status of the domain\.

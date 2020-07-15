@@ -93,7 +93,7 @@ The type of endpoint\.
 Default: Gateway  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Gateway | Interface`  
+*Allowed values*: `Gateway | Interface`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
@@ -103,7 +103,7 @@ This field is required when the endpoint is an interface\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcendpoint-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcendpoint-return-values-ref"></a>
 

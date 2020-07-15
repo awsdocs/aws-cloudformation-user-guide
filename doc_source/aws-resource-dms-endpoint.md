@@ -107,7 +107,7 @@ The database endpoint identifier\. Identifiers must begin with a letter and must
 The type of endpoint\. Valid values are `source` and `target`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `source | target`  
+*Allowed values*: `source | target`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
@@ -182,7 +182,7 @@ The name of the server where the endpoint database resides\.
 The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The default is `none`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `none | require | verify-ca | verify-full`  
+*Allowed values*: `none | require | verify-ca | verify-full`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-endpoint-tags"></a>
@@ -197,7 +197,7 @@ The user name to be used to log in to the endpoint database\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dms-endpoint-return-values"></a>
+## Return values<a name="aws-resource-dms-endpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-endpoint-return-values-ref"></a>
 
@@ -240,6 +240,6 @@ AWSTemplateFormatVersion: 2010-09-09 Description: "Endpoint
                 "AWS::DMS::Endpoint"
 ```
 
-## See Also<a name="aws-resource-dms-endpoint--seealso"></a>
+## See also<a name="aws-resource-dms-endpoint--seealso"></a>
 +  [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

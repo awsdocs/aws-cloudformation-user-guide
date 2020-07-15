@@ -60,17 +60,17 @@ Depending on how you created your AWS Batch service role, its ARN may contain th
 The state of the compute environment\. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
 The type of the compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `MANAGED | UNMANAGED`  
+*Allowed values*: `MANAGED | UNMANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-batch-computeenvironment-return-values"></a>
+## Return values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-computeenvironment-return-values-ref"></a>
 
@@ -160,5 +160,5 @@ ComputeEnvironment:
     State: ENABLED
 ```
 
-## See Also<a name="aws-resource-batch-computeenvironment--seealso"></a>
+## See also<a name="aws-resource-batch-computeenvironment--seealso"></a>
 +  [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.

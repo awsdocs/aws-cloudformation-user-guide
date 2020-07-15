@@ -55,7 +55,7 @@ A routing configuration that specifies where traffic is directed for this alias,
 *Type*: [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-gamelift-alias-return-values"></a>
+## Return values<a name="aws-resource-gamelift-alias-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-alias-return-values-ref"></a>
 
@@ -143,7 +143,7 @@ Resources:
         Message: Terminal routing strategy message
 ```
 
-## See Also<a name="aws-resource-gamelift-alias--seealso"></a>
+## See also<a name="aws-resource-gamelift-alias--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Add an Alias to a GameLift Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/aliases-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [CreateAlias](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateAlias.html) in the *Amazon GameLift API Reference* 

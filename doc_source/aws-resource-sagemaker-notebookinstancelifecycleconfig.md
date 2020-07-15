@@ -55,7 +55,7 @@ A shell script that runs every time you start a notebook instance, including whe
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-return-values-ref"></a>
 

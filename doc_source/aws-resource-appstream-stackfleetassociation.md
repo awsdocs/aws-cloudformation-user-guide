@@ -45,5 +45,5 @@ To associate a fleet with a stack, you must specify a dependency on the stack re
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-stackfleetassociation--seealso"></a>
+## See also<a name="aws-resource-appstream-stackfleetassociation--seealso"></a>
 +  [AssociateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_AssociateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 

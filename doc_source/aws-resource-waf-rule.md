@@ -60,7 +60,7 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 *Type*: List of [Predicate](aws-properties-waf-rule-predicates.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-rule-return-values"></a>
+## Return values<a name="aws-resource-waf-rule-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-rule-return-values-ref"></a>
 

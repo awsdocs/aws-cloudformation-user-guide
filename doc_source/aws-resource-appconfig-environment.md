@@ -87,7 +87,7 @@ Metadata to assign to the environment\. Tags help organize and categorize your A
 *Type*: [List](aws-properties-appconfig-environment-tags.md) of [Tags](aws-properties-appconfig-environment-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-environment-return-values"></a>
+## Return values<a name="aws-resource-appconfig-environment-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-environment-return-values-ref"></a>
 
@@ -138,6 +138,6 @@ Resources:
           Value: test
 ```
 
-## See Also<a name="aws-resource-appconfig-environment--seealso"></a>
+## See also<a name="aws-resource-appconfig-environment--seealso"></a>
 +  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
 +  [Creating an environment](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-environment.html)

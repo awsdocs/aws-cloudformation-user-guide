@@ -73,7 +73,7 @@ You can override the default quiet time settings for a specific campaign or jour
 *Type*: [QuietTime](aws-properties-pinpoint-applicationsettings-quiettime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-applicationsettings-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-applicationsettings-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-applicationsettings-return-values-ref"></a>
 

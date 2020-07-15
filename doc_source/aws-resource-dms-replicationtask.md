@@ -79,7 +79,7 @@ Commit time example: \-\-cdc\-stop\-position “commit\_time: 3018\-02\-09T12:12
 The migration type\. Valid values: `full-load` \| `cdc` \| `full-load-and-cdc`   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `cdc | full-load | full-load-and-cdc`  
+*Allowed values*: `cdc | full-load | full-load-and-cdc`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
@@ -134,7 +134,7 @@ Supplemental information that the task requires to migrate the data for certain 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dms-replicationtask-return-values"></a>
+## Return values<a name="aws-resource-dms-replicationtask-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationtask-return-values-ref"></a>
 
@@ -170,6 +170,6 @@ AWSTemplateFormatVersion: 2010-09-09 Resources:
                 "AWS::DMS::ReplicationTask"
 ```
 
-## See Also<a name="aws-resource-dms-replicationtask--seealso"></a>
+## See also<a name="aws-resource-dms-replicationtask--seealso"></a>
 +  [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

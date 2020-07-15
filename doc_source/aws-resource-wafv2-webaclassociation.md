@@ -55,7 +55,7 @@ The Amazon Resource Name \(ARN\) of the Web ACL that you want to associate with 
 *Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafv2-webaclassociation-return-values"></a>
+## Return values<a name="aws-resource-wafv2-webaclassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-webaclassociation-return-values-ref"></a>
 

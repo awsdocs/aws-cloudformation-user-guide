@@ -1,4 +1,4 @@
-# CloudTrail Resource Type Reference<a name="AWS_CloudTrail"></a>
+# CloudTrail resource type reference<a name="AWS_CloudTrail"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::CloudTrail::Trail](aws-resource-cloudtrail-trail.md)

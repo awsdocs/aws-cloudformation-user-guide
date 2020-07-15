@@ -89,5 +89,5 @@ The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` 
 The type of action\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  
+*Allowed values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

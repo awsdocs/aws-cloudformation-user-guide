@@ -55,5 +55,5 @@ The amount of time to enable fast snapshot restore\. The maximum is 100 years\. 
 The unit of time for enabling fast snapshot restore\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DAYS | MONTHS | WEEKS | YEARS`  
+*Allowed values*: `DAYS | MONTHS | WEEKS | YEARS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

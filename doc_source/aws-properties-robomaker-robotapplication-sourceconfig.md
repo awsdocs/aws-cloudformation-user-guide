@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The target processor architecture for the application\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ARM64 | ARMHF | X86_64`  
+*Allowed values*: `ARM64 | ARMHF | X86_64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Bucket`  <a name="cfn-robomaker-robotapplication-sourceconfig-s3bucket"></a>

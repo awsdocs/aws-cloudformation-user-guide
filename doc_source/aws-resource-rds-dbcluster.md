@@ -339,7 +339,7 @@ A list of EC2 VPC security groups to associate with this DB cluster\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-rds-dbcluster-return-values"></a>
+## Return values<a name="aws-resource-rds-dbcluster-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-dbcluster-return-values-ref"></a>
 

@@ -98,7 +98,7 @@ The following are possible values:
 Valid only when configuring predictive scaling\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `SetForecastCapacityToMaxCapacity | SetMaxCapacityAboveForecastCapacity | SetMaxCapacityToForecastCapacity`  
+*Allowed values*: `SetForecastCapacityToMaxCapacity | SetMaxCapacityAboveForecastCapacity | SetMaxCapacityToForecastCapacity`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PredictiveScalingMaxCapacityBuffer`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmaxcapacitybuffer"></a>
@@ -113,7 +113,7 @@ The range is 1\-100\.
 The predictive scaling mode\. The default value is `ForecastAndScale`\. Otherwise, AWS Auto Scaling forecasts capacity but does not apply any scheduled scaling actions based on the capacity forecast\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ForecastAndScale | ForecastOnly`  
+*Allowed values*: `ForecastAndScale | ForecastOnly`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceId`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-resourceid"></a>
@@ -143,7 +143,7 @@ The scalable dimension associated with the resource\.
 +  `rds:cluster:ReadReplicaCount` \- The count of Aurora Replicas in an Aurora DB cluster\. Available for Aurora MySQL\-compatible edition and Aurora PostgreSQL\-compatible edition\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `autoscaling:autoScalingGroup:DesiredCapacity | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | rds:cluster:ReadReplicaCount`  
+*Allowed values*: `autoscaling:autoScalingGroup:DesiredCapacity | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | rds:cluster:ReadReplicaCount`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalingPolicyUpdateBehavior`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-scalingpolicyupdatebehavior"></a>
@@ -151,7 +151,7 @@ Controls whether your scaling policies that are external to AWS Auto Scaling are
 Valid only when configuring dynamic scaling\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `KeepExternalPolicies | ReplaceExternalPolicies`  
+*Allowed values*: `KeepExternalPolicies | ReplaceExternalPolicies`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduledActionBufferTime`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-scheduledactionbuffertime"></a>
@@ -167,7 +167,7 @@ Valid only when configuring predictive scaling\.
 The namespace of the AWS service\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `autoscaling | dynamodb | ec2 | ecs | rds`  
+*Allowed values*: `autoscaling | dynamodb | ec2 | ecs | rds`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetTrackingConfigurations`  <a name="cfn-autoscalingplans-scalingplan-scalinginstruction-targettrackingconfigurations"></a>
@@ -176,5 +176,5 @@ The target tracking configurations \(up to 10\)\. Each of these structures must 
 *Type*: List of [TargetTrackingConfiguration](aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction--seealso"></a>
+## See also<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction--seealso"></a>
 + [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

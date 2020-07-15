@@ -150,5 +150,5 @@ If you specified `HTTP` or `AWS` for the `Type` property, you must specify this 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
+## See also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*

@@ -36,7 +36,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
+## Return values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-resourcegroup-return-values-ref"></a>
 

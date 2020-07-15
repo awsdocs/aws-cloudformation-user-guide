@@ -121,5 +121,5 @@ A list specifying the sort order of each bucket in the table\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-table-storagedescriptor--seealso"></a>
+## See also<a name="aws-properties-glue-table-storagedescriptor--seealso"></a>
 +  [StorageDescriptor Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide* 

@@ -46,7 +46,7 @@ Describes the configuration of a Spot Fleet request\.
 *Type*: [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="aws-resource-ec2-spotfleet-return-values"></a>
+## Return values<a name="aws-resource-ec2-spotfleet-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-spotfleet-return-values-ref"></a>
 
@@ -152,6 +152,6 @@ SpotFleet:
        WeightedCapacity: '8'
 ```
 
-## See Also<a name="aws-resource-ec2-spotfleet--seealso"></a>
+## See also<a name="aws-resource-ec2-spotfleet--seealso"></a>
 +  [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
 +  [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)

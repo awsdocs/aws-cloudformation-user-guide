@@ -64,7 +64,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iotevents-input-return-values"></a>
+## Return values<a name="aws-resource-iotevents-input-return-values"></a>
 
 ### Ref<a name="aws-resource-iotevents-input-return-values-ref"></a>
 
@@ -128,6 +128,6 @@ Resources:
             JsonPath: "bar"
 ```
 
-## See Also<a name="aws-resource-iotevents-input--seealso"></a>
+## See also<a name="aws-resource-iotevents-input--seealso"></a>
 +  [ How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*
 +  [CreateInput](https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateInput.html) in the *AWS IoT Events API Reference*

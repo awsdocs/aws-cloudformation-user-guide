@@ -45,7 +45,7 @@ Properties:
 The level of detail to include in the notifications for this resource\. BASIC will include only the contents of the event as it would appear in AWS CloudWatch\. FULL will include any supplemental information provided by AWS CodeStar Notifications and/or the service for the resource for which the notification is created\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BASIC | FULL`  
+*Allowed values*: `BASIC | FULL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventTypeIds`  <a name="cfn-codestarnotifications-notificationrule-eventtypeids"></a>
@@ -74,7 +74,7 @@ The Amazon Resource Name \(ARN\) of the resource to associate with the notificat
 The status of the notification rule\. The default value is ENABLED\. If the status is set to DISABLED, notifications aren't sent for the notification rule\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-codestarnotifications-notificationrule-tags"></a>
@@ -90,7 +90,7 @@ A list of Amazon Resource Names \(ARNs\) of Amazon SNS topics and AWS Chatbot cl
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codestarnotifications-notificationrule-return-values"></a>
+## Return values<a name="aws-resource-codestarnotifications-notificationrule-return-values"></a>
 
 ### Ref<a name="aws-resource-codestarnotifications-notificationrule-return-values-ref"></a>
 

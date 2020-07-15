@@ -128,7 +128,7 @@ One or more tags\.
 *Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-cloudformationproduct-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-cloudformationproduct-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-cloudformationproduct-return-values-ref"></a>
 
@@ -153,5 +153,5 @@ The IDs of the provisioning artifacts\.
 `ProvisioningArtifactNames`  <a name="ProvisioningArtifactNames-fn::getatt"></a>
 The names of the provisioning artifacts\.
 
-## See Also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
 + [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog API Reference*

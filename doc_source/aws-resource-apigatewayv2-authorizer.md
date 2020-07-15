@@ -101,7 +101,7 @@ The name of the authorizer\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-authorizer-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-authorizer-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-authorizer-return-values-ref"></a>
 
@@ -177,5 +177,5 @@ Authorizer:
       - route.request.header.Auth
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-authorizer--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-authorizer--seealso"></a>
 + [CreateAuthorizer](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-authorizers.html#CreateAuthorizer) in the *Amazon API Gateway Version 2 API Reference*

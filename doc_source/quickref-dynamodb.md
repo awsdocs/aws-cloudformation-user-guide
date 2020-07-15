@@ -1,10 +1,10 @@
-# Amazon DynamoDB Template Snippets<a name="quickref-dynamodb"></a>
+# Amazon DynamoDB template snippets<a name="quickref-dynamodb"></a>
 
 **Topics**
-+ [Application Auto Scaling with an Amazon DynamoDB Table](#quickref-dynamodb-application-autoscaling)
-+ [See Also](#w6345ab1c19c23c35b7)
++ [Application Auto Scaling with an Amazon DynamoDB table](#quickref-dynamodb-application-autoscaling)
++ [See also](#w6408ab1c19c22c35b7)
 
-## Application Auto Scaling with an Amazon DynamoDB Table<a name="quickref-dynamodb-application-autoscaling"></a>
+## Application Auto Scaling with an Amazon DynamoDB table<a name="quickref-dynamodb-application-autoscaling"></a>
 
 This example sets up Application Auto Scaling for a `AWS::DynamoDB::Table` resource\. The template defines a `TargetTrackingScaling` scaling policy that scales up the `WriteCapacityUnits` throughput for the table\.
 
@@ -246,6 +246,6 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-## See Also<a name="w6345ab1c19c23c35b7"></a>
+## See also<a name="w6408ab1c19c22c35b7"></a>
 
 For more information about DynamoDB resources, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\.

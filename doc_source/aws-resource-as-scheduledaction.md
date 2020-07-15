@@ -91,7 +91,7 @@ The date and time in UTC for this action to start\. For example, `"2019-06-01T00
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-as-scheduledaction-return-values"></a>
+## Return values<a name="aws-resource-as-scheduledaction-return-values"></a>
 
 ### Ref<a name="aws-resource-as-scheduledaction-return-values-ref"></a>
 

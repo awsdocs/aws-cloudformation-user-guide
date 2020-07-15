@@ -71,17 +71,7 @@ Valid values are between 1 and 3600 seconds\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-appsync-apicache-type"></a>
-The cache instance type\. Valid values are   
-+  `SMALL` 
-+  `MEDIUM` 
-+  `LARGE` 
-+  `XLARGE` 
-+  `LARGE_2X` 
-+  `LARGE_4X` 
-+  `LARGE_8X` \(not available in all regions\)
-+  `LARGE_12X` 
-Historically, instance types were identified by an EC2\-style value\. As of July 2020, this is deprecated, and the generic identifiers above should be used\.  
-The following legacy instance types are avaible, but their use is discouraged:  
+The cache instance type\.  
 +  **T2\_SMALL**: A t2\.small instance type\.
 +  **T2\_MEDIUM**: A t2\.medium instance type\.
 +  **R4\_LARGE**: A r4\.large instance type\.

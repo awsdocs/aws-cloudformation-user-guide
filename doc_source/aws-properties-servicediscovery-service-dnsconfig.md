@@ -57,9 +57,9 @@ If you don't define a health check for the service, Route 53 assumes that all in
 For more information about the weighted routing policy, see [Weighted Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted) in the *Route 53 Developer Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `MULTIVALUE | WEIGHTED`  
+*Allowed values*: `MULTIVALUE | WEIGHTED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-servicediscovery-service-dnsconfig--seealso"></a>
+## See also<a name="aws-properties-servicediscovery-service-dnsconfig--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [DnsConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsConfig.html) in the *AWS Cloud Map API Reference* 

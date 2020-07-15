@@ -42,6 +42,6 @@ The name of the security configuration\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-glue-securityconfiguration-return-values"></a>
+## Return values<a name="aws-resource-glue-securityconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-securityconfiguration-return-values-ref"></a>

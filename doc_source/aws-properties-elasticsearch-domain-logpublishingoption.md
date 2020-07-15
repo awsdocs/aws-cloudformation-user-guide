@@ -39,5 +39,5 @@ Default: `false`\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-elasticsearch-domain-logpublishingoption--seealso"></a>
+## See also<a name="aws-properties-elasticsearch-domain-logpublishingoption--seealso"></a>
 + [Configuring Logs](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-slow-logs) and [Log Publishing Options](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-datatypes-logpublishingoptions) in the *Amazon Elasticsearch Service Developer Guide*\.

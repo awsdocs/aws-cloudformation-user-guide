@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 For the default value, in MongoDB version 2\.x, `"default"` is `"mongodb_cr"`\. For MongoDB version 3\.x or later, `"default"` is `"scram_sha_1"`\. This setting isn't used when `AuthType` is set to `"no"`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `default | mongodb_cr | scram_sha_1`  
+*Allowed values*: `default | mongodb_cr | scram_sha_1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthSource`  <a name="cfn-dms-endpoint-mongodbsettings-authsource"></a>
@@ -62,7 +62,7 @@ The default is `"admin"`\.
 When when set to `"no"`, user name and password parameters are not used and can be empty\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `no | password`  
+*Allowed values*: `no | password`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-dms-endpoint-mongodbsettings-databasename"></a>
@@ -90,7 +90,7 @@ Default value is `"false"`\.
 Default value is `"none"`\. Specify `"none"` to use document mode\. Specify `"one"` to use table mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `none | one`  
+*Allowed values*: `none | one`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-dms-endpoint-mongodbsettings-password"></a>

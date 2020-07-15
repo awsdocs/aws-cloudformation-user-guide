@@ -70,7 +70,7 @@ A map that contains tag keys and tag values that are attached to the robot appli
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
+## Return values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robotapplication-return-values-ref"></a>
 

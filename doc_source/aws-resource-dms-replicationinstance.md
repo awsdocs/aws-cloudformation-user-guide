@@ -154,7 +154,7 @@ One or more tags to be assigned to the replication instance\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dms-replicationinstance-return-values"></a>
+## Return values<a name="aws-resource-dms-replicationinstance-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationinstance-return-values-ref"></a>
 
@@ -196,6 +196,6 @@ AWSTemplateFormatVersion: 2010-09-09 Resources:
                 "AWS::DMS::ReplicationInstance"
 ```
 
-## See Also<a name="aws-resource-dms-replicationinstance--seealso"></a>
+## See also<a name="aws-resource-dms-replicationinstance--seealso"></a>
 +  [CreateReplicationInstance](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

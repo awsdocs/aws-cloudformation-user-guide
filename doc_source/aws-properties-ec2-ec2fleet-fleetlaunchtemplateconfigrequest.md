@@ -41,5 +41,5 @@ Any parameters that you specify override the same parameters in the launch templ
 *Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest--seealso"></a>
+## See also<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest--seealso"></a>
 +  [ FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_FleetLaunchTemplateConfigRequest.html) in the *Amazon EC2 API Reference* 

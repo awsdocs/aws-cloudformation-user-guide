@@ -144,5 +144,5 @@ The actions that are enabled or disabled for users during their streaming sessio
 *Type*: List of [UserSetting](aws-properties-appstream-stack-usersetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-stack--seealso"></a>
+## See also<a name="aws-resource-appstream-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateStack.html) in the *Amazon AppStream 2\.0 API Reference* 

@@ -79,7 +79,7 @@ The desired Kubernetes version for your cluster\. If you don't specify a value h
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eks-cluster-return-values"></a>
+## Return values<a name="aws-resource-eks-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-eks-cluster-return-values-ref"></a>
 
@@ -166,6 +166,6 @@ Resources:
           - subnet-e7e761ac
 ```
 
-## See Also<a name="aws-resource-eks-cluster--seealso"></a>
+## See also<a name="aws-resource-eks-cluster--seealso"></a>
 +  [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide *\.
 +  [CreateCluster](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference *\.

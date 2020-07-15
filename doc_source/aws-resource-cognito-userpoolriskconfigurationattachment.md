@@ -76,7 +76,7 @@ The user pool ID\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values-ref"></a>
 

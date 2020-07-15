@@ -1,15 +1,15 @@
-# Moving Resources Between Stacks<a name="refactor-stacks"></a>
+# Moving resources between stacks<a name="refactor-stacks"></a>
 
 Using the `resource import` feature, you can move resources between, or *refactor*, stacks\. You need to first add a `Retain` deletion policy to the resource you want to move to ensure that the resource is preserved when you remove it from the source stack and import it to the target stack\.
 
 **Important**  
-Not all resources support import operations\. See [Resources that Support Import Operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html) before you remove a resource from your stack\. If you remove a resource that doesn't support import operations from your stack, you can't import the resource into another stack or bring it back into the source stack\.
+Not all resources support import operations\. See [Resources that support import operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html) before you remove a resource from your stack\. If you remove a resource that doesn't support import operations from your stack, you can't import the resource into another stack or bring it back into the source stack\.
 
-## Refactor a Stack Using the AWS Management Console<a name="refactor-stacks-console"></a>
+## Refactor a stack using the AWS Management Console<a name="refactor-stacks-console"></a>
 
 1. In the source template, specify a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) for the resource you want to move\.
 
-   In the following example source template, `GamesTable` is the target of this refactor\.  
+   In the following example source template, `Games` is the target of this refactor\.  
 **Example JSON**  
 
    ```
@@ -80,7 +80,7 @@ Not all resources support import operations\. See [Resources that Support Import
 
    1. On the **Configure stack options** page, no changes are required\. Choose **Next**\.
 
-   1. On the **Review *stack\_name*** page, review your changes\. If your template contains IAM resources, select **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\. Then, either update your source stack by creating a change set or update your source stack directly\.
+   1. On the **Review *stack\_name*** page, review your changes\. If your template contains IAM resources, select **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\. Then, either update your source stack by creating a change set or update your source stack directly\.
 
 1. Remove the resource, related parameters, and outputs from the source template, and then add them to the target template\.
 
@@ -208,7 +208,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 **Note**  
 It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack`resource is already managed by AWS CloudFormation\.
 
-## Refactor a Stack Using the AWS CLI<a name="refactor-stacks-cli"></a>
+## Refactor a stack using the AWS CLI<a name="refactor-stacks-cli"></a>
 
 1. In the source template, specify a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) for the resource you want to move\.
 

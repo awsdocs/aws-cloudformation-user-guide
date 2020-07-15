@@ -74,7 +74,7 @@ For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFor
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-endpoint-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-endpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-endpoint-return-values-ref"></a>
 

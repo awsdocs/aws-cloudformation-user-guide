@@ -90,7 +90,7 @@ The NetBIOS name of the directory, such as `CORP`\.
 The size of the directory\. For valid values, see [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Large | Small`  
+*Allowed values*: `Large | Small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSettings`  <a name="cfn-directoryservice-simplead-vpcsettings"></a>
@@ -99,7 +99,7 @@ A [DirectoryVpcSettings](https://docs.aws.amazon.com/directoryservice/latest/dev
 *Type*: [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-directoryservice-simplead-return-values"></a>
+## Return values<a name="aws-resource-directoryservice-simplead-return-values"></a>
 
 ### Ref<a name="aws-resource-directoryservice-simplead-return-values-ref"></a>
 
@@ -166,6 +166,6 @@ myDirectory:
         Ref: vpcID
 ```
 
-## See Also<a name="aws-resource-directoryservice-simplead--seealso"></a>
+## See also<a name="aws-resource-directoryservice-simplead--seealso"></a>
 + [Getting Started with Simple AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_getting_started.html) in the *AWS Directory Service Admin Guide*\.\.
 + [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.

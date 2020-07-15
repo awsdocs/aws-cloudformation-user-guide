@@ -69,7 +69,7 @@ A friendly description of the IP set\. You cannot change the description of an I
 Specify IPV4 or IPV6\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IPV4 | IPV6`  
+*Allowed values*: `IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-ipset-name"></a>
@@ -94,7 +94,7 @@ Key:value pairs associated with an AWS resource\. The key:value pair can be anyt
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-ipset-return-values"></a>
+## Return values<a name="aws-resource-wafv2-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-ipset-return-values-ref"></a>
 

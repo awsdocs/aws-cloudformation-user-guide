@@ -47,5 +47,5 @@ Describes parameters for how an application executes multiple tasks simultaneous
 *Type*: [ParallelismConfiguration](aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration--seealso"></a>
 +  [FlinkApplicationConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_FlinkApplicationConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 

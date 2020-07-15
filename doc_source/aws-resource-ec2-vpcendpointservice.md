@@ -44,7 +44,7 @@ The Amazon Resource Names \(ARNs\) of one or more Network Load Balancers for you
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-vpcendpointservice-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcendpointservice-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcendpointservice-return-values-ref"></a>
 
@@ -52,6 +52,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-vpcendpointservice--seealso"></a>
+## See also<a name="aws-resource-ec2-vpcendpointservice--seealso"></a>
 + [CreateVpcEndpointServiceConfiguration](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpcEndpointServiceConfiguration.html) in the *Amazon EC2 API Reference*
 + [VPC Endpoint Services](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html) in the *Amazon Virtual Private Cloud User Guide*

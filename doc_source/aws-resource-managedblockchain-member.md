@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::ManagedBlockchain::Member
-Properties:
+Properties: 
   [InvitationId](#cfn-managedblockchain-member-invitationid): String
-  [MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration):
+  [MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration): 
     [MemberConfiguration](aws-properties-managedblockchain-member-memberconfiguration.md)
-  [NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration):
+  [NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration): 
     [NetworkConfiguration](aws-properties-managedblockchain-member-networkconfiguration.md)
   [NetworkId](#cfn-managedblockchain-member-networkid): String
 ```
@@ -61,7 +61,7 @@ The unique identifier of the network to which the member belongs\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-managedblockchain-member-return-values"></a>
+## Return values<a name="aws-resource-managedblockchain-member-return-values"></a>
 
 ### Ref<a name="aws-resource-managedblockchain-member-return-values-ref"></a>
 
@@ -243,10 +243,9 @@ Resources:
       MemberConfiguration:
         Name: !Ref MemberName
         Description: !Ref MemberDescription
-        MemberFrameworkConfiguration:
-          MemberFabricConfiguration:
-            AdminUsername: !Ref MemberAdminUsername
-            AdminPassword: !Ref MemberAdminPassword
+        FabricMemberConfiguration:
+          AdminUsername: !Ref MemberAdminUsername
+          AdminPassword: !Ref MemberAdminPassword
       NetworkId: !Ref NetworkId
       InvitationId: !Ref InvitationId
 ```
@@ -283,11 +282,9 @@ Resources:
         "MemberConfiguration": {
           "Name": "MemberName",
           "Description": "MemberDescription",
-          "MemberFrameworkConfiguration": {
-            "MemberFabricConfiguration": {
-              "AdminUsername": "MemberAdminUsername",
-              "AdminPassword": "MemberAdminPassword"
-            }
+          "FabricMemberConfiguration": {
+            "AdminUsername": "MemberAdminUsername",
+            "AdminPassword": "MemberAdminPassword"
           }
         },
         "NetworkId": "NetworkId",

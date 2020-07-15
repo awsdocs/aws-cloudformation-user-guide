@@ -47,5 +47,5 @@ The zip\-format code for a Flink\-based Kinesis Data Analytics application\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-codecontent--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-codecontent--seealso"></a>
 +  [CodeContent](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CodeContent.html) in the *Amazon Kinesis Data Analytics API Reference* 

@@ -39,5 +39,5 @@ Amazon S3 only supports symmetric CMKs and not asymmetric CMKs\. For more inform
 Server\-side encryption algorithm to use for the default encryption\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `AES256 | aws:kms`  
+*Allowed values*: `AES256 | aws:kms`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

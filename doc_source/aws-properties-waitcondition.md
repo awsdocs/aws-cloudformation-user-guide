@@ -63,7 +63,7 @@ Updates are not supported\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-waitcondition-return-values"></a>
+## Return values<a name="aws-properties-waitcondition-return-values"></a>
 
 ### Ref<a name="aws-properties-waitcondition-return-values-ref"></a>
 
@@ -148,6 +148,6 @@ WaitCondition:
       Ref: "WebServerCapacity"
 ```
 
-## See Also<a name="aws-properties-waitcondition--seealso"></a>
+## See also<a name="aws-properties-waitcondition--seealso"></a>
 +  [Creating Wait Conditions in a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html) 
 +  [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) 

@@ -51,7 +51,7 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 *Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafregional-ipset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-ipset-return-values-ref"></a>
 

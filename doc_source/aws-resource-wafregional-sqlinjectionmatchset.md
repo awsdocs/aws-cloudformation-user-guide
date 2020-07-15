@@ -49,7 +49,7 @@ Specifies the parts of web requests that you want to inspect for snippets of mal
 *Type*: List of [SqlInjectionMatchTuple](aws-properties-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuple.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-sqlinjectionmatchset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-sqlinjectionmatchset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-sqlinjectionmatchset-return-values-ref"></a>
 

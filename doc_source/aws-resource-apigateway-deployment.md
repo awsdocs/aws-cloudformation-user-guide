@@ -67,7 +67,7 @@ A name for the stage that API Gateway creates with this deployment\. Use only al
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-deployment-return-values"></a>
+## Return values<a name="aws-resource-apigateway-deployment-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-deployment-return-values-ref"></a>
 
@@ -145,5 +145,5 @@ Deployment:
     StageName: DummyStage
 ```
 
-## See Also<a name="aws-resource-apigateway-deployment--seealso"></a>
+## See also<a name="aws-resource-apigateway-deployment--seealso"></a>
 + [deployment:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/deployment-create/) in the *Amazon API Gateway REST API Reference*

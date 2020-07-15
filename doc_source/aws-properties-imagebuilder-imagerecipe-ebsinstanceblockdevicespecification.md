@@ -82,5 +82,5 @@ Overrides the volume size of the device\.
 Overrides the volume type of the device\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | io1 | sc1 | st1 | standard`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -121,7 +121,7 @@ For more information about creating backend environments, see [Feature Branch De
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amplify-branch-return-values"></a>
+## Return values<a name="aws-resource-amplify-branch-return-values"></a>
 
 ### Fn::GetAtt<a name="aws-resource-amplify-branch-return-values-fn--getatt"></a>
 

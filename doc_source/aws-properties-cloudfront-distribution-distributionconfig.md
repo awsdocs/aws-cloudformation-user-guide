@@ -120,7 +120,7 @@ For viewers and CloudFront to use HTTP/2, viewers must support TLS 1\.2 or later
 In general, configuring CloudFront to communicate with viewers using HTTP/2 reduces latency\. You can improve performance by optimizing for HTTP/2\. For more information, do an Internet search for "http/2 optimization\."   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `http1.1 | http2`  
+*Allowed values*: `http1.1 | http2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IPV6Enabled`  <a name="cfn-cloudfront-distribution-distributionconfig-ipv6enabled"></a>
@@ -160,7 +160,7 @@ If you specify a price class other than `PriceClass_All`, CloudFront serves your
 For more information about price classes, see [Choosing the Price Class for a CloudFront Distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PriceClass.html) in the *Amazon CloudFront Developer Guide*\. For information about CloudFront pricing, including how price classes \(such as Price Class 100\) map to CloudFront regions, see [Amazon CloudFront Pricing](http://aws.amazon.com/cloudfront/pricing/)\. For price class information, scroll down to see the table at the bottom of the page\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  
+*Allowed values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Restrictions`  <a name="cfn-cloudfront-distribution-distributionconfig-restrictions"></a>
@@ -182,5 +182,5 @@ AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS r
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
 +  [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DistributionConfig.html) in the *Amazon CloudFront API Reference* 

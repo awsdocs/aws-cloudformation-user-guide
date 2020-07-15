@@ -62,7 +62,7 @@ The tags of this distribution configuration\.
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-imagebuilder-distributionconfiguration-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-distributionconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-distributionconfiguration-return-values-ref"></a>
 
@@ -173,5 +173,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
+## See also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
 + [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *EC2 Image Builder User Guide*\.

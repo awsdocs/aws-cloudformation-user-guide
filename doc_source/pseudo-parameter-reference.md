@@ -1,8 +1,8 @@
-# Pseudo Parameters Reference<a name="pseudo-parameter-reference"></a>
+# Pseudo parameters reference<a name="pseudo-parameter-reference"></a>
 
 Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You do not declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
 
-## Example<a name="w6345ab1c25c33b5"></a>
+## Example<a name="w6408ab1c25c33b5"></a>
 
 The following snippet assigns the value of the `AWS::Region` pseudo parameter to an output value:
 

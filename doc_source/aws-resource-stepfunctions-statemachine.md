@@ -103,7 +103,7 @@ Tags may only contain Unicode letters, digits, white space, or these symbols: `_
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-stepfunctions-statemachine-return-values"></a>
+## Return values<a name="aws-resource-stepfunctions-statemachine-return-values"></a>
 
 ### Ref<a name="aws-resource-stepfunctions-statemachine-return-values-ref"></a>
 

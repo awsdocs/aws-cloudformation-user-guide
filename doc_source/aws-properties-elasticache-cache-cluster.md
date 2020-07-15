@@ -84,7 +84,7 @@ This parameter is only supported for Memcached clusters\.
 If the `AZMode` and `PreferredAvailabilityZones` are not specified, ElastiCache assumes `single-az` mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cross-az | single-az`  
+*Allowed values*: `cross-az | single-az`  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CacheNodeType`  <a name="cfn-elasticache-cachecluster-cachenodetype"></a>
@@ -273,7 +273,7 @@ Use this parameter only when you are creating a cluster in an Amazon Virtual Pri
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-cache-cluster-return-values"></a>
+## Return values<a name="aws-properties-elasticache-cache-cluster-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-cache-cluster-return-values-ref"></a>
 
@@ -418,6 +418,6 @@ myCacheCluster:
       - us-west-2b
 ```
 
-## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
+## See also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
 + [CreateCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
 + [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 

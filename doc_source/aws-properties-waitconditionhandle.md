@@ -33,5 +33,5 @@ Type: AWS::CloudFormation::WaitConditionHandle
 Properties:
 ```
 
-## See Also<a name="aws-properties-waitconditionhandle--seealso"></a>
+## See also<a name="aws-properties-waitconditionhandle--seealso"></a>
 + For information about how to use wait conditions, see [Creating Wait Conditions in a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)\.

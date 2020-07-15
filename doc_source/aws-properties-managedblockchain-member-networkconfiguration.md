@@ -45,7 +45,7 @@ Attributes of the blockchain framework for the network\.
 The blockchain framework that the network uses\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `HYPERLEDGER_FABRIC`  
+*Allowed values*: `HYPERLEDGER_FABRIC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameworkVersion`  <a name="cfn-managedblockchain-member-networkconfiguration-frameworkversion"></a>

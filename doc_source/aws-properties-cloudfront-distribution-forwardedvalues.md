@@ -60,5 +60,5 @@ A complex type that contains information about the query string parameters that 
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-forwardedvalues--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-forwardedvalues--seealso"></a>
 +  [ForwardedValues](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ForwardedValues.html) in the *Amazon CloudFront API Reference* 

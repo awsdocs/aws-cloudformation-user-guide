@@ -92,7 +92,7 @@ The value of the API key\. Must be at least 20 characters long\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-apigateway-apikey-return-values"></a>
+## Return values<a name="aws-resource-apigateway-apikey-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-apikey-return-values-ref"></a>
 
@@ -207,5 +207,5 @@ Resources:
       Name: !Ref apiKeyName
 ```
 
-## See Also<a name="aws-resource-apigateway-apikey--seealso"></a>
+## See also<a name="aws-resource-apigateway-apikey--seealso"></a>
 + [apikey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) in the *Amazon API Gateway REST API Reference*

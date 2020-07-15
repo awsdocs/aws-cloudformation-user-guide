@@ -325,7 +325,7 @@ Default: The default VPC security group is associated with the cluster\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-redshift-cluster-return-values"></a>
+## Return values<a name="aws-resource-redshift-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-redshift-cluster-return-values-ref"></a>
 
@@ -394,6 +394,6 @@ myCluster:
         Value: bar
 ```
 
-## See Also<a name="aws-resource-redshift-cluster--seealso"></a>
+## See also<a name="aws-resource-redshift-cluster--seealso"></a>
 + For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html)\.
 +  [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.

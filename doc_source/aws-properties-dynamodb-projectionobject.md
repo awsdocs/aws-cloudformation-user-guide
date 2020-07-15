@@ -40,5 +40,5 @@ The set of attributes that are projected into the index:
 +  `ALL` \- All of the table attributes are projected into the index\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ALL | INCLUDE | KEYS_ONLY`  
+*Allowed values*: `ALL | INCLUDE | KEYS_ONLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

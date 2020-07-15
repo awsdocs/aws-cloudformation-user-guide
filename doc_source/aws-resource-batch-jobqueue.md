@@ -56,10 +56,10 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-jobqueue-return-values"></a>
+## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-jobqueue-return-values-ref"></a>
 

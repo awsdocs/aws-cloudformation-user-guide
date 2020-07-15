@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The market type\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `spot`  
+*Allowed values*: `spot`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions"></a>
@@ -40,5 +40,5 @@ The options for Spot Instances\.
 *Type*: [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions--seealso"></a>
 +  [ LaunchTemplateInstanceMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

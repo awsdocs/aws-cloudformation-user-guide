@@ -65,7 +65,7 @@ An array of key\-value pairs to apply to this resource\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ecr-repository-return-values"></a>
+## Return values<a name="aws-resource-ecr-repository-return-values"></a>
 
 ### Ref<a name="aws-resource-ecr-repository-return-values-ref"></a>
 
@@ -225,6 +225,6 @@ Outputs:
     Value: !GetAtt MyRepository.Arn
 ```
 
-## See Also<a name="aws-resource-ecr-repository--seealso"></a>
+## See also<a name="aws-resource-ecr-repository--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 

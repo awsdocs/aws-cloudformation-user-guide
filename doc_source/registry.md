@@ -7,15 +7,15 @@ The CloudFormation registry lists the resources, both private and public \(AWS\)
 *Private* resource providers are those resource providers that you have explicitly registered for use in your AWS account\. These may be resource providers you've created yourself, as well as ones shared with you\. You can use the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk), an open\-source tool for resource management, to create private resource providers\. For more information, see the [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
 
 **Note**  
-Private resource providers implement custom logic that runs during resource create, read, update, list, and delete operations\. Because of this, using private resource providers in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation Pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+Private resource providers implement custom logic that runs during resource create, read, update, list, and delete operations\. Because of this, using private resource providers in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
 
-*Public* resource providers are those provided by AWS to manage specific AWS service resources\. While the registry lists AWS resources implemented using the open\-source resource provider framework, all the resources included in the [Resource and Property Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) are available for use in your CloudFormation account\.
+*Public* resource providers are those provided by AWS to manage specific AWS service resources\. While the registry lists AWS resources implemented using the open\-source resource provider framework, all the resources included in the [Resource and property types reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) are available for use in your CloudFormation account\.
 
 ## Registering resource providers in CloudFormation<a name="registry-register"></a>
 
 To use private resource providers\-\-either ones you develop yourself, or providers shared with you\-\-you must first register them with CloudFormation, in the accounts and regions in which you want to use them\. Once you're registered a resource provider, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
 
-You can register a resource provider using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a resource provider using the CloudFormation CLI, see [Registering Resource Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
+You can register a resource provider using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a resource provider using the CloudFormation CLI, see [Registering resource providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
 
 ### IAM permissions for registering a resource provider<a name="registry-register-permissions"></a>
 
@@ -45,7 +45,7 @@ Make sure you grant the `cloudformation.amazonaws.com` service these permissions
               - !Sub "arn:${AWS::Partition}:s3:::${ArtifactBucket}/*"
 ```
 
-For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
+For more information, see [Actions, resources, and condition keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 
 In addition, both the [execution role](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) and the [logging role](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) you specify when registering the resource provider must specify a trust relationship that allows the CloudFormation service principal to assume that role\. For example:
 
@@ -64,9 +64,9 @@ In addition, both the [execution role](https://docs.aws.amazon.com/AWSCloudForma
   }
 ```
 
-For more information, see [Creating a Role to Delegate Permissions to an AWS Service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *AWS Identity and Access Management User Guide*\.
+For more information, see [Creating a role to delegate permissions to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *AWS Identity and Access Management User Guide*\.
 
-**To Register a Resource Provider Using the AWS CLI**
+**To register a resource provider using the AWS CLI**
 
 1. Locate the S3 bucket that contains the resource provider package for the resource provider you want to register in your account\.
 
@@ -107,7 +107,7 @@ If your resource type calls AWS APIs in any of its handlers, you must create an 
 
 Over time, you may register multiple versions of the same resource provider\. You can specify which version of the resource provider you want to use for CloudFormation operations\.
 
-**To Specify Which Version of a Resource Provider to Use Using the AWS CLI**
+**To specify which version of a resource provider to use using the AWS CLI**
 + Use the `[set\-type\-default\-version](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-type-default-version.html)` command to specify which version of the resource provider to use for CloudFormation operations in your account\.
 
   For example, the following command sets the default version of the `My::Resource::Example` resource type to `00000003` for the current account\.
@@ -120,7 +120,7 @@ Over time, you may register multiple versions of the same resource provider\. Yo
 
 Once you've registered a resource provider in an account, you can view the details of that resource provider in the CloudFormation console\. Private resource providers are displayed in the **Private** section of the CloudFormation registry\.
 
-**To View Registered Resource Providers in the CloudFormation Console**
+**To view registered resource providers in the CloudFormation console**
 
 1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** navigation pane, under **CloudFormation registry**, select **Resource types**\.
 

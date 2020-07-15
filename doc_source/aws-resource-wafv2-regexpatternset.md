@@ -79,7 +79,7 @@ Key:value pairs associated with an AWS resource\. The key:value pair can be anyt
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-regexpatternset-return-values"></a>
+## Return values<a name="aws-resource-wafv2-regexpatternset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-regexpatternset-return-values-ref"></a>
 

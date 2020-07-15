@@ -33,5 +33,5 @@ A list that contains other lists of EC2 instance tag groups\. For an instance to
 *Type*: List of [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject--seealso"></a>
+## See also<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject--seealso"></a>
 +  [EC2TagSet](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagSet.html) in the *AWS CodeDeploy API Reference*\.

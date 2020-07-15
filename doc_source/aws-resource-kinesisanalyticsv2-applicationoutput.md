@@ -98,5 +98,5 @@ Properties:
         - Arn
 ```
 
-## See Also<a name="aws-resource-kinesisanalyticsv2-applicationoutput--seealso"></a>
+## See also<a name="aws-resource-kinesisanalyticsv2-applicationoutput--seealso"></a>
 +  [AddApplicationOutput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationOutput.html) in the *Amazon Kinesis Data Analytics API Reference* 

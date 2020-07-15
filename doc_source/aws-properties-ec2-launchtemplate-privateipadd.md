@@ -38,5 +38,5 @@ The private IPv4 addresses\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-privateipadd--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-privateipadd--seealso"></a>
 +  [ PrivateIpAddressSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_PrivateIpAddressSpecification.html) in the *Amazon Elastic Compute Cloud API Reference* 

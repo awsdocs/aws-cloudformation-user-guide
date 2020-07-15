@@ -150,7 +150,7 @@ A custom name of the default treatment for the campaign, if the campaign has mul
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-campaign-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-campaign-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-campaign-return-values-ref"></a>
 

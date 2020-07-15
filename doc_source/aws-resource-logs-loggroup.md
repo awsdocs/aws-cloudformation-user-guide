@@ -49,7 +49,7 @@ The number of days to retain the log events in the specified log group\. Possibl
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-logs-loggroup-return-values"></a>
+## Return values<a name="aws-resource-logs-loggroup-return-values"></a>
 
 ### Ref<a name="aws-resource-logs-loggroup-return-values-ref"></a>
 

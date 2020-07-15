@@ -49,5 +49,5 @@ Specify if you want your trail to log read\-only events, write\-only events, or 
  By default, the value is `All`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `All | ReadOnly | WriteOnly`  
+*Allowed values*: `All | ReadOnly | WriteOnly`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

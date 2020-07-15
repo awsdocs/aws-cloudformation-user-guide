@@ -196,7 +196,7 @@ Information used to configure the bucket as a static website\. For more informat
 *Type*: [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-s3-bucket-return-values"></a>
+## Return values<a name="aws-properties-s3-bucket-return-values"></a>
 
 ### Ref<a name="aws-properties-s3-bucket-return-values-ref"></a>
 
@@ -1023,5 +1023,5 @@ Resources:
     DeletionPolicy: Delete
 ```
 
-## See Also<a name="aws-properties-s3-bucket--seealso"></a>
+## See also<a name="aws-properties-s3-bucket--seealso"></a>
 + [Amazon S3 Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-s3.html)

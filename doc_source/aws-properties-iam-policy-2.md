@@ -46,5 +46,5 @@ The friendly name \(not ARN\) identifying the policy\.
 *Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-iam-policy-2--seealso"></a>
+## See also<a name="aws-properties-iam-policy-2--seealso"></a>
 +  [PolicyDetail](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PolicyDetail.html) in the *AWS Identity and Access Management API Reference* 

@@ -45,6 +45,6 @@ Running as the root user increases risks to your data and device\. Do not run as
 *Type*: [RunAs](aws-properties-greengrass-functiondefinitionversion-runas.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinitionversion-execution--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinitionversion-execution--seealso"></a>
 +  [FunctionExecutionConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionexecutionconfig.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

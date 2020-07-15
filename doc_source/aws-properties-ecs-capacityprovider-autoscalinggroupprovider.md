@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-capacityprovider-autoscalinggroupprovider-properties"></a>
 
 `AutoScalingGroupArn`  <a name="cfn-ecs-capacityprovider-autoscalinggroupprovider-autoscalinggrouparn"></a>
-The Amazon Resource Name \(ARN\) that identifies the Auto Scaling group\.  
+The Amazon Resource Name \(ARN\) or short name that identifies the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -46,5 +46,5 @@ When managed termination protection is enabled, Amazon ECS prevents the Amazon E
 When managed termination protection is disabled, your Amazon EC2 instances are not protected from termination when the Auto Scaling group scales in\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

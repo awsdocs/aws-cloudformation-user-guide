@@ -74,7 +74,7 @@ The JSON block of configuration information for each trigger\.
 *Type*: List of [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="aws-resource-codecommit-repository-return-values"></a>
+## Return values<a name="aws-resource-codecommit-repository-return-values"></a>
 
 ### Ref<a name="aws-resource-codecommit-repository-return-values-ref"></a>
 

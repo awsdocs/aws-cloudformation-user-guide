@@ -63,7 +63,7 @@ The maximum time, in seconds, that a new game session placement request remains 
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-gamelift-gamesessionqueue-return-values"></a>
+## Return values<a name="aws-resource-gamelift-gamesessionqueue-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-gamesessionqueue-return-values-ref"></a>
 
@@ -139,7 +139,7 @@ Resources:
           PolicyDurationSeconds: 60
 ```
 
-## See Also<a name="aws-resource-gamelift-gamesessionqueue--seealso"></a>
+## See also<a name="aws-resource-gamelift-gamesessionqueue--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Using Multi\-Region Queues](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html) in the *Amazon GameLift Developer Guide*
 +  [CreateGameSessionQueue](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html) in the *Amazon GameLift API Reference* 

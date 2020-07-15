@@ -138,7 +138,7 @@ If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `
 *Type*: [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-as-policy-return-values"></a>
+## Return values<a name="aws-properties-as-policy-return-values"></a>
 
 ### Ref<a name="aws-properties-as-policy-return-values-ref"></a>
 

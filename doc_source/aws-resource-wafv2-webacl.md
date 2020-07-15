@@ -95,7 +95,7 @@ Defines and enables Amazon CloudWatch metrics and web request sample collection\
 *Type*: [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-webacl-return-values"></a>
+## Return values<a name="aws-resource-wafv2-webacl-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-webacl-return-values-ref"></a>
 

@@ -72,7 +72,7 @@ An arbitrary set of tags \(key–value pairs\) to associate with the Kinesis str
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kinesis-stream-return-values"></a>
+## Return values<a name="aws-resource-kinesis-stream-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesis-stream-return-values-ref"></a>
 

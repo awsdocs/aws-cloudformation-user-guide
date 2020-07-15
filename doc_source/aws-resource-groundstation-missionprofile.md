@@ -83,7 +83,7 @@ Properties:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-groundstation-missionprofile-return-values"></a>
+## Return values<a name="aws-resource-groundstation-missionprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-groundstation-missionprofile-return-values-ref"></a>
 

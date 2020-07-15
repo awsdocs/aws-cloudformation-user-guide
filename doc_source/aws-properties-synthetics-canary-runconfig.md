@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[MemoryInMB](#cfn-synthetics-canary-runconfig-memoryinmb)" : Integer,
   "[TimeoutInSeconds](#cfn-synthetics-canary-runconfig-timeoutinseconds)" : Integer
 }
 ```
@@ -17,10 +18,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-synthetics-canary-runconfig-syntax.yaml"></a>
 
 ```
+  [MemoryInMB](#cfn-synthetics-canary-runconfig-memoryinmb): Integer
   [TimeoutInSeconds](#cfn-synthetics-canary-runconfig-timeoutinseconds): Integer
 ```
 
 ## Properties<a name="aws-properties-synthetics-canary-runconfig-properties"></a>
+
+`MemoryInMB`  <a name="cfn-synthetics-canary-runconfig-memoryinmb"></a>
+The maximum amount of memory that the canary can use while running\. This value must be a multiple of 64\. The range is 960 to 3008\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `960`  
+*Maximum*: `3008`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutInSeconds`  <a name="cfn-synthetics-canary-runconfig-timeoutinseconds"></a>
 How long the canary is allowed to run before it must stop\. You can't set this time to be longer than the frequency of the runs of this canary\.  

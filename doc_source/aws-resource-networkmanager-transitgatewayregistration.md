@@ -41,7 +41,7 @@ The Amazon Resource Name \(ARN\) of the transit gateway\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-networkmanager-transitgatewayregistration-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-transitgatewayregistration-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-transitgatewayregistration-return-values-ref"></a>
 

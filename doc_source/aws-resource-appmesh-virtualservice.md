@@ -71,7 +71,7 @@ The name to use for the virtual service\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-virtualservice-return-values"></a>
+## Return values<a name="aws-resource-appmesh-virtualservice-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-virtualservice-return-values-ref"></a>
 
@@ -234,6 +234,6 @@ Outputs:
         - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-virtualservice--seealso"></a>
+## See also<a name="aws-resource-appmesh-virtualservice--seealso"></a>
 +  [Virtual Services](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualService](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualService.html) in the * AWS App Mesh API Reference *\.

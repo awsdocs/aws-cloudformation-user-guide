@@ -35,5 +35,5 @@ When configuring application input at the time of creating or updating an applic
 The type of record format\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CSV | JSON`  
+*Allowed values*: `CSV | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

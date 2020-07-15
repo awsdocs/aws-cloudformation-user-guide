@@ -52,7 +52,7 @@ The name of the event destination that you want to modify\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-pinpointemail-configurationseteventdestination-return-values"></a>
+## Return values<a name="aws-resource-pinpointemail-configurationseteventdestination-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpointemail-configurationseteventdestination-return-values-ref"></a>
 

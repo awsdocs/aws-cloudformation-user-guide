@@ -42,7 +42,7 @@ If you use this property to change the `SecretId` for an existing resource\-base
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
+## Return values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-secretsmanager-resourcepolicy-return-values-ref"></a>
 
@@ -162,7 +162,7 @@ MySecretResourcePolicy:
                 AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
 ```
 
-## See Also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
+## See also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
 +  [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
 +  [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
 +  [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)

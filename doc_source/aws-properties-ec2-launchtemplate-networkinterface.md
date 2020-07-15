@@ -131,5 +131,5 @@ The ID of the subnet for the network interface\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
 +  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

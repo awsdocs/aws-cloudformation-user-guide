@@ -121,5 +121,5 @@ ApplicationReferenceDataSource:
         FileKey: fakeKey
 ```
 
-## See Also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
+## See also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
 +  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 

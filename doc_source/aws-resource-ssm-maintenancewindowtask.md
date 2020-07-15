@@ -146,7 +146,7 @@ The parameters to pass to the task when it runs\.
 The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FUNCTIONS`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`  
+*Allowed values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
@@ -158,7 +158,7 @@ The ID of the maintenance window where the task is registered\.
 *Pattern*: `^mw-[0-9a-f]{17}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ssm-maintenancewindowtask-return-values"></a>
+## Return values<a name="aws-resource-ssm-maintenancewindowtask-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-maintenancewindowtask-return-values-ref"></a>
 
@@ -304,7 +304,7 @@ Resources:
     DependsOn: MaintenanceWindowTarget
 ```
 
-## See Also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
+## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
 +  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
 +  [RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.

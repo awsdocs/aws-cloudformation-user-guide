@@ -122,7 +122,7 @@ The target for the route\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-route-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-route-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-route-return-values-ref"></a>
 
@@ -227,5 +227,5 @@ MyRoute:
         - !Ref MyIntegration
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-route--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-route--seealso"></a>
 + [CreateRoute](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes.html#CreateRoute) in the *Amazon API Gateway Version 2 API Reference*

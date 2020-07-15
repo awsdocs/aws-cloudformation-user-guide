@@ -1,5 +1,5 @@
-# EKS Resource Type Reference<a name="AWS_EKS"></a>
+# EKS resource type reference<a name="AWS_EKS"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::EKS::Cluster](aws-resource-eks-cluster.md)
 + [AWS::EKS::Nodegroup](aws-resource-eks-nodegroup.md)

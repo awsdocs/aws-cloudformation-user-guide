@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A setting to enable or disable metrics at the container level\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricPolicyRules`  <a name="cfn-mediastore-container-metricpolicy-metricpolicyrules"></a>

@@ -45,7 +45,7 @@ A name for the launch template\.
 *Pattern*: `[a-zA-Z0-9\(\)\.\-/_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
+## Return values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-launchtemplate-return-values-ref"></a>
 
@@ -136,5 +136,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
+## See also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
 + [ CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference* 

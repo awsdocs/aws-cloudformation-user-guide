@@ -99,7 +99,7 @@ The name of the workflow associated with the trigger\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-glue-trigger-return-values"></a>
+## Return values<a name="aws-resource-glue-trigger-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-trigger-return-values-ref"></a>
 

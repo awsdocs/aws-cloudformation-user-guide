@@ -83,10 +83,10 @@ The timeout configuration for jobs that are submitted with this job definition\.
 The type of job definition\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `container | multinode`  
+*Allowed values*: `container | multinode`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-jobdefinition-return-values"></a>
+## Return values<a name="aws-resource-batch-jobdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-jobdefinition-return-values-ref"></a>
 
@@ -167,5 +167,5 @@ JobDefinition:
       Image: nvidia/cuda
 ```
 
-## See Also<a name="aws-resource-batch-jobdefinition--seealso"></a>
+## See also<a name="aws-resource-batch-jobdefinition--seealso"></a>
 +  [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.

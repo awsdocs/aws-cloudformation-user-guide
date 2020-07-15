@@ -91,7 +91,7 @@ The Virtual Private Cloud \(VPC\) configuration for this access point, if one ex
 *Type*: [VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-s3-accesspoint-return-values"></a>
+## Return values<a name="aws-resource-s3-accesspoint-return-values"></a>
 
 ### Ref<a name="aws-resource-s3-accesspoint-return-values-ref"></a>
 

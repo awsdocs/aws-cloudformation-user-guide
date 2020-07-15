@@ -49,7 +49,7 @@ The location of an imported Oracle Wallet certificate for use with SSL\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-certificate-return-values"></a>
+## Return values<a name="aws-resource-dms-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-certificate-return-values-ref"></a>
 
@@ -82,6 +82,6 @@ AWSTemplateFormatVersion: 2010-09-09 Description: "Certificate
                 -----END CERTIFICATE----- Type: "AWS::DMS::Certificate"
 ```
 
-## See Also<a name="aws-resource-dms-certificate--seealso"></a>
+## See also<a name="aws-resource-dms-certificate--seealso"></a>
 +  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

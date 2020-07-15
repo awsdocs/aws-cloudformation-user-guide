@@ -78,7 +78,7 @@ An object that defines the open and click tracking options for emails that you s
 *Type*: [TrackingOptions](aws-properties-pinpointemail-configurationset-trackingoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpointemail-configurationset-return-values"></a>
+## Return values<a name="aws-resource-pinpointemail-configurationset-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpointemail-configurationset-return-values-ref"></a>
 

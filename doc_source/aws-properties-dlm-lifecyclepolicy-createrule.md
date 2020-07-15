@@ -51,7 +51,7 @@ The interval between snapshots\. The supported values are 1, 2, 3, 4, 6, 8, 12, 
 The interval unit\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `HOURS`  
+*Allowed values*: `HOURS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Times`  <a name="cfn-dlm-lifecyclepolicy-createrule-times"></a>

@@ -54,7 +54,7 @@ Specifies an application resource lifecycle configuration to prevent your applic
 *Type*: [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-beanstalk-return-values"></a>
+## Return values<a name="aws-properties-beanstalk-return-values"></a>
 
 ### Ref<a name="aws-properties-beanstalk-return-values-ref"></a>
 
@@ -87,5 +87,5 @@ Properties:
   Description: "AWS Elastic Beanstalk PHP Sample Application"
 ```
 
-## See Also<a name="aws-properties-beanstalk--seealso"></a>
+## See also<a name="aws-properties-beanstalk--seealso"></a>
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.

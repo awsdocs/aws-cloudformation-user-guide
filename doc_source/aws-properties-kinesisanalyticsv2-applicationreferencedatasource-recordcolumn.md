@@ -47,5 +47,5 @@ The type of column created in the in\-application input stream or reference tabl
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn--seealso"></a>
 +  [RecordColumn](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordColumn.html) in the *Amazon Kinesis Data Analytics API Reference* 

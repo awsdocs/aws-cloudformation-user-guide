@@ -49,7 +49,7 @@ The AWS account ID of the account designated as the GuardDuty master account\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-guardduty-master-return-values"></a>
+## Return values<a name="aws-resource-guardduty-master-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-master-return-values-ref"></a>
 

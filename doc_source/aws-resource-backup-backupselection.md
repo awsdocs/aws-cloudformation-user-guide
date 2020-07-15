@@ -43,7 +43,7 @@ It includes an array of resources, an optional array of patterns to exclude reso
 *Type*: [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-backup-backupselection-return-values"></a>
+## Return values<a name="aws-resource-backup-backupselection-return-values"></a>
 
 ### Ref<a name="aws-resource-backup-backupselection-return-values-ref"></a>
 

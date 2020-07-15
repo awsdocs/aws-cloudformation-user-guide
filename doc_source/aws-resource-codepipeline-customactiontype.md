@@ -50,7 +50,7 @@ Properties:
 The category of the custom action, such as a build action or a test action\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Approval | Build | Deploy | Invoke | Source | Test`  
+*Allowed values*: `Approval | Build | Deploy | Invoke | Source | Test`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationProperties`  <a name="cfn-codepipeline-customactiontype-configurationproperties"></a>
@@ -103,7 +103,7 @@ The version identifier of the custom action\.
 *Pattern*: `[0-9A-Za-z_-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-codepipeline-customactiontype-return-values"></a>
+## Return values<a name="aws-resource-codepipeline-customactiontype-return-values"></a>
 
 ### Ref<a name="aws-resource-codepipeline-customactiontype-return-values-ref"></a>
 

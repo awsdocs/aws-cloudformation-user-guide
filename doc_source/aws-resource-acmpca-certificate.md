@@ -53,7 +53,7 @@ The name of the algorithm that will be used to sign the certificate to be issued
 This parameter should not be confused with the `SigningAlgorithm` parameter used to sign a CSR\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
+*Allowed values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TemplateArn`  <a name="cfn-acmpca-certificate-templatearn"></a>
@@ -68,7 +68,7 @@ The period of time during which the certificate will be valid\.
 *Type*: [Validity](aws-properties-acmpca-certificate-validity.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-acmpca-certificate-return-values"></a>
+## Return values<a name="aws-resource-acmpca-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-acmpca-certificate-return-values-ref"></a>
 

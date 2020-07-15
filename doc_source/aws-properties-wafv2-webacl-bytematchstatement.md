@@ -59,7 +59,7 @@ The value of `SearchString` must appear at the beginning of the specified part o
 The value of `SearchString` must appear at the end of the specified part of the web request\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
+*Allowed values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SearchString`  <a name="cfn-wafv2-webacl-bytematchstatement-searchstring"></a>

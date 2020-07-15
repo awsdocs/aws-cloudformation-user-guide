@@ -30,5 +30,5 @@ Specify `true` to enable detailed monitoring\. Otherwise, basic monitoring is en
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring--seealso"></a>
 +  [ LaunchTemplatesMonitoringRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatesMonitoringRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

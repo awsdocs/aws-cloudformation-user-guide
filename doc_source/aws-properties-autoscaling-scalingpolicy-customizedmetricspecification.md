@@ -56,7 +56,7 @@ The namespace of the metric\.
 The statistic of the metric\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Average | Maximum | Minimum | SampleCount | Sum`  
+*Allowed values*: `Average | Maximum | Minimum | SampleCount | Sum`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit"></a>

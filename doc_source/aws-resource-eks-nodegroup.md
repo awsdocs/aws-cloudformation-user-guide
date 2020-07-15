@@ -65,7 +65,7 @@ Properties:
 The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type, which uses the Amazon EKS\-optimized Linux AMI with GPU support\. Non\-GPU instances should use the `AL2_x86_64` AMI type, which uses the Amazon EKS\-optimized Linux AMI\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AL2_x86_64 | AL2_x86_64_GPU`  
+*Allowed values*: `AL2_x86_64 | AL2_x86_64_GPU`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterName`  <a name="cfn-eks-nodegroup-clustername"></a>
@@ -147,7 +147,7 @@ The Kubernetes version to use for your managed nodes\. By default, the Kubernete
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eks-nodegroup-return-values"></a>
+## Return values<a name="aws-resource-eks-nodegroup-return-values"></a>
 
 ### Ref<a name="aws-resource-eks-nodegroup-return-values-ref"></a>
 
@@ -232,6 +232,6 @@ Resources:
         - subnet-e7e761ac
 ```
 
-## See Also<a name="aws-resource-eks-nodegroup--seealso"></a>
+## See also<a name="aws-resource-eks-nodegroup--seealso"></a>
 +  [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide *\.
 +  [CreateNodegroup](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateNodegroup.html) in the *Amazon EKS API Reference *\.

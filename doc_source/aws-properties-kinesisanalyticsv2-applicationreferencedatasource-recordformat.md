@@ -35,8 +35,8 @@ When you configure application input at the time of creating or updating an appl
 The type of record format\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CSV | JSON`  
+*Allowed values*: `CSV | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat--seealso"></a>
 +  [RecordFormat](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordFormat.html) in the *Amazon Kinesis Data Analytics API Reference* 

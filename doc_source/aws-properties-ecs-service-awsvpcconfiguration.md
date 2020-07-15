@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Whether the task's elastic network interface receives a public IP address\. The default value is `DISABLED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-ecs-service-awsvpcconfiguration-securitygroups"></a>

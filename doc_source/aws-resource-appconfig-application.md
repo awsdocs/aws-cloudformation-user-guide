@@ -68,7 +68,7 @@ Metadata to assign to the application\. Tags help organize and categorize your A
 *Type*: [List](aws-properties-appconfig-application-tags.md) of [Tags](aws-properties-appconfig-application-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-application-return-values"></a>
+## Return values<a name="aws-resource-appconfig-application-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-application-return-values-ref"></a>
 
@@ -112,6 +112,6 @@ BasicApplication:
           Value: test
 ```
 
-## See Also<a name="aws-resource-appconfig-application--seealso"></a>
+## See also<a name="aws-resource-appconfig-application--seealso"></a>
 +  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
 +  [Creating an Application](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-application.html)

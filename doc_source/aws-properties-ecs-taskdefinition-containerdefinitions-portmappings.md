@@ -53,5 +53,5 @@ The default reserved ports are 22 for SSH, the Docker ports 2375 and 2376, and t
 The protocol used for the port mapping\. Valid values are `tcp` and `udp`\. The default is `tcp`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `tcp | udp`  
+*Allowed values*: `tcp | udp`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

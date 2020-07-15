@@ -67,7 +67,7 @@ A list of security group IDs associated with this network interface\.
 Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `efa`  
+*Allowed values*: `efa`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
@@ -119,7 +119,7 @@ An arbitrary set of tags \(key\-value pairs\) for this network interface\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-network-interface-return-values"></a>
+## Return values<a name="aws-resource-ec2-network-interface-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-network-interface-return-values-ref"></a>
 
@@ -235,5 +235,5 @@ Ec2Instance:
             Ref: WebServerPort
 ```
 
-## See Also<a name="aws-resource-ec2-network-interface--seealso"></a>
+## See also<a name="aws-resource-ec2-network-interface--seealso"></a>
 + [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon Elastic Compute Cloud API Reference*

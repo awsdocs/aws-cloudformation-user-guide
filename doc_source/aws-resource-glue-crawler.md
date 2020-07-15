@@ -125,7 +125,7 @@ A collection of targets to crawl\.
 *Type*: [Targets](aws-properties-glue-crawler-targets.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-crawler-return-values"></a>
+## Return values<a name="aws-resource-glue-crawler-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-crawler-return-values-ref"></a>
 

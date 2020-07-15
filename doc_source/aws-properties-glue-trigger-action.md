@@ -72,5 +72,5 @@ The `JobRun` timeout in minutes\. This is the maximum time that a job run can co
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-trigger-action--seealso"></a>
+## See also<a name="aws-properties-glue-trigger-action--seealso"></a>
 +  [Action Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Action) in the *AWS Glue Developer Guide* 

@@ -253,7 +253,7 @@ A map that contains tag keys and tag values to attach to an AWS OpsWorks for Che
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-opsworkscm-server-return-values"></a>
+## Return values<a name="aws-resource-opsworkscm-server-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworkscm-server-return-values-ref"></a>
 
@@ -487,7 +487,7 @@ Outputs:
       Value: !GetAtt [MyPuppetServer, Endpoint]
 ```
 
-## See Also<a name="aws-resource-opsworkscm-server--seealso"></a>
+## See also<a name="aws-resource-opsworkscm-server--seealso"></a>
 +  [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [ `CreateServer` ](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference* 

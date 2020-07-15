@@ -124,7 +124,7 @@ When CloudWatch has insufficient data about the metric to determine the alarm st
 +  `LastKnownStatus`: Route 53 uses the status of the health check from the last time that CloudWatch had sufficient data to determine the alarm state\. For new health checks that have no last known status, the default status for the health check is healthy\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Healthy | LastKnownStatus | Unhealthy`  
+*Allowed values*: `Healthy | LastKnownStatus | Unhealthy`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Inverted`  <a name="cfn-route53-healthcheck-healthcheckconfig-inverted"></a>
@@ -217,9 +217,9 @@ If you specify `HTTPS` for the value of `Type`, the endpoint must support TLS v1
 For more information, see [How Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Amazon Route 53 Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CALCULATED | CLOUDWATCH_METRIC | HTTP | HTTP_STR_MATCH | HTTPS | HTTPS_STR_MATCH | TCP`  
+*Allowed values*: `CALCULATED | CLOUDWATCH_METRIC | HTTP | HTTP_STR_MATCH | HTTPS | HTTPS_STR_MATCH | TCP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-route53-healthcheck-healthcheckconfig--seealso"></a>
+## See also<a name="aws-properties-route53-healthcheck-healthcheckconfig--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#aws-resource-route53-healthcheck-return-values) in the topic [AWS::Route53::HealthCheck](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html) 
 +  [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html) in the *Amazon Route 53 API Reference*

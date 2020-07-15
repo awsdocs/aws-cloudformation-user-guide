@@ -44,7 +44,7 @@ A set of optional parameters for the policy\.
 The valid target resource types and actions a policy can manage\. The default is EBS\_SNAPSHOT\_MANAGEMENT\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `EBS_SNAPSHOT_MANAGEMENT`  
+*Allowed values*: `EBS_SNAPSHOT_MANAGEMENT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceTypes`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcetypes"></a>
@@ -68,5 +68,5 @@ The single tag that identifies targeted resources for this policy\.
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-dlm-lifecyclepolicy-policydetails--seealso"></a>
+## See also<a name="aws-properties-dlm-lifecyclepolicy-policydetails--seealso"></a>
 +  [PolicyDetails](https://docs.aws.amazon.com/dlm/latest/APIReference/API_PolicyDetails.html) in the *Amazon Data Lifecycle Manager API Reference* 

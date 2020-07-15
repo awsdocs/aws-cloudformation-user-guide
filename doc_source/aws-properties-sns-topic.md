@@ -90,7 +90,7 @@ If you specify a name, you can't perform updates that require replacement of thi
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-sns-topic-return-values"></a>
+## Return values<a name="aws-properties-sns-topic-return-values"></a>
 
 ### Ref<a name="aws-properties-sns-topic-return-values-ref"></a>
 
@@ -151,5 +151,5 @@ MySNSTopic:
     TopicName: "SampleTopic"
 ```
 
-## See Also<a name="aws-properties-sns-topic--seealso"></a>
+## See also<a name="aws-properties-sns-topic--seealso"></a>
 +  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 

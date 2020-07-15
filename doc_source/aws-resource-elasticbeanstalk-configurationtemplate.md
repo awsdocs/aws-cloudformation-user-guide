@@ -95,7 +95,7 @@ Constraint: If both solution stack name and source configuration are specified, 
 *Type*: [SourceConfiguration](aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-elasticbeanstalk-configurationtemplate-return-values"></a>
+## Return values<a name="aws-resource-elasticbeanstalk-configurationtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticbeanstalk-configurationtemplate-return-values-ref"></a>
 
@@ -154,7 +154,7 @@ myConfigTemplate:
           Ref: "KeyName"
 ```
 
-## See Also<a name="aws-resource-elasticbeanstalk-configurationtemplate--seealso"></a>
+## See also<a name="aws-resource-elasticbeanstalk-configurationtemplate--seealso"></a>
 +  [AWS::ElasticBeanstalk::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html) 
 +  [Configuration Options](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS Elastic Beanstalk Developer Guide* 
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.

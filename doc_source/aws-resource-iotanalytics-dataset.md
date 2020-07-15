@@ -447,6 +447,6 @@ Resources:
             DatasetName: "TriggeringDataset"
 ```
 
-## See Also<a name="aws-resource-iotanalytics-dataset--seealso"></a>
+## See also<a name="aws-resource-iotanalytics-dataset--seealso"></a>
 +  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide* 
 +  [CreateDataset](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreateDataset.html) in the *AWS IoT Analytics API Reference* 

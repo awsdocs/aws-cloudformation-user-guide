@@ -43,7 +43,7 @@ A complex type that contains zero or more `Tag` elements\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-distribution-return-values"></a>
+## Return values<a name="aws-resource-cloudfront-distribution-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudfront-distribution-return-values-ref"></a>
 
@@ -145,5 +145,5 @@ Resources:
           Value: string-value
 ```
 
-## See Also<a name="aws-resource-cloudfront-distribution--seealso"></a>
+## See also<a name="aws-resource-cloudfront-distribution--seealso"></a>
 +  [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference* 

@@ -53,7 +53,7 @@ Specifies the ARN or the friendly name of the secret that you want to rotate\. T
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-secretsmanager-rotationschedule-return-values"></a>
+## Return values<a name="aws-resource-secretsmanager-rotationschedule-return-values"></a>
 
 ### Ref<a name="aws-resource-secretsmanager-rotationschedule-return-values-ref"></a>
 
@@ -477,6 +477,6 @@ AWSTemplateFormatVersion: 2010-09-09
             functionName: SecretsManagerDocDBRotationLambda
 ```
 
-## See Also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>
+## See also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>
 +  [RotateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_RotateSecret.html) in the AWS Secrets Manager API Reference
 +  [Rotating Your AWS Secrets Manager Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User Guide

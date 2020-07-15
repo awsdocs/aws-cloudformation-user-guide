@@ -73,7 +73,7 @@ The directory on the Amazon EFS file system that the access point exposes as the
 *Type*: [RootDirectory](aws-properties-efs-accesspoint-rootdirectory.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-efs-accesspoint-return-values"></a>
+## Return values<a name="aws-resource-efs-accesspoint-return-values"></a>
 
 ### Ref<a name="aws-resource-efs-accesspoint-return-values-ref"></a>
 
@@ -156,6 +156,6 @@ AccessPointResource:
         Path: "/testcfn/abc"
 ```
 
-## See Also<a name="aws-resource-efs-accesspoint--seealso"></a>
+## See also<a name="aws-resource-efs-accesspoint--seealso"></a>
 + [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html)\.
 + [Working with Amazon EFS Access Points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon EFS User Guide*\.

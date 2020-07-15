@@ -78,7 +78,7 @@ The number of player slots in a match to keep open for future players\. For exam
 The method used to backfill game sessions that are created with this matchmaking configuration\. Specify `MANUAL` when your game manages backfill requests manually or does not use the match backfill feature\. Specify `AUTOMATIC` to have GameLift create a `StartMatchBackfill` request whenever a game session has one or more open slots\. Learn more about manual and automatic backfill in [Backfill Existing Games with FlexMatch](https://docs.aws.amazon.com/gamelift/latest/developerguide/match-backfill.html)\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AUTOMATIC | MANUAL`  
+*Allowed values*: `AUTOMATIC | MANUAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomEventData`  <a name="cfn-gamelift-matchmakingconfiguration-customeventdata"></a>
@@ -152,7 +152,7 @@ A unique identifier for a matchmaking rule set to use with this configuration\. 
 *Pattern*: `[a-zA-Z0-9-\.]*|^arn:.*:matchmakingruleset\/[a-zA-Z0-9-\.]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-gamelift-matchmakingconfiguration-return-values"></a>
+## Return values<a name="aws-resource-gamelift-matchmakingconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-matchmakingconfiguration-return-values-ref"></a>
 
@@ -291,7 +291,7 @@ Resources:
       - MatchmakingRuleSetResource
 ```
 
-## See Also<a name="aws-resource-gamelift-matchmakingconfiguration--seealso"></a>
+## See also<a name="aws-resource-gamelift-matchmakingconfiguration--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Setting Up GameLift FlexMatch Matchmakers](https://docs.aws.amazon.com/gamelift/latest/developerguide/matchmaker-build.html) in the *Amazon GameLift Developer Guide* 
 + [MatchmakingConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_MatchmakingConfiguration.html) in the *Amazon GameLift API Reference* 

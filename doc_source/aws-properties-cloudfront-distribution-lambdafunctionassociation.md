@@ -36,7 +36,7 @@ Specifies the event type that triggers a Lambda function invocation\. You can sp
   If the origin returns an HTTP status code other than HTTP 200 \(OK\), the function doesn't execute\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `origin-request | origin-response | viewer-request | viewer-response`  
+*Allowed values*: `origin-request | origin-response | viewer-request | viewer-response`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeBody`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-includebody"></a>
@@ -51,5 +51,5 @@ The ARN of the Lambda function\. You must specify the ARN of a function version;
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation--seealso"></a>
 +  [LambdaFunctionAssociation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LambdaFunctionAssociation.html) in the *Amazon CloudFront API Reference* 

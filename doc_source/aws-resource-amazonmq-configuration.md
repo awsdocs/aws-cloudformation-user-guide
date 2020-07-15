@@ -74,7 +74,7 @@ Create tags when creating the configuration\.
 *Type*: List of [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-configuration-return-values"></a>
+## Return values<a name="aws-resource-amazonmq-configuration-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-configuration-return-values-ref"></a>
 

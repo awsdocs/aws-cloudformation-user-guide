@@ -1,4 +1,4 @@
-# Importing Existing Resources Into a Stack<a name="resource-import-existing-stack"></a>
+# Importing existing resources into a stack<a name="resource-import-existing-stack"></a>
 
 During this import operation, you need to provide the following\.
 + A template that describes the entire stack, including both the resources that are already part of the stack and the resources to import\. Each resource to import must have a [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) attribute in your template\.
@@ -60,7 +60,7 @@ In this walkthrough, we provide the following example template, called `template
 }
 ```
 
-## Import an Existing Resource into a Stack Using the AWS CloudFormation Console<a name="resource-import-existing-stack-console"></a>
+## Import an existing resource into a stack using the AWS CloudFormation console<a name="resource-import-existing-stack-console"></a>
 
 1. Open the AWS CloudFormation console\.
 
@@ -93,7 +93,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    The **Events** page for the stack displays\.   
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 
-1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
+1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
 
 1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.
 
@@ -103,7 +103,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    1. Repeat steps 2\-9 using the modified template to import the resources again\.
 
-## Import an Existing Resource into a Stack Using the AWS CLI<a name="resource-import-existing-stack-cli"></a>
+## Import an existing resource into a stack using the AWS CLI<a name="resource-import-existing-stack-cli"></a>
 
 1. Optionally run `GetTemplateSummary` to learn which properties identify each resource type in the template\. For example, the `AWS::DynamoDB::Table` resource can be identified using the `TableName` property\. For the `GamesTable` resource in the example template, the value of `TableName` is `Games`\.
 
@@ -158,7 +158,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    > aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
-1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
+1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
 
    ```
    > aws cloudformation detect-stack-drift --stack-name TargetStack

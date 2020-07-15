@@ -368,7 +368,7 @@ For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an 
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-elasticache-replicationgroup-return-values"></a>
+## Return values<a name="aws-resource-elasticache-replicationgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticache-replicationgroup-return-values-ref"></a>
 
@@ -522,6 +522,6 @@ BasicReplicationGroup:
     SnapshotWindow: '10:00-12:00'
 ```
 
-## See Also<a name="aws-resource-elasticache-replicationgroup--seealso"></a>
+## See also<a name="aws-resource-elasticache-replicationgroup--seealso"></a>
 
 [CreateReplicationGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html) in the * Amazon ElastiCache API Reference Guide* 

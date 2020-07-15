@@ -102,7 +102,7 @@ A rule must contain either `ScheduleExpression` or `EventPattern`\.
 Indicates whether the rule is enabled\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-events-rule-targets"></a>
@@ -112,7 +112,7 @@ If you're setting the event bus of another account as the target and that accoun
 *Type*: List of [Target](aws-properties-events-rule-target.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-events-rule-return-values"></a>
+## Return values<a name="aws-resource-events-rule-return-values"></a>
 
 ### Ref<a name="aws-resource-events-rule-return-values-ref"></a>
 

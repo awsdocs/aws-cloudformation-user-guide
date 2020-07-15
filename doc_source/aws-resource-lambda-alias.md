@@ -94,7 +94,7 @@ The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-
 *Type*: [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-lambda-alias-return-values"></a>
+## Return values<a name="aws-resource-lambda-alias-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-alias-return-values-ref"></a>
 

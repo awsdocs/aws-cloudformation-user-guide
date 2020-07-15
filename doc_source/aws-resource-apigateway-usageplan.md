@@ -77,7 +77,7 @@ A name for the usage plan\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-usageplan-return-values"></a>
+## Return values<a name="aws-resource-apigateway-usageplan-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-usageplan-return-values-ref"></a>
 
@@ -142,5 +142,5 @@ usagePlan:
     UsagePlanName: Plan_ABC
 ```
 
-## See Also<a name="aws-resource-apigateway-usageplan--seealso"></a>
+## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
 + [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*

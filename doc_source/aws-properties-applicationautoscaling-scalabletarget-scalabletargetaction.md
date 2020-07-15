@@ -37,5 +37,5 @@ For Lambda provisioned concurrency, the minimum value allowed is 0\. For all oth
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction--seealso"></a>
+## See also<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 

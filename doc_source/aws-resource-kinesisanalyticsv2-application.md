@@ -66,7 +66,7 @@ The name of the application\.
 The runtime environment for the application \(`SQL-1.0`, `FLINK-1_6`, or `FLINK-1_8`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
+*Allowed values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -427,5 +427,5 @@ Outputs:
     Value: !Ref BasicApplication
 ```
 
-## See Also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
+## See also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
 +  [CreateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplication.html) in the *Amazon Kinesis Data Analytics API Reference* 

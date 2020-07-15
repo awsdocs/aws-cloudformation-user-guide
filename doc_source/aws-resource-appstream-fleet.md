@@ -106,7 +106,7 @@ ON\_DEMAND
 Provide users with access to applications after they connect, which takes one to two minutes\. You are charged for instance streaming when users are connected and a small hourly fee for instances that are not streaming apps\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ALWAYS_ON | ON_DEMAND`  
+*Allowed values*: `ALWAYS_ON | ON_DEMAND`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IdleDisconnectTimeoutInSeconds`  <a name="cfn-appstream-fleet-idledisconnecttimeoutinseconds"></a>
@@ -196,5 +196,5 @@ The VPC configuration for the fleet\.
 *Type*: [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-fleet--seealso"></a>
+## See also<a name="aws-resource-appstream-fleet--seealso"></a>
 +  [CreateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 

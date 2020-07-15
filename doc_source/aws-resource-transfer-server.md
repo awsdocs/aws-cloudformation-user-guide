@@ -73,7 +73,7 @@ The type of VPC endpoint that you want your server to connect to\. You can choos
 It is recommended that you use `VPC` as the `EndpointType`\. With this endpoint type, you have the option to directly associate up to three Elastic IPv4 addresses \(BYO IP included\) with your server's endpoint and use VPC security groups to restrict traffic by the client's public IP address\. This is not possible with `EndpointType` set to `VPC_ENDPOINT`\.
 *Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `PUBLIC | VPC | VPC_ENDPOINT`  
+*Allowed values*: `PUBLIC | VPC | VPC_ENDPOINT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityProviderDetails`  <a name="cfn-transfer-server-identityproviderdetails"></a>
@@ -86,7 +86,7 @@ Required when `IdentityProviderType` is set to `API_GATEWAY`\. Accepts an array 
 Specifies the mode of authentication for a file transfer protocol\-enabled server\. The default value is `SERVICE_MANAGED`, which allows you to store and access user credentials within the AWS Transfer Family service\. Use the `API_GATEWAY` value to integrate with an identity provider of your choosing\. The `API_GATEWAY` setting requires you to provide an API Gateway endpoint URL to call for authentication using the `IdentityProviderDetails` parameter\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `API_GATEWAY | SERVICE_MANAGED`  
+*Allowed values*: `API_GATEWAY | SERVICE_MANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoggingRole`  <a name="cfn-transfer-server-loggingrole"></a>
@@ -112,7 +112,7 @@ Key\-value pairs that can be used to group and search for file transfer protocol
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-transfer-server-return-values"></a>
+## Return values<a name="aws-resource-transfer-server-return-values"></a>
 
 ### Ref<a name="aws-resource-transfer-server-return-values-ref"></a>
 
@@ -218,6 +218,6 @@ MyTransferServer:
         Value: MyTransferServer
 ```
 
-## See Also<a name="aws-resource-transfer-server--seealso"></a>
+## See also<a name="aws-resource-transfer-server--seealso"></a>
 
 [CreateServer](https://docs.aws.amazon.com/transfer/latest/userguide/API_CreateServer.html) in the *AWS Transfer Family User Guide*\.

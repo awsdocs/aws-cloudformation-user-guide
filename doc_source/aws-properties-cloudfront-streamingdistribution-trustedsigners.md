@@ -43,5 +43,5 @@ Specifies whether you want to require viewers to use signed URLs to access the f
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners--seealso"></a>
+## See also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners--seealso"></a>
 +  [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference* 

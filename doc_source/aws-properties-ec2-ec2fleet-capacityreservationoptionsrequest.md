@@ -33,5 +33,5 @@ If you specify `use-capacity-reservations-first`, the fleet uses unused Capacity
 If you do not specify a value, the fleet fulfils the On\-Demand capacity according to the chosen On\-Demand allocation strategy\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `use-capacity-reservations-first`  
+*Allowed values*: `use-capacity-reservations-first`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

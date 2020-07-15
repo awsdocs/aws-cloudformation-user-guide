@@ -1,4 +1,4 @@
-# Synthetics Resource Type Reference<a name="AWS_Synthetics"></a>
+# Synthetics resource type reference<a name="AWS_Synthetics"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Synthetics::Canary](aws-resource-synthetics-canary.md)

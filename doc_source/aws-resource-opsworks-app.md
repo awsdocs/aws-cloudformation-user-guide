@@ -129,10 +129,10 @@ The stack ID\.
 The app type\. Each supported type is associated with a particular layer\. For example, PHP applications are associated with a PHP layer\. AWS OpsWorks Stacks deploys an application to those instances that are members of the corresponding layer\. If your app isn't one of the standard types, or you prefer to implement your own Deploy recipes, specify `other`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `aws-flow-ruby | java | nodejs | other | php | rails | static`  
+*Allowed values*: `aws-flow-ruby | java | nodejs | other | php | rails | static`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-opsworks-app-return-values"></a>
+## Return values<a name="aws-resource-opsworks-app-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworks-app-return-values-ref"></a>
 
@@ -184,6 +184,6 @@ myApp:
       Revision: "version1"
 ```
 
-## See Also<a name="aws-resource-opsworks-app--seealso"></a>
+## See also<a name="aws-resource-opsworks-app--seealso"></a>
 +  [CreateApp](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateApp.html) in the *AWS OpsWorks API Reference*\.
 +  [Adding Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html) in the *AWS OpsWorks User Guide*\.

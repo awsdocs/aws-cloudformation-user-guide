@@ -54,7 +54,7 @@ The name of the rule set that you want to add the receipt rule to\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-receiptrule-return-values"></a>
+## Return values<a name="aws-resource-ses-receiptrule-return-values"></a>
 
 ### Ref<a name="aws-resource-ses-receiptrule-return-values-ref"></a>
 

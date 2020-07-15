@@ -65,7 +65,7 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 *Type*: List of [ActivatedRule](aws-properties-waf-webacl-rules.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-webacl-return-values"></a>
+## Return values<a name="aws-resource-waf-webacl-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-webacl-return-values-ref"></a>
 

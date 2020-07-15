@@ -181,7 +181,7 @@ The list of ActiveMQ users \(persons or applications\) who can access queues and
 *Type*: List of [User](aws-properties-amazonmq-broker-user.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-broker-return-values"></a>
+## Return values<a name="aws-resource-amazonmq-broker-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-broker-return-values-ref"></a>
 

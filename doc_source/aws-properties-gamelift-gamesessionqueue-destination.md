@@ -31,7 +31,7 @@ The Amazon Resource Name \(ARN\) that is assigned to fleet or fleet alias\. ARNs
 *Pattern*: `[a-zA-Z0-9:/-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-gamelift-gamesessionqueue-destination--seealso"></a>
+## See also<a name="aws-properties-gamelift-gamesessionqueue-destination--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Create a Queue](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-creating.html) in the *Amazon GameLift Developer Guide*
 + [GameSessionQueueDestination](https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameSessionQueueDestination.html) in the *Amazon GameLift API Reference*

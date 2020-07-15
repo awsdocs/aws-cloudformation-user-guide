@@ -1,6 +1,6 @@
-# CloudWatch Logs Resource Type Reference<a name="AWS_Logs"></a>
+# CloudWatch Logs resource type reference<a name="AWS_Logs"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Logs::Destination](aws-resource-logs-destination.md)
 + [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md)
 + [AWS::Logs::LogStream](aws-resource-logs-logstream.md)

@@ -45,7 +45,7 @@ The Amazon Resource Name \(ARN\) of the bucket to which data is exported\.
 Specifies the file format used when exporting data to Amazon S3\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CSV`  
+*Allowed values*: `CSV`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-s3-bucket-destination-prefix"></a>

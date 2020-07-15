@@ -47,6 +47,6 @@ The URI of the source model in an Amazon S3 bucket\. The model package must be i
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
 +  [S3MachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-s3machinelearningmodelresourcedata.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

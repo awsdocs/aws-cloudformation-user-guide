@@ -51,9 +51,9 @@ The tags for the namespace\. Each tag consists of a key and an optional value, b
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: Updates are not supported\.
 
-## Return Values<a name="aws-resource-servicediscovery-publicdnsnamespace-return-values"></a>
+## Return values<a name="aws-resource-servicediscovery-publicdnsnamespace-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-publicdnsnamespace-return-values-ref"></a>
 
@@ -102,5 +102,5 @@ Properties:
   Name: example.com
 ```
 
-## See Also<a name="aws-resource-servicediscovery-publicdnsnamespace--seealso"></a>
+## See also<a name="aws-resource-servicediscovery-publicdnsnamespace--seealso"></a>
 +  [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html) in the *AWS Cloud Map API Reference* 

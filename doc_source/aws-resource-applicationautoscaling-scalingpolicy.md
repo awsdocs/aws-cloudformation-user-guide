@@ -105,7 +105,7 @@ A target tracking scaling policy\.
 *Type*: [TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-applicationautoscaling-scalingpolicy-return-values"></a>
+## Return values<a name="aws-resource-applicationautoscaling-scalingpolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-applicationautoscaling-scalingpolicy-return-values-ref"></a>
 
@@ -516,6 +516,6 @@ Resources:
           ScalingAdjustment: 3
 ```
 
-## See Also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>
+## See also<a name="aws-resource-applicationautoscaling-scalingpolicy--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
 + [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/put-scaling-policy.html#examples) of Application Auto Scaling scaling policies in the * AWS CLI Command Reference*

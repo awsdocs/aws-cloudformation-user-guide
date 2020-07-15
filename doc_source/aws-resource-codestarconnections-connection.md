@@ -49,7 +49,7 @@ The name of the connection\. Connection names must be unique in an AWS user acco
 The name of the external provider where your third\-party code repository is configured\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Bitbucket | GitHubEnterpriseServer`  
+*Allowed values*: `Bitbucket | GitHubEnterpriseServer`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codestarconnections-connection-tags"></a>
@@ -59,7 +59,7 @@ Specifies the tags applied to the resource\.
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codestarconnections-connection-return-values"></a>
+## Return values<a name="aws-resource-codestarconnections-connection-return-values"></a>
 
 ### Ref<a name="aws-resource-codestarconnections-connection-return-values-ref"></a>
 

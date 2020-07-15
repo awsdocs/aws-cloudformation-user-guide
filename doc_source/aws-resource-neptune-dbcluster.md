@@ -211,7 +211,7 @@ Provides a list of VPC security groups that the DB cluster belongs to\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-neptune-dbcluster-return-values"></a>
+## Return values<a name="aws-resource-neptune-dbcluster-return-values"></a>
 
 ### Ref<a name="aws-resource-neptune-dbcluster-return-values-ref"></a>
 

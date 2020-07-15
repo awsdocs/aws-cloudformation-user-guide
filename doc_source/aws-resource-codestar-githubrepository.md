@@ -82,7 +82,7 @@ The GitHub user name for the owner of the GitHub repository to be created\. If t
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="aws-resource-codestar-githubrepository-return-values"></a>
+## Return values<a name="aws-resource-codestar-githubrepository-return-values"></a>
 
 ### Ref<a name="aws-resource-codestar-githubrepository-return-values-ref"></a>
 

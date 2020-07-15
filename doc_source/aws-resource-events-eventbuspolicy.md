@@ -82,7 +82,7 @@ An identifier string for the external account that you're granting permissions t
 *Pattern*: `[a-zA-Z0-9-_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-events-eventbuspolicy-return-values"></a>
+## Return values<a name="aws-resource-events-eventbuspolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-events-eventbuspolicy-return-values-ref"></a>
 

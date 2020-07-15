@@ -86,7 +86,7 @@ A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html
 *Type*: [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-sagemaker-model-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-model-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-model-return-values-ref"></a>
 

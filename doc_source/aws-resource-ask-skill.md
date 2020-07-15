@@ -51,7 +51,7 @@ The vendor ID associated with the Amazon developer account that will host the sk
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ask-skill-return-values"></a>
+## Return values<a name="aws-resource-ask-skill-return-values"></a>
 
 ### Ref<a name="aws-resource-ask-skill-return-values-ref"></a>
 

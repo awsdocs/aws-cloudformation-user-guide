@@ -85,7 +85,7 @@ The name of the component\.
 The platform of the component\. For example, `Windows`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Linux | Windows`  
+*Allowed values*: `Linux | Windows`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-imagebuilder-component-tags"></a>
@@ -107,7 +107,7 @@ The component version\. For example, `1.0.0`\.
 *Pattern*: `^[0-9]+\.[0-9]+\.[0-9]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-imagebuilder-component-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-component-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-component-return-values-ref"></a>
 

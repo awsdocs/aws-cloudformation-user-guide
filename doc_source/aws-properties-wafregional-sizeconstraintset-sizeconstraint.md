@@ -43,7 +43,7 @@ The type of comparison you want AWS WAF to perform\. AWS WAF uses this in combin
  **GT**: Used to test if the `Size` is strictly greater than the size of the `FieldToMatch`   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EQ | GE | GT | LE | LT | NE`  
+*Allowed values*: `EQ | GE | GT | LE | LT | NE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch"></a>
@@ -96,5 +96,5 @@ Use this option to convert uppercase letters \(A\-Z\) to lowercase \(a\-z\)\.
 Use this option to decode a URL\-encoded value\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

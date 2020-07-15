@@ -73,7 +73,7 @@ For information about limits on the number of inline policies that you can embed
 *Type*: List of [Policy](aws-properties-iam-policy-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-iam-group-return-values"></a>
+## Return values<a name="aws-properties-iam-group-return-values"></a>
 
 ### Ref<a name="aws-properties-iam-group-return-values-ref"></a>
 
@@ -120,6 +120,6 @@ Resources:
     Type: AWS::IAM::Group
 ```
 
-## See Also<a name="aws-properties-iam-group--seealso"></a>
+## See also<a name="aws-properties-iam-group--seealso"></a>
 + To view `AWS::IAM::Group` template example snippets, see [Declaring an IAM Group Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-group)\. 
 +  [CreateGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateGroup.html) in the *AWS Identity and Access Management API Reference* 

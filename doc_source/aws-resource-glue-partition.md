@@ -59,7 +59,7 @@ The name of the metadata table in which the partition is to be created\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-glue-partition-return-values"></a>
+## Return values<a name="aws-resource-glue-partition-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-partition-return-values-ref"></a>
 
@@ -67,6 +67,6 @@ The name of the metadata table in which the partition is to be created\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-glue-partition--seealso"></a>
+## See also<a name="aws-resource-glue-partition--seealso"></a>
 +  [CreatePartition Action](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) in the *AWS Glue Developer Guide* 
 +  [Partition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide* 

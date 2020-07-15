@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeGuruProfiler::ProfilingGroup",
   "Properties" : {
       "[AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions)" : Json,
+      "[ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform)" : String,
       "[ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname)" : String
     }
 }
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeGuruProfiler::ProfilingGroup
 Properties: 
   [AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions): Json
+  [ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform): String
   [ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname): String
 ```
 
@@ -35,13 +37,19 @@ The agent permissions attached to this profiling group\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ComputePlatform`  <a name="cfn-codeguruprofiler-profilinggroup-computeplatform"></a>
+ The compute platform of the profiling group\. Use `AWSLambda` if your application runs on AWS Lambda\. Use `Default` if your application runs on a compute platform that is not AWS Lambda, such an Amazon EC2 instance, an on\-premises server, or a different platform\. If not specified, `Default` is used\. This property is immutable\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ProfilingGroupName`  <a name="cfn-codeguruprofiler-profilinggroup-profilinggroupname"></a>
 The name of the profiling group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-codeguruprofiler-profilinggroup-return-values"></a>
+## Return values<a name="aws-resource-codeguruprofiler-profilinggroup-return-values"></a>
 
 ### Ref<a name="aws-resource-codeguruprofiler-profilinggroup-return-values-ref"></a>
 
@@ -94,4 +102,30 @@ MyProfilingGroupWithAgentPermissions:
       Principals:
         - "arn:aws:iam::1233456789012:role/agent-permissions-role-1"
         - "arn:aws:iam::1233456789012:role/agent-permissions-role-2"
+```
+
+### CodeGuru Profiler profiling group resource with compute platform<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_with_compute_platform"></a>
+
+The following is an example of the profiling group resource that runs on AWS Lambda\.
+
+#### JSON<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_with_compute_platform--json"></a>
+
+```
+"MyProfilingGroupWithComputePlatform": {
+  "Type": "AWS::CodeGuruProfiler::ProfilingGroup",
+  "Properties": {
+    "ProfilingGroupName": "MyProfilingGroup",
+    "ComputePlatform": "AWSLambda"
+  }
+}
+```
+
+#### YAML<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_with_compute_platform--yaml"></a>
+
+```
+MyProfilingGroupWithComputePlatform:
+  Type: AWS::CodeGuruProfiler::ProfilingGroup
+  Properties:
+    ProfilingGroupName: "MyProfilingGroup"
+    ComputePlatform: "AWSLambda"
 ```

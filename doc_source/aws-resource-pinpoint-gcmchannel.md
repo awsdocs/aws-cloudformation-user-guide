@@ -51,7 +51,7 @@ Specifies whether to enable the GCM channel for the application\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-gcmchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-gcmchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-gcmchannel-return-values-ref"></a>
 

@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-coredefinition-return-values-ref"></a>
 
@@ -196,6 +196,6 @@ Outputs:
     Value: !Ref CoreDefinition
 ```
 
-## See Also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
 +  [CreateCoreDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

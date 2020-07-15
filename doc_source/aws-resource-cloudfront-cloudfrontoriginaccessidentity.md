@@ -34,7 +34,7 @@ The current configuration information for the identity\.
 *Type*: [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values"></a>
+## Return values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values-ref"></a>
 
@@ -87,5 +87,5 @@ Resources:
         Comment: string-value
 ```
 
-## See Also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
+## See also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
 +  [OriginAccessIdentity](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference* 

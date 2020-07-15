@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Indicates whether this bucket has an Object Lock configuration enabled\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Enabled`  
+*Allowed values*: `Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rule`  <a name="cfn-s3-bucket-objectlockconfiguration-rule"></a>

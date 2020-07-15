@@ -99,7 +99,7 @@ The WorkSpace properties\.
 *Type*: [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-workspaces-workspace-return-values"></a>
+## Return values<a name="aws-resource-workspaces-workspace-return-values"></a>
 
 ### Ref<a name="aws-resource-workspaces-workspace-return-values-ref"></a>
 
@@ -107,6 +107,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-workspaces-workspace--seealso"></a>
+## See also<a name="aws-resource-workspaces-workspace--seealso"></a>
 +  [CreateWorkspaces](https://docs.aws.amazon.com/workspaces/latest/api/API_CreateWorkspaces.html) in the *Amazon WorkSpaces API Reference* 
 +  [Launch a Virtual Desktop Using Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/launch-workspaces-tutorials.html) in the *Amazon WorkSpaces Administration Guide* 

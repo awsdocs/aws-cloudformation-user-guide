@@ -141,10 +141,10 @@ The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provision
 Default: `gp2`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | io1 | sc1 | st1 | standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-ec2-ebs-volume-return-values"></a>
+## Return values<a name="aws-properties-ec2-ebs-volume-return-values"></a>
 
 ### Ref<a name="aws-properties-ec2-ebs-volume-return-values-ref"></a>
 
@@ -217,5 +217,5 @@ NewVolume:
     AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
 ```
 
-## See Also<a name="aws-properties-ec2-ebs-volume--seealso"></a>
+## See also<a name="aws-properties-ec2-ebs-volume--seealso"></a>
 +  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*

@@ -94,7 +94,7 @@ The tags to be assigned to the instance\. You can assign up to 10 tags to an ins
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-docdb-dbinstance-return-values"></a>
+## Return values<a name="aws-resource-docdb-dbinstance-return-values"></a>
 
 ### Ref<a name="aws-resource-docdb-dbinstance-return-values-ref"></a>
 
@@ -154,7 +154,7 @@ Properties:
          Value: "String"
 ```
 
-## See Also<a name="aws-resource-docdb-dbinstance--seealso"></a>
+## See also<a name="aws-resource-docdb-dbinstance--seealso"></a>
 +  [DBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBInstance.html) 
 +  [CreateDBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) 
 +  [DeleteDBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBInstance.html) 

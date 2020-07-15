@@ -86,5 +86,5 @@ A container that describes additional filters for identifying the source objects
 Specifies whether the rule is enabled\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

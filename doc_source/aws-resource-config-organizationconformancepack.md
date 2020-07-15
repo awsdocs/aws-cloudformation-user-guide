@@ -92,7 +92,7 @@ Location of file containing the template body\. The uri must point to the confor
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-organizationconformancepack-return-values"></a>
+## Return values<a name="aws-resource-config-organizationconformancepack-return-values"></a>
 
 ### Ref<a name="aws-resource-config-organizationconformancepack-return-values-ref"></a>
 

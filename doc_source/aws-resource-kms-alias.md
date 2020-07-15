@@ -62,7 +62,7 @@ To get the key ID and key ARN for a CMK, use ListKeys or DescribeKey\.
 *Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kms-alias-return-values"></a>
+## Return values<a name="aws-resource-kms-alias-return-values"></a>
 
 ### Ref<a name="aws-resource-kms-alias-return-values-ref"></a>
 
@@ -99,5 +99,5 @@ myAlias:
       Ref: myKey
 ```
 
-## See Also<a name="aws-resource-kms-alias--seealso"></a>
+## See also<a name="aws-resource-kms-alias--seealso"></a>
 +  [CreateAlias](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateAlias.html) in the *AWS Key Management Service API Reference*\.

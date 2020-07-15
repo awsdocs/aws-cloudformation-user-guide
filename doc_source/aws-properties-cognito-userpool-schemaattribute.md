@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The attribute data type\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Boolean | DateTime | Number | String`  
+*Allowed values*: `Boolean | DateTime | Number | String`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeveloperOnlyAttribute`  <a name="cfn-cognito-userpool-schemaattribute-developeronlyattribute"></a>

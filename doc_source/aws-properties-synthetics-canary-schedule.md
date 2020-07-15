@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-synthetics-canary-schedule-properties"></a>
 
 `DurationInSeconds`  <a name="cfn-synthetics-canary-schedule-durationinseconds"></a>
-How long, in seconds, for the canary to continue making regular runs according to the schedule in the `Expression` value\. If you specify 0, the canary continues making runs until you stop it\.  
-*Required*: Yes  
+How long, in seconds, for the canary to continue making regular runs according to the schedule in the `Expression` value\. If you specify 0, the canary continues making runs until you stop it\. If you omit this field, the default of 0 is used\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

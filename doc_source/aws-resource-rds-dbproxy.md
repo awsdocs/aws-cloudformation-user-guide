@@ -114,7 +114,7 @@ One or more VPC subnet IDs to associate with the new proxy\.
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-rds-dbproxy-return-values"></a>
+## Return values<a name="aws-resource-rds-dbproxy-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-dbproxy-return-values-ref"></a>
 

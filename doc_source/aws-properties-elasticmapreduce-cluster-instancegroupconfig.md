@@ -86,7 +86,7 @@ The EC2 instance type for all instances in the instance group\.
 Market type of the EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-name"></a>

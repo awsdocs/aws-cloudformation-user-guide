@@ -178,5 +178,5 @@ A map that defines the stage variables\. Variable names must consist of alphanum
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
+## See also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*

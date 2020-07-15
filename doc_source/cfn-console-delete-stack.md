@@ -1,4 +1,4 @@
-# Deleting a Stack on the AWS CloudFormation Console<a name="cfn-console-delete-stack"></a>
+# Deleting a stack on the AWS CloudFormation console<a name="cfn-console-delete-stack"></a>
 
 **To delete a stack**
 
@@ -12,8 +12,8 @@
 **Note**  
 After stack deletion has begun, you cannot abort it\. The stack proceeds to the **DELETE\_IN\_PROGRESS** state\.
 
-   After the stack deletion is complete, the stack will be in the **DELETE\_COMPLETE** state\. Stacks in the **DELETE\_COMPLETE** state are not displayed in the AWS CloudFormation console by default\. To display deleted stacks, you must change the stack view filter as described in [Viewing Deleted Stacks on the AWS CloudFormation ConsoleViewing Deleted Stacks](cfn-console-view-deleted-stacks.md)\.
+   After the stack deletion is complete, the stack will be in the **DELETE\_COMPLETE** state\. Stacks in the **DELETE\_COMPLETE** state are not displayed in the AWS CloudFormation console by default\. To display deleted stacks, you must change the stack view filter as described in [Viewing deleted stacks on the AWS CloudFormation consoleViewing deleted stacks](cfn-console-view-deleted-stacks.md)\.
 
-   If the delete failed, the stack will be in the **DELETE\_FAILED** state\. For solutions, see the [Delete Stack Fails](troubleshooting.md#troubleshooting-errors-delete-stack-fails) troubleshooting topic\.
+   If the delete failed, the stack will be in the **DELETE\_FAILED** state\. For solutions, see the [Delete stack fails](troubleshooting.md#troubleshooting-errors-delete-stack-fails) troubleshooting topic\.
 
-For information on protecting stacks from being accidentally deleted see [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)\.
+For information on protecting stacks from being accidentally deleted see [Protecting a stack from being deleted](using-cfn-protect-stacks.md)\.

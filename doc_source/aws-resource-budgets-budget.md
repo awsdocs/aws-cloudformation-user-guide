@@ -44,7 +44,7 @@ A notification that you want to associate with a budget\. A budget can have up t
 *Maximum*: `5`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-budgets-budget-return-values"></a>
+## Return values<a name="aws-resource-budgets-budget-return-values"></a>
 
 ### Ref<a name="aws-resource-budgets-budget-return-values-ref"></a>
 
@@ -174,5 +174,5 @@ Outputs:
     Value: !Ref BudgetExample
 ```
 
-## See Also<a name="aws-resource-budgets-budget--seealso"></a>
+## See also<a name="aws-resource-budgets-budget--seealso"></a>
 +  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs* 

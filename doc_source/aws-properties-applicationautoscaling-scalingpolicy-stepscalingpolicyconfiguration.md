@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies whether the `ScalingAdjustment` value in the `StepAdjustment` property is an absolute number or a percentage of the current capacity\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ChangeInCapacity | ExactCapacity | PercentChangeInCapacity`  
+*Allowed values*: `ChangeInCapacity | ExactCapacity | PercentChangeInCapacity`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cooldown`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-cooldown"></a>
@@ -66,7 +66,7 @@ For all other scalable targets, the default value is 0:
 The aggregation type for the CloudWatch metrics\. Valid values are `Minimum`, `Maximum`, and `Average`\. If the aggregation type is null, the value is treated as `Average`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Average | Maximum | Minimum`  
+*Allowed values*: `Average | Maximum | Minimum`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinAdjustmentMagnitude`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-minadjustmentmagnitude"></a>

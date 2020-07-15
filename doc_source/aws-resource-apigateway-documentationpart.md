@@ -50,7 +50,7 @@ The identifier of the targeted API entity\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-apigateway-documentationpart-return-values"></a>
+## Return values<a name="aws-resource-apigateway-documentationpart-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-documentationpart-return-values-ref"></a>
 
@@ -164,5 +164,5 @@ Resources:
     DependsOn: DocumentationPart
 ```
 
-## See Also<a name="aws-resource-apigateway-documentationpart--seealso"></a>
+## See also<a name="aws-resource-apigateway-documentationpart--seealso"></a>
 + [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*

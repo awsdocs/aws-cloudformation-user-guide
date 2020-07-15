@@ -105,7 +105,7 @@ The list of user\-defined tags associated with the secret\. Use tags to manage y
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-secretsmanager-secret-return-values"></a>
+## Return values<a name="aws-resource-secretsmanager-secret-return-values"></a>
 
 ### Ref<a name="aws-resource-secretsmanager-secret-return-values-ref"></a>
 
@@ -212,7 +212,7 @@ The following example creates a secret and provides the secret value as a litera
           Value: AppB
 ```
 
-## See Also<a name="aws-resource-secretsmanager-secret--seealso"></a>
+## See also<a name="aws-resource-secretsmanager-secret--seealso"></a>
 +  [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) API in the AWS Secrets Manager API Reference
 +  [Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_secret) in the AWS Secrets Manager User Guide
 +  [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)

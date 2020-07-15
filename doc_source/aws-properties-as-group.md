@@ -271,7 +271,7 @@ When you update `VPCZoneIdentifier`, this retains the same Auto Scaling group an
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="aws-properties-as-group-return-values"></a>
+## Return values<a name="aws-properties-as-group-return-values"></a>
 
 ### Ref<a name="aws-properties-as-group-return-values-ref"></a>
 
@@ -308,8 +308,14 @@ The example stack creates an Auto Scaling group with a minimum size of 1 and a m
         "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
         "LaunchTemplateData":{
           "BlockDeviceMappings":[{
-            "Ebs":{"VolumeSize":8},
-            "DeviceName":"/dev/sdf"}],
+            "Ebs":{
+              "VolumeSize":"22",
+              "VolumeType":"gp2",
+              "DeleteOnTermination": true,
+              "Encrypted": true
+            },
+            "DeviceName":"/dev/xvdcz"
+          }],
           "CreditSpecification":{
             "CpuCredits":"unlimited"
           },
@@ -362,8 +368,11 @@ Resources:
       LaunchTemplateData: 
         BlockDeviceMappings: 
           - Ebs:
-              VolumeSize: 8
-            DeviceName: /dev/sdf
+              VolumeSize: 22
+              VolumeType: gp2
+              DeleteOnTermination: true
+              Encrypted: true
+            DeviceName: /dev/xvdcz
         CreditSpecification: 
           CpuCredits: Unlimited
         ImageId: !Ref myImageId
@@ -612,7 +621,7 @@ myASG:
     MinSize: "1"
 ```
 
-## See Also<a name="aws-properties-as-group--seealso"></a>
+## See also<a name="aws-properties-as-group--seealso"></a>
 + [UpdatePolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
 + [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
 + [Suspending and Resuming Scaling Processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*

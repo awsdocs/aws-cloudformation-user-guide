@@ -75,7 +75,7 @@ Specify the target for the association\. This target is required for association
 The severity level that is assigned to the association\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CRITICAL | HIGH | LOW | MEDIUM | UNSPECIFIED`  
+*Allowed values*: `CRITICAL | HIGH | LOW | MEDIUM | UNSPECIFIED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocumentVersion`  <a name="cfn-ssm-association-documentversion"></a>
@@ -159,7 +159,7 @@ The number of seconds the service should wait for the association status to show
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-association-return-values"></a>
+## Return values<a name="aws-resource-ssm-association-return-values"></a>
 
 ### Fn::GetAtt<a name="aws-resource-ssm-association-return-values-fn--getatt"></a>
 
@@ -3080,5 +3080,5 @@ Resources:
           - !GetAtt 'SSMExecutionRole.Arn'
 ```
 
-## See Also<a name="aws-resource-ssm-association--seealso"></a>
+## See also<a name="aws-resource-ssm-association--seealso"></a>
 +  [Reference: Cron and Rate Expressions for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html) 

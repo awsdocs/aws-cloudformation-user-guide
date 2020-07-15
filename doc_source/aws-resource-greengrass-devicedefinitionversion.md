@@ -46,7 +46,7 @@ The devices in this version\.
 *Type*: List of [Device](aws-properties-greengrass-devicedefinitionversion-device.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-devicedefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-devicedefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-devicedefinitionversion-return-values-ref"></a>
 
@@ -151,6 +151,6 @@ TestDeviceDefinitionVersion:
             - thing/TestDevice1
 ```
 
-## See Also<a name="aws-resource-greengrass-devicedefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-devicedefinitionversion--seealso"></a>
 +  [CreateDeviceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createdevicedefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

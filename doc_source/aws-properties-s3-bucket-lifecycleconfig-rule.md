@@ -108,7 +108,7 @@ Object key prefix that identifies one or more objects to which this rule applies
 If `Enabled`, the rule is currently being applied\. If `Disabled`, the rule is not currently being applied\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagFilters`  <a name="cfn-s3-bucket-rule-tagfilters"></a>

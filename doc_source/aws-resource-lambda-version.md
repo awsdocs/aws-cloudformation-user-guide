@@ -69,7 +69,7 @@ Specifies a provisioned concurrency configuration for a function's version\. Upd
 *Type*: [ProvisionedConcurrencyConfiguration](aws-properties-lambda-version-provisionedconcurrencyconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-lambda-version-return-values"></a>
+## Return values<a name="aws-resource-lambda-version-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-version-return-values-ref"></a>
 

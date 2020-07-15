@@ -94,7 +94,7 @@ A flag representing whether X\-Ray tracing is enabled for this `GraphqlApi`\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-graphqlapi-return-values"></a>
+## Return values<a name="aws-resource-appsync-graphqlapi-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-graphqlapi-return-values-ref"></a>
 
@@ -196,5 +196,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-graphqlapi--seealso"></a>
+## See also<a name="aws-resource-appsync-graphqlapi--seealso"></a>
 +  [CreateGraphqlApi](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateGraphqlApi.html) operation in the *AWS AppSync API Reference*\.

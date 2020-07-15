@@ -45,7 +45,7 @@ You can't change a thing's name\. To change a thing's name, you must create a ne
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-iot-thing-return-values"></a>
+## Return values<a name="aws-resource-iot-thing-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-thing-return-values-ref"></a>
 

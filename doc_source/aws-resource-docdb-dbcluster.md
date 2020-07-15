@@ -207,7 +207,7 @@ A list of EC2 VPC security groups to associate with this cluster\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-docdb-dbcluster-return-values"></a>
+## Return values<a name="aws-resource-docdb-dbcluster-return-values"></a>
 
 ### Ref<a name="aws-resource-docdb-dbcluster-return-values-ref"></a>
 
@@ -293,7 +293,7 @@ Resources:
                Value: "String"
 ```
 
-## See Also<a name="aws-resource-docdb-dbcluster--seealso"></a>
+## See also<a name="aws-resource-docdb-dbcluster--seealso"></a>
 +  [DBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBCluster.html) 
 +  [CreateDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBCluster.html) 
 +  [DeleteDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBCluster.html) 

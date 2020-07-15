@@ -83,7 +83,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cassandra-table-return-values"></a>
+## Return values<a name="aws-resource-cassandra-table-return-values"></a>
 
 ### Ref<a name="aws-resource-cassandra-table-return-values-ref"></a>
 

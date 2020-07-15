@@ -1,4 +1,4 @@
-# Creating a Stack<a name="using-cfn-cli-creating-stack"></a>
+# Creating a stack<a name="using-cfn-cli-creating-stack"></a>
 
 To create a stack you run the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. You must provide the stack name, the location of a valid template, and any input parameters\.
 
@@ -19,7 +19,7 @@ We strongly recommend you do not use these mechanisms to include sensitive infor
 
 **Important**  
 Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
-For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 The following example creates the `myteststack` stack:
 

@@ -55,7 +55,7 @@ The ID of the VPC that you associated the Resolver rule with\.
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-route53resolver-resolverruleassociation-return-values"></a>
+## Return values<a name="aws-resource-route53resolver-resolverruleassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-route53resolver-resolverruleassociation-return-values-ref"></a>
 
@@ -83,5 +83,5 @@ The ID of the resolver rule that you associated with the VPC that is specified b
 `VPCId`  <a name="VPCId-fn::getatt"></a>
 The ID of the VPC that you associated the resolver rule with, such as `vpc-03cf94c75cexample`\.
 
-## See Also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
+## See also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
 +  [ResolverRuleAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRuleAssociation.html) in the *Amazon Route 53 API Reference* 

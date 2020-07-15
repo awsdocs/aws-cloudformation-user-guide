@@ -66,7 +66,7 @@ AWS CloudFormation resource tags to apply to the document\. Use tags to help you
 *Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-document-return-values"></a>
+## Return values<a name="aws-resource-ssm-document-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-document-return-values-ref"></a>
 
@@ -248,5 +248,5 @@ myEC2:
       Ref: myKeyName
 ```
 
-## See Also<a name="aws-resource-ssm-document--seealso"></a>
+## See also<a name="aws-resource-ssm-document--seealso"></a>
 +  [AWS Systems Manager Documents](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-ssm-docs.html) 

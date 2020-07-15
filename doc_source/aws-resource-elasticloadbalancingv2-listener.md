@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::Listener",
   "Properties" : {
+      "[AlpnPolicy](#cfn-elasticloadbalancingv2-listener-alpnpolicy)" : [ String, ... ],
       "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md), ... ],
       "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md), ... ],
       "[LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
@@ -27,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ElasticLoadBalancingV2::Listener
 Properties: 
+  [AlpnPolicy](#cfn-elasticloadbalancingv2-listener-alpnpolicy): 
+    - String
   [Certificates](#cfn-elasticloadbalancingv2-listener-certificates): 
     - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md)
   [DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions): 
@@ -38,6 +41,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-elasticloadbalancingv2-listener-properties"></a>
+
+`AlpnPolicy`  <a name="cfn-elasticloadbalancingv2-listener-alpnpolicy"></a>
+\[TLS listener\] The name of the Application\-Layer Protocol Negotiation \(ALPN\) policy\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
 The default SSL server certificate for a secure listener\. You must provide exactly one certificate if the listener protocol is HTTPS or TLS\.  
@@ -71,7 +80,7 @@ The port on which the load balancer is listening\.
 The protocol for connections from clients to the load balancer\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP\_UDP\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslPolicy`  <a name="cfn-elasticloadbalancingv2-listener-sslpolicy"></a>
@@ -90,7 +99,7 @@ For more information, see [Security Policies](https://docs.aws.amazon.com/elasti
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-elasticloadbalancingv2-listener-return-values"></a>
+## Return values<a name="aws-resource-elasticloadbalancingv2-listener-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticloadbalancingv2-listener-return-values-ref"></a>
 
@@ -152,7 +161,7 @@ HTTPlistener:
 }
 ```
 
-## See Also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>
+## See also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>
 +  [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) in the *User Guide for Network Load Balancers* 

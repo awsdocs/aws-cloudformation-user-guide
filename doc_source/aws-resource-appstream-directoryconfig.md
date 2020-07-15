@@ -51,5 +51,5 @@ The credentials for the service account used by the streaming instance to connec
 *Type*: [ServiceAccountCredentials](aws-properties-appstream-directoryconfig-serviceaccountcredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-directoryconfig--seealso"></a>
+## See also<a name="aws-resource-appstream-directoryconfig--seealso"></a>
 +  [CreateDirectoryConfig](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateDirectoryConfig.html) in the *Amazon AppStream 2\.0 API Reference* 

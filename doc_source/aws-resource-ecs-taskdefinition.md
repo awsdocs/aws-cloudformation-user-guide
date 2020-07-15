@@ -108,7 +108,7 @@ If you are setting namespaced kernel parameters using `systemControls` for the c
 This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `host | none | task`  
+*Allowed values*: `host | none | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
@@ -134,7 +134,7 @@ Docker for Windows uses different network modes than Docker for Linux\. When you
 For more information, see [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) in the *Docker run reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `awsvpc | bridge | host | none`  
+*Allowed values*: `awsvpc | bridge | host | none`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PidMode`  <a name="cfn-ecs-taskdefinition-pidmode"></a>
@@ -143,7 +143,7 @@ If the `host` PID mode is used, be aware that there is a heightened risk of unde
 This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `host | task`  
+*Allowed values*: `host | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementConstraints`  <a name="cfn-ecs-taskdefinition-placementconstraints"></a>
@@ -195,7 +195,7 @@ For more information about volume definition parameters and defaults, see [Amazo
 *Type*: List of [Volume](aws-properties-ecs-taskdefinition-volumes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
+## Return values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-ecs-taskdefinition-return-values-ref"></a>
 

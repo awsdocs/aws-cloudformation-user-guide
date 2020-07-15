@@ -84,7 +84,7 @@ An optional locking token used to prevent race conditions from overwriting confi
 *Type*: Double  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appconfig-hostedconfigurationversion-return-values"></a>
+## Return values<a name="aws-resource-appconfig-hostedconfigurationversion-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-hostedconfigurationversion-return-values-ref"></a>
 
@@ -153,7 +153,7 @@ Resources:
       ContentType: 'text/plain'
 ```
 
-## See Also<a name="aws-resource-appconfig-hostedconfigurationversion--seealso"></a>
+## See also<a name="aws-resource-appconfig-hostedconfigurationversion--seealso"></a>
 +  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
 +  [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html)
 +  [About the AppConfig hosted configuration store](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html#appconfig-creating-configuration-and-profile-about-hosted-store)

@@ -79,7 +79,7 @@ Any tags assigned to the DHCP options set\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-dhcp-options-return-values"></a>
+## Return values<a name="aws-resource-ec2-dhcp-options-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-dhcp-options-return-values-ref"></a>
 
@@ -130,6 +130,6 @@ myDhcpOptions:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-dhcp-options--seealso"></a>
+## See also<a name="aws-resource-ec2-dhcp-options--seealso"></a>
 +  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon Elastic Compute Cloud API Reference* 
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*

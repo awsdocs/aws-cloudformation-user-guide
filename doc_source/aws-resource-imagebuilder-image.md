@@ -70,7 +70,7 @@ The tags of the image\.
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-imagebuilder-image-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-image-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-image-return-values-ref"></a>
 

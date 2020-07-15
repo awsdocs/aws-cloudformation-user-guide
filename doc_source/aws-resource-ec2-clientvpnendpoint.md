@@ -120,7 +120,7 @@ The transport protocol to be used by the VPN session\.
 Default value: `udp`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `tcp | udp`  
+*Allowed values*: `tcp | udp`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-clientvpnendpoint-vpcid"></a>
@@ -137,7 +137,7 @@ Default Value: `443`
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-clientvpnendpoint-return-values"></a>
+## Return values<a name="aws-resource-ec2-clientvpnendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-clientvpnendpoint-return-values-ref"></a>
 
@@ -215,6 +215,6 @@ myClientVpnEndpoint:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-clientvpnendpoint--seealso"></a>
+## See also<a name="aws-resource-ec2-clientvpnendpoint--seealso"></a>
 + [ Getting Started with Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html) in the *AWS Client VPN Administrator Guide*
 + [Client VPN Endpoints](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-endpoints.html) in the *AWS Client VPN Administrator Guide*

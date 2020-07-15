@@ -47,5 +47,5 @@ The values for the keys for the new partition must be passed as an array of Stri
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-glue-partition-partitioninput--seealso"></a>
+## See also<a name="aws-properties-glue-partition-partitioninput--seealso"></a>
 +  [PartitionInput](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-PartitionInput) in the *AWS Glue Developer Guide* 

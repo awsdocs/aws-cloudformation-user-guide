@@ -113,7 +113,7 @@ Permission to create, update, and delete stack instances\. Choose from ALLOWED a
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-stacksetconstraint-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-stacksetconstraint-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-stacksetconstraint-return-values-ref"></a>
 

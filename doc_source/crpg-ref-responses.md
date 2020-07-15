@@ -1,6 +1,6 @@
-# Custom Resource Response Objects<a name="crpg-ref-responses"></a>
+# Custom resource response objects<a name="crpg-ref-responses"></a>
 
-## Custom Resource Provider Response Fields<a name="crpg-ref-responses-fields"></a>
+## Custom resource provider response fields<a name="crpg-ref-responses-fields"></a>
 
 The following are properties that the custom resource provider includes when it sends the JSON file to the presigned URL\. For more information about uploading objects by using presigned URLs, see the related [topic](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
@@ -40,7 +40,7 @@ The template developer\-chosen name \(logical ID\) of the custom resource in the
 
 NoEcho  <a name="crpg-ref-responses-noecho"></a>
 Optional\. Indicates whether to mask the output of the custom resource when retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\), *except for those stored in the `Metadata` section of the template*\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. The default value is `false`\.  
-For more information about using `NoEcho` to mask sensitive information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.  
+For more information about using `NoEcho` to mask sensitive information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.  
 *Required*: No  
 *Type*: Boolean
 

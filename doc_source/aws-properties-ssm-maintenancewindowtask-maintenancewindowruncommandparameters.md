@@ -59,7 +59,7 @@ The SHA\-256 or SHA\-1 hash created by the system when the document was created\
 The SHA\-256 or SHA\-1 hash type\. SHA\-1 hashes are deprecated\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Sha1 | Sha256`  
+*Allowed values*: `Sha1 | Sha256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationConfig`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig"></a>

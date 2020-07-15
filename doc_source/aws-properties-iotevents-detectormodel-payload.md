@@ -37,5 +37,5 @@ The content of the payload\. You can use a string expression that includes quote
 The value of the payload type can be either `STRING` or `JSON`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `JSON | STRING`  
+*Allowed values*: `JSON | STRING`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -130,7 +130,7 @@ Optional metadata that you assign to a resource in the form of an arbitrary set 
 *Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-maintenancewindow-return-values"></a>
+## Return values<a name="aws-resource-ssm-maintenancewindow-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-maintenancewindow-return-values-ref"></a>
 
@@ -182,7 +182,7 @@ Resources:
       ScheduleTimezone: US/Eastern
 ```
 
-## See Also<a name="aws-resource-ssm-maintenancewindow--seealso"></a>
+## See also<a name="aws-resource-ssm-maintenancewindow--seealso"></a>
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
 +  [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) 
 +  [CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference\.* 

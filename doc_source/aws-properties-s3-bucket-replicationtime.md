@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Time`  <a name="cfn-s3-bucket-replicationtime-time"></a>

@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-subscriptiondefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-subscriptiondefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-subscriptiondefinition-return-values-ref"></a>
 
@@ -159,6 +159,6 @@ TestSubscriptionDefinition:
           Target: !ImportValue TestCanaryLambdaVersionArn
 ```
 
-## See Also<a name="aws-resource-greengrass-subscriptiondefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-subscriptiondefinition--seealso"></a>
 +  [CreateSubscriptionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createsubscriptiondefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

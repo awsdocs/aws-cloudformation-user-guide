@@ -42,7 +42,7 @@ The type of application revision:
 + AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file for an AWS Lambda or Amazon ECS deployment\. The content is formatted as JSON or YAML stored as a RawString\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AppSpecContent | GitHub | S3 | String`  
+*Allowed values*: `AppSpecContent | GitHub | S3 | String`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Location`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>

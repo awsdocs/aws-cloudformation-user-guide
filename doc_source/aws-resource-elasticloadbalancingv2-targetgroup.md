@@ -97,7 +97,7 @@ The port the load balancer uses when performing health checks on targets\. The d
 The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. For Network Load Balancers, the default is TCP\. The TCP protocol is supported for health checks only if the protocol of the target group is TCP, TLS, UDP, or TCP\_UDP\. The TLS, UDP, and TCP\_UDP protocols are not supported for health checks\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
@@ -141,7 +141,7 @@ The port on which the targets receive traffic\. This port is used unless you spe
 The protocol to use for routing traffic to the targets\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, or TCP\_UDP\. A TCP\_UDP listener must be associated with a TCP\_UDP target group\. If the target is a Lambda function, this parameter does not apply\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-targetgroup-tags"></a>
@@ -169,7 +169,7 @@ The type of target that you must specify when registering targets with this targ
 +  `lambda` \- The target groups contains a single Lambda function\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `instance | ip | lambda`  
+*Allowed values*: `instance | ip | lambda`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
@@ -186,7 +186,7 @@ The identifier of the virtual private cloud \(VPC\)\. If the target is a Lambda 
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-elasticloadbalancingv2-targetgroup-return-values"></a>
+## Return values<a name="aws-resource-elasticloadbalancingv2-targetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticloadbalancingv2-targetgroup-return-values-ref"></a>
 
@@ -289,7 +289,7 @@ Resources:
             Action: "sts:AssumeRole"
 ```
 
-## See Also<a name="aws-resource-elasticloadbalancingv2-targetgroup--seealso"></a>
+## See also<a name="aws-resource-elasticloadbalancingv2-targetgroup--seealso"></a>
 +  [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html) in the *User Guide for Application Load Balancers* 
 +  [Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) in the *User Guide for Network Load Balancers* 

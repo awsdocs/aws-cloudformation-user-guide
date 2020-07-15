@@ -50,7 +50,7 @@ Tags to associate with the registry\.
 *Type*: List of [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eventschemas-registry-return-values"></a>
+## Return values<a name="aws-resource-eventschemas-registry-return-values"></a>
 
 ### Ref<a name="aws-resource-eventschemas-registry-return-values-ref"></a>
 

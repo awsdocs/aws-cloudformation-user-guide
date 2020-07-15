@@ -58,7 +58,7 @@ The ID used to identify the inventory configuration\.
 Object versions to include in the inventory list\. If set to `All`, the list includes all the object versions, which adds the version\-related fields `VersionId`, `IsLatest`, and `DeleteMarker` to the list\. If set to `Current`, the list does not contain these version\-related fields\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `All | Current`  
+*Allowed values*: `All | Current`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionalFields`  <a name="cfn-s3-bucket-inventoryconfiguration-optionalfields"></a>

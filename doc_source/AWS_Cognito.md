@@ -1,6 +1,6 @@
-# Amazon Cognito Resource Type Reference<a name="AWS_Cognito"></a>
+# Amazon Cognito resource type reference<a name="AWS_Cognito"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Cognito::IdentityPool](aws-resource-cognito-identitypool.md)
 + [AWS::Cognito::IdentityPoolRoleAttachment](aws-resource-cognito-identitypoolroleattachment.md)
 + [AWS::Cognito::UserPool](aws-resource-cognito-userpool.md)

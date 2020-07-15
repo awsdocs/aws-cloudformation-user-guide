@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ConnectionPoolConfigurationInfo](#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)" : [ConnectionPoolConfigurationInfoFormat](aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.md),
       "[DBClusterIdentifiers](#cfn-rds-dbproxytargetgroup-dbclusteridentifiers)" : [ String, ... ],
       "[DBInstanceIdentifiers](#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers)" : [ String, ... ],
-      "[DBProxyName](#cfn-rds-dbproxytargetgroup-dbproxyname)" : String
+      "[DBProxyName](#cfn-rds-dbproxytargetgroup-dbproxyname)" : String,
+      "[TargetGroupName](#cfn-rds-dbproxytargetgroup-targetgroupname)" : String
     }
 }
 ```
@@ -38,6 +39,7 @@ Properties:
   [DBInstanceIdentifiers](#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers): 
     - String
   [DBProxyName](#cfn-rds-dbproxytargetgroup-dbproxyname): String
+  [TargetGroupName](#cfn-rds-dbproxytargetgroup-targetgroupname): String
 ```
 
 ## Properties<a name="aws-resource-rds-dbproxytargetgroup-properties"></a>
@@ -64,9 +66,16 @@ One or more DB instance identifiers\.
 The identifier of the `DBProxy` that is associated with the `DBProxyTargetGroup`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-rds-dbproxytargetgroup-return-values"></a>
+`TargetGroupName`  <a name="cfn-rds-dbproxytargetgroup-targetgroupname"></a>
+The identifier for the target group\.  
+Currently, this property must be set to `default`\.
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-rds-dbproxytargetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-dbproxytargetgroup-return-values-ref"></a>
 
@@ -80,7 +89,3 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 `TargetGroupArn`  <a name="TargetGroupArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) representing the target group\.
-
-`TargetGroupName`  <a name="TargetGroupName-fn::getatt"></a>
-The identifier for the target group\.  
-Currently, this property must be set to `default`\.

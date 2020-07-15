@@ -50,7 +50,7 @@ The scaling instructions\.
 *Type*: List of [ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-autoscalingplans-scalingplan-return-values"></a>
+## Return values<a name="aws-resource-autoscalingplans-scalingplan-return-values"></a>
 
 ### Ref<a name="aws-resource-autoscalingplans-scalingplan-return-values-ref"></a>
 

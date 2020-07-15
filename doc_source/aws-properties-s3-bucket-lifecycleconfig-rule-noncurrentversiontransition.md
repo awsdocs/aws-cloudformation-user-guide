@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The class of storage used to store the object\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionInDays`  <a name="cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition-transitionindays"></a>

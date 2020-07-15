@@ -93,7 +93,7 @@ The name of the Elasticsearch index to which Kinesis Data Firehose adds data for
 The frequency of Elasticsearch index rotation\. If you enable index rotation, Kinesis Data Firehose appends a portion of the UTC arrival timestamp to the specified index name, and rotates the appended timestamp accordingly\. For more information, see [Index Rotation for the Amazon ES Destination](https://docs.aws.amazon.com/firehose/latest/dev/basic-deliver.html#es-index-rotation) in the *Amazon Kinesis Data Firehose Developer Guide*\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `NoRotation | OneDay | OneHour | OneMonth | OneWeek`  
+*Allowed values*: `NoRotation | OneDay | OneHour | OneMonth | OneWeek`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProcessingConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration"></a>
@@ -121,7 +121,7 @@ The Amazon Resource Name \(ARN\) of the IAM role to be assumed by Kinesis Data F
 The condition under which Kinesis Data Firehose delivers data to Amazon Simple Storage Service \(Amazon S3\)\. You can send Amazon S3 all documents \(all data\) or only the documents that Kinesis Data Firehose could not deliver to the Amazon ES destination\. For more information and valid values, see the `S3BackupMode` content for the [ElasticsearchDestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ElasticsearchDestinationConfiguration.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AllDocuments | FailedDocumentsOnly`  
+*Allowed values*: `AllDocuments | FailedDocumentsOnly`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Configuration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration"></a>

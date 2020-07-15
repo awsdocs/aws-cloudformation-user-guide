@@ -110,7 +110,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-iam-user-return-values"></a>
+## Return values<a name="aws-properties-iam-user-return-values"></a>
 
 ### Ref<a name="aws-properties-iam-user-return-values-ref"></a>
 
@@ -166,6 +166,6 @@ Resources:
           Ref: MyPassword
 ```
 
-## See Also<a name="aws-properties-iam-user--seealso"></a>
+## See also<a name="aws-properties-iam-user--seealso"></a>
 + To view `AWS::IAM::User` template example snippets, see [Declaring an IAM User Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-user)\. 
 +  [CreateUser](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html) in the *AWS Identity and Access Management API Reference* 

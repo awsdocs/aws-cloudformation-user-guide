@@ -99,7 +99,7 @@ Optional metadata that you assign to a resource in the form of an arbitrary set 
 The parameter tier\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Advanced | Intelligent-Tiering | Standard`  
+*Allowed values*: `Advanced | Intelligent-Tiering | Standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
@@ -116,7 +116,7 @@ The parameter value\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-parameter-return-values"></a>
+## Return values<a name="aws-resource-ssm-parameter-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-parameter-return-values-ref"></a>
 
@@ -268,7 +268,7 @@ Resources:
         Environment: DEV
 ```
 
-## See Also<a name="aws-resource-ssm-parameter--seealso"></a>
+## See also<a name="aws-resource-ssm-parameter--seealso"></a>
 +  [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) 
 +  [About Advanced Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html)
 +  [Working with Parameter Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) 

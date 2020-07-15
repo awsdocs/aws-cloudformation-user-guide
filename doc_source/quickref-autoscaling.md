@@ -1,13 +1,13 @@
-# Auto Scaling Template Snippets<a name="quickref-autoscaling"></a>
+# Auto Scaling template snippets<a name="quickref-autoscaling"></a>
 
 **Topics**
-+ [Auto Scaling Launch Configuration Resource](#scenario-as-launch-config)
-+ [Auto Scaling Group Resource](#scenario-as-group)
-+ [Auto Scaling Policy Triggered by CloudWatch Alarm](#scenario-as-policy)
-+ [Auto Scaling Group with Notifications](#scenario-as-notification)
-+ [Auto Scaling with an UpdatePolicy](#w6345ab1c19c23c15c13)
++ [Auto Scaling launch configuration resource](#scenario-as-launch-config)
++ [Auto Scaling group resource](#scenario-as-group)
++ [Auto Scaling policy triggered by CloudWatch alarm](#scenario-as-policy)
++ [Auto Scaling group with notifications](#scenario-as-notification)
++ [Auto Scaling with an UpdatePolicy](#w6408ab1c19c22c15c13)
 
-## Auto Scaling Launch Configuration Resource<a name="scenario-as-launch-config"></a>
+## Auto Scaling launch configuration resource<a name="scenario-as-launch-config"></a>
 
 This example shows an Auto Scaling AWS::AutoScaling::LaunchConfiguration resource\. The SecurityGroups property specifies both an AWS::EC2::SecurityGroup resource named myEC2SecurityGroup and an existing EC2 security group named myExistingEC2SecurityGroup\. The BlockDeviceMappings property lists two devices: a 50 gigabyte EBS volume mapped to /dev/sdk and a virtual device ephemeral0 mapped to /dev/sdc\. 
 
@@ -50,7 +50,7 @@ This example shows an Auto Scaling AWS::AutoScaling::LaunchConfiguration resourc
 14.       VirtualName: ephemeral0
 ```
 
-## Auto Scaling Group Resource<a name="scenario-as-group"></a>
+## Auto Scaling group resource<a name="scenario-as-group"></a>
 
 This example shows an Auto Scaling [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\. The AvailabilityZones property specifies the availability zones where the auto\-scaling group's EC2 instances will be created\. In this example, the [Fn::GetAZs](intrinsic-function-reference-getavailabilityzones.md) function call `{ "Fn::GetAZs" : "" }` specifies all availability zones for the region in which the stack is created\. The LoadBalancerNames property lists the LoadBalancers used to route traffic to the Auto Scaling group\. In this example, one LoadBalancer is specified, the [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html) resource LB\.
 
@@ -85,7 +85,7 @@ This example shows an Auto Scaling [AWS::AutoScaling::AutoScalingGroup](https://
 11.     - Ref: LB
 ```
 
-## Auto Scaling Policy Triggered by CloudWatch Alarm<a name="scenario-as-policy"></a>
+## Auto Scaling policy triggered by CloudWatch alarm<a name="scenario-as-policy"></a>
 
 This example shows an [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html) resource that scales up the Auto Scaling group asGroup\. The `AdjustmentType` property specifies ChangeInCapacity, which means that the `ScalingAdjustment` represents the number of instances to add \(if `ScalingAdjustment` is positive\) or delete \(if it is negative\)\. In this example, `ScalingAdjustment` is 1; therefore, the policy increments the number of EC2 instances in the group by 1 when the policy is executed\.
 
@@ -154,7 +154,7 @@ The [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/lates
 26.     MetricName: CPUUtilization
 ```
 
-## Auto Scaling Group with Notifications<a name="scenario-as-notification"></a>
+## Auto Scaling group with notifications<a name="scenario-as-notification"></a>
 
 This example shows an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource that sends Amazon SNS notifications when the specified events take place\. The `NotificationConfigurations` property specifies the SNS topic where AWS CloudFormation sends a notification and the events that will cause AWS CloudFormation to send notifications\. When the events specified by `NotificationTypes` occur, AWS CloudFormation will send a notification to the SNS topic specified by `TopicARN`\. In this example, AWS CloudFormation sends a notification to the SNS topic topic1 when the `autoscaling:EC2_INSTANCE_LAUNCH` and `autoscaling:EC2_INSTANCE_LAUNCH_ERROR` events occur\.
 
@@ -207,9 +207,9 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amaz
 18.       - autoscaling:EC2_INSTANCE_TERMINATE_ERROR
 ```
 
-## Auto Scaling with an UpdatePolicy<a name="w6345ab1c19c23c15c13"></a>
+## Auto Scaling with an UpdatePolicy<a name="w6408ab1c19c22c15c13"></a>
 
-This example shows how to use an [UpdatePolicy Attribute](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
+This example shows how to use an [UpdatePolicy attribute](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
 
 ### JSON<a name="quickref-autoscaling-example-5.json"></a>
 

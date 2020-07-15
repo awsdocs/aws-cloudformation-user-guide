@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The order of the launch template overrides to use in fulfilling On\-Demand capacity\. If you specify `lowest-price`, EC2 Fleet uses price to determine the order, launching the lowest price first\. If you specify `prioritized`, EC2 Fleet uses the priority that you assigned to each launch template override, launching the highest priority first\. If you do not specify a value, EC2 Fleet defaults to `lowest-price`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `lowest-price | prioritized`  
+*Allowed values*: `lowest-price | prioritized`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CapacityReservationOptions`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions"></a>
@@ -72,5 +72,5 @@ Indicates that the fleet uses a single instance type to launch all On\-Demand In
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest--seealso"></a>
+## See also<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest--seealso"></a>
 +  [ OnDemandOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_OnDemandOptionsRequest.html) in the *Amazon EC2 API Reference*

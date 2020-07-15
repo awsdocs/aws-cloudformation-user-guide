@@ -112,7 +112,7 @@ A list of methods for validating the configuration\.
 *Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-configurationprofile-return-values"></a>
+## Return values<a name="aws-resource-appconfig-configurationprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-configurationprofile-return-values-ref"></a>
 
@@ -191,6 +191,6 @@ Resources:
           Value: test
 ```
 
-## See Also<a name="aws-resource-appconfig-configurationprofile--seealso"></a>
+## See also<a name="aws-resource-appconfig-configurationprofile--seealso"></a>
 +  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
 +  [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html)

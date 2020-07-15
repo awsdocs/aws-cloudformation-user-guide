@@ -48,5 +48,5 @@ Specifies the format of the records on the streaming source\.
 *Type*: [RecordFormat](aws-properties-kinesisanalyticsv2-application-recordformat.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-inputschema--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-inputschema--seealso"></a>
 +  [SourceSchema](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SourceSchema.html) in the *Amazon Kinesis Data Analytics API Reference* 

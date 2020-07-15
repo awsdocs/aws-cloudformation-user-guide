@@ -87,7 +87,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule\. You ca
 By default, rules with a periodic trigger are evaluated every 24 hours\. To change the frequency, specify a valid value for the `MaximumExecutionFrequency` parameter\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-config-configrule-scope"></a>
@@ -103,7 +103,7 @@ Provides the rule owner \(AWS or customer\), the rule identifier, and the notifi
 *Type*: [Source](aws-properties-config-configrule-source.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-configrule-return-values"></a>
+## Return values<a name="aws-resource-config-configrule-return-values"></a>
 
 ### Ref<a name="aws-resource-config-configrule-return-values-ref"></a>
 

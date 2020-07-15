@@ -37,5 +37,5 @@ The range of nodes, using node index values\. A range of `0:3` indicates nodes w
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-batch-jobdefinition-noderangeproperty--seealso"></a>
+## See also<a name="aws-properties-batch-jobdefinition-noderangeproperty--seealso"></a>
 +  [Multi\-node Parallel Jobs](https://docs.aws.amazon.com/batch/latest/userguide/multi-node-parallel-jobs.html) in the *AWS Batch User Guide*\.

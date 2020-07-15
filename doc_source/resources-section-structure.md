@@ -29,14 +29,14 @@ Resources:
       Set of properties
 ```
 
-### Resource Fields<a name="resources-section-structure-resource-fields"></a>
+### Resource fields<a name="resources-section-structure-resource-fields"></a>
 
 **Logical ID**  <a name="resources-section-structure-logicalid"></a>
 The logical ID must be alphanumeric \(A\-Za\-z0\-9\) and unique within the template\. Use the logical name to reference the resource in other parts of the template\. For example, if you want to map an Amazon Elastic Block Store volume to an Amazon EC2 instance, you reference the logical IDs to associate the block stores with the instance\.  
-In addition to the logical ID, certain resources also have a physical ID, which is the actual assigned name for that resource, such as an EC2 instance ID or an S3 bucket name\. Use the physical IDs to identify resources outside of AWS CloudFormation templates, but only after the resources have been created\. For example, suppose you give an EC2 instance resource a logical ID of `MyEC2Instance`\. When AWS CloudFormation creates the instance, AWS CloudFormation automatically generates and assigns a physical ID \(such as `i-28f9ba55`\) to the instance\. You can use this physical ID to identify the instance and view its properties \(such as the DNS name\) by using the Amazon EC2 console\. For resources that support custom names, you can assign your own names \(physical IDs\) to help you quickly identify resources\. For example, you can name an S3 bucket that stores logs as `MyPerformanceLogs`\. For more information, see [Name Type](aws-properties-name.md)\.
+In addition to the logical ID, certain resources also have a physical ID, which is the actual assigned name for that resource, such as an EC2 instance ID or an S3 bucket name\. Use the physical IDs to identify resources outside of AWS CloudFormation templates, but only after the resources have been created\. For example, suppose you give an EC2 instance resource a logical ID of `MyEC2Instance`\. When AWS CloudFormation creates the instance, AWS CloudFormation automatically generates and assigns a physical ID \(such as `i-28f9ba55`\) to the instance\. You can use this physical ID to identify the instance and view its properties \(such as the DNS name\) by using the Amazon EC2 console\. For resources that support custom names, you can assign your own names \(physical IDs\) to help you quickly identify resources\. For example, you can name an S3 bucket that stores logs as `MyPerformanceLogs`\. For more information, see [Name type](aws-properties-name.md)\.
 
 **Resource type**  
-The resource type identifies the type of resource that you are declaring\. For example, `AWS::EC2::Instance` declares an EC2 instance\. For a list of all resource types, see [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\.
+The resource type identifies the type of resource that you are declaring\. For example, `AWS::EC2::Instance` declares an EC2 instance\. For a list of all resource types, see [AWS resource and property types reference](aws-template-resource-type-ref.md)\.
 
 **Resource properties**  
 Resource properties are additional options that you can specify for a resource\. For example, for each EC2 instance, you must specify an Amazon Machine Image \(AMI\) ID for that instance\. You declare the AMI ID as a property of the instance, as shown in the following example:  

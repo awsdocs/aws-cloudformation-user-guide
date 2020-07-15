@@ -62,7 +62,7 @@ The delivery stream type\. This can be one of the following values:
 +  `KinesisStreamAsSource`: The delivery stream uses a Kinesis data stream as a source\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DirectPut | KinesisStreamAsSource`  
+*Allowed values*: `DirectPut | KinesisStreamAsSource`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ElasticsearchDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration"></a>
@@ -109,7 +109,7 @@ The configuration of a destination in Splunk for the delivery stream\.
 *Type*: [SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kinesisfirehose-deliverystream-return-values"></a>
+## Return values<a name="aws-resource-kinesisfirehose-deliverystream-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesisfirehose-deliverystream-return-values-ref"></a>
 
@@ -678,5 +678,5 @@ Resources :
                 RoleARN: !Ref deliveryRoleArn
 ```
 
-## See Also<a name="aws-resource-kinesisfirehose-deliverystream--seealso"></a>
+## See also<a name="aws-resource-kinesisfirehose-deliverystream--seealso"></a>
 +  [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) in the *Amazon Kinesis Data Firehose API Reference*\.

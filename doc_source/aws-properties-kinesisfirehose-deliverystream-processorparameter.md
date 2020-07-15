@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the parameter\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BufferIntervalInSeconds | BufferSizeInMBs | LambdaArn | NumberOfRetries | RoleArn`  
+*Allowed values*: `BufferIntervalInSeconds | BufferSizeInMBs | LambdaArn | NumberOfRetries | RoleArn`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParameterValue`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue"></a>

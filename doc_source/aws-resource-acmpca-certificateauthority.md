@@ -47,7 +47,7 @@ Properties:
 Type of the public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate\. When you create a subordinate CA, you must use a key algorithm supported by the parent CA\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EC_prime256v1 | EC_secp384r1 | RSA_2048 | RSA_4096`  
+*Allowed values*: `EC_prime256v1 | EC_secp384r1 | RSA_2048 | RSA_4096`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RevocationConfiguration`  <a name="cfn-acmpca-certificateauthority-revocationconfiguration"></a>
@@ -61,7 +61,7 @@ Name of the algorithm your private CA uses to sign certificate requests\.
 This parameter should not be confused with the `SigningAlgorithm` parameter used to sign certificates when they are issued\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
+*Allowed values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subject`  <a name="cfn-acmpca-certificateauthority-subject"></a>
@@ -80,10 +80,10 @@ Key\-value pairs that will be attached to the new private CA\. You can associate
 Type of your private CA\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ROOT | SUBORDINATE`  
+*Allowed values*: `ROOT | SUBORDINATE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-acmpca-certificateauthority-return-values"></a>
+## Return values<a name="aws-resource-acmpca-certificateauthority-return-values"></a>
 
 ### Ref<a name="aws-resource-acmpca-certificateauthority-return-values-ref"></a>
 

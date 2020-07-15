@@ -148,7 +148,7 @@ For more information about Amazon SQS queue visibility timeouts, see [Visibility
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-sqs-queues-return-values"></a>
+## Return values<a name="aws-properties-sqs-queues-return-values"></a>
 
 ### Ref<a name="aws-properties-sqs-queues-return-values-ref"></a>
 
@@ -403,6 +403,6 @@ Outputs:
         - "Arn"
 ```
 
-## See Also<a name="aws-properties-sqs-queues--seealso"></a>
+## See also<a name="aws-properties-sqs-queues--seealso"></a>
 +  [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) in the *Amazon Simple Queue Service Developer Guide* 
 +  ` [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) ` in the *Amazon Simple Queue Service API Reference* 

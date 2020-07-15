@@ -94,7 +94,7 @@ If you specify \-1, all ports are opened and the `PortRange` property is ignored
 Whether to allow or deny traffic that matches the rule; valid values are "allow" or "deny"\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `allow | deny`  
+*Allowed values*: `allow | deny`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleNumber`  <a name="cfn-ec2-networkaclentry-rulenumber"></a>
@@ -103,7 +103,7 @@ Rule number to assign to the entry, such as 100\. ACL entries are processed in a
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-network-acl-entry-return-values"></a>
+## Return values<a name="aws-resource-ec2-network-acl-entry-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-network-acl-entry-return-values-ref"></a>
 
@@ -156,6 +156,6 @@ The following example creates an entry in a network ACL with a specified rule nu
             To: '53'
 ```
 
-## See Also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
+## See also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
 + [NetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*

@@ -186,7 +186,7 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-job-return-values"></a>
+## Return values<a name="aws-resource-glue-job-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-job-return-values-ref"></a>
 

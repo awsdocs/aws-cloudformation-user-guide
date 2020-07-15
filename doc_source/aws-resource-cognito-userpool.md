@@ -164,7 +164,7 @@ The multi\-factor \(MFA\) configuration\. Valid values include:
 +  `OPTIONAL` MFA will be required only for individual users who have an MFA factor enabled\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `OFF | ON | OPTIONAL`  
+*Allowed values*: `OFF | ON | OPTIONAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policies`  <a name="cfn-cognito-userpool-policies"></a>
@@ -245,7 +245,7 @@ The template for the verification message that the user sees when the app reques
 *Type*: [VerificationMessageTemplate](aws-properties-cognito-userpool-verificationmessagetemplate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cognito-userpool-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpool-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpool-return-values-ref"></a>
 

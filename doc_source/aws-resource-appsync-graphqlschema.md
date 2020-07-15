@@ -50,7 +50,7 @@ The location of a GraphQL schema file in an Amazon S3 bucket\. Use this if you w
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-graphqlschema-return-values"></a>
+## Return values<a name="aws-resource-appsync-graphqlschema-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-graphqlschema-return-values-ref"></a>
 
@@ -110,5 +110,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-graphqlschema--seealso"></a>
+## See also<a name="aws-resource-appsync-graphqlschema--seealso"></a>
 +  [StartSchemaCreation](https://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html) operation in the *AWS AppSync API Reference*\.

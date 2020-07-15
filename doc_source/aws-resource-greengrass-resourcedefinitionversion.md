@@ -46,7 +46,7 @@ The resources in this version\.
 *Type*: List of [ResourceInstance](aws-properties-greengrass-resourcedefinitionversion-resourceinstance.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-resourcedefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-resourcedefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-resourcedefinitionversion-return-values-ref"></a>
 
@@ -229,6 +229,6 @@ TestResourceDefinition:
                 - label2
 ```
 
-## See Also<a name="aws-resource-greengrass-resourcedefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-resourcedefinitionversion--seealso"></a>
 +  [CreateResourceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createresourcedefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

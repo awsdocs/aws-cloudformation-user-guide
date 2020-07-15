@@ -80,6 +80,6 @@ The allowed execution time \(in seconds\) after which the function should termin
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinitionversion-functionconfiguration--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinitionversion-functionconfiguration--seealso"></a>
 +  [FunctionConfiguration](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfiguration.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

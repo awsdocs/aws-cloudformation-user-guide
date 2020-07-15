@@ -66,7 +66,7 @@ A complex type that controls whether access logs are written for the streaming d
 A complex type that contains information about price class for this streaming distribution\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  
+*Allowed values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Origin`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin"></a>
@@ -81,5 +81,5 @@ A complex type that specifies any AWS accounts that you want to permit to create
 *Type*: [TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig--seealso"></a>
+## See also<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig--seealso"></a>
 +  [StreamingDistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_StreamingDistributionConfig.html) in the *Amazon CloudFront API Reference* 

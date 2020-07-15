@@ -60,7 +60,7 @@ The ID of the backup\. Specifies the backup to use if you're creating a file sys
 The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `LUSTRE | WINDOWS`  
+*Allowed values*: `LUSTRE | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
@@ -94,7 +94,7 @@ For Windows file systems:
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `2147483647`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
 Sets the storage type for the Amazon FSx for Windows file system you're creating\. Valid values are `SSD` and `HDD`\.  
@@ -103,7 +103,7 @@ Sets the storage type for the Amazon FSx for Windows file system you're creating
  Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide*\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `HDD | SSD`  
+*Allowed values*: `HDD | SSD`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
@@ -128,7 +128,7 @@ The configuration object for the Microsoft Windows file system you are creating\
 *Type*: [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-fsx-filesystem-return-values"></a>
+## Return values<a name="aws-resource-fsx-filesystem-return-values"></a>
 
 ### Ref<a name="aws-resource-fsx-filesystem-return-values-ref"></a>
 
@@ -184,6 +184,9 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                     }
                 ],
                 "LustreConfiguration": {
+                    "AutomaticBackupRetentionDays" : 21,
+                    "CopyTagsToBackups" : true,
+                    "DailyAutomaticBackupStartTime" : "02:00",
                     "DeploymentType": "PERSISTENT_1",
                     "PerUnitStorageThroughput": 200,                    
                     "ImportPath": {
@@ -238,6 +241,9 @@ Resources:
         - Key: "Name"
           Value: "CFNs3linkedLustre"
       LustreConfiguration:
+        AutomaticBackupRetentionDays: 21
+        CopyTagsToBackups: true
+        DailyAutomaticBackupStartTime: "02:00"
         DeploymentType: "PERSISTENT_1"
         PerUnitStorageThroughput: 200
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]

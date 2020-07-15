@@ -169,7 +169,7 @@ Information about triggers associated with the deployment group\. Duplicates are
 *Type*: List of [TriggerConfig](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codedeploy-deploymentgroup-return-values"></a>
+## Return values<a name="aws-resource-codedeploy-deploymentgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-codedeploy-deploymentgroup-return-values-ref"></a>
 

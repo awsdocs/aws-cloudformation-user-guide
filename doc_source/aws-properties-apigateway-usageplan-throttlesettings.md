@@ -36,5 +36,5 @@ The API request steady\-state rate limit \(average requests per second over an e
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-usageplan-throttlesettings--seealso"></a>
+## See also<a name="aws-properties-apigateway-usageplan-throttlesettings--seealso"></a>
 + [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan/) in the *Amazon API Gateway REST API Reference*

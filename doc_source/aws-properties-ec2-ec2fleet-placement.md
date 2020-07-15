@@ -90,5 +90,5 @@ The tenancy of the instance \(if the instance is running in a VPC\)\. An instanc
 This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default | host`  
+*Allowed values*: `dedicated | default | host`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

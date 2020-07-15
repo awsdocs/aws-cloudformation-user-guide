@@ -100,7 +100,7 @@ Configuration information for the target S3 bucket\.
 A supported sync format\. The following format is currently supported: JsonSerDe  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `JsonSerDe`  
+*Allowed values*: `JsonSerDe`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SyncName`  <a name="cfn-ssm-resourcedatasync-syncname"></a>
@@ -125,7 +125,7 @@ The type of resource data sync\. If `SyncType` is `SyncToDestination`, then the 
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ssm-resourcedatasync-return-values"></a>
+## Return values<a name="aws-resource-ssm-resourcedatasync-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-resourcedatasync-return-values-ref"></a>
 
@@ -339,7 +339,7 @@ Resources:
         IncludeFutureRegions: false
 ```
 
-## See Also<a name="aws-resource-ssm-resourcedatasync--seealso"></a>
+## See also<a name="aws-resource-ssm-resourcedatasync--seealso"></a>
 +  [What is Systems Manager?](https://docs.aws.amazon.com/systems-manager/latest/userguide/what-is-systems-manager.html) 
 +  [AWS Systems Manager Inventory](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html) 
 +  [Configuring Inventory Collection](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-inventory-configuring.html) 

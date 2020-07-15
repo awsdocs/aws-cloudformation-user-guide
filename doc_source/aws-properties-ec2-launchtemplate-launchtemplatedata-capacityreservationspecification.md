@@ -33,7 +33,7 @@ Indicates the instance's Capacity Reservation preferences\. Possible preferences
 +  `none` \- The instance avoids running in a Capacity Reservation even if one is available\. The instance runs in On\-Demand capacity\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `none | open`  
+*Allowed values*: `none | open`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CapacityReservationTarget`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget"></a>

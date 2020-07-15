@@ -119,7 +119,7 @@ A map of key:value pairs to apply to this resource\. Both key and value are of t
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-msk-cluster-return-values"></a>
+## Return values<a name="aws-resource-msk-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-msk-cluster-return-values-ref"></a>
 

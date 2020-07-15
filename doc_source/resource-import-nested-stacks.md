@@ -1,16 +1,16 @@
-# Nesting an Existing Stack<a name="resource-import-nested-stacks"></a>
+# Nesting an existing stack<a name="resource-import-nested-stacks"></a>
 
-Use the `resource import` feature to nest an existing stack within another existing stack\. Nested stacks are common components that you declare and reference from within other templates\. That way, you can avoid copying and pasting the same configurations into your templates and simplify stack updates\. If you have a template for a common component, you can use the `AWS::CloudFormation::Stack` resource to reference this template from within another template\. For more information on nested stacks, see [Working with Nested Stacks](using-cfn-nested-stacks.md)\.
+Use the `resource import` feature to nest an existing stack within another existing stack\. Nested stacks are common components that you declare and reference from within other templates\. That way, you can avoid copying and pasting the same configurations into your templates and simplify stack updates\. If you have a template for a common component, you can use the `AWS::CloudFormation::Stack` resource to reference this template from within another template\. For more information on nested stacks, see [Working with nested stacks](using-cfn-nested-stacks.md)\.
 
 AWS CloudFormation only supports one level of nesting using `resource import`\. This means that you cannot import a stack into a child stack or import a stack that has children\.
 
-## Nested Stack Import Validation<a name="resource-import-nested-stacks-validation"></a>
+## Nested stack import validation<a name="resource-import-nested-stacks-validation"></a>
 
 During a nested stack import operation, AWS CloudFormation performs the following validations\.
 + The nested `AWS::CloudFormation::Stack` definition in the parent stack template matches the actual nested stack's template\.
 + The tags for the nested `AWS::CloudFormation::Stack` definition in the parent stack template match the tags for the actual nested stack resource\.
 
-## Nest an Existing Stack Using the AWS Management Console<a name="resource-import-nested-stacks-console"></a>
+## Nest an existing stack using the AWS Management Console<a name="resource-import-nested-stacks-console"></a>
 
 1. Add the `AWS::CloudFormation::Stack` resource to the parent stack template with a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\. In the following example parent template, `NestedStack` is the target of the import\.
 
@@ -86,7 +86,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 **Note**  
 It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack`resource was already managed by AWS CloudFormation\.
 
-## Nest an Existing Stack Using the AWS CLI<a name="resource-import-nested-stacks-cli"></a>
+## Nest an existing stack using the AWS CLI<a name="resource-import-nested-stacks-cli"></a>
 
 1. Add the `AWS::CloudFormation::Stack` resource to the parent stack template with a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\. In the following example parent template, `NestedStack` is the target of the import\.
 

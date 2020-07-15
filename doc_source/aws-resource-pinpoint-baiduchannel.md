@@ -59,7 +59,7 @@ The secret key that you received from the Baidu Cloud Push service to communicat
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-baiduchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-baiduchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-baiduchannel-return-values-ref"></a>
 

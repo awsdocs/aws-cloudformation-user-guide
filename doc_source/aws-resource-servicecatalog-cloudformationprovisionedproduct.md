@@ -149,7 +149,7 @@ Requires the provisioned product to have an [ResourceUpdateConstraint](https://d
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-return-values-ref"></a>
 
@@ -168,8 +168,14 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `CloudformationStackArn`  <a name="CloudformationStackArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\.
 
+`Outputs`  <a name="Outputs-fn::getatt"></a>
+The output of the product you are provisioning\. For example, the DNS of an EC2 instance\.
+
+`ProvisionedProductId`  <a name="ProvisionedProductId-fn::getatt"></a>
+The ID of the provisioned product\.
+
 `RecordId`  <a name="RecordId-fn::getatt"></a>
 The ID of the record, such as `rec-rjeatvy434trk`\.
 
-## See Also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
 + [ProvisionProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog API Reference*

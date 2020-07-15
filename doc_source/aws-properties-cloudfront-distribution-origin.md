@@ -99,5 +99,5 @@ Use this type to specify an origin that is an Amazon S3 bucket that is * **not**
 *Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-origin--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-origin--seealso"></a>
 +  [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html) in the *Amazon CloudFront API Reference* 

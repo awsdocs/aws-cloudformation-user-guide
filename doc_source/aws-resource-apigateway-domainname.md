@@ -78,7 +78,7 @@ An array of arbitrary tags \(key\-value pairs\) to associate with the domain nam
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-domainname-return-values"></a>
+## Return values<a name="aws-resource-apigateway-domainname-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-domainname-return-values-ref"></a>
 
@@ -433,5 +433,5 @@ Outputs:
       - RegionalHostedZoneId
 ```
 
-## See Also<a name="aws-resource-apigateway-domainname--seealso"></a>
+## See also<a name="aws-resource-apigateway-domainname--seealso"></a>
 + [domainname:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) in the *Amazon API Gateway REST API Reference*

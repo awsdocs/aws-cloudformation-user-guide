@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BuildSpec](#cfn-amplify-app-buildspec)" : String,
       "[CustomRules](#cfn-amplify-app-customrules)" : [ [CustomRule](aws-properties-amplify-app-customrule.md), ... ],
       "[Description](#cfn-amplify-app-description)" : String,
+      "[EnableBranchAutoDeletion](#cfn-amplify-app-enablebranchautodeletion)" : Boolean,
       "[EnvironmentVariables](#cfn-amplify-app-environmentvariables)" : [ [EnvironmentVariable](aws-properties-amplify-app-environmentvariable.md), ... ],
       "[IAMServiceRole](#cfn-amplify-app-iamservicerole)" : String,
       "[Name](#cfn-amplify-app-name)" : String,
@@ -42,6 +43,7 @@ Properties:
   [CustomRules](#cfn-amplify-app-customrules): 
     - [CustomRule](aws-properties-amplify-app-customrule.md)
   [Description](#cfn-amplify-app-description): String
+  [EnableBranchAutoDeletion](#cfn-amplify-app-enablebranchautodeletion): Boolean
   [EnvironmentVariables](#cfn-amplify-app-environmentvariables): 
     - [EnvironmentVariable](aws-properties-amplify-app-environmentvariable.md)
   [IAMServiceRole](#cfn-amplify-app-iamservicerole): String
@@ -90,6 +92,12 @@ Properties:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EnableBranchAutoDeletion`  <a name="cfn-amplify-app-enablebranchautodeletion"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EnvironmentVariables`  <a name="cfn-amplify-app-environmentvariables"></a>
  The environment variables map for an Amplify app\.   
 *Required*: No  
@@ -126,7 +134,7 @@ Properties:
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amplify-app-return-values"></a>
+## Return values<a name="aws-resource-amplify-app-return-values"></a>
 
 ### Fn::GetAtt<a name="aws-resource-amplify-app-return-values-fn--getatt"></a>
 

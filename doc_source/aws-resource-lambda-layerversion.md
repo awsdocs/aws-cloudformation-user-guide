@@ -77,7 +77,7 @@ The layer's software license\. It can be any of the following:
 *Maximum*: `512`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-lambda-layerversion-return-values"></a>
+## Return values<a name="aws-resource-lambda-layerversion-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-layerversion-return-values-ref"></a>
 

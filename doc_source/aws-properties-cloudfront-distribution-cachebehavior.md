@@ -164,8 +164,8 @@ For more information about requiring the HTTPS protocol, see [Requiring HTTPS Be
 The only way to guarantee that viewers retrieve an object that was fetched from the origin using HTTPS is never to use any other protocol to fetch the object\. If you have recently changed from HTTP to HTTPS, we recommend that you clear your objects’ cache because cached objects are protocol agnostic\. That means that an edge location will return an object from the cache regardless of whether the current request protocol matches the protocol used previously\. For more information, see [Managing Cache Expiration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `allow-all | https-only | redirect-to-https`  
+*Allowed values*: `allow-all | https-only | redirect-to-https`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-cachebehavior--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-cachebehavior--seealso"></a>
 +  [CacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehavior.html) in the *Amazon CloudFront API Reference* 

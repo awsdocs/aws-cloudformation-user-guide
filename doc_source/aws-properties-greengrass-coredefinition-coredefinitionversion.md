@@ -34,6 +34,6 @@ The Greengrass core in this version\. Currently, the `Cores` property for a core
 *Type*: List of [Core](aws-properties-greengrass-coredefinition-core.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-coredefinition-coredefinitionversion--seealso"></a>
+## See also<a name="aws-properties-greengrass-coredefinition-coredefinitionversion--seealso"></a>
 +  [CoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-coredefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -75,7 +75,7 @@ By default filters may not be created in the same order as they are ranked\. To 
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-guardduty-filter-return-values"></a>
+## Return values<a name="aws-resource-guardduty-filter-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-filter-return-values-ref"></a>
 

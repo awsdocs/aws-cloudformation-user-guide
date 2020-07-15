@@ -57,5 +57,5 @@ The name of the API's stage\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-apigateway-basepathmapping--seealso"></a>
+## See also<a name="aws-resource-apigateway-basepathmapping--seealso"></a>
 + [basepathmapping:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/basepathmapping-create/) in the *Amazon API Gateway REST API Reference*

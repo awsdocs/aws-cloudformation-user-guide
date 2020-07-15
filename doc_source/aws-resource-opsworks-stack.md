@@ -169,7 +169,7 @@ The default option is the current Amazon Linux version\. For more information ab
 The default root device type\. This value is the default for all instances in the stack, but you can override it when you create an instance\. The default option is `instance-store`\. For more information, see [Storage for the Root Device](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ebs | instance-store`  
+*Allowed values*: `ebs | instance-store`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultSshKeyName`  <a name="cfn-opsworks-stack-defaultsshkeyname"></a>
@@ -281,7 +281,7 @@ For more information about how to use AWS OpsWorks Stacks with a VPC, see [Runni
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-opsworks-stack-return-values"></a>
+## Return values<a name="aws-resource-opsworks-stack-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworks-stack-return-values-ref"></a>
 
@@ -588,6 +588,6 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="aws-resource-opsworks-stack--seealso"></a>
+## See also<a name="aws-resource-opsworks-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks API Reference*\.
 +  [Create a New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) in the *AWS OpsWorks User Guide*\.

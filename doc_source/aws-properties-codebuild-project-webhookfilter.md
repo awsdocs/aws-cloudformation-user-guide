@@ -60,5 +60,5 @@ A webhook triggers a build when the head commit message matches the regular expr
  Works with GitHub and Bitbucket events push and pull requests events\. Also works with GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events\. 
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ACTOR_ACCOUNT_ID | BASE_REF | COMMIT_MESSAGE | EVENT | FILE_PATH | HEAD_REF`  
+*Allowed values*: `ACTOR_ACCOUNT_ID | BASE_REF | COMMIT_MESSAGE | EVENT | FILE_PATH | HEAD_REF`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

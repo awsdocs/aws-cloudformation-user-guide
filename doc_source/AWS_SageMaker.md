@@ -1,6 +1,6 @@
-# Amazon SageMaker Resource Type Reference<a name="AWS_SageMaker"></a>
+# Amazon SageMaker resource type reference<a name="AWS_SageMaker"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::SageMaker::CodeRepository](aws-resource-sagemaker-coderepository.md)
 + [AWS::SageMaker::Endpoint](aws-resource-sagemaker-endpoint.md)
 + [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md)

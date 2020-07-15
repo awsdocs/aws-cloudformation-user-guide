@@ -131,7 +131,7 @@ For public hosted zones, omit `VPCs`, `VPCId`, and `VPCRegion`\.
 *Type*: List of [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="aws-resource-route53-hostedzone-return-values"></a>
+## Return values<a name="aws-resource-route53-hostedzone-return-values"></a>
 
 ### Ref<a name="aws-resource-route53-hostedzone-return-values-ref"></a>
 
@@ -218,5 +218,5 @@ DNS:
         Value: 'SampleValue2'
 ```
 
-## See Also<a name="aws-resource-route53-hostedzone--seealso"></a>
+## See also<a name="aws-resource-route53-hostedzone--seealso"></a>
 +  [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*

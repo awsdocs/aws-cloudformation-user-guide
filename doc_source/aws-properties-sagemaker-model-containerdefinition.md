@@ -57,7 +57,7 @@ The Amazon EC2 Container Registry \(Amazon ECR\) path where inference code is st
 Whether the container hosts a single model or multiple models\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `MultiModel | SingleModel`  
+*Allowed values*: `MultiModel | SingleModel`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelDataUrl`  <a name="cfn-sagemaker-model-containerdefinition-modeldataurl"></a>

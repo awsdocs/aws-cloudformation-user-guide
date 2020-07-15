@@ -61,7 +61,7 @@ If you do not specify a certificate transparency logging preference on a new Clo
 Changing the certificate transparency logging preference will update the existing resource by calling `UpdateCertificateOptions` on the certificate\. This action will not create a new resource\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-certificatemanager-certificate-domainname"></a>
@@ -98,10 +98,10 @@ Key\-value pairs that can identify the certificate\.
 The method you want to use to validate that you own or control the domain associated with a public certificate\. You can [validate with DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html) or [validate with email](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html)\. We recommend that you use DNS validation\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DNS | EMAIL`  
+*Allowed values*: `DNS | EMAIL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-certificatemanager-certificate-return-values"></a>
+## Return values<a name="aws-resource-certificatemanager-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-certificatemanager-certificate-return-values-ref"></a>
 

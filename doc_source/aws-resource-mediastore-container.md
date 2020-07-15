@@ -94,7 +94,7 @@ A collection of tags associated with a container\. Each tag consists of a key:va
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-mediastore-container-return-values"></a>
+## Return values<a name="aws-resource-mediastore-container-return-values"></a>
 
 ### Ref<a name="aws-resource-mediastore-container-return-values-ref"></a>
 

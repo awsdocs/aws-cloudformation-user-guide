@@ -222,7 +222,7 @@ How long, in minutes, from 5 to 480 \(8 hours\), for AWS CodeBuild to wait befor
 *Type*: [VpcConfig](aws-properties-codebuild-project-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codebuild-project-return-values"></a>
+## Return values<a name="aws-resource-codebuild-project-return-values"></a>
 
 ### Ref<a name="aws-resource-codebuild-project-return-values-ref"></a>
 
@@ -660,5 +660,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-codebuild-project--seealso"></a>
+## See also<a name="aws-resource-codebuild-project--seealso"></a>
 +  [ CreateProject](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_CreateProject.html) in the *AWS CodeBuild API Reference* 
