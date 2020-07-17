@@ -115,9 +115,9 @@ From this field, you can enable or disable the selected distribution\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpVersion`  <a name="cfn-cloudfront-distribution-distributionconfig-httpversion"></a>
-\(Optional\) Specify the maximum HTTP version that you want viewers to use to communicate with CloudFront\. The default value for new web distributions is http2\. Viewers that don't support HTTP/2 automatically use an earlier HTTP version\.  
+\(Optional\) Specify the maximum HTTP version that you want viewers to use to communicate with CloudFront\. The default value for new web distributions is `http1.1`\.
 For viewers and CloudFront to use HTTP/2, viewers must support TLS 1\.2 or later, and must support Server Name Identification \(SNI\)\.  
-In general, configuring CloudFront to communicate with viewers using HTTP/2 reduces latency\. You can improve performance by optimizing for HTTP/2\. For more information, do an Internet search for "http/2 optimization\."   
+In general, configuring CloudFront to communicate with viewers using HTTP/2 reduces latency\. You can improve performance by optimizing for HTTP/2\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `http1.1 | http2`  
