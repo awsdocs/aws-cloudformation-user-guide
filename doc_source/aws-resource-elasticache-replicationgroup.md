@@ -384,12 +384,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-elasticache-replicationgroup-return-values-fn--getatt-fn--getatt"></a>
 
+### Cluster Mode Enabled
+
 `ConfigurationEndPoint.Address`  <a name="ConfigurationEndPoint.Address-fn::getatt"></a>
  The DNS hostname of the cache node\.  
 Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `ConfigurationEndPoint.Port`  <a name="ConfigurationEndPoint.Port-fn::getatt"></a>
 The port number that the cache engine is listening on\. 
+
+### Cluster Mode Disabled
 
 `PrimaryEndPoint.Address`  <a name="PrimaryEndPoint.Address-fn::getatt"></a>
 The DNS address of the primary read\-write cache node\. 
