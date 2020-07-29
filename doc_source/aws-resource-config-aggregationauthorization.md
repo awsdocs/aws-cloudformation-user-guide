@@ -528,7 +528,7 @@ Resources:
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
 
   ConfigAggregator:
-    Type: AWS::Config::ConfigurationAggregatorName
+    Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
     ConfigurationAggregatorName: name
