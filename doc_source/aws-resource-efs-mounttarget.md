@@ -112,8 +112,7 @@ MountTarget:
     SubnetId: 
       Ref: "Subnet"
     SecurityGroups: 
-      - 
-Ref: "MountTargetSecurityGroup"
+      - Ref: "MountTargetSecurityGroup"
 ```
 
 ## See also<a name="aws-resource-efs-mounttarget--seealso"></a>
