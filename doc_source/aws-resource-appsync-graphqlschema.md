@@ -39,7 +39,6 @@ The AWS AppSync GraphQL API identifier to which you want to apply this schema\.
 
 `Definition`  <a name="cfn-appsync-graphqlschema-definition"></a>
 The text representation of a GraphQL schema in SDL format\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
