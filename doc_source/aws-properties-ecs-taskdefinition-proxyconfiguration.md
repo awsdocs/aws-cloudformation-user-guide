@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContainerName](#cfn-ecs-taskdefinition-proxyconfiguration-containername)" : String,
-  "[ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)" : [ [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md), ... ],
+  "[ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)" : [ KeyValuePair, ... ],
   "[Type](#cfn-ecs-taskdefinition-proxyconfiguration-type)" : String
 }
 ```
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContainerName](#cfn-ecs-taskdefinition-proxyconfiguration-containername): String
   [ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties): 
-    - [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)
+    - KeyValuePair
   [Type](#cfn-ecs-taskdefinition-proxyconfiguration-type): String
 ```
 

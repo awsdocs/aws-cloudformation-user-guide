@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::ListenerRule",
   "Properties" : {
-      "[Actions](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md), ... ],
-      "[Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md), ... ],
+      "[Actions](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ Action, ... ],
+      "[Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ RuleCondition, ... ],
       "[ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn)" : String,
       "[Priority](#cfn-elasticloadbalancingv2-listenerrule-priority)" : Integer
     }
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ElasticLoadBalancingV2::ListenerRule
 Properties: 
   [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions): 
-    - [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
+    - Action
   [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions): 
-    - [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
+    - RuleCondition
   [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
   [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```

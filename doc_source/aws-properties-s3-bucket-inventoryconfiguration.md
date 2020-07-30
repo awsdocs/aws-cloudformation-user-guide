@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-s3-bucket-inventoryconfiguration-destination)" : [Destination](aws-properties-s3-bucket-destination.md),
+  "[Destination](#cfn-s3-bucket-inventoryconfiguration-destination)" : Destination,
   "[Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled)" : Boolean,
   "[Id](#cfn-s3-bucket-inventoryconfiguration-id)" : String,
   "[IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions)" : String,
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destination](#cfn-s3-bucket-inventoryconfiguration-destination): 
-    [Destination](aws-properties-s3-bucket-destination.md)
+    Destination
   [Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled): Boolean
   [Id](#cfn-s3-bucket-inventoryconfiguration-id): String
   [IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions): String

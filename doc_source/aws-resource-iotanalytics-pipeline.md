@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTAnalytics::Pipeline",
   "Properties" : {
-      "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ [Activity](aws-properties-iotanalytics-pipeline-activity.md), ... ],
+      "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ Activity, ... ],
       "[PipelineName](#cfn-iotanalytics-pipeline-pipelinename)" : String,
       "[Tags](#cfn-iotanalytics-pipeline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTAnalytics::Pipeline
 Properties: 
   [PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities): 
-    - [Activity](aws-properties-iotanalytics-pipeline-activity.md)
+    - Activity
   [PipelineName](#cfn-iotanalytics-pipeline-pipelinename): String
   [Tags](#cfn-iotanalytics-pipeline-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

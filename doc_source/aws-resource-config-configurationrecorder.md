@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Config::ConfigurationRecorder",
   "Properties" : {
       "[Name](#cfn-config-configurationrecorder-name)" : String,
-      "[RecordingGroup](#cfn-config-configurationrecorder-recordinggroup)" : [RecordingGroup](aws-properties-config-configurationrecorder-recordinggroup.md),
+      "[RecordingGroup](#cfn-config-configurationrecorder-recordinggroup)" : RecordingGroup,
       "[RoleARN](#cfn-config-configurationrecorder-rolearn)" : String
     }
 }
@@ -31,7 +31,7 @@ Type: AWS::Config::ConfigurationRecorder
 Properties: 
   [Name](#cfn-config-configurationrecorder-name): String
   [RecordingGroup](#cfn-config-configurationrecorder-recordinggroup): 
-    [RecordingGroup](aws-properties-config-configurationrecorder-recordinggroup.md)
+    RecordingGroup
   [RoleARN](#cfn-config-configurationrecorder-rolearn): String
 ```
 

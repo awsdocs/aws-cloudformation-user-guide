@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::FunctionDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : FunctionDefinitionVersion,
       "[Name](#cfn-greengrass-functiondefinition-name)" : String,
       "[Tags](#cfn-greengrass-functiondefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::FunctionDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-functiondefinition-initialversion): 
-    [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
+    FunctionDefinitionVersion
   [Name](#cfn-greengrass-functiondefinition-name): String
   [Tags](#cfn-greengrass-functiondefinition-tags): Json
 ```

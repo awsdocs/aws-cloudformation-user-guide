@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ExclusiveEndTime](#cfn-qldb-stream-exclusiveendtime)" : String,
       "[InclusiveStartTime](#cfn-qldb-stream-inclusivestarttime)" : String,
-      "[KinesisConfiguration](#cfn-qldb-stream-kinesisconfiguration)" : [KinesisConfiguration](aws-properties-qldb-stream-kinesisconfiguration.md),
+      "[KinesisConfiguration](#cfn-qldb-stream-kinesisconfiguration)" : KinesisConfiguration,
       "[LedgerName](#cfn-qldb-stream-ledgername)" : String,
       "[RoleArn](#cfn-qldb-stream-rolearn)" : String,
       "[StreamName](#cfn-qldb-stream-streamname)" : String,
@@ -33,7 +33,7 @@ Properties:
   [ExclusiveEndTime](#cfn-qldb-stream-exclusiveendtime): String
   [InclusiveStartTime](#cfn-qldb-stream-inclusivestarttime): String
   [KinesisConfiguration](#cfn-qldb-stream-kinesisconfiguration): 
-    [KinesisConfiguration](aws-properties-qldb-stream-kinesisconfiguration.md)
+    KinesisConfiguration
   [LedgerName](#cfn-qldb-stream-ledgername): String
   [RoleArn](#cfn-qldb-stream-rolearn): String
   [StreamName](#cfn-qldb-stream-streamname): String
@@ -171,7 +171,7 @@ Resources:
       ExclusiveEndTime: "2020-05-29T22:59:59Z"
       InclusiveStartTime: "2020-05-29T00:00:00Z"
       KinesisConfiguration:
-        AggregationEnabled: true,
+        AggregationEnabled: true
         StreamArn: "arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb"
       LedgerName: "exampleLedger"
       RoleArn: "arn:aws:iam::123456789012:role/my-kinesis-stream-role"

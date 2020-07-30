@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ContentHandling](#cfn-apigateway-method-integration-contenthandling)" : String,
   "[Credentials](#cfn-apigateway-method-integration-credentials)" : String,
   "[IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod)" : String,
-  "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md), ... ],
+  "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ IntegrationResponse, ... ],
   "[PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior)" : String,
   "[RequestParameters](#cfn-apigateway-method-integration-requestparameters)" : {Key : Value, ...},
   "[RequestTemplates](#cfn-apigateway-method-integration-requesttemplates)" : {Key : Value, ...},
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Credentials](#cfn-apigateway-method-integration-credentials): String
   [IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod): String
   [IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses): 
-    - [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md)
+    - IntegrationResponse
   [PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior): String
   [RequestParameters](#cfn-apigateway-method-integration-requestparameters): 
     Key : Value
@@ -114,7 +114,7 @@ For more information and valid values, see the [passthroughBehavior](https://doc
 
 `RequestParameters`  <a name="cfn-apigateway-method-integration-requestparameters"></a>
 The request parameters that API Gateway sends with the backend request\. Specify request parameters as key\-value pairs \(string\-to\-string mappings\), with a destination as the key and a source as the value\.  
-Specify the destination by using the following pattern `integration.request.location.name`, where *location* is `querystring`, `path`, or `header`, and *name* is a valid, unique parameter name\.  
+Specify the destination by using the following pattern `integration.request.location.name`, where *location* is query string, path, or header, and *name* is a valid, unique parameter name\.  
 The source must be an existing method request parameter or a static value\. You must enclose static values in single quotation marks and pre\-encode these values based on their destination in the request\.  
 *Required*: No  
 *Type*: Map of String  

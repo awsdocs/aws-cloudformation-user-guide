@@ -14,18 +14,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppStream::ImageBuilder",
   "Properties" : {
-      "[AccessEndpoints](#cfn-appstream-imagebuilder-accessendpoints)" : [ [AccessEndpoint](aws-properties-appstream-imagebuilder-accessendpoint.md), ... ],
+      "[AccessEndpoints](#cfn-appstream-imagebuilder-accessendpoints)" : [ AccessEndpoint, ... ],
       "[AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion)" : String,
       "[Description](#cfn-appstream-imagebuilder-description)" : String,
       "[DisplayName](#cfn-appstream-imagebuilder-displayname)" : String,
-      "[DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo)" : [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md),
+      "[DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo)" : DomainJoinInfo,
       "[EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess)" : Boolean,
       "[ImageArn](#cfn-appstream-imagebuilder-imagearn)" : String,
       "[ImageName](#cfn-appstream-imagebuilder-imagename)" : String,
       "[InstanceType](#cfn-appstream-imagebuilder-instancetype)" : String,
       "[Name](#cfn-appstream-imagebuilder-name)" : String,
       "[Tags](#cfn-appstream-imagebuilder-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcConfig](#cfn-appstream-imagebuilder-vpcconfig)" : [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
+      "[VpcConfig](#cfn-appstream-imagebuilder-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -36,12 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppStream::ImageBuilder
 Properties: 
   [AccessEndpoints](#cfn-appstream-imagebuilder-accessendpoints): 
-    - [AccessEndpoint](aws-properties-appstream-imagebuilder-accessendpoint.md)
+    - AccessEndpoint
   [AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion): String
   [Description](#cfn-appstream-imagebuilder-description): String
   [DisplayName](#cfn-appstream-imagebuilder-displayname): String
   [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo): 
-    [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md)
+    DomainJoinInfo
   [EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess): Boolean
   [ImageArn](#cfn-appstream-imagebuilder-imagearn): String
   [ImageName](#cfn-appstream-imagebuilder-imagename): String
@@ -50,7 +50,7 @@ Properties:
   [Tags](#cfn-appstream-imagebuilder-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-appstream-imagebuilder-vpcconfig): 
-    [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-appstream-imagebuilder-properties"></a>

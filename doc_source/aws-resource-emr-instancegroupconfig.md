@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::InstanceGroupConfig",
   "Properties" : {
-      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md),
+      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
       "[BidPrice](#cfn-emr-instancegroupconfig-bidprice)" : String,
-      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ [Configuration](aws-properties-emr-cluster-configuration.md), ... ],
-      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-emr-ebsconfiguration.md),
+      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ Configuration, ... ],
+      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
       "[InstanceCount](#cfn-emr-instancegroupconfiginstancecount-)" : Integer,
       "[InstanceRole](#cfn-emr-instancegroupconfig-instancerole)" : String,
       "[InstanceType](#cfn-emr-instancegroupconfig-instancetype)" : String,
@@ -32,12 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EMR::InstanceGroupConfig
 Properties: 
   [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy): 
-    [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
+    AutoScalingPolicy
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
   [Configurations](#cfn-emr-instancegroupconfig-configurations): 
-    - [Configuration](aws-properties-emr-cluster-configuration.md)
+    - Configuration
   [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
   [InstanceRole](#cfn-emr-instancegroupconfig-instancerole): String
   [InstanceType](#cfn-emr-instancegroupconfig-instancetype): String

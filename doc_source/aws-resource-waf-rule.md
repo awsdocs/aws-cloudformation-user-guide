@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MetricName](#cfn-waf-rule-metricname)" : String,
       "[Name](#cfn-waf-rule-name)" : String,
-      "[Predicates](#cfn-waf-rule-predicates)" : [ [Predicate](aws-properties-waf-rule-predicates.md), ... ]
+      "[Predicates](#cfn-waf-rule-predicates)" : [ Predicate, ... ]
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [MetricName](#cfn-waf-rule-metricname): String
   [Name](#cfn-waf-rule-name): String
   [Predicates](#cfn-waf-rule-predicates): 
-    - [Predicate](aws-properties-waf-rule-predicates.md)
+    - Predicate
 ```
 
 ## Properties<a name="aws-resource-waf-rule-properties"></a>

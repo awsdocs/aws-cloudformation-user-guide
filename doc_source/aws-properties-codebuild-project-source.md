@@ -10,11 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Auth](#cfn-codebuild-project-source-auth)" : [SourceAuth](aws-properties-codebuild-project-sourceauth.md),
+  "[Auth](#cfn-codebuild-project-source-auth)" : SourceAuth,
   "[BuildSpec](#cfn-codebuild-project-source-buildspec)" : String,
-  "[BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig)" : [BuildStatusConfig](aws-properties-codebuild-project-buildstatusconfig.md),
+  "[BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig)" : BuildStatusConfig,
   "[GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth)" : Integer,
-  "[GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig)" : [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md),
+  "[GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig)" : GitSubmodulesConfig,
   "[InsecureSsl](#cfn-codebuild-project-source-insecuressl)" : Boolean,
   "[Location](#cfn-codebuild-project-source-location)" : String,
   "[ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus)" : Boolean,
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Auth](#cfn-codebuild-project-source-auth): 
-    [SourceAuth](aws-properties-codebuild-project-sourceauth.md)
+    SourceAuth
   [BuildSpec](#cfn-codebuild-project-source-buildspec): String
   [BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig): 
-    [BuildStatusConfig](aws-properties-codebuild-project-buildstatusconfig.md)
+    BuildStatusConfig
   [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
   [GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig): 
-    [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md)
+    GitSubmodulesConfig
   [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
   [Location](#cfn-codebuild-project-source-location): String
   [ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus): Boolean

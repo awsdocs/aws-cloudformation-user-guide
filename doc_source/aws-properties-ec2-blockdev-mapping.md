@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-ec2-blockdev-mapping-devicename)" : String,
-  "[Ebs](#cfn-ec2-blockdev-mapping-ebs)" : [Ebs](aws-properties-ec2-blockdev-template.md),
-  "[NoDevice](#cfn-ec2-blockdev-mapping-nodevice)" : [NoDevice](aws-properties-ec2-instance-nodevice.md),
+  "[Ebs](#cfn-ec2-blockdev-mapping-ebs)" : Ebs,
+  "[NoDevice](#cfn-ec2-blockdev-mapping-nodevice)" : NoDevice,
   "[VirtualName](#cfn-ec2-blockdev-mapping-virtualname)" : String
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-ec2-blockdev-mapping-devicename): String
   [Ebs](#cfn-ec2-blockdev-mapping-ebs): 
-    [Ebs](aws-properties-ec2-blockdev-template.md)
+    Ebs
   [NoDevice](#cfn-ec2-blockdev-mapping-nodevice): 
-    [NoDevice](aws-properties-ec2-instance-nodevice.md)
+    NoDevice
   [VirtualName](#cfn-ec2-blockdev-mapping-virtualname): String
 ```
 

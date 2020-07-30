@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AutoScalingGroupArn](#cfn-ecs-capacityprovider-autoscalinggroupprovider-autoscalinggrouparn)" : String,
-  "[ManagedScaling](#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedscaling)" : [ManagedScaling](aws-properties-ecs-capacityprovider-managedscaling.md),
+  "[ManagedScaling](#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedscaling)" : ManagedScaling,
   "[ManagedTerminationProtection](#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedterminationprotection)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AutoScalingGroupArn](#cfn-ecs-capacityprovider-autoscalinggroupprovider-autoscalinggrouparn): String
   [ManagedScaling](#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedscaling): 
-    [ManagedScaling](aws-properties-ecs-capacityprovider-managedscaling.md)
+    ManagedScaling
   [ManagedTerminationProtection](#cfn-ecs-capacityprovider-autoscalinggroupprovider-managedterminationprotection): String
 ```
 

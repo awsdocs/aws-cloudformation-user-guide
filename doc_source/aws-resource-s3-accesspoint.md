@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NetworkOrigin](#cfn-s3-accesspoint-networkorigin)" : String,
       "[Policy](#cfn-s3-accesspoint-policy)" : Json,
       "[PolicyStatus](#cfn-s3-accesspoint-policystatus)" : Json,
-      "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : [PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md),
-      "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : [VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)
+      "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
+      "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : VpcConfiguration
     }
 }
 ```
@@ -36,9 +36,9 @@ Properties:
   [Policy](#cfn-s3-accesspoint-policy): Json
   [PolicyStatus](#cfn-s3-accesspoint-policystatus): Json
   [PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration): 
-    [PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md)
+    PublicAccessBlockConfiguration
   [VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration): 
-    [VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)
+    VpcConfiguration
 ```
 
 ## Properties<a name="aws-resource-s3-accesspoint-properties"></a>

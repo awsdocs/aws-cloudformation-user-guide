@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NodegroupName](#cfn-eks-nodegroup-nodegroupname)" : String,
       "[NodeRole](#cfn-eks-nodegroup-noderole)" : String,
       "[ReleaseVersion](#cfn-eks-nodegroup-releaseversion)" : String,
-      "[RemoteAccess](#cfn-eks-nodegroup-remoteaccess)" : [RemoteAccess](aws-properties-eks-nodegroup-remoteaccess.md),
-      "[ScalingConfig](#cfn-eks-nodegroup-scalingconfig)" : [ScalingConfig](aws-properties-eks-nodegroup-scalingconfig.md),
+      "[RemoteAccess](#cfn-eks-nodegroup-remoteaccess)" : RemoteAccess,
+      "[ScalingConfig](#cfn-eks-nodegroup-scalingconfig)" : ScalingConfig,
       "[Subnets](#cfn-eks-nodegroup-subnets)" : [ String, ... ],
       "[Tags](#cfn-eks-nodegroup-tags)" : Json,
       "[Version](#cfn-eks-nodegroup-version)" : String
@@ -50,9 +50,9 @@ Properties:
   [NodeRole](#cfn-eks-nodegroup-noderole): String
   [ReleaseVersion](#cfn-eks-nodegroup-releaseversion): String
   [RemoteAccess](#cfn-eks-nodegroup-remoteaccess): 
-    [RemoteAccess](aws-properties-eks-nodegroup-remoteaccess.md)
+    RemoteAccess
   [ScalingConfig](#cfn-eks-nodegroup-scalingconfig): 
-    [ScalingConfig](aws-properties-eks-nodegroup-scalingconfig.md)
+    ScalingConfig
   [Subnets](#cfn-eks-nodegroup-subnets): 
     - String
   [Tags](#cfn-eks-nodegroup-tags): Json

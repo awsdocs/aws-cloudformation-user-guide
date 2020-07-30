@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-dlm-lifecyclepolicy-description)" : String,
       "[ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn)" : String,
-      "[PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails)" : [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md),
+      "[PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails)" : PolicyDetails,
       "[State](#cfn-dlm-lifecyclepolicy-state)" : String
     }
 }
@@ -30,7 +30,7 @@ Properties:
   [Description](#cfn-dlm-lifecyclepolicy-description): String
   [ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn): String
   [PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails): 
-    [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)
+    PolicyDetails
   [State](#cfn-dlm-lifecyclepolicy-state): String
 ```
 

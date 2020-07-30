@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DataResources](#cfn-cloudtrail-trail-eventselector-dataresources)" : [ [DataResource](aws-properties-cloudtrail-trail-dataresource.md), ... ],
+  "[DataResources](#cfn-cloudtrail-trail-eventselector-dataresources)" : [ DataResource, ... ],
   "[IncludeManagementEvents](#cfn-cloudtrail-trail-eventselector-includemanagementevents)" : Boolean,
   "[ReadWriteType](#cfn-cloudtrail-trail-eventselector-readwritetype)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DataResources](#cfn-cloudtrail-trail-eventselector-dataresources): 
-    - [DataResource](aws-properties-cloudtrail-trail-dataresource.md)
+    - DataResource
   [IncludeManagementEvents](#cfn-cloudtrail-trail-eventselector-includemanagementevents): Boolean
   [ReadWriteType](#cfn-cloudtrail-trail-eventselector-readwritetype): String
 ```

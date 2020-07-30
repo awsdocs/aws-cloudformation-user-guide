@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ImageId](#cfn-batch-computeenvironment-computeresources-imageid)" : String,
   "[InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole)" : String,
   "[InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes)" : [ String, ... ],
-  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md),
+  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : LaunchTemplateSpecification,
   "[MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus)" : Integer,
   "[MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus)" : Integer,
   "[PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup)" : String,
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes): 
     - String
   [LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate): 
-    [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)
+    LaunchTemplateSpecification
   [MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus): Integer
   [MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus): Integer
   [PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup): String

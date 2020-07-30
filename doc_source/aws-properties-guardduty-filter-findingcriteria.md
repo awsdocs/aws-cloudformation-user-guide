@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Criterion](#cfn-guardduty-filter-findingcriteria-criterion)" : Json,
-  "[ItemType](#cfn-guardduty-filter-findingcriteria-itemtype)" : [Condition](aws-properties-guardduty-filter-condition.md)
+  "[ItemType](#cfn-guardduty-filter-findingcriteria-itemtype)" : Condition
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Criterion](#cfn-guardduty-filter-findingcriteria-criterion): Json
   [ItemType](#cfn-guardduty-filter-findingcriteria-itemtype): 
-    [Condition](aws-properties-guardduty-filter-condition.md)
+    Condition
 ```
 
 ## Properties<a name="aws-properties-guardduty-filter-findingcriteria-properties"></a>

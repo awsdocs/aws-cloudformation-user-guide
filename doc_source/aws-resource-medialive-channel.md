@@ -15,10 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MediaLive::Channel",
   "Properties" : {
       "[ChannelClass](#cfn-medialive-channel-channelclass)" : String,
-      "[Destinations](#cfn-medialive-channel-destinations)" : [ [OutputDestination](aws-properties-medialive-channel-outputdestination.md), ... ],
+      "[Destinations](#cfn-medialive-channel-destinations)" : [ OutputDestination, ... ],
       "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : Json,
-      "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ [InputAttachment](aws-properties-medialive-channel-inputattachment.md), ... ],
-      "[InputSpecification](#cfn-medialive-channel-inputspecification)" : [InputSpecification](aws-properties-medialive-channel-inputspecification.md),
+      "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ InputAttachment, ... ],
+      "[InputSpecification](#cfn-medialive-channel-inputspecification)" : InputSpecification,
       "[LogLevel](#cfn-medialive-channel-loglevel)" : String,
       "[Name](#cfn-medialive-channel-name)" : String,
       "[RoleArn](#cfn-medialive-channel-rolearn)" : String,
@@ -34,12 +34,12 @@ Type: AWS::MediaLive::Channel
 Properties: 
   [ChannelClass](#cfn-medialive-channel-channelclass): String
   [Destinations](#cfn-medialive-channel-destinations): 
-    - [OutputDestination](aws-properties-medialive-channel-outputdestination.md)
+    - OutputDestination
   [EncoderSettings](#cfn-medialive-channel-encodersettings): Json
   [InputAttachments](#cfn-medialive-channel-inputattachments): 
-    - [InputAttachment](aws-properties-medialive-channel-inputattachment.md)
+    - InputAttachment
   [InputSpecification](#cfn-medialive-channel-inputspecification): 
-    [InputSpecification](aws-properties-medialive-channel-inputspecification.md)
+    InputSpecification
   [LogLevel](#cfn-medialive-channel-loglevel): String
   [Name](#cfn-medialive-channel-name): String
   [RoleArn](#cfn-medialive-channel-rolearn): String

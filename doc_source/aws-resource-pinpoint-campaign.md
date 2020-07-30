@@ -12,16 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Pinpoint::Campaign",
   "Properties" : {
-      "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ [WriteTreatmentResource](aws-properties-pinpoint-campaign-writetreatmentresource.md), ... ],
+      "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ WriteTreatmentResource, ... ],
       "[ApplicationId](#cfn-pinpoint-campaign-applicationid)" : String,
-      "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md),
+      "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : CampaignHook,
       "[Description](#cfn-pinpoint-campaign-description)" : String,
       "[HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent)" : Integer,
       "[IsPaused](#cfn-pinpoint-campaign-ispaused)" : Boolean,
-      "[Limits](#cfn-pinpoint-campaign-limits)" : [Limits](aws-properties-pinpoint-campaign-limits.md),
-      "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md),
+      "[Limits](#cfn-pinpoint-campaign-limits)" : Limits,
+      "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : MessageConfiguration,
       "[Name](#cfn-pinpoint-campaign-name)" : String,
-      "[Schedule](#cfn-pinpoint-campaign-schedule)" : [Schedule](aws-properties-pinpoint-campaign-schedule.md),
+      "[Schedule](#cfn-pinpoint-campaign-schedule)" : Schedule,
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
       "[Tags](#cfn-pinpoint-campaign-tags)" : Json,
@@ -37,20 +37,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Pinpoint::Campaign
 Properties: 
   [AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments): 
-    - [WriteTreatmentResource](aws-properties-pinpoint-campaign-writetreatmentresource.md)
+    - WriteTreatmentResource
   [ApplicationId](#cfn-pinpoint-campaign-applicationid): String
   [CampaignHook](#cfn-pinpoint-campaign-campaignhook): 
-    [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md)
+    CampaignHook
   [Description](#cfn-pinpoint-campaign-description): String
   [HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent): Integer
   [IsPaused](#cfn-pinpoint-campaign-ispaused): Boolean
   [Limits](#cfn-pinpoint-campaign-limits): 
-    [Limits](aws-properties-pinpoint-campaign-limits.md)
+    Limits
   [MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration): 
-    [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)
+    MessageConfiguration
   [Name](#cfn-pinpoint-campaign-name): String
   [Schedule](#cfn-pinpoint-campaign-schedule): 
-    [Schedule](aws-properties-pinpoint-campaign-schedule.md)
+    Schedule
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
   [SegmentVersion](#cfn-pinpoint-campaign-segmentversion): Integer
   [Tags](#cfn-pinpoint-campaign-tags): Json

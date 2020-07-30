@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::DataflowEndpointGroup",
   "Properties" : {
-      "[EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist)" : [ [EndpointDetails](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md), ... ],
+      "[EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist)" : [ EndpointDetails, ... ],
       "[Tags](#cfn-groundstation-dataflowendpointgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GroundStation::DataflowEndpointGroup
 Properties: 
   [EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist): 
-    - [EndpointDetails](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md)
+    - EndpointDetails
   [Tags](#cfn-groundstation-dataflowendpointgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

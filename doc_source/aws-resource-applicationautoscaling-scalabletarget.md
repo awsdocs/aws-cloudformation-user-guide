@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid)" : String,
       "[RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn)" : String,
       "[ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension)" : String,
-      "[ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions)" : [ [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md), ... ],
+      "[ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions)" : [ ScheduledAction, ... ],
       "[ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace)" : String,
-      "[SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate)" : [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)
+      "[SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate)" : SuspendedState
     }
 }
 ```
@@ -39,10 +39,10 @@ Properties:
   [RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn): String
   [ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension): String
   [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions): 
-    - [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
+    - ScheduledAction
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
   [SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate): 
-    [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)
+    SuspendedState
 ```
 
 ## Properties<a name="aws-resource-applicationautoscaling-scalabletarget-properties"></a>

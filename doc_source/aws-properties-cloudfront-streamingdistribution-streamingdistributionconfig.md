@@ -13,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Aliases](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases)" : [ String, ... ],
   "[Comment](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment)" : String,
   "[Enabled](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled)" : Boolean,
-  "[Logging](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging)" : [Logging](aws-properties-cloudfront-streamingdistribution-logging.md),
+  "[Logging](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging)" : Logging,
   "[PriceClass](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass)" : String,
-  "[S3Origin](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin)" : [S3Origin](aws-properties-cloudfront-streamingdistribution-s3origin.md),
-  "[TrustedSigners](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners)" : [TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)
+  "[S3Origin](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin)" : S3Origin,
+  "[TrustedSigners](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners)" : TrustedSigners
 }
 ```
 
@@ -28,12 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Comment](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment): String
   [Enabled](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled): Boolean
   [Logging](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging): 
-    [Logging](aws-properties-cloudfront-streamingdistribution-logging.md)
+    Logging
   [PriceClass](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass): String
   [S3Origin](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin): 
-    [S3Origin](aws-properties-cloudfront-streamingdistribution-s3origin.md)
+    S3Origin
   [TrustedSigners](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners): 
-    [TrustedSigners](aws-properties-cloudfront-streamingdistribution-trustedsigners.md)
+    TrustedSigners
 ```
 
 ## Properties<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig-properties"></a>

@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElasticLoadBalancingV2::Listener",
   "Properties" : {
       "[AlpnPolicy](#cfn-elasticloadbalancingv2-listener-alpnpolicy)" : [ String, ... ],
-      "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md), ... ],
-      "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md), ... ],
+      "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ Certificate, ... ],
+      "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ Action, ... ],
       "[LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
       "[Port](#cfn-elasticloadbalancingv2-listener-port)" : Integer,
       "[Protocol](#cfn-elasticloadbalancingv2-listener-protocol)" : String,
@@ -31,9 +31,9 @@ Properties:
   [AlpnPolicy](#cfn-elasticloadbalancingv2-listener-alpnpolicy): 
     - String
   [Certificates](#cfn-elasticloadbalancingv2-listener-certificates): 
-    - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md)
+    - Certificate
   [DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions): 
-    - [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)
+    - Action
   [LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn): String
   [Port](#cfn-elasticloadbalancingv2-listener-port): Integer
   [Protocol](#cfn-elasticloadbalancingv2-listener-protocol): String

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)" : [ [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md), ... ]
+  "[PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups)" : [ PropertyGroup, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PropertyGroups](#cfn-kinesisanalyticsv2-application-environmentproperties-propertygroups): 
-    - [PropertyGroup](aws-properties-kinesisanalyticsv2-application-propertygroup.md)
+    - PropertyGroup
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties-properties"></a>

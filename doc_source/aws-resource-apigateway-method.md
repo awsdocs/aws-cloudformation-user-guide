@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthorizationType](#cfn-apigateway-method-authorizationtype)" : String,
       "[AuthorizerId](#cfn-apigateway-method-authorizerid)" : String,
       "[HttpMethod](#cfn-apigateway-method-httpmethod)" : String,
-      "[Integration](#cfn-apigateway-method-integration)" : [Integration](aws-properties-apitgateway-method-integration.md),
-      "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ [MethodResponse](aws-properties-apitgateway-method-methodresponse.md), ... ],
+      "[Integration](#cfn-apigateway-method-integration)" : Integration,
+      "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ MethodResponse, ... ],
       "[OperationName](#cfn-apigateway-method-operationname)" : String,
       "[RequestModels](#cfn-apigateway-method-requestmodels)" : {Key : Value, ...},
       "[RequestParameters](#cfn-apigateway-method-requestparameters)" : {Key : Value, ...},
@@ -41,9 +41,9 @@ Properties:
   [AuthorizerId](#cfn-apigateway-method-authorizerid): String
   [HttpMethod](#cfn-apigateway-method-httpmethod): String
   [Integration](#cfn-apigateway-method-integration): 
-    [Integration](aws-properties-apitgateway-method-integration.md)
+    Integration
   [MethodResponses](#cfn-apigateway-method-methodresponses): 
-    - [MethodResponse](aws-properties-apitgateway-method-methodresponse.md)
+    - MethodResponse
   [OperationName](#cfn-apigateway-method-operationname): String
   [RequestModels](#cfn-apigateway-method-requestmodels): 
     Key : Value

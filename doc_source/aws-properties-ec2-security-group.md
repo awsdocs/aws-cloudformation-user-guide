@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[GroupDescription](#cfn-ec2-securitygroup-groupdescription)" : String,
       "[GroupName](#cfn-ec2-securitygroup-groupname)" : String,
-      "[SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress)" : [ [Egress](aws-properties-ec2-security-group-rule.md), ... ],
-      "[SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress)" : [ [Ingress](aws-properties-ec2-security-group-rule-1.md), ... ],
+      "[SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress)" : [ Egress, ... ],
+      "[SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress)" : [ Ingress, ... ],
       "[Tags](#cfn-ec2-securitygroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-ec2-securitygroup-vpcid)" : String
     }
@@ -35,9 +35,9 @@ Properties:
   [GroupDescription](#cfn-ec2-securitygroup-groupdescription): String
   [GroupName](#cfn-ec2-securitygroup-groupname): String
   [SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress): 
-    - [Egress](aws-properties-ec2-security-group-rule.md)
+    - Egress
   [SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress): 
-    - [Ingress](aws-properties-ec2-security-group-rule-1.md)
+    - Ingress
   [Tags](#cfn-ec2-securitygroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-securitygroup-vpcid): String

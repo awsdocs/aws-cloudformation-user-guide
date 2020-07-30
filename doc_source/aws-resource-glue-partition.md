@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CatalogId](#cfn-glue-partition-catalogid)" : String,
       "[DatabaseName](#cfn-glue-partition-databasename)" : String,
-      "[PartitionInput](#cfn-glue-partition-partitioninput)" : [PartitionInput](aws-properties-glue-partition-partitioninput.md),
+      "[PartitionInput](#cfn-glue-partition-partitioninput)" : PartitionInput,
       "[TableName](#cfn-glue-partition-tablename)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [CatalogId](#cfn-glue-partition-catalogid): String
   [DatabaseName](#cfn-glue-partition-databasename): String
   [PartitionInput](#cfn-glue-partition-partitioninput): 
-    [PartitionInput](aws-properties-glue-partition-partitioninput.md)
+    PartitionInput
   [TableName](#cfn-glue-partition-tablename): String
 ```
 

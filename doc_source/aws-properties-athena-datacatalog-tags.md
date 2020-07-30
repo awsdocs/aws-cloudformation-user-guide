@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Tags](#cfn-athena-datacatalog-tags-tags)" : [ [Tag](#aws-properties-athena-datacatalog-tags), ... ]
+  "[Tags](#cfn-athena-datacatalog-tags-tags)" : [ Tag, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Tags](#cfn-athena-datacatalog-tags-tags): 
-    - [Tag](#aws-properties-athena-datacatalog-tags)
+    - Tag
 ```
 
 ## Properties<a name="aws-properties-athena-datacatalog-tags-properties"></a>

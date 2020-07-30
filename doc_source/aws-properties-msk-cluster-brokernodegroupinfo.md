@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ClientSubnets](#cfn-msk-cluster-brokernodegroupinfo-clientsubnets)" : [ String, ... ],
   "[InstanceType](#cfn-msk-cluster-brokernodegroupinfo-instancetype)" : String,
   "[SecurityGroups](#cfn-msk-cluster-brokernodegroupinfo-securitygroups)" : [ String, ... ],
-  "[StorageInfo](#cfn-msk-cluster-brokernodegroupinfo-storageinfo)" : [StorageInfo](aws-properties-msk-cluster-storageinfo.md)
+  "[StorageInfo](#cfn-msk-cluster-brokernodegroupinfo-storageinfo)" : StorageInfo
 }
 ```
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SecurityGroups](#cfn-msk-cluster-brokernodegroupinfo-securitygroups): 
     - String
   [StorageInfo](#cfn-msk-cluster-brokernodegroupinfo-storageinfo): 
-    [StorageInfo](aws-properties-msk-cluster-storageinfo.md)
+    StorageInfo
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-brokernodegroupinfo-properties"></a>

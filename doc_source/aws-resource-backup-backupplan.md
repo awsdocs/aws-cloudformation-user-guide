@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Backup::BackupPlan",
   "Properties" : {
-      "[BackupPlan](#cfn-backup-backupplan-backupplan)" : [BackupPlanResourceType](aws-properties-backup-backupplan-backupplanresourcetype.md),
+      "[BackupPlan](#cfn-backup-backupplan-backupplan)" : BackupPlanResourceType,
       "[BackupPlanTags](#cfn-backup-backupplan-backupplantags)" : Json
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Backup::BackupPlan
 Properties: 
   [BackupPlan](#cfn-backup-backupplan-backupplan): 
-    [BackupPlanResourceType](aws-properties-backup-backupplan-backupplanresourcetype.md)
+    BackupPlanResourceType
   [BackupPlanTags](#cfn-backup-backupplan-backupplantags): Json
 ```
 

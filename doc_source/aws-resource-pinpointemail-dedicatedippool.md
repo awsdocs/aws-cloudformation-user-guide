@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::PinpointEmail::DedicatedIpPool",
   "Properties" : {
       "[PoolName](#cfn-pinpointemail-dedicatedippool-poolname)" : String,
-      "[Tags](#cfn-pinpointemail-dedicatedippool-tags)" : [ [Tags](aws-properties-pinpointemail-dedicatedippool-tags.md), ... ]
+      "[Tags](#cfn-pinpointemail-dedicatedippool-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::PinpointEmail::DedicatedIpPool
 Properties: 
   [PoolName](#cfn-pinpointemail-dedicatedippool-poolname): String
   [Tags](#cfn-pinpointemail-dedicatedippool-tags): 
-    - [Tags](aws-properties-pinpointemail-dedicatedippool-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-pinpointemail-dedicatedippool-properties"></a>

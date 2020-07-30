@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Route53Resolver::ResolverEndpoint",
   "Properties" : {
       "[Direction](#cfn-route53resolver-resolverendpoint-direction)" : String,
-      "[IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses)" : [ [IpAddressRequest](aws-properties-route53resolver-resolverendpoint-ipaddressrequest.md), ... ],
+      "[IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses)" : [ IpAddressRequest, ... ],
       "[Name](#cfn-route53resolver-resolverendpoint-name)" : String,
       "[SecurityGroupIds](#cfn-route53resolver-resolverendpoint-securitygroupids)" : [ String, ... ],
       "[Tags](#cfn-route53resolver-resolverendpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,7 +30,7 @@ Type: AWS::Route53Resolver::ResolverEndpoint
 Properties: 
   [Direction](#cfn-route53resolver-resolverendpoint-direction): String
   [IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses): 
-    - [IpAddressRequest](aws-properties-route53resolver-resolverendpoint-ipaddressrequest.md)
+    - IpAddressRequest
   [Name](#cfn-route53resolver-resolverendpoint-name): String
   [SecurityGroupIds](#cfn-route53resolver-resolverendpoint-securitygroupids): 
     - String

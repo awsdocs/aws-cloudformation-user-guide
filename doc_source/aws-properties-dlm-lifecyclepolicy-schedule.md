@@ -11,11 +11,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags)" : Boolean,
-  "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md),
-  "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md), ... ],
-  "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : [FastRestoreRule](aws-properties-dlm-lifecyclepolicy-fastrestorerule.md),
+  "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : CreateRule,
+  "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ CrossRegionCopyRule, ... ],
+  "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : FastRestoreRule,
   "[Name](#cfn-dlm-lifecyclepolicy-schedule-name)" : String,
-  "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md),
+  "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : RetainRule,
   "[TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags): Boolean
   [CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule): 
-    [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md)
+    CreateRule
   [CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules): 
-    - [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)
+    - CrossRegionCopyRule
   [FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule): 
-    [FastRestoreRule](aws-properties-dlm-lifecyclepolicy-fastrestorerule.md)
+    FastRestoreRule
   [Name](#cfn-dlm-lifecyclepolicy-schedule-name): String
   [RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule): 
-    [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)
+    RetainRule
   [TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags): 

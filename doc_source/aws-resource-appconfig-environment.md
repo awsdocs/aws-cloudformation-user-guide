@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationId](#cfn-appconfig-environment-applicationid)" : String,
       "[Description](#cfn-appconfig-environment-description)" : String,
-      "[Monitors](#cfn-appconfig-environment-monitors)" : [ [Monitors](aws-properties-appconfig-environment-monitors.md), ... ],
+      "[Monitors](#cfn-appconfig-environment-monitors)" : [ Monitors, ... ],
       "[Name](#cfn-appconfig-environment-name)" : String,
-      "[Tags](#cfn-appconfig-environment-tags)" : [ [Tags](aws-properties-appconfig-environment-tags.md), ... ]
+      "[Tags](#cfn-appconfig-environment-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -43,10 +43,10 @@ Properties:
   [ApplicationId](#cfn-appconfig-environment-applicationid): String
   [Description](#cfn-appconfig-environment-description): String
   [Monitors](#cfn-appconfig-environment-monitors): 
-    - [Monitors](aws-properties-appconfig-environment-monitors.md)
+    - Monitors
   [Name](#cfn-appconfig-environment-name): String
   [Tags](#cfn-appconfig-environment-tags): 
-    - [Tags](aws-properties-appconfig-environment-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-environment-properties"></a>

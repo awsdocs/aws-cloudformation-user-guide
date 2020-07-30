@@ -14,13 +14,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : [Spend](aws-properties-budgets-budget-spend.md),
+  "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : Spend,
   "[BudgetName](#cfn-budgets-budget-budgetdata-budgetname)" : String,
   "[BudgetType](#cfn-budgets-budget-budgetdata-budgettype)" : String,
   "[CostFilters](#cfn-budgets-budget-budgetdata-costfilters)" : Json,
-  "[CostTypes](#cfn-budgets-budget-budgetdata-costtypes)" : [CostTypes](aws-properties-budgets-budget-costtypes.md),
+  "[CostTypes](#cfn-budgets-budget-budgetdata-costtypes)" : CostTypes,
   "[PlannedBudgetLimits](#cfn-budgets-budget-budgetdata-plannedbudgetlimits)" : Json,
-  "[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod)" : [TimePeriod](aws-properties-budgets-budget-timeperiod.md),
+  "[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod)" : TimePeriod,
   "[TimeUnit](#cfn-budgets-budget-budgetdata-timeunit)" : String
 }
 ```
@@ -29,15 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit): 
-    [Spend](aws-properties-budgets-budget-spend.md)
+    Spend
   [BudgetName](#cfn-budgets-budget-budgetdata-budgetname): String
   [BudgetType](#cfn-budgets-budget-budgetdata-budgettype): String
   [CostFilters](#cfn-budgets-budget-budgetdata-costfilters): Json
   [CostTypes](#cfn-budgets-budget-budgetdata-costtypes): 
-    [CostTypes](aws-properties-budgets-budget-costtypes.md)
+    CostTypes
   [PlannedBudgetLimits](#cfn-budgets-budget-budgetdata-plannedbudgetlimits): Json
   [TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod): 
-    [TimePeriod](aws-properties-budgets-budget-timeperiod.md)
+    TimePeriod
   [TimeUnit](#cfn-budgets-budget-budgetdata-timeunit): String
 ```
 

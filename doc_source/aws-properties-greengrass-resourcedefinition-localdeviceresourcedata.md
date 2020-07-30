@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting)" : [GroupOwnerSetting](aws-properties-greengrass-resourcedefinition-groupownersetting.md),
+  "[GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting)" : GroupOwnerSetting,
   "[SourcePath](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GroupOwnerSetting](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-groupownersetting): 
-    [GroupOwnerSetting](aws-properties-greengrass-resourcedefinition-groupownersetting.md)
+    GroupOwnerSetting
   [SourcePath](#cfn-greengrass-resourcedefinition-localdeviceresourcedata-sourcepath): String
 ```
 

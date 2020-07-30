@@ -13,13 +13,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Amplify::App",
   "Properties" : {
       "[AccessToken](#cfn-amplify-app-accesstoken)" : String,
-      "[AutoBranchCreationConfig](#cfn-amplify-app-autobranchcreationconfig)" : [AutoBranchCreationConfig](aws-properties-amplify-app-autobranchcreationconfig.md),
-      "[BasicAuthConfig](#cfn-amplify-app-basicauthconfig)" : [BasicAuthConfig](aws-properties-amplify-app-basicauthconfig.md),
+      "[AutoBranchCreationConfig](#cfn-amplify-app-autobranchcreationconfig)" : AutoBranchCreationConfig,
+      "[BasicAuthConfig](#cfn-amplify-app-basicauthconfig)" : BasicAuthConfig,
       "[BuildSpec](#cfn-amplify-app-buildspec)" : String,
-      "[CustomRules](#cfn-amplify-app-customrules)" : [ [CustomRule](aws-properties-amplify-app-customrule.md), ... ],
+      "[CustomRules](#cfn-amplify-app-customrules)" : [ CustomRule, ... ],
       "[Description](#cfn-amplify-app-description)" : String,
       "[EnableBranchAutoDeletion](#cfn-amplify-app-enablebranchautodeletion)" : Boolean,
-      "[EnvironmentVariables](#cfn-amplify-app-environmentvariables)" : [ [EnvironmentVariable](aws-properties-amplify-app-environmentvariable.md), ... ],
+      "[EnvironmentVariables](#cfn-amplify-app-environmentvariables)" : [ EnvironmentVariable, ... ],
       "[IAMServiceRole](#cfn-amplify-app-iamservicerole)" : String,
       "[Name](#cfn-amplify-app-name)" : String,
       "[OauthToken](#cfn-amplify-app-oauthtoken)" : String,
@@ -36,16 +36,16 @@ Type: AWS::Amplify::App
 Properties: 
   [AccessToken](#cfn-amplify-app-accesstoken): String
   [AutoBranchCreationConfig](#cfn-amplify-app-autobranchcreationconfig): 
-    [AutoBranchCreationConfig](aws-properties-amplify-app-autobranchcreationconfig.md)
+    AutoBranchCreationConfig
   [BasicAuthConfig](#cfn-amplify-app-basicauthconfig): 
-    [BasicAuthConfig](aws-properties-amplify-app-basicauthconfig.md)
+    BasicAuthConfig
   [BuildSpec](#cfn-amplify-app-buildspec): String
   [CustomRules](#cfn-amplify-app-customrules): 
-    - [CustomRule](aws-properties-amplify-app-customrule.md)
+    - CustomRule
   [Description](#cfn-amplify-app-description): String
   [EnableBranchAutoDeletion](#cfn-amplify-app-enablebranchautodeletion): Boolean
   [EnvironmentVariables](#cfn-amplify-app-environmentvariables): 
-    - [EnvironmentVariable](aws-properties-amplify-app-environmentvariable.md)
+    - EnvironmentVariable
   [IAMServiceRole](#cfn-amplify-app-iamservicerole): String
   [Name](#cfn-amplify-app-name): String
   [OauthToken](#cfn-amplify-app-oauthtoken): String
@@ -93,7 +93,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableBranchAutoDeletion`  <a name="cfn-amplify-app-enablebranchautodeletion"></a>
-Not currently supported by AWS CloudFormation\.  
+Automatically disconnect a branch in the Amplify Console when you delete a branch from your Git repository\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

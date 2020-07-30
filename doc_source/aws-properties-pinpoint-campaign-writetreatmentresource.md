@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)" : [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md),
-  "[Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule)" : [Schedule](aws-properties-pinpoint-campaign-schedule.md),
+  "[MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)" : MessageConfiguration,
+  "[Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule)" : Schedule,
   "[SizePercent](#cfn-pinpoint-campaign-writetreatmentresource-sizepercent)" : Integer,
   "[TreatmentDescription](#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription)" : String,
   "[TreatmentName](#cfn-pinpoint-campaign-writetreatmentresource-treatmentname)" : String
@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration): 
-    [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)
+    MessageConfiguration
   [Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule): 
-    [Schedule](aws-properties-pinpoint-campaign-schedule.md)
+    Schedule
   [SizePercent](#cfn-pinpoint-campaign-writetreatmentresource-sizepercent): Integer
   [TreatmentDescription](#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription): String
   [TreatmentName](#cfn-pinpoint-campaign-writetreatmentresource-treatmentname): String

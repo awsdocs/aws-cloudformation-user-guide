@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CodeSha256](#cfn-lambda-version-codesha256)" : String,
       "[Description](#cfn-lambda-version-description)" : String,
       "[FunctionName](#cfn-lambda-version-functionname)" : String,
-      "[ProvisionedConcurrencyConfig](#cfn-lambda-version-provisionedconcurrencyconfig)" : [ProvisionedConcurrencyConfiguration](aws-properties-lambda-version-provisionedconcurrencyconfiguration.md)
+      "[ProvisionedConcurrencyConfig](#cfn-lambda-version-provisionedconcurrencyconfig)" : ProvisionedConcurrencyConfiguration
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [Description](#cfn-lambda-version-description): String
   [FunctionName](#cfn-lambda-version-functionname): String
   [ProvisionedConcurrencyConfig](#cfn-lambda-version-provisionedconcurrencyconfig): 
-    [ProvisionedConcurrencyConfiguration](aws-properties-lambda-version-provisionedconcurrencyconfiguration.md)
+    ProvisionedConcurrencyConfiguration
 ```
 
 ## Properties<a name="aws-resource-lambda-version-properties"></a>

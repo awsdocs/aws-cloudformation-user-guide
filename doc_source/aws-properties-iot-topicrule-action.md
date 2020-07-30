@@ -10,23 +10,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm)" : [CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md),
-  "[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric)" : [CloudwatchMetricAction](aws-properties-iot-topicrule-cloudwatchmetricaction.md),
-  "[DynamoDB](#cfn-iot-topicrule-action-dynamodb)" : [DynamoDBAction](aws-properties-iot-topicrule-dynamodbaction.md),
-  "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)" : [DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md),
-  "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)" : [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md),
-  "[Firehose](#cfn-iot-topicrule-action-firehose)" : [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md),
-  "[Http](#cfn-iot-topicrule-action-http)" : [HttpAction](aws-properties-iot-topicrule-httpaction.md),
-  "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)" : [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md),
-  "[IotEvents](#cfn-iot-topicrule-action-iotevents)" : [IotEventsAction](aws-properties-iot-topicrule-ioteventsaction.md),
-  "[IotSiteWise](#cfn-iot-topicrule-action-iotsitewise)" : [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md),
-  "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : [KinesisAction](aws-properties-iot-topicrule-kinesisaction.md),
-  "[Lambda](#cfn-iot-topicrule-action-lambda)" : [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md),
-  "[Republish](#cfn-iot-topicrule-action-republish)" : [RepublishAction](aws-properties-iot-topicrule-republishaction.md),
-  "[S3](#cfn-iot-topicrule-action-s3)" : [S3Action](aws-properties-iot-topicrule-s3action.md),
-  "[Sns](#cfn-iot-topicrule-action-sns)" : [SnsAction](aws-properties-iot-topicrule-snsaction.md),
-  "[Sqs](#cfn-iot-topicrule-action-sqs)" : [SqsAction](aws-properties-iot-topicrule-sqsaction.md),
-  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)" : [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)
+  "[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm)" : CloudwatchAlarmAction,
+  "[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric)" : CloudwatchMetricAction,
+  "[DynamoDB](#cfn-iot-topicrule-action-dynamodb)" : DynamoDBAction,
+  "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)" : DynamoDBv2Action,
+  "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)" : ElasticsearchAction,
+  "[Firehose](#cfn-iot-topicrule-action-firehose)" : FirehoseAction,
+  "[Http](#cfn-iot-topicrule-action-http)" : HttpAction,
+  "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)" : IotAnalyticsAction,
+  "[IotEvents](#cfn-iot-topicrule-action-iotevents)" : IotEventsAction,
+  "[IotSiteWise](#cfn-iot-topicrule-action-iotsitewise)" : IotSiteWiseAction,
+  "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : KinesisAction,
+  "[Lambda](#cfn-iot-topicrule-action-lambda)" : LambdaAction,
+  "[Republish](#cfn-iot-topicrule-action-republish)" : RepublishAction,
+  "[S3](#cfn-iot-topicrule-action-s3)" : S3Action,
+  "[Sns](#cfn-iot-topicrule-action-sns)" : SnsAction,
+  "[Sqs](#cfn-iot-topicrule-action-sqs)" : SqsAction,
+  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)" : StepFunctionsAction
 }
 ```
 
@@ -34,39 +34,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm): 
-    [CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md)
+    CloudwatchAlarmAction
   [CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric): 
-    [CloudwatchMetricAction](aws-properties-iot-topicrule-cloudwatchmetricaction.md)
+    CloudwatchMetricAction
   [DynamoDB](#cfn-iot-topicrule-action-dynamodb): 
-    [DynamoDBAction](aws-properties-iot-topicrule-dynamodbaction.md)
+    DynamoDBAction
   [DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2): 
-    [DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md)
+    DynamoDBv2Action
   [Elasticsearch](#cfn-iot-topicrule-action-elasticsearch): 
-    [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md)
+    ElasticsearchAction
   [Firehose](#cfn-iot-topicrule-action-firehose): 
-    [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)
+    FirehoseAction
   [Http](#cfn-iot-topicrule-action-http): 
-    [HttpAction](aws-properties-iot-topicrule-httpaction.md)
+    HttpAction
   [IotAnalytics](#cfn-iot-topicrule-action-iotanalytics): 
-    [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md)
+    IotAnalyticsAction
   [IotEvents](#cfn-iot-topicrule-action-iotevents): 
-    [IotEventsAction](aws-properties-iot-topicrule-ioteventsaction.md)
+    IotEventsAction
   [IotSiteWise](#cfn-iot-topicrule-action-iotsitewise): 
-    [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md)
+    IotSiteWiseAction
   [Kinesis](#cfn-iot-topicrule-action-kinesis): 
-    [KinesisAction](aws-properties-iot-topicrule-kinesisaction.md)
+    KinesisAction
   [Lambda](#cfn-iot-topicrule-action-lambda): 
-    [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md)
+    LambdaAction
   [Republish](#cfn-iot-topicrule-action-republish): 
-    [RepublishAction](aws-properties-iot-topicrule-republishaction.md)
+    RepublishAction
   [S3](#cfn-iot-topicrule-action-s3): 
-    [S3Action](aws-properties-iot-topicrule-s3action.md)
+    S3Action
   [Sns](#cfn-iot-topicrule-action-sns): 
-    [SnsAction](aws-properties-iot-topicrule-snsaction.md)
+    SnsAction
   [Sqs](#cfn-iot-topicrule-action-sqs): 
-    [SqsAction](aws-properties-iot-topicrule-sqsaction.md)
+    SqsAction
   [StepFunctions](#cfn-iot-topicrule-action-stepfunctions): 
-    [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)
+    StepFunctionsAction
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-action-properties"></a>

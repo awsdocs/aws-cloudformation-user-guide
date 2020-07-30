@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::FunctionDefinitionVersion",
   "Properties" : {
-      "[DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig)" : [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md),
+      "[DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig)" : DefaultConfig,
       "[FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid)" : String,
-      "[Functions](#cfn-greengrass-functiondefinitionversion-functions)" : [ [Function](aws-properties-greengrass-functiondefinitionversion-function.md), ... ]
+      "[Functions](#cfn-greengrass-functiondefinitionversion-functions)" : [ Function, ... ]
     }
 }
 ```
@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::FunctionDefinitionVersion
 Properties: 
   [DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig): 
-    [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md)
+    DefaultConfig
   [FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid): String
   [Functions](#cfn-greengrass-functiondefinitionversion-functions): 
-    - [Function](aws-properties-greengrass-functiondefinitionversion-function.md)
+    - Function
 ```
 
 ## Properties<a name="aws-resource-greengrass-functiondefinitionversion-properties"></a>

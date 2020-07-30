@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BatchSize](#cfn-lambda-eventsourcemapping-batchsize)" : Integer,
       "[BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)" : Boolean,
-      "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md),
+      "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : DestinationConfig,
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
@@ -40,7 +40,7 @@ Properties:
   [BatchSize](#cfn-lambda-eventsourcemapping-batchsize): Integer
   [BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror): Boolean
   [DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig): 
-    [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)
+    DestinationConfig
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String

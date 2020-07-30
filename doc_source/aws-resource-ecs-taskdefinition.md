@@ -12,21 +12,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::TaskDefinition",
   "Properties" : {
-      "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md), ... ],
+      "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ ContainerDefinition, ... ],
       "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
       "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
       "[Family](#cfn-ecs-taskdefinition-family)" : String,
-      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md), ... ],
+      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ InferenceAccelerator, ... ],
       "[IpcMode](#cfn-ecs-taskdefinition-ipcmode)" : String,
       "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
       "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
       "[PidMode](#cfn-ecs-taskdefinition-pidmode)" : String,
-      "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md), ... ],
-      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md),
+      "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ TaskDefinitionPlacementConstraint, ... ],
+      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration,
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
       "[Tags](#cfn-ecs-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
-      "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ [Volume](aws-properties-ecs-taskdefinition-volumes.md), ... ]
+      "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume, ... ]
     }
 }
 ```
@@ -37,27 +37,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ECS::TaskDefinition
 Properties: 
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions): 
-    - [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)
+    - ContainerDefinition
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
   [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
   [InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators): 
-    - [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md)
+    - InferenceAccelerator
   [IpcMode](#cfn-ecs-taskdefinition-ipcmode): String
   [Memory](#cfn-ecs-taskdefinition-memory): String
   [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
   [PidMode](#cfn-ecs-taskdefinition-pidmode): String
   [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints): 
-    - [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)
+    - TaskDefinitionPlacementConstraint
   [ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration): 
-    [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)
+    ProxyConfiguration
   [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities): 
     - String
   [Tags](#cfn-ecs-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
   [Volumes](#cfn-ecs-taskdefinition-volumes): 
-    - [Volume](aws-properties-ecs-taskdefinition-volumes.md)
+    - Volume
 ```
 
 ## Properties<a name="aws-resource-ecs-taskdefinition-properties"></a>

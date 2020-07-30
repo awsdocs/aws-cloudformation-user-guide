@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BrokerLogs](#cfn-msk-cluster-logginginfo-brokerlogs)" : [BrokerLogs](aws-properties-msk-cluster-brokerlogs.md)
+  "[BrokerLogs](#cfn-msk-cluster-logginginfo-brokerlogs)" : BrokerLogs
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BrokerLogs](#cfn-msk-cluster-logginginfo-brokerlogs): 
-    [BrokerLogs](aws-properties-msk-cluster-brokerlogs.md)
+    BrokerLogs
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-logginginfo-properties"></a>

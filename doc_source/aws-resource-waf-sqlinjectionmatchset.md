@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAF::SqlInjectionMatchSet",
   "Properties" : {
       "[Name](#cfn-waf-sqlinjectionmatchset-name)" : String,
-      "[SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md), ... ]
+      "[SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ SqlInjectionMatchTuple, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::WAF::SqlInjectionMatchSet
 Properties: 
   [Name](#cfn-waf-sqlinjectionmatchset-name): String
   [SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples): 
-    - [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)
+    - SqlInjectionMatchTuple
 ```
 
 ## Properties<a name="aws-resource-waf-sqlinjectionmatchset-properties"></a>

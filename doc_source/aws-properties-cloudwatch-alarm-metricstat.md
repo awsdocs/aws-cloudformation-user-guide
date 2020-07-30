@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Metric](#cfn-cloudwatch-alarm-metricstat-metric)" : [Metric](aws-properties-cloudwatch-alarm-metric.md),
+  "[Metric](#cfn-cloudwatch-alarm-metricstat-metric)" : Metric,
   "[Period](#cfn-cloudwatch-alarm-metricstat-period)" : Integer,
   "[Stat](#cfn-cloudwatch-alarm-metricstat-stat)" : String,
   "[Unit](#cfn-cloudwatch-alarm-metricstat-unit)" : String
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Metric](#cfn-cloudwatch-alarm-metricstat-metric): 
-    [Metric](aws-properties-cloudwatch-alarm-metric.md)
+    Metric
   [Period](#cfn-cloudwatch-alarm-metricstat-period): Integer
   [Stat](#cfn-cloudwatch-alarm-metricstat-stat): String
   [Unit](#cfn-cloudwatch-alarm-metricstat-unit): String

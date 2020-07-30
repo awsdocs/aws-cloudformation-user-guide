@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)" : [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md),
+  "[FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)" : FieldToMatch,
   "[TextTransformation](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch): 
-    [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md)
+    FieldToMatch
   [TextTransformation](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation): String
 ```
 

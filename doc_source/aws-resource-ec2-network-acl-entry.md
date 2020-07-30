@@ -16,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CidrBlock](#cfn-ec2-networkaclentry-cidrblock)" : String,
       "[Egress](#cfn-ec2-networkaclentry-egress)" : Boolean,
-      "[Icmp](#cfn-ec2-networkaclentry-icmp)" : [Icmp](aws-properties-ec2-networkaclentry-icmp.md),
+      "[Icmp](#cfn-ec2-networkaclentry-icmp)" : Icmp,
       "[Ipv6CidrBlock](#cfn-ec2-networkaclentry-ipv6cidrblock)" : String,
       "[NetworkAclId](#cfn-ec2-networkaclentry-networkaclid)" : String,
-      "[PortRange](#cfn-ec2-networkaclentry-portrange)" : [PortRange](aws-properties-ec2-networkaclentry-portrange.md),
+      "[PortRange](#cfn-ec2-networkaclentry-portrange)" : PortRange,
       "[Protocol](#cfn-ec2-networkaclentry-protocol)" : Integer,
       "[RuleAction](#cfn-ec2-networkaclentry-ruleaction)" : String,
       "[RuleNumber](#cfn-ec2-networkaclentry-rulenumber)" : Integer
@@ -35,11 +35,11 @@ Properties:
   [CidrBlock](#cfn-ec2-networkaclentry-cidrblock): String
   [Egress](#cfn-ec2-networkaclentry-egress): Boolean
   [Icmp](#cfn-ec2-networkaclentry-icmp): 
-    [Icmp](aws-properties-ec2-networkaclentry-icmp.md)
+    Icmp
   [Ipv6CidrBlock](#cfn-ec2-networkaclentry-ipv6cidrblock): String
   [NetworkAclId](#cfn-ec2-networkaclentry-networkaclid): String
   [PortRange](#cfn-ec2-networkaclentry-portrange): 
-    [PortRange](aws-properties-ec2-networkaclentry-portrange.md)
+    PortRange
   [Protocol](#cfn-ec2-networkaclentry-protocol): Integer
   [RuleAction](#cfn-ec2-networkaclentry-ruleaction): String
   [RuleNumber](#cfn-ec2-networkaclentry-rulenumber): Integer

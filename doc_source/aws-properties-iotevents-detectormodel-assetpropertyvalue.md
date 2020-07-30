@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Quality](#cfn-iotevents-detectormodel-assetpropertyvalue-quality)" : String,
-  "[Timestamp](#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp)" : [AssetPropertyTimestamp](aws-properties-iotevents-detectormodel-assetpropertytimestamp.md),
-  "[Value](#cfn-iotevents-detectormodel-assetpropertyvalue-value)" : [AssetPropertyVariant](aws-properties-iotevents-detectormodel-assetpropertyvariant.md)
+  "[Timestamp](#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp)" : AssetPropertyTimestamp,
+  "[Value](#cfn-iotevents-detectormodel-assetpropertyvalue-value)" : AssetPropertyVariant
 }
 ```
 
@@ -29,9 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Quality](#cfn-iotevents-detectormodel-assetpropertyvalue-quality): String
   [Timestamp](#cfn-iotevents-detectormodel-assetpropertyvalue-timestamp): 
-    [AssetPropertyTimestamp](aws-properties-iotevents-detectormodel-assetpropertytimestamp.md)
+    AssetPropertyTimestamp
   [Value](#cfn-iotevents-detectormodel-assetpropertyvalue-value): 
-    [AssetPropertyVariant](aws-properties-iotevents-detectormodel-assetpropertyvariant.md)
+    AssetPropertyVariant
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-assetpropertyvalue-properties"></a>

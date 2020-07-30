@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CreationInfo](#cfn-efs-accesspoint-rootdirectory-creationinfo)" : [CreationInfo](aws-properties-efs-accesspoint-creationinfo.md),
+  "[CreationInfo](#cfn-efs-accesspoint-rootdirectory-creationinfo)" : CreationInfo,
   "[Path](#cfn-efs-accesspoint-rootdirectory-path)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CreationInfo](#cfn-efs-accesspoint-rootdirectory-creationinfo): 
-    [CreationInfo](aws-properties-efs-accesspoint-creationinfo.md)
+    CreationInfo
   [Path](#cfn-efs-accesspoint-rootdirectory-path): String
 ```
 

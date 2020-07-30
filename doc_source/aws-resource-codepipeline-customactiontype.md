@@ -13,11 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodePipeline::CustomActionType",
   "Properties" : {
       "[Category](#cfn-codepipeline-customactiontype-category)" : String,
-      "[ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties)" : [ [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md), ... ],
-      "[InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails)" : [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md),
-      "[OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails)" : [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md),
+      "[ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties)" : [ ConfigurationProperties, ... ],
+      "[InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails)" : ArtifactDetails,
+      "[OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails)" : ArtifactDetails,
       "[Provider](#cfn-codepipeline-customactiontype-provider)" : String,
-      "[Settings](#cfn-codepipeline-customactiontype-settings)" : [Settings](aws-properties-codepipeline-customactiontype-settings.md),
+      "[Settings](#cfn-codepipeline-customactiontype-settings)" : Settings,
       "[Tags](#cfn-codepipeline-customactiontype-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Version](#cfn-codepipeline-customactiontype-version)" : String
     }
@@ -31,14 +31,14 @@ Type: AWS::CodePipeline::CustomActionType
 Properties: 
   [Category](#cfn-codepipeline-customactiontype-category): String
   [ConfigurationProperties](#cfn-codepipeline-customactiontype-configurationproperties): 
-    - [ConfigurationProperties](aws-properties-codepipeline-customactiontype-configurationproperties.md)
+    - ConfigurationProperties
   [InputArtifactDetails](#cfn-codepipeline-customactiontype-inputartifactdetails): 
-    [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
+    ArtifactDetails
   [OutputArtifactDetails](#cfn-codepipeline-customactiontype-outputartifactdetails): 
-    [ArtifactDetails](aws-properties-codepipeline-customactiontype-artifactdetails.md)
+    ArtifactDetails
   [Provider](#cfn-codepipeline-customactiontype-provider): String
   [Settings](#cfn-codepipeline-customactiontype-settings): 
-    [Settings](aws-properties-codepipeline-customactiontype-settings.md)
+    Settings
   [Tags](#cfn-codepipeline-customactiontype-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Version](#cfn-codepipeline-customactiontype-version): String

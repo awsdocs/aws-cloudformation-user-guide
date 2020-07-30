@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeBuild::ReportGroup",
   "Properties" : {
-      "[ExportConfig](#cfn-codebuild-reportgroup-exportconfig)" : [ReportExportConfig](aws-properties-codebuild-reportgroup-reportexportconfig.md),
+      "[ExportConfig](#cfn-codebuild-reportgroup-exportconfig)" : ReportExportConfig,
       "[Name](#cfn-codebuild-reportgroup-name)" : String,
       "[Tags](#cfn-codebuild-reportgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-codebuild-reportgroup-type)" : String
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeBuild::ReportGroup
 Properties: 
   [ExportConfig](#cfn-codebuild-reportgroup-exportconfig): 
-    [ReportExportConfig](aws-properties-codebuild-reportgroup-reportexportconfig.md)
+    ReportExportConfig
   [Name](#cfn-codebuild-reportgroup-name): String
   [Tags](#cfn-codebuild-reportgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

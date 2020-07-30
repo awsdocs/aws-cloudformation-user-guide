@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[EngineName](#cfn-rds-optiongroup-enginename)" : String,
       "[MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion)" : String,
-      "[OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations)" : [ [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md), ... ],
+      "[OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations)" : [ OptionConfiguration, ... ],
       "[OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription)" : String,
       "[Tags](#cfn-rds-optiongroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -29,7 +29,7 @@ Properties:
   [EngineName](#cfn-rds-optiongroup-enginename): String
   [MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion): String
   [OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations): 
-    - [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)
+    - OptionConfiguration
   [OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription): String
   [Tags](#cfn-rds-optiongroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

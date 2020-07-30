@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-appmesh-route-grpcroute-action)" : [GrpcRouteAction](aws-properties-appmesh-route-grpcrouteaction.md),
-  "[Match](#cfn-appmesh-route-grpcroute-match)" : [GrpcRouteMatch](aws-properties-appmesh-route-grpcroutematch.md),
-  "[RetryPolicy](#cfn-appmesh-route-grpcroute-retrypolicy)" : [GrpcRetryPolicy](aws-properties-appmesh-route-grpcretrypolicy.md),
-  "[Timeout](#cfn-appmesh-route-grpcroute-timeout)" : [GrpcTimeout](aws-properties-appmesh-route-grpctimeout.md)
+  "[Action](#cfn-appmesh-route-grpcroute-action)" : GrpcRouteAction,
+  "[Match](#cfn-appmesh-route-grpcroute-match)" : GrpcRouteMatch,
+  "[RetryPolicy](#cfn-appmesh-route-grpcroute-retrypolicy)" : GrpcRetryPolicy,
+  "[Timeout](#cfn-appmesh-route-grpcroute-timeout)" : GrpcTimeout
 }
 ```
 
@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-appmesh-route-grpcroute-action): 
-    [GrpcRouteAction](aws-properties-appmesh-route-grpcrouteaction.md)
+    GrpcRouteAction
   [Match](#cfn-appmesh-route-grpcroute-match): 
-    [GrpcRouteMatch](aws-properties-appmesh-route-grpcroutematch.md)
+    GrpcRouteMatch
   [RetryPolicy](#cfn-appmesh-route-grpcroute-retrypolicy): 
-    [GrpcRetryPolicy](aws-properties-appmesh-route-grpcretrypolicy.md)
+    GrpcRetryPolicy
   [Timeout](#cfn-appmesh-route-grpcroute-timeout): 
-    [GrpcTimeout](aws-properties-appmesh-route-grpctimeout.md)
+    GrpcTimeout
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-grpcroute-properties"></a>

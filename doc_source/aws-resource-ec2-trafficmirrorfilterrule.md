@@ -18,12 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-ec2-trafficmirrorfilterrule-description)" : String,
       "[DestinationCidrBlock](#cfn-ec2-trafficmirrorfilterrule-destinationcidrblock)" : String,
-      "[DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange)" : [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md),
+      "[DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange)" : TrafficMirrorPortRange,
       "[Protocol](#cfn-ec2-trafficmirrorfilterrule-protocol)" : Integer,
       "[RuleAction](#cfn-ec2-trafficmirrorfilterrule-ruleaction)" : String,
       "[RuleNumber](#cfn-ec2-trafficmirrorfilterrule-rulenumber)" : Integer,
       "[SourceCidrBlock](#cfn-ec2-trafficmirrorfilterrule-sourcecidrblock)" : String,
-      "[SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange)" : [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md),
+      "[SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange)" : TrafficMirrorPortRange,
       "[TrafficDirection](#cfn-ec2-trafficmirrorfilterrule-trafficdirection)" : String,
       "[TrafficMirrorFilterId](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid)" : String
     }
@@ -38,13 +38,13 @@ Properties:
   [Description](#cfn-ec2-trafficmirrorfilterrule-description): String
   [DestinationCidrBlock](#cfn-ec2-trafficmirrorfilterrule-destinationcidrblock): String
   [DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange): 
-    [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)
+    TrafficMirrorPortRange
   [Protocol](#cfn-ec2-trafficmirrorfilterrule-protocol): Integer
   [RuleAction](#cfn-ec2-trafficmirrorfilterrule-ruleaction): String
   [RuleNumber](#cfn-ec2-trafficmirrorfilterrule-rulenumber): Integer
   [SourceCidrBlock](#cfn-ec2-trafficmirrorfilterrule-sourcecidrblock): String
   [SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange): 
-    [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)
+    TrafficMirrorPortRange
   [TrafficDirection](#cfn-ec2-trafficmirrorfilterrule-trafficdirection): String
   [TrafficMirrorFilterId](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid): String
 ```

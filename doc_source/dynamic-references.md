@@ -198,7 +198,7 @@ You should take the following important security considerations into account whe
   To manage updating the secret in your template, consider using `version-id` to specify the version of your secret\. Then, when you update to the next version, update the `version-id` in your template and perform a stack update\. For example, specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version ID of `EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE`:
 
   ```
-    '{{resolve:secretsmanager:MySecret:SecretString:password:SecretString:EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE}}'
+    '{{resolve:secretsmanager:MySecret:SecretString:password:EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE}}'
   ```
 
   Then, when you update the `password` value, you would need to update this segment with the new `version-id` and perform a stack update\. For more examples of using version\-id, see [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager-example)\.

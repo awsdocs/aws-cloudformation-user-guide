@@ -13,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::GameLift::Fleet",
   "Properties" : {
       "[BuildId](#cfn-gamelift-fleet-buildid)" : String,
-      "[CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration)" : [CertificateConfiguration](aws-properties-gamelift-fleet-certificateconfiguration.md),
+      "[CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration)" : CertificateConfiguration,
       "[Description](#cfn-gamelift-fleet-description)" : String,
       "[DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances)" : Integer,
-      "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md), ... ],
+      "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ IpPermission, ... ],
       "[EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype)" : String,
       "[FleetType](#cfn-gamelift-fleet-fleettype)" : String,
       "[InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn)" : String,
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NewGameSessionProtectionPolicy](#cfn-gamelift-fleet-newgamesessionprotectionpolicy)" : String,
       "[PeerVpcAwsAccountId](#cfn-gamelift-fleet-peervpcawsaccountid)" : String,
       "[PeerVpcId](#cfn-gamelift-fleet-peervpcid)" : String,
-      "[ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy)" : [ResourceCreationLimitPolicy](aws-properties-gamelift-fleet-resourcecreationlimitpolicy.md),
-      "[RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration)" : [RuntimeConfiguration](aws-properties-gamelift-fleet-runtimeconfiguration.md),
+      "[ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy)" : ResourceCreationLimitPolicy,
+      "[RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration)" : RuntimeConfiguration,
       "[ScriptId](#cfn-gamelift-fleet-scriptid)" : String,
       "[ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters)" : String,
       "[ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath)" : String
@@ -44,11 +44,11 @@ Type: AWS::GameLift::Fleet
 Properties: 
   [BuildId](#cfn-gamelift-fleet-buildid): String
   [CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration): 
-    [CertificateConfiguration](aws-properties-gamelift-fleet-certificateconfiguration.md)
+    CertificateConfiguration
   [Description](#cfn-gamelift-fleet-description): String
   [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances): Integer
   [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions): 
-    - [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)
+    - IpPermission
   [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype): String
   [FleetType](#cfn-gamelift-fleet-fleettype): String
   [InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn): String
@@ -63,9 +63,9 @@ Properties:
   [PeerVpcAwsAccountId](#cfn-gamelift-fleet-peervpcawsaccountid): String
   [PeerVpcId](#cfn-gamelift-fleet-peervpcid): String
   [ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy): 
-    [ResourceCreationLimitPolicy](aws-properties-gamelift-fleet-resourcecreationlimitpolicy.md)
+    ResourceCreationLimitPolicy
   [RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration): 
-    [RuntimeConfiguration](aws-properties-gamelift-fleet-runtimeconfiguration.md)
+    RuntimeConfiguration
   [ScriptId](#cfn-gamelift-fleet-scriptid): String
   [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters): String
   [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String

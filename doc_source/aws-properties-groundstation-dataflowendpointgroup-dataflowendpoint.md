@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Address](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)" : [SocketAddress](aws-properties-groundstation-dataflowendpointgroup-socketaddress.md),
+  "[Address](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)" : SocketAddress,
   "[Name](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Address](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address): 
-    [SocketAddress](aws-properties-groundstation-dataflowendpointgroup-socketaddress.md)
+    SocketAddress
   [Name](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name): String
 ```
 

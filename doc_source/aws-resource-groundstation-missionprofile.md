@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ContactPostPassDurationSeconds](#cfn-groundstation-missionprofile-contactpostpassdurationseconds)" : Integer,
       "[ContactPrePassDurationSeconds](#cfn-groundstation-missionprofile-contactprepassdurationseconds)" : Integer,
-      "[DataflowEdges](#cfn-groundstation-missionprofile-dataflowedges)" : [ [DataflowEdge](aws-properties-groundstation-missionprofile-dataflowedge.md), ... ],
+      "[DataflowEdges](#cfn-groundstation-missionprofile-dataflowedges)" : [ DataflowEdge, ... ],
       "[MinimumViableContactDurationSeconds](#cfn-groundstation-missionprofile-minimumviablecontactdurationseconds)" : Integer,
       "[Name](#cfn-groundstation-missionprofile-name)" : String,
       "[Tags](#cfn-groundstation-missionprofile-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -31,7 +31,7 @@ Properties:
   [ContactPostPassDurationSeconds](#cfn-groundstation-missionprofile-contactpostpassdurationseconds): Integer
   [ContactPrePassDurationSeconds](#cfn-groundstation-missionprofile-contactprepassdurationseconds): Integer
   [DataflowEdges](#cfn-groundstation-missionprofile-dataflowedges): 
-    - [DataflowEdge](aws-properties-groundstation-missionprofile-dataflowedge.md)
+    - DataflowEdge
   [MinimumViableContactDurationSeconds](#cfn-groundstation-missionprofile-minimumviablecontactdurationseconds): Integer
   [Name](#cfn-groundstation-missionprofile-name): String
   [Tags](#cfn-groundstation-missionprofile-tags): 

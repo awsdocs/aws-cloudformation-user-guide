@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentStrategyId](#cfn-appconfig-deployment-deploymentstrategyid)" : String,
       "[Description](#cfn-appconfig-deployment-description)" : String,
       "[EnvironmentId](#cfn-appconfig-deployment-environmentid)" : String,
-      "[Tags](#cfn-appconfig-deployment-tags)" : [ [Tags](aws-properties-appconfig-deployment-tags.md), ... ]
+      "[Tags](#cfn-appconfig-deployment-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -51,7 +51,7 @@ Properties:
   [Description](#cfn-appconfig-deployment-description): String
   [EnvironmentId](#cfn-appconfig-deployment-environmentid): String
   [Tags](#cfn-appconfig-deployment-tags): 
-    - [Tags](aws-properties-appconfig-deployment-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-deployment-properties"></a>

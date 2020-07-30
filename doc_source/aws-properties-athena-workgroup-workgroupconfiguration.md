@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)" : Boolean,
   "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)" : Boolean,
   "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)" : Boolean,
-  "[ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)" : [ResultConfiguration](aws-properties-athena-workgroup-resultconfiguration.md)
+  "[ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)" : ResultConfiguration
 }
 ```
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled): Boolean
   [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled): Boolean
   [ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration): 
-    [ResultConfiguration](aws-properties-athena-workgroup-resultconfiguration.md)
+    ResultConfiguration
 ```
 
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfiguration-properties"></a>

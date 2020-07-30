@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::SubscriptionDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion)" : [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion)" : SubscriptionDefinitionVersion,
       "[Name](#cfn-greengrass-subscriptiondefinition-name)" : String,
       "[Tags](#cfn-greengrass-subscriptiondefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::SubscriptionDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion): 
-    [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md)
+    SubscriptionDefinitionVersion
   [Name](#cfn-greengrass-subscriptiondefinition-name): String
   [Tags](#cfn-greengrass-subscriptiondefinition-tags): Json
 ```

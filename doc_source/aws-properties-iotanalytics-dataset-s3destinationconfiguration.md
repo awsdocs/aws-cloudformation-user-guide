@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Bucket](#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket)" : String,
-  "[GlueConfiguration](#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration)" : [GlueConfiguration](aws-properties-iotanalytics-dataset-glueconfiguration.md),
+  "[GlueConfiguration](#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration)" : GlueConfiguration,
   "[Key](#cfn-iotanalytics-dataset-s3destinationconfiguration-key)" : String,
   "[RoleArn](#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Bucket](#cfn-iotanalytics-dataset-s3destinationconfiguration-bucket): String
   [GlueConfiguration](#cfn-iotanalytics-dataset-s3destinationconfiguration-glueconfiguration): 
-    [GlueConfiguration](aws-properties-iotanalytics-dataset-glueconfiguration.md)
+    GlueConfiguration
   [Key](#cfn-iotanalytics-dataset-s3destinationconfiguration-key): String
   [RoleArn](#cfn-iotanalytics-dataset-s3destinationconfiguration-rolearn): String
 ```

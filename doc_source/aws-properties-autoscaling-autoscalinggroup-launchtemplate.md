@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LaunchTemplateSpecification](#cfn-as-group-launchtemplate-launchtemplatespecification)" : [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md),
-  "[Overrides](#cfn-as-group-launchtemplate-overrides)" : [ [LaunchTemplateOverrides](aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.md), ... ]
+  "[LaunchTemplateSpecification](#cfn-as-group-launchtemplate-launchtemplatespecification)" : LaunchTemplateSpecification,
+  "[Overrides](#cfn-as-group-launchtemplate-overrides)" : [ LaunchTemplateOverrides, ... ]
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LaunchTemplateSpecification](#cfn-as-group-launchtemplate-launchtemplatespecification): 
-    [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)
+    LaunchTemplateSpecification
   [Overrides](#cfn-as-group-launchtemplate-overrides): 
-    - [LaunchTemplateOverrides](aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.md)
+    - LaunchTemplateOverrides
 ```
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-launchtemplate-properties"></a>

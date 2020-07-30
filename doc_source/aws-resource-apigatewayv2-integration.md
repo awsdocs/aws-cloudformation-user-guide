@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequestTemplates](#cfn-apigatewayv2-integration-requesttemplates)" : Json,
       "[TemplateSelectionExpression](#cfn-apigatewayv2-integration-templateselectionexpression)" : String,
       "[TimeoutInMillis](#cfn-apigatewayv2-integration-timeoutinmillis)" : Integer,
-      "[TlsConfig](#cfn-apigatewayv2-integration-tlsconfig)" : [TlsConfig](aws-properties-apigatewayv2-integration-tlsconfig.md)
+      "[TlsConfig](#cfn-apigatewayv2-integration-tlsconfig)" : TlsConfig
     }
 }
 ```
@@ -53,7 +53,7 @@ Properties:
   [TemplateSelectionExpression](#cfn-apigatewayv2-integration-templateselectionexpression): String
   [TimeoutInMillis](#cfn-apigatewayv2-integration-timeoutinmillis): Integer
   [TlsConfig](#cfn-apigatewayv2-integration-tlsconfig): 
-    [TlsConfig](aws-properties-apigatewayv2-integration-tlsconfig.md)
+    TlsConfig
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-integration-properties"></a>

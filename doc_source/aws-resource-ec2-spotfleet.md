@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::SpotFleet",
   "Properties" : {
-      "[SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata)" : [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)
+      "[SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata)" : SpotFleetRequestConfigData
     }
 }
 ```
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::SpotFleet
 Properties: 
   [SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata): 
-    [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)
+    SpotFleetRequestConfigData
 ```
 
 ## Properties<a name="aws-resource-ec2-spotfleet-properties"></a>

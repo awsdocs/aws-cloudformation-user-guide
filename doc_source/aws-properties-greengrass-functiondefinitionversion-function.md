@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[FunctionArn](#cfn-greengrass-functiondefinitionversion-function-functionarn)" : String,
-  "[FunctionConfiguration](#cfn-greengrass-functiondefinitionversion-function-functionconfiguration)" : [FunctionConfiguration](aws-properties-greengrass-functiondefinitionversion-functionconfiguration.md),
+  "[FunctionConfiguration](#cfn-greengrass-functiondefinitionversion-function-functionconfiguration)" : FunctionConfiguration,
   "[Id](#cfn-greengrass-functiondefinitionversion-function-id)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [FunctionArn](#cfn-greengrass-functiondefinitionversion-function-functionarn): String
   [FunctionConfiguration](#cfn-greengrass-functiondefinitionversion-function-functionconfiguration): 
-    [FunctionConfiguration](aws-properties-greengrass-functiondefinitionversion-functionconfiguration.md)
+    FunctionConfiguration
   [Id](#cfn-greengrass-functiondefinitionversion-function-id): String
 ```
 

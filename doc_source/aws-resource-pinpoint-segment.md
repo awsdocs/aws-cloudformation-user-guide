@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Pinpoint::Segment",
   "Properties" : {
       "[ApplicationId](#cfn-pinpoint-segment-applicationid)" : String,
-      "[Dimensions](#cfn-pinpoint-segment-dimensions)" : [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md),
+      "[Dimensions](#cfn-pinpoint-segment-dimensions)" : SegmentDimensions,
       "[Name](#cfn-pinpoint-segment-name)" : String,
-      "[SegmentGroups](#cfn-pinpoint-segment-segmentgroups)" : [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md),
+      "[SegmentGroups](#cfn-pinpoint-segment-segmentgroups)" : SegmentGroups,
       "[Tags](#cfn-pinpoint-segment-tags)" : Json
     }
 }
@@ -28,10 +28,10 @@ Type: AWS::Pinpoint::Segment
 Properties: 
   [ApplicationId](#cfn-pinpoint-segment-applicationid): String
   [Dimensions](#cfn-pinpoint-segment-dimensions): 
-    [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md)
+    SegmentDimensions
   [Name](#cfn-pinpoint-segment-name): String
   [SegmentGroups](#cfn-pinpoint-segment-segmentgroups): 
-    [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)
+    SegmentGroups
   [Tags](#cfn-pinpoint-segment-tags): Json
 ```
 

@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::PinpointEmail::ConfigurationSet",
   "Properties" : {
-      "[DeliveryOptions](#cfn-pinpointemail-configurationset-deliveryoptions)" : [DeliveryOptions](aws-properties-pinpointemail-configurationset-deliveryoptions.md),
+      "[DeliveryOptions](#cfn-pinpointemail-configurationset-deliveryoptions)" : DeliveryOptions,
       "[Name](#cfn-pinpointemail-configurationset-name)" : String,
-      "[ReputationOptions](#cfn-pinpointemail-configurationset-reputationoptions)" : [ReputationOptions](aws-properties-pinpointemail-configurationset-reputationoptions.md),
-      "[SendingOptions](#cfn-pinpointemail-configurationset-sendingoptions)" : [SendingOptions](aws-properties-pinpointemail-configurationset-sendingoptions.md),
-      "[Tags](#cfn-pinpointemail-configurationset-tags)" : [ [Tags](aws-properties-pinpointemail-configurationset-tags.md), ... ],
-      "[TrackingOptions](#cfn-pinpointemail-configurationset-trackingoptions)" : [TrackingOptions](aws-properties-pinpointemail-configurationset-trackingoptions.md)
+      "[ReputationOptions](#cfn-pinpointemail-configurationset-reputationoptions)" : ReputationOptions,
+      "[SendingOptions](#cfn-pinpointemail-configurationset-sendingoptions)" : SendingOptions,
+      "[Tags](#cfn-pinpointemail-configurationset-tags)" : [ Tags, ... ],
+      "[TrackingOptions](#cfn-pinpointemail-configurationset-trackingoptions)" : TrackingOptions
     }
 }
 ```
@@ -28,16 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::PinpointEmail::ConfigurationSet
 Properties: 
   [DeliveryOptions](#cfn-pinpointemail-configurationset-deliveryoptions): 
-    [DeliveryOptions](aws-properties-pinpointemail-configurationset-deliveryoptions.md)
+    DeliveryOptions
   [Name](#cfn-pinpointemail-configurationset-name): String
   [ReputationOptions](#cfn-pinpointemail-configurationset-reputationoptions): 
-    [ReputationOptions](aws-properties-pinpointemail-configurationset-reputationoptions.md)
+    ReputationOptions
   [SendingOptions](#cfn-pinpointemail-configurationset-sendingoptions): 
-    [SendingOptions](aws-properties-pinpointemail-configurationset-sendingoptions.md)
+    SendingOptions
   [Tags](#cfn-pinpointemail-configurationset-tags): 
-    - [Tags](aws-properties-pinpointemail-configurationset-tags.md)
+    - Tags
   [TrackingOptions](#cfn-pinpointemail-configurationset-trackingoptions): 
-    [TrackingOptions](aws-properties-pinpointemail-configurationset-trackingoptions.md)
+    TrackingOptions
 ```
 
 ## Properties<a name="aws-resource-pinpointemail-configurationset-properties"></a>

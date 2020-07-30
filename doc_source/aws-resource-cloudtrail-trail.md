@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
       "[CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
-      "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ [EventSelector](aws-properties-cloudtrail-trail-eventselector.md), ... ],
+      "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ EventSelector, ... ],
       "[IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents)" : Boolean,
       "[IsLogging](#cfn-cloudtrail-trail-islogging)" : Boolean,
       "[IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail)" : Boolean,
@@ -38,7 +38,7 @@ Properties:
   [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
   [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
   [EventSelectors](#cfn-cloudtrail-trail-eventselectors): 
-    - [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)
+    - EventSelector
   [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents): Boolean
   [IsLogging](#cfn-cloudtrail-trail-islogging): Boolean
   [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail): Boolean

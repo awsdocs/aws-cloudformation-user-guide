@@ -14,17 +14,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessPolicies](#cfn-elasticsearch-domain-accesspolicies)" : Json,
       "[AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions)" : {Key : Value, ...},
-      "[CognitoOptions](#cfn-elasticsearch-domain-cognitooptions)" : [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md),
+      "[AdvancedSecurityOptions](#cfn-elasticsearch-domain-advancedsecurityoptions)" : AdvancedSecurityOptionsInput,
+      "[CognitoOptions](#cfn-elasticsearch-domain-cognitooptions)" : CognitoOptions,
+      "[DomainEndpointOptions](#cfn-elasticsearch-domain-domainendpointoptions)" : DomainEndpointOptions,
       "[DomainName](#cfn-elasticsearch-domain-domainname)" : String,
-      "[EBSOptions](#cfn-elasticsearch-domain-ebsoptions)" : [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md),
-      "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md),
+      "[EBSOptions](#cfn-elasticsearch-domain-ebsoptions)" : EBSOptions,
+      "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : ElasticsearchClusterConfig,
       "[ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion)" : String,
-      "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md),
+      "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : EncryptionAtRestOptions,
       "[LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions)" : {Key : Value, ...},
-      "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md),
-      "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md),
+      "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : NodeToNodeEncryptionOptions,
+      "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : SnapshotOptions,
       "[Tags](#cfn-elasticsearch-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VPCOptions](#cfn-elasticsearch-domain-vpcoptions)" : [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)
+      "[VPCOptions](#cfn-elasticsearch-domain-vpcoptions)" : VPCOptions
     }
 }
 ```
@@ -37,26 +39,30 @@ Properties:
   [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): Json
   [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions): 
     Key : Value
+  [AdvancedSecurityOptions](#cfn-elasticsearch-domain-advancedsecurityoptions): 
+    AdvancedSecurityOptionsInput
   [CognitoOptions](#cfn-elasticsearch-domain-cognitooptions): 
-    [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)
+    CognitoOptions
+  [DomainEndpointOptions](#cfn-elasticsearch-domain-domainendpointoptions): 
+    DomainEndpointOptions
   [DomainName](#cfn-elasticsearch-domain-domainname): String
   [EBSOptions](#cfn-elasticsearch-domain-ebsoptions): 
-    [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)
+    EBSOptions
   [ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig): 
-    [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md)
+    ElasticsearchClusterConfig
   [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion): String
   [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
-    [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)
+    EncryptionAtRestOptions
   [LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions): 
     Key : Value
   [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions): 
-    [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)
+    NodeToNodeEncryptionOptions
   [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions): 
-    [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md)
+    SnapshotOptions
   [Tags](#cfn-elasticsearch-domain-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VPCOptions](#cfn-elasticsearch-domain-vpcoptions): 
-    [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)
+    VPCOptions
 ```
 
 ## Properties<a name="aws-resource-elasticsearch-domain-properties"></a>
@@ -73,10 +79,22 @@ Additional options to specify for the Amazon ES domain\. For more information, s
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`AdvancedSecurityOptions`  <a name="cfn-elasticsearch-domain-advancedsecurityoptions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [AdvancedSecurityOptionsInput](aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `CognitoOptions`  <a name="cfn-elasticsearch-domain-cognitooptions"></a>
 Configures Amazon ES to use Amazon Cognito authentication for Kibana\.  
 *Required*: No  
 *Type*: [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DomainEndpointOptions`  <a name="cfn-elasticsearch-domain-domainendpointoptions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [DomainEndpointOptions](aws-properties-elasticsearch-domain-domainendpointoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-elasticsearch-domain-domainname"></a>

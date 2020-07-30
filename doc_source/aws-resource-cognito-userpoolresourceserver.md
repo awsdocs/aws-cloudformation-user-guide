@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Identifier](#cfn-cognito-userpoolresourceserver-identifier)" : String,
       "[Name](#cfn-cognito-userpoolresourceserver-name)" : String,
-      "[Scopes](#cfn-cognito-userpoolresourceserver-scopes)" : [ [ResourceServerScopeType](aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.md), ... ],
+      "[Scopes](#cfn-cognito-userpoolresourceserver-scopes)" : [ ResourceServerScopeType, ... ],
       "[UserPoolId](#cfn-cognito-userpoolresourceserver-userpoolid)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Identifier](#cfn-cognito-userpoolresourceserver-identifier): String
   [Name](#cfn-cognito-userpoolresourceserver-name): String
   [Scopes](#cfn-cognito-userpoolresourceserver-scopes): 
-    - [ResourceServerScopeType](aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.md)
+    - ResourceServerScopeType
   [UserPoolId](#cfn-cognito-userpoolresourceserver-userpoolid): String
 ```
 

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname)" : String,
       "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
-      "[ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties)" : [ [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md), ... ],
+      "[ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties)" : [ VariantProperty, ... ],
       "[RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties)" : Boolean,
       "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -29,7 +29,7 @@ Properties:
   [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname): String
   [EndpointName](#cfn-sagemaker-endpoint-endpointname): String
   [ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties): 
-    - [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md)
+    - VariantProperty
   [RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties): Boolean
   [Tags](#cfn-sagemaker-endpoint-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

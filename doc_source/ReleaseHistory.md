@@ -4,6 +4,42 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_WAFv2.md) | The following resources were updated: AWS::WAFv2::WebACL and AWS::WAFv2::RuleGroup 
+
+ [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
+Rule statements that use IP addresses now support using IP addresses that are forwarded in an HTTP header in the web request, instead of using the IP address that's reported by the web request origin\. This option is available for all rule statements that use an IP address: `GeoMatchStatement`, `RateBasedStatement`, and `IPSetReferenceStatement`\. The following new properties support this functionality: `IPSetForwardedIPConfiguration` and `ForwardedIPConfiguration`\. 
+
+ [AWS::WAFv2::RuleGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-rulegroup.html)   
+Rule statements that use IP addresses now support using IP addresses that are forwarded in an HTTP header in the web request, instead of using the IP address that's reported by the web request origin\. This option is available for all rule statements that use an IP address: `GeoMatchStatement`, `RateBasedStatement`, and `IPSetReferenceStatement`\. The following new properties support this functionality: `IPSetForwardedIPConfiguration` and `ForwardedIPConfiguration`\.  | July 23, 2020 | 
+| [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
+
+ [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
+In the [CacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html) and [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) property types:  
++ Use the `CachePolicyId` property to specify the ID of the cache policy for the cache behavior\.
++ Use the `OriginRequestPolicyId` property to specify the ID of the origin request policy for the cache behavior\.
+For more information, see [Working with policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/working-with-policies.html) in the *Amazon CloudFront Developer Guide*\.  | July 23, 2020 | 
+| [Updated resource](AWS_CodeStarConnections.md) | The following resource was updated: AWS::CodeStarConnections::Connection 
+
+ [AWS::CodeStarConnections::Connection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html)   
+Use the `HostArn` property to specify the host associated with connections you want to make to an installed provider\.  | July 23, 2020 | 
+| [Updated resource](AWS_EFS.md) | The following resource was updated: AWS::EFS::FileSystem 
+
+[AWS::EFS::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-backuppolicy.html)  
+Use the `BackupPolicy` property to turn automatic backups on or off for your Amazon EFS file system\.  | July 23, 2020 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicyType` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
+| [Updated resource](AWS_SageMaker.md) | The following resource was updated: EndpointConfig 
+
+ [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)   
+Use the `CaptureContentTypeHeader` property to specify content types \(JSON and/or CSV\) to capture\.  
+Use the `CaptureOption` property to specify whether to capture input data, output data, or both\.  
+Use the `DataCaptureConfig` resource/property to configure how the endpoint captures data\.  | July 23, 2020 | 
+| [New resource](AWS_SecretsManager.md) | The following resource was added: AWS::SecretsManager::RotationSchedule\.HostedRotationLambda\. 
+
+[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)  
+Use the `RESOURCE` AWS::SecretsManager::RotationSchedule\.HostedRotationLambda to create a rotation Lambda\.   | July 23, 2020 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
 
  [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
@@ -35,37 +71,6 @@ Use the `Outputs` property to view the output of the product you are provisionin
 
  [AWS::Synthetics::Canary](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)   
 The MemoryInMB parameter was added\. Also, the RunConfig parameter is no longer required, and DurationInSeconds is no longer required\.   | July 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Amplify::Domain 
-
- [AWS::Amplify::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html)   
-Use the `AutoSubDomainCreationPatterns` property to set branch patterns for automatic subdomain creation\.  
-Use the `AutoSubDomainIAMRole` property to specify the required AWS Identity and Access Management \(IAM\) service role for the Amazon Resource Name \(ARN\) for automatically creating subdomains\.  
-Use the `EnableAutoSubDomain` property to enable the automated creation of subdomains for branches\.  | July 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::FSx::FileSystem 
-
-[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
-The `StorageCapacity` property has changed so that an update requires no interruption\.  
-In the [WindowsConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html) property type, the `ThroughputCapacity` property has changed so that an update requires no interruption\.  
-In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type:  
-+ Use the `DailyAutomaticBackupStartTime` property to specify the time that the daily automatic backup window starts\.
-+ Use the `CopyTagsToBackups` boolean property to copy file system tags to its backups\.
-+ Use the `AutomaticBackupRetentionDays` property to set the number of days to retain file system backups\.  | July 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ServiceCatalog::CloudFormationProvisionedProduct\. 
-
- [AWS::ServiceCatalog::CloudFormationProvisionedProduct](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)   
-Use the `Outputs` property to view the output of the product you are provisioning\.   | July 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Amplify::App 
-
- [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
-Use the `EnableBranchAutoDeletion` property to automatically disconnect a branch in the Amplify Console when you delete a branch from your Git repository\.  | July 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Synthetics::Canary\. 
-
- [AWS::Synthetics::Canary](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)   
-The MemoryInMB parameter was added\. Also, the RunConfig parameter is no longer required, and DurationInSeconds is no longer required\.   | July 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ElasticLoadBalancingV2::Listener\. 
-
- [AWS::ElasticLoadBalancingV2::Listener](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aaws-resource-elasticloadbalancingv2-listener.html)   
-Use the `AlpnPolicy` property to specify the name of the Application\-Layer Protocol Negotiation \(ALPN\) policy for TLS listeners\.  | July 9, 2020 | 
 | [New resource](AWS_Athena.md) | The following resource was added: AWS::Athena::DataCatalog 
 
  [AWS::Athena::DataCatalog](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html)   
@@ -74,14 +79,10 @@ Use the `AWS::Athena::DataCatalog` resource to register external data sources wi
 
  [AWS::EC2::PrefixList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html)   
 Use the `PrefixList` resource to create a prefix list\.  | July 9, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::EC2::PrefixList\. 
+| [New resource](AWS_QLDB.md) | The following resource was added: AWS::QLDB::Stream 
 
- [AWS::EC2::PrefixList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html)   
-Use the `PrefixList` resource to create a prefix list\.  | July 9, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::Athena::DataCatalog 
-
- [AWS::Athena::DataCatalog](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html)   
-Use the `AWS::Athena::DataCatalog` resource to register external data sources with Athena\.  | July 9, 2020 | 
+ [AWS::QLDB::Stream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html)   
+Use the `AWS::QLDB::Stream` resource to specify a new journal stream for a given Amazon Quantum Ledger Database \(Amazon QLDB\) ledger\.  | July 9, 2020 | 
 | [New property](AWS_CodeBuild.md) | The following property was added to AWS::CodeBuild::Project Source: BuildStatusConfig 
 
  [AWS::CodeBuild::Project Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-buildstatusconfig)   
@@ -90,22 +91,6 @@ Use the `buildStatusConfig` property to specify build status information to the 
 
  [AWS::CodeGuruProfiler::ProfilingGroup\.ComputePlatform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)   
 Use `AWS::CodeGuruProfiler::ProfilingGroup.ComputePlatform` to specify the compute platform of the profiling group\.  | July 9, 2020 | 
-| [New property](#ReleaseHistory) | The following property was added to AWS::CodeBuild::Project Source: BuildStatusConfig 
-
- [AWS::CodeBuild::Project Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html#cfn-codebuild-project-source-buildstatusconfig)   
-Use the `buildStatusConfig` property to specify build status information to the source provider\.  | July 9, 2020 | 
-| [New property](#ReleaseHistory) | The following resource was added: `AWS::CodeGuruProfiler::ProfilingGroup.ComputePlatform`\. 
-
- [AWS::CodeGuruProfiler::ProfilingGroup\.ComputePlatform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)   
-Use `AWS::CodeGuruProfiler::ProfilingGroup.ComputePlatform` to specify the compute platform of the profiling group\.  | July 9, 2020 | 
-| [New resource](AWS_QLDB.md) | The following resource was added: AWS::QLDB::Stream 
-
- [AWS::QLDB::Stream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html)   
-Use the `AWS::QLDB::Stream` resource to specify a new journal stream for a given Amazon Quantum Ledger Database \(Amazon QLDB\) ledger\.  | July 8, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::QLDB::Stream 
-
- [AWS::QLDB::Stream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html)   
-Use the `AWS::QLDB::Stream` resource to specify a new journal stream for a given Amazon Quantum Ledger Database \(Amazon QLDB\) ledger\.  | July 8, 2020 | 
 | [Updated resource](AWS_Events.md) | The following resource was updated: AWS::Events::Rule\. 
 
  [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
@@ -175,14 +160,6 @@ In the [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/a
  [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
 Use the `MultiAZEnabled` attribute to indicate if you have Multi\-AZ enabled\.  | June 11, 2020 | 
 | [Updated resource](AWS_ElasticLoadBalancingV2.md) | The following resource was updated: AWS::ElasticLoadBalancingV2::LoadBalancer\. 
-
- [AWS::ElasticLoadBalancingV2::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)   
-Use the `SubnetMapping` attribute to specify a subnet to attach to an Application Load Balancer or a Network Load Balancer\.  | June 11, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ElastiCache::ReplicationGroup\. 
-
- [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
-Use the `MultiAZEnabled` attribute to indicate if you have Multi\-AZ enabled\.  | June 11, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ElasticLoadBalancingV2::LoadBalancer\. 
 
  [AWS::ElasticLoadBalancingV2::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)   
 Use the `SubnetMapping` attribute to specify a subnet to attach to an Application Load Balancer or a Network Load Balancer\.  | June 11, 2020 | 
@@ -996,10 +973,6 @@ Use the `Tags` property to specify the tags for the pipeline\.  | October 31, 20
  [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
 Use the `EnablePullRequestPreview` property to specify whether pull request previews are enabled for each branch that Amplify Console automatically creates for your app\.  
 Use the `PullRequestEnvironmentName` property to specify a dedicated backend environment for your pull request previews\.  | October 31, 2019 | 
-| [Updated resource](AWS_Events.md) | The following resource was updated: AWS::Events::Rule\. 
-
- [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
-In the [Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html) property type, use the `BatchParameters` property to specify the job definition, job name, and other parameters, if the event target is an AWS Batch job\.  | October 31, 2019 | 
 | [Updated resource](AWS_ECS.md) | The following resource was updated: AWS::ECS::TaskDefinition\. 
 
  [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)   
@@ -1008,6 +981,10 @@ Use the `InferenceAccelerator` property to specify the Elastic Inference acceler
 
  [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
 Use the `LogPublishingOptions` property to configure slow log publishing\.  | October 31, 2019 | 
+| [Updated resource](AWS_Events.md) | The following resource was updated: AWS::Events::Rule\. 
+
+ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+In the [Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html) property type, use the `BatchParameters` property to specify the job definition, job name, and other parameters, if the event target is an AWS Batch job\.  | October 31, 2019 | 
 | [New resources](AWS_Pinpoint.md) | The following resources were added: AWS::Pinpoint::EmailTemplate, AWS::Pinpoint::PushTemplate, and AWS::Pinpoint::SmsTemplate 
 
  [AWS::Pinpoint::EmailTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html)   

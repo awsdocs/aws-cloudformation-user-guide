@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DisplayName](#cfn-sns-topic-displayname)" : String,
       "[FifoTopic](#cfn-sns-topic-fifotopic)" : Boolean,
       "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
-      "[Subscription](#cfn-sns-topic-subscription)" : [ [Subscription](aws-properties-sns-subscription.md), ... ],
+      "[Subscription](#cfn-sns-topic-subscription)" : [ Subscription, ... ],
       "[Tags](#cfn-sns-topic-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TopicName](#cfn-sns-topic-topicname)" : String
     }
@@ -36,7 +36,7 @@ Properties:
   [FifoTopic](#cfn-sns-topic-fifotopic): Boolean
   [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription): 
-    - [Subscription](aws-properties-sns-subscription.md)
+    - Subscription
   [Tags](#cfn-sns-topic-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TopicName](#cfn-sns-topic-topicname): String

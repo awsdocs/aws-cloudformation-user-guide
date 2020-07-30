@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)" : [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md),
-  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)" : [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
+  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)" : CSVMappingParameters,
+  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)" : JSONMappingParameters
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters): 
-    [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)
+    CSVMappingParameters
   [JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters): 
-    [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
+    JSONMappingParameters
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-properties"></a>

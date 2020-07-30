@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Name](#cfn-gamelift-build-name)" : String,
       "[OperatingSystem](#cfn-gamelift-build-operatingsystem)" : String,
-      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : [S3Location](aws-properties-gamelift-build-storagelocation.md),
+      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : S3Location,
       "[Version](#cfn-gamelift-build-version)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Name](#cfn-gamelift-build-name): String
   [OperatingSystem](#cfn-gamelift-build-operatingsystem): String
   [StorageLocation](#cfn-gamelift-build-storagelocation): 
-    [S3Location](aws-properties-gamelift-build-storagelocation.md)
+    S3Location
   [Version](#cfn-gamelift-build-version): String
 ```
 

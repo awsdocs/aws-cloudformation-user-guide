@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RoleArn](#cfn-events-rule-rolearn)" : String,
       "[ScheduleExpression](#cfn-events-rule-scheduleexpression)" : String,
       "[State](#cfn-events-rule-state)" : String,
-      "[Targets](#cfn-events-rule-targets)" : [ [Target](aws-properties-events-rule-target.md), ... ]
+      "[Targets](#cfn-events-rule-targets)" : [ Target, ... ]
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [ScheduleExpression](#cfn-events-rule-scheduleexpression): String
   [State](#cfn-events-rule-state): String
   [Targets](#cfn-events-rule-targets): 
-    - [Target](aws-properties-events-rule-target.md)
+    - Target
 ```
 
 ## Properties<a name="aws-resource-events-rule-properties"></a>

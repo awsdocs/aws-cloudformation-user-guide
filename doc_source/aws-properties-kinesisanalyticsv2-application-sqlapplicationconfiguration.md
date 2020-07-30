@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)" : [ [Input](aws-properties-kinesisanalyticsv2-application-input.md), ... ]
+  "[Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)" : [ Input, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs): 
-    - [Input](aws-properties-kinesisanalyticsv2-application-input.md)
+    - Input
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-properties"></a>

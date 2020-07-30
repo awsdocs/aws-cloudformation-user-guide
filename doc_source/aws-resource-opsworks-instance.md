@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Architecture](#cfn-opsworks-instance-architecture)" : String,
       "[AutoScalingType](#cfn-opsworks-instance-autoscalingtype)" : String,
       "[AvailabilityZone](#cfn-opsworks-instance-availabilityzone)" : String,
-      "[BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-opsworks-instance-blockdevicemapping.md), ... ],
+      "[BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
       "[EbsOptimized](#cfn-opsworks-instance-ebsoptimized)" : Boolean,
       "[ElasticIps](#cfn-opsworks-instance-elasticips)" : [ String, ... ],
       "[Hostname](#cfn-opsworks-instance-hostname)" : String,
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StackId](#cfn-opsworks-instance-stackid)" : String,
       "[SubnetId](#cfn-opsworks-instance-subnetid)" : String,
       "[Tenancy](#cfn-opsworks-instance-tenancy)" : String,
-      "[TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling)" : [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md),
+      "[TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling)" : TimeBasedAutoScaling,
       "[VirtualizationType](#cfn-opsworks-instance-virtualizationtype)" : String,
       "[Volumes](#cfn-opsworks-instance-volumes)" : [ String, ... ]
     }
@@ -50,7 +50,7 @@ Properties:
   [AutoScalingType](#cfn-opsworks-instance-autoscalingtype): String
   [AvailabilityZone](#cfn-opsworks-instance-availabilityzone): String
   [BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings): 
-    - [BlockDeviceMapping](aws-properties-opsworks-instance-blockdevicemapping.md)
+    - BlockDeviceMapping
   [EbsOptimized](#cfn-opsworks-instance-ebsoptimized): Boolean
   [ElasticIps](#cfn-opsworks-instance-elasticips): 
     - String
@@ -66,7 +66,7 @@ Properties:
   [SubnetId](#cfn-opsworks-instance-subnetid): String
   [Tenancy](#cfn-opsworks-instance-tenancy): String
   [TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling): 
-    [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md)
+    TimeBasedAutoScaling
   [VirtualizationType](#cfn-opsworks-instance-virtualizationtype): String
   [Volumes](#cfn-opsworks-instance-volumes): 
     - String

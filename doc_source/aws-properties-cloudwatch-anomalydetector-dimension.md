@@ -33,7 +33,7 @@ The name of the dimension\. Dimension names cannot contain blank spaces or non\-
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-cloudwatch-anomalydetector-dimension-value"></a>
-The value of the dimension\.  
+The value of the dimension\. Dimension values cannot contain blank spaces or non\-ASCII characters\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ManagedBlockchain::Member",
   "Properties" : {
       "[InvitationId](#cfn-managedblockchain-member-invitationid)" : String,
-      "[MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration)" : [MemberConfiguration](aws-properties-managedblockchain-member-memberconfiguration.md),
-      "[NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration)" : [NetworkConfiguration](aws-properties-managedblockchain-member-networkconfiguration.md),
+      "[MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration)" : MemberConfiguration,
+      "[NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration)" : NetworkConfiguration,
       "[NetworkId](#cfn-managedblockchain-member-networkid)" : String
     }
 }
@@ -27,9 +27,9 @@ Type: AWS::ManagedBlockchain::Member
 Properties: 
   [InvitationId](#cfn-managedblockchain-member-invitationid): String
   [MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration): 
-    [MemberConfiguration](aws-properties-managedblockchain-member-memberconfiguration.md)
+    MemberConfiguration
   [NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration): 
-    [NetworkConfiguration](aws-properties-managedblockchain-member-networkconfiguration.md)
+    NetworkConfiguration
   [NetworkId](#cfn-managedblockchain-member-networkid): String
 ```
 
@@ -221,7 +221,7 @@ Resources:
 #### YAML<a name="aws-resource-managedblockchain-member--examples--Create_an_Additional_Member_in_an_Existing_Network--yaml"></a>
 
 ```
-Description: "Basic Secondary Member template"
+Description: Basic Secondary Member template
 Parameters:
   MemberName:
     Type: String
@@ -235,17 +235,17 @@ Parameters:
     Type: String
   InvitationId:
     Type: String
-
 Resources:
   Member:
-    Type: "AWS::ManagedBlockchain::Member"
+    Type: 'AWS::ManagedBlockchain::Member'
     Properties:
       MemberConfiguration:
         Name: !Ref MemberName
         Description: !Ref MemberDescription
-        FabricMemberConfiguration:
-          AdminUsername: !Ref MemberAdminUsername
-          AdminPassword: !Ref MemberAdminPassword
+        MemberFrameworkConfiguration:
+          MemberFabricConfiguration:
+            AdminUsername: !Ref MemberAdminUsername
+            AdminPassword: !Ref MemberAdminPassword
       NetworkId: !Ref NetworkId
       InvitationId: !Ref InvitationId
 ```
@@ -256,41 +256,52 @@ Resources:
 {
   "Description": "Basic Additional Member template",
   "Parameters": {
-    "MemberName": {
-      "Type": "String"
-    },
-    "MemberDescription": {
-      "Type": "String"
-    },
-    "MemberAdminUsername": {
-      "Type": "String"
-    },
-    "MemberAdminPassword": {
-      "Type": "String"
-    },
-    "NetworkId": {
-      "Type": "String"
-    },
-    "InvitationId": {
-      "Type": "String"
-    }
+      "MemberName": {
+          "Type": "String"
+      },
+      "MemberDescription": {
+          "Type": "String"
+      },
+      "MemberAdminUsername": {
+          "Type": "String"
+      },
+      "MemberAdminPassword": {
+          "Type": "String"
+      },
+      "NetworkId": {
+          "Type": "String"
+      },
+      "InvitationId": {
+          "Type": "String"
+      }
   },
   "Resources": {
-    "Member": {
-      "Type": "AWS::ManagedBlockchain::Member",
-      "Properties": {
-        "MemberConfiguration": {
-          "Name": "MemberName",
-          "Description": "MemberDescription",
-          "FabricMemberConfiguration": {
-            "AdminUsername": "MemberAdminUsername",
-            "AdminPassword": "MemberAdminPassword"
+      "Member": {
+          "Type": "AWS::ManagedBlockchain::Member",
+          "Properties": {
+              "MemberConfiguration": {
+                  "Name": {
+                      "Ref": "MemberName"
+                  },
+                  "MemberFrameworkConfiguration": {
+                      "MemberFabricConfiguration": {
+                          "AdminUsername": {
+                              "Ref": "MemberAdminUsername"
+                          },
+                          "AdminPassword": {
+                              "Ref": "MemberAdminPassword"
+                          }
+                      }
+                  }
+              },
+              "NetworkId": {
+                  "Ref": "NetworkId"
+              },
+              "InvitationId": {
+                  "Ref": "InvitationId"
+              }
           }
-        },
-        "NetworkId": "NetworkId",
-        "InvitationId": "InvitationId"
       }
-    }
   }
 }
 ```

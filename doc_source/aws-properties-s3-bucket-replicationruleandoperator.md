@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Prefix](#cfn-s3-bucket-replicationruleandoperator-prefix)" : String,
-  "[TagFilters](#cfn-s3-bucket-replicationruleandoperator-tagfilters)" : [ [TagFilter](aws-properties-s3-bucket-tagfilter.md), ... ]
+  "[TagFilters](#cfn-s3-bucket-replicationruleandoperator-tagfilters)" : [ TagFilter, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Prefix](#cfn-s3-bucket-replicationruleandoperator-prefix): String
   [TagFilters](#cfn-s3-bucket-replicationruleandoperator-tagfilters): 
-    - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-replicationruleandoperator-properties"></a>

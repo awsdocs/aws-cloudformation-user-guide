@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Query](#cfn-resourcegroups-group-resourcequery-query)" : [Query](aws-properties-resourcegroups-group-query.md),
+  "[Query](#cfn-resourcegroups-group-resourcequery-query)" : Query,
   "[Type](#cfn-resourcegroups-group-resourcequery-type)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Query](#cfn-resourcegroups-group-resourcequery-query): 
-    [Query](aws-properties-resourcegroups-group-query.md)
+    Query
   [Type](#cfn-resourcegroups-group-resourcequery-type): String
 ```
 

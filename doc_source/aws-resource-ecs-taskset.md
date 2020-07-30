@@ -15,12 +15,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Cluster](#cfn-ecs-taskset-cluster)" : String,
       "[ExternalId](#cfn-ecs-taskset-externalid)" : String,
       "[LaunchType](#cfn-ecs-taskset-launchtype)" : String,
-      "[LoadBalancers](#cfn-ecs-taskset-loadbalancers)" : [ [LoadBalancer](aws-properties-ecs-taskset-loadbalancer.md), ... ],
-      "[NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration)" : [NetworkConfiguration](aws-properties-ecs-taskset-networkconfiguration.md),
+      "[LoadBalancers](#cfn-ecs-taskset-loadbalancers)" : [ LoadBalancer, ... ],
+      "[NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration)" : NetworkConfiguration,
       "[PlatformVersion](#cfn-ecs-taskset-platformversion)" : String,
-      "[Scale](#cfn-ecs-taskset-scale)" : [Scale](aws-properties-ecs-taskset-scale.md),
+      "[Scale](#cfn-ecs-taskset-scale)" : Scale,
       "[Service](#cfn-ecs-taskset-service)" : String,
-      "[ServiceRegistries](#cfn-ecs-taskset-serviceregistries)" : [ [ServiceRegistry](aws-properties-ecs-taskset-serviceregistry.md), ... ],
+      "[ServiceRegistries](#cfn-ecs-taskset-serviceregistries)" : [ ServiceRegistry, ... ],
       "[TaskDefinition](#cfn-ecs-taskset-taskdefinition)" : String
     }
 }
@@ -35,15 +35,15 @@ Properties:
   [ExternalId](#cfn-ecs-taskset-externalid): String
   [LaunchType](#cfn-ecs-taskset-launchtype): String
   [LoadBalancers](#cfn-ecs-taskset-loadbalancers): 
-    - [LoadBalancer](aws-properties-ecs-taskset-loadbalancer.md)
+    - LoadBalancer
   [NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration): 
-    [NetworkConfiguration](aws-properties-ecs-taskset-networkconfiguration.md)
+    NetworkConfiguration
   [PlatformVersion](#cfn-ecs-taskset-platformversion): String
   [Scale](#cfn-ecs-taskset-scale): 
-    [Scale](aws-properties-ecs-taskset-scale.md)
+    Scale
   [Service](#cfn-ecs-taskset-service): String
   [ServiceRegistries](#cfn-ecs-taskset-serviceregistries): 
-    - [ServiceRegistry](aws-properties-ecs-taskset-serviceregistry.md)
+    - ServiceRegistry
   [TaskDefinition](#cfn-ecs-taskset-taskdefinition): String
 ```
 

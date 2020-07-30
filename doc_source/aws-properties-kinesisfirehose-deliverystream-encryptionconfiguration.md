@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig)" : [KMSEncryptionConfig](aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.md),
+  "[KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig)" : KMSEncryptionConfig,
   "[NoEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [KMSEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig): 
-    [KMSEncryptionConfig](aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.md)
+    KMSEncryptionConfig
   [NoEncryptionConfig](#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig): String
 ```
 

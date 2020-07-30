@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-athena-workgroup-name)" : String,
       "[RecursiveDeleteOption](#cfn-athena-workgroup-recursivedeleteoption)" : Boolean,
       "[State](#cfn-athena-workgroup-state)" : String,
-      "[Tags](#cfn-athena-workgroup-tags)" : [Tags](aws-properties-athena-workgroup-tags.md),
-      "[WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration)" : [WorkGroupConfiguration](aws-properties-athena-workgroup-workgroupconfiguration.md),
-      "[WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates)" : [WorkGroupConfigurationUpdates](aws-properties-athena-workgroup-workgroupconfigurationupdates.md)
+      "[Tags](#cfn-athena-workgroup-tags)" : Tags,
+      "[WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration)" : WorkGroupConfiguration,
+      "[WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates)" : WorkGroupConfigurationUpdates
     }
 }
 ```
@@ -33,11 +33,11 @@ Properties:
   [RecursiveDeleteOption](#cfn-athena-workgroup-recursivedeleteoption): Boolean
   [State](#cfn-athena-workgroup-state): String
   [Tags](#cfn-athena-workgroup-tags): 
-    [Tags](aws-properties-athena-workgroup-tags.md)
+    Tags
   [WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration): 
-    [WorkGroupConfiguration](aws-properties-athena-workgroup-workgroupconfiguration.md)
+    WorkGroupConfiguration
   [WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates): 
-    [WorkGroupConfigurationUpdates](aws-properties-athena-workgroup-workgroupconfigurationupdates.md)
+    WorkGroupConfigurationUpdates
 ```
 
 ## Properties<a name="aws-resource-athena-workgroup-properties"></a>

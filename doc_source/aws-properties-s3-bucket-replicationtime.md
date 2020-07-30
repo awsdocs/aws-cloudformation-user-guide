@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Status](#cfn-s3-bucket-replicationtime-status)" : String,
-  "[Time](#cfn-s3-bucket-replicationtime-time)" : [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)
+  "[Time](#cfn-s3-bucket-replicationtime-time)" : ReplicationTimeValue
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Status](#cfn-s3-bucket-replicationtime-status): String
   [Time](#cfn-s3-bucket-replicationtime-time): 
-    [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)
+    ReplicationTimeValue
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-replicationtime-properties"></a>

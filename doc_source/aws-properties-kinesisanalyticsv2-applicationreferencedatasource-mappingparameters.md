@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-csvmappingparameters)" : [CSVMappingParameters](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters.md),
-  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-jsonmappingparameters)" : [JSONMappingParameters](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-jsonmappingparameters.md)
+  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-csvmappingparameters)" : CSVMappingParameters,
+  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-jsonmappingparameters)" : JSONMappingParameters
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CSVMappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-csvmappingparameters): 
-    [CSVMappingParameters](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters.md)
+    CSVMappingParameters
   [JSONMappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-jsonmappingparameters): 
-    [JSONMappingParameters](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-jsonmappingparameters.md)
+    JSONMappingParameters
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters-properties"></a>

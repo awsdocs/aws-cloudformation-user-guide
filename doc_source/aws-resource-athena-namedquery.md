@@ -1,6 +1,9 @@
 # AWS::Athena::NamedQuery<a name="aws-resource-athena-namedquery"></a>
 
-The AWS::Athena::NamedQuery resource specifies an Amazon Athena query, where `QueryString` is the list of SQL query statements that comprise the query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena API Reference*\.
+The `AWS::Athena::NamedQuery` resource specifies an Amazon Athena saved query, where `QueryString` is the list of SQL query statements that comprise the query\.
+
+**Note**  
+The `AWS::Athena::NamedQuery` resource creates a named query in the primary workgroup\. To create a named query in a different workgroup, use the [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) API operation and specify a workgroup in the `WorkGroup` parameter, or use the [create\-named\-query](https://docs.aws.amazon.com/cli/latest/reference/athena/create-named-query.html) AWS CLI command and specify a workgroup in the `--work-group` option\.
 
 ## Syntax<a name="aws-resource-athena-namedquery-syntax"></a>
 

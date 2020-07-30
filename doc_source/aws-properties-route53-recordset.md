@@ -16,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::RecordSet",
   "Properties" : {
-      "[AliasTarget](#cfn-route53-recordset-aliastarget)" : [AliasTarget](aws-properties-route53-aliastarget-1.md),
+      "[AliasTarget](#cfn-route53-recordset-aliastarget)" : AliasTarget,
       "[Comment](#cfn-route53-recordset-comment)" : String,
       "[Failover](#cfn-route53-recordset-failover)" : String,
-      "[GeoLocation](#cfn-route53-recordset-geolocation)" : [GeoLocation](aws-properties-route53-recordset-geolocation.md),
+      "[GeoLocation](#cfn-route53-recordset-geolocation)" : GeoLocation,
       "[HealthCheckId](#cfn-route53-recordset-healthcheckid)" : String,
       "[HostedZoneId](#cfn-route53-recordset-hostedzoneid)" : String,
       "[HostedZoneName](#cfn-route53-recordset-hostedzonename)" : String,
@@ -41,11 +41,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Route53::RecordSet
 Properties: 
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
-    [AliasTarget](aws-properties-route53-aliastarget-1.md)
+    AliasTarget
   [Comment](#cfn-route53-recordset-comment): String
   [Failover](#cfn-route53-recordset-failover): String
   [GeoLocation](#cfn-route53-recordset-geolocation): 
-    [GeoLocation](aws-properties-route53-recordset-geolocation.md)
+    GeoLocation
   [HealthCheckId](#cfn-route53-recordset-healthcheckid): String
   [HostedZoneId](#cfn-route53-recordset-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordset-hostedzonename): String

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoSubDomainIAMRole](#cfn-amplify-domain-autosubdomainiamrole)" : String,
       "[DomainName](#cfn-amplify-domain-domainname)" : String,
       "[EnableAutoSubDomain](#cfn-amplify-domain-enableautosubdomain)" : Boolean,
-      "[SubDomainSettings](#cfn-amplify-domain-subdomainsettings)" : [ [SubDomainSetting](aws-properties-amplify-domain-subdomainsetting.md), ... ]
+      "[SubDomainSettings](#cfn-amplify-domain-subdomainsettings)" : [ SubDomainSetting, ... ]
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [DomainName](#cfn-amplify-domain-domainname): String
   [EnableAutoSubDomain](#cfn-amplify-domain-enableautosubdomain): Boolean
   [SubDomainSettings](#cfn-amplify-domain-subdomainsettings): 
-    - [SubDomainSetting](aws-properties-amplify-domain-subdomainsetting.md)
+    - SubDomainSetting
 ```
 
 ## Properties<a name="aws-resource-amplify-domain-properties"></a>
@@ -46,13 +46,13 @@ Properties:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoSubDomainCreationPatterns`  <a name="cfn-amplify-domain-autosubdomaincreationpatterns"></a>
-Not currently supported by AWS CloudFormation\.  
+ Sets the branch patterns for automatic subdomain creation\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoSubDomainIAMRole`  <a name="cfn-amplify-domain-autosubdomainiamrole"></a>
-Not currently supported by AWS CloudFormation\.  
+The required AWS Identity and Access Management \(IAM\) service role for the Amazon Resource Name \(ARN\) for automatically creating subdomains\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -85,10 +85,10 @@ Not currently supported by AWS CloudFormation\.
 ARN for the Domain Association\.
 
 `AutoSubDomainCreationPatterns`  <a name="AutoSubDomainCreationPatterns-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Branch patterns for the automatically created subdomain\.
 
 `AutoSubDomainIAMRole`  <a name="AutoSubDomainIAMRole-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The IAM service role for the subdomain\.
 
 `CertificateRecord`  <a name="CertificateRecord-fn::getatt"></a>
 DNS Record for certificate verification\.
@@ -97,10 +97,10 @@ DNS Record for certificate verification\.
 Name of the domain\.
 
 `DomainStatus`  <a name="DomainStatus-fn::getatt"></a>
-Status fo the Domain Association\.
+Status for the Domain Association\.
 
 `EnableAutoSubDomain`  <a name="EnableAutoSubDomain-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Specifies whether the automated creation of subdomains for branches is enabled\.
 
 `StatusReason`  <a name="StatusReason-fn::getatt"></a>
 Reason for the current status of the domain\.

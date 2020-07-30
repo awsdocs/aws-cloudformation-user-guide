@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Action](#cfn-macie-findingsfilter-action)" : String,
       "[Description](#cfn-macie-findingsfilter-description)" : String,
-      "[FindingCriteria](#cfn-macie-findingsfilter-findingcriteria)" : [FindingCriteria](aws-properties-macie-findingsfilter-findingcriteria.md),
+      "[FindingCriteria](#cfn-macie-findingsfilter-findingcriteria)" : FindingCriteria,
       "[Name](#cfn-macie-findingsfilter-name)" : String,
       "[Position](#cfn-macie-findingsfilter-position)" : Integer
     }
@@ -31,7 +31,7 @@ Properties:
   [Action](#cfn-macie-findingsfilter-action): String
   [Description](#cfn-macie-findingsfilter-description): String
   [FindingCriteria](#cfn-macie-findingsfilter-findingcriteria): 
-    [FindingCriteria](aws-properties-macie-findingsfilter-findingcriteria.md)
+    FindingCriteria
   [Name](#cfn-macie-findingsfilter-name): String
   [Position](#cfn-macie-findingsfilter-position): Integer
 ```

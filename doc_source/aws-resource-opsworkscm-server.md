@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CustomPrivateKey](#cfn-opsworkscm-server-customprivatekey)" : String,
       "[DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup)" : Boolean,
       "[Engine](#cfn-opsworkscm-server-engine)" : String,
-      "[EngineAttributes](#cfn-opsworkscm-server-engineattributes)" : [ [EngineAttribute](aws-properties-opsworkscm-server-engineattribute.md), ... ],
+      "[EngineAttributes](#cfn-opsworkscm-server-engineattributes)" : [ EngineAttribute, ... ],
       "[EngineModel](#cfn-opsworkscm-server-enginemodel)" : String,
       "[EngineVersion](#cfn-opsworkscm-server-engineversion)" : String,
       "[InstanceProfileArn](#cfn-opsworkscm-server-instanceprofilearn)" : String,
@@ -51,7 +51,7 @@ Properties:
   [DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup): Boolean
   [Engine](#cfn-opsworkscm-server-engine): String
   [EngineAttributes](#cfn-opsworkscm-server-engineattributes): 
-    - [EngineAttribute](aws-properties-opsworkscm-server-engineattribute.md)
+    - EngineAttribute
   [EngineModel](#cfn-opsworkscm-server-enginemodel): String
   [EngineVersion](#cfn-opsworkscm-server-engineversion): String
   [InstanceProfileArn](#cfn-opsworkscm-server-instanceprofilearn): String

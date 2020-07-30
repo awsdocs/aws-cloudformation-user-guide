@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Distributor](#cfn-servicecatalog-cloudformationproduct-distributor)" : String,
       "[Name](#cfn-servicecatalog-cloudformationproduct-name)" : String,
       "[Owner](#cfn-servicecatalog-cloudformationproduct-owner)" : String,
-      "[ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)" : [ [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md), ... ],
+      "[ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)" : [ ProvisioningArtifactProperties, ... ],
       "[ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts)" : Boolean,
       "[SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription)" : String,
       "[SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail)" : String,
@@ -38,7 +38,7 @@ Properties:
   [Name](#cfn-servicecatalog-cloudformationproduct-name): String
   [Owner](#cfn-servicecatalog-cloudformationproduct-owner): String
   [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters): 
-    - [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)
+    - ProvisioningArtifactProperties
   [ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts): Boolean
   [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription): String
   [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail): String

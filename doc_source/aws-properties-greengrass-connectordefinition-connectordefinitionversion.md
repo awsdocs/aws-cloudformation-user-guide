@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Connectors](#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors)" : [ [Connector](aws-properties-greengrass-connectordefinition-connector.md), ... ]
+  "[Connectors](#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors)" : [ Connector, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Connectors](#cfn-greengrass-connectordefinition-connectordefinitionversion-connectors): 
-    - [Connector](aws-properties-greengrass-connectordefinition-connector.md)
+    - Connector
 ```
 
 ## Properties<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-properties"></a>

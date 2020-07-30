@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CmkArn](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-cmkarn)" : String,
   "[CopyTags](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags)" : Boolean,
   "[Encrypted](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted)" : Boolean,
-  "[RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule)" : [CrossRegionCopyRetainRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.md),
+  "[RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule)" : CrossRegionCopyRetainRule,
   "[TargetRegion](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion)" : String
 }
 ```
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CopyTags](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags): Boolean
   [Encrypted](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted): Boolean
   [RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule): 
-    [CrossRegionCopyRetainRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.md)
+    CrossRegionCopyRetainRule
   [TargetRegion](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion): String
 ```
 

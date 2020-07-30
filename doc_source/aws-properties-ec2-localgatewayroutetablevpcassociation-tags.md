@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags-tags)" : [ [Tag](#aws-properties-ec2-localgatewayroutetablevpcassociation-tags), ... ]
+  "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags-tags)" : [ Tag, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags-tags): 
-    - [Tag](#aws-properties-ec2-localgatewayroutetablevpcassociation-tags)
+    - Tag
 ```
 
 ## Properties<a name="aws-properties-ec2-localgatewayroutetablevpcassociation-tags-properties"></a>

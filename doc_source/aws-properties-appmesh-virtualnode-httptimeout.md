@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Idle](#cfn-appmesh-virtualnode-httptimeout-idle)" : [Duration](aws-properties-appmesh-virtualnode-duration.md),
-  "[PerRequest](#cfn-appmesh-virtualnode-httptimeout-perrequest)" : [Duration](aws-properties-appmesh-virtualnode-duration.md)
+  "[Idle](#cfn-appmesh-virtualnode-httptimeout-idle)" : Duration,
+  "[PerRequest](#cfn-appmesh-virtualnode-httptimeout-perrequest)" : Duration
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Idle](#cfn-appmesh-virtualnode-httptimeout-idle): 
-    [Duration](aws-properties-appmesh-virtualnode-duration.md)
+    Duration
   [PerRequest](#cfn-appmesh-virtualnode-httptimeout-perrequest): 
-    [Duration](aws-properties-appmesh-virtualnode-duration.md)
+    Duration
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-httptimeout-properties"></a>

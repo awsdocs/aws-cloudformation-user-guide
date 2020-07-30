@@ -14,20 +14,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CertificateArn](#cfn-dms-endpoint-certificatearn)" : String,
       "[DatabaseName](#cfn-dms-endpoint-databasename)" : String,
-      "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)" : [DynamoDbSettings](aws-properties-dms-endpoint-dynamodbsettings.md),
-      "[ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings)" : [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md),
+      "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)" : DynamoDbSettings,
+      "[ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings)" : ElasticsearchSettings,
       "[EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier)" : String,
       "[EndpointType](#cfn-dms-endpoint-endpointtype)" : String,
       "[EngineName](#cfn-dms-endpoint-enginename)" : String,
       "[ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes)" : String,
-      "[KafkaSettings](#cfn-dms-endpoint-kafkasettings)" : [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md),
-      "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md),
+      "[KafkaSettings](#cfn-dms-endpoint-kafkasettings)" : KafkaSettings,
+      "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : KinesisSettings,
       "[KmsKeyId](#cfn-dms-endpoint-kmskeyid)" : String,
-      "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md),
-      "[NeptuneSettings](#cfn-dms-endpoint-neptunesettings)" : [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md),
+      "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : MongoDbSettings,
+      "[NeptuneSettings](#cfn-dms-endpoint-neptunesettings)" : NeptuneSettings,
       "[Password](#cfn-dms-endpoint-password)" : String,
       "[Port](#cfn-dms-endpoint-port)" : Integer,
-      "[S3Settings](#cfn-dms-endpoint-s3settings)" : [S3Settings](aws-properties-dms-endpoint-s3settings.md),
+      "[S3Settings](#cfn-dms-endpoint-s3settings)" : S3Settings,
       "[ServerName](#cfn-dms-endpoint-servername)" : String,
       "[SslMode](#cfn-dms-endpoint-sslmode)" : String,
       "[Tags](#cfn-dms-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -44,26 +44,26 @@ Properties:
   [CertificateArn](#cfn-dms-endpoint-certificatearn): String
   [DatabaseName](#cfn-dms-endpoint-databasename): String
   [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings): 
-    [DynamoDbSettings](aws-properties-dms-endpoint-dynamodbsettings.md)
+    DynamoDbSettings
   [ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings): 
-    [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md)
+    ElasticsearchSettings
   [EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier): String
   [EndpointType](#cfn-dms-endpoint-endpointtype): String
   [EngineName](#cfn-dms-endpoint-enginename): String
   [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes): String
   [KafkaSettings](#cfn-dms-endpoint-kafkasettings): 
-    [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md)
+    KafkaSettings
   [KinesisSettings](#cfn-dms-endpoint-kinesissettings): 
-    [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)
+    KinesisSettings
   [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
   [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings): 
-    [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)
+    MongoDbSettings
   [NeptuneSettings](#cfn-dms-endpoint-neptunesettings): 
-    [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)
+    NeptuneSettings
   [Password](#cfn-dms-endpoint-password): String
   [Port](#cfn-dms-endpoint-port): Integer
   [S3Settings](#cfn-dms-endpoint-s3settings): 
-    [S3Settings](aws-properties-dms-endpoint-s3settings.md)
+    S3Settings
   [ServerName](#cfn-dms-endpoint-servername): String
   [SslMode](#cfn-dms-endpoint-sslmode): String
   [Tags](#cfn-dms-endpoint-tags): 

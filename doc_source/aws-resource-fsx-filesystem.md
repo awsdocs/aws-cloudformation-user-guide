@@ -15,13 +15,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackupId](#cfn-fsx-filesystem-backupid)" : String,
       "[FileSystemType](#cfn-fsx-filesystem-filesystemtype)" : String,
       "[KmsKeyId](#cfn-fsx-filesystem-kmskeyid)" : String,
-      "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md),
+      "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : LustreConfiguration,
       "[SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids)" : [ String, ... ],
       "[StorageCapacity](#cfn-fsx-filesystem-storagecapacity)" : Integer,
       "[StorageType](#cfn-fsx-filesystem-storagetype)" : String,
       "[SubnetIds](#cfn-fsx-filesystem-subnetids)" : [ String, ... ],
       "[Tags](#cfn-fsx-filesystem-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration)" : [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)
+      "[WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration)" : WindowsConfiguration
     }
 }
 ```
@@ -35,7 +35,7 @@ Properties:
   [FileSystemType](#cfn-fsx-filesystem-filesystemtype): String
   [KmsKeyId](#cfn-fsx-filesystem-kmskeyid): String
   [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration): 
-    [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)
+    LustreConfiguration
   [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids): 
     - String
   [StorageCapacity](#cfn-fsx-filesystem-storagecapacity): Integer
@@ -45,7 +45,7 @@ Properties:
   [Tags](#cfn-fsx-filesystem-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration): 
-    [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)
+    WindowsConfiguration
 ```
 
 ## Properties<a name="aws-resource-fsx-filesystem-properties"></a>
@@ -184,6 +184,7 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                     }
                 ],
                 "LustreConfiguration": {
+                    "AutoImportPolicyType" : "NEW",
                     "AutomaticBackupRetentionDays" : 21,
                     "CopyTagsToBackups" : true,
                     "DailyAutomaticBackupStartTime" : "02:00",
@@ -241,6 +242,7 @@ Resources:
         - Key: "Name"
           Value: "CFNs3linkedLustre"
       LustreConfiguration:
+        AutoImportPolicyType: "NEW"
         AutomaticBackupRetentionDays: 21
         CopyTagsToBackups: true
         DailyAutomaticBackupStartTime: "02:00"

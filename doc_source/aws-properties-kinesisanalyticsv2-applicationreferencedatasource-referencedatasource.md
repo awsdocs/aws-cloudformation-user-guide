@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ReferenceSchema](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-referenceschema)" : [ReferenceSchema](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.md),
-  "[S3ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource)" : [S3ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.md),
+  "[ReferenceSchema](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-referenceschema)" : ReferenceSchema,
+  "[S3ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource)" : S3ReferenceDataSource,
   "[TableName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-tablename)" : String
 }
 ```
@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ReferenceSchema](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-referenceschema): 
-    [ReferenceSchema](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema.md)
+    ReferenceSchema
   [S3ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-s3referencedatasource): 
-    [S3ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.md)
+    S3ReferenceDataSource
   [TableName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource-tablename): String
 ```
 

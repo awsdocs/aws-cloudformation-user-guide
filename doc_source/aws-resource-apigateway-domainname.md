@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CertificateArn](#cfn-apigateway-domainname-certificatearn)" : String,
       "[DomainName](#cfn-apigateway-domainname-domainname)" : String,
-      "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md),
+      "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : EndpointConfiguration,
       "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String,
       "[SecurityPolicy](#cfn-apigateway-domainname-securitypolicy)" : String,
       "[Tags](#cfn-apigateway-domainname-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -32,7 +32,7 @@ Properties:
   [CertificateArn](#cfn-apigateway-domainname-certificatearn): String
   [DomainName](#cfn-apigateway-domainname-domainname): String
   [EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration): 
-    [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)
+    EndpointConfiguration
   [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
   [SecurityPolicy](#cfn-apigateway-domainname-securitypolicy): String
   [Tags](#cfn-apigateway-domainname-tags): 

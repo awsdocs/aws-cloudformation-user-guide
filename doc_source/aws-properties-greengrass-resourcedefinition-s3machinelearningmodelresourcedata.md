@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)" : String,
-  "[OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)" : [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md),
+  "[OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)" : ResourceDownloadOwnerSetting,
   "[S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath): String
   [OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting): 
-    [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md)
+    ResourceDownloadOwnerSetting
   [S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri): String
 ```
 

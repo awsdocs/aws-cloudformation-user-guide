@@ -16,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaConvert::JobTemplate",
   "Properties" : {
-      "[AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings)" : [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md),
+      "[AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings)" : AccelerationSettings,
       "[Category](#cfn-mediaconvert-jobtemplate-category)" : String,
       "[Description](#cfn-mediaconvert-jobtemplate-description)" : String,
-      "[HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations)" : [ [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md), ... ],
+      "[HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations)" : [ HopDestination, ... ],
       "[Name](#cfn-mediaconvert-jobtemplate-name)" : String,
       "[Priority](#cfn-mediaconvert-jobtemplate-priority)" : Integer,
       "[Queue](#cfn-mediaconvert-jobtemplate-queue)" : String,
@@ -36,11 +36,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MediaConvert::JobTemplate
 Properties: 
   [AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings): 
-    [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)
+    AccelerationSettings
   [Category](#cfn-mediaconvert-jobtemplate-category): String
   [Description](#cfn-mediaconvert-jobtemplate-description): String
   [HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations): 
-    - [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)
+    - HopDestination
   [Name](#cfn-mediaconvert-jobtemplate-name): String
   [Priority](#cfn-mediaconvert-jobtemplate-priority): Integer
   [Queue](#cfn-mediaconvert-jobtemplate-queue): String

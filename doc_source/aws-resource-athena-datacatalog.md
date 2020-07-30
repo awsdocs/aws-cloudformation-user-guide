@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-athena-datacatalog-description)" : String,
       "[Name](#cfn-athena-datacatalog-name)" : String,
       "[Parameters](#cfn-athena-datacatalog-parameters)" : {Key : Value, ...},
-      "[Tags](#cfn-athena-datacatalog-tags)" : [Tags](aws-properties-athena-datacatalog-tags.md),
+      "[Tags](#cfn-athena-datacatalog-tags)" : Tags,
       "[Type](#cfn-athena-datacatalog-type)" : String
     }
 }
@@ -31,7 +31,7 @@ Properties:
   [Parameters](#cfn-athena-datacatalog-parameters): 
     Key : Value
   [Tags](#cfn-athena-datacatalog-tags): 
-    [Tags](aws-properties-athena-datacatalog-tags.md)
+    Tags
   [Type](#cfn-athena-datacatalog-type): String
 ```
 

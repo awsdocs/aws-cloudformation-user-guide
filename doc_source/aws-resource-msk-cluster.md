@@ -12,16 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MSK::Cluster",
   "Properties" : {
-      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md),
-      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md),
+      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : BrokerNodeGroupInfo,
+      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : ClientAuthentication,
       "[ClusterName](#cfn-msk-cluster-clustername)" : String,
-      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md),
-      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md),
+      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : ConfigurationInfo,
+      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : EncryptionInfo,
       "[EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring)" : String,
       "[KafkaVersion](#cfn-msk-cluster-kafkaversion)" : String,
-      "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : [LoggingInfo](aws-properties-msk-cluster-logginginfo.md),
+      "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : LoggingInfo,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
-      "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md),
+      "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
       "[Tags](#cfn-msk-cluster-tags)" : Json
     }
 }
@@ -33,21 +33,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MSK::Cluster
 Properties: 
   [BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo): 
-    [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)
+    BrokerNodeGroupInfo
   [ClientAuthentication](#cfn-msk-cluster-clientauthentication): 
-    [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)
+    ClientAuthentication
   [ClusterName](#cfn-msk-cluster-clustername): String
   [ConfigurationInfo](#cfn-msk-cluster-configurationinfo): 
-    [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)
+    ConfigurationInfo
   [EncryptionInfo](#cfn-msk-cluster-encryptioninfo): 
-    [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)
+    EncryptionInfo
   [EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring): String
   [KafkaVersion](#cfn-msk-cluster-kafkaversion): String
   [LoggingInfo](#cfn-msk-cluster-logginginfo): 
-    [LoggingInfo](aws-properties-msk-cluster-logginginfo.md)
+    LoggingInfo
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
   [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
-    [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md)
+    OpenMonitoring
   [Tags](#cfn-msk-cluster-tags): Json
 ```
 

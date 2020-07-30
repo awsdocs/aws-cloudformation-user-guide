@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CloudFormationStackARN](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)" : String,
-  "[TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)" : [ [TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md), ... ]
+  "[TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)" : [ TagFilter, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CloudFormationStackARN](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn): String
   [TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters): 
-    - [TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-applicationsource-properties"></a>

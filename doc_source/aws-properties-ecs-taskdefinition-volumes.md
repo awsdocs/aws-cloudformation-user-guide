@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration)" : [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md),
-  "[Host](#cfn-ecs-taskdefinition-volumes-host)" : [HostVolumeProperties](aws-properties-ecs-taskdefinition-volumes-host.md),
+  "[DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration)" : DockerVolumeConfiguration,
+  "[Host](#cfn-ecs-taskdefinition-volumes-host)" : HostVolumeProperties,
   "[Name](#cfn-ecs-taskdefinition-volumes-name)" : String
 }
 ```
@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration): 
-    [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md)
+    DockerVolumeConfiguration
   [Host](#cfn-ecs-taskdefinition-volumes-host): 
-    [HostVolumeProperties](aws-properties-ecs-taskdefinition-volumes-host.md)
+    HostVolumeProperties
   [Name](#cfn-ecs-taskdefinition-volumes-name): String
 ```
 

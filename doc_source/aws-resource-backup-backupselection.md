@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Backup::BackupSelection",
   "Properties" : {
       "[BackupPlanId](#cfn-backup-backupselection-backupplanid)" : String,
-      "[BackupSelection](#cfn-backup-backupselection-backupselection)" : [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
+      "[BackupSelection](#cfn-backup-backupselection-backupselection)" : BackupSelectionResourceType
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::Backup::BackupSelection
 Properties: 
   [BackupPlanId](#cfn-backup-backupselection-backupplanid): String
   [BackupSelection](#cfn-backup-backupselection-backupselection): 
-    [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
+    BackupSelectionResourceType
 ```
 
 ## Properties<a name="aws-resource-backup-backupselection-properties"></a>

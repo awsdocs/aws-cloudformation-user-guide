@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTEvents::DetectorModel",
   "Properties" : {
-      "[DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition)" : [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md),
+      "[DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition)" : DetectorModelDefinition,
       "[DetectorModelDescription](#cfn-iotevents-detectormodel-detectormodeldescription)" : String,
       "[DetectorModelName](#cfn-iotevents-detectormodel-detectormodelname)" : String,
       "[EvaluationMethod](#cfn-iotevents-detectormodel-evaluationmethod)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTEvents::DetectorModel
 Properties: 
   [DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition): 
-    [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md)
+    DetectorModelDefinition
   [DetectorModelDescription](#cfn-iotevents-detectormodel-detectormodeldescription): String
   [DetectorModelName](#cfn-iotevents-detectormodel-detectormodelname): String
   [EvaluationMethod](#cfn-iotevents-detectormodel-evaluationmethod): String

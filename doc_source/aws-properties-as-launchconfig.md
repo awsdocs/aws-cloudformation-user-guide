@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AutoScaling::LaunchConfiguration",
   "Properties" : {
       "[AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip)" : Boolean,
-      "[BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md), ... ],
+      "[BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
       "[ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid)" : String,
       "[ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups)" : [ String, ... ],
       "[EbsOptimized](#cfn-as-launchconfig-ebsoptimized)" : Boolean,
@@ -47,7 +47,7 @@ Type: AWS::AutoScaling::LaunchConfiguration
 Properties: 
   [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip): Boolean
   [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings): 
-    - [BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md)
+    - BlockDeviceMapping
   [ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid): String
   [ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups): 
     - String
@@ -213,8 +213,6 @@ The maximum hourly price to be paid for any Spot Instance launched to fulfill th
 When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price\.
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserData`  <a name="cfn-as-launchconfig-userdata"></a>

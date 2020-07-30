@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AutoScalingPlans::ScalingPlan",
   "Properties" : {
-      "[ApplicationSource](#cfn-autoscalingplans-scalingplan-applicationsource)" : [ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md),
-      "[ScalingInstructions](#cfn-autoscalingplans-scalingplan-scalinginstructions)" : [ [ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md), ... ]
+      "[ApplicationSource](#cfn-autoscalingplans-scalingplan-applicationsource)" : ApplicationSource,
+      "[ScalingInstructions](#cfn-autoscalingplans-scalingplan-scalinginstructions)" : [ ScalingInstruction, ... ]
     }
 }
 ```
@@ -31,9 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AutoScalingPlans::ScalingPlan
 Properties: 
   [ApplicationSource](#cfn-autoscalingplans-scalingplan-applicationsource): 
-    [ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md)
+    ApplicationSource
   [ScalingInstructions](#cfn-autoscalingplans-scalingplan-scalinginstructions): 
-    - [ScalingInstruction](aws-properties-autoscalingplans-scalingplan-scalinginstruction.md)
+    - ScalingInstruction
 ```
 
 ## Properties<a name="aws-resource-autoscalingplans-scalingplan-properties"></a>

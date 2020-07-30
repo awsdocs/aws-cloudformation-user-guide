@@ -12,13 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AllowedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-allowedmethods)" : [ String, ... ],
   "[CachedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-cachedmethods)" : [ String, ... ],
+  "[CachePolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-cachepolicyid)" : String,
   "[Compress](#cfn-cloudfront-distribution-defaultcachebehavior-compress)" : Boolean,
   "[DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl)" : Double,
   "[FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid)" : String,
-  "[ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues)" : [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md),
-  "[LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations)" : [ [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md), ... ],
+  "[ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues)" : ForwardedValues,
+  "[LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations)" : [ LambdaFunctionAssociation, ... ],
   "[MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl)" : Double,
   "[MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl)" : Double,
+  "[OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid)" : String,
   "[TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners)" : [ String, ... ],
@@ -33,15 +35,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [CachedMethods](#cfn-cloudfront-distribution-defaultcachebehavior-cachedmethods): 
     - String
+  [CachePolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-cachepolicyid): String
   [Compress](#cfn-cloudfront-distribution-defaultcachebehavior-compress): Boolean
   [DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl): Double
   [FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid): String
   [ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues): 
-    [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)
+    ForwardedValues
   [LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations): 
-    - [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)
+    - LambdaFunctionAssociation
   [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl): Double
   [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl): Double
+  [OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid): String
   [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
   [TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners): 
@@ -70,6 +74,12 @@ If you pick the second choice for your Amazon S3 Origin, you may need to forward
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CachePolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-cachepolicyid"></a>
+The unique identifier of the cache policy that is attached to the default cache behavior\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Compress`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-compress"></a>
 Whether you want CloudFront to automatically compress certain files for this cache behavior\. If so, specify `true`; if not, specify `false`\. For more information, see [Serving Compressed Files](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/ServingCompressedFiles.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
@@ -77,6 +87,7 @@ Whether you want CloudFront to automatically compress certain files for this cac
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultTTL`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-defaultttl"></a>
+This field is deprecated\. We recommend that you use the `DefaultTTL` field in a cache policy instead of this field\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 The default amount of time that you want objects to stay in CloudFront caches before CloudFront forwards another request to your origin to determine whether the object has been updated\. The value that you specify applies only when your origin does not add HTTP headers such as `Cache-Control max-age`, `Cache-Control s-maxage`, and `Expires` to objects\. For more information, see [Managing How Long Content Stays in an Edge Cache \(Expiration\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: Double  
@@ -89,8 +100,11 @@ The value of `ID` for the field\-level encryption configuration that you want Cl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ForwardedValues`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues"></a>
+This field is deprecated\. We recommend that you use a cache policy or an origin request policy instead of this field\. For more information, see [Working with policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/working-with-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+If you want to include values in the cache key, use a cache policy\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+If you want to send values to the origin but not include them in the cache key, use an origin request policy\. For more information, see [Creating origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy) or [Using the managed origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -101,16 +115,24 @@ A complex type that contains zero or more Lambda function associations for a cac
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxTTL`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-maxttl"></a>
+This field is deprecated\. We recommend that you use the `MaxTTL` field in a cache policy instead of this field\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 The maximum amount of time that you want objects to stay in CloudFront caches before CloudFront forwards another request to your origin to determine whether the object has been updated\. The value that you specify applies only when your origin adds HTTP headers such as `Cache-Control max-age`, `Cache-Control s-maxage`, and `Expires` to objects\. For more information, see [Managing How Long Content Stays in an Edge Cache \(Expiration\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinTTL`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-minttl"></a>
+This field is deprecated\. We recommend that you use the `MinTTL` field in a cache policy instead of this field\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 The minimum amount of time that you want objects to stay in CloudFront caches before CloudFront forwards another request to your origin to determine whether the object has been updated\. For more information, see [Managing How Long Content Stays in an Edge Cache \(Expiration\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.  
 You must specify `0` for `MinTTL` if you configure CloudFront to forward all headers to your origin \(under `Headers`, if you specify `1` for `Quantity` and `*` for `Name`\)\.  
 *Required*: No  
 *Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OriginRequestPolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid"></a>
+The unique identifier of the origin request policy that is attached to the default cache behavior\. For more information, see [Creating origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy) or [Using the managed origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmoothStreaming`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming"></a>

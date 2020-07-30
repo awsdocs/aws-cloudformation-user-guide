@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores)" : [ [Core](aws-properties-greengrass-coredefinition-core.md), ... ]
+  "[Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores)" : [ Core, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores): 
-    - [Core](aws-properties-greengrass-coredefinition-core.md)
+    - Core
 ```
 
 ## Properties<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-properties"></a>

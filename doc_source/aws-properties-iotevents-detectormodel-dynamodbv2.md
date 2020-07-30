@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Payload](#cfn-iotevents-detectormodel-dynamodbv2-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md),
+  "[Payload](#cfn-iotevents-detectormodel-dynamodbv2-payload)" : Payload,
   "[TableName](#cfn-iotevents-detectormodel-dynamodbv2-tablename)" : String
 }
 ```
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Payload](#cfn-iotevents-detectormodel-dynamodbv2-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
   [TableName](#cfn-iotevents-detectormodel-dynamodbv2-tablename): String
 ```
 

@@ -10,15 +10,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions)" : [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
+  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[HECAcknowledgmentTimeoutInSeconds](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds)" : Integer,
   "[HECEndpoint](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpoint)" : String,
   "[HECEndpointType](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype)" : String,
   "[HECToken](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hectoken)" : String,
-  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration)" : [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md),
-  "[RetryOptions](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions)" : [SplunkRetryOptions](aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.md),
+  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration)" : ProcessingConfiguration,
+  "[RetryOptions](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions)" : SplunkRetryOptions,
   "[S3BackupMode](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode)" : String,
-  "[S3Configuration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration)" : [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+  "[S3Configuration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration)" : S3DestinationConfiguration
 }
 ```
 
@@ -26,18 +26,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions): 
-    [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+    CloudWatchLoggingOptions
   [HECAcknowledgmentTimeoutInSeconds](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds): Integer
   [HECEndpoint](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpoint): String
   [HECEndpointType](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype): String
   [HECToken](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hectoken): String
   [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration): 
-    [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
+    ProcessingConfiguration
   [RetryOptions](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions): 
-    [SplunkRetryOptions](aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.md)
+    SplunkRetryOptions
   [S3BackupMode](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode): String
   [S3Configuration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration): 
-    [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    S3DestinationConfiguration
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration-properties"></a>

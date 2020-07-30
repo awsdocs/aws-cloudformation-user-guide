@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Action](#cfn-guardduty-filter-action)" : String,
       "[Description](#cfn-guardduty-filter-description)" : String,
       "[DetectorId](#cfn-guardduty-filter-detectorid)" : String,
-      "[FindingCriteria](#cfn-guardduty-filter-findingcriteria)" : [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md),
+      "[FindingCriteria](#cfn-guardduty-filter-findingcriteria)" : FindingCriteria,
       "[Name](#cfn-guardduty-filter-name)" : String,
       "[Rank](#cfn-guardduty-filter-rank)" : Integer
     }
@@ -31,7 +31,7 @@ Properties:
   [Description](#cfn-guardduty-filter-description): String
   [DetectorId](#cfn-guardduty-filter-detectorid): String
   [FindingCriteria](#cfn-guardduty-filter-findingcriteria): 
-    [FindingCriteria](aws-properties-guardduty-filter-findingcriteria.md)
+    FindingCriteria
   [Name](#cfn-guardduty-filter-name): String
   [Rank](#cfn-guardduty-filter-rank): Integer
 ```

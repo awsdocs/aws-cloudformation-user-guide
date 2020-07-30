@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Container](#cfn-batch-jobdefinition-noderangeproperty-container)" : [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md),
+  "[Container](#cfn-batch-jobdefinition-noderangeproperty-container)" : ContainerProperties,
   "[TargetNodes](#cfn-batch-jobdefinition-noderangeproperty-targetnodes)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Container](#cfn-batch-jobdefinition-noderangeproperty-container): 
-    [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
+    ContainerProperties
   [TargetNodes](#cfn-batch-jobdefinition-noderangeproperty-targetnodes): String
 ```
 

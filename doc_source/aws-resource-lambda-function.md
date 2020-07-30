@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::Function",
   "Properties" : {
-      "[Code](#cfn-lambda-function-code)" : [Code](aws-properties-lambda-function-code.md),
-      "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md),
+      "[Code](#cfn-lambda-function-code)" : Code,
+      "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : DeadLetterConfig,
       "[Description](#cfn-lambda-function-description)" : String,
-      "[Environment](#cfn-lambda-function-environment)" : [Environment](aws-properties-lambda-function-environment.md),
-      "[FileSystemConfigs](#cfn-lambda-function-filesystemconfigs)" : [ [FileSystemConfig](aws-properties-lambda-function-filesystemconfig.md), ... ],
+      "[Environment](#cfn-lambda-function-environment)" : Environment,
+      "[FileSystemConfigs](#cfn-lambda-function-filesystemconfigs)" : [ FileSystemConfig, ... ],
       "[FunctionName](#cfn-lambda-function-functionname)" : String,
       "[Handler](#cfn-lambda-function-handler)" : String,
       "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
@@ -27,8 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Runtime](#cfn-lambda-function-runtime)" : String,
       "[Tags](#cfn-lambda-function-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Timeout](#cfn-lambda-function-timeout)" : Integer,
-      "[TracingConfig](#cfn-lambda-function-tracingconfig)" : [TracingConfig](aws-properties-lambda-function-tracingconfig.md),
-      "[VpcConfig](#cfn-lambda-function-vpcconfig)" : [VpcConfig](aws-properties-lambda-function-vpcconfig.md)
+      "[TracingConfig](#cfn-lambda-function-tracingconfig)" : TracingConfig,
+      "[VpcConfig](#cfn-lambda-function-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -39,14 +39,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Lambda::Function
 Properties: 
   [Code](#cfn-lambda-function-code): 
-    [Code](aws-properties-lambda-function-code.md)
+    Code
   [DeadLetterConfig](#cfn-lambda-function-deadletterconfig): 
-    [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md)
+    DeadLetterConfig
   [Description](#cfn-lambda-function-description): String
   [Environment](#cfn-lambda-function-environment): 
-    [Environment](aws-properties-lambda-function-environment.md)
+    Environment
   [FileSystemConfigs](#cfn-lambda-function-filesystemconfigs): 
-    - [FileSystemConfig](aws-properties-lambda-function-filesystemconfig.md)
+    - FileSystemConfig
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
@@ -60,9 +60,9 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Timeout](#cfn-lambda-function-timeout): Integer
   [TracingConfig](#cfn-lambda-function-tracingconfig): 
-    [TracingConfig](aws-properties-lambda-function-tracingconfig.md)
+    TracingConfig
   [VpcConfig](#cfn-lambda-function-vpcconfig): 
-    [VpcConfig](aws-properties-lambda-function-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-lambda-function-properties"></a>

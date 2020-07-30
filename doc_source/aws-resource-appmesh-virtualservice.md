@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualservice-meshname)" : String,
       "[MeshOwner](#cfn-appmesh-virtualservice-meshowner)" : String,
-      "[Spec](#cfn-appmesh-virtualservice-spec)" : [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md),
+      "[Spec](#cfn-appmesh-virtualservice-spec)" : VirtualServiceSpec,
       "[Tags](#cfn-appmesh-virtualservice-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename)" : String
     }
@@ -33,7 +33,7 @@ Properties:
   [MeshName](#cfn-appmesh-virtualservice-meshname): String
   [MeshOwner](#cfn-appmesh-virtualservice-meshowner): String
   [Spec](#cfn-appmesh-virtualservice-spec): 
-    [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)
+    VirtualServiceSpec
   [Tags](#cfn-appmesh-virtualservice-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename): String

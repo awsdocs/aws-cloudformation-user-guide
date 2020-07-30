@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackfillMode](#cfn-gamelift-matchmakingconfiguration-backfillmode)" : String,
       "[CustomEventData](#cfn-gamelift-matchmakingconfiguration-customeventdata)" : String,
       "[Description](#cfn-gamelift-matchmakingconfiguration-description)" : String,
-      "[GameProperties](#cfn-gamelift-matchmakingconfiguration-gameproperties)" : [ [GameProperty](aws-properties-gamelift-matchmakingconfiguration-gameproperty.md), ... ],
+      "[GameProperties](#cfn-gamelift-matchmakingconfiguration-gameproperties)" : [ GameProperty, ... ],
       "[GameSessionData](#cfn-gamelift-matchmakingconfiguration-gamesessiondata)" : String,
       "[GameSessionQueueArns](#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns)" : [ String, ... ],
       "[Name](#cfn-gamelift-matchmakingconfiguration-name)" : String,
@@ -41,7 +41,7 @@ Properties:
   [CustomEventData](#cfn-gamelift-matchmakingconfiguration-customeventdata): String
   [Description](#cfn-gamelift-matchmakingconfiguration-description): String
   [GameProperties](#cfn-gamelift-matchmakingconfiguration-gameproperties): 
-    - [GameProperty](aws-properties-gamelift-matchmakingconfiguration-gameproperty.md)
+    - GameProperty
   [GameSessionData](#cfn-gamelift-matchmakingconfiguration-gamesessiondata): String
   [GameSessionQueueArns](#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns): 
     - String

@@ -12,28 +12,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPool",
   "Properties" : {
-      "[AccountRecoverySetting](#cfn-cognito-userpool-accountrecoverysetting)" : [AccountRecoverySetting](aws-properties-cognito-userpool-accountrecoverysetting.md),
-      "[AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig)" : [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md),
+      "[AccountRecoverySetting](#cfn-cognito-userpool-accountrecoverysetting)" : AccountRecoverySetting,
+      "[AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig)" : AdminCreateUserConfig,
       "[AliasAttributes](#cfn-cognito-userpool-aliasattributes)" : [ String, ... ],
       "[AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes)" : [ String, ... ],
-      "[DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration)" : [DeviceConfiguration](aws-properties-cognito-userpool-deviceconfiguration.md),
-      "[EmailConfiguration](#cfn-cognito-userpool-emailconfiguration)" : [EmailConfiguration](aws-properties-cognito-userpool-emailconfiguration.md),
+      "[DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration)" : DeviceConfiguration,
+      "[EmailConfiguration](#cfn-cognito-userpool-emailconfiguration)" : EmailConfiguration,
       "[EmailVerificationMessage](#cfn-cognito-userpool-emailverificationmessage)" : String,
       "[EmailVerificationSubject](#cfn-cognito-userpool-emailverificationsubject)" : String,
       "[EnabledMfas](#cfn-cognito-userpool-enabledmfas)" : [ String, ... ],
-      "[LambdaConfig](#cfn-cognito-userpool-lambdaconfig)" : [LambdaConfig](aws-properties-cognito-userpool-lambdaconfig.md),
+      "[LambdaConfig](#cfn-cognito-userpool-lambdaconfig)" : LambdaConfig,
       "[MfaConfiguration](#cfn-cognito-userpool-mfaconfiguration)" : String,
-      "[Policies](#cfn-cognito-userpool-policies)" : [Policies](aws-properties-cognito-userpool-policies.md),
-      "[Schema](#cfn-cognito-userpool-schema)" : [ [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md), ... ],
+      "[Policies](#cfn-cognito-userpool-policies)" : Policies,
+      "[Schema](#cfn-cognito-userpool-schema)" : [ SchemaAttribute, ... ],
       "[SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage)" : String,
-      "[SmsConfiguration](#cfn-cognito-userpool-smsconfiguration)" : [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md),
+      "[SmsConfiguration](#cfn-cognito-userpool-smsconfiguration)" : SmsConfiguration,
       "[SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage)" : String,
       "[UsernameAttributes](#cfn-cognito-userpool-usernameattributes)" : [ String, ... ],
-      "[UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration)" : [UsernameConfiguration](aws-properties-cognito-userpool-usernameconfiguration.md),
-      "[UserPoolAddOns](#cfn-cognito-userpool-userpooladdons)" : [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md),
+      "[UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration)" : UsernameConfiguration,
+      "[UserPoolAddOns](#cfn-cognito-userpool-userpooladdons)" : UserPoolAddOns,
       "[UserPoolName](#cfn-cognito-userpool-userpoolname)" : String,
       "[UserPoolTags](#cfn-cognito-userpool-userpooltags)" : Json,
-      "[VerificationMessageTemplate](#cfn-cognito-userpool-verificationmessagetemplate)" : [VerificationMessageTemplate](aws-properties-cognito-userpool-verificationmessagetemplate.md)
+      "[VerificationMessageTemplate](#cfn-cognito-userpool-verificationmessagetemplate)" : VerificationMessageTemplate
     }
 }
 ```
@@ -44,42 +44,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPool
 Properties: 
   [AccountRecoverySetting](#cfn-cognito-userpool-accountrecoverysetting): 
-    [AccountRecoverySetting](aws-properties-cognito-userpool-accountrecoverysetting.md)
+    AccountRecoverySetting
   [AdminCreateUserConfig](#cfn-cognito-userpool-admincreateuserconfig): 
-    [AdminCreateUserConfig](aws-properties-cognito-userpool-admincreateuserconfig.md)
+    AdminCreateUserConfig
   [AliasAttributes](#cfn-cognito-userpool-aliasattributes): 
     - String
   [AutoVerifiedAttributes](#cfn-cognito-userpool-autoverifiedattributes): 
     - String
   [DeviceConfiguration](#cfn-cognito-userpool-deviceconfiguration): 
-    [DeviceConfiguration](aws-properties-cognito-userpool-deviceconfiguration.md)
+    DeviceConfiguration
   [EmailConfiguration](#cfn-cognito-userpool-emailconfiguration): 
-    [EmailConfiguration](aws-properties-cognito-userpool-emailconfiguration.md)
+    EmailConfiguration
   [EmailVerificationMessage](#cfn-cognito-userpool-emailverificationmessage): String
   [EmailVerificationSubject](#cfn-cognito-userpool-emailverificationsubject): String
   [EnabledMfas](#cfn-cognito-userpool-enabledmfas): 
     - String
   [LambdaConfig](#cfn-cognito-userpool-lambdaconfig): 
-    [LambdaConfig](aws-properties-cognito-userpool-lambdaconfig.md)
+    LambdaConfig
   [MfaConfiguration](#cfn-cognito-userpool-mfaconfiguration): String
   [Policies](#cfn-cognito-userpool-policies): 
-    [Policies](aws-properties-cognito-userpool-policies.md)
+    Policies
   [Schema](#cfn-cognito-userpool-schema): 
-    - [SchemaAttribute](aws-properties-cognito-userpool-schemaattribute.md)
+    - SchemaAttribute
   [SmsAuthenticationMessage](#cfn-cognito-userpool-smsauthenticationmessage): String
   [SmsConfiguration](#cfn-cognito-userpool-smsconfiguration): 
-    [SmsConfiguration](aws-properties-cognito-userpool-smsconfiguration.md)
+    SmsConfiguration
   [SmsVerificationMessage](#cfn-cognito-userpool-smsverificationmessage): String
   [UsernameAttributes](#cfn-cognito-userpool-usernameattributes): 
     - String
   [UsernameConfiguration](#cfn-cognito-userpool-usernameconfiguration): 
-    [UsernameConfiguration](aws-properties-cognito-userpool-usernameconfiguration.md)
+    UsernameConfiguration
   [UserPoolAddOns](#cfn-cognito-userpool-userpooladdons): 
-    [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)
+    UserPoolAddOns
   [UserPoolName](#cfn-cognito-userpool-userpoolname): String
   [UserPoolTags](#cfn-cognito-userpool-userpooltags): Json
   [VerificationMessageTemplate](#cfn-cognito-userpool-verificationmessagetemplate): 
-    [VerificationMessageTemplate](aws-properties-cognito-userpool-verificationmessagetemplate.md)
+    VerificationMessageTemplate
 ```
 
 ## Properties<a name="aws-resource-cognito-userpool-properties"></a>

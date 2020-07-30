@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : [SpotProvisioningSpecification](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)
+  "[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : SpotProvisioningSpecification
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification): 
-    [SpotProvisioningSpecification](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)
+    SpotProvisioningSpecification
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications-properties"></a>

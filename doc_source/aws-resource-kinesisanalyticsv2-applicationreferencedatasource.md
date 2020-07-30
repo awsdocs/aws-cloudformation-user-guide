@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource",
   "Properties" : {
       "[ApplicationName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-applicationname)" : String,
-      "[ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource)" : [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)
+      "[ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource)" : ReferenceDataSource
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
 Properties: 
   [ApplicationName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-applicationname): String
   [ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource): 
-    [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)
+    ReferenceDataSource
 ```
 
 ## Properties<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource-properties"></a>

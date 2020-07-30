@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[StatusCodes](#cfn-cloudfront-distribution-origingroupfailovercriteria-statuscodes)" : [StatusCodes](aws-properties-cloudfront-distribution-statuscodes.md)
+  "[StatusCodes](#cfn-cloudfront-distribution-origingroupfailovercriteria-statuscodes)" : StatusCodes
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [StatusCodes](#cfn-cloudfront-distribution-origingroupfailovercriteria-statuscodes): 
-    [StatusCodes](aws-properties-cloudfront-distribution-statuscodes.md)
+    StatusCodes
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-origingroupfailovercriteria-properties"></a>

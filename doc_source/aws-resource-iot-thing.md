@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoT::Thing",
   "Properties" : {
-      "[AttributePayload](#cfn-iot-thing-attributepayload)" : [AttributePayload](aws-properties-iot-thing-attributepayload.md),
+      "[AttributePayload](#cfn-iot-thing-attributepayload)" : AttributePayload,
       "[ThingName](#cfn-iot-thing-thingname)" : String
     }
 }
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoT::Thing
 Properties: 
   [AttributePayload](#cfn-iot-thing-attributepayload): 
-    [AttributePayload](aws-properties-iot-thing-attributepayload.md)
+    AttributePayload
   [ThingName](#cfn-iot-thing-thingname): String
 ```
 

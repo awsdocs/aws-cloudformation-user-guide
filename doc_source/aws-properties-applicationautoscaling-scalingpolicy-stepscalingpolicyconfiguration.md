@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Cooldown](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-cooldown)" : Integer,
   "[MetricAggregationType](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-metricaggregationtype)" : String,
   "[MinAdjustmentMagnitude](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-minadjustmentmagnitude)" : Integer,
-  "[StepAdjustments](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustments)" : [ [StepAdjustment](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.md), ... ]
+  "[StepAdjustments](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustments)" : [ StepAdjustment, ... ]
 }
 ```
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MetricAggregationType](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-metricaggregationtype): String
   [MinAdjustmentMagnitude](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-minadjustmentmagnitude): Integer
   [StepAdjustments](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustments): 
-    - [StepAdjustment](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.md)
+    - StepAdjustment
 ```
 
 ## Properties<a name="aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-properties"></a>

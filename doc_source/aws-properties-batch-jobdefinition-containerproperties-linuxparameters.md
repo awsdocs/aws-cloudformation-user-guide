@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Devices](#cfn-batch-jobdefinition-containerproperties-linuxparameters-devices)" : [ [Device](aws-properties-batch-jobdefinition-device.md), ... ]
+  "[Devices](#cfn-batch-jobdefinition-containerproperties-linuxparameters-devices)" : [ Device, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Devices](#cfn-batch-jobdefinition-containerproperties-linuxparameters-devices): 
-    - [Device](aws-properties-batch-jobdefinition-device.md)
+    - Device
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-containerproperties-linuxparameters-properties"></a>

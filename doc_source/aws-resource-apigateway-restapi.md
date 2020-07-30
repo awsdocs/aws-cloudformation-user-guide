@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype)" : String,
       "[BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes)" : [ String, ... ],
       "[Body](#cfn-apigateway-restapi-body)" : Json,
-      "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : [S3Location](aws-properties-apigateway-restapi-s3location.md),
+      "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : S3Location,
       "[CloneFrom](#cfn-apigateway-restapi-clonefrom)" : String,
       "[Description](#cfn-apigateway-restapi-description)" : String,
-      "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md),
+      "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : EndpointConfiguration,
       "[FailOnWarnings](#cfn-apigateway-restapi-failonwarnings)" : Boolean,
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
       "[Name](#cfn-apigateway-restapi-name)" : String,
@@ -42,11 +42,11 @@ Properties:
     - String
   [Body](#cfn-apigateway-restapi-body): Json
   [BodyS3Location](#cfn-apigateway-restapi-bodys3location): 
-    [S3Location](aws-properties-apigateway-restapi-s3location.md)
+    S3Location
   [CloneFrom](#cfn-apigateway-restapi-clonefrom): String
   [Description](#cfn-apigateway-restapi-description): String
   [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): 
-    [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md)
+    EndpointConfiguration
   [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings): Boolean
   [MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize): Integer
   [Name](#cfn-apigateway-restapi-name): String

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-configuration-engineversion)" : String,
       "[Name](#cfn-amazonmq-configuration-name)" : String,
-      "[Tags](#cfn-amazonmq-configuration-tags)" : [ [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md), ... ]
+      "[Tags](#cfn-amazonmq-configuration-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -33,7 +33,7 @@ Properties:
   [EngineVersion](#cfn-amazonmq-configuration-engineversion): String
   [Name](#cfn-amazonmq-configuration-name): String
   [Tags](#cfn-amazonmq-configuration-tags): 
-    - [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>

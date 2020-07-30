@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceType](#cfn-cloud9-environmentec2-instancetype)" : String,
       "[Name](#cfn-cloud9-environmentec2-name)" : String,
       "[OwnerArn](#cfn-cloud9-environmentec2-ownerarn)" : String,
-      "[Repositories](#cfn-cloud9-environmentec2-repositories)" : [ [Repository](aws-properties-cloud9-environmentec2-repository.md), ... ],
+      "[Repositories](#cfn-cloud9-environmentec2-repositories)" : [ Repository, ... ],
       "[SubnetId](#cfn-cloud9-environmentec2-subnetid)" : String,
       "[Tags](#cfn-cloud9-environmentec2-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -37,7 +37,7 @@ Properties:
   [Name](#cfn-cloud9-environmentec2-name): String
   [OwnerArn](#cfn-cloud9-environmentec2-ownerarn): String
   [Repositories](#cfn-cloud9-environmentec2-repositories): 
-    - [Repository](aws-properties-cloud9-environmentec2-repository.md)
+    - Repository
   [SubnetId](#cfn-cloud9-environmentec2-subnetid): String
   [Tags](#cfn-cloud9-environmentec2-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

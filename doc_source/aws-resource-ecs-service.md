@@ -13,22 +13,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ECS::Service",
   "Properties" : {
       "[Cluster](#cfn-ecs-service-cluster)" : String,
-      "[DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration)" : [DeploymentConfiguration](aws-properties-ecs-service-deploymentconfiguration.md),
-      "[DeploymentController](#cfn-ecs-service-deploymentcontroller)" : [DeploymentController](aws-properties-ecs-service-deploymentcontroller.md),
+      "[DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration)" : DeploymentConfiguration,
+      "[DeploymentController](#cfn-ecs-service-deploymentcontroller)" : DeploymentController,
       "[DesiredCount](#cfn-ecs-service-desiredcount)" : Integer,
       "[EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags)" : Boolean,
       "[HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds)" : Integer,
       "[LaunchType](#cfn-ecs-service-launchtype)" : String,
-      "[LoadBalancers](#cfn-ecs-service-loadbalancers)" : [ [LoadBalancer](aws-properties-ecs-service-loadbalancers.md), ... ],
-      "[NetworkConfiguration](#cfn-ecs-service-networkconfiguration)" : [NetworkConfiguration](aws-properties-ecs-service-networkconfiguration.md),
-      "[PlacementConstraints](#cfn-ecs-service-placementconstraints)" : [ [PlacementConstraint](aws-properties-ecs-service-placementconstraint.md), ... ],
-      "[PlacementStrategies](#cfn-ecs-service-placementstrategies)" : [ [PlacementStrategy](aws-properties-ecs-service-placementstrategy.md), ... ],
+      "[LoadBalancers](#cfn-ecs-service-loadbalancers)" : [ LoadBalancer, ... ],
+      "[NetworkConfiguration](#cfn-ecs-service-networkconfiguration)" : NetworkConfiguration,
+      "[PlacementConstraints](#cfn-ecs-service-placementconstraints)" : [ PlacementConstraint, ... ],
+      "[PlacementStrategies](#cfn-ecs-service-placementstrategies)" : [ PlacementStrategy, ... ],
       "[PlatformVersion](#cfn-ecs-service-platformversion)" : String,
       "[PropagateTags](#cfn-ecs-service-propagatetags)" : String,
       "[Role](#cfn-ecs-service-role)" : String,
       "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
       "[ServiceName](#cfn-ecs-service-servicename)" : String,
-      "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md), ... ],
+      "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ ServiceRegistry, ... ],
       "[Tags](#cfn-ecs-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TaskDefinition](#cfn-ecs-service-taskdefinition)" : String
     }
@@ -42,28 +42,28 @@ Type: AWS::ECS::Service
 Properties: 
   [Cluster](#cfn-ecs-service-cluster): String
   [DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration): 
-    [DeploymentConfiguration](aws-properties-ecs-service-deploymentconfiguration.md)
+    DeploymentConfiguration
   [DeploymentController](#cfn-ecs-service-deploymentcontroller): 
-    [DeploymentController](aws-properties-ecs-service-deploymentcontroller.md)
+    DeploymentController
   [DesiredCount](#cfn-ecs-service-desiredcount): Integer
   [EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags): Boolean
   [HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds): Integer
   [LaunchType](#cfn-ecs-service-launchtype): String
   [LoadBalancers](#cfn-ecs-service-loadbalancers): 
-    - [LoadBalancer](aws-properties-ecs-service-loadbalancers.md)
+    - LoadBalancer
   [NetworkConfiguration](#cfn-ecs-service-networkconfiguration): 
-    [NetworkConfiguration](aws-properties-ecs-service-networkconfiguration.md)
+    NetworkConfiguration
   [PlacementConstraints](#cfn-ecs-service-placementconstraints): 
-    - [PlacementConstraint](aws-properties-ecs-service-placementconstraint.md)
+    - PlacementConstraint
   [PlacementStrategies](#cfn-ecs-service-placementstrategies): 
-    - [PlacementStrategy](aws-properties-ecs-service-placementstrategy.md)
+    - PlacementStrategy
   [PlatformVersion](#cfn-ecs-service-platformversion): String
   [PropagateTags](#cfn-ecs-service-propagatetags): String
   [Role](#cfn-ecs-service-role): String
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
-    - [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)
+    - ServiceRegistry
   [Tags](#cfn-ecs-service-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TaskDefinition](#cfn-ecs-service-taskdefinition): String

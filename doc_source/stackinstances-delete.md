@@ -62,7 +62,7 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 StackSets also deletes stack instances from any child OUs of the specified target OUs\.
 
    ```
-   aws cloudformation delete-stack-instances -stack-set-name my-awsconfig-stackset --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5jlwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]' --no-retain-stacks
+   aws cloudformation delete-stack-instances --stack-set-name my-awsconfig-stackset --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5jlwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]' --no-retain-stacks
    ```
 
 1. Optionally, after stack deletion is finished, verify that stack instances were deleted from your stack set by running the `describe-stack-set-operation` command to show the status and results of the delete stacks operation\. For `--operation-id`, use the operation ID that was returned by your `delete-stack-instances` command\.

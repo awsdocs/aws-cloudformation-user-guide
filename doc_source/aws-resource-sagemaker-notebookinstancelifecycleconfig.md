@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::NotebookInstanceLifecycleConfig",
   "Properties" : {
       "[NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname)" : String,
-      "[OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)" : [ [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md), ... ],
-      "[OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)" : [ [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md), ... ]
+      "[OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)" : [ NotebookInstanceLifecycleHook, ... ],
+      "[OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)" : [ NotebookInstanceLifecycleHook, ... ]
     }
 }
 ```
@@ -26,9 +26,9 @@ Type: AWS::SageMaker::NotebookInstanceLifecycleConfig
 Properties: 
   [NotebookInstanceLifecycleConfigName](#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname): String
   [OnCreate](#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate): 
-    - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
+    - NotebookInstanceLifecycleHook
   [OnStart](#cfn-sagemaker-notebookinstancelifecycleconfig-onstart): 
-    - [NotebookInstanceLifecycleHook](aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.md)
+    - NotebookInstanceLifecycleHook
 ```
 
 ## Properties<a name="aws-resource-sagemaker-notebookinstancelifecycleconfig-properties"></a>

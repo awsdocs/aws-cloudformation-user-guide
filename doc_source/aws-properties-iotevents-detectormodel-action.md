@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ClearTimer](#cfn-iotevents-detectormodel-action-cleartimer)" : [ClearTimer](aws-properties-iotevents-detectormodel-cleartimer.md),
-  "[DynamoDB](#cfn-iotevents-detectormodel-action-dynamodb)" : [DynamoDB](aws-properties-iotevents-detectormodel-dynamodb.md),
-  "[DynamoDBv2](#cfn-iotevents-detectormodel-action-dynamodbv2)" : [DynamoDBv2](aws-properties-iotevents-detectormodel-dynamodbv2.md),
-  "[Firehose](#cfn-iotevents-detectormodel-action-firehose)" : [Firehose](aws-properties-iotevents-detectormodel-firehose.md),
-  "[IotEvents](#cfn-iotevents-detectormodel-action-iotevents)" : [IotEvents](aws-properties-iotevents-detectormodel-iotevents.md),
-  "[IotSiteWise](#cfn-iotevents-detectormodel-action-iotsitewise)" : [IotSiteWise](aws-properties-iotevents-detectormodel-iotsitewise.md),
-  "[IotTopicPublish](#cfn-iotevents-detectormodel-action-iottopicpublish)" : [IotTopicPublish](aws-properties-iotevents-detectormodel-iottopicpublish.md),
-  "[Lambda](#cfn-iotevents-detectormodel-action-lambda)" : [Lambda](aws-properties-iotevents-detectormodel-lambda.md),
-  "[ResetTimer](#cfn-iotevents-detectormodel-action-resettimer)" : [ResetTimer](aws-properties-iotevents-detectormodel-resettimer.md),
-  "[SetTimer](#cfn-iotevents-detectormodel-action-settimer)" : [SetTimer](aws-properties-iotevents-detectormodel-settimer.md),
-  "[SetVariable](#cfn-iotevents-detectormodel-action-setvariable)" : [SetVariable](aws-properties-iotevents-detectormodel-setvariable.md),
-  "[Sns](#cfn-iotevents-detectormodel-action-sns)" : [Sns](aws-properties-iotevents-detectormodel-sns.md),
-  "[Sqs](#cfn-iotevents-detectormodel-action-sqs)" : [Sqs](aws-properties-iotevents-detectormodel-sqs.md)
+  "[ClearTimer](#cfn-iotevents-detectormodel-action-cleartimer)" : ClearTimer,
+  "[DynamoDB](#cfn-iotevents-detectormodel-action-dynamodb)" : DynamoDB,
+  "[DynamoDBv2](#cfn-iotevents-detectormodel-action-dynamodbv2)" : DynamoDBv2,
+  "[Firehose](#cfn-iotevents-detectormodel-action-firehose)" : Firehose,
+  "[IotEvents](#cfn-iotevents-detectormodel-action-iotevents)" : IotEvents,
+  "[IotSiteWise](#cfn-iotevents-detectormodel-action-iotsitewise)" : IotSiteWise,
+  "[IotTopicPublish](#cfn-iotevents-detectormodel-action-iottopicpublish)" : IotTopicPublish,
+  "[Lambda](#cfn-iotevents-detectormodel-action-lambda)" : Lambda,
+  "[ResetTimer](#cfn-iotevents-detectormodel-action-resettimer)" : ResetTimer,
+  "[SetTimer](#cfn-iotevents-detectormodel-action-settimer)" : SetTimer,
+  "[SetVariable](#cfn-iotevents-detectormodel-action-setvariable)" : SetVariable,
+  "[Sns](#cfn-iotevents-detectormodel-action-sns)" : Sns,
+  "[Sqs](#cfn-iotevents-detectormodel-action-sqs)" : Sqs
 }
 ```
 
@@ -30,31 +30,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ClearTimer](#cfn-iotevents-detectormodel-action-cleartimer): 
-    [ClearTimer](aws-properties-iotevents-detectormodel-cleartimer.md)
+    ClearTimer
   [DynamoDB](#cfn-iotevents-detectormodel-action-dynamodb): 
-    [DynamoDB](aws-properties-iotevents-detectormodel-dynamodb.md)
+    DynamoDB
   [DynamoDBv2](#cfn-iotevents-detectormodel-action-dynamodbv2): 
-    [DynamoDBv2](aws-properties-iotevents-detectormodel-dynamodbv2.md)
+    DynamoDBv2
   [Firehose](#cfn-iotevents-detectormodel-action-firehose): 
-    [Firehose](aws-properties-iotevents-detectormodel-firehose.md)
+    Firehose
   [IotEvents](#cfn-iotevents-detectormodel-action-iotevents): 
-    [IotEvents](aws-properties-iotevents-detectormodel-iotevents.md)
+    IotEvents
   [IotSiteWise](#cfn-iotevents-detectormodel-action-iotsitewise): 
-    [IotSiteWise](aws-properties-iotevents-detectormodel-iotsitewise.md)
+    IotSiteWise
   [IotTopicPublish](#cfn-iotevents-detectormodel-action-iottopicpublish): 
-    [IotTopicPublish](aws-properties-iotevents-detectormodel-iottopicpublish.md)
+    IotTopicPublish
   [Lambda](#cfn-iotevents-detectormodel-action-lambda): 
-    [Lambda](aws-properties-iotevents-detectormodel-lambda.md)
+    Lambda
   [ResetTimer](#cfn-iotevents-detectormodel-action-resettimer): 
-    [ResetTimer](aws-properties-iotevents-detectormodel-resettimer.md)
+    ResetTimer
   [SetTimer](#cfn-iotevents-detectormodel-action-settimer): 
-    [SetTimer](aws-properties-iotevents-detectormodel-settimer.md)
+    SetTimer
   [SetVariable](#cfn-iotevents-detectormodel-action-setvariable): 
-    [SetVariable](aws-properties-iotevents-detectormodel-setvariable.md)
+    SetVariable
   [Sns](#cfn-iotevents-detectormodel-action-sns): 
-    [Sns](aws-properties-iotevents-detectormodel-sns.md)
+    Sns
   [Sqs](#cfn-iotevents-detectormodel-action-sqs): 
-    [Sqs](aws-properties-iotevents-detectormodel-sqs.md)
+    Sqs
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-action-properties"></a>

@@ -123,7 +123,7 @@ After you launch a stack, use the AWS CloudFormation [console](https://console.a
 
 ## Create change sets before updating your stacks<a name="cfn-best-practices-changesets"></a>
 
- Change sets allow you to see how proposed changes to a stack might impact your running resources before you implement them\. AWS CloudFormation doesn't make any changes to your stack until you execute the change set, allowing you to decide whether to proceed with your proposed changes or create another change set\.
+ Change sets allow you to see how proposed changes to a stack might impact your running resources before you implement them\. AWS CloudFormation doesn't make any changes to your stack until you run the change set, allowing you to decide whether to proceed with your proposed changes or create another change set\.
 
 Use change sets to check how your changes might impact your running resources, especially for critical resources\. For example, if you change the name of an Amazon RDS database instance, AWS CloudFormation will create a new database and delete the old one; you will lose the data in the old database unless you've already backed it up\. If you generate a change set, you will see that your change will replace your database\. This can help you plan before you update your stack\. For more information, see [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md)\.
 

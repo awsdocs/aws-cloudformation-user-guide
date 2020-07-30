@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppMesh::Mesh",
   "Properties" : {
       "[MeshName](#cfn-appmesh-mesh-meshname)" : String,
-      "[Spec](#cfn-appmesh-mesh-spec)" : [MeshSpec](aws-properties-appmesh-mesh-meshspec.md),
+      "[Spec](#cfn-appmesh-mesh-spec)" : MeshSpec,
       "[Tags](#cfn-appmesh-mesh-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,7 +30,7 @@ Type: AWS::AppMesh::Mesh
 Properties: 
   [MeshName](#cfn-appmesh-mesh-meshname): String
   [Spec](#cfn-appmesh-mesh-spec): 
-    [MeshSpec](aws-properties-appmesh-mesh-meshspec.md)
+    MeshSpec
   [Tags](#cfn-appmesh-mesh-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

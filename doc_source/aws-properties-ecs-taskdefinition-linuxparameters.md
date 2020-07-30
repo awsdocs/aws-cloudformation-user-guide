@@ -10,13 +10,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities)" : [KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md),
-  "[Devices](#cfn-ecs-taskdefinition-linuxparameters-devices)" : [ [Device](aws-properties-ecs-taskdefinition-device.md), ... ],
+  "[Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities)" : KernelCapabilities,
+  "[Devices](#cfn-ecs-taskdefinition-linuxparameters-devices)" : [ Device, ... ],
   "[InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled)" : Boolean,
   "[MaxSwap](#cfn-ecs-taskdefinition-linuxparameters-maxswap)" : Integer,
   "[SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize)" : Integer,
   "[Swappiness](#cfn-ecs-taskdefinition-linuxparameters-swappiness)" : Integer,
-  "[Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs)" : [ [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md), ... ]
+  "[Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs)" : [ Tmpfs, ... ]
 }
 ```
 
@@ -24,15 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Capabilities](#cfn-ecs-taskdefinition-linuxparameters-capabilities): 
-    [KernelCapabilities](aws-properties-ecs-taskdefinition-kernelcapabilities.md)
+    KernelCapabilities
   [Devices](#cfn-ecs-taskdefinition-linuxparameters-devices): 
-    - [Device](aws-properties-ecs-taskdefinition-device.md)
+    - Device
   [InitProcessEnabled](#cfn-ecs-taskdefinition-linuxparameters-initprocessenabled): Boolean
   [MaxSwap](#cfn-ecs-taskdefinition-linuxparameters-maxswap): Integer
   [SharedMemorySize](#cfn-ecs-taskdefinition-linuxparameters-sharedmemorysize): Integer
   [Swappiness](#cfn-ecs-taskdefinition-linuxparameters-swappiness): Integer
   [Tmpfs](#cfn-ecs-taskdefinition-linuxparameters-tmpfs): 
-    - [Tmpfs](aws-properties-ecs-taskdefinition-tmpfs.md)
+    - Tmpfs
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-linuxparameters-properties"></a>

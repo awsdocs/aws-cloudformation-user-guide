@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy)" : [AutoScalingPolicy](aws-properties-elasticmapreduce-cluster-autoscalingpolicy.md),
+  "[AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
   "[BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice)" : String,
-  "[Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations)" : [ [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md), ... ],
-  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md),
+  "[Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations)" : [ Configuration, ... ],
+  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
   "[InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount)" : Integer,
   "[InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype)" : String,
   "[Market](#cfn-elasticmapreduce-cluster-instancegroupconfig-market)" : String,
@@ -25,12 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy): 
-    [AutoScalingPolicy](aws-properties-elasticmapreduce-cluster-autoscalingpolicy.md)
+    AutoScalingPolicy
   [BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice): String
   [Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations): 
-    - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
+    - Configuration
   [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount): Integer
   [InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype): String
   [Market](#cfn-elasticmapreduce-cluster-instancegroupconfig-market): String

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ExportConfigType](#cfn-codebuild-reportgroup-reportexportconfig-exportconfigtype)" : String,
-  "[S3Destination](#cfn-codebuild-reportgroup-reportexportconfig-s3destination)" : [S3ReportExportConfig](aws-properties-codebuild-reportgroup-s3reportexportconfig.md)
+  "[S3Destination](#cfn-codebuild-reportgroup-reportexportconfig-s3destination)" : S3ReportExportConfig
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ExportConfigType](#cfn-codebuild-reportgroup-reportexportconfig-exportconfigtype): String
   [S3Destination](#cfn-codebuild-reportgroup-reportexportconfig-s3destination): 
-    [S3ReportExportConfig](aws-properties-codebuild-reportgroup-s3reportexportconfig.md)
+    S3ReportExportConfig
 ```
 
 ## Properties<a name="aws-properties-codebuild-reportgroup-reportexportconfig-properties"></a>

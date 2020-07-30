@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobDefinition",
   "Properties" : {
-      "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md),
+      "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : ContainerProperties,
       "[JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname)" : String,
-      "[NodeProperties](#cfn-batch-jobdefinition-nodeproperties)" : [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md),
+      "[NodeProperties](#cfn-batch-jobdefinition-nodeproperties)" : NodeProperties,
       "[Parameters](#cfn-batch-jobdefinition-parameters)" : Json,
-      "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md),
-      "[Timeout](#cfn-batch-jobdefinition-timeout)" : [Timeout](aws-properties-batch-jobdefinition-timeout.md),
+      "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : RetryStrategy,
+      "[Timeout](#cfn-batch-jobdefinition-timeout)" : Timeout,
       "[Type](#cfn-batch-jobdefinition-type)" : String
     }
 }
@@ -29,15 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Batch::JobDefinition
 Properties: 
   [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
-    [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
+    ContainerProperties
   [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
   [NodeProperties](#cfn-batch-jobdefinition-nodeproperties): 
-    [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)
+    NodeProperties
   [Parameters](#cfn-batch-jobdefinition-parameters): Json
   [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
-    [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)
+    RetryStrategy
   [Timeout](#cfn-batch-jobdefinition-timeout): 
-    [Timeout](aws-properties-batch-jobdefinition-timeout.md)
+    Timeout
   [Type](#cfn-batch-jobdefinition-type): String
 ```
 

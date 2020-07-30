@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoT::TopicRule",
   "Properties" : {
       "[RuleName](#cfn-iot-topicrule-rulename)" : String,
-      "[TopicRulePayload](#cfn-iot-topicrule-topicrulepayload)" : [TopicRulePayload](aws-properties-iot-topicrule-topicrulepayload.md)
+      "[TopicRulePayload](#cfn-iot-topicrule-topicrulepayload)" : TopicRulePayload
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::IoT::TopicRule
 Properties: 
   [RuleName](#cfn-iot-topicrule-rulename): String
   [TopicRulePayload](#cfn-iot-topicrule-topicrulepayload): 
-    [TopicRulePayload](aws-properties-iot-topicrule-topicrulepayload.md)
+    TopicRulePayload
 ```
 
 ## Properties<a name="aws-resource-iot-topicrule-properties"></a>

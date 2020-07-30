@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ServiceDiscovery::Service",
   "Properties" : {
       "[Description](#cfn-servicediscovery-service-description)" : String,
-      "[DnsConfig](#cfn-servicediscovery-service-dnsconfig)" : [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md),
-      "[HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig)" : [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md),
-      "[HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig)" : [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md),
+      "[DnsConfig](#cfn-servicediscovery-service-dnsconfig)" : DnsConfig,
+      "[HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig)" : HealthCheckConfig,
+      "[HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig)" : HealthCheckCustomConfig,
       "[Name](#cfn-servicediscovery-service-name)" : String,
       "[NamespaceId](#cfn-servicediscovery-service-namespaceid)" : String,
       "[Tags](#cfn-servicediscovery-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -37,11 +37,11 @@ Type: AWS::ServiceDiscovery::Service
 Properties: 
   [Description](#cfn-servicediscovery-service-description): String
   [DnsConfig](#cfn-servicediscovery-service-dnsconfig): 
-    [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)
+    DnsConfig
   [HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig): 
-    [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)
+    HealthCheckConfig
   [HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig): 
-    [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)
+    HealthCheckCustomConfig
   [Name](#cfn-servicediscovery-service-name): String
   [NamespaceId](#cfn-servicediscovery-service-namespaceid): String
   [Tags](#cfn-servicediscovery-service-tags): 

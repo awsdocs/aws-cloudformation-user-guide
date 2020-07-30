@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport)" : [DataExport](aws-properties-s3-bucket-dataexport.md)
+  "[DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport)" : DataExport
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DataExport](#cfn-s3-bucket-storageclassanalysis-dataexport): 
-    [DataExport](aws-properties-s3-bucket-dataexport.md)
+    DataExport
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-storageclassanalysis-properties"></a>

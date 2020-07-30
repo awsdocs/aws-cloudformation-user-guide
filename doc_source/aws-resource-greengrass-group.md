@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::Group",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-group-initialversion)" : [GroupVersion](aws-properties-greengrass-group-groupversion.md),
+      "[InitialVersion](#cfn-greengrass-group-initialversion)" : GroupVersion,
       "[Name](#cfn-greengrass-group-name)" : String,
       "[RoleArn](#cfn-greengrass-group-rolearn)" : String,
       "[Tags](#cfn-greengrass-group-tags)" : Json
@@ -43,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::Group
 Properties: 
   [InitialVersion](#cfn-greengrass-group-initialversion): 
-    [GroupVersion](aws-properties-greengrass-group-groupversion.md)
+    GroupVersion
   [Name](#cfn-greengrass-group-name): String
   [RoleArn](#cfn-greengrass-group-rolearn): String
   [Tags](#cfn-greengrass-group-tags): Json

@@ -22,8 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ScalableDimension](#cfn-applicationautoscaling-scalingpolicy-scalabledimension)" : String,
       "[ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid)" : String,
       "[ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace)" : String,
-      "[StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration)" : [StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md),
-      "[TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration)" : [TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
+      "[StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration)" : StepScalingPolicyConfiguration,
+      "[TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration)" : TargetTrackingScalingPolicyConfiguration
     }
 }
 ```
@@ -40,9 +40,9 @@ Properties:
   [ScalingTargetId](#cfn-applicationautoscaling-scalingpolicy-scalingtargetid): String
   [ServiceNamespace](#cfn-applicationautoscaling-scalingpolicy-servicenamespace): String
   [StepScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration): 
-    [StepScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.md)
+    StepScalingPolicyConfiguration
   [TargetTrackingScalingPolicyConfiguration](#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration): 
-    [TargetTrackingScalingPolicyConfiguration](aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.md)
+    TargetTrackingScalingPolicyConfiguration
 ```
 
 ## Properties<a name="aws-resource-applicationautoscaling-scalingpolicy-properties"></a>

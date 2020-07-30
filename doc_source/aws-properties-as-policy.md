@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MinAdjustmentMagnitude](#cfn-as-scalingpolicy-minadjustmentmagnitude)" : Integer,
       "[PolicyType](#cfn-as-scalingpolicy-policytype)" : String,
       "[ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment)" : Integer,
-      "[StepAdjustments](#cfn-as-scalingpolicy-stepadjustments)" : [ [StepAdjustment](aws-properties-autoscaling-scalingpolicy-stepadjustments.md), ... ],
-      "[TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration)" : [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)
+      "[StepAdjustments](#cfn-as-scalingpolicy-stepadjustments)" : [ StepAdjustment, ... ],
+      "[TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration)" : TargetTrackingConfiguration
     }
 }
 ```
@@ -44,9 +44,9 @@ Properties:
   [PolicyType](#cfn-as-scalingpolicy-policytype): String
   [ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment): Integer
   [StepAdjustments](#cfn-as-scalingpolicy-stepadjustments): 
-    - [StepAdjustment](aws-properties-autoscaling-scalingpolicy-stepadjustments.md)
+    - StepAdjustment
   [TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration): 
-    [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)
+    TargetTrackingConfiguration
 ```
 
 ## Properties<a name="aws-properties-as-policy-properties"></a>

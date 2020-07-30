@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomizedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)" : [CustomizedMetricSpecification](aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.md),
+  "[CustomizedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification)" : CustomizedMetricSpecification,
   "[DisableScaleIn](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein)" : Boolean,
-  "[PredefinedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)" : [PredefinedMetricSpecification](aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.md),
+  "[PredefinedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification)" : PredefinedMetricSpecification,
   "[TargetValue](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue)" : Double
 }
 ```
@@ -23,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomizedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-customizedmetricspecification): 
-    [CustomizedMetricSpecification](aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.md)
+    CustomizedMetricSpecification
   [DisableScaleIn](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-disablescalein): Boolean
   [PredefinedMetricSpecification](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-predefinedmetricspecification): 
-    [PredefinedMetricSpecification](aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.md)
+    PredefinedMetricSpecification
   [TargetValue](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration-targetvalue): Double
 ```
 

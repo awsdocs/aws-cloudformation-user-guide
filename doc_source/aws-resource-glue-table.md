@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CatalogId](#cfn-glue-table-catalogid)" : String,
       "[DatabaseName](#cfn-glue-table-databasename)" : String,
-      "[TableInput](#cfn-glue-table-tableinput)" : [TableInput](aws-properties-glue-table-tableinput.md)
+      "[TableInput](#cfn-glue-table-tableinput)" : TableInput
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [CatalogId](#cfn-glue-table-catalogid): String
   [DatabaseName](#cfn-glue-table-databasename): String
   [TableInput](#cfn-glue-table-tableinput): 
-    [TableInput](aws-properties-glue-table-tableinput.md)
+    TableInput
 ```
 
 ## Properties<a name="aws-resource-glue-table-properties"></a>

@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CheckpointConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration)" : [CheckpointConfiguration](aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.md),
-  "[MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration)" : [MonitoringConfiguration](aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.md),
-  "[ParallelismConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration)" : [ParallelismConfiguration](aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.md)
+  "[CheckpointConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration)" : CheckpointConfiguration,
+  "[MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration)" : MonitoringConfiguration,
+  "[ParallelismConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration)" : ParallelismConfiguration
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CheckpointConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-checkpointconfiguration): 
-    [CheckpointConfiguration](aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.md)
+    CheckpointConfiguration
   [MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-monitoringconfiguration): 
-    [MonitoringConfiguration](aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.md)
+    MonitoringConfiguration
   [ParallelismConfiguration](#cfn-kinesisanalyticsv2-application-flinkapplicationconfiguration-parallelismconfiguration): 
-    [ParallelismConfiguration](aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.md)
+    ParallelismConfiguration
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration-properties"></a>

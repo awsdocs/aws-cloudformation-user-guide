@@ -17,17 +17,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Synthetics::Canary",
   "Properties" : {
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
-      "[Code](#cfn-synthetics-canary-code)" : [Code](aws-properties-synthetics-canary-code.md),
+      "[Code](#cfn-synthetics-canary-code)" : Code,
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
       "[FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod)" : Integer,
       "[Name](#cfn-synthetics-canary-name)" : String,
-      "[RunConfig](#cfn-synthetics-canary-runconfig)" : [RunConfig](aws-properties-synthetics-canary-runconfig.md),
+      "[RunConfig](#cfn-synthetics-canary-runconfig)" : RunConfig,
       "[RuntimeVersion](#cfn-synthetics-canary-runtimeversion)" : String,
-      "[Schedule](#cfn-synthetics-canary-schedule)" : [Schedule](aws-properties-synthetics-canary-schedule.md),
+      "[Schedule](#cfn-synthetics-canary-schedule)" : Schedule,
       "[StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation)" : Boolean,
       "[SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod)" : Integer,
       "[Tags](#cfn-synthetics-canary-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : [VPCConfig](aws-properties-synthetics-canary-vpcconfig.md)
+      "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : VPCConfig
     }
 }
 ```
@@ -39,21 +39,21 @@ Type: AWS::Synthetics::Canary
 Properties: 
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
-    [Code](aws-properties-synthetics-canary-code.md)
+    Code
   [ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn): String
   [FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod): Integer
   [Name](#cfn-synthetics-canary-name): String
   [RunConfig](#cfn-synthetics-canary-runconfig): 
-    [RunConfig](aws-properties-synthetics-canary-runconfig.md)
+    RunConfig
   [RuntimeVersion](#cfn-synthetics-canary-runtimeversion): String
   [Schedule](#cfn-synthetics-canary-schedule): 
-    [Schedule](aws-properties-synthetics-canary-schedule.md)
+    Schedule
   [StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation): Boolean
   [SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod): Integer
   [Tags](#cfn-synthetics-canary-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VPCConfig](#cfn-synthetics-canary-vpcconfig): 
-    [VPCConfig](aws-properties-synthetics-canary-vpcconfig.md)
+    VPCConfig
 ```
 
 ## Properties<a name="aws-resource-synthetics-canary-properties"></a>

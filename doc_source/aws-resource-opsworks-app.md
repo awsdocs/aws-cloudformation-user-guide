@@ -14,16 +14,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::OpsWorks::App",
   "Properties" : {
-      "[AppSource](#cfn-opsworks-app-appsource)" : [Source](aws-properties-opsworks-stack-source-1.md),
+      "[AppSource](#cfn-opsworks-app-appsource)" : Source,
       "[Attributes](#cfn-opsworks-app-attributes)" : {Key : Value, ...},
-      "[DataSources](#cfn-opsworks-app-datasources)" : [ [DataSource](aws-properties-opsworks-app-datasource.md), ... ],
+      "[DataSources](#cfn-opsworks-app-datasources)" : [ DataSource, ... ],
       "[Description](#cfn-opsworks-app-description)" : String,
       "[Domains](#cfn-opsworks-app-domains)" : [ String, ... ],
       "[EnableSsl](#cfn-opsworks-app-enablessl)" : Boolean,
-      "[Environment](#cfn-opsworks-app-environment)" : [ [EnvironmentVariable](aws-properties-opsworks-app-environment.md), ... ],
+      "[Environment](#cfn-opsworks-app-environment)" : [ EnvironmentVariable, ... ],
       "[Name](#cfn-opsworks-app-name)" : String,
       "[Shortname](#cfn-opsworks-app-shortname)" : String,
-      "[SslConfiguration](#cfn-opsworks-app-sslconfiguration)" : [SslConfiguration](aws-properties-opsworks-app-sslconfiguration.md),
+      "[SslConfiguration](#cfn-opsworks-app-sslconfiguration)" : SslConfiguration,
       "[StackId](#cfn-opsworks-app-stackid)" : String,
       "[Type](#cfn-opsworks-app-type)" : String
     }
@@ -36,21 +36,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::OpsWorks::App
 Properties: 
   [AppSource](#cfn-opsworks-app-appsource): 
-    [Source](aws-properties-opsworks-stack-source-1.md)
+    Source
   [Attributes](#cfn-opsworks-app-attributes): 
     Key : Value
   [DataSources](#cfn-opsworks-app-datasources): 
-    - [DataSource](aws-properties-opsworks-app-datasource.md)
+    - DataSource
   [Description](#cfn-opsworks-app-description): String
   [Domains](#cfn-opsworks-app-domains): 
     - String
   [EnableSsl](#cfn-opsworks-app-enablessl): Boolean
   [Environment](#cfn-opsworks-app-environment): 
-    - [EnvironmentVariable](aws-properties-opsworks-app-environment.md)
+    - EnvironmentVariable
   [Name](#cfn-opsworks-app-name): String
   [Shortname](#cfn-opsworks-app-shortname): String
   [SslConfiguration](#cfn-opsworks-app-sslconfiguration): 
-    [SslConfiguration](aws-properties-opsworks-app-sslconfiguration.md)
+    SslConfiguration
   [StackId](#cfn-opsworks-app-stackid): String
   [Type](#cfn-opsworks-app-type): String
 ```

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Statements](#cfn-wafv2-rulegroup-andstatementone-statements)" : [ [StatementTwo](aws-properties-wafv2-rulegroup-statementtwo.md), ... ]
+  "[Statements](#cfn-wafv2-rulegroup-andstatementone-statements)" : [ StatementTwo, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Statements](#cfn-wafv2-rulegroup-andstatementone-statements): 
-    - [StatementTwo](aws-properties-wafv2-rulegroup-statementtwo.md)
+    - StatementTwo
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-andstatementone-properties"></a>

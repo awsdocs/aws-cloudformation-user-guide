@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EntryId](#cfn-iotevents-detectormodel-iotsitewise-entryid)" : String,
   "[PropertyAlias](#cfn-iotevents-detectormodel-iotsitewise-propertyalias)" : String,
   "[PropertyId](#cfn-iotevents-detectormodel-iotsitewise-propertyid)" : String,
-  "[PropertyValue](#cfn-iotevents-detectormodel-iotsitewise-propertyvalue)" : [AssetPropertyValue](aws-properties-iotevents-detectormodel-assetpropertyvalue.md)
+  "[PropertyValue](#cfn-iotevents-detectormodel-iotsitewise-propertyvalue)" : AssetPropertyValue
 }
 ```
 
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PropertyAlias](#cfn-iotevents-detectormodel-iotsitewise-propertyalias): String
   [PropertyId](#cfn-iotevents-detectormodel-iotsitewise-propertyid): String
   [PropertyValue](#cfn-iotevents-detectormodel-iotsitewise-propertyvalue): 
-    [AssetPropertyValue](aws-properties-iotevents-detectormodel-assetpropertyvalue.md)
+    AssetPropertyValue
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-iotsitewise-properties"></a>

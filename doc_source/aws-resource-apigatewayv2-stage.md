@@ -12,14 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGatewayV2::Stage",
   "Properties" : {
-      "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md),
+      "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : AccessLogSettings,
       "[ApiId](#cfn-apigatewayv2-stage-apiid)" : String,
       "[AutoDeploy](#cfn-apigatewayv2-stage-autodeploy)" : Boolean,
       "[ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid)" : String,
-      "[DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings)" : [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md),
+      "[DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings)" : RouteSettings,
       "[DeploymentId](#cfn-apigatewayv2-stage-deploymentid)" : String,
       "[Description](#cfn-apigatewayv2-stage-description)" : String,
-      "[RouteSettings](#cfn-apigatewayv2-stage-routesettings)" : [Json](aws-properties-apigatewayv2-stage-routesettings.md),
+      "[RouteSettings](#cfn-apigatewayv2-stage-routesettings)" : Json,
       "[StageName](#cfn-apigatewayv2-stage-stagename)" : String,
       "[StageVariables](#cfn-apigatewayv2-stage-stagevariables)" : Json,
       "[Tags](#cfn-apigatewayv2-stage-tags)" : Json
@@ -33,15 +33,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGatewayV2::Stage
 Properties: 
   [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
-    [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)
+    AccessLogSettings
   [ApiId](#cfn-apigatewayv2-stage-apiid): String
   [AutoDeploy](#cfn-apigatewayv2-stage-autodeploy): Boolean
   [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
   [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings): 
-    [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)
+    RouteSettings
   [DeploymentId](#cfn-apigatewayv2-stage-deploymentid): String
   [Description](#cfn-apigatewayv2-stage-description): String
-  [RouteSettings](#cfn-apigatewayv2-stage-routesettings): [Json](aws-properties-apigatewayv2-stage-routesettings.md)
+  [RouteSettings](#cfn-apigatewayv2-stage-routesettings): Json
   [StageName](#cfn-apigatewayv2-stage-stagename): String
   [StageVariables](#cfn-apigatewayv2-stage-stagevariables): Json
   [Tags](#cfn-apigatewayv2-stage-tags): Json

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-eventschemas-discoverer-description)" : String,
       "[SourceArn](#cfn-eventschemas-discoverer-sourcearn)" : String,
-      "[Tags](#cfn-eventschemas-discoverer-tags)" : [ [TagsEntry](aws-properties-eventschemas-discoverer-tagsentry.md), ... ]
+      "[Tags](#cfn-eventschemas-discoverer-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [Description](#cfn-eventschemas-discoverer-description): String
   [SourceArn](#cfn-eventschemas-discoverer-sourcearn): String
   [Tags](#cfn-eventschemas-discoverer-tags): 
-    - [TagsEntry](aws-properties-eventschemas-discoverer-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-eventschemas-discoverer-properties"></a>

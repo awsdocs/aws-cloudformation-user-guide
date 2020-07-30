@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-waf-webacl-rules-action)" : [WafAction](aws-properties-waf-webacl-action.md),
+  "[Action](#cfn-waf-webacl-rules-action)" : WafAction,
   "[Priority](#cfn-waf-webacl-rules-priority)" : Integer,
   "[RuleId](#cfn-waf-webacl-rules-ruleid)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-waf-webacl-rules-action): 
-    [WafAction](aws-properties-waf-webacl-action.md)
+    WafAction
   [Priority](#cfn-waf-webacl-rules-priority): Integer
   [RuleId](#cfn-waf-webacl-rules-ruleid): String
 ```

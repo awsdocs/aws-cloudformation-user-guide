@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InstanceTypeConfigs](#cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs)" : [ [InstanceTypeConfig](aws-properties-elasticmapreduce-cluster-instancetypeconfig.md), ... ],
-  "[LaunchSpecifications](#cfn-elasticmapreduce-cluster-instancefleetconfig-launchspecifications)" : [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications.md),
+  "[InstanceTypeConfigs](#cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs)" : [ InstanceTypeConfig, ... ],
+  "[LaunchSpecifications](#cfn-elasticmapreduce-cluster-instancefleetconfig-launchspecifications)" : InstanceFleetProvisioningSpecifications,
   "[Name](#cfn-elasticmapreduce-cluster-instancefleetconfig-name)" : String,
   "[TargetOnDemandCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetondemandcapacity)" : Integer,
   "[TargetSpotCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetspotcapacity)" : Integer
@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InstanceTypeConfigs](#cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs): 
-    - [InstanceTypeConfig](aws-properties-elasticmapreduce-cluster-instancetypeconfig.md)
+    - InstanceTypeConfig
   [LaunchSpecifications](#cfn-elasticmapreduce-cluster-instancefleetconfig-launchspecifications): 
-    [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications.md)
+    InstanceFleetProvisioningSpecifications
   [Name](#cfn-elasticmapreduce-cluster-instancefleetconfig-name): String
   [TargetOnDemandCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetondemandcapacity): Integer
   [TargetSpotCapacity](#cfn-elasticmapreduce-cluster-instancefleetconfig-targetspotcapacity): Integer

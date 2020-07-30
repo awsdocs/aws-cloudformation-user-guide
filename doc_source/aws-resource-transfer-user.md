@@ -13,12 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Transfer::User",
   "Properties" : {
       "[HomeDirectory](#cfn-transfer-user-homedirectory)" : String,
-      "[HomeDirectoryMappings](#cfn-transfer-user-homedirectorymappings)" : [ [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md), ... ],
+      "[HomeDirectoryMappings](#cfn-transfer-user-homedirectorymappings)" : [ HomeDirectoryMapEntry, ... ],
       "[HomeDirectoryType](#cfn-transfer-user-homedirectorytype)" : String,
       "[Policy](#cfn-transfer-user-policy)" : String,
       "[Role](#cfn-transfer-user-role)" : String,
       "[ServerId](#cfn-transfer-user-serverid)" : String,
-      "[SshPublicKeys](#cfn-transfer-user-sshpublickeys)" : [ [SshPublicKey](aws-properties-transfer-user-sshpublickey.md), ... ],
+      "[SshPublicKeys](#cfn-transfer-user-sshpublickeys)" : [ SshPublicKey, ... ],
       "[Tags](#cfn-transfer-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserName](#cfn-transfer-user-username)" : String
     }
@@ -32,13 +32,13 @@ Type: AWS::Transfer::User
 Properties: 
   [HomeDirectory](#cfn-transfer-user-homedirectory): String
   [HomeDirectoryMappings](#cfn-transfer-user-homedirectorymappings): 
-    - [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)
+    - HomeDirectoryMapEntry
   [HomeDirectoryType](#cfn-transfer-user-homedirectorytype): String
   [Policy](#cfn-transfer-user-policy): String
   [Role](#cfn-transfer-user-role): String
   [ServerId](#cfn-transfer-user-serverid): String
   [SshPublicKeys](#cfn-transfer-user-sshpublickeys): 
-    - [SshPublicKey](aws-properties-transfer-user-sshpublickey.md)
+    - SshPublicKey
   [Tags](#cfn-transfer-user-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserName](#cfn-transfer-user-username): String

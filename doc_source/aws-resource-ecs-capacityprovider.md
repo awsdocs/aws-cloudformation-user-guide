@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::CapacityProvider",
   "Properties" : {
-      "[AutoScalingGroupProvider](#cfn-ecs-capacityprovider-autoscalinggroupprovider)" : [AutoScalingGroupProvider](aws-properties-ecs-capacityprovider-autoscalinggroupprovider.md),
+      "[AutoScalingGroupProvider](#cfn-ecs-capacityprovider-autoscalinggroupprovider)" : AutoScalingGroupProvider,
       "[Name](#cfn-ecs-capacityprovider-name)" : String,
       "[Tags](#cfn-ecs-capacityprovider-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ECS::CapacityProvider
 Properties: 
   [AutoScalingGroupProvider](#cfn-ecs-capacityprovider-autoscalinggroupprovider): 
-    [AutoScalingGroupProvider](aws-properties-ecs-capacityprovider-autoscalinggroupprovider.md)
+    AutoScalingGroupProvider
   [Name](#cfn-ecs-capacityprovider-name): String
   [Tags](#cfn-ecs-capacityprovider-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

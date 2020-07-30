@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BucketPrefix](#cfn-ssm-resourcedatasync-bucketprefix)" : String,
       "[BucketRegion](#cfn-ssm-resourcedatasync-bucketregion)" : String,
       "[KMSKeyArn](#cfn-ssm-resourcedatasync-kmskeyarn)" : String,
-      "[S3Destination](#cfn-ssm-resourcedatasync-s3destination)" : [S3Destination](aws-properties-ssm-resourcedatasync-s3destination.md),
+      "[S3Destination](#cfn-ssm-resourcedatasync-s3destination)" : S3Destination,
       "[SyncFormat](#cfn-ssm-resourcedatasync-syncformat)" : String,
       "[SyncName](#cfn-ssm-resourcedatasync-syncname)" : String,
-      "[SyncSource](#cfn-ssm-resourcedatasync-syncsource)" : [SyncSource](aws-properties-ssm-resourcedatasync-syncsource.md),
+      "[SyncSource](#cfn-ssm-resourcedatasync-syncsource)" : SyncSource,
       "[SyncType](#cfn-ssm-resourcedatasync-synctype)" : String
     }
 }
@@ -47,11 +47,11 @@ Properties:
   [BucketRegion](#cfn-ssm-resourcedatasync-bucketregion): String
   [KMSKeyArn](#cfn-ssm-resourcedatasync-kmskeyarn): String
   [S3Destination](#cfn-ssm-resourcedatasync-s3destination): 
-    [S3Destination](aws-properties-ssm-resourcedatasync-s3destination.md)
+    S3Destination
   [SyncFormat](#cfn-ssm-resourcedatasync-syncformat): String
   [SyncName](#cfn-ssm-resourcedatasync-syncname): String
   [SyncSource](#cfn-ssm-resourcedatasync-syncsource): 
-    [SyncSource](aws-properties-ssm-resourcedatasync-syncsource.md)
+    SyncSource
   [SyncType](#cfn-ssm-resourcedatasync-synctype): String
 ```
 

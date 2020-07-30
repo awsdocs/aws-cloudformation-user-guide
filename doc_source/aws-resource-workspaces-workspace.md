@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[UserName](#cfn-workspaces-workspace-username)" : String,
       "[UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled)" : Boolean,
       "[VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey)" : String,
-      "[WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties)" : [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
+      "[WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties)" : WorkspaceProperties
     }
 }
 ```
@@ -40,7 +40,7 @@ Properties:
   [UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled): Boolean
   [VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey): String
   [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties): 
-    [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
+    WorkspaceProperties
 ```
 
 ## Properties<a name="aws-resource-workspaces-workspace-properties"></a>

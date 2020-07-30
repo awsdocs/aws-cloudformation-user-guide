@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BufferingHints](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints)" : [ElasticsearchBufferingHints](aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.md),
-  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions)" : [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
+  "[BufferingHints](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints)" : ElasticsearchBufferingHints,
+  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[ClusterEndpoint](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-clusterendpoint)" : String,
   "[DomainARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn)" : String,
   "[IndexName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname)" : String,
   "[IndexRotationPeriod](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod)" : String,
-  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration)" : [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md),
-  "[RetryOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions)" : [ElasticsearchRetryOptions](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md),
+  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration)" : ProcessingConfiguration,
+  "[RetryOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions)" : ElasticsearchRetryOptions,
   "[RoleARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn)" : String,
   "[S3BackupMode](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmode)" : String,
-  "[S3Configuration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration)" : [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
+  "[S3Configuration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration)" : S3DestinationConfiguration,
   "[TypeName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename)" : String,
-  "[VpcConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-vpcconfiguration)" : [VpcConfiguration](aws-properties-kinesisfirehose-deliverystream-vpcconfiguration.md)
+  "[VpcConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-vpcconfiguration)" : VpcConfiguration
 }
 ```
 
@@ -30,24 +30,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BufferingHints](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints): 
-    [ElasticsearchBufferingHints](aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.md)
+    ElasticsearchBufferingHints
   [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions): 
-    [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+    CloudWatchLoggingOptions
   [ClusterEndpoint](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-clusterendpoint): String
   [DomainARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn): String
   [IndexName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname): String
   [IndexRotationPeriod](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod): String
   [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration): 
-    [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
+    ProcessingConfiguration
   [RetryOptions](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions): 
-    [ElasticsearchRetryOptions](aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.md)
+    ElasticsearchRetryOptions
   [RoleARN](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn): String
   [S3BackupMode](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmode): String
   [S3Configuration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration): 
-    [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    S3DestinationConfiguration
   [TypeName](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename): String
   [VpcConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-vpcconfiguration): 
-    [VpcConfiguration](aws-properties-kinesisfirehose-deliverystream-vpcconfiguration.md)
+    VpcConfiguration
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-properties"></a>

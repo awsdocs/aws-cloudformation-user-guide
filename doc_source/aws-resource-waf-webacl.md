@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::WebACL",
   "Properties" : {
-      "[DefaultAction](#cfn-waf-webacl-defaultaction)" : [WafAction](aws-properties-waf-webacl-action.md),
+      "[DefaultAction](#cfn-waf-webacl-defaultaction)" : WafAction,
       "[MetricName](#cfn-waf-webacl-metricname)" : String,
       "[Name](#cfn-waf-webacl-name)" : String,
-      "[Rules](#cfn-waf-webacl-rules)" : [ [ActivatedRule](aws-properties-waf-webacl-rules.md), ... ]
+      "[Rules](#cfn-waf-webacl-rules)" : [ ActivatedRule, ... ]
     }
 }
 ```
@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::WebACL
 Properties: 
   [DefaultAction](#cfn-waf-webacl-defaultaction): 
-    [WafAction](aws-properties-waf-webacl-action.md)
+    WafAction
   [MetricName](#cfn-waf-webacl-metricname): String
   [Name](#cfn-waf-webacl-name): String
   [Rules](#cfn-waf-webacl-rules): 
-    - [ActivatedRule](aws-properties-waf-webacl-rules.md)
+    - ActivatedRule
 ```
 
 ## Properties<a name="aws-resource-waf-webacl-properties"></a>

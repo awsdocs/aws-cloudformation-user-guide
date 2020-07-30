@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Column](#cfn-glue-table-order-column)" : [String](aws-properties-glue-table-column.md),
+  "[Column](#cfn-glue-table-order-column)" : String,
   "[SortOrder](#cfn-glue-table-order-sortorder)" : Integer
 }
 ```
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-table-order-syntax.yaml"></a>
 
 ```
-  [Column](#cfn-glue-table-order-column): [String](aws-properties-glue-table-column.md)
+  [Column](#cfn-glue-table-order-column): String
   [SortOrder](#cfn-glue-table-order-sortorder): Integer
 ```
 

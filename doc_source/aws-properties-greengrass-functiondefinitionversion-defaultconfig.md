@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
+  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : Execution
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution): 
-    [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
+    Execution
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-properties"></a>

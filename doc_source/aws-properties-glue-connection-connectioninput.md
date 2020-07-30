@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Description](#cfn-glue-connection-connectioninput-description)" : String,
   "[MatchCriteria](#cfn-glue-connection-connectioninput-matchcriteria)" : [ String, ... ],
   "[Name](#cfn-glue-connection-connectioninput-name)" : String,
-  "[PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements)" : [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)
+  "[PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements)" : PhysicalConnectionRequirements
 }
 ```
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [Name](#cfn-glue-connection-connectioninput-name): String
   [PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements): 
-    [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)
+    PhysicalConnectionRequirements
 ```
 
 ## Properties<a name="aws-properties-glue-connection-connectioninput-properties"></a>

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-iot-provisioningtemplate-description)" : String,
       "[Enabled](#cfn-iot-provisioningtemplate-enabled)" : Boolean,
-      "[PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook)" : [ProvisioningHook](aws-properties-iot-provisioningtemplate-provisioninghook.md),
+      "[PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook)" : ProvisioningHook,
       "[ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn)" : String,
       "[Tags](#cfn-iot-provisioningtemplate-tags)" : [ Json, ... ],
       "[TemplateBody](#cfn-iot-provisioningtemplate-templatebody)" : String,
@@ -31,7 +31,7 @@ Properties:
   [Description](#cfn-iot-provisioningtemplate-description): String
   [Enabled](#cfn-iot-provisioningtemplate-enabled): Boolean
   [PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook): 
-    [ProvisioningHook](aws-properties-iot-provisioningtemplate-provisioninghook.md)
+    ProvisioningHook
   [ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn): String
   [Tags](#cfn-iot-provisioningtemplate-tags): 
     - Json

@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters)" : [Parameters](aws-properties-dlm-lifecyclepolicy-parameters.md),
+  "[Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters)" : Parameters,
   "[PolicyType](#cfn-dlm-lifecyclepolicy-policydetails-policytype)" : String,
   "[ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes)" : [ String, ... ],
-  "[Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules)" : [ [Schedule](aws-properties-dlm-lifecyclepolicy-schedule.md), ... ],
+  "[Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules)" : [ Schedule, ... ],
   "[TargetTags](#cfn-dlm-lifecyclepolicy-policydetails-targettags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
 ```
@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters): 
-    [Parameters](aws-properties-dlm-lifecyclepolicy-parameters.md)
+    Parameters
   [PolicyType](#cfn-dlm-lifecyclepolicy-policydetails-policytype): String
   [ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes): 
     - String
   [Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules): 
-    - [Schedule](aws-properties-dlm-lifecyclepolicy-schedule.md)
+    - Schedule
   [TargetTags](#cfn-dlm-lifecyclepolicy-policydetails-targettags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceProfileName](#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename)" : String,
       "[InstanceTypes](#cfn-imagebuilder-infrastructureconfiguration-instancetypes)" : [ String, ... ],
       "[KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair)" : String,
-      "[Logging](#cfn-imagebuilder-infrastructureconfiguration-logging)" : [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md),
+      "[Logging](#cfn-imagebuilder-infrastructureconfiguration-logging)" : Logging,
       "[Name](#cfn-imagebuilder-infrastructureconfiguration-name)" : String,
       "[SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids)" : [ String, ... ],
       "[SnsTopicArn](#cfn-imagebuilder-infrastructureconfiguration-snstopicarn)" : String,
@@ -38,7 +38,7 @@ Properties:
     - String
   [KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair): String
   [Logging](#cfn-imagebuilder-infrastructureconfiguration-logging): 
-    [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md)
+    Logging
   [Name](#cfn-imagebuilder-infrastructureconfiguration-name): String
   [SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids): 
     - String

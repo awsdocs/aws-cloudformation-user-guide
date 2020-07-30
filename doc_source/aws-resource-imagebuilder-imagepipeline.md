@@ -14,11 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-imagebuilder-imagepipeline-description)" : String,
       "[DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn)" : String,
+      "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn)" : String,
-      "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : [ImageTestsConfiguration](aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.md),
+      "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn)" : String,
       "[Name](#cfn-imagebuilder-imagepipeline-name)" : String,
-      "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : [Schedule](aws-properties-imagebuilder-imagepipeline-schedule.md),
+      "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : Schedule,
       "[Status](#cfn-imagebuilder-imagepipeline-status)" : String,
       "[Tags](#cfn-imagebuilder-imagepipeline-tags)" : {Key : Value, ...}
     }
@@ -32,13 +33,14 @@ Type: AWS::ImageBuilder::ImagePipeline
 Properties: 
   [Description](#cfn-imagebuilder-imagepipeline-description): String
   [DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn): String
+  [EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn): String
   [ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration): 
-    [ImageTestsConfiguration](aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.md)
+    ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn): String
   [Name](#cfn-imagebuilder-imagepipeline-name): String
   [Schedule](#cfn-imagebuilder-imagepipeline-schedule): 
-    [Schedule](aws-properties-imagebuilder-imagepipeline-schedule.md)
+    Schedule
   [Status](#cfn-imagebuilder-imagepipeline-status): String
   [Tags](#cfn-imagebuilder-imagepipeline-tags): 
     Key : Value
@@ -58,6 +60,12 @@ The description of this image pipeline\.
 The Amazon Resource Name \(ARN\) of the distribution configuration associated with this image pipeline\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageRecipeArn`  <a name="cfn-imagebuilder-imagepipeline-imagerecipearn"></a>

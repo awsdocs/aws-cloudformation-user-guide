@@ -31,11 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HostedZone",
   "Properties" : {
-      "[HostedZoneConfig](#cfn-route53-hostedzone-hostedzoneconfig)" : [HostedZoneConfig](aws-properties-route53-hostedzone-hostedzoneconfig.md),
-      "[HostedZoneTags](#cfn-route53-hostedzone-hostedzonetags)" : [ [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetags.md), ... ],
+      "[HostedZoneConfig](#cfn-route53-hostedzone-hostedzoneconfig)" : HostedZoneConfig,
+      "[HostedZoneTags](#cfn-route53-hostedzone-hostedzonetags)" : [ HostedZoneTag, ... ],
       "[Name](#cfn-route53-hostedzone-name)" : String,
-      "[QueryLoggingConfig](#cfn-route53-hostedzone-queryloggingconfig)" : [QueryLoggingConfig](aws-properties-route53-hostedzone-queryloggingconfig.md),
-      "[VPCs](#cfn-route53-hostedzone-vpcs)" : [ [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md), ... ]
+      "[QueryLoggingConfig](#cfn-route53-hostedzone-queryloggingconfig)" : QueryLoggingConfig,
+      "[VPCs](#cfn-route53-hostedzone-vpcs)" : [ VPC, ... ]
     }
 }
 ```
@@ -46,14 +46,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Route53::HostedZone
 Properties: 
   [HostedZoneConfig](#cfn-route53-hostedzone-hostedzoneconfig): 
-    [HostedZoneConfig](aws-properties-route53-hostedzone-hostedzoneconfig.md)
+    HostedZoneConfig
   [HostedZoneTags](#cfn-route53-hostedzone-hostedzonetags): 
-    - [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetags.md)
+    - HostedZoneTag
   [Name](#cfn-route53-hostedzone-name): String
   [QueryLoggingConfig](#cfn-route53-hostedzone-queryloggingconfig): 
-    [QueryLoggingConfig](aws-properties-route53-hostedzone-queryloggingconfig.md)
+    QueryLoggingConfig
   [VPCs](#cfn-route53-hostedzone-vpcs): 
-    - [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md)
+    - VPC
 ```
 
 ## Properties<a name="aws-resource-route53-hostedzone-properties"></a>

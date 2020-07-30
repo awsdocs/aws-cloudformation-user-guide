@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath)" : String,
-  "[OwnerSetting](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)" : [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md),
+  "[OwnerSetting](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)" : ResourceDownloadOwnerSetting,
   "[SageMakerJobArn](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath): String
   [OwnerSetting](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting): 
-    [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md)
+    ResourceDownloadOwnerSetting
   [SageMakerJobArn](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn): String
 ```
 

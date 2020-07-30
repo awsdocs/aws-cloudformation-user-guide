@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RuleBody](#cfn-cloudwatch-insightrule-rulebody)" : String,
       "[RuleName](#cfn-cloudwatch-insightrule-rulename)" : String,
       "[RuleState](#cfn-cloudwatch-insightrule-rulestate)" : String,
-      "[Tags](#cfn-cloudwatch-insightrule-tags)" : [Tags](aws-properties-cloudwatch-insightrule-tags.md)
+      "[Tags](#cfn-cloudwatch-insightrule-tags)" : Tags
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [RuleName](#cfn-cloudwatch-insightrule-rulename): String
   [RuleState](#cfn-cloudwatch-insightrule-rulestate): String
   [Tags](#cfn-cloudwatch-insightrule-tags): 
-    [Tags](aws-properties-cloudwatch-insightrule-tags.md)
+    Tags
 ```
 
 ## Properties<a name="aws-resource-cloudwatch-insightrule-properties"></a>

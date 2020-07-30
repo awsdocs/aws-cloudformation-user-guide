@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)" : String,
-  "[FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)" : [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)" : FieldToMatch,
   "[Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size)" : Integer,
   "[TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)" : String
 }
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator): String
   [FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)
+    FieldToMatch
   [Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size): Integer
   [TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation): String
 ```

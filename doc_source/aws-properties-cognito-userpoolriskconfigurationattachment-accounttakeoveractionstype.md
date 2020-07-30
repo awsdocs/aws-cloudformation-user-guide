@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HighAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)" : [AccountTakeoverActionType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.md),
-  "[LowAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)" : [AccountTakeoverActionType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.md),
-  "[MediumAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)" : [AccountTakeoverActionType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.md)
+  "[HighAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction)" : AccountTakeoverActionType,
+  "[LowAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction)" : AccountTakeoverActionType,
+  "[MediumAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction)" : AccountTakeoverActionType
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HighAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-highaction): 
-    [AccountTakeoverActionType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.md)
+    AccountTakeoverActionType
   [LowAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-lowaction): 
-    [AccountTakeoverActionType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.md)
+    AccountTakeoverActionType
   [MediumAction](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-mediumaction): 
-    [AccountTakeoverActionType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype.md)
+    AccountTakeoverActionType
 ```
 
 ## Properties<a name="aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype-properties"></a>

@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CapacityProviders](#cfn-ecs-cluster-capacityproviders)" : [ String, ... ],
       "[ClusterName](#cfn-ecs-cluster-clustername)" : String,
-      "[ClusterSettings](#cfn-ecs-cluster-clustersettings)" : [ [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md), ... ],
-      "[DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy)" : [ [CapacityProviderStrategyItem](aws-properties-ecs-cluster-capacityproviderstrategyitem.md), ... ],
+      "[ClusterSettings](#cfn-ecs-cluster-clustersettings)" : [ ClusterSettings, ... ],
+      "[DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy)" : [ CapacityProviderStrategyItem, ... ],
       "[Tags](#cfn-ecs-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,9 +30,9 @@ Properties:
     - String
   [ClusterName](#cfn-ecs-cluster-clustername): String
   [ClusterSettings](#cfn-ecs-cluster-clustersettings): 
-    - [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md)
+    - ClusterSettings
   [DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy): 
-    - [CapacityProviderStrategyItem](aws-properties-ecs-cluster-capacityproviderstrategyitem.md)
+    - CapacityProviderStrategyItem
   [Tags](#cfn-ecs-cluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

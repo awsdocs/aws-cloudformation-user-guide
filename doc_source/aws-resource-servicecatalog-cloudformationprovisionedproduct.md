@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProvisionedProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname)" : String,
       "[ProvisioningArtifactId](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid)" : String,
       "[ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname)" : String,
-      "[ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)" : [ [ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md), ... ],
-      "[ProvisioningPreferences](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences)" : [ProvisioningPreferences](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences.md),
+      "[ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)" : [ ProvisioningParameter, ... ],
+      "[ProvisioningPreferences](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences)" : ProvisioningPreferences,
       "[Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -46,9 +46,9 @@ Properties:
   [ProvisioningArtifactId](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid): String
   [ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname): String
   [ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters): 
-    - [ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md)
+    - ProvisioningParameter
   [ProvisioningPreferences](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences): 
-    [ProvisioningPreferences](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences.md)
+    ProvisioningPreferences
   [Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

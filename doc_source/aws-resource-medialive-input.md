@@ -14,15 +14,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaLive::Input",
   "Properties" : {
-      "[Destinations](#cfn-medialive-input-destinations)" : [ [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md), ... ],
+      "[Destinations](#cfn-medialive-input-destinations)" : [ InputDestinationRequest, ... ],
       "[InputSecurityGroups](#cfn-medialive-input-inputsecuritygroups)" : [ String, ... ],
-      "[MediaConnectFlows](#cfn-medialive-input-mediaconnectflows)" : [ [MediaConnectFlowRequest](aws-properties-medialive-input-mediaconnectflowrequest.md), ... ],
+      "[MediaConnectFlows](#cfn-medialive-input-mediaconnectflows)" : [ MediaConnectFlowRequest, ... ],
       "[Name](#cfn-medialive-input-name)" : String,
       "[RoleArn](#cfn-medialive-input-rolearn)" : String,
-      "[Sources](#cfn-medialive-input-sources)" : [ [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md), ... ],
+      "[Sources](#cfn-medialive-input-sources)" : [ InputSourceRequest, ... ],
       "[Tags](#cfn-medialive-input-tags)" : Json,
       "[Type](#cfn-medialive-input-type)" : String,
-      "[Vpc](#cfn-medialive-input-vpc)" : [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)
+      "[Vpc](#cfn-medialive-input-vpc)" : InputVpcRequest
     }
 }
 ```
@@ -33,19 +33,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MediaLive::Input
 Properties: 
   [Destinations](#cfn-medialive-input-destinations): 
-    - [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)
+    - InputDestinationRequest
   [InputSecurityGroups](#cfn-medialive-input-inputsecuritygroups): 
     - String
   [MediaConnectFlows](#cfn-medialive-input-mediaconnectflows): 
-    - [MediaConnectFlowRequest](aws-properties-medialive-input-mediaconnectflowrequest.md)
+    - MediaConnectFlowRequest
   [Name](#cfn-medialive-input-name): String
   [RoleArn](#cfn-medialive-input-rolearn): String
   [Sources](#cfn-medialive-input-sources): 
-    - [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md)
+    - InputSourceRequest
   [Tags](#cfn-medialive-input-tags): Json
   [Type](#cfn-medialive-input-type): String
   [Vpc](#cfn-medialive-input-vpc): 
-    [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)
+    InputVpcRequest
 ```
 
 ## Properties<a name="aws-resource-medialive-input-properties"></a>

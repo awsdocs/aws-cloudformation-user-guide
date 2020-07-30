@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cassandra::Table",
   "Properties" : {
-      "[BillingMode](#cfn-cassandra-table-billingmode)" : [BillingMode](aws-properties-cassandra-table-billingmode.md),
-      "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ [ClusteringKeyColumn](aws-properties-cassandra-table-clusteringkeycolumn.md), ... ],
+      "[BillingMode](#cfn-cassandra-table-billingmode)" : BillingMode,
+      "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ ClusteringKeyColumn, ... ],
       "[KeyspaceName](#cfn-cassandra-table-keyspacename)" : String,
-      "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ [Column](aws-properties-cassandra-table-column.md), ... ],
-      "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ [Column](aws-properties-cassandra-table-column.md), ... ],
+      "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ Column, ... ],
+      "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ Column, ... ],
       "[TableName](#cfn-cassandra-table-tablename)" : String
     }
 }
@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cassandra::Table
 Properties: 
   [BillingMode](#cfn-cassandra-table-billingmode): 
-    [BillingMode](aws-properties-cassandra-table-billingmode.md)
+    BillingMode
   [ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns): 
-    - [ClusteringKeyColumn](aws-properties-cassandra-table-clusteringkeycolumn.md)
+    - ClusteringKeyColumn
   [KeyspaceName](#cfn-cassandra-table-keyspacename): String
   [PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns): 
-    - [Column](aws-properties-cassandra-table-column.md)
+    - Column
   [RegularColumns](#cfn-cassandra-table-regularcolumns): 
-    - [Column](aws-properties-cassandra-table-column.md)
+    - Column
   [TableName](#cfn-cassandra-table-tablename): String
 ```
 

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::StreamingDistribution",
   "Properties" : {
-      "[StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)" : [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md),
+      "[StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)" : StreamingDistributionConfig,
       "[Tags](#cfn-cloudfront-streamingdistribution-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::StreamingDistribution
 Properties: 
   [StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig): 
-    [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md)
+    StreamingDistributionConfig
   [Tags](#cfn-cloudfront-streamingdistribution-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

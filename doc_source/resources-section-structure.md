@@ -98,7 +98,7 @@ Properties:
     Key=%${MyParameter}
 ```
 
-You can conditionally create a resource by associating a condition with it\. You must define the condition in the `[Conditions](conditions-section-structure.md)` section of the template\.
+You can conditionally create a resource by associating a condition with it\. You must define the condition in the `Conditions` section of the template\.
 
 ## Examples<a name="resources-section-structure-examples"></a>
 

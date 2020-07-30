@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LaunchTemplateSpecification](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification)" : [FleetLaunchTemplateSpecificationRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.md),
-  "[Overrides](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides)" : [ [FleetLaunchTemplateOverridesRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.md), ... ]
+  "[LaunchTemplateSpecification](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification)" : FleetLaunchTemplateSpecificationRequest,
+  "[Overrides](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides)" : [ FleetLaunchTemplateOverridesRequest, ... ]
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LaunchTemplateSpecification](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-launchtemplatespecification): 
-    [FleetLaunchTemplateSpecificationRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.md)
+    FleetLaunchTemplateSpecificationRequest
   [Overrides](#cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides): 
-    - [FleetLaunchTemplateOverridesRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.md)
+    - FleetLaunchTemplateOverridesRequest
 ```
 
 ## Properties<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-properties"></a>

@@ -13,22 +13,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EMR::Cluster",
   "Properties" : {
       "[AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo)" : Json,
-      "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ [Application](aws-properties-elasticmapreduce-cluster-application.md), ... ],
+      "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ Application, ... ],
       "[AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole)" : String,
-      "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md), ... ],
-      "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md), ... ],
+      "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ BootstrapActionConfig, ... ],
+      "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ Configuration, ... ],
       "[CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid)" : String,
       "[EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize)" : Integer,
-      "[Instances](#cfn-elasticmapreduce-cluster-instances)" : [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md),
+      "[Instances](#cfn-elasticmapreduce-cluster-instances)" : JobFlowInstancesConfig,
       "[JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole)" : String,
-      "[KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes)" : [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md),
+      "[KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes)" : KerberosAttributes,
       "[LogUri](#cfn-elasticmapreduce-cluster-loguri)" : String,
       "[Name](#cfn-elasticmapreduce-cluster-name)" : String,
       "[ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel)" : String,
       "[ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior)" : String,
       "[SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration)" : String,
       "[ServiceRole](#cfn-elasticmapreduce-cluster-servicerole)" : String,
-      "[Steps](#cfn-elasticmapreduce-cluster-steps)" : [ [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md), ... ],
+      "[Steps](#cfn-elasticmapreduce-cluster-steps)" : [ StepConfig, ... ],
       "[Tags](#cfn-elasticmapreduce-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers)" : Boolean
     }
@@ -42,19 +42,19 @@ Type: AWS::EMR::Cluster
 Properties: 
   [AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo): Json
   [Applications](#cfn-elasticmapreduce-cluster-applications): 
-    - [Application](aws-properties-elasticmapreduce-cluster-application.md)
+    - Application
   [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
   [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
-    - [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md)
+    - BootstrapActionConfig
   [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
-    - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
+    - Configuration
   [CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid): String
   [EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize): Integer
   [Instances](#cfn-elasticmapreduce-cluster-instances): 
-    [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)
+    JobFlowInstancesConfig
   [JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole): String
   [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes): 
-    [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)
+    KerberosAttributes
   [LogUri](#cfn-elasticmapreduce-cluster-loguri): String
   [Name](#cfn-elasticmapreduce-cluster-name): String
   [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
@@ -62,7 +62,7 @@ Properties:
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
   [ServiceRole](#cfn-elasticmapreduce-cluster-servicerole): String
   [Steps](#cfn-elasticmapreduce-cluster-steps): 
-    - [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)
+    - StepConfig
   [Tags](#cfn-elasticmapreduce-cluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers): Boolean

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation)" : [S3ContentLocation](aws-properties-kinesisanalyticsv2-application-s3contentlocation.md),
+  "[S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation)" : S3ContentLocation,
   "[TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent)" : String,
   "[ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation): 
-    [S3ContentLocation](aws-properties-kinesisanalyticsv2-application-s3contentlocation.md)
+    S3ContentLocation
   [TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent): String
   [ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent): String
 ```

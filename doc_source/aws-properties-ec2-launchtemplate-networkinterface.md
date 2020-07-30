@@ -19,10 +19,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Groups](#cfn-ec2-launchtemplate-networkinterface-groups)" : [ String, ... ],
   "[InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype)" : String,
   "[Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount)" : Integer,
-  "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md), ... ],
+  "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ Ipv6Add, ... ],
   "[NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid)" : String,
   "[PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress)" : String,
-  "[PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses)" : [ [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md), ... ],
+  "[PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses)" : [ PrivateIpAdd, ... ],
   "[SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount)" : Integer,
   "[SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid)" : String
 }
@@ -40,11 +40,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
-    - [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)
+    - Ipv6Add
   [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid): String
   [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress): String
   [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses): 
-    - [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)
+    - PrivateIpAdd
   [SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount): Integer
   [SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid): String
 ```

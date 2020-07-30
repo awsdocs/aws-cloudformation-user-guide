@@ -15,13 +15,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::WebACL",
   "Properties" : {
-      "[DefaultAction](#cfn-wafv2-webacl-defaultaction)" : [DefaultAction](aws-properties-wafv2-webacl-defaultaction.md),
+      "[DefaultAction](#cfn-wafv2-webacl-defaultaction)" : DefaultAction,
       "[Description](#cfn-wafv2-webacl-description)" : String,
       "[Name](#cfn-wafv2-webacl-name)" : String,
-      "[Rules](#cfn-wafv2-webacl-rules)" : [ [Rule](aws-properties-wafv2-webacl-rule.md), ... ],
+      "[Rules](#cfn-wafv2-webacl-rules)" : [ Rule, ... ],
       "[Scope](#cfn-wafv2-webacl-scope)" : String,
       "[Tags](#cfn-wafv2-webacl-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
+      "[VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig)" : VisibilityConfig
     }
 }
 ```
@@ -32,16 +32,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFv2::WebACL
 Properties: 
   [DefaultAction](#cfn-wafv2-webacl-defaultaction): 
-    [DefaultAction](aws-properties-wafv2-webacl-defaultaction.md)
+    DefaultAction
   [Description](#cfn-wafv2-webacl-description): String
   [Name](#cfn-wafv2-webacl-name): String
   [Rules](#cfn-wafv2-webacl-rules): 
-    - [Rule](aws-properties-wafv2-webacl-rule.md)
+    - Rule
   [Scope](#cfn-wafv2-webacl-scope): String
   [Tags](#cfn-wafv2-webacl-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityConfig](#cfn-wafv2-webacl-visibilityconfig): 
-    [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
+    VisibilityConfig
 ```
 
 ## Properties<a name="aws-resource-wafv2-webacl-properties"></a>

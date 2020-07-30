@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "Alexa::ASK::Skill",
   "Properties" : {
-      "[AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration)" : [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md),
-      "[SkillPackage](#cfn-ask-skill-skillpackage)" : [SkillPackage](aws-properties-ask-skill-skillpackage.md),
+      "[AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration)" : AuthenticationConfiguration,
+      "[SkillPackage](#cfn-ask-skill-skillpackage)" : SkillPackage,
       "[VendorId](#cfn-ask-skill-vendorid)" : String
     }
 }
@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: Alexa::ASK::Skill
 Properties: 
   [AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration): 
-    [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md)
+    AuthenticationConfiguration
   [SkillPackage](#cfn-ask-skill-skillpackage): 
-    [SkillPackage](aws-properties-ask-skill-skillpackage.md)
+    SkillPackage
   [VendorId](#cfn-ask-skill-vendorid): String
 ```
 

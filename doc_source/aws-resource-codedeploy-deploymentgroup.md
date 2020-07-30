@@ -12,21 +12,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeDeploy::DeploymentGroup",
   "Properties" : {
-      "[AlarmConfiguration](#cfn-codedeploy-deploymentgroup-alarmconfiguration)" : [AlarmConfiguration](aws-properties-codedeploy-deploymentgroup-alarmconfiguration.md),
+      "[AlarmConfiguration](#cfn-codedeploy-deploymentgroup-alarmconfiguration)" : AlarmConfiguration,
       "[ApplicationName](#cfn-codedeploy-deploymentgroup-applicationname)" : String,
-      "[AutoRollbackConfiguration](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration)" : [AutoRollbackConfiguration](aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.md),
+      "[AutoRollbackConfiguration](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration)" : AutoRollbackConfiguration,
       "[AutoScalingGroups](#cfn-codedeploy-deploymentgroup-autoscalinggroups)" : [ String, ... ],
-      "[Deployment](#cfn-codedeploy-deploymentgroup-deployment)" : [Deployment](aws-properties-codedeploy-deploymentgroup-deployment.md),
+      "[Deployment](#cfn-codedeploy-deploymentgroup-deployment)" : Deployment,
       "[DeploymentConfigName](#cfn-codedeploy-deploymentgroup-deploymentconfigname)" : String,
       "[DeploymentGroupName](#cfn-codedeploy-deploymentgroup-deploymentgroupname)" : String,
-      "[DeploymentStyle](#cfn-codedeploy-deploymentgroup-deploymentstyle)" : [DeploymentStyle](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md),
-      "[Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters)" : [ [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md), ... ],
-      "[Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset)" : [EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md),
-      "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : [LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md),
-      "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ [TagFilter](aws-properties-codedeploy-deploymentgroup-tagfilter.md), ... ],
-      "[OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset)" : [OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md),
+      "[DeploymentStyle](#cfn-codedeploy-deploymentgroup-deploymentstyle)" : DeploymentStyle,
+      "[Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters)" : [ EC2TagFilter, ... ],
+      "[Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset)" : EC2TagSet,
+      "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : LoadBalancerInfo,
+      "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ TagFilter, ... ],
+      "[OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset)" : OnPremisesTagSet,
       "[ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn)" : String,
-      "[TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations)" : [ [TriggerConfig](aws-properties-codedeploy-deploymentgroup-triggerconfig.md), ... ]
+      "[TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations)" : [ TriggerConfig, ... ]
     }
 }
 ```
@@ -37,31 +37,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeDeploy::DeploymentGroup
 Properties: 
   [AlarmConfiguration](#cfn-codedeploy-deploymentgroup-alarmconfiguration): 
-    [AlarmConfiguration](aws-properties-codedeploy-deploymentgroup-alarmconfiguration.md)
+    AlarmConfiguration
   [ApplicationName](#cfn-codedeploy-deploymentgroup-applicationname): String
   [AutoRollbackConfiguration](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration): 
-    [AutoRollbackConfiguration](aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.md)
+    AutoRollbackConfiguration
   [AutoScalingGroups](#cfn-codedeploy-deploymentgroup-autoscalinggroups): 
     - String
   [Deployment](#cfn-codedeploy-deploymentgroup-deployment): 
-    [Deployment](aws-properties-codedeploy-deploymentgroup-deployment.md)
+    Deployment
   [DeploymentConfigName](#cfn-codedeploy-deploymentgroup-deploymentconfigname): String
   [DeploymentGroupName](#cfn-codedeploy-deploymentgroup-deploymentgroupname): String
   [DeploymentStyle](#cfn-codedeploy-deploymentgroup-deploymentstyle): 
-    [DeploymentStyle](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md)
+    DeploymentStyle
   [Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters): 
-    - [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)
+    - EC2TagFilter
   [Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset): 
-    [EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)
+    EC2TagSet
   [LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo): 
-    [LoadBalancerInfo](aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.md)
+    LoadBalancerInfo
   [OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters): 
-    - [TagFilter](aws-properties-codedeploy-deploymentgroup-tagfilter.md)
+    - TagFilter
   [OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset): 
-    [OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md)
+    OnPremisesTagSet
   [ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn): String
   [TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations): 
-    - [TriggerConfig](aws-properties-codedeploy-deploymentgroup-triggerconfig.md)
+    - TriggerConfig
 ```
 
 ## Properties<a name="aws-resource-codedeploy-deploymentgroup-properties"></a>

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EbsBlockDeviceConfigs](#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsblockdeviceconfigs)" : [ [EbsBlockDeviceConfig](aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.md), ... ],
+  "[EbsBlockDeviceConfigs](#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsblockdeviceconfigs)" : [ EbsBlockDeviceConfig, ... ],
   "[EbsOptimized](#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsoptimized)" : Boolean
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EbsBlockDeviceConfigs](#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsblockdeviceconfigs): 
-    - [EbsBlockDeviceConfig](aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.md)
+    - EbsBlockDeviceConfig
   [EbsOptimized](#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsoptimized): Boolean
 ```
 

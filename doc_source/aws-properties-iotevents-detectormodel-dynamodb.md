@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[HashKeyType](#cfn-iotevents-detectormodel-dynamodb-hashkeytype)" : String,
   "[HashKeyValue](#cfn-iotevents-detectormodel-dynamodb-hashkeyvalue)" : String,
   "[Operation](#cfn-iotevents-detectormodel-dynamodb-operation)" : String,
-  "[Payload](#cfn-iotevents-detectormodel-dynamodb-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md),
+  "[Payload](#cfn-iotevents-detectormodel-dynamodb-payload)" : Payload,
   "[PayloadField](#cfn-iotevents-detectormodel-dynamodb-payloadfield)" : String,
   "[RangeKeyField](#cfn-iotevents-detectormodel-dynamodb-rangekeyfield)" : String,
   "[RangeKeyType](#cfn-iotevents-detectormodel-dynamodb-rangekeytype)" : String,
@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [HashKeyValue](#cfn-iotevents-detectormodel-dynamodb-hashkeyvalue): String
   [Operation](#cfn-iotevents-detectormodel-dynamodb-operation): String
   [Payload](#cfn-iotevents-detectormodel-dynamodb-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
   [PayloadField](#cfn-iotevents-detectormodel-dynamodb-payloadfield): String
   [RangeKeyField](#cfn-iotevents-detectormodel-dynamodb-rangekeyfield): String
   [RangeKeyType](#cfn-iotevents-detectormodel-dynamodb-rangekeytype): String

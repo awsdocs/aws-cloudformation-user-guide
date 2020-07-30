@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBProxyTargetGroup",
   "Properties" : {
-      "[ConnectionPoolConfigurationInfo](#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)" : [ConnectionPoolConfigurationInfoFormat](aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.md),
+      "[ConnectionPoolConfigurationInfo](#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo)" : ConnectionPoolConfigurationInfoFormat,
       "[DBClusterIdentifiers](#cfn-rds-dbproxytargetgroup-dbclusteridentifiers)" : [ String, ... ],
       "[DBInstanceIdentifiers](#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers)" : [ String, ... ],
       "[DBProxyName](#cfn-rds-dbproxytargetgroup-dbproxyname)" : String,
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RDS::DBProxyTargetGroup
 Properties: 
   [ConnectionPoolConfigurationInfo](#cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfo): 
-    [ConnectionPoolConfigurationInfoFormat](aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.md)
+    ConnectionPoolConfigurationInfoFormat
   [DBClusterIdentifiers](#cfn-rds-dbproxytargetgroup-dbclusteridentifiers): 
     - String
   [DBInstanceIdentifiers](#cfn-rds-dbproxytargetgroup-dbinstanceidentifiers): 

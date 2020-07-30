@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::ConformancePack",
   "Properties" : {
-      "[ConformancePackInputParameters](#cfn-config-conformancepack-conformancepackinputparameters)" : [ [ConformancePackInputParameter](aws-properties-config-conformancepack-conformancepackinputparameter.md), ... ],
+      "[ConformancePackInputParameters](#cfn-config-conformancepack-conformancepackinputparameters)" : [ ConformancePackInputParameter, ... ],
       "[ConformancePackName](#cfn-config-conformancepack-conformancepackname)" : String,
       "[DeliveryS3Bucket](#cfn-config-conformancepack-deliverys3bucket)" : String,
       "[DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::ConformancePack
 Properties: 
   [ConformancePackInputParameters](#cfn-config-conformancepack-conformancepackinputparameters): 
-    - [ConformancePackInputParameter](aws-properties-config-conformancepack-conformancepackinputparameter.md)
+    - ConformancePackInputParameter
   [ConformancePackName](#cfn-config-conformancepack-conformancepackname): String
   [DeliveryS3Bucket](#cfn-config-conformancepack-deliverys3bucket): String
   [DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix): String

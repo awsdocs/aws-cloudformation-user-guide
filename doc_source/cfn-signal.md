@@ -9,7 +9,7 @@ You use the cfn\-signal script in conjunction with a [CreationPolicy](aws-attrib
 **Note**  
 cfn\-signal does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
-## Syntax for resource signaling \(recommended\)<a name="w6408ab1c25c38c31b5"></a>
+## Syntax for resource signaling \(recommended\)<a name="w6461ab1c25c38c31b5"></a>
 
 If you want to signal AWS CloudFormation resources, use the following syntax\.
 
@@ -68,7 +68,7 @@ The options that you can use depend on whether you're signaling a creation polic
 
 ## Example<a name="cfn-signal-Examples"></a>
 
-### Amazon Linux example<a name="w6408ab1c25c38c31c11b2"></a>
+### Amazon Linux example<a name="w6461ab1c25c38c31c11b2"></a>
 
 A common usage pattern is to use cfn\-init and cfn\-signal together\. The cfn\-signal call uses the return status of the call to cfn\-init \(using the $? shell construct\)\. If the application fails to install, the instance will fail to create and the stack will rollback\. For Windows stacks, see [Bootstrapping AWS CloudFormation Windows stacks](cfn-windows-stacks-bootstrapping.md)\.
 
@@ -193,7 +193,7 @@ Resources:
         Timeout: PT5M
 ```
 
-#### Examples<a name="w6408ab1c25c38c31c11b2b8"></a>
+#### Examples<a name="w6461ab1c25c38c31c11b2b8"></a>
 
 Several AWS CloudFormation sample templates use cfn\-signal, including the following templates\.
 +  [LAMP: Single EC2 instance with local MySQL database](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template) 

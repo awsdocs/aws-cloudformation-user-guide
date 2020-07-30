@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md), ... ],
+  "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ ExcludedRule, ... ],
   "[Name](#cfn-wafv2-webacl-managedrulegroupstatement-name)" : String,
   "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String
 }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules): 
-    - [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)
+    - ExcludedRule
   [Name](#cfn-wafv2-webacl-managedrulegroupstatement-name): String
   [VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname): String
 ```

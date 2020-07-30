@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy)" : String,
-  "[CapacityReservationOptions](#cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions)" : [CapacityReservationOptionsRequest](aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.md),
+  "[CapacityReservationOptions](#cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions)" : CapacityReservationOptionsRequest,
   "[MaxTotalPrice](#cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice)" : String,
   "[MinTargetCapacity](#cfn-ec2-ec2fleet-ondemandoptionsrequest-mintargetcapacity)" : Integer,
   "[SingleAvailabilityZone](#cfn-ec2-ec2fleet-ondemandoptionsrequest-singleavailabilityzone)" : Boolean,
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AllocationStrategy](#cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy): String
   [CapacityReservationOptions](#cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions): 
-    [CapacityReservationOptionsRequest](aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.md)
+    CapacityReservationOptionsRequest
   [MaxTotalPrice](#cfn-ec2-ec2fleet-ondemandoptionsrequest-maxtotalprice): String
   [MinTargetCapacity](#cfn-ec2-ec2fleet-ondemandoptionsrequest-mintargetcapacity): Integer
   [SingleAvailabilityZone](#cfn-ec2-ec2fleet-ondemandoptionsrequest-singleavailabilityzone): Boolean

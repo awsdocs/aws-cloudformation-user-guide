@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::PrefixList",
   "Properties" : {
       "[AddressFamily](#cfn-ec2-prefixlist-addressfamily)" : String,
-      "[Entries](#cfn-ec2-prefixlist-entries)" : [ [Entry](aws-properties-ec2-prefixlist-entry.md), ... ],
+      "[Entries](#cfn-ec2-prefixlist-entries)" : [ Entry, ... ],
       "[MaxEntries](#cfn-ec2-prefixlist-maxentries)" : Integer,
       "[PrefixListName](#cfn-ec2-prefixlist-prefixlistname)" : String,
       "[Tags](#cfn-ec2-prefixlist-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,7 +30,7 @@ Type: AWS::EC2::PrefixList
 Properties: 
   [AddressFamily](#cfn-ec2-prefixlist-addressfamily): String
   [Entries](#cfn-ec2-prefixlist-entries): 
-    - [Entry](aws-properties-ec2-prefixlist-entry.md)
+    - Entry
   [MaxEntries](#cfn-ec2-prefixlist-maxentries): Integer
   [PrefixListName](#cfn-ec2-prefixlist-prefixlistname): String
   [Tags](#cfn-ec2-prefixlist-tags): 
@@ -99,3 +99,62 @@ The ID of the prefix list\. For example, `pl-0123123123123abcd`\.
 
 `Version`  <a name="Version-fn::getatt"></a>
 The version of the prefix list\. For example, `1`\.
+
+## Examples<a name="aws-resource-ec2-prefixlist--examples"></a>
+
+### Creating a prefix list<a name="aws-resource-ec2-prefixlist--examples--Creating_a_prefix_list"></a>
+
+The following example creates an IPv4 prefix list with a maximum of 10 entries, and creates 2 entries in the prefix list\.
+
+#### JSON<a name="aws-resource-ec2-prefixlist--examples--Creating_a_prefix_list--json"></a>
+
+```
+{
+    "Resources": {
+        "NewPrefixList": {
+            "Type": "AWS::EC2::PrefixList",
+            "Properties": {
+                "PrefixListName": "vpc-1-servers",
+                "AddressFamily": "IPv4",
+                "MaxEntries": 10,
+                "Entries": [
+                    {
+                        "Cidr": "10.0.0.5/32",
+                        "Description": "Server 1"
+                    },
+                    {
+                        "Cidr": "10.0.0.10/32",
+                        "Description": "Server 2"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "VPC-1-Servers"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ec2-prefixlist--examples--Creating_a_prefix_list--yaml"></a>
+
+```
+Resources:
+  NewPrefixList:
+    Type: AWS::EC2::PrefixList
+    Properties:
+      PrefixListName: "vpc-1-servers"
+      AddressFamily: "IPv4"
+      MaxEntries: 10
+      Entries:
+        - Cidr: "10.0.0.5/32"
+          Description: "Server 1"
+        - Cidr: "10.0.0.10/32"
+          Description: "Server 2"
+      Tags:
+        - Key: "Name"
+          Value: "VPC-1-Servers"
+```

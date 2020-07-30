@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode)" : Integer,
-  "[NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties)" : [ [NodeRangeProperty](aws-properties-batch-jobdefinition-noderangeproperty.md), ... ],
+  "[NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties)" : [ NodeRangeProperty, ... ],
   "[NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes)" : Integer
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode): Integer
   [NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties): 
-    - [NodeRangeProperty](aws-properties-batch-jobdefinition-noderangeproperty.md)
+    - NodeRangeProperty
   [NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes): Integer
 ```
 

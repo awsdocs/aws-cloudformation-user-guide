@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression)" : String,
       "[BasePath](#cfn-apigatewayv2-api-basepath)" : String,
       "[Body](#cfn-apigatewayv2-api-body)" : Json,
-      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md),
-      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : [Cors](aws-properties-apigatewayv2-api-cors.md),
+      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : BodyS3Location,
+      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : Cors,
       "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-api-description)" : String,
       "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
@@ -41,9 +41,9 @@ Properties:
   [BasePath](#cfn-apigatewayv2-api-basepath): String
   [Body](#cfn-apigatewayv2-api-body): Json
   [BodyS3Location](#cfn-apigatewayv2-api-bodys3location): 
-    [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md)
+    BodyS3Location
   [CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration): 
-    [Cors](aws-properties-apigatewayv2-api-cors.md)
+    Cors
   [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
   [Description](#cfn-apigatewayv2-api-description): String
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean

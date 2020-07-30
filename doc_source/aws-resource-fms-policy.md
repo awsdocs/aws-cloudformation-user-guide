@@ -23,16 +23,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::FMS::Policy",
   "Properties" : {
       "[DeleteAllPolicyResources](#cfn-fms-policy-deleteallpolicyresources)" : Boolean,
-      "[ExcludeMap](#cfn-fms-policy-excludemap)" : [IEMap](aws-properties-fms-policy-iemap.md),
+      "[ExcludeMap](#cfn-fms-policy-excludemap)" : IEMap,
       "[ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags)" : Boolean,
-      "[IncludeMap](#cfn-fms-policy-includemap)" : [IEMap](aws-properties-fms-policy-iemap.md),
+      "[IncludeMap](#cfn-fms-policy-includemap)" : IEMap,
       "[PolicyName](#cfn-fms-policy-policyname)" : String,
       "[RemediationEnabled](#cfn-fms-policy-remediationenabled)" : Boolean,
-      "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ [ResourceTag](aws-properties-fms-policy-resourcetag.md), ... ],
+      "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ ResourceTag, ... ],
       "[ResourceType](#cfn-fms-policy-resourcetype)" : String,
       "[ResourceTypeList](#cfn-fms-policy-resourcetypelist)" : [ String, ... ],
       "[SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata)" : Json,
-      "[Tags](#cfn-fms-policy-tags)" : [ [PolicyTag](aws-properties-fms-policy-policytag.md), ... ]
+      "[Tags](#cfn-fms-policy-tags)" : [ PolicyTag, ... ]
     }
 }
 ```
@@ -44,20 +44,20 @@ Type: AWS::FMS::Policy
 Properties: 
   [DeleteAllPolicyResources](#cfn-fms-policy-deleteallpolicyresources): Boolean
   [ExcludeMap](#cfn-fms-policy-excludemap): 
-    [IEMap](aws-properties-fms-policy-iemap.md)
+    IEMap
   [ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags): Boolean
   [IncludeMap](#cfn-fms-policy-includemap): 
-    [IEMap](aws-properties-fms-policy-iemap.md)
+    IEMap
   [PolicyName](#cfn-fms-policy-policyname): String
   [RemediationEnabled](#cfn-fms-policy-remediationenabled): Boolean
   [ResourceTags](#cfn-fms-policy-resourcetags): 
-    - [ResourceTag](aws-properties-fms-policy-resourcetag.md)
+    - ResourceTag
   [ResourceType](#cfn-fms-policy-resourcetype): String
   [ResourceTypeList](#cfn-fms-policy-resourcetypelist): 
     - String
   [SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata): Json
   [Tags](#cfn-fms-policy-tags): 
-    - [PolicyTag](aws-properties-fms-policy-policytag.md)
+    - PolicyTag
 ```
 
 ## Properties<a name="aws-resource-fms-policy-properties"></a>
@@ -105,7 +105,7 @@ You can specify account IDs, OUs, or a combination:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-fms-policy-policyname"></a>
-The friendly name of the AWS Firewall Manager policy\.  
+The name of the AWS Firewall Manager policy\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

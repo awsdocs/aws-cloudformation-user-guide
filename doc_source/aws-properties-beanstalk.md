@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationName](#cfn-elasticbeanstalk-application-name)" : String,
       "[Description](#cfn-elasticbeanstalk-application-description)" : String,
-      "[ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig)" : [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
+      "[ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig)" : ApplicationResourceLifecycleConfig
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [ApplicationName](#cfn-elasticbeanstalk-application-name): String
   [Description](#cfn-elasticbeanstalk-application-description): String
   [ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig): 
-    [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
+    ApplicationResourceLifecycleConfig
 ```
 
 ## Properties<a name="aws-properties-beanstalk-properties"></a>

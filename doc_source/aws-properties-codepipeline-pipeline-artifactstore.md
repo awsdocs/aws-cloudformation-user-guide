@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey)" : [EncryptionKey](aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.md),
+  "[EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey)" : EncryptionKey,
   "[Location](#cfn-codepipeline-pipeline-artifactstore-location)" : String,
   "[Type](#cfn-codepipeline-pipeline-artifactstore-type)" : String
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey): 
-    [EncryptionKey](aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.md)
+    EncryptionKey
   [Location](#cfn-codepipeline-pipeline-artifactstore-location): String
   [Type](#cfn-codepipeline-pipeline-artifactstore-type): String
 ```

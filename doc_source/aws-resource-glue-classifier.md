@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Classifier",
   "Properties" : {
-      "[CsvClassifier](#cfn-glue-classifier-csvclassifier)" : [CsvClassifier](aws-properties-glue-classifier-csvclassifier.md),
-      "[GrokClassifier](#cfn-glue-classifier-grokclassifier)" : [GrokClassifier](aws-properties-glue-classifier-grokclassifier.md),
-      "[JsonClassifier](#cfn-glue-classifier-jsonclassifier)" : [JsonClassifier](aws-properties-glue-classifier-jsonclassifier.md),
-      "[XMLClassifier](#cfn-glue-classifier-xmlclassifier)" : [XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)
+      "[CsvClassifier](#cfn-glue-classifier-csvclassifier)" : CsvClassifier,
+      "[GrokClassifier](#cfn-glue-classifier-grokclassifier)" : GrokClassifier,
+      "[JsonClassifier](#cfn-glue-classifier-jsonclassifier)" : JsonClassifier,
+      "[XMLClassifier](#cfn-glue-classifier-xmlclassifier)" : XMLClassifier
     }
 }
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Glue::Classifier
 Properties: 
   [CsvClassifier](#cfn-glue-classifier-csvclassifier): 
-    [CsvClassifier](aws-properties-glue-classifier-csvclassifier.md)
+    CsvClassifier
   [GrokClassifier](#cfn-glue-classifier-grokclassifier): 
-    [GrokClassifier](aws-properties-glue-classifier-grokclassifier.md)
+    GrokClassifier
   [JsonClassifier](#cfn-glue-classifier-jsonclassifier): 
-    [JsonClassifier](aws-properties-glue-classifier-jsonclassifier.md)
+    JsonClassifier
   [XMLClassifier](#cfn-glue-classifier-xmlclassifier): 
-    [XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)
+    XMLClassifier
 ```
 
 ## Properties<a name="aws-resource-glue-classifier-properties"></a>

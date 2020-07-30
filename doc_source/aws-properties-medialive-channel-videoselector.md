@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ColorSpace](#cfn-medialive-channel-videoselector-colorspace)" : String,
   "[ColorSpaceUsage](#cfn-medialive-channel-videoselector-colorspaceusage)" : String,
-  "[SelectorSettings](#cfn-medialive-channel-videoselector-selectorsettings)" : [VideoSelectorSettings](aws-properties-medialive-channel-videoselectorsettings.md)
+  "[SelectorSettings](#cfn-medialive-channel-videoselector-selectorsettings)" : VideoSelectorSettings
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ColorSpace](#cfn-medialive-channel-videoselector-colorspace): String
   [ColorSpaceUsage](#cfn-medialive-channel-videoselector-colorspaceusage): String
   [SelectorSettings](#cfn-medialive-channel-videoselector-selectorsettings): 
-    [VideoSelectorSettings](aws-properties-medialive-channel-videoselectorsettings.md)
+    VideoSelectorSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-videoselector-properties"></a>

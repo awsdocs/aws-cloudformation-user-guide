@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::CoreDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-coredefinition-initialversion)" : [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-coredefinition-initialversion)" : CoreDefinitionVersion,
       "[Name](#cfn-greengrass-coredefinition-name)" : String,
       "[Tags](#cfn-greengrass-coredefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::CoreDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-coredefinition-initialversion): 
-    [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)
+    CoreDefinitionVersion
   [Name](#cfn-greengrass-coredefinition-name): String
   [Tags](#cfn-greengrass-coredefinition-tags): Json
 ```

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem)" : [PutItemInput](aws-properties-iot-topicrule-putiteminput.md),
+  "[PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem)" : PutItemInput,
   "[RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PutItem](#cfn-iot-topicrule-dynamodbv2action-putitem): 
-    [PutItemInput](aws-properties-iot-topicrule-putiteminput.md)
+    PutItemInput
   [RoleArn](#cfn-iot-topicrule-dynamodbv2action-rolearn): String
 ```
 

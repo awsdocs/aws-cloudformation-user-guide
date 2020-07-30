@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier)" : String,
       "[IamRoles](#cfn-redshift-cluster-iamroles)" : [ String, ... ],
       "[KmsKeyId](#cfn-redshift-cluster-kmskeyid)" : String,
-      "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md),
+      "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : LoggingProperties,
       "[MasterUsername](#cfn-redshift-cluster-masterusername)" : String,
       "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
       "[NodeType](#cfn-redshift-cluster-nodetype)" : String,
@@ -71,7 +71,7 @@ Properties:
     - String
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
   [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
-    [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
+    LoggingProperties
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
   [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String

@@ -12,11 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EFS::FileSystem",
   "Properties" : {
+      "[BackupPolicy](#cfn-efs-filesystem-backuppolicy)" : BackupPolicy,
       "[Encrypted](#cfn-efs-filesystem-encrypted)" : Boolean,
       "[FileSystemPolicy](#cfn-efs-filesystem-filesystempolicy)" : Json,
-      "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ [ElasticFileSystemTag](aws-properties-efs-filesystem-elasticfilesystemtag.md), ... ],
+      "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ ElasticFileSystemTag, ... ],
       "[KmsKeyId](#cfn-efs-filesystem-kmskeyid)" : String,
-      "[LifecyclePolicies](#cfn-efs-filesystem-lifecyclepolicies)" : [ [LifecyclePolicy](aws-properties-efs-filesystem-lifecyclepolicy.md), ... ],
+      "[LifecyclePolicies](#cfn-efs-filesystem-lifecyclepolicies)" : [ LifecyclePolicy, ... ],
       "[PerformanceMode](#cfn-efs-filesystem-performancemode)" : String,
       "[ProvisionedThroughputInMibps](#cfn-efs-filesystem-provisionedthroughputinmibps)" : Double,
       "[ThroughputMode](#cfn-efs-filesystem-throughputmode)" : String
@@ -29,19 +30,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EFS::FileSystem
 Properties: 
+  [BackupPolicy](#cfn-efs-filesystem-backuppolicy): 
+    BackupPolicy
   [Encrypted](#cfn-efs-filesystem-encrypted): Boolean
   [FileSystemPolicy](#cfn-efs-filesystem-filesystempolicy): Json
   [FileSystemTags](#cfn-efs-filesystem-filesystemtags): 
-    - [ElasticFileSystemTag](aws-properties-efs-filesystem-elasticfilesystemtag.md)
+    - ElasticFileSystemTag
   [KmsKeyId](#cfn-efs-filesystem-kmskeyid): String
   [LifecyclePolicies](#cfn-efs-filesystem-lifecyclepolicies): 
-    - [LifecyclePolicy](aws-properties-efs-filesystem-lifecyclepolicy.md)
+    - LifecyclePolicy
   [PerformanceMode](#cfn-efs-filesystem-performancemode): String
   [ProvisionedThroughputInMibps](#cfn-efs-filesystem-provisionedthroughputinmibps): Double
   [ThroughputMode](#cfn-efs-filesystem-throughputmode): String
 ```
 
 ## Properties<a name="aws-resource-efs-filesystem-properties"></a>
+
+`BackupPolicy`  <a name="cfn-efs-filesystem-backuppolicy"></a>
+Use the `BackupPolicy` to turn automatic backups on or off for the file system\.  
+*Required*: No  
+*Type*: [BackupPolicy](aws-properties-efs-filesystem-backuppolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-efs-filesystem-encrypted"></a>
 A Boolean value that, if true, creates an encrypted file system\. When creating an encrypted file system, you have the option of specifying a KmsKeyId for an existing AWS Key Management Service \(AWS KMS\) customer master key \(CMK\)\. If you don't specify a CMK, then the default CMK for Amazon EFS, `/aws/elasticfilesystem`, is used to protect the encrypted file system\.   
@@ -70,8 +79,8 @@ The ID of the AWS KMS customer master key \(CMK\) to be used to protect the encr
 If `KmsKeyId` is specified, the `Encrypted` parameter must be set to true\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
 *Maximum*: `2048`  
+*Pattern*: `^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|alias/[a-zA-Z0-9/_-]+|(arn:aws[-a-z]*:kms:[a-z0-9-]+:\d{12}:((key/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})|(alias/[a-zA-Z0-9/_-]+))))$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LifecyclePolicies`  <a name="cfn-efs-filesystem-lifecyclepolicies"></a>
@@ -119,6 +128,9 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-efs-filesystem-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `FileSystemId`  <a name="FileSystemId-fn::getatt"></a>
 The ID of the EFS file system\. For example: `fs-0123456`
@@ -199,6 +211,9 @@ The following example declares an encrypted Amazon EFS file system\.
                         }
                     ]
                 },
+                "BackupPolicy": {
+                    "Status": "ENABLED"
+                    },
                 "KmsKeyId": {
                     "Fn::GetAtt": [
                         "key",
@@ -360,6 +375,8 @@ Resources:
   FileSystemResource:
     Type: 'AWS::EFS::FileSystem'
     Properties:
+      BackupPolicy:
+        - Status: ENABLED
       PerformanceMode: maxIO
       Encrypted: true
       LifecyclePolicies:

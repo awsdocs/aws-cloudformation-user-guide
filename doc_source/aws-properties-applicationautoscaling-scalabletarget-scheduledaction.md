@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime)" : Timestamp,
-  "[ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction)" : [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md),
+  "[ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction)" : ScalableTargetAction,
   "[Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule)" : String,
   "[ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname)" : String,
   "[StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime)" : Timestamp
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime): Timestamp
   [ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction): 
-    [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md)
+    ScalableTargetAction
   [Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule): String
   [ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname): String
   [StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime): Timestamp

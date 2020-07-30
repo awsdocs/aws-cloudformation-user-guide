@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::DeliveryChannel",
   "Properties" : {
-      "[ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties)" : [ConfigSnapshotDeliveryProperties](aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.md),
+      "[ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties)" : ConfigSnapshotDeliveryProperties,
       "[Name](#cfn-config-deliverychannel-name)" : String,
       "[S3BucketName](#cfn-config-deliverychannel-s3bucketname)" : String,
       "[S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix)" : String,
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::DeliveryChannel
 Properties: 
   [ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties): 
-    [ConfigSnapshotDeliveryProperties](aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.md)
+    ConfigSnapshotDeliveryProperties
   [Name](#cfn-config-deliverychannel-name): String
   [S3BucketName](#cfn-config-deliverychannel-s3bucketname): String
   [S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix): String

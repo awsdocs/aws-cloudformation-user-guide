@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthorizerUri](#cfn-apigatewayv2-authorizer-authorizeruri)" : String,
       "[IdentitySource](#cfn-apigatewayv2-authorizer-identitysource)" : [ String, ... ],
       "[IdentityValidationExpression](#cfn-apigatewayv2-authorizer-identityvalidationexpression)" : String,
-      "[JwtConfiguration](#cfn-apigatewayv2-authorizer-jwtconfiguration)" : [JWTConfiguration](aws-properties-apigatewayv2-authorizer-jwtconfiguration.md),
+      "[JwtConfiguration](#cfn-apigatewayv2-authorizer-jwtconfiguration)" : JWTConfiguration,
       "[Name](#cfn-apigatewayv2-authorizer-name)" : String
     }
 }
@@ -39,7 +39,7 @@ Properties:
     - String
   [IdentityValidationExpression](#cfn-apigatewayv2-authorizer-identityvalidationexpression): String
   [JwtConfiguration](#cfn-apigatewayv2-authorizer-jwtconfiguration): 
-    [JWTConfiguration](aws-properties-apigatewayv2-authorizer-jwtconfiguration.md)
+    JWTConfiguration
   [Name](#cfn-apigatewayv2-authorizer-name): String
 ```
 

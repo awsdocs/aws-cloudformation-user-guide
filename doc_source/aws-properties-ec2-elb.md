@@ -16,18 +16,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancing::LoadBalancer",
   "Properties" : {
-      "[AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy)" : [AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md),
-      "[AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy)" : [ [AppCookieStickinessPolicy](aws-properties-ec2-elb-AppCookieStickinessPolicy.md), ... ],
+      "[AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy)" : AccessLoggingPolicy,
+      "[AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy)" : [ AppCookieStickinessPolicy, ... ],
       "[AvailabilityZones](#cfn-ec2-elb-availabilityzones)" : [ String, ... ],
-      "[ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy)" : [ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md),
-      "[ConnectionSettings](#cfn-ec2-elb-connectionsettings)" : [ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md),
+      "[ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy)" : ConnectionDrainingPolicy,
+      "[ConnectionSettings](#cfn-ec2-elb-connectionsettings)" : ConnectionSettings,
       "[CrossZone](#cfn-ec2-elb-crosszone)" : Boolean,
-      "[HealthCheck](#cfn-ec2-elb-healthcheck)" : [HealthCheck](aws-properties-ec2-elb-health-check.md),
+      "[HealthCheck](#cfn-ec2-elb-healthcheck)" : HealthCheck,
       "[Instances](#cfn-ec2-elb-instances)" : [ String, ... ],
-      "[LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy)" : [ [LBCookieStickinessPolicy](aws-properties-ec2-elb-LBCookieStickinessPolicy.md), ... ],
-      "[Listeners](#cfn-ec2-elb-listeners)" : [ [Listeners](aws-properties-ec2-elb-listener.md), ... ],
+      "[LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy)" : [ LBCookieStickinessPolicy, ... ],
+      "[Listeners](#cfn-ec2-elb-listeners)" : [ Listeners, ... ],
       "[LoadBalancerName](#cfn-ec2-elb-elbname)" : String,
-      "[Policies](#cfn-ec2-elb-policies)" : [ [Policies](aws-properties-ec2-elb-policy.md), ... ],
+      "[Policies](#cfn-ec2-elb-policies)" : [ Policies, ... ],
       "[Scheme](#cfn-ec2-elb-scheme)" : String,
       "[SecurityGroups](#cfn-ec2-elb-securitygroups)" : [ String, ... ],
       "[Subnets](#cfn-ec2-elb-subnets)" : [ String, ... ],
@@ -42,27 +42,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ElasticLoadBalancing::LoadBalancer
 Properties: 
   [AccessLoggingPolicy](#cfn-ec2-elb-accessloggingpolicy): 
-    [AccessLoggingPolicy](aws-properties-ec2-elb-accessloggingpolicy.md)
+    AccessLoggingPolicy
   [AppCookieStickinessPolicy](#cfn-ec2-elb-appcookiestickinesspolicy): 
-    - [AppCookieStickinessPolicy](aws-properties-ec2-elb-AppCookieStickinessPolicy.md)
+    - AppCookieStickinessPolicy
   [AvailabilityZones](#cfn-ec2-elb-availabilityzones): 
     - String
   [ConnectionDrainingPolicy](#cfn-ec2-elb-connectiondrainingpolicy): 
-    [ConnectionDrainingPolicy](aws-properties-ec2-elb-connectiondrainingpolicy.md)
+    ConnectionDrainingPolicy
   [ConnectionSettings](#cfn-ec2-elb-connectionsettings): 
-    [ConnectionSettings](aws-properties-ec2-elb-connectionsettings.md)
+    ConnectionSettings
   [CrossZone](#cfn-ec2-elb-crosszone): Boolean
   [HealthCheck](#cfn-ec2-elb-healthcheck): 
-    [HealthCheck](aws-properties-ec2-elb-health-check.md)
+    HealthCheck
   [Instances](#cfn-ec2-elb-instances): 
     - String
   [LBCookieStickinessPolicy](#cfn-ec2-elb-lbcookiestickinesspolicy): 
-    - [LBCookieStickinessPolicy](aws-properties-ec2-elb-LBCookieStickinessPolicy.md)
+    - LBCookieStickinessPolicy
   [Listeners](#cfn-ec2-elb-listeners): 
-    - [Listeners](aws-properties-ec2-elb-listener.md)
+    - Listeners
   [LoadBalancerName](#cfn-ec2-elb-elbname): String
   [Policies](#cfn-ec2-elb-policies): 
-    - [Policies](aws-properties-ec2-elb-policy.md)
+    - Policies
   [Scheme](#cfn-ec2-elb-scheme): String
   [SecurityGroups](#cfn-ec2-elb-securitygroups): 
     - String

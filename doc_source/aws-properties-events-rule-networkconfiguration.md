@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AwsVpcConfiguration](#cfn-events-rule-networkconfiguration-awsvpcconfiguration)" : [AwsVpcConfiguration](aws-properties-events-rule-awsvpcconfiguration.md)
+  "[AwsVpcConfiguration](#cfn-events-rule-networkconfiguration-awsvpcconfiguration)" : AwsVpcConfiguration
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AwsVpcConfiguration](#cfn-events-rule-networkconfiguration-awsvpcconfiguration): 
-    [AwsVpcConfiguration](aws-properties-events-rule-awsvpcconfiguration.md)
+    AwsVpcConfiguration
 ```
 
 ## Properties<a name="aws-properties-events-rule-networkconfiguration-properties"></a>

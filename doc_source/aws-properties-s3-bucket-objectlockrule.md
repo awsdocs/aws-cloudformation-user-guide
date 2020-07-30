@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DefaultRetention](#cfn-s3-bucket-objectlockrule-defaultretention)" : [DefaultRetention](aws-properties-s3-bucket-defaultretention.md)
+  "[DefaultRetention](#cfn-s3-bucket-objectlockrule-defaultretention)" : DefaultRetention
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DefaultRetention](#cfn-s3-bucket-objectlockrule-defaultretention): 
-    [DefaultRetention](aws-properties-s3-bucket-defaultretention.md)
+    DefaultRetention
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-objectlockrule-properties"></a>

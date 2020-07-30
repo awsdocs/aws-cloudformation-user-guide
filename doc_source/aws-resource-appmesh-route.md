@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MeshName](#cfn-appmesh-route-meshname)" : String,
       "[MeshOwner](#cfn-appmesh-route-meshowner)" : String,
       "[RouteName](#cfn-appmesh-route-routename)" : String,
-      "[Spec](#cfn-appmesh-route-spec)" : [RouteSpec](aws-properties-appmesh-route-routespec.md),
+      "[Spec](#cfn-appmesh-route-spec)" : RouteSpec,
       "[Tags](#cfn-appmesh-route-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualRouterName](#cfn-appmesh-route-virtualroutername)" : String
     }
@@ -35,7 +35,7 @@ Properties:
   [MeshOwner](#cfn-appmesh-route-meshowner): String
   [RouteName](#cfn-appmesh-route-routename): String
   [Spec](#cfn-appmesh-route-spec): 
-    [RouteSpec](aws-properties-appmesh-route-routespec.md)
+    RouteSpec
   [Tags](#cfn-appmesh-route-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualRouterName](#cfn-appmesh-route-virtualroutername): String

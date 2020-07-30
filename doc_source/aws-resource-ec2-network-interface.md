@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[GroupSet](#cfn-awsec2networkinterface-groupset)" : [ String, ... ],
       "[InterfaceType](#cfn-ec2-networkinterface-interfacetype)" : String,
       "[Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount)" : Integer,
-      "[Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses)" : [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md),
+      "[Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses)" : InstanceIpv6Address,
       "[PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress)" : String,
-      "[PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses)" : [ [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md), ... ],
+      "[PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses)" : [ PrivateIpAddressSpecification, ... ],
       "[SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount)" : Integer,
       "[SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck)" : Boolean,
       "[SubnetId](#cfn-awsec2networkinterface-subnetid)" : String,
@@ -38,10 +38,10 @@ Properties:
   [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses): 
-    [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)
+    InstanceIpv6Address
   [PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress): String
   [PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses): 
-    - [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)
+    - PrivateIpAddressSpecification
   [SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount): Integer
   [SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck): Boolean
   [SubnetId](#cfn-awsec2networkinterface-subnetid): String

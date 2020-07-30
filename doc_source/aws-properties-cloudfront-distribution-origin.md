@@ -17,12 +17,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ConnectionAttempts](#cfn-cloudfront-distribution-origin-connectionattempts)" : Integer,
   "[ConnectionTimeout](#cfn-cloudfront-distribution-origin-connectiontimeout)" : Integer,
-  "[CustomOriginConfig](#cfn-cloudfront-distribution-origin-customoriginconfig)" : [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md),
+  "[CustomOriginConfig](#cfn-cloudfront-distribution-origin-customoriginconfig)" : CustomOriginConfig,
   "[DomainName](#cfn-cloudfront-distribution-origin-domainname)" : String,
   "[Id](#cfn-cloudfront-distribution-origin-id)" : String,
-  "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ [OriginCustomHeader](aws-properties-cloudfront-distribution-origincustomheader.md), ... ],
+  "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ OriginCustomHeader, ... ],
   "[OriginPath](#cfn-cloudfront-distribution-origin-originpath)" : String,
-  "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig)" : [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)
+  "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig)" : S3OriginConfig
 }
 ```
 
@@ -32,14 +32,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ConnectionAttempts](#cfn-cloudfront-distribution-origin-connectionattempts): Integer
   [ConnectionTimeout](#cfn-cloudfront-distribution-origin-connectiontimeout): Integer
   [CustomOriginConfig](#cfn-cloudfront-distribution-origin-customoriginconfig): 
-    [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md)
+    CustomOriginConfig
   [DomainName](#cfn-cloudfront-distribution-origin-domainname): String
   [Id](#cfn-cloudfront-distribution-origin-id): String
   [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders): 
-    - [OriginCustomHeader](aws-properties-cloudfront-distribution-origincustomheader.md)
+    - OriginCustomHeader
   [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
   [S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig): 
-    [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)
+    S3OriginConfig
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-origin-properties"></a>

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IsolationMode](#cfn-greengrass-functiondefinitionversion-execution-isolationmode)" : String,
-  "[RunAs](#cfn-greengrass-functiondefinitionversion-execution-runas)" : [RunAs](aws-properties-greengrass-functiondefinitionversion-runas.md)
+  "[RunAs](#cfn-greengrass-functiondefinitionversion-execution-runas)" : RunAs
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IsolationMode](#cfn-greengrass-functiondefinitionversion-execution-isolationmode): String
   [RunAs](#cfn-greengrass-functiondefinitionversion-execution-runas): 
-    [RunAs](aws-properties-greengrass-functiondefinitionversion-runas.md)
+    RunAs
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-execution-properties"></a>

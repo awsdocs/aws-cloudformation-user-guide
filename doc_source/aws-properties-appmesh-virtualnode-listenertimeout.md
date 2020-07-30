@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GRPC](#cfn-appmesh-virtualnode-listenertimeout-grpc)" : [GrpcTimeout](aws-properties-appmesh-virtualnode-grpctimeout.md),
-  "[HTTP](#cfn-appmesh-virtualnode-listenertimeout-http)" : [HttpTimeout](aws-properties-appmesh-virtualnode-httptimeout.md),
-  "[HTTP2](#cfn-appmesh-virtualnode-listenertimeout-http2)" : [HttpTimeout](aws-properties-appmesh-virtualnode-httptimeout.md),
-  "[TCP](#cfn-appmesh-virtualnode-listenertimeout-tcp)" : [TcpTimeout](aws-properties-appmesh-virtualnode-tcptimeout.md)
+  "[GRPC](#cfn-appmesh-virtualnode-listenertimeout-grpc)" : GrpcTimeout,
+  "[HTTP](#cfn-appmesh-virtualnode-listenertimeout-http)" : HttpTimeout,
+  "[HTTP2](#cfn-appmesh-virtualnode-listenertimeout-http2)" : HttpTimeout,
+  "[TCP](#cfn-appmesh-virtualnode-listenertimeout-tcp)" : TcpTimeout
 }
 ```
 
@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GRPC](#cfn-appmesh-virtualnode-listenertimeout-grpc): 
-    [GrpcTimeout](aws-properties-appmesh-virtualnode-grpctimeout.md)
+    GrpcTimeout
   [HTTP](#cfn-appmesh-virtualnode-listenertimeout-http): 
-    [HttpTimeout](aws-properties-appmesh-virtualnode-httptimeout.md)
+    HttpTimeout
   [HTTP2](#cfn-appmesh-virtualnode-listenertimeout-http2): 
-    [HttpTimeout](aws-properties-appmesh-virtualnode-httptimeout.md)
+    HttpTimeout
   [TCP](#cfn-appmesh-virtualnode-listenertimeout-tcp): 
-    [TcpTimeout](aws-properties-appmesh-virtualnode-tcptimeout.md)
+    TcpTimeout
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-listenertimeout-properties"></a>

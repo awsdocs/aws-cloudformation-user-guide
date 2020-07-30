@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destinations](#cfn-stepfunctions-statemachine-loggingconfiguration-destinations)" : [ [LogDestination](aws-properties-stepfunctions-statemachine-logdestination.md), ... ],
+  "[Destinations](#cfn-stepfunctions-statemachine-loggingconfiguration-destinations)" : [ LogDestination, ... ],
   "[IncludeExecutionData](#cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata)" : Boolean,
   "[Level](#cfn-stepfunctions-statemachine-loggingconfiguration-level)" : String
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destinations](#cfn-stepfunctions-statemachine-loggingconfiguration-destinations): 
-    - [LogDestination](aws-properties-stepfunctions-statemachine-logdestination.md)
+    - LogDestination
   [IncludeExecutionData](#cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata): Boolean
   [Level](#cfn-stepfunctions-statemachine-loggingconfiguration-level): String
 ```

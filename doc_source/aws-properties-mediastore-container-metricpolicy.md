@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContainerLevelMetrics](#cfn-mediastore-container-metricpolicy-containerlevelmetrics)" : String,
-  "[MetricPolicyRules](#cfn-mediastore-container-metricpolicy-metricpolicyrules)" : [ [MetricPolicyRule](aws-properties-mediastore-container-metricpolicyrule.md), ... ]
+  "[MetricPolicyRules](#cfn-mediastore-container-metricpolicy-metricpolicyrules)" : [ MetricPolicyRule, ... ]
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContainerLevelMetrics](#cfn-mediastore-container-metricpolicy-containerlevelmetrics): String
   [MetricPolicyRules](#cfn-mediastore-container-metricpolicy-metricpolicyrules): 
-    - [MetricPolicyRule](aws-properties-mediastore-container-metricpolicyrule.md)
+    - MetricPolicyRule
 ```
 
 ## Properties<a name="aws-properties-mediastore-container-metricpolicy-properties"></a>

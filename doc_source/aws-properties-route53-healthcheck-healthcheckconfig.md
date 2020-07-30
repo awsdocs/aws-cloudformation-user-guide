@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier)" : [AlarmIdentifier](aws-properties-route53-healthcheck-alarmidentifier.md),
+  "[AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier)" : AlarmIdentifier,
   "[ChildHealthChecks](#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks)" : [ String, ... ],
   "[EnableSNI](#cfn-route53-healthcheck-healthcheckconfig-enablesni)" : Boolean,
   "[FailureThreshold](#cfn-route53-healthcheck-healthcheckconfig-failurethreshold)" : Integer,
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AlarmIdentifier](#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier): 
-    [AlarmIdentifier](aws-properties-route53-healthcheck-alarmidentifier.md)
+    AlarmIdentifier
   [ChildHealthChecks](#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks): 
     - String
   [EnableSNI](#cfn-route53-healthcheck-healthcheckconfig-enablesni): Boolean

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AvailabilityZone](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-availabilityzone)" : String,
   "[InstanceType](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-instancetype)" : String,
   "[MaxPrice](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice)" : String,
-  "[Placement](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-placement)" : [Placement](aws-properties-ec2-ec2fleet-placement.md),
+  "[Placement](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-placement)" : Placement,
   "[Priority](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-priority)" : Double,
   "[SubnetId](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-subnetid)" : String,
   "[WeightedCapacity](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-weightedcapacity)" : Double
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InstanceType](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-instancetype): String
   [MaxPrice](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-maxprice): String
   [Placement](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-placement): 
-    [Placement](aws-properties-ec2-ec2fleet-placement.md)
+    Placement
   [Priority](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-priority): Double
   [SubnetId](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-subnetid): String
   [WeightedCapacity](#cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-weightedcapacity): Double

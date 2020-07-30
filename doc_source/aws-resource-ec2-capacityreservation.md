@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria)" : String,
       "[InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform)" : String,
       "[InstanceType](#cfn-ec2-capacityreservation-instancetype)" : String,
-      "[TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications)" : [ [TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md), ... ],
+      "[TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications)" : [ TagSpecification, ... ],
       "[Tenancy](#cfn-ec2-capacityreservation-tenancy)" : String
     }
 }
@@ -42,7 +42,7 @@ Properties:
   [InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform): String
   [InstanceType](#cfn-ec2-capacityreservation-instancetype): String
   [TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications): 
-    - [TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md)
+    - TagSpecification
   [Tenancy](#cfn-ec2-capacityreservation-tenancy): String
 ```
 

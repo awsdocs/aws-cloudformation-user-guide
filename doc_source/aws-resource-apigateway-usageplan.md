@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::UsagePlan",
   "Properties" : {
-      "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ [ApiStage](aws-properties-apigateway-usageplan-apistage.md), ... ],
+      "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ ApiStage, ... ],
       "[Description](#cfn-apigateway-usageplan-description)" : String,
-      "[Quota](#cfn-apigateway-usageplan-quota)" : [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md),
+      "[Quota](#cfn-apigateway-usageplan-quota)" : QuotaSettings,
       "[Tags](#cfn-apigateway-usageplan-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[Throttle](#cfn-apigateway-usageplan-throttle)" : [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md),
+      "[Throttle](#cfn-apigateway-usageplan-throttle)" : ThrottleSettings,
       "[UsagePlanName](#cfn-apigateway-usageplan-usageplanname)" : String
     }
 }
@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::UsagePlan
 Properties: 
   [ApiStages](#cfn-apigateway-usageplan-apistages): 
-    - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
+    - ApiStage
   [Description](#cfn-apigateway-usageplan-description): String
   [Quota](#cfn-apigateway-usageplan-quota): 
-    [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
+    QuotaSettings
   [Tags](#cfn-apigateway-usageplan-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Throttle](#cfn-apigateway-usageplan-throttle): 
-    [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
+    ThrottleSettings
   [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
 ```
 

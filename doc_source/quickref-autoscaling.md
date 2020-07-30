@@ -5,7 +5,7 @@
 + [Auto Scaling group resource](#scenario-as-group)
 + [Auto Scaling policy triggered by CloudWatch alarm](#scenario-as-policy)
 + [Auto Scaling group with notifications](#scenario-as-notification)
-+ [Auto Scaling with an UpdatePolicy](#w6408ab1c19c22c15c13)
++ [Auto Scaling with an UpdatePolicy](#w6461ab1c19c22c15c13)
 
 ## Auto Scaling launch configuration resource<a name="scenario-as-launch-config"></a>
 
@@ -87,9 +87,9 @@ This example shows an Auto Scaling [AWS::AutoScaling::AutoScalingGroup](https://
 
 ## Auto Scaling policy triggered by CloudWatch alarm<a name="scenario-as-policy"></a>
 
-This example shows an [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html) resource that scales up the Auto Scaling group asGroup\. The `AdjustmentType` property specifies ChangeInCapacity, which means that the `ScalingAdjustment` represents the number of instances to add \(if `ScalingAdjustment` is positive\) or delete \(if it is negative\)\. In this example, `ScalingAdjustment` is 1; therefore, the policy increments the number of EC2 instances in the group by 1 when the policy is executed\.
+This example shows an [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html) resource that scales up the Auto Scaling group asGroup\. The `AdjustmentType` property specifies ChangeInCapacity, which means that the `ScalingAdjustment` represents the number of instances to add \(if `ScalingAdjustment` is positive\) or delete \(if it is negative\)\. In this example, `ScalingAdjustment` is 1; therefore, the policy increments the number of EC2 instances in the group by 1 when the policy is ran\.
 
-The [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource CPUAlarmHigh specifies the scaling policy ScaleUpPolicy as the action to execute when the alarm is in an `ALARM` state \(`AlarmActions`\)\.
+The [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource CPUAlarmHigh specifies the scaling policy ScaleUpPolicy as the action to run when the alarm is in an `ALARM` state \(`AlarmActions`\)\.
 
 ### JSON<a name="quickref-autoscaling-example-3.json"></a>
 
@@ -207,7 +207,7 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amaz
 18.       - autoscaling:EC2_INSTANCE_TERMINATE_ERROR
 ```
 
-## Auto Scaling with an UpdatePolicy<a name="w6408ab1c19c22c15c13"></a>
+## Auto Scaling with an UpdatePolicy<a name="w6461ab1c19c22c15c13"></a>
 
 This example shows how to use an [UpdatePolicy attribute](aws-attribute-updatepolicy.md) with an auto\-scaling group\.
 

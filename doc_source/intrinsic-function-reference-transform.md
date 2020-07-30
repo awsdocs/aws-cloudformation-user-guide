@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Transform` specifies a macro to perform custom processing on part of a stack template\. Macros enable you to perform custom processing on templates, from simple actions like find\-and\-replace operations to extensive transformations of entire templates\. For more information, see [Using AWS CloudFormation macros to perform custom processing on templates](template-macros.md)\.
 
-You can also use `Fn::Transform` to call the `[AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)` transform, which is a macro hosted by AWS CloudFormation\.
+You can also use `Fn::Transform` to call the `` transform, which is a macro hosted by AWS CloudFormation\.
 
 ## Declaration<a name="intrinsic-function-reference-transform-declaration"></a>
 

@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::RateBasedRule",
   "Properties" : {
-      "[MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates)" : [ [Predicate](aws-properties-wafregional-ratebasedrule-predicate.md), ... ],
+      "[MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates)" : [ Predicate, ... ],
       "[MetricName](#cfn-wafregional-ratebasedrule-metricname)" : String,
       "[Name](#cfn-wafregional-ratebasedrule-name)" : String,
       "[RateKey](#cfn-wafregional-ratebasedrule-ratekey)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::RateBasedRule
 Properties: 
   [MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates): 
-    - [Predicate](aws-properties-wafregional-ratebasedrule-predicate.md)
+    - Predicate
   [MetricName](#cfn-wafregional-ratebasedrule-metricname): String
   [Name](#cfn-wafregional-ratebasedrule-name): String
   [RateKey](#cfn-wafregional-ratebasedrule-ratekey): String

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-as-launchconfig-blockdev-mapping-devicename)" : String,
-  "[Ebs](#cfn-as-launchconfig-blockdev-mapping-ebs)" : [BlockDevice](aws-properties-as-launchconfig-blockdev-template.md),
+  "[Ebs](#cfn-as-launchconfig-blockdev-mapping-ebs)" : BlockDevice,
   "[NoDevice](#cfn-as-launchconfig-blockdev-mapping-nodevice)" : Boolean,
   "[VirtualName](#cfn-as-launchconfig-blockdev-mapping-virtualname)" : String
 }
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-as-launchconfig-blockdev-mapping-devicename): String
   [Ebs](#cfn-as-launchconfig-blockdev-mapping-ebs): 
-    [BlockDevice](aws-properties-as-launchconfig-blockdev-template.md)
+    BlockDevice
   [NoDevice](#cfn-as-launchconfig-blockdev-mapping-nodevice): Boolean
   [VirtualName](#cfn-as-launchconfig-blockdev-mapping-virtualname): String
 ```

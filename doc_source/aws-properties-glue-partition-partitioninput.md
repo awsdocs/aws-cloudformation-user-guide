@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Parameters](#cfn-glue-partition-partitioninput-parameters)" : Json,
-  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md),
+  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : StorageDescriptor,
   "[Values](#cfn-glue-partition-partitioninput-values)" : [ String, ... ]
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Parameters](#cfn-glue-partition-partitioninput-parameters): Json
   [StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor): 
-    [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)
+    StorageDescriptor
   [Values](#cfn-glue-partition-partitioninput-values): 
     - String
 ```

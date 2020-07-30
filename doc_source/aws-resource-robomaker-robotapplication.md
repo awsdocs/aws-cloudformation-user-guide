@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid)" : String,
       "[Name](#cfn-robomaker-robotapplication-name)" : String,
-      "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md),
-      "[Sources](#cfn-robomaker-robotapplication-sources)" : [ [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md), ... ],
+      "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
+      "[Sources](#cfn-robomaker-robotapplication-sources)" : [ SourceConfig, ... ],
       "[Tags](#cfn-robomaker-robotapplication-tags)" : Json
     }
 }
@@ -29,9 +29,9 @@ Properties:
   [CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid): String
   [Name](#cfn-robomaker-robotapplication-name): String
   [RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite): 
-    [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)
+    RobotSoftwareSuite
   [Sources](#cfn-robomaker-robotapplication-sources): 
-    - [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)
+    - SourceConfig
   [Tags](#cfn-robomaker-robotapplication-tags): Json
 ```
 

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobQueue",
   "Properties" : {
-      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md), ... ],
+      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
       "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
       "[State](#cfn-batch-jobqueue-state)" : String
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Batch::JobQueue
 Properties: 
   [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
-    - [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
+    - ComputeEnvironmentOrder
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [State](#cfn-batch-jobqueue-state): String

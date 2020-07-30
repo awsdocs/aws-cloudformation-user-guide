@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MediaLive::InputSecurityGroup",
   "Properties" : {
       "[Tags](#cfn-medialive-inputsecuritygroup-tags)" : Json,
-      "[WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules)" : [ [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md), ... ]
+      "[WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules)" : [ InputWhitelistRuleCidr, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::MediaLive::InputSecurityGroup
 Properties: 
   [Tags](#cfn-medialive-inputsecuritygroup-tags): Json
   [WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules): 
-    - [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md)
+    - InputWhitelistRuleCidr
 ```
 
 ## Properties<a name="aws-resource-medialive-inputsecuritygroup-properties"></a>

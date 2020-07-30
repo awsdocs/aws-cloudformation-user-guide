@@ -13,11 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
   "Properties" : {
       "[IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)" : String,
-      "[LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)" : [ [LoadBalancerAttribute](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md), ... ],
+      "[LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)" : [ LoadBalancerAttribute, ... ],
       "[Name](#cfn-elasticloadbalancingv2-loadbalancer-name)" : String,
       "[Scheme](#cfn-elasticloadbalancingv2-loadbalancer-scheme)" : String,
       "[SecurityGroups](#cfn-elasticloadbalancingv2-loadbalancer-securitygroups)" : [ String, ... ],
-      "[SubnetMappings](#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)" : [ [SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md), ... ],
+      "[SubnetMappings](#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)" : [ SubnetMapping, ... ],
       "[Subnets](#cfn-elasticloadbalancingv2-loadbalancer-subnets)" : [ String, ... ],
       "[Tags](#cfn-elasticloadbalancingv2-loadbalancer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-elasticloadbalancingv2-loadbalancer-type)" : String
@@ -32,13 +32,13 @@ Type: AWS::ElasticLoadBalancingV2::LoadBalancer
 Properties: 
   [IpAddressType](#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype): String
   [LoadBalancerAttributes](#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes): 
-    - [LoadBalancerAttribute](aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes.md)
+    - LoadBalancerAttribute
   [Name](#cfn-elasticloadbalancingv2-loadbalancer-name): String
   [Scheme](#cfn-elasticloadbalancingv2-loadbalancer-scheme): String
   [SecurityGroups](#cfn-elasticloadbalancingv2-loadbalancer-securitygroups): 
     - String
   [SubnetMappings](#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings): 
-    - [SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md)
+    - SubnetMapping
   [Subnets](#cfn-elasticloadbalancingv2-loadbalancer-subnets): 
     - String
   [Tags](#cfn-elasticloadbalancingv2-loadbalancer-tags): 

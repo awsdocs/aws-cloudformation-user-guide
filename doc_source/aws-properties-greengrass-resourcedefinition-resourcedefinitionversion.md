@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)" : [ [ResourceInstance](aws-properties-greengrass-resourcedefinition-resourceinstance.md), ... ]
+  "[Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)" : [ ResourceInstance, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources): 
-    - [ResourceInstance](aws-properties-greengrass-resourcedefinition-resourceinstance.md)
+    - ResourceInstance
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-resourcedefinitionversion-properties"></a>

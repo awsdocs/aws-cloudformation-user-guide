@@ -17,14 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalInfo](#cfn-ec2-instance-additionalinfo)" : String,
       "[Affinity](#cfn-ec2-instance-affinity)" : String,
       "[AvailabilityZone](#cfn-ec2-instance-availabilityzone)" : String,
-      "[BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md), ... ],
-      "[CpuOptions](#cfn-ec2-instance-cpuoptions)" : [CpuOptions](aws-properties-ec2-instance-cpuoptions.md),
-      "[CreditSpecification](#cfn-ec2-instance-creditspecification)" : [CreditSpecification](aws-properties-ec2-instance-creditspecification.md),
+      "[BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
+      "[CpuOptions](#cfn-ec2-instance-cpuoptions)" : CpuOptions,
+      "[CreditSpecification](#cfn-ec2-instance-creditspecification)" : CreditSpecification,
       "[DisableApiTermination](#cfn-ec2-instance-disableapitermination)" : Boolean,
       "[EbsOptimized](#cfn-ec2-instance-ebsoptimized)" : Boolean,
-      "[ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications)" : [ [ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md), ... ],
-      "[ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators)" : [ [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md), ... ],
-      "[HibernationOptions](#cfn-ec2-instance-hibernationoptions)" : [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md),
+      "[ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications)" : [ ElasticGpuSpecification, ... ],
+      "[ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators)" : [ ElasticInferenceAccelerator, ... ],
+      "[HibernationOptions](#cfn-ec2-instance-hibernationoptions)" : HibernationOptions,
       "[HostId](#cfn-ec2-instance-hostid)" : String,
       "[HostResourceGroupArn](#cfn-ec2-instance-hostresourcegrouparn)" : String,
       "[IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile)" : String,
@@ -32,25 +32,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceInitiatedShutdownBehavior](#cfn-ec2-instance-instanceinitiatedshutdownbehavior)" : String,
       "[InstanceType](#cfn-ec2-instance-instancetype)" : String,
       "[Ipv6AddressCount](#cfn-ec2-instance-ipv6addresscount)" : Integer,
-      "[Ipv6Addresses](#cfn-ec2-instance-ipv6addresses)" : [ [InstanceIpv6Address](aws-properties-ec2-instance-instanceipv6address.md), ... ],
+      "[Ipv6Addresses](#cfn-ec2-instance-ipv6addresses)" : [ InstanceIpv6Address, ... ],
       "[KernelId](#cfn-ec2-instance-kernelid)" : String,
       "[KeyName](#cfn-ec2-instance-keyname)" : String,
-      "[LaunchTemplate](#cfn-ec2-instance-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md),
-      "[LicenseSpecifications](#cfn-ec2-instance-licensespecifications)" : [ [LicenseSpecification](aws-properties-ec2-instance-licensespecification.md), ... ],
+      "[LaunchTemplate](#cfn-ec2-instance-launchtemplate)" : LaunchTemplateSpecification,
+      "[LicenseSpecifications](#cfn-ec2-instance-licensespecifications)" : [ LicenseSpecification, ... ],
       "[Monitoring](#cfn-ec2-instance-monitoring)" : Boolean,
-      "[NetworkInterfaces](#cfn-ec2-instance-networkinterfaces)" : [ [NetworkInterface](aws-properties-ec2-network-iface-embedded.md), ... ],
+      "[NetworkInterfaces](#cfn-ec2-instance-networkinterfaces)" : [ NetworkInterface, ... ],
       "[PlacementGroupName](#cfn-ec2-instance-placementgroupname)" : String,
       "[PrivateIpAddress](#cfn-ec2-instance-privateipaddress)" : String,
       "[RamdiskId](#cfn-ec2-instance-ramdiskid)" : String,
       "[SecurityGroupIds](#cfn-ec2-instance-securitygroupids)" : [ String, ... ],
       "[SecurityGroups](#cfn-ec2-instance-securitygroups)" : [ String, ... ],
       "[SourceDestCheck](#cfn-ec2-instance-sourcedestcheck)" : Boolean,
-      "[SsmAssociations](#cfn-ec2-instance-ssmassociations)" : [ [SsmAssociation](aws-properties-ec2-instance-ssmassociations.md), ... ],
+      "[SsmAssociations](#cfn-ec2-instance-ssmassociations)" : [ SsmAssociation, ... ],
       "[SubnetId](#cfn-ec2-instance-subnetid)" : String,
       "[Tags](#cfn-ec2-instance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Tenancy](#cfn-ec2-instance-tenancy)" : String,
       "[UserData](#cfn-ec2-instance-userdata)" : String,
-      "[Volumes](#cfn-ec2-instance-volumes)" : [ [Volume](aws-properties-ec2-mount-point.md), ... ]
+      "[Volumes](#cfn-ec2-instance-volumes)" : [ Volume, ... ]
     }
 }
 ```
@@ -64,19 +64,19 @@ Properties:
   [Affinity](#cfn-ec2-instance-affinity): String
   [AvailabilityZone](#cfn-ec2-instance-availabilityzone): String
   [BlockDeviceMappings](#cfn-ec2-instance-blockdevicemappings): 
-    - [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)
+    - BlockDeviceMapping
   [CpuOptions](#cfn-ec2-instance-cpuoptions): 
-    [CpuOptions](aws-properties-ec2-instance-cpuoptions.md)
+    CpuOptions
   [CreditSpecification](#cfn-ec2-instance-creditspecification): 
-    [CreditSpecification](aws-properties-ec2-instance-creditspecification.md)
+    CreditSpecification
   [DisableApiTermination](#cfn-ec2-instance-disableapitermination): Boolean
   [EbsOptimized](#cfn-ec2-instance-ebsoptimized): Boolean
   [ElasticGpuSpecifications](#cfn-ec2-instance-elasticgpuspecifications): 
-    - [ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md)
+    - ElasticGpuSpecification
   [ElasticInferenceAccelerators](#cfn-ec2-instance-elasticinferenceaccelerators): 
-    - [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md)
+    - ElasticInferenceAccelerator
   [HibernationOptions](#cfn-ec2-instance-hibernationoptions): 
-    [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md)
+    HibernationOptions
   [HostId](#cfn-ec2-instance-hostid): String
   [HostResourceGroupArn](#cfn-ec2-instance-hostresourcegrouparn): String
   [IamInstanceProfile](#cfn-ec2-instance-iaminstanceprofile): String
@@ -85,16 +85,16 @@ Properties:
   [InstanceType](#cfn-ec2-instance-instancetype): String
   [Ipv6AddressCount](#cfn-ec2-instance-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-instance-ipv6addresses): 
-    - [InstanceIpv6Address](aws-properties-ec2-instance-instanceipv6address.md)
+    - InstanceIpv6Address
   [KernelId](#cfn-ec2-instance-kernelid): String
   [KeyName](#cfn-ec2-instance-keyname): String
   [LaunchTemplate](#cfn-ec2-instance-launchtemplate): 
-    [LaunchTemplateSpecification](aws-properties-ec2-instance-launchtemplatespecification.md)
+    LaunchTemplateSpecification
   [LicenseSpecifications](#cfn-ec2-instance-licensespecifications): 
-    - [LicenseSpecification](aws-properties-ec2-instance-licensespecification.md)
+    - LicenseSpecification
   [Monitoring](#cfn-ec2-instance-monitoring): Boolean
   [NetworkInterfaces](#cfn-ec2-instance-networkinterfaces): 
-    - [NetworkInterface](aws-properties-ec2-network-iface-embedded.md)
+    - NetworkInterface
   [PlacementGroupName](#cfn-ec2-instance-placementgroupname): String
   [PrivateIpAddress](#cfn-ec2-instance-privateipaddress): String
   [RamdiskId](#cfn-ec2-instance-ramdiskid): String
@@ -104,14 +104,14 @@ Properties:
     - String
   [SourceDestCheck](#cfn-ec2-instance-sourcedestcheck): Boolean
   [SsmAssociations](#cfn-ec2-instance-ssmassociations): 
-    - [SsmAssociation](aws-properties-ec2-instance-ssmassociations.md)
+    - SsmAssociation
   [SubnetId](#cfn-ec2-instance-subnetid): String
   [Tags](#cfn-ec2-instance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Tenancy](#cfn-ec2-instance-tenancy): String
   [UserData](#cfn-ec2-instance-userdata): String
   [Volumes](#cfn-ec2-instance-volumes): 
-    - [Volume](aws-properties-ec2-mount-point.md)
+    - Volume
 ```
 
 ## Properties<a name="aws-properties-ec2-instance-properties"></a>

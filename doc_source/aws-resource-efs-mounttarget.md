@@ -38,12 +38,17 @@ Properties:
 The ID of the file system for which to create the mount target\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `^(arn:aws[-a-z]*:elasticfilesystem:[0-9a-z-:]+:file-system/fs-[0-9a-f]{8,40}|fs-[0-9a-f]{8,40})$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IpAddress`  <a name="cfn-efs-mounttarget-ipaddress"></a>
 Valid IPv4 address within the address range of the specified subnet\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `7`  
+*Maximum*: `15`  
+*Pattern*: `^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-efs-mounttarget-securitygroups"></a>
@@ -57,6 +62,9 @@ Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for
 The ID of the subnet to add the mount target in\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `15`  
+*Maximum*: `47`  
+*Pattern*: `^subnet-[0-9a-f]{8,40}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-efs-mounttarget-return-values"></a>

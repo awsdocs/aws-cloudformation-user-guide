@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::IPSet",
   "Properties" : {
-      "[IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors)" : [ [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md), ... ],
+      "[IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors)" : [ IPSetDescriptor, ... ],
       "[Name](#cfn-wafregional-ipset-name)" : String
     }
 }
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::IPSet
 Properties: 
   [IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors): 
-    - [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md)
+    - IPSetDescriptor
   [Name](#cfn-wafregional-ipset-name): String
 ```
 

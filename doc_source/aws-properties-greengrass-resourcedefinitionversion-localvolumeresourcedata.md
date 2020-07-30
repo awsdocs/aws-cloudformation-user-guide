@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath)" : String,
-  "[GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting)" : [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md),
+  "[GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting)" : GroupOwnerSetting,
   "[SourcePath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath): String
   [GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting): 
-    [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md)
+    GroupOwnerSetting
   [SourcePath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath): String
 ```
 

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AccessAnalyzer::Analyzer",
   "Properties" : {
       "[AnalyzerName](#cfn-accessanalyzer-analyzer-analyzername)" : String,
-      "[ArchiveRules](#cfn-accessanalyzer-analyzer-archiverules)" : [ [ArchiveRule](aws-properties-accessanalyzer-analyzer-archiverule.md), ... ],
+      "[ArchiveRules](#cfn-accessanalyzer-analyzer-archiverules)" : [ ArchiveRule, ... ],
       "[Tags](#cfn-accessanalyzer-analyzer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-accessanalyzer-analyzer-type)" : String
     }
@@ -27,7 +27,7 @@ Type: AWS::AccessAnalyzer::Analyzer
 Properties: 
   [AnalyzerName](#cfn-accessanalyzer-analyzer-analyzername): String
   [ArchiveRules](#cfn-accessanalyzer-analyzer-archiverules): 
-    - [ArchiveRule](aws-properties-accessanalyzer-analyzer-archiverule.md)
+    - ArchiveRule
   [Tags](#cfn-accessanalyzer-analyzer-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-accessanalyzer-analyzer-type): String

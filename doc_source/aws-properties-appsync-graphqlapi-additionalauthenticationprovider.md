@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype)" : String,
-  "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig)" : [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md),
-  "[UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig)" : [CognitoUserPoolConfig](aws-properties-appsync-graphqlapi-cognitouserpoolconfig.md)
+  "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig)" : OpenIDConnectConfig,
+  "[UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig)" : CognitoUserPoolConfig
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype): String
   [OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig): 
-    [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)
+    OpenIDConnectConfig
   [UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig): 
-    [CognitoUserPoolConfig](aws-properties-appsync-graphqlapi-cognitouserpoolconfig.md)
+    CognitoUserPoolConfig
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-additionalauthenticationprovider-properties"></a>

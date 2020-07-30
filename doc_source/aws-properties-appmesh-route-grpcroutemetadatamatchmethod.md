@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Exact](#cfn-appmesh-route-grpcroutemetadatamatchmethod-exact)" : String,
   "[Prefix](#cfn-appmesh-route-grpcroutemetadatamatchmethod-prefix)" : String,
-  "[Range](#cfn-appmesh-route-grpcroutemetadatamatchmethod-range)" : [MatchRange](aws-properties-appmesh-route-matchrange.md),
+  "[Range](#cfn-appmesh-route-grpcroutemetadatamatchmethod-range)" : MatchRange,
   "[Regex](#cfn-appmesh-route-grpcroutemetadatamatchmethod-regex)" : String,
   "[Suffix](#cfn-appmesh-route-grpcroutemetadatamatchmethod-suffix)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Exact](#cfn-appmesh-route-grpcroutemetadatamatchmethod-exact): String
   [Prefix](#cfn-appmesh-route-grpcroutemetadatamatchmethod-prefix): String
   [Range](#cfn-appmesh-route-grpcroutemetadatamatchmethod-range): 
-    [MatchRange](aws-properties-appmesh-route-matchrange.md)
+    MatchRange
   [Regex](#cfn-appmesh-route-grpcroutemetadatamatchmethod-regex): String
   [Suffix](#cfn-appmesh-route-grpcroutemetadatamatchmethod-suffix): String
 ```

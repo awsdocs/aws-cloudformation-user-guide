@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid)" : String,
       "[Type](#cfn-ec2-vpnconnection-type)" : String,
       "[VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid)" : String,
-      "[VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications)" : [ [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md), ... ]
+      "[VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications)" : [ VpnTunnelOptionsSpecification, ... ]
     }
 }
 ```
@@ -42,7 +42,7 @@ Properties:
   [Type](#cfn-ec2-vpnconnection-type): String
   [VpnGatewayId](#cfn-ec2-vpnconnection-vpngatewayid): String
   [VpnTunnelOptionsSpecifications](#cfn-ec2-vpnconnection-vpntunneloptionsspecifications): 
-    - [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)
+    - VpnTunnelOptionsSpecification
 ```
 
 ## Properties<a name="aws-resource-ec2-vpn-connection-properties"></a>

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-ssm-maintenancewindowtarget-name)" : String,
       "[OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation)" : String,
       "[ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype)" : String,
-      "[Targets](#cfn-ssm-maintenancewindowtarget-targets)" : [ [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md), ... ],
+      "[Targets](#cfn-ssm-maintenancewindowtarget-targets)" : [ Targets, ... ],
       "[WindowId](#cfn-ssm-maintenancewindowtarget-windowid)" : String
     }
 }
@@ -32,7 +32,7 @@ Properties:
   [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation): String
   [ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype): String
   [Targets](#cfn-ssm-maintenancewindowtarget-targets): 
-    - [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)
+    - Targets
   [WindowId](#cfn-ssm-maintenancewindowtarget-windowid): String
 ```
 

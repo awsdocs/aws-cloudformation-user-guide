@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CorsRules](#cfn-s3-bucket-cors-corsrule)" : [ [CorsRule](aws-properties-s3-bucket-cors-corsrule.md), ... ]
+  "[CorsRules](#cfn-s3-bucket-cors-corsrule)" : [ CorsRule, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CorsRules](#cfn-s3-bucket-cors-corsrule): 
-    - [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)
+    - CorsRule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-cors-properties"></a>

@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
-      "[Containers](#cfn-sagemaker-model-containers)" : [ [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md), ... ],
+      "[Containers](#cfn-sagemaker-model-containers)" : [ ContainerDefinition, ... ],
       "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
       "[ModelName](#cfn-sagemaker-model-modelname)" : String,
-      "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md),
+      "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : ContainerDefinition,
       "[Tags](#cfn-sagemaker-model-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+      "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -28,15 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SageMaker::Model
 Properties: 
   [Containers](#cfn-sagemaker-model-containers): 
-    - [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+    - ContainerDefinition
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
   [ModelName](#cfn-sagemaker-model-modelname): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): 
-    [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+    ContainerDefinition
   [Tags](#cfn-sagemaker-model-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-sagemaker-model-vpcconfig): 
-    [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>

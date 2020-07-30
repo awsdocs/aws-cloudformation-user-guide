@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification)" : [Notification](aws-properties-budgets-budget-notification.md),
-  "[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers)" : [ [Subscriber](aws-properties-budgets-budget-subscriber.md), ... ]
+  "[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification)" : Notification,
+  "[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers)" : [ Subscriber, ... ]
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Notification](#cfn-budgets-budget-notificationwithsubscribers-notification): 
-    [Notification](aws-properties-budgets-budget-notification.md)
+    Notification
   [Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers): 
-    - [Subscriber](aws-properties-budgets-budget-subscriber.md)
+    - Subscriber
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-notificationwithsubscribers-properties"></a>

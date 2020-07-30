@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
-      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ [Rule](aws-properties-wafv2-rulegroup-rule.md), ... ],
+      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ Rule, ... ],
       "[Scope](#cfn-wafv2-rulegroup-scope)" : String,
       "[Tags](#cfn-wafv2-rulegroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : VisibilityConfig
     }
 }
 ```
@@ -37,12 +37,12 @@ Properties:
   [Description](#cfn-wafv2-rulegroup-description): String
   [Name](#cfn-wafv2-rulegroup-name): String
   [Rules](#cfn-wafv2-rulegroup-rules): 
-    - [Rule](aws-properties-wafv2-rulegroup-rule.md)
+    - Rule
   [Scope](#cfn-wafv2-rulegroup-scope): String
   [Tags](#cfn-wafv2-rulegroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig): 
-    [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+    VisibilityConfig
 ```
 
 ## Properties<a name="aws-resource-wafv2-rulegroup-properties"></a>

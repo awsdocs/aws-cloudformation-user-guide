@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Tls](#cfn-msk-cluster-clientauthentication-tls)" : [Tls](aws-properties-msk-cluster-tls.md)
+  "[Tls](#cfn-msk-cluster-clientauthentication-tls)" : Tls
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Tls](#cfn-msk-cluster-clientauthentication-tls): 
-    [Tls](aws-properties-msk-cluster-tls.md)
+    Tls
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-clientauthentication-properties"></a>

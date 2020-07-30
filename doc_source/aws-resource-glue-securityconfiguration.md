@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::SecurityConfiguration",
   "Properties" : {
-      "[EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md),
+      "[EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
       "[Name](#cfn-glue-securityconfiguration-name)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Glue::SecurityConfiguration
 Properties: 
   [EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md)
+    EncryptionConfiguration
   [Name](#cfn-glue-securityconfiguration-name): String
 ```
 

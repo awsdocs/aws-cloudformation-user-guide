@@ -11,16 +11,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketARN](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bucketarn)" : String,
-  "[BufferingHints](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints)" : [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md),
-  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions)" : [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
+  "[BufferingHints](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints)" : BufferingHints,
+  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[CompressionFormat](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat)" : String,
-  "[DataFormatConversionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration)" : [DataFormatConversionConfiguration](aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.md),
-  "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md),
+  "[DataFormatConversionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration)" : DataFormatConversionConfiguration,
+  "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
   "[ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-erroroutputprefix)" : String,
   "[Prefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix)" : String,
-  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-processingconfiguration)" : [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md),
+  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-processingconfiguration)" : ProcessingConfiguration,
   "[RoleARN](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-rolearn)" : String,
-  "[S3BackupConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupconfiguration)" : [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
+  "[S3BackupConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupconfiguration)" : S3DestinationConfiguration,
   "[S3BackupMode](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode)" : String
 }
 ```
@@ -30,21 +30,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BucketARN](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bucketarn): String
   [BufferingHints](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints): 
-    [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)
+    BufferingHints
   [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions): 
-    [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+    CloudWatchLoggingOptions
   [CompressionFormat](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat): String
   [DataFormatConversionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration): 
-    [DataFormatConversionConfiguration](aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.md)
+    DataFormatConversionConfiguration
   [EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)
+    EncryptionConfiguration
   [ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-erroroutputprefix): String
   [Prefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix): String
   [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-processingconfiguration): 
-    [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
+    ProcessingConfiguration
   [RoleARN](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-rolearn): String
   [S3BackupConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupconfiguration): 
-    [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    S3DestinationConfiguration
   [S3BackupMode](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode): String
 ```
 

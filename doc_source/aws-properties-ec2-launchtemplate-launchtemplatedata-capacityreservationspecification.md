@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference)" : String,
-  "[CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget)" : [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
+  "[CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget)" : CapacityReservationTarget
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference): String
   [CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget): 
-    [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
+    CapacityReservationTarget
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-properties"></a>

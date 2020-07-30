@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FunctionName](#cfn-lambda-alias-functionname)" : String,
       "[FunctionVersion](#cfn-lambda-alias-functionversion)" : String,
       "[Name](#cfn-lambda-alias-name)" : String,
-      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md),
-      "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
+      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : ProvisionedConcurrencyConfiguration,
+      "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : AliasRoutingConfiguration
     }
 }
 ```
@@ -34,9 +34,9 @@ Properties:
   [FunctionVersion](#cfn-lambda-alias-functionversion): String
   [Name](#cfn-lambda-alias-name): String
   [ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig): 
-    [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)
+    ProvisionedConcurrencyConfiguration
   [RoutingConfig](#cfn-lambda-alias-routingconfig): 
-    [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
+    AliasRoutingConfiguration
 ```
 
 ## Properties<a name="aws-resource-lambda-alias-properties"></a>

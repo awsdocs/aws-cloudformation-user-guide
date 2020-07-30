@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-s3-bucket-dataexport-destination)" : [Destination](aws-properties-s3-bucket-destination.md),
+  "[Destination](#cfn-s3-bucket-dataexport-destination)" : Destination,
   "[OutputSchemaVersion](#cfn-s3-bucket-dataexport-outputschemaversion)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destination](#cfn-s3-bucket-dataexport-destination): 
-    [Destination](aws-properties-s3-bucket-destination.md)
+    Destination
   [OutputSchemaVersion](#cfn-s3-bucket-dataexport-outputschemaversion): String
 ```
 

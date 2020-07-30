@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAF::XssMatchSet",
   "Properties" : {
       "[Name](#cfn-waf-xssmatchset-name)" : String,
-      "[XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples)" : [ [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md), ... ]
+      "[XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples)" : [ XssMatchTuple, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::WAF::XssMatchSet
 Properties: 
   [Name](#cfn-waf-xssmatchset-name): String
   [XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples): 
-    - [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)
+    - XssMatchTuple
 ```
 
 ## Properties<a name="aws-resource-waf-xssmatchset-properties"></a>

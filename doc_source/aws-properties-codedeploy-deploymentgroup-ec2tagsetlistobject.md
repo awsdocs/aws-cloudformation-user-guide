@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup)" : [ [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md), ... ]
+  "[Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup)" : [ EC2TagFilter, ... ]
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Ec2TagGroup](#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup): 
-    - [EC2TagFilter](aws-properties-codedeploy-deploymentgroup-ec2tagfilter.md)
+    - EC2TagFilter
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject-properties"></a>

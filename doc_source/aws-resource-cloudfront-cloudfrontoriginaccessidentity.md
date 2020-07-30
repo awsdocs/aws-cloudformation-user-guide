@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::CloudFrontOriginAccessIdentity",
   "Properties" : {
-      "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
+      "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : CloudFrontOriginAccessIdentityConfig
     }
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
 Properties: 
   [CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): 
-    [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
+    CloudFrontOriginAccessIdentityConfig
 ```
 
 ## Properties<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-properties"></a>

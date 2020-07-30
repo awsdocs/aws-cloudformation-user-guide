@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::ByteMatchSet",
   "Properties" : {
-      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md), ... ],
+      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ ByteMatchTuple, ... ],
       "[Name](#cfn-waf-bytematchset-name)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::ByteMatchSet
 Properties: 
   [ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples): 
-    - [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md)
+    - ByteMatchTuple
   [Name](#cfn-waf-bytematchset-name): String
 ```
 

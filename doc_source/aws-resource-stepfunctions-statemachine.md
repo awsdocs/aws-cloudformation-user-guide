@@ -12,14 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::StateMachine",
   "Properties" : {
-      "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : [S3Location](aws-properties-stepfunctions-statemachine-s3location.md),
+      "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
-      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md),
-      "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md),
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : DefinitionSubstitutions,
+      "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : LoggingConfiguration,
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
       "[StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype)" : String,
-      "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md), ... ]
+      "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -30,18 +30,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::StepFunctions::StateMachine
 Properties: 
   [DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location): 
-    [S3Location](aws-properties-stepfunctions-statemachine-s3location.md)
+    S3Location
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
   [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
-    [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md)
+    DefinitionSubstitutions
   [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
-    [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md)
+    LoggingConfiguration
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
   [StateMachineName](#cfn-stepfunctions-statemachine-statemachinename): String
   [StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype): String
   [Tags](#cfn-stepfunctions-statemachine-tags): 
-    - [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>

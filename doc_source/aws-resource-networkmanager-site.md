@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-networkmanager-site-description)" : String,
       "[GlobalNetworkId](#cfn-networkmanager-site-globalnetworkid)" : String,
-      "[Location](#cfn-networkmanager-site-location)" : [Location](aws-properties-networkmanager-site-location.md),
+      "[Location](#cfn-networkmanager-site-location)" : Location,
       "[Tags](#cfn-networkmanager-site-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-networkmanager-site-description): String
   [GlobalNetworkId](#cfn-networkmanager-site-globalnetworkid): String
   [Location](#cfn-networkmanager-site-location): 
-    [Location](aws-properties-networkmanager-site-location.md)
+    Location
   [Tags](#cfn-networkmanager-site-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

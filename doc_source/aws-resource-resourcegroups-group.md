@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-resourcegroups-group-description)" : String,
       "[Name](#cfn-resourcegroups-group-name)" : String,
-      "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md),
+      "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : ResourceQuery,
       "[Tags](#cfn-resourcegroups-group-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-resourcegroups-group-description): String
   [Name](#cfn-resourcegroups-group-name): String
   [ResourceQuery](#cfn-resourcegroups-group-resourcequery): 
-    [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md)
+    ResourceQuery
   [Tags](#cfn-resourcegroups-group-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

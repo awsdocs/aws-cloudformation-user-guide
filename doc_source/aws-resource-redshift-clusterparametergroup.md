@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-redshift-clusterparametergroup-description)" : String,
       "[ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
-      "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ [Parameter](aws-property-redshift-clusterparametergroup-parameter.md), ... ],
+      "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
       "[Tags](#cfn-redshift-clusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-redshift-clusterparametergroup-description): String
   [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
   [Parameters](#cfn-redshift-clusterparametergroup-parameters): 
-    - [Parameter](aws-property-redshift-clusterparametergroup-parameter.md)
+    - Parameter
   [Tags](#cfn-redshift-clusterparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

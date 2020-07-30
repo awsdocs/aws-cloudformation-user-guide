@@ -16,11 +16,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AgentVersion](#cfn-opsworks-stack-agentversion)" : String,
       "[Attributes](#cfn-opsworks-stack-attributes)" : {Key : Value, ...},
-      "[ChefConfiguration](#cfn-opsworks-stack-chefconfiguration)" : [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md),
+      "[ChefConfiguration](#cfn-opsworks-stack-chefconfiguration)" : ChefConfiguration,
       "[CloneAppIds](#cfn-opsworks-stack-cloneappids)" : [ String, ... ],
       "[ClonePermissions](#cfn-opsworks-stack-clonepermissions)" : Boolean,
-      "[ConfigurationManager](#cfn-opsworks-stack-configmanager)" : [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md),
-      "[CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource)" : [Source](aws-properties-opsworks-stack-source.md),
+      "[ConfigurationManager](#cfn-opsworks-stack-configmanager)" : StackConfigurationManager,
+      "[CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource)" : Source,
       "[CustomJson](#cfn-opsworks-stack-custjson)" : Json,
       "[DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz)" : String,
       "[DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof)" : String,
@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultSshKeyName](#cfn-opsworks-stack-defaultsshkeyname)" : String,
       "[DefaultSubnetId](#defaultsubnet)" : String,
       "[EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn)" : String,
-      "[ElasticIps](#cfn-opsworks-stack-elasticips)" : [ [ElasticIp](aws-properties-opsworks-stack-elasticip.md), ... ],
+      "[ElasticIps](#cfn-opsworks-stack-elasticips)" : [ ElasticIp, ... ],
       "[HostnameTheme](#cfn-opsworks-stack-hostnametheme)" : String,
       "[Name](#cfn-opsworks-stack-name)" : String,
-      "[RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances)" : [ [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md), ... ],
+      "[RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances)" : [ RdsDbInstance, ... ],
       "[ServiceRoleArn](#cfn-opsworks-stack-servicerolearn)" : String,
       "[SourceStackId](#cfn-opsworks-stack-sourcestackid)" : String,
       "[Tags](#cfn-opsworks-stack-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -52,14 +52,14 @@ Properties:
   [Attributes](#cfn-opsworks-stack-attributes): 
     Key : Value
   [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration): 
-    [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md)
+    ChefConfiguration
   [CloneAppIds](#cfn-opsworks-stack-cloneappids): 
     - String
   [ClonePermissions](#cfn-opsworks-stack-clonepermissions): Boolean
   [ConfigurationManager](#cfn-opsworks-stack-configmanager): 
-    [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md)
+    StackConfigurationManager
   [CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource): 
-    [Source](aws-properties-opsworks-stack-source.md)
+    Source
   [CustomJson](#cfn-opsworks-stack-custjson): 
     Json
   [DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz): String
@@ -70,11 +70,11 @@ Properties:
   [DefaultSubnetId](#defaultsubnet): String
   [EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn): String
   [ElasticIps](#cfn-opsworks-stack-elasticips): 
-    - [ElasticIp](aws-properties-opsworks-stack-elasticip.md)
+    - ElasticIp
   [HostnameTheme](#cfn-opsworks-stack-hostnametheme): String
   [Name](#cfn-opsworks-stack-name): String
   [RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances): 
-    - [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md)
+    - RdsDbInstance
   [ServiceRoleArn](#cfn-opsworks-stack-servicerolearn): String
   [SourceStackId](#cfn-opsworks-stack-sourcestackid): String
   [Tags](#cfn-opsworks-stack-tags): 

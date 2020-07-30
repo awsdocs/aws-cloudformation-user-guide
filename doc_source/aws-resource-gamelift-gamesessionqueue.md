@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GameLift::GameSessionQueue",
   "Properties" : {
-      "[Destinations](#cfn-gamelift-gamesessionqueue-destinations)" : [ [Destination](aws-properties-gamelift-gamesessionqueue-destination.md), ... ],
+      "[Destinations](#cfn-gamelift-gamesessionqueue-destinations)" : [ Destination, ... ],
       "[Name](#cfn-gamelift-gamesessionqueue-name)" : String,
-      "[PlayerLatencyPolicies](#cfn-gamelift-gamesessionqueue-playerlatencypolicies)" : [ [PlayerLatencyPolicy](aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.md), ... ],
+      "[PlayerLatencyPolicies](#cfn-gamelift-gamesessionqueue-playerlatencypolicies)" : [ PlayerLatencyPolicy, ... ],
       "[TimeoutInSeconds](#cfn-gamelift-gamesessionqueue-timeoutinseconds)" : Integer
     }
 }
@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GameLift::GameSessionQueue
 Properties: 
   [Destinations](#cfn-gamelift-gamesessionqueue-destinations): 
-    - [Destination](aws-properties-gamelift-gamesessionqueue-destination.md)
+    - Destination
   [Name](#cfn-gamelift-gamesessionqueue-name): String
   [PlayerLatencyPolicies](#cfn-gamelift-gamesessionqueue-playerlatencypolicies): 
-    - [PlayerLatencyPolicy](aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.md)
+    - PlayerLatencyPolicy
   [TimeoutInSeconds](#cfn-gamelift-gamesessionqueue-timeoutinseconds): Integer
 ```
 

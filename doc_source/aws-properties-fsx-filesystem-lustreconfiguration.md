@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AutoImportPolicyType](#cfn-fsx-filesystem-lustreconfiguration-autoimportpolicytype)" : String,
   "[AutomaticBackupRetentionDays](#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays)" : Integer,
   "[CopyTagsToBackups](#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups)" : Boolean,
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime)" : String,
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-fsx-filesystem-lustreconfiguration-syntax.yaml"></a>
 
 ```
+  [AutoImportPolicyType](#cfn-fsx-filesystem-lustreconfiguration-autoimportpolicytype): String
   [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays): Integer
   [CopyTagsToBackups](#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups): Boolean
   [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime): String
@@ -37,6 +39,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-fsx-filesystem-lustreconfiguration-properties"></a>
+
+`AutoImportPolicyType`  <a name="cfn-fsx-filesystem-lustreconfiguration-autoimportpolicytype"></a>
+ \(Optional\) Use this property to configure the AutoImport feature on the file system's linked Amazon S3 data repository\. You use AutoImport to update the contents of your FSx for Lustre file system automatically with changes that occur in the linked S3 data repository\. `AutoImportPolicy` can have the following values:  
++  `NONE` \- \(Default\) AutoImport is off\. Changes in the linked data repository are not reflected on the FSx file system\.
++  `NEW` \- AutoImport is on\. New files in the linked data repository that do not currently exist in the FSx file system are automatically imported\. Updates to existing FSx files are not imported to the FSx file system\. Files deleted from the linked data repository are not deleted from the FSx file system\.
++  `NEW_CHANGED` \- AutoImport is on\. New files in the linked S3 data repository that do not currently exist in the FSx file system are automatically imported\. Changes to existing FSx files in the linked repository are also automatically imported to the FSx file system\. Files deleted from the linked data repository are not deleted from the FSx file system\. 
+For more information, see [Automatically import updates from your S3 bucket](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `NEW | NEW_CHANGED | NONE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomaticBackupRetentionDays`  <a name="cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays"></a>
 The number of days to retain automatic backups\. Setting this to 0 disables automatic backups\. You can retain automatic backups for a maximum of 35 days\. The default is 0\. Only valid for use with `PERSISTENT_1` deployment types\. For more information, see [Working with backups](https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html) in the *Amazon FSx for Lustre User Guide*\. \(Default = 0\)  
@@ -60,7 +73,6 @@ A recurring daily time, in the format` HH:MM`\. `HH` is the zero\-padded hour of
 
 `DeploymentType`  <a name="cfn-fsx-filesystem-lustreconfiguration-deploymenttype"></a>
  Choose `SCRATCH_1` and `SCRATCH_2` deployment types when you need temporary storage and shorter\-term processing of data\. The `SCRATCH_2` deployment type provides in\-transit encryption of data and higher burst throughput capacity than `SCRATCH_1`\.  
-This option can only be set for for PERSISTENT\_1 deployments types\.
 Choose `PERSISTENT_1` deployment type for longer\-term storage and workloads and encryption of data in transit\. To learn more about deployment types, see [ FSx for Lustre Deployment Options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html)\.  
 Encryption of data in\-transit is automatically enabled when you access a `SCRATCH_2` or `PERSISTENT_1` file system from Amazon EC2 instances that [support this feature](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data-                 protection.html)\. \(Default = `SCRATCH_1`\)   
 Encryption of data in\-transit for `SCRATCH_2` and `PERSISTENT_1` deployment types is supported when accessed from supported instance types in supported AWS Regions\. To learn more, [Encrypting Data in Transit](https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html)\.  

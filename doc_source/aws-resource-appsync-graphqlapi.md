@@ -12,13 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppSync::GraphQLApi",
   "Properties" : {
-      "[AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders)" : [AdditionalAuthenticationProviders](aws-properties-appsync-graphqlapi-additionalauthenticationproviders.md),
+      "[AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders)" : AdditionalAuthenticationProviders,
       "[AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype)" : String,
-      "[LogConfig](#cfn-appsync-graphqlapi-logconfig)" : [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md),
+      "[LogConfig](#cfn-appsync-graphqlapi-logconfig)" : LogConfig,
       "[Name](#cfn-appsync-graphqlapi-name)" : String,
-      "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md),
-      "[Tags](#cfn-appsync-graphqlapi-tags)" : [Tags](aws-properties-appsync-graphqlapi-tags.md),
-      "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md),
+      "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : OpenIDConnectConfig,
+      "[Tags](#cfn-appsync-graphqlapi-tags)" : Tags,
+      "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : UserPoolConfig,
       "[XrayEnabled](#cfn-appsync-graphqlapi-xrayenabled)" : Boolean
     }
 }
@@ -30,17 +30,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppSync::GraphQLApi
 Properties: 
   [AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders): 
-    [AdditionalAuthenticationProviders](aws-properties-appsync-graphqlapi-additionalauthenticationproviders.md)
+    AdditionalAuthenticationProviders
   [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype): String
   [LogConfig](#cfn-appsync-graphqlapi-logconfig): 
-    [LogConfig](aws-properties-appsync-graphqlapi-logconfig.md)
+    LogConfig
   [Name](#cfn-appsync-graphqlapi-name): String
   [OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig): 
-    [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)
+    OpenIDConnectConfig
   [Tags](#cfn-appsync-graphqlapi-tags): 
-    [Tags](aws-properties-appsync-graphqlapi-tags.md)
+    Tags
   [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig): 
-    [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)
+    UserPoolConfig
   [XrayEnabled](#cfn-appsync-graphqlapi-xrayenabled): Boolean
 ```
 

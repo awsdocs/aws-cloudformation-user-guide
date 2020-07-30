@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AmazonMQ::ConfigurationAssociation",
   "Properties" : {
       "[Broker](#cfn-amazonmq-configurationassociation-broker)" : String,
-      "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
+      "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : ConfigurationId
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::AmazonMQ::ConfigurationAssociation
 Properties: 
   [Broker](#cfn-amazonmq-configurationassociation-broker): String
   [Configuration](#cfn-amazonmq-configurationassociation-configuration): 
-    [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
+    ConfigurationId
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configurationassociation-properties"></a>

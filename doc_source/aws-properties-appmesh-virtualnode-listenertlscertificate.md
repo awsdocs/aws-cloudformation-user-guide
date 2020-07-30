@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ACM](#cfn-appmesh-virtualnode-listenertlscertificate-acm)" : [ListenerTlsAcmCertificate](aws-properties-appmesh-virtualnode-listenertlsacmcertificate.md),
-  "[File](#cfn-appmesh-virtualnode-listenertlscertificate-file)" : [ListenerTlsFileCertificate](aws-properties-appmesh-virtualnode-listenertlsfilecertificate.md)
+  "[ACM](#cfn-appmesh-virtualnode-listenertlscertificate-acm)" : ListenerTlsAcmCertificate,
+  "[File](#cfn-appmesh-virtualnode-listenertlscertificate-file)" : ListenerTlsFileCertificate
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ACM](#cfn-appmesh-virtualnode-listenertlscertificate-acm): 
-    [ListenerTlsAcmCertificate](aws-properties-appmesh-virtualnode-listenertlsacmcertificate.md)
+    ListenerTlsAcmCertificate
   [File](#cfn-appmesh-virtualnode-listenertlscertificate-file): 
-    [ListenerTlsFileCertificate](aws-properties-appmesh-virtualnode-listenertlsfilecertificate.md)
+    ListenerTlsFileCertificate
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-listenertlscertificate-properties"></a>

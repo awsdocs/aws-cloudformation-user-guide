@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLogsLogGroup](#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)" : [CloudWatchLogsLogGroup](aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup.md)
+  "[CloudWatchLogsLogGroup](#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)" : CloudWatchLogsLogGroup
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchLogsLogGroup](#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup): 
-    [CloudWatchLogsLogGroup](aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup.md)
+    CloudWatchLogsLogGroup
 ```
 
 ## Properties<a name="aws-properties-stepfunctions-statemachine-logdestination-properties"></a>

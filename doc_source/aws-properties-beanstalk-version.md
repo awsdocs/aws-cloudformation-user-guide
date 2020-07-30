@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname)" : String,
       "[Description](#cfn-elasticbeanstalk-applicationversion-description)" : String,
-      "[SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle)" : [SourceBundle](aws-properties-beanstalk-sourcebundle.md)
+      "[SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle)" : SourceBundle
     }
 }
 ```
@@ -30,7 +30,7 @@ Properties:
   [ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname): String
   [Description](#cfn-elasticbeanstalk-applicationversion-description): String
   [SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle): 
-    [SourceBundle](aws-properties-beanstalk-sourcebundle.md)
+    SourceBundle
 ```
 
 ## Properties<a name="aws-properties-beanstalk-version-properties"></a>

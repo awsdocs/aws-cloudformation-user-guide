@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::GeoMatchSet",
   "Properties" : {
-      "[GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints)" : [ [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md), ... ],
+      "[GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints)" : [ GeoMatchConstraint, ... ],
       "[Name](#cfn-wafregional-geomatchset-name)" : String
     }
 }
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::GeoMatchSet
 Properties: 
   [GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints): 
-    - [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md)
+    - GeoMatchConstraint
   [Name](#cfn-wafregional-geomatchset-name): String
 ```
 

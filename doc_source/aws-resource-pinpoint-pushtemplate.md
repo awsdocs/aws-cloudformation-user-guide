@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Pinpoint::PushTemplate",
   "Properties" : {
-      "[ADM](#cfn-pinpoint-pushtemplate-adm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
-      "[APNS](#cfn-pinpoint-pushtemplate-apns)" : [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md),
-      "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
-      "[Default](#cfn-pinpoint-pushtemplate-default)" : [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md),
+      "[ADM](#cfn-pinpoint-pushtemplate-adm)" : AndroidPushNotificationTemplate,
+      "[APNS](#cfn-pinpoint-pushtemplate-apns)" : APNSPushNotificationTemplate,
+      "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : AndroidPushNotificationTemplate,
+      "[Default](#cfn-pinpoint-pushtemplate-default)" : DefaultPushNotificationTemplate,
       "[DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions)" : String,
-      "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
+      "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : AndroidPushNotificationTemplate,
       "[Tags](#cfn-pinpoint-pushtemplate-tags)" : Json,
       "[TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription)" : String,
       "[TemplateName](#cfn-pinpoint-pushtemplate-templatename)" : String
@@ -31,16 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Pinpoint::PushTemplate
 Properties: 
   [ADM](#cfn-pinpoint-pushtemplate-adm): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [APNS](#cfn-pinpoint-pushtemplate-apns): 
-    [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md)
+    APNSPushNotificationTemplate
   [Baidu](#cfn-pinpoint-pushtemplate-baidu): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [Default](#cfn-pinpoint-pushtemplate-default): 
-    [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md)
+    DefaultPushNotificationTemplate
   [DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions): String
   [GCM](#cfn-pinpoint-pushtemplate-gcm): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [Tags](#cfn-pinpoint-pushtemplate-tags): Json
   [TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription): String
   [TemplateName](#cfn-pinpoint-pushtemplate-templatename): String

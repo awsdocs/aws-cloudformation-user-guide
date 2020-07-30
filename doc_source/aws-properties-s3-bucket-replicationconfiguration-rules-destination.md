@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md),
+  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : AccessControlTranslation,
   "[Account](#cfn-s3-bucket-replicationdestination-account)" : String,
   "[Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket)" : String,
-  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md),
-  "[Metrics](#cfn-s3-bucket-replicationdestination-metrics)" : [Metrics](aws-properties-s3-bucket-metrics.md),
-  "[ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime)" : [ReplicationTime](aws-properties-s3-bucket-replicationtime.md),
+  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : EncryptionConfiguration,
+  "[Metrics](#cfn-s3-bucket-replicationdestination-metrics)" : Metrics,
+  "[ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime)" : ReplicationTime,
   "[StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass)" : String
 }
 ```
@@ -24,15 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation): 
-    [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md)
+    AccessControlTranslation
   [Account](#cfn-s3-bucket-replicationdestination-account): String
   [Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket): String
   [EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)
+    EncryptionConfiguration
   [Metrics](#cfn-s3-bucket-replicationdestination-metrics): 
-    [Metrics](aws-properties-s3-bucket-metrics.md)
+    Metrics
   [ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime): 
-    [ReplicationTime](aws-properties-s3-bucket-replicationtime.md)
+    ReplicationTime
   [StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass): String
 ```
 

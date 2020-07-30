@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::OrganizationConformancePack",
   "Properties" : {
-      "[ConformancePackInputParameters](#cfn-config-organizationconformancepack-conformancepackinputparameters)" : [ [ConformancePackInputParameter](aws-properties-config-organizationconformancepack-conformancepackinputparameter.md), ... ],
+      "[ConformancePackInputParameters](#cfn-config-organizationconformancepack-conformancepackinputparameters)" : [ ConformancePackInputParameter, ... ],
       "[DeliveryS3Bucket](#cfn-config-organizationconformancepack-deliverys3bucket)" : String,
       "[DeliveryS3KeyPrefix](#cfn-config-organizationconformancepack-deliverys3keyprefix)" : String,
       "[ExcludedAccounts](#cfn-config-organizationconformancepack-excludedaccounts)" : [ String, ... ],
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::OrganizationConformancePack
 Properties: 
   [ConformancePackInputParameters](#cfn-config-organizationconformancepack-conformancepackinputparameters): 
-    - [ConformancePackInputParameter](aws-properties-config-organizationconformancepack-conformancepackinputparameter.md)
+    - ConformancePackInputParameter
   [DeliveryS3Bucket](#cfn-config-organizationconformancepack-deliverys3bucket): String
   [DeliveryS3KeyPrefix](#cfn-config-organizationconformancepack-deliverys3keyprefix): String
   [ExcludedAccounts](#cfn-config-organizationconformancepack-excludedaccounts): 

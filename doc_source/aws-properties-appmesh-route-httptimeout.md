@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Idle](#cfn-appmesh-route-httptimeout-idle)" : [Duration](aws-properties-appmesh-route-duration.md),
-  "[PerRequest](#cfn-appmesh-route-httptimeout-perrequest)" : [Duration](aws-properties-appmesh-route-duration.md)
+  "[Idle](#cfn-appmesh-route-httptimeout-idle)" : Duration,
+  "[PerRequest](#cfn-appmesh-route-httptimeout-perrequest)" : Duration
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Idle](#cfn-appmesh-route-httptimeout-idle): 
-    [Duration](aws-properties-appmesh-route-duration.md)
+    Duration
   [PerRequest](#cfn-appmesh-route-httptimeout-perrequest): 
-    [Duration](aws-properties-appmesh-route-duration.md)
+    Duration
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-httptimeout-properties"></a>

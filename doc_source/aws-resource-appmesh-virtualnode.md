@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualnode-meshname)" : String,
       "[MeshOwner](#cfn-appmesh-virtualnode-meshowner)" : String,
-      "[Spec](#cfn-appmesh-virtualnode-spec)" : [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md),
+      "[Spec](#cfn-appmesh-virtualnode-spec)" : VirtualNodeSpec,
       "[Tags](#cfn-appmesh-virtualnode-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename)" : String
     }
@@ -40,7 +40,7 @@ Properties:
   [MeshName](#cfn-appmesh-virtualnode-meshname): String
   [MeshOwner](#cfn-appmesh-virtualnode-meshowner): String
   [Spec](#cfn-appmesh-virtualnode-spec): 
-    [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
+    VirtualNodeSpec
   [Tags](#cfn-appmesh-virtualnode-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename): String

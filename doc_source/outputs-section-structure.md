@@ -78,7 +78,7 @@ Export:
   Name: !Join [ ":", [ !Ref "AWS::StackName", AccountVPC ] ]
 ```
 
-To associate a condition with an output, define the condition in the `[Conditions](conditions-section-structure.md)` section of the template\.
+To associate a condition with an output, define the condition in the `Conditions` section of the template\.
 
 ## Examples<a name="outputs-section-structure-examples"></a>
 

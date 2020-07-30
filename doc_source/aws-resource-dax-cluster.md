@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredMaintenanceWindow](#cfn-dax-cluster-preferredmaintenancewindow)" : String,
       "[ReplicationFactor](#cfn-dax-cluster-replicationfactor)" : Integer,
       "[SecurityGroupIds](#cfn-dax-cluster-securitygroupids)" : [ String, ... ],
-      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : [SSESpecification](aws-properties-dax-cluster-ssespecification.md),
+      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : SSESpecification,
       "[SubnetGroupName](#cfn-dax-cluster-subnetgroupname)" : String,
       "[Tags](#cfn-dax-cluster-tags)" : Json
     }
@@ -47,7 +47,7 @@ Properties:
   [SecurityGroupIds](#cfn-dax-cluster-securitygroupids): 
     - String
   [SSESpecification](#cfn-dax-cluster-ssespecification): 
-    [SSESpecification](aws-properties-dax-cluster-ssespecification.md)
+    SSESpecification
   [SubnetGroupName](#cfn-dax-cluster-subnetgroupname): String
   [Tags](#cfn-dax-cluster-tags): Json
 ```

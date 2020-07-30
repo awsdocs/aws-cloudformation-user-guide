@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-directoryservice-microsoftad-name)" : String,
       "[Password](#cfn-directoryservice-microsoftad-password)" : String,
       "[ShortName](#cfn-directoryservice-microsoftad-shortname)" : String,
-      "[VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings)" : [VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)
+      "[VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings)" : VpcSettings
     }
 }
 ```
@@ -35,7 +35,7 @@ Properties:
   [Password](#cfn-directoryservice-microsoftad-password): String
   [ShortName](#cfn-directoryservice-microsoftad-shortname): String
   [VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings): 
-    [VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)
+    VpcSettings
 ```
 
 ## Properties<a name="aws-resource-directoryservice-microsoftad-properties"></a>

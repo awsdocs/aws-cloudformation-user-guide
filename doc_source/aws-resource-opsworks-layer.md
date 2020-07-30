@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
       "[CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn)" : String,
       "[CustomJson](#cfn-opsworks-layer-customjson)" : Json,
-      "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : [Recipes](aws-properties-opsworks-layer-recipes.md),
+      "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : Recipes,
       "[CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids)" : [ String, ... ],
       "[EnableAutoHealing](#cfn-opsworks-layer-enableautohealing)" : Boolean,
       "[InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot)" : Boolean,
-      "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md),
-      "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md),
+      "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : LifecycleEventConfiguration,
+      "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : LoadBasedAutoScaling,
       "[Name](#cfn-opsworks-layer-name)" : String,
       "[Packages](#cfn-opsworks-layer-packages)" : [ String, ... ],
       "[Shortname](#cfn-opsworks-layer-shortname)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Tags](#cfn-opsworks-layer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-opsworks-layer-type)" : String,
       "[UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances)" : Boolean,
-      "[VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations)" : [ [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md), ... ]
+      "[VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations)" : [ VolumeConfiguration, ... ]
     }
 }
 ```
@@ -53,15 +53,15 @@ Properties:
   [CustomJson](#cfn-opsworks-layer-customjson): 
     Json
   [CustomRecipes](#cfn-opsworks-layer-customrecipes): 
-    [Recipes](aws-properties-opsworks-layer-recipes.md)
+    Recipes
   [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids): 
     - String
   [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing): Boolean
   [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot): Boolean
   [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration): 
-    [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)
+    LifecycleEventConfiguration
   [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling): 
-    [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)
+    LoadBasedAutoScaling
   [Name](#cfn-opsworks-layer-name): String
   [Packages](#cfn-opsworks-layer-packages): 
     - String
@@ -72,7 +72,7 @@ Properties:
   [Type](#cfn-opsworks-layer-type): String
   [UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances): Boolean
   [VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations): 
-    - [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md)
+    - VolumeConfiguration
 ```
 
 ## Properties<a name="aws-resource-opsworks-layer-properties"></a>

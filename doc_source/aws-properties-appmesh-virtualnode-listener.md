@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck)" : [HealthCheck](aws-properties-appmesh-virtualnode-healthcheck.md),
-  "[PortMapping](#cfn-appmesh-virtualnode-listener-portmapping)" : [PortMapping](aws-properties-appmesh-virtualnode-portmapping.md),
-  "[Timeout](#cfn-appmesh-virtualnode-listener-timeout)" : [ListenerTimeout](aws-properties-appmesh-virtualnode-listenertimeout.md),
-  "[TLS](#cfn-appmesh-virtualnode-listener-tls)" : [ListenerTls](aws-properties-appmesh-virtualnode-listenertls.md)
+  "[HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck)" : HealthCheck,
+  "[PortMapping](#cfn-appmesh-virtualnode-listener-portmapping)" : PortMapping,
+  "[Timeout](#cfn-appmesh-virtualnode-listener-timeout)" : ListenerTimeout,
+  "[TLS](#cfn-appmesh-virtualnode-listener-tls)" : ListenerTls
 }
 ```
 
@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HealthCheck](#cfn-appmesh-virtualnode-listener-healthcheck): 
-    [HealthCheck](aws-properties-appmesh-virtualnode-healthcheck.md)
+    HealthCheck
   [PortMapping](#cfn-appmesh-virtualnode-listener-portmapping): 
-    [PortMapping](aws-properties-appmesh-virtualnode-portmapping.md)
+    PortMapping
   [Timeout](#cfn-appmesh-virtualnode-listener-timeout): 
-    [ListenerTimeout](aws-properties-appmesh-virtualnode-listenertimeout.md)
+    ListenerTimeout
   [TLS](#cfn-appmesh-virtualnode-listener-tls): 
-    [ListenerTls](aws-properties-appmesh-virtualnode-listenertls.md)
+    ListenerTls
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-listener-properties"></a>

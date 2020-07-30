@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Batch::ComputeEnvironment",
   "Properties" : {
       "[ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname)" : String,
-      "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md),
+      "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : ComputeResources,
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
       "[Type](#cfn-batch-computeenvironment-type)" : String
@@ -28,7 +28,7 @@ Type: AWS::Batch::ComputeEnvironment
 Properties: 
   [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): String
   [ComputeResources](#cfn-batch-computeenvironment-computeresources): 
-    [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)
+    ComputeResources
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
   [Type](#cfn-batch-computeenvironment-type): String

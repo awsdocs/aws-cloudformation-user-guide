@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction)" : [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)
+  "[GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction)" : GeoRestriction
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GeoRestriction](#cfn-cloudfront-distribution-restrictions-georestriction): 
-    [GeoRestriction](aws-properties-cloudfront-distribution-georestriction.md)
+    GeoRestriction
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-restrictions-properties"></a>

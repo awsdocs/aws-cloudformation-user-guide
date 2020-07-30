@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateSigningRequest](#cfn-acmpca-certificate-certificatesigningrequest)" : String,
       "[SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm)" : String,
       "[TemplateArn](#cfn-acmpca-certificate-templatearn)" : String,
-      "[Validity](#cfn-acmpca-certificate-validity)" : [Validity](aws-properties-acmpca-certificate-validity.md)
+      "[Validity](#cfn-acmpca-certificate-validity)" : Validity
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm): String
   [TemplateArn](#cfn-acmpca-certificate-templatearn): String
   [Validity](#cfn-acmpca-certificate-validity): 
-    [Validity](aws-properties-acmpca-certificate-validity.md)
+    Validity
 ```
 
 ## Properties<a name="aws-resource-acmpca-certificate-properties"></a>

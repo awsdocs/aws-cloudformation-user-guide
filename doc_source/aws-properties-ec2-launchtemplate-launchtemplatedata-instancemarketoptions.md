@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype)" : String,
-  "[SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions)" : [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
+  "[SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions)" : SpotOptions
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype): String
   [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions): 
-    [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
+    SpotOptions
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-properties"></a>

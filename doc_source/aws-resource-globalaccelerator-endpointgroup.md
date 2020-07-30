@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GlobalAccelerator::EndpointGroup",
   "Properties" : {
-      "[EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations)" : [ [EndpointConfiguration](aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.md), ... ],
+      "[EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations)" : [ EndpointConfiguration, ... ],
       "[EndpointGroupRegion](#cfn-globalaccelerator-endpointgroup-endpointgroupregion)" : String,
       "[HealthCheckIntervalSeconds](#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds)" : Integer,
       "[HealthCheckPath](#cfn-globalaccelerator-endpointgroup-healthcheckpath)" : String,
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GlobalAccelerator::EndpointGroup
 Properties: 
   [EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations): 
-    - [EndpointConfiguration](aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.md)
+    - EndpointConfiguration
   [EndpointGroupRegion](#cfn-globalaccelerator-endpointgroup-endpointgroupregion): String
   [HealthCheckIntervalSeconds](#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds): Integer
   [HealthCheckPath](#cfn-globalaccelerator-endpointgroup-healthcheckpath): String

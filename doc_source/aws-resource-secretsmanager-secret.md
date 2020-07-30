@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SecretsManager::Secret",
   "Properties" : {
       "[Description](#cfn-secretsmanager-secret-description)" : String,
-      "[GenerateSecretString](#cfn-secretsmanager-secret-generatesecretstring)" : [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md),
+      "[GenerateSecretString](#cfn-secretsmanager-secret-generatesecretstring)" : GenerateSecretString,
       "[KmsKeyId](#cfn-secretsmanager-secret-kmskeyid)" : String,
       "[Name](#cfn-secretsmanager-secret-name)" : String,
       "[SecretString](#cfn-secretsmanager-secret-secretstring)" : String,
@@ -42,7 +42,7 @@ Type: AWS::SecretsManager::Secret
 Properties: 
   [Description](#cfn-secretsmanager-secret-description): String
   [GenerateSecretString](#cfn-secretsmanager-secret-generatesecretstring): 
-    [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md)
+    GenerateSecretString
   [KmsKeyId](#cfn-secretsmanager-secret-kmskeyid): String
   [Name](#cfn-secretsmanager-secret-name): String
   [SecretString](#cfn-secretsmanager-secret-secretstring): 

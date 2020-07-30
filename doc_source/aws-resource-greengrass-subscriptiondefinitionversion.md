@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::SubscriptionDefinitionVersion",
   "Properties" : {
       "[SubscriptionDefinitionId](#cfn-greengrass-subscriptiondefinitionversion-subscriptiondefinitionid)" : String,
-      "[Subscriptions](#cfn-greengrass-subscriptiondefinitionversion-subscriptions)" : [ [Subscription](aws-properties-greengrass-subscriptiondefinitionversion-subscription.md), ... ]
+      "[Subscriptions](#cfn-greengrass-subscriptiondefinitionversion-subscriptions)" : [ Subscription, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::Greengrass::SubscriptionDefinitionVersion
 Properties: 
   [SubscriptionDefinitionId](#cfn-greengrass-subscriptiondefinitionversion-subscriptiondefinitionid): String
   [Subscriptions](#cfn-greengrass-subscriptiondefinitionversion-subscriptions): 
-    - [Subscription](aws-properties-greengrass-subscriptiondefinitionversion-subscription.md)
+    - Subscription
 ```
 
 ## Properties<a name="aws-resource-greengrass-subscriptiondefinitionversion-properties"></a>

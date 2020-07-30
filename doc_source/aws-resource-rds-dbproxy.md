@@ -16,14 +16,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBProxy",
   "Properties" : {
-      "[Auth](#cfn-rds-dbproxy-auth)" : [ [AuthFormat](aws-properties-rds-dbproxy-authformat.md), ... ],
+      "[Auth](#cfn-rds-dbproxy-auth)" : [ AuthFormat, ... ],
       "[DBProxyName](#cfn-rds-dbproxy-dbproxyname)" : String,
       "[DebugLogging](#cfn-rds-dbproxy-debuglogging)" : Boolean,
       "[EngineFamily](#cfn-rds-dbproxy-enginefamily)" : String,
       "[IdleClientTimeout](#cfn-rds-dbproxy-idleclienttimeout)" : Integer,
       "[RequireTLS](#cfn-rds-dbproxy-requiretls)" : Boolean,
       "[RoleArn](#cfn-rds-dbproxy-rolearn)" : String,
-      "[Tags](#cfn-rds-dbproxy-tags)" : [ [TagFormat](aws-properties-rds-dbproxy-tagformat.md), ... ],
+      "[Tags](#cfn-rds-dbproxy-tags)" : [ TagFormat, ... ],
       "[VpcSecurityGroupIds](#cfn-rds-dbproxy-vpcsecuritygroupids)" : [ String, ... ],
       "[VpcSubnetIds](#cfn-rds-dbproxy-vpcsubnetids)" : [ String, ... ]
     }
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RDS::DBProxy
 Properties: 
   [Auth](#cfn-rds-dbproxy-auth): 
-    - [AuthFormat](aws-properties-rds-dbproxy-authformat.md)
+    - AuthFormat
   [DBProxyName](#cfn-rds-dbproxy-dbproxyname): String
   [DebugLogging](#cfn-rds-dbproxy-debuglogging): Boolean
   [EngineFamily](#cfn-rds-dbproxy-enginefamily): String
@@ -44,7 +44,7 @@ Properties:
   [RequireTLS](#cfn-rds-dbproxy-requiretls): Boolean
   [RoleArn](#cfn-rds-dbproxy-rolearn): String
   [Tags](#cfn-rds-dbproxy-tags): 
-    - [TagFormat](aws-properties-rds-dbproxy-tagformat.md)
+    - TagFormat
   [VpcSecurityGroupIds](#cfn-rds-dbproxy-vpcsecuritygroupids): 
     - String
   [VpcSubnetIds](#cfn-rds-dbproxy-vpcsubnetids): 

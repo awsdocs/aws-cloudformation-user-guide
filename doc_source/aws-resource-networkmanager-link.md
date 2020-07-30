@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::NetworkManager::Link",
   "Properties" : {
-      "[Bandwidth](#cfn-networkmanager-link-bandwidth)" : [Bandwidth](aws-properties-networkmanager-link-bandwidth.md),
+      "[Bandwidth](#cfn-networkmanager-link-bandwidth)" : Bandwidth,
       "[Description](#cfn-networkmanager-link-description)" : String,
       "[GlobalNetworkId](#cfn-networkmanager-link-globalnetworkid)" : String,
       "[Provider](#cfn-networkmanager-link-provider)" : String,
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::NetworkManager::Link
 Properties: 
   [Bandwidth](#cfn-networkmanager-link-bandwidth): 
-    [Bandwidth](aws-properties-networkmanager-link-bandwidth.md)
+    Bandwidth
   [Description](#cfn-networkmanager-link-description): String
   [GlobalNetworkId](#cfn-networkmanager-link-globalnetworkid): String
   [Provider](#cfn-networkmanager-link-provider): String

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype)" : String,
-  "[Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment)" : [Environment](aws-properties-greengrass-functiondefinition-environment.md),
+  "[Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment)" : Environment,
   "[ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs)" : String,
   "[Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable)" : String,
   "[MemorySize](#cfn-greengrass-functiondefinition-functionconfiguration-memorysize)" : Integer,
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype): String
   [Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment): 
-    [Environment](aws-properties-greengrass-functiondefinition-environment.md)
+    Environment
   [ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs): String
   [Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable): String
   [MemorySize](#cfn-greengrass-functiondefinition-functionconfiguration-memorysize): Integer

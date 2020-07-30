@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::PinpointEmail::ConfigurationSetEventDestination",
   "Properties" : {
       "[ConfigurationSetName](#cfn-pinpointemail-configurationseteventdestination-configurationsetname)" : String,
-      "[EventDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination)" : [EventDestination](aws-properties-pinpointemail-configurationseteventdestination-eventdestination.md),
+      "[EventDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination)" : EventDestination,
       "[EventDestinationName](#cfn-pinpointemail-configurationseteventdestination-eventdestinationname)" : String
     }
 }
@@ -28,7 +28,7 @@ Type: AWS::PinpointEmail::ConfigurationSetEventDestination
 Properties: 
   [ConfigurationSetName](#cfn-pinpointemail-configurationseteventdestination-configurationsetname): String
   [EventDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination): 
-    [EventDestination](aws-properties-pinpointemail-configurationseteventdestination-eventdestination.md)
+    EventDestination
   [EventDestinationName](#cfn-pinpointemail-configurationseteventdestination-eventdestinationname): String
 ```
 

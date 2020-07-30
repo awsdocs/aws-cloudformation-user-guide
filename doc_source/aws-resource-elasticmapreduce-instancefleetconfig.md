@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid)" : String,
       "[InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype)" : String,
-      "[InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs)" : [ [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md), ... ],
-      "[LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications)" : [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications.md),
+      "[InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs)" : [ InstanceTypeConfig, ... ],
+      "[LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications)" : InstanceFleetProvisioningSpecifications,
       "[Name](#cfn-elasticmapreduce-instancefleetconfig-name)" : String,
       "[TargetOnDemandCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity)" : Integer,
       "[TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity)" : Integer
@@ -34,9 +34,9 @@ Properties:
   [ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid): String
   [InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype): String
   [InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs): 
-    - [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)
+    - InstanceTypeConfig
   [LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications): 
-    [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications.md)
+    InstanceFleetProvisioningSpecifications
   [Name](#cfn-elasticmapreduce-instancefleetconfig-name): String
   [TargetOnDemandCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity): Integer
   [TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity): Integer

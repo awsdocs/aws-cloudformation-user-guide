@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch)" : [FieldToMatch](aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.md),
+  "[FieldToMatch](#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch)" : FieldToMatch,
   "[TextTransformation](#cfn-waf-xssmatchset-xssmatchtuple-texttransformation)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch): 
-    [FieldToMatch](aws-properties-waf-xssmatchset-xssmatchtuple-fieldtomatch.md)
+    FieldToMatch
   [TextTransformation](#cfn-waf-xssmatchset-xssmatchtuple-texttransformation): String
 ```
 

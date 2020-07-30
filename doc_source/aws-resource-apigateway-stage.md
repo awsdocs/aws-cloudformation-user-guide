@@ -12,15 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Stage",
   "Properties" : {
-      "[AccessLogSetting](#cfn-apigateway-stage-accesslogsetting)" : [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md),
+      "[AccessLogSetting](#cfn-apigateway-stage-accesslogsetting)" : AccessLogSetting,
       "[CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled)" : Boolean,
       "[CacheClusterSize](#cfn-apigateway-stage-cacheclustersize)" : String,
-      "[CanarySetting](#cfn-apigateway-stage-canarysetting)" : [CanarySetting](aws-properties-apigateway-stage-canarysetting.md),
+      "[CanarySetting](#cfn-apigateway-stage-canarysetting)" : CanarySetting,
       "[ClientCertificateId](#cfn-apigateway-stage-clientcertificateid)" : String,
       "[DeploymentId](#cfn-apigateway-stage-deploymentid)" : String,
       "[Description](#cfn-apigateway-stage-description)" : String,
       "[DocumentationVersion](#cfn-apigateway-stage-documentationversion)" : String,
-      "[MethodSettings](#cfn-apigateway-stage-methodsettings)" : [ [MethodSetting](aws-properties-apitgateway-stage-methodsetting.md), ... ],
+      "[MethodSettings](#cfn-apigateway-stage-methodsettings)" : [ MethodSetting, ... ],
       "[RestApiId](#cfn-apigateway-stage-restapiid)" : String,
       "[StageName](#cfn-apigateway-stage-stagename)" : String,
       "[Tags](#cfn-apigateway-stage-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -36,17 +36,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::Stage
 Properties: 
   [AccessLogSetting](#cfn-apigateway-stage-accesslogsetting): 
-    [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)
+    AccessLogSetting
   [CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled): Boolean
   [CacheClusterSize](#cfn-apigateway-stage-cacheclustersize): String
   [CanarySetting](#cfn-apigateway-stage-canarysetting): 
-    [CanarySetting](aws-properties-apigateway-stage-canarysetting.md)
+    CanarySetting
   [ClientCertificateId](#cfn-apigateway-stage-clientcertificateid): String
   [DeploymentId](#cfn-apigateway-stage-deploymentid): String
   [Description](#cfn-apigateway-stage-description): String
   [DocumentationVersion](#cfn-apigateway-stage-documentationversion): String
   [MethodSettings](#cfn-apigateway-stage-methodsettings): 
-    - [MethodSetting](aws-properties-apitgateway-stage-methodsetting.md)
+    - MethodSetting
   [RestApiId](#cfn-apigateway-stage-restapiid): String
   [StageName](#cfn-apigateway-stage-stagename): String
   [Tags](#cfn-apigateway-stage-tags): 

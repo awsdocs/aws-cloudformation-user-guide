@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTEvents::Input",
   "Properties" : {
-      "[InputDefinition](#cfn-iotevents-input-inputdefinition)" : [InputDefinition](aws-properties-iotevents-input-inputdefinition.md),
+      "[InputDefinition](#cfn-iotevents-input-inputdefinition)" : InputDefinition,
       "[InputDescription](#cfn-iotevents-input-inputdescription)" : String,
       "[InputName](#cfn-iotevents-input-inputname)" : String,
       "[Tags](#cfn-iotevents-input-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTEvents::Input
 Properties: 
   [InputDefinition](#cfn-iotevents-input-inputdefinition): 
-    [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)
+    InputDefinition
   [InputDescription](#cfn-iotevents-input-inputdescription): String
   [InputName](#cfn-iotevents-input-inputname): String
   [Tags](#cfn-iotevents-input-tags): 

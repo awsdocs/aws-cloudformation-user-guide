@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ComparisonOperator](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-comparisonoperator)" : String,
-  "[Dimensions](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-dimensions)" : [ [MetricDimension](aws-properties-elasticmapreduce-instancegroupconfig-metricdimension.md), ... ],
+  "[Dimensions](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-dimensions)" : [ MetricDimension, ... ],
   "[EvaluationPeriods](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-evaluationperiods)" : Integer,
   "[MetricName](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-metricname)" : String,
   "[Namespace](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-namespace)" : String,
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ComparisonOperator](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-comparisonoperator): String
   [Dimensions](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-dimensions): 
-    - [MetricDimension](aws-properties-elasticmapreduce-instancegroupconfig-metricdimension.md)
+    - MetricDimension
   [EvaluationPeriods](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-evaluationperiods): Integer
   [MetricName](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-metricname): String
   [Namespace](#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-namespace): String

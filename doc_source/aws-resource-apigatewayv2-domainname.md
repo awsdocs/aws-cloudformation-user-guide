@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::DomainName",
   "Properties" : {
       "[DomainName](#cfn-apigatewayv2-domainname-domainname)" : String,
-      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md), ... ],
+      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ DomainNameConfiguration, ... ],
       "[Tags](#cfn-apigatewayv2-domainname-tags)" : Json
     }
 }
@@ -28,7 +28,7 @@ Type: AWS::ApiGatewayV2::DomainName
 Properties: 
   [DomainName](#cfn-apigatewayv2-domainname-domainname): String
   [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations): 
-    - [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)
+    - DomainNameConfiguration
   [Tags](#cfn-apigatewayv2-domainname-tags): Json
 ```
 

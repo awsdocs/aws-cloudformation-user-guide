@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MetricName](#cfn-wafregional-rule-metricname)" : String,
       "[Name](#cfn-wafregional-rule-name)" : String,
-      "[Predicates](#cfn-wafregional-rule-predicates)" : [ [Predicate](aws-properties-wafregional-rule-predicate.md), ... ]
+      "[Predicates](#cfn-wafregional-rule-predicates)" : [ Predicate, ... ]
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [MetricName](#cfn-wafregional-rule-metricname): String
   [Name](#cfn-wafregional-rule-name): String
   [Predicates](#cfn-wafregional-rule-predicates): 
-    - [Predicate](aws-properties-wafregional-rule-predicate.md)
+    - Predicate
 ```
 
 ## Properties<a name="aws-resource-wafregional-rule-properties"></a>

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Deserializer](#cfn-kinesisfirehose-deliverystream-inputformatconfiguration-deserializer)" : [Deserializer](aws-properties-kinesisfirehose-deliverystream-deserializer.md)
+  "[Deserializer](#cfn-kinesisfirehose-deliverystream-inputformatconfiguration-deserializer)" : Deserializer
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Deserializer](#cfn-kinesisfirehose-deliverystream-inputformatconfiguration-deserializer): 
-    [Deserializer](aws-properties-kinesisfirehose-deliverystream-deserializer.md)
+    Deserializer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration-properties"></a>

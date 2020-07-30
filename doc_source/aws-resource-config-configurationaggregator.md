@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::ConfigurationAggregator",
   "Properties" : {
-      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md), ... ],
+      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ AccountAggregationSource, ... ],
       "[ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname)" : String,
-      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md),
+      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : OrganizationAggregationSource,
       "[Tags](#cfn-config-configurationaggregator-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::ConfigurationAggregator
 Properties: 
   [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
-    - [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
+    - AccountAggregationSource
   [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
   [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
-    [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
+    OrganizationAggregationSource
   [Tags](#cfn-config-configurationaggregator-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RecoveryMechanisms](#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms)" : [ [RecoveryOption](aws-properties-cognito-userpool-recoveryoption.md), ... ]
+  "[RecoveryMechanisms](#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms)" : [ RecoveryOption, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RecoveryMechanisms](#cfn-cognito-userpool-accountrecoverysetting-recoverymechanisms): 
-    - [RecoveryOption](aws-properties-cognito-userpool-recoveryoption.md)
+    - RecoveryOption
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-accountrecoverysetting-properties"></a>

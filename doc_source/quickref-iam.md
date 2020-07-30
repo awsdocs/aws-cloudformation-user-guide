@@ -20,7 +20,7 @@ When creating or updating a stack using a template containing IAM resources, you
 
 This snippet shows how to declare an `[AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)` resource to create an IAM user\. The user is declared with the path \(`"/"`\) and a login profile with the password \(`myP@ssW0rd`\)\.
 
-The policy document named `giveaccesstoqueueonly` gives the user permission to perform all Amazon SQS actions on the Amazon SQS queue resource `myqueue`, and denies access to all other Amazon SQS queue resources\. The `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the Arn attribute of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource `myqueue`\. 
+The policy document named `giveaccesstoqueueonly` gives the user permission to perform all Amazon SQS actions on the Amazon SQS queue resource `myqueue`, and denies access to all other Amazon SQS queue resources\. The `Fn::GetAtt` function gets the Arn attribute of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource `myqueue`\. 
 
 The policy document named `giveaccesstotopiconly` is added to the user to give the user permission to perform all Amazon SNS actions on the Amazon SNS topic resource `mytopic` and to deny access to all other Amazon SNS resources\. The [`Ref`](intrinsic-function-reference-ref.md) function gets the ARN of the `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)` resource `mytopic`\.
 
@@ -140,7 +140,7 @@ This snippet shows an `[AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSClou
 
 ### <a name="quickref-iam-access-key-2"></a>
 
-You can get the secret key for an `AWS::IAM::AccessKey` resource using the `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function\. The only time that you can get the secret key for an AWS access key is when it is created\. One way to retrieve the secret key is to put it into an `Output` value\. You can get the access key using the `Ref` function\. The following `Output` value declarations get the access key and secret key for `myaccesskey`\.
+You can get the secret key for an `AWS::IAM::AccessKey` resource using the `Fn::GetAtt` function\. The only time that you can get the secret key for an AWS access key is when it is created\. One way to retrieve the secret key is to put it into an `Output` value\. You can get the access key using the `Ref` function\. The following `Output` value declarations get the access key and secret key for `myaccesskey`\.
 
 #### JSON<a name="quickref-iam-example-3.json"></a>
 
@@ -216,7 +216,7 @@ You can also pass the AWS access key and secret key to an EC2 instance or Auto S
 
 This snippet shows an `[AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)` resource\. The group has a path \(`"/myapplication/"`\)\. The policy document named `myapppolicy` is added to the group to allow the group's users to perform all Amazon SQS actions on the Amazon SQS queue resource myqueue and deny access to all other Amazon SQS resources except `myqueue`\. 
 
-To assign a policy to a resource, IAM requires the Amazon Resource Name \(ARN\) for the resource\. In the snippet, the `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the ARN of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource queue\.
+To assign a policy to a resource, IAM requires the Amazon Resource Name \(ARN\) for the resource\. In the snippet, the `Fn::GetAtt` function gets the ARN of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource queue\.
 
 ### JSON<a name="quickref-iam-example-5.json"></a>
 
@@ -348,7 +348,7 @@ The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resou
 
 ## Declaring an Amazon S3 bucket policy<a name="scenario-bucket-policy"></a>
 
-This snippet shows how to create a policy and apply it to an Amazon S3 bucket using the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource\. The `mybucketpolicy` resource declares a policy document that allows the `user1` IAM user to perform the `GetObject` action on all objects in the S3 bucket to which this policy is applied\. In the snippet, the `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the ARN of the `user1` resource\. The `mybucketpolicy` resource applies the policy to the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource mybucket\. The `[Ref](intrinsic-function-reference-ref.md)` function gets the bucket name of the `mybucket` resource\. 
+This snippet shows how to create a policy and apply it to an Amazon S3 bucket using the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource\. The `mybucketpolicy` resource declares a policy document that allows the `user1` IAM user to perform the `GetObject` action on all objects in the S3 bucket to which this policy is applied\. In the snippet, the `Fn::GetAtt` function gets the ARN of the `user1` resource\. The `mybucketpolicy` resource applies the policy to the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource mybucket\. The `Ref` function gets the bucket name of the `mybucket` resource\. 
 
 ### JSON<a name="quickref-iam-example-8.json"></a>
 
@@ -398,7 +398,7 @@ This snippet shows how to create a policy and apply it to an Amazon S3 bucket us
 
 ## Declaring an Amazon SNS topic policy<a name="scenario-sns-policy"></a>
 
-This snippet shows how to create a policy and apply it to an Amazon SNS topic using the `[AWS::SNS::TopicPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html)` resource\. The `mysnspolicy` resource contains a `PolicyDocument` property that allows the `[AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)` resource `myuser` to perform the `Publish` action on an `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)` resource `mytopic`\. In the snippet, the `[Fn::GetAtt](intrinsic-function-reference-getatt.md)` function gets the ARN for the `myuser` resource and the `[Ref](intrinsic-function-reference-ref.md)` function gets the ARN for the `mytopic` resource\.
+This snippet shows how to create a policy and apply it to an Amazon SNS topic using the `[AWS::SNS::TopicPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html)` resource\. The `mysnspolicy` resource contains a `PolicyDocument` property that allows the `[AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)` resource `myuser` to perform the `Publish` action on an `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)` resource `mytopic`\. In the snippet, the `Fn::GetAtt` function gets the ARN for the `myuser` resource and the `Ref` function gets the ARN for the `mytopic` resource\.
 
 **Important**  
 The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special information for Amazon SNS policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 

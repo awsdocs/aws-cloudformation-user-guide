@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords)" : [ [DnsRecord](aws-properties-servicediscovery-service-dnsrecord.md), ... ],
+  "[DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords)" : [ DnsRecord, ... ],
   "[NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid)" : String,
   "[RoutingPolicy](#cfn-servicediscovery-service-dnsconfig-routingpolicy)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords): 
-    - [DnsRecord](aws-properties-servicediscovery-service-dnsrecord.md)
+    - DnsRecord
   [NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid): String
   [RoutingPolicy](#cfn-servicediscovery-service-dnsconfig-routingpolicy): String
 ```

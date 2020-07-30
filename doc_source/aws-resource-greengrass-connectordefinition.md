@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::ConnectorDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : ConnectorDefinitionVersion,
       "[Name](#cfn-greengrass-connectordefinition-name)" : String,
       "[Tags](#cfn-greengrass-connectordefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::ConnectorDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-connectordefinition-initialversion): 
-    [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
+    ConnectorDefinitionVersion
   [Name](#cfn-greengrass-connectordefinition-name): String
   [Tags](#cfn-greengrass-connectordefinition-tags): Json
 ```

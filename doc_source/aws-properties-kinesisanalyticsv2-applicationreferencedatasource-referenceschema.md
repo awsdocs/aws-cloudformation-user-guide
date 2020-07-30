@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RecordColumns](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)" : [ [RecordColumn](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn.md), ... ],
+  "[RecordColumns](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns)" : [ RecordColumn, ... ],
   "[RecordEncoding](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding)" : String,
-  "[RecordFormat](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)" : [RecordFormat](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.md)
+  "[RecordFormat](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat)" : RecordFormat
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RecordColumns](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordcolumns): 
-    - [RecordColumn](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn.md)
+    - RecordColumn
   [RecordEncoding](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordencoding): String
   [RecordFormat](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-recordformat): 
-    [RecordFormat](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat.md)
+    RecordFormat
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema-properties"></a>

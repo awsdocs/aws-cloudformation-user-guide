@@ -11,12 +11,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Field](#cfn-elasticloadbalancingv2-listenerrule-conditions-field)" : String,
-  "[HostHeaderConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-hostheaderconfig)" : [HostHeaderConfig](aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.md),
-  "[HttpHeaderConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httpheaderconfig)" : [HttpHeaderConfig](aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.md),
-  "[HttpRequestMethodConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httprequestmethodconfig)" : [HttpRequestMethodConfig](aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.md),
-  "[PathPatternConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-pathpatternconfig)" : [PathPatternConfig](aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.md),
-  "[QueryStringConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-querystringconfig)" : [QueryStringConfig](aws-properties-elasticloadbalancingv2-listenerrule-querystringconfig.md),
-  "[SourceIpConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-sourceipconfig)" : [SourceIpConfig](aws-properties-elasticloadbalancingv2-listenerrule-sourceipconfig.md),
+  "[HostHeaderConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-hostheaderconfig)" : HostHeaderConfig,
+  "[HttpHeaderConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httpheaderconfig)" : HttpHeaderConfig,
+  "[HttpRequestMethodConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httprequestmethodconfig)" : HttpRequestMethodConfig,
+  "[PathPatternConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-pathpatternconfig)" : PathPatternConfig,
+  "[QueryStringConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-querystringconfig)" : QueryStringConfig,
+  "[SourceIpConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-sourceipconfig)" : SourceIpConfig,
   "[Values](#cfn-elasticloadbalancingv2-listenerrule-conditions-values)" : [ String, ... ]
 }
 ```
@@ -26,17 +26,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Field](#cfn-elasticloadbalancingv2-listenerrule-conditions-field): String
   [HostHeaderConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-hostheaderconfig): 
-    [HostHeaderConfig](aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.md)
+    HostHeaderConfig
   [HttpHeaderConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httpheaderconfig): 
-    [HttpHeaderConfig](aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.md)
+    HttpHeaderConfig
   [HttpRequestMethodConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-httprequestmethodconfig): 
-    [HttpRequestMethodConfig](aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.md)
+    HttpRequestMethodConfig
   [PathPatternConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-pathpatternconfig): 
-    [PathPatternConfig](aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.md)
+    PathPatternConfig
   [QueryStringConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-querystringconfig): 
-    [QueryStringConfig](aws-properties-elasticloadbalancingv2-listenerrule-querystringconfig.md)
+    QueryStringConfig
   [SourceIpConfig](#cfn-elasticloadbalancingv2-listenerrule-rulecondition-sourceipconfig): 
-    [SourceIpConfig](aws-properties-elasticloadbalancingv2-listenerrule-sourceipconfig.md)
+    SourceIpConfig
   [Values](#cfn-elasticloadbalancingv2-listenerrule-conditions-values): 
     - String
 ```

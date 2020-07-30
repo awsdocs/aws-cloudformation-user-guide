@@ -3,7 +3,8 @@
 The `AWS::CertificateManager::Certificate` resource requests an AWS Certificate Manager \(ACM\) certificate that you can use to enable secure connections\. For example, you can deploy an ACM certificate to an Elastic Load Balancer to enable HTTPS support\. For more information, see [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html) in the AWS Certificate Manager API Reference\.
 
 **Important**  
-When you use the `AWS::CertificateManager::Certificate` resource in an AWS CloudFormation stack, the stack will remain in the `CREATE_IN_PROGRESS` state\. Further stack operations will be delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration\. For more information, see [Use Email to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html) and [Use DNS to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html)\.
+When you use the `AWS::CertificateManager::Certificate` resource in a CloudFormation stack, domain validation is handled automatically if all three of the following are true: The certificate domain is hosted in Amazon Route 53, the domain resides in your AWS account, and you are using DNS validation\.  
+However, if the certificate uses email validation, or if the domain is not hosted in Route 53, then the stack will remain in the `CREATE_IN_PROGRESS` state\. Further stack operations are delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration\. For more information, see [Use Email to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html) and [Use DNS to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html)\.
 
 ## Syntax<a name="aws-resource-certificatemanager-certificate-syntax"></a>
 
@@ -18,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateAuthorityArn](#cfn-certificatemanager-certificate-certificateauthorityarn)" : String,
       "[CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference)" : String,
       "[DomainName](#cfn-certificatemanager-certificate-domainname)" : String,
-      "[DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions)" : [ [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md), ... ],
+      "[DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions)" : [ DomainValidationOption, ... ],
       "[SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames)" : [ String, ... ],
       "[Tags](#cfn-certificatemanager-certificate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ValidationMethod](#cfn-certificatemanager-certificate-validationmethod)" : String
@@ -35,7 +36,7 @@ Properties:
   [CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference): String
   [DomainName](#cfn-certificatemanager-certificate-domainname): String
   [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions): 
-    - [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)
+    - DomainValidationOption
   [SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames): 
     - String
   [Tags](#cfn-certificatemanager-certificate-tags): 

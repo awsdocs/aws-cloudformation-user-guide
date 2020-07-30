@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-gamelift-alias-description)" : String,
       "[Name](#cfn-gamelift-alias-name)" : String,
-      "[RoutingStrategy](#cfn-gamelift-alias-routingstrategy)" : [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)
+      "[RoutingStrategy](#cfn-gamelift-alias-routingstrategy)" : RoutingStrategy
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [Description](#cfn-gamelift-alias-description): String
   [Name](#cfn-gamelift-alias-name): String
   [RoutingStrategy](#cfn-gamelift-alias-routingstrategy): 
-    [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)
+    RoutingStrategy
 ```
 
 ## Properties<a name="aws-resource-gamelift-alias-properties"></a>

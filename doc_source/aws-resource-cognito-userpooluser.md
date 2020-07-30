@@ -16,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DesiredDeliveryMediums](#cfn-cognito-userpooluser-desireddeliverymediums)" : [ String, ... ],
       "[ForceAliasCreation](#cfn-cognito-userpooluser-forcealiascreation)" : Boolean,
       "[MessageAction](#cfn-cognito-userpooluser-messageaction)" : String,
-      "[UserAttributes](#cfn-cognito-userpooluser-userattributes)" : [ [AttributeType](aws-properties-cognito-userpooluser-attributetype.md), ... ],
+      "[UserAttributes](#cfn-cognito-userpooluser-userattributes)" : [ AttributeType, ... ],
       "[Username](#cfn-cognito-userpooluser-username)" : String,
       "[UserPoolId](#cfn-cognito-userpooluser-userpoolid)" : String,
-      "[ValidationData](#cfn-cognito-userpooluser-validationdata)" : [ [AttributeType](aws-properties-cognito-userpooluser-attributetype.md), ... ]
+      "[ValidationData](#cfn-cognito-userpooluser-validationdata)" : [ AttributeType, ... ]
     }
 }
 ```
@@ -35,11 +35,11 @@ Properties:
   [ForceAliasCreation](#cfn-cognito-userpooluser-forcealiascreation): Boolean
   [MessageAction](#cfn-cognito-userpooluser-messageaction): String
   [UserAttributes](#cfn-cognito-userpooluser-userattributes): 
-    - [AttributeType](aws-properties-cognito-userpooluser-attributetype.md)
+    - AttributeType
   [Username](#cfn-cognito-userpooluser-username): String
   [UserPoolId](#cfn-cognito-userpooluser-userpoolid): String
   [ValidationData](#cfn-cognito-userpooluser-validationdata): 
-    - [AttributeType](aws-properties-cognito-userpooluser-attributetype.md)
+    - AttributeType
 ```
 
 ## Properties<a name="aws-resource-cognito-userpooluser-properties"></a>

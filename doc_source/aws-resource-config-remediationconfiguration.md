@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Automatic](#cfn-config-remediationconfiguration-automatic)" : Boolean,
       "[ConfigRuleName](#cfn-config-remediationconfiguration-configrulename)" : String,
-      "[ExecutionControls](#cfn-config-remediationconfiguration-executioncontrols)" : [ExecutionControls](aws-properties-config-remediationconfiguration-executioncontrols.md),
+      "[ExecutionControls](#cfn-config-remediationconfiguration-executioncontrols)" : ExecutionControls,
       "[MaximumAutomaticAttempts](#cfn-config-remediationconfiguration-maximumautomaticattempts)" : Integer,
       "[Parameters](#cfn-config-remediationconfiguration-parameters)" : Json,
       "[ResourceType](#cfn-config-remediationconfiguration-resourcetype)" : String,
@@ -34,7 +34,7 @@ Properties:
   [Automatic](#cfn-config-remediationconfiguration-automatic): Boolean
   [ConfigRuleName](#cfn-config-remediationconfiguration-configrulename): String
   [ExecutionControls](#cfn-config-remediationconfiguration-executioncontrols): 
-    [ExecutionControls](aws-properties-config-remediationconfiguration-executioncontrols.md)
+    ExecutionControls
   [MaximumAutomaticAttempts](#cfn-config-remediationconfiguration-maximumautomaticattempts): Integer
   [Parameters](#cfn-config-remediationconfiguration-parameters): Json
   [ResourceType](#cfn-config-remediationconfiguration-resourcetype): String
@@ -69,7 +69,7 @@ An ExecutionControls object\.
 
 `MaximumAutomaticAttempts`  <a name="cfn-config-remediationconfiguration-maximumautomaticattempts"></a>
 The maximum number of failed attempts for auto\-remediation\. If you do not select a number, the default is 5\.  
-For example, if you specify MaximumAutomaticAttempts as 5 with RetryAttemptsSeconds as 50 seconds, AWS Config will put a RemediationException on your behalf for the failing resource after the 5th failed attempt within 50 seconds\.  
+For example, if you specify MaximumAutomaticAttempts as 5 with RetryAttemptSeconds as 50 seconds, AWS Config will put a RemediationException on your behalf for the failing resource after the 5th failed attempt within 50 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -91,7 +91,7 @@ The type of a resource\.
 
 `RetryAttemptSeconds`  <a name="cfn-config-remediationconfiguration-retryattemptseconds"></a>
 Maximum time in seconds that AWS Config runs auto\-remediation\. If you do not select a number, the default is 60 seconds\.   
-For example, if you specify RetryAttemptsSeconds as 50 seconds and MaximumAutomaticAttempts as 5, AWS Config will run auto\-remediations 5 times within 50 seconds before throwing an exception\.  
+For example, if you specify RetryAttemptSeconds as 50 seconds and MaximumAutomaticAttempts as 5, AWS Config will run auto\-remediations 5 times within 50 seconds before throwing an exception\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

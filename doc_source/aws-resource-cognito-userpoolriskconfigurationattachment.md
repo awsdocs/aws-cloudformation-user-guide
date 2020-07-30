@@ -14,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolRiskConfigurationAttachment",
   "Properties" : {
-      "[AccountTakeoverRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)" : [AccountTakeoverRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.md),
+      "[AccountTakeoverRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)" : AccountTakeoverRiskConfigurationType,
       "[ClientId](#cfn-cognito-userpoolriskconfigurationattachment-clientid)" : String,
-      "[CompromisedCredentialsRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)" : [CompromisedCredentialsRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.md),
-      "[RiskExceptionConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration)" : [RiskExceptionConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype.md),
+      "[CompromisedCredentialsRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)" : CompromisedCredentialsRiskConfigurationType,
+      "[RiskExceptionConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration)" : RiskExceptionConfigurationType,
       "[UserPoolId](#cfn-cognito-userpoolriskconfigurationattachment-userpoolid)" : String
     }
 }
@@ -29,12 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPoolRiskConfigurationAttachment
 Properties: 
   [AccountTakeoverRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration): 
-    [AccountTakeoverRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.md)
+    AccountTakeoverRiskConfigurationType
   [ClientId](#cfn-cognito-userpoolriskconfigurationattachment-clientid): String
   [CompromisedCredentialsRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration): 
-    [CompromisedCredentialsRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.md)
+    CompromisedCredentialsRiskConfigurationType
   [RiskExceptionConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration): 
-    [RiskExceptionConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype.md)
+    RiskExceptionConfigurationType
   [UserPoolId](#cfn-cognito-userpoolriskconfigurationattachment-userpoolid): String
 ```
 

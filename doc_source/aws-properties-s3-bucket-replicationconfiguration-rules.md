@@ -10,13 +10,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DeleteMarkerReplication](#cfn-s3-bucket-replicationrule-deletemarkerreplication)" : [DeleteMarkerReplication](aws-properties-s3-bucket-deletemarkerreplication.md),
-  "[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination)" : [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md),
-  "[Filter](#cfn-s3-bucket-replicationrule-filter)" : [ReplicationRuleFilter](aws-properties-s3-bucket-replicationrulefilter.md),
+  "[DeleteMarkerReplication](#cfn-s3-bucket-replicationrule-deletemarkerreplication)" : DeleteMarkerReplication,
+  "[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination)" : ReplicationDestination,
+  "[Filter](#cfn-s3-bucket-replicationrule-filter)" : ReplicationRuleFilter,
   "[Id](#cfn-s3-bucket-replicationconfiguration-rules-id)" : String,
   "[Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix)" : String,
   "[Priority](#cfn-s3-bucket-replicationrule-priority)" : Integer,
-  "[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria)" : [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md),
+  "[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria)" : SourceSelectionCriteria,
   "[Status](#cfn-s3-bucket-replicationconfiguration-rules-status)" : String
 }
 ```
@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DeleteMarkerReplication](#cfn-s3-bucket-replicationrule-deletemarkerreplication): 
-    [DeleteMarkerReplication](aws-properties-s3-bucket-deletemarkerreplication.md)
+    DeleteMarkerReplication
   [Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination): 
-    [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
+    ReplicationDestination
   [Filter](#cfn-s3-bucket-replicationrule-filter): 
-    [ReplicationRuleFilter](aws-properties-s3-bucket-replicationrulefilter.md)
+    ReplicationRuleFilter
   [Id](#cfn-s3-bucket-replicationconfiguration-rules-id): String
   [Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix): String
   [Priority](#cfn-s3-bucket-replicationrule-priority): Integer
   [SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria): 
-    [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
+    SourceSelectionCriteria
   [Status](#cfn-s3-bucket-replicationconfiguration-rules-status): String
 ```
 

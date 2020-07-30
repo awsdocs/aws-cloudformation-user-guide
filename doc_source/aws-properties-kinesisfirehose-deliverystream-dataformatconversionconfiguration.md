@@ -11,9 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Enabled](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-enabled)" : Boolean,
-  "[InputFormatConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-inputformatconfiguration)" : [InputFormatConfiguration](aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration.md),
-  "[OutputFormatConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-outputformatconfiguration)" : [OutputFormatConfiguration](aws-properties-kinesisfirehose-deliverystream-outputformatconfiguration.md),
-  "[SchemaConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-schemaconfiguration)" : [SchemaConfiguration](aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.md)
+  "[InputFormatConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-inputformatconfiguration)" : InputFormatConfiguration,
+  "[OutputFormatConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-outputformatconfiguration)" : OutputFormatConfiguration,
+  "[SchemaConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-schemaconfiguration)" : SchemaConfiguration
 }
 ```
 
@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Enabled](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-enabled): Boolean
   [InputFormatConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-inputformatconfiguration): 
-    [InputFormatConfiguration](aws-properties-kinesisfirehose-deliverystream-inputformatconfiguration.md)
+    InputFormatConfiguration
   [OutputFormatConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-outputformatconfiguration): 
-    [OutputFormatConfiguration](aws-properties-kinesisfirehose-deliverystream-outputformatconfiguration.md)
+    OutputFormatConfiguration
   [SchemaConfiguration](#cfn-kinesisfirehose-deliverystream-dataformatconversionconfiguration-schemaconfiguration): 
-    [SchemaConfiguration](aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.md)
+    SchemaConfiguration
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration-properties"></a>

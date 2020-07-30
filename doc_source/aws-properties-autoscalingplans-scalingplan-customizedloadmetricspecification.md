@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions)" : [ [MetricDimension](aws-properties-autoscalingplans-scalingplan-metricdimension.md), ... ],
+  "[Dimensions](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions)" : [ MetricDimension, ... ],
   "[MetricName](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-metricname)" : String,
   "[Namespace](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-namespace)" : String,
   "[Statistic](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-statistic)" : String,
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions): 
-    - [MetricDimension](aws-properties-autoscalingplans-scalingplan-metricdimension.md)
+    - MetricDimension
   [MetricName](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-metricname): String
   [Namespace](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-namespace): String
   [Statistic](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-statistic): String

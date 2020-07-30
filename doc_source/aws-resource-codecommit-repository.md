@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeCommit::Repository",
   "Properties" : {
-      "[Code](#cfn-codecommit-repository-code)" : [Code](aws-properties-codecommit-repository-code.md),
+      "[Code](#cfn-codecommit-repository-code)" : Code,
       "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String,
       "[RepositoryName](#cfn-codecommit-repository-repositoryname)" : String,
       "[Tags](#cfn-codecommit-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[Triggers](#cfn-codecommit-repository-triggers)" : [ [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md), ... ]
+      "[Triggers](#cfn-codecommit-repository-triggers)" : [ RepositoryTrigger, ... ]
     }
 }
 ```
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeCommit::Repository
 Properties: 
   [Code](#cfn-codecommit-repository-code): 
-    [Code](aws-properties-codecommit-repository-code.md)
+    Code
   [RepositoryDescription](#cfn-codecommit-repository-repositorydescription): String
   [RepositoryName](#cfn-codecommit-repository-repositoryname): String
   [Tags](#cfn-codecommit-repository-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Triggers](#cfn-codecommit-repository-triggers): 
-    - [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md)
+    - RepositoryTrigger
 ```
 
 ## Properties<a name="aws-resource-codecommit-repository-properties"></a>

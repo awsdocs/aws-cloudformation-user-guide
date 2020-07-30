@@ -2,7 +2,7 @@
 
 ## EC2 block device mapping examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 instance with block device mapping<a name="w6408ab1c19c22c39b3b2"></a>
+### EC2 instance with block device mapping<a name="w6461ab1c19c22c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 instance with ephemeral drives<a name="w6408ab1c19c22c39b3b4"></a>
+### EC2 instance with ephemeral drives<a name="w6461ab1c19c22c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -167,7 +167,7 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ## Elastic network interface \(ENI\) template snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w6408ab1c19c22c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w6461ab1c19c22c39c13b3"></a>
 
 Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
 
@@ -605,8 +605,8 @@ This template shows an AWS::EC2::SecurityGroup resource that contains a security
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupOwnerId": {
                             "Fn::GetAtt": [
                                 "myELB",
@@ -647,8 +647,8 @@ Resources:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupOwnerId: !GetAtt myELB.SourceSecurityGroup.OwnerAlias
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```

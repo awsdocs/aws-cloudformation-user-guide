@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MemberId](#cfn-managedblockchain-node-memberid)" : String,
       "[NetworkId](#cfn-managedblockchain-node-networkid)" : String,
-      "[NodeConfiguration](#cfn-managedblockchain-node-nodeconfiguration)" : [NodeConfiguration](aws-properties-managedblockchain-node-nodeconfiguration.md)
+      "[NodeConfiguration](#cfn-managedblockchain-node-nodeconfiguration)" : NodeConfiguration
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [MemberId](#cfn-managedblockchain-node-memberid): String
   [NetworkId](#cfn-managedblockchain-node-networkid): String
   [NodeConfiguration](#cfn-managedblockchain-node-nodeconfiguration): 
-    [NodeConfiguration](aws-properties-managedblockchain-node-nodeconfiguration.md)
+    NodeConfiguration
 ```
 
 ## Properties<a name="aws-resource-managedblockchain-node-properties"></a>

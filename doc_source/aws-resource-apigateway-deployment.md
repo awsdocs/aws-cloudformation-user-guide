@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Deployment",
   "Properties" : {
-      "[DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings)" : [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md),
+      "[DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings)" : DeploymentCanarySettings,
       "[Description](#cfn-apigateway-deployment-description)" : String,
       "[RestApiId](#cfn-apigateway-deployment-restapiid)" : String,
-      "[StageDescription](#cfn-apigateway-deployment-stagedescription)" : [StageDescription](aws-properties-apigateway-deployment-stagedescription.md),
+      "[StageDescription](#cfn-apigateway-deployment-stagedescription)" : StageDescription,
       "[StageName](#cfn-apigateway-deployment-stagename)" : String
     }
 }
@@ -27,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::Deployment
 Properties: 
   [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings): 
-    [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)
+    DeploymentCanarySettings
   [Description](#cfn-apigateway-deployment-description): String
   [RestApiId](#cfn-apigateway-deployment-restapiid): String
   [StageDescription](#cfn-apigateway-deployment-stagedescription): 
-    [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)
+    StageDescription
   [StageName](#cfn-apigateway-deployment-stagename): String
 ```
 

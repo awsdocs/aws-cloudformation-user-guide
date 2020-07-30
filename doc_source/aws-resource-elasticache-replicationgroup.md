@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
       "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
       "[MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled)" : Boolean,
-      "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md), ... ],
+      "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ NodeGroupConfiguration, ... ],
       "[NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
       "[NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters)" : Integer,
       "[NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups)" : Integer,
@@ -66,7 +66,7 @@ Properties:
   [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
   [MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled): Boolean
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
-    - [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
+    - NodeGroupConfiguration
   [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn): String
   [NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters): Integer
   [NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups): Integer
@@ -187,7 +187,7 @@ A list of cache security group names to associate with this replication group\.
 
 `CacheSubnetGroupName`  <a name="cfn-elasticache-replicationgroup-cachesubnetgroupname"></a>
 The name of the cache subnet group to be used for the replication group\.  
-If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [Subnets and Subnet Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.html)\.
+If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -215,7 +215,7 @@ The ID of the KMS key used to encrypt the disk on the cluster\.
 A flag indicating if you have Multi\-AZ enabled to enhance fault tolerance\. For more information, see [Minimizing Downtime: Multi\-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html)\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NodeGroupConfiguration`  <a name="cfn-elasticache-replicationgroup-nodegroupconfiguration"></a>
 `NodeGroupConfiguration ` is a property of the `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache \(ElastiCache\) Redis cluster node group\.   
@@ -386,7 +386,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `ConfigurationEndPoint.Address`  <a name="ConfigurationEndPoint.Address-fn::getatt"></a>
  The DNS hostname of the cache node\.  
-Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
+Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\. For Redis \(cluster mode disabled\) replication groups, use the `PrimaryEndpoint` or `ReadEndpoint` attributes\.
 
 `ConfigurationEndPoint.Port`  <a name="ConfigurationEndPoint.Port-fn::getatt"></a>
 The port number that the cache engine is listening on\. 

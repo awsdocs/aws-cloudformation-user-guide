@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ResourceTypeFilters](#cfn-resourcegroups-group-query-resourcetypefilters)" : [ String, ... ],
   "[StackIdentifier](#cfn-resourcegroups-group-query-stackidentifier)" : String,
-  "[TagFilters](#cfn-resourcegroups-group-query-tagfilters)" : [ [TagFilter](aws-properties-resourcegroups-group-tagfilter.md), ... ]
+  "[TagFilters](#cfn-resourcegroups-group-query-tagfilters)" : [ TagFilter, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [StackIdentifier](#cfn-resourcegroups-group-query-stackidentifier): String
   [TagFilters](#cfn-resourcegroups-group-query-tagfilters): 
-    - [TagFilter](aws-properties-resourcegroups-group-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-resourcegroups-group-query-properties"></a>

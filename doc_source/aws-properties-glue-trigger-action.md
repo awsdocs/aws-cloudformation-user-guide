@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Arguments](#cfn-glue-trigger-action-arguments)" : Json,
   "[CrawlerName](#cfn-glue-trigger-action-crawlername)" : String,
   "[JobName](#cfn-glue-trigger-action-jobname)" : String,
-  "[NotificationProperty](#cfn-glue-trigger-action-notificationproperty)" : [NotificationProperty](aws-properties-glue-trigger-notificationproperty.md),
+  "[NotificationProperty](#cfn-glue-trigger-action-notificationproperty)" : NotificationProperty,
   "[SecurityConfiguration](#cfn-glue-trigger-action-securityconfiguration)" : String,
   "[Timeout](#cfn-glue-trigger-action-timeout)" : Integer
 }
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CrawlerName](#cfn-glue-trigger-action-crawlername): String
   [JobName](#cfn-glue-trigger-action-jobname): String
   [NotificationProperty](#cfn-glue-trigger-action-notificationproperty): 
-    [NotificationProperty](aws-properties-glue-trigger-notificationproperty.md)
+    NotificationProperty
   [SecurityConfiguration](#cfn-glue-trigger-action-securityconfiguration): String
   [Timeout](#cfn-glue-trigger-action-timeout): Integer
 ```

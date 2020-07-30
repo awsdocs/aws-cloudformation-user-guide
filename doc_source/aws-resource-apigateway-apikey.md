@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Enabled](#cfn-apigateway-apikey-enabled)" : Boolean,
       "[GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid)" : Boolean,
       "[Name](#cfn-apigateway-apikey-name)" : String,
-      "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ [StageKey](aws-properties-apigateway-apikey-stagekey.md), ... ],
+      "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ StageKey, ... ],
       "[Tags](#cfn-apigateway-apikey-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Value](#cfn-apigateway-apikey-value)" : String
     }
@@ -35,7 +35,7 @@ Properties:
   [GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid): Boolean
   [Name](#cfn-apigateway-apikey-name): String
   [StageKeys](#cfn-apigateway-apikey-stagekeys): 
-    - [StageKey](aws-properties-apigateway-apikey-stagekey.md)
+    - StageKey
   [Tags](#cfn-apigateway-apikey-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Value](#cfn-apigateway-apikey-value): String

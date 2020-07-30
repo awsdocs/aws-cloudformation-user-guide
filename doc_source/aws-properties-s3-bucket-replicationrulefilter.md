@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[And](#cfn-s3-bucket-replicationrulefilter-and)" : [ReplicationRuleAndOperator](aws-properties-s3-bucket-replicationruleandoperator.md),
+  "[And](#cfn-s3-bucket-replicationrulefilter-and)" : ReplicationRuleAndOperator,
   "[Prefix](#cfn-s3-bucket-replicationrulefilter-prefix)" : String,
-  "[TagFilter](#cfn-s3-bucket-replicationrulefilter-tagfilter)" : [TagFilter](aws-properties-s3-bucket-tagfilter.md)
+  "[TagFilter](#cfn-s3-bucket-replicationrulefilter-tagfilter)" : TagFilter
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [And](#cfn-s3-bucket-replicationrulefilter-and): 
-    [ReplicationRuleAndOperator](aws-properties-s3-bucket-replicationruleandoperator.md)
+    ReplicationRuleAndOperator
   [Prefix](#cfn-s3-bucket-replicationrulefilter-prefix): String
   [TagFilter](#cfn-s3-bucket-replicationrulefilter-tagfilter): 
-    [TagFilter](aws-properties-s3-bucket-tagfilter.md)
+    TagFilter
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-replicationrulefilter-properties"></a>

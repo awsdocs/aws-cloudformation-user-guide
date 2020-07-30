@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)" : [ [Logger](aws-properties-greengrass-loggerdefinition-logger.md), ... ]
+  "[Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)" : [ Logger, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers): 
-    - [Logger](aws-properties-greengrass-loggerdefinition-logger.md)
+    - Logger
 ```
 
 ## Properties<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion-properties"></a>

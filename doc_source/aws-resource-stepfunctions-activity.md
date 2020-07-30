@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::StepFunctions::Activity",
   "Properties" : {
       "[Name](#cfn-stepfunctions-activity-name)" : String,
-      "[Tags](#cfn-stepfunctions-activity-tags)" : [ [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md), ... ]
+      "[Tags](#cfn-stepfunctions-activity-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::StepFunctions::Activity
 Properties: 
   [Name](#cfn-stepfunctions-activity-name): String
   [Tags](#cfn-stepfunctions-activity-tags): 
-    - [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-activity-properties"></a>

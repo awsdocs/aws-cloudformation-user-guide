@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-eventschemas-schema-description)" : String,
       "[RegistryName](#cfn-eventschemas-schema-registryname)" : String,
       "[SchemaName](#cfn-eventschemas-schema-schemaname)" : String,
-      "[Tags](#cfn-eventschemas-schema-tags)" : [ [TagsEntry](aws-properties-eventschemas-schema-tagsentry.md), ... ],
+      "[Tags](#cfn-eventschemas-schema-tags)" : [ TagsEntry, ... ],
       "[Type](#cfn-eventschemas-schema-type)" : String
     }
 }
@@ -32,7 +32,7 @@ Properties:
   [RegistryName](#cfn-eventschemas-schema-registryname): String
   [SchemaName](#cfn-eventschemas-schema-schemaname): String
   [Tags](#cfn-eventschemas-schema-tags): 
-    - [TagsEntry](aws-properties-eventschemas-schema-tagsentry.md)
+    - TagsEntry
   [Type](#cfn-eventschemas-schema-type): String
 ```
 

@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Framework](#cfn-managedblockchain-member-networkconfiguration-framework)" : String,
   "[FrameworkVersion](#cfn-managedblockchain-member-networkconfiguration-frameworkversion)" : String,
   "[Name](#cfn-managedblockchain-member-networkconfiguration-name)" : String,
-  "[NetworkFrameworkConfiguration](#cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration)" : [NetworkFrameworkConfiguration](aws-properties-managedblockchain-member-networkframeworkconfiguration.md),
-  "[VotingPolicy](#cfn-managedblockchain-member-networkconfiguration-votingpolicy)" : [VotingPolicy](aws-properties-managedblockchain-member-votingpolicy.md)
+  "[NetworkFrameworkConfiguration](#cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration)" : NetworkFrameworkConfiguration,
+  "[VotingPolicy](#cfn-managedblockchain-member-networkconfiguration-votingpolicy)" : VotingPolicy
 }
 ```
 
@@ -27,9 +27,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FrameworkVersion](#cfn-managedblockchain-member-networkconfiguration-frameworkversion): String
   [Name](#cfn-managedblockchain-member-networkconfiguration-name): String
   [NetworkFrameworkConfiguration](#cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration): 
-    [NetworkFrameworkConfiguration](aws-properties-managedblockchain-member-networkframeworkconfiguration.md)
+    NetworkFrameworkConfiguration
   [VotingPolicy](#cfn-managedblockchain-member-networkconfiguration-votingpolicy): 
-    [VotingPolicy](aws-properties-managedblockchain-member-votingpolicy.md)
+    VotingPolicy
 ```
 
 ## Properties<a name="aws-properties-managedblockchain-member-networkconfiguration-properties"></a>

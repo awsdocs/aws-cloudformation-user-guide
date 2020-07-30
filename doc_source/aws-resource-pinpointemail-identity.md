@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DkimSigningEnabled](#cfn-pinpointemail-identity-dkimsigningenabled)" : Boolean,
       "[FeedbackForwardingEnabled](#cfn-pinpointemail-identity-feedbackforwardingenabled)" : Boolean,
-      "[MailFromAttributes](#cfn-pinpointemail-identity-mailfromattributes)" : [MailFromAttributes](aws-properties-pinpointemail-identity-mailfromattributes.md),
+      "[MailFromAttributes](#cfn-pinpointemail-identity-mailfromattributes)" : MailFromAttributes,
       "[Name](#cfn-pinpointemail-identity-name)" : String,
-      "[Tags](#cfn-pinpointemail-identity-tags)" : [ [Tags](aws-properties-pinpointemail-identity-tags.md), ... ]
+      "[Tags](#cfn-pinpointemail-identity-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -36,10 +36,10 @@ Properties:
   [DkimSigningEnabled](#cfn-pinpointemail-identity-dkimsigningenabled): Boolean
   [FeedbackForwardingEnabled](#cfn-pinpointemail-identity-feedbackforwardingenabled): Boolean
   [MailFromAttributes](#cfn-pinpointemail-identity-mailfromattributes): 
-    [MailFromAttributes](aws-properties-pinpointemail-identity-mailfromattributes.md)
+    MailFromAttributes
   [Name](#cfn-pinpointemail-identity-name): String
   [Tags](#cfn-pinpointemail-identity-tags): 
-    - [Tags](aws-properties-pinpointemail-identity-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-pinpointemail-identity-properties"></a>

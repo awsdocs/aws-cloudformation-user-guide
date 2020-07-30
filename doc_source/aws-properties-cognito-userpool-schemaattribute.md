@@ -14,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DeveloperOnlyAttribute](#cfn-cognito-userpool-schemaattribute-developeronlyattribute)" : Boolean,
   "[Mutable](#cfn-cognito-userpool-schemaattribute-mutable)" : Boolean,
   "[Name](#cfn-cognito-userpool-schemaattribute-name)" : String,
-  "[NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)" : [NumberAttributeConstraints](aws-properties-cognito-userpool-numberattributeconstraints.md),
+  "[NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)" : NumberAttributeConstraints,
   "[Required](#cfn-cognito-userpool-schemaattribute-required)" : Boolean,
-  "[StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)" : [StringAttributeConstraints](aws-properties-cognito-userpool-stringattributeconstraints.md)
+  "[StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)" : StringAttributeConstraints
 }
 ```
 
@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Mutable](#cfn-cognito-userpool-schemaattribute-mutable): Boolean
   [Name](#cfn-cognito-userpool-schemaattribute-name): String
   [NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints): 
-    [NumberAttributeConstraints](aws-properties-cognito-userpool-numberattributeconstraints.md)
+    NumberAttributeConstraints
   [Required](#cfn-cognito-userpool-schemaattribute-required): Boolean
   [StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints): 
-    [StringAttributeConstraints](aws-properties-cognito-userpool-stringattributeconstraints.md)
+    StringAttributeConstraints
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-schemaattribute-properties"></a>

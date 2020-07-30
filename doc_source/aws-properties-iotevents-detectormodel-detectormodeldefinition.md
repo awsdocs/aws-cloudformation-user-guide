@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[InitialStateName](#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename)" : String,
-  "[States](#cfn-iotevents-detectormodel-detectormodeldefinition-states)" : [ [State](aws-properties-iotevents-detectormodel-state.md), ... ]
+  "[States](#cfn-iotevents-detectormodel-detectormodeldefinition-states)" : [ State, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [InitialStateName](#cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename): String
   [States](#cfn-iotevents-detectormodel-detectormodeldefinition-states): 
-    - [State](aws-properties-iotevents-detectormodel-state.md)
+    - State
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-detectormodeldefinition-properties"></a>

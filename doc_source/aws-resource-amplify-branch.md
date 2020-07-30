@@ -13,13 +13,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Amplify::Branch",
   "Properties" : {
       "[AppId](#cfn-amplify-branch-appid)" : String,
-      "[BasicAuthConfig](#cfn-amplify-branch-basicauthconfig)" : [BasicAuthConfig](aws-properties-amplify-branch-basicauthconfig.md),
+      "[BasicAuthConfig](#cfn-amplify-branch-basicauthconfig)" : BasicAuthConfig,
       "[BranchName](#cfn-amplify-branch-branchname)" : String,
       "[BuildSpec](#cfn-amplify-branch-buildspec)" : String,
       "[Description](#cfn-amplify-branch-description)" : String,
       "[EnableAutoBuild](#cfn-amplify-branch-enableautobuild)" : Boolean,
       "[EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview)" : Boolean,
-      "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md), ... ],
+      "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ EnvironmentVariable, ... ],
       "[PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname)" : String,
       "[Stage](#cfn-amplify-branch-stage)" : String,
       "[Tags](#cfn-amplify-branch-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -34,14 +34,14 @@ Type: AWS::Amplify::Branch
 Properties: 
   [AppId](#cfn-amplify-branch-appid): String
   [BasicAuthConfig](#cfn-amplify-branch-basicauthconfig): 
-    [BasicAuthConfig](aws-properties-amplify-branch-basicauthconfig.md)
+    BasicAuthConfig
   [BranchName](#cfn-amplify-branch-branchname): String
   [BuildSpec](#cfn-amplify-branch-buildspec): String
   [Description](#cfn-amplify-branch-description): String
   [EnableAutoBuild](#cfn-amplify-branch-enableautobuild): Boolean
   [EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-branch-environmentvariables): 
-    - [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)
+    - EnvironmentVariable
   [PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname): String
   [Stage](#cfn-amplify-branch-stage): String
   [Tags](#cfn-amplify-branch-tags): 

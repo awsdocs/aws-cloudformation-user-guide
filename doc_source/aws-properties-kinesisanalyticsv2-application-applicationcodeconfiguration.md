@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)" : [CodeContent](aws-properties-kinesisanalyticsv2-application-codecontent.md),
+  "[CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)" : CodeContent,
   "[CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent): 
-    [CodeContent](aws-properties-kinesisanalyticsv2-application-codecontent.md)
+    CodeContent
   [CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype): String
 ```
 

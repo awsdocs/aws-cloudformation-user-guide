@@ -1,6 +1,6 @@
 # AWS::QLDB::Stream KinesisConfiguration<a name="aws-properties-qldb-stream-kinesisconfiguration"></a>
 
-The configuration settings of the Amazon Kinesis Data Streams destination for a Amazon QLDB journal stream\.
+The configuration settings of the Amazon Kinesis Data Streams destination for an Amazon QLDB journal stream\.
 
 ## Syntax<a name="aws-properties-qldb-stream-kinesisconfiguration-syntax"></a>
 

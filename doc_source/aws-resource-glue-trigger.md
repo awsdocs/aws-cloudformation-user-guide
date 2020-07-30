@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Trigger",
   "Properties" : {
-      "[Actions](#cfn-glue-trigger-actions)" : [ [Action](aws-properties-glue-trigger-action.md), ... ],
+      "[Actions](#cfn-glue-trigger-actions)" : [ Action, ... ],
       "[Description](#cfn-glue-trigger-description)" : String,
       "[Name](#cfn-glue-trigger-name)" : String,
-      "[Predicate](#cfn-glue-trigger-predicate)" : [Predicate](aws-properties-glue-trigger-predicate.md),
+      "[Predicate](#cfn-glue-trigger-predicate)" : Predicate,
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
       "[StartOnCreation](#cfn-glue-trigger-startoncreation)" : Boolean,
       "[Tags](#cfn-glue-trigger-tags)" : Json,
@@ -31,11 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Glue::Trigger
 Properties: 
   [Actions](#cfn-glue-trigger-actions): 
-    - [Action](aws-properties-glue-trigger-action.md)
+    - Action
   [Description](#cfn-glue-trigger-description): String
   [Name](#cfn-glue-trigger-name): String
   [Predicate](#cfn-glue-trigger-predicate): 
-    [Predicate](aws-properties-glue-trigger-predicate.md)
+    Predicate
   [Schedule](#cfn-glue-trigger-schedule): String
   [StartOnCreation](#cfn-glue-trigger-startoncreation): Boolean
   [Tags](#cfn-glue-trigger-tags): Json

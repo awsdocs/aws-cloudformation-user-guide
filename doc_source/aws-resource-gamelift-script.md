@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::GameLift::Script",
   "Properties" : {
       "[Name](#cfn-gamelift-script-name)" : String,
-      "[StorageLocation](#cfn-gamelift-script-storagelocation)" : [S3Location](aws-properties-gamelift-script-s3location.md),
+      "[StorageLocation](#cfn-gamelift-script-storagelocation)" : S3Location,
       "[Version](#cfn-gamelift-script-version)" : String
     }
 }
@@ -26,7 +26,7 @@ Type: AWS::GameLift::Script
 Properties: 
   [Name](#cfn-gamelift-script-name): String
   [StorageLocation](#cfn-gamelift-script-storagelocation): 
-    [S3Location](aws-properties-gamelift-script-s3location.md)
+    S3Location
   [Version](#cfn-gamelift-script-version): String
 ```
 

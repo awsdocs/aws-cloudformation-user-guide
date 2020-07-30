@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Invert](#cfn-appmesh-route-httprouteheader-invert)" : Boolean,
-  "[Match](#cfn-appmesh-route-httprouteheader-match)" : [HeaderMatchMethod](aws-properties-appmesh-route-headermatchmethod.md),
+  "[Match](#cfn-appmesh-route-httprouteheader-match)" : HeaderMatchMethod,
   "[Name](#cfn-appmesh-route-httprouteheader-name)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Invert](#cfn-appmesh-route-httprouteheader-invert): Boolean
   [Match](#cfn-appmesh-route-httprouteheader-match): 
-    [HeaderMatchMethod](aws-properties-appmesh-route-headermatchmethod.md)
+    HeaderMatchMethod
   [Name](#cfn-appmesh-route-httprouteheader-name): String
 ```
 

@@ -13,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ApproveAfterDays](#cfn-ssm-patchbaseline-rule-approveafterdays)" : Integer,
-  "[ApproveUntilDate](#cfn-ssm-patchbaseline-rule-approveuntildate)" : [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md),
+  "[ApproveUntilDate](#cfn-ssm-patchbaseline-rule-approveuntildate)" : PatchStringDate,
   "[ComplianceLevel](#cfn-ssm-patchbaseline-rule-compliancelevel)" : String,
   "[EnableNonSecurity](#cfn-ssm-patchbaseline-rule-enablenonsecurity)" : Boolean,
-  "[PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup)" : [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
+  "[PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup)" : PatchFilterGroup
 }
 ```
 
@@ -25,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ApproveAfterDays](#cfn-ssm-patchbaseline-rule-approveafterdays): Integer
   [ApproveUntilDate](#cfn-ssm-patchbaseline-rule-approveuntildate): 
-    [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md)
+    PatchStringDate
   [ComplianceLevel](#cfn-ssm-patchbaseline-rule-compliancelevel): String
   [EnableNonSecurity](#cfn-ssm-patchbaseline-rule-enablenonsecurity): Boolean
   [PatchFilterGroup](#cfn-ssm-patchbaseline-rule-patchfiltergroup): 
-    [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
+    PatchFilterGroup
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-rule-properties"></a>

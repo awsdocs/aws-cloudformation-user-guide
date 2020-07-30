@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::CodeRepository",
   "Properties" : {
       "[CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname)" : String,
-      "[GitConfig](#cfn-sagemaker-coderepository-gitconfig)" : [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
+      "[GitConfig](#cfn-sagemaker-coderepository-gitconfig)" : GitConfig
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::SageMaker::CodeRepository
 Properties: 
   [CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname): String
   [GitConfig](#cfn-sagemaker-coderepository-gitconfig): 
-    [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
+    GitConfig
 ```
 
 ## Properties<a name="aws-resource-sagemaker-coderepository-properties"></a>

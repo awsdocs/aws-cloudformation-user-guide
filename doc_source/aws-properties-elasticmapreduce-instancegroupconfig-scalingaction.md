@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Market](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market)" : String,
-  "[SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration)" : [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.md)
+  "[SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration)" : SimpleScalingPolicyConfiguration
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Market](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market): String
   [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration): 
-    [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.md)
+    SimpleScalingPolicyConfiguration
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingaction-properties"></a>

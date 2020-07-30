@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters)" : [MappingParameters](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters.md),
+  "[MappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters)" : MappingParameters,
   "[RecordFormatType](#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MappingParameters](#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-mappingparameters): 
-    [MappingParameters](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-mappingparameters.md)
+    MappingParameters
   [RecordFormatType](#cfn-kinesisanalyticsv2-applicationreferencedatasource-recordformat-recordformattype): String
 ```
 

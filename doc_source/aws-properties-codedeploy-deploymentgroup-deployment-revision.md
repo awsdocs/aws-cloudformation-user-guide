@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation)" : [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md),
+  "[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation)" : GitHubLocation,
   "[RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype)" : String,
-  "[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location)" : [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
+  "[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location)" : S3Location
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation): 
-    [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)
+    GitHubLocation
   [RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype): String
   [S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location): 
-    [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
+    S3Location
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-properties"></a>

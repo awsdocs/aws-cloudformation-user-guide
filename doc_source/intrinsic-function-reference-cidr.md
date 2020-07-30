@@ -123,5 +123,5 @@ Resources:
 ## Supported functions<a name="intrinsic-function-reference-cidr-functions"></a>
 
 You can use the following functions in a `Fn::Cidr` function:
-+ `[`Fn::Select`](intrinsic-function-reference-select.md)` 
-+ `[`Ref`](intrinsic-function-reference-ref.md)` 
++ `` 
++ `` 

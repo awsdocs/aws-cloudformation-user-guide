@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::Distribution",
   "Properties" : {
-      "[DistributionConfig](#cfn-cloudfront-distribution-distributionconfig)" : [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md),
+      "[DistributionConfig](#cfn-cloudfront-distribution-distributionconfig)" : DistributionConfig,
       "[Tags](#cfn-cloudfront-distribution-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::Distribution
 Properties: 
   [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
-    [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)
+    DistributionConfig
   [Tags](#cfn-cloudfront-distribution-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Column](#cfn-cassandra-table-clusteringkeycolumn-column)" : [Column](aws-properties-cassandra-table-column.md),
+  "[Column](#cfn-cassandra-table-clusteringkeycolumn-column)" : Column,
   "[OrderBy](#cfn-cassandra-table-clusteringkeycolumn-orderby)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Column](#cfn-cassandra-table-clusteringkeycolumn-column): 
-    [Column](aws-properties-cassandra-table-column.md)
+    Column
   [OrderBy](#cfn-cassandra-table-clusteringkeycolumn-orderby): String
 ```
 

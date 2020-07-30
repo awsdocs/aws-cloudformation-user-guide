@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md),
+      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
       "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
       "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ECR::Repository
 Properties: 
   [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
-    [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)
+    LifecyclePolicy
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
   [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
   [Tags](#cfn-ecr-repository-tags): 

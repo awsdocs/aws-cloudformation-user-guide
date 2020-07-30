@@ -17,11 +17,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomizedLoadMetricSpecification](#cfn-autoscalingplans-scalingplan-scalinginstruction-customizedloadmetricspecification)" : [CustomizedLoadMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.md),
+  "[CustomizedLoadMetricSpecification](#cfn-autoscalingplans-scalingplan-scalinginstruction-customizedloadmetricspecification)" : CustomizedLoadMetricSpecification,
   "[DisableDynamicScaling](#cfn-autoscalingplans-scalingplan-scalinginstruction-disabledynamicscaling)" : Boolean,
   "[MaxCapacity](#cfn-autoscalingplans-scalingplan-scalinginstruction-maxcapacity)" : Integer,
   "[MinCapacity](#cfn-autoscalingplans-scalingplan-scalinginstruction-mincapacity)" : Integer,
-  "[PredefinedLoadMetricSpecification](#cfn-autoscalingplans-scalingplan-scalinginstruction-predefinedloadmetricspecification)" : [PredefinedLoadMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.md),
+  "[PredefinedLoadMetricSpecification](#cfn-autoscalingplans-scalingplan-scalinginstruction-predefinedloadmetricspecification)" : PredefinedLoadMetricSpecification,
   "[PredictiveScalingMaxCapacityBehavior](#cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmaxcapacitybehavior)" : String,
   "[PredictiveScalingMaxCapacityBuffer](#cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmaxcapacitybuffer)" : Integer,
   "[PredictiveScalingMode](#cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmode)" : String,
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ScalingPolicyUpdateBehavior](#cfn-autoscalingplans-scalingplan-scalinginstruction-scalingpolicyupdatebehavior)" : String,
   "[ScheduledActionBufferTime](#cfn-autoscalingplans-scalingplan-scalinginstruction-scheduledactionbuffertime)" : Integer,
   "[ServiceNamespace](#cfn-autoscalingplans-scalingplan-scalinginstruction-servicenamespace)" : String,
-  "[TargetTrackingConfigurations](#cfn-autoscalingplans-scalingplan-scalinginstruction-targettrackingconfigurations)" : [ [TargetTrackingConfiguration](aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.md), ... ]
+  "[TargetTrackingConfigurations](#cfn-autoscalingplans-scalingplan-scalinginstruction-targettrackingconfigurations)" : [ TargetTrackingConfiguration, ... ]
 }
 ```
 
@@ -38,12 +38,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomizedLoadMetricSpecification](#cfn-autoscalingplans-scalingplan-scalinginstruction-customizedloadmetricspecification): 
-    [CustomizedLoadMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification.md)
+    CustomizedLoadMetricSpecification
   [DisableDynamicScaling](#cfn-autoscalingplans-scalingplan-scalinginstruction-disabledynamicscaling): Boolean
   [MaxCapacity](#cfn-autoscalingplans-scalingplan-scalinginstruction-maxcapacity): Integer
   [MinCapacity](#cfn-autoscalingplans-scalingplan-scalinginstruction-mincapacity): Integer
   [PredefinedLoadMetricSpecification](#cfn-autoscalingplans-scalingplan-scalinginstruction-predefinedloadmetricspecification): 
-    [PredefinedLoadMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification.md)
+    PredefinedLoadMetricSpecification
   [PredictiveScalingMaxCapacityBehavior](#cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmaxcapacitybehavior): String
   [PredictiveScalingMaxCapacityBuffer](#cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmaxcapacitybuffer): Integer
   [PredictiveScalingMode](#cfn-autoscalingplans-scalingplan-scalinginstruction-predictivescalingmode): String
@@ -53,7 +53,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ScheduledActionBufferTime](#cfn-autoscalingplans-scalingplan-scalinginstruction-scheduledactionbuffertime): Integer
   [ServiceNamespace](#cfn-autoscalingplans-scalingplan-scalinginstruction-servicenamespace): String
   [TargetTrackingConfigurations](#cfn-autoscalingplans-scalingplan-scalinginstruction-targettrackingconfigurations): 
-    - [TargetTrackingConfiguration](aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.md)
+    - TargetTrackingConfiguration
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-scalinginstruction-properties"></a>

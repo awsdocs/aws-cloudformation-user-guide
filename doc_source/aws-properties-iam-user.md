@@ -2,7 +2,7 @@
 
 Creates a new IAM user for your AWS account\.
 
-The number and size of IAM resources in an AWS account are limited\. For more information, see [IAM and STS Quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+ For information about limitations on the number of IAM users you can create, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-properties-iam-user-syntax"></a>
 
@@ -15,11 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IAM::User",
   "Properties" : {
       "[Groups](#cfn-iam-user-groups)" : [ String, ... ],
-      "[LoginProfile](#cfn-iam-user-loginprofile)" : [LoginProfile](aws-properties-iam-user-loginprofile.md),
+      "[LoginProfile](#cfn-iam-user-loginprofile)" : LoginProfile,
       "[ManagedPolicyArns](#cfn-iam-user-managepolicyarns)" : [ String, ... ],
       "[Path](#cfn-iam-user-path)" : String,
       "[PermissionsBoundary](#cfn-iam-user-permissionsboundary)" : String,
-      "[Policies](#cfn-iam-user-policies)" : [ [Policy](aws-properties-iam-policy-2.md), ... ],
+      "[Policies](#cfn-iam-user-policies)" : [ Policy, ... ],
       "[Tags](#cfn-iam-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserName](#cfn-iam-user-username)" : String
     }
@@ -34,13 +34,13 @@ Properties:
   [Groups](#cfn-iam-user-groups): 
     - String
   [LoginProfile](#cfn-iam-user-loginprofile): 
-    [LoginProfile](aws-properties-iam-user-loginprofile.md)
+    LoginProfile
   [ManagedPolicyArns](#cfn-iam-user-managepolicyarns): 
     - String
   [Path](#cfn-iam-user-path): String
   [PermissionsBoundary](#cfn-iam-user-permissionsboundary): String
   [Policies](#cfn-iam-user-policies): 
-    - [Policy](aws-properties-iam-policy-2.md)
+    - Policy
   [Tags](#cfn-iam-user-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserName](#cfn-iam-user-username): String

@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-appmesh-route-httproute-action)" : [HttpRouteAction](aws-properties-appmesh-route-httprouteaction.md),
-  "[Match](#cfn-appmesh-route-httproute-match)" : [HttpRouteMatch](aws-properties-appmesh-route-httproutematch.md),
-  "[RetryPolicy](#cfn-appmesh-route-httproute-retrypolicy)" : [HttpRetryPolicy](aws-properties-appmesh-route-httpretrypolicy.md),
-  "[Timeout](#cfn-appmesh-route-httproute-timeout)" : [HttpTimeout](aws-properties-appmesh-route-httptimeout.md)
+  "[Action](#cfn-appmesh-route-httproute-action)" : HttpRouteAction,
+  "[Match](#cfn-appmesh-route-httproute-match)" : HttpRouteMatch,
+  "[RetryPolicy](#cfn-appmesh-route-httproute-retrypolicy)" : HttpRetryPolicy,
+  "[Timeout](#cfn-appmesh-route-httproute-timeout)" : HttpTimeout
 }
 ```
 
@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-appmesh-route-httproute-action): 
-    [HttpRouteAction](aws-properties-appmesh-route-httprouteaction.md)
+    HttpRouteAction
   [Match](#cfn-appmesh-route-httproute-match): 
-    [HttpRouteMatch](aws-properties-appmesh-route-httproutematch.md)
+    HttpRouteMatch
   [RetryPolicy](#cfn-appmesh-route-httproute-retrypolicy): 
-    [HttpRetryPolicy](aws-properties-appmesh-route-httpretrypolicy.md)
+    HttpRetryPolicy
   [Timeout](#cfn-appmesh-route-httproute-timeout): 
-    [HttpTimeout](aws-properties-appmesh-route-httptimeout.md)
+    HttpTimeout
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-httproute-properties"></a>

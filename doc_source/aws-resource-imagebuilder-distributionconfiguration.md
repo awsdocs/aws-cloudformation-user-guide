@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ImageBuilder::DistributionConfiguration",
   "Properties" : {
       "[Description](#cfn-imagebuilder-distributionconfiguration-description)" : String,
-      "[Distributions](#cfn-imagebuilder-distributionconfiguration-distributions)" : [ [Distribution](aws-properties-imagebuilder-distributionconfiguration-distribution.md), ... ],
+      "[Distributions](#cfn-imagebuilder-distributionconfiguration-distributions)" : [ Distribution, ... ],
       "[Name](#cfn-imagebuilder-distributionconfiguration-name)" : String,
       "[Tags](#cfn-imagebuilder-distributionconfiguration-tags)" : {Key : Value, ...}
     }
@@ -27,7 +27,7 @@ Type: AWS::ImageBuilder::DistributionConfiguration
 Properties: 
   [Description](#cfn-imagebuilder-distributionconfiguration-description): String
   [Distributions](#cfn-imagebuilder-distributionconfiguration-distributions): 
-    - [Distribution](aws-properties-imagebuilder-distributionconfiguration-distribution.md)
+    - Distribution
   [Name](#cfn-imagebuilder-distributionconfiguration-name): String
   [Tags](#cfn-imagebuilder-distributionconfiguration-tags): 
     Key : Value

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-appconfig-application-description)" : String,
       "[Name](#cfn-appconfig-application-name)" : String,
-      "[Tags](#cfn-appconfig-application-tags)" : [ [Tags](aws-properties-appconfig-application-tags.md), ... ]
+      "[Tags](#cfn-appconfig-application-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [Description](#cfn-appconfig-application-description): String
   [Name](#cfn-appconfig-application-name): String
   [Tags](#cfn-appconfig-application-tags): 
-    - [Tags](aws-properties-appconfig-application-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-application-properties"></a>

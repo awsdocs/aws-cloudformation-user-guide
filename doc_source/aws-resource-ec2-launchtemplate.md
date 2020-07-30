@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::LaunchTemplate",
   "Properties" : {
-      "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md),
+      "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : LaunchTemplateData,
       "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::LaunchTemplate
 Properties: 
   [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata): 
-    [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)
+    LaunchTemplateData
   [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
 ```
 

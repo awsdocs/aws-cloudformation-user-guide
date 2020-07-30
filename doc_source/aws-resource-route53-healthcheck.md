@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HealthCheck",
   "Properties" : {
-      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md),
-      "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md), ... ]
+      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : HealthCheckConfig,
+      "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTag, ... ]
     }
 }
 ```
@@ -37,9 +37,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Route53::HealthCheck
 Properties: 
   [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
-    [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)
+    HealthCheckConfig
   [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
-    - [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)
+    - HealthCheckTag
 ```
 
 ## Properties<a name="aws-resource-route53-healthcheck-properties"></a>
@@ -48,7 +48,7 @@ Properties:
 A complex type that contains detailed information about one health check\.  
 *Required*: Yes  
 *Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>
 The `HealthCheckTags` property describes key\-value pairs that are associated with an `AWS::Route53::HealthCheck` resource\.   

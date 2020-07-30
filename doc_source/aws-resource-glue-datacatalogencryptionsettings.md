@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::DataCatalogEncryptionSettings",
   "Properties" : {
       "[CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid)" : String,
-      "[DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)" : [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)
+      "[DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)" : DataCatalogEncryptionSettings
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::Glue::DataCatalogEncryptionSettings
 Properties: 
   [CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid): String
   [DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings): 
-    [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)
+    DataCatalogEncryptionSettings
 ```
 
 ## Properties<a name="aws-resource-glue-datacatalogencryptionsettings-properties"></a>

@@ -14,18 +14,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::PatchBaseline",
   "Properties" : {
-      "[ApprovalRules](#cfn-ssm-patchbaseline-approvalrules)" : [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md),
+      "[ApprovalRules](#cfn-ssm-patchbaseline-approvalrules)" : RuleGroup,
       "[ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches)" : [ String, ... ],
       "[ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel)" : String,
       "[ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)" : Boolean,
       "[Description](#cfn-ssm-patchbaseline-description)" : String,
-      "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md),
+      "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : PatchFilterGroup,
       "[Name](#cfn-ssm-patchbaseline-name)" : String,
       "[OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem)" : String,
       "[PatchGroups](#cfn-ssm-patchbaseline-patchgroups)" : [ String, ... ],
       "[RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches)" : [ String, ... ],
       "[RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction)" : String,
-      "[Sources](#cfn-ssm-patchbaseline-sources)" : [ [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md), ... ],
+      "[Sources](#cfn-ssm-patchbaseline-sources)" : [ PatchSource, ... ],
       "[Tags](#cfn-ssm-patchbaseline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -37,14 +37,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SSM::PatchBaseline
 Properties: 
   [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules): 
-    [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)
+    RuleGroup
   [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 
     - String
   [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel): String
   [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity): Boolean
   [Description](#cfn-ssm-patchbaseline-description): String
   [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters): 
-    [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
+    PatchFilterGroup
   [Name](#cfn-ssm-patchbaseline-name): String
   [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem): String
   [PatchGroups](#cfn-ssm-patchbaseline-patchgroups): 
@@ -53,7 +53,7 @@ Properties:
     - String
   [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction): String
   [Sources](#cfn-ssm-patchbaseline-sources): 
-    - [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md)
+    - PatchSource
   [Tags](#cfn-ssm-patchbaseline-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Role](#cfn-s3-bucket-replicationconfiguration-role)" : String,
-  "[Rules](#cfn-s3-bucket-replicationconfiguration-rules)" : [ [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md), ... ]
+  "[Rules](#cfn-s3-bucket-replicationconfiguration-rules)" : [ ReplicationRule, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Role](#cfn-s3-bucket-replicationconfiguration-role): String
   [Rules](#cfn-s3-bucket-replicationconfiguration-rules): 
-    - [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)
+    - ReplicationRule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-properties"></a>

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch)" : [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.md),
+  "[FieldToMatch](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch)" : FieldToMatch,
   "[PositionalConstraint](#cfn-waf-bytematchset-bytematchtuples-positionalconstraint)" : String,
   "[TargetString](#cfn-waf-bytematchset-bytematchtuples-targetstring)" : String,
   "[TargetStringBase64](#cfn-waf-bytematchset-bytematchtuples-targetstringbase64)" : String,
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-waf-bytematchset-bytematchtuples-fieldtomatch): 
-    [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch.md)
+    FieldToMatch
   [PositionalConstraint](#cfn-waf-bytematchset-bytematchtuples-positionalconstraint): String
   [TargetString](#cfn-waf-bytematchset-bytematchtuples-targetstring): 
     String

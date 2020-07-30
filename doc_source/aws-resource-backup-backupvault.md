@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackupVaultName](#cfn-backup-backupvault-backupvaultname)" : String,
       "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : Json,
       "[EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn)" : String,
-      "[Notifications](#cfn-backup-backupvault-notifications)" : [NotificationObjectType](aws-properties-backup-backupvault-notificationobjecttype.md)
+      "[Notifications](#cfn-backup-backupvault-notifications)" : NotificationObjectType
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [BackupVaultTags](#cfn-backup-backupvault-backupvaulttags): Json
   [EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn): String
   [Notifications](#cfn-backup-backupvault-notifications): 
-    [NotificationObjectType](aws-properties-backup-backupvault-notificationobjecttype.md)
+    NotificationObjectType
 ```
 
 ## Properties<a name="aws-resource-backup-backupvault-properties"></a>

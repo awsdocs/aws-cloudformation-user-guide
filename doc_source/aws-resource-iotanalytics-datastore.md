@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTAnalytics::Datastore",
   "Properties" : {
       "[DatastoreName](#cfn-iotanalytics-datastore-datastorename)" : String,
-      "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : [DatastoreStorage](aws-properties-iotanalytics-datastore-datastorestorage.md),
-      "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : [RetentionPeriod](aws-properties-iotanalytics-datastore-retentionperiod.md),
+      "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : DatastoreStorage,
+      "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : RetentionPeriod,
       "[Tags](#cfn-iotanalytics-datastore-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -27,9 +27,9 @@ Type: AWS::IoTAnalytics::Datastore
 Properties: 
   [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
   [DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage): 
-    [DatastoreStorage](aws-properties-iotanalytics-datastore-datastorestorage.md)
+    DatastoreStorage
   [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod): 
-    [RetentionPeriod](aws-properties-iotanalytics-datastore-retentionperiod.md)
+    RetentionPeriod
   [Tags](#cfn-iotanalytics-datastore-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

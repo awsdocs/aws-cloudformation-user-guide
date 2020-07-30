@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AccessSysfs](#cfn-greengrass-functiondefinition-environment-accesssysfs)" : Boolean,
-  "[Execution](#cfn-greengrass-functiondefinition-environment-execution)" : [Execution](aws-properties-greengrass-functiondefinition-execution.md),
-  "[ResourceAccessPolicies](#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies)" : [ [ResourceAccessPolicy](aws-properties-greengrass-functiondefinition-resourceaccesspolicy.md), ... ],
+  "[Execution](#cfn-greengrass-functiondefinition-environment-execution)" : Execution,
+  "[ResourceAccessPolicies](#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies)" : [ ResourceAccessPolicy, ... ],
   "[Variables](#cfn-greengrass-functiondefinition-environment-variables)" : Json
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AccessSysfs](#cfn-greengrass-functiondefinition-environment-accesssysfs): Boolean
   [Execution](#cfn-greengrass-functiondefinition-environment-execution): 
-    [Execution](aws-properties-greengrass-functiondefinition-execution.md)
+    Execution
   [ResourceAccessPolicies](#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies): 
-    - [ResourceAccessPolicy](aws-properties-greengrass-functiondefinition-resourceaccesspolicy.md)
+    - ResourceAccessPolicy
   [Variables](#cfn-greengrass-functiondefinition-environment-variables): Json
 ```
 

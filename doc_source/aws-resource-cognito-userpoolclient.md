@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows)" : [ String, ... ],
       "[AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)" : Boolean,
       "[AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes)" : [ String, ... ],
-      "[AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration)" : [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md),
+      "[AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration)" : AnalyticsConfiguration,
       "[CallbackURLs](#cfn-cognito-userpoolclient-callbackurls)" : [ String, ... ],
       "[ClientName](#cfn-cognito-userpoolclient-clientname)" : String,
       "[DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi)" : String,
@@ -43,7 +43,7 @@ Properties:
   [AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes): 
     - String
   [AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration): 
-    [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md)
+    AnalyticsConfiguration
   [CallbackURLs](#cfn-cognito-userpoolclient-callbackurls): 
     - String
   [ClientName](#cfn-cognito-userpoolclient-clientname): String

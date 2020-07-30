@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Idle](#cfn-appmesh-route-tcptimeout-idle)" : [Duration](aws-properties-appmesh-route-duration.md)
+  "[Idle](#cfn-appmesh-route-tcptimeout-idle)" : Duration
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Idle](#cfn-appmesh-route-tcptimeout-idle): 
-    [Duration](aws-properties-appmesh-route-duration.md)
+    Duration
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-tcptimeout-properties"></a>

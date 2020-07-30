@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolDomain",
   "Properties" : {
-      "[CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig)" : [CustomDomainConfigType](aws-properties-cognito-userpooldomain-customdomainconfigtype.md),
+      "[CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig)" : CustomDomainConfigType,
       "[Domain](#cfn-cognito-userpooldomain-domain)" : String,
       "[UserPoolId](#cfn-cognito-userpooldomain-userpoolid)" : String
     }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPoolDomain
 Properties: 
   [CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig): 
-    [CustomDomainConfigType](aws-properties-cognito-userpooldomain-customdomainconfigtype.md)
+    CustomDomainConfigType
   [Domain](#cfn-cognito-userpooldomain-domain): String
   [UserPoolId](#cfn-cognito-userpooldomain-userpoolid): String
 ```

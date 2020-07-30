@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[GameSessionActivationTimeoutSeconds](#cfn-gamelift-fleet-runtimeconfiguration-gamesessionactivationtimeoutseconds)" : Integer,
   "[MaxConcurrentGameSessionActivations](#cfn-gamelift-fleet-runtimeconfiguration-maxconcurrentgamesessionactivations)" : Integer,
-  "[ServerProcesses](#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses)" : [ [ServerProcess](aws-properties-gamelift-fleet-serverprocess.md), ... ]
+  "[ServerProcesses](#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses)" : [ ServerProcess, ... ]
 }
 ```
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [GameSessionActivationTimeoutSeconds](#cfn-gamelift-fleet-runtimeconfiguration-gamesessionactivationtimeoutseconds): Integer
   [MaxConcurrentGameSessionActivations](#cfn-gamelift-fleet-runtimeconfiguration-maxconcurrentgamesessionactivations): Integer
   [ServerProcesses](#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses): 
-    - [ServerProcess](aws-properties-gamelift-fleet-serverprocess.md)
+    - ServerProcess
 ```
 
 ## Properties<a name="aws-properties-gamelift-fleet-runtimeconfiguration-properties"></a>

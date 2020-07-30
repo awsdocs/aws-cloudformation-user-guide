@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-distribution-origincustomheader-properties"></a>
 
 `HeaderName`  <a name="cfn-cloudfront-distribution-origincustomheader-headername"></a>
-The name of a header that you want CloudFront to forward to your origin\. For more information, see [Forwarding Custom Headers to Your Origin \(Web Distributions Only\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html) in the * Amazon CloudFront Developer Guide*\.  
+The name of a header that you want CloudFront to send to your origin\. For more information, see [Adding Custom Headers to Origin Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/forward-custom-headers.html) in the * Amazon CloudFront Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

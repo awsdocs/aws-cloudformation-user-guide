@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTThingsGraph::FlowTemplate",
   "Properties" : {
       "[CompatibleNamespaceVersion](#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion)" : Double,
-      "[Definition](#cfn-iotthingsgraph-flowtemplate-definition)" : [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)
+      "[Definition](#cfn-iotthingsgraph-flowtemplate-definition)" : DefinitionDocument
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::IoTThingsGraph::FlowTemplate
 Properties: 
   [CompatibleNamespaceVersion](#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion): Double
   [Definition](#cfn-iotthingsgraph-flowtemplate-definition): 
-    [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)
+    DefinitionDocument
 ```
 
 ## Properties<a name="aws-resource-iotthingsgraph-flowtemplate-properties"></a>

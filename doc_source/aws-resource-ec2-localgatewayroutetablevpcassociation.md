@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
   "Properties" : {
       "[LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid)" : String,
-      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : [Tags](aws-properties-ec2-localgatewayroutetablevpcassociation-tags.md),
+      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : Tags,
       "[VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid)" : String
     }
 }
@@ -26,7 +26,7 @@ Type: AWS::EC2::LocalGatewayRouteTableVPCAssociation
 Properties: 
   [LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid): String
   [Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags): 
-    [Tags](aws-properties-ec2-localgatewayroutetablevpcassociation-tags.md)
+    Tags
   [VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid): String
 ```
 

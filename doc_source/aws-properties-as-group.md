@@ -26,18 +26,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HealthCheckType](#cfn-as-group-healthchecktype)" : String,
       "[InstanceId](#cfn-as-group-instanceid)" : String,
       "[LaunchConfigurationName](#cfn-as-group-launchconfigurationname)" : String,
-      "[LaunchTemplate](#cfn-as-group-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md),
-      "[LifecycleHookSpecificationList](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist)" : [ [LifecycleHookSpecification](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md), ... ],
+      "[LaunchTemplate](#cfn-as-group-launchtemplate)" : LaunchTemplateSpecification,
+      "[LifecycleHookSpecificationList](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist)" : [ LifecycleHookSpecification, ... ],
       "[LoadBalancerNames](#cfn-as-group-loadbalancernames)" : [ String, ... ],
       "[MaxInstanceLifetime](#cfn-as-group-maxinstancelifetime)" : Integer,
       "[MaxSize](#cfn-as-group-maxsize)" : String,
-      "[MetricsCollection](#cfn-as-group-metricscollection)" : [ [MetricsCollection](aws-properties-as-metricscollection.md), ... ],
+      "[MetricsCollection](#cfn-as-group-metricscollection)" : [ MetricsCollection, ... ],
       "[MinSize](#cfn-as-group-minsize)" : String,
-      "[MixedInstancesPolicy](#cfn-as-group-mixedinstancespolicy)" : [MixedInstancesPolicy](aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.md),
-      "[NotificationConfigurations](#cfn-as-group-notificationconfigurations)" : [ [NotificationConfiguration](aws-properties-as-notificationconfigurations.md), ... ],
+      "[MixedInstancesPolicy](#cfn-as-group-mixedinstancespolicy)" : MixedInstancesPolicy,
+      "[NewInstancesProtectedFromScaleIn](#cfn-as-group-newinstancesprotectedfromscalein)" : Boolean,
+      "[NotificationConfigurations](#cfn-as-group-notificationconfigurations)" : [ NotificationConfiguration, ... ],
       "[PlacementGroup](#cfn-as-group-placementgroup)" : String,
       "[ServiceLinkedRoleARN](#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn)" : String,
-      "[Tags](#cfn-as-group-tags)" : [ [TagProperty](aws-properties-as-tags.md), ... ],
+      "[Tags](#cfn-as-group-tags)" : [ TagProperty, ... ],
       "[TargetGroupARNs](#cfn-as-group-targetgrouparns)" : [ String, ... ],
       "[TerminationPolicies](#cfn-as-group-termpolicy)" : [ String, ... ],
       "[VPCZoneIdentifier](#cfn-as-group-vpczoneidentifier)" : [ String, ... ]
@@ -60,24 +61,25 @@ Properties:
   [InstanceId](#cfn-as-group-instanceid): String
   [LaunchConfigurationName](#cfn-as-group-launchconfigurationname): String
   [LaunchTemplate](#cfn-as-group-launchtemplate): 
-    [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)
+    LaunchTemplateSpecification
   [LifecycleHookSpecificationList](#cfn-autoscaling-autoscalinggroup-lifecyclehookspecificationlist): 
-    - [LifecycleHookSpecification](aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.md)
+    - LifecycleHookSpecification
   [LoadBalancerNames](#cfn-as-group-loadbalancernames): 
     - String
   [MaxInstanceLifetime](#cfn-as-group-maxinstancelifetime): Integer
   [MaxSize](#cfn-as-group-maxsize): String
   [MetricsCollection](#cfn-as-group-metricscollection): 
-    - [MetricsCollection](aws-properties-as-metricscollection.md)
+    - MetricsCollection
   [MinSize](#cfn-as-group-minsize): String
   [MixedInstancesPolicy](#cfn-as-group-mixedinstancespolicy): 
-    [MixedInstancesPolicy](aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.md)
+    MixedInstancesPolicy
+  [NewInstancesProtectedFromScaleIn](#cfn-as-group-newinstancesprotectedfromscalein): Boolean
   [NotificationConfigurations](#cfn-as-group-notificationconfigurations): 
-    - [NotificationConfiguration](aws-properties-as-notificationconfigurations.md)
+    - NotificationConfiguration
   [PlacementGroup](#cfn-as-group-placementgroup): String
   [ServiceLinkedRoleARN](#cfn-autoscaling-autoscalinggroup-servicelinkedrolearn): String
   [Tags](#cfn-as-group-tags): 
-    - [TagProperty](aws-properties-as-tags.md)
+    - TagProperty
   [TargetGroupARNs](#cfn-as-group-targetgrouparns): 
     - String
   [TerminationPolicies](#cfn-as-group-termpolicy): 
@@ -213,6 +215,12 @@ For more information, see [Auto Scaling Groups with Multiple Instance Types and 
 You must specify one of the following properties: `LaunchConfigurationName`, `LaunchTemplate`, `InstanceId`, or `MixedInstancesPolicy`\.  
 *Required*: Conditional  
 *Type*: [MixedInstancesPolicy](aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NewInstancesProtectedFromScaleIn`  <a name="cfn-as-group-newinstancesprotectedfromscalein"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationConfigurations`  <a name="cfn-as-group-notificationconfigurations"></a>

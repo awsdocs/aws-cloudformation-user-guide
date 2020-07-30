@@ -2,7 +2,7 @@
 
 Creates a new group\.
 
-The number and size of IAM resources in an AWS account are limited\. For more information, see [IAM and STS Quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+ For information about the number of groups you can create, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-properties-iam-group-syntax"></a>
 
@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[GroupName](#cfn-iam-group-groupname)" : String,
       "[ManagedPolicyArns](#cfn-iam-group-managepolicyarns)" : [ String, ... ],
       "[Path](#cfn-iam-group-path)" : String,
-      "[Policies](#cfn-iam-group-policies)" : [ [Policy](aws-properties-iam-policy-1.md), ... ]
+      "[Policies](#cfn-iam-group-policies)" : [ Policy, ... ]
     }
 }
 ```
@@ -32,7 +32,7 @@ Properties:
     - String
   [Path](#cfn-iam-group-path): String
   [Policies](#cfn-iam-group-policies): 
-    - [Policy](aws-properties-iam-policy-1.md)
+    - Policy
 ```
 
 ## Properties<a name="aws-properties-iam-group-properties"></a>

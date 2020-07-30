@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ExcludedAccounts](#cfn-config-organizationconfigrule-excludedaccounts)" : [ String, ... ],
       "[OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename)" : String,
-      "[OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata)" : [OrganizationCustomRuleMetadata](aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.md),
-      "[OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata)" : [OrganizationManagedRuleMetadata](aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.md)
+      "[OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata)" : OrganizationCustomRuleMetadata,
+      "[OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata)" : OrganizationManagedRuleMetadata
     }
 }
 ```
@@ -31,9 +31,9 @@ Properties:
     - String
   [OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename): String
   [OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata): 
-    [OrganizationCustomRuleMetadata](aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.md)
+    OrganizationCustomRuleMetadata
   [OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata): 
-    [OrganizationManagedRuleMetadata](aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.md)
+    OrganizationManagedRuleMetadata
 ```
 
 ## Properties<a name="aws-resource-config-organizationconfigrule-properties"></a>

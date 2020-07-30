@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::DeviceDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-devicedefinition-initialversion)" : [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-devicedefinition-initialversion)" : DeviceDefinitionVersion,
       "[Name](#cfn-greengrass-devicedefinition-name)" : String,
       "[Tags](#cfn-greengrass-devicedefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::DeviceDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-devicedefinition-initialversion): 
-    [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)
+    DeviceDefinitionVersion
   [Name](#cfn-greengrass-devicedefinition-name): String
   [Tags](#cfn-greengrass-devicedefinition-tags): Json
 ```

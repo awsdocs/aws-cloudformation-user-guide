@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-networkmanager-device-description)" : String,
       "[GlobalNetworkId](#cfn-networkmanager-device-globalnetworkid)" : String,
-      "[Location](#cfn-networkmanager-device-location)" : [Location](aws-properties-networkmanager-device-location.md),
+      "[Location](#cfn-networkmanager-device-location)" : Location,
       "[Model](#cfn-networkmanager-device-model)" : String,
       "[SerialNumber](#cfn-networkmanager-device-serialnumber)" : String,
       "[SiteId](#cfn-networkmanager-device-siteid)" : String,
@@ -33,7 +33,7 @@ Properties:
   [Description](#cfn-networkmanager-device-description): String
   [GlobalNetworkId](#cfn-networkmanager-device-globalnetworkid): String
   [Location](#cfn-networkmanager-device-location): 
-    [Location](aws-properties-networkmanager-device-location.md)
+    Location
   [Model](#cfn-networkmanager-device-model): String
   [SerialNumber](#cfn-networkmanager-device-serialnumber): String
   [SiteId](#cfn-networkmanager-device-siteid): String

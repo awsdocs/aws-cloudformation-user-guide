@@ -13,11 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch)" : [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch)" : FieldToMatch,
   "[PositionalConstraint](#cfn-wafv2-rulegroup-bytematchstatement-positionalconstraint)" : String,
   "[SearchString](#cfn-wafv2-rulegroup-bytematchstatement-searchstring)" : String,
   "[SearchStringBase64](#cfn-wafv2-rulegroup-bytematchstatement-searchstringbase64)" : String,
-  "[TextTransformations](#cfn-wafv2-rulegroup-bytematchstatement-texttransformations)" : [ [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md), ... ]
+  "[TextTransformations](#cfn-wafv2-rulegroup-bytematchstatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
 
@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)
+    FieldToMatch
   [PositionalConstraint](#cfn-wafv2-rulegroup-bytematchstatement-positionalconstraint): String
   [SearchString](#cfn-wafv2-rulegroup-bytematchstatement-searchstring): 
     String
   [SearchStringBase64](#cfn-wafv2-rulegroup-bytematchstatement-searchstringbase64): 
     String
   [TextTransformations](#cfn-wafv2-rulegroup-bytematchstatement-texttransformations): 
-    - [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md)
+    - TextTransformation
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-bytematchstatement-properties"></a>

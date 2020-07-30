@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[VirtualService](#cfn-appmesh-virtualnode-backend-virtualservice)" : [VirtualServiceBackend](aws-properties-appmesh-virtualnode-virtualservicebackend.md)
+  "[VirtualService](#cfn-appmesh-virtualnode-backend-virtualservice)" : VirtualServiceBackend
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [VirtualService](#cfn-appmesh-virtualnode-backend-virtualservice): 
-    [VirtualServiceBackend](aws-properties-appmesh-virtualnode-virtualservicebackend.md)
+    VirtualServiceBackend
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-backend-properties"></a>

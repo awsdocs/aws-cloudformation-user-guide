@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Coordinates](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates)" : [Coordinates](aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates.md),
+  "[Coordinates](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates)" : Coordinates,
   "[RangeInKilometers](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-rangeinkilometers)" : Double
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Coordinates](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates): 
-    [Coordinates](aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates.md)
+    Coordinates
   [RangeInKilometers](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-rangeinkilometers): Double
 ```
 

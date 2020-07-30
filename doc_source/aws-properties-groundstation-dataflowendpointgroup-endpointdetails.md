@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DataflowEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-dataflowendpoint)" : [DataflowEndpoint](aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.md),
-  "[SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails)" : [SecurityDetails](aws-properties-groundstation-dataflowendpointgroup-securitydetails.md)
+  "[DataflowEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-dataflowendpoint)" : DataflowEndpoint,
+  "[SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails)" : SecurityDetails
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DataflowEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-dataflowendpoint): 
-    [DataflowEndpoint](aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.md)
+    DataflowEndpoint
   [SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails): 
-    [SecurityDetails](aws-properties-groundstation-dataflowendpointgroup-securitydetails.md)
+    SecurityDetails
 ```
 
 ## Properties<a name="aws-properties-groundstation-dataflowendpointgroup-endpointdetails-properties"></a>

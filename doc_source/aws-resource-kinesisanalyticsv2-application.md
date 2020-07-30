@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisAnalyticsV2::Application",
   "Properties" : {
-      "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : [ApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-applicationconfiguration.md),
+      "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : ApplicationConfiguration,
       "[ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription)" : String,
       "[ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname)" : String,
       "[RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::KinesisAnalyticsV2::Application
 Properties: 
   [ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration): 
-    [ApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-applicationconfiguration.md)
+    ApplicationConfiguration
   [ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription): String
   [ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname): String
   [RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment): String

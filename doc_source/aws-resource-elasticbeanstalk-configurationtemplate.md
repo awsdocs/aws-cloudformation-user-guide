@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplicationName](#cfn-elasticbeanstalk-configurationtemplate-applicationname)" : String,
       "[Description](#cfn-elasticbeanstalk-configurationtemplate-description)" : String,
       "[EnvironmentId](#cfn-elasticbeanstalk-configurationtemplate-environmentid)" : String,
-      "[OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings)" : [ [ConfigurationOptionSetting](aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.md), ... ],
+      "[OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings)" : [ ConfigurationOptionSetting, ... ],
       "[PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn)" : String,
       "[SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname)" : String,
-      "[SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration)" : [SourceConfiguration](aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.md)
+      "[SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration)" : SourceConfiguration
     }
 }
 ```
@@ -35,11 +35,11 @@ Properties:
   [Description](#cfn-elasticbeanstalk-configurationtemplate-description): String
   [EnvironmentId](#cfn-elasticbeanstalk-configurationtemplate-environmentid): String
   [OptionSettings](#cfn-elasticbeanstalk-configurationtemplate-optionsettings): 
-    - [ConfigurationOptionSetting](aws-properties-elasticbeanstalk-configurationtemplate-configurationoptionsetting.md)
+    - ConfigurationOptionSetting
   [PlatformArn](#cfn-elasticbeanstalk-configurationtemplate-platformarn): String
   [SolutionStackName](#cfn-elasticbeanstalk-configurationtemplate-solutionstackname): String
   [SourceConfiguration](#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration): 
-    [SourceConfiguration](aws-properties-elasticbeanstalk-configurationtemplate-sourceconfiguration.md)
+    SourceConfiguration
 ```
 
 ## Properties<a name="aws-resource-elasticbeanstalk-configurationtemplate-properties"></a>

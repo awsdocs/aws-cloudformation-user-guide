@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ [Condition](aws-properties-glue-trigger-condition.md), ... ],
+  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ Condition, ... ],
   "[Logical](#cfn-glue-trigger-predicate-logical)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Conditions](#cfn-glue-trigger-predicate-conditions): 
-    - [Condition](aws-properties-glue-trigger-condition.md)
+    - Condition
   [Logical](#cfn-glue-trigger-predicate-logical): String
 ```
 

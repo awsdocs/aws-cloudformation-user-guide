@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)" : String,
   "[DeploymentType](#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)" : String,
   "[PreferredSubnetId](#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)" : String,
-  "[SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)" : [SelfManagedActiveDirectoryConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.md),
+  "[SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)" : SelfManagedActiveDirectoryConfiguration,
   "[ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)" : Integer,
   "[WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)" : String
 }
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeploymentType](#cfn-fsx-filesystem-windowsconfiguration-deploymenttype): String
   [PreferredSubnetId](#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid): String
   [SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration): 
-    [SelfManagedActiveDirectoryConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.md)
+    SelfManagedActiveDirectoryConfiguration
   [ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity): Integer
   [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime): String
 ```

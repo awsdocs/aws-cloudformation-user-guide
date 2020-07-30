@@ -1,6 +1,6 @@
 # AWS::IAM::Role<a name="aws-resource-iam-role"></a>
 
-Creates a new role for your AWS account\. For more information about roles, go to [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. The number and size of IAM resources in an AWS account are limited\. For more information, see [IAM and STS Quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+Creates a new role for your AWS account\. For more information about roles, go to [IAM Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. For information about limitations on role names and the number of roles you can create, go to [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-role-syntax"></a>
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxSessionDuration](#cfn-iam-role-maxsessionduration)" : Integer,
       "[Path](#cfn-iam-role-path)" : String,
       "[PermissionsBoundary](#cfn-iam-role-permissionsboundary)" : String,
-      "[Policies](#cfn-iam-role-policies)" : [ [Policy](aws-properties-iam-policy.md), ... ],
+      "[Policies](#cfn-iam-role-policies)" : [ Policy, ... ],
       "[RoleName](#cfn-iam-role-rolename)" : String,
       "[Tags](#cfn-iam-role-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -38,7 +38,7 @@ Properties:
   [Path](#cfn-iam-role-path): String
   [PermissionsBoundary](#cfn-iam-role-permissionsboundary): String
   [Policies](#cfn-iam-role-policies): 
-    - [Policy](aws-properties-iam-policy.md)
+    - Policy
   [RoleName](#cfn-iam-role-rolename): String
   [Tags](#cfn-iam-role-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

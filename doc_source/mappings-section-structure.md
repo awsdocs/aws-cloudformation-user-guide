@@ -119,7 +119,7 @@ RegionMap:
 
 ### Return a value from a mapping<a name="mappings-section-structure-examples-return-value"></a>
 
-You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` function to return a named value based on a specified key\. The following example template contains an Amazon EC2 resource whose `ImageId` property is assigned by the `FindInMap` function\. The `FindInMap` function specifies key as the region where the stack is created \(using the [AWS::Region pseudo parameter](pseudo-parameter-reference.md)\) and `HVM64` as the name of the value to map to\.
+You can use the `Fn::FindInMap` function to return a named value based on a specified key\. The following example template contains an Amazon EC2 resource whose `ImageId` property is assigned by the `FindInMap` function\. The `FindInMap` function specifies key as the region where the stack is created \(using the [AWS::Region pseudo parameter](pseudo-parameter-reference.md)\) and `HVM64` as the name of the value to map to\.
 
 #### JSON<a name="mappings-section-structure-example3.json"></a>
 

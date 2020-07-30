@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-appmesh-route-tcproute-action)" : [TcpRouteAction](aws-properties-appmesh-route-tcprouteaction.md),
-  "[Timeout](#cfn-appmesh-route-tcproute-timeout)" : [TcpTimeout](aws-properties-appmesh-route-tcptimeout.md)
+  "[Action](#cfn-appmesh-route-tcproute-action)" : TcpRouteAction,
+  "[Timeout](#cfn-appmesh-route-tcproute-timeout)" : TcpTimeout
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-appmesh-route-tcproute-action): 
-    [TcpRouteAction](aws-properties-appmesh-route-tcprouteaction.md)
+    TcpRouteAction
   [Timeout](#cfn-appmesh-route-tcproute-timeout): 
-    [TcpTimeout](aws-properties-appmesh-route-tcptimeout.md)
+    TcpTimeout
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-tcproute-properties"></a>

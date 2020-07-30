@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Activate](#cfn-datapipeline-pipeline-activate)" : Boolean,
       "[Description](#cfn-datapipeline-pipeline-description)" : String,
       "[Name](#cfn-datapipeline-pipeline-name)" : String,
-      "[ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects)" : [ [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md), ... ],
-      "[ParameterValues](#cfn-datapipeline-pipeline-parametervalues)" : [ [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md), ... ],
-      "[PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects)" : [ [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md), ... ],
-      "[PipelineTags](#cfn-datapipeline-pipeline-pipelinetags)" : [ [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md), ... ]
+      "[ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects)" : [ ParameterObject, ... ],
+      "[ParameterValues](#cfn-datapipeline-pipeline-parametervalues)" : [ ParameterValue, ... ],
+      "[PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects)" : [ PipelineObject, ... ],
+      "[PipelineTags](#cfn-datapipeline-pipeline-pipelinetags)" : [ PipelineTag, ... ]
     }
 }
 ```
@@ -42,13 +42,13 @@ Properties:
   [Description](#cfn-datapipeline-pipeline-description): String
   [Name](#cfn-datapipeline-pipeline-name): String
   [ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects): 
-    - [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)
+    - ParameterObject
   [ParameterValues](#cfn-datapipeline-pipeline-parametervalues): 
-    - [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)
+    - ParameterValue
   [PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects): 
-    - [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)
+    - PipelineObject
   [PipelineTags](#cfn-datapipeline-pipeline-pipelinetags): 
-    - [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)
+    - PipelineTag
 ```
 
 ## Properties<a name="aws-resource-datapipeline-pipeline-properties"></a>

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SES::ReceiptRule",
   "Properties" : {
       "[After](#cfn-ses-receiptrule-after)" : String,
-      "[Rule](#cfn-ses-receiptrule-rule)" : [Rule](aws-properties-ses-receiptrule-rule.md),
+      "[Rule](#cfn-ses-receiptrule-rule)" : Rule,
       "[RuleSetName](#cfn-ses-receiptrule-rulesetname)" : String
     }
 }
@@ -30,7 +30,7 @@ Type: AWS::SES::ReceiptRule
 Properties: 
   [After](#cfn-ses-receiptrule-after): String
   [Rule](#cfn-ses-receiptrule-rule): 
-    [Rule](aws-properties-ses-receiptrule-rule.md)
+    Rule
   [RuleSetName](#cfn-ses-receiptrule-rulesetname): String
 ```
 

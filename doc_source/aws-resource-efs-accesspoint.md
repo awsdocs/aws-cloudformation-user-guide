@@ -14,11 +14,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EFS::AccessPoint",
   "Properties" : {
-      "[AccessPointTags](#cfn-efs-accesspoint-accesspointtags)" : [ [AccessPointTag](aws-properties-efs-accesspoint-accesspointtag.md), ... ],
+      "[AccessPointTags](#cfn-efs-accesspoint-accesspointtags)" : [ AccessPointTag, ... ],
       "[ClientToken](#cfn-efs-accesspoint-clienttoken)" : String,
       "[FileSystemId](#cfn-efs-accesspoint-filesystemid)" : String,
-      "[PosixUser](#cfn-efs-accesspoint-posixuser)" : [PosixUser](aws-properties-efs-accesspoint-posixuser.md),
-      "[RootDirectory](#cfn-efs-accesspoint-rootdirectory)" : [RootDirectory](aws-properties-efs-accesspoint-rootdirectory.md)
+      "[PosixUser](#cfn-efs-accesspoint-posixuser)" : PosixUser,
+      "[RootDirectory](#cfn-efs-accesspoint-rootdirectory)" : RootDirectory
     }
 }
 ```
@@ -29,13 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EFS::AccessPoint
 Properties: 
   [AccessPointTags](#cfn-efs-accesspoint-accesspointtags): 
-    - [AccessPointTag](aws-properties-efs-accesspoint-accesspointtag.md)
+    - AccessPointTag
   [ClientToken](#cfn-efs-accesspoint-clienttoken): String
   [FileSystemId](#cfn-efs-accesspoint-filesystemid): String
   [PosixUser](#cfn-efs-accesspoint-posixuser): 
-    [PosixUser](aws-properties-efs-accesspoint-posixuser.md)
+    PosixUser
   [RootDirectory](#cfn-efs-accesspoint-rootdirectory): 
-    [RootDirectory](aws-properties-efs-accesspoint-rootdirectory.md)
+    RootDirectory
 ```
 
 ## Properties<a name="aws-resource-efs-accesspoint-properties"></a>
@@ -59,6 +59,8 @@ The opaque string specified in the request to ensure idempotent creation\.
 The ID of the EFS file system that the access point applies to\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `^(arn:aws[-a-z]*:elasticfilesystem:[0-9a-z-:]+:file-system/fs-[0-9a-f]{8,40}|fs-[0-9a-f]{8,40})$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PosixUser`  <a name="cfn-efs-accesspoint-posixuser"></a>

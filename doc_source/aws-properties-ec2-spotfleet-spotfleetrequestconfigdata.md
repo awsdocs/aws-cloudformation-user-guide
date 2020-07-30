@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExcessCapacityTerminationPolicy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)" : String,
   "[IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)" : String,
   "[InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior)" : String,
-  "[LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)" : [ [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md), ... ],
-  "[LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)" : [ [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md), ... ],
-  "[LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)" : [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md),
+  "[LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)" : [ SpotFleetLaunchSpecification, ... ],
+  "[LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)" : [ LaunchTemplateConfig, ... ],
+  "[LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)" : LoadBalancersConfig,
   "[ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)" : Boolean,
   "[SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)" : String,
   "[TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)" : Integer,
@@ -37,11 +37,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole): String
   [InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior): String
   [LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications): 
-    - [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)
+    - SpotFleetLaunchSpecification
   [LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs): 
-    - [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)
+    - LaunchTemplateConfig
   [LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig): 
-    [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)
+    LoadBalancersConfig
   [ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances): Boolean
   [SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice): String
   [TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity): Integer

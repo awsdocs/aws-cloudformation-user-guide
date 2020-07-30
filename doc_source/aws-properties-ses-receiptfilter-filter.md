@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[IpFilter](#cfn-ses-receiptfilter-filter-ipfilter)" : [IpFilter](aws-properties-ses-receiptfilter-ipfilter.md),
+  "[IpFilter](#cfn-ses-receiptfilter-filter-ipfilter)" : IpFilter,
   "[Name](#cfn-ses-receiptfilter-filter-name)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [IpFilter](#cfn-ses-receiptfilter-filter-ipfilter): 
-    [IpFilter](aws-properties-ses-receiptfilter-ipfilter.md)
+    IpFilter
   [Name](#cfn-ses-receiptfilter-filter-name): String
 ```
 

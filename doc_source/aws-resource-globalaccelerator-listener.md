@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceleratorArn](#cfn-globalaccelerator-listener-acceleratorarn)" : String,
       "[ClientAffinity](#cfn-globalaccelerator-listener-clientaffinity)" : String,
-      "[PortRanges](#cfn-globalaccelerator-listener-portranges)" : [ [PortRange](aws-properties-globalaccelerator-listener-portrange.md), ... ],
+      "[PortRanges](#cfn-globalaccelerator-listener-portranges)" : [ PortRange, ... ],
       "[Protocol](#cfn-globalaccelerator-listener-protocol)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [AcceleratorArn](#cfn-globalaccelerator-listener-acceleratorarn): String
   [ClientAffinity](#cfn-globalaccelerator-listener-clientaffinity): String
   [PortRanges](#cfn-globalaccelerator-listener-portranges): 
-    - [PortRange](aws-properties-globalaccelerator-listener-portrange.md)
+    - PortRange
   [Protocol](#cfn-globalaccelerator-listener-protocol): String
 ```
 

@@ -13,12 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Transfer::Server",
   "Properties" : {
       "[Certificate](#cfn-transfer-server-certificate)" : String,
-      "[EndpointDetails](#cfn-transfer-server-endpointdetails)" : [EndpointDetails](aws-properties-transfer-server-endpointdetails.md),
+      "[EndpointDetails](#cfn-transfer-server-endpointdetails)" : EndpointDetails,
       "[EndpointType](#cfn-transfer-server-endpointtype)" : String,
-      "[IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails)" : [IdentityProviderDetails](aws-properties-transfer-server-identityproviderdetails.md),
+      "[IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails)" : IdentityProviderDetails,
       "[IdentityProviderType](#cfn-transfer-server-identityprovidertype)" : String,
       "[LoggingRole](#cfn-transfer-server-loggingrole)" : String,
-      "[Protocols](#cfn-transfer-server-protocols)" : [ [Protocol](aws-properties-transfer-server-protocol.md), ... ],
+      "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
       "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -31,14 +31,14 @@ Type: AWS::Transfer::Server
 Properties: 
   [Certificate](#cfn-transfer-server-certificate): String
   [EndpointDetails](#cfn-transfer-server-endpointdetails): 
-    [EndpointDetails](aws-properties-transfer-server-endpointdetails.md)
+    EndpointDetails
   [EndpointType](#cfn-transfer-server-endpointtype): String
   [IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails): 
-    [IdentityProviderDetails](aws-properties-transfer-server-identityproviderdetails.md)
+    IdentityProviderDetails
   [IdentityProviderType](#cfn-transfer-server-identityprovidertype): String
   [LoggingRole](#cfn-transfer-server-loggingrole): String
   [Protocols](#cfn-transfer-server-protocols): 
-    - [Protocol](aws-properties-transfer-server-protocol.md)
+    - Protocol
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```

@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EKS::Cluster",
   "Properties" : {
-      "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md), ... ],
+      "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ EncryptionConfig, ... ],
       "[Name](#cfn-eks-cluster-name)" : String,
-      "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md),
+      "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : ResourcesVpcConfig,
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
       "[Version](#cfn-eks-cluster-version)" : String
     }
@@ -35,10 +35,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EKS::Cluster
 Properties: 
   [EncryptionConfig](#cfn-eks-cluster-encryptionconfig): 
-    - [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md)
+    - EncryptionConfig
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
-    [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
+    ResourcesVpcConfig
   [RoleArn](#cfn-eks-cluster-rolearn): String
   [Version](#cfn-eks-cluster-version): String
 ```

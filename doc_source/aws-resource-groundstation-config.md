@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::Config",
   "Properties" : {
-      "[ConfigData](#cfn-groundstation-config-configdata)" : [ConfigData](aws-properties-groundstation-config-configdata.md),
+      "[ConfigData](#cfn-groundstation-config-configdata)" : ConfigData,
       "[Name](#cfn-groundstation-config-name)" : String,
       "[Tags](#cfn-groundstation-config-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GroundStation::Config
 Properties: 
   [ConfigData](#cfn-groundstation-config-configdata): 
-    [ConfigData](aws-properties-groundstation-config-configdata.md)
+    ConfigData
   [Name](#cfn-groundstation-config-name): String
   [Tags](#cfn-groundstation-config-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)

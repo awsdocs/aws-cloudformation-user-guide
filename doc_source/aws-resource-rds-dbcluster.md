@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBCluster",
   "Properties" : {
-      "[AssociatedRoles](#cfn-rds-dbcluster-associatedroles)" : [ [DBClusterRole](aws-properties-rds-dbcluster-dbclusterrole.md), ... ],
+      "[AssociatedRoles](#cfn-rds-dbcluster-associatedroles)" : [ DBClusterRole, ... ],
       "[AvailabilityZones](#cfn-rds-dbcluster-availabilityzones)" : [ String, ... ],
       "[BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow)" : Long,
       "[BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod)" : Integer,
@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow)" : String,
       "[ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier)" : String,
       "[RestoreType](#cfn-rds-dbcluster-restoretype)" : String,
-      "[ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration)" : [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md),
+      "[ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration)" : ScalingConfiguration,
       "[SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier)" : String,
       "[SourceDBClusterIdentifier](#cfn-rds-dbcluster-sourcedbclusteridentifier)" : String,
       "[SourceRegion](#cfn-rds-dbcluster-sourceregion)" : String,
@@ -58,7 +58,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RDS::DBCluster
 Properties: 
   [AssociatedRoles](#cfn-rds-dbcluster-associatedroles): 
-    - [DBClusterRole](aws-properties-rds-dbcluster-dbclusterrole.md)
+    - DBClusterRole
   [AvailabilityZones](#cfn-rds-dbcluster-availabilityzones): 
     - String
   [BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow): Long
@@ -84,7 +84,7 @@ Properties:
   [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
   [RestoreType](#cfn-rds-dbcluster-restoretype): String
   [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): 
-    [ScalingConfiguration](aws-properties-rds-dbcluster-scalingconfiguration.md)
+    ScalingConfiguration
   [SnapshotIdentifier](#cfn-rds-dbcluster-snapshotidentifier): String
   [SourceDBClusterIdentifier](#cfn-rds-dbcluster-sourcedbclusteridentifier): String
   [SourceRegion](#cfn-rds-dbcluster-sourceregion): String
@@ -195,13 +195,8 @@ Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(f
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
-The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
- `global` engine mode only applies for global database clusters created with Aurora MySQL version 5\.6\.10a\. For higher Aurora MySQL versions, the clusters in a global database use `provisioned` engine mode\. 
-Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
-+  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
-+  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
-+  [ Requirements for Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
-+  [ Limitations of Multi\-Master Clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations) 
+The DB engine mode of the DB cluster, either `provisioned` or `serverless`\.   
+Limitations and requirements apply to the `serverless` DB engine mode\. For more information, see [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -240,7 +235,11 @@ If you specify the `SourceDBInstanceIdentifier` or `SnapshotIdentifier` property
 
 `Port`  <a name="cfn-rds-dbcluster-port"></a>
 The port number on which the DB instances in the DB cluster accept connections\.  
- Default: `3306` \(for both Aurora MySQL and Aurora PostgreSQL\)   
+Default:  
++ When `EngineMode` is `provisioned`, `3306` \(for both Aurora MySQL and Aurora PostgreSQL\)
++ When `EngineMode` is `serverless`:
+  + `3306` when `Engine` is `aurora` or `aurora-mysql`
+  + `5432` when `Engine` is `aurora-postgresql`
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

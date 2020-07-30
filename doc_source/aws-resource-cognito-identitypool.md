@@ -17,12 +17,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AllowClassicFlow](#cfn-cognito-identitypool-allowclassicflow)" : Boolean,
       "[AllowUnauthenticatedIdentities](#cfn-cognito-identitypool-allowunauthenticatedidentities)" : Boolean,
       "[CognitoEvents](#cfn-cognito-identitypool-cognitoevents)" : Json,
-      "[CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders)" : [ [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md), ... ],
-      "[CognitoStreams](#cfn-cognito-identitypool-cognitostreams)" : [CognitoStreams](aws-properties-cognito-identitypool-cognitostreams.md),
+      "[CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders)" : [ CognitoIdentityProvider, ... ],
+      "[CognitoStreams](#cfn-cognito-identitypool-cognitostreams)" : CognitoStreams,
       "[DeveloperProviderName](#cfn-cognito-identitypool-developerprovidername)" : String,
       "[IdentityPoolName](#cfn-cognito-identitypool-identitypoolname)" : String,
       "[OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns)" : [ String, ... ],
-      "[PushSync](#cfn-cognito-identitypool-pushsync)" : [PushSync](aws-properties-cognito-identitypool-pushsync.md),
+      "[PushSync](#cfn-cognito-identitypool-pushsync)" : PushSync,
       "[SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns)" : [ String, ... ],
       "[SupportedLoginProviders](#cfn-cognito-identitypool-supportedloginproviders)" : Json
     }
@@ -38,15 +38,15 @@ Properties:
   [AllowUnauthenticatedIdentities](#cfn-cognito-identitypool-allowunauthenticatedidentities): Boolean
   [CognitoEvents](#cfn-cognito-identitypool-cognitoevents): Json
   [CognitoIdentityProviders](#cfn-cognito-identitypool-cognitoidentityproviders): 
-    - [CognitoIdentityProvider](aws-properties-cognito-identitypool-cognitoidentityprovider.md)
+    - CognitoIdentityProvider
   [CognitoStreams](#cfn-cognito-identitypool-cognitostreams): 
-    [CognitoStreams](aws-properties-cognito-identitypool-cognitostreams.md)
+    CognitoStreams
   [DeveloperProviderName](#cfn-cognito-identitypool-developerprovidername): String
   [IdentityPoolName](#cfn-cognito-identitypool-identitypoolname): String
   [OpenIdConnectProviderARNs](#cfn-cognito-identitypool-openidconnectproviderarns): 
     - String
   [PushSync](#cfn-cognito-identitypool-pushsync): 
-    [PushSync](aws-properties-cognito-identitypool-pushsync.md)
+    PushSync
   [SamlProviderARNs](#cfn-cognito-identitypool-samlproviderarns): 
     - String
   [SupportedLoginProviders](#cfn-cognito-identitypool-supportedloginproviders): Json

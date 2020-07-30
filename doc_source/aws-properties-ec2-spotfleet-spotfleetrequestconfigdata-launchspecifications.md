@@ -10,21 +10,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BlockDeviceMappings](#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.md), ... ],
+  "[BlockDeviceMappings](#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
   "[EbsOptimized](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized)" : Boolean,
-  "[IamInstanceProfile](#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile)" : [IamInstanceProfileSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.md),
+  "[IamInstanceProfile](#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile)" : IamInstanceProfileSpecification,
   "[ImageId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid)" : String,
   "[InstanceType](#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype)" : String,
   "[KernelId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid)" : String,
   "[KeyName](#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname)" : String,
-  "[Monitoring](#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring)" : [SpotFleetMonitoring](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.md),
-  "[NetworkInterfaces](#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)" : [ [InstanceNetworkInterfaceSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.md), ... ],
-  "[Placement](#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement)" : [SpotPlacement](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.md),
+  "[Monitoring](#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring)" : SpotFleetMonitoring,
+  "[NetworkInterfaces](#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)" : [ InstanceNetworkInterfaceSpecification, ... ],
+  "[Placement](#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement)" : SpotPlacement,
   "[RamdiskId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid)" : String,
-  "[SecurityGroups](#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)" : [ [GroupIdentifier](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.md), ... ],
+  "[SecurityGroups](#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)" : [ GroupIdentifier, ... ],
   "[SpotPrice](#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice)" : String,
   "[SubnetId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)" : String,
-  "[TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)" : [ [SpotFleetTagSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.md), ... ],
+  "[TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications)" : [ SpotFleetTagSpecification, ... ],
   "[UserData](#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata)" : String,
   "[WeightedCapacity](#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity)" : Double
 }
@@ -34,27 +34,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BlockDeviceMappings](#cfn-ec2-spotfleet-spotfleetlaunchspecification-blockdevicemappings): 
-    - [BlockDeviceMapping](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.md)
+    - BlockDeviceMapping
   [EbsOptimized](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ebsoptimized): Boolean
   [IamInstanceProfile](#cfn-ec2-spotfleet-spotfleetlaunchspecification-iaminstanceprofile): 
-    [IamInstanceProfileSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-iaminstanceprofile.md)
+    IamInstanceProfileSpecification
   [ImageId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-imageid): String
   [InstanceType](#cfn-ec2-spotfleet-spotfleetlaunchspecification-instancetype): String
   [KernelId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-kernelid): String
   [KeyName](#cfn-ec2-spotfleet-spotfleetlaunchspecification-keyname): String
   [Monitoring](#cfn-ec2-spotfleet-spotfleetlaunchspecification-monitoring): 
-    [SpotFleetMonitoring](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-monitoring.md)
+    SpotFleetMonitoring
   [NetworkInterfaces](#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces): 
-    - [InstanceNetworkInterfaceSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces.md)
+    - InstanceNetworkInterfaceSpecification
   [Placement](#cfn-ec2-spotfleet-spotfleetlaunchspecification-placement): 
-    [SpotPlacement](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement.md)
+    SpotPlacement
   [RamdiskId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-ramdiskid): String
   [SecurityGroups](#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups): 
-    - [GroupIdentifier](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-securitygroups.md)
+    - GroupIdentifier
   [SpotPrice](#cfn-ec2-spotfleet-spotfleetlaunchspecification-spotprice): String
   [SubnetId](#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid): String
   [TagSpecifications](#cfn-ec2-spotfleet-spotfleetlaunchspecification-tagspecifications): 
-    - [SpotFleetTagSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-tagspecifications.md)
+    - SpotFleetTagSpecification
   [UserData](#cfn-ec2-spotfleet-spotfleetlaunchspecification-userdata): String
   [WeightedCapacity](#cfn-ec2-spotfleet-spotfleetlaunchspecification-weightedcapacity): Double
 ```

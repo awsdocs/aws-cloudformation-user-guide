@@ -86,8 +86,8 @@ The following example template returns the `SourceSecurityGroup.OwnerAlias` and 
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupOwnerId": {
                             "Fn::GetAtt": [
                                 "myELB",
@@ -128,8 +128,8 @@ Resources:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupOwnerId: !GetAtt myELB.SourceSecurityGroup.OwnerAlias
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```

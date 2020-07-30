@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ServerSideEncryptionByDefault](#cfn-s3-bucket-serversideencryptionrule-serversideencryptionbydefault)" : [ServerSideEncryptionByDefault](aws-properties-s3-bucket-serversideencryptionbydefault.md)
+  "[ServerSideEncryptionByDefault](#cfn-s3-bucket-serversideencryptionrule-serversideencryptionbydefault)" : ServerSideEncryptionByDefault
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ServerSideEncryptionByDefault](#cfn-s3-bucket-serversideencryptionrule-serversideencryptionbydefault): 
-    [ServerSideEncryptionByDefault](aws-properties-s3-bucket-serversideencryptionbydefault.md)
+    ServerSideEncryptionByDefault
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-serversideencryptionrule-properties"></a>

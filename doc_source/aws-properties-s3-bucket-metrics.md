@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EventThreshold](#cfn-s3-bucket-metrics-eventthreshold)" : [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md),
+  "[EventThreshold](#cfn-s3-bucket-metrics-eventthreshold)" : ReplicationTimeValue,
   "[Status](#cfn-s3-bucket-metrics-status)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EventThreshold](#cfn-s3-bucket-metrics-eventthreshold): 
-    [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)
+    ReplicationTimeValue
   [Status](#cfn-s3-bucket-metrics-status): String
 ```
 

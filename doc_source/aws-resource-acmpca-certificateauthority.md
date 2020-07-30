@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ACMPCA::CertificateAuthority",
   "Properties" : {
       "[KeyAlgorithm](#cfn-acmpca-certificateauthority-keyalgorithm)" : String,
-      "[RevocationConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration)" : [RevocationConfiguration](aws-properties-acmpca-certificateauthority-revocationconfiguration.md),
+      "[RevocationConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration)" : RevocationConfiguration,
       "[SigningAlgorithm](#cfn-acmpca-certificateauthority-signingalgorithm)" : String,
-      "[Subject](#cfn-acmpca-certificateauthority-subject)" : [Subject](aws-properties-acmpca-certificateauthority-subject.md),
+      "[Subject](#cfn-acmpca-certificateauthority-subject)" : Subject,
       "[Tags](#cfn-acmpca-certificateauthority-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-acmpca-certificateauthority-type)" : String
     }
@@ -32,10 +32,10 @@ Type: AWS::ACMPCA::CertificateAuthority
 Properties: 
   [KeyAlgorithm](#cfn-acmpca-certificateauthority-keyalgorithm): String
   [RevocationConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration): 
-    [RevocationConfiguration](aws-properties-acmpca-certificateauthority-revocationconfiguration.md)
+    RevocationConfiguration
   [SigningAlgorithm](#cfn-acmpca-certificateauthority-signingalgorithm): String
   [Subject](#cfn-acmpca-certificateauthority-subject): 
-    [Subject](aws-properties-acmpca-certificateauthority-subject.md)
+    Subject
   [Tags](#cfn-acmpca-certificateauthority-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-acmpca-certificateauthority-type): String

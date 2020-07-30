@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AllocatedStorage](#cfn-rds-dbinstance-allocatedstorage)" : String,
       "[AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade)" : Boolean,
-      "[AssociatedRoles](#cfn-rds-dbinstance-associatedroles)" : [ [DBInstanceRole](aws-properties-rds-dbinstance-dbinstancerole.md), ... ],
+      "[AssociatedRoles](#cfn-rds-dbinstance-associatedroles)" : [ DBInstanceRole, ... ],
       "[AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade)" : Boolean,
       "[AvailabilityZone](#cfn-rds-dbinstance-availabilityzone)" : String,
       "[BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod)" : Integer,
@@ -80,7 +80,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Port](#cfn-rds-dbinstance-port)" : String,
       "[PreferredBackupWindow](#cfn-rds-dbinstance-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-rds-dbinstance-preferredmaintenancewindow)" : String,
-      "[ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures)" : [ [ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md), ... ],
+      "[ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures)" : [ ProcessorFeature, ... ],
       "[PromotionTier](#cfn-rds-dbinstance-promotiontier)" : Integer,
       "[PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible)" : Boolean,
       "[SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier)" : String,
@@ -103,7 +103,7 @@ Properties:
   [AllocatedStorage](#cfn-rds-dbinstance-allocatedstorage): String
   [AllowMajorVersionUpgrade](#cfn-rds-dbinstance-allowmajorversionupgrade): Boolean
   [AssociatedRoles](#cfn-rds-dbinstance-associatedroles): 
-    - [DBInstanceRole](aws-properties-rds-dbinstance-dbinstancerole.md)
+    - DBInstanceRole
   [AutoMinorVersionUpgrade](#cfn-rds-dbinstance-autominorversionupgrade): Boolean
   [AvailabilityZone](#cfn-rds-dbinstance-availabilityzone): String
   [BackupRetentionPeriod](#cfn-rds-dbinstance-backupretentionperiod): Integer
@@ -145,7 +145,7 @@ Properties:
   [PreferredBackupWindow](#cfn-rds-dbinstance-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-rds-dbinstance-preferredmaintenancewindow): String
   [ProcessorFeatures](#cfn-rds-dbinstance-processorfeatures): 
-    - [ProcessorFeature](aws-properties-rds-dbinstance-processorfeature.md)
+    - ProcessorFeature
   [PromotionTier](#cfn-rds-dbinstance-promotiontier): Integer
   [PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible): Boolean
   [SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier): String

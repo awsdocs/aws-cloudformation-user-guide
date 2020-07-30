@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Owner](#cfn-config-configrule-source-owner)" : String,
-  "[SourceDetails](#cfn-config-configrule-source-sourcedetails)" : [ [SourceDetail](aws-properties-config-configrule-source-sourcedetails.md), ... ],
+  "[SourceDetails](#cfn-config-configrule-source-sourcedetails)" : [ SourceDetail, ... ],
   "[SourceIdentifier](#cfn-config-configrule-source-sourceidentifier)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Owner](#cfn-config-configrule-source-owner): String
   [SourceDetails](#cfn-config-configrule-source-sourcedetails): 
-    - [SourceDetail](aws-properties-config-configrule-source-sourcedetails.md)
+    - SourceDetail
   [SourceIdentifier](#cfn-config-configrule-source-sourceidentifier): String
 ```
 
