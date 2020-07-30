@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::LakeFormation::DataLakeSettings",
   "Properties" : {
       "[Admins](#cfn-lakeformation-datalakesettings-admins)" : {
-          DataLakePrincipalIdentifier (#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier) : String
+         "DataLakePrincipalIdentifier (#cfn-lakeformation-datalakesettings-datalakeprincipal-datalakeprincipalidentifier)" : String
       }
    }
 }
