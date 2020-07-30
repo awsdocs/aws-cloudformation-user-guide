@@ -490,8 +490,7 @@ RDSDBClusterParameterGroup:
 RDSDBInstance1: 
   Properties: 
     AvailabilityZone: 
-      ? "Fn::GetAtt"
-      : 
+      Fn::GetAtt: 
         - Subnet1
         - AvailabilityZone
     DBClusterIdentifier: 
@@ -507,8 +506,7 @@ RDSDBInstance1:
 RDSDBInstance2: 
   Properties: 
     AvailabilityZone: 
-      ? "Fn::GetAtt"
-      : 
+      Fn::GetAtt: 
         - Subnet2
         - AvailabilityZone
     DBClusterIdentifier: 
