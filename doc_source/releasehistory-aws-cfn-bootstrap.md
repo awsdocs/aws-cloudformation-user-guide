@@ -5,8 +5,8 @@ The following table describes the changes to the aws\-cfn\-bootstrap package, wh
 You can also download the latest version of the helper scripts at the following links\. These links redirect to the most recent version of the helper scripts listed in the table below\. 
 + [ TAR\.GZ](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.tar.gz)
 + [ ZIP](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.zip)
-+ [ MSI \(32\-bit Windows\)](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.exe)
-+ [ MSI \(64\-bit Windows\)](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-win64-latest.exe)
++ [ EXE \(32\-bit Windows\)](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.exe)
++ [ EXE \(64\-bit Windows\)](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-win64-latest.exe)
 
 **Note**  
 Version 2\.0\-0\.1 and above of the helper scripts support Python 3\.4 and above\. If you need helper scripts that support an earlier version of Python, see [Release History for CloudFormation Helper Scripts 1\.4](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html#releasehistory-aws-cfn-bootstrap-v1)\.
