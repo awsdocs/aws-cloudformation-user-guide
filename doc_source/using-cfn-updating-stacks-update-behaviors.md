@@ -9,7 +9,10 @@ Updates with Some Interruption  <a name="update-some-interrupt"></a>
 AWS CloudFormation updates the resource with some interruption and retains the physical ID\. For example, if you update certain properties on an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, the instance might have some interruption while AWS CloudFormation and Amazon EC2 reconfigure the instance\.
 
 Replacement  <a name="update-replacement"></a>
-AWS CloudFormation recreates the resource during an update, which also generates a new physical ID\. AWS CloudFormation creates the replacement resource first, changes references from other dependent resources to point to the replacement resource, and then deletes the old resource\. For example, if you update the `Engine` property of an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type, AWS CloudFormation creates a new resource and replaces the current DB instance resource with the new one\.
+AWS CloudFormation recreates the resource during an update, which also generates a new physical ID\. AWS CloudFormation creates the replacement resource first, changes references from other dependent resources to point to the replacement resource, and then deletes the old resource during the cleanup phase\. For example, if you update the `Engine` property of an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type, AWS CloudFormation creates a new resource and replaces the current DB instance resource with the new one\.
+
+**Note**
+If during the cleanup phase CloudFormation is unable to delete the old resource after 3 attempts CloudFormation will give up and leave the physical resource running but orphaned from CloudFormation management\. In this case you should manually delete the resource to prevent unwanted resource charges\.
 
 The method AWS CloudFormation uses depends on which property you update for a given resource type\. The update behavior for each property is described in the [AWS Resource Types Reference](aws-template-resource-type-ref.md)\.
 
