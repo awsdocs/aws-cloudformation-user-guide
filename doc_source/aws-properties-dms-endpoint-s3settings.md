@@ -67,7 +67,7 @@ An optional parameter to use GZIP to compress the target files\. Set to GZIP to 
 
 `ExternalTableDefinition`  <a name="cfn-dms-endpoint-s3settings-externaltabledefinition"></a>
  The external table definition\.   
-*Required*: No  
+*Required*: No, unless S3 is being used as a source then Yes\.  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
