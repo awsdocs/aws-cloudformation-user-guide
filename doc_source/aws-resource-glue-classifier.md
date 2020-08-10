@@ -39,25 +39,25 @@ Properties:
 
 `CsvClassifier`  <a name="cfn-glue-classifier-csvclassifier"></a>
 A classifier for comma\-separated values \(CSV\)\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [CsvClassifier](aws-properties-glue-classifier-csvclassifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GrokClassifier`  <a name="cfn-glue-classifier-grokclassifier"></a>
 A classifier that uses `grok`\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [GrokClassifier](aws-properties-glue-classifier-grokclassifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JsonClassifier`  <a name="cfn-glue-classifier-jsonclassifier"></a>
 A classifier for JSON content\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [JsonClassifier](aws-properties-glue-classifier-jsonclassifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `XMLClassifier`  <a name="cfn-glue-classifier-xmlclassifier"></a>
 A classifier for XML content\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [XMLClassifier](aws-properties-glue-classifier-xmlclassifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
