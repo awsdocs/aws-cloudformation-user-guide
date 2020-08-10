@@ -376,7 +376,7 @@ Resources:
     Type: 'AWS::EFS::FileSystem'
     Properties:
       BackupPolicy:
-        - Status: ENABLED
+        Status: ENABLED
       PerformanceMode: maxIO
       Encrypted: true
       LifecyclePolicies:
