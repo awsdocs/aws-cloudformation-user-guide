@@ -54,7 +54,7 @@ The resource type in which you want to log data events\. You can specify `AWS::S
 
 `Values`  <a name="cfn-cloudtrail-trail-dataresource-values"></a>
 An array of Amazon Resource Name \(ARN\) strings or partial ARN strings for the specified objects\.  
-+ To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as `arn:aws:s3:::`\. 
++ To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as `arn:aws:s3`\. 
 **Note**  
 This will also enable logging of data event activity performed by any user or role in your AWS account, even if that activity is performed on a bucket that belongs to another AWS account\. 
 + To log data events for all objects in an S3 bucket, specify the bucket and an empty object prefix such as `arn:aws:s3:::bucket-1/`\. The trail logs data events for all objects in this S3 bucket\.
