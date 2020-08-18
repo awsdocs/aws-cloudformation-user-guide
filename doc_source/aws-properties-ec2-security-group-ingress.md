@@ -125,7 +125,7 @@ You must specify the `GroupName` property or the `GroupId` property\. For securi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceSecurityGroupOwnerId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupownerid"></a>
-\[nondefault VPC\] The AWS account ID that owns the source security group\. Cannot be used when specifying a CIDR IP address\.  
+\[nondefault VPC\] The AWS account ID that owns the source security group\. You can't specify this property with an IP address range\.  
 If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
 *Required*: Conditional  
 *Type*: String  

@@ -64,7 +64,7 @@ Specifies the name of the Lambda created to rotate your secret\.
 Specifies the type of RotationSchedule used by Secrets Manager\. You can specify one of the following `RotationTypes`:  
 + MySQLSingleUser
 + MySQLMultiUser
-+ PostreSQLSingleUser
++ PostgreSQLSingleUser
 + PostgreSQLMultiUser
 + OracleSingleUser
 + OracleMultiUser

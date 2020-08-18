@@ -55,7 +55,7 @@ Represents attributes that are copied \(projected\) from the table into the glob
 
 `ProvisionedThroughput`  <a name="cfn-dynamodb-gsi-provisionedthroughput"></a>
 Represents the provisioned throughput settings for the specified global secondary index\.  
-For current minimum and maximum provisioned throughput values, see [Limits](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.  
+For current minimum and maximum provisioned throughput values, see [Service, Account, and Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.  
 *Required*: No  
 *Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

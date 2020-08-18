@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation)" : String,
       "[Description](#cfn-ec2-transitgateway-description)" : String,
       "[DnsSupport](#cfn-ec2-transitgateway-dnssupport)" : String,
+      "[MulticastSupport](#cfn-ec2-transitgateway-multicastsupport)" : String,
       "[Tags](#cfn-ec2-transitgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport)" : String
     }
@@ -43,6 +44,7 @@ Properties:
   [DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation): String
   [Description](#cfn-ec2-transitgateway-description): String
   [DnsSupport](#cfn-ec2-transitgateway-dnssupport): String
+  [MulticastSupport](#cfn-ec2-transitgateway-multicastsupport): String
   [Tags](#cfn-ec2-transitgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport): String
@@ -85,6 +87,13 @@ The description of the transit gateway\.
 
 `DnsSupport`  <a name="cfn-ec2-transitgateway-dnssupport"></a>
 Enable or disable DNS support\. Enabled by default\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disable | enable`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MulticastSupport`  <a name="cfn-ec2-transitgateway-multicastsupport"></a>
+Indicates whether multicast is enabled on the transit gateway  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `disable | enable`  

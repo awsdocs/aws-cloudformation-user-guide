@@ -1,6 +1,6 @@
 # AWS::SageMaker::Workteam MemberDefinition<a name="aws-properties-sagemaker-workteam-memberdefinition"></a>
 
-Defines the Amazon Cognito user group that is part of a work team\.
+Defines an Amazon Cognito or your own OIDC IdP user group that is part of a work team\.
 
 ## Syntax<a name="aws-properties-sagemaker-workteam-memberdefinition-syntax"></a>
 

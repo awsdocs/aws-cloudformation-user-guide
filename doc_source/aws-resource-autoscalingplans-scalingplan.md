@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-autoscalingplans-scalingplan-properties"></a>
 
 `ApplicationSource`  <a name="cfn-autoscalingplans-scalingplan-applicationsource"></a>
-A CloudFormation stack or a set of tags\. You can create one scaling plan per application source\.  
+A CloudFormation stack or a set of tags\. You can create one scaling plan per application source\. The `ApplicationSource` property must be present to ensure interoperability with the AWS Auto Scaling console\.  
 *Required*: Yes  
 *Type*: [ApplicationSource](aws-properties-autoscalingplans-scalingplan-applicationsource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,11 +62,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-autoscalingplans-scalingplan--examples"></a>
 
-### Scaling Plan<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_Plan"></a>
+### Scaling plan<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_plan"></a>
 
-The following example creates a scaling plan named `myScalingPlan` for an existing Auto Scaling group whose name you specify \(along with other values\) when launching the stack using this template\. It specifies the `TagFilters` property as the application source and enables predictive scaling and dynamic scaling\. 
+The following example creates a scaling plan named `myScalingPlan` for an existing Auto Scaling group \([AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\) whose name you specify when launching the stack using this template\. It specifies the `TagFilters` property as the application source\. You can specify any tag key and tag value you want without affecting the stack, as long as the key\-pair is unique for each scaling plan\. This can be any value you choose that helps you identify your scaling plan configuration\. However, if you also want to use the AWS Auto Scaling console to edit the scaling plan, then the tag must match the tag you chose for the Auto Scaling group\.
 
-#### JSON<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_Plan--json"></a>
+The [ScalingInstructions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) property includes information that's required to enable predictive scaling and dynamic scaling\. In this example, the predictive scaling mode specifies `ForecastOnly`\. In which case, AWS Auto Scaling generates forecasts with traffic predictions for the two days ahead, but does not schedule scaling actions to match the forecast\. 
+
+#### JSON<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_plan--json"></a>
 
 ```
 {
@@ -150,7 +152,7 @@ The following example creates a scaling plan named `myScalingPlan` for an existi
             "PredefinedLoadMetricSpecification":{
               "PredefinedLoadMetricType":"ASGTotalCPUUtilization"
             },
-            "PredictiveScalingMode":"ForecastAndScale",
+            "PredictiveScalingMode":"ForecastOnly",
             "PredictiveScalingMaxCapacityBehavior":"SetMaxCapacityAboveForecastCapacity",
             "PredictiveScalingMaxCapacityBuffer":25,
             "ScheduledActionBufferTime":600
@@ -162,7 +164,7 @@ The following example creates a scaling plan named `myScalingPlan` for an existi
 }
 ```
 
-#### YAML<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_Plan--yaml"></a>
+#### YAML<a name="aws-resource-autoscalingplans-scalingplan--examples--Scaling_plan--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -209,7 +211,7 @@ Resources:
               EstimatedInstanceWarmup: !Ref ASGEstimatedInstanceWarmup
           PredefinedLoadMetricSpecification:
             PredefinedLoadMetricType: "ASGTotalCPUUtilization"
-          PredictiveScalingMode: "ForecastAndScale"
+          PredictiveScalingMode: "ForecastOnly"
           PredictiveScalingMaxCapacityBehavior: "SetMaxCapacityAboveForecastCapacity"
           PredictiveScalingMaxCapacityBuffer: 25
           ScheduledActionBufferTime: 600

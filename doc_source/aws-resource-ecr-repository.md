@@ -12,7 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
+      "[ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration)" : Json,
+      "[ImageTagMutability](#cfn-ecr-repository-imagetagmutability)" : String,
+      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : Json,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
       "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
       "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -25,8 +27,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::Repository
 Properties: 
-  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
-    LifecyclePolicy
+  [ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration): Json
+  [ImageTagMutability](#cfn-ecr-repository-imagetagmutability): String
+  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): Json
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
   [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
   [Tags](#cfn-ecr-repository-tags): 
@@ -35,10 +38,23 @@ Properties:
 
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
 
+`ImageScanningConfiguration`  <a name="cfn-ecr-repository-imagescanningconfiguration"></a>
+The image scanning configuration for the repository\. This determines whether images are scanned for known vulnerabilities after being pushed to the repository\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ImageTagMutability`  <a name="cfn-ecr-repository-imagetagmutability"></a>
+The tag mutability setting for the repository\. If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow image tags to be overwritten\. If `IMMUTABLE` is specified, all image tags within the repository will be immutable which will prevent them from being overwritten\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `IMMUTABLE | MUTABLE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
 Creates or updates the lifecycle policy for the specified repository\. For more information, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
 *Required*: No  
-*Type*: [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-ecr-repository-repositoryname"></a>

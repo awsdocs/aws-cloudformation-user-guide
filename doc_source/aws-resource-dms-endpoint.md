@@ -98,7 +98,7 @@ Settings in JSON format for the target Elasticsearch endpoint\. For more informa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointIdentifier`  <a name="cfn-dms-endpoint-endpointidentifier"></a>
-The database endpoint identifier\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen or contain two consecutive hyphens\.  
+The database endpoint identifier\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen, or contain two consecutive hyphens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,7 +111,7 @@ The type of endpoint\. Valid values are `source` and `target`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"documentdb"`, `"sqlserver"`, and `"neptune"`\.  
+The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"docdb"`, `"sqlserver"`, and `"neptune"`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -149,7 +149,7 @@ Settings in JSON format for the source MongoDB endpoint\. For more information a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NeptuneSettings`  <a name="cfn-dms-endpoint-neptunesettings"></a>
-Settings in JSON format for the target Amazon Neptune endpoint\. For more information about the available settings, see [Specifying Endpoint Settings for Amazon Neptune as a Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.EndpointSettings) in the *AWS Database Migration Service User Guide\.*   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -223,21 +223,47 @@ A value that can be used for cross\-account validation\.
 #### JSON<a name="aws-resource-dms-endpoint--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
-                "myBasicEndpoint": { "Type": "AWS::DMS::Endpoint", "Properties": { "EngineName":
-                "mysql", "EndpointType": "source", "Username": "username", "Password": { "Ref":
-                "PasswordParameter" }, "ServerName": "source.db.amazon.com", "Port": 1234,
-                "DatabaseName": "source-db" } } } }
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "myBasicEndpoint": {
+      "Type": "AWS::DMS::Endpoint",
+      "Properties": {
+        "EngineName": "mysql",
+        "EndpointType": "source",
+        "Username": "username",
+        "Password": {
+          "Ref": "PasswordParameter"
+        },
+        "ServerName": "source.db.amazon.com",
+        "Port": 1234,
+        "DatabaseName": "source-db"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-dms-endpoint--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Description: "Endpoint
-                test" Resources: BasicEndpoint: Properties: DatabaseName: my-db EndpointType: target
-                EngineName: mysql Password: PasswordParameter Port: 1234 ServerName:
-                server.db.amazon.com Tags: - Key: type Value: new Username: username Type:
-                "AWS::DMS::Endpoint"
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Endpoint test"
+Resources: 
+  BasicEndpoint: 
+    Properties: 
+      DatabaseName: my-db
+      EndpointType: target
+      EngineName: mysql
+      Password: PasswordParameter
+      Port: 1234
+      ServerName: server.db.amazon.com
+      Tags: 
+        - 
+          Key: type
+          Value: new
+      Username: username
+    Type: "AWS::DMS::Endpoint"
 ```
 
 ## See also<a name="aws-resource-dms-endpoint--seealso"></a>

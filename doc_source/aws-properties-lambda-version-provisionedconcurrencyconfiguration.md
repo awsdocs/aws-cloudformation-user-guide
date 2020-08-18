@@ -37,6 +37,5 @@ Allocate 20 provisioned concurrency for a version\.
 #### YAML<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency_Configuration--yaml"></a>
 
 ```
-      ProvisionedConcurrencyConfig:
-        ProvisionedConcurrentExecutions: 20
+ ProvisionedConcurrencyConfig: ProvisionedConcurrentExecutions: 20
 ```

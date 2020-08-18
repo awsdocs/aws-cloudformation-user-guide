@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Destination`  <a name="cfn-lambda-eventsourcemapping-onfailure-destination"></a>
 The Amazon Resource Name \(ARN\) of the destination resource\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -37,6 +37,5 @@ Configure a function to send a record of failed batches to an SQS queue\.
 #### YAML<a name="aws-properties-lambda-eventsourcemapping-onfailure--examples--On-Failure_Destination_Configuration--yaml"></a>
 
 ```
-          OnFailure:
-            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
+ OnFailure: Destination: arn:aws:sqs:us-east-2:123456789012:dlq
 ```

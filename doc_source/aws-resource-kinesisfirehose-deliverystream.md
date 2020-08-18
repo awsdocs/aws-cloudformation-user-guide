@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype)" : String,
       "[ElasticsearchDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration)" : ElasticsearchDestinationConfiguration,
       "[ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration)" : ExtendedS3DestinationConfiguration,
+      "[HttpEndpointDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration)" : HttpEndpointDestinationConfiguration,
       "[KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration)" : KinesisStreamSourceConfiguration,
       "[RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration)" : RedshiftDestinationConfiguration,
       "[S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : S3DestinationConfiguration,
@@ -35,6 +36,8 @@ Properties:
     ElasticsearchDestinationConfiguration
   [ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration): 
     ExtendedS3DestinationConfiguration
+  [HttpEndpointDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration): 
+    HttpEndpointDestinationConfiguration
   [KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration): 
     KinesisStreamSourceConfiguration
   [RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration): 
@@ -79,6 +82,12 @@ Conditional\. You must specify only one destination configuration\.
 If you change the delivery stream destination from an Amazon Extended S3 destination to an Amazon ES destination, update requires [some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\.   
 *Required*: Conditional  
 *Type*: [ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HttpEndpointDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration"></a>
+Enables configuring Kinesis Firehose to deliver data to any HTTP endpoint destination\. You can specify only one destination\.   
+*Required*: No  
+*Type*: [HttpEndpointDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisStreamSourceConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration"></a>
@@ -137,91 +146,35 @@ The following example creates a Kinesis Data Firehose delivery stream that deliv
 #### JSON<a name="aws-resource-kinesisfirehose-deliverystream--examples--Create_a_Kinesis_Data_Firehose_Delivery_Stream--json"></a>
 
 ```
-"ElasticSearchDeliveryStream": {
-   "Type": "AWS::KinesisFirehose::DeliveryStream",
-   "Properties": {
-      "ElasticsearchDestinationConfiguration": {
-         "BufferingHints": {
-            "IntervalInSeconds": 60,
-            "SizeInMBs": 50
-      },
-      "CloudWatchLoggingOptions": {
-         "Enabled": true,
-         "LogGroupName": "deliverystream",
-         "LogStreamName": "elasticsearchDelivery"
-      },
-      "DomainARN": { "Ref" : "MyDomainARN" },
-      "IndexName": { "Ref" : "MyIndexName" },
-      "IndexRotationPeriod": "NoRotation",
-      "TypeName" : "fromFirehose",
-      "RetryOptions": {
-         "DurationInSeconds": "60"
-      },
-      "RoleARN": { "Fn::GetAtt" : ["ESdeliveryRole", "Arn"] },
-      "S3BackupMode": "AllDocuments",
-      "S3Configuration": { 
-         "BucketARN": { "Ref" : "MyBackupBucketARN" },
-         "BufferingHints": {
-            "IntervalInSeconds": "60",
-            "SizeInMBs": "50"
-         },
-         "CompressionFormat": "UNCOMPRESSED",
-         "Prefix": "firehose/",
-         "RoleARN": { "Fn::GetAtt" : ["S3deliveryRole", "Arn"] },
-         "CloudWatchLoggingOptions" : {
-            "Enabled" : true,
-            "LogGroupName" : "deliverystream",
-            "LogStreamName" : "s3Backup"
-         }
-      }
-    }              
-  }
-}
+"ElasticSearchDeliveryStream": { "Type":
+            "AWS::KinesisFirehose::DeliveryStream", "Properties": {
+            "ElasticsearchDestinationConfiguration": { "BufferingHints": { "IntervalInSeconds": 60,
+            "SizeInMBs": 50 }, "CloudWatchLoggingOptions": { "Enabled": true, "LogGroupName":
+            "deliverystream", "LogStreamName": "elasticsearchDelivery" }, "DomainARN": { "Ref" :
+            "MyDomainARN" }, "IndexName": { "Ref" : "MyIndexName" }, "IndexRotationPeriod":
+            "NoRotation", "TypeName" : "fromFirehose", "RetryOptions": { "DurationInSeconds": "60"
+            }, "RoleARN": { "Fn::GetAtt" : ["ESdeliveryRole", "Arn"] }, "S3BackupMode":
+            "AllDocuments", "S3Configuration": { "BucketARN": { "Ref" : "MyBackupBucketARN" },
+            "BufferingHints": { "IntervalInSeconds": "60", "SizeInMBs": "50" }, "CompressionFormat":
+            "UNCOMPRESSED", "Prefix": "firehose/", "RoleARN": { "Fn::GetAtt" : ["S3deliveryRole",
+            "Arn"] }, "CloudWatchLoggingOptions" : { "Enabled" : true, "LogGroupName" :
+            "deliverystream", "LogStreamName" : "s3Backup" } } } } }
 ```
 
 #### YAML<a name="aws-resource-kinesisfirehose-deliverystream--examples--Create_a_Kinesis_Data_Firehose_Delivery_Stream--yaml"></a>
 
 ```
-ElasticSearchDeliveryStream: 
-   Type: AWS::KinesisFirehose::DeliveryStream
-   Properties: 
-      ElasticsearchDestinationConfiguration: 
-         BufferingHints: 
-            IntervalInSeconds: 60
-            SizeInMBs: 50
-         CloudWatchLoggingOptions: 
-            Enabled: true
-            LogGroupName: "deliverystream"
-            LogStreamName: "elasticsearchDelivery"
-         DomainARN: 
-            Ref: "MyDomainARN"
-         IndexName: 
-            Ref: "MyIndexName"
-         IndexRotationPeriod: "NoRotation"
-         TypeName: "fromFirehose"
-         RetryOptions: 
-            DurationInSeconds: "60"
-         RoleARN: 
-            Fn::GetAtt: 
-               - "ESdeliveryRole"
-               - "Arn"
-         S3BackupMode: "AllDocuments"
-         S3Configuration: 
-            BucketARN: 
-               Ref: "MyBackupBucketARN"
-            BufferingHints: 
-               IntervalInSeconds: "60"
-               SizeInMBs: "50"
-            CompressionFormat: "UNCOMPRESSED"
-            Prefix: "firehose/"
-            RoleARN: 
-               Fn::GetAtt: 
-                  - "S3deliveryRole"
-                  - "Arn"
-            CloudWatchLoggingOptions: 
-               Enabled: true
-               LogGroupName: "deliverystream"
-               LogStreamName: "s3Backup"
+ElasticSearchDeliveryStream: Type:
+            AWS::KinesisFirehose::DeliveryStream Properties: ElasticsearchDestinationConfiguration:
+            BufferingHints: IntervalInSeconds: 60 SizeInMBs: 50 CloudWatchLoggingOptions: Enabled:
+            true LogGroupName: "deliverystream" LogStreamName: "elasticsearchDelivery" DomainARN:
+            Ref: "MyDomainARN" IndexName: Ref: "MyIndexName" IndexRotationPeriod: "NoRotation"
+            TypeName: "fromFirehose" RetryOptions: DurationInSeconds: "60" RoleARN: Fn::GetAtt: -
+            "ESdeliveryRole" - "Arn" S3BackupMode: "AllDocuments" S3Configuration: BucketARN: Ref:
+            "MyBackupBucketARN" BufferingHints: IntervalInSeconds: "60" SizeInMBs: "50"
+            CompressionFormat: "UNCOMPRESSED" Prefix: "firehose/" RoleARN: Fn::GetAtt: -
+            "S3deliveryRole" - "Arn" CloudWatchLoggingOptions: Enabled: true LogGroupName:
+            "deliverystream" LogStreamName: "s3Backup"
 ```
 
 ### Convert Record Format<a name="aws-resource-kinesisfirehose-deliverystream--examples--Convert_Record_Format"></a>
@@ -231,179 +184,51 @@ The following example shows record format conversion\.
 #### YAML<a name="aws-resource-kinesisfirehose-deliverystream--examples--Convert_Record_Format--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: Stack for Firehose DeliveryStream S3 Destination.
-Resources:
-
-  GlueDatabase:
-    Type: AWS::Glue::Database
-    Properties: 
-      CatalogId: !Ref AWS::AccountId
-      DatabaseInput: {}
-
-  GlueTable:
-    Type: AWS::Glue::Table
-    Properties:
-      CatalogId: !Ref AWS::AccountId
-      DatabaseName: !Ref GlueDatabase
-      TableInput:
-        Owner: owner
-        Retention: 0
-        StorageDescriptor:
-          Columns:
-          - Name: pickup_latitude
-            Type: double
-          - Name: pickup_longitude
-            Type: double
-          - Name: dropoff_latitude
-            Type: double
-          - Name: dropoff_longitude
-            Type: double
-          - Name: trip_id
-            Type: int
-          - Name: trip_distance
-            Type: double
-          - Name: passenger_count
-            Type: int
-          - Name: pickup_datetime
-            Type: timestamp
-          - Name: dropoff_datetime
-            Type: timestamp
-          - Name: total_amount
-            Type: double
-          InputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
-          OutputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
-          Compressed: false
-          NumberOfBuckets: -1
-          SerdeInfo:
-            SerializationLibrary: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
-            Parameters:
-              serialization.format: '1'
-          BucketColumns: []
-          SortColumns: []
-          StoredAsSubDirectories: false
-        PartitionKeys:
-        - Name: year
-          Type: string
-        - Name: month
-          Type: string
-        - Name: day
-          Type: string
-        - Name: hour
-          Type: string
-        TableType: EXTERNAL_TABLE
-
-  deliverystream:
-    Type: AWS::KinesisFirehose::DeliveryStream
-    Properties: 
-      DeliveryStreamType: DirectPut
-      ExtendedS3DestinationConfiguration:
-        RoleARN: !GetAtt deliveryRole.Arn
-        BucketARN: !Join 
-          - ''
-          - - 'arn:aws:s3:::'
-            - !Ref s3bucket
-        Prefix: !Join 
-          - ''
-          - - !Ref GlueTable
-            -  '/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/'
-        ErrorOutputPrefix: !Join 
-          - ''
-          - - !Ref GlueTable
-            -  'error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/'
-        BufferingHints:
-          SizeInMBs: 128
-          IntervalInSeconds: 300
-        CompressionFormat: UNCOMPRESSED
-        EncryptionConfiguration:
-          NoEncryptionConfig: NoEncryption
-        CloudWatchLoggingOptions:
-          Enabled: true
-          LogGroupName: !Join
-            - ''
-            - - 'KDF-'
-              - !Ref GlueTable
-          LogStreamName: S3Delivery
-        S3BackupMode: Disabled
-        DataFormatConversionConfiguration:
-          SchemaConfiguration:
-            CatalogId: !Ref AWS::AccountId
-            RoleARN: !GetAtt deliveryRole.Arn
-            DatabaseName: !Ref GlueDatabase
-            TableName: !Ref GlueTable
-            Region: !Ref AWS::Region
-            VersionId: LATEST
-          InputFormatConfiguration:
-            Deserializer:
-              OpenXJsonSerDe: {}
-          OutputFormatConfiguration:
-            Serializer:
-              ParquetSerDe: {}
-          Enabled: True
-
-  s3bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      VersioningConfiguration:
-        Status: Enabled
-
-  deliveryRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Sid: ''
-            Effect: Allow
-            Principal:
-              Service: firehose.amazonaws.com
-            Action: 'sts:AssumeRole'
-            Condition:
-              StringEquals:
-                'sts:ExternalId': !Ref 'AWS::AccountId'
-      Path: "/"
-      Policies:
-        - PolicyName: firehose_delivery_policy
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 's3:AbortMultipartUpload'
-                  - 's3:GetBucketLocation'
-                  - 's3:GetObject'
-                  - 's3:ListBucket'
-                  - 's3:ListBucketMultipartUploads'
-                  - 's3:PutObject'
-                Resource:
-                  - !Join 
-                    - ''
-                    - - 'arn:aws:s3:::'
-                      - !Ref s3bucket
-                  - !Join 
-                    - ''
-                    - - 'arn:aws:s3:::'
-                      - !Ref s3bucket
-                      - '/*'
-              - Effect: Allow
-                Action: 'glue:GetTableVersions'
-                Resource: '*'
-              - Effect: Allow
-                Action: 'logs:PutLogEvents'
-                Resource: 
-                - !Join 
-                    - ''
-                    - - 'arn:aws:logs:'
-                      - !Ref 'AWS::Region'
-                      - ':'
-                      - !Ref 'AWS::AccountId'
-                      - 'log-group:/aws/kinesisfirehose/KDF-'
-                      - !Ref GlueTable
-                      - ':log-stream:*'
-Outputs:
-  deliverysreamARN:
-    Description: The ARN of the firehose delivery stream
-    Value: !GetAtt deliverystream.Arn
+AWSTemplateFormatVersion: 2010-09-09 Description: Stack for
+            Firehose DeliveryStream S3 Destination. Resources: GlueDatabase: Type:
+            AWS::Glue::Database Properties: CatalogId: !Ref AWS::AccountId DatabaseInput: {}
+            GlueTable: Type: AWS::Glue::Table Properties: CatalogId: !Ref AWS::AccountId
+            DatabaseName: !Ref GlueDatabase TableInput: Owner: owner Retention: 0 StorageDescriptor:
+            Columns: - Name: pickup_latitude Type: double - Name: pickup_longitude Type: double -
+            Name: dropoff_latitude Type: double - Name: dropoff_longitude Type: double - Name:
+            trip_id Type: int - Name: trip_distance Type: double - Name: passenger_count Type: int -
+            Name: pickup_datetime Type: timestamp - Name: dropoff_datetime Type: timestamp - Name:
+            total_amount Type: double InputFormat:
+            org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat OutputFormat:
+            org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat Compressed: false
+            NumberOfBuckets: -1 SerdeInfo: SerializationLibrary:
+            org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe Parameters:
+            serialization.format: '1' BucketColumns: [] SortColumns: [] StoredAsSubDirectories:
+            false PartitionKeys: - Name: year Type: string - Name: month Type: string - Name: day
+            Type: string - Name: hour Type: string TableType: EXTERNAL_TABLE deliverystream: Type:
+            AWS::KinesisFirehose::DeliveryStream Properties: DeliveryStreamType: DirectPut
+            ExtendedS3DestinationConfiguration: RoleARN: !GetAtt deliveryRole.Arn BucketARN: !Join -
+            '' - - 'arn:aws:s3:::' - !Ref s3bucket Prefix: !Join - '' - - !Ref GlueTable -
+            '/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/'
+            ErrorOutputPrefix: !Join - '' - - !Ref GlueTable -
+            'error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/'
+            BufferingHints: SizeInMBs: 128 IntervalInSeconds: 300 CompressionFormat: UNCOMPRESSED
+            EncryptionConfiguration: NoEncryptionConfig: NoEncryption CloudWatchLoggingOptions:
+            Enabled: true LogGroupName: !Join - '' - - 'KDF-' - !Ref GlueTable LogStreamName:
+            S3Delivery S3BackupMode: Disabled DataFormatConversionConfiguration:
+            SchemaConfiguration: CatalogId: !Ref AWS::AccountId RoleARN: !GetAtt deliveryRole.Arn
+            DatabaseName: !Ref GlueDatabase TableName: !Ref GlueTable Region: !Ref AWS::Region
+            VersionId: LATEST InputFormatConfiguration: Deserializer: OpenXJsonSerDe: {}
+            OutputFormatConfiguration: Serializer: ParquetSerDe: {} Enabled: True s3bucket: Type:
+            AWS::S3::Bucket Properties: VersioningConfiguration: Status: Enabled deliveryRole: Type:
+            AWS::IAM::Role Properties: AssumeRolePolicyDocument: Version: 2012-10-17 Statement: -
+            Sid: '' Effect: Allow Principal: Service: firehose.amazonaws.com Action:
+            'sts:AssumeRole' Condition: StringEquals: 'sts:ExternalId': !Ref 'AWS::AccountId' Path:
+            "/" Policies: - PolicyName: firehose_delivery_policy PolicyDocument: Version: 2012-10-17
+            Statement: - Effect: Allow Action: - 's3:AbortMultipartUpload' - 's3:GetBucketLocation'
+            - 's3:GetObject' - 's3:ListBucket' - 's3:ListBucketMultipartUploads' - 's3:PutObject'
+            Resource: - !Join - '' - - 'arn:aws:s3:::' - !Ref s3bucket - !Join - '' - -
+            'arn:aws:s3:::' - !Ref s3bucket - '/*' - Effect: Allow Action: 'glue:GetTableVersions'
+            Resource: '*' - Effect: Allow Action: 'logs:PutLogEvents' Resource: - !Join - '' - -
+            'arn:aws:logs:' - !Ref 'AWS::Region' - ':' - !Ref 'AWS::AccountId' -
+            'log-group:/aws/kinesisfirehose/KDF-' - !Ref GlueTable - ':log-stream:*' Outputs:
+            deliverysreamARN: Description: The ARN of the firehose delivery stream Value: !GetAtt
+            deliverystream.Arn
 ```
 
 ### Specify an Amazon S3 Destination for the Delivery Stream<a name="aws-resource-kinesisfirehose-deliverystream--examples--Specify_an_Amazon_S3_Destination_for_the_Delivery_Stream"></a>

@@ -34,7 +34,7 @@ ARN of the Amazon CloudWatch alarm\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AlarmRoleArn`  <a name="cfn-appconfig-environment-monitors-alarmrolearn"></a>
-ARN of an IAM role for AppConfig to monitor `AlarmArn`\.  
+ARN of an IAM role for AWS AppConfig to monitor `AlarmArn`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

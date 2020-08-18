@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[LogDriver](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver)" : String,
-  "[Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options)" : {Key : Value, ...},
+  "[Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options)" : Options,
   "[SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions)" : [ Secret, ... ]
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [LogDriver](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver): String
   [Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options): 
-    Key : Value
+    Options
   [SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions): 
     - Secret
 ```
@@ -43,7 +43,7 @@ If you have a custom driver that is not listed, you can fork the Amazon ECS cont
 `Options`  <a name="cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options"></a>
 The configuration options to send to the log driver\. This parameter requires version 1\.19 of the Docker Remote API or greater on your container instance\. To check the Docker Remote API version on your container instance, log in to your container instance and run the following command: `sudo docker version --format '{{.Server.APIVersion}}'`   
 *Required*: No  
-*Type*: Map of String  
+*Type*: [Options](aws-properties-ecs-taskdefinition-options.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecretOptions`  <a name="cfn-ecs-taskdefinition-logconfiguration-secretoptions"></a>

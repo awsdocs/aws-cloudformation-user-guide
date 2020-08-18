@@ -1,6 +1,6 @@
 # AWS::CloudFormation::Macro<a name="aws-resource-cloudformation-macro"></a>
 
-The `AWS::CloudFormation::Macro` resource is an CloudFormation resource type that creates an CloudFormation macro to perform custom processing on CloudFormation templates\. For more information, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html)\.
+The `AWS::CloudFormation::Macro` resource is an CloudFormation resource type that creates an CloudFormation macro to perform custom processing on CloudFormation templates\. For more information, see [Using AWS CloudFormation macros to perform custom processing on templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html)\.
 
 ## Syntax<a name="aws-resource-cloudformation-macro-syntax"></a>
 
@@ -78,4 +78,4 @@ For the macro `myMacro`, `Ref` returns the name of the macro\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-cloudformation-macro--seealso"></a>
-+  [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) 
++  [Using AWS CloudFormation macros to perform custom processing on templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) 

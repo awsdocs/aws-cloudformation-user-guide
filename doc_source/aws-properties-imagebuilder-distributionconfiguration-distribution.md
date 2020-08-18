@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Region`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-region"></a>
  The target Region for the Distribution Configuration\. For example, `eu-west-1`\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  

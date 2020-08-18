@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Artifacts](#cfn-codebuild-project-artifacts)" : Artifacts,
       "[BadgeEnabled](#cfn-codebuild-project-badgeenabled)" : Boolean,
+      "[BuildBatchConfig](#cfn-codebuild-project-buildbatchconfig)" : ProjectBuildBatchConfig,
       "[Cache](#cfn-codebuild-project-cache)" : ProjectCache,
       "[Description](#cfn-codebuild-project-description)" : String,
       "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
@@ -44,6 +45,8 @@ Properties:
   [Artifacts](#cfn-codebuild-project-artifacts): 
     Artifacts
   [BadgeEnabled](#cfn-codebuild-project-badgeenabled): Boolean
+  [BuildBatchConfig](#cfn-codebuild-project-buildbatchconfig): 
+    ProjectBuildBatchConfig
   [Cache](#cfn-codebuild-project-cache): 
     ProjectCache
   [Description](#cfn-codebuild-project-description): String
@@ -90,6 +93,12 @@ Properties:
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`BuildBatchConfig`  <a name="cfn-codebuild-project-buildbatchconfig"></a>
+A `ProjectBuildBatchConfig` object that defines the batch build options for the project\.   
+*Required*: No  
+*Type*: [ProjectBuildBatchConfig](aws-properties-codebuild-project-projectbuildbatchconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Cache`  <a name="cfn-codebuild-project-cache"></a>
 Settings that AWS CodeBuild uses to store and reuse build dependencies\.   
 *Required*: No  
@@ -126,7 +135,7 @@ A description that makes the build project easy to identify\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogsConfig`  <a name="cfn-codebuild-project-logsconfig"></a>
- Information about logs for the build project\. A project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both\.   
+Information about logs for the build project\. A project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both\.   
 *Required*: No  
 *Type*: [LogsConfig](aws-properties-codebuild-project-logsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -141,7 +150,7 @@ The name of the build project\. The name must be unique across all of the projec
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `QueuedTimeoutInMinutes`  <a name="cfn-codebuild-project-queuedtimeoutinminutes"></a>
- The number of minutes a build is allowed to be queued before it times out\.   
+The number of minutes a build is allowed to be queued before it times out\.   
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `5`  
@@ -156,14 +165,14 @@ The name of the build project\. The name must be unique across all of the projec
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondarySources`  <a name="cfn-codebuild-project-secondarysources"></a>
- An array of `ProjectSource` objects\.   
+An array of `ProjectSource` objects\.   
 *Required*: No  
 *Type*: List of [Source](aws-properties-codebuild-project-source.md)  
 *Maximum*: `12`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondarySourceVersions`  <a name="cfn-codebuild-project-secondarysourceversions"></a>
- An array of `ProjectSourceVersion` objects\. If `secondarySourceVersions` is specified at the build level, then they take over these `secondarySourceVersions` \(at the project level\)\.   
+An array of `ProjectSourceVersion` objects\. If `secondarySourceVersions` is specified at the build level, then they take over these `secondarySourceVersions` \(at the project level\)\.   
 *Required*: No  
 *Type*: List of [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md)  
 *Maximum*: `12`  
@@ -188,8 +197,8 @@ A version of the build input to be built for this project\. If not specified, th
 + For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a pull request ID is specified, it must use the format `pr/pull-request-ID` \(for example `pr/25`\)\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
 + For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
 + For Amazon Simple Storage Service \(Amazon S3\): the version ID of the object that represents the build input ZIP file to use\.
- If `sourceVersion` is specified at the build level, then that version takes precedence over this `sourceVersion` \(at the project level\)\.   
- For more information, see [Source Version Sample with CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html) in the *AWS CodeBuild User Guide*\.   
+If `sourceVersion` is specified at the build level, then that version takes precedence over this `sourceVersion` \(at the project level\)\.   
+For more information, see [Source Version Sample with CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html) in the *AWS CodeBuild User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

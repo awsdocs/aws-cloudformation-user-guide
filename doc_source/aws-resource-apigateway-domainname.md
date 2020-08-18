@@ -49,9 +49,9 @@ The reference to an AWS\-managed certificate for use by the edge\-optimized endp
 
 `DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
 The custom domain name for your API\. Uppercase letters are not supported\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointConfiguration`  <a name="cfn-apigateway-domainname-endpointconfiguration"></a>
 A list of the endpoint types of the domain name\.  

@@ -2,6 +2,7 @@
 
 **Resource types**
 + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
++ [AWS::EC2::CarrierGateway](aws-resource-ec2-carriergateway.md)
 + [AWS::EC2::ClientVpnAuthorizationRule](aws-resource-ec2-clientvpnauthorizationrule.md)
 + [AWS::EC2::ClientVpnEndpoint](aws-resource-ec2-clientvpnendpoint.md)
 + [AWS::EC2::ClientVpnRoute](aws-resource-ec2-clientvpnroute.md)

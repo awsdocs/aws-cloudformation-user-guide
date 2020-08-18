@@ -77,22 +77,47 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-resource-dms-replicationsubnetgroup--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
-                "myReplicationSubnetGroup": { "Type": "AWS::DMS::ReplicationSubnetGroup",
-                "Properties": { "ReplicationSubnetGroupIdentifier": "identifier",
-                "ReplicationSubnetGroupDescription": "description", "SubnetIds": [
-                "subnet-7b5b4112", "subnet-7b5b4115" ], "Tags": [ { "Key": "String", "Value":
-                "String" } ] } } } }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "myReplicationSubnetGroup": {
+            "Type": "AWS::DMS::ReplicationSubnetGroup",
+            "Properties": {
+                "ReplicationSubnetGroupIdentifier": "identifier",
+                "ReplicationSubnetGroupDescription": "description",
+                "SubnetIds": [
+                    "subnet-7b5b4112",
+                    "subnet-7b5b4115"
+                ],
+                "Tags": [
+                    {
+                        "Key": "String",
+                        "Value": "String"
+                    }
+                ]
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-dms-replicationsubnetgroup--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Resources:
-                myReplicationSubnetGroup: Properties: ReplicationSubnetGroupDescription: description
-                ReplicationSubnetGroupIdentifier: identifier SubnetIds: - subnet-7b5b4112 -
-                subnet-7b5b4115 Tags: - Key: String Value: String Type:
-                "AWS::DMS::ReplicationSubnetGroup"
+AWSTemplateFormatVersion: 2010-09-09
+Resources: 
+  myReplicationSubnetGroup: 
+    Properties: 
+      ReplicationSubnetGroupDescription: description
+      ReplicationSubnetGroupIdentifier: identifier
+      SubnetIds: 
+        - subnet-7b5b4112
+        - subnet-7b5b4115
+      Tags: 
+        - 
+          Key: String
+          Value: String
+    Type: "AWS::DMS::ReplicationSubnetGroup"
 ```
 
 ## See also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>

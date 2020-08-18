@@ -81,7 +81,7 @@ The following examples create a secret, and then creates an AWS resource as defi
 **Supported AWS Resources**
 + Amazon Aurora on Amazon RDS
 + MySQL on Amazon RDS
-+ PostgreSQL on Amazon RDS
++ PostgresSQL on Amazon RDS
 + Oracle on Amazon RDS
 + MariaDB on Amazon RDS
 + Microsoft SQL Server on Amazon RDS

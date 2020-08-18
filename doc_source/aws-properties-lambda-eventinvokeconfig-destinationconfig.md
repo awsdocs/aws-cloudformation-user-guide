@@ -47,7 +47,6 @@ Configure a function to send a record of failed asynchronous invocations to an S
 #### YAML<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig--examples--On-Failure_Destination_Configuration--yaml"></a>
 
 ```
-      DestinationConfig:
-          OnFailure:
-            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
+ DestinationConfig: OnFailure: Destination:
+        arn:aws:sqs:us-east-2:123456789012:dlq
 ```

@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration,
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
       "[Tags](#cfn-ecs-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TaskDefinitionStatus](#cfn-ecs-taskdefinition-taskdefinitionstatus)" : String,
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
       "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume, ... ]
     }
@@ -55,6 +56,7 @@ Properties:
     - String
   [Tags](#cfn-ecs-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TaskDefinitionStatus](#cfn-ecs-taskdefinition-taskdefinitionstatus): String
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
   [Volumes](#cfn-ecs-taskdefinition-volumes): 
     - Volume
@@ -113,7 +115,7 @@ This parameter is not supported for Windows containers or tasks using the Fargat
 
 `Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
 The amount \(in MiB\) of memory used by the task\.  
-If using the EC2 launch type, this field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\.  
+If using the EC2 launch type, you must specify either a task\-level memory value or a container\-level memory value\. This field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\. For more information regarding container\-level memory and memory reservation, see [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)\.  
 If using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
 + 512 \(0\.5 GB\), 1024 \(1 GB\), 2048 \(2 GB\) \- Available `cpu` values: 256 \(\.25 vCPU\)
 + 1024 \(1 GB\), 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\) \- Available `cpu` values: 512 \(\.5 vCPU\)
@@ -180,6 +182,12 @@ The following basic restrictions apply to tags:
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TaskDefinitionStatus`  <a name="cfn-ecs-taskdefinition-taskdefinitionstatus"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
 The short name or full Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [Amazon ECS Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM Roles for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
@@ -206,6 +214,13 @@ In the following example, the `Ref` function returns the ARN of the `MyTaskDefin
  `{ "Ref": "MyTaskDefinition" }` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt-fn--getatt"></a>
+
+`TaskDefinitionArn`  <a name="TaskDefinitionArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-taskdefinition--examples"></a>
 

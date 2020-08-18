@@ -113,47 +113,93 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-network-acl-entry--examples"></a>
 
-### Network ACL Entry<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_Entry"></a>
+### Network ACL entries for inbound and outbound traffic<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic"></a>
 
-The following example creates an entry in a network ACL with a specified rule number\.
+The following example creates a network ACL, and creates two entries in the NACL\. The first entry allows inbound SSH traffic from the specified network\. The second entry allows all outbound IPv4 traffic\.
 
-#### JSON<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_Entry--json"></a>
+#### JSON<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--json"></a>
 
 ```
-"myNetworkAclEntry" : {
-   "Type" : "AWS::EC2::NetworkAclEntry",
-   "Properties" : {
-      "NetworkAclId" : { "Ref" : "myNetworkAcl" },
-      "RuleNumber" : "100",
-      "Protocol" : "-1",
-      "RuleAction" : "allow",
-      "Egress" : "true",
-      "CidrBlock" : "172.16.0.0/24",
-      "Icmp" : { "Code" : "-1", "Type" : "-1" },
-      "PortRange" : { "From" : "53", "To" : "53" }
-   }
+{
+    "Resources": {
+        "MyNACL": {
+            "Type": "AWS::EC2::NetworkAcl",
+            "Properties": {
+                "VpcId": "vpc-1122334455aabbccd",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "NACLforSSHTraffic"
+                    }
+                ]
+            }
+        },
+        "InboundRule": {
+            "Type": "AWS::EC2::NetworkAclEntry",
+            "Properties": {
+                "NetworkAclId": {
+                    "Ref": "MyNACL"
+                },
+                "RuleNumber": 100,
+                "Protocol": 6,
+                "RuleAction": "allow",
+                "CidrBlock": "172.16.0.0/24",
+                "PortRange": {
+                    "From": 22,
+                    "To": 22
+                }
+            }
+        },
+        "OutboundRule": {
+            "Type": "AWS::EC2::NetworkAclEntry",
+            "Properties": {
+                "NetworkAclId": {
+                    "Ref": "MyNACL"
+                },
+                "RuleNumber": 100,
+                "Protocol": -1,
+                "Egress": true,
+                "RuleAction": "allow",
+                "CidrBlock": "0.0.0.0/0"
+            }
+        }
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_Entry--yaml"></a>
+#### YAML<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--yaml"></a>
 
 ```
-   myNetworkAclEntry:
-      Type: AWS::EC2::NetworkAclEntry
-      Properties:
-         NetworkAclId:
-            Ref: myNetworkAcl
-         RuleNumber: '100'
-         Protocol: "-1"
-         RuleAction: allow
-         Egress: 'true'
-         CidrBlock: 172.16.0.0/24
-         Icmp:
-            Code: "-1"
-            Type: "-1"
-         PortRange:
-            From: '53'
-            To: '53'
+Resources:
+  MyNACL:
+    Type: AWS::EC2::NetworkAcl
+    Properties:
+       VpcId: vpc-1122334455aabbccd
+       Tags:
+       - Key: Name
+         Value: NACLforSSHTraffic
+  InboundRule:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+       NetworkAclId:
+         Ref: MyNACL
+       RuleNumber: 100
+       Protocol: 6
+       RuleAction: allow
+       CidrBlock: 172.16.0.0/24
+       PortRange:
+         From: 22
+         To: 22
+  OutboundRule:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+       NetworkAclId:
+         Ref: MyNACL
+       RuleNumber: 100
+       Protocol: -1
+       Egress: true
+       RuleAction: allow
+       CidrBlock: 0.0.0.0/0
 ```
 
 ## See also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>

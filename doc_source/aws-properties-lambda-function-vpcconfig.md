@@ -53,10 +53,6 @@ Connect a function to a VPC\.
 #### YAML<a name="aws-properties-lambda-function-vpcconfig--examples--VPC_Configuration--yaml"></a>
 
 ```
-      VpcConfig:
-        SecurityGroupIds:
-          - sg-085912345678492fb
-        SubnetIds:
-          - subnet-071f712345678e7c8
-          - subnet-07fd123456788a036
+ VpcConfig: SecurityGroupIds: - sg-085912345678492fb SubnetIds: -
+        subnet-071f712345678e7c8 - subnet-07fd123456788a036
 ```

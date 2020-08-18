@@ -102,12 +102,8 @@ Grant account 123456789012 permission to invoke a function resource named `funct
 #### YAML<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke--yaml"></a>
 
 ```
-  permission:
-    Type: AWS::Lambda::Permission
-    Properties:
-      FunctionName: !GetAtt function.Arn
-      Action: lambda:InvokeFunction
-      Principal: 123456789012
+ permission: Type: AWS::Lambda::Permission Properties: FunctionName: !GetAtt function.Arn
+        Action: lambda:InvokeFunction Principal: 123456789012
 ```
 
 ### Amazon S3 Notifications<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications"></a>
@@ -117,39 +113,15 @@ Grant Amazon S3 permission to invoke a function resource named `function` create
 #### JSON<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--json"></a>
 
 ```
-"s3Permission": {
-    "Type": "AWS::Lambda::Permission",
-    "Properties": {
-        "FunctionName": {
-            "Fn::GetAtt": [
-                "function",
-                "Arn"
-            ]
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "s3.amazonaws.com",
-        "SourceAccount": {
-            "Ref": "AWS::AccountId"
-        },
-        "SourceArn": {
-            "Fn::GetAtt": [
-                "bucket",
-                "Arn"
-            ]
-        }
-    }
-}
+"s3Permission": { "Type": "AWS::Lambda::Permission", "Properties": { "FunctionName": {
+        "Fn::GetAtt": [ "function", "Arn" ] }, "Action": "lambda:InvokeFunction", "Principal": "s3.amazonaws.com",
+        "SourceAccount": { "Ref": "AWS::AccountId" }, "SourceArn": { "Fn::GetAtt": [ "bucket", "Arn" ] } } }
 ```
 
 #### YAML<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--yaml"></a>
 
 ```
-s3Permission:
-  Type: AWS::Lambda::Permission
-  Properties:
-    FunctionName: !GetAtt function.Arn
-    Action: lambda:InvokeFunction
-    Principal: s3.amazonaws.com
-    SourceAccount: !Ref 'AWS::AccountId'
-    SourceArn: !GetAtt bucket.Arn
+s3Permission: Type: AWS::Lambda::Permission Properties: FunctionName: !GetAtt
+        function.Arn Action: lambda:InvokeFunction Principal: s3.amazonaws.com SourceAccount: !Ref 'AWS::AccountId'
+        SourceArn: !GetAtt bucket.Arn
 ```

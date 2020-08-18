@@ -18,6 +18,7 @@ service-provider::service-name::data-type-name
 + [API Gateway V2](AWS_ApiGatewayV2.md)
 + [AppConfig](AWS_AppConfig.md)
 + [Application Auto Scaling](AWS_ApplicationAutoScaling.md)
++ [ApplicationInsights](AWS_ApplicationInsights.md)
 + [App Mesh](AWS_AppMesh.md)
 + [AppStream 2\.0](AWS_AppStream.md)
 + [AppSync](AWS_AppSync.md)

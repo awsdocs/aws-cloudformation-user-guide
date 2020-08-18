@@ -2,7 +2,7 @@
 
 **Topics**
 + [Application Auto Scaling with an Amazon DynamoDB table](#quickref-dynamodb-application-autoscaling)
-+ [See also](#w6461ab1c19c22c35b7)
++ [See also](#w6643ab1c19c22c35b7)
 
 ## Application Auto Scaling with an Amazon DynamoDB table<a name="quickref-dynamodb-application-autoscaling"></a>
 
@@ -253,6 +253,6 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-## See also<a name="w6461ab1c19c22c35b7"></a>
+## See also<a name="w6643ab1c19c22c35b7"></a>
 
 For more information about DynamoDB resources, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\.

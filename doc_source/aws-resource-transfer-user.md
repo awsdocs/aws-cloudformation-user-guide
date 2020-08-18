@@ -59,7 +59,7 @@ An example is * `your-Amazon-S3-bucket-name>/home/username` *\.
 Logical directory mappings that specify what Amazon S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your IAM role provides access to paths in `Target`\. The following is an example\.  
  `'[ "/bucket2/documentation", { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]'`   
 In most cases, you can use this value instead of the scope\-down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
-If the target of a logical directory entry does not exist in Amazon S3, the entry will be ignored\. As a workaround, you can use the Amazon S3 api to create 0 byte objects as place holders for your directory\. If using the CLI, use the `s3api` call instead of `s3` so you can use the put\-object operation\. For example, you use the following: `aws s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a '/' for it to be considered a folder\.
+If the target of a logical directory entry does not exist in Amazon S3, the entry will be ignored\. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders for your directory\. If using the CLI, use the `s3api` call instead of `s3` so you can use the put\-object operation\. For example, you use the following: `aws s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a '/' for it to be considered a folder\.
 *Required*: No  
 *Type*: List of [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)  
 *Maximum*: `50`  
@@ -115,12 +115,12 @@ Key\-value pairs that can be used to group and search for users\. Tags are metad
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserName`  <a name="cfn-transfer-user-username"></a>
-A unique string that identifies a user and is associated with a file transfer protocol\-enabled server as specified by the `ServerId`\. This user name must be a minimum of 3 and a maximum of 32 characters long\. The following are valid characters: a\-z, A\-Z, 0\-9, underscore, and hyphen\. The user name can't start with a hyphen\.  
+A unique string that identifies a user and is associated with a file transfer protocol\-enabled server as specified by the `ServerId`\. This user name must be a minimum of 3 and a maximum of 100 characters long\. The following are valid characters: a\-z, A\-Z, 0\-9, underscore '\_', hyphen '\-', period '\.', and at sign '@'\. The user name can't start with a hyphen, period, and at sign\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  
-*Maximum*: `32`  
-*Pattern*: `^[a-zA-Z0-9_][a-zA-Z0-9_-]{2,31}$`  
+*Maximum*: `100`  
+*Pattern*: `^[\w][\w@.-]{2,99}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-transfer-user-return-values"></a>
@@ -185,11 +185,11 @@ The following example associates a user with a server\.
       "SshPublicKeys": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6",
       "Tags": [
         {
-          "Key": "Group",
-          "Value": "UserGroup1"
+          "Key": "KeyName",
+          "Value": "ValueName"
         }
       ],
-      "UserName": "transfer_user"
+      "UserName": "username"
     }
   }
 }
@@ -218,9 +218,9 @@ transfer_user:
     ServerId: s-01234567890abcdef
     SshPublicKeys: AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
     Tags:
-      - Key: Group
-        Value: UserGroup1
-    UserName: transfer_user
+      - Key: KeyName
+        Value: ValueName
+    UserName: username
 ```
 
 ## See also<a name="aws-resource-transfer-user--seealso"></a>

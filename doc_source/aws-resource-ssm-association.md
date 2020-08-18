@@ -59,7 +59,7 @@ Properties:
 ## Properties<a name="aws-resource-ssm-association-properties"></a>
 
 `ApplyOnlyAtCronInterval`  <a name="cfn-ssm-association-applyonlyatcroninterval"></a>
-Not currently supported by AWS CloudFormation\.  
+By default, when you create a new associations, the system runs it immediately after it is created and then according to the schedule you specified\. Specify this option if you don't want an association to run immediately after you create it\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -149,9 +149,12 @@ A cron expression that specifies a schedule when the association runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncCompliance`  <a name="cfn-ssm-association-synccompliance"></a>
-Not currently supported by AWS CloudFormation\.  
+The mode for generating association compliance\. You can specify `AUTO` or `MANUAL`\. In `AUTO` mode, the system uses the status of the association execution to determine the compliance status\. If the association execution runs successfully, then the association is `COMPLIANT`\. If the association execution doesn't run successfully, the association is `NON-COMPLIANT`\.  
+In `MANUAL` mode, you must specify the `AssociationId` as a parameter for the PutComplianceItems API action\. In this case, compliance data is not managed by State Manager\. It is managed by your direct call to the PutComplianceItems API action\.  
+By default, all associations use `AUTO` mode\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `AUTO | MANUAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>

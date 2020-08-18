@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Namespace`  <a name="cfn-ecs-taskdefinition-systemcontrol-namespace"></a>
 The namespaced kernel parameter for which to set a `value`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-ecs-taskdefinition-systemcontrol-value"></a>
 The value for the namespaced kernel parameter specified in `namespace`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

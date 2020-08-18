@@ -80,9 +80,9 @@ To declare a GuardDuty `Master` resource:
 
 ```
 GDMaster:
-  Type: AWS::GuardDuty::Master
-  Properties:
-      DetectorId: "a12abc34d567e8fa901bc2d34e56789f0"
-      MasterId: "012345678901"
-      InvitationId: "84b097800250d17d1872b34c4daadcf5"
+    Type: AWS::GuardDuty::Master
+    Properties:
+        DetectorId: "a12abc34d567e8fa901bc2d34e56789f0"
+        MasterId: "012345678901"
+        InvitationId: "84b097800250d17d1872b34c4daadcf5"
 ```

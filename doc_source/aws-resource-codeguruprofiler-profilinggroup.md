@@ -13,8 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeGuruProfiler::ProfilingGroup",
   "Properties" : {
       "[AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions)" : Json,
+      "[AnomalyDetectionNotificationConfiguration](#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration)" : [ Channel, ... ],
       "[ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform)" : String,
-      "[ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname)" : String
+      "[ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname)" : String,
+      "[Tags](#cfn-codeguruprofiler-profilinggroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,8 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeGuruProfiler::ProfilingGroup
 Properties: 
   [AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions): Json
+  [AnomalyDetectionNotificationConfiguration](#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration): 
+    - Channel
   [ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform): String
   [ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname): String
+  [Tags](#cfn-codeguruprofiler-profilinggroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-codeguruprofiler-profilinggroup-properties"></a>
@@ -35,6 +41,12 @@ Properties:
 The agent permissions attached to this profiling group\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AnomalyDetectionNotificationConfiguration`  <a name="cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration"></a>
+Add anomaly notifications for a profiling group\.  
+*Required*: No  
+*Type*: List of [Channel](aws-properties-codeguruprofiler-profilinggroup-channel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ComputePlatform`  <a name="cfn-codeguruprofiler-profilinggroup-computeplatform"></a>
@@ -48,6 +60,12 @@ The name of the profiling group\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-codeguruprofiler-profilinggroup-tags"></a>
+ A list of tags to add to the created profiling group\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-codeguruprofiler-profilinggroup-return-values"></a>
 
@@ -128,4 +146,37 @@ MyProfilingGroupWithComputePlatform:
   Properties:
     ProfilingGroupName: "MyProfilingGroup"
     ComputePlatform: "AWSLambda"
+```
+
+### CodeGuru Profiler profiling group resource with notifications<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_with_notifications"></a>
+
+The following is an example of the a notification configuration for a profiling group\.
+
+#### JSON<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_with_notifications--json"></a>
+
+```
+"MyProfilingGroupWithNotificationChannelConfiguration": {
+  "Type": "AWS::CodeGuruProfiler::ProfilingGroup",
+  "Properties": {
+    "ProfilingGroupName": "MyProfilingGroup",
+    "AnomalyDetectionNotificationConfiguration": [
+        {
+            "channelUri": "SOME_SNS_TOPIC_ARN",
+            "channelId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+        }
+    ]
+  }
+}
+```
+
+#### YAML<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_with_notifications--yaml"></a>
+
+```
+MyProfilingGroupWithNotificationChannelConfiguration:
+  Type: AWS::CodeGuruProfiler::ProfilingGroup
+  Properties:
+    ProfilingGroupName: MyProfilingGroup
+    AnomalyDetectionNotificationConfiguration:
+    - channelUri: SOME_SNS_TOPIC_ARN
+      channelId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
 ```

@@ -57,13 +57,13 @@ The maximum number of retry attempts\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PerRetryTimeout`  <a name="cfn-appmesh-route-grpcretrypolicy-perretrytimeout"></a>
-An object that represents a duration of time\.  
+The timeout for each retry attempt\.  
 *Required*: Yes  
 *Type*: [Duration](aws-properties-appmesh-route-duration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TcpRetryEvents`  <a name="cfn-appmesh-route-grpcretrypolicy-tcpretryevents"></a>
-Specify a valid value\.  
+Specify a valid value\. The event occurs before any processing of a request has started and is encountered when the upstream is temporarily or permanently unavailable\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

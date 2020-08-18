@@ -29,7 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ResourceType`  <a name="cfn-ec2-launchtemplate-tagspecification-resourcetype"></a>
 The type of resource to tag\. Currently, the resource types that support tagging on creation are `instance` and `volume`\. To tag a resource after it has been created, see [CreateTags](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTags.html)\.  
-*Required*: Conditional. Required if tags are set.  
+*Conditional*: Requried if tags are set\.  
+*Required*: Conditional  
 *Type*: String  
 *Allowed values*: `client-vpn-endpoint | customer-gateway | dedicated-host | dhcp-options | elastic-gpu | elastic-ip | export-image-task | export-instance-task | fleet | fpga-image | host-reservation | image | import-image-task | import-snapshot-task | instance | internet-gateway | key-pair | launch-template | local-gateway-route-table-vpc-association | natgateway | network-acl | network-interface | placement-group | reserved-instances | route-table | security-group | snapshot | spot-fleet-request | spot-instances-request | subnet | traffic-mirror-filter | traffic-mirror-session | traffic-mirror-target | transit-gateway | transit-gateway-attachment | transit-gateway-multicast-domain | transit-gateway-route-table | volume | vpc | vpc-flow-log | vpc-peering-connection | vpn-connection | vpn-gateway`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -42,4 +43,3 @@ The tags to apply to the resource\.
 
 ## See also<a name="aws-properties-ec2-launchtemplate-tagspecification--seealso"></a>
 +  [ LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
-

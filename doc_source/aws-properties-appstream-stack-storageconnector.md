@@ -38,7 +38,7 @@ The type of storage connector\.
 The names of the domains for the account\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `10`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceIdentifier`  <a name="cfn-appstream-stack-storageconnector-resourceidentifier"></a>

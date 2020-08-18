@@ -81,7 +81,7 @@ Along with `path` and `name`, the pattern that AWS CodeBuild uses to determine t
 + If `type` is set to `S3`, valid values include:
   +  `BUILD_ID`: Include the build ID in the location of the build output artifact\.
   +  `NONE`: Do not include the build ID\. This is the default if `namespaceType` is not specified\.
-For example, if `path` is set to `MyArtifacts`, `namespaceType` is set to `BUILD_ID`, and `name` is set to `MyArtifact.zip`, the output artifact is stored in `MyArtifacts/build-ID/MyArtifact.zip`\.  
+For example, if `path` is set to `MyArtifacts`, `namespaceType` is set to `BUILD_ID`, and `name` is set to `MyArtifact.zip`, the output artifact is stored in `MyArtifacts/<build-ID>/MyArtifact.zip`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BUILD_ID | NONE`  

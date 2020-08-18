@@ -7,10 +7,10 @@ You can use a wait condition for situations like the following:
 + To coordinate stack resource creation with configuration actions that are external to the stack creation
 + To track the status of a configuration process
 
-For these situations, we recommend that you associate a [CreationPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-creationpolicy.html) attribute with the wait condition so that you don't have to use a wait condition handle\. For more information and an example, see [Creating Wait Conditions in a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)\. If you use a CreationPolicy with a wait condition, do not specify any of the wait condition's properties\.
+For these situations, we recommend that you associate a [CreationPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-creationpolicy.html) attribute with the wait condition so that you don't have to use a wait condition handle\. For more information and an example, see [Creating wait conditions in a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)\. If you use a CreationPolicy with a wait condition, do not specify any of the wait condition's properties\.
 
 **Note**  
-If you use the [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting Up VPC Endpoints for AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-vpce-bucketnames.html)\.
+If you use the [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting up VPC endpoints for AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-vpce-bucketnames.html)\.
 
 ## Syntax<a name="aws-properties-waitcondition-syntax"></a>
 
@@ -80,15 +80,15 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-properties-waitcondition-return-values-fn--getatt-fn--getatt"></a>
 
 `Data`  <a name="Data-fn::getatt"></a>
-A JSON object that contains the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait Condition Signal JSON Format](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html#using-cfn-waitcondition-signaljson)\.  
+A JSON object that contains the `UniqueId` and `Data` values from the wait condition signal\(s\) for the specified wait condition\. For more information about wait condition signals, see [Wait condition signal JSON format](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html#using-cfn-waitcondition-signaljson)\.  
 Example return value for a wait condition with 2 signals:  
  `{ "Signal1" : "Step 1 complete." , "Signal2" : "Step 2 complete." }` 
 
 ## Examples<a name="aws-properties-waitcondition--examples"></a>
 
-### WaitCondition that Waits for the Desired Number of Instances in a Web Server Group<a name="aws-properties-waitcondition--examples--WaitCondition_that_Waits_for_the_Desired_Number_of_Instances_in_a_Web_Server_Group"></a>
+### WaitCondition that waits for the desired number of instances in a web server group<a name="aws-properties-waitcondition--examples--WaitCondition_that_waits_for_the_desired_number_of_instances_in_a_web_server_group"></a>
 
-#### JSON<a name="aws-properties-waitcondition--examples--WaitCondition_that_Waits_for_the_Desired_Number_of_Instances_in_a_Web_Server_Group--json"></a>
+#### JSON<a name="aws-properties-waitcondition--examples--WaitCondition_that_waits_for_the_desired_number_of_instances_in_a_web_server_group--json"></a>
 
 ```
 "WebServerGroup" : {
@@ -118,7 +118,7 @@ Example return value for a wait condition with 2 signals:
 }
 ```
 
-#### YAML<a name="aws-properties-waitcondition--examples--WaitCondition_that_Waits_for_the_Desired_Number_of_Instances_in_a_Web_Server_Group--yaml"></a>
+#### YAML<a name="aws-properties-waitcondition--examples--WaitCondition_that_waits_for_the_desired_number_of_instances_in_a_web_server_group--yaml"></a>
 
 ```
 WebServerGroup: 
@@ -149,5 +149,5 @@ WaitCondition:
 ```
 
 ## See also<a name="aws-properties-waitcondition--seealso"></a>
-+  [Creating Wait Conditions in a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html) 
-+  [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) 
++  [Creating wait conditions in a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html) 
++  [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) 

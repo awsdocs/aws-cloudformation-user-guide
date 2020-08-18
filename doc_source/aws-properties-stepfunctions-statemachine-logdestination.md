@@ -29,5 +29,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CloudWatchLogsLogGroup`  <a name="cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup"></a>
 An object describing a CloudWatch log group\. For more information, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) in the AWS CloudFormation User Guide\.  
 *Required*: No  
-*Type*: [CloudWatchLogsLogGroup](aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup.md)  
+*Type*: [CloudWatchLogsLogGroup](aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

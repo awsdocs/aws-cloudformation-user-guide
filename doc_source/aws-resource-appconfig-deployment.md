@@ -101,7 +101,7 @@ The environment ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-appconfig-deployment-tags"></a>
-Metadata to assign to the deployment\. Tags help organize and categorize your AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
+Metadata to assign to the deployment\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-deployment-tags.md) of [Tags](aws-properties-appconfig-deployment-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

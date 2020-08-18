@@ -296,7 +296,7 @@ AWS CloudFormation templates that are stored in an S3 bucket must be accessible 
 
 1. In the **Specify Details** section, enter a stack name in the **Name** field\. For this example, use **MyWPTestStack**\. The stack name cannot contain spaces\.
 
-1. On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\. You must provide values for all parameters that do not have default values, including DBUser, DBPassword, DBRootPassword, and KeyName\.  In the **KeyName** field, enter the name of a valid Amazon EC2 key pair in the same region you are creating the stack\.
+1. On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\. You must provide values for all parameters that do not have default values, including **DBUser**, **DBPassword**, **DBRootPassword**, and **KeyName**\. In the **KeyName** field, enter the name of a valid Amazon EC2 pair in the same region you are creating the stack\.
 
 1. Click **Next**\.
 

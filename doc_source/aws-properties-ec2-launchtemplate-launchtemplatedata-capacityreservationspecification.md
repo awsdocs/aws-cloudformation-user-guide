@@ -37,7 +37,7 @@ Indicates the instance's Capacity Reservation preferences\. Possible preferences
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CapacityReservationTarget`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget"></a>
-Information about the target Capacity Reservation\.  
+Information about the target Capacity Reservation or Capacity Reservation group\.  
 *Required*: No  
 *Type*: [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

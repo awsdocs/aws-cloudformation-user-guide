@@ -5,7 +5,7 @@ The `AWS::RDS::DBParameterGroup` resource creates a custom parameter group for a
 This type can be declared in a template and referenced in the `DBParameterGroupName` property of an ` [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)` resource\.
 
 **Note**  
-Applying a parameter group to a DB instance may require the instance to reboot, resulting in a database outage for the duration of the reboot\.
+Applying a parameter group to a DB instance may require the DB instance to reboot, resulting in a database outage for the duration of the reboot\.
 
 ## Syntax<a name="aws-properties-rds-dbparametergroup-syntax"></a>
 

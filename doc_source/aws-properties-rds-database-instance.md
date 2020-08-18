@@ -12,16 +12,16 @@ When properties labeled "*Update requires:* [Replacement](https://docs.aws.amazo
 **Important**  
 We highly recommend that you take a snapshot of the database before updating the stack\. If you don't, you lose the data when AWS CloudFormation replaces your DB instance\. To preserve your data, perform the following procedure:  
 Deactivate any applications that are using the DB instance so that there's no activity on the DB instance\.
-Create a snapshot of the DB instance\. For more information about creating DB snapshots, see [Creating a DB snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateSnapshot.html)\.
+Create a snapshot of the DB instance\. For more information about creating DB snapshots, see [Creating a DB Snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateSnapshot.html)\.
 If you want to restore your instance using a DB snapshot, modify the updated template with your DB instance changes and add the `DBSnapshotIdentifier` property with the ID of the DB snapshot that you want to use\.  
-After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, the DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.
+After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.
 Update the stack\.
 
 For more information about updating other properties of this resource, see ` [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)`\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
 **Deleting DB Instances**
 
-You can set a deletion policy for your DB instance to control how AWS CloudFormation handles the instance when the stack is deleted\. For Amazon RDS DB instances, you can choose to *retain* the instance, to *delete* the instance, or to *create a snapshot* of the instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
+For DB instances that are part of an Aurora DB cluster, you can set a deletion policy for your DB instance to control how AWS CloudFormation handles the DB instance when the stack is deleted\. For Amazon RDS DB instances, you can choose to *retain* the DB instance, to *delete* the DB instance, or to *create a snapshot* of the DB instance\. The default AWS CloudFormation behavior depends on the `DBClusterIdentifier` property:
 
 1. For `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property, AWS CloudFormation saves a snapshot of the DB instance\.
 
@@ -291,6 +291,8 @@ Constraints:
 
 `DBParameterGroupName`  <a name="cfn-rds-dbinstance-dbparametergroupname"></a>
 The name of an existing DB parameter group or a reference to an [AWS::RDS::DBParameterGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbparametergroup.html) resource created in the template\.  
+To list all of the available DB parameter group names, use the following command:  
+`aws rds describe-db-parameter-groups --query "DBParameterGroups[].DBParameterGroupName" --output text`  
 If any of the data members of the referenced parameter group are changed during an update, the DB instance might need to be restarted, which causes some interruption\. If the parameter group contains static parameters, whether they were changed or not, an update triggers a reboot\.
 *Required*: No  
 *Type*: String  
@@ -345,7 +347,7 @@ All other properties are ignored\. Specify a virtual private cloud \(VPC\) secur
 The name or Amazon Resource Name \(ARN\) of the DB snapshot that's used to restore the DB instance\. If you're restoring from a shared manual DB snapshot, you must specify the ARN of the snapshot\.  
 By specifying this property, you can create a DB instance from the specified DB snapshot\. If the `DBSnapshotIdentifier` property is an empty string or the `AWS::RDS::DBInstance` declaration has no `DBSnapshotIdentifier` property, AWS CloudFormation creates a new database\. If the property contains a value \(other than an empty string\), AWS CloudFormation creates a database from the specified snapshot\. If a snapshot with the specified name doesn't exist, AWS CloudFormation can't create the database and it rolls back the stack\.  
 Some DB instance properties aren't valid when you restore from a snapshot, such as the `MasterUsername` and `MasterUserPassword` properties\. For information about the properties that you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API Reference*\.  
-After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, the DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.  
+After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.  
 If you specify this property, you can't specify the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbname](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbname) property\.
 *Required*: No  
 *Type*: String  
@@ -353,7 +355,7 @@ If you specify this property, you can't specify the [https://docs.aws.amazon.com
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbinstance-dbsubnetgroupname"></a>
 A DB subnet group to associate with the DB instance\. If you update this value, the new subnet group must be a subnet group in a new VPC\.   
-If there's no DB subnet group, then the instance isn't a VPC DB instance\.  
+If there's no DB subnet group, then the DB instance isn't a VPC DB instance\.  
 For more information about using Amazon RDS in a VPC, see [Using Amazon RDS with Amazon Virtual Private Cloud \(VPC\)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon Relational Database Service Developer Guide*\.   
 *Required*: No  
 *Type*: String  
@@ -374,9 +376,8 @@ Not applicable\. You can enable or disable deletion protection for the DB cluste
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Domain`  <a name="cfn-rds-dbinstance-domain"></a>
-The Active Directory directory ID to create the DB instance in\. Currently, only Microsoft SQL Server and Oracle DB instances can be created in an Active Directory Domain\.  
-For Microsoft SQL Server DB instances, Amazon RDS can use Windows Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Windows Authentication with an Amazon RDS DB Instance Running Microsoft SQL Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_SQLServerWinAuth.html) in the *Amazon RDS User Guide*\.  
-For Oracle DB instances, Amazon RDS can use Kerberos Authentication to authenticate users that connect to the DB instance\. For more information, see [ Using Kerberos Authentication with Amazon RDS for Oracle](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/oracle-kerberos.html) in the *Amazon RDS User Guide*\.  
+The Active Directory directory ID to create the DB instance in\. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain\.  
+For more information, see [ Kerberos Authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -419,8 +420,23 @@ For more information, see [Using Amazon Performance Insights](https://docs.aws.a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-rds-dbinstance-engine"></a>
-The name of the database engine that you want to use for this DB instance\. For valid values, see the `Engine` parameter of the [CreateDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) action in the *Amazon RDS API Reference*\.  
+The name of the database engine that you want to use for this DB instance\.  
 If you don't specify a value for the `DBParameterGroupName` property, the default DBParameterGroup for the specified engine is used\.
+Valid Values:  
++ `aurora` \(for MySQL 5\.6\-compatible Aurora\)
++ `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\)
++ `aurora-postgresql`
++ `mariadb`
++ `mysql`
++ `oracle-ee`
++ `oracle-se2`
++ `oracle-se1`
++ `oracle-se`
++ `postgres`
++ `sqlserver-ee`
++ `sqlserver-se`
++ `sqlserver-ex`
++ `sqlserver-web`
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -458,6 +474,7 @@ If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To
 
 `LicenseModel`  <a name="cfn-rds-dbinstance-licensemodel"></a>
 License model information for this DB instance\.  
+ Valid values: `license-included` \| `bring-your-own-license` \| `general-public-license`   
 If you've specified `DBSecurityGroups` and then you update the license model, AWS CloudFormation replaces the underlying DB instance\. This will incur some interruptions to database availability\. 
 *Required*: No  
 *Type*: String  
@@ -617,8 +634,9 @@ Not applicable\. The encryption for DB instances is managed by the DB cluster\.
 `StorageType`  <a name="cfn-rds-dbinstance-storagetype"></a>
 Specifies the storage type to be associated with the DB instance\.  
  Valid values: `standard | gp2 | io1`   
+The `standard` value is also known as magnetic\.  
  If you specify `io1`, you must also include a value for the `Iops` parameter\.   
- Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`   
+ Default: `io1` if the `Iops` parameter is specified, otherwise `standard`   
 For more information, see [Amazon RDS DB Instance Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -933,43 +951,41 @@ The following example creates an encrypted Read Replica from a cross\-region sou
 ```
 --- 
 AWSTemplateFormatVersion: 2010-09-09
-Description: "RDS Storage Encrypted"
-Outputs: 
-  InstanceId: 
-    Description: "InstanceId of the newly created RDS Instance"
-    Value: MyDBSmall
-Parameters: 
-  DBInstanceType: 
+Description: RDS Storage Encrypted
+Parameters:
+  SourceDBInstanceIdentifier:
     Type: String
-  SourceDBInstanceIdentifier: 
+  DBInstanceType:
     Type: String
-  SourceRegion: 
+  SourceRegion:
     Type: String
-Resources: 
-  MyDBSmall: 
-    Properties: 
-      DBInstanceClass: DBInstanceType
-      KmsKeyId: MyKey
-      SourceDBInstanceIdentifier: SourceDBInstanceIdentifier
-      SourceRegion: SourceRegion
-    Type: "AWS::RDS::DBInstance"
-  MyKey: 
-    Properties: 
-      KeyPolicy: 
-        Id: key-default-1
-        Statement: 
-          - 
-            Action: "kms:*"
-            Effect: Allow
-            Principal: 
-              AWS: 
-                - ""
-                - 
-                  - "arn:aws:iam::"
-                  - "AWS::AccountId"
-                  - ":root"
-            Resource: "*"
-            Sid: "Enable IAM User Permissions"
-        Version: 2012-10-17
+Resources:
+  MyKey:
     Type: "AWS::KMS::Key"
+    Properties:
+      KeyPolicy:
+        Version: 2012-10-17
+        Id: key-default-1
+        Statement:
+          - Sid: Enable IAM User Permissions
+            Effect: Allow
+            Principal:
+              AWS: !Join
+                - ""
+                - - "arn:aws:iam::"
+                  - !Ref "AWS::AccountId"
+                  - ":root"
+            Action: "kms:*"
+            Resource: "*"
+  MyDBSmall:
+    Type: "AWS::RDS::DBInstance"
+    Properties:
+      DBInstanceClass: !Ref DBInstanceType
+      SourceDBInstanceIdentifier: !Ref SourceDBInstanceIdentifier
+      SourceRegion: !Ref SourceRegion
+      KmsKeyId: !Ref MyKey
+Outputs:
+  InstanceId:
+    Description: InstanceId of the newly created RDS Instance
+    Value: !Ref MyDBSmall
 ```

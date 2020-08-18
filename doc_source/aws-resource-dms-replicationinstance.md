@@ -84,6 +84,7 @@ The default value is a random, system\-chosen Availability Zone in the endpoint'
 
 `EngineVersion`  <a name="cfn-dms-replicationinstance-engineversion"></a>
 The engine version number of the replication instance\.  
+If an engine version number is not specified when a replication instance is created, the default is the latest engine version available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -183,17 +184,28 @@ One or more public IP addresses for the replication instance\.
 #### JSON<a name="aws-resource-dms-replicationinstance--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
-                "BasicReplicationInstance": { "Type": "AWS::DMS::ReplicationInstance", "Properties":
-                { "ReplicationInstanceClass": "dms.t2.small" } } } }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "BasicReplicationInstance": {
+            "Type": "AWS::DMS::ReplicationInstance",
+            "Properties": {
+                "ReplicationInstanceClass": "dms.t2.small"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-dms-replicationinstance--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Resources:
-                BasicReplicationInstance: Properties: ReplicationInstanceClass: dms.t2.small Type:
-                "AWS::DMS::ReplicationInstance"
+AWSTemplateFormatVersion: 2010-09-09
+Resources: 
+  BasicReplicationInstance: 
+    Properties: 
+      ReplicationInstanceClass: dms.t2.small
+    Type: "AWS::DMS::ReplicationInstance"
 ```
 
 ## See also<a name="aws-resource-dms-replicationinstance--seealso"></a>

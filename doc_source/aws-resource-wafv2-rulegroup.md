@@ -7,6 +7,9 @@ Use an [AWS::WAFv2::RuleGroup](#aws-resource-wafv2-rulegroup) to define a collec
 
 When you create a rule group, you define an immutable capacity limit\. If you update a rule group, you must stay within the capacity\. This allows others to reuse the rule group with confidence in its capacity requirements\. 
 
+**Note**  
+You can only use up to 3 levels of nested rule statements when you manage your web ACLs and rule groups using AWS CloudFormation\. This limitation doesn't exist when you use the API and SDKs\. 
+
 ## Syntax<a name="aws-resource-wafv2-rulegroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -88,6 +91,7 @@ For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virg
 
 `Tags`  <a name="cfn-wafv2-rulegroup-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
+To modify tags on existing resources, use the AWS WAF console or the APIs\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -3,7 +3,8 @@
 The `AWS::RDS::DBClusterParameterGroup` resource creates a new Amazon RDS DB cluster parameter group\. For more information, see [Managing an Amazon Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_Aurora.html) in the *Amazon Aurora User Guide*\.
 
 **Note**  
-If you apply a parameter group to a DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\. If you attempt to apply change to parameter group referenced by stopped DB Cluster, update stack would wait until cluster is started.
+If you apply a parameter group to a DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\.  
+If you apply a change to parameter group associated with a stopped DB cluster, then the update stack waits until the DB cluster is started\.
 
 ## Syntax<a name="aws-resource-rds-dbclusterparametergroup-syntax"></a>
 

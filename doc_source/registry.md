@@ -19,52 +19,11 @@ You can register a resource provider using the [register\-type](https://docs.aws
 
 ### IAM permissions for registering a resource provider<a name="registry-register-permissions"></a>
 
-As part of registering a resource provider, you specify an S3 bucket which contains the schema handler package\. This package contains the schema, event handlers, and associated files for the resource provider you want to register\. CloudFormation requires the following IAM permissions in order to access this S3 bucket and the schema handler package\. \(This is true whether you're either using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\.\)
-+ `s3:ListBucket`
-+ `s3:GetObject`
+As part of registering a resource provider, you specify an S3 bucket which contains the schema handler package\. This package contains the schema, event handlers, and associated files for the resource provider you want to register\. The user registering the resource provider type must be able to access the the schema handler package in that S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the schema handler package\.
 
-Make sure you grant the `cloudformation.amazonaws.com` service these permissions for the appropriate S3 bucket before you attempt to register the resource provider\. For example:
+This is true whether you're either using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\.
 
-```
-  ArtifactCopyPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !Ref ArtifactBucket
-      PolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Sid: Allow CloudFormation to copy artifacts from the bucket
-            Effect: Allow
-            Principal:
-              Service: cloudformation.amazonaws.com
-            Action:
-              - s3:ListBucket
-              - s3:GetObject
-            Resource:
-              - !Sub "arn:${AWS::Partition}:s3:::${ArtifactBucket}"
-              - !Sub "arn:${AWS::Partition}:s3:::${ArtifactBucket}/*"
-```
-
-For more information, see [Actions, resources, and condition keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
-
-In addition, both the [execution role](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) and the [logging role](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) you specify when registering the resource provider must specify a trust relationship that allows the CloudFormation service principal to assume that role\. For example:
-
-```
-  {
-    "Version": "2012-10-17",
-    "Statement": [
-      {
-        "Effect": "Allow",
-        "Principal": {
-          "Service": "resources.cloudformation.amazonaws.com"
-        },
-        "Action": "sts:AssumeRole"
-      }
-    ]
-  }
-```
-
-For more information, see [Creating a role to delegate permissions to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *AWS Identity and Access Management User Guide*\.
+For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 
 **To register a resource provider using the AWS CLI**
 

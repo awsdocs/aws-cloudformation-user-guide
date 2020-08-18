@@ -85,8 +85,9 @@ A list of IDs specifying the security groups to apply to all network interfaces 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
 Sets the storage capacity of the file system that you're creating\.  
 For Lustre file systems:  
-+ For `SCRATCH_2` and `PERSISTENT_1` deployment types, valid values are 1\.2, 2\.4, and increments of 2\.4 TiB\.
-+ For `SCRATCH_1` deployment type, valid values are 1\.2, 2\.4, and increments of 3\.6 TiB\.
++ For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid values are 1200 GiB, 2400 GiB, and increments of 2400 GiB\.
++ For `PERSISTENT HDD` file systems, valid values are increments of 6000 GiB for 12 MB/s/TiB file systems and increments of 1800 GiB for 40 MB/s/TiB file systems\.
++ For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of 3600 GiB\.
 For Windows file systems:  
 + If `StorageType=SSD`, valid values are 32 GiB \- 65,536 GiB \(64 TiB\)\.
 + If `StorageType=HDD`, valid values are 2000 GiB \- 65,536 GiB \(64 TiB\)\.
@@ -97,9 +98,9 @@ For Windows file systems:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
-Sets the storage type for the Amazon FSx for Windows file system you're creating\. Valid values are `SSD` and `HDD`\.  
-+ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows deployment types\.
-+ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types\. 
+Sets the storage type for the file system you're creating\. Valid values are `SSD` and `HDD`\.  
++ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows and Lustre deployment types\.
++ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT`Lustre file system deployment types\. 
  Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide*\.   
 *Required*: No  
 *Type*: String  
@@ -184,8 +185,7 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                     }
                 ],
                 "LustreConfiguration": {
-                    "AutoImportPolicyType" : "NEW",
-                    "AutomaticBackupRetentionDays" : 21,
+                    "AutoImportPolicy" : "NEW",                    
                     "CopyTagsToBackups" : true,
                     "DailyAutomaticBackupStartTime" : "02:00",
                     "DeploymentType": "PERSISTENT_1",
@@ -242,8 +242,7 @@ Resources:
         - Key: "Name"
           Value: "CFNs3linkedLustre"
       LustreConfiguration:
-        AutoImportPolicyType: "NEW"
-        AutomaticBackupRetentionDays: 21
+        AutoImportPolicy: "NEW"
         CopyTagsToBackups: true
         DailyAutomaticBackupStartTime: "02:00"
         DeploymentType: "PERSISTENT_1"
@@ -294,7 +293,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                     "ThroughputCapacity": 8,
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
-                    "AutomaticBackupRetentionDays": 2,
+                    "AutomaticBackupRetentionDays": 30,
                     "CopyTagsToBackups": false,
                     "DeploymentType": "MULTI_AZ_1",
                     "PreferredSubnetId": {
@@ -371,7 +370,7 @@ Resources:
         ThroughputCapacity: 8
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
-        AutomaticBackupRetentionDays: 2
+        AutomaticBackupRetentionDays: 30
         CopyTagsToBackups: false
         DeploymentType: MULTI_AZ_1
         PreferredSubnetId: !ImportValue MySubnet01
@@ -438,7 +437,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                     "ThroughputCapacity": 8,
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
-                    "AutomaticBackupRetentionDays": 2,
+                    "AutomaticBackupRetentionDays": 90,
                     "CopyTagsToBackups": false,
                     "DeploymentType": "MULTI_AZ_1",
                     "PreferredSubnetId": {
@@ -481,7 +480,7 @@ Resources:
         ThroughputCapacity: 8
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
-        AutomaticBackupRetentionDays: 2
+        AutomaticBackupRetentionDays: 90
         DeploymentType: MULTI_AZ_1
         PreferredSubnetId: !ImportValue CfnFsxMadSubnet01
         CopyTagsToBackups: false

@@ -293,18 +293,15 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
     "Transform": [
         "AWS::CodeDeployBlueGreen"
     ],
-    "Hooks": {
+   "Hooks": {
         "CodeDeployBlueGreenHook": {
             "Properties": {
                 "TrafficRoutingConfig": {
-                    "Type": [
-                        {
-                            "TimeBasedCanary": {
-                                "StepPercentage": 15,
-                                "BakeTimeMins": 5
-                            }
-                        }
-                    ]
+                    "Type": "TimeBasedCanary",
+                    "TimeBasedCanary": {
+                        "StepPercentage": 15,
+                        "BakeTimeMins": 5
+                    }
                 },
                 "Applications": [
                     {

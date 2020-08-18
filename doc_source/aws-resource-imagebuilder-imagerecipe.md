@@ -93,7 +93,7 @@ The semantic version of the image recipe\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkingDirectory`  <a name="cfn-imagebuilder-imagerecipe-workingdirectory"></a>
-Not currently supported by AWS CloudFormation\.  
+The working directory to be used during build and test workflows\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

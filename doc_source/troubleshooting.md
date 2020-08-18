@@ -76,7 +76,7 @@ For resource property names and values, update your template to use valid names 
 
 Verify that you didn't reach a resource limit\. For example, the default number Amazon EC2 instances that you can launch is 20\. If try to create more Amazon EC2 instances than your account limit, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS limits by service, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
-For AWS CloudFormation limits and tweaking strategies, see [AWS CloudFormation limits](cloudformation-limits.md)\.
+For AWS CloudFormation limits and tweaking strategies, see [AWS CloudFormation quotas](cloudformation-limits.md)\.
 
 Also, during an update, if a resource is replaced, AWS CloudFormation creates new resource before it deletes the old one\. This replacement might put your account over the resource limit, which would cause your update to fail\. You can delete excess resources or request a [limit increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
 

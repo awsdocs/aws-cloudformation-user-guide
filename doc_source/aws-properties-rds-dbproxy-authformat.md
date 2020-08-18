@@ -32,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AuthScheme`  <a name="cfn-rds-dbproxy-authformat-authscheme"></a>
 The type of authentication that the proxy uses for connections from the proxy to the underlying database\.  
+Valid Values: `SECRETS`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -44,6 +45,7 @@ A user\-specified description about the authentication used by a proxy to log in
 
 `IAMAuth`  <a name="cfn-rds-dbproxy-authformat-iamauth"></a>
 Whether to require or disallow AWS Identity and Access Management \(IAM\) authentication for connections to the proxy\.  
+Valid Values: `DISABLED | REQUIRED`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

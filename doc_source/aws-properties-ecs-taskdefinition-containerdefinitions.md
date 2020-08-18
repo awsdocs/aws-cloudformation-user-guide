@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DockerSecurityOptions](#cfn-ecs-taskdefinition-containerdefinition-dockersecurityoptions)" : [ String, ... ],
   "[EntryPoint](#cfn-ecs-taskdefinition-containerdefinition-entrypoint)" : [ String, ... ],
   "[Environment](#cfn-ecs-taskdefinition-containerdefinition-environment)" : [ KeyValuePair, ... ],
+  "[EnvironmentFiles](#cfn-ecs-taskdefinition-containerdefinition-environmentfiles)" : [ EnvironmentFile, ... ],
   "[Essential](#cfn-ecs-taskdefinition-containerdefinition-essential)" : Boolean,
   "[ExtraHosts](#cfn-ecs-taskdefinition-containerdefinition-extrahosts)" : [ HostEntry, ... ],
   "[FirelensConfiguration](#cfn-ecs-taskdefinition-containerdefinition-firelensconfiguration)" : FirelensConfiguration,
@@ -72,6 +73,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [Environment](#cfn-ecs-taskdefinition-containerdefinition-environment): 
     - KeyValuePair
+  [EnvironmentFiles](#cfn-ecs-taskdefinition-containerdefinition-environmentfiles): 
+    - EnvironmentFile
   [Essential](#cfn-ecs-taskdefinition-containerdefinition-essential): Boolean
   [ExtraHosts](#cfn-ecs-taskdefinition-containerdefinition-extrahosts): 
     - HostEntry
@@ -147,21 +150,21 @@ For tasks using the Fargate launch type, the task or service requires platform v
 
 `DisableNetworking`  <a name="cfn-ecs-taskdefinition-containerdefinition-disablenetworking"></a>
 When this parameter is true, networking is disabled within the container\. This parameter maps to `NetworkDisabled` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/)\.  
-This parameter is not supported for Windows containers\.
+This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsSearchDomains`  <a name="cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains"></a>
 A list of DNS search domains that are presented to the container\. This parameter maps to `DnsSearch` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--dns-search` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers\.
+This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsServers`  <a name="cfn-ecs-taskdefinition-containerdefinition-dnsservers"></a>
 A list of DNS servers that are presented to the container\. This parameter maps to `Dns` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--dns` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers\.
+This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -195,6 +198,15 @@ The environment variables to pass to a container\. This parameter maps to `Env` 
 We do not recommend using plaintext environment variables for sensitive information, such as credential data\.
 *Required*: No  
 *Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnvironmentFiles`  <a name="cfn-ecs-taskdefinition-containerdefinition-environmentfiles"></a>
+A list of files containing the environment variables to pass to a container\. This parameter maps to the `--env-file` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
+You can specify up to ten environment files\. The file must have a `.env` file extension\. Each line in an environment file should contain an environment variable in `VARIABLE=VALUE` format\. Lines beginning with `#` are treated as comments and are ignored\. For more information on the environment variable file syntax, see [Declare default environment variables in file](https://docs.docker.com/compose/env-file/)\.  
+If there are environment variables specified using the `environment` parameter in a container definition, they take precedence over the variables contained within an environment file\. If multiple environment files are specified that contain the same variable, they are processed from the top down\. It is recommended to use unique variable names\. For more information, see [Specifying Environment Variables](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+This field is not valid for containers in tasks using the Fargate launch type\.  
+*Required*: No  
+*Type*: List of [EnvironmentFile](aws-properties-ecs-taskdefinition-environmentfile.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Essential`  <a name="cfn-ecs-taskdefinition-containerdefinition-essential"></a>
@@ -249,7 +261,7 @@ When this parameter is `true`, this allows you to deploy containerized applicati
 
 `Links`  <a name="cfn-ecs-taskdefinition-containerdefinition-links"></a>
 The `links` parameter allows containers to communicate with each other without the need for port mappings\. This parameter is only supported if the network mode of a task definition is `bridge`\. The `name:internalName` construct is analogous to `name:alias` in Docker links\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. For more information about linking Docker containers, go to [Legacy container links](https://docs.docker.com/network/links/) in the Docker documentation\. This parameter maps to `Links` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--link` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers\.
+This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
 Containers that are collocated on a single container instance may be able to communicate with each other without requiring links or host port mappings\. Network isolation is achieved on the container instance using security groups and VPC settings\.
 *Required*: No  
 *Type*: List of String  
@@ -329,7 +341,7 @@ When this parameter is `true`, a TTY is allocated\. This parameter maps to `Tty`
 
 `ReadonlyRootFilesystem`  <a name="cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem"></a>
 When this parameter is true, the container is given read\-only access to its root file system\. This parameter maps to `ReadonlyRootfs` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--read-only` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers\.
+This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -392,7 +404,7 @@ You can use the following formats\. If specifying a UID or GID, you must specify
 +  `uid:gid` 
 +  `user:gid` 
 +  `uid:group` 
-This parameter is not supported for Windows containers\.
+This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

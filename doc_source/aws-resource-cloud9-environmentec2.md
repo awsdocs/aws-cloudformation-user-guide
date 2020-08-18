@@ -53,9 +53,10 @@ The number of minutes until the running instance is shut down after the environm
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConnectionType`  <a name="cfn-cloud9-environmentec2-connectiontype"></a>
-Not currently supported by AWS CloudFormation\.  
+The connection type used for connecting to an Amazon EC2 environment\. Valid values are `CONNECT_SSH` \(default\) and `CONNECT_SSM` \(connected through AWS Systems Manager\)\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `CONNECT_SSH | CONNECT_SSM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-cloud9-environmentec2-description"></a>

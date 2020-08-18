@@ -1,6 +1,6 @@
 # AWS::ResourceGroups::Group Query<a name="aws-properties-resourcegroups-group-query"></a>
 
-The underlying resource query of a resource group\. Resources that match query results are part of the group\.
+A mapping of a query attached to a resource group that determines the AWS resources that are members of the group\.
 
 ## Syntax<a name="aws-properties-resourcegroups-group-query-syntax"></a>
 

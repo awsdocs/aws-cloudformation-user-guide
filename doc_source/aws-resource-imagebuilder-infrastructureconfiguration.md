@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair)" : String,
       "[Logging](#cfn-imagebuilder-infrastructureconfiguration-logging)" : Logging,
       "[Name](#cfn-imagebuilder-infrastructureconfiguration-name)" : String,
+      "[ResourceTags](#cfn-imagebuilder-infrastructureconfiguration-resourcetags)" : {Key : Value, ...},
       "[SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids)" : [ String, ... ],
       "[SnsTopicArn](#cfn-imagebuilder-infrastructureconfiguration-snstopicarn)" : String,
       "[SubnetId](#cfn-imagebuilder-infrastructureconfiguration-subnetid)" : String,
@@ -40,6 +41,8 @@ Properties:
   [Logging](#cfn-imagebuilder-infrastructureconfiguration-logging): 
     Logging
   [Name](#cfn-imagebuilder-infrastructureconfiguration-name): String
+  [ResourceTags](#cfn-imagebuilder-infrastructureconfiguration-resourcetags): 
+    Key : Value
   [SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids): 
     - String
   [SnsTopicArn](#cfn-imagebuilder-infrastructureconfiguration-snstopicarn): String
@@ -93,6 +96,12 @@ The name of the infrastructure configuration\.
 *Type*: String  
 *Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ResourceTags`  <a name="cfn-imagebuilder-infrastructureconfiguration-resourcetags"></a>
+The tags attached to the resource created by Image Builder\.  
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-imagebuilder-infrastructureconfiguration-securitygroupids"></a>
 The security group IDs of the infrastructure configuration\.  

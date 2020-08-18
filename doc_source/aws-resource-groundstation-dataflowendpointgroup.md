@@ -103,7 +103,8 @@ The following example creates a Ground Station `DataflowEndpointGroup`
               "Address": {
                 "Name": "172.10.0.2",
                 "Port": 44720
-              }
+              },
+              "Mtu": 1500
             }
           }
         ]
@@ -132,4 +133,5 @@ Resources:
         Address:
           Name: 172.10.0.2
           Port: 44720
+        Mtu: 1500
 ```

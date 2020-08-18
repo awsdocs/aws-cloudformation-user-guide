@@ -1,6 +1,6 @@
 # AWS::Elasticsearch::Domain MasterUserOptions<a name="aws-properties-elasticsearch-domain-masteruseroptions"></a>
 
-<a name="aws-properties-elasticsearch-domain-masteruseroptions-description"></a>The `MasterUserOptions` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)\.
+Specifies information about the master user\.
 
 ## Syntax<a name="aws-properties-elasticsearch-domain-masteruseroptions-syntax"></a>
 
@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-masteruseroptions-properties"></a>
 
 `MasterUserARN`  <a name="cfn-elasticsearch-domain-masteruseroptions-masteruserarn"></a>
-Not currently supported by AWS CloudFormation\.  
+ARN for the master user\. Only specify if `InternalUserDatabaseEnabled` is false in `AdvancedSecurityOptions`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUserName`  <a name="cfn-elasticsearch-domain-masteruseroptions-masterusername"></a>
-Not currently supported by AWS CloudFormation\.  
+Username for the master user\. Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUserPassword`  <a name="cfn-elasticsearch-domain-masteruseroptions-masteruserpassword"></a>
-Not currently supported by AWS CloudFormation\.  
+Password for the master user\. Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

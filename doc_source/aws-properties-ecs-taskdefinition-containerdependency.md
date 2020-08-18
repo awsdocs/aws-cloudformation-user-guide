@@ -35,13 +35,13 @@ The dependency condition of the container\. The following are the available cond
 +  `COMPLETE` \- This condition validates that a dependent container runs to completion \(exits\) before permitting other containers to start\. This can be useful for nonessential containers that run a script and then exit\. This condition cannot be set on an essential container\.
 +  `SUCCESS` \- This condition is the same as `COMPLETE`, but it also requires that the container exits with a `zero` status\. This condition cannot be set on an essential container\.
 +  `HEALTHY` \- This condition validates that the dependent container passes its Docker health check before permitting other containers to start\. This requires that the dependent container has health checks configured\. This condition is confirmed only at task startup\.
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed values*: `COMPLETE | HEALTHY | START | SUCCESS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ContainerName`  <a name="cfn-ecs-taskdefinition-containerdependency-containername"></a>
 The name of a container\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

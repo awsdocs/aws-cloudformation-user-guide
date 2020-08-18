@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration)" : DockerVolumeConfiguration,
+  "[EFSVolumeConfiguration](#cfn-ecs-taskdefinition-volume-efsvolumeconfiguration)" : EFSVolumeConfiguration,
   "[Host](#cfn-ecs-taskdefinition-volumes-host)" : HostVolumeProperties,
   "[Name](#cfn-ecs-taskdefinition-volumes-name)" : String
 }
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DockerVolumeConfiguration](#cfn-ecs-taskdefinition-volume-dockervolumeconfiguration): 
     DockerVolumeConfiguration
+  [EFSVolumeConfiguration](#cfn-ecs-taskdefinition-volume-efsvolumeconfiguration): 
+    EFSVolumeConfiguration
   [Host](#cfn-ecs-taskdefinition-volumes-host): 
     HostVolumeProperties
   [Name](#cfn-ecs-taskdefinition-volumes-name): String
@@ -32,6 +35,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 This parameter is specified when you are using Docker volumes\. Docker volumes are only supported when you are using the EC2 launch type\. Windows containers only support the use of the `local` driver\. To use bind mounts, specify the `host` parameter instead\.  
 *Required*: No  
 *Type*: [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EFSVolumeConfiguration`  <a name="cfn-ecs-taskdefinition-volume-efsvolumeconfiguration"></a>
+This parameter is specified when you are using an Amazon Elastic File System file system for task storage\.  
+*Required*: No  
+*Type*: [EFSVolumeConfiguration](aws-properties-ecs-taskdefinition-efsvolumeconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Host`  <a name="cfn-ecs-taskdefinition-volumes-host"></a>

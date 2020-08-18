@@ -64,7 +64,8 @@ The following example creates Ground Station `EndpointDetails`
         "Address": {
           "Name": "172.10.0.2",
           "Port": 44720
-        }
+        },
+        "Mtu": 1500
       }
     }
   }
@@ -86,4 +87,5 @@ Endpoint:
   Address:
     Name: 172.10.0.2
     Port: 44720
+  Mtu: 1500
 ```

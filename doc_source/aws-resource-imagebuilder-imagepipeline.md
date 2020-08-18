@@ -63,7 +63,7 @@ The Amazon Resource Name \(ARN\) of the distribution configuration associated wi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled"></a>
-Not currently supported by AWS CloudFormation\.  
+ Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

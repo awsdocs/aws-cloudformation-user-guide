@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Broker",
   "Properties" : {
+      "[AuthenticationStrategy](#cfn-amazonmq-broker-authenticationstrategy)" : String,
       "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
       "[Configuration](#cfn-amazonmq-broker-configuration)" : ConfigurationId,
@@ -38,6 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
+      "[LdapMetadata](#cfn-amazonmq-broker-ldapmetadata)" : LdapMetadata,
+      "[LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata)" : LdapServerMetadata,
       "[Logs](#cfn-amazonmq-broker-logs)" : LogList,
       "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : MaintenanceWindow,
       "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
@@ -55,6 +58,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AmazonMQ::Broker
 Properties: 
+  [AuthenticationStrategy](#cfn-amazonmq-broker-authenticationstrategy): String
   [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade): Boolean
   [BrokerName](#cfn-amazonmq-broker-brokername): String
   [Configuration](#cfn-amazonmq-broker-configuration): 
@@ -65,6 +69,10 @@ Properties:
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
+  [LdapMetadata](#cfn-amazonmq-broker-ldapmetadata): 
+    LdapMetadata
+  [LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata): 
+    LdapServerMetadata
   [Logs](#cfn-amazonmq-broker-logs): 
     LogList
   [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime): 
@@ -82,6 +90,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-amazonmq-broker-properties"></a>
+
+`AuthenticationStrategy`  <a name="cfn-amazonmq-broker-authenticationstrategy"></a>
+Optional\. The authentication strategy used to secure the broker\. The default is `SIMPLE`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-amazonmq-broker-autominorversionupgrade"></a>
 Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions\. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot\.  
@@ -131,6 +145,18 @@ The version of the broker engine\. For a list of supported engine versions, see 
 The broker's instance type\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LdapMetadata`  <a name="cfn-amazonmq-broker-ldapmetadata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [LdapMetadata](aws-properties-amazonmq-broker-ldapmetadata.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LdapServerMetadata`  <a name="cfn-amazonmq-broker-ldapservermetadata"></a>
+Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\.  
+*Required*: No  
+*Type*: [LdapServerMetadata](aws-properties-amazonmq-broker-ldapservermetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logs`  <a name="cfn-amazonmq-broker-logs"></a>

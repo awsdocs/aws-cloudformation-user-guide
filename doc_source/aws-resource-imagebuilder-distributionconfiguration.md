@@ -66,7 +66,7 @@ The tags of this distribution configuration\.
 
 ### Ref<a name="aws-resource-imagebuilder-distributionconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:distribution-configuration/myexampledistribution`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the resource, such as `arn:aws:imagebuilder:us-west-2:123456789012:distribution-configuration/myexampledistribution`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

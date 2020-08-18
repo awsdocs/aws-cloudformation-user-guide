@@ -12,6 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoT::Certificate",
   "Properties" : {
+      "[CACertificatePem](#cfn-iot-certificate-cacertificatepem)" : String,
+      "[CertificateMode](#cfn-iot-certificate-certificatemode)" : String,
+      "[CertificatePem](#cfn-iot-certificate-certificatepem)" : String,
       "[CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest)" : String,
       "[Status](#cfn-iot-certificate-status)" : String
     }
@@ -23,15 +26,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoT::Certificate
 Properties: 
+  [CACertificatePem](#cfn-iot-certificate-cacertificatepem): String
+  [CertificateMode](#cfn-iot-certificate-certificatemode): String
+  [CertificatePem](#cfn-iot-certificate-certificatepem): String
   [CertificateSigningRequest](#cfn-iot-certificate-certificatesigningrequest): String
   [Status](#cfn-iot-certificate-status): String
 ```
 
 ## Properties<a name="aws-resource-iot-certificate-properties"></a>
 
+`CACertificatePem`  <a name="cfn-iot-certificate-cacertificatepem"></a>
+The CA certificate used to sign the device certificate being registered, not available when CertificateMode is SNI\_ONLY\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CertificateMode`  <a name="cfn-iot-certificate-certificatemode"></a>
+Specifies which mode of certificate registration to use with this resource\. Valid options are DEFAULT with CaCertificatePem and CertificatePem, SNI\_ONLY with CertificatePem, and Default with CertificateSigningRequest\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CertificatePem`  <a name="cfn-iot-certificate-certificatepem"></a>
+The certificate data in PEM format\. Requires SNI\_ONLY for the certificate mode or the accompanying CACertificatePem for registration\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `CertificateSigningRequest`  <a name="cfn-iot-certificate-certificatesigningrequest"></a>
 The certificate signing request \(CSR\)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -70,3 +94,6 @@ Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:
  `{ "Fn::GetAtt": ["MyCertificate", "Arn"] }`   
 A value similar to the following is returned:  
  `arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2` 
+
+`Id`  <a name="Id-fn::getatt"></a>
+The certificate ID\.
