@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[VolumeSpecification](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification)" : [VolumeSpecification](aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.md),
+  "[VolumeSpecification](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification)" : VolumeSpecification,
   "[VolumesPerInstance](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance)" : Integer
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [VolumeSpecification](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification): 
-    [VolumeSpecification](aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.md)
+    VolumeSpecification
   [VolumesPerInstance](#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance): Integer
 ```
 

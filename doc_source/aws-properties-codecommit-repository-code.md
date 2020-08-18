@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3](#cfn-codecommit-repository-code-s3)" : [S3](aws-properties-codecommit-repository-s3.md)
+  "[S3](#cfn-codecommit-repository-code-s3)" : S3
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3](#cfn-codecommit-repository-code-s3): 
-    [S3](aws-properties-codecommit-repository-s3.md)
+    S3
 ```
 
 ## Properties<a name="aws-properties-codecommit-repository-code-properties"></a>

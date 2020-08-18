@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AutoScaling::LaunchConfiguration",
   "Properties" : {
       "[AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip)" : Boolean,
-      "[BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md), ... ],
+      "[BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
       "[ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid)" : String,
       "[ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups)" : [ String, ... ],
       "[EbsOptimized](#cfn-as-launchconfig-ebsoptimized)" : Boolean,
@@ -47,7 +47,7 @@ Type: AWS::AutoScaling::LaunchConfiguration
 Properties: 
   [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip): Boolean
   [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings): 
-    - [BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md)
+    - BlockDeviceMapping
   [ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid): String
   [ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups): 
     - String
@@ -213,8 +213,6 @@ The maximum hourly price to be paid for any Spot Instance launched to fulfill th
 When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price\.
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserData`  <a name="cfn-as-launchconfig-userdata"></a>
@@ -226,7 +224,7 @@ For more information, see [Instance Metadata and User Data](https://docs.aws.ama
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-as-launchconfig-return-values"></a>
+## Return values<a name="aws-properties-as-launchconfig-return-values"></a>
 
 ### Ref<a name="aws-properties-as-launchconfig-return-values-ref"></a>
 
@@ -240,7 +238,7 @@ The following examples create launch configurations that can be used by an Auto 
 
 ### Launch Configuration with Block Device Mappings<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Block_Device_Mappings"></a>
 
-This example shows a launch configuration with a `BlockDeviceMappings` property that lists two devices: a 50 gigabyte EBS root volume mapped to /dev/sda1 and a 100 gigabyte EBS volume mapped to /dev/sdm\. The /dev/sdm volume uses the default EBS volume type based on the region and is not deleted when terminating the instance it is attached to\. 
+This example shows a launch configuration with a `BlockDeviceMappings` property that lists two devices: a 30 gigabyte EBS root volume mapped to /dev/sda1 and a 100 gigabyte EBS volume mapped to /dev/sdm\. The /dev/sdm volume uses the default EBS volume type based on the region and is not deleted when terminating the instance it is attached to\. 
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Launch_Configuration_with_Block_Device_Mappings--json"></a>
 
@@ -287,9 +285,8 @@ This example shows a launch configuration with a `BlockDeviceMappings` property 
           {
             "DeviceName":"/dev/sda1",
             "Ebs":{
-              "VolumeSize":"50",
-              "VolumeType":"io1",
-              "Iops":200
+              "VolumeSize":"30",
+              "VolumeType":"gp2"
             }
           },
           {
@@ -334,9 +331,8 @@ Resources:
       BlockDeviceMappings: 
         - DeviceName: /dev/sda1
           Ebs: 
-            VolumeSize: 50
-            VolumeType: "io1"
-            Iops: 200
+            VolumeSize: 30
+            VolumeType: "gp2"
         - DeviceName: /dev/sdm
           Ebs: 
             VolumeSize: 100

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::DomainName",
   "Properties" : {
       "[DomainName](#cfn-apigatewayv2-domainname-domainname)" : String,
-      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md), ... ],
+      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ DomainNameConfiguration, ... ],
       "[Tags](#cfn-apigatewayv2-domainname-tags)" : Json
     }
 }
@@ -28,7 +28,7 @@ Type: AWS::ApiGatewayV2::DomainName
 Properties: 
   [DomainName](#cfn-apigatewayv2-domainname-domainname): String
   [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations): 
-    - [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)
+    - DomainNameConfiguration
   [Tags](#cfn-apigatewayv2-domainname-tags): Json
 ```
 
@@ -52,7 +52,7 @@ The collection of tags associated with a domain name\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-domainname-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-domainname-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-domainname-return-values-ref"></a>
 
@@ -114,5 +114,5 @@ MyDomainName:
         CertificateName: testCertificate
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-domainname--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-domainname--seealso"></a>
 + [CreateDomainName](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames.html#CreateDomainName) in the *Amazon API Gateway Version 2 API Reference*

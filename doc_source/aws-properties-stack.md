@@ -88,7 +88,7 @@ Updates are not supported\.
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-stack-return-values"></a>
+## Return values<a name="aws-properties-stack-return-values"></a>
 
 ### Ref<a name="aws-properties-stack-return-values-ref"></a>
 
@@ -180,6 +180,6 @@ Resources:
         KeyName: "mykey"
 ```
 
-## See Also<a name="aws-properties-stack--seealso"></a>
+## See also<a name="aws-properties-stack--seealso"></a>
 + For sample template snippets, see Nested Stacks in [CloudFormation Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudformation.html)\.
 + If you have nested stacks that are stuck in an in\-progress operation, see Troubleshooting Errors in [Troubleshooting AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html)\.

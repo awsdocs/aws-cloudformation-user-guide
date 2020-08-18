@@ -37,7 +37,7 @@ The name of the receipt rule set that you want to reorder\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-receiptruleset-return-values"></a>
+## Return values<a name="aws-resource-ses-receiptruleset-return-values"></a>
 
 ### Ref<a name="aws-resource-ses-receiptruleset-return-values-ref"></a>
 

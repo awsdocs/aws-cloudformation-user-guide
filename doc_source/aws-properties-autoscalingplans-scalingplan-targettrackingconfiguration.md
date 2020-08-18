@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomizedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification)" : [CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md),
+  "[CustomizedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification)" : CustomizedScalingMetricSpecification,
   "[DisableScaleIn](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein)" : Boolean,
   "[EstimatedInstanceWarmup](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup)" : Integer,
-  "[PredefinedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification)" : [PredefinedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.md),
+  "[PredefinedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification)" : PredefinedScalingMetricSpecification,
   "[ScaleInCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown)" : Integer,
   "[ScaleOutCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown)" : Integer,
   "[TargetValue](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue)" : Double
@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomizedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-customizedscalingmetricspecification): 
-    [CustomizedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.md)
+    CustomizedScalingMetricSpecification
   [DisableScaleIn](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-disablescalein): Boolean
   [EstimatedInstanceWarmup](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-estimatedinstancewarmup): Integer
   [PredefinedScalingMetricSpecification](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-predefinedscalingmetricspecification): 
-    [PredefinedScalingMetricSpecification](aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.md)
+    PredefinedScalingMetricSpecification
   [ScaleInCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleincooldown): Integer
   [ScaleOutCooldown](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-scaleoutcooldown): Integer
   [TargetValue](#cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue): Double
@@ -79,5 +79,5 @@ The target value for the metric\. The range is 8\.515920e\-109 to 1\.174271e\+10
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration--seealso"></a>
+## See also<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration--seealso"></a>
 + [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

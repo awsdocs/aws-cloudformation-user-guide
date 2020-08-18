@@ -36,7 +36,7 @@ The number of days that you want to specify for the default retention period\.
 The default Object Lock retention mode you want to apply to new objects placed in the specified bucket\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `COMPLIANCE | GOVERNANCE`  
+*Allowed values*: `COMPLIANCE | GOVERNANCE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Years`  <a name="cfn-s3-bucket-defaultretention-years"></a>

@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Api<a name="aws-resource-apigatewayv2-api"></a>
 
-The `AWS::ApiGatewayV2::Api` resource creates an API\. WebSocket APIs and HTTP APIs \(beta\) are supported\. For more information about WebSocket APIs, see [About WebSocket APIs in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview.html) in the *API Gateway Developer Guide*\. For more information about HTTP APIs, see [HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) in the *API Gateway Developer Guide\.*
+The `AWS::ApiGatewayV2::Api` resource creates an API\. WebSocket APIs and HTTP APIs are supported\. For more information about WebSocket APIs, see [About WebSocket APIs in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview.html) in the *API Gateway Developer Guide*\. For more information about HTTP APIs, see [HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) in the *API Gateway Developer Guide\.*
 
 ## Syntax<a name="aws-resource-apigatewayv2-api-syntax"></a>
 
@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression)" : String,
       "[BasePath](#cfn-apigatewayv2-api-basepath)" : String,
       "[Body](#cfn-apigatewayv2-api-body)" : Json,
-      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md),
-      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : [Cors](aws-properties-apigatewayv2-api-cors.md),
+      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : BodyS3Location,
+      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : Cors,
       "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-api-description)" : String,
       "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
@@ -41,9 +41,9 @@ Properties:
   [BasePath](#cfn-apigatewayv2-api-basepath): String
   [Body](#cfn-apigatewayv2-api-body): Json
   [BodyS3Location](#cfn-apigatewayv2-api-bodys3location): 
-    [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md)
+    BodyS3Location
   [CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration): 
-    [Cors](aws-properties-apigatewayv2-api-cors.md)
+    Cors
   [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
   [Description](#cfn-apigatewayv2-api-description): String
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
@@ -108,7 +108,7 @@ Avoid validating models when creating a deployment\. Supported only for WebSocke
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailOnWarnings`  <a name="cfn-apigatewayv2-api-failonwarnings"></a>
-Specifies whether to rollback the API creation \(`true`\) or not \(`false`\) when a warning is encountered\. The default value is `false`\.  
+Specifies whether to rollback the API creation when a warning is encountered\. By default, API creation continues if a warning is encountered\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,7 +120,7 @@ The name of the API\. Required unless you specify an OpenAPI definition for `Bod
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolType`  <a name="cfn-apigatewayv2-api-protocoltype"></a>
-The API protocol\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
+The API protocol\. Valid values are `WEBSOCKET` or `HTTP`\. Required unless you specify an OpenAPI definition for `Body` or `S3BodyLocation`\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -155,7 +155,7 @@ A version identifier for the API\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-api-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-api-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-api-return-values-ref"></a>
 
@@ -230,5 +230,5 @@ HttpApi:
     Target: arn:aws:apigateway:{region}:lambda:path/2015-03-31/functions/arn:aws:lambda:{region}:{account-id}:function:{function-name}/invocations
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-api--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-api--seealso"></a>
 + [CreateApi](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis.html#CreateApi) in the *Amazon API Gateway Version 2 API Reference*

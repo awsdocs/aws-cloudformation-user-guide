@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ParameterValues](#cfn-ssm-association-parametervalues-parametervalues)" : [ [String](#aws-properties-ssm-association-parametervalues), ... ]
+  "[ParameterValues](#cfn-ssm-association-parametervalues-parametervalues)" : [ String, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ParameterValues](#cfn-ssm-association-parametervalues-parametervalues): 
-    - [String](#aws-properties-ssm-association-parametervalues)
+    - String
 ```
 
 ## Properties<a name="aws-properties-ssm-association-parametervalues-properties"></a>

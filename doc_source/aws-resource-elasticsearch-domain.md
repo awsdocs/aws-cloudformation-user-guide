@@ -1,6 +1,6 @@
 # AWS::Elasticsearch::Domain<a name="aws-resource-elasticsearch-domain"></a>
 
-The AWS::Elasticsearch::Domain resource creates an Amazon Elasticsearch Service \(Amazon ES\) domain that encapsulates the Amazon ES engine instances\.
+The AWS::Elasticsearch::Domain resource creates an Amazon Elasticsearch Service \(Amazon ES\) domain\.
 
 ## Syntax<a name="aws-resource-elasticsearch-domain-syntax"></a>
 
@@ -14,17 +14,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessPolicies](#cfn-elasticsearch-domain-accesspolicies)" : Json,
       "[AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions)" : {Key : Value, ...},
-      "[CognitoOptions](#cfn-elasticsearch-domain-cognitooptions)" : [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md),
+      "[AdvancedSecurityOptions](#cfn-elasticsearch-domain-advancedsecurityoptions)" : AdvancedSecurityOptionsInput,
+      "[CognitoOptions](#cfn-elasticsearch-domain-cognitooptions)" : CognitoOptions,
+      "[DomainEndpointOptions](#cfn-elasticsearch-domain-domainendpointoptions)" : DomainEndpointOptions,
       "[DomainName](#cfn-elasticsearch-domain-domainname)" : String,
-      "[EBSOptions](#cfn-elasticsearch-domain-ebsoptions)" : [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md),
-      "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md),
+      "[EBSOptions](#cfn-elasticsearch-domain-ebsoptions)" : EBSOptions,
+      "[ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig)" : ElasticsearchClusterConfig,
       "[ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion)" : String,
-      "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md),
+      "[EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions)" : EncryptionAtRestOptions,
       "[LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions)" : {Key : Value, ...},
-      "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md),
-      "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md),
+      "[NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions)" : NodeToNodeEncryptionOptions,
+      "[SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions)" : SnapshotOptions,
       "[Tags](#cfn-elasticsearch-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VPCOptions](#cfn-elasticsearch-domain-vpcoptions)" : [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)
+      "[VPCOptions](#cfn-elasticsearch-domain-vpcoptions)" : VPCOptions
     }
 }
 ```
@@ -37,26 +39,30 @@ Properties:
   [AccessPolicies](#cfn-elasticsearch-domain-accesspolicies): Json
   [AdvancedOptions](#cfn-elasticsearch-domain-advancedoptions): 
     Key : Value
+  [AdvancedSecurityOptions](#cfn-elasticsearch-domain-advancedsecurityoptions): 
+    AdvancedSecurityOptionsInput
   [CognitoOptions](#cfn-elasticsearch-domain-cognitooptions): 
-    [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)
+    CognitoOptions
+  [DomainEndpointOptions](#cfn-elasticsearch-domain-domainendpointoptions): 
+    DomainEndpointOptions
   [DomainName](#cfn-elasticsearch-domain-domainname): String
   [EBSOptions](#cfn-elasticsearch-domain-ebsoptions): 
-    [EBSOptions](aws-properties-elasticsearch-domain-ebsoptions.md)
+    EBSOptions
   [ElasticsearchClusterConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig): 
-    [ElasticsearchClusterConfig](aws-properties-elasticsearch-domain-elasticsearchclusterconfig.md)
+    ElasticsearchClusterConfig
   [ElasticsearchVersion](#cfn-elasticsearch-domain-elasticsearchversion): String
   [EncryptionAtRestOptions](#cfn-elasticsearch-domain-encryptionatrestoptions): 
-    [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)
+    EncryptionAtRestOptions
   [LogPublishingOptions](#cfn-elasticsearch-domain-logpublishingoptions): 
     Key : Value
   [NodeToNodeEncryptionOptions](#cfn-elasticsearch-domain-nodetonodeencryptionoptions): 
-    [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)
+    NodeToNodeEncryptionOptions
   [SnapshotOptions](#cfn-elasticsearch-domain-snapshotoptions): 
-    [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md)
+    SnapshotOptions
   [Tags](#cfn-elasticsearch-domain-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VPCOptions](#cfn-elasticsearch-domain-vpcoptions): 
-    [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)
+    VPCOptions
 ```
 
 ## Properties<a name="aws-resource-elasticsearch-domain-properties"></a>
@@ -73,10 +79,22 @@ Additional options to specify for the Amazon ES domain\. For more information, s
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`AdvancedSecurityOptions`  <a name="cfn-elasticsearch-domain-advancedsecurityoptions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [AdvancedSecurityOptionsInput](aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `CognitoOptions`  <a name="cfn-elasticsearch-domain-cognitooptions"></a>
 Configures Amazon ES to use Amazon Cognito authentication for Kibana\.  
 *Required*: No  
 *Type*: [CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DomainEndpointOptions`  <a name="cfn-elasticsearch-domain-domainendpointoptions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [DomainEndpointOptions](aws-properties-elasticsearch-domain-domainendpointoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-elasticsearch-domain-domainname"></a>
@@ -112,7 +130,7 @@ Whether the domain should encrypt data at rest, and if so, the AWS Key Managemen
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogPublishingOptions`  <a name="cfn-elasticsearch-domain-logpublishingoptions"></a>
-Key\-value pairs to configure slow log publishing\.  
+An object with one or more of the following keys: `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `INDEX_SLOW_LOGS`, depending on the types of logs you want to publish\. Each key needs a valid `LogPublishingOption` value\. See [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#aws-resource-elasticsearch-domain--examples) for the full syntax\.  
 *Required*: No  
 *Type*: Map of [LogPublishingOption](aws-properties-elasticsearch-domain-logpublishingoption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -141,7 +159,7 @@ The virtual private cloud \(VPC\) configuration for the Amazon ES domain\. For m
 *Type*: [VPCOptions](aws-properties-elasticsearch-domain-vpcoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-elasticsearch-domain-return-values"></a>
+## Return values<a name="aws-resource-elasticsearch-domain-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticsearch-domain-return-values-ref"></a>
 
@@ -160,90 +178,106 @@ The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:12
 The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-elasti-1ab2cdefghij`\. This returned value is the same as the one returned by `AWS::Elasticsearch::Domain.Arn`\.
 
 `DomainEndpoint`  <a name="DomainEndpoint-fn::getatt"></a>
-The domain\-specific endpoint that's used to submit index, search, and data upload requests to an Amazon ES domain, such as s`earch-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-2.es.amazonaws.com`\.
+The domain\-specific endpoint that's used for requests to the Elasticsearch APIs, such as `search-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-1.es.amazonaws.com`\.
 
 ## Examples<a name="aws-resource-elasticsearch-domain--examples"></a>
 
 ### Create an Amazon ES domain that contains two data nodes and three master nodes<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes"></a>
 
-The following example create an Amazon ES domain that contains two data nodes and three master nodes\. Automated snapshots of the indices are taken daily between midnight and 1:00 AM \(UTC\)\. The access policy permits the IAM user `es-user` to take all Amazon ES actions on the domain, such as `es:UpdateElasticsearchDomainConfig`\.
+The following example create an Amazon ES domain running Elasticsearch 7\.4 that contains two data nodes and three dedicated master nodes\. The domain has 40 GiB of storage and enables log publishing for application logs, search slow logs, and index slow logs\. The access policy permits the root user for the AWS account to make all HTTP requests to the domain, such as indexing documents or searching indices\.
 
 #### JSON<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--json"></a>
 
 ```
-"ElasticsearchDomain":{
-   "Type":"AWS::Elasticsearch::Domain",
-   "Properties":{
-      "DomainName":"test",
-      "ElasticsearchClusterConfig":{
-         "DedicatedMasterEnabled":"true",
-         "InstanceCount":"2",
-         "ZoneAwarenessEnabled":"true",
-         "InstanceType":"m3.medium.elasticsearch",
-         "DedicatedMasterType":"m3.medium.elasticsearch",
-         "DedicatedMasterCount":"3"
-      },
-      "EBSOptions":{
-         "EBSEnabled":true,
-         "Iops":0,
-         "VolumeSize":20,
-         "VolumeType":"gp2"
-      },
-      "SnapshotOptions":{
-         "AutomatedSnapshotStartHour":"0"
-      },
-      "AccessPolicies":{
-         "Version":"2012-10-17",
-         "Statement":[
-            {
-               "Effect":"Allow",
-               "Principal":{
-                  "AWS":"arn:aws:iam::123456789012:user/es-user"
-               },
-               "Action":"es:*",
-               "Resource":"arn:aws:es:us-east-1:123456789012:domain/test/*"
-            }
-         ]
-      },
-      "AdvancedOptions":{
-         "rest.action.multi.allow_explicit_index":"true"
+{
+  "Resources": {
+    "ElasticsearchDomain": {
+      "Type": "AWS::Elasticsearch::Domain",
+      "Properties": {
+        "DomainName": "test",
+        "ElasticsearchClusterConfig": {
+          "DedicatedMasterEnabled": "true",
+          "InstanceCount": "2",
+          "ZoneAwarenessEnabled": "true",
+          "InstanceType": "m4.large.elasticsearch",
+          "DedicatedMasterType": "c4.large.elasticsearch",
+          "DedicatedMasterCount": "3"
+        },
+        "ElasticsearchVersion": 7.4,
+        "EBSOptions": {
+          "EBSEnabled": true,
+          "VolumeSize": 20,
+          "VolumeType": "gp2"
+        },
+        "AccessPolicies": {
+          "Version": "2012-10-17",
+          "Statement": [{
+            "Effect": "Allow",
+            "Principal": {
+              "AWS": "123456789012"
+            },
+            "Action": "es:ESHttp*",
+            "Resource": "arn:aws:es:us-west-1:123456789012:domain/test/*"
+          }]
+        },
+        "LogPublishingOptions": {
+          "SEARCH_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-west-1:123456789012:log-group:test-1",
+            "Enabled": true
+          },
+          "INDEX_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-west-1:123456789012:log-group:test-2",
+            "Enabled": true
+          },
+          "ES_APPLICATION_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-west-1:123456789012:log-group:test-3",
+            "Enabled": true
+          }
+        }
       }
-   }
+    }
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--yaml"></a>
 
 ```
-ElasticsearchDomain:
-  Type: AWS::Elasticsearch::Domain
-  Properties:
-    DomainName: "test"
-    ElasticsearchClusterConfig:
-      DedicatedMasterEnabled: "true"
-      InstanceCount: "2"
-      ZoneAwarenessEnabled: "true"
-      InstanceType: "m3.medium.elasticsearch"
-      DedicatedMasterType: "m3.medium.elasticsearch"
-      DedicatedMasterCount: "3"
-    EBSOptions:
-      EBSEnabled: true
-      Iops: 0
-      VolumeSize: 20
-      VolumeType: "gp2"
-    SnapshotOptions:
-      AutomatedSnapshotStartHour: "0"
-    AccessPolicies:
-      Version: "2012-10-17"
-      Statement:
-        -
-          Effect: "Allow"
-          Principal:
-            AWS: "arn:aws:iam::123456789012:user/es-user"
-          Action: "es:*"
-          Resource: "arn:aws:es:us-east-1:846973539254:domain/test/*"
-    AdvancedOptions:
-      rest.action.multi.allow_explicit_index: "true"
+Resources:
+  ElasticsearchDomain:
+    Type: 'AWS::Elasticsearch::Domain'
+    Properties:
+      DomainName: test
+      ElasticsearchClusterConfig:
+        DedicatedMasterEnabled: 'true'
+        InstanceCount: '2'
+        ZoneAwarenessEnabled: 'true'
+        InstanceType: m4.large.elasticsearch
+        DedicatedMasterType: c4.large.elasticsearch
+        DedicatedMasterCount: '3'
+      ElasticsearchVersion: 7.4
+      EBSOptions:
+        EBSEnabled: true
+        VolumeSize: 20
+        VolumeType: gp2
+      AccessPolicies:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: '904601396794'
+            Action: 'es:ESHttp*'
+            Resource: 'arn:aws:es:us-west-1:904601396794:domain/test/*'
+      LogPublishingOptions:
+        SEARCH_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-west-1:904601396794:log-group:test-1'
+          Enabled: true
+        INDEX_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-west-1:904601396794:log-group:test-2'
+          Enabled: true
+        ES_APPLICATION_LOGS:
+          CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-west-1:904601396794:log-group:test-3'
+          Enabled: true
 ```
 
 ### Create a domain with VPC options<a name="aws-resource-elasticsearch-domain--examples--Create_a_domain_with_VPC_options"></a>
@@ -257,97 +291,133 @@ The following example creates a domain with VPC options\.
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "ElasticsearchDomain resource",
   "Parameters": {
-    "DomainName" : {
-      "Description" : "User defined Elasticsearch Domain name",
-      "Type" : "String"
+    "DomainName": {
+      "Description": "User defined Elasticsearch Domain name",
+      "Type": "String"
     },
-    "ElasticsearchVersion" : {
-      "Description" : "User defined Elasticsearch Version",
-      "Type" : "String"
+    "ElasticsearchVersion": {
+      "Description": "User defined Elasticsearch Version",
+      "Type": "String"
     },
-    "InstanceType" : {
-      "Type" : "String"
+    "InstanceType": {
+      "Type": "String"
     },
-    "AvailabilityZone" : {
-      "Type" : "String"
+    "AvailabilityZone": {
+      "Type": "String"
     },
-    "CidrBlock" : {
-      "Type" : "String"
+    "CidrBlock": {
+      "Type": "String"
     },
-    "GroupDescription" : {
-      "Type" : "String"
+    "GroupDescription": {
+      "Type": "String"
     },
-    "SGName" : {
-      "Type" : "String"
+    "SGName": {
+      "Type": "String"
     }
   },
   "Resources": {
     "ElasticsearchDomain": {
       "Type": "AWS::Elasticsearch::Domain",
       "Properties": {
-        "DomainName": { "Ref": "DomainName" },
-        "ElasticsearchVersion": { "Ref": "ElasticsearchVersion" },
+        "DomainName": {
+          "Ref": "DomainName"
+        },
+        "ElasticsearchVersion": {
+          "Ref": "ElasticsearchVersion"
+        },
         "ElasticsearchClusterConfig": {
           "InstanceCount": "1",
-          "InstanceType": { "Ref": "InstanceType" }
+          "InstanceType": {
+            "Ref": "InstanceType"
+          }
         },
         "EBSOptions": {
-          "EBSEnabled" : "true",
-          "Iops" : 0,
-          "VolumeSize" : 10,
-          "VolumeType" : "standard"
+          "EBSEnabled": "true",
+          "Iops": 0,
+          "VolumeSize": 10,
+          "VolumeType": "standard"
         },
         "SnapshotOptions": {
           "AutomatedSnapshotStartHour": "0"
         },
         "AccessPolicies": {
           "Version": "2012-10-17",
-          "Statement": [{
-            "Effect": "Deny",
-            "Principal": {
-              "AWS": "*"
-            },
-            "Action": "es:*",
-            "Resource": "*"
-          }]
+          "Statement": [
+            {
+              "Effect": "Deny",
+              "Principal": {
+                "AWS": "*"
+              },
+              "Action": "es:*",
+              "Resource": "*"
+            }
+          ]
+        },
+        "LogPublishingOptions": {
+          "SEARCH_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs",
+            "Enabled": "true"
+          },
+          "INDEX_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs",
+            "Enabled": "true"
+          }
         },
         "AdvancedOptions": {
           "rest.action.multi.allow_explicit_index": "true"
         },
-        "Tags": [{
-          "Key": "foo",
-          "Value": "bar"
-        }],
-        "VPCOptions" : {
-          "SubnetIds" : [
-            {"Ref" : "subnet"}
+        "Tags": [
+          {
+            "Key": "foo",
+            "Value": "bar"
+          }
+        ],
+        "VPCOptions": {
+          "SubnetIds": [
+            {
+              "Ref": "subnet"
+            }
           ],
-          "SecurityGroupIds" : [
-            {"Ref" : "mySecurityGroup"}
+          "SecurityGroupIds": [
+            {
+              "Ref": "mySecurityGroup"
+            }
           ]
         }
       }
     },
-    "vpc" : {
-      "Type" : "AWS::EC2::VPC",
-      "Properties" : {
-        "CidrBlock" : "10.0.0.0/16"
+    "vpc": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16"
       }
     },
-    "subnet" : {
-      "Type" : "AWS::EC2::Subnet",
-      "Properties" : {
-        "VpcId" : {"Ref": "vpc"},
-        "CidrBlock" : {"Ref" : "CidrBlock"},
-        "AvailabilityZone" : {"Ref" : "AvailabilityZone"}
+    "subnet": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "vpc"
+        },
+        "CidrBlock": {
+          "Ref": "CidrBlock"
+        },
+        "AvailabilityZone": {
+          "Ref": "AvailabilityZone"
+        }
       }
     },
     "mySecurityGroup": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
-        "GroupDescription": {"Ref" : "GroupDescription"},
-        "VpcId" : {"Ref" : "vpc"},
-        "GroupName": {"Ref" : "SGName"},
+        "GroupDescription": {
+          "Ref": "GroupDescription"
+        },
+        "VpcId": {
+          "Ref": "vpc"
+        },
+        "GroupName": {
+          "Ref": "SGName"
+        },
         "SecurityGroupIngress": [
           {
             "FromPort": "443",
@@ -362,12 +432,18 @@ The following example creates a domain with VPC options\.
   "Outputs": {
     "DomainArn": {
       "Value": {
-        "Fn::GetAtt": ["ElasticsearchDomain", "DomainArn"]
+        "Fn::GetAtt": [
+          "ElasticsearchDomain",
+          "DomainArn"
+        ]
       }
     },
     "DomainEndpoint": {
       "Value": {
-        "Fn::GetAtt": ["ElasticsearchDomain", "DomainEndpoint"]
+        "Fn::GetAtt": [
+          "ElasticsearchDomain",
+          "DomainEndpoint"
+        ]
       }
     },
     "SecurityGroupId": {
@@ -432,6 +508,13 @@ Resources:
             Resource: '*'
       AdvancedOptions:
         rest.action.multi.allow_explicit_index: 'true'
+      LogPublishingOptions:
+        SEARCH_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs
+          Enabled: 'true'
+        INDEX_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs
+          Enabled: 'true'
       Tags:
         - Key: foo
           Value: bar

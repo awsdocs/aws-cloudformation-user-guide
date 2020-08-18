@@ -40,14 +40,14 @@ Properties:
  The type of authentication used by the credentials\. Valid options are OAUTH, BASIC\_AUTH, or PERSONAL\_ACCESS\_TOKEN\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BASIC_AUTH | OAUTH | PERSONAL_ACCESS_TOKEN`  
+*Allowed values*: `BASIC_AUTH | OAUTH | PERSONAL_ACCESS_TOKEN`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerType`  <a name="cfn-codebuild-sourcecredential-servertype"></a>
  The type of source provider\. The valid options are GITHUB, GITHUB\_ENTERPRISE, or BITBUCKET\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BITBUCKET | GITHUB | GITHUB_ENTERPRISE`  
+*Allowed values*: `BITBUCKET | GITHUB | GITHUB_ENTERPRISE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Token`  <a name="cfn-codebuild-sourcecredential-token"></a>

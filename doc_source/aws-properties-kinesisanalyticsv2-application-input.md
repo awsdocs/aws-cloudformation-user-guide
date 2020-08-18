@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application Input<a name="aws-properties-kinesisanalyticsv2-application-input"></a>
 
-When you configure the application input for an SQL\-based Amazon Kinesis Data Analytics application, you specify the streaming source, the in\-application stream name that is created, and the mapping between the two\. 
+When you configure the application input for a SQL\-based Kinesis Data Analytics application, you specify the streaming source, the in\-application stream name that is created, and the mapping between the two\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-input-syntax"></a>
 
@@ -10,11 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputParallelism](#cfn-kinesisanalyticsv2-application-input-inputparallelism)" : [InputParallelism](aws-properties-kinesisanalyticsv2-application-inputparallelism.md),
-  "[InputProcessingConfiguration](#cfn-kinesisanalyticsv2-application-input-inputprocessingconfiguration)" : [InputProcessingConfiguration](aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.md),
-  "[InputSchema](#cfn-kinesisanalyticsv2-application-input-inputschema)" : [InputSchema](aws-properties-kinesisanalyticsv2-application-inputschema.md),
-  "[KinesisFirehoseInput](#cfn-kinesisanalyticsv2-application-input-kinesisfirehoseinput)" : [KinesisFirehoseInput](aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.md),
-  "[KinesisStreamsInput](#cfn-kinesisanalyticsv2-application-input-kinesisstreamsinput)" : [KinesisStreamsInput](aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.md),
+  "[InputParallelism](#cfn-kinesisanalyticsv2-application-input-inputparallelism)" : InputParallelism,
+  "[InputProcessingConfiguration](#cfn-kinesisanalyticsv2-application-input-inputprocessingconfiguration)" : InputProcessingConfiguration,
+  "[InputSchema](#cfn-kinesisanalyticsv2-application-input-inputschema)" : InputSchema,
+  "[KinesisFirehoseInput](#cfn-kinesisanalyticsv2-application-input-kinesisfirehoseinput)" : KinesisFirehoseInput,
+  "[KinesisStreamsInput](#cfn-kinesisanalyticsv2-application-input-kinesisstreamsinput)" : KinesisStreamsInput,
   "[NamePrefix](#cfn-kinesisanalyticsv2-application-input-nameprefix)" : String
 }
 ```
@@ -23,15 +23,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputParallelism](#cfn-kinesisanalyticsv2-application-input-inputparallelism): 
-    [InputParallelism](aws-properties-kinesisanalyticsv2-application-inputparallelism.md)
+    InputParallelism
   [InputProcessingConfiguration](#cfn-kinesisanalyticsv2-application-input-inputprocessingconfiguration): 
-    [InputProcessingConfiguration](aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration.md)
+    InputProcessingConfiguration
   [InputSchema](#cfn-kinesisanalyticsv2-application-input-inputschema): 
-    [InputSchema](aws-properties-kinesisanalyticsv2-application-inputschema.md)
+    InputSchema
   [KinesisFirehoseInput](#cfn-kinesisanalyticsv2-application-input-kinesisfirehoseinput): 
-    [KinesisFirehoseInput](aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput.md)
+    KinesisFirehoseInput
   [KinesisStreamsInput](#cfn-kinesisanalyticsv2-application-input-kinesisstreamsinput): 
-    [KinesisStreamsInput](aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput.md)
+    KinesisStreamsInput
   [NamePrefix](#cfn-kinesisanalyticsv2-application-input-nameprefix): String
 ```
 
@@ -76,5 +76,5 @@ The name prefix to use when creating an in\-application stream\. Suppose that yo
 *Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-input--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-input--seealso"></a>
 +  [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) in the *Amazon Kinesis Data Analytics API Reference* 

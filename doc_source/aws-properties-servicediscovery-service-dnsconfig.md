@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords)" : [ [DnsRecord](aws-properties-servicediscovery-service-dnsrecord.md), ... ],
+  "[DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords)" : [ DnsRecord, ... ],
   "[NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid)" : String,
   "[RoutingPolicy](#cfn-servicediscovery-service-dnsconfig-routingpolicy)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DnsRecords](#cfn-servicediscovery-service-dnsconfig-dnsrecords): 
-    - [DnsRecord](aws-properties-servicediscovery-service-dnsrecord.md)
+    - DnsRecord
   [NamespaceId](#cfn-servicediscovery-service-dnsconfig-namespaceid): String
   [RoutingPolicy](#cfn-servicediscovery-service-dnsconfig-routingpolicy): String
 ```
@@ -47,19 +47,19 @@ If you want to use this service to register instances that create alias records,
 You can specify the following values:  
  **MULTIVALUE**   
 If you define a health check for the service and the health check is healthy, Route 53 returns the applicable value for up to eight instances\.  
-For example, suppose the service includes configurations for one A record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with IP addresses for up to eight healthy instances\. If fewer than eight instances are healthy, Route 53 responds to every DNS query with the IP addresses for all of the healthy instances\.  
+For example, suppose the service includes configurations for one `A` record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with IP addresses for up to eight healthy instances\. If fewer than eight instances are healthy, Route 53 responds to every DNS query with the IP addresses for all of the healthy instances\.  
 If you don't define a health check for the service, Route 53 assumes that all instances are healthy and returns the values for up to eight instances\.  
 For more information about the multivalue routing policy, see [Multivalue Answer Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-multivalue) in the *Route 53 Developer Guide*\.  
  **WEIGHTED**   
 Route 53 returns the applicable value from one randomly selected instance from among the instances that you registered using the same service\. Currently, all records have the same weight, so you can't route more or less traffic to any instances\.  
-For example, suppose the service includes configurations for one A record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with the IP address for one randomly selected instance from among the healthy instances\. If no instances are healthy, Route 53 responds to DNS queries as if all of the instances were healthy\.  
+For example, suppose the service includes configurations for one `A` record and a health check, and you use the service to register 10 instances\. Route 53 responds to DNS queries with the IP address for one randomly selected instance from among the healthy instances\. If no instances are healthy, Route 53 responds to DNS queries as if all of the instances were healthy\.  
 If you don't define a health check for the service, Route 53 assumes that all instances are healthy and returns the applicable value for one randomly selected instance\.  
 For more information about the weighted routing policy, see [Weighted Routing](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted) in the *Route 53 Developer Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `MULTIVALUE | WEIGHTED`  
+*Allowed values*: `MULTIVALUE | WEIGHTED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-servicediscovery-service-dnsconfig--seealso"></a>
+## See also<a name="aws-properties-servicediscovery-service-dnsconfig--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [DnsConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsConfig.html) in the *AWS Cloud Map API Reference* 

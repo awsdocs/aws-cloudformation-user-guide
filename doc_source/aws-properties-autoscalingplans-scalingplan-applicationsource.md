@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CloudFormationStackARN](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn)" : String,
-  "[TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)" : [ [TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md), ... ]
+  "[TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters)" : [ TagFilter, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CloudFormationStackARN](#cfn-autoscalingplans-scalingplan-applicationsource-cloudformationstackarn): String
   [TagFilters](#cfn-autoscalingplans-scalingplan-applicationsource-tagfilters): 
-    - [TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-applicationsource-properties"></a>
@@ -38,5 +38,5 @@ A set of tags \(up to 50\)\.
 *Type*: List of [TagFilter](aws-properties-autoscalingplans-scalingplan-tagfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-autoscalingplans-scalingplan-applicationsource--seealso"></a>
+## See also<a name="aws-properties-autoscalingplans-scalingplan-applicationsource--seealso"></a>
 + [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

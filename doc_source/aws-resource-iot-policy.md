@@ -41,7 +41,7 @@ The policy name\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-iot-policy-return-values"></a>
+## Return values<a name="aws-resource-iot-policy-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-policy-return-values-ref"></a>
 
@@ -71,46 +71,17 @@ The following example declares an AWS IoT Policy\. This example grants permissio
 #### JSON<a name="aws-resource-iot-policy--examples----json"></a>
 
 ```
-{
-   "Type": "AWS::IoT::Policy",
-   "Properties": {
-   "PolicyDocument": {
-   "Version": "2012-10-17",
-   "Statement": [
-   {
-   "Effect": "Allow",
-   "Action": [
-   "iot:Connect"
-   ],
-   "Resource": [
-   "arn:aws:iot:us-east-1:123456789012:client/client1"
-   ]
-   }
-   ]
-   },
-      "PolicyName": "PolicyName"
-   }
-}
+{ "Type": "AWS::IoT::Policy", "Properties": { "PolicyDocument": {
+            "Version": "2012-10-17", "Statement": [ { "Effect": "Allow", "Action": [ "iot:Connect"
+            ], "Resource": [ "arn:aws:iot:us-east-1:123456789012:client/client1" ] } ] },
+            "PolicyName": "PolicyName" } }
 ```
 
 #### YAML<a name="aws-resource-iot-policy--examples----yaml"></a>
 
 ```
-Type: AWS::IoT::Policy
-Properties:
-PolicyDocument: "{
-'Version': '2012-10-17',
-'Statement': [
-{
-'Effect': 'Allow',
-'Action': [
-'iot:Connect'
-],
-'Resource': [
-'arn:aws:iot:us-east-1:123456789012:client/client1'
-]
-}
-]
-}"
-PolicyName: "PolicyName"
+Type: AWS::IoT::Policy Properties: PolicyDocument: "{ 'Version':
+            '2012-10-17', 'Statement': [ { 'Effect': 'Allow', 'Action': [ 'iot:Connect' ],
+            'Resource': [ 'arn:aws:iot:us-east-1:123456789012:client/client1' ] } ] }" PolicyName:
+            "PolicyName"
 ```

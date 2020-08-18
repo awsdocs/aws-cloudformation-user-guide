@@ -63,7 +63,7 @@ An account ID, or `*` to grant permission to all AWS accounts\.
 *Pattern*: `\d{12}|\*|arn:(aws[a-zA-Z-]*):iam::\d{12}:root`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-lambda-layerversionpermission-return-values"></a>
+## Return values<a name="aws-resource-lambda-layerversionpermission-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-layerversionpermission-return-values-ref"></a>
 

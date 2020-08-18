@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::ConnectorDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : ConnectorDefinitionVersion,
       "[Name](#cfn-greengrass-connectordefinition-name)" : String,
       "[Tags](#cfn-greengrass-connectordefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::ConnectorDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-connectordefinition-initialversion): 
-    [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
+    ConnectorDefinitionVersion
   [Name](#cfn-greengrass-connectordefinition-name): String
   [Tags](#cfn-greengrass-connectordefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-connectordefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-connectordefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-connectordefinition-return-values-ref"></a>
 
@@ -173,6 +173,6 @@ TestConnectorDefinition:
                 - defaultSns
 ```
 
-## See Also<a name="aws-resource-greengrass-connectordefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-connectordefinition--seealso"></a>
 +  [CreateConnectorDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

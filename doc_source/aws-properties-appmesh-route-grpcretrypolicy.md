@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[GrpcRetryEvents](#cfn-appmesh-route-grpcretrypolicy-grpcretryevents)" : [ String, ... ],
   "[HttpRetryEvents](#cfn-appmesh-route-grpcretrypolicy-httpretryevents)" : [ String, ... ],
   "[MaxRetries](#cfn-appmesh-route-grpcretrypolicy-maxretries)" : Integer,
-  "[PerRetryTimeout](#cfn-appmesh-route-grpcretrypolicy-perretrytimeout)" : [Duration](aws-properties-appmesh-route-duration.md),
+  "[PerRetryTimeout](#cfn-appmesh-route-grpcretrypolicy-perretrytimeout)" : Duration,
   "[TcpRetryEvents](#cfn-appmesh-route-grpcretrypolicy-tcpretryevents)" : [ String, ... ]
 }
 ```
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [MaxRetries](#cfn-appmesh-route-grpcretrypolicy-maxretries): Integer
   [PerRetryTimeout](#cfn-appmesh-route-grpcretrypolicy-perretrytimeout): 
-    [Duration](aws-properties-appmesh-route-duration.md)
+    Duration
   [TcpRetryEvents](#cfn-appmesh-route-grpcretrypolicy-tcpretryevents): 
     - String
 ```

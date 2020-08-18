@@ -12,21 +12,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::TaskDefinition",
   "Properties" : {
-      "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md), ... ],
+      "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ ContainerDefinition, ... ],
       "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
       "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
       "[Family](#cfn-ecs-taskdefinition-family)" : String,
-      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md), ... ],
+      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ InferenceAccelerator, ... ],
       "[IpcMode](#cfn-ecs-taskdefinition-ipcmode)" : String,
       "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
       "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
       "[PidMode](#cfn-ecs-taskdefinition-pidmode)" : String,
-      "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md), ... ],
-      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md),
+      "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ TaskDefinitionPlacementConstraint, ... ],
+      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration,
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
       "[Tags](#cfn-ecs-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
-      "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ [Volume](aws-properties-ecs-taskdefinition-volumes.md), ... ]
+      "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume, ... ]
     }
 }
 ```
@@ -37,27 +37,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ECS::TaskDefinition
 Properties: 
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions): 
-    - [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)
+    - ContainerDefinition
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
   [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
   [InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators): 
-    - [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md)
+    - InferenceAccelerator
   [IpcMode](#cfn-ecs-taskdefinition-ipcmode): String
   [Memory](#cfn-ecs-taskdefinition-memory): String
   [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
   [PidMode](#cfn-ecs-taskdefinition-pidmode): String
   [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints): 
-    - [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)
+    - TaskDefinitionPlacementConstraint
   [ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration): 
-    [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)
+    ProxyConfiguration
   [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities): 
     - String
   [Tags](#cfn-ecs-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
   [Volumes](#cfn-ecs-taskdefinition-volumes): 
-    - [Volume](aws-properties-ecs-taskdefinition-volumes.md)
+    - Volume
 ```
 
 ## Properties<a name="aws-resource-ecs-taskdefinition-properties"></a>
@@ -80,7 +80,7 @@ The number of `cpu` units used by the task\. If you are using the EC2 launch typ
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the task execution role that containers in this task can assume\. All containers in this task are granted the permissions that are specified in this role\.  
+The Amazon Resource Name \(ARN\) of the task execution role that grants the Amazon ECS container agent permission to make AWS API calls on your behalf\. The task execution IAM role is required depending on the requirements of your task\. For more information, see [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -108,7 +108,7 @@ If you are setting namespaced kernel parameters using `systemControls` for the c
 This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `host | none | task`  
+*Allowed values*: `host | none | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
@@ -134,7 +134,7 @@ Docker for Windows uses different network modes than Docker for Linux\. When you
 For more information, see [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) in the *Docker run reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `awsvpc | bridge | host | none`  
+*Allowed values*: `awsvpc | bridge | host | none`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PidMode`  <a name="cfn-ecs-taskdefinition-pidmode"></a>
@@ -143,7 +143,7 @@ If the `host` PID mode is used, be aware that there is a heightened risk of unde
 This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `host | task`  
+*Allowed values*: `host | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementConstraints`  <a name="cfn-ecs-taskdefinition-placementconstraints"></a>
@@ -195,7 +195,7 @@ For more information about volume definition parameters and defaults, see [Amazo
 *Type*: List of [Volume](aws-properties-ecs-taskdefinition-volumes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
+## Return values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-ecs-taskdefinition-return-values-ref"></a>
 

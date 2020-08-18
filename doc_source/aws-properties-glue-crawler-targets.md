@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md), ... ],
-  "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md), ... ],
-  "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md), ... ],
-  "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ [S3Target](aws-properties-glue-crawler-s3target.md), ... ]
+  "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ CatalogTarget, ... ],
+  "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ DynamoDBTarget, ... ],
+  "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ JdbcTarget, ... ],
+  "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ S3Target, ... ]
 }
 ```
 
@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CatalogTargets](#cfn-glue-crawler-targets-catalogtargets): 
-    - [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md)
+    - CatalogTarget
   [DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets): 
-    - [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md)
+    - DynamoDBTarget
   [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
-    - [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)
+    - JdbcTarget
   [S3Targets](#cfn-glue-crawler-targets-s3targets): 
-    - [S3Target](aws-properties-glue-crawler-s3target.md)
+    - S3Target
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-targets-properties"></a>

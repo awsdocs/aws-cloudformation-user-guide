@@ -76,7 +76,7 @@ One or more tags\.
 *Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-portfolio-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-portfolio-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-portfolio-return-values-ref"></a>
 
@@ -95,5 +95,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `PortfolioName`  <a name="PortfolioName-fn::getatt"></a>
 The name of the portfolio\.
 
-## See Also<a name="aws-resource-servicecatalog-portfolio--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-portfolio--seealso"></a>
 + [CreatePortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolio.html) in the *AWS Service Catalog API Reference*

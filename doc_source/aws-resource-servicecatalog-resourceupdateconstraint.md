@@ -77,7 +77,7 @@ If set to `NOT_ALLOWED`, prevents users from changing tags in a [CloudFormationP
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-resourceupdateconstraint-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-resourceupdateconstraint-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-resourceupdateconstraint-return-values-ref"></a>
 
@@ -114,5 +114,5 @@ Properties:
   ProductId: prod-xxx`
 ```
 
-## See Also<a name="aws-resource-servicecatalog-resourceupdateconstraint--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-resourceupdateconstraint--seealso"></a>
 + [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*

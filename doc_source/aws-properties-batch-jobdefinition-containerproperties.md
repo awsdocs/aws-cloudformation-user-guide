@@ -11,20 +11,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Command](#cfn-batch-jobdefinition-containerproperties-command)" : [ String, ... ],
-  "[Environment](#cfn-batch-jobdefinition-containerproperties-environment)" : [ [Environment](aws-properties-batch-jobdefinition-environment.md), ... ],
+  "[Environment](#cfn-batch-jobdefinition-containerproperties-environment)" : [ Environment, ... ],
   "[Image](#cfn-batch-jobdefinition-containerproperties-image)" : String,
   "[InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype)" : String,
   "[JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn)" : String,
-  "[LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters)" : [LinuxParameters](aws-properties-batch-jobdefinition-containerproperties-linuxparameters.md),
+  "[LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters)" : LinuxParameters,
   "[Memory](#cfn-batch-jobdefinition-containerproperties-memory)" : Integer,
-  "[MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints)" : [ [MountPoints](aws-properties-batch-jobdefinition-mountpoints.md), ... ],
+  "[MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints)" : [ MountPoints, ... ],
   "[Privileged](#cfn-batch-jobdefinition-containerproperties-privileged)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem)" : Boolean,
-  "[ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements)" : [ [ResourceRequirement](aws-properties-batch-jobdefinition-resourcerequirement.md), ... ],
-  "[Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits)" : [ [Ulimit](aws-properties-batch-jobdefinition-ulimit.md), ... ],
+  "[ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements)" : [ ResourceRequirement, ... ],
+  "[Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits)" : [ Ulimit, ... ],
   "[User](#cfn-batch-jobdefinition-containerproperties-user)" : String,
   "[Vcpus](#cfn-batch-jobdefinition-containerproperties-vcpus)" : Integer,
-  "[Volumes](#cfn-batch-jobdefinition-containerproperties-volumes)" : [ [Volumes](aws-properties-batch-jobdefinition-volumes.md), ... ]
+  "[Volumes](#cfn-batch-jobdefinition-containerproperties-volumes)" : [ Volumes, ... ]
 }
 ```
 
@@ -34,25 +34,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Command](#cfn-batch-jobdefinition-containerproperties-command): 
     - String
   [Environment](#cfn-batch-jobdefinition-containerproperties-environment): 
-    - [Environment](aws-properties-batch-jobdefinition-environment.md)
+    - Environment
   [Image](#cfn-batch-jobdefinition-containerproperties-image): String
   [InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype): String
   [JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn): String
   [LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters): 
-    [LinuxParameters](aws-properties-batch-jobdefinition-containerproperties-linuxparameters.md)
+    LinuxParameters
   [Memory](#cfn-batch-jobdefinition-containerproperties-memory): Integer
   [MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints): 
-    - [MountPoints](aws-properties-batch-jobdefinition-mountpoints.md)
+    - MountPoints
   [Privileged](#cfn-batch-jobdefinition-containerproperties-privileged): Boolean
   [ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem): Boolean
   [ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements): 
-    - [ResourceRequirement](aws-properties-batch-jobdefinition-resourcerequirement.md)
+    - ResourceRequirement
   [Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits): 
-    - [Ulimit](aws-properties-batch-jobdefinition-ulimit.md)
+    - Ulimit
   [User](#cfn-batch-jobdefinition-containerproperties-user): String
   [Vcpus](#cfn-batch-jobdefinition-containerproperties-vcpus): Integer
   [Volumes](#cfn-batch-jobdefinition-containerproperties-volumes): 
-    - [Volumes](aws-properties-batch-jobdefinition-volumes.md)
+    - Volumes
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-containerproperties-properties"></a>
@@ -100,9 +100,9 @@ Linux\-specific modifications that are applied to the container, such as details
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Memory`  <a name="cfn-batch-jobdefinition-containerproperties-memory"></a>
-The hard limit \(in MiB\) of memory to present to the container\. If your container attempts to exceed the memory specified here, the container is killed\. This parameter maps to `Memory` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--memory` option to [docker run](https://docs.docker.com/engine/reference/run/)\. You must specify at least 4 MiB of memory for a job\.  
+The hard limit \(in MiB\) of memory to present to the container\. If your container attempts to exceed the memory specified here, the container is killed\. This parameter maps to `Memory` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--memory` option to [docker run](https://docs.docker.com/engine/reference/run/)\. You must specify at least 4 MiB of memory for a job\. This is required but can be specified in several places for multi\-node parallel \(MNP\) jobs; it must be specified for each node at least once\.  
 If you are trying to maximize your resource utilization by providing your jobs as much memory as possible for a particular instance type, see [Memory Management](https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html) in the *AWS Batch User Guide*\.
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -143,8 +143,8 @@ The user name to use inside the container\. This parameter maps to `User` in the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vcpus`  <a name="cfn-batch-jobdefinition-containerproperties-vcpus"></a>
-The number of vCPUs reserved for the container\. This parameter maps to `CpuShares` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--cpu-shares` option to [docker run](https://docs.docker.com/engine/reference/run/)\. Each vCPU is equivalent to 1,024 CPU shares\. You must specify at least one vCPU\.  
-*Required*: Yes  
+The number of vCPUs reserved for the container\. This parameter maps to `CpuShares` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--cpu-shares` option to [docker run](https://docs.docker.com/engine/reference/run/)\. Each vCPU is equivalent to 1,024 CPU shares\. You must specify at least one vCPU\. This is required but can be specified in several places for multi\-node parallel \(MNP\) jobs; it must be specified for each node at least once\.  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

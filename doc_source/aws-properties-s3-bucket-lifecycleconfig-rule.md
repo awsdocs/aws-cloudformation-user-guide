@@ -10,18 +10,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload)" : [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md),
+  "[AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload)" : AbortIncompleteMultipartUpload,
   "[ExpirationDate](#cfn-s3-bucket-lifecycleconfig-rule-expirationdate)" : Timestamp,
   "[ExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-expirationindays)" : Integer,
   "[Id](#cfn-s3-bucket-lifecycleconfig-rule-id)" : String,
   "[NoncurrentVersionExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays)" : Integer,
-  "[NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition)" : [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md),
-  "[NoncurrentVersionTransitions](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions)" : [ [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md), ... ],
+  "[NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition)" : NoncurrentVersionTransition,
+  "[NoncurrentVersionTransitions](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions)" : [ NoncurrentVersionTransition, ... ],
   "[Prefix](#cfn-s3-bucket-lifecycleconfig-rule-prefix)" : String,
   "[Status](#cfn-s3-bucket-lifecycleconfig-rule-status)" : String,
-  "[TagFilters](#cfn-s3-bucket-rule-tagfilters)" : [ [TagFilter](aws-properties-s3-bucket-tagfilter.md), ... ],
-  "[Transition](#cfn-s3-bucket-lifecycleconfig-rule-transition)" : [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md),
-  "[Transitions](#cfn-s3-bucket-lifecycleconfig-rule-transitions)" : [ [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md), ... ]
+  "[TagFilters](#cfn-s3-bucket-rule-tagfilters)" : [ TagFilter, ... ],
+  "[Transition](#cfn-s3-bucket-lifecycleconfig-rule-transition)" : Transition,
+  "[Transitions](#cfn-s3-bucket-lifecycleconfig-rule-transitions)" : [ Transition, ... ]
 }
 ```
 
@@ -29,23 +29,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload): 
-    [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)
+    AbortIncompleteMultipartUpload
   [ExpirationDate](#cfn-s3-bucket-lifecycleconfig-rule-expirationdate): Timestamp
   [ExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-expirationindays): Integer
   [Id](#cfn-s3-bucket-lifecycleconfig-rule-id): String
   [NoncurrentVersionExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays): Integer
   [NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition): 
-    [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
+    NoncurrentVersionTransition
   [NoncurrentVersionTransitions](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions): 
-    - [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
+    - NoncurrentVersionTransition
   [Prefix](#cfn-s3-bucket-lifecycleconfig-rule-prefix): String
   [Status](#cfn-s3-bucket-lifecycleconfig-rule-status): String
   [TagFilters](#cfn-s3-bucket-rule-tagfilters): 
-    - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
+    - TagFilter
   [Transition](#cfn-s3-bucket-lifecycleconfig-rule-transition): 
-    [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
+    Transition
   [Transitions](#cfn-s3-bucket-lifecycleconfig-rule-transitions): 
-    - [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
+    - Transition
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-properties"></a>
@@ -108,7 +108,7 @@ Object key prefix that identifies one or more objects to which this rule applies
 If `Enabled`, the rule is currently being applied\. If `Disabled`, the rule is not currently being applied\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagFilters`  <a name="cfn-s3-bucket-rule-tagfilters"></a>

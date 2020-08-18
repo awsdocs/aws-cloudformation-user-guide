@@ -12,26 +12,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeBuild::Project",
   "Properties" : {
-      "[Artifacts](#cfn-codebuild-project-artifacts)" : [Artifacts](aws-properties-codebuild-project-artifacts.md),
+      "[Artifacts](#cfn-codebuild-project-artifacts)" : Artifacts,
       "[BadgeEnabled](#cfn-codebuild-project-badgeenabled)" : Boolean,
-      "[Cache](#cfn-codebuild-project-cache)" : [ProjectCache](aws-properties-codebuild-project-projectcache.md),
+      "[Cache](#cfn-codebuild-project-cache)" : ProjectCache,
       "[Description](#cfn-codebuild-project-description)" : String,
       "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
-      "[Environment](#cfn-codebuild-project-environment)" : [Environment](aws-properties-codebuild-project-environment.md),
-      "[FileSystemLocations](#cfn-codebuild-project-filesystemlocations)" : [ [ProjectFileSystemLocation](aws-properties-codebuild-project-projectfilesystemlocation.md), ... ],
-      "[LogsConfig](#cfn-codebuild-project-logsconfig)" : [LogsConfig](aws-properties-codebuild-project-logsconfig.md),
+      "[Environment](#cfn-codebuild-project-environment)" : Environment,
+      "[FileSystemLocations](#cfn-codebuild-project-filesystemlocations)" : [ ProjectFileSystemLocation, ... ],
+      "[LogsConfig](#cfn-codebuild-project-logsconfig)" : LogsConfig,
       "[Name](#cfn-codebuild-project-name)" : String,
       "[QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes)" : Integer,
-      "[SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts)" : [ [Artifacts](aws-properties-codebuild-project-artifacts.md), ... ],
-      "[SecondarySources](#cfn-codebuild-project-secondarysources)" : [ [Source](aws-properties-codebuild-project-source.md), ... ],
-      "[SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions)" : [ [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md), ... ],
+      "[SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts)" : [ Artifacts, ... ],
+      "[SecondarySources](#cfn-codebuild-project-secondarysources)" : [ Source, ... ],
+      "[SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions)" : [ ProjectSourceVersion, ... ],
       "[ServiceRole](#cfn-codebuild-project-servicerole)" : String,
-      "[Source](#cfn-codebuild-project-source)" : [Source](aws-properties-codebuild-project-source.md),
+      "[Source](#cfn-codebuild-project-source)" : Source,
       "[SourceVersion](#cfn-codebuild-project-sourceversion)" : String,
       "[Tags](#cfn-codebuild-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes)" : Integer,
-      "[Triggers](#cfn-codebuild-project-triggers)" : [ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md),
-      "[VpcConfig](#cfn-codebuild-project-vpcconfig)" : [VpcConfig](aws-properties-codebuild-project-vpcconfig.md)
+      "[Triggers](#cfn-codebuild-project-triggers)" : ProjectTriggers,
+      "[VpcConfig](#cfn-codebuild-project-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -42,37 +42,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeBuild::Project
 Properties: 
   [Artifacts](#cfn-codebuild-project-artifacts): 
-    [Artifacts](aws-properties-codebuild-project-artifacts.md)
+    Artifacts
   [BadgeEnabled](#cfn-codebuild-project-badgeenabled): Boolean
   [Cache](#cfn-codebuild-project-cache): 
-    [ProjectCache](aws-properties-codebuild-project-projectcache.md)
+    ProjectCache
   [Description](#cfn-codebuild-project-description): String
   [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
   [Environment](#cfn-codebuild-project-environment): 
-    [Environment](aws-properties-codebuild-project-environment.md)
+    Environment
   [FileSystemLocations](#cfn-codebuild-project-filesystemlocations): 
-    - [ProjectFileSystemLocation](aws-properties-codebuild-project-projectfilesystemlocation.md)
+    - ProjectFileSystemLocation
   [LogsConfig](#cfn-codebuild-project-logsconfig): 
-    [LogsConfig](aws-properties-codebuild-project-logsconfig.md)
+    LogsConfig
   [Name](#cfn-codebuild-project-name): String
   [QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes): Integer
   [SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts): 
-    - [Artifacts](aws-properties-codebuild-project-artifacts.md)
+    - Artifacts
   [SecondarySources](#cfn-codebuild-project-secondarysources): 
-    - [Source](aws-properties-codebuild-project-source.md)
+    - Source
   [SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions): 
-    - [ProjectSourceVersion](aws-properties-codebuild-project-projectsourceversion.md)
+    - ProjectSourceVersion
   [ServiceRole](#cfn-codebuild-project-servicerole): String
   [Source](#cfn-codebuild-project-source): 
-    [Source](aws-properties-codebuild-project-source.md)
+    Source
   [SourceVersion](#cfn-codebuild-project-sourceversion): String
   [Tags](#cfn-codebuild-project-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes): Integer
   [Triggers](#cfn-codebuild-project-triggers): 
-    [ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md)
+    ProjectTriggers
   [VpcConfig](#cfn-codebuild-project-vpcconfig): 
-    [VpcConfig](aws-properties-codebuild-project-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-codebuild-project-properties"></a>
@@ -222,7 +222,7 @@ How long, in minutes, from 5 to 480 \(8 hours\), for AWS CodeBuild to wait befor
 *Type*: [VpcConfig](aws-properties-codebuild-project-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codebuild-project-return-values"></a>
+## Return values<a name="aws-resource-codebuild-project-return-values"></a>
 
 ### Ref<a name="aws-resource-codebuild-project-return-values-ref"></a>
 
@@ -660,5 +660,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-codebuild-project--seealso"></a>
+## See also<a name="aws-resource-codebuild-project--seealso"></a>
 +  [ CreateProject](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_CreateProject.html) in the *AWS CodeBuild API Reference* 

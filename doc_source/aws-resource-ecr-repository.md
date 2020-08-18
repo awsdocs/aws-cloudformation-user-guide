@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md),
+      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
       "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
       "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ECR::Repository
 Properties: 
   [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
-    [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)
+    LifecyclePolicy
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
   [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
   [Tags](#cfn-ecr-repository-tags): 
@@ -52,7 +52,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
-The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policy Examples](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html) in the *Amazon Elastic Container Registry User Guide*\.  
+The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Minimum*: `0`  
@@ -65,7 +65,7 @@ An array of key\-value pairs to apply to this resource\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ecr-repository-return-values"></a>
+## Return values<a name="aws-resource-ecr-repository-return-values"></a>
 
 ### Ref<a name="aws-resource-ecr-repository-return-values-ref"></a>
 
@@ -225,6 +225,6 @@ Outputs:
     Value: !GetAtt MyRepository.Arn
 ```
 
-## See Also<a name="aws-resource-ecr-repository--seealso"></a>
+## See also<a name="aws-resource-ecr-repository--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 

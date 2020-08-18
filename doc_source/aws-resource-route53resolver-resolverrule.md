@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ResolverEndpointId](#cfn-route53resolver-resolverrule-resolverendpointid)" : String,
       "[RuleType](#cfn-route53resolver-resolverrule-ruletype)" : String,
       "[Tags](#cfn-route53resolver-resolverrule-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TargetIps](#cfn-route53resolver-resolverrule-targetips)" : [ [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md), ... ]
+      "[TargetIps](#cfn-route53resolver-resolverrule-targetips)" : [ TargetAddress, ... ]
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [Tags](#cfn-route53resolver-resolverrule-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TargetIps](#cfn-route53resolver-resolverrule-targetips): 
-    - [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)
+    - TargetAddress
 ```
 
 ## Properties<a name="aws-resource-route53resolver-resolverrule-properties"></a>
@@ -52,7 +52,7 @@ The name for the Resolver rule, which you specified when you created the Resolve
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResolverEndpointId`  <a name="cfn-route53resolver-resolverrule-resolverendpointid"></a>
@@ -70,13 +70,14 @@ For example, to forward DNS queries for example\.com to resolvers on your networ
 Currently, only Resolver can create rules that have a value of `RECURSIVE` for `RuleType`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `FORWARD | RECURSIVE | SYSTEM`  
+*Allowed values*: `FORWARD | RECURSIVE | SYSTEM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
 A list of the tag keys and values that you want to associate with the endpoint\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetIps`  <a name="cfn-route53resolver-resolverrule-targetips"></a>
@@ -85,7 +86,7 @@ An array that contains the IP addresses and ports that an outbound endpoint forw
 *Type*: List of [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53resolver-resolverrule-return-values"></a>
+## Return values<a name="aws-resource-route53resolver-resolverrule-return-values"></a>
 
 ### Ref<a name="aws-resource-route53resolver-resolverrule-return-values-ref"></a>
 
@@ -177,5 +178,5 @@ Properties :
       Port : 53
 ```
 
-## See Also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
+## See also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
 +  [ResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRule.html) in the *Amazon Route 53 API Reference* 

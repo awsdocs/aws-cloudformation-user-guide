@@ -60,7 +60,7 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 Default: `cloud-watch-logs`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cloud-watch-logs | s3`  
+*Allowed values*: `cloud-watch-logs | s3`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogGroupName`  <a name="cfn-ec2-flowlog-loggroupname"></a>
@@ -72,7 +72,6 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 
 `ResourceId`  <a name="cfn-ec2-flowlog-resourceid"></a>
 The ID of the subnet, network interface, or VPC for which you want to create a flow log\.  
-Constraints: Maximum of 1000 resources  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -81,23 +80,30 @@ Constraints: Maximum of 1000 resources
 The type of resource for which to create the flow log\. For example, if you specified a VPC ID for the `ResourceId` property, specify `VPC` for this property\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `NetworkInterface | Subnet | VPC`  
+*Allowed values*: `NetworkInterface | Subnet | VPC`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TrafficType`  <a name="cfn-ec2-flowlog-traffictype"></a>
 The type of traffic to log\. You can log traffic that the resource accepts or rejects, or all traffic\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ACCEPT | ALL | REJECT`  
+*Allowed values*: `ACCEPT | ALL | REJECT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-flowlog-return-values"></a>
+## Return values<a name="aws-resource-ec2-flowlog-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-flowlog-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the flow log ID, such as `fl-1a23b456`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-ec2-flowlog-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ec2-flowlog-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ec2-flowlog--examples"></a>
 

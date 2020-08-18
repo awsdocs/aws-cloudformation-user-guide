@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Rules](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)" : [ [MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md), ... ]
+  "[Rules](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)" : [ MappingRule, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Rules](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules): 
-    - [MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)
+    - MappingRule
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype-properties"></a>

@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Workteam",
   "Properties" : {
       "[Description](#cfn-sagemaker-workteam-description)" : String,
-      "[MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions)" : [ [MemberDefinition](aws-properties-sagemaker-workteam-memberdefinition.md), ... ],
-      "[NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration)" : [NotificationConfiguration](aws-properties-sagemaker-workteam-notificationconfiguration.md),
+      "[MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions)" : [ MemberDefinition, ... ],
+      "[NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration)" : NotificationConfiguration,
       "[Tags](#cfn-sagemaker-workteam-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[WorkteamName](#cfn-sagemaker-workteam-workteamname)" : String
     }
@@ -30,9 +30,9 @@ Type: AWS::SageMaker::Workteam
 Properties: 
   [Description](#cfn-sagemaker-workteam-description): String
   [MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions): 
-    - [MemberDefinition](aws-properties-sagemaker-workteam-memberdefinition.md)
+    - MemberDefinition
   [NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration): 
-    [NotificationConfiguration](aws-properties-sagemaker-workteam-notificationconfiguration.md)
+    NotificationConfiguration
   [Tags](#cfn-sagemaker-workteam-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WorkteamName](#cfn-sagemaker-workteam-workteamname): String
@@ -77,7 +77,7 @@ The name of the work team\.
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-sagemaker-workteam-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-workteam-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-workteam-return-values-ref"></a>
 

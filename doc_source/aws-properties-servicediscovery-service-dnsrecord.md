@@ -67,9 +67,9 @@ Note the following about the values:
 If you specify settings for an SRV record and if you specify values for `AWS_INSTANCE_IPV4`, `AWS_INSTANCE_IPV6`, or both in the `RegisterInstance` request, AWS Cloud Map automatically creates `A` and/or `AAAA` records that have the same name as the value of `service-hostname` in the SRV record\. You can ignore these records\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `A | AAAA | CNAME | SRV`  
+*Allowed values*: `A | AAAA | CNAME | SRV`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-servicediscovery-service-dnsrecord--seealso"></a>
+## See also<a name="aws-properties-servicediscovery-service-dnsrecord--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [DnsRecord](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html) in the *AWS Cloud Map API Reference* 

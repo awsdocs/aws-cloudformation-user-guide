@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings)" : [AribSourceSettings](aws-properties-medialive-channel-aribsourcesettings.md),
-  "[DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings)" : [DvbSubSourceSettings](aws-properties-medialive-channel-dvbsubsourcesettings.md),
-  "[EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings)" : [EmbeddedSourceSettings](aws-properties-medialive-channel-embeddedsourcesettings.md),
-  "[Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings)" : [Scte20SourceSettings](aws-properties-medialive-channel-scte20sourcesettings.md),
-  "[Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings)" : [Scte27SourceSettings](aws-properties-medialive-channel-scte27sourcesettings.md),
-  "[TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings)" : [TeletextSourceSettings](aws-properties-medialive-channel-teletextsourcesettings.md)
+  "[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings)" : AribSourceSettings,
+  "[DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings)" : DvbSubSourceSettings,
+  "[EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings)" : EmbeddedSourceSettings,
+  "[Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings)" : Scte20SourceSettings,
+  "[Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings)" : Scte27SourceSettings,
+  "[TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings)" : TeletextSourceSettings
 }
 ```
 
@@ -25,17 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings): 
-    [AribSourceSettings](aws-properties-medialive-channel-aribsourcesettings.md)
+    AribSourceSettings
   [DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings): 
-    [DvbSubSourceSettings](aws-properties-medialive-channel-dvbsubsourcesettings.md)
+    DvbSubSourceSettings
   [EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings): 
-    [EmbeddedSourceSettings](aws-properties-medialive-channel-embeddedsourcesettings.md)
+    EmbeddedSourceSettings
   [Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings): 
-    [Scte20SourceSettings](aws-properties-medialive-channel-scte20sourcesettings.md)
+    Scte20SourceSettings
   [Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings): 
-    [Scte27SourceSettings](aws-properties-medialive-channel-scte27sourcesettings.md)
+    Scte27SourceSettings
   [TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings): 
-    [TeletextSourceSettings](aws-properties-medialive-channel-teletextsourcesettings.md)
+    TeletextSourceSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-captionselectorsettings-properties"></a>

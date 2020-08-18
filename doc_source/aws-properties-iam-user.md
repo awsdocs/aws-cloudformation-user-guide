@@ -15,11 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IAM::User",
   "Properties" : {
       "[Groups](#cfn-iam-user-groups)" : [ String, ... ],
-      "[LoginProfile](#cfn-iam-user-loginprofile)" : [LoginProfile](aws-properties-iam-user-loginprofile.md),
+      "[LoginProfile](#cfn-iam-user-loginprofile)" : LoginProfile,
       "[ManagedPolicyArns](#cfn-iam-user-managepolicyarns)" : [ String, ... ],
       "[Path](#cfn-iam-user-path)" : String,
       "[PermissionsBoundary](#cfn-iam-user-permissionsboundary)" : String,
-      "[Policies](#cfn-iam-user-policies)" : [ [Policy](aws-properties-iam-policy-2.md), ... ],
+      "[Policies](#cfn-iam-user-policies)" : [ Policy, ... ],
       "[Tags](#cfn-iam-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserName](#cfn-iam-user-username)" : String
     }
@@ -34,13 +34,13 @@ Properties:
   [Groups](#cfn-iam-user-groups): 
     - String
   [LoginProfile](#cfn-iam-user-loginprofile): 
-    [LoginProfile](aws-properties-iam-user-loginprofile.md)
+    LoginProfile
   [ManagedPolicyArns](#cfn-iam-user-managepolicyarns): 
     - String
   [Path](#cfn-iam-user-path): String
   [PermissionsBoundary](#cfn-iam-user-permissionsboundary): String
   [Policies](#cfn-iam-user-policies): 
-    - [Policy](aws-properties-iam-policy-2.md)
+    - Policy
   [Tags](#cfn-iam-user-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserName](#cfn-iam-user-username): String
@@ -110,7 +110,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-iam-user-return-values"></a>
+## Return values<a name="aws-properties-iam-user-return-values"></a>
 
 ### Ref<a name="aws-properties-iam-user-return-values-ref"></a>
 
@@ -166,6 +166,6 @@ Resources:
           Ref: MyPassword
 ```
 
-## See Also<a name="aws-properties-iam-user--seealso"></a>
+## See also<a name="aws-properties-iam-user--seealso"></a>
 + To view `AWS::IAM::User` template example snippets, see [Declaring an IAM User Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-user)\. 
 +  [CreateUser](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html) in the *AWS Identity and Access Management API Reference* 

@@ -12,15 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MSK::Cluster",
   "Properties" : {
-      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md),
-      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md),
+      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : BrokerNodeGroupInfo,
+      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : ClientAuthentication,
       "[ClusterName](#cfn-msk-cluster-clustername)" : String,
-      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md),
-      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md),
+      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : ConfigurationInfo,
+      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : EncryptionInfo,
       "[EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring)" : String,
       "[KafkaVersion](#cfn-msk-cluster-kafkaversion)" : String,
+      "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : LoggingInfo,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
-      "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md),
+      "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
       "[Tags](#cfn-msk-cluster-tags)" : Json
     }
 }
@@ -32,19 +33,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MSK::Cluster
 Properties: 
   [BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo): 
-    [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)
+    BrokerNodeGroupInfo
   [ClientAuthentication](#cfn-msk-cluster-clientauthentication): 
-    [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)
+    ClientAuthentication
   [ClusterName](#cfn-msk-cluster-clustername): String
   [ConfigurationInfo](#cfn-msk-cluster-configurationinfo): 
-    [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)
+    ConfigurationInfo
   [EncryptionInfo](#cfn-msk-cluster-encryptioninfo): 
-    [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)
+    EncryptionInfo
   [EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring): String
   [KafkaVersion](#cfn-msk-cluster-kafkaversion): String
+  [LoggingInfo](#cfn-msk-cluster-logginginfo): 
+    LoggingInfo
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
   [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
-    [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md)
+    OpenMonitoring
   [Tags](#cfn-msk-cluster-tags): Json
 ```
 
@@ -72,7 +75,7 @@ The name of the cluster\.
 The Amazon MSK configuration to use for the cluster\.  
 *Required*: No  
 *Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionInfo`  <a name="cfn-msk-cluster-encryptioninfo"></a>
 Includes all encryption\-related information\.  
@@ -90,7 +93,13 @@ Specifies the level of monitoring for the MSK cluster\. The possible values are 
 The version of Apache Kafka\. You can use Amazon MSK to create clusters that use Apache Kafka versions 1\.1\.1 and 2\.2\.1\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LoggingInfo`  <a name="cfn-msk-cluster-logginginfo"></a>
+You can configure your MSK cluster to send broker logs to different destination types\. This is a container for the configuration details related to broker logs\.  
+*Required*: No  
+*Type*: [LoggingInfo](aws-properties-msk-cluster-logginginfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfBrokerNodes`  <a name="cfn-msk-cluster-numberofbrokernodes"></a>
 The number of broker nodes you want in the Amazon MSK cluster\. You can submit an update to increase the number of broker nodes in a cluster\.  
@@ -110,7 +119,7 @@ A map of key:value pairs to apply to this resource\. Both key and value are of t
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-msk-cluster-return-values"></a>
+## Return values<a name="aws-resource-msk-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-msk-cluster-return-values-ref"></a>
 

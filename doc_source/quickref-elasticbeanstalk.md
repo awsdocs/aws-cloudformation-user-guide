@@ -1,8 +1,8 @@
-# Elastic Beanstalk Template Snippets<a name="quickref-elasticbeanstalk"></a>
+# Elastic Beanstalk template snippets<a name="quickref-elasticbeanstalk"></a>
 
 With Elastic Beanstalk, you can quickly deploy and manage applications in AWS without worrying about the infrastructure that runs those applications\. The following sample template can help you describe Elastic Beanstalk resources in your AWS CloudFormation template\.
 
-## Elastic Beanstalk Sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
+## Elastic Beanstalk sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
 
 The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
 

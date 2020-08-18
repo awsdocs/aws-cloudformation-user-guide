@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Metadata](#cfn-appmesh-route-grpcroutematch-metadata)" : [ [GrpcRouteMetadata](aws-properties-appmesh-route-grpcroutemetadata.md), ... ],
+  "[Metadata](#cfn-appmesh-route-grpcroutematch-metadata)" : [ GrpcRouteMetadata, ... ],
   "[MethodName](#cfn-appmesh-route-grpcroutematch-methodname)" : String,
   "[ServiceName](#cfn-appmesh-route-grpcroutematch-servicename)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Metadata](#cfn-appmesh-route-grpcroutematch-metadata): 
-    - [GrpcRouteMetadata](aws-properties-appmesh-route-grpcroutemetadata.md)
+    - GrpcRouteMetadata
   [MethodName](#cfn-appmesh-route-grpcroutematch-methodname): String
   [ServiceName](#cfn-appmesh-route-grpcroutematch-servicename): String
 ```

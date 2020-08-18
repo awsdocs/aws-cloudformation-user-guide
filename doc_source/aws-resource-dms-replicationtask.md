@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn)" : String,
       "[TableMappings](#cfn-dms-replicationtask-tablemappings)" : String,
       "[Tags](#cfn-dms-replicationtask-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn)" : String
+      "[TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn)" : String,
+      "[TaskData](#cfn-dms-replicationtask-taskdata)" : String
     }
 }
 ```
@@ -44,6 +45,7 @@ Properties:
   [Tags](#cfn-dms-replicationtask-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TargetEndpointArn](#cfn-dms-replicationtask-targetendpointarn): String
+  [TaskData](#cfn-dms-replicationtask-taskdata): String
 ```
 
 ## Properties<a name="aws-resource-dms-replicationtask-properties"></a>
@@ -77,7 +79,7 @@ Commit time example: \-\-cdc\-stop\-position “commit\_time: 3018\-02\-09T12:12
 The migration type\. Valid values: `full-load` \| `cdc` \| `full-load-and-cdc`   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `cdc | full-load | full-load-and-cdc`  
+*Allowed values*: `cdc | full-load | full-load-and-cdc`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationInstanceArn`  <a name="cfn-dms-replicationtask-replicationinstancearn"></a>
@@ -89,7 +91,7 @@ The Amazon Resource Name \(ARN\) of a replication instance\.
 `ReplicationTaskIdentifier`  <a name="cfn-dms-replicationtask-replicationtaskidentifier"></a>
 An identifier for the replication task\.  
 Constraints:  
-+ Must contain from 1 to 255 alphanumeric characters or hyphens\.
++ Must contain 1\-255 alphanumeric characters or hyphens\.
 + First character must be a letter\.
 + Cannot end with a hyphen or contain two consecutive hyphens\.
 *Required*: No  
@@ -97,7 +99,7 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationTaskSettings`  <a name="cfn-dms-replicationtask-replicationtasksettings"></a>
-Overall settings for the task, in JSON format\. For more information, see [Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration User Guide\.*   
+Overall settings for the task, in JSON format\. For more information, see [Specifying Task Settings for AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration User Guide\.*   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,7 +111,7 @@ An Amazon Resource Name \(ARN\) that uniquely identifies the source endpoint\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableMappings`  <a name="cfn-dms-replicationtask-tablemappings"></a>
-The table mappings for the task, in JSON format\. For more information, see [Table Mapping](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the *AWS Database Migration User Guide\.*   
+The table mappings for the task, in JSON format\. For more information, see [Using Table Mapping to Specify Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -126,7 +128,13 @@ An Amazon Resource Name \(ARN\) that uniquely identifies the target endpoint\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-replicationtask-return-values"></a>
+`TaskData`  <a name="cfn-dms-replicationtask-taskdata"></a>
+Supplemental information that the task requires to migrate the data for certain source and target endpoints\. For more information, see [Specifying Supplemental Data for Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.TaskData.html) in the *AWS Database Migration Service User Guide\.*   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-dms-replicationtask-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationtask-return-values-ref"></a>
 
@@ -141,38 +149,27 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-resource-dms-replicationtask--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "myReplicationTask": {
-            "Type": "AWS::DMS::ReplicationTask",
-            "Properties": {
-                "SourceEndpointArn": 11,
-                "TargetEndpointArn": "12ff",
-                "ReplicationInstanceArn": "ert1",
-                "MigrationType": "full-load",
-                "TableMappings": "{ \"rules\": [ { \"rule-type\": \"selection\", \"rule-id\": \"1\", \"rule-name\": \"1\", \"object-locator\": { \"schema-name\": \"%\", \"table-name\": \"%\" }, \"rule-action\": \"include\" } ] }"
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
+                "myReplicationTask": { "Type": "AWS::DMS::ReplicationTask", "Properties": {
+                "SourceEndpointArn": 11, "TargetEndpointArn": "12ff", "ReplicationInstanceArn":
+                "ert1", "MigrationType": "full-load", "TableMappings": "{ \"rules\": [ {
+                \"rule-type\": \"selection\", \"rule-id\": \"1\", \"rule-name\": \"1\",
+                \"object-locator\": { \"schema-name\": \"%\", \"table-name\": \"%\" },
+                \"rule-action\": \"include\" } ] }" } } } }
 ```
 
 #### YAML<a name="aws-resource-dms-replicationtask--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources: 
-  myReplicationTask: 
-    Properties: 
-      MigrationType: full-load
-      ReplicationInstanceArn: ReplicationInstance
-      SourceEndpointArn: SourceEndpoint
-      TableMappings: "{ \"rules\": [ { \"rule-type\": \"selection\", \"rule-id\": \"1\", \"rule-name\": \"1\", \"object-locator\": { \"schema-name\": \"%\", \"table-name\": \"%\" }, \"rule-action\": \"include\" } ] }"
-      TargetEndpointArn: TargetEndpoint
-    Type: "AWS::DMS::ReplicationTask"
+AWSTemplateFormatVersion: 2010-09-09 Resources:
+                myReplicationTask: Properties: MigrationType: full-load ReplicationInstanceArn:
+                ReplicationInstance SourceEndpointArn: SourceEndpoint TableMappings: "{ \"rules\": [
+                { \"rule-type\": \"selection\", \"rule-id\": \"1\", \"rule-name\": \"1\",
+                \"object-locator\": { \"schema-name\": \"%\", \"table-name\": \"%\" },
+                \"rule-action\": \"include\" } ] }" TargetEndpointArn: TargetEndpoint Type:
+                "AWS::DMS::ReplicationTask"
 ```
 
-## See Also<a name="aws-resource-dms-replicationtask--seealso"></a>
+## See also<a name="aws-resource-dms-replicationtask--seealso"></a>
 +  [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

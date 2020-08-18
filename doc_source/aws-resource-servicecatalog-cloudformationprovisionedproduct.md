@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProvisionedProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname)" : String,
       "[ProvisioningArtifactId](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid)" : String,
       "[ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname)" : String,
-      "[ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)" : [ [ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md), ... ],
-      "[ProvisioningPreferences](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences)" : [ProvisioningPreferences](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences.md),
+      "[ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters)" : [ ProvisioningParameter, ... ],
+      "[ProvisioningPreferences](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences)" : ProvisioningPreferences,
       "[Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -46,9 +46,9 @@ Properties:
   [ProvisioningArtifactId](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactid): String
   [ProvisioningArtifactName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname): String
   [ProvisioningParameters](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters): 
-    - [ProvisioningParameter](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter.md)
+    - ProvisioningParameter
   [ProvisioningPreferences](#cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences): 
-    [ProvisioningPreferences](aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences.md)
+    ProvisioningPreferences
   [Tags](#cfn-servicecatalog-cloudformationprovisionedproduct-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -126,6 +126,7 @@ The name of the provisioning artifact \(also known as a version\) for the produc
 You must specify either the name or the ID of the provisioning artifact, but not both\.
 *Required*: Conditional  
 *Type*: String  
+*Maximum*: `8192`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisioningParameters`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameters"></a>
@@ -148,7 +149,7 @@ Requires the provisioned product to have an [ResourceUpdateConstraint](https://d
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct-return-values-ref"></a>
 
@@ -167,8 +168,14 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `CloudformationStackArn`  <a name="CloudformationStackArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\.
 
+`Outputs`  <a name="Outputs-fn::getatt"></a>
+The output of the product you are provisioning\. For example, the DNS of an EC2 instance\.
+
+`ProvisionedProductId`  <a name="ProvisionedProductId-fn::getatt"></a>
+The ID of the provisioned product\.
+
 `RecordId`  <a name="RecordId-fn::getatt"></a>
 The ID of the record, such as `rec-rjeatvy434trk`\.
 
-## See Also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
 + [ProvisionProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog API Reference*

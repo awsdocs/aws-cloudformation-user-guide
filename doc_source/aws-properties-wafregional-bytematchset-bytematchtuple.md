@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch)" : [FieldToMatch](aws-properties-wafregional-bytematchset-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch)" : FieldToMatch,
   "[PositionalConstraint](#cfn-wafregional-bytematchset-bytematchtuple-positionalconstraint)" : String,
   "[TargetString](#cfn-wafregional-bytematchset-bytematchtuple-targetstring)" : String,
   "[TargetStringBase64](#cfn-wafregional-bytematchset-bytematchtuple-targetstringbase64)" : String,
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafregional-bytematchset-fieldtomatch.md)
+    FieldToMatch
   [PositionalConstraint](#cfn-wafregional-bytematchset-bytematchtuple-positionalconstraint): String
   [TargetString](#cfn-wafregional-bytematchset-bytematchtuple-targetstring): 
     String
@@ -61,7 +61,7 @@ The value of `TargetString` must appear at the beginning of the specified part o
 The value of `TargetString` must appear at the end of the specified part of the web request\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
+*Allowed values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetString`  <a name="cfn-wafregional-bytematchset-bytematchtuple-targetstring"></a>
@@ -124,5 +124,5 @@ Use this option to decode a URL\-encoded value\.
 Specify `NONE` if you don't want to perform any text transformations\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

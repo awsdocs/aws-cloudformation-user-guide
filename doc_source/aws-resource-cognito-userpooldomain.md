@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolDomain",
   "Properties" : {
-      "[CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig)" : [CustomDomainConfigType](aws-properties-cognito-userpooldomain-customdomainconfigtype.md),
+      "[CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig)" : CustomDomainConfigType,
       "[Domain](#cfn-cognito-userpooldomain-domain)" : String,
       "[UserPoolId](#cfn-cognito-userpooldomain-userpoolid)" : String
     }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPoolDomain
 Properties: 
   [CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig): 
-    [CustomDomainConfigType](aws-properties-cognito-userpooldomain-customdomainconfigtype.md)
+    CustomDomainConfigType
   [Domain](#cfn-cognito-userpooldomain-domain): String
   [UserPoolId](#cfn-cognito-userpooldomain-userpoolid): String
 ```
@@ -57,7 +57,7 @@ The user pool ID for the user pool where you want to associate a user pool domai
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpooldomain-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpooldomain-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpooldomain-return-values-ref"></a>
 

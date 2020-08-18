@@ -10,10 +10,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination)" : [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md),
+  "[DeleteMarkerReplication](#cfn-s3-bucket-replicationrule-deletemarkerreplication)" : DeleteMarkerReplication,
+  "[Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination)" : ReplicationDestination,
+  "[Filter](#cfn-s3-bucket-replicationrule-filter)" : ReplicationRuleFilter,
   "[Id](#cfn-s3-bucket-replicationconfiguration-rules-id)" : String,
   "[Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix)" : String,
-  "[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria)" : [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md),
+  "[Priority](#cfn-s3-bucket-replicationrule-priority)" : Integer,
+  "[SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria)" : SourceSelectionCriteria,
   "[Status](#cfn-s3-bucket-replicationconfiguration-rules-status)" : String
 }
 ```
@@ -21,21 +24,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-replicationconfiguration-rules-syntax.yaml"></a>
 
 ```
+  [DeleteMarkerReplication](#cfn-s3-bucket-replicationrule-deletemarkerreplication): 
+    DeleteMarkerReplication
   [Destination](#cfn-s3-bucket-replicationconfiguration-rules-destination): 
-    [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)
+    ReplicationDestination
+  [Filter](#cfn-s3-bucket-replicationrule-filter): 
+    ReplicationRuleFilter
   [Id](#cfn-s3-bucket-replicationconfiguration-rules-id): String
   [Prefix](#cfn-s3-bucket-replicationconfiguration-rules-prefix): String
+  [Priority](#cfn-s3-bucket-replicationrule-priority): Integer
   [SourceSelectionCriteria](#cfn-s3-bucket-replicationrule-sourceselectioncriteria): 
-    [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)
+    SourceSelectionCriteria
   [Status](#cfn-s3-bucket-replicationconfiguration-rules-status): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-rules-properties"></a>
 
+`DeleteMarkerReplication`  <a name="cfn-s3-bucket-replicationrule-deletemarkerreplication"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [DeleteMarkerReplication](aws-properties-s3-bucket-deletemarkerreplication.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Destination`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination"></a>
 A container for information about the replication destination and its configurations including enabling the S3 Replication Time Control \(S3 RTC\)\.  
 *Required*: Yes  
 *Type*: [ReplicationDestination](aws-properties-s3-bucket-replicationconfiguration-rules-destination.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Filter`  <a name="cfn-s3-bucket-replicationrule-filter"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [ReplicationRuleFilter](aws-properties-s3-bucket-replicationrulefilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3-bucket-replicationconfiguration-rules-id"></a>
@@ -46,8 +66,14 @@ A unique identifier for the rule\. The maximum value is 255 characters\. If you 
 
 `Prefix`  <a name="cfn-s3-bucket-replicationconfiguration-rules-prefix"></a>
 An object key name prefix that identifies the object or objects to which the rule applies\. The maximum prefix length is 1,024 characters\. To include all objects in a bucket, specify an empty string\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Priority`  <a name="cfn-s3-bucket-replicationrule-priority"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceSelectionCriteria`  <a name="cfn-s3-bucket-replicationrule-sourceselectioncriteria"></a>
@@ -60,5 +86,5 @@ A container that describes additional filters for identifying the source objects
 Specifies whether the rule is enabled\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

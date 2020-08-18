@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The type of the compute resource used to execute the `containerAction`\. Possible values are: `ACU_1` \(vCPU=4, memory=16 GiB\) or `ACU_2` \(vCPU=8, memory=32 GiB\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ACU_1 | ACU_2`  
+*Allowed values*: `ACU_1 | ACU_2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSizeInGB`  <a name="cfn-iotanalytics-dataset-resourceconfiguration-volumesizeingb"></a>

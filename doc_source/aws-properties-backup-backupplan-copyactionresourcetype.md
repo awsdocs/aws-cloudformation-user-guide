@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationBackupVaultArn](#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn)" : String,
-  "[Lifecycle](#cfn-backup-backupplan-copyactionresourcetype-lifecycle)" : [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md)
+  "[Lifecycle](#cfn-backup-backupplan-copyactionresourcetype-lifecycle)" : LifecycleResourceType
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationBackupVaultArn](#cfn-backup-backupplan-copyactionresourcetype-destinationbackupvaultarn): String
   [Lifecycle](#cfn-backup-backupplan-copyactionresourcetype-lifecycle): 
-    [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md)
+    LifecycleResourceType
 ```
 
 ## Properties<a name="aws-properties-backup-backupplan-copyactionresourcetype-properties"></a>

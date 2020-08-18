@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The scope of the StopAction\. The only acceptable value is `RuleSet`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `RuleSet`  
+*Allowed values*: `RuleSet`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-stopaction-topicarn"></a>

@@ -1,4 +1,4 @@
-# Custom Resource Request Types<a name="crpg-ref-requesttypes"></a>
+# Custom resource request types<a name="crpg-ref-requesttypes"></a>
 
 The request type is sent in the `RequestType` field in the [vendor request object](crpg-ref-requests.md) sent by AWS CloudFormation when the template developer creates, updates, or deletes a stack that contains a custom resource\.
 
@@ -6,7 +6,7 @@ Each request type has a particular set of fields that are sent with the request,
 
 This section provides information about the request and response fields, with examples, for each request type\.
 
-## In This Section<a name="w5792ab1c19c25c17c19b9"></a>
+## In this section<a name="w6461ab1c19c24c17c19b9"></a>
 + [Create](crpg-ref-requesttypes-create.md)
 + [Delete](crpg-ref-requesttypes-delete.md)
 + [Update](crpg-ref-requesttypes-update.md)

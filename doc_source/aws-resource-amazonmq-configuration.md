@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-configuration-engineversion)" : String,
       "[Name](#cfn-amazonmq-configuration-name)" : String,
-      "[Tags](#cfn-amazonmq-configuration-tags)" : [ [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md), ... ]
+      "[Tags](#cfn-amazonmq-configuration-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -33,7 +33,7 @@ Properties:
   [EngineVersion](#cfn-amazonmq-configuration-engineversion): String
   [Name](#cfn-amazonmq-configuration-name): String
   [Tags](#cfn-amazonmq-configuration-tags): 
-    - [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>
@@ -74,7 +74,7 @@ Create tags when creating the configuration\.
 *Type*: List of [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-configuration-return-values"></a>
+## Return values<a name="aws-resource-amazonmq-configuration-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-configuration-return-values-ref"></a>
 

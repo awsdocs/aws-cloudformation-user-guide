@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration)" : [IotEventsDestinationConfiguration](aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.md),
-  "[S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration)" : [S3DestinationConfiguration](aws-properties-iotanalytics-dataset-s3destinationconfiguration.md)
+  "[IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration)" : IotEventsDestinationConfiguration,
+  "[S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration)" : S3DestinationConfiguration
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [IotEventsDestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-ioteventsdestinationconfiguration): 
-    [IotEventsDestinationConfiguration](aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.md)
+    IotEventsDestinationConfiguration
   [S3DestinationConfiguration](#cfn-iotanalytics-dataset-datasetcontentdeliveryruledestination-s3destinationconfiguration): 
-    [S3DestinationConfiguration](aws-properties-iotanalytics-dataset-s3destinationconfiguration.md)
+    S3DestinationConfiguration
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination-properties"></a>

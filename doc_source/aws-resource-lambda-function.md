@@ -12,10 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::Function",
   "Properties" : {
-      "[Code](#cfn-lambda-function-code)" : [Code](aws-properties-lambda-function-code.md),
-      "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md),
+      "[Code](#cfn-lambda-function-code)" : Code,
+      "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : DeadLetterConfig,
       "[Description](#cfn-lambda-function-description)" : String,
-      "[Environment](#cfn-lambda-function-environment)" : [Environment](aws-properties-lambda-function-environment.md),
+      "[Environment](#cfn-lambda-function-environment)" : Environment,
+      "[FileSystemConfigs](#cfn-lambda-function-filesystemconfigs)" : [ FileSystemConfig, ... ],
       "[FunctionName](#cfn-lambda-function-functionname)" : String,
       "[Handler](#cfn-lambda-function-handler)" : String,
       "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
@@ -26,8 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Runtime](#cfn-lambda-function-runtime)" : String,
       "[Tags](#cfn-lambda-function-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Timeout](#cfn-lambda-function-timeout)" : Integer,
-      "[TracingConfig](#cfn-lambda-function-tracingconfig)" : [TracingConfig](aws-properties-lambda-function-tracingconfig.md),
-      "[VpcConfig](#cfn-lambda-function-vpcconfig)" : [VpcConfig](aws-properties-lambda-function-vpcconfig.md)
+      "[TracingConfig](#cfn-lambda-function-tracingconfig)" : TracingConfig,
+      "[VpcConfig](#cfn-lambda-function-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -38,12 +39,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Lambda::Function
 Properties: 
   [Code](#cfn-lambda-function-code): 
-    [Code](aws-properties-lambda-function-code.md)
+    Code
   [DeadLetterConfig](#cfn-lambda-function-deadletterconfig): 
-    [DeadLetterConfig](aws-properties-lambda-function-deadletterconfig.md)
+    DeadLetterConfig
   [Description](#cfn-lambda-function-description): String
   [Environment](#cfn-lambda-function-environment): 
-    [Environment](aws-properties-lambda-function-environment.md)
+    Environment
+  [FileSystemConfigs](#cfn-lambda-function-filesystemconfigs): 
+    - FileSystemConfig
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
@@ -57,9 +60,9 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Timeout](#cfn-lambda-function-timeout): Integer
   [TracingConfig](#cfn-lambda-function-tracingconfig): 
-    [TracingConfig](aws-properties-lambda-function-tracingconfig.md)
+    TracingConfig
   [VpcConfig](#cfn-lambda-function-vpcconfig): 
-    [VpcConfig](aws-properties-lambda-function-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-lambda-function-properties"></a>
@@ -88,6 +91,14 @@ A description of the function\.
 Environment variables that are accessible from function code during execution\.  
 *Required*: No  
 *Type*: [Environment](aws-properties-lambda-function-environment.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FileSystemConfigs`  <a name="cfn-lambda-function-filesystemconfigs"></a>
+Connection settings for an Amazon EFS file system\. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to\. If your template contains an [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html) resource, you must also specify a `DependsOn` attribute to ensure that the mount target is created or updated before the function\.  
+For more information about using the `DependsOn` attribute, see [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.   
+*Required*: No  
+*Type*: List of [FileSystemConfig](aws-properties-lambda-function-filesystemconfig.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-function-functionname"></a>
@@ -144,7 +155,7 @@ The Amazon Resource Name \(ARN\) of the function's execution role\.
 The identifier of the function's [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `dotnetcore2.1 | go1.x | java11 | java8 | nodejs10.x | nodejs12.x | provided | python2.7 | python3.6 | python3.7 | python3.8 | ruby2.5 | ruby2.7`  
+*Allowed values*: `dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | nodejs10.x | nodejs12.x | provided | python2.7 | python3.6 | python3.7 | python3.8 | ruby2.5 | ruby2.7`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-lambda-function-tags"></a>
@@ -172,7 +183,7 @@ For network connectivity to AWS resources in a VPC, specify a list of security g
 *Type*: [VpcConfig](aws-properties-lambda-function-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-lambda-function-return-values"></a>
+## Return values<a name="aws-resource-lambda-function-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-function-return-values-ref"></a>
 

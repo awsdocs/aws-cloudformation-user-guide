@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationId](#cfn-appconfig-environment-applicationid)" : String,
       "[Description](#cfn-appconfig-environment-description)" : String,
-      "[Monitors](#cfn-appconfig-environment-monitors)" : [ [Monitors](aws-properties-appconfig-environment-monitors.md), ... ],
+      "[Monitors](#cfn-appconfig-environment-monitors)" : [ Monitors, ... ],
       "[Name](#cfn-appconfig-environment-name)" : String,
-      "[Tags](#cfn-appconfig-environment-tags)" : [ [Tags](aws-properties-appconfig-environment-tags.md), ... ]
+      "[Tags](#cfn-appconfig-environment-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -43,10 +43,10 @@ Properties:
   [ApplicationId](#cfn-appconfig-environment-applicationid): String
   [Description](#cfn-appconfig-environment-description): String
   [Monitors](#cfn-appconfig-environment-monitors): 
-    - [Monitors](aws-properties-appconfig-environment-monitors.md)
+    - Monitors
   [Name](#cfn-appconfig-environment-name): String
   [Tags](#cfn-appconfig-environment-tags): 
-    - [Tags](aws-properties-appconfig-environment-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-environment-properties"></a>
@@ -87,7 +87,7 @@ Metadata to assign to the environment\. Tags help organize and categorize your A
 *Type*: [List](aws-properties-appconfig-environment-tags.md) of [Tags](aws-properties-appconfig-environment-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-environment-return-values"></a>
+## Return values<a name="aws-resource-appconfig-environment-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-environment-return-values-ref"></a>
 
@@ -137,3 +137,7 @@ Resources:
         - Key: Env
           Value: test
 ```
+
+## See also<a name="aws-resource-appconfig-environment--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Creating an environment](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-environment.html)

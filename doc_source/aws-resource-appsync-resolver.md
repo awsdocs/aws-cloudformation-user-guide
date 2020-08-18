@@ -13,16 +13,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppSync::Resolver",
   "Properties" : {
       "[ApiId](#cfn-appsync-resolver-apiid)" : String,
-      "[CachingConfig](#cfn-appsync-resolver-cachingconfig)" : [CachingConfig](aws-properties-appsync-resolver-cachingconfig.md),
+      "[CachingConfig](#cfn-appsync-resolver-cachingconfig)" : CachingConfig,
       "[DataSourceName](#cfn-appsync-resolver-datasourcename)" : String,
       "[FieldName](#cfn-appsync-resolver-fieldname)" : String,
       "[Kind](#cfn-appsync-resolver-kind)" : String,
-      "[PipelineConfig](#cfn-appsync-resolver-pipelineconfig)" : [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md),
+      "[PipelineConfig](#cfn-appsync-resolver-pipelineconfig)" : PipelineConfig,
       "[RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate)" : String,
       "[RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location)" : String,
       "[ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate)" : String,
       "[ResponseMappingTemplateS3Location](#cfn-appsync-resolver-responsemappingtemplates3location)" : String,
-      "[SyncConfig](#cfn-appsync-resolver-syncconfig)" : [SyncConfig](aws-properties-appsync-resolver-syncconfig.md),
+      "[SyncConfig](#cfn-appsync-resolver-syncconfig)" : SyncConfig,
       "[TypeName](#cfn-appsync-resolver-typename)" : String
     }
 }
@@ -35,18 +35,18 @@ Type: AWS::AppSync::Resolver
 Properties: 
   [ApiId](#cfn-appsync-resolver-apiid): String
   [CachingConfig](#cfn-appsync-resolver-cachingconfig): 
-    [CachingConfig](aws-properties-appsync-resolver-cachingconfig.md)
+    CachingConfig
   [DataSourceName](#cfn-appsync-resolver-datasourcename): String
   [FieldName](#cfn-appsync-resolver-fieldname): String
   [Kind](#cfn-appsync-resolver-kind): String
   [PipelineConfig](#cfn-appsync-resolver-pipelineconfig): 
-    [PipelineConfig](aws-properties-appsync-resolver-pipelineconfig.md)
+    PipelineConfig
   [RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate): String
   [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location): String
   [ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate): String
   [ResponseMappingTemplateS3Location](#cfn-appsync-resolver-responsemappingtemplates3location): String
   [SyncConfig](#cfn-appsync-resolver-syncconfig): 
-    [SyncConfig](aws-properties-appsync-resolver-syncconfig.md)
+    SyncConfig
   [TypeName](#cfn-appsync-resolver-typename): String
 ```
 
@@ -126,7 +126,7 @@ The GraphQL type that invokes this resolver\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appsync-resolver-return-values"></a>
+## Return values<a name="aws-resource-appsync-resolver-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-resolver-return-values-ref"></a>
 
@@ -243,5 +243,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-resolver--seealso"></a>
+## See also<a name="aws-resource-appsync-resolver--seealso"></a>
 +  [CreateResolver](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateResolver.html) operation in the *AWS AppSync API Reference*\.

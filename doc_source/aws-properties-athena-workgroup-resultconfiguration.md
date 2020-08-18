@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EncryptionConfiguration](#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md),
+  "[EncryptionConfiguration](#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
   "[OutputLocation](#cfn-athena-workgroup-resultconfiguration-outputlocation)" : String
 }
 ```
@@ -19,20 +19,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncryptionConfiguration](#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md)
+    EncryptionConfiguration
   [OutputLocation](#cfn-athena-workgroup-resultconfiguration-outputlocation): String
 ```
 
 ## Properties<a name="aws-properties-athena-workgroup-resultconfiguration-properties"></a>
 
 `EncryptionConfiguration`  <a name="cfn-athena-workgroup-resultconfiguration-encryptionconfiguration"></a>
-If query results are encrypted in Amazon S3, indicates the encryption option used \(for example, `SSE-KMS` or `CSE-KMS`\) and key information\. This is a client\-side setting\. If workgroup settings override client\-side settings, then the query uses the encryption configuration that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup\. See WorkGroupConfiguration$EnforceWorkGroupConfiguration and [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
+If query results are encrypted in Amazon S3, indicates the encryption option used \(for example, `SSE-KMS` or `CSE-KMS`\) and key information\. This is a client\-side setting\. If workgroup settings override client\-side settings, then the query uses the encryption configuration that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup\. See [EnforceWorkGroupConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration) and [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
 *Required*: No  
 *Type*: [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputLocation`  <a name="cfn-athena-workgroup-resultconfiguration-outputlocation"></a>
-The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`\. To run the query, you must specify the query results location using one of the ways: either for individual queries using either this setting \(client\-side\), or in the workgroup, using [WorkGroupConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html#cfn-athena-workgroup-workgroupconfiguration)\. If none of them is set, Athena issues an error that no output location is provided\. For more information, see [Query Results](https://docs.aws.amazon.com/athena/latest/ug/querying.html)\. If workgroup settings override client\-side settings, then the query uses the settings specified for the workgroup\. See WorkGroupConfiguration$EnforceWorkGroupConfiguration\.  
+The location in Amazon S3 where your query results are stored, such as `s3://path/to/query/bucket/`\. To run a query, you must specify the query results location using either a client\-side setting for individual queries or a location specified by the workgroup\. If workgroup settings override client\-side settings, then the query uses the location specified for the workgroup\. If no query location is set, Athena issues an error\. For more information, see [Working with Query Results, Output Files, and Query History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) and [EnforceWorkGroupConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

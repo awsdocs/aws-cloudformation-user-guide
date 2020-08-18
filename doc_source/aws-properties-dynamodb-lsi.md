@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IndexName](#cfn-dynamodb-lsi-indexname)" : String,
-  "[KeySchema](#cfn-dynamodb-lsi-keyschema)" : [ [KeySchema](aws-properties-dynamodb-keyschema.md), ... ],
-  "[Projection](#cfn-dynamodb-lsi-projection)" : [Projection](aws-properties-dynamodb-projectionobject.md)
+  "[KeySchema](#cfn-dynamodb-lsi-keyschema)" : [ KeySchema, ... ],
+  "[Projection](#cfn-dynamodb-lsi-projection)" : Projection
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IndexName](#cfn-dynamodb-lsi-indexname): String
   [KeySchema](#cfn-dynamodb-lsi-keyschema): 
-    - [KeySchema](aws-properties-dynamodb-keyschema.md)
+    - KeySchema
   [Projection](#cfn-dynamodb-lsi-projection): 
-    [Projection](aws-properties-dynamodb-projectionobject.md)
+    Projection
 ```
 
 ## Properties<a name="aws-properties-dynamodb-lsi-properties"></a>
@@ -50,6 +50,6 @@ Represents attributes that are copied \(projected\) from the table into the loca
 *Type*: [Projection](aws-properties-dynamodb-projectionobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-dynamodb-lsi--seealso"></a>
+## See also<a name="aws-properties-dynamodb-lsi--seealso"></a>
 
 For an example of a declared local secondary index, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\. 

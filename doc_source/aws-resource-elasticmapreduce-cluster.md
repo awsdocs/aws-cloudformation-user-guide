@@ -13,22 +13,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EMR::Cluster",
   "Properties" : {
       "[AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo)" : Json,
-      "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ [Application](aws-properties-elasticmapreduce-cluster-application.md), ... ],
+      "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ Application, ... ],
       "[AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole)" : String,
-      "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md), ... ],
-      "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md), ... ],
+      "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ BootstrapActionConfig, ... ],
+      "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ Configuration, ... ],
       "[CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid)" : String,
       "[EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize)" : Integer,
-      "[Instances](#cfn-elasticmapreduce-cluster-instances)" : [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md),
+      "[Instances](#cfn-elasticmapreduce-cluster-instances)" : JobFlowInstancesConfig,
       "[JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole)" : String,
-      "[KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes)" : [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md),
+      "[KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes)" : KerberosAttributes,
       "[LogUri](#cfn-elasticmapreduce-cluster-loguri)" : String,
       "[Name](#cfn-elasticmapreduce-cluster-name)" : String,
       "[ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel)" : String,
       "[ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior)" : String,
       "[SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration)" : String,
       "[ServiceRole](#cfn-elasticmapreduce-cluster-servicerole)" : String,
-      "[Steps](#cfn-elasticmapreduce-cluster-steps)" : [ [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md), ... ],
+      "[Steps](#cfn-elasticmapreduce-cluster-steps)" : [ StepConfig, ... ],
       "[Tags](#cfn-elasticmapreduce-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers)" : Boolean
     }
@@ -42,19 +42,19 @@ Type: AWS::EMR::Cluster
 Properties: 
   [AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo): Json
   [Applications](#cfn-elasticmapreduce-cluster-applications): 
-    - [Application](aws-properties-elasticmapreduce-cluster-application.md)
+    - Application
   [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
   [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
-    - [BootstrapActionConfig](aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.md)
+    - BootstrapActionConfig
   [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
-    - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
+    - Configuration
   [CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid): String
   [EbsRootVolumeSize](#cfn-elasticmapreduce-cluster-ebsrootvolumesize): Integer
   [Instances](#cfn-elasticmapreduce-cluster-instances): 
-    [JobFlowInstancesConfig](aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.md)
+    JobFlowInstancesConfig
   [JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole): String
   [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes): 
-    [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)
+    KerberosAttributes
   [LogUri](#cfn-elasticmapreduce-cluster-loguri): String
   [Name](#cfn-elasticmapreduce-cluster-name): String
   [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
@@ -62,7 +62,7 @@ Properties:
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
   [ServiceRole](#cfn-elasticmapreduce-cluster-servicerole): String
   [Steps](#cfn-elasticmapreduce-cluster-steps): 
-    - [StepConfig](aws-properties-elasticmapreduce-cluster-stepconfig.md)
+    - StepConfig
   [Tags](#cfn-elasticmapreduce-cluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers): Boolean
@@ -164,7 +164,7 @@ The Amazon EMR release label, which determines the version of open\-source appli
 The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR blacklists and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR version 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `TERMINATE_AT_INSTANCE_HOUR | TERMINATE_AT_TASK_COMPLETION`  
+*Allowed values*: `TERMINATE_AT_INSTANCE_HOUR | TERMINATE_AT_TASK_COMPLETION`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityConfiguration`  <a name="cfn-elasticmapreduce-cluster-securityconfiguration"></a>
@@ -201,11 +201,11 @@ When you create clusters directly through the EMR console or API, this value is 
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-elasticmapreduce-cluster-return-values"></a>
+## Return values<a name="aws-resource-elasticmapreduce-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticmapreduce-cluster-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the cluster ID, such as j\-1ABCD123AB1A\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the cluster ID, such as j\-1ABCD123AB1A\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

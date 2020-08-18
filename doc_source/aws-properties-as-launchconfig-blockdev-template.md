@@ -87,6 +87,6 @@ Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`
 *Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
+## See also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
 + [Required CMK Key Policy for Use with Encrypted Volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*
 + [Using Encryption with EBS\-Backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*

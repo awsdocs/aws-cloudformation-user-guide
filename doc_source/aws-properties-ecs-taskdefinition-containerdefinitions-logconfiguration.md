@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[LogDriver](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-logdriver)" : String,
   "[Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options)" : {Key : Value, ...},
-  "[SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions)" : [ [Secret](aws-properties-ecs-taskdefinition-secret.md), ... ]
+  "[SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions)" : [ Secret, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Options](#cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options): 
     Key : Value
   [SecretOptions](#cfn-ecs-taskdefinition-logconfiguration-secretoptions): 
-    - [Secret](aws-properties-ecs-taskdefinition-secret.md)
+    - Secret
 ```
 
 ## Properties<a name="aws-properties-ecs-taskdefinition-containerdefinitions-logconfiguration-properties"></a>
@@ -37,7 +37,7 @@ For more information about using the `awsfirelens` log driver, see [Custom Log R
 If you have a custom driver that is not listed, you can fork the Amazon ECS container agent project that is [available on GitHub](https://github.com/aws/amazon-ecs-agent) and customize it to work with that driver\. We encourage you to submit pull requests for changes that you would like to have included\. However, we do not currently provide support for running modified copies of this software\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `awsfirelens | awslogs | fluentd | gelf | journald | json-file | splunk | syslog`  
+*Allowed values*: `awsfirelens | awslogs | fluentd | gelf | journald | json-file | splunk | syslog`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Options`  <a name="cfn-ecs-taskdefinition-containerdefinition-logconfiguration-options"></a>

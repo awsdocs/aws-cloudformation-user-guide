@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InstancesDistribution](#cfn-as-mixedinstancespolicy-instancesdistribution)" : [InstancesDistribution](aws-properties-autoscaling-autoscalinggroup-instancesdistribution.md),
-  "[LaunchTemplate](#cfn-as-mixedinstancespolicy-launchtemplate)" : [LaunchTemplate](aws-properties-autoscaling-autoscalinggroup-launchtemplate.md)
+  "[InstancesDistribution](#cfn-as-mixedinstancespolicy-instancesdistribution)" : InstancesDistribution,
+  "[LaunchTemplate](#cfn-as-mixedinstancespolicy-launchtemplate)" : LaunchTemplate
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InstancesDistribution](#cfn-as-mixedinstancespolicy-instancesdistribution): 
-    [InstancesDistribution](aws-properties-autoscaling-autoscalinggroup-instancesdistribution.md)
+    InstancesDistribution
   [LaunchTemplate](#cfn-as-mixedinstancespolicy-launchtemplate): 
-    [LaunchTemplate](aws-properties-autoscaling-autoscalinggroup-launchtemplate.md)
+    LaunchTemplate
 ```
 
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy-properties"></a>

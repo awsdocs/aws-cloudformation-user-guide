@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTThingsGraph::FlowTemplate",
   "Properties" : {
       "[CompatibleNamespaceVersion](#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion)" : Double,
-      "[Definition](#cfn-iotthingsgraph-flowtemplate-definition)" : [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)
+      "[Definition](#cfn-iotthingsgraph-flowtemplate-definition)" : DefinitionDocument
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::IoTThingsGraph::FlowTemplate
 Properties: 
   [CompatibleNamespaceVersion](#cfn-iotthingsgraph-flowtemplate-compatiblenamespaceversion): Double
   [Definition](#cfn-iotthingsgraph-flowtemplate-definition): 
-    [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)
+    DefinitionDocument
 ```
 
 ## Properties<a name="aws-resource-iotthingsgraph-flowtemplate-properties"></a>
@@ -42,7 +42,7 @@ A workflow's definition document\.
 *Type*: [DefinitionDocument](aws-properties-iotthingsgraph-flowtemplate-definitiondocument.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iotthingsgraph-flowtemplate-return-values"></a>
+## Return values<a name="aws-resource-iotthingsgraph-flowtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-iotthingsgraph-flowtemplate-return-values-ref"></a>
 

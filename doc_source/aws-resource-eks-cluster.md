@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EKS::Cluster",
   "Properties" : {
-      "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md), ... ],
+      "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ EncryptionConfig, ... ],
       "[Name](#cfn-eks-cluster-name)" : String,
-      "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md),
+      "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : ResourcesVpcConfig,
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
       "[Version](#cfn-eks-cluster-version)" : String
     }
@@ -35,10 +35,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EKS::Cluster
 Properties: 
   [EncryptionConfig](#cfn-eks-cluster-encryptionconfig): 
-    - [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md)
+    - EncryptionConfig
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
-    [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)
+    ResourcesVpcConfig
   [RoleArn](#cfn-eks-cluster-rolearn): String
   [Version](#cfn-eks-cluster-version): String
 ```
@@ -68,7 +68,7 @@ The VPC configuration used by the cluster control plane\. Amazon EKS VPC resourc
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-eks-cluster-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for Amazon EKS to make calls to other AWS API operations on your behalf\. For more information, see [Amazon EKS Service IAM Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) in the * *Amazon EKS User Guide* *\.  
+The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf\. For more information, see [Amazon EKS Service IAM Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) in the * *Amazon EKS User Guide* *\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -79,7 +79,7 @@ The desired Kubernetes version for your cluster\. If you don't specify a value h
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eks-cluster-return-values"></a>
+## Return values<a name="aws-resource-eks-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-eks-cluster-return-values-ref"></a>
 
@@ -166,6 +166,6 @@ Resources:
           - subnet-e7e761ac
 ```
 
-## See Also<a name="aws-resource-eks-cluster--seealso"></a>
+## See also<a name="aws-resource-eks-cluster--seealso"></a>
 +  [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide *\.
 +  [CreateCluster](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference *\.

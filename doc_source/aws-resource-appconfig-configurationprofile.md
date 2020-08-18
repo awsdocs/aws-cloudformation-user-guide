@@ -1,6 +1,6 @@
 # AWS::AppConfig::ConfigurationProfile<a name="aws-resource-appconfig-configurationprofile"></a>
 
-The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\. Valid configuration sources include Systems Manager \(SSM\) documents and SSM Parameter Store parameters\. A configuration profile includes the following information\.
+The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\. Valid configuration sources include Systems Manager \(SSM\) documents, SSM Parameter Store parameters, and Amazon S3\. A configuration profile includes the following information\.
 + The Uri location of the configuration data\.
 + The AWS Identity and Access Management \(IAM\) role that provides access to the configuration data\.
 + A validator for the configuration data\. Available validators include either a JSON Schema or the Amazon Resource Name \(ARN\) of an AWS Lambda function\.
@@ -34,8 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LocationUri](#cfn-appconfig-configurationprofile-locationuri)" : String,
       "[Name](#cfn-appconfig-configurationprofile-name)" : String,
       "[RetrievalRoleArn](#cfn-appconfig-configurationprofile-retrievalrolearn)" : String,
-      "[Tags](#cfn-appconfig-configurationprofile-tags)" : [ [Tags](aws-properties-appconfig-configurationprofile-tags.md), ... ],
-      "[Validators](#cfn-appconfig-configurationprofile-validators)" : [ [Validators](aws-properties-appconfig-configurationprofile-validators.md), ... ]
+      "[Tags](#cfn-appconfig-configurationprofile-tags)" : [ Tags, ... ],
+      "[Validators](#cfn-appconfig-configurationprofile-validators)" : [ Validators, ... ]
     }
 }
 ```
@@ -51,9 +51,9 @@ Properties:
   [Name](#cfn-appconfig-configurationprofile-name): String
   [RetrievalRoleArn](#cfn-appconfig-configurationprofile-retrievalrolearn): String
   [Tags](#cfn-appconfig-configurationprofile-tags): 
-    - [Tags](aws-properties-appconfig-configurationprofile-tags.md)
+    - Tags
   [Validators](#cfn-appconfig-configurationprofile-validators): 
-    - [Validators](aws-properties-appconfig-configurationprofile-validators.md)
+    - Validators
 ```
 
 ## Properties<a name="aws-resource-appconfig-configurationprofile-properties"></a>
@@ -74,7 +74,7 @@ A description of the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-appconfig-configurationprofile-locationuri"></a>
-A URI to locate the configuration\. You can specify either a Systems Manager \(SSM\) document or an SSM Parameter Store parameter\. For an SSM document, specify either the document name in the format `ssm-document://<Document name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter name>` or the ARN\.  
+A URI to locate the configuration\. You can specify the AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: s3://my\-bucket/my\-app/us\-east\-1/my\-config\.json  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,11 +91,12 @@ A name for the configuration profile\.
 
 `RetrievalRoleArn`  <a name="cfn-appconfig-configurationprofile-retrievalrolearn"></a>
 The ARN of an IAM role with permission to access the configuration at the specified LocationUri\.  
+A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store\. It is required for all other sources that store your configuration\. 
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
-*Pattern*: `arn:(aws[a-zA-Z-]*)?:[a-z]+:([a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-\d{1})?:(\d{12})?:[a-zA-Z0-9-_/:.]+`  
+*Pattern*: `^((arn):(aws|aws-cn|aws-iso|aws-iso-[a-z]{1}|aws-us-gov):(iam)::\d{12}:role[/].*)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appconfig-configurationprofile-tags"></a>
@@ -111,7 +112,7 @@ A list of methods for validating the configuration\.
 *Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-configurationprofile-return-values"></a>
+## Return values<a name="aws-resource-appconfig-configurationprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-configurationprofile-return-values-ref"></a>
 
@@ -119,11 +120,66 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-appconfig-configurationprofile--examples"></a>
 
-### AWS AppConfig Configuration Profile Example<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example"></a>
+### AWS AppConfig Configuration Profile Example \- CodePipeline<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_CodePipeline"></a>
 
-The following examples creats an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data in either a Systems Manager \(SSM\) document or a Parameter Store parameter\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `RetrievalRoleArn` and `LocationUri` to retrieve configuration data from an SSM parameter\.
+The following examples creates an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `LocationUri` to retrieve configuration data from AWS CodePipeline\.
 
-#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example--json"></a>
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_CodePipeline--json"></a>
+
+```
+{
+  "Resources": {
+    "CodePipelineConfigurationProfile": {
+      "Type": "AWS::AppConfig::ConfigurationProfile",
+      "DependsOn": "MyTestApplication",
+      "Properties": {
+        "ApplicationId": "MyTestApplication",
+        "Name": "MyTestConfigurationProfile",
+        "Description": "My test configuration profile",
+        "LocationUri": "codepipeline://YourPipelineName",
+        "Validators": [
+          {
+            "Type": "LAMBDA",
+            "Content": "MyLambdaValidator"
+          }
+        ],
+        "Tags": [
+          {
+            "Key": "Env",
+            "Value": "test"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_CodePipeline--yaml"></a>
+
+```
+Resources:
+  CodePipelineConfigurationProfile:
+    Type: AWS::AppConfig::ConfigurationProfile
+    DependsOn: MyTestApplication
+    Properties:
+      ApplicationId: !Ref MyTestApplication
+      Name: "MyTestConfigurationProfile"
+      Description: "My test configuration profile"
+      LocationUri: "codepipeline://YourPipelineName"
+      Validators:
+        - Type: LAMBDA
+          Content: !ImportValue MyLambdaValidator
+      Tags:
+        - Key: Env
+          Value: test
+```
+
+### AWS AppConfig Configuration Profile Example \- Parameter Store<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_Parameter_Store"></a>
+
+The following examples creats an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `RetrievalRoleArn` and `LocationUri` to retrieve configuration data from an SSM parameter\.
+
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_Parameter_Store--json"></a>
 
 ```
 {
@@ -166,7 +222,7 @@ The following examples creats an AWS AppConfig configuration profile named MyTes
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_Parameter_Store--yaml"></a>
 
 ```
 Resources:
@@ -189,3 +245,7 @@ Resources:
         - Key: Env
           Value: test
 ```
+
+## See also<a name="aws-resource-appconfig-configurationprofile--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html)

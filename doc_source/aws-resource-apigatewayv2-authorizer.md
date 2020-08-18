@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthorizerUri](#cfn-apigatewayv2-authorizer-authorizeruri)" : String,
       "[IdentitySource](#cfn-apigatewayv2-authorizer-identitysource)" : [ String, ... ],
       "[IdentityValidationExpression](#cfn-apigatewayv2-authorizer-identityvalidationexpression)" : String,
-      "[JwtConfiguration](#cfn-apigatewayv2-authorizer-jwtconfiguration)" : [JWTConfiguration](aws-properties-apigatewayv2-authorizer-jwtconfiguration.md),
+      "[JwtConfiguration](#cfn-apigatewayv2-authorizer-jwtconfiguration)" : JWTConfiguration,
       "[Name](#cfn-apigatewayv2-authorizer-name)" : String
     }
 }
@@ -39,7 +39,7 @@ Properties:
     - String
   [IdentityValidationExpression](#cfn-apigatewayv2-authorizer-identityvalidationexpression): String
   [JwtConfiguration](#cfn-apigatewayv2-authorizer-jwtconfiguration): 
-    [JWTConfiguration](aws-properties-apigatewayv2-authorizer-jwtconfiguration.md)
+    JWTConfiguration
   [Name](#cfn-apigatewayv2-authorizer-name): String
 ```
 
@@ -101,7 +101,7 @@ The name of the authorizer\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-authorizer-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-authorizer-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-authorizer-return-values-ref"></a>
 
@@ -177,5 +177,5 @@ Authorizer:
       - route.request.header.Auth
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-authorizer--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-authorizer--seealso"></a>
 + [CreateAuthorizer](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-authorizers.html#CreateAuthorizer) in the *Amazon API Gateway Version 2 API Reference*

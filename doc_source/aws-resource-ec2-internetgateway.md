@@ -34,7 +34,7 @@ Any tags to assign to the internet gateway\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-internetgateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-internetgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-internetgateway-return-values-ref"></a>
 
@@ -72,7 +72,7 @@ The following example creates an Internet gateway and assigns it a tag\.
         Value: bar
 ```
 
-## See Also<a name="aws-resource-ec2-internetgateway--seealso"></a>
+## See also<a name="aws-resource-ec2-internetgateway--seealso"></a>
 +  [ CreateInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateInternetGateway.html) in the *Amazon EC2 API Reference*
 + [InternetGateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon Virtual Private Cloud User Guide*
 + Use the [ AWS::EC2::VPCGatewayAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html) resource to associate an Internet gateway with a VPC

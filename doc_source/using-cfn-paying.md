@@ -1,4 +1,4 @@
-# Estimating the Cost of Your CloudFormation Stack<a name="using-cfn-paying"></a>
+# Estimating the cost of your CloudFormation stack<a name="using-cfn-paying"></a>
 
 There is no additional charge for AWS CloudFormation\. You pay for AWS resources \(e\.g\. Amazon EC2 instances, Elastic Load Balancing load balancers and so on\) created using AWS CloudFormation as if you created them by hand\.
 

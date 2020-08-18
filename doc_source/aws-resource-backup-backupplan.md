@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Backup::BackupPlan",
   "Properties" : {
-      "[BackupPlan](#cfn-backup-backupplan-backupplan)" : [BackupPlanResourceType](aws-properties-backup-backupplan-backupplanresourcetype.md),
+      "[BackupPlan](#cfn-backup-backupplan-backupplan)" : BackupPlanResourceType,
       "[BackupPlanTags](#cfn-backup-backupplan-backupplantags)" : Json
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Backup::BackupPlan
 Properties: 
   [BackupPlan](#cfn-backup-backupplan-backupplan): 
-    [BackupPlanResourceType](aws-properties-backup-backupplan-backupplanresourcetype.md)
+    BackupPlanResourceType
   [BackupPlanTags](#cfn-backup-backupplan-backupplantags): Json
 ```
 
@@ -42,7 +42,7 @@ To help organize your resources, you can assign your own metadata to the resourc
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-backup-backupplan-return-values"></a>
+## Return values<a name="aws-resource-backup-backupplan-return-values"></a>
 
 ### Ref<a name="aws-resource-backup-backupplan-return-values-ref"></a>
 

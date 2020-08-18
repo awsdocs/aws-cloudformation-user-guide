@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition SystemControl<a name="aws-properties-ecs-taskdefinition-systemcontrol"></a>
 
-A list of namespaced kernel parameters to set in the container\. This parameter maps to `Sysctls` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--sysctl` option to [docker run](https://docs.docker.com/engine/reference/run/)\.
+A list of namespaced kernel parameters to set in the container\. This parameter maps to `Sysctls` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--sysctl` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.
 
 It is not recommended that you specify network\-related `systemControls` parameters for multiple containers in a single task that also uses either the `awsvpc` or `host` network mode for the following reasons:
 + For tasks that use the `awsvpc` network mode, if you set `systemControls` for any container, it applies to all containers in the task\. If you set different `systemControls` for multiple containers in a single task, the container that is started last determines which `systemControls` take effect\.

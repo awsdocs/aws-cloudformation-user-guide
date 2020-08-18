@@ -12,13 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction)" : [AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md),
-  "[BounceAction](#cfn-ses-receiptrule-action-bounceaction)" : [BounceAction](aws-properties-ses-receiptrule-bounceaction.md),
-  "[LambdaAction](#cfn-ses-receiptrule-action-lambdaaction)" : [LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md),
-  "[S3Action](#cfn-ses-receiptrule-action-s3action)" : [S3Action](aws-properties-ses-receiptrule-s3action.md),
-  "[SNSAction](#cfn-ses-receiptrule-action-snsaction)" : [SNSAction](aws-properties-ses-receiptrule-snsaction.md),
-  "[StopAction](#cfn-ses-receiptrule-action-stopaction)" : [StopAction](aws-properties-ses-receiptrule-stopaction.md),
-  "[WorkmailAction](#cfn-ses-receiptrule-action-workmailaction)" : [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)
+  "[AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction)" : AddHeaderAction,
+  "[BounceAction](#cfn-ses-receiptrule-action-bounceaction)" : BounceAction,
+  "[LambdaAction](#cfn-ses-receiptrule-action-lambdaaction)" : LambdaAction,
+  "[S3Action](#cfn-ses-receiptrule-action-s3action)" : S3Action,
+  "[SNSAction](#cfn-ses-receiptrule-action-snsaction)" : SNSAction,
+  "[StopAction](#cfn-ses-receiptrule-action-stopaction)" : StopAction,
+  "[WorkmailAction](#cfn-ses-receiptrule-action-workmailaction)" : WorkmailAction
 }
 ```
 
@@ -26,19 +26,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction): 
-    [AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md)
+    AddHeaderAction
   [BounceAction](#cfn-ses-receiptrule-action-bounceaction): 
-    [BounceAction](aws-properties-ses-receiptrule-bounceaction.md)
+    BounceAction
   [LambdaAction](#cfn-ses-receiptrule-action-lambdaaction): 
-    [LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md)
+    LambdaAction
   [S3Action](#cfn-ses-receiptrule-action-s3action): 
-    [S3Action](aws-properties-ses-receiptrule-s3action.md)
+    S3Action
   [SNSAction](#cfn-ses-receiptrule-action-snsaction): 
-    [SNSAction](aws-properties-ses-receiptrule-snsaction.md)
+    SNSAction
   [StopAction](#cfn-ses-receiptrule-action-stopaction): 
-    [StopAction](aws-properties-ses-receiptrule-stopaction.md)
+    StopAction
   [WorkmailAction](#cfn-ses-receiptrule-action-workmailaction): 
-    [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)
+    WorkmailAction
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-action-properties"></a>

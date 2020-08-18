@@ -58,8 +58,8 @@ The type of cache used by the build project\. Valid values include:
 +  `LOCAL`: The build project stores a cache locally on a build host that is only available to that build host\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `LOCAL | NO_CACHE | S3`  
+*Allowed values*: `LOCAL | NO_CACHE | S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-projectcache--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-projectcache--seealso"></a>
 +  [ ProjectCache](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectCache.html) in the *AWS CodeBuild API Reference* 

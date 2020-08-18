@@ -1,8 +1,8 @@
-# Creating Stacks Using Change Sets<a name="cfn-console-create-stacks-changesets"></a>
+# Creating stacks using change sets<a name="cfn-console-create-stacks-changesets"></a>
 
-To preview how a AWS CloudFormation stack will be configured before creating the stack, create a change set\. This functionality allows you to examine various configurations and make corrections and changes to your stack before executing the change set\. For more information on change sets, see [Updating Stacks Using Change Sets](using-cfn-updating-stacks-changesets.md)\.
+To preview how a AWS CloudFormation stack will be configured before creating the stack, create a change set\. This functionality allows you to examine various configurations and make corrections and changes to your stack before executing the change set\. For more information on change sets, see [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md)\.
 
-## Creating a Change Set for a New Stack<a name="cfn-console-create-stacks-changesets-create-new-stack"></a>
+## Creating a change set for a new stack<a name="cfn-console-create-stacks-changesets-create-new-stack"></a>
 
 To create a change set for a new stack, select your stack template and specify the configuration of your stack as you would if you were creating a new stack, then choose to create a new change set rather than a new stack\.
 

@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Arn](#cfn-wafv2-rulegroup-ipsetreferencestatement-arn)" : String
+  "[Arn](#cfn-wafv2-rulegroup-ipsetreferencestatement-arn)" : String,
+  "[IPSetForwardedIPConfig](#cfn-wafv2-rulegroup-ipsetreferencestatement-ipsetforwardedipconfig)" : IPSetForwardedIPConfiguration
 }
 ```
 
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Arn](#cfn-wafv2-rulegroup-ipsetreferencestatement-arn): String
+  [IPSetForwardedIPConfig](#cfn-wafv2-rulegroup-ipsetreferencestatement-ipsetforwardedipconfig): 
+    IPSetForwardedIPConfiguration
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-ipsetreferencestatement-properties"></a>
@@ -34,4 +37,11 @@ The Amazon Resource Name \(ARN\) of the IPSet that this statement references\.
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `.*\S.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IPSetForwardedIPConfig`  <a name="cfn-wafv2-rulegroup-ipsetreferencestatement-ipsetforwardedipconfig"></a>
+The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin\. Commonly, this is the X\-Forwarded\-For \(XFF\) header, but you can specify any header name\.   
+If the specified header isn't present in the request, AWS WAF doesn't apply the rule to the web request at all\.
+*Required*: No  
+*Type*: [IPSetForwardedIPConfiguration](aws-properties-wafv2-rulegroup-ipsetforwardedipconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

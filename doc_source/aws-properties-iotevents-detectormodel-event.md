@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-iotevents-detectormodel-event-actions)" : [ [Action](aws-properties-iotevents-detectormodel-action.md), ... ],
+  "[Actions](#cfn-iotevents-detectormodel-event-actions)" : [ Action, ... ],
   "[Condition](#cfn-iotevents-detectormodel-event-condition)" : String,
   "[EventName](#cfn-iotevents-detectormodel-event-eventname)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-iotevents-detectormodel-event-actions): 
-    - [Action](aws-properties-iotevents-detectormodel-action.md)
+    - Action
   [Condition](#cfn-iotevents-detectormodel-event-condition): String
   [EventName](#cfn-iotevents-detectormodel-event-eventname): String
 ```

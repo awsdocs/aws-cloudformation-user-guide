@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode)" : Integer,
-  "[NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties)" : [ [NodeRangeProperty](aws-properties-batch-jobdefinition-noderangeproperty.md), ... ],
+  "[NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties)" : [ NodeRangeProperty, ... ],
   "[NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes)" : Integer
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [MainNode](#cfn-batch-jobdefinition-nodeproperties-mainnode): Integer
   [NodeRangeProperties](#cfn-batch-jobdefinition-nodeproperties-noderangeproperties): 
-    - [NodeRangeProperty](aws-properties-batch-jobdefinition-noderangeproperty.md)
+    - NodeRangeProperty
   [NumNodes](#cfn-batch-jobdefinition-nodeproperties-numnodes): Integer
 ```
 
@@ -45,5 +45,5 @@ The number of nodes associated with a multi\-node parallel job\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-batch-jobdefinition-nodeproperties--seealso"></a>
+## See also<a name="aws-properties-batch-jobdefinition-nodeproperties--seealso"></a>
 +  [Multi\-node Parallel Jobs](https://docs.aws.amazon.com/batch/latest/userguide/multi-node-parallel-jobs.html) in the *AWS Batch User Guide*\.

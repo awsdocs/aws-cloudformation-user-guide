@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ContentHandling](#cfn-apigateway-method-integration-contenthandling)" : String,
   "[Credentials](#cfn-apigateway-method-integration-credentials)" : String,
   "[IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod)" : String,
-  "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md), ... ],
+  "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ IntegrationResponse, ... ],
   "[PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior)" : String,
   "[RequestParameters](#cfn-apigateway-method-integration-requestparameters)" : {Key : Value, ...},
   "[RequestTemplates](#cfn-apigateway-method-integration-requesttemplates)" : {Key : Value, ...},
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Credentials](#cfn-apigateway-method-integration-credentials): String
   [IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod): String
   [IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses): 
-    - [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md)
+    - IntegrationResponse
   [PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior): String
   [RequestParameters](#cfn-apigateway-method-integration-requestparameters): 
     Key : Value
@@ -150,5 +150,5 @@ If you specified `HTTP` or `AWS` for the `Type` property, you must specify this 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
+## See also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*

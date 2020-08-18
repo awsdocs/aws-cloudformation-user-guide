@@ -1,4 +1,4 @@
-# AWS Cloud9 Resource Type Reference<a name="AWS_Cloud9"></a>
+# AWS Cloud9 resource type reference<a name="AWS_Cloud9"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Cloud9::EnvironmentEC2](aws-resource-cloud9-environmentec2.md)

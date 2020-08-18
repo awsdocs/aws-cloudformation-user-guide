@@ -45,9 +45,13 @@ The ARN that specifies the resource group that is used to create the assessment 
 *Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-inspector-assessmenttarget-return-values"></a>
+## Return values<a name="aws-resource-inspector-assessmenttarget-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-assessmenttarget-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ResourceGroupArn` of the new assessment target\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-inspector-assessmenttarget-return-values-fn--getatt"></a>
 

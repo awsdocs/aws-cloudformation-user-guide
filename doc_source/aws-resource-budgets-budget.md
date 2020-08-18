@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Budgets::Budget",
   "Properties" : {
-      "[Budget](#cfn-budgets-budget-budget)" : [BudgetData](aws-properties-budgets-budget-budgetdata.md),
-      "[NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers)" : [ [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md), ... ]
+      "[Budget](#cfn-budgets-budget-budget)" : BudgetData,
+      "[NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers)" : [ NotificationWithSubscribers, ... ]
     }
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Budgets::Budget
 Properties: 
   [Budget](#cfn-budgets-budget-budget): 
-    [BudgetData](aws-properties-budgets-budget-budgetdata.md)
+    BudgetData
   [NotificationsWithSubscribers](#cfn-budgets-budget-notificationswithsubscribers): 
-    - [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)
+    - NotificationWithSubscribers
 ```
 
 ## Properties<a name="aws-resource-budgets-budget-properties"></a>
@@ -44,7 +44,7 @@ A notification that you want to associate with a budget\. A budget can have up t
 *Maximum*: `5`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-budgets-budget-return-values"></a>
+## Return values<a name="aws-resource-budgets-budget-return-values"></a>
 
 ### Ref<a name="aws-resource-budgets-budget-return-values-ref"></a>
 
@@ -174,5 +174,5 @@ Outputs:
     Value: !Ref BudgetExample
 ```
 
-## See Also<a name="aws-resource-budgets-budget--seealso"></a>
+## See also<a name="aws-resource-budgets-budget--seealso"></a>
 +  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs* 

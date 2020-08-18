@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies the recovery method for a user\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `admin_only | verified_email | verified_phone_number`  
+*Allowed values*: `admin_only | verified_email | verified_phone_number`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-cognito-userpool-recoveryoption-priority"></a>

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath)" : String,
-  "[OwnerSetting](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)" : [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md),
+  "[OwnerSetting](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting)" : ResourceDownloadOwnerSetting,
   "[SageMakerJobArn](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-destinationpath): String
   [OwnerSetting](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-ownersetting): 
-    [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md)
+    ResourceDownloadOwnerSetting
   [SageMakerJobArn](#cfn-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata-sagemakerjobarn): String
 ```
 
@@ -47,6 +47,6 @@ The Amazon Resource Name \(ARN\) of the Amazon SageMaker training job that repre
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata--seealso"></a>
 +  [SageMakerMachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-sagemakermachinelearningmodelresourcedata.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

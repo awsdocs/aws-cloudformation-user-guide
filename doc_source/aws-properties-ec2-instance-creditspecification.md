@@ -1,6 +1,6 @@
 # AWS::EC2::Instance CreditSpecification<a name="aws-properties-ec2-instance-creditspecification"></a>
 
-Specifies the credit option for CPU usage of a T2 or T3 instance\.
+Specifies the credit option for CPU usage of a T2, T3, or T3a instance\.
 
  `CreditSpecification` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
 

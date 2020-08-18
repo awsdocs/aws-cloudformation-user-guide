@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md), ... ],
-  "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md), ... ],
-  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md), ... ]
+  "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ LambdaConfiguration, ... ],
+  "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ QueueConfiguration, ... ],
+  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ TopicConfiguration, ... ]
 }
 ```
 
@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig): 
-    - [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md)
+    - LambdaConfiguration
   [QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig): 
-    - [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md)
+    - QueueConfiguration
   [TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig): 
-    - [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)
+    - TopicConfiguration
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-properties"></a>

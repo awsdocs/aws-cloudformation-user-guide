@@ -1,16 +1,16 @@
-# Detecting Unmanaged Configuration Changes in Stack Sets<a name="stacksets-drift"></a>
+# Detecting unmanaged configuration changes in stack sets<a name="stacksets-drift"></a>
 
 Even as you manage your stacks and the resources they contain through CloudFormation, users can change those resources outside of CloudFormation\. Users can edit resources directly by using the underlying service that created the resource\. By performing drift detection on a stack set, you can determine if any of the stack instances belonging to that stack set differ, or have *drifted*, from their expected configuration\.
 
-## How CloudFormation Performs Drift Detection on a Stack Set<a name="stacksets-drift-how"></a>
+## How CloudFormation performs drift detection on a stack set<a name="stacksets-drift-how"></a>
 
 When CloudFormation performs drift detection on a stack set, it performs drift detection on the stack associated with each stack instance in the stack set\. To do this, CloudFormation compares the current state of each resource in the stack with the expected state of that resource, as defined in the stack's template and and any specified input parameters\. If the current state of a resource varies from its expected state, that resource is considered to have drifted\. If one or more resources in a stack have drifted, then the stack itself is considered to have drifted, and the stack instances that the stack is associated with is considered to have drifted as well\. If one or more stack instances in a stack set have drifted, the stack set itself is considered to have drifted\.
 
 Drift detection identifies unmanaged changes; that is, changes made to stacks outside of CloudFormation\. Changes made through CloudFormation to a stack directly, rather than at the stack\-set level, are not considered drift\. For example, suppose you have a stack that is associated with a stack instance of a stack set\. If you use CloudFormation to update that stack to use a different template, that is not considered drift, even though that stack now has a different template than any other stacks belonging to the stack set\. This is because the stack still matches its expected template and parameter configuration in CloudFormation\. 
 
-For detailed information on how CloudFormation performs drift detection on a stack, see [Detecting Unmanaged Configuration Changes to Stacks and Resources](using-cfn-stack-drift.md)\.
+For detailed information on how CloudFormation performs drift detection on a stack, see [Detecting unmanaged configuration changes to stacks and resources](using-cfn-stack-drift.md)\.
 
-Because CloudFormation performs drift detection on each stack individually, it takes any overridden parameter values into account when determining whether a stack has drifted\. For more information on overriding template parameters in stack instances, see [Override Parameters on Stack Instances](stackinstances-override.md)\.
+Because CloudFormation performs drift detection on each stack individually, it takes any overridden parameter values into account when determining whether a stack has drifted\. For more information on overriding template parameters in stack instances, see [Override parameters on stack instances](stackinstances-override.md)\.
 
  If you perform drift detection [directly on a stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) that is associated with a stack instance, those drift results are not available from the **StackSets** console page\.
 
@@ -69,7 +69,7 @@ Because CloudFormation performs drift detection on each stack individually, it t
        To highlight a difference, in the **Differences** section select the property name\.
        + Added properties are highlighted in green in the **Current** column of the **Details** section\.
        + Deleted properties are highlighted in red in the **Expected** column of the **Details** section\.
-       + Properties whose value have been changed are highlighted in yellow in the both **Expected** and **Current** columns\.  
+       + Properties whose value have been changed are highlighted in blue in the both **Expected** and **Current** columns\.  
 ![\[The Resource drift status section of the Drift Details page, which contains drift information for each resource in the stack that supports drift detection. Details include drift status and expected and current property values.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-drifts-drift-details-differences-1.png)
 
 **To detect drift on a stack set using the AWS CLI**
@@ -295,7 +295,7 @@ To detect drift on an entire stack using the AWS CLI, use the following `aws clo
    }
    ```
 
-## Stopping Drift Detection on a Stack Set<a name="stacksets-drift-stop"></a>
+## Stopping drift detection on a stack set<a name="stacksets-drift-stop"></a>
 
 Because drift detection on a stack set can be a long\-running operation, there may be instances when you want to stop a drift detection operation that is currently running on a stack set\.
 

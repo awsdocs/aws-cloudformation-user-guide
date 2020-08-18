@@ -14,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::WebACL",
   "Properties" : {
-      "[DefaultAction](#cfn-wafregional-webacl-defaultaction)" : [Action](aws-properties-wafregional-webacl-action.md),
+      "[DefaultAction](#cfn-wafregional-webacl-defaultaction)" : Action,
       "[MetricName](#cfn-wafregional-webacl-metricname)" : String,
       "[Name](#cfn-wafregional-webacl-name)" : String,
-      "[Rules](#cfn-wafregional-webacl-rules)" : [ [Rule](aws-properties-wafregional-webacl-rule.md), ... ]
+      "[Rules](#cfn-wafregional-webacl-rules)" : [ Rule, ... ]
     }
 }
 ```
@@ -28,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::WebACL
 Properties: 
   [DefaultAction](#cfn-wafregional-webacl-defaultaction): 
-    [Action](aws-properties-wafregional-webacl-action.md)
+    Action
   [MetricName](#cfn-wafregional-webacl-metricname): String
   [Name](#cfn-wafregional-webacl-name): String
   [Rules](#cfn-wafregional-webacl-rules): 
-    - [Rule](aws-properties-wafregional-webacl-rule.md)
+    - Rule
 ```
 
 ## Properties<a name="aws-resource-wafregional-webacl-properties"></a>
@@ -47,6 +47,9 @@ The action to perform if none of the `Rules` contained in the `WebACL` match\. T
 A friendly name or description for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-wafregional-webacl-name"></a>
@@ -55,6 +58,7 @@ A friendly name or description of the `WebACL`\. You can't change the name of a 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rules`  <a name="cfn-wafregional-webacl-rules"></a>
@@ -63,7 +67,7 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 *Type*: List of [Rule](aws-properties-wafregional-webacl-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-webacl-return-values"></a>
+## Return values<a name="aws-resource-wafregional-webacl-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-webacl-return-values-ref"></a>
 

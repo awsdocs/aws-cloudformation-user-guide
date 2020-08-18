@@ -4,7 +4,8 @@ An AWS Firewall Manager policy\.
 
 Firewall Manager provides the following types of policies: 
 + A Shield Advanced policy, which applies Shield Advanced protection to specified accounts and resources\.
-+ An AWS WAF policy, which contains a rule group and defines which resources are to be protected by that rule group\. AWS WAF doesn't support rule groups in CloudFormation, so, to create WAF policies through CloudFormation, you first need to create your rule groups outside of CloudFormation\. 
++ An AWS WAF policy \(type WAFV2\), which defines rule groups to run first in the corresponding AWS WAF web ACL and rule groups to run last in the web ACL\. 
++ An AWS WAF Classic policy, which defines a rule group\. AWS WAF Classic doesn't support rule groups in CloudFormation, so, to create WAF Classic policies through CloudFormation, you first need to create your rule groups outside of CloudFormation\. 
 + A security group policy, which manages VPC security groups across your AWS organization\. 
 
 Each policy is specific to one of the types\. If you want to enforce more than one policy type across accounts, create multiple policies\. You can create multiple policies for each type\.
@@ -22,16 +23,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::FMS::Policy",
   "Properties" : {
       "[DeleteAllPolicyResources](#cfn-fms-policy-deleteallpolicyresources)" : Boolean,
-      "[ExcludeMap](#cfn-fms-policy-excludemap)" : [IEMap](aws-properties-fms-policy-iemap.md),
+      "[ExcludeMap](#cfn-fms-policy-excludemap)" : IEMap,
       "[ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags)" : Boolean,
-      "[IncludeMap](#cfn-fms-policy-includemap)" : [IEMap](aws-properties-fms-policy-iemap.md),
+      "[IncludeMap](#cfn-fms-policy-includemap)" : IEMap,
       "[PolicyName](#cfn-fms-policy-policyname)" : String,
       "[RemediationEnabled](#cfn-fms-policy-remediationenabled)" : Boolean,
-      "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ [ResourceTag](aws-properties-fms-policy-resourcetag.md), ... ],
+      "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ ResourceTag, ... ],
       "[ResourceType](#cfn-fms-policy-resourcetype)" : String,
       "[ResourceTypeList](#cfn-fms-policy-resourcetypelist)" : [ String, ... ],
       "[SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata)" : Json,
-      "[Tags](#cfn-fms-policy-tags)" : [ [PolicyTag](aws-properties-fms-policy-policytag.md), ... ]
+      "[Tags](#cfn-fms-policy-tags)" : [ PolicyTag, ... ]
     }
 }
 ```
@@ -43,20 +44,20 @@ Type: AWS::FMS::Policy
 Properties: 
   [DeleteAllPolicyResources](#cfn-fms-policy-deleteallpolicyresources): Boolean
   [ExcludeMap](#cfn-fms-policy-excludemap): 
-    [IEMap](aws-properties-fms-policy-iemap.md)
+    IEMap
   [ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags): Boolean
   [IncludeMap](#cfn-fms-policy-includemap): 
-    [IEMap](aws-properties-fms-policy-iemap.md)
+    IEMap
   [PolicyName](#cfn-fms-policy-policyname): String
   [RemediationEnabled](#cfn-fms-policy-remediationenabled): Boolean
   [ResourceTags](#cfn-fms-policy-resourcetags): 
-    - [ResourceTag](aws-properties-fms-policy-resourcetag.md)
+    - ResourceTag
   [ResourceType](#cfn-fms-policy-resourcetype): String
   [ResourceTypeList](#cfn-fms-policy-resourcetypelist): 
     - String
   [SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata): Json
   [Tags](#cfn-fms-policy-tags): 
-    - [PolicyTag](aws-properties-fms-policy-policytag.md)
+    - PolicyTag
 ```
 
 ## Properties<a name="aws-resource-fms-policy-properties"></a>
@@ -76,8 +77,12 @@ After the cleanup, in\-scope resources are no longer protected by web ACLs in th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeMap`  <a name="cfn-fms-policy-excludemap"></a>
-Specifies the AWS account IDs to exclude from the policy\. The `IncludeMap` values are evaluated first, with all the appropriate account IDs added to the policy\. Then the accounts listed in `ExcludeMap` are removed, resulting in the final list of accounts to add to the policy\.  
-The key to the map is `ACCOUNT`\. For example, a valid `ExcludeMap` would be `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.  
+Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\) to exclude from the policy\. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time\.  
+You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
+You can specify account IDs, OUs, or a combination:   
++ Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
++ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,14 +94,18 @@ Used only when tags are specified in the `ResourceTags` property\. If this prope
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeMap`  <a name="cfn-fms-policy-includemap"></a>
-Specifies the AWS account IDs to include in the policy\. If `IncludeMap` is not set, all accounts in the organization in AWS Organizations are included in the policy\. If `IncludeMap` is set, only values listed in `IncludeMap` are included in the policy\.  
-The key to the map is `ACCOUNT`\. For example, a valid `IncludeMap` would be `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.  
+Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\) to include in the policy\. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time\.  
+You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
+You can specify account IDs, OUs, or a combination:   
++ Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
++ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-fms-policy-policyname"></a>
-The friendly name of the AWS Firewall Manager policy\.  
+The name of the AWS Firewall Manager policy\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -137,16 +146,19 @@ Details about the security service that is being used to protect the resources\.
 This contains the following settings:   
 + Type \- Indicates the service type that the policy uses to protect the resource\. For security group policies, Firewall Manager supports one security group for each common policy and for each content audit policy\. This is an adjustable limit that you can increase by contacting AWS Support\. 
 
-  Valid values: `WAF` \| `SHIELD_ADVANCED` \| `SECURITY_GROUPS_COMMON` \| `SECURITY_GROUPS_CONTENT_AUDIT` \| `SECURITY_GROUPS_USAGE_AUDIT`\. 
+  Valid values: `WAFV2` \| `WAF` \|`SHIELD_ADVANCED` \| `SECURITY_GROUPS_COMMON` \| `SECURITY_GROUPS_CONTENT_AUDIT` \| `SECURITY_GROUPS_USAGE_AUDIT`\. 
 + ManagedServiceData \- Details about the service that are specific to the service type, in JSON format\. For `SHIELD_ADVANCED`, this is an empty string\.
-  + Example: `WAF` 
+  + Example: `WAFV2` 
 
-    `"ManagedServiceData": "{\"type\": \"WAF\", \"ruleGroups\": [{\"id\": \"12345678-1bcd-9012-efga-0987654321ab\", \"overrideAction\" : {\"type\": \"COUNT\"}}], \"defaultAction\": {\"type\": \"BLOCK\"}}`
+    `"ManagedServiceData": "{\"type\":\"WAFV2\",\"defaultAction\":{\"type\":\"ALLOW\"},\"preProcessRuleGroups\":[{\"managedRuleGroupIdentifier\":null,\"ruleGroupArn\":\"rulegrouparn\",\"overrideAction\":{\"type\":\"COUNT\"},\"excludeRules\":[{\"name\":\"EntityName\"}],\"ruleGroupType\":\"RuleGroup\"}],\"postProcessRuleGroups\":[{\"managedRuleGroupIdentifier\":{\"managedRuleGroupName\":\"AWSManagedRulesAdminProtectionRuleSet\",\"vendorName\":\"AWS\"},\"ruleGroupArn\":\"rulegrouparn\",\"overrideAction\":{\"type\":\"NONE\"},\"excludeRules\":[],\"ruleGroupType\":\"ManagedRuleGroup\"}],\"overrideCustomerWebACLAssociation\":false}"`
+  + Example: `WAF Classic` 
 
-    AWS WAF doesn't support rule groups in CloudFormation\. To create a WAF policy through CloudFormation, create your rule group outside of CloudFormation, then provide the rule group ID in the WAF managed service data specification\.
+    `"ManagedServiceData": "{\"type\": \"WAF\", \"ruleGroups\": [{\"id\":\"12345678-1bcd-9012-efga-0987654321ab\", \"overrideAction\" : {\"type\": \"COUNT\"}}],\"defaultAction\": {\"type\": \"BLOCK\"}}`
+
+    AWS WAF Classic doesn't support rule groups in CloudFormation\. To create a WAF Classic policy through CloudFormation, create your rule groups outside of CloudFormation, then provide the rule group IDs in the WAF managed service data specification\.
   + Example: `SECURITY_GROUPS_COMMON` 
 
-    `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_COMMON","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_COMMON\",\"revertManualSecurityGroupChanges\":false,\"exclusiveResourceSecurityGroupMngment\":false,\"securityGroups\":[{\"id\":\" sg-000e55995d61a06bd\"}]}"},"RemediationEnabled":false,"ResourceType":"AWS::EC2::NetworkInterface"}`
+    `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_COMMON","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_COMMON\",\"revertManualSecurityGroupChanges\":false,\"exclusiveResourceSecurityGroupManagement\":false,\"securityGroups\":[{\"id\":\" sg-000e55995d61a06bd\"}]}"},"RemediationEnabled":false,"ResourceType":"AWS::EC2::NetworkInterface"}`
   + Example: `SECURITY_GROUPS_CONTENT_AUDIT`
 
     `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_CONTENT_AUDIT","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_CONTENT_AUDIT\",\"securityGroups\":[{\"id\":\" sg-000e55995d61a06bd \"}],\"securityGroupAction\":{\"type\":\"ALLOW\"}}"},"RemediationEnabled":false,"ResourceType":"AWS::EC2::NetworkInterface"}`
@@ -165,7 +177,7 @@ A collection of key:value pairs associated with an AWS resource\. The key:value 
 *Type*: List of [PolicyTag](aws-properties-fms-policy-policytag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-fms-policy-return-values"></a>
+## Return values<a name="aws-resource-fms-policy-return-values"></a>
 
 ### Ref<a name="aws-resource-fms-policy-return-values-ref"></a>
 
@@ -187,9 +199,54 @@ The ID of the policy\.
 
 ## Examples<a name="aws-resource-fms-policy--examples"></a>
 
+### Create a Firewall Manager AWS WAF Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy"></a>
+
+The following shows an example Firewall Manager WAF policy for the latest version of AWS WAF\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy--yaml"></a>
+
+```
+PolicyWAFv2:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: Policy
+      RemediationEnabled: false 
+      ResourceType: AWS::ElasticLoadBalancingV2::LoadBalancer 
+      SecurityServicePolicyData: 
+        Type: WAFV2
+        ManagedServiceData: !Sub '{"type":"WAFV2", 
+                                  "preProcessRuleGroups":[{ 
+                                  "ruleGroupType":"RuleGroup",
+                                  "ruleGroupArn":"${RuleGroup.Arn}",
+                                  "overrideAction":{"type":"NONE"}}],
+                                  "postProcessRuleGroups":[],
+                                  "defaultAction":{"type":"BLOCK"}}'
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy--json"></a>
+
+```
+"PolicyWAFv2": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+        "ExcludeResourceTags": false,
+        "PolicyName": "Policy",
+        "RemediationEnabled": false,
+        "ResourceType": "AWS::ElasticLoadBalancingV2::LoadBalancer",
+        "SecurityServicePolicyData": {
+            "Type": "WAFV2",
+            "ManagedServiceData": {
+                "Fn::Sub": "{\"type\":\"WAFV2\",\"preProcessRuleGroups\":[{\"ruleGroupType\":\"RuleGroup,\"ruleGroupArn\":\"${RuleGroup.Arn}\",\"overrideAction\":{\"type\":\"NONE\"}}],\"postProcessRuleGroups\":[],\"defaultAction\":{\"type\":\"BLOCK\"}}"
+            }
+        }
+    }
+}
+```
+
 ### Create a Firewall Manager AWS WAF Classic Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy"></a>
 
-The following shows an example Firewall Manager AWS WAF policy\. 
+The following shows an example Firewall Manager AWS WAF Classic policy\. 
 
 #### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy--yaml"></a>
 
@@ -378,7 +435,7 @@ PolicySGContentAudit:
                                   "securityGroupAction":{"type":"ALLOW"},
                                   "securityGroups":[
                                     {"id":"${SecurityGroup.GroupId}"}
-                                  ]}
+                                  ]}'
 ```
 
 #### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_content_audit_security_group_policy--json"></a>

@@ -106,7 +106,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kms-key-return-values"></a>
+## Return values<a name="aws-resource-kms-key-return-values"></a>
 
 ### Ref<a name="aws-resource-kms-key-return-values-ref"></a>
 
@@ -320,7 +320,7 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="aws-resource-kms-key--seealso"></a>
+## See also<a name="aws-resource-kms-key--seealso"></a>
 +  [Creating Keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 +  [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) in the *AWS Key Management Service API Reference*\.
 +  [Customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\.

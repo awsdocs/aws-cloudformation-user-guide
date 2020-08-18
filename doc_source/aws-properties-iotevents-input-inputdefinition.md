@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-iotevents-input-inputdefinition-attributes)" : [ [Attribute](aws-properties-iotevents-input-attribute.md), ... ]
+  "[Attributes](#cfn-iotevents-input-inputdefinition-attributes)" : [ Attribute, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-iotevents-input-inputdefinition-attributes): 
-    - [Attribute](aws-properties-iotevents-input-attribute.md)
+    - Attribute
 ```
 
 ## Properties<a name="aws-properties-iotevents-input-inputdefinition-properties"></a>

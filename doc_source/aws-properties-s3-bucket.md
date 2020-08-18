@@ -17,24 +17,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::S3::Bucket",
   "Properties" : {
-      "[AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration)" : [AccelerateConfiguration](aws-properties-s3-bucket-accelerateconfiguration.md),
+      "[AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration)" : AccelerateConfiguration,
       "[AccessControl](#cfn-s3-bucket-accesscontrol)" : String,
-      "[AnalyticsConfigurations](#cfn-s3-bucket-analyticsconfigurations)" : [ [AnalyticsConfiguration](aws-properties-s3-bucket-analyticsconfiguration.md), ... ],
-      "[BucketEncryption](#cfn-s3-bucket-bucketencryption)" : [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md),
+      "[AnalyticsConfigurations](#cfn-s3-bucket-analyticsconfigurations)" : [ AnalyticsConfiguration, ... ],
+      "[BucketEncryption](#cfn-s3-bucket-bucketencryption)" : BucketEncryption,
       "[BucketName](#cfn-s3-bucket-name)" : String,
-      "[CorsConfiguration](#cfn-s3-bucket-crossoriginconfig)" : [CorsConfiguration](aws-properties-s3-bucket-cors.md),
-      "[InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations)" : [ [InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md), ... ],
-      "[LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig)" : [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md),
-      "[LoggingConfiguration](#cfn-s3-bucket-loggingconfig)" : [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md),
-      "[MetricsConfigurations](#cfn-s3-bucket-metricsconfigurations)" : [ [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md), ... ],
-      "[NotificationConfiguration](#cfn-s3-bucket-notification)" : [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md),
-      "[ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration)" : [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md),
+      "[CorsConfiguration](#cfn-s3-bucket-crossoriginconfig)" : CorsConfiguration,
+      "[InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations)" : [ InventoryConfiguration, ... ],
+      "[LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig)" : LifecycleConfiguration,
+      "[LoggingConfiguration](#cfn-s3-bucket-loggingconfig)" : LoggingConfiguration,
+      "[MetricsConfigurations](#cfn-s3-bucket-metricsconfigurations)" : [ MetricsConfiguration, ... ],
+      "[NotificationConfiguration](#cfn-s3-bucket-notification)" : NotificationConfiguration,
+      "[ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration)" : ObjectLockConfiguration,
       "[ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled)" : Boolean,
-      "[PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration)" : [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md),
-      "[ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration)" : [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md),
+      "[PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
+      "[ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration)" : ReplicationConfiguration,
       "[Tags](#cfn-s3-bucket-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VersioningConfiguration](#cfn-s3-bucket-versioning)" : [VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md),
-      "[WebsiteConfiguration](#cfn-s3-bucket-websiteconfiguration)" : [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)
+      "[VersioningConfiguration](#cfn-s3-bucket-versioning)" : VersioningConfiguration,
+      "[WebsiteConfiguration](#cfn-s3-bucket-websiteconfiguration)" : WebsiteConfiguration
     }
 }
 ```
@@ -45,38 +45,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::S3::Bucket
 Properties: 
   [AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration): 
-    [AccelerateConfiguration](aws-properties-s3-bucket-accelerateconfiguration.md)
+    AccelerateConfiguration
   [AccessControl](#cfn-s3-bucket-accesscontrol): String
   [AnalyticsConfigurations](#cfn-s3-bucket-analyticsconfigurations): 
-    - [AnalyticsConfiguration](aws-properties-s3-bucket-analyticsconfiguration.md)
+    - AnalyticsConfiguration
   [BucketEncryption](#cfn-s3-bucket-bucketencryption): 
-    [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)
+    BucketEncryption
   [BucketName](#cfn-s3-bucket-name): String
   [CorsConfiguration](#cfn-s3-bucket-crossoriginconfig): 
-    [CorsConfiguration](aws-properties-s3-bucket-cors.md)
+    CorsConfiguration
   [InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations): 
-    - [InventoryConfiguration](aws-properties-s3-bucket-inventoryconfiguration.md)
+    - InventoryConfiguration
   [LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig): 
-    [LifecycleConfiguration](aws-properties-s3-bucket-lifecycleconfig.md)
+    LifecycleConfiguration
   [LoggingConfiguration](#cfn-s3-bucket-loggingconfig): 
-    [LoggingConfiguration](aws-properties-s3-bucket-loggingconfig.md)
+    LoggingConfiguration
   [MetricsConfigurations](#cfn-s3-bucket-metricsconfigurations): 
-    - [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md)
+    - MetricsConfiguration
   [NotificationConfiguration](#cfn-s3-bucket-notification): 
-    [NotificationConfiguration](aws-properties-s3-bucket-notificationconfig.md)
+    NotificationConfiguration
   [ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration): 
-    [ObjectLockConfiguration](aws-properties-s3-bucket-objectlockconfiguration.md)
+    ObjectLockConfiguration
   [ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled): Boolean
   [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration): 
-    [PublicAccessBlockConfiguration](aws-properties-s3-bucket-publicaccessblockconfiguration.md)
+    PublicAccessBlockConfiguration
   [ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration): 
-    [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)
+    ReplicationConfiguration
   [Tags](#cfn-s3-bucket-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VersioningConfiguration](#cfn-s3-bucket-versioning): 
-    [VersioningConfiguration](aws-properties-s3-bucket-versioningconfig.md)
+    VersioningConfiguration
   [WebsiteConfiguration](#cfn-s3-bucket-websiteconfiguration): 
-    [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)
+    WebsiteConfiguration
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-properties"></a>
@@ -196,11 +196,11 @@ Information used to configure the bucket as a static website\. For more informat
 *Type*: [WebsiteConfiguration](aws-properties-s3-websiteconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-s3-bucket-return-values"></a>
+## Return values<a name="aws-properties-s3-bucket-return-values"></a>
 
 ### Ref<a name="aws-properties-s3-bucket-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the bucket name\.
 
 Example: `mystack-mybucket` 
 
@@ -1024,5 +1024,5 @@ Resources:
     DeletionPolicy: Delete
 ```
 
-## See Also<a name="aws-properties-s3-bucket--seealso"></a>
+## See also<a name="aws-properties-s3-bucket--seealso"></a>
 + [Amazon S3 Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-s3.html)

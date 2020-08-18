@@ -49,7 +49,7 @@ Expiration time of the API key in seconds \(using Unix Epoch time\), with a mini
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-apikey-return-values"></a>
+## Return values<a name="aws-resource-appsync-apikey-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-apikey-return-values-ref"></a>
 
@@ -133,5 +133,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-apikey--seealso"></a>
+## See also<a name="aws-resource-appsync-apikey--seealso"></a>
 +  [CreateApiKey](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*\.

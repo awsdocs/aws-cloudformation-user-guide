@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Events::EventBusPolicy",
   "Properties" : {
       "[Action](#cfn-events-eventbuspolicy-action)" : String,
-      "[Condition](#cfn-events-eventbuspolicy-condition)" : [Condition](aws-properties-events-eventbuspolicy-condition.md),
+      "[Condition](#cfn-events-eventbuspolicy-condition)" : Condition,
       "[EventBusName](#cfn-events-eventbuspolicy-eventbusname)" : String,
       "[Principal](#cfn-events-eventbuspolicy-principal)" : String,
       "[StatementId](#cfn-events-eventbuspolicy-statementid)" : String
@@ -32,7 +32,7 @@ Type: AWS::Events::EventBusPolicy
 Properties: 
   [Action](#cfn-events-eventbuspolicy-action): String
   [Condition](#cfn-events-eventbuspolicy-condition): 
-    [Condition](aws-properties-events-eventbuspolicy-condition.md)
+    Condition
   [EventBusName](#cfn-events-eventbuspolicy-eventbusname): String
   [Principal](#cfn-events-eventbuspolicy-principal): String
   [StatementId](#cfn-events-eventbuspolicy-statementid): String
@@ -82,7 +82,7 @@ An identifier string for the external account that you're granting permissions t
 *Pattern*: `[a-zA-Z0-9-_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-events-eventbuspolicy-return-values"></a>
+## Return values<a name="aws-resource-events-eventbuspolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-events-eventbuspolicy-return-values-ref"></a>
 

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[InputAttachmentName](#cfn-medialive-channel-inputattachment-inputattachmentname)" : String,
   "[InputId](#cfn-medialive-channel-inputattachment-inputid)" : String,
-  "[InputSettings](#cfn-medialive-channel-inputattachment-inputsettings)" : [InputSettings](aws-properties-medialive-channel-inputsettings.md)
+  "[InputSettings](#cfn-medialive-channel-inputattachment-inputsettings)" : InputSettings
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InputAttachmentName](#cfn-medialive-channel-inputattachment-inputattachmentname): String
   [InputId](#cfn-medialive-channel-inputattachment-inputid): String
   [InputSettings](#cfn-medialive-channel-inputattachment-inputsettings): 
-    [InputSettings](aws-properties-medialive-channel-inputsettings.md)
+    InputSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-inputattachment-properties"></a>

@@ -20,11 +20,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ServiceDiscovery::Service",
   "Properties" : {
       "[Description](#cfn-servicediscovery-service-description)" : String,
-      "[DnsConfig](#cfn-servicediscovery-service-dnsconfig)" : [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md),
-      "[HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig)" : [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md),
-      "[HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig)" : [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md),
+      "[DnsConfig](#cfn-servicediscovery-service-dnsconfig)" : DnsConfig,
+      "[HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig)" : HealthCheckConfig,
+      "[HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig)" : HealthCheckCustomConfig,
       "[Name](#cfn-servicediscovery-service-name)" : String,
-      "[NamespaceId](#cfn-servicediscovery-service-namespaceid)" : String
+      "[NamespaceId](#cfn-servicediscovery-service-namespaceid)" : String,
+      "[Tags](#cfn-servicediscovery-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -36,13 +37,15 @@ Type: AWS::ServiceDiscovery::Service
 Properties: 
   [Description](#cfn-servicediscovery-service-description): String
   [DnsConfig](#cfn-servicediscovery-service-dnsconfig): 
-    [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)
+    DnsConfig
   [HealthCheckConfig](#cfn-servicediscovery-service-healthcheckconfig): 
-    [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)
+    HealthCheckConfig
   [HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig): 
-    [HealthCheckCustomConfig](aws-properties-servicediscovery-service-healthcheckcustomconfig.md)
+    HealthCheckCustomConfig
   [Name](#cfn-servicediscovery-service-name): String
   [NamespaceId](#cfn-servicediscovery-service-namespaceid): String
+  [Tags](#cfn-servicediscovery-service-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-service-properties"></a>
@@ -89,7 +92,14 @@ You must specify a value for `NamespaceId` either for the service properties or 
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicediscovery-service-return-values"></a>
+`Tags`  <a name="cfn-servicediscovery-service-tags"></a>
+The tags for the service\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: Updates are not supported\.
+
+## Return values<a name="aws-resource-servicediscovery-service-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-service-return-values-ref"></a>
 
@@ -172,5 +182,5 @@ Properties:
   NamespaceId: ns-e4anhexample0004
 ```
 
-## See Also<a name="aws-resource-servicediscovery-service--seealso"></a>
+## See also<a name="aws-resource-servicediscovery-service--seealso"></a>
 +  [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference* 

@@ -65,7 +65,7 @@ The name of the message template\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-pinpoint-smstemplate-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-smstemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-smstemplate-return-values-ref"></a>
 
