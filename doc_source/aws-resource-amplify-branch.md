@@ -13,13 +13,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Amplify::Branch",
   "Properties" : {
       "[AppId](#cfn-amplify-branch-appid)" : String,
-      "[BasicAuthConfig](#cfn-amplify-branch-basicauthconfig)" : [BasicAuthConfig](aws-properties-amplify-branch-basicauthconfig.md),
+      "[BasicAuthConfig](#cfn-amplify-branch-basicauthconfig)" : BasicAuthConfig,
       "[BranchName](#cfn-amplify-branch-branchname)" : String,
       "[BuildSpec](#cfn-amplify-branch-buildspec)" : String,
       "[Description](#cfn-amplify-branch-description)" : String,
       "[EnableAutoBuild](#cfn-amplify-branch-enableautobuild)" : Boolean,
       "[EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview)" : Boolean,
-      "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md), ... ],
+      "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ EnvironmentVariable, ... ],
       "[PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname)" : String,
       "[Stage](#cfn-amplify-branch-stage)" : String,
       "[Tags](#cfn-amplify-branch-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -34,14 +34,14 @@ Type: AWS::Amplify::Branch
 Properties: 
   [AppId](#cfn-amplify-branch-appid): String
   [BasicAuthConfig](#cfn-amplify-branch-basicauthconfig): 
-    [BasicAuthConfig](aws-properties-amplify-branch-basicauthconfig.md)
+    BasicAuthConfig
   [BranchName](#cfn-amplify-branch-branchname): String
   [BuildSpec](#cfn-amplify-branch-buildspec): String
   [Description](#cfn-amplify-branch-description): String
   [EnableAutoBuild](#cfn-amplify-branch-enableautobuild): Boolean
   [EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-branch-environmentvariables): 
-    - [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)
+    - EnvironmentVariable
   [PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname): String
   [Stage](#cfn-amplify-branch-stage): String
   [Tags](#cfn-amplify-branch-tags): 
@@ -51,31 +51,31 @@ Properties:
 ## Properties<a name="aws-resource-amplify-branch-properties"></a>
 
 `AppId`  <a name="cfn-amplify-branch-appid"></a>
- Unique Id for an Amplify App\.   
+ The unique ID for an Amplify app\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BasicAuthConfig`  <a name="cfn-amplify-branch-basicauthconfig"></a>
- Basic Authorization credentials for a branch, part of an Amplify App\.   
+ The basic authorization credentials for a branch of an Amplify app\.   
 *Required*: No  
 *Type*: [BasicAuthConfig](aws-properties-amplify-branch-basicauthconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BranchName`  <a name="cfn-amplify-branch-branchname"></a>
- Name for the branch\.   
+ The name for the branch\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BuildSpec`  <a name="cfn-amplify-branch-buildspec"></a>
- BuildSpec for the branch\.   
+ The build specification \(build spec\) for the branch\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-amplify-branch-description"></a>
- Description for the branch\.   
+ The description for the branch\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -95,7 +95,7 @@ For more information, see [Web Previews](https://docs.aws.amazon.com/amplify/lat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentVariables`  <a name="cfn-amplify-branch-environmentvariables"></a>
- Environment Variables for the branch\.   
+ The environment variables for the branch\.   
 *Required*: No  
 *Type*: List of [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -110,18 +110,18 @@ For more information about creating backend environments, see [Feature Branch De
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Stage`  <a name="cfn-amplify-branch-stage"></a>
- Stage for the branch\.   
+ Describes the current stage for the branch\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-amplify-branch-tags"></a>
- Tag for the branch\.   
+ The tag for the branch\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amplify-branch-return-values"></a>
+## Return values<a name="aws-resource-amplify-branch-return-values"></a>
 
 ### Fn::GetAtt<a name="aws-resource-amplify-branch-return-values-fn--getatt"></a>
 

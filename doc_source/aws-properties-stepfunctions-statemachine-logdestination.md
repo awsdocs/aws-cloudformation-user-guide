@@ -3,7 +3,7 @@
 Defines a destination for `LoggingConfiguration`\.
 
 **Note**  
-`LogDestination` is only valid when `StateMachineType` is set to `EXPRESS`\. For more information on logging with `EXPRESS` workflows, see [Logging Express Workflows Using CloudWatch Logs](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html)\.
+For more information on logging with `EXPRESS` workflows, see [Logging Express Workflows Using CloudWatch Logs](https://docs.aws.amazon.com/step-functions/latest/dg/cw-logs.html)\.
 
 ## Syntax<a name="aws-properties-stepfunctions-statemachine-logdestination-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLogsLogGroup](#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)" : [CloudWatchLogsLogGroup](aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup.md)
+  "[CloudWatchLogsLogGroup](#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup)" : CloudWatchLogsLogGroup
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchLogsLogGroup](#cfn-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup): 
-    [CloudWatchLogsLogGroup](aws-properties-stepfunctions-statemachine-logdestination-cloudwatchlogsloggroup.md)
+    CloudWatchLogsLogGroup
 ```
 
 ## Properties<a name="aws-properties-stepfunctions-statemachine-logdestination-properties"></a>

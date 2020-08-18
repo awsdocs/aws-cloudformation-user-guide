@@ -15,12 +15,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackupId](#cfn-fsx-filesystem-backupid)" : String,
       "[FileSystemType](#cfn-fsx-filesystem-filesystemtype)" : String,
       "[KmsKeyId](#cfn-fsx-filesystem-kmskeyid)" : String,
-      "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md),
+      "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : LustreConfiguration,
       "[SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids)" : [ String, ... ],
       "[StorageCapacity](#cfn-fsx-filesystem-storagecapacity)" : Integer,
+      "[StorageType](#cfn-fsx-filesystem-storagetype)" : String,
       "[SubnetIds](#cfn-fsx-filesystem-subnetids)" : [ String, ... ],
       "[Tags](#cfn-fsx-filesystem-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration)" : [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)
+      "[WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration)" : WindowsConfiguration
     }
 }
 ```
@@ -34,16 +35,17 @@ Properties:
   [FileSystemType](#cfn-fsx-filesystem-filesystemtype): String
   [KmsKeyId](#cfn-fsx-filesystem-kmskeyid): String
   [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration): 
-    [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)
+    LustreConfiguration
   [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids): 
     - String
   [StorageCapacity](#cfn-fsx-filesystem-storagecapacity): Integer
+  [StorageType](#cfn-fsx-filesystem-storagetype): String
   [SubnetIds](#cfn-fsx-filesystem-subnetids): 
     - String
   [Tags](#cfn-fsx-filesystem-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WindowsConfiguration](#cfn-fsx-filesystem-windowsconfiguration): 
-    [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)
+    WindowsConfiguration
 ```
 
 ## Properties<a name="aws-resource-fsx-filesystem-properties"></a>
@@ -58,7 +60,7 @@ The ID of the backup\. Specifies the backup to use if you're creating a file sys
 The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `LUSTRE | WINDOWS`  
+*Allowed values*: `LUSTRE | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
@@ -68,8 +70,8 @@ The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the fil
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LustreConfiguration`  <a name="cfn-fsx-filesystem-lustreconfiguration"></a>
-The Lustre configuration for the file system being created\. This value is required if `FileSystemType` is set to `LUSTRE`\.  
-*Required*: Conditional  
+The Lustre configuration for the file system being created\.   
+*Required*: No  
 *Type*: [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -81,17 +83,32 @@ A list of IDs specifying the security groups to apply to all network interfaces 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
-The storage capacity of the file system being created\.  
-For Windows file systems, valid values are 32 GiB \- 65,536 GiB\.  
-For Lustre `SCRATCH_2` and `PERSISTENT_1` file systems, valid values are 1200, 2400, then continuing in increments of 2400 GiB\. For Lustre `SCRATCH_1` file systems, valid values are 1,200, 2,400, 3,600, then continuing in increments of 3600 GiB\.  
+Sets the storage capacity of the file system that you're creating\.  
+For Lustre file systems:  
++ For `SCRATCH_2` and `PERSISTENT_1` deployment types, valid values are 1\.2, 2\.4, and increments of 2\.4 TiB\.
++ For `SCRATCH_1` deployment type, valid values are 1\.2, 2\.4, and increments of 3\.6 TiB\.
+For Windows file systems:  
++ If `StorageType=SSD`, valid values are 32 GiB \- 65,536 GiB \(64 TiB\)\.
++ If `StorageType=HDD`, valid values are 2000 GiB \- 65,536 GiB \(64 TiB\)\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
+*Maximum*: `2147483647`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
+Sets the storage type for the Amazon FSx for Windows file system you're creating\. Valid values are `SSD` and `HDD`\.  
++ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows deployment types\.
++ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types\. 
+ Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide*\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `HDD | SSD`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
 Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\.  
-For Windows `SINGLE_AZ_1` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
+For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
@@ -111,7 +128,7 @@ The configuration object for the Microsoft Windows file system you are creating\
 *Type*: [WindowsConfiguration](aws-properties-fsx-filesystem-windowsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-fsx-filesystem-return-values"></a>
+## Return values<a name="aws-resource-fsx-filesystem-return-values"></a>
 
 ### Ref<a name="aws-resource-fsx-filesystem-return-values-ref"></a>
 
@@ -122,6 +139,17 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For the Amazon FSx file system `fs-01234567890123456`, Ref returns the file system ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-fsx-filesystem-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-fsx-filesystem-return-values-fn--getatt-fn--getatt"></a>
+
+`LustreMountName`  <a name="LustreMountName-fn::getatt"></a>
+Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
 
 ## Examples<a name="aws-resource-fsx-filesystem--examples"></a>
 
@@ -156,6 +184,10 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                     }
                 ],
                 "LustreConfiguration": {
+                    "AutoImportPolicyType" : "NEW",
+                    "AutomaticBackupRetentionDays" : 21,
+                    "CopyTagsToBackups" : true,
+                    "DailyAutomaticBackupStartTime" : "02:00",
                     "DeploymentType": "PERSISTENT_1",
                     "PerUnitStorageThroughput": 200,                    
                     "ImportPath": {
@@ -210,6 +242,10 @@ Resources:
         - Key: "Name"
           Value: "CFNs3linkedLustre"
       LustreConfiguration:
+        AutoImportPolicyType: "NEW"
+        AutomaticBackupRetentionDays: 21
+        CopyTagsToBackups: true
+        DailyAutomaticBackupStartTime: "02:00"
         DeploymentType: "PERSISTENT_1"
         PerUnitStorageThroughput: 200
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
@@ -234,6 +270,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
             "Properties": {
                 "FileSystemType": "WINDOWS",
                 "StorageCapacity": 32,
+                "StorageType": "SSD",
                 "SubnetIds": [
                     {
                         "Fn::ImportValue": "MySubnet01"
@@ -280,7 +317,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                             }
                         ],
                         "DomainName": {
-                            "Fn::ImprtValue": "SelfManagedADDomainName"
+                            "Fn::ImportValue": "SelfManagedADDomainName"
                         },
                         "FileSystemAdministratorsGroup": "MyDomainAdminGroup",
                         "OrganizationalUnitDistinguishedName": "OU=FileSystems,DC=corp,DC=example,DC=com",
@@ -321,6 +358,7 @@ Resources:
     Properties:
       FileSystemType: WINDOWS
       StorageCapacity: 32
+      StorageType: SSD
       SubnetIds:
         - !ImportValue MySubnet01
         - !ImportValue MySubnet02
@@ -345,10 +383,10 @@ Resources:
                 - ','
                 - !ImportValue MySelfManagedADDnsIpAddresses
           DomainName:
-            'Fn::ImprtValue': SelfManagedADDomainName
+            'Fn::ImportValue': SelfManagedADDomainName
           FileSystemAdministratorsGroup: MyDomainAdminGroup
           OrganizationalUnitDistinguishedName: 'OU=FileSystems,DC=corp,DC=example,DC=com'
-          Username: Admin
+          UserName: Admin
           Password: !Join 
             - ':'
             - - '{{resolve:secretsmanager'
@@ -361,7 +399,7 @@ Outputs:
 
 ### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory"></a>
 
-The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to an AWS Managed Active Directory\.
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system using HDD storage that is joined to an AWS Managed Active Directory\.
 
 #### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--json"></a>
 
@@ -372,7 +410,8 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
             "Type": "AWS::FSx::FileSystem",
             "Properties": {
                 "FileSystemType": "WINDOWS",
-                "StorageCapacity": 32,
+                "StorageCapacity": 2000,
+                "StorageType": "HDD",
                 "SubnetIds": [
                     {
                         "Fn::ImportValue": "CfnFsxMadSubnet01"
@@ -427,7 +466,8 @@ Resources:
     Type: 'AWS::FSx::FileSystem'
     Properties:
       FileSystemType: WINDOWS
-      StorageCapacity: 300
+      StorageCapacity: 2000
+      StorageType: SSD
       SubnetIds:
         - !ImportValue CfnFsxMadSubnet01
         - !ImportValue CfnFsxMadSubnet02

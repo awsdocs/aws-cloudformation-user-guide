@@ -1,4 +1,4 @@
-# Intrinsic Function Reference<a name="intrinsic-function-reference"></a>
+# Intrinsic function reference<a name="intrinsic-function-reference"></a>
 
 AWS CloudFormation provides several built\-in functions that help you manage your stacks\. Use intrinsic functions in your templates to assign values to properties that are not available until runtime\.
 
@@ -8,7 +8,7 @@ You can use intrinsic functions only in specific parts of a template\. Currently
 **Topics**
 + [`Fn::Base64`](intrinsic-function-reference-base64.md)
 + [`Fn::Cidr`](intrinsic-function-reference-cidr.md)
-+ [Condition Functions](intrinsic-function-reference-conditions.md)
++ [Condition functions](intrinsic-function-reference-conditions.md)
 + [`Fn::FindInMap`](intrinsic-function-reference-findinmap.md)
 + [`Fn::GetAtt`](intrinsic-function-reference-getatt.md)
 + [`Fn::GetAZs`](intrinsic-function-reference-getavailabilityzones.md)

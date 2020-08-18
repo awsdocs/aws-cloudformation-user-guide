@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::CodeRepository",
   "Properties" : {
       "[CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname)" : String,
-      "[GitConfig](#cfn-sagemaker-coderepository-gitconfig)" : [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
+      "[GitConfig](#cfn-sagemaker-coderepository-gitconfig)" : GitConfig
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::SageMaker::CodeRepository
 Properties: 
   [CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname): String
   [GitConfig](#cfn-sagemaker-coderepository-gitconfig): 
-    [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
+    GitConfig
 ```
 
 ## Properties<a name="aws-resource-sagemaker-coderepository-properties"></a>
@@ -47,7 +47,7 @@ Configuration details for the Git repository, including the URL where it is loca
 *Type*: [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-coderepository-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-coderepository-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-coderepository-return-values-ref"></a>
 

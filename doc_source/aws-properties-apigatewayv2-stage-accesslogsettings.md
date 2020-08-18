@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigatewayv2-stage-accesslogsettings-properties"></a>
 
 `DestinationArn`  <a name="cfn-apigatewayv2-stage-accesslogsettings-destinationarn"></a>
-The ARN of the CloudWatch Logs log group to receive access logs\.  
-*Required*: No  
+The ARN of the CloudWatch Logs log group to receive access logs\. This parameter is required to enable access logging\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Format`  <a name="cfn-apigatewayv2-stage-accesslogsettings-format"></a>
-A single line format of the access logs of data, as specified by selected $context variables\. The format must include at least $context\.requestId\.  
-*Required*: No  
+A single line format of the access logs of data, as specified by selected $context variables\. The format must include at least $context\.requestId\. This parameter is required to enable access logging\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigatewayv2-stage-accesslogsettings--seealso"></a>
+## See also<a name="aws-properties-apigatewayv2-stage-accesslogsettings--seealso"></a>
 + [Stages](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html) in the *Amazon API Gateway Version 2 API Reference*

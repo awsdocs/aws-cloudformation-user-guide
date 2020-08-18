@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Expression](#cfn-cloudwatch-alarm-metricdataquery-expression)" : String,
   "[Id](#cfn-cloudwatch-alarm-metricdataquery-id)" : String,
   "[Label](#cfn-cloudwatch-alarm-metricdataquery-label)" : String,
-  "[MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat)" : [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md),
+  "[MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat)" : MetricStat,
+  "[Period](#cfn-cloudwatch-alarm-metricdataquery-period)" : Integer,
   "[ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata)" : Boolean
 }
 ```
@@ -27,7 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Id](#cfn-cloudwatch-alarm-metricdataquery-id): String
   [Label](#cfn-cloudwatch-alarm-metricdataquery-label): String
   [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat): 
-    [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)
+    MetricStat
+  [Period](#cfn-cloudwatch-alarm-metricdataquery-period): Integer
   [ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata): Boolean
 ```
 
@@ -63,8 +65,17 @@ Within one MetricDataQuery object, you must specify either `Expression` or `Metr
 *Type*: [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Period`  <a name="cfn-cloudwatch-alarm-metricdataquery-period"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ReturnData`  <a name="cfn-cloudwatch-alarm-metricdataquery-returndata"></a>
-This option indicates whether to return the timestamps and raw data values of this metric\. If you are performing this call just to do math expressions and do not also need the raw data returned, you can specify `False`\. If you omit this, the default of `True` is used\.  
+This option indicates whether to return the timestamps and raw data values of this metric\.  
+When you create an alarm based on a metric math expression, specify `True` for this value for only the one math expression that the alarm is based on\. You must specify `False` for `ReturnData` for all the other metrics and expressions used in the alarm\.  
+If you omit this field, the default of `True` is used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

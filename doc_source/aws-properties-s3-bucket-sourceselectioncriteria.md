@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SseKmsEncryptedObjects](#cfn-s3-bucket-sourceselectioncriteria-ssekmsencryptedobjects)" : [SseKmsEncryptedObjects](aws-properties-s3-bucket-ssekmsencryptedobjects.md)
+  "[SseKmsEncryptedObjects](#cfn-s3-bucket-sourceselectioncriteria-ssekmsencryptedobjects)" : SseKmsEncryptedObjects
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SseKmsEncryptedObjects](#cfn-s3-bucket-sourceselectioncriteria-ssekmsencryptedobjects): 
-    [SseKmsEncryptedObjects](aws-properties-s3-bucket-ssekmsencryptedobjects.md)
+    SseKmsEncryptedObjects
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-sourceselectioncriteria-properties"></a>

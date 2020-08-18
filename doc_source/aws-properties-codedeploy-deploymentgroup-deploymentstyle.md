@@ -29,16 +29,16 @@ Indicates whether to route deployment traffic behind a load balancer\.
  An EC2 Application Load Balancer or Network Load Balancer is required for an Amazon ECS deployment\. 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `WITH_TRAFFIC_CONTROL | WITHOUT_TRAFFIC_CONTROL`  
+*Allowed values*: `WITH_TRAFFIC_CONTROL | WITHOUT_TRAFFIC_CONTROL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentType`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype"></a>
 Indicates whether to run an in\-place or blue/green deployment\.  
-AWS CloudFormation supports blue/green deployments on AWS Lambda compute platforms only\. For more information about deploying on an AWS Lambda compute platform, see [ Deployments on an AWS Lambda Compute Platform](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html#deployment-steps-lambda) in the *AWS CodeDeploy User Guide*\.  
+AWS CloudFormation supports blue/green deployments on Amazon ECS compute platforms only\. For more information about deploying on an Amazon ECS compute platform, see [ Deployments on an Amazon ECS Compute Platform](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps-ecs.html) in the *AWS CodeDeploy User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `BLUE_GREEN | IN_PLACE`  
+*Allowed values*: `BLUE_GREEN | IN_PLACE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle--seealso"></a>
+## See also<a name="aws-properties-codedeploy-deploymentgroup-deploymentstyle--seealso"></a>
 +  [EC2TagFilter](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_EC2TagFilter.html) in the *AWS CodeDeploy API Reference*\.

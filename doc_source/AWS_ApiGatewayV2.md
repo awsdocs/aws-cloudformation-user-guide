@@ -1,7 +1,8 @@
-# Amazon API Gateway V2 Resource Type Reference<a name="AWS_ApiGatewayV2"></a>
+# Amazon API Gateway V2 resource type reference<a name="AWS_ApiGatewayV2"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ApiGatewayV2::Api](aws-resource-apigatewayv2-api.md)
++ [AWS::ApiGatewayV2::ApiGatewayManagedOverrides](aws-resource-apigatewayv2-apigatewaymanagedoverrides.md)
 + [AWS::ApiGatewayV2::ApiMapping](aws-resource-apigatewayv2-apimapping.md)
 + [AWS::ApiGatewayV2::Authorizer](aws-resource-apigatewayv2-authorizer.md)
 + [AWS::ApiGatewayV2::Deployment](aws-resource-apigatewayv2-deployment.md)
@@ -12,3 +13,4 @@
 + [AWS::ApiGatewayV2::Route](aws-resource-apigatewayv2-route.md)
 + [AWS::ApiGatewayV2::RouteResponse](aws-resource-apigatewayv2-routeresponse.md)
 + [AWS::ApiGatewayV2::Stage](aws-resource-apigatewayv2-stage.md)
++ [AWS::ApiGatewayV2::VpcLink](aws-resource-apigatewayv2-vpclink.md)

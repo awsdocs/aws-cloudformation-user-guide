@@ -14,12 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname)" : String,
       "[DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype)" : String,
-      "[ElasticsearchDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration)" : [ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md),
-      "[ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration)" : [ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md),
-      "[KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration)" : [KinesisStreamSourceConfiguration](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md),
-      "[RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration)" : [RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md),
-      "[S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
-      "[SplunkDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration)" : [SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)
+      "[ElasticsearchDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration)" : ElasticsearchDestinationConfiguration,
+      "[ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration)" : ExtendedS3DestinationConfiguration,
+      "[KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration)" : KinesisStreamSourceConfiguration,
+      "[RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration)" : RedshiftDestinationConfiguration,
+      "[S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration)" : S3DestinationConfiguration,
+      "[SplunkDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration)" : SplunkDestinationConfiguration
     }
 }
 ```
@@ -32,17 +32,17 @@ Properties:
   [DeliveryStreamName](#cfn-kinesisfirehose-deliverystream-deliverystreamname): String
   [DeliveryStreamType](#cfn-kinesisfirehose-deliverystream-deliverystreamtype): String
   [ElasticsearchDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration): 
-    [ElasticsearchDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.md)
+    ElasticsearchDestinationConfiguration
   [ExtendedS3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration): 
-    [ExtendedS3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.md)
+    ExtendedS3DestinationConfiguration
   [KinesisStreamSourceConfiguration](#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration): 
-    [KinesisStreamSourceConfiguration](aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.md)
+    KinesisStreamSourceConfiguration
   [RedshiftDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration): 
-    [RedshiftDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.md)
+    RedshiftDestinationConfiguration
   [S3DestinationConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration): 
-    [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    S3DestinationConfiguration
   [SplunkDestinationConfiguration](#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration): 
-    [SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)
+    SplunkDestinationConfiguration
 ```
 
 ## Properties<a name="aws-resource-kinesisfirehose-deliverystream-properties"></a>
@@ -62,7 +62,7 @@ The delivery stream type\. This can be one of the following values:
 +  `KinesisStreamAsSource`: The delivery stream uses a Kinesis data stream as a source\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DirectPut | KinesisStreamAsSource`  
+*Allowed values*: `DirectPut | KinesisStreamAsSource`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ElasticsearchDestinationConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration"></a>
@@ -109,7 +109,7 @@ The configuration of a destination in Splunk for the delivery stream\.
 *Type*: [SplunkDestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kinesisfirehose-deliverystream-return-values"></a>
+## Return values<a name="aws-resource-kinesisfirehose-deliverystream-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesisfirehose-deliverystream-return-values-ref"></a>
 
@@ -384,7 +384,7 @@ Resources:
                     - ''
                     - - 'arn:aws:s3:::'
                       - !Ref s3bucket
-                      - '*'
+                      - '/*'
               - Effect: Allow
                 Action: 'glue:GetTableVersions'
                 Resource: '*'
@@ -678,5 +678,5 @@ Resources :
                 RoleARN: !Ref deliveryRoleArn
 ```
 
-## See Also<a name="aws-resource-kinesisfirehose-deliverystream--seealso"></a>
+## See also<a name="aws-resource-kinesisfirehose-deliverystream--seealso"></a>
 +  [CreateDeliveryStream](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html) in the *Amazon Kinesis Data Firehose API Reference*\.

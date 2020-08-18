@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BlockEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-blockemail)" : [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md),
+  "[BlockEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-blockemail)" : NotifyEmailType,
   "[From](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-from)" : String,
-  "[MfaEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail)" : [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md),
-  "[NoActionEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail)" : [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md),
+  "[MfaEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail)" : NotifyEmailType,
+  "[NoActionEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail)" : NotifyEmailType,
   "[ReplyTo](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-replyto)" : String,
   "[SourceArn](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn)" : String
 }
@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BlockEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-blockemail): 
-    [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)
+    NotifyEmailType
   [From](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-from): String
   [MfaEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail): 
-    [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)
+    NotifyEmailType
   [NoActionEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail): 
-    [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)
+    NotifyEmailType
   [ReplyTo](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-replyto): String
   [SourceArn](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn): String
 ```

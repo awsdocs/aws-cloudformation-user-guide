@@ -52,7 +52,7 @@ Specifies the AWS Account ID of the owner of the EC2 security group specified in
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-security-group-ingress-return-values"></a>
+## Return values<a name="aws-properties-elasticache-security-group-ingress-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-security-group-ingress-return-values-ref"></a>
 

@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BatchSize](#cfn-lambda-eventsourcemapping-batchsize)" : Integer,
       "[BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)" : Boolean,
-      "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md),
+      "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : DestinationConfig,
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
@@ -40,7 +40,7 @@ Properties:
   [BatchSize](#cfn-lambda-eventsourcemapping-batchsize): Integer
   [BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror): Boolean
   [DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig): 
-    [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)
+    DestinationConfig
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
@@ -77,7 +77,7 @@ The maximum number of items to retrieve in a single batch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lambda-eventsourcemapping-enabled"></a>
-Disables the event source mapping to pause polling and invocation\.  
+If true, the event source mapping is active\. Set to false to pause polling and invocation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -148,7 +148,7 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-lambda-eventsourcemapping-return-values"></a>
+## Return values<a name="aws-resource-lambda-eventsourcemapping-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-eventsourcemapping-return-values-ref"></a>
 

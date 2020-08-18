@@ -10,9 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-appmesh-route-httproute-action)" : [HttpRouteAction](aws-properties-appmesh-route-httprouteaction.md),
-  "[Match](#cfn-appmesh-route-httproute-match)" : [HttpRouteMatch](aws-properties-appmesh-route-httproutematch.md),
-  "[RetryPolicy](#cfn-appmesh-route-httproute-retrypolicy)" : [HttpRetryPolicy](aws-properties-appmesh-route-httpretrypolicy.md)
+  "[Action](#cfn-appmesh-route-httproute-action)" : HttpRouteAction,
+  "[Match](#cfn-appmesh-route-httproute-match)" : HttpRouteMatch,
+  "[RetryPolicy](#cfn-appmesh-route-httproute-retrypolicy)" : HttpRetryPolicy,
+  "[Timeout](#cfn-appmesh-route-httproute-timeout)" : HttpTimeout
 }
 ```
 
@@ -20,11 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-appmesh-route-httproute-action): 
-    [HttpRouteAction](aws-properties-appmesh-route-httprouteaction.md)
+    HttpRouteAction
   [Match](#cfn-appmesh-route-httproute-match): 
-    [HttpRouteMatch](aws-properties-appmesh-route-httproutematch.md)
+    HttpRouteMatch
   [RetryPolicy](#cfn-appmesh-route-httproute-retrypolicy): 
-    [HttpRetryPolicy](aws-properties-appmesh-route-httpretrypolicy.md)
+    HttpRetryPolicy
+  [Timeout](#cfn-appmesh-route-httproute-timeout): 
+    HttpTimeout
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-httproute-properties"></a>
@@ -45,4 +48,10 @@ An object that represents the criteria for determining a request match\.
 An object that represents a retry policy\.  
 *Required*: No  
 *Type*: [HttpRetryPolicy](aws-properties-appmesh-route-httpretrypolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Timeout`  <a name="cfn-appmesh-route-httproute-timeout"></a>
+An object that represents types of timeouts\.   
+*Required*: No  
+*Type*: [HttpTimeout](aws-properties-appmesh-route-httptimeout.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

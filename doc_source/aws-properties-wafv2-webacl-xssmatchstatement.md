@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-wafv2-webacl-xssmatchstatement-fieldtomatch)" : [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md),
-  "[TextTransformations](#cfn-wafv2-webacl-xssmatchstatement-texttransformations)" : [ [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md), ... ]
+  "[FieldToMatch](#cfn-wafv2-webacl-xssmatchstatement-fieldtomatch)" : FieldToMatch,
+  "[TextTransformations](#cfn-wafv2-webacl-xssmatchstatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
 
@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-wafv2-webacl-xssmatchstatement-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)
+    FieldToMatch
   [TextTransformations](#cfn-wafv2-webacl-xssmatchstatement-texttransformations): 
-    - [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md)
+    - TextTransformation
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-xssmatchstatement-properties"></a>

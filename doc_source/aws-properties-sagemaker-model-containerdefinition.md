@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : Json,
   "[Image](#cfn-sagemaker-model-containerdefinition-image)" : String,
   "[Mode](#cfn-sagemaker-model-containerdefinition-mode)" : String,
-  "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String
+  "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String,
+  "[ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename)" : String
 }
 ```
 
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Image](#cfn-sagemaker-model-containerdefinition-image): String
   [Mode](#cfn-sagemaker-model-containerdefinition-mode): String
   [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
+  [ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename): String
 ```
 
 ## Properties<a name="aws-properties-sagemaker-model-containerdefinition-properties"></a>
@@ -47,7 +49,7 @@ The environment variables to set in the Docker container\. Each key and value in
 
 `Image`  <a name="cfn-sagemaker-model-containerdefinition-image"></a>
 The Amazon EC2 Container Registry \(Amazon ECR\) path where inference code is stored\. If you are using your own custom algorithm instead of an algorithm provided by Amazon SageMaker, the inference code must meet Amazon SageMaker requirements\. Amazon SageMaker supports both `registry/repository[:tag]` and `registry/repository[@digest]` image path formats\. For more information, see [Using Your Own Algorithms with Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms.html)   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `255`  
 *Pattern*: `[\S]+`  
@@ -57,7 +59,7 @@ The Amazon EC2 Container Registry \(Amazon ECR\) path where inference code is st
 Whether the container hosts a single model or multiple models\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `MultiModel | SingleModel`  
+*Allowed values*: `MultiModel | SingleModel`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelDataUrl`  <a name="cfn-sagemaker-model-containerdefinition-modeldataurl"></a>
@@ -68,4 +70,13 @@ If you use a built\-in algorithm to create a model, Amazon SageMaker requires th
 *Type*: String  
 *Maximum*: `1024`  
 *Pattern*: `^(https|s3)://([^/]+)/?(.*)$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ModelPackageName`  <a name="cfn-sagemaker-model-containerdefinition-modelpackagename"></a>
+The name or Amazon Resource Name \(ARN\) of the model package to use to create the model\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `170`  
+*Pattern*: `(arn:aws[a-z\-]*:sagemaker:[a-z0-9\-]*:[0-9]{12}:[a-z\-]*\/)?([a-zA-Z0-9]([a-zA-Z0-9-]){0,62})(?<!-)$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

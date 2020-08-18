@@ -35,16 +35,22 @@ The frequency at which Amazon EC2 Auto Scaling sends aggregated data to CloudWat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-as-metricscollection-metrics"></a>
-The list of Auto Scaling group metrics to collect\. If you specify `Granularity` and don't specify any metrics, all metrics are enabled\.   
+Specifies which group\-level metrics to start collecting\.  
 *Allowed Values*:  
-+ `GroupMinSize`
-+ `GroupMaxSize`
-+ `GroupDesiredCapacity`
-+ `GroupInServiceInstances`
-+ `GroupPendingInstances`
-+ `GroupStandbyInstances`
-+ `GroupTerminatingInstances`
-+ `GroupTotalInstances`
++  `GroupMinSize` 
++  `GroupMaxSize` 
++  `GroupDesiredCapacity` 
++  `GroupInServiceInstances` 
++  `GroupPendingInstances` 
++  `GroupStandbyInstances` 
++  `GroupTerminatingInstances` 
++  `GroupTotalInstances` 
++  `GroupInServiceCapacity` 
++  `GroupPendingCapacity` 
++  `GroupStandbyCapacity` 
++  `GroupTerminatingCapacity` 
++  `GroupTotalCapacity` 
+If you specify `Granularity` and don't specify any metrics, all metrics are enabled\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

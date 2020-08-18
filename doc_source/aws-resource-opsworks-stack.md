@@ -16,11 +16,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AgentVersion](#cfn-opsworks-stack-agentversion)" : String,
       "[Attributes](#cfn-opsworks-stack-attributes)" : {Key : Value, ...},
-      "[ChefConfiguration](#cfn-opsworks-stack-chefconfiguration)" : [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md),
+      "[ChefConfiguration](#cfn-opsworks-stack-chefconfiguration)" : ChefConfiguration,
       "[CloneAppIds](#cfn-opsworks-stack-cloneappids)" : [ String, ... ],
       "[ClonePermissions](#cfn-opsworks-stack-clonepermissions)" : Boolean,
-      "[ConfigurationManager](#cfn-opsworks-stack-configmanager)" : [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md),
-      "[CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource)" : [Source](aws-properties-opsworks-stack-source.md),
+      "[ConfigurationManager](#cfn-opsworks-stack-configmanager)" : StackConfigurationManager,
+      "[CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource)" : Source,
       "[CustomJson](#cfn-opsworks-stack-custjson)" : Json,
       "[DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz)" : String,
       "[DefaultInstanceProfileArn](#cfn-opsworks-stack-defaultinstanceprof)" : String,
@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultSshKeyName](#cfn-opsworks-stack-defaultsshkeyname)" : String,
       "[DefaultSubnetId](#defaultsubnet)" : String,
       "[EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn)" : String,
-      "[ElasticIps](#cfn-opsworks-stack-elasticips)" : [ [ElasticIp](aws-properties-opsworks-stack-elasticip.md), ... ],
+      "[ElasticIps](#cfn-opsworks-stack-elasticips)" : [ ElasticIp, ... ],
       "[HostnameTheme](#cfn-opsworks-stack-hostnametheme)" : String,
       "[Name](#cfn-opsworks-stack-name)" : String,
-      "[RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances)" : [ [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md), ... ],
+      "[RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances)" : [ RdsDbInstance, ... ],
       "[ServiceRoleArn](#cfn-opsworks-stack-servicerolearn)" : String,
       "[SourceStackId](#cfn-opsworks-stack-sourcestackid)" : String,
       "[Tags](#cfn-opsworks-stack-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -52,14 +52,14 @@ Properties:
   [Attributes](#cfn-opsworks-stack-attributes): 
     Key : Value
   [ChefConfiguration](#cfn-opsworks-stack-chefconfiguration): 
-    [ChefConfiguration](aws-properties-opsworks-stack-chefconfiguration.md)
+    ChefConfiguration
   [CloneAppIds](#cfn-opsworks-stack-cloneappids): 
     - String
   [ClonePermissions](#cfn-opsworks-stack-clonepermissions): Boolean
   [ConfigurationManager](#cfn-opsworks-stack-configmanager): 
-    [StackConfigurationManager](aws-properties-opsworks-stack-stackconfigmanager.md)
+    StackConfigurationManager
   [CustomCookbooksSource](#cfn-opsworks-stack-custcookbooksource): 
-    [Source](aws-properties-opsworks-stack-source.md)
+    Source
   [CustomJson](#cfn-opsworks-stack-custjson): 
     Json
   [DefaultAvailabilityZone](#cfn-opsworks-stack-defaultaz): String
@@ -70,11 +70,11 @@ Properties:
   [DefaultSubnetId](#defaultsubnet): String
   [EcsClusterArn](#cfn-opsworks-stack-ecsclusterarn): String
   [ElasticIps](#cfn-opsworks-stack-elasticips): 
-    - [ElasticIp](aws-properties-opsworks-stack-elasticip.md)
+    - ElasticIp
   [HostnameTheme](#cfn-opsworks-stack-hostnametheme): String
   [Name](#cfn-opsworks-stack-name): String
   [RdsDbInstances](#cfn-opsworks-stack-rdsdbinstances): 
-    - [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md)
+    - RdsDbInstance
   [ServiceRoleArn](#cfn-opsworks-stack-servicerolearn): String
   [SourceStackId](#cfn-opsworks-stack-sourcestackid): String
   [Tags](#cfn-opsworks-stack-tags): 
@@ -169,7 +169,7 @@ The default option is the current Amazon Linux version\. For more information ab
 The default root device type\. This value is the default for all instances in the stack, but you can override it when you create an instance\. The default option is `instance-store`\. For more information, see [Storage for the Root Device](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ebs | instance-store`  
+*Allowed values*: `ebs | instance-store`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultSshKeyName`  <a name="cfn-opsworks-stack-defaultsshkeyname"></a>
@@ -281,7 +281,7 @@ For more information about how to use AWS OpsWorks Stacks with a VPC, see [Runni
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-opsworks-stack-return-values"></a>
+## Return values<a name="aws-resource-opsworks-stack-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworks-stack-return-values-ref"></a>
 
@@ -588,6 +588,6 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="aws-resource-opsworks-stack--seealso"></a>
+## See also<a name="aws-resource-opsworks-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateStack.html) in the *AWS OpsWorks API Reference*\.
 +  [Create a New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) in the *AWS OpsWorks User Guide*\.

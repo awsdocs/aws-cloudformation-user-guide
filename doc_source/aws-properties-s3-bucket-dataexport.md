@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-s3-bucket-dataexport-destination)" : [Destination](aws-properties-s3-bucket-destination.md),
+  "[Destination](#cfn-s3-bucket-dataexport-destination)" : Destination,
   "[OutputSchemaVersion](#cfn-s3-bucket-dataexport-outputschemaversion)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destination](#cfn-s3-bucket-dataexport-destination): 
-    [Destination](aws-properties-s3-bucket-destination.md)
+    Destination
   [OutputSchemaVersion](#cfn-s3-bucket-dataexport-outputschemaversion): String
 ```
 
@@ -35,5 +35,5 @@ The place to store the data for an analysis\.
 The version of the output schema to use when exporting data\. Must be `V_1`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `V_1`  
+*Allowed values*: `V_1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

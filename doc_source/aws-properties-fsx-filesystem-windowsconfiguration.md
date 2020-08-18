@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)" : String,
   "[DeploymentType](#cfn-fsx-filesystem-windowsconfiguration-deploymenttype)" : String,
   "[PreferredSubnetId](#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid)" : String,
-  "[SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)" : [SelfManagedActiveDirectoryConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.md),
+  "[SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration)" : SelfManagedActiveDirectoryConfiguration,
   "[ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity)" : Integer,
   "[WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime)" : String
 }
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DeploymentType](#cfn-fsx-filesystem-windowsconfiguration-deploymenttype): String
   [PreferredSubnetId](#cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid): String
   [SelfManagedActiveDirectoryConfiguration](#cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration): 
-    [SelfManagedActiveDirectoryConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.md)
+    SelfManagedActiveDirectoryConfiguration
   [ThroughputCapacity](#cfn-fsx-filesystem-windowsconfiguration-throughputcapacity): Integer
   [WeeklyMaintenanceStartTime](#cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime): String
 ```
@@ -70,12 +70,13 @@ The preferred time to take daily automatic backups, formatted HH:MM in the UTC t
 
 `DeploymentType`  <a name="cfn-fsx-filesystem-windowsconfiguration-deploymenttype"></a>
 Specifies the file system deployment type, valid values are the following:  
-+ MULTI\_AZ\_1 \- Deploys a high availability file system that is configured for Multi\-AZ redundancy to tolerate temporary Availability Zone \(AZ\) unavailability\. You can only deploy a Multi\-AZ file system in AWS Regions that have a minimum of three Availability Zones\.
-+ SINGLE\_AZ\_1 \- \(Default\) Choose to deploy a file system that is configured for single AZ redundancy\.
-To learn more about high availability Multi\-AZ file systems, see [ High Availability for Amazon FSx for Windows File Server](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html)\.  
++  `MULTI_AZ_1` \- Deploys a high availability file system that is configured for Multi\-AZ redundancy to tolerate temporary Availability Zone \(AZ\) unavailability\. You can only deploy a Multi\-AZ file system in AWS Regions that have a minimum of three Availability Zones\. Also supports HDD storage type
++  `SINGLE_AZ_1` \- \(Default\) Choose to deploy a file system that is configured for single AZ redundancy\.
++  `SINGLE_AZ_2` \- The latest generation Single AZ file system\. Specifies a file system that is configured for single AZ redundancy and supports HDD storage type\.
+For more information, see [ Availability and Durability: Single\-AZ and Multi\-AZ File Systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `MULTI_AZ_1 | SINGLE_AZ_1`  
+*Allowed values*: `MULTI_AZ_1 | SINGLE_AZ_1 | SINGLE_AZ_2`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreferredSubnetId`  <a name="cfn-fsx-filesystem-windowsconfiguration-preferredsubnetid"></a>
@@ -96,10 +97,10 @@ The throughput of an Amazon FSx file system, measured in megabytes per second, i
 *Type*: Integer  
 *Minimum*: `8`  
 *Maximum*: `2048`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WeeklyMaintenanceStartTime`  <a name="cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime"></a>
-The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone\.  
+The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone, where d is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

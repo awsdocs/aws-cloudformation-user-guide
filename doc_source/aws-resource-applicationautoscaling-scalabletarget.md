@@ -4,6 +4,8 @@ The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource 
 
 For more information, see [RegisterScalableTarget](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_RegisterScalableTarget.html) in the *Application Auto Scaling API Reference*\.
 
+For introductory exercises for scaling specific resources, see [Getting Started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*\.
+
 ## Syntax<a name="aws-resource-applicationautoscaling-scalabletarget-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -19,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ResourceId](#cfn-applicationautoscaling-scalabletarget-resourceid)" : String,
       "[RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn)" : String,
       "[ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension)" : String,
-      "[ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions)" : [ [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md), ... ],
+      "[ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions)" : [ ScheduledAction, ... ],
       "[ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace)" : String,
-      "[SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate)" : [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)
+      "[SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate)" : SuspendedState
     }
 }
 ```
@@ -37,10 +39,10 @@ Properties:
   [RoleARN](#cfn-applicationautoscaling-scalabletarget-rolearn): String
   [ScalableDimension](#cfn-applicationautoscaling-scalabletarget-scalabledimension): String
   [ScheduledActions](#cfn-applicationautoscaling-scalabletarget-scheduledactions): 
-    - [ScheduledAction](aws-properties-applicationautoscaling-scalabletarget-scheduledaction.md)
+    - ScheduledAction
   [ServiceNamespace](#cfn-applicationautoscaling-scalabletarget-servicenamespace): String
   [SuspendedState](#cfn-applicationautoscaling-scalabletarget-suspendedstate): 
-    [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)
+    SuspendedState
 ```
 
 ## Properties<a name="aws-resource-applicationautoscaling-scalabletarget-properties"></a>
@@ -100,7 +102,7 @@ For more information, see [Suspending and Resuming Scaling](https://docs.aws.ama
 *Type*: [SuspendedState](aws-properties-applicationautoscaling-scalabletarget-suspendedstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-applicationautoscaling-scalabletarget-return-values"></a>
+## Return values<a name="aws-resource-applicationautoscaling-scalabletarget-return-values"></a>
 
 ### Ref<a name="aws-resource-applicationautoscaling-scalabletarget-return-values-ref"></a>
 
@@ -116,7 +118,7 @@ Each scalable target has a service namespace, scalable dimension, and resource I
 
 ### Register a Scalable Target<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_Scalable_Target"></a>
 
-The following example creates a scalable target for an AppStream fleet \([AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)\)\. Application Auto Scaling can scale the number of fleet instances at a minimum of 1 instance and a maximum of 20\. 
+The following example creates a scalable target for an Amazon Keyspaces \(for Apache Cassandra\) table \([AWS::Cassandra::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)\)\. Application Auto Scaling can scale the write capacity throughput at a minimum of 1 capacity unit and a maximum of 20\. For more information about scaling Amazon Keyspaces tables, see [Managing Amazon Keyspaces Throughput Capacity with Application Auto Scaling](https://docs.aws.amazon.com/keyspaces/latest/devguide/autoscaling.html) in the *Amazon Keyspaces \(for Apache Cassandra\) Developer Guide*\.
 
 To register a different resource supported by Application Auto Scaling, specify its namespace in `ServiceNamespace`, its scalable dimension in `ScalableDimension`, its resource ID in `ResourceId`, and its service\-linked role in `RoleARN`\.
 
@@ -129,10 +131,12 @@ To register a different resource supported by Application Auto Scaling, specify 
     "Properties":{
       "MaxCapacity":20,
       "MinCapacity":1,
-      "RoleARN": "arn:aws:iam::012345678910:role/aws-service-role/appstream.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_AppStreamFleet",
-      "ServiceNamespace":"appstream",
-      "ScalableDimension":"appstream:fleet:DesiredCapacity",
-      "ResourceId":"fleet/sample-fleet"
+      "RoleARN":{
+        "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable"
+      },
+      "ServiceNamespace":"cassandra",
+      "ScalableDimension":"cassandra:table:WriteCapacityUnits",
+      "ResourceId":"keyspace/mykeyspace/table/mytable"
     }
   }
 }
@@ -146,10 +150,11 @@ ScalableTarget:
   Properties:
     MaxCapacity: 20
     MinCapacity: 1
-    RoleARN: arn:aws:iam::012345678910:role/aws-service-role/appstream.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_AppStreamFleet
-    ServiceNamespace: appstream
-    ScalableDimension: appstream:fleet:DesiredCapacity
-    ResourceId: fleet/sample-fleet
+    RoleARN: 
+      Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/cassandra.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_CassandraTable'
+    ServiceNamespace: cassandra
+    ScalableDimension: cassandra:table:WriteCapacityUnits
+    ResourceId: keyspace/mykeyspace/table/mytable
 ```
 
 ### Lambda with a Scheduled Action<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Lambda_with_a_Scheduled_Action"></a>
@@ -157,6 +162,8 @@ ScalableTarget:
 The following example registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) called BLUE, with a minimum capacity of 1 and a maximum capacity of 100\. It also creates a scheduled action with a recurring schedule using a cron expression\.
 
 This example uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions in the `RoleARN` property to specify the ARN of the service\-linked role\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` property\. 
+
+Note: You can't allocate provisioned concurrency on an alias that points to the unpublished version \($LATEST\)\. 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Lambda_with_a_Scheduled_Action--json"></a>
 
@@ -229,7 +236,7 @@ ScalableTarget:
 
 ### Amazon DynamoDB<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB"></a>
 
-This example registers the read and write capacity throughput of a DyanmoDB table \([AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
+This example registers the read and write capacity throughput of a DynamoDB table \([AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\) and its global secondary index as scalable targets\. It uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) intrinsic function to construct the `ResourceId` properties\. 
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Amazon_DynamoDB--json"></a>
 
@@ -278,7 +285,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:table:WriteCapacityUnits",
         "ResourceId":{
@@ -291,7 +300,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:table:ReadCapacityUnits",
         "ResourceId":{
@@ -304,7 +315,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:index:WriteCapacityUnits",
         "ResourceId":{
@@ -317,7 +330,9 @@ This example registers the read and write capacity throughput of a DyanmoDB tabl
       "Properties":{
         "MaxCapacity":100,
         "MinCapacity":5,
-        "RoleARN":"arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable",
+        "RoleARN":{
+          "Fn::Sub":"arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable"
+        },
         "ServiceNamespace":"dynamodb",
         "ScalableDimension":"dynamodb:index:ReadCapacityUnits",
         "ResourceId":{
@@ -360,7 +375,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:table:WriteCapacityUnits
       ResourceId: !Sub table/${DDBTable} 
@@ -369,7 +385,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:table:ReadCapacityUnits
       ResourceId: !Sub table/${DDBTable}
@@ -378,7 +395,8 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN:
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:index:WriteCapacityUnits
       ResourceId: !Sub table/${DDBTable}/index/GSI
@@ -387,12 +405,13 @@ Resources:
     Properties:
       MaxCapacity: 100
       MinCapacity: 5
-      RoleARN: arn:aws:iam::012345678910:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable
+      RoleARN: 
+        Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/aws-service-role/dynamodb.application-autoscaling.amazonaws.com/AWSServiceRoleForApplicationAutoScaling_DynamoDBTable'
       ServiceNamespace: dynamodb
       ScalableDimension: dynamodb:index:ReadCapacityUnits
       ResourceId: !Sub table/${DDBTable}/index/GSI
 ```
 
-## See Also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
+## See also<a name="aws-resource-applicationautoscaling-scalabletarget--seealso"></a>
 + [Application Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/application/userguide/what-is-application-auto-scaling.html) 
 + [Examples](https://docs.aws.amazon.com/cli/latest/reference/application-autoscaling/register-scalable-target.html#examples) of Application Auto Scaling scalable targets in the * AWS CLI Command Reference*

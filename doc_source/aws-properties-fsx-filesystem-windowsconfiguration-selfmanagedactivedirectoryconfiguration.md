@@ -49,7 +49,7 @@ The fully qualified domain name of the self\-managed AD directory, such as `corp
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^.{1,255}$`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,255}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemAdministratorsGroup`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-filesystemadministratorsgroup"></a>
@@ -58,7 +58,7 @@ The fully qualified domain name of the self\-managed AD directory, such as `corp
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
-*Pattern*: `^.{1,256}$`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,256}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationalUnitDistinguishedName`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname"></a>
@@ -68,7 +68,7 @@ Only Organizational Unit \(OU\) objects can be the direct parent of the file sys
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2000`  
-*Pattern*: `^.{1,2000}$`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,2000}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Password`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-password"></a>
@@ -88,5 +88,5 @@ The user name for the service account on your self\-managed AD domain that Amazo
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
-*Pattern*: `^.{1,256}$`  
+*Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{1,256}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

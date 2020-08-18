@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-ssm-maintenancewindowtarget-name)" : String,
       "[OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation)" : String,
       "[ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype)" : String,
-      "[Targets](#cfn-ssm-maintenancewindowtarget-targets)" : [ [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md), ... ],
+      "[Targets](#cfn-ssm-maintenancewindowtarget-targets)" : [ Targets, ... ],
       "[WindowId](#cfn-ssm-maintenancewindowtarget-windowid)" : String
     }
 }
@@ -32,7 +32,7 @@ Properties:
   [OwnerInformation](#cfn-ssm-maintenancewindowtarget-ownerinformation): String
   [ResourceType](#cfn-ssm-maintenancewindowtarget-resourcetype): String
   [Targets](#cfn-ssm-maintenancewindowtarget-targets): 
-    - [Targets](aws-properties-ssm-maintenancewindowtarget-targets.md)
+    - Targets
   [WindowId](#cfn-ssm-maintenancewindowtarget-windowid): String
 ```
 
@@ -67,7 +67,7 @@ A user\-provided value that will be included in any CloudWatch events that are r
 The type of target that is being registered with the maintenance window\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `INSTANCE | RESOURCE_GROUP`  
+*Allowed values*: `INSTANCE | RESOURCE_GROUP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtarget-targets"></a>
@@ -87,7 +87,7 @@ The ID of the maintenance window to register the target with\.
 *Pattern*: `^mw-[0-9a-f]{17}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ssm-maintenancewindowtarget-return-values"></a>
+## Return values<a name="aws-resource-ssm-maintenancewindowtarget-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-maintenancewindowtarget-return-values-ref"></a>
 
@@ -149,7 +149,7 @@ Resources:
     DependsOn: MaintenanceWindow
 ```
 
-## See Also<a name="aws-resource-ssm-maintenancewindowtarget--seealso"></a>
+## See also<a name="aws-resource-ssm-maintenancewindowtarget--seealso"></a>
 +  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
 +  [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) 
 +  [RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.

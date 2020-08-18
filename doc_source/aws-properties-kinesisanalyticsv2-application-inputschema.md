@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application InputSchema<a name="aws-properties-kinesisanalyticsv2-application-inputschema"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\. 
+For a SQL\-based Kinesis Data Analytics application, describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in\-application stream\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-inputschema-syntax"></a>
 
@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RecordColumns](#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns)" : [ [RecordColumn](aws-properties-kinesisanalyticsv2-application-recordcolumn.md), ... ],
+  "[RecordColumns](#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns)" : [ RecordColumn, ... ],
   "[RecordEncoding](#cfn-kinesisanalyticsv2-application-inputschema-recordencoding)" : String,
-  "[RecordFormat](#cfn-kinesisanalyticsv2-application-inputschema-recordformat)" : [RecordFormat](aws-properties-kinesisanalyticsv2-application-recordformat.md)
+  "[RecordFormat](#cfn-kinesisanalyticsv2-application-inputschema-recordformat)" : RecordFormat
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RecordColumns](#cfn-kinesisanalyticsv2-application-inputschema-recordcolumns): 
-    - [RecordColumn](aws-properties-kinesisanalyticsv2-application-recordcolumn.md)
+    - RecordColumn
   [RecordEncoding](#cfn-kinesisanalyticsv2-application-inputschema-recordencoding): String
   [RecordFormat](#cfn-kinesisanalyticsv2-application-inputschema-recordformat): 
-    [RecordFormat](aws-properties-kinesisanalyticsv2-application-recordformat.md)
+    RecordFormat
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-inputschema-properties"></a>
@@ -48,5 +48,5 @@ Specifies the format of the records on the streaming source\.
 *Type*: [RecordFormat](aws-properties-kinesisanalyticsv2-application-recordformat.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-inputschema--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-inputschema--seealso"></a>
 +  [SourceSchema](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SourceSchema.html) in the *Amazon Kinesis Data Analytics API Reference* 

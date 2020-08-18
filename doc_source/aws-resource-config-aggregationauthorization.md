@@ -54,7 +54,7 @@ An array of tag object\.
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
+## Return values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
 
 ### Ref<a name="aws-resource-config-aggregationauthorization-return-values-ref"></a>
 
@@ -131,7 +131,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
                     "default": "Aggregator account"
                 },
                 "AggregatorRegion": {
-                    "default": "Aggregator account"
+                    "default": "Aggregator region"
                 },
                 "SourceAccounts": {
                     "default": "Source accounts"
@@ -346,10 +346,10 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
             }
         },
         "ConfigAggregator": {
-            "Type": "AWS::Config::ConfigurationAggregator",
+            "Type": "AWS::Config::ConfigurationAggregatorName",
             "Condition": "CreateAggregator",
             "Properties": {
-                "Name": "default",
+                "Name": "name",
                 "AccountAggregationSources": [
                     {
                         "AccountIds": {
@@ -528,10 +528,10 @@ Resources:
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
 
   ConfigAggregator:
-    Type: AWS::Config::ConfigurationAggregator
+    Type: AWS::Config::ConfigurationAggregatorName
     Condition: CreateAggregator
     Properties:
-    ConfigurationAggregatorName: default
+    ConfigurationAggregatorName: name
       AccountAggregationSources:
         - AccountIds: !Ref SourceAccounts
           AwsRegions: !Ref SourceRegions

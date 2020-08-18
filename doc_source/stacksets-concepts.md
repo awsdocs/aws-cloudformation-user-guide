@@ -1,4 +1,4 @@
-# StackSets Concepts<a name="stacksets-concepts"></a>
+# StackSets concepts<a name="stacksets-concepts"></a>
 
 When you use StackSets, you work with *stack sets*, *stack instances*, and *stacks*\.
 
@@ -80,7 +80,7 @@ This setting, available in delete stack workflows, lets you keep stacks and thei
 
 ## Tags<a name="stackset-concepts-tags"></a>
 
-You can add tags during stack set creation and update operations by specifying key and value pairs\. Tags are useful for sorting and filtering stack set resources for billing and cost allocation\. For more information about how tags are used in AWS, see [Using Cost Allocation Tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. After you specify the key\-value pair, choose **\+** to save the tag\.You can delete tags that you are no longer using by choosing the red **X** to the right of a tag\.
+You can add tags during stack set creation and update operations by specifying key and value pairs\. Tags are useful for sorting and filtering stack set resources for billing and cost allocation\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. After you specify the key\-value pair, choose **\+** to save the tag\.You can delete tags that you are no longer using by choosing the red **X** to the right of a tag\.
 
 Tags that you apply to stack sets are applied to all stacks, and the resources that are created by your stacks\. Tags can be added at the stack\-only level in AWS CloudFormation, but those tags might not show up in StackSets\.
 
@@ -93,7 +93,7 @@ AWS CloudFormation StackSets generates status codes for stack set operations and
 The following table describes status codes for stack set operations\.
 
 
-| Stack Set Operation Status | Description | 
+| Stack set operation status | Description | 
 | --- | --- | 
 |  `RUNNING`  |  The operation is currently in progress\.  | 
 |  `SUCCEEDED`  |  The operation finished without exceeding the failure tolerance for the operation\.  | 
@@ -105,8 +105,13 @@ The following table describes status codes for stack set operations\.
 The following table describes status codes for stack instances within stack sets\.
 
 
-| Stack Instance Status | Description | 
+| Stack instance status | Description | 
 | --- | --- | 
 |  `CURRENT`  |  The stack is currently up to date with the stack set\.  | 
 |  `OUTDATED`  |  The stack is not currently up to date with the stack set for one of the following reasons\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html)  | 
 |  `INOPERABLE`  |  A `DeleteStackInstances` operation has failed and left the stack in an unstable state\. Stacks in this state are excluded from further `UpdateStackSet` operations\. You might need to perform a `DeleteStackInstances` operation, with `RetainStacks` set to `true`, to delete the stack instance, and then delete the stack manually\.  | 
+|  `CANCELLED`  |  The operation in the specified account and Region has been cancelled\. This is either because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation has been exceeded\.  | 
+|  `FAILED`  |  The operation in the specified account and Region failed\. If the stack set operation fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole might be exceeded\.  | 
+|  `PENDING`  |  The operation in the specified account and Region has yet to start\.  | 
+|  `RUNNING`  |  The operation in the specified account and Region is currently in progress\.  | 
+|  `SUCCEEDED`  |  The operation in the specified account and Region completed successfully\.  | 

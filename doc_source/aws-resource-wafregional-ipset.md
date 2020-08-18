@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::IPSet",
   "Properties" : {
-      "[IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors)" : [ [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md), ... ],
+      "[IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors)" : [ IPSetDescriptor, ... ],
       "[Name](#cfn-wafregional-ipset-name)" : String
     }
 }
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::IPSet
 Properties: 
   [IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors): 
-    - [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md)
+    - IPSetDescriptor
   [Name](#cfn-wafregional-ipset-name): String
 ```
 
@@ -48,9 +48,10 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafregional-ipset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-ipset-return-values-ref"></a>
 

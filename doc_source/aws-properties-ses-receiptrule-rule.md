@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-ses-receiptrule-rule-actions)" : [ [Action](aws-properties-ses-receiptrule-action.md), ... ],
+  "[Actions](#cfn-ses-receiptrule-rule-actions)" : [ Action, ... ],
   "[Enabled](#cfn-ses-receiptrule-rule-enabled)" : Boolean,
   "[Name](#cfn-ses-receiptrule-rule-name)" : String,
   "[Recipients](#cfn-ses-receiptrule-rule-recipients)" : [ String, ... ],
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-ses-receiptrule-rule-actions): 
-    - [Action](aws-properties-ses-receiptrule-action.md)
+    - Action
   [Enabled](#cfn-ses-receiptrule-rule-enabled): Boolean
   [Name](#cfn-ses-receiptrule-rule-name): String
   [Recipients](#cfn-ses-receiptrule-rule-recipients): 

@@ -12,16 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Pinpoint::Campaign",
   "Properties" : {
-      "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ [WriteTreatmentResource](aws-properties-pinpoint-campaign-writetreatmentresource.md), ... ],
+      "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ WriteTreatmentResource, ... ],
       "[ApplicationId](#cfn-pinpoint-campaign-applicationid)" : String,
-      "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md),
+      "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : CampaignHook,
       "[Description](#cfn-pinpoint-campaign-description)" : String,
       "[HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent)" : Integer,
       "[IsPaused](#cfn-pinpoint-campaign-ispaused)" : Boolean,
-      "[Limits](#cfn-pinpoint-campaign-limits)" : [Limits](aws-properties-pinpoint-campaign-limits.md),
-      "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md),
+      "[Limits](#cfn-pinpoint-campaign-limits)" : Limits,
+      "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : MessageConfiguration,
       "[Name](#cfn-pinpoint-campaign-name)" : String,
-      "[Schedule](#cfn-pinpoint-campaign-schedule)" : [Schedule](aws-properties-pinpoint-campaign-schedule.md),
+      "[Schedule](#cfn-pinpoint-campaign-schedule)" : Schedule,
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
       "[Tags](#cfn-pinpoint-campaign-tags)" : Json,
@@ -37,20 +37,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Pinpoint::Campaign
 Properties: 
   [AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments): 
-    - [WriteTreatmentResource](aws-properties-pinpoint-campaign-writetreatmentresource.md)
+    - WriteTreatmentResource
   [ApplicationId](#cfn-pinpoint-campaign-applicationid): String
   [CampaignHook](#cfn-pinpoint-campaign-campaignhook): 
-    [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md)
+    CampaignHook
   [Description](#cfn-pinpoint-campaign-description): String
   [HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent): Integer
   [IsPaused](#cfn-pinpoint-campaign-ispaused): Boolean
   [Limits](#cfn-pinpoint-campaign-limits): 
-    [Limits](aws-properties-pinpoint-campaign-limits.md)
+    Limits
   [MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration): 
-    [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)
+    MessageConfiguration
   [Name](#cfn-pinpoint-campaign-name): String
   [Schedule](#cfn-pinpoint-campaign-schedule): 
-    [Schedule](aws-properties-pinpoint-campaign-schedule.md)
+    Schedule
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
   [SegmentVersion](#cfn-pinpoint-campaign-segmentversion): Integer
   [Tags](#cfn-pinpoint-campaign-tags): Json
@@ -91,7 +91,7 @@ The allocated percentage of users \(segment members\) who shouldn't receive mess
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsPaused`  <a name="cfn-pinpoint-campaign-ispaused"></a>
-Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by setting this value to `false`\.  
+Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,18 +139,18 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-treatmentdescription"></a>
-A custom description of a variation of the campaign to use for A/B testing\.  
+A custom description of the default treatment for the campaign\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-treatmentname"></a>
-A custom name for a variation of the campaign to use for A/B testing\.  
+A custom name of the default treatment for the campaign, if the campaign has multiple treatments\. A *treatment* is a variation of a campaign that's used for A/B testing\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-campaign-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-campaign-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-campaign-return-values-ref"></a>
 

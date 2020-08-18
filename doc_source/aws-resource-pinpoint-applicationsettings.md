@@ -13,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Pinpoint::ApplicationSettings",
   "Properties" : {
       "[ApplicationId](#cfn-pinpoint-applicationsettings-applicationid)" : String,
-      "[CampaignHook](#cfn-pinpoint-applicationsettings-campaignhook)" : [CampaignHook](aws-properties-pinpoint-applicationsettings-campaignhook.md),
+      "[CampaignHook](#cfn-pinpoint-applicationsettings-campaignhook)" : CampaignHook,
       "[CloudWatchMetricsEnabled](#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled)" : Boolean,
-      "[Limits](#cfn-pinpoint-applicationsettings-limits)" : [Limits](aws-properties-pinpoint-applicationsettings-limits.md),
-      "[QuietTime](#cfn-pinpoint-applicationsettings-quiettime)" : [QuietTime](aws-properties-pinpoint-applicationsettings-quiettime.md)
+      "[Limits](#cfn-pinpoint-applicationsettings-limits)" : Limits,
+      "[QuietTime](#cfn-pinpoint-applicationsettings-quiettime)" : QuietTime
     }
 }
 ```
@@ -28,12 +28,12 @@ Type: AWS::Pinpoint::ApplicationSettings
 Properties: 
   [ApplicationId](#cfn-pinpoint-applicationsettings-applicationid): String
   [CampaignHook](#cfn-pinpoint-applicationsettings-campaignhook): 
-    [CampaignHook](aws-properties-pinpoint-applicationsettings-campaignhook.md)
+    CampaignHook
   [CloudWatchMetricsEnabled](#cfn-pinpoint-applicationsettings-cloudwatchmetricsenabled): Boolean
   [Limits](#cfn-pinpoint-applicationsettings-limits): 
-    [Limits](aws-properties-pinpoint-applicationsettings-limits.md)
+    Limits
   [QuietTime](#cfn-pinpoint-applicationsettings-quiettime): 
-    [QuietTime](aws-properties-pinpoint-applicationsettings-quiettime.md)
+    QuietTime
 ```
 
 ## Properties<a name="aws-resource-pinpoint-applicationsettings-properties"></a>
@@ -73,7 +73,7 @@ You can override the default quiet time settings for a specific campaign or jour
 *Type*: [QuietTime](aws-properties-pinpoint-applicationsettings-quiettime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-applicationsettings-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-applicationsettings-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-applicationsettings-return-values-ref"></a>
 

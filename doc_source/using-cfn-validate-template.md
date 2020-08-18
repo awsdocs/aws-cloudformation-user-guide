@@ -1,4 +1,4 @@
-# Validating a Template<a name="using-cfn-validate-template"></a>
+# Validating a template<a name="using-cfn-validate-template"></a>
 
 To check your template file for syntax errors, you can use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command\.
 

@@ -1,8 +1,8 @@
-# Reverting an Import Operation<a name="resource-import-revert"></a>
+# Reverting an import operation<a name="resource-import-revert"></a>
 
 To revert an import operation, specify a `Retain` deletion policy for the resource you want to remove from the template to ensure that it's preserved when you delete it from the stack\.
 
-## Revert an Import Operation Using the AWS Management Console<a name="resource-import-revert-console"></a>
+## Revert an import operation using the AWS Management Console<a name="resource-import-revert-console"></a>
 
 1. Specify a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) for the resources you want to remove from your stack\. In the following example template, `GamesTable` is the target of this revert operation\.  
 **Example JSON**  
@@ -75,7 +75,7 @@ To revert an import operation, specify a `Retain` deletion policy for the resour
 
    1. On the **Configure stack options** page, no changes are required\. Choose **Next**\.
 
-   1. On the **Review *stack\_name*** page, review your changes\. If your template contains IAM resources, select **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling Access with AWS Identity and Access Management](using-iam-template.md)\. Then, either update your source stack by creating a change set or update your source stack directly\.
+   1. On the **Review *stack\_name*** page, review your changes\. If your template contains IAM resources, select **I acknowledge that this template may create IAM resources** to specify that you want to use IAM resources in the template\. For more information about using IAM resources in templates, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\. Then, either update your source stack by creating a change set or update your source stack directly\.
 
 1. Remove the resource, related parameters, and outputs from the stack template\. In this example, the template now looks like the following\.  
 **Example JSON**  
@@ -113,7 +113,7 @@ To revert an import operation, specify a `Retain` deletion policy for the resour
 
 1. Repeat step 2 to delete the resource \(`GamesTable`\) and its related parameters and outputs from the stack\.
 
-## Revert an Import Operation Using the AWS CLI<a name="resource-import-revert-cli"></a>
+## Revert an import operation using the AWS CLI<a name="resource-import-revert-cli"></a>
 
 1. Specify a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) for the resources you want to remove from your stack\. In the following example template, `GamesTable` is the target of this revert operation\.  
 **Example JSON**  

@@ -2,16 +2,16 @@
 
 Creates a virtual node within a service mesh\.
 
-A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment\. When you create a virtual node, you can specify the service discovery information for your task group\.
+ A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment\. When you create a virtual node, you can specify the service discovery information for your task group, and whether the proxy running in a task group will communicate with other proxies using Transport Layer Security \(TLS\)\.
 
-Any inbound traffic that your virtual node expects should be specified as a `listener`\. Any outbound traffic that your virtual node expects to reach should be specified as a `backend`\.
+You define a `listener` for any inbound traffic that your virtual node expects\. Any virtual service that your virtual node expects to communicate to is specified as a `backend`\.
 
 The response metadata for your new virtual node contains the `arn` that is associated with the virtual node\. Set this value \(either the full ARN or the truncated resource name: for example, `mesh/default/virtualNode/simpleapp`\) as the `APPMESH_VIRTUAL_NODE_NAME` environment variable for your task group's Envoy proxy container in your task definition or pod spec\. This is then mapped to the `node.id` and `node.cluster` Envoy parameters\.
 
 **Note**  
 If you require your Envoy stats or tracing to use a different name, you can override the `node.cluster` value that is set by `APPMESH_VIRTUAL_NODE_NAME` with the `APPMESH_VIRTUAL_NODE_CLUSTER` environment variable\.
 
-For more information about virtual nodes, see [Virtual Nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)\.
+For more information about virtual nodes, see [Virtual nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)\.
 
 ## Syntax<a name="aws-resource-appmesh-virtualnode-syntax"></a>
 
@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppMesh::VirtualNode",
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualnode-meshname)" : String,
-      "[Spec](#cfn-appmesh-virtualnode-spec)" : [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md),
+      "[MeshOwner](#cfn-appmesh-virtualnode-meshowner)" : String,
+      "[Spec](#cfn-appmesh-virtualnode-spec)" : VirtualNodeSpec,
       "[Tags](#cfn-appmesh-virtualnode-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename)" : String
     }
@@ -37,8 +38,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::VirtualNode
 Properties: 
   [MeshName](#cfn-appmesh-virtualnode-meshname): String
+  [MeshOwner](#cfn-appmesh-virtualnode-meshowner): String
   [Spec](#cfn-appmesh-virtualnode-spec): 
-    [VirtualNodeSpec](aws-properties-appmesh-virtualnode-virtualnodespec.md)
+    VirtualNodeSpec
   [Tags](#cfn-appmesh-virtualnode-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualNodeName](#cfn-appmesh-virtualnode-virtualnodename): String
@@ -49,6 +51,12 @@ Properties:
 `MeshName`  <a name="cfn-appmesh-virtualnode-meshname"></a>
 The name of the service mesh to create the virtual node in\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MeshOwner`  <a name="cfn-appmesh-virtualnode-meshowner"></a>
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -70,7 +78,7 @@ The name to use for the virtual node\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-virtualnode-return-values"></a>
+## Return values<a name="aws-resource-appmesh-virtualnode-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-virtualnode-return-values-ref"></a>
 
@@ -97,10 +105,10 @@ The full Amazon Resource Name \(ARN\) for the virtual node\.
 The name of the service mesh that the virtual node resides in\.
 
 `MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the virtual node\.
@@ -290,6 +298,6 @@ Outputs:
       - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-virtualnode--seealso"></a>
+## See also<a name="aws-resource-appmesh-virtualnode--seealso"></a>
 +  [Virtual Nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualNode](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualNode.html) in the * AWS App Mesh API Reference *\.

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobQueue",
   "Properties" : {
-      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md), ... ],
+      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
       "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
       "[State](#cfn-batch-jobqueue-state)" : String
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Batch::JobQueue
 Properties: 
   [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
-    - [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
+    - ComputeEnvironmentOrder
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [State](#cfn-batch-jobqueue-state): String
@@ -56,10 +56,10 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-jobqueue-return-values"></a>
+## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-jobqueue-return-values-ref"></a>
 

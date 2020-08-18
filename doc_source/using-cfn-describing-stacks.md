@@ -1,9 +1,9 @@
-# Describing and Listing Your Stacks<a name="using-cfn-describing-stacks"></a>
+# Describing and listing your stacks<a name="using-cfn-describing-stacks"></a>
 
 You can use two AWS CLI commands to get information about your AWS CloudFormation stacks: `[aws cloudformation list\-stacks](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stacks.html)` and `[aws cloudformation describe\-stacks](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html)`\.
 
 **Note**  
-See [AWS CloudFormation Resources](using-iam-template.md#resource-level-permissions) for a discussion of how IAM policies may limit what a user can do with these two AWS CLI commands\.
+See [AWS CloudFormation resources](using-iam-template.md#resource-level-permissions) for a discussion of how IAM policies may limit what a user can do with these two AWS CLI commands\.
 
 ## aws cloudformation list\-stacks<a name="using-cfn-describing-stacks-list-stacks"></a>
 
@@ -65,11 +65,11 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 If you don't use the `--stack-name` option to limit the output to one stack, information on all your running stacks is returned\.
 
-## Stack Status Codes<a name="w5792ab1c15c15c17c11"></a>
+## Stack status codes<a name="w6461ab1c15c15c17c11"></a>
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w5792ab1c15c15c17c11b4"></a>
+### <a name="w6461ab1c15c15c17c11b4"></a>
 
 
 | Stack Status | Description | 

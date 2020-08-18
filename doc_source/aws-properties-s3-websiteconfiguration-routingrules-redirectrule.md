@@ -46,7 +46,7 @@ The HTTP redirect code to use on the response\. Not required if one of the sibli
 Protocol to use when redirecting requests\. The default is the protocol that is used in the original request\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `http | https`  
+*Allowed values*: `http | https`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplaceKeyPrefixWith`  <a name="cfn-s3-websiteconfiguration-redirectrule-replacekeyprefixwith"></a>

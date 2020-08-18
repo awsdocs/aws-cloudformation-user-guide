@@ -10,10 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md),
+  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : AccessControlTranslation,
   "[Account](#cfn-s3-bucket-replicationdestination-account)" : String,
   "[Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket)" : String,
-  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md),
+  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : EncryptionConfiguration,
+  "[Metrics](#cfn-s3-bucket-replicationdestination-metrics)" : Metrics,
+  "[ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime)" : ReplicationTime,
   "[StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass)" : String
 }
 ```
@@ -22,11 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation): 
-    [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md)
+    AccessControlTranslation
   [Account](#cfn-s3-bucket-replicationdestination-account): String
   [Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket): String
   [EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)
+    EncryptionConfiguration
+  [Metrics](#cfn-s3-bucket-replicationdestination-metrics): 
+    Metrics
+  [ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime): 
+    ReplicationTime
   [StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass): String
 ```
 
@@ -57,10 +63,22 @@ Specifies encryption\-related information\.
 *Type*: [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Metrics`  <a name="cfn-s3-bucket-replicationdestination-metrics"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [Metrics](aws-properties-s3-bucket-metrics.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ReplicationTime`  <a name="cfn-s3-bucket-replicationdestination-replicationtime"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [ReplicationTime](aws-properties-s3-bucket-replicationtime.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `StorageClass`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass"></a>
- The storage class to use when replicating objects, such as standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
+ The storage class to use when replicating objects, such as S3 Standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
 For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

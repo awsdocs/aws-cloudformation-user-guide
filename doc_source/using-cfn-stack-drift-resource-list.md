@@ -1,4 +1,4 @@
-# Resources that Support Drift Detection<a name="using-cfn-stack-drift-resource-list"></a>
+# Resources that support drift detection<a name="using-cfn-stack-drift-resource-list"></a>
 
 The following resource types support drift detection\.
 

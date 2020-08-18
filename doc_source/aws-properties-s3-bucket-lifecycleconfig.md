@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Rules](#cfn-s3-bucket-lifecycleconfig-rules)" : [ [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md), ... ]
+  "[Rules](#cfn-s3-bucket-lifecycleconfig-rules)" : [ Rule, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Rules](#cfn-s3-bucket-lifecycleconfig-rules): 
-    - [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)
+    - Rule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-properties"></a>

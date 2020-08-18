@@ -53,7 +53,7 @@ If you use this option, you must provide the ARN of an Amazon SES verified email
 Before Amazon Cognito can email your users, it requires additional permissions to call Amazon SES on your behalf\. When you update your user pool with this option, Amazon Cognito creates a *service\-linked role*, which is a type of IAM role, in your AWS account\. This role contains the permissions that allow Amazon Cognito to access Amazon SES and send email messages with your address\. For more information about the service\-linked role that Amazon Cognito creates, see [Using Service\-Linked Roles for Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/using-service-linked-roles.html) in the *Amazon Cognito Developer Guide*\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `COGNITO_DEFAULT | DEVELOPER`  
+*Allowed values*: `COGNITO_DEFAULT | DEVELOPER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `From`  <a name="cfn-cognito-userpool-emailconfiguration-from"></a>

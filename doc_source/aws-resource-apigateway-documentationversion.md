@@ -233,5 +233,5 @@ Resources:
     DependsOn: DocumentationVersion
 ```
 
-## See Also<a name="aws-resource-apigateway-documentationversion--seealso"></a>
+## See also<a name="aws-resource-apigateway-documentationversion--seealso"></a>
 + [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)" : [ [MetricDimension](aws-properties-autoscaling-scalingpolicy-metricdimension.md), ... ],
+  "[Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions)" : [ MetricDimension, ... ],
   "[MetricName](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname)" : String,
   "[Namespace](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)" : String,
   "[Statistic](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic)" : String,
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-dimensions): 
-    - [MetricDimension](aws-properties-autoscaling-scalingpolicy-metricdimension.md)
+    - MetricDimension
   [MetricName](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-metricname): String
   [Namespace](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace): String
   [Statistic](#cfn-autoscaling-scalingpolicy-customizedmetricspecification-statistic): String
@@ -56,7 +56,7 @@ The namespace of the metric\.
 The statistic of the metric\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Average | Maximum | Minimum | SampleCount | Sum`  
+*Allowed values*: `Average | Maximum | Minimum | SampleCount | Sum`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-autoscaling-scalingpolicy-customizedmetricspecification-unit"></a>

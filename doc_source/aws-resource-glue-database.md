@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::Database",
   "Properties" : {
       "[CatalogId](#cfn-glue-database-catalogid)" : String,
-      "[DatabaseInput](#cfn-glue-database-databaseinput)" : [DatabaseInput](aws-properties-glue-database-databaseinput.md)
+      "[DatabaseInput](#cfn-glue-database-databaseinput)" : DatabaseInput
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::Glue::Database
 Properties: 
   [CatalogId](#cfn-glue-database-catalogid): String
   [DatabaseInput](#cfn-glue-database-databaseinput): 
-    [DatabaseInput](aws-properties-glue-database-databaseinput.md)
+    DatabaseInput
 ```
 
 ## Properties<a name="aws-resource-glue-database-properties"></a>
@@ -43,7 +43,7 @@ The metadata for the database\.
 *Type*: [DatabaseInput](aws-properties-glue-database-databaseinput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-database-return-values"></a>
+## Return values<a name="aws-resource-glue-database-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-database-return-values-ref"></a>
 

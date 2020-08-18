@@ -44,7 +44,7 @@ The list of all tags added to the fleet\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-fleet-return-values"></a>
+## Return values<a name="aws-resource-robomaker-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-fleet-return-values-ref"></a>
 

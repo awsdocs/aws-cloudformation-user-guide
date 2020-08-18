@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The output format for the records created on the endpoint\. The message format is `JSON` \(default\) or `JSON_UNFORMATTED` \(a single line with no tab\)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `json | json-unformatted`  
+*Allowed values*: `json | json-unformatted`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-kinesissettings-serviceaccessrolearn"></a>

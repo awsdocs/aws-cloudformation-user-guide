@@ -65,7 +65,7 @@ A name for the `ThreatIntelSet`\. The name is displayed in all finding generated
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-guardduty-threatintelset-return-values"></a>
+## Return values<a name="aws-resource-guardduty-threatintelset-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-threatintelset-return-values-ref"></a>
 

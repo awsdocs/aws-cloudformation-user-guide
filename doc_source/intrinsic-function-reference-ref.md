@@ -11,7 +11,7 @@ For some resources, an identifier is returned that has another significant meani
 **Tip**  
 You can also use `Ref` to add values to Output messages\.
 
-For more information about `Ref` return values for a particular resource or property, refer to the documentation for that resource or property in the [Resource and Property Reference](aws-template-resource-type-ref.md)\.
+For more information about `Ref` return values for a particular resource or property, refer to the documentation for that resource or property in the [Resource and property reference](aws-template-resource-type-ref.md)\.
 
 ## Declaration<a name="ref-declaration"></a>
 
@@ -40,7 +40,7 @@ Syntax for the short form:
 logicalName  
 The logical name of the resource or parameter you want to dereference\.
 
-## Return Value<a name="ref-return-value"></a>
+## Return value<a name="ref-return-value"></a>
 
 The physical ID of the resource or the value of the parameter\.
 
@@ -68,6 +68,6 @@ MyEIP:
     InstanceId: !Ref MyEC2Instance
 ```
 
-## Supported Functions<a name="ref-supported-functions"></a>
+## Supported functions<a name="ref-supported-functions"></a>
 
 You cannot use any functions in the `Ref` function\. You must specify a string that is a resource logical ID\.

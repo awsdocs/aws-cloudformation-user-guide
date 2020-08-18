@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AndStatement](#cfn-wafv2-webacl-statementtwo-andstatement)" : [AndStatementTwo](aws-properties-wafv2-webacl-andstatementtwo.md),
-  "[ByteMatchStatement](#cfn-wafv2-webacl-statementtwo-bytematchstatement)" : [ByteMatchStatement](aws-properties-wafv2-webacl-bytematchstatement.md),
-  "[GeoMatchStatement](#cfn-wafv2-webacl-statementtwo-geomatchstatement)" : [GeoMatchStatement](aws-properties-wafv2-webacl-geomatchstatement.md),
-  "[IPSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-ipsetreferencestatement)" : [IPSetReferenceStatement](aws-properties-wafv2-webacl-ipsetreferencestatement.md),
-  "[ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementtwo-managedrulegroupstatement)" : [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md),
-  "[NotStatement](#cfn-wafv2-webacl-statementtwo-notstatement)" : [NotStatementTwo](aws-properties-wafv2-webacl-notstatementtwo.md),
-  "[OrStatement](#cfn-wafv2-webacl-statementtwo-orstatement)" : [OrStatementTwo](aws-properties-wafv2-webacl-orstatementtwo.md),
-  "[RateBasedStatement](#cfn-wafv2-webacl-statementtwo-ratebasedstatement)" : [RateBasedStatementTwo](aws-properties-wafv2-webacl-ratebasedstatementtwo.md),
-  "[RegexPatternSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-regexpatternsetreferencestatement)" : [RegexPatternSetReferenceStatement](aws-properties-wafv2-webacl-regexpatternsetreferencestatement.md),
-  "[RuleGroupReferenceStatement](#cfn-wafv2-webacl-statementtwo-rulegroupreferencestatement)" : [RuleGroupReferenceStatement](aws-properties-wafv2-webacl-rulegroupreferencestatement.md),
-  "[SizeConstraintStatement](#cfn-wafv2-webacl-statementtwo-sizeconstraintstatement)" : [SizeConstraintStatement](aws-properties-wafv2-webacl-sizeconstraintstatement.md),
-  "[SqliMatchStatement](#cfn-wafv2-webacl-statementtwo-sqlimatchstatement)" : [SqliMatchStatement](aws-properties-wafv2-webacl-sqlimatchstatement.md),
-  "[XssMatchStatement](#cfn-wafv2-webacl-statementtwo-xssmatchstatement)" : [XssMatchStatement](aws-properties-wafv2-webacl-xssmatchstatement.md)
+  "[AndStatement](#cfn-wafv2-webacl-statementtwo-andstatement)" : AndStatementTwo,
+  "[ByteMatchStatement](#cfn-wafv2-webacl-statementtwo-bytematchstatement)" : ByteMatchStatement,
+  "[GeoMatchStatement](#cfn-wafv2-webacl-statementtwo-geomatchstatement)" : GeoMatchStatement,
+  "[IPSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-ipsetreferencestatement)" : IPSetReferenceStatement,
+  "[ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementtwo-managedrulegroupstatement)" : ManagedRuleGroupStatement,
+  "[NotStatement](#cfn-wafv2-webacl-statementtwo-notstatement)" : NotStatementTwo,
+  "[OrStatement](#cfn-wafv2-webacl-statementtwo-orstatement)" : OrStatementTwo,
+  "[RateBasedStatement](#cfn-wafv2-webacl-statementtwo-ratebasedstatement)" : RateBasedStatementTwo,
+  "[RegexPatternSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-regexpatternsetreferencestatement)" : RegexPatternSetReferenceStatement,
+  "[RuleGroupReferenceStatement](#cfn-wafv2-webacl-statementtwo-rulegroupreferencestatement)" : RuleGroupReferenceStatement,
+  "[SizeConstraintStatement](#cfn-wafv2-webacl-statementtwo-sizeconstraintstatement)" : SizeConstraintStatement,
+  "[SqliMatchStatement](#cfn-wafv2-webacl-statementtwo-sqlimatchstatement)" : SqliMatchStatement,
+  "[XssMatchStatement](#cfn-wafv2-webacl-statementtwo-xssmatchstatement)" : XssMatchStatement
 }
 ```
 
@@ -30,31 +30,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AndStatement](#cfn-wafv2-webacl-statementtwo-andstatement): 
-    [AndStatementTwo](aws-properties-wafv2-webacl-andstatementtwo.md)
+    AndStatementTwo
   [ByteMatchStatement](#cfn-wafv2-webacl-statementtwo-bytematchstatement): 
-    [ByteMatchStatement](aws-properties-wafv2-webacl-bytematchstatement.md)
+    ByteMatchStatement
   [GeoMatchStatement](#cfn-wafv2-webacl-statementtwo-geomatchstatement): 
-    [GeoMatchStatement](aws-properties-wafv2-webacl-geomatchstatement.md)
+    GeoMatchStatement
   [IPSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-ipsetreferencestatement): 
-    [IPSetReferenceStatement](aws-properties-wafv2-webacl-ipsetreferencestatement.md)
+    IPSetReferenceStatement
   [ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementtwo-managedrulegroupstatement): 
-    [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md)
+    ManagedRuleGroupStatement
   [NotStatement](#cfn-wafv2-webacl-statementtwo-notstatement): 
-    [NotStatementTwo](aws-properties-wafv2-webacl-notstatementtwo.md)
+    NotStatementTwo
   [OrStatement](#cfn-wafv2-webacl-statementtwo-orstatement): 
-    [OrStatementTwo](aws-properties-wafv2-webacl-orstatementtwo.md)
+    OrStatementTwo
   [RateBasedStatement](#cfn-wafv2-webacl-statementtwo-ratebasedstatement): 
-    [RateBasedStatementTwo](aws-properties-wafv2-webacl-ratebasedstatementtwo.md)
+    RateBasedStatementTwo
   [RegexPatternSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-regexpatternsetreferencestatement): 
-    [RegexPatternSetReferenceStatement](aws-properties-wafv2-webacl-regexpatternsetreferencestatement.md)
+    RegexPatternSetReferenceStatement
   [RuleGroupReferenceStatement](#cfn-wafv2-webacl-statementtwo-rulegroupreferencestatement): 
-    [RuleGroupReferenceStatement](aws-properties-wafv2-webacl-rulegroupreferencestatement.md)
+    RuleGroupReferenceStatement
   [SizeConstraintStatement](#cfn-wafv2-webacl-statementtwo-sizeconstraintstatement): 
-    [SizeConstraintStatement](aws-properties-wafv2-webacl-sizeconstraintstatement.md)
+    SizeConstraintStatement
   [SqliMatchStatement](#cfn-wafv2-webacl-statementtwo-sqlimatchstatement): 
-    [SqliMatchStatement](aws-properties-wafv2-webacl-sqlimatchstatement.md)
+    SqliMatchStatement
   [XssMatchStatement](#cfn-wafv2-webacl-statementtwo-xssmatchstatement): 
-    [XssMatchStatement](aws-properties-wafv2-webacl-xssmatchstatement.md)
+    XssMatchStatement
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-statementtwo-properties"></a>

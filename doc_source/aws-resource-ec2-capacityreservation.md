@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria)" : String,
       "[InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform)" : String,
       "[InstanceType](#cfn-ec2-capacityreservation-instancetype)" : String,
-      "[TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications)" : [ [TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md), ... ],
+      "[TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications)" : [ TagSpecification, ... ],
       "[Tenancy](#cfn-ec2-capacityreservation-tenancy)" : String
     }
 }
@@ -42,7 +42,7 @@ Properties:
   [InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform): String
   [InstanceType](#cfn-ec2-capacityreservation-instancetype): String
   [TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications): 
-    - [TagSpecification](aws-properties-ec2-capacityreservation-tagspecification.md)
+    - TagSpecification
   [Tenancy](#cfn-ec2-capacityreservation-tenancy): String
 ```
 
@@ -74,7 +74,7 @@ Indicates the way in which the Capacity Reservation ends\. A Capacity Reservatio
 +  `limited` \- The Capacity Reservation expires automatically at a specified date and time\. You must provide an `EndDate` value if the `EndDateType` value is `limited`\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `limited | unlimited`  
+*Allowed values*: `limited | unlimited`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EphemeralStorage`  <a name="cfn-ec2-capacityreservation-ephemeralstorage"></a>
@@ -96,14 +96,14 @@ Indicates the type of instance launches that the Capacity Reservation accepts\. 
 Default: `open`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `open | targeted`  
+*Allowed values*: `open | targeted`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstancePlatform`  <a name="cfn-ec2-capacityreservation-instanceplatform"></a>
 The type of operating system for which to reserve capacity\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Linux with SQL Server Enterprise | Linux with SQL Server Standard | Linux with SQL Server Web | Linux/UNIX | Red Hat Enterprise Linux | SUSE Linux | Windows | Windows with SQL Server | Windows with SQL Server Enterprise | Windows with SQL Server Standard | Windows with SQL Server Web`  
+*Allowed values*: `Linux with SQL Server Enterprise | Linux with SQL Server Standard | Linux with SQL Server Web | Linux/UNIX | Red Hat Enterprise Linux | SUSE Linux | Windows | Windows with SQL Server | Windows with SQL Server Enterprise | Windows with SQL Server Standard | Windows with SQL Server Web`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-ec2-capacityreservation-instancetype"></a>
@@ -124,10 +124,10 @@ Indicates the tenancy of the Capacity Reservation\. A Capacity Reservation can h
 +  `dedicated` \- The Capacity Reservation is created on single\-tenant hardware that is dedicated to a single AWS account\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default`  
+*Allowed values*: `dedicated | default`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-capacityreservation-return-values"></a>
+## Return values<a name="aws-resource-ec2-capacityreservation-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-capacityreservation-return-values-ref"></a>
 
@@ -158,5 +158,5 @@ Returns the tenancy of the Capacity Reservation\. For example: `dedicated`\.
 `TotalInstanceCount`  <a name="TotalInstanceCount-fn::getatt"></a>
 Returns the total number of instances for which the Capacity Reservation reserves capacity\. For example: `15`\.
 
-## See Also<a name="aws-resource-ec2-capacityreservation--seealso"></a>
+## See also<a name="aws-resource-ec2-capacityreservation--seealso"></a>
 +  [ On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon Elastic Compute Cloud User Guide for Linux Instances* 

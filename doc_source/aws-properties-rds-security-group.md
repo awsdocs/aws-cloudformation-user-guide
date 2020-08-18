@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBSecurityGroup",
   "Properties" : {
-      "[DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress)" : [ [Ingress](aws-properties-rds-security-group-rule.md), ... ],
+      "[DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress)" : [ Ingress, ... ],
       "[EC2VpcId](#cfn-rds-dbsecuritygroup-ec2vpcid)" : String,
       "[GroupDescription](#cfn-rds-dbsecuritygroup-groupdescription)" : String,
       "[Tags](#cfn-rds-dbsecuritygroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RDS::DBSecurityGroup
 Properties: 
   [DBSecurityGroupIngress](#cfn-rds-dbsecuritygroup-dbsecuritygroupingress): 
-    - [Ingress](aws-properties-rds-security-group-rule.md)
+    - Ingress
   [EC2VpcId](#cfn-rds-dbsecuritygroup-ec2vpcid): String
   [GroupDescription](#cfn-rds-dbsecuritygroup-groupdescription): String
   [Tags](#cfn-rds-dbsecuritygroup-tags): 
@@ -53,7 +53,7 @@ The `EC2VpcId` property is for backward compatibility with older regions, and is
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupDescription`  <a name="cfn-rds-dbsecuritygroup-groupdescription"></a>
-Provides the description of the DB security group\.  
+Provides the description of the DB Security Group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -64,7 +64,7 @@ Tags to assign to the DB security group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-rds-security-group-return-values"></a>
+## Return values<a name="aws-properties-rds-security-group-return-values"></a>
 
 ### Ref<a name="aws-properties-rds-security-group-return-values-ref"></a>
 

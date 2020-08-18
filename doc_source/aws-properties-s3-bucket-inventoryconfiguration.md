@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-s3-bucket-inventoryconfiguration-destination)" : [Destination](aws-properties-s3-bucket-destination.md),
+  "[Destination](#cfn-s3-bucket-inventoryconfiguration-destination)" : Destination,
   "[Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled)" : Boolean,
   "[Id](#cfn-s3-bucket-inventoryconfiguration-id)" : String,
   "[IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions)" : String,
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destination](#cfn-s3-bucket-inventoryconfiguration-destination): 
-    [Destination](aws-properties-s3-bucket-destination.md)
+    Destination
   [Enabled](#cfn-s3-bucket-inventoryconfiguration-enabled): Boolean
   [Id](#cfn-s3-bucket-inventoryconfiguration-id): String
   [IncludedObjectVersions](#cfn-s3-bucket-inventoryconfiguration-includedobjectversions): String
@@ -58,7 +58,7 @@ The ID used to identify the inventory configuration\.
 Object versions to include in the inventory list\. If set to `All`, the list includes all the object versions, which adds the version\-related fields `VersionId`, `IsLatest`, and `DeleteMarker` to the list\. If set to `Current`, the list does not contain these version\-related fields\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `All | Current`  
+*Allowed values*: `All | Current`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionalFields`  <a name="cfn-s3-bucket-inventoryconfiguration-optionalfields"></a>

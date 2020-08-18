@@ -62,7 +62,7 @@ The allowed tenancy of instances launched into the VPC\.
 Updating `InstanceTenancy` requires no replacement only if you are updating its value from `"dedicated"` to `"default"`\. Updating `InstanceTenancy` from `"default"` to `"dedicated"` requires replacement\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default | host`  
+*Allowed values*: `dedicated | default | host`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-aws-ec2-vpc-tags"></a>
@@ -71,7 +71,7 @@ The tags for the VPC\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-vpc-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpc-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpc-return-values-ref"></a>
 
@@ -138,6 +138,6 @@ myVPC:
        Value: bar
 ```
 
-## See Also<a name="aws-resource-ec2-vpc--seealso"></a>
+## See also<a name="aws-resource-ec2-vpc--seealso"></a>
 +  [CreateVpc](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpc.html) in the *Amazon EC2 API Reference*
 +  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*

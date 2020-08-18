@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::SubscriptionDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion)" : [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion)" : SubscriptionDefinitionVersion,
       "[Name](#cfn-greengrass-subscriptiondefinition-name)" : String,
       "[Tags](#cfn-greengrass-subscriptiondefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::SubscriptionDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion): 
-    [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md)
+    SubscriptionDefinitionVersion
   [Name](#cfn-greengrass-subscriptiondefinition-name): String
   [Tags](#cfn-greengrass-subscriptiondefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-subscriptiondefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-subscriptiondefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-subscriptiondefinition-return-values-ref"></a>
 
@@ -159,6 +159,6 @@ TestSubscriptionDefinition:
           Target: !ImportValue TestCanaryLambdaVersionArn
 ```
 
-## See Also<a name="aws-resource-greengrass-subscriptiondefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-subscriptiondefinition--seealso"></a>
 +  [CreateSubscriptionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createsubscriptiondefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

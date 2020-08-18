@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource CSVMappingParameters<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters"></a>
 
-For an SQL\-based application, provides additional mapping information when the record format uses delimiters, such as CSV\. For example, the following sample records use CSV format, where the records use the *'\\n'* as the row delimiter and a comma \(","\) as the column delimiter: 
+For a SQL\-based Kinesis Data Analytics application, provides additional mapping information when the record format uses delimiters, such as CSV\. For example, the following sample records use CSV format, where the records use the *'\\n'* as the row delimiter and a comma \(","\) as the column delimiter: 
 
  `"name1", "address1"` 
 
@@ -42,5 +42,5 @@ The row delimiter\. For example, in a CSV format, *'\\n'* is the typical row del
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-csvmappingparameters--seealso"></a>
 +  [CSVMappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CSVMappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 

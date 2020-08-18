@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Double,
-  "[CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions)" : [ [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md), ... ],
-  "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md),
+  "[CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions)" : [ CopyActionResourceType, ... ],
+  "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : LifecycleResourceType,
   "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : Json,
   "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
   "[ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression)" : String,
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Double
   [CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions): 
-    - [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)
+    - CopyActionResourceType
   [Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle): 
-    [LifecycleResourceType](aws-properties-backup-backupplan-lifecycleresourcetype.md)
+    LifecycleResourceType
   [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): Json
   [RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename): String
   [ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression): String

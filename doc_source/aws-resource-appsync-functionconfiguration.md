@@ -97,7 +97,7 @@ The location of a response mapping template in an Amazon S3 bucket\. Use this if
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>
+## Return values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-functionconfiguration-return-values-ref"></a>
 
@@ -227,5 +227,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-functionconfiguration--seealso"></a>
+## See also<a name="aws-resource-appsync-functionconfiguration--seealso"></a>
 +  [CreateFunction](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateFunction.html) operation in the *AWS AppSync API Reference*\.

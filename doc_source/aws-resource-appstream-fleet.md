@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppStream::Fleet",
   "Properties" : {
-      "[ComputeCapacity](#cfn-appstream-fleet-computecapacity)" : [ComputeCapacity](aws-properties-appstream-fleet-computecapacity.md),
+      "[ComputeCapacity](#cfn-appstream-fleet-computecapacity)" : ComputeCapacity,
       "[Description](#cfn-appstream-fleet-description)" : String,
       "[DisconnectTimeoutInSeconds](#cfn-appstream-fleet-disconnecttimeoutinseconds)" : Integer,
       "[DisplayName](#cfn-appstream-fleet-displayname)" : String,
-      "[DomainJoinInfo](#cfn-appstream-fleet-domainjoininfo)" : [DomainJoinInfo](aws-properties-appstream-fleet-domainjoininfo.md),
+      "[DomainJoinInfo](#cfn-appstream-fleet-domainjoininfo)" : DomainJoinInfo,
       "[EnableDefaultInternetAccess](#cfn-appstream-fleet-enabledefaultinternetaccess)" : Boolean,
       "[FleetType](#cfn-appstream-fleet-fleettype)" : String,
       "[IdleDisconnectTimeoutInSeconds](#cfn-appstream-fleet-idledisconnecttimeoutinseconds)" : Integer,
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds)" : Integer,
       "[Name](#cfn-appstream-fleet-name)" : String,
       "[Tags](#cfn-appstream-fleet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcConfig](#cfn-appstream-fleet-vpcconfig)" : [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)
+      "[VpcConfig](#cfn-appstream-fleet-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -37,12 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppStream::Fleet
 Properties: 
   [ComputeCapacity](#cfn-appstream-fleet-computecapacity): 
-    [ComputeCapacity](aws-properties-appstream-fleet-computecapacity.md)
+    ComputeCapacity
   [Description](#cfn-appstream-fleet-description): String
   [DisconnectTimeoutInSeconds](#cfn-appstream-fleet-disconnecttimeoutinseconds): Integer
   [DisplayName](#cfn-appstream-fleet-displayname): String
   [DomainJoinInfo](#cfn-appstream-fleet-domainjoininfo): 
-    [DomainJoinInfo](aws-properties-appstream-fleet-domainjoininfo.md)
+    DomainJoinInfo
   [EnableDefaultInternetAccess](#cfn-appstream-fleet-enabledefaultinternetaccess): Boolean
   [FleetType](#cfn-appstream-fleet-fleettype): String
   [IdleDisconnectTimeoutInSeconds](#cfn-appstream-fleet-idledisconnecttimeoutinseconds): Integer
@@ -54,7 +54,7 @@ Properties:
   [Tags](#cfn-appstream-fleet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-appstream-fleet-vpcconfig): 
-    [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-appstream-fleet-properties"></a>
@@ -106,7 +106,7 @@ ON\_DEMAND
 Provide users with access to applications after they connect, which takes one to two minutes\. You are charged for instance streaming when users are connected and a small hourly fee for instances that are not streaming apps\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ALWAYS_ON | ON_DEMAND`  
+*Allowed values*: `ALWAYS_ON | ON_DEMAND`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IdleDisconnectTimeoutInSeconds`  <a name="cfn-appstream-fleet-idledisconnecttimeoutinseconds"></a>
@@ -156,6 +156,12 @@ The instance type to use when launching fleet instances\. The following instance
 + stream\.graphics\-design\.2xlarge
 + stream\.graphics\-design\.4xlarge
 + stream\.graphics\-desktop\.2xlarge
++ stream\.graphics\.g4dn\.xlarge
++ stream\.graphics\.g4dn\.2xlarge
++ stream\.graphics\.g4dn\.4xlarge
++ stream\.graphics\.g4dn\.8xlarge
++ stream\.graphics\.g4dn\.12xlarge
++ stream\.graphics\.g4dn\.16xlarge
 + stream\.graphics\-pro\.4xlarge
 + stream\.graphics\-pro\.8xlarge
 + stream\.graphics\-pro\.16xlarge
@@ -190,5 +196,5 @@ The VPC configuration for the fleet\.
 *Type*: [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-fleet--seealso"></a>
+## See also<a name="aws-resource-appstream-fleet--seealso"></a>
 +  [CreateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 

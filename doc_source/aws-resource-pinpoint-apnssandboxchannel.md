@@ -99,7 +99,7 @@ The key identifier that's assigned to your APNs signing key, if you want Amazon 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-apnssandboxchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-apnssandboxchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-apnssandboxchannel-return-values-ref"></a>
 

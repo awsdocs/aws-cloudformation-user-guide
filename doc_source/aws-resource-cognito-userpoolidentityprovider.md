@@ -53,10 +53,15 @@ A list of identity provider identifiers\.
 
 `ProviderDetails`  <a name="cfn-cognito-userpoolidentityprovider-providerdetails"></a>
 The identity provider details\. The following list describes the provider detail keys for each identity provider type\.  
-+ For Google, Facebook and Login with Amazon:
++ For Google and Login with Amazon:
   + client\_id
   + client\_secret
   + authorize\_scopes
++ For Facebook:
+  + client\_id
+  + client\_secret
+  + authorize\_scopes
+  + api\_version
 + For Sign in with Apple:
   + client\_id
   + team\_id
@@ -93,7 +98,7 @@ The identity provider name\.
 The identity provider type\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Facebook | Google | LoginWithAmazon | OIDC | SAML | SignInWithApple`  
+*Allowed values*: `Facebook | Google | LoginWithAmazon | OIDC | SAML | SignInWithApple`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolidentityprovider-userpoolid"></a>
@@ -105,7 +110,7 @@ The user pool ID\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpoolidentityprovider-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpoolidentityprovider-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpoolidentityprovider-return-values-ref"></a>
 

@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LakeFormation::Permissions",
   "Properties" : {
-      "[DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal)" : [DataLakePrincipal](aws-properties-lakeformation-permissions-datalakeprincipal.md),
+      "[DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal)" : DataLakePrincipal,
       "[Permissions](#cfn-lakeformation-permissions-permissions)" : [ String, ... ],
       "[PermissionsWithGrantOption](#cfn-lakeformation-permissions-permissionswithgrantoption)" : [ String, ... ],
-      "[Resource](#cfn-lakeformation-permissions-resource)" : [Resource](aws-properties-lakeformation-permissions-resource.md)
+      "[Resource](#cfn-lakeformation-permissions-resource)" : Resource
     }
 }
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LakeFormation::Permissions
 Properties: 
   [DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal): 
-    [DataLakePrincipal](aws-properties-lakeformation-permissions-datalakeprincipal.md)
+    DataLakePrincipal
   [Permissions](#cfn-lakeformation-permissions-permissions): 
     - String
   [PermissionsWithGrantOption](#cfn-lakeformation-permissions-permissionswithgrantoption): 
     - String
   [Resource](#cfn-lakeformation-permissions-resource): 
-    [Resource](aws-properties-lakeformation-permissions-resource.md)
+    Resource
 ```
 
 ## Properties<a name="aws-resource-lakeformation-permissions-properties"></a>

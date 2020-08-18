@@ -51,30 +51,30 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgateway-properties"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-transitgateway-amazonsideasn"></a>
-A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs\.  
+A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs\. The default is 64512\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoAcceptSharedAttachments`  <a name="cfn-ec2-transitgateway-autoacceptsharedattachments"></a>
-Indicates whether attachment requests are automatically accepted\.  
+Enable or disable automatic acceptance of attachment requests\. Disabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
+*Allowed values*: `disable | enable`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultRouteTableAssociation`  <a name="cfn-ec2-transitgateway-defaultroutetableassociation"></a>
-Indicates whether resource attachments are automatically associated with the default association route table\.  
+Enable or disable automatic association with the default association route table\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
+*Allowed values*: `disable | enable`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultRouteTablePropagation`  <a name="cfn-ec2-transitgateway-defaultroutetablepropagation"></a>
-Indicates whether resource attachments automatically propagate routes to the default propagation route table\.  
+Enable or disable automatic propagation of routes to the default propagation route table\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
+*Allowed values*: `disable | enable`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-transitgateway-description"></a>
@@ -84,10 +84,10 @@ The description of the transit gateway\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsSupport`  <a name="cfn-ec2-transitgateway-dnssupport"></a>
-Indicates whether DNS support is enabled\.  
+Enable or disable DNS support\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
+*Allowed values*: `disable | enable`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-transitgateway-tags"></a>
@@ -97,13 +97,13 @@ The tags for the transit gateway\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpnEcmpSupport`  <a name="cfn-ec2-transitgateway-vpnecmpsupport"></a>
-Indicates whether Equal Cost Multipath Protocol support is enabled\.  
+Enable or disable Equal Cost Multipath Protocol support\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
+*Allowed values*: `disable | enable`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-transitgateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-transitgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-transitgateway-return-values-ref"></a>
 
@@ -158,5 +158,6 @@ The following example declares a transit gateway\.
         Value: !Ref 'AWS::StackId'
 ```
 
-## See Also<a name="aws-resource-ec2-transitgateway--seealso"></a>
+## See also<a name="aws-resource-ec2-transitgateway--seealso"></a>
 +  [CreateTransitGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGateway.html) in the *Amazon EC2 API Reference*
++  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html)

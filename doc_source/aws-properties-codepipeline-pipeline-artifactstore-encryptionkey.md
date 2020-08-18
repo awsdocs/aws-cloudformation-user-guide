@@ -2,6 +2,8 @@
 
 Represents information about the key used to encrypt data in the artifact store, such as an AWS Key Management Service \(AWS KMS\) key\.
 
+`EncryptionKey` is a property of the [ArtifactStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html) property type\.
+
 ## Syntax<a name="aws-properties-codepipeline-pipeline-artifactstore-encryptionkey-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

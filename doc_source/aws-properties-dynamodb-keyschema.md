@@ -46,6 +46,6 @@ The sort key of an item is also known as its *range attribute*\. The term "range
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-dynamodb-keyschema--seealso"></a>
+## See also<a name="aws-properties-dynamodb-keyschema--seealso"></a>
 
 For an example of a declared key schema, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\. 

@@ -60,5 +60,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The type of the file system\. The one supported type is `EFS`\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EFS`  
+*Allowed values*: `EFS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

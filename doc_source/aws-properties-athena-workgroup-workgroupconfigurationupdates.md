@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled)" : Boolean,
   "[RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery)" : Boolean,
   "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled)" : Boolean,
-  "[ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates)" : [ResultConfigurationUpdates](aws-properties-athena-workgroup-resultconfigurationupdates.md)
+  "[ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates)" : ResultConfigurationUpdates
 }
 ```
 
@@ -28,13 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery): Boolean
   [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled): Boolean
   [ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates): 
-    [ResultConfigurationUpdates](aws-properties-athena-workgroup-resultconfigurationupdates.md)
+    ResultConfigurationUpdates
 ```
 
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfigurationupdates-properties"></a>
 
 `BytesScannedCutoffPerQuery`  <a name="cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery"></a>
 The upper limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\.  
+This property currently supports integer types\. Support for long values is planned\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,7 +53,7 @@ Indicates whether this workgroup enables publishing metrics to Amazon CloudWatch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveBytesScannedCutoffPerQuery`  <a name="cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery"></a>
-Indicates that the data usage control limit per query is removed\. [BytesScannedCutoffPerQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery)  
+Indicates that the data usage control limit per query is removed\. See [BytesScannedCutoffPerQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

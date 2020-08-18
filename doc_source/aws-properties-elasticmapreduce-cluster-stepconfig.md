@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure)" : String,
-  "[HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep)" : [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md),
+  "[HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep)" : HadoopJarStepConfig,
   "[Name](#cfn-elasticmapreduce-cluster-stepconfig-name)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure): String
   [HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep): 
-    [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md)
+    HadoopJarStepConfig
   [Name](#cfn-elasticmapreduce-cluster-stepconfig-name): String
 ```
 

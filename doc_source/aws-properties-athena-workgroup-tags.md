@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Tags](#cfn-athena-workgroup-tags-tags)" : [ [Tag](#aws-properties-athena-workgroup-tags), ... ]
+  "[Tags](#cfn-athena-workgroup-tags-tags)" : [ Tag, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Tags](#cfn-athena-workgroup-tags-tags): 
-    - [Tag](#aws-properties-athena-workgroup-tags)
+    - Tag
 ```
 
 ## Properties<a name="aws-properties-athena-workgroup-tags-properties"></a>

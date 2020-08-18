@@ -13,15 +13,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SSM::MaintenanceWindowTask",
   "Properties" : {
       "[Description](#cfn-ssm-maintenancewindowtask-description)" : String,
-      "[LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo)" : [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md),
+      "[LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo)" : LoggingInfo,
       "[MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency)" : String,
       "[MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors)" : String,
       "[Name](#cfn-ssm-maintenancewindowtask-name)" : String,
       "[Priority](#cfn-ssm-maintenancewindowtask-priority)" : Integer,
       "[ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn)" : String,
-      "[Targets](#cfn-ssm-maintenancewindowtask-targets)" : [ [Target](aws-properties-ssm-maintenancewindowtask-target.md), ... ],
+      "[Targets](#cfn-ssm-maintenancewindowtask-targets)" : [ Target, ... ],
       "[TaskArn](#cfn-ssm-maintenancewindowtask-taskarn)" : String,
-      "[TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters)" : [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md),
+      "[TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters)" : TaskInvocationParameters,
       "[TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters)" : Json,
       "[TaskType](#cfn-ssm-maintenancewindowtask-tasktype)" : String,
       "[WindowId](#cfn-ssm-maintenancewindowtask-windowid)" : String
@@ -36,17 +36,17 @@ Type: AWS::SSM::MaintenanceWindowTask
 Properties: 
   [Description](#cfn-ssm-maintenancewindowtask-description): String
   [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo): 
-    [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
+    LoggingInfo
   [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
   [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
   [Name](#cfn-ssm-maintenancewindowtask-name): String
   [Priority](#cfn-ssm-maintenancewindowtask-priority): Integer
   [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn): String
   [Targets](#cfn-ssm-maintenancewindowtask-targets): 
-    - [Target](aws-properties-ssm-maintenancewindowtask-target.md)
+    - Target
   [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn): String
   [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters): 
-    [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
+    TaskInvocationParameters
   [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters): Json
   [TaskType](#cfn-ssm-maintenancewindowtask-tasktype): String
   [WindowId](#cfn-ssm-maintenancewindowtask-windowid): String
@@ -146,8 +146,8 @@ The parameters to pass to the task when it runs\.
 The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FUNCTIONS`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Allowed values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
 The ID of the maintenance window where the task is registered\.  
@@ -158,7 +158,7 @@ The ID of the maintenance window where the task is registered\.
 *Pattern*: `^mw-[0-9a-f]{17}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ssm-maintenancewindowtask-return-values"></a>
+## Return values<a name="aws-resource-ssm-maintenancewindowtask-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-maintenancewindowtask-return-values-ref"></a>
 
@@ -304,7 +304,7 @@ Resources:
     DependsOn: MaintenanceWindowTarget
 ```
 
-## See Also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
+## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
 +  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
 +  [RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.

@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname)" : String,
+      "[DeletionProtection](#cfn-docdb-dbcluster-deletionprotection)" : Boolean,
       "[EnableCloudwatchLogsExports](#cfn-docdb-dbcluster-enablecloudwatchlogsexports)" : [ String, ... ],
       "[EngineVersion](#cfn-docdb-dbcluster-engineversion)" : String,
       "[KmsKeyId](#cfn-docdb-dbcluster-kmskeyid)" : String,
@@ -44,6 +45,7 @@ Properties:
   [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname): String
+  [DeletionProtection](#cfn-docdb-dbcluster-deletionprotection): Boolean
   [EnableCloudwatchLogsExports](#cfn-docdb-dbcluster-enablecloudwatchlogsexports): 
     - String
   [EngineVersion](#cfn-docdb-dbcluster-engineversion): String
@@ -103,8 +105,14 @@ Example: `mySubnetgroup`
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`DeletionProtection`  <a name="cfn-docdb-dbcluster-deletionprotection"></a>
+Protects clusters from being accidentally deleted\. If enabled, the cluster cannot be deleted unless it is modified and `DeletionProtection` is disabled\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EnableCloudwatchLogsExports`  <a name="cfn-docdb-dbcluster-enablecloudwatchlogsexports"></a>
-A list of log types that need to be enabled for exporting to Amazon CloudWatch Logs\.  
+The list of log types that need to be enabled for exporting to Amazon CloudWatch Logs\. You can enable audit logs or profiler logs\. For more information, see [Auditing Amazon DocumentDB Events](https://docs.aws.amazon.com/documentdb/latest/developerguide/event-auditing.html) and [Profiling Amazon DocumentDB Operations](https://docs.aws.amazon.com/documentdb/latest/developerguide/profiling.html)\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -199,7 +207,7 @@ A list of EC2 VPC security groups to associate with this cluster\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-docdb-dbcluster-return-values"></a>
+## Return values<a name="aws-resource-docdb-dbcluster-return-values"></a>
 
 ### Ref<a name="aws-resource-docdb-dbcluster-return-values-ref"></a>
 
@@ -285,7 +293,7 @@ Resources:
                Value: "String"
 ```
 
-## See Also<a name="aws-resource-docdb-dbcluster--seealso"></a>
+## See also<a name="aws-resource-docdb-dbcluster--seealso"></a>
 +  [DBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBCluster.html) 
 +  [CreateDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBCluster.html) 
 +  [DeleteDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBCluster.html) 

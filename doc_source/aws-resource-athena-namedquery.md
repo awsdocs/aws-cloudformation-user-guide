@@ -1,6 +1,9 @@
 # AWS::Athena::NamedQuery<a name="aws-resource-athena-namedquery"></a>
 
-The AWS::Athena::NamedQuery resource specifies an Amazon Athena query, where `QueryString` is the list of SQL query statements that comprise the query\. For more information, see [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) in the *Amazon Athena API Reference*\.
+The `AWS::Athena::NamedQuery` resource specifies an Amazon Athena saved query, where `QueryString` is the list of SQL query statements that comprise the query\.
+
+**Note**  
+The `AWS::Athena::NamedQuery` resource creates a named query in the primary workgroup\. To create a named query in a different workgroup, use the [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) API operation and specify a workgroup in the `WorkGroup` parameter, or use the [create\-named\-query](https://docs.aws.amazon.com/cli/latest/reference/athena/create-named-query.html) AWS CLI command and specify a workgroup in the `--work-group` option\.
 
 ## Syntax<a name="aws-resource-athena-namedquery-syntax"></a>
 
@@ -66,13 +69,24 @@ The SQL query statements that comprise the query\.
 *Maximum*: `262144`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-athena-namedquery-return-values"></a>
+## Return values<a name="aws-resource-athena-namedquery-return-values"></a>
 
 ### Ref<a name="aws-resource-athena-namedquery-return-values-ref"></a>
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-athena-namedquery-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-athena-namedquery-return-values-fn--getatt-fn--getatt"></a>
+
+`NamedQueryId`  <a name="NamedQueryId-fn::getatt"></a>
+The unique ID of the query\.
 
 ## Examples<a name="aws-resource-athena-namedquery--examples"></a>
 

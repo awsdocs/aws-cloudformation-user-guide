@@ -1,6 +1,6 @@
 # AWS::EKS::Nodegroup ScalingConfig<a name="aws-properties-eks-nodegroup-scalingconfig"></a>
 
-An object representing the scaling configuration details for the Auto Scaling group that is associated with your node group\.
+An object representing the scaling configuration details for the Auto Scaling group that is associated with your node group\. If you specify a value for any property, then you must specify values for all of the properties\.
 
 ## Syntax<a name="aws-properties-eks-nodegroup-scalingconfig-syntax"></a>
 

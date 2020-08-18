@@ -55,7 +55,7 @@ A string that excludes characters in the generated password\. By default, all ch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeLowercase`  <a name="cfn-secretsmanager-secret-generatesecretstring-excludelowercase"></a>
-Specifies the generated password should not include lowercase letters\. The default parameter is `False`, and the generated password can include lowercase letters\.  
+Specifies the generated password should not include lowercase letters\. By default, SEcrets Manager disables this parameter, and the generated password can include lowercase `False`, and the generated password can include lowercase letters\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,7 +89,7 @@ The JSON key name used to add the generated password to the JSON structure speci
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeSpace`  <a name="cfn-secretsmanager-secret-generatesecretstring-includespace"></a>
-Specifies that the generated password can include the space character\. The default parameter is `False`, and the generated password doesn't include space characters\.  
+Specifies that the generated password can include the space character\. By default, Secrets Manager disables this parameter, and the generated password doesn't include space   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,18 +101,18 @@ The desired length of the generated password\. The default value if you do not i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequireEachIncludedType`  <a name="cfn-secretsmanager-secret-generatesecretstring-requireeachincludedtype"></a>
-Specifies whether the generated password must include at least one of every allowed character type\. The default value is `True`, and the generated password includes at least one of every character type\.  
+Specifies whether the generated password must include at least one of every allowed character type\. By default, Secrets Manager enables this parameter, and the generated password includes at least one of every character type\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretStringTemplate`  <a name="cfn-secretsmanager-secret-generatesecretstring-secretstringtemplate"></a>
-A properly structured JSON string that the generated password can be added to\. If you specify this parameter, then you must also specify `GenerateStringKey`\. The key is combined with the generated random string and inserted into the JSON structure specified by this parameter\. The merged JSON string is returned as the completed `SecretString` of the secret\. By default, Secrets Manager does not return the generated random password string, and doesn't embed it in a JSON structure\.  
+A properly structured JSON string that the generated password can be added to\. If you specify this parameter, then you must also specify `GenerateStringKey`\. Secrets Manager combines this with the generated random string and inserts into the JSON structure specified by this parameter\. The merged JSON string returns as the completed `SecretString` of the secret\. By default, Secrets Manager does not return the generated random password string, and doesn't embed it in a JSON structure\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-secretsmanager-secret-generatesecretstring--seealso"></a>
+## See also<a name="aws-properties-secretsmanager-secret-generatesecretstring--seealso"></a>
 +  [GetRandomPassword](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetRandomPassword.html) API in the AWS Secrets Manager API Reference

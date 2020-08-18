@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Backup::BackupSelection",
   "Properties" : {
       "[BackupPlanId](#cfn-backup-backupselection-backupplanid)" : String,
-      "[BackupSelection](#cfn-backup-backupselection-backupselection)" : [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
+      "[BackupSelection](#cfn-backup-backupselection-backupselection)" : BackupSelectionResourceType
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::Backup::BackupSelection
 Properties: 
   [BackupPlanId](#cfn-backup-backupselection-backupplanid): String
   [BackupSelection](#cfn-backup-backupselection-backupselection): 
-    [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
+    BackupSelectionResourceType
 ```
 
 ## Properties<a name="aws-resource-backup-backupselection-properties"></a>
@@ -43,7 +43,7 @@ It includes an array of resources, an optional array of patterns to exclude reso
 *Type*: [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-backup-backupselection-return-values"></a>
+## Return values<a name="aws-resource-backup-backupselection-return-values"></a>
 
 ### Ref<a name="aws-resource-backup-backupselection-return-values-ref"></a>
 

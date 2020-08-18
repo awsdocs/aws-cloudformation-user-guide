@@ -43,7 +43,7 @@ The status value REGISTER\_INACTIVE is deprecated and should not be used\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iot-certificate-return-values"></a>
+## Return values<a name="aws-resource-iot-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-certificate-return-values-ref"></a>
 

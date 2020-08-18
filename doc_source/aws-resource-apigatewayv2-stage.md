@@ -12,14 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGatewayV2::Stage",
   "Properties" : {
-      "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md),
+      "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : AccessLogSettings,
       "[ApiId](#cfn-apigatewayv2-stage-apiid)" : String,
       "[AutoDeploy](#cfn-apigatewayv2-stage-autodeploy)" : Boolean,
       "[ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid)" : String,
-      "[DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings)" : [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md),
+      "[DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings)" : RouteSettings,
       "[DeploymentId](#cfn-apigatewayv2-stage-deploymentid)" : String,
       "[Description](#cfn-apigatewayv2-stage-description)" : String,
-      "[RouteSettings](#cfn-apigatewayv2-stage-routesettings)" : [Json](aws-properties-apigatewayv2-stage-routesettings.md),
+      "[RouteSettings](#cfn-apigatewayv2-stage-routesettings)" : Json,
       "[StageName](#cfn-apigatewayv2-stage-stagename)" : String,
       "[StageVariables](#cfn-apigatewayv2-stage-stagevariables)" : Json,
       "[Tags](#cfn-apigatewayv2-stage-tags)" : Json
@@ -33,15 +33,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGatewayV2::Stage
 Properties: 
   [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
-    [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)
+    AccessLogSettings
   [ApiId](#cfn-apigatewayv2-stage-apiid): String
   [AutoDeploy](#cfn-apigatewayv2-stage-autodeploy): Boolean
   [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
   [DefaultRouteSettings](#cfn-apigatewayv2-stage-defaultroutesettings): 
-    [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)
+    RouteSettings
   [DeploymentId](#cfn-apigatewayv2-stage-deploymentid): String
   [Description](#cfn-apigatewayv2-stage-description): String
-  [RouteSettings](#cfn-apigatewayv2-stage-routesettings): [Json](aws-properties-apigatewayv2-stage-routesettings.md)
+  [RouteSettings](#cfn-apigatewayv2-stage-routesettings): Json
   [StageName](#cfn-apigatewayv2-stage-stagename): String
   [StageVariables](#cfn-apigatewayv2-stage-stagevariables): Json
   [Tags](#cfn-apigatewayv2-stage-tags): Json
@@ -104,7 +104,7 @@ The stage name\. Stage names can only contain alphanumeric characters, hyphens, 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageVariables`  <a name="cfn-apigatewayv2-stage-stagevariables"></a>
-A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\. Supported only for WebSocket APIs\.  
+A map that defines the stage variables for a `Stage`\. Variable names can have alphanumeric and underscore characters, and the values must match \[A\-Za\-z0\-9\-\.\_\~:/?\#&=,\]\+\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -115,7 +115,7 @@ The collection of tags\. Each tag element is associated with a given resource\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-stage-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-stage-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-stage-return-values-ref"></a>
 
@@ -147,7 +147,7 @@ The following example creates a `stage` resource called `MyStage` and associates
             "DefaultRouteSettings": {
                 "DetailedMetricsEnabled": true,
                 "LoggingLevel": "INFO",
-                "DataTraceEnabled": true,
+                "DataTraceEnabled": false,
                 "ThrottlingBurstLimit": 10,
                 "ThrottlingRateLimit": 10
             },
@@ -173,7 +173,7 @@ MyStage:
     DefaultRouteSettings:
       DetailedMetricsEnabled: true
       LoggingLevel: INFO
-      DataTraceEnabled: true
+      DataTraceEnabled: false
       ThrottlingBurstLimit: 10
       ThrottlingRateLimit: 10
     AccessLogSettings:
@@ -186,5 +186,5 @@ MyStage:
         "status":"$context.status","connectionId":"$context.connectionId"}
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-stage--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-stage--seealso"></a>
 + [CreateStage](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html#CreateStage) in the *Amazon API Gateway Version 2 API Reference*

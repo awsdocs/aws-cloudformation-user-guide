@@ -38,7 +38,7 @@ Determines how *ACM Private CA* interprets the `Value` parameter, an integer\. S
 Note: When UTCTime is used, if the year field \(YY\) is greater than or equal to 50, the year is interpreted as 19YY\. If the year field is less than 50, the year is interpreted as 20YY\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ABSOLUTE | DAYS | END_DATE | MONTHS | YEARS`  
+*Allowed values*: `ABSOLUTE | DAYS | END_DATE | MONTHS | YEARS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-acmpca-certificate-validity-value"></a>

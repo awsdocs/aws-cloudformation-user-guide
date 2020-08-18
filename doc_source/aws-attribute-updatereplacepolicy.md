@@ -1,4 +1,4 @@
-# UpdateReplacePolicy Attribute<a name="aws-attribute-updatereplacepolicy"></a>
+# UpdateReplacePolicy attribute<a name="aws-attribute-updatereplacepolicy"></a>
 
 Use the UpdateReplacePolicy attribute to retain or \(in some cases\) backup the existing physical instance of a resource when it is replaced during a stack update operation\. 
 
@@ -6,7 +6,7 @@ When you initiate a stack update, AWS CloudFormation updates resources based on 
 
 For resources that support snapshots, such as `AWS::EC2::Volume`, specify `Snapshot` to have AWS CloudFormation create a snapshot before deleting the old resource instance\.
 
-You can apply the UpdateReplacePolicy attribute to any resource\. UpdateReplacePolicy is only executed if you update a resource property whose update behavior is specified as [**Replacement**](using-cfn-updating-stacks-update-behaviors.md#update-replacement), thereby causing AWS CloudFormation to replace the old resource with a new one with a new physical ID\. For example, if you update the `Engine` property of an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type, AWS CloudFormation creates a new resource and replaces the current DB instance resource with the new one\. The UpdateReplacePolicy attribute would then dictate whether AWS CloudFormation deleted, retained, or created a snapshot of the old DB instance\. The update behavior for each property of a resource is specified in the reference topic for that resource in the [AWS Resource and Property Types Reference](aws-template-resource-type-ref.md)\. For more information on resource update behavior, see [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)\.
+You can apply the UpdateReplacePolicy attribute to any resource\. UpdateReplacePolicy is only executed if you update a resource property whose update behavior is specified as [**Replacement**](using-cfn-updating-stacks-update-behaviors.md#update-replacement), thereby causing AWS CloudFormation to replace the old resource with a new one with a new physical ID\. For example, if you update the `Engine` property of an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type, AWS CloudFormation creates a new resource and replaces the current DB instance resource with the new one\. The UpdateReplacePolicy attribute would then dictate whether AWS CloudFormation deleted, retained, or created a snapshot of the old DB instance\. The update behavior for each property of a resource is specified in the reference topic for that resource in the [AWS resource and property types reference](aws-template-resource-type-ref.md)\. For more information on resource update behavior, see [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
 The UpdateReplacePolicy attribute applies to [stack updates you perform directly](using-cfn-updating-stacks-direct.md), as well as stack updates performed using [change sets](using-cfn-updating-stacks-changesets.md)\.
 
@@ -45,7 +45,7 @@ Resources:
     Properties: {}
 ```
 
-## UpdateReplacePolicy Options<a name="aws-attribute-updatereplacepolicy-options"></a>
+## UpdateReplacePolicy options<a name="aws-attribute-updatereplacepolicy-options"></a>
 
 Delete  
 AWS CloudFormation deletes the resource and all its content if applicable during resource replacement\. You can add this policy to any resource type\. By default, if you don't specify an UpdateReplacePolicy, AWS CloudFormation deletes your resources\. However, be aware of the following consideration:  

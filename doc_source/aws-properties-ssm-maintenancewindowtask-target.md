@@ -43,5 +43,5 @@ User\-defined criteria that maps to `Key`\. For example, if you specify `Instanc
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ssm-maintenancewindowtask-target--seealso"></a>
+## See also<a name="aws-properties-ssm-maintenancewindowtask-target--seealso"></a>
 +  [RegisterTargetWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTargetWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.

@@ -3,7 +3,7 @@
 The `AWS::RDS::DBClusterParameterGroup` resource creates a new Amazon RDS DB cluster parameter group\. For more information, see [Managing an Amazon Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_Aurora.html) in the *Amazon Aurora User Guide*\.
 
 **Note**  
-If you apply a parameter group to a DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\.
+If you apply a parameter group to a DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\. If you attempt to apply change to parameter group referenced by stopped DB Cluster, update stack would wait until cluster is started.
 
 ## Syntax<a name="aws-resource-rds-dbclusterparametergroup-syntax"></a>
 
@@ -66,7 +66,7 @@ Tags to assign to the DB cluster parameter group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-rds-dbclusterparametergroup-return-values"></a>
+## Return values<a name="aws-resource-rds-dbclusterparametergroup-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-dbclusterparametergroup-return-values-ref"></a>
 

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MediaLive::InputSecurityGroup",
   "Properties" : {
       "[Tags](#cfn-medialive-inputsecuritygroup-tags)" : Json,
-      "[WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules)" : [ [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md), ... ]
+      "[WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules)" : [ InputWhitelistRuleCidr, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::MediaLive::InputSecurityGroup
 Properties: 
   [Tags](#cfn-medialive-inputsecuritygroup-tags): Json
   [WhitelistRules](#cfn-medialive-inputsecuritygroup-whitelistrules): 
-    - [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md)
+    - InputWhitelistRuleCidr
 ```
 
 ## Properties<a name="aws-resource-medialive-inputsecuritygroup-properties"></a>
@@ -44,7 +44,7 @@ The list of IPv4 CIDR addresses to include in the input security group as "allow
 *Type*: List of [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-medialive-inputsecuritygroup-return-values"></a>
+## Return values<a name="aws-resource-medialive-inputsecuritygroup-return-values"></a>
 
 ### Ref<a name="aws-resource-medialive-inputsecuritygroup-return-values-ref"></a>
 

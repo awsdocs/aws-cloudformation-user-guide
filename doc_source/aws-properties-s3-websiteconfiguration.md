@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ErrorDocument](#cfn-s3-websiteconfiguration-errordocument)" : String,
   "[IndexDocument](#cfn-s3-websiteconfiguration-indexdocument)" : String,
-  "[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo)" : [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md),
-  "[RoutingRules](#cfn-s3-websiteconfiguration-routingrules)" : [ [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md), ... ]
+  "[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo)" : RedirectAllRequestsTo,
+  "[RoutingRules](#cfn-s3-websiteconfiguration-routingrules)" : [ RoutingRule, ... ]
 }
 ```
 
@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ErrorDocument](#cfn-s3-websiteconfiguration-errordocument): String
   [IndexDocument](#cfn-s3-websiteconfiguration-indexdocument): String
   [RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo): 
-    [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
+    RedirectAllRequestsTo
   [RoutingRules](#cfn-s3-websiteconfiguration-routingrules): 
-    - [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)
+    - RoutingRule
 ```
 
 ## Properties<a name="aws-properties-s3-websiteconfiguration-properties"></a>

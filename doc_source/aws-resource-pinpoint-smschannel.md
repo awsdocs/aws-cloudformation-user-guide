@@ -61,7 +61,7 @@ For information about obtaining a dedicated short code for sending SMS messages,
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-smschannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-smschannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-smschannel-return-values-ref"></a>
 

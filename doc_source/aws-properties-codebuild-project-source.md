@@ -10,10 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Auth](#cfn-codebuild-project-source-auth)" : [SourceAuth](aws-properties-codebuild-project-sourceauth.md),
+  "[Auth](#cfn-codebuild-project-source-auth)" : SourceAuth,
   "[BuildSpec](#cfn-codebuild-project-source-buildspec)" : String,
+  "[BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig)" : BuildStatusConfig,
   "[GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth)" : Integer,
-  "[GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig)" : [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md),
+  "[GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig)" : GitSubmodulesConfig,
   "[InsecureSsl](#cfn-codebuild-project-source-insecuressl)" : Boolean,
   "[Location](#cfn-codebuild-project-source-location)" : String,
   "[ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus)" : Boolean,
@@ -26,11 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Auth](#cfn-codebuild-project-source-auth): 
-    [SourceAuth](aws-properties-codebuild-project-sourceauth.md)
+    SourceAuth
   [BuildSpec](#cfn-codebuild-project-source-buildspec): String
+  [BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig): 
+    BuildStatusConfig
   [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
   [GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig): 
-    [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md)
+    GitSubmodulesConfig
   [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
   [Location](#cfn-codebuild-project-source-location): String
   [ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus): Boolean
@@ -51,6 +54,12 @@ This information is for the AWS CodeBuild console's use only\. Your code should 
 The build specification for the project\. If this value is not provided, then the source code must contain a buildspec file named `buildspec.yml` at the root level\. If this value is provided, it can be either a single string containing the entire build specification, or the path to an alternate buildspec file relative to the value of the built\-in environment variable `CODEBUILD_SRC_DIR`\. The alternate buildspec file can have a name other than `buildspec.yml`, for example `myspec.yml` or `build_spec_qa.yml` or similar\. For more information, see the [Build Spec Reference](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-example) in the *AWS CodeBuild User Guide*\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BuildStatusConfig`  <a name="cfn-codebuild-project-source-buildstatusconfig"></a>
+Contains information that defines how the build project reports the build status to the source provider\. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`\.  
+*Required*: No  
+*Type*: [BuildStatusConfig](aws-properties-codebuild-project-buildstatusconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GitCloneDepth`  <a name="cfn-codebuild-project-source-gitclonedepth"></a>
@@ -103,11 +112,11 @@ The type of repository that contains the source code to be built\. Valid values 
 +  `BITBUCKET`: The source code is in a Bitbucket repository\.
 +  `CODECOMMIT`: The source code is in an AWS CodeCommit repository\.
 +  `CODEPIPELINE`: The source code settings are specified in the source action of a pipeline in AWS CodePipeline\.
-+  `GITHUB`: The source code is in a GitHub repository\.
-+  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise repository\.
++  `GITHUB`: The source code is in a GitHub or GitHub Enterprise Cloud repository\.
++  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise Server repository\.
 +  `NO_SOURCE`: The project does not have input source code\.
 +  `S3`: The source code is in an Amazon Simple Storage Service \(Amazon S3\) input bucket\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BITBUCKET | CODECOMMIT | CODEPIPELINE | GITHUB | GITHUB_ENTERPRISE | NO_SOURCE | S3`  
+*Allowed values*: `BITBUCKET | CODECOMMIT | CODEPIPELINE | GITHUB | GITHUB_ENTERPRISE | NO_SOURCE | S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Id](#cfn-s3-bucket-metricsconfiguration-id)" : String,
   "[Prefix](#cfn-s3-bucket-metricsconfiguration-prefix)" : String,
-  "[TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters)" : [ [TagFilter](aws-properties-s3-bucket-tagfilter.md), ... ]
+  "[TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters)" : [ TagFilter, ... ]
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Id](#cfn-s3-bucket-metricsconfiguration-id): String
   [Prefix](#cfn-s3-bucket-metricsconfiguration-prefix): String
   [TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters): 
-    - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-metricsconfiguration-properties"></a>

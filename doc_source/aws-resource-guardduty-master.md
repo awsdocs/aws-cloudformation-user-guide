@@ -49,7 +49,7 @@ The AWS account ID of the account designated as the GuardDuty master account\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-guardduty-master-return-values"></a>
+## Return values<a name="aws-resource-guardduty-master-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-master-return-values-ref"></a>
 
@@ -79,10 +79,10 @@ To declare a GuardDuty `Master` resource:
 #### YAML<a name="aws-resource-guardduty-master--examples--Declare_a_Master_Resource--yaml"></a>
 
 ```
-"GDMaster": {
-    Type: AWS::GuardDuty::Master
-    Properties:
-        DetectorId: "a12abc34d567e8fa901bc2d34e56789f0"
-        MasterId: "012345678901"
-        InvitationId: "84b097800250d17d1872b34c4daadcf5"
+GDMaster:
+  Type: AWS::GuardDuty::Master
+  Properties:
+      DetectorId: "a12abc34d567e8fa901bc2d34e56789f0"
+      MasterId: "012345678901"
+      InvitationId: "84b097800250d17d1872b34c4daadcf5"
 ```

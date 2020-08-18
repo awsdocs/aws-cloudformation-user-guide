@@ -74,7 +74,7 @@ If you specify `AssignIpv6AddressOnCreation`, you must also specify `Ipv6CidrBlo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MapPublicIpOnLaunch`  <a name="cfn-ec2-subnet-mappubliciponlaunch"></a>
-Indicates whether instances launched in this subnet receive a public IPv4 address\.  
+Indicates whether instances launched in this subnet receive a public IPv4 address\. The default value is `false`\.  
 If you specify `MapPublicIpOnLaunch`, you cannot specify `AssignIpv6AddressOnCreation`\.  
 *Required*: No  
 *Type*: Boolean  
@@ -93,7 +93,7 @@ If you update this property, you must also update the `CidrBlock` property\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-subnet-return-values"></a>
+## Return values<a name="aws-resource-ec2-subnet-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-subnet-return-values-ref"></a>
 
@@ -157,6 +157,6 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
         Value: bar
 ```
 
-## See Also<a name="aws-resource-ec2-subnet--seealso"></a>
+## See also<a name="aws-resource-ec2-subnet--seealso"></a>
 +  [CreateSubnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSubnet.html) in the *Amazon EC2 API Reference*
 +  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*

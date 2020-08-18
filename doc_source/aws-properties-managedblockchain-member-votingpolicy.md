@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ApprovalThresholdPolicy](#cfn-managedblockchain-member-votingpolicy-approvalthresholdpolicy)" : [ApprovalThresholdPolicy](aws-properties-managedblockchain-member-approvalthresholdpolicy.md)
+  "[ApprovalThresholdPolicy](#cfn-managedblockchain-member-votingpolicy-approvalthresholdpolicy)" : ApprovalThresholdPolicy
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ApprovalThresholdPolicy](#cfn-managedblockchain-member-votingpolicy-approvalthresholdpolicy): 
-    [ApprovalThresholdPolicy](aws-properties-managedblockchain-member-approvalthresholdpolicy.md)
+    ApprovalThresholdPolicy
 ```
 
 ## Properties<a name="aws-properties-managedblockchain-member-votingpolicy-properties"></a>

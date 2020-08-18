@@ -28,5 +28,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-gitsubmodulesconfig--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-gitsubmodulesconfig--seealso"></a>
 +  [ GitSubmodulesConfig](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_GitSubmodulesConfig.html) in the *AWS CodeBuild API Reference* 

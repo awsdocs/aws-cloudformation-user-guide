@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection)" : [AudioLanguageSelection](aws-properties-medialive-channel-audiolanguageselection.md),
-  "[AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection)" : [AudioPidSelection](aws-properties-medialive-channel-audiopidselection.md)
+  "[AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection)" : AudioLanguageSelection,
+  "[AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection)" : AudioPidSelection
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection): 
-    [AudioLanguageSelection](aws-properties-medialive-channel-audiolanguageselection.md)
+    AudioLanguageSelection
   [AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection): 
-    [AudioPidSelection](aws-properties-medialive-channel-audiopidselection.md)
+    AudioPidSelection
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-audioselectorsettings-properties"></a>

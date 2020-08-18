@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IamRoleArn](#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn)" : String,
-  "[ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags)" : [ [ConditionResourceType](aws-properties-backup-backupselection-conditionresourcetype.md), ... ],
+  "[ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags)" : [ ConditionResourceType, ... ],
   "[Resources](#cfn-backup-backupselection-backupselectionresourcetype-resources)" : [ String, ... ],
   "[SelectionName](#cfn-backup-backupselection-backupselectionresourcetype-selectionname)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IamRoleArn](#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn): String
   [ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags): 
-    - [ConditionResourceType](aws-properties-backup-backupselection-conditionresourcetype.md)
+    - ConditionResourceType
   [Resources](#cfn-backup-backupselection-backupselectionresourcetype-resources): 
     - String
   [SelectionName](#cfn-backup-backupselection-backupselectionresourcetype-selectionname): String

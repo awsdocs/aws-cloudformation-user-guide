@@ -15,12 +15,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Cluster](#cfn-ecs-taskset-cluster)" : String,
       "[ExternalId](#cfn-ecs-taskset-externalid)" : String,
       "[LaunchType](#cfn-ecs-taskset-launchtype)" : String,
-      "[LoadBalancers](#cfn-ecs-taskset-loadbalancers)" : [ [LoadBalancer](aws-properties-ecs-taskset-loadbalancer.md), ... ],
-      "[NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration)" : [NetworkConfiguration](aws-properties-ecs-taskset-networkconfiguration.md),
+      "[LoadBalancers](#cfn-ecs-taskset-loadbalancers)" : [ LoadBalancer, ... ],
+      "[NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration)" : NetworkConfiguration,
       "[PlatformVersion](#cfn-ecs-taskset-platformversion)" : String,
-      "[Scale](#cfn-ecs-taskset-scale)" : [Scale](aws-properties-ecs-taskset-scale.md),
+      "[Scale](#cfn-ecs-taskset-scale)" : Scale,
       "[Service](#cfn-ecs-taskset-service)" : String,
-      "[ServiceRegistries](#cfn-ecs-taskset-serviceregistries)" : [ [ServiceRegistry](aws-properties-ecs-taskset-serviceregistry.md), ... ],
+      "[ServiceRegistries](#cfn-ecs-taskset-serviceregistries)" : [ ServiceRegistry, ... ],
       "[TaskDefinition](#cfn-ecs-taskset-taskdefinition)" : String
     }
 }
@@ -35,15 +35,15 @@ Properties:
   [ExternalId](#cfn-ecs-taskset-externalid): String
   [LaunchType](#cfn-ecs-taskset-launchtype): String
   [LoadBalancers](#cfn-ecs-taskset-loadbalancers): 
-    - [LoadBalancer](aws-properties-ecs-taskset-loadbalancer.md)
+    - LoadBalancer
   [NetworkConfiguration](#cfn-ecs-taskset-networkconfiguration): 
-    [NetworkConfiguration](aws-properties-ecs-taskset-networkconfiguration.md)
+    NetworkConfiguration
   [PlatformVersion](#cfn-ecs-taskset-platformversion): String
   [Scale](#cfn-ecs-taskset-scale): 
-    [Scale](aws-properties-ecs-taskset-scale.md)
+    Scale
   [Service](#cfn-ecs-taskset-service): String
   [ServiceRegistries](#cfn-ecs-taskset-serviceregistries): 
-    - [ServiceRegistry](aws-properties-ecs-taskset-serviceregistry.md)
+    - ServiceRegistry
   [TaskDefinition](#cfn-ecs-taskset-taskdefinition): String
 ```
 
@@ -66,7 +66,7 @@ The launch type that new tasks in the task set will use\. For more information, 
 If a `launchType` is specified, the `capacityProviderStrategy` parameter must be omitted\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `EC2 | FARGATE`  
+*Allowed values*: `EC2 | FARGATE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoadBalancers`  <a name="cfn-ecs-taskset-loadbalancers"></a>
@@ -111,7 +111,7 @@ The task definition for the tasks in the task set to use\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ecs-taskset-return-values"></a>
+## Return values<a name="aws-resource-ecs-taskset-return-values"></a>
 
 ### Ref<a name="aws-resource-ecs-taskset-return-values-ref"></a>
 

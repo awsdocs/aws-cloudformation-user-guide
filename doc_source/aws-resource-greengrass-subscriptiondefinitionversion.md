@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::SubscriptionDefinitionVersion",
   "Properties" : {
       "[SubscriptionDefinitionId](#cfn-greengrass-subscriptiondefinitionversion-subscriptiondefinitionid)" : String,
-      "[Subscriptions](#cfn-greengrass-subscriptiondefinitionversion-subscriptions)" : [ [Subscription](aws-properties-greengrass-subscriptiondefinitionversion-subscription.md), ... ]
+      "[Subscriptions](#cfn-greengrass-subscriptiondefinitionversion-subscriptions)" : [ Subscription, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::Greengrass::SubscriptionDefinitionVersion
 Properties: 
   [SubscriptionDefinitionId](#cfn-greengrass-subscriptiondefinitionversion-subscriptiondefinitionid): String
   [Subscriptions](#cfn-greengrass-subscriptiondefinitionversion-subscriptions): 
-    - [Subscription](aws-properties-greengrass-subscriptiondefinitionversion-subscription.md)
+    - Subscription
 ```
 
 ## Properties<a name="aws-resource-greengrass-subscriptiondefinitionversion-properties"></a>
@@ -46,7 +46,7 @@ The subscriptions in this version\.
 *Type*: List of [Subscription](aws-properties-greengrass-subscriptiondefinitionversion-subscription.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-subscriptiondefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-subscriptiondefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-subscriptiondefinitionversion-return-values-ref"></a>
 
@@ -128,6 +128,6 @@ TestSubscriptionDefinitionVersion:
         Target: !ImportValue TestCanaryLambdaVersionArn
 ```
 
-## See Also<a name="aws-resource-greengrass-subscriptiondefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-subscriptiondefinitionversion--seealso"></a>
 +  [CreateSubscriptionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createsubscriptiondefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

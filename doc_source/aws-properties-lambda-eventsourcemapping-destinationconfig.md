@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)" : [OnFailure](aws-properties-lambda-eventsourcemapping-onfailure.md)
+  "[OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)" : OnFailure
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure): 
-    [OnFailure](aws-properties-lambda-eventsourcemapping-onfailure.md)
+    OnFailure
 ```
 
 ## Properties<a name="aws-properties-lambda-eventsourcemapping-destinationconfig-properties"></a>

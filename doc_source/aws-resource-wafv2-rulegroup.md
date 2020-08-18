@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
-      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ [Rule](aws-properties-wafv2-rulegroup-rule.md), ... ],
+      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ Rule, ... ],
       "[Scope](#cfn-wafv2-rulegroup-scope)" : String,
       "[Tags](#cfn-wafv2-rulegroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : VisibilityConfig
     }
 }
 ```
@@ -37,12 +37,12 @@ Properties:
   [Description](#cfn-wafv2-rulegroup-description): String
   [Name](#cfn-wafv2-rulegroup-name): String
   [Rules](#cfn-wafv2-rulegroup-rules): 
-    - [Rule](aws-properties-wafv2-rulegroup-rule.md)
+    - Rule
   [Scope](#cfn-wafv2-rulegroup-scope): String
   [Tags](#cfn-wafv2-rulegroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig): 
-    [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+    VisibilityConfig
 ```
 
 ## Properties<a name="aws-resource-wafv2-rulegroup-properties"></a>
@@ -81,6 +81,7 @@ The Rule statements used to identify the web requests that you want to allow, bl
 
 `Scope`  <a name="cfn-wafv2-rulegroup-scope"></a>
 Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,7 +98,7 @@ Defines and enables Amazon CloudWatch metrics and web request sample collection\
 *Type*: [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-rulegroup-return-values"></a>
+## Return values<a name="aws-resource-wafv2-rulegroup-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-rulegroup-return-values-ref"></a>
 

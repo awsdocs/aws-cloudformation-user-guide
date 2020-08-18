@@ -60,5 +60,5 @@ The condition state\. Currently, the values supported are `SUCCEEDED`, `STOPPED`
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-trigger-condition--seealso"></a>
+## See also<a name="aws-properties-glue-trigger-condition--seealso"></a>
 +  [Condition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Condition) in the *AWS Glue Developer Guide* 

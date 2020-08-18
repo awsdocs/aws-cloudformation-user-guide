@@ -52,7 +52,7 @@ The name or Amazon Resource Name \(ARN\) of the Auto Scaling group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredCapacity`  <a name="cfn-as-scheduledaction-desiredcapacity"></a>
-The number of Amazon EC2 instances that should be running in the Auto Scaling group\.  
+The desired capacity is the initial capacity of the Auto Scaling group after the scheduled action runs and the capacity it attempts to maintain\. It can scale beyond this capacity if you add more scaling conditions\.  
 You must specify at least one of the following properties: `MaxSize`, `MinSize`, or `DesiredCapacity`\.   
 *Required*: Conditional  
 *Type*: Integer  
@@ -65,14 +65,14 @@ The date and time in UTC for the recurring schedule to end\. For example, `"2019
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSize`  <a name="cfn-as-scheduledaction-maxsize"></a>
-The maximum number of Amazon EC2 instances in the Auto Scaling group\.  
+The maximum size of the Auto Scaling group\.  
 You must specify at least one of the following properties: `MaxSize`, `MinSize`, or `DesiredCapacity`\.   
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinSize`  <a name="cfn-as-scheduledaction-minsize"></a>
-The minimum number of Amazon EC2 instances in the Auto Scaling group\.  
+The minimum size of the Auto Scaling group\.  
 You must specify at least one of the following properties: `MaxSize`, `MinSize`, or `DesiredCapacity`\.   
 *Required*: Conditional  
 *Type*: Integer  
@@ -91,7 +91,7 @@ The date and time in UTC for this action to start\. For example, `"2019-06-01T00
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-as-scheduledaction-return-values"></a>
+## Return values<a name="aws-resource-as-scheduledaction-return-values"></a>
 
 ### Ref<a name="aws-resource-as-scheduledaction-return-values-ref"></a>
 

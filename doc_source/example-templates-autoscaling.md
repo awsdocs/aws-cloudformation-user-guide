@@ -1,4 +1,4 @@
-# Walkthrough: Create a Scalable, Load\-balancing Web Server<a name="example-templates-autoscaling"></a>
+# Walkthrough: Create a scalable, load\-balancing web server<a name="example-templates-autoscaling"></a>
 
 This template creates a sample web site that uses Auto Scaling and Elastic Load Balancing and is configured to use multiple availability zones\. The template also contains CloudWatch alarms that execute Auto Scaling policies to add or remove instances from the Auto Scaling group when the defined thresholds are exceeded\.
 
@@ -9,7 +9,7 @@ The template assumes that your account supports the EC2\-VPC platform\. In other
 
 You can get the latest version of this sample template at [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/AutoScalingMultiAZWithNotifications\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/AutoScalingMultiAZWithNotifications.template)\.
 
-## Auto Scaling Multi\-AZ Template<a name="example-templates-autoscaling-template"></a>
+## Auto Scaling Multi\-AZ template<a name="example-templates-autoscaling-template"></a>
 
 ```
 {
@@ -472,7 +472,7 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
 }
 ```
 
-## Template Walkthrough<a name="example-templates-autoscaling-description"></a>
+## Template walkthrough<a name="example-templates-autoscaling-description"></a>
 
 The example template contains an Auto Scaling group with a LoadBalancer, a security group that defines ingress rules, CloudWatch alarms, and Auto Scaling policies\.
 
@@ -486,7 +486,7 @@ The [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFor
 The [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html) resource LaunchConfig declares the following configurations to use for the EC2 instances in the WebServerGroup Auto Scaling group:
 + *KeyName* takes the value of the KeyName input parameter as the EC2 key pair to use\.
 + *UserData* is the Base64 encoded value of the WebServerPort parameter, which is passed to an application \.
-+ *SecurityGroups* is a list of EC2 security groups that contain the firewall ingress rules for EC2 instances in the Auto Scaling group\. In this example, there is only one security group and it is declared as a [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource: InstanceSecurityGroup\. This security group contains two ingress rules: 1\) a TCP ingress rule that allows access from all IP addresses \("CidrIp" : "0\.0\.0\.0/0"\) for port 22 \(for SSH access\) and 2\) a TCP ingress rule that allows access from the ElasticLoadBalancer resource for the WebServerPort port by specifying the LoadBalancer's source security group\. The [GetAtt](intrinsic-function-reference-getatt.md) function is used to get the SourceSecurityGroup\.OwnerAlias and SourceSecurityGroup\.GroupName properties from the ElasticLoadBalancer resource\. For more information about the Elastic Load Balancing security groups, see [Manage Security Groups in Amazon EC2\-Classic](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/using-elb-security-groups.html) or [Manage Security Groups in Amazon VPC](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/USVPC_ApplySG.html)\.
++ *SecurityGroups* is a list of EC2 security groups that contain the firewall ingress rules for EC2 instances in the Auto Scaling group\. In this example, there is only one security group and it is declared as a [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource: InstanceSecurityGroup\. This security group contains two ingress rules: 1\) a TCP ingress rule that allows access from all IP addresses \("CidrIp" : "0\.0\.0\.0/0"\) for port 22 \(for SSH access\) and 2\) a TCP ingress rule that allows access from the ElasticLoadBalancer resource for the WebServerPort port by specifying the LoadBalancer's source security group\. The [GetAtt](intrinsic-function-reference-getatt.md) function is used to get the SourceSecurityGroup\.OwnerAlias and SourceSecurityGroup\.GroupName properties from the ElasticLoadBalancer resource\. For more information about the Elastic Load Balancing security groups, see [Manage security groups in Amazon EC2\-Classic](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/using-elb-security-groups.html) or [Manage security groups in Amazon VPC](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/USVPC_ApplySG.html)\.
 + *ImageId* is the evaluated value of a set of nested maps\. We added the maps so that the template contained the logic for choosing the right image ID\. That logic is based on the instance type that was specified with the InstanceType parameter \(AWSInstanceType2Arch maps the instance type to an architecture 32 or 64\) and the region where the stack is created \(AWSRegionArch2AMI maps the region and architecture to a image ID\):
 
   ```

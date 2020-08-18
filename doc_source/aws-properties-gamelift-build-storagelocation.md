@@ -56,7 +56,7 @@ The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-gamelift-build-storagelocation--seealso"></a>
+## See also<a name="aws-properties-gamelift-build-storagelocation--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Create a Build with Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
 + [ Upload Script Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*

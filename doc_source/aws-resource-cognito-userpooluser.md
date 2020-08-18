@@ -16,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DesiredDeliveryMediums](#cfn-cognito-userpooluser-desireddeliverymediums)" : [ String, ... ],
       "[ForceAliasCreation](#cfn-cognito-userpooluser-forcealiascreation)" : Boolean,
       "[MessageAction](#cfn-cognito-userpooluser-messageaction)" : String,
-      "[UserAttributes](#cfn-cognito-userpooluser-userattributes)" : [ [AttributeType](aws-properties-cognito-userpooluser-attributetype.md), ... ],
+      "[UserAttributes](#cfn-cognito-userpooluser-userattributes)" : [ AttributeType, ... ],
       "[Username](#cfn-cognito-userpooluser-username)" : String,
       "[UserPoolId](#cfn-cognito-userpooluser-userpoolid)" : String,
-      "[ValidationData](#cfn-cognito-userpooluser-validationdata)" : [ [AttributeType](aws-properties-cognito-userpooluser-attributetype.md), ... ]
+      "[ValidationData](#cfn-cognito-userpooluser-validationdata)" : [ AttributeType, ... ]
     }
 }
 ```
@@ -35,11 +35,11 @@ Properties:
   [ForceAliasCreation](#cfn-cognito-userpooluser-forcealiascreation): Boolean
   [MessageAction](#cfn-cognito-userpooluser-messageaction): String
   [UserAttributes](#cfn-cognito-userpooluser-userattributes): 
-    - [AttributeType](aws-properties-cognito-userpooluser-attributetype.md)
+    - AttributeType
   [Username](#cfn-cognito-userpooluser-username): String
   [UserPoolId](#cfn-cognito-userpooluser-userpoolid): String
   [ValidationData](#cfn-cognito-userpooluser-validationdata): 
-    - [AttributeType](aws-properties-cognito-userpooluser-attributetype.md)
+    - AttributeType
 ```
 
 ## Properties<a name="aws-resource-cognito-userpooluser-properties"></a>
@@ -74,7 +74,7 @@ If this parameter is set to `False`, the API throws an `AliasExistsException` er
 Set to `"RESEND"` to resend the invitation message to a user that already exists and reset the expiration limit on the user's account\. Set to `"SUPPRESS"` to suppress sending the message\. Only one value can be specified\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `RESEND | SUPPRESS`  
+*Allowed values*: `RESEND | SUPPRESS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserAttributes`  <a name="cfn-cognito-userpooluser-userattributes"></a>
@@ -114,7 +114,7 @@ The user's validation data is not persisted\.
 *Type*: List of [AttributeType](aws-properties-cognito-userpooluser-attributetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpooluser-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpooluser-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpooluser-return-values-ref"></a>
 

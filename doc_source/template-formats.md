@@ -1,4 +1,4 @@
-# AWS CloudFormation Template Formats<a name="template-formats"></a>
+# AWS CloudFormation template formats<a name="template-formats"></a>
 
 You can author AWS CloudFormation templates in JSON or YAML formats\. We support all AWS CloudFormation features and functions for both formats, including in AWS CloudFormation Designer\.
 
@@ -29,7 +29,7 @@ Resources:
             VolumeSize: 20
 ```
 
-For more information about the template syntax for each format, see [Template Anatomy](template-anatomy.md)\.
+For more information about the template syntax for each format, see [Template anatomy](template-anatomy.md)\.
 
 AWS CloudFormation supports the following JSON and YAML specifications:
 

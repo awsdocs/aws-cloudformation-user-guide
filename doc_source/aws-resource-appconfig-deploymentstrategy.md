@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[GrowthType](#cfn-appconfig-deploymentstrategy-growthtype)" : String,
       "[Name](#cfn-appconfig-deploymentstrategy-name)" : String,
       "[ReplicateTo](#cfn-appconfig-deploymentstrategy-replicateto)" : String,
-      "[Tags](#cfn-appconfig-deploymentstrategy-tags)" : [ [Tags](aws-properties-appconfig-deploymentstrategy-tags.md), ... ]
+      "[Tags](#cfn-appconfig-deploymentstrategy-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -51,7 +51,7 @@ Properties:
   [Name](#cfn-appconfig-deploymentstrategy-name): String
   [ReplicateTo](#cfn-appconfig-deploymentstrategy-replicateto): String
   [Tags](#cfn-appconfig-deploymentstrategy-tags): 
-    - [Tags](aws-properties-appconfig-deploymentstrategy-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-deploymentstrategy-properties"></a>
@@ -96,7 +96,7 @@ The algorithm used to define how percentage grows over time\. AWS AppConfig supp
 Expressed numerically, the deployment rolls out as follows: 2% of the targets, 4% of the targets, 8% of the targets, and continues until the configuration has been deployed to all targets\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `EXPONENTIAL | LINEAR`  
+*Allowed values*: `EXPONENTIAL | LINEAR`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-appconfig-deploymentstrategy-name"></a>
@@ -111,7 +111,7 @@ A name for the deployment strategy\.
 Save the deployment strategy to a Systems Manager \(SSM\) document\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `NONE | SSM_DOCUMENT`  
+*Allowed values*: `NONE | SSM_DOCUMENT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-appconfig-deploymentstrategy-tags"></a>
@@ -120,7 +120,7 @@ Metadata to assign to an AppConfig resource\. Tags help organize and categorize 
 *Type*: [List](aws-properties-appconfig-deploymentstrategy-tags.md) of [Tags](aws-properties-appconfig-deploymentstrategy-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-deploymentstrategy-return-values"></a>
+## Return values<a name="aws-resource-appconfig-deploymentstrategy-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-deploymentstrategy-return-values-ref"></a>
 
@@ -176,3 +176,7 @@ Resources:
         - Key: Env
           Value: test
 ```
+
+## See also<a name="aws-resource-appconfig-deploymentstrategy--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Creating a deployment strategy](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-deployment-strategy.html)

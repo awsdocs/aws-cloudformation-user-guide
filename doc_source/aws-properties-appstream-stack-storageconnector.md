@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The type of storage connector\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GOOGLE_DRIVE | HOMEFOLDERS | ONE_DRIVE`  
+*Allowed values*: `GOOGLE_DRIVE | HOMEFOLDERS | ONE_DRIVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Domains`  <a name="cfn-appstream-stack-storageconnector-domains"></a>

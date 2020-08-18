@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CachingKeys`  <a name="cfn-appsync-resolver-cachingconfig-cachingkeys"></a>
 The caching keys for a resolver that has caching enabled\.  
-Valid values are entries from the `$context.identity` and `$context.arguments` maps\.  
+Valid values are entries from the `$context.arguments`, `$context.source`, and `$context.identity` maps\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

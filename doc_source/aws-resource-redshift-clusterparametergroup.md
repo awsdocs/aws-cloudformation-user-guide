@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-redshift-clusterparametergroup-description)" : String,
       "[ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
-      "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ [Parameter](aws-property-redshift-clusterparametergroup-parameter.md), ... ],
+      "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
       "[Tags](#cfn-redshift-clusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-redshift-clusterparametergroup-description): String
   [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
   [Parameters](#cfn-redshift-clusterparametergroup-parameters): 
-    - [Parameter](aws-property-redshift-clusterparametergroup-parameter.md)
+    - Parameter
   [Tags](#cfn-redshift-clusterparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -61,7 +61,7 @@ The list of tags for the cluster parameter group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-redshift-clusterparametergroup-return-values"></a>
+## Return values<a name="aws-resource-redshift-clusterparametergroup-return-values"></a>
 
 ### Ref<a name="aws-resource-redshift-clusterparametergroup-return-values-ref"></a>
 

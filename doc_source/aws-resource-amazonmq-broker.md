@@ -32,20 +32,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
-      "[Configuration](#cfn-amazonmq-broker-configuration)" : [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md),
+      "[Configuration](#cfn-amazonmq-broker-configuration)" : ConfigurationId,
       "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
-      "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md),
+      "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : EncryptionOptions,
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
-      "[Logs](#cfn-amazonmq-broker-logs)" : [LogList](aws-properties-amazonmq-broker-loglist.md),
-      "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md),
+      "[Logs](#cfn-amazonmq-broker-logs)" : LogList,
+      "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : MaintenanceWindow,
       "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
       "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
       "[StorageType](#cfn-amazonmq-broker-storagetype)" : String,
       "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
-      "[Tags](#cfn-amazonmq-broker-tags)" : [ [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md), ... ],
-      "[Users](#cfn-amazonmq-broker-users)" : [ [User](aws-properties-amazonmq-broker-user.md), ... ]
+      "[Tags](#cfn-amazonmq-broker-tags)" : [ TagsEntry, ... ],
+      "[Users](#cfn-amazonmq-broker-users)" : [ User, ... ]
     }
 }
 ```
@@ -58,17 +58,17 @@ Properties:
   [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade): Boolean
   [BrokerName](#cfn-amazonmq-broker-brokername): String
   [Configuration](#cfn-amazonmq-broker-configuration): 
-    [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
+    ConfigurationId
   [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
   [EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions): 
-    [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)
+    EncryptionOptions
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
   [Logs](#cfn-amazonmq-broker-logs): 
-    [LogList](aws-properties-amazonmq-broker-loglist.md)
+    LogList
   [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime): 
-    [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)
+    MaintenanceWindow
   [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible): Boolean
   [SecurityGroups](#cfn-amazonmq-broker-securitygroups): 
     - String
@@ -76,9 +76,9 @@ Properties:
   [SubnetIds](#cfn-amazonmq-broker-subnetids): 
     - String
   [Tags](#cfn-amazonmq-broker-tags): 
-    - [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md)
+    - TagsEntry
   [Users](#cfn-amazonmq-broker-users): 
-    - [User](aws-properties-amazonmq-broker-user.md)
+    - User
 ```
 
 ## Properties<a name="aws-resource-amazonmq-broker-properties"></a>
@@ -181,7 +181,7 @@ The list of ActiveMQ users \(persons or applications\) who can access queues and
 *Type*: List of [User](aws-properties-amazonmq-broker-user.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-broker-return-values"></a>
+## Return values<a name="aws-resource-amazonmq-broker-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-broker-return-values-ref"></a>
 
