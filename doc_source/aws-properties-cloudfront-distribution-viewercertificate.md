@@ -75,7 +75,6 @@ If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), specify
 + The ciphers that CloudFront can use to encrypt the content that it returns to viewers\.
 For more information, see [Security Policy](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValues-security-policy) and [Supported Protocols and Ciphers Between Viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html#secure-connections-supported-ciphers) in the *Amazon CloudFront Developer Guide*\.  
 On the CloudFront console, this setting is called **Security Policy**\.
-We recommend that you specify `TLSv1.2_2018` unless your viewers are using browsers or devices that don’t support TLSv1\.2\.  
 When you’re using SNI only \(you set `SslSupportMethod` to `sni-only`\), you must specify `TLSv1` or higher\.   
 If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net` \(you set `CloudFrontDefaultCertificate` to `true`\), CloudFront automatically sets the security policy to `TLSv1` regardless of the value that you set here\.  
 *Required*: Conditional  
