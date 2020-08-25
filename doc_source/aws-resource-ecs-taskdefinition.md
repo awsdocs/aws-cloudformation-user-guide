@@ -25,7 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration,
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
       "[Tags](#cfn-ecs-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TaskDefinitionStatus](#cfn-ecs-taskdefinition-taskdefinitionstatus)" : String,
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
       "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume, ... ]
     }
@@ -56,7 +55,6 @@ Properties:
     - String
   [Tags](#cfn-ecs-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [TaskDefinitionStatus](#cfn-ecs-taskdefinition-taskdefinitionstatus): String
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
   [Volumes](#cfn-ecs-taskdefinition-volumes): 
     - Volume
@@ -180,12 +178,6 @@ The following basic restrictions apply to tags:
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`TaskDefinitionStatus`  <a name="cfn-ecs-taskdefinition-taskdefinitionstatus"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>

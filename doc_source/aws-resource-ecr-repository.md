@@ -1,6 +1,6 @@
 # AWS::ECR::Repository<a name="aws-resource-ecr-repository"></a>
 
-The `AWS::ECR::Repository` resource specifies an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon Elastic Container Registry User Guide*\.
+The `AWS::ECR::Repository` resource specifies an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images, Open Container Initiative \(OCI\) images, and OCI compatible artifacts\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon ECR User Guide*\.
 
 ## Syntax<a name="aws-resource-ecr-repository-syntax"></a>
 
@@ -52,7 +52,7 @@ The tag mutability setting for the repository\. If this parameter is omitted, th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
-Creates or updates the lifecycle policy for the specified repository\. For more information, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
+Creates or updates a lifecycle policy\. For information about lifecycle policy syntax, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -239,6 +239,35 @@ Resources:
 Outputs:    
   Arn:
     Value: !GetAtt MyRepository.Arn
+```
+
+### Specify a repository with an image scanning configuration<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_an_image_scanning_configuration"></a>
+
+The following example creates a repository named `test-repository` with image scanning enabled\. For more information on image scanning, see [Image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) in the *Amazon Elastic Container Registry User Guide*\.
+
+#### JSON<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_an_image_scanning_configuration--json"></a>
+
+```
+"MyRepository": {
+  "Type": "AWS::ECR::Repository",
+  "Properties": {
+    "RepositoryName" : "test-repository",
+    "ImageScanningConfiguration" : {
+      "scanOnPush": "true"
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_an_image_scanning_configuration--yaml"></a>
+
+```
+MyRepository: 
+  Type: AWS::ECR::Repository
+  Properties: 
+    RepositoryName: "test-repository"
+    ImageScanningConfiguration: 
+      scanOnPush: "true"
 ```
 
 ## See also<a name="aws-resource-ecr-repository--seealso"></a>

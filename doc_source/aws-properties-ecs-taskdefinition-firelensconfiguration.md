@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : Options,
+  "[Options](#cfn-ecs-taskdefinition-firelensconfiguration-options)" : {Key : Value, ...},
   "[Type](#cfn-ecs-taskdefinition-firelensconfiguration-type)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Options](#cfn-ecs-taskdefinition-firelensconfiguration-options): 
-    Options
+    Key : Value
   [Type](#cfn-ecs-taskdefinition-firelensconfiguration-type): String
 ```
 
@@ -32,7 +32,7 @@ The options to use when configuring the log router\. This field is optional and 
 + `config-file-type`, which can be `s3` or `file`
 + `config-file-value`, which is either an S3 ARN or a file path
 *Required*: No  
-*Type*: [Options](aws-properties-ecs-taskdefinition-options.md)  
+*Type*: [Map](aws-properties-ecs-taskdefinition-options.md) of [String](aws-properties-ecs-taskdefinition-options.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-ecs-taskdefinition-firelensconfiguration-type"></a>

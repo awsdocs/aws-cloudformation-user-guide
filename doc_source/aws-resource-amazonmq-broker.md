@@ -391,53 +391,45 @@ The following example creates a complex Amazon MQ broker with two users that don
 #### YAML<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--yaml"></a>
 
 ```
---- 
-Description: "Create a complex AmazonMQ broker"
-Resources: 
+Description: Create a complex AmazonMQ broker
+Resources:
   ComplexBroker:
-    Type: "AWS::AmazonMQ::Broker"
-    Properties: 
-      AutoMinorVersionUpgrade: "false"
+    Type: 'AWS::AmazonMQ::Broker'
+    Properties:
+      AutoMinorVersionUpgrade: 'false'
       BrokerName: MyComplexBroker
-      Configuration: 
+      Configuration:
         Id: !Ref Configuration1
-        Revision: !GetAtt Configuration1.Revision
+        Revision: !GetAtt 
+          - Configuration1
+          - Revision
       DeploymentMode: SINGLE_INSTANCE
       EngineType: ActiveMQ
-      EngineVersion: "5.15.0"
+      EngineVersion: 5.15.0
       HostInstanceType: mq.t2.micro
       Logs:
-        General: "true"
-        Audit: "false"
-      MaintenanceWindowStartTime: 
+        General: true
+        Audit: false
+      MaintenanceWindowStartTime:
         DayOfWeek: Monday
-        TimeOfDay: "22:45"
+        TimeOfDay: '22:45'
         TimeZone: America/Los_Angeles
-      PubliclyAccessible: "true"
+      PubliclyAccessible: 'true'
       SecurityGroups:
-        - "sg-a1b234cd"
-        - "sg-e5f678gh"
+        - sg-a1b234cd
+        - sg-e5f678gh
       SubnetIds:
-        - "subnet-12a3b45c"
-        - "subnet-67d8e90f"
-      Users: 
-        - 
-          ConsoleAccess: "true"
-          Password: 
-            Ref: "BrokerPassword1"
-          Username: 
-            Ref: "BrokerUsername1"
-        - 
-          Password: 
-            Ref: "BrokerPassword2"
-          Username: 
-            Ref: "BrokerUsername2"
-        - 
-          Groups: 
+        - subnet-12a3b45c
+        - subnet-67d8e90f
+      Users:
+        - ConsoleAccess: 'true'
+          Password: !Ref AmazonMqPassword1
+          Username: !Ref AmazonMqUsername1
+        - Password: !Ref AmazonMqPassword2
+          Username: !Ref AmazonMqUsername2
+        - Groups:
             - MyGroup1
             - MyGroup2
-          Password: 
-            Ref: "BrokerPassword3"
-          Username: 
-            Ref: "BrokerUsername3"
+          Password: !Ref AmazonMqPassword3
+          Username: !Ref AmazonMqUsername3
 ```

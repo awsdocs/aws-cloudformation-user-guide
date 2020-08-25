@@ -659,10 +659,10 @@ Hooks:
   CodeDeployBlueGreenHook:
     Properties:
       TrafficRoutingConfig:
-        Type:
-          - TimeBasedCanary:
-              StepPercentage: 15
-              BakeTimeMins: 5
+        Type: TimeBasedCanary
+        TimeBasedCanary:
+           StepPercentage: 15
+           BakeTimeMins: 5
       Applications:
         - Target:
             Type: 'AWS::ECS::Service'

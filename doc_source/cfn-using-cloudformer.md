@@ -4,7 +4,7 @@ CloudFormer is a template creation beta tool that creates an AWS CloudFormation 
 
 Use CloudFormer to produce templates that you can use as a starting point\. Not all AWS resources or resource properties are supported\. 
 
-Cloudformer is not supported in the following regions: `us-gov-east-1`, `eu-north-1`, `ap-east-1` , and `me-south-1`\.
+CloudFormer is not supported in the following regions: `us-gov-east-1`, `eu-north-1`, `ap-east-1` , and `me-south-1`\.
 
 **Important**  
 CloudFormer is currently in beta\. We recommend against utilizing it in critical or production environments\.

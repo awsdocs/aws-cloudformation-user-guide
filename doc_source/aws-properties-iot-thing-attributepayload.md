@@ -39,15 +39,29 @@ The following example declares an attribute payload with three attributes\.
 #### JSON<a name="aws-properties-iot-thing-attributepayload--examples----json"></a>
 
 ```
-"AttributePayload": { "Attributes": { "myAttributeA": { "Ref":
-            "MyAttributeValueA" }, "myAttributeB": { "Ref": "MyAttributeValueB" }, "myAttributeC": {
-            "Ref": "MyAttributeValueC" } } }
+{
+    "AttributePayload": {
+        "Attributes": {
+            "myAttributeA": {
+                "Ref": "MyAttributeValueA"
+            },
+            "myAttributeB": {
+                "Ref": "MyAttributeValueB"
+            },
+            "myAttributeC": {
+                "Ref": "MyAttributeValueC"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-properties-iot-thing-attributepayload--examples----yaml"></a>
 
 ```
-AttributePayload: Attributes: myAttributeA: Ref:
-            "MyAttributeValueA" myAttributeB: Ref: "MyAttributeValueB" myAttributeC: Ref:
-            "MyAttributeValueC"
+AttributePayload:
+  Attributes:
+    myAttributeA: !Ref MyAttributeValueA
+    myAttributeB: !Ref MyAttributeValueB
+    myAttributeC: !Ref MyAttributeValueC
 ```

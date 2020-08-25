@@ -184,44 +184,84 @@ The domain\-specific endpoint that's used for requests to the Elasticsearch APIs
 
 ### Create an Amazon ES domain that contains two data nodes and three master nodes<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes"></a>
 
-The following example create an Amazon ES domain running Elasticsearch 7\.4 that contains two data nodes and three dedicated master nodes\. The domain has 40 GiB of storage and enables log publishing for application logs, search slow logs, and index slow logs\. The access policy permits the root user for the AWS account to make all HTTP requests to the domain, such as indexing documents or searching indices\.
+The following example creates an Amazon ES domain running Elasticsearch 7\.4 that contains two data nodes and three dedicated master nodes\. The domain has 40 GiB of storage and enables log publishing for application logs, search slow logs, and index slow logs\. The access policy permits the root user for the AWS account to make all HTTP requests to the domain, such as indexing documents or searching indices\.
 
 #### JSON<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--json"></a>
 
 ```
-{ "Resources": { "ElasticsearchDomain": { "Type":
-        "AWS::Elasticsearch::Domain", "Properties": { "DomainName": "test",
-        "ElasticsearchClusterConfig": { "DedicatedMasterEnabled": "true", "InstanceCount": "2",
-        "ZoneAwarenessEnabled": "true", "InstanceType": "m4.large.elasticsearch",
-        "DedicatedMasterType": "c4.large.elasticsearch", "DedicatedMasterCount": "3" },
-        "ElasticsearchVersion": 7.4, "EBSOptions": { "EBSEnabled": true, "VolumeSize": 20,
-        "VolumeType": "gp2" }, "AccessPolicies": { "Version": "2012-10-17", "Statement": [{
-        "Effect": "Allow", "Principal": { "AWS": "123456789012" }, "Action": "es:ESHttp*",
-        "Resource": "arn:aws:es:us-west-1:123456789012:domain/test/*" }] }, "LogPublishingOptions":
-        { "SEARCH_SLOW_LOGS": { "CloudWatchLogsLogGroupArn":
-        "arn:aws:logs:us-west-1:123456789012:log-group:test-1", "Enabled": true },
-        "INDEX_SLOW_LOGS": { "CloudWatchLogsLogGroupArn":
-        "arn:aws:logs:us-west-1:123456789012:log-group:test-2", "Enabled": true },
-        "ES_APPLICATION_LOGS": { "CloudWatchLogsLogGroupArn":
-        "arn:aws:logs:us-west-1:123456789012:log-group:test-3", "Enabled": true } } } } }
-        }
+"ElasticsearchDomain":{
+   "Type":"AWS::Elasticsearch::Domain",
+   "Properties":{
+      "DomainName":"test",
+      "ElasticsearchClusterConfig":{
+         "DedicatedMasterEnabled":"true",
+         "InstanceCount":"2",
+         "ZoneAwarenessEnabled":"true",
+         "InstanceType":"m3.medium.elasticsearch",
+         "DedicatedMasterType":"m3.medium.elasticsearch",
+         "DedicatedMasterCount":"3"
+      },
+      "EBSOptions":{
+         "EBSEnabled":true,
+         "Iops":0,
+         "VolumeSize":20,
+         "VolumeType":"gp2"
+      },
+      "SnapshotOptions":{
+         "AutomatedSnapshotStartHour":"0"
+      },
+      "AccessPolicies":{
+         "Version":"2012-10-17",
+         "Statement":[
+            {
+               "Effect":"Allow",
+               "Principal":{
+                  "AWS":"arn:aws:iam::123456789012:user/es-user"
+               },
+               "Action":"es:*",
+               "Resource":"arn:aws:es:us-east-1:123456789012:domain/test/*"
+            }
+         ]
+      },
+      "AdvancedOptions":{
+         "rest.action.multi.allow_explicit_index":"true"
+      }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--yaml"></a>
 
 ```
-Resources: ElasticsearchDomain: Type: 'AWS::Elasticsearch::Domain'
-        Properties: DomainName: test ElasticsearchClusterConfig: DedicatedMasterEnabled: 'true'
-        InstanceCount: '2' ZoneAwarenessEnabled: 'true' InstanceType: m4.large.elasticsearch
-        DedicatedMasterType: c4.large.elasticsearch DedicatedMasterCount: '3' ElasticsearchVersion:
-        7.4 EBSOptions: EBSEnabled: true VolumeSize: 20 VolumeType: gp2 AccessPolicies: Version:
-        2012-10-17 Statement: - Effect: Allow Principal: AWS: '904601396794' Action: 'es:ESHttp*'
-        Resource: 'arn:aws:es:us-west-1:904601396794:domain/test/*' LogPublishingOptions:
-        SEARCH_SLOW_LOGS: CloudWatchLogsLogGroupArn:
-        'arn:aws:logs:us-west-1:904601396794:log-group:test-1' Enabled: true INDEX_SLOW_LOGS:
-        CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-west-1:904601396794:log-group:test-2' Enabled:
-        true ES_APPLICATION_LOGS: CloudWatchLogsLogGroupArn:
-        'arn:aws:logs:us-west-1:904601396794:log-group:test-3' Enabled: true
+ElasticsearchDomain:
+  Type: AWS::Elasticsearch::Domain
+  Properties:
+    DomainName: "test"
+    ElasticsearchClusterConfig:
+      DedicatedMasterEnabled: "true"
+      InstanceCount: "2"
+      ZoneAwarenessEnabled: "true"
+      InstanceType: "m3.medium.elasticsearch"
+      DedicatedMasterType: "m3.medium.elasticsearch"
+      DedicatedMasterCount: "3"
+    EBSOptions:
+      EBSEnabled: true
+      Iops: 0
+      VolumeSize: 20
+      VolumeType: "gp2"
+    SnapshotOptions:
+      AutomatedSnapshotStartHour: "0"
+    AccessPolicies:
+      Version: "2012-10-17"
+      Statement:
+        -
+          Effect: "Allow"
+          Principal:
+            AWS: "arn:aws:iam::123456789012:user/es-user"
+          Action: "es:*"
+          Resource: "arn:aws:es:us-east-1:846973539254:domain/test/*"
+    AdvancedOptions:
+      rest.action.multi.allow_explicit_index: "true"
 ```
 
 ### Create a domain with VPC options<a name="aws-resource-elasticsearch-domain--examples--Create_a_domain_with_VPC_options"></a>
@@ -231,63 +271,289 @@ The following example creates a domain with VPC options\.
 #### JSON<a name="aws-resource-elasticsearch-domain--examples--Create_a_domain_with_VPC_options--json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Description":
-        "ElasticsearchDomain resource", "Parameters": { "DomainName": { "Description": "User defined
-        Elasticsearch Domain name", "Type": "String" }, "ElasticsearchVersion": { "Description":
-        "User defined Elasticsearch Version", "Type": "String" }, "InstanceType": { "Type": "String"
-        }, "AvailabilityZone": { "Type": "String" }, "CidrBlock": { "Type": "String" },
-        "GroupDescription": { "Type": "String" }, "SGName": { "Type": "String" } }, "Resources": {
-        "ElasticsearchDomain": { "Type": "AWS::Elasticsearch::Domain", "Properties": { "DomainName":
-        { "Ref": "DomainName" }, "ElasticsearchVersion": { "Ref": "ElasticsearchVersion" },
-        "ElasticsearchClusterConfig": { "InstanceCount": "1", "InstanceType": { "Ref":
-        "InstanceType" } }, "EBSOptions": { "EBSEnabled": "true", "Iops": 0, "VolumeSize": 10,
-        "VolumeType": "standard" }, "SnapshotOptions": { "AutomatedSnapshotStartHour": "0" },
-        "AccessPolicies": { "Version": "2012-10-17", "Statement": [ { "Effect": "Deny", "Principal":
-        { "AWS": "*" }, "Action": "es:*", "Resource": "*" } ] }, "LogPublishingOptions": {
-        "SEARCH_SLOW_LOGS": { "CloudWatchLogsLogGroupArn":
-        "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs", "Enabled":
-        "true" }, "INDEX_SLOW_LOGS": { "CloudWatchLogsLogGroupArn":
-        "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs",
-        "Enabled": "true" } }, "AdvancedOptions": { "rest.action.multi.allow_explicit_index": "true"
-        }, "Tags": [ { "Key": "foo", "Value": "bar" } ], "VPCOptions": { "SubnetIds": [ { "Ref":
-        "subnet" } ], "SecurityGroupIds": [ { "Ref": "mySecurityGroup" } ] } } }, "vpc": { "Type":
-        "AWS::EC2::VPC", "Properties": { "CidrBlock": "10.0.0.0/16" } }, "subnet": { "Type":
-        "AWS::EC2::Subnet", "Properties": { "VpcId": { "Ref": "vpc" }, "CidrBlock": { "Ref":
-        "CidrBlock" }, "AvailabilityZone": { "Ref": "AvailabilityZone" } } }, "mySecurityGroup": {
-        "Type": "AWS::EC2::SecurityGroup", "Properties": { "GroupDescription": { "Ref":
-        "GroupDescription" }, "VpcId": { "Ref": "vpc" }, "GroupName": { "Ref": "SGName" },
-        "SecurityGroupIngress": [ { "FromPort": "443", "IpProtocol": "tcp", "ToPort": "443",
-        "CidrIp": "0.0.0.0/0" } ] } } }, "Outputs": { "DomainArn": { "Value": { "Fn::GetAtt": [
-        "ElasticsearchDomain", "DomainArn" ] } }, "DomainEndpoint": { "Value": { "Fn::GetAtt": [
-        "ElasticsearchDomain", "DomainEndpoint" ] } }, "SecurityGroupId": { "Value": { "Ref":
-        "mySecurityGroup" } }, "SubnetId": { "Value": { "Ref": "subnet" } } } }
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "ElasticsearchDomain resource",
+  "Parameters": {
+    "DomainName": {
+      "Description": "User defined Elasticsearch Domain name",
+      "Type": "String"
+    },
+    "ElasticsearchVersion": {
+      "Description": "User defined Elasticsearch Version",
+      "Type": "String"
+    },
+    "InstanceType": {
+      "Type": "String"
+    },
+    "AvailabilityZone": {
+      "Type": "String"
+    },
+    "CidrBlock": {
+      "Type": "String"
+    },
+    "GroupDescription": {
+      "Type": "String"
+    },
+    "SGName": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "ElasticsearchDomain": {
+      "Type": "AWS::Elasticsearch::Domain",
+      "Properties": {
+        "DomainName": {
+          "Ref": "DomainName"
+        },
+        "ElasticsearchVersion": {
+          "Ref": "ElasticsearchVersion"
+        },
+        "ElasticsearchClusterConfig": {
+          "InstanceCount": "1",
+          "InstanceType": {
+            "Ref": "InstanceType"
+          }
+        },
+        "EBSOptions": {
+          "EBSEnabled": "true",
+          "Iops": 0,
+          "VolumeSize": 10,
+          "VolumeType": "standard"
+        },
+        "SnapshotOptions": {
+          "AutomatedSnapshotStartHour": "0"
+        },
+        "AccessPolicies": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Deny",
+              "Principal": {
+                "AWS": "*"
+              },
+              "Action": "es:*",
+              "Resource": "*"
+            }
+          ]
+        },
+        "LogPublishingOptions": {
+          "SEARCH_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs",
+            "Enabled": "true"
+          },
+          "INDEX_SLOW_LOGS": {
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs",
+            "Enabled": "true"
+          }
+        },
+        "AdvancedOptions": {
+          "rest.action.multi.allow_explicit_index": "true"
+        },
+        "Tags": [
+          {
+            "Key": "foo",
+            "Value": "bar"
+          }
+        ],
+        "VPCOptions": {
+          "SubnetIds": [
+            {
+              "Ref": "subnet"
+            }
+          ],
+          "SecurityGroupIds": [
+            {
+              "Ref": "mySecurityGroup"
+            }
+          ]
+        }
+      }
+    },
+    "vpc": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16"
+      }
+    },
+    "subnet": {
+      "Type": "AWS::EC2::Subnet",
+      "Properties": {
+        "VpcId": {
+          "Ref": "vpc"
+        },
+        "CidrBlock": {
+          "Ref": "CidrBlock"
+        },
+        "AvailabilityZone": {
+          "Ref": "AvailabilityZone"
+        }
+      }
+    },
+    "mySecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupDescription": {
+          "Ref": "GroupDescription"
+        },
+        "VpcId": {
+          "Ref": "vpc"
+        },
+        "GroupName": {
+          "Ref": "SGName"
+        },
+        "SecurityGroupIngress": [
+          {
+            "FromPort": "443",
+            "IpProtocol": "tcp",
+            "ToPort": "443",
+            "CidrIp": "0.0.0.0/0"
+          }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "DomainArn": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ElasticsearchDomain",
+          "DomainArn"
+        ]
+      }
+    },
+    "DomainEndpoint": {
+      "Value": {
+        "Fn::GetAtt": [
+          "ElasticsearchDomain",
+          "DomainEndpoint"
+        ]
+      }
+    },
+    "SecurityGroupId": {
+      "Value": {
+        "Ref": "mySecurityGroup"
+      }
+    },
+    "SubnetId": {
+      "Value": {
+        "Ref": "subnet"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-elasticsearch-domain--examples--Create_a_domain_with_VPC_options--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Description: ElasticsearchDomain
-        resource Parameters: DomainName: Description: User defined Elasticsearch Domain name Type:
-        String ElasticsearchVersion: Description: User defined Elasticsearch Version Type: String
-        InstanceType: Type: String AvailabilityZone: Type: String CidrBlock: Type: String
-        GroupDescription: Type: String SGName: Type: String Resources: ElasticsearchDomain: Type:
-        AWS::Elasticsearch::Domain Properties: DomainName: !Ref DomainName ElasticsearchVersion:
-        !Ref ElasticsearchVersion ElasticsearchClusterConfig: InstanceCount: '1' InstanceType: !Ref
-        InstanceType EBSOptions: EBSEnabled: 'true' Iops: 0 VolumeSize: 10 VolumeType: standard
-        SnapshotOptions: AutomatedSnapshotStartHour: '0' AccessPolicies: Version: 2012-10-17
-        Statement: - Effect: Deny Principal: AWS: '*' Action: 'es:*' Resource: '*' AdvancedOptions:
-        rest.action.multi.allow_explicit_index: 'true' LogPublishingOptions: SEARCH_SLOW_LOGS:
-        CloudWatchLogsLogGroupArn:
-        arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs Enabled: 'true'
-        INDEX_SLOW_LOGS: CloudWatchLogsLogGroupArn:
-        arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs Enabled:
-        'true' Tags: - Key: foo Value: bar VPCOptions: SubnetIds: - !Ref subnet SecurityGroupIds: -
-        !Ref mySecurityGroup vpc: Type: AWS::EC2::VPC Properties: CidrBlock: 10.0.0.0/16 subnet:
-        Type: AWS::EC2::Subnet Properties: VpcId: !Ref vpc CidrBlock: !Ref CidrBlock
-        AvailabilityZone: !Ref AvailabilityZone mySecurityGroup: Type: AWS::EC2::SecurityGroup
-        Properties: GroupDescription: !Ref GroupDescription VpcId: !Ref vpc GroupName: !Ref SGName
-        SecurityGroupIngress: - FromPort: '443' IpProtocol: tcp ToPort: '443' CidrIp: 0.0.0.0/0
-        Outputs: DomainArn: Value: !GetAtt ElasticsearchDomain.DomainArn DomainEndpoint: Value:
-        !GetAtt ElasticsearchDomain.DomainEndpoint SecurityGroupId: Value: !Ref mySecurityGroup
-        SubnetId: Value: !Ref subnet
+AWSTemplateFormatVersion: '2010-09-09'
+Description: ElasticsearchDomain resource
+Parameters:
+  DomainName:
+    Description: User defined Elasticsearch Domain name
+    Type: String
+  ElasticsearchVersion:
+    Description: User defined Elasticsearch Version
+    Type: String
+  InstanceType:
+    Type: String
+  AvailabilityZone:
+    Type: String
+  CidrBlock:
+    Type: String
+  GroupDescription:
+    Type: String
+  SGName:
+    Type: String
+Resources:
+  ElasticsearchDomain:
+    Type: 'AWS::Elasticsearch::Domain'
+    Properties:
+      DomainName:
+        Ref: DomainName
+      ElasticsearchVersion:
+        Ref: ElasticsearchVersion
+      ElasticsearchClusterConfig:
+        InstanceCount: '1'
+        InstanceType:
+          Ref: InstanceType
+      EBSOptions:
+        EBSEnabled: 'true'
+        Iops: 0
+        VolumeSize: 10
+        VolumeType: standard
+      SnapshotOptions:
+        AutomatedSnapshotStartHour: '0'
+      AccessPolicies:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Deny
+            Principal:
+              AWS: '*'
+            Action: 'es:*'
+            Resource: '*'
+      LogPublishingOptions:
+        SEARCH_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: >-
+            arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs
+          Enabled: 'true'
+        INDEX_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: >-
+            arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs
+          Enabled: 'true'
+      AdvancedOptions:
+        rest.action.multi.allow_explicit_index: 'true'
+      Tags:
+        - Key: foo
+          Value: bar
+      VPCOptions:
+        SubnetIds:
+          - Ref: subnet
+        SecurityGroupIds:
+          - Ref: mySecurityGroup
+  vpc:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 10.0.0.0/16
+  subnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId:
+        Ref: vpc
+      CidrBlock:
+        Ref: CidrBlock
+      AvailabilityZone:
+        Ref: AvailabilityZone
+  mySecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription:
+        Ref: GroupDescription
+      VpcId:
+        Ref: vpc
+      GroupName:
+        Ref: SGName
+      SecurityGroupIngress:
+        - FromPort: '443'
+          IpProtocol: tcp
+          ToPort: '443'
+          CidrIp: 0.0.0.0/0
+Outputs:
+  DomainArn:
+    Value:
+      'Fn::GetAtt':
+        - ElasticsearchDomain
+        - DomainArn
+  DomainEndpoint:
+    Value:
+      'Fn::GetAtt':
+        - ElasticsearchDomain
+        - DomainEndpoint
+  SecurityGroupId:
+    Value:
+      Ref: mySecurityGroup
+  SubnetId:
+    Value:
+      Ref: subnet
 ```

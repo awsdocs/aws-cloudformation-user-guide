@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ForceUpdateEnabled](#cfn-eks-nodegroup-forceupdateenabled)" : Boolean,
       "[InstanceTypes](#cfn-eks-nodegroup-instancetypes)" : [ String, ... ],
       "[Labels](#cfn-eks-nodegroup-labels)" : Json,
-      "[LaunchTemplate](#cfn-eks-nodegroup-launchtemplate)" : LaunchTemplateSpecification,
+      "[LaunchTemplate](#cfn-eks-nodegroup-launchtemplatespecification)" : LaunchTemplateSpecification,
       "[NodegroupName](#cfn-eks-nodegroup-nodegroupname)" : String,
       "[NodeRole](#cfn-eks-nodegroup-noderole)" : String,
       "[ReleaseVersion](#cfn-eks-nodegroup-releaseversion)" : String,
@@ -47,7 +47,7 @@ Properties:
   [InstanceTypes](#cfn-eks-nodegroup-instancetypes): 
     - String
   [Labels](#cfn-eks-nodegroup-labels): Json
-  [LaunchTemplate](#cfn-eks-nodegroup-launchtemplate): 
+  [LaunchTemplate](#cfn-eks-nodegroup-launchtemplatespecification): 
     LaunchTemplateSpecification
   [NodegroupName](#cfn-eks-nodegroup-nodegroupname): String
   [NodeRole](#cfn-eks-nodegroup-noderole): String
@@ -101,8 +101,8 @@ The Kubernetes labels to be applied to the nodes in the node group when they are
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LaunchTemplate`  <a name="cfn-eks-nodegroup-launchtemplate"></a>
-If a launch template was used to create the node group, then this is the launch template that was used\.  
+`LaunchTemplate`  <a name="cfn-eks-nodegroup-launchtemplatespecification"></a>
+An object representing a node group's launch template specification\. If specified, then do not specify `instanceTypes`, `diskSize`, or `remoteAccess` and make sure that the launch template meets the requirements in `launchTemplateSpecification`\.  
 *Required*: No  
 *Type*: [LaunchTemplateSpecification](aws-properties-eks-nodegroup-launchtemplatespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

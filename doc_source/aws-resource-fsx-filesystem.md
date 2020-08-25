@@ -100,8 +100,8 @@ For Windows file systems:
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
 Sets the storage type for the file system you're creating\. Valid values are `SSD` and `HDD`\.  
 + Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows and Lustre deployment types\.
-+ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT`Lustre file system deployment types\. 
- Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide*\.   
++ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT` Lustre file system deployment types\. 
+ Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide* and [Multiple Storage Options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the *Amazon FSx for Lustre User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HDD | SSD`  
@@ -187,7 +187,6 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                 "LustreConfiguration": {
                     "AutoImportPolicy" : "NEW",                    
                     "CopyTagsToBackups" : true,
-                    "DailyAutomaticBackupStartTime" : "02:00",
                     "DeploymentType": "PERSISTENT_1",
                     "PerUnitStorageThroughput": 200,                    
                     "ImportPath": {
@@ -207,7 +206,7 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                             [
                                 "s3://",
                                 {
-                                    "Fn::ImportValue": "LustreCFNS3ImportBucketName"
+                                    "Fn::ImportValue": "LustreCFNS3ExportPath"
                                 }
                             ]
                         ]
@@ -244,11 +243,10 @@ Resources:
       LustreConfiguration:
         AutoImportPolicy: "NEW"
         CopyTagsToBackups: true
-        DailyAutomaticBackupStartTime: "02:00"
         DeploymentType: "PERSISTENT_1"
         PerUnitStorageThroughput: 200
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
-        ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
+        ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ExportPath]]
         WeeklyMaintenanceStartTime: "2:20:30"
 Outputs:
   FileSystemId:

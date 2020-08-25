@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CredentialsArn](#cfn-apigatewayv2-integration-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-integration-description)" : String,
       "[IntegrationMethod](#cfn-apigatewayv2-integration-integrationmethod)" : String,
+      "[IntegrationSubtype](#cfn-apigatewayv2-integration-integrationsubtype)" : String,
       "[IntegrationType](#cfn-apigatewayv2-integration-integrationtype)" : String,
       "[IntegrationUri](#cfn-apigatewayv2-integration-integrationuri)" : String,
       "[PassthroughBehavior](#cfn-apigatewayv2-integration-passthroughbehavior)" : String,
@@ -44,6 +45,7 @@ Properties:
   [CredentialsArn](#cfn-apigatewayv2-integration-credentialsarn): String
   [Description](#cfn-apigatewayv2-integration-description): String
   [IntegrationMethod](#cfn-apigatewayv2-integration-integrationmethod): String
+  [IntegrationSubtype](#cfn-apigatewayv2-integration-integrationsubtype): String
   [IntegrationType](#cfn-apigatewayv2-integration-integrationtype): String
   [IntegrationUri](#cfn-apigatewayv2-integration-integrationuri): String
   [PassthroughBehavior](#cfn-apigatewayv2-integration-passthroughbehavior): String
@@ -103,10 +105,16 @@ Specifies the integration's HTTP method type\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IntegrationSubtype`  <a name="cfn-apigatewayv2-integration-integrationsubtype"></a>
+Supported only for HTTP API `AWS_PROXY` integrations\. Specifies the AWS service action to invoke\. To learn more, see [Integration subtype reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IntegrationType`  <a name="cfn-apigatewayv2-integration-integrationtype"></a>
 The integration type of an integration\. One of the following:  
  `AWS`: for integrating the route or method request with an AWS service action, including the Lambda function\-invoking action\. With the Lambda function\-invoking action, this is referred to as the Lambda custom integration\. With any other AWS service action, this is known as AWS integration\. Supported only for WebSocket APIs\.  
- `AWS_PROXY`: for integrating the route or method request with the Lambda function\-invoking action with the client request passed through as\-is\. This integration is also referred to as Lambda proxy integration\.  
+ `AWS_PROXY`: for integrating the route or method request with a Lambda function or other AWS service action\. This integration is also referred to as a Lambda proxy integration\.  
  `HTTP`: for integrating the route or method request with an HTTP endpoint\. This integration is also referred to as the HTTP custom integration\. Supported only for WebSocket APIs\.  
  `HTTP_PROXY`: for integrating the route or method request with an HTTP endpoint, with the client request passed through as\-is\. This is also referred to as HTTP proxy integration\. For HTTP API private integrations, use an `HTTP_PROXY` integration\.  
  `MOCK`: for integrating the route or method request with API Gateway as a "loopback" endpoint without invoking any backend\. Supported only for WebSocket APIs\.  
@@ -138,7 +146,8 @@ Specifies the format of the payload sent to an integration\. Required for HTTP A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestParameters`  <a name="cfn-apigatewayv2-integration-requestparameters"></a>
-A key\-value map specifying request parameters that are passed from the method request to the backend\. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre\-encoded as required by the backend\. The method request parameter value must match the pattern of `method.request.{location}.{name} `, where ` {location} ` is `querystring`, `path`, or `header`; and ` {name} ` must be a valid and unique method request parameter name\. Supported only for WebSocket APIs\.  
+For WebSocket APIs, a key\-value map specifying request parameters that are passed from the method request to the backend\. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre\-encoded as required by the backend\. The method request parameter value must match the pattern of `method.request.{location}.{name} `, where ` {location} ` is `querystring`, `path`, or `header`; and `{name}` must be a valid and unique method request parameter name\.  
+For HTTP APIs, request parameters are a key\-value map specifying parameters that are passed to `AWS_PROXY` integrations with a specified `integrationSubtype`\. You can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime\. To learn more, see [Working with AWS service integrations for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

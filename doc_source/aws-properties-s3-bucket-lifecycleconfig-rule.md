@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-properties"></a>
 
 `AbortIncompleteMultipartUpload`  <a name="cfn-s3-bucket-rule-abortincompletemultipartupload"></a>
-Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\.  
+Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3 bucket\.  
 You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
 *Required*: Conditional  
 *Type*: [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)  

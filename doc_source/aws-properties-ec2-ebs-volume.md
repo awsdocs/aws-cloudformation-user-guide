@@ -85,8 +85,8 @@ Encrypted Amazon EBS volumes must be attached to instances that support Amazon E
 *Update requires*: Updates are not supported\.
 
 `Iops`  <a name="cfn-ec2-ebs-volume-iops"></a>
-The number of I/O operations per second \(IOPS\) to provision for the volume, with a maximum ratio of 50 IOPS/GiB\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-This parameter is valid only for Provisioned IOPS SSD \(io1\) volumes\.  
+The number of I/O operations per second \(IOPS\) to provision for an `io1` or `io2` volume, with a maximum ratio of 50 IOPS/GiB for `io1`, and 500 IOPS/GiB for `io2`\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+This parameter is valid only for Provisioned IOPS SSD \(`io1` and `io2`\) volumes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -118,7 +118,7 @@ The Amazon Resource Name \(ARN\) of the Outpost\.
 
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>
 The size of the volume, in GiBs\. You must specify either a snapshot ID or a volume size\.  
-Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.  
+Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1` and `io2`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.  
 Default: If you're creating the volume from a snapshot and don't specify a volume size, the default is the snapshot size\.  
 *Required*: No  
 *Type*: Integer  
@@ -137,11 +137,11 @@ The tags to apply to the volume during creation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
-The volume type\. This can be `gp2` for General Purpose SSD, `io1` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  
+The volume type\. This can be `gp2` for General Purpose SSD, `io1` or `io2` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  
 Default: `gp2`   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `gp2 | io1 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | io1 | io2 | sc1 | st1 | standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-properties-ec2-ebs-volume-return-values"></a>

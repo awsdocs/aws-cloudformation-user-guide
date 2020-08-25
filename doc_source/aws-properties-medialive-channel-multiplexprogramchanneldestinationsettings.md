@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel MultiplexProgramChannelDestinationSettings<a name="aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings"></a>
 
-Multiplex Program Input Destination Settings for outputting a Channel to a Multiplex
+This element specifies the destination information for a Multiplex output group\. Always create an array of two MultiplexProgramChannelDestinationSettings\. 
 
 ## Syntax<a name="aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings-properties"></a>
 
 `MultiplexId`  <a name="cfn-medialive-channel-multiplexprogramchanneldestinationsettings-multiplexid"></a>
-The ID of the Multiplex that the encoder is providing output to\. You do not need to specify the individual inputs to the Multiplex; MediaLive will handle the connection of the two MediaLive pipelines to the two Multiplex instances\. The Multiplex must be in the same region as the Channel\.  
+The ID of the Multiplex that the encoder is providing output to\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

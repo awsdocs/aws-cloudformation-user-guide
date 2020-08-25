@@ -260,34 +260,34 @@ The following example contains parameters that enable specifying `PlatformArn` f
   },
   "Resources": {
     "Application": {
+      "Type": "AWS::ElasticBeanstalk::Application",
       "Properties": {
-        "ApplicationVersions": [
-          {
-            "Description": "Version 1.0",
-            "SourceBundle": {
-              "S3Bucket": {
-                "Fn::Join": ["", ["elasticbeanstalk-samples-", {"Ref": "AWS::Region"}]]
-              },
-              "S3Key": "python-sample-20150402.zip"
-            },
-            "VersionLabel": "Initial Version"
-          }
-        ],
+        "ApplicationName": "SampleBeanstalkApp",
         "Description": "AWS Elastic Beanstalk Python Sample Application"
-      },
-      "Type": "AWS::ElasticBeanstalk::Application"
+      }
+    },
+    "AppVersion": {
+      "Type": "AWS::ElasticBeanstalk::ApplicationVersion",
+      "Properties": {
+        "ApplicationName": {"Ref" : "Application"},
+        "Description": "Version 1.0",
+        "SourceBundle": {
+          "S3Bucket": {
+            "Fn::Join": ["-", [ "elasticbeanstalk-samples", { "Ref" : "AWS::Region" } ] ] },
+          "S3Key": "python-sample-20150402.zip"
+        }
+      }
     },
     "Environment": {
+      "Type": "AWS::ElasticBeanstalk::Environment",
       "Properties": {
-        "ApplicationName": {
-          "Ref": "Application"
-        },
+        "ApplicationName": {"Ref": "Application"},
         "Description": "AWS Elastic Beanstalk Environment running Python Sample Application",
         "PlatformArn": { "Ref" : "PlatformArn"},
         "SolutionStackName": {
           "Ref": "SolutionStackName"
         },
-        "VersionLabel": "Initial Version",
+        "VersionLabel": {"Ref": "AppVersion"},
         "OptionSettings": [
           {
             "Namespace": "aws:autoscaling:launchconfiguration",
@@ -304,8 +304,7 @@ The following example contains parameters that enable specifying `PlatformArn` f
             }
           }
         ]
-      },
-      "Type": "AWS::ElasticBeanstalk::Environment"
+      }
     },
     "ServiceRole": {
       "Type": "AWS::IAM::Role",
@@ -567,25 +566,30 @@ Parameters:
     Type: String
 Resources:
   Application:
-    Properties:
-      ApplicationVersions:
-        - Description: Version 1.0
-          SourceBundle:
-            S3Bucket: !Join 
-              - ''
-              - - elasticbeanstalk-samples-
-                - !Ref 'AWS::Region'
-            S3Key: python-sample-20150402.zip
-          VersionLabel: Initial Version
-      Description: AWS Elastic Beanstalk Python Sample Application
     Type: AWS::ElasticBeanstalk::Application
+    Properties:
+      ApplicationName: SampleBeanstalkApp
+      Description: AWS Elastic Beanstalk Python Sample Application
+  AppVersion:
+    Type: AWS::ElasticBeanstalk::ApplicationVersion
+    Properties:
+      ApplicationName: !Ref Application
+      Description: Version 1.0
+      SourceBundle:
+        S3Bucket: Fn::Join:
+          - '-'
+          - 
+          - 'elasticbeanstalk-samples'
+          - !Ref 'AWS::Region'
+        S3Key: python-sample-20150402.zip
   Environment:
+    Type: AWS::ElasticBeanstalk::Environment
     Properties:
       ApplicationName: !Ref Application
       Description: AWS Elastic Beanstalk Environment running Python Sample Application
       PlatformArn: !Ref PlatformArn
       SolutionStackName: !Ref SolutionStackName
-      VersionLabel: Initial Version
+      VersionLabel: !Ref AppVersion
       OptionSettings:
         - Namespace: 'aws:autoscaling:launchconfiguration'
           OptionName: IamInstanceProfile
@@ -593,7 +597,6 @@ Resources:
         - Namespace: 'aws:elasticbeanstalk:environment'
           OptionName: ServiceRole
           Value: !Ref ServiceRole
-    Type: AWS::ElasticBeanstalk::Environment
   ServiceRole:
     Type: AWS::IAM::Role
     Properties:

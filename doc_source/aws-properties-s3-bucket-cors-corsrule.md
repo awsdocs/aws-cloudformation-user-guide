@@ -43,7 +43,7 @@ Headers that are specified in the `Access-Control-Request-Headers` header\. Thes
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedMethods`  <a name="cfn-s3-bucket-cors-corsrule-allowedmethods"></a>
-An HTTP method that you allow the origin to execute\. Valid values are `GET`, `PUT`, `HEAD`, `POST`, and `DELETE`\.  
+An HTTP method that you allow the origin to run\. Valid values are `GET`, `PUT`, `HEAD`, `POST`, and `DELETE`\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

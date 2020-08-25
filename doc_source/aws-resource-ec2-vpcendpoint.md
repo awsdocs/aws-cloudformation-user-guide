@@ -6,6 +6,8 @@ A `gateway` endpoint serves as a target for a route in your route table for traf
 
 An `interface` endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service\. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface\.
 
+For information about connectivity when you use a gateway endpoint to connect to an Amazon S3 bucket from an EC2 instance, see [Why can’t I connect to an S3 bucket using a gateway VPC endpoint](http://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)\.
+
 ## Syntax<a name="aws-resource-ec2-vpcendpoint-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -162,20 +164,22 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
 #### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--yaml"></a>
 
 ```
-Type: AWS::EC2::VPCEndpoint
-Properties:
-   PolicyDocument: '{
-     "Version":"2012-10-17",
-     "Statement":[{
-       "Effect":"Allow",
-       "Principal": "*",
-       "Action":["s3:GetObject"],
-       "Resource":["arn:aws:s3:::examplebucket/*"]
-     }]
-  }'
-  RouteTableIds:
-    - !Ref routetableA
-    - !Ref routetableB
-  ServiceName: !Sub com.amazonaws.${AWS::Region}.s3
-  VpcId: !Ref VPCID
+Type: 'AWS::EC2::VPCEndpoint'
+  Properties:
+    PolicyDocument:
+      Version: 2012-10-17
+      Statement:
+        - Effect: Allow
+          Principal: '*'
+          Action:
+            - 's3:GetObject'
+          Resource:
+            - 'arn:aws:s3:::examplebucket/*'
+    RouteTableIds:
+      - Ref: routetableA
+      - Ref: routetableB
+    ServiceName:
+      'Fn::Sub': 'com.amazonaws.${AWS::Region}.s3'
+    VpcId:
+      Ref: VPCID
 ```

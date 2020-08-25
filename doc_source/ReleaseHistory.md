@@ -4,18 +4,19 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Integration`\. 
+
+ [AWS::ApiGatewayV2::Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)   
+Use the `AWS::ApiGatewayV2::Integration` resource to create an AWS service integration for an HTTP API\.  | August 20, 2020 | 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support use of a launch template: AWS::EKS::Nodegroup\. 
+
+ [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+Use the `LaunchTemplate` property to specify a launch template specification that can be used to deploy or update a managed node group\. If you use a launch template to deploy a node group, some settings that you normally set for a node group must be moved into the launch template\. The text for affected settings has been updated to note that\.  | August 20, 2020 | 
 | [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::TaskDefinition 
 
  [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)   
 Use the `EnvironmentFiles` property to specify a list of files containing the environment variables to pass to a container\.  | August 13, 2020 | 
-| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::ECS::TaskDefinition 
-
- [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)   
-Use the `EnvironmentFiles` property to specify a list of files containing the environment variables to pass to a container\.  | August 13, 2020 | 
 | [Updated resource](AWS_EKS.md) | The following resource was updated to support use of a launch template: AWS::EKS::Nodegroup\. 
-
- [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
-Use the `LaunchTemplate` property to specify a launch template specification that can be used to deploy or update a managed node group\. If you use a launch template to deploy a node group, some settings that you normally set for a node group must be moved into the launch template\. The text for affected settings has been updated to note that\. 
 
  [AWS::EKS::Nodegroup LaunchTemplateSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html)   
 Use the `AWS::EKS::Nodegroup LaunchTemplateSpecification` resource to specify a launch template that can be used to deploy or update a managed node group\. A launch template can also be used to deploy a custom AMI\.  | August 13, 2020 | 
@@ -31,27 +32,7 @@ Use the `Topics` property to specify the Amazon MSK topics to stream to a Lambda
 
  [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
 Use the `SecurityPolicy` property to specify the name of the security policy that is attached to the server\.  | August 13, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Lambda::Function\. 
-
- [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   
-Use the `Topics` property to specify the Amazon MSK topics to stream to a Lambda function\.  | August 13, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::FSx::FileSystem 
-
-[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
-In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `DriveCacheType` to specify the type of drive cache used by `PERSISTENT_1` file systems that are provisioned with HDD storage devices\.  | August 13, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated to support use of a launch template: AWS::EKS::Nodegroup\. 
-
- [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
-Use the `LaunchTemplate` property to specify a launch template specification that can be used to deploy or update a managed node group\. If you use a launch template to deploy a node group, some settings that you normally set for a node group must be moved into the launch template\. The text for affected settings has been updated to note that\.  | August 13, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Transfer::Server\. 
-
- [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
-Use the `SecurityPolicy` property to specify the name of the security policy that is attached to the server\.  | August 13, 2020 | 
 | [New resources](AWS_SageMaker.md) | The following resource was added: AWS::SageMaker::MonitoringSchedule 
-
- [AWS::SageMaker::MonitoringSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html)   
-Use the `AWS::SageMaker::MonitoringSchedule` resource to create a monitoring schedule to regularly start an Amazon SageMaker processing job to monitor the data captured for a SageMaker endpoint\.  | August 13, 2020 | 
-| [New resources](#ReleaseHistory) | The following resource was added: AWS::SageMaker::MonitoringSchedule 
 
  [AWS::SageMaker::MonitoringSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html)   
 Use the `AWS::SageMaker::MonitoringSchedule` resource to create a monitoring schedule to regularly start an Amazon SageMaker processing job to monitor the data captured for a SageMaker endpoint\.  | August 13, 2020 | 
@@ -61,25 +42,8 @@ Use the `AWS::SageMaker::MonitoringSchedule` resource to create a monitoring sch
 Use the `AWS::ApplicationInsights::Application` resource to add an application that is created from a resource group\.  | August 13, 2020 | 
 | [New resource](AWS_EC2.md) | The following resource was added: AWS::EC2::CarrierGateway\. 
 
- [AWS::EC2::CarrierGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carrier-gateway.html)   
+ [AWS::EC2::CarrierGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html)   
 Use the `CarrierGateway` resource to create a carrier gateway\.  | August 13, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::EC2::CarrierGateway\. 
-
- [AWS::EC2::CarrierGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carrier-gateway.html)   
-Use the `CarrierGateway` resource to create a carrier gateway\.  | August 13, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::ApplicationInsights::Application  
-
- [AWS::ApplicationInsights::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html)   
-Use the `AWS::ApplicationInsights::Application` resource to add an application that is created from a resource group\.  | August 13, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::EKS::Nodegroup LaunchTemplateSpecification\. 
-
- [AWS::EKS::Nodegroup LaunchTemplateSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-launchtemplatespecification.html)   
-Use the `AWS::EKS::Nodegroup LaunchTemplateSpecification` resource to specify a launch template that can be used to deploy or update a managed node group\. The launch template can also deploy a custom AMI\.  | August 13, 2020 | 
-| [Updated resource](AWS_Elasticsearch.md) | The following resource was updated: AWS::Elasticsearch::Domain\. 
-
- [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
-Use the `AdvancedSecurityOptions` property to specify options for fine\-grained access control\.  
-Use the `DomainEndpointOptions` property to specify additional options for the domain endpoint, such as whether to require HTTPS for all traffic\.  | August 11, 2020 | 
 | [Updated permissions required for registering resource providers](#ReleaseHistory) | Registering a resource provider in your account now requires you have permission to access the schema handler package uploaded to an S3 bucket for that resource provider\.For more information, see [Registering resource providers in CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register)\. | August 7, 2020 | 
 | [Updated resource](AWS_CodeBuild.md) | The following resource was updated: AWS::CodeBuild::Project 
 

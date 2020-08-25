@@ -62,8 +62,8 @@ A set of environment variables to make available to builds for this build projec
 
 `Image`  <a name="cfn-codebuild-project-environment-image"></a>
 The image tag or image digest that identifies the Docker image to use for this build project\. Use the following formats:  
-+ For an image tag: `registry/repository:tag`\. For example, to specify an image with the tag "latest," use `registry/repository:latest`\.
-+ For an image digest: `registry/repository@digest`\. For example, to specify an image with the digest "sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf," use `registry/repository@sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf`\.
++ For an image tag: `<registry>/<repository>:<tag>`\. For example, in the Docker repository that CodeBuild uses to manage its Docker images, this would be `aws/codebuild/standard:4.0`\. To specify the latest version of this image, this would be `aws/codebuild/standard:latest`\.
++ For an image digest: `<registry>/<repository>@<digest>`\. For example, to specify an image with the digest "sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf," use `<registry>/<repository>@sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf`\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

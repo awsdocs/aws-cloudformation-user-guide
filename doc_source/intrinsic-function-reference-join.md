@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Join` appends a set of values into a single value, separated by the specified delimiter\. If a delimiter is the empty string, the set of values are concatenated with no delimiter\.
 
-## Declaration<a name="w6643ab1c25c28c46b5"></a>
+## Declaration<a name="w6640ab1c25c28c46b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-join-syntax.json"></a>
 

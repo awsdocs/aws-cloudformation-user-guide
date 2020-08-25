@@ -66,7 +66,7 @@ Within one MetricDataQuery object, you must specify either `Expression` or `Metr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Period`  <a name="cfn-cloudwatch-alarm-metricdataquery-period"></a>
-Not currently supported by AWS CloudFormation\.  
+The granularity, in seconds, of the returned data points\. For metrics with regular resolution, a period can be as short as one minute \(60 seconds\) and must be a multiple of 60\. For high\-resolution metrics that are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60\. High\-resolution metrics are those metrics stored by a `PutMetricData` operation that includes a `StorageResolution of 1 second`\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

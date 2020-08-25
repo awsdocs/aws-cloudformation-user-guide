@@ -38,13 +38,14 @@ Properties:
 ## Properties<a name="aws-resource-codeguruprofiler-profilinggroup-properties"></a>
 
 `AgentPermissions`  <a name="cfn-codeguruprofiler-profilinggroup-agentpermissions"></a>
-The agent permissions attached to this profiling group\.  
+The agent permissions attached to this profiling group\. This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform actions required by the profiling agent\. The Json consists of key `Principals`\.  
+*Principals*: A list of string ARNs for the roles and users you want to grant access to the profiling group\. Wildcards are not supported in the ARNs\. You are allowed to provide up to 50 ARNs\. An empty list is not permitted\. This is a required key\. For information, see [Resource\-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in the *Amazon CodeGuru Profiler user guide*, [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html), and [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AnomalyDetectionNotificationConfiguration`  <a name="cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration"></a>
-Add anomaly notifications for a profiling group\.  
+Adds anomaly notifications for a profiling group\.  
 *Required*: No  
 *Type*: List of [Channel](aws-properties-codeguruprofiler-profilinggroup-channel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -176,6 +177,51 @@ MyProfilingGroupWithNotificationChannelConfiguration:
   Type: AWS::CodeGuruProfiler::ProfilingGroup
   Properties:
     ProfilingGroupName: MyProfilingGroup
+    AnomalyDetectionNotificationConfiguration:
+    - channelUri: SOME_SNS_TOPIC_ARN
+      channelId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
+```
+
+### CodeGuru Profiler profiling group configuration<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_configuration"></a>
+
+The following is an example of a profiling group that runs on AWS Lambda\. This profiling group has enabled agent permissions\. Notifications have also been configured with `AnomalyDetectionConfiguration`\.
+
+#### JSON<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_configuration--json"></a>
+
+```
+"MyProfilingGroupWithAgentPermissions": {
+  "Type": "AWS::CodeGuruProfiler::ProfilingGroup",
+  "Properties": {
+    "ProfilingGroupName": "MyProfilingGroup",
+    "ComputePlatform": "AWSLambda",
+    "AgentPermissions": {
+      "Principals": [
+          "arn:aws:iam::1233456789012:role/agent-permissions-role-1", 
+          "arn:aws:iam::1233456789012:role/agent-permissions-role-2"
+      ]
+    },
+    "AnomalyDetectionNotificationConfiguration": [
+        {
+            "channelUri": "SOME_SNS_TOPIC_ARN",
+            "channelId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+        }
+    ]
+  }
+}
+```
+
+#### YAML<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_configuration--yaml"></a>
+
+```
+MyProfilingGroup:
+  Type: AWS::CodeGuruProfiler::ProfilingGroup
+  Properties:
+    ProfilingGroupName: "MyProfilingGroup"
+    ComputePlatform: "AWSLambda"
+    AgentPermissions:
+      Principals:
+        - "arn:aws:iam::1233456789012:role/agent-permissions-role-1"
+        - "arn:aws:iam::1233456789012:role/agent-permissions-role-2"
     AnomalyDetectionNotificationConfiguration:
     - channelUri: SOME_SNS_TOPIC_ARN
       channelId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee

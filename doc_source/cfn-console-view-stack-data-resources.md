@@ -47,7 +47,7 @@ For stacks that contain macros, choose **View original template** to view the us
 
 The following table describes stack status codes:
 
-### <a name="w6643ab1c15c13c17b5b4"></a>
+### <a name="w6640ab1c15c13c17b5b4"></a>
 
 
 | Stack Status | Description | 

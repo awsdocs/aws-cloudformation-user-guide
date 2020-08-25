@@ -35,9 +35,9 @@ The name or key of the environment variable\.
 
 `Type`  <a name="cfn-codebuild-project-environmentvariable-type"></a>
 The type of environment variable\. Valid values include:  
-+  `PARAMETER_STORE`: An environment variable stored in Amazon EC2 Systems Manager Parameter Store\. To learn how to specify a parameter store environment variable, see [ parameter store reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#parameter-store-build-spec)\.
++  `PARAMETER_STORE`: An environment variable stored in Amazon EC2 Systems Manager Parameter Store\. To learn how to specify a parameter store environment variable, see [ parameter store reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.parameter-store)\.
 +  `PLAINTEXT`: An environment variable in plain text format\. This is the default value\.
-+  `SECRETS_MANAGER`: An environment variable stored in AWS Secrets Manager\. To learn how to specify a secrets manager environment variable, see [ secrets manager reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#secrets-manager-build-spec)\.
++  `SECRETS_MANAGER`: An environment variable stored in AWS Secrets Manager\. To learn how to specify a secrets manager environment variable, see [ secrets manager reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager)\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `PARAMETER_STORE | PLAINTEXT | SECRETS_MANAGER`  

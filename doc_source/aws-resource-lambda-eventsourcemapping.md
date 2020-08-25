@@ -123,18 +123,18 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
-\(Streams\) The maximum age of a record that Lambda sends to a function for processing\.  
+\(Streams\) Discard records older than the specified age\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `-1`  
+*Minimum*: `60`  
 *Maximum*: `604800`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRetryAttempts`  <a name="cfn-lambda-eventsourcemapping-maximumretryattempts"></a>
-\(Streams\) The maximum number of times to retry when the function returns an error\.  
+\(Streams\) Discard records after the specified number of retries\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `-1`  
+*Minimum*: `0`  
 *Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

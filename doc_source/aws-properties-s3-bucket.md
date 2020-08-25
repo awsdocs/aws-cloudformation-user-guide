@@ -202,7 +202,7 @@ Information used to configure the bucket as a static website\. For more informat
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the bucket name\.
 
-Example: `mystack-mybucket` 
+Example: `AWSDOC-EXAMPLE-BUCKET` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -216,26 +216,25 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the specified bucket\.  
-Example: `arn:aws:s3:::mybucket` 
+Example: `arn:aws:s3:::AWSDOC-EXAMPLE-BUCKET` 
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 Returns the IPv4 DNS name of the specified bucket\.  
-Example: `mystack-mybucket.s3.amazonaws.com` 
+Example: `AWSDOC-EXAMPLE-BUCKET.s3.amazonaws.com` 
 
 `DualStackDomainName`  <a name="DualStackDomainName-fn::getatt"></a>
 Returns the IPv6 DNS name of the specified bucket\.  
-Example: ` mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com`   
+Example: ` AWSDOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com`   
 For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html)\.
 
 `RegionalDomainName`  <a name="RegionalDomainName-fn::getatt"></a>
 Returns the regional domain name of the specified bucket\.  
-Example: `mystack-mybucket.s3.us-east-2.amazonaws.com` 
+Example: `AWSDOC-EXAMPLE-BUCKET.s3.us-east-2.amazonaws.com` 
 
 `WebsiteURL`  <a name="WebsiteURL-fn::getatt"></a>
 Returns the Amazon S3 website endpoint for the specified bucket\.  
-
-Example \(IPv4\): `http://mystack-mybucket.s3-website-us-east-2.amazonaws.com/`   
-Example \(IPv6\): `http://mystack-mybucket.s3.dualstack.us-east-2.amazonaws.com/` 
+Example \(IPv4\): `http://AWSDOC-EXAMPLE-BUCKET.s3-website.us-east-2.amazonaws.com`   
+Example \(IPv6\): `http://AWSDOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com` 
 
 ## Examples<a name="aws-properties-s3-bucket--examples"></a>
 
@@ -251,7 +250,7 @@ The following example creates an S3 bucket with a `Retain` deletion policy\.
         "Type" : "AWS::S3::Bucket",
 	"DeletionPolicy": "Retain",
         "Properties" : {
-           "BucketName" : "my-bucket"
+           "BucketName" : "AWSDOC-EXAMPLE-BUCKET"
          }  
      }
 }
@@ -265,7 +264,7 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      BucketName: my-bucket
+      BucketName: AWSDOC-EXAMPLE-BUCKET
 ```
 
 ### Associate a Replication Configuration IAM Role with an S3 Bucket<a name="aws-properties-s3-bucket--examples--Associate_a_Replication_Configuration_IAM_Role_with_an_S3_Bucket"></a>
@@ -567,8 +566,8 @@ The following example template shows a public S3 bucket with two cross\-origin r
                                 "DELETE"
                             ],
                             "AllowedOrigins": [
-                                "http://www.example1.com",
-                                "http://www.example2.com"
+                                "http://www.example.com",
+                                "http://www.example.net"
                             ],
                             "ExposedHeaders": [
                                 "Connection",
@@ -613,7 +612,7 @@ Resources:
           MaxAge: '3600'
         - AllowedHeaders: [x-amz-*]
           AllowedMethods: [DELETE]
-          AllowedOrigins: ['http://www.example1.com', 'http://www.example2.com']
+          AllowedOrigins: ['http://www.example.com', 'http://www.example.net']
           ExposedHeaders: [Connection, Server, Date]
           Id: myCORSRuleId2
           MaxAge: '1800'
