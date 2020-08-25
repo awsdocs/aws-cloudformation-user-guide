@@ -174,10 +174,10 @@ The read attributes\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshTokenValidity`  <a name="cfn-cognito-userpoolclient-refreshtokenvalidity"></a>
-The time limit, in days, after which the refresh token is no longer valid and cannot be used\.  
+The time limit, in seconds, after which the refresh token is no longer valid and cannot be used\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `0`  
+*Minimum*: `600`  
 *Maximum*: `315360000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
