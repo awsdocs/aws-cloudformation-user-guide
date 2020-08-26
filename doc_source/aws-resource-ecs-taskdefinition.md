@@ -236,7 +236,7 @@ The following example defines an Amazon ECS task definition, which includes two 
         }
       ],
       "Image":"amazon/amazon-ecs-sample",
-      "Cpu": "10",
+      "Cpu": 256,
       "PortMappings":[
         {
           "ContainerPort": {"Ref":"AppContainerPort"},
@@ -248,22 +248,22 @@ The following example defines an Amazon ECS task definition, which includes two 
         "-D",
         "FOREGROUND"
       ],
-      "Memory":"0.5GB",
-      "Essential": "true"
+      "Memory": 512,
+      "Essential": true
     },
     {
       "Name": "busybox",
       "Image": "busybox",
-      "Cpu": "10",
+      "Cpu": 256,
       "EntryPoint": [
         "sh",
         "-c"
       ],
-      "Memory": "0.5GB",
+      "Memory": 512,
       "Command": [
         "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
       ],
-      "Essential" : "false",
+      "Essential" : false,
       "VolumesFrom": [
         {
           "SourceContainer": {"Ref":"AppName"}
@@ -296,7 +296,7 @@ taskdefinition:
             SourceVolume: "my-vol"
             ContainerPath: "/var/www/my-vol"
         Image: "amazon/amazon-ecs-sample"
-        Cpu: "10"
+        Cpu: 256
         PortMappings: 
           - 
             ContainerPort: 
@@ -307,16 +307,16 @@ taskdefinition:
           - "/usr/sbin/apache2"
           - "-D"
           - "FOREGROUND"
-        Memory: "0.5GB"
+        Memory: 512
         Essential: true
       - 
         Name: "busybox"
         Image: "busybox"
-        Cpu: "10"
+        Cpu: 256
         EntryPoint: 
           - "sh"
           - "-c"
-        Memory: "0.5GB"
+        Memory: 512
         Command: 
           - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
         Essential: false
@@ -358,28 +358,28 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
               }
             ],
             "Image": "amazon/amazon-ecs-sample",
-            "Cpu": "10",
+            "Cpu": 256,
             "EntryPoint": [
               "/usr/sbin/apache2",
               "-D",
               "FOREGROUND"
             ],
-            "Memory": "0.5GB",
-            "Essential": "true"
+            "Memory": 512,
+            "Essential": true
           },
           {
             "Name": "busybox",
             "Image": "busybox",
-            "Cpu": "10",
+            "Cpu": 256,
             "EntryPoint": [
               "sh",
               "-c"
             ],
-            "Memory": "0.5GB",
+            "Memory": 512,
             "Command": [
               "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
             ],
-            "Essential": "false",
+            "Essential": false,
             "DependsOn": [
               "ContainerName": "my-app",
               "Condition": "START"
