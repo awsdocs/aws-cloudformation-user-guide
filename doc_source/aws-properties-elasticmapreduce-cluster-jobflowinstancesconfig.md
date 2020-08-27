@@ -119,7 +119,7 @@ The identifier of the Amazon EC2 security group for the master node\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EmrManagedSlaveSecurityGroup`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup"></a>
-The identifier of the Amazon EC2 security group for the core and task nodes\.
+The identifier of the Amazon EC2 security group for the core and task nodes\.  
 If you specify the EmrManagedMasterSecurityGroup, you must be specify the EmrManagedSlaveSecurityGroup\.
 *Required*: No  
 *Type*: String  
