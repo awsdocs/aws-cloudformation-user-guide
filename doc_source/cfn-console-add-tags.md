@@ -33,7 +33,7 @@ Specifies whether the stack should be rolled back if stack creation fails\. Typi
 Specifies the amount of time, in minutes, that CloudFormation should allot before timing out stack creation operations\. If CloudFormation cannot create the entire stack in the time allotted, it fails the stack creation due to timeout and rolls back the stack\.   
 By default, there is no timeout for stack creation\. However, individual resources may have their own timeouts based on the nature of the service they implement\. For example, if an individual resource in your stack times out, stack creation also times out even if the timeout you specified for stack creation has not yet been reached\.  
 **Termination protection**  
-Prevents a stack from being accidently deleted\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. For more information, see [Protecting a stack from being deleted](using-cfn-protect-stacks.md)\.  
+Prevents a stack from being accidentally deleted\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack\-\-including its status\-\-remains unchanged\. For more information, see [Protecting a stack from being deleted](using-cfn-protect-stacks.md)\.  
 Termination protection is **Disabled** by default\.
 
 **To set stack options**
