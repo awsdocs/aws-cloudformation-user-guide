@@ -99,7 +99,7 @@ You must specify at least one of the following properties: `AbortIncompleteMulti
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-s3-bucket-lifecycleconfig-rule-prefix"></a>
-Object key prefix that identifies one or more objects to which this rule applies\.  
+Object key prefix that identifies one or more objects to which this rule applies\. When no prefix is specified, the rule will be applied to the entire bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
