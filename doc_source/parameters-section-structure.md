@@ -73,7 +73,7 @@ The following requirements apply when using parameters:
 + Each parameter must be assigned a value at runtime for AWS CloudFormation to successfully provision the stack\. You can optionally specify a default value for AWS CloudFormation to use unless another value is provided\.
 + Parameters must be declared and referenced from within the same template\. You can reference parameters from the `Resources` and `Outputs` sections of the template\.
 
-## JSON<a name="parameters-section-structure-syntax"></a>
+### JSON<a name="parameters-section-structure-syntax"></a>
 
 ```
 "Parameters" : {
@@ -84,7 +84,7 @@ The following requirements apply when using parameters:
 }
 ```
 
-## YAML<a name="parameters-section-structure-syntax.yaml"></a>
+### YAML<a name="parameters-section-structure-syntax.yaml"></a>
 
 ```
 Parameters:
