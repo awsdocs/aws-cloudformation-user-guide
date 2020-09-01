@@ -198,7 +198,7 @@ The period, in seconds, over which the statistic is applied\. This is required f
 For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statistic`  <a name="cfn-cloudwatch-alarms-statistic"></a>
