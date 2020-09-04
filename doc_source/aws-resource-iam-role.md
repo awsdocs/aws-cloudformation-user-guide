@@ -332,20 +332,17 @@ Resources:
       PolicyDocument: 
         Version: "2012-10-17"
         Statement: 
-          - 
-            Effect: "Allow"
+          - Effect: "Allow"
             Action: "*"
             Resource: "*"
       Roles: 
-        - 
-          Ref: "RootRole"
+        - Ref: "RootRole"
   RootInstanceProfile: 
     Type: "AWS::IAM::InstanceProfile"
     Properties: 
       Path: "/"
       Roles: 
-        - 
-          Ref: "RootRole"
+        - Ref: "RootRole"
 ```
 
 ## See also<a name="aws-resource-iam-role--seealso"></a>
