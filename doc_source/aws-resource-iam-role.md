@@ -230,7 +230,7 @@ Resources:
           - Effect: Allow
             Principal:
               Service:
-              - ec2.amazonaws.com
+                - ec2.amazonaws.com
             Action:
               - 'sts:AssumeRole'
       Path: /
