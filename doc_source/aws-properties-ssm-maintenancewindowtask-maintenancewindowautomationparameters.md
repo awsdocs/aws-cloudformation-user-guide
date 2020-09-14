@@ -36,5 +36,5 @@ The version of an Automation document to use during task execution\.
 `Parameters`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters"></a>
 The parameters for the AUTOMATION task\.  
 *Required*: No  
-*Type*: Json  
+*Type*: String to array of strings map  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
