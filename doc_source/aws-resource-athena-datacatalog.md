@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-athena-datacatalog-description)" : String,
       "[Name](#cfn-athena-datacatalog-name)" : String,
       "[Parameters](#cfn-athena-datacatalog-parameters)" : {Key : Value, ...},
-      "[Tags](#cfn-athena-datacatalog-tags)" : Tags,
+      "[Tags](#cfn-athena-datacatalog-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-athena-datacatalog-type)" : String
     }
 }
@@ -30,8 +30,8 @@ Properties:
   [Name](#cfn-athena-datacatalog-name): String
   [Parameters](#cfn-athena-datacatalog-parameters): 
     Key : Value
-  [Tags](#cfn-athena-datacatalog-tags): 
-    Tags
+  [Tags](#cfn-athena-datacatalog-tags):
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-athena-datacatalog-type): String
 ```
 
@@ -67,9 +67,9 @@ Specifies the Lambda function or functions to use for the data catalog\. The map
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-athena-datacatalog-tags"></a>
-An optional list of comma separated tags \(key\-value pairs\) that are custom attributes for the data catalog\.  
+The tags \(key\-value pairs\) to associate with this resource\.
 *Required*: No  
-*Type*: [Tags](aws-properties-athena-datacatalog-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-athena-datacatalog-type"></a>
