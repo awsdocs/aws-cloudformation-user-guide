@@ -228,7 +228,8 @@ MyTransferServer:
     LoggingRole:
       Ref: AWSTransferLoggingAccess
     Protocols: SFTP
-    SecurityPolicy: TransferSecurityPolicy-2020-06
+    SecurityPolicy:
+      Ref: TransferSecurityPolicy-2020-06
     Tags: 
       - Key: KeyName
         Value: ValueName
