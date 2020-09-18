@@ -157,7 +157,7 @@ A complex type that contains information about origins for this distribution\.
 `PriceClass`  <a name="cfn-cloudfront-distribution-distributionconfig-priceclass"></a>
 The price class that corresponds with the maximum price that you want to pay for CloudFront service\. If you specify `PriceClass_All`, CloudFront responds to requests for your objects from all CloudFront edge locations\.  
 If you specify a price class other than `PriceClass_All`, CloudFront serves your objects from the CloudFront edge location that has the lowest latency among the edge locations in your price class\. Viewers who are in or near regions that are excluded from your specified price class may encounter slower performance\.  
-For more information about price classes, see [Choosing the Price Class for a CloudFront Distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PriceClass.html) in the *Amazon CloudFront Developer Guide*\. For information about CloudFront pricing, including how price classes \(such as Price Class 100\) map to CloudFront regions, see [Amazon CloudFront Pricing](http://aws.amazon.com/cloudfront/pricing/)\. For price class information, scroll down to see the table at the bottom of the page\.  
+For more information about price classes, see [Choosing the Price Class for a CloudFront Distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PriceClass.html) in the *Amazon CloudFront Developer Guide*\. For information about CloudFront pricing, including how price classes \(such as Price Class 100\) map to CloudFront regions, see [Amazon CloudFront Pricing](http://aws.amazon.com/cloudfront/pricing/)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  

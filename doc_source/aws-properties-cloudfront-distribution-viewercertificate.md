@@ -89,7 +89,7 @@ If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), specify
 If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net`, don’t set a value for this field\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed values*: `sni-only | vip`  
+*Allowed values*: `sni-only | static-ip | vip`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-cloudfront-distribution-viewercertificate--seealso"></a>
