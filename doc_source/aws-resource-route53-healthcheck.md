@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HealthCheck",
   "Properties" : {
-      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : HealthCheckConfig,
+      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : Json,
       "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTag, ... ]
     }
 }
@@ -36,8 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Route53::HealthCheck
 Properties: 
-  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
-    HealthCheckConfig
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): Json
   [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
     - HealthCheckTag
 ```
@@ -47,8 +46,8 @@ Properties:
 `HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
 A complex type that contains detailed information about one health check\.  
 *Required*: Yes  
-*Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>
 The `HealthCheckTags` property describes key\-value pairs that are associated with an `AWS::Route53::HealthCheck` resource\.   
@@ -63,6 +62,13 @@ The `HealthCheckTags` property describes key\-value pairs that are associated wi
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the health check ID, such as `e0a123b4-4dba-4650-935e-example`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-route53-healthcheck-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-route53-healthcheck-return-values-fn--getatt-fn--getatt"></a>
+
+`HealthCheckId`  <a name="HealthCheckId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-route53-healthcheck--examples"></a>
 

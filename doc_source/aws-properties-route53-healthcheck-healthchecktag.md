@@ -10,21 +10,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Key](#cfn-route53-healthchecktags-key)" : String,
-  "[Value](#cfn-route53-healthchecktags-value)" : String
+  "[Key](#cfn-route53-healthcheck-healthchecktag-key)" : String,
+  "[Value](#cfn-route53-healthcheck-healthchecktag-value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-route53-healthcheck-healthchecktag-syntax.yaml"></a>
 
 ```
-  [Key](#cfn-route53-healthchecktags-key): String
-  [Value](#cfn-route53-healthchecktags-value): String
+  [Key](#cfn-route53-healthcheck-healthchecktag-key): String
+  [Value](#cfn-route53-healthcheck-healthchecktag-value): String
 ```
 
 ## Properties<a name="aws-properties-route53-healthcheck-healthchecktag-properties"></a>
 
-`Key`  <a name="cfn-route53-healthchecktags-key"></a>
+`Key`  <a name="cfn-route53-healthcheck-healthchecktag-key"></a>
 The value of `Key` depends on the operation that you want to perform:  
 +  **Add a tag to a health check or hosted zone**: `Key` is the name that you want to give the new tag\.
 +  **Edit a tag**: `Key` is the name of the tag that you want to change the `Value` for\.
@@ -35,7 +35,7 @@ The value of `Key` depends on the operation that you want to perform:
 *Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Value`  <a name="cfn-route53-healthchecktags-value"></a>
+`Value`  <a name="cfn-route53-healthcheck-healthchecktag-value"></a>
 The value of `Value` depends on the operation that you want to perform:  
 +  **Add a tag to a health check or hosted zone**: `Value` is the value that you want to give the new tag\.
 +  **Edit a tag**: `Value` is the new value that you want to assign the tag\.
