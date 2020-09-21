@@ -65,8 +65,8 @@ An API\-specific tag group of related cached parameters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionId`  <a name="cfn-apigateway-method-integration-connectionid"></a>
-The ID of the `VpcLink` used for the integration when `connectionType=VPC_LINK`, otherwise undefined\.  
-*Required*: No  
+The ID of the `VpcLink` used for the integration when `ConnectionType: VPC_LINK`, otherwise undefined\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
