@@ -45,6 +45,7 @@ The type of the connection\. Currently, these types are supported:
 +  `JDBC` \- Designates a connection to a database through Java Database Connectivity \(JDBC\)\.
 +  `KAFKA` \- Designates a connection to an Apache Kafka streaming platform\.
 +  `MONGODB` \- Designates a connection to a MongoDB document database\.
++  `NETWORK` \- Designates a connection to a VPC/Subnet\.
 SFTP is not supported\.  
 *Required*: Yes  
 *Type*: String  
