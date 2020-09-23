@@ -144,14 +144,14 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
       "Id": "key-default-1",
       "Statement": [
         {
-          "Sid": "Enable IAM User Permissions",
+          "Sid": "EnableIamUserPermissions",
           "Effect": "Allow",
           "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
           "Action": "kms:*",
           "Resource": "*"
         },
         {
-          "Sid": "Allow administration of the key",
+          "Sid": "AllowAdministrationOfTheKey",
           "Effect": "Allow",
           "Principal": { "AWS": "arn:aws:iam::123456789012:user/Alice" },
           "Action": [
@@ -171,7 +171,7 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
           "Resource": "*"
         },
         {
-          "Sid": "Allow use of the key",
+          "Sid": "AllowUseOfTheKey",
           "Effect": "Allow",
           "Principal": { "AWS": "arn:aws:iam::123456789012:user/Bob" },
           "Action": [
@@ -201,13 +201,13 @@ myKey:
       Version: '2012-10-17'
       Id: key-default-1
       Statement:
-      - Sid: Enable IAM User Permissions
+      - Sid: EnableIamUserPermissions
         Effect: Allow
         Principal:
           AWS: arn:aws:iam::111122223333:root
         Action: kms:*
         Resource: '*'
-      - Sid: Allow administration of the key
+      - Sid: AllowAdministrationOfTheKey
         Effect: Allow
         Principal:
           AWS: arn:aws:iam::123456789012:user/Alice
@@ -225,7 +225,7 @@ myKey:
         - kms:ScheduleKeyDeletion
         - kms:CancelKeyDeletion
         Resource: '*'
-      - Sid: Allow use of the key
+      - Sid: AllowUseOfTheKey
         Effect: Allow
         Principal:
           AWS: arn:aws:iam::123456789012:user/Bob
@@ -256,7 +256,7 @@ The following example creates a symmetric CMK with one resource tag\.
           "Id": "key-default-1",
           "Statement": [
             {
-              "Sid": "Enable IAM User Permissions",
+              "Sid": "EnableIamUserPermissions",
               "Effect": "Allow",
               "Principal": {
                 "AWS": { "Fn::Join" : ["" , ["arn:aws:iam::", {"Ref" : "AWS::AccountId"} ,":root" ]] }
@@ -297,7 +297,7 @@ Resources:
         Version: '2012-10-17'
         Id: key-default-1
         Statement:
-        - Sid: Enable IAM User Permissions
+        - Sid: EnableIamUserPermissions
           Effect: Allow
           Principal:
             AWS:
