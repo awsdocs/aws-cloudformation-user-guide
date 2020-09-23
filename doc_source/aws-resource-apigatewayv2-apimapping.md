@@ -78,7 +78,9 @@ The following example creates an `ApiMapping` resource called `MyApiMapping`\.
     "MyApiMapping": {
         "Type": "AWS::ApiGatewayV2::ApiMapping",
         "Properties": {
-            "DomainName": "mydomainame.us-east-1.com",
+            "DomainName": {
+                "Ref": "MyDomainName"
+            },
             "ApiId": {
                 "Ref": "MyApi"
             },
@@ -96,7 +98,7 @@ The following example creates an `ApiMapping` resource called `MyApiMapping`\.
 MyApiMapping:
   Type: 'AWS::ApiGatewayV2::ApiMapping'
   Properties:
-    DomainName: mydomainame.us-east-1.com
+    DomainName: !Ref MyDomainName
     ApiId: !Ref MyApi
     Stage: !Ref MyStage
 ```
