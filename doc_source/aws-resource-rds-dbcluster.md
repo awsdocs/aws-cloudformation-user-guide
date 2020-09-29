@@ -187,6 +187,10 @@ A value that indicates whether the DB cluster has deletion protection enabled\. 
 
 `EnableCloudwatchLogsExports`  <a name="cfn-rds-dbcluster-enablecloudwatchlogsexports"></a>
 The list of log types that need to be enabled for exporting to CloudWatch Logs\. The values in the list depend on the DB engine being used\. For more information, see [Publishing Database Logs to Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Aurora User Guide*\.  
+ **Aurora MySQL**   
+Possible values are `audit`, `error`, `general`, and `slowquery`\.   
+ **Aurora PostgreSQL**   
+Possible values are `postgresql` and `upgrade`\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -353,6 +357,7 @@ A value that indicates whether to restore the DB cluster to the latest restorabl
 
 `VpcSecurityGroupIds`  <a name="cfn-rds-dbcluster-vpcsecuritygroupids"></a>
 A list of EC2 VPC security groups to associate with this DB cluster\.  
+If you plan to update the resource, don't specify VPC security groups in a shared VPC\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

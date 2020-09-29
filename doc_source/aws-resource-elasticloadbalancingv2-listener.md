@@ -52,7 +52,7 @@ Properties:
 The default SSL server certificate for a secure listener\. You must provide exactly one certificate if the listener protocol is HTTPS or TLS\.  
 To create a certificate list for a secure listener, use [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)\.  
 *Required*: Conditional  
-*Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md)  
+*Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultActions`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions"></a>

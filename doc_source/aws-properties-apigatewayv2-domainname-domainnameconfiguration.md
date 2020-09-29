@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)" : String,
   "[CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)" : String,
-  "[EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)" : String
+  "[EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)" : String,
+  "[SecurityPolicy](#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)" : String
 }
 ```
 
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn): String
   [CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename): String
   [EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype): String
+  [SecurityPolicy](#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy): String
 ```
 
 ## Properties<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration-properties"></a>
@@ -42,6 +44,12 @@ The user\-friendly name of the certificate that will be used by the edge\-optimi
 
 `EndpointType`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype"></a>
 The endpoint type\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityPolicy`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy"></a>
+The Transport Layer Security \(TLS\) version of the security policy for this domain name\. The valid values are `TLS_1_0` and `TLS_1_2`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

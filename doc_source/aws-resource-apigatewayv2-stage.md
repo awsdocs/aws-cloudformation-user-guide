@@ -98,7 +98,7 @@ Route settings for the stage\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigatewayv2-stage-stagename"></a>
-The stage name\. Stage names can only contain alphanumeric characters, hyphens, and underscores\. Maximum length is 128 characters\.  
+The stage name\. Stage names can contain only alphanumeric characters, hyphens, and underscores, or be `$default`\. Maximum length is 128 characters\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

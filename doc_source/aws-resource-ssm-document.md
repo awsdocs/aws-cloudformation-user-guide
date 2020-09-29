@@ -76,11 +76,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-document--examples"></a>
 
-### Run commands on an EC2 Linux instance<a name="aws-resource-ssm-document--examples--Run_commands_on_an_EC2_Linux_instance"></a>
+### Create a document that runs commands on an EC2 Linux instance<a name="aws-resource-ssm-document--examples--Create_a_document_that_runs_commands_on_an_EC2_Linux_instance"></a>
 
 The following SSM document runs the commands you specify on your target EC2 Linux instance\. You specify the commands parameter value when you run the document using Run Command\.
 
-#### YAML<a name="aws-resource-ssm-document--examples--Run_commands_on_an_EC2_Linux_instance--yaml"></a>
+#### YAML<a name="aws-resource-ssm-document--examples--Create_a_document_that_runs_commands_on_an_EC2_Linux_instance--yaml"></a>
 
 ```
 document: 
@@ -106,7 +106,7 @@ document:
     Name: 'CFN_2.2_command_example'
 ```
 
-#### JSON<a name="aws-resource-ssm-document--examples--Run_commands_on_an_EC2_Linux_instance--json"></a>
+#### JSON<a name="aws-resource-ssm-document--examples--Create_a_document_that_runs_commands_on_an_EC2_Linux_instance--json"></a>
 
 ```
 "document": {

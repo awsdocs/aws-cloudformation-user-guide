@@ -37,7 +37,12 @@ An alias with 20 provisioned concurrency\.
 #### YAML<a name="aws-properties-lambda-alias-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency--yaml"></a>
 
 ```
- alias: Type: AWS::Lambda::Alias Properties: FunctionName: !Ref function FunctionVersion:
-        !GetAtt newVersion.Version Name: BLUE ProvisionedConcurrencyConfig: ProvisionedConcurrentExecutions:
-        20
+  alias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref function
+      FunctionVersion: !GetAtt newVersion.Version
+      Name: BLUE
+      ProvisionedConcurrencyConfig:
+        ProvisionedConcurrentExecutions: 20
 ```

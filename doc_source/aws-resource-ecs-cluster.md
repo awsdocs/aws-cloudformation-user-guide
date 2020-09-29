@@ -103,82 +103,114 @@ The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs
 
 ## Examples<a name="aws-resource-ecs-cluster--examples"></a>
 
-### Creating an Amazon ECS cluster<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster"></a>
+### Define a cluster with the AWS Fargate capacity providers and a default capacity provider strategy defined<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the_AWS_Fargate_capacity_providers_and_a_default_capacity_provider_strategy_defined"></a>
 
-The following example creates an empty cluster named `MyCluster`\.
+The following example defines a cluster named `MyFargateCluster` with the `FARGATE` and `FARGATE_SPOT` capacity providers\. A default capacity provider strategy is also defined where tasks launched will be split evenly between the `FARGATE` and `FARGATE_SPOT` capacity providers\.
 
-#### JSON<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster--json"></a>
+#### JSON<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the_AWS_Fargate_capacity_providers_and_a_default_capacity_provider_strategy_defined--json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "MyCluster": {
-            "Type": "AWS::ECS::Cluster",
-            "Properties": {
-                "ClusterName": "MyCluster"
+"ECSCluster": {
+    "Type": "AWS: : ECS: : Cluster",
+    "Properties": {
+        "ClusterName": "MyFargateCluster",
+        "CapacityProviders": [
+            "FARGATE",
+            "FARGATE_SPOT"
+        ],
+        "DefaultCapacityProviderStrategy": [
+            {
+                "CapacityProvider": "FARGATE",
+                "Weight": 1
+            },
+            {
+                "CapacityProvider": "FARGATE_SPOT",
+                "Weight": 1
             }
-        }
+        ]
     }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-cluster--examples--Creating_an_Amazon_ECS_cluster--yaml"></a>
+#### YAML<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the_AWS_Fargate_capacity_providers_and_a_default_capacity_provider_strategy_defined--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  MyCluster:
-    Type: 'AWS::ECS::Cluster'
-    Properties:
-      ClusterName: MyCluster
+ECSCluster:
+  Type: 'AWS::ECS::Cluster'
+  Properties:
+    ClusterName: MyFargateCluster
+    CapacityProviders:
+      - FARGATE
+        FARGATE_SPOT
+    DefaultCapacityProviderStrategy:
+      - CapacityProvider: FARGATE
+        Weight: 1
+      - CapacityProvider: FARGATE_SPOT
+        Weight: 1
 ```
 
-### Creating an empty Amazon ECS cluster with tags with CloudWatch Container Insights enabled<a name="aws-resource-ecs-cluster--examples--Creating_an_empty_Amazon_ECS_cluster_with_tags_with_CloudWatch_Container_Insights_enabled"></a>
+### Define an empty cluster<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster"></a>
 
-The following example creates an empty cluster named `MyCluster` with CloudWatch Container Insights enabled that is tagged with the key `environment` and the value `production`\.
+The following example defines an empty cluster named `MyEmptyCluster`\.
 
-#### JSON<a name="aws-resource-ecs-cluster--examples--Creating_an_empty_Amazon_ECS_cluster_with_tags_with_CloudWatch_Container_Insights_enabled--json"></a>
+#### JSON<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster--json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "ECSCluster": {
-            "Type": "AWS::ECS::Cluster",
-            "Properties": {
-                "ClusterName": "MyCluster",
-                "ClusterSettings": [
-                    {
-                        "Name": "containerInsights",
-                        "Value": "enabled"
-                    }
-                ],
-                "Tags": [
-                    {
-                        "Key": "environment",
-                        "Value": "production"
-                    }
-                ]
-            }
-        }
+"ECSCluster": {
+    "Type": "AWS::ECS::Cluster",
+    "Properties": {
+        "ClusterName": "MyEmptyCluster"
     }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-cluster--examples--Creating_an_empty_Amazon_ECS_cluster_with_tags_with_CloudWatch_Container_Insights_enabled--yaml"></a>
+#### YAML<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  ECSCluster:
-    Type: 'AWS::ECS::Cluster'
-    Properties:
-      ClusterName: MyCluster
-      ClusterSettings:
-        - Name: containerInsights
-          Value: enabled
-      Tags:
-        - Key: environment
-          Value: production
+ECSCluster:
+  Type: 'AWS::ECS::Cluster'
+  Properties:
+    ClusterName: MyEmptyCluster
+```
+
+### Define an empty cluster with CloudWatch Container Insights enabled and defined tags<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster_with_CloudWatch_Container_Insights_enabled_and_defined_tags"></a>
+
+The following example defines an empty cluster named `MyCluster` with CloudWatch Container Insights enabled that is tagged with the key `environment` and the value `production`\.
+
+#### JSON<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster_with_CloudWatch_Container_Insights_enabled_and_defined_tags--json"></a>
+
+```
+"ECSCluster": {
+    "Type": "AWS::ECS::Cluster",
+    "Properties": {
+        "ClusterName": "MyCluster",
+        "ClusterSettings": [
+            {
+                "Name": "containerInsights",
+                "Value": "enabled"
+            }
+        ],
+        "Tags": [
+            {
+                "Key": "environment",
+                "Value": "production"
+            }
+        ]
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster_with_CloudWatch_Container_Insights_enabled_and_defined_tags--yaml"></a>
+
+```
+ECSCluster:
+  Type: 'AWS::ECS::Cluster'
+  Properties:
+    ClusterName: MyCluster
+    ClusterSettings:
+      - Name: containerInsights
+        Value: enabled
+    Tags:
+      - Key: environment
+        Value: production
 ```

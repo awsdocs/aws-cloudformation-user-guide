@@ -70,10 +70,9 @@ The maximum number of items to retrieve in a single batch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BisectBatchOnFunctionError`  <a name="cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror"></a>
-\(Streams\) If the function returns an error, split the batch in two and retry\.  
+\(Streams\) If the function returns an error, split the batch in two and retry\. The default value is false\.  
 *Required*: No  
 *Type*: Boolean  
-*Default*: `false`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationConfig`  <a name="cfn-lambda-eventsourcemapping-destinationconfig"></a>
@@ -119,7 +118,6 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) The maximum amount of time to gather records before invoking the function, in seconds\.  
 *Required*: No  
 *Type*: Integer  
-*Default*: `0`  
 *Minimum*: `0`  
 *Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -128,7 +126,6 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) Discard records older than the specified age\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Default*: `604800`  
 *Minimum*: `60`  
 *Maximum*: `604800`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -137,16 +134,14 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) Discard records after the specified number of retries\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Default*: `10000`  
 *Minimum*: `0`  
 *Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelizationFactor`  <a name="cfn-lambda-eventsourcemapping-parallelizationfactor"></a>
-\(Streams\) The number of batches to process from each shard concurrently\.  
+\(Streams\) The number of batches to process from each shard concurrently\. The default value is 1\.  
 *Required*: No  
 *Type*: Integer  
-*Default*: `1`  
 *Minimum*: `1`  
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -190,16 +185,61 @@ Create an event source mapping that reads events from Amazon Kinesis and invokes
 #### JSON<a name="aws-resource-lambda-eventsourcemapping--examples--Event_Source_Mapping--json"></a>
 
 ```
-"EventSourceMapping": { "Type": "AWS::Lambda::EventSourceMapping", "Properties": {
-        "EventSourceArn": { "Fn::Join": [ "", [ "arn:aws:kinesis:", { "Ref": "AWS::Region" }, ":", { "Ref":
-        "AWS::AccountId" }, ":stream/", { "Ref": "KinesisStream" } ] ] }, "FunctionName": { "Fn::GetAtt": [
-        "LambdaFunction", "Arn" ] }, "StartingPosition": "TRIM_HORIZON" } }
+"EventSourceMapping": {
+    "Type": "AWS::Lambda::EventSourceMapping",
+    "Properties": {
+        "EventSourceArn": {
+            "Fn::Join": [
+                "",
+                [
+                    "arn:aws:kinesis:",
+                    {
+                        "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                        "Ref": "AWS::AccountId"
+                    },
+                    ":stream/",
+                    {
+                        "Ref": "KinesisStream"
+                    }
+                ]
+            ]
+        },
+        "FunctionName": {
+            "Fn::GetAtt": [
+                "LambdaFunction",
+                "Arn"
+            ]
+        },
+        "StartingPosition": "TRIM_HORIZON"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-lambda-eventsourcemapping--examples--Event_Source_Mapping--yaml"></a>
 
 ```
-MyEventSourceMapping: Type: AWS::Lambda::EventSourceMapping Properties: EventSourceArn:
-        Fn::Join: - "" - - "arn:aws:kinesis:" - Ref: "AWS::Region" - ":" - Ref: "AWS::AccountId" - ":stream/" - Ref:
-        "KinesisStream" FunctionName: Fn::GetAtt: - "LambdaFunction" - "Arn" StartingPosition: "TRIM_HORIZON"
+MyEventSourceMapping: 
+  Type: AWS::Lambda::EventSourceMapping
+  Properties: 
+    EventSourceArn: 
+      Fn::Join: 
+        - ""
+        - 
+          - "arn:aws:kinesis:"
+          - 
+            Ref: "AWS::Region"
+          - ":"
+          - 
+            Ref: "AWS::AccountId"
+          - ":stream/"
+          - 
+            Ref: "KinesisStream"
+    FunctionName: 
+      Fn::GetAtt: 
+        - "LambdaFunction"
+        - "Arn"
+    StartingPosition: "TRIM_HORIZON"
 ```

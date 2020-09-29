@@ -89,11 +89,11 @@ The JSON formatted contents of the fleet provisioning template\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
 
- `{ "Ref": "MyThing" }` 
+ `{ "Ref": "MyTemplate" }` 
 
 For a stack named MyStack, a value similar to the following is returned:
 
- `MyStack-MyThing-AB1CDEFGHIJK` 
+ `MyStack-MyTemplate-AB1CDEFGHIJK` 
 
 ### Fn::GetAtt<a name="aws-resource-iot-provisioningtemplate-return-values-fn--getatt"></a>
 

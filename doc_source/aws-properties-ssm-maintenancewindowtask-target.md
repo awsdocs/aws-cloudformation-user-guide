@@ -4,6 +4,9 @@ The `Target` property type specifies targets \(either instances or window target
 
  `Target` is a property of the [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) property type\.
 
+**Note**  
+To use `resource-groups:Name` as the key for a maintenance window target, specify the resource group as a `AWS::SSM::MaintenanceWindowTarget` type, and use the `Ref` function to specify the target for `AWS::SSM::MaintenanceWindowTask`\. For an example, see **Create a Run Command task that targets instances using a resource group name** in [AWS::SSM::MaintenanceWindowTask Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#aws-resource-ssm-maintenancewindowtask--examples)\.
+
 ## Syntax<a name="aws-properties-ssm-maintenancewindowtask-target-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

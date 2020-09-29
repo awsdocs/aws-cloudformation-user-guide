@@ -39,7 +39,8 @@ Properties:
 
 `AgentPermissions`  <a name="cfn-codeguruprofiler-profilinggroup-agentpermissions"></a>
 The agent permissions attached to this profiling group\. This action group grants `ConfigureAgent` and `PostAgentProfile` permissions to perform actions required by the profiling agent\. The Json consists of key `Principals`\.  
-*Principals*: A list of string ARNs for the roles and users you want to grant access to the profiling group\. Wildcards are not supported in the ARNs\. You are allowed to provide up to 50 ARNs\. An empty list is not permitted\. This is a required key\. For information, see [Resource\-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in the *Amazon CodeGuru Profiler user guide*, [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html), and [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)\.  
+*Principals*: A list of string ARNs for the roles and users you want to grant access to the profiling group\. Wildcards are not supported in the ARNs\. You are allowed to provide up to 50 ARNs\. An empty list is not permitted\. This is a required key\.   
+For more information, see [Resource\-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in the *Amazon CodeGuru Profiler user guide*, [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html), and [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

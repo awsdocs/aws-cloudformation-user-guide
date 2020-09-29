@@ -45,7 +45,7 @@ A value in minutes after a backup job is successfully started before it must be 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyActions`  <a name="cfn-backup-backupplan-backupruleresourcetype-copyactions"></a>
-Not currently supported by AWS CloudFormation\.  
+An array of CopyAction objects, which contains the details of the copy operation\.  
 *Required*: No  
 *Type*: List of [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

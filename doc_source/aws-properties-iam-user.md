@@ -89,7 +89,7 @@ Adds or updates an inline policy document that is embedded in the specified IAM 
 The name of each policy for a role, user, or group must be unique\. If you don't choose unique names, updates to the IAM identity will fail\. 
 For information about limits on the number of inline policies that you can embed in a user, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.  
 *Required*: No  
-*Type*: List of [Policy](aws-properties-iam-policy-2.md)  
+*Type*: List of [Policy](aws-properties-iam-policy-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iam-user-tags"></a>

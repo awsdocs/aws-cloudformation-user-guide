@@ -275,6 +275,9 @@ The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-e
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
 
 ### Create an AWS OpsWorks for Chef Automate server<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server"></a>

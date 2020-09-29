@@ -70,7 +70,7 @@ The Amazon Resource Name \(ARN\) of the service\-linked role that allows Amazon 
 
 ## Examples<a name="aws-resource-macie-session--examples"></a>
 
-The following examples demonstrates how to declare an `AWS::Macie::Session` resource\.
+The following example demonstrates how to declare an `AWS::Macie::Session` resource\.
 
 ### Creating a Macie Session<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session"></a>
 

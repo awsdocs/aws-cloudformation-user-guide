@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolClient",
   "Properties" : {
+      "[AccessTokenValidity](#cfn-cognito-userpoolclient-accesstokenvalidity)" : Integer,
       "[AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows)" : [ String, ... ],
       "[AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)" : Boolean,
       "[AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes)" : [ String, ... ],
@@ -21,11 +22,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi)" : String,
       "[ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows)" : [ String, ... ],
       "[GenerateSecret](#cfn-cognito-userpoolclient-generatesecret)" : Boolean,
+      "[IdTokenValidity](#cfn-cognito-userpoolclient-idtokenvalidity)" : Integer,
       "[LogoutURLs](#cfn-cognito-userpoolclient-logouturls)" : [ String, ... ],
       "[PreventUserExistenceErrors](#cfn-cognito-userpoolclient-preventuserexistenceerrors)" : String,
       "[ReadAttributes](#cfn-cognito-userpoolclient-readattributes)" : [ String, ... ],
       "[RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity)" : Integer,
       "[SupportedIdentityProviders](#cfn-cognito-userpoolclient-supportedidentityproviders)" : [ String, ... ],
+      "[TokenValidityUnits](#cfn-cognito-userpoolclient-tokenvalidityunits)" : TokenValidityUnits,
       "[UserPoolId](#cfn-cognito-userpoolclient-userpoolid)" : String,
       "[WriteAttributes](#cfn-cognito-userpoolclient-writeattributes)" : [ String, ... ]
     }
@@ -37,6 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Cognito::UserPoolClient
 Properties: 
+  [AccessTokenValidity](#cfn-cognito-userpoolclient-accesstokenvalidity): Integer
   [AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows): 
     - String
   [AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient): Boolean
@@ -51,6 +55,7 @@ Properties:
   [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
     - String
   [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret): Boolean
+  [IdTokenValidity](#cfn-cognito-userpoolclient-idtokenvalidity): Integer
   [LogoutURLs](#cfn-cognito-userpoolclient-logouturls): 
     - String
   [PreventUserExistenceErrors](#cfn-cognito-userpoolclient-preventuserexistenceerrors): String
@@ -59,12 +64,22 @@ Properties:
   [RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity): Integer
   [SupportedIdentityProviders](#cfn-cognito-userpoolclient-supportedidentityproviders): 
     - String
+  [TokenValidityUnits](#cfn-cognito-userpoolclient-tokenvalidityunits): 
+    TokenValidityUnits
   [UserPoolId](#cfn-cognito-userpoolclient-userpoolid): String
   [WriteAttributes](#cfn-cognito-userpoolclient-writeattributes): 
     - String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpoolclient-properties"></a>
+
+`AccessTokenValidity`  <a name="cfn-cognito-userpoolclient-accesstokenvalidity"></a>
+The time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used\. This value will be overridden if you have entered a value in TokenValidityUnits\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `86400`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
 The allowed OAuth flows\.  
@@ -153,6 +168,14 @@ Boolean to specify whether you want to generate a secret for the user pool clien
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`IdTokenValidity`  <a name="cfn-cognito-userpoolclient-idtokenvalidity"></a>
+The time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used\. This value will be overridden if you have entered a value in TokenValidityUnits\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `86400`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LogoutURLs`  <a name="cfn-cognito-userpoolclient-logouturls"></a>
 A list of allowed logout URLs for the identity providers\.  
 *Required*: No  
@@ -185,6 +208,12 @@ The time limit, in days, after which the refresh token is no longer valid and ca
 A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `Google` and `LoginWithAmazon`\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TokenValidityUnits`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits"></a>
+The units in which the validity times are represented in\. Default for RefreshToken is days, and default for ID and access tokens are hours\.  
+*Required*: No  
+*Type*: [TokenValidityUnits](aws-properties-cognito-userpoolclient-tokenvalidityunits.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolclient-userpoolid"></a>

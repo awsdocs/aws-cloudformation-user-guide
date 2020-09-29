@@ -44,6 +44,5 @@ The ARN of the IAM role that grants access to the DynamoDB table\.
 ## See also<a name="aws-properties-iot-topicrule-dynamodbv2action--seealso"></a>
 +  [AWS SDK for C\+\+](https://sdk.amazonaws.com/cpp/api/LATEST/class_aws_1_1_io_t_1_1_model_1_1_dynamo_d_bv2_action.html)\.
 +  [AWS SDK for Go](https://docs.aws.amazon.com/sdk-for-go/api/service/iot/#DynamoDBv2Action)\.
-+  [AWS SDK for Go \- Pilot](https://docs.aws.amazon.com/sdk-for-go/v1/api/service.iot.DynamoDBv2Action.html)\.
 +  [AWS SDK for Java](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/iot/model/DynamoDBv2Action.html)\.
 +  [AWS SDK for Ruby V2](https://docs.aws.amazon.com/sdkforruby/api/Aws/IoT/Types/DynamoDBv2Action.html)\.

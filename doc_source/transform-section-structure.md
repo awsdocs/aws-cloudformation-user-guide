@@ -4,7 +4,7 @@ The optional `Transform` section specifies one or more macros that AWS CloudForm
 
 You can declare one or more macros within a template\. AWS CloudFormation executes macros in the order that they are specified\. When you create a change set, AWS CloudFormation generates a change set that includes the processed template content\. You can then review the changes and execute the change set\. For more information, see [Using AWS CloudFormation macros to perform custom processing on templates](template-macros.md)\.
 
-AWS CloudFormation also supports *transforms*, which are macros hosted by AWS CloudFormation\. AWS CloudFormation treats these transforms the same as any macros you create in terms of execution order and scope\.
+AWS CloudFormation also supports *transforms*, which are macros hosted by AWS CloudFormation\. AWS CloudFormation treats these transforms the same as any macros you create in terms of execution order and scope\. For detailed information regarding specific transforms, see [Transform reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)\. 
 
 To declare multiple macros, use a list format and specify one or more macros\.
 
@@ -29,8 +29,3 @@ AWSTemplateFormatVersion: 2010-09-09
         ImageID: "ami-123"
 // End of processable content for MyMacro and AWS::Serverless
 ```
-
-**Topics**
-+ [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)
-+ [AWS::SecretsManager transform](transform-aws-secretsmanager.md)
-+ [AWS::Serverless transform](transform-aws-serverless.md)

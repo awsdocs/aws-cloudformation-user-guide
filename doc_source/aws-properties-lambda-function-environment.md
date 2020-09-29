@@ -38,5 +38,8 @@ Add environment variables to a function\.
 #### YAML<a name="aws-properties-lambda-function-environment--examples--Environment_Variables--yaml"></a>
 
 ```
- Environment: Variables: databaseName: lambdadb databaseUser: admin
+      Environment:
+        Variables:
+          databaseName: lambdadb
+          databaseUser: admin
 ```

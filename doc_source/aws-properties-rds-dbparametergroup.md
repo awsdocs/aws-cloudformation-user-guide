@@ -61,6 +61,7 @@ For more information, see `[CreateDBParameterGroup](https://docs.aws.amazon.com/
 An array of parameter names and values for the parameter update\. At least one parameter name and value must be supplied\. Subsequent arguments are optional\. You can modify a maximum of 20 parameters in a single request\.  
 For more information about DB parameters and DB parameter groups for Amazon RDS DB engines, see [ Working with DB Parameter Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html) in the *Amazon RDS User Guide*\.  
 For more information about DB cluster and DB instance parameters and parameter groups for Amazon Aurora DB engines, see [ Working with DB Parameter Groups and DB Cluster Parameter Groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html) in the *Amazon Aurora User Guide*\.  
+AWS CloudFormation doesn't support specifying an apply method for each individual parameter\. The default apply method for each parameter is used\.
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

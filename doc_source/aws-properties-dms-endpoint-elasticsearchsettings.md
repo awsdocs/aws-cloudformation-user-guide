@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dms-endpoint-elasticsearchsettings-properties"></a>
 
 `EndpointUri`  <a name="cfn-dms-endpoint-elasticsearchsettings-endpointuri"></a>
-The endpoint for the Elasticsearch cluster\. AWS DMS uses HTTPS if a transport protocol \(http/https\) is not specified\.  
+The endpoint for the Elasticsearch cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -41,8 +41,7 @@ The maximum number of seconds for which DMS retries failed API requests to the E
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FullLoadErrorPercentage`  <a name="cfn-dms-endpoint-elasticsearchsettings-fullloaderrorpercentage"></a>
-The maximum percentage of records that can fail to be written before a full load operation stops\.  
-To avoid early failure, this counter is only effective after 1000 records are transferred\. Elasticsearch also has the concept of error monitoring during the last 10 minutes of an Observation Window\. If transfer of all records fail in the last 10 minutes, the full load operation stops\.   
+The maximum percentage of records that can fail to be written before a full load operation stops\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

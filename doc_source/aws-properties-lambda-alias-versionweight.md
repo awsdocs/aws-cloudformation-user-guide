@@ -45,7 +45,14 @@ An alias that routes half of incoming requests to a second version\.
 #### YAML<a name="aws-properties-lambda-alias-versionweight--examples--Routing_Configuration--yaml"></a>
 
 ```
- alias: Type: AWS::Lambda::Alias Properties: FunctionName: !Ref function FunctionVersion:
-        !GetAtt newVersion.Version Name: BLUE RoutingConfig: AdditionalVersionWeights: - FunctionVersion: !GetAtt
-        version.Version FunctionWeight: 0.5
+  alias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref function
+      FunctionVersion: !GetAtt newVersion.Version
+      Name: BLUE
+      RoutingConfig:
+        AdditionalVersionWeights:
+          - FunctionVersion: !GetAtt version.Version
+            FunctionWeight: 0.5
 ```

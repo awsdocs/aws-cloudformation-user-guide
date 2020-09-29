@@ -38,5 +38,6 @@ Enable active tracing on a function\.
 #### YAML<a name="aws-properties-lambda-function-tracingconfig--examples--Tracing_Configuration--yaml"></a>
 
 ```
- TracingConfig: Mode: Active
+      TracingConfig:
+        Mode: Active
 ```

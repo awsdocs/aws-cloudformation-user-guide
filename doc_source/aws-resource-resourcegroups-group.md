@@ -5,7 +5,7 @@ Creates a resource group with the specified name and description\. You can optio
  **Minimum permissions** 
 
 To run this command, you must have the following permissions:
-+  `resourcegroups:CreateGroup` 
++  `resource-groups:CreateGroup` 
 
  **Related operations** 
 + To delete a group, use DeleteGroup\.
@@ -254,12 +254,12 @@ TagBasedGroup:
     ResourceQuery:
       Type:
         "TAG_FILTERS_1_0" 
-        Query:
-          ResourceTypeFilters: 
-            - "AWS::AllSupported" 
-          TagFilters:
-            - 
-              Key: "Usage" 
-              Values: 
-                - "Integration Tests"
+      Query:
+        ResourceTypeFilters: 
+          - "AWS::AllSupported" 
+        TagFilters:
+          - 
+            Key: "Usage" 
+            Values: 
+              - "Integration Tests"
 ```

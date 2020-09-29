@@ -241,10 +241,11 @@ The identifier of the DB cluster that the instance will belong to\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBInstanceClass`  <a name="cfn-rds-dbinstance-dbinstanceclass"></a>
-The compute and memory capacity of the DB instance, for example, `db.m4.large`\. Not all DB instance classes are available in all AWS Regions, or for all database engines\. For the full list of DB instance classes, and availability for your engine, see [DB Instance Class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in the *Amazon RDS User Guide\.*   
+The compute and memory capacity of the DB instance, for example, `db.m4.large`\. Not all DB instance classes are available in all AWS Regions, or for all database engines\.  
+For the full list of DB instance classes, and availability for your engine, see [DB Instance Class](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html) in the *Amazon RDS User Guide\.* For more information about DB instance class pricing and AWS Region support for DB instance classes, see [Amazon RDS Pricing](http://aws.amazon.com/rds/pricing/)\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBInstanceIdentifier`  <a name="cfn-rds-dbinstance-dbinstanceidentifier"></a>
 A name for the DB instance\. If you specify a name, AWS CloudFormation converts it to lowercase\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the DB instance\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
@@ -390,6 +391,16 @@ Specify the name of the IAM role to be used when making API calls to the Directo
 
 `EnableCloudwatchLogsExports`  <a name="cfn-rds-dbinstance-enablecloudwatchlogsexports"></a>
 The list of log types that need to be enabled for exporting to CloudWatch Logs\. The values in the list depend on the DB engine being used\. For more information, see [Publishing Database Logs to Amazon CloudWatch Logs ](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Relational Database Service User Guide*\.  
+ **MariaDB**   
+Possible values are `audit`, `error`, `general`, and `slowquery`\.   
+ **Microsoft SQL Server**   
+Possible values are `agent` and `error`\.   
+ **MySQL**   
+Possible values are `audit`, `error`, `general`, and `slowquery`\.   
+ **Oracle**   
+Possible values are `alert`, `audit`, `listener`, and `trace`\.   
+ **PostgreSQL**   
+Possible values are `postgresql` and `upgrade`\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -662,6 +673,7 @@ A value that indicates whether the DB instance class of the DB instance uses its
 
 `VPCSecurityGroups`  <a name="cfn-rds-dbinstance-vpcsecuritygroups"></a>
 A list of the VPC security group IDs to assign to the DB instance\. The list can include both the physical IDs of existing VPC security groups and references to [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.  
+If you plan to update the resource, don't specify VPC security groups in a shared VPC\.  
  If you set `VPCSecurityGroups`, you must not set [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups), and vice versa\.  
 You can migrate a DB instance in your stack from an RDS DB security group to a VPC security group, but keep the following in mind:  
 + You can't revert to using an RDS security group after you establish a VPC security group membership\.

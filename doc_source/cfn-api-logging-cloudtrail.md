@@ -54,7 +54,7 @@ Only the input parameter key names are logged; no parameter values are logged\.
   "sourceIPAddress": "127.0.0.1",
   "userAgent": "aws-cli/1.2.11 Python/2.7.4 Linux/2.6.18-164.el5",
   "requestParameters": {
-    "templateURL": "https://s3.amazonaws.com/Alice-dev/create_stack",
+    "templateURL": "DOC-EXAMPLE-BUCKET1",
     "tags": [
       {
         "key": "test",
@@ -100,7 +100,7 @@ The following example shows that Alice called the `UpdateStack` action on the `m
   "sourceIPAddress": "127.0.0.1",
   "userAgent": "aws-cli/1.2.11 Python/2.7.4 Linux/2.6.18-164.el5",
   "requestParameters": {
-    "templateURL": "https://s3.amazonaws.com/Alice-dev/create_stack",
+    "templateURL": "DOC-EXAMPLE-BUCKET1",
     "parameters": [
       {
         "parameterKey": "password"

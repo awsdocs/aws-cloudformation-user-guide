@@ -53,7 +53,7 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-batch-jobqueue-state"></a>
-The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.  
+The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\. If the job queue state is `DISABLED`, new jobs cannot be added to the queue, but jobs already in the queue can finish\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
@@ -113,3 +113,6 @@ JobQueue:
     Priority: 1
     JobQueueName: HighPriority
 ```
+
+## See also<a name="aws-resource-batch-jobqueue--seealso"></a>
++  [Job Queue Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_queue_parameters.html) in the *AWS Batch User Guide*\.

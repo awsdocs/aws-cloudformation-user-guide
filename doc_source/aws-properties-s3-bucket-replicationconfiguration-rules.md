@@ -41,7 +41,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-rules-properties"></a>
 
 `DeleteMarkerReplication`  <a name="cfn-s3-bucket-replicationrule-deletemarkerreplication"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether Amazon S3 replicates the delete markers\. If you specify a `Filter`, you must specify this element\. However, in the latest version of replication configuration \(when `Filter` is specified\), Amazon S3 doesn't replicate delete markers\. Therefore, the `DeleteMarkerReplication` element can contain only <Status>Disabled</Status>\. For an example configuration, see [Basic Rule Configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-config-min-rule-config)\.   
+ If you don't specify the `Filter` element, Amazon S3 assumes that the replication configuration is the earlier version, V1\. In the earlier version, Amazon S3 handled replication of delete markers differently\. For more information, see [Backward Compatibility](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations)\.
 *Required*: No  
 *Type*: [DeleteMarkerReplication](aws-properties-s3-bucket-deletemarkerreplication.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,7 +54,7 @@ A container for information about the replication destination and its configurat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filter`  <a name="cfn-s3-bucket-replicationrule-filter"></a>
-Not currently supported by AWS CloudFormation\.  
+A filter that identifies the subset of objects to which the replication rule applies\. A `Filter` must specify exactly one `Prefix`, `TagFilter`, or an `And` child element\.  
 *Required*: No  
 *Type*: [ReplicationRuleFilter](aws-properties-s3-bucket-replicationrulefilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,7 +72,10 @@ An object key name prefix that identifies the object or objects to which the rul
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-s3-bucket-replicationrule-priority"></a>
-Not currently supported by AWS CloudFormation\.  
+The priority associated with the rule\. If you specify multiple rules in a replication configuration, Amazon S3 prioritizes the rules to prevent conflicts when filtering\. If two or more rules identify the same object based on a specified filter, the rule with higher priority takes precedence\. For example:  
++ Same object quality prefix\-based filter criteria if prefixes you specified in multiple rules overlap 
++ Same object qualify tag\-based filter criteria specified in multiple rules
+For more information, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

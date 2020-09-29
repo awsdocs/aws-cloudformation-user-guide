@@ -8,6 +8,13 @@ The cluster control plane is provisioned across multiple Availability Zones and 
 
 Amazon EKS worker nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API server endpoint and a certificate file that is created for your cluster\.
 
+You can use the `endpointPublicAccess` and `endpointPrivateAccess` parameters to enable or disable public and private access to your cluster's Kubernetes API server endpoint\. By default, public access is enabled, and private access is disabled\. For more information, see [Amazon EKS Cluster Endpoint Access Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the * *Amazon EKS User Guide* *\. 
+
+You can use the `logging` parameter to enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs\. By default, cluster control plane logs aren't exported to CloudWatch Logs\. For more information, see [Amazon EKS Cluster Control Plane Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) in the * *Amazon EKS User Guide* *\.
+
+**Note**  
+CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs\. For more information, see [Amazon CloudWatch Pricing](http://aws.amazon.com/cloudwatch/pricing/)\.
+
 Cluster creation typically takes between 10 and 15 minutes\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch worker nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS Worker Nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-cluster-syntax"></a>

@@ -140,11 +140,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-maintenancewindow--examples"></a>
 
-### AWS Systems Manager Maintenance Window Example<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example"></a>
+### Create a maintenance window that does not allow unregistered targets<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets"></a>
 
 The following example creates a Systems Manager maintenance window that runs for two hours with a one hour cutoff every Sunday at 04:00 AM US Eastern Time\. The maintenance window also doesn't allow unregistered targets\.
 
-#### JSON<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example--json"></a>
+#### JSON<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets--json"></a>
 
 ```
 {
@@ -165,7 +165,7 @@ The following example creates a Systems Manager maintenance window that runs for
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets--yaml"></a>
 
 ```
 ---

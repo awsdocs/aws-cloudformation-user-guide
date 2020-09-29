@@ -37,6 +37,6 @@ How long the canary is allowed to run before it must stop\. You can't set this t
 If you omit this field, the frequency of the canary is used as this value, up to a maximum of 900 seconds\.  
 *Required*: Yes  
 *Type*: Integer  
-*Minimum*: `60`  
-*Maximum*: `900`  
+*Minimum*: `3`  
+*Maximum*: `840`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

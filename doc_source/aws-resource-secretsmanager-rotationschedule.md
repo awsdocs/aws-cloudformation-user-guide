@@ -355,8 +355,8 @@ RDS Secret Rotation
           Engine: mysql
           DBSubnetGroupName:
             Ref: MyDBSubnetGroup
-          MasterUsername: !Sub '{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}'
-          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}'
+          MasterUsername: !Sub '{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}'
+          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}'
           BackupRetentionPeriod: 0
           VPCSecurityGroups:
             - !GetAtt TestVPC.DefaultSecurityGroup
@@ -375,7 +375,7 @@ RDS Secret Rotation
       SecretRDSInstanceAttachment:
         Type: AWS::SecretsManager::SecretTargetAttachment
         Properties:
-          SecretId: !Ref MyDocDBClusterRotationSecret
+          SecretId: !Ref MyRDSRotationSecret
           TargetId: !Ref MyDBInstance
           TargetType: AWS::RDS::DBInstance
      

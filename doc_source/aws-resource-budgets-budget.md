@@ -41,7 +41,7 @@ The budget object that you want to create\.
 A notification that you want to associate with a budget\. A budget can have up to five notifications, and each notification can have one SNS subscriber and up to 10 email subscribers\. If you include notifications and subscribers in your `CreateBudget` call, AWS creates the notifications and subscribers for you\.  
 *Required*: No  
 *Type*: List of [NotificationWithSubscribers](aws-properties-budgets-budget-notificationwithsubscribers.md)  
-*Maximum*: `5`  
+*Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-budgets-budget-return-values"></a>

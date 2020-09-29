@@ -49,7 +49,7 @@ A resource\-based policy that is used to manage access permissions on the target
 The name of a logical container where backups are stored\. Backup vaults are identified by names that are unique to the account used to create them and the AWS Region where they are created\. They consist of lowercase letters, numbers, and hyphens\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^[a-zA-Z0-9\-\_\.]{1,50}$`  
+*Pattern*: `^[a-zA-Z0-9\-\_]{2,50}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BackupVaultTags`  <a name="cfn-backup-backupvault-backupvaulttags"></a>

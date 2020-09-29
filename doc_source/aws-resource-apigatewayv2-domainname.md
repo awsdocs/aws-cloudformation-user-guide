@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DomainName](#cfn-apigatewayv2-domainname-domainname)" : String,
       "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ DomainNameConfiguration, ... ],
+      "[MutualTlsAuthentication](#cfn-apigatewayv2-domainname-mutualtlsauthentication)" : MutualTlsAuthentication,
       "[Tags](#cfn-apigatewayv2-domainname-tags)" : Json
     }
 }
@@ -29,6 +30,8 @@ Properties:
   [DomainName](#cfn-apigatewayv2-domainname-domainname): String
   [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations): 
     - DomainNameConfiguration
+  [MutualTlsAuthentication](#cfn-apigatewayv2-domainname-mutualtlsauthentication): 
+    MutualTlsAuthentication
   [Tags](#cfn-apigatewayv2-domainname-tags): Json
 ```
 
@@ -44,6 +47,12 @@ The custom domain name for your API in Amazon API Gateway\. Uppercase letters ar
 The domain name configurations\.  
 *Required*: No  
 *Type*: List of [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MutualTlsAuthentication`  <a name="cfn-apigatewayv2-domainname-mutualtlsauthentication"></a>
+The mutual TLS authentication configuration for a custom domain name\.  
+*Required*: No  
+*Type*: [MutualTlsAuthentication](aws-properties-apigatewayv2-domainname-mutualtlsauthentication.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apigatewayv2-domainname-tags"></a>

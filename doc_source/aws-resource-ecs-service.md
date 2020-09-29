@@ -233,68 +233,79 @@ The name of the Amazon ECS service, such as `sample-webapp`\.
 
 ## Examples<a name="aws-resource-ecs-service--examples"></a>
 
-### Define a Basic Amazon ECS Service<a name="aws-resource-ecs-service--examples--Define_a_Basic_Amazon_ECS_Service"></a>
+### Define a basic service<a name="aws-resource-ecs-service--examples--Define_a_basic_service"></a>
 
-The following example defines an Amazon ECS service that uses a cluster and task definition that are declared elsewhere in the same template\.
+The following example defines a service with a desired count of `1` that uses a cluster and task definition that are declared elsewhere in the same template\.
 
-#### JSON<a name="aws-resource-ecs-service--examples--Define_a_Basic_Amazon_ECS_Service--json"></a>
+#### JSON<a name="aws-resource-ecs-service--examples--Define_a_basic_service--json"></a>
 
 ```
-"WebApp": {
+"ECSService": {
   "Type": "AWS::ECS::Service",
   "Properties" : {
-    "Cluster": { "Ref": "cluster" },
-    "DesiredCount": { "Ref": "desiredcount" },
-    "TaskDefinition" : { "Ref": "taskdefinition" }
+    "Cluster": { "Ref": "ECSCluster" },
+    "DesiredCount": 1,
+    "TaskDefinition" : { "Ref": "ECSTaskDefinition" }
   }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-service--examples--Define_a_Basic_Amazon_ECS_Service--yaml"></a>
+#### YAML<a name="aws-resource-ecs-service--examples--Define_a_basic_service--yaml"></a>
 
 ```
-WebApp: 
+ECSService: 
   Type: AWS::ECS::Service
   Properties: 
     Cluster: 
-      Ref: "cluster"
-    DesiredCount: 
-      Ref: "desiredcount"
+      Ref: "ECSCluster"
+    DesiredCount: 1
     TaskDefinition: 
-      Ref: "taskdefinition"
+      Ref: "ECSTaskDefinition"
 ```
 
-### Associate an Application Load Balancer with a Service<a name="aws-resource-ecs-service--examples--Associate_an_Application_Load_Balancer_with_a_Service"></a>
+### Associate an Application Load Balancer with a service<a name="aws-resource-ecs-service--examples--Associate_an_Application_Load_Balancer_with_a_service"></a>
 
 The following example associates an Application Load Balancer with an Amazon ECS service by referencing an `AWS::ElasticLoadBalancingV2::TargetGroup` resource\.
 
 **Note**  
 The Amazon ECS service requires an explicit dependency on the Application Load Balancer listener rule and the Application Load Balancer listener\. This prevents the service from starting before the listener is ready\.
 
-#### JSON<a name="aws-resource-ecs-service--examples--Associate_an_Application_Load_Balancer_with_a_Service--json"></a>
+#### JSON<a name="aws-resource-ecs-service--examples--Associate_an_Application_Load_Balancer_with_a_service--json"></a>
 
 ```
-"service" : {
-  "Type" : "AWS::ECS::Service",
-  "DependsOn": ["Listener"],
-  "Properties" : {
-    "Role" : { "Ref" : "ECSServiceRole" },
-    "TaskDefinition" : { "Ref" : "taskdefinition" },
-    "DesiredCount" : "1",
-    "LoadBalancers" : [{
-      "TargetGroupArn" : { "Ref" : "TargetGroup" },
-      "ContainerPort" : "80",
-      "ContainerName" : "sample-app"
-    }],
-    "Cluster" : { "Ref" : "ECSCluster" }
-  }
+"ECSService" : {
+    "Type": "AWS::ECS::Service",
+    "DependsOn": [
+        "Listener"
+    ],
+    "Properties": {
+        "Role": {
+            "Ref": "ECSServiceRole"
+        },
+        "TaskDefinition": {
+            "Ref": "ECSTaskDefinition"
+        },
+        "DesiredCount": "1",
+        "LoadBalancers": [
+            {
+                "TargetGroupArn": {
+                    "Ref": "TargetGroup"
+                },
+                "ContainerPort": "80",
+                "ContainerName": "sample-app"
+            }
+        ],
+        "Cluster": {
+            "Ref": "ECSCluster"
+        }
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-service--examples--Associate_an_Application_Load_Balancer_with_a_Service--yaml"></a>
+#### YAML<a name="aws-resource-ecs-service--examples--Associate_an_Application_Load_Balancer_with_a_service--yaml"></a>
 
 ```
-service:
+ECSService:
   Type: AWS::ECS::Service
   DependsOn:
   - Listener
@@ -302,7 +313,7 @@ service:
     Role:
       Ref: ECSServiceRole
     TaskDefinition:
-      Ref: taskdefinition
+      Ref: ECSTaskDefinition
     DesiredCount: 1
     LoadBalancers:
     - TargetGroupArn:
@@ -313,11 +324,11 @@ service:
       Ref: ECSCluster
 ```
 
-### Define a Service with a Health Check Grace Period<a name="aws-resource-ecs-service--examples--Define_a_Service_with_a_Health_Check_Grace_Period"></a>
+### Define a service with a health check grace period<a name="aws-resource-ecs-service--examples--Define_a_service_with_a_health_check_grace_period"></a>
 
 The following example defines a service with a parameter that enables users to specify how many seconds that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\.
 
-#### JSON<a name="aws-resource-ecs-service--examples--Define_a_Service_with_a_Health_Check_Grace_Period--json"></a>
+#### JSON<a name="aws-resource-ecs-service--examples--Define_a_service_with_a_health_check_grace_period--json"></a>
 
 ```
 {
@@ -350,7 +361,7 @@ The following example defines a service with a parameter that enables users to s
     }
   },
   "Resources": {
-    "cluster": {
+    "ECSCluster": {
       "Type": "AWS::ECS::Cluster"
     },
     "taskdefinition": {
@@ -411,10 +422,10 @@ The following example defines a service with a parameter that enables users to s
         ]
       }
     },
-    "service": {
+    "ECSService": {
       "Type": "AWS::ECS::Service",
       "Properties" : {
-        "Cluster": {"Ref": "cluster"},
+        "Cluster": {"Ref": "ECSCluster"},
         "DeploymentConfiguration": {
           "MaximumPercent": 200,
           "MinimumHealthyPercent": 100
@@ -502,13 +513,13 @@ The following example defines a service with a parameter that enables users to s
   },
   "Outputs" : {
     "Cluster": {
-      "Value": {"Ref" : "cluster"}
+      "Value": {"Ref" : "ECSCluster"}
     }
   }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-service--examples--Define_a_Service_with_a_Health_Check_Grace_Period--yaml"></a>
+#### YAML<a name="aws-resource-ecs-service--examples--Define_a_service_with_a_health_check_grace_period--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

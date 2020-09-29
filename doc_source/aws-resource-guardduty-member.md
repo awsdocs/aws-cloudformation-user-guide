@@ -62,7 +62,7 @@ The AWS account ID of the account to designate as a member\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Message`  <a name="cfn-guardduty-member-message"></a>
-The message to include with the invitation sent to the member accounts\.  
+The invitation message that you want to send to the accounts that you're inviting to GuardDuty as members\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

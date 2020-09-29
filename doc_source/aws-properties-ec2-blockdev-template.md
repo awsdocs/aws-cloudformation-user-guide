@@ -58,12 +58,12 @@ Condition: This parameter is required for requests to create `io1` and `io2` vol
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-instance-ebs-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer managed CMK to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be true\. If the encrypted state is true but you do not specify `KmsKeyId`, your AWS managed CMK for EBS is used\.  
+The identifier of the AWS Key Management Service \(AWS KMS\) customer managed CMK to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\. If the encrypted state is `true` but you do not specify `KmsKeyId`, your AWS managed CMK for EBS is used\.  
 You can specify the CMK using any of the following:  
-+ Key ID\. For example, key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
++ Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Key alias\. For example, alias/ExampleAlias\.
-+ Key ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:key/*abcd1234\-a123\-456a\-a12b\-a123b4cd56ef*\.
-+ Alias ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:alias/*ExampleAlias*\.
++ Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
++ Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

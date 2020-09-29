@@ -5,13 +5,13 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 **Planning and organizing**  
 + [Organize your stacks by lifecycle and ownership](#organizingstacks)
 + [Use cross\-stack references to export shared resources](#cross-stack)
-+ [Use IAM to control access](#use-iam-to-control-access)
++ [Use IAM to control access](security-best-practices.md#use-iam-to-control-access)
 + [Reuse templates to replicate stacks in multiple environments](#reuse)
 + [Verify quotas for all resource types](#limits) 
 + [Use nested stacks to reuse common template patterns](#nested)
 
 **Creating templates**  
-+ [Do not embed credentials in your templates](#creds)
++ [Do not embed credentials in your templates](security-best-practices.md#creds)
 + [Use AWS\-specific parameter types](#parmtypes)
 + [Use parameter constraints](#parmconstraints)
 + [Use AWS::CloudFormation::Init to deploy software applications on Amazon EC2 instances](#cfninit)
@@ -22,7 +22,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Manage all stack resources through AWS CloudFormation](#donttouch)
 + [Create change sets before updating your stacks](#cfn-best-practices-changesets)
 + [Use stack policies](#stackpolicy)
-+ [Use AWS CloudTrail to log AWS CloudFormation calls](#cloudtrail)
++ [Use AWS CloudTrail to log AWS CloudFormation calls](security-best-practices.md#cloudtrail)
 + [Use code reviews and revision controls to manage your templates](#code)
 + [Update your Amazon EC2 Linux instances regularly](#update-ec2-linux)
 
@@ -44,12 +44,6 @@ When you organize your AWS resources based on lifecycle and ownership, you might
 
 For example, you might have a network stack that includes a VPC, a security group, and a subnet\. You want all public web applications to use these resources\. By exporting the resources, you allow all stacks with public web applications to use them\. For more information, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)\.
 
-## Use IAM to control access<a name="use-iam-to-control-access"></a>
-
-IAM is an AWS service that you can use to manage users and their permissions in AWS\. You can use IAM with AWS CloudFormation to specify what AWS CloudFormation actions users can perform, such as viewing stack templates, creating stacks, or deleting stacks\. Furthermore, anyone managing AWS CloudFormation stacks will require permissions to resources within those stacks\. For example, if users want to use AWS CloudFormation to launch, update, or terminate Amazon EC2 instances, they must have permission to call the relevant Amazon EC2 actions\.
-
-In most cases, users require full access to manage all of the resources in a template\. AWS CloudFormation makes calls to create, modify, and delete those resources on their behalf\. To separate permissions between a user and the AWS CloudFormation service, use a service role\. AWS CloudFormation uses the service role's policy to make calls instead of the user's policy\. For more information, see [AWS CloudFormation service role](using-iam-servicerole.md)\.
-
 ## Verify quotas for all resource types<a name="limits"></a>
 
 Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, AWS CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 200 AWS CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
@@ -63,16 +57,6 @@ After you have your stacks and resources set up, you can reuse your templates to
 As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. You can separate out these common components and create dedicated templates for them\. That way, you can mix and match different templates but use nested stacks to create a single, unified stack\. Nested stacks are stacks that create other stacks\. To create nested stacks, use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource in your template to reference other templates\.
 
 For example, assume that you have a load balancer configuration that you use for most of your stacks\. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer\. Then, you just use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource to reference that template from within other templates\. If the load balancer template is updated, any stack that is referencing it will use the updated load balancer \(only after you update the stack\)\. In addition to simplifying updates, this approach lets you use exports to create and maintain components that you might not be necessarily familiar with\. All you need to do is reference their templates\.
-
-## Do not embed credentials in your templates<a name="creds"></a>
-
-Rather than embedding sensitive information in your AWS CloudFormation templates, we recommend you use *dynamic references* in your stack template\.
-
-Dynamic references provide a compact, powerful way for you to reference external values that are stored and managed in other services, such as the AWS Systems Manager Parameter Store or AWS Secrets Manager\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations, and passes the value to the appropriate resource\. However, CloudFormation never stores the actual reference value\. For more information, see [Using dynamic references to specify template values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
-
-[AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) helps you to securely encrypt, store, and retrieve credentials for your databases and other services\. The [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) provides secure, hierarchical storage for configuration data management\. 
-
-For more information on defining template parameters, see [Parameters](parameters-section-structure.md)\.
 
 ## Use AWS\-specific parameter types<a name="parmtypes"></a>
 
@@ -132,10 +116,6 @@ Use change sets to check how your changes might impact your running resources, e
 Stack policies help protect critical stack resources from unintentional updates that could cause resources to be interrupted or even replaced\. A stack policy is a JSON document that describes what update actions can be performed on designated resources\. Specify a stack policy whenever you create a stack that has critical resources\.
 
 During a stack update, you must explicitly specify the protected resources that you want to update; otherwise, no changes are made to protected resources\. For more information, see [Prevent updates to stack resources](protect-stack-resources.md)\.
-
-## Use AWS CloudTrail to log AWS CloudFormation calls<a name="cloudtrail"></a>
-
-AWS CloudTrail tracks anyone making AWS CloudFormation API calls in your AWS account\. API calls are logged whenever anyone uses the AWS CloudFormation API, the AWS CloudFormation console, a back\-end console, or AWS CloudFormation AWS CLI commands\. Enable logging and specify an Amazon S3 bucket to store the logs\. That way, if you ever need to, you can audit who made what AWS CloudFormation call in your account\. For more information, see [Logging AWS CloudFormation API calls with AWS CloudTrail](cfn-api-logging-cloudtrail.md)\.
 
 ## Use code reviews and revision controls to manage your templates<a name="code"></a>
 

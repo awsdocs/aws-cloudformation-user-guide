@@ -107,7 +107,7 @@ Tags may only contain Unicode letters, digits, white space, or these symbols: `_
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TracingConfiguration`  <a name="cfn-stepfunctions-statemachine-tracingconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Selects whether or not the state machine's AWS X\-Ray tracing is enabled\.  
 *Required*: No  
 *Type*: [TracingConfiguration](aws-properties-stepfunctions-statemachine-tracingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

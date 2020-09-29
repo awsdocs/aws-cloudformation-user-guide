@@ -155,7 +155,7 @@ The Amazon Resource Name \(ARN\) of the function's execution role\.
 The identifier of the function's [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | nodejs10.x | nodejs12.x | provided | python2.7 | python3.6 | python3.7 | python3.8 | ruby2.5 | ruby2.7`  
+*Allowed values*: `dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | java8.al2 | nodejs10.x | nodejs12.x | provided | provided.al2 | python2.7 | python3.6 | python3.7 | python3.8 | ruby2.5 | ruby2.7`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-lambda-function-tags"></a>
@@ -211,10 +211,27 @@ Create a Node\.js function\.
 #### JSON<a name="aws-resource-lambda-function--examples--Function--json"></a>
 
 ```
-"AMIIDLookup": { "Type": "AWS::Lambda::Function", "Properties": { "Handler":
-        "index.handler", "Role": { "Fn::GetAtt": [ "LambdaExecutionRole", "Arn" ] }, "Code": { "S3Bucket":
-        "lambda-functions", "S3Key": "amilookup.zip" }, "Runtime": "nodejs12.x", "Timeout": 25, "TracingConfig": {
-        "Mode": "Active" } } }
+"AMIIDLookup": {
+    "Type": "AWS::Lambda::Function",
+    "Properties": {
+        "Handler": "index.handler",
+        "Role": {
+            "Fn::GetAtt": [
+                "LambdaExecutionRole",
+                "Arn"
+            ]
+        },
+        "Code": {
+            "S3Bucket": "lambda-functions",
+            "S3Key": "amilookup.zip"
+        },
+        "Runtime": "nodejs12.x",
+        "Timeout": 25,
+        "TracingConfig": {
+            "Mode": "Active"
+        }
+    }
+}
 ```
 
 ### Inline Function<a name="aws-resource-lambda-function--examples--Inline_Function"></a>
@@ -224,17 +241,42 @@ Inline Node\.js function that uses the cfn\-response library\.
 #### YAML<a name="aws-resource-lambda-function--examples--Inline_Function--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09' Description: Lambda function with cfn-response.
-        Resources: primer: Type: AWS::Lambda::Function Properties: Runtime: nodejs12.x Role:
-        arn:aws:iam::123456789012:role/lambda-role Handler: index.handler Code: ZipFile: | var aws = require('aws-sdk')
-        var response = require('cfn-response') exports.handler = function(event, context) { console.log("REQUEST
-        RECEIVED:\n" + JSON.stringify(event)) // For Delete requests, immediately send a SUCCESS response. if
-        (event.RequestType == "Delete") { response.send(event, context, "SUCCESS") return } var responseStatus =
-        "FAILED" var responseData = {} var functionName = event.ResourceProperties.FunctionName var lambda = new
-        aws.Lambda() lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) { if (err) { responseData
-        = {Error: "Invoke call failed"} console.log(responseData.Error + ":\n", err) } else responseStatus = "SUCCESS"
-        response.send(event, context, responseStatus, responseData) }) } Description: Invoke a function during stack
-        creation. TracingConfig: Mode: Active
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Lambda function with cfn-response.
+Resources:
+  primer:
+    Type: AWS::Lambda::Function
+    Properties:
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Handler: index.handler
+      Code:
+        ZipFile: |
+          var aws = require('aws-sdk')
+          var response = require('cfn-response')
+          exports.handler = function(event, context) {
+              console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
+              // For Delete requests, immediately send a SUCCESS response.
+              if (event.RequestType == "Delete") {
+                  response.send(event, context, "SUCCESS")
+                  return
+              }
+              var responseStatus = "FAILED"
+              var responseData = {}
+              var functionName = event.ResourceProperties.FunctionName
+              var lambda = new aws.Lambda()
+              lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+                  if (err) {
+                      responseData = {Error: "Invoke call failed"}
+                      console.log(responseData.Error + ":\n", err)
+                  }
+                  else responseStatus = "SUCCESS"
+                  response.send(event, context, responseStatus, responseData)
+              })
+          }
+      Description: Invoke a function during stack creation.
+      TracingConfig:
+        Mode: Active
 ```
 
 ### VPC Function<a name="aws-resource-lambda-function--examples--VPC_Function"></a>
@@ -244,9 +286,25 @@ Function connected to a VPC\.
 #### YAML<a name="aws-resource-lambda-function--examples--VPC_Function--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09' Description: VPC function. Resources: Function:
-        Type: AWS::Lambda::Function Properties: Handler: index.handler Role: arn:aws:iam::123456789012:role/lambda-role
-        Code: S3Bucket: my-bucket S3Key: function.zip Runtime: nodejs12.x Timeout: 5 TracingConfig: Mode: Active
-        VpcConfig: SecurityGroupIds: - sg-085912345678492fb SubnetIds: - subnet-071f712345678e7c8 -
-        subnet-07fd123456788a036
+AWSTemplateFormatVersion: '2010-09-09'
+Description: VPC function.
+Resources:
+  Function: 
+    Type: AWS::Lambda::Function
+    Properties: 
+      Handler: index.handler
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Code: 
+        S3Bucket: my-bucket
+        S3Key: function.zip
+      Runtime: nodejs12.x
+      Timeout: 5
+      TracingConfig:
+        Mode: Active
+      VpcConfig: 
+        SecurityGroupIds: 
+          - sg-085912345678492fb
+        SubnetIds: 
+          - subnet-071f712345678e7c8
+          - subnet-07fd123456788a036
 ```

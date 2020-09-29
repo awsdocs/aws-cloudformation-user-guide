@@ -155,11 +155,6 @@ Resources": {
 Resources:
   BasicDeployment:
     Type: AWS::AppConfig::Deployment
-    DependsOn:
-      - MyTestApplication
-      - MyTestConfigurationProfile
-      - MyTestEnvironment
-      - MyTestDeploymentStrategy
     Properties:
       ApplicationId: !Ref MyTestApplication
       EnvironmentId: !Ref MyTestEnvironment

@@ -65,7 +65,7 @@ By default, when you create a new associations, the system runs it immediately a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssociationName`  <a name="cfn-ssm-association-associationname"></a>
-The name of the association\.  
+Specify a descriptive name for the association\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
@@ -122,7 +122,10 @@ Executions that are already running an association when MaxErrors is reached are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-association-name"></a>
-The name of the Systems Manager document\.  
+The name of the SSM document that contains the configuration information for the instance\. You can specify `Command` or `Automation` documents\. The documents can be AWS\-predefined documents, documents you created, or a document that is shared with you from another account\. For SSM documents that are shared with you from other AWS accounts, you must specify the complete SSM document ARN, in the following format:  
+`arn:partition:ssm:region:account-id:document/document-name`  
+For example: `arn:aws:ssm:us-east-2:12345678912:document/My-Shared-Document`  
+For AWS\-predefined documents and SSM documents you created in your account, you only need to specify the document name\. For example, AWS\-ApplyPatchBaseline or My\-Document\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.:/]{3,128}$`  
@@ -238,11 +241,11 @@ Resources:
       WaitForSuccessTimeoutSeconds: 300
 ```
 
-### Create an association for all managed instances in your AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account"></a>
+### Create an association for all managed instances in an AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account"></a>
 
 The following example creates an association that uses the AWS\-UpdateSSMAgent SSM document\. The association updates SSM Agent on all managed instances \(instances configured for Systems Manager\) in the user's AWS account according to the specified CRON schedule\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account--json"></a>
 
 ```
 {
@@ -268,7 +271,7 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account--yaml"></a>
 
 ```
 ---
@@ -334,14 +337,14 @@ Resources:
       WaitForSuccessTimeoutSeconds: 300
 ```
 
-### Associate an automation document with an instance<a name="aws-resource-ssm-association--examples--Associate_an_automation_document_with_an_instance"></a>
+### Create an association that associates an automation document with an instance<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance"></a>
 
 The following example creates an association that assigns the AWS\-StopEC2Instance automation document to a specific instance\. 
 
 **Note**  
 This example specifies the following Amazon Resource Name \(ARN\): `arn:${AWS::Partition}:iam::aws:policy/AmazonEC2FullAccess`\. This policy provides more than the required permissions to stop the instance\. We recommend that you use a policy with more restrictive permissions\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Associate_an_automation_document_with_an_instance--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance--json"></a>
 
 ```
 {
@@ -393,7 +396,7 @@ This example specifies the following Amazon Resource Name \(ARN\): `arn:${AWS::P
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Associate_an_automation_document_with_an_instance--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance--yaml"></a>
 
 ```
 ---
@@ -426,11 +429,11 @@ Resources:
       AutomationTargetParameterName: InstanceId
 ```
 
-### Create an association that uses rate controls and logs output to Amazon S3<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_logs_output_to_Amazon_S3"></a>
+### Create an association that uses rate controls and sends log output to Amazon S3<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3"></a>
 
 The following example creates an association that uses rate controls\. The association attempts to update SSM Agent on only 20% of instances at one time\. Systems Manager stops the association from running on any additional instances if the execution fails on 5% of the total number of instances\. System Manager also logs the association output to Amazon S3\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_logs_output_to_Amazon_S3--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3--json"></a>
 
 ```
 {
@@ -462,7 +465,7 @@ The following example creates an association that uses rate controls\. The assoc
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_logs_output_to_Amazon_S3--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3--yaml"></a>
 
 ```
 ---

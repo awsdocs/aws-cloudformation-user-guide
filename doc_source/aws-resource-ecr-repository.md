@@ -14,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration)" : Json,
       "[ImageTagMutability](#cfn-ecr-repository-imagetagmutability)" : String,
-      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : Json,
+      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
-      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
+      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : ,
       "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -29,9 +29,10 @@ Type: AWS::ECR::Repository
 Properties: 
   [ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration): Json
   [ImageTagMutability](#cfn-ecr-repository-imagetagmutability): String
-  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): Json
+  [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
+    LifecyclePolicy
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
-  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
+  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): 
   [Tags](#cfn-ecr-repository-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -54,7 +55,7 @@ The tag mutability setting for the repository\. If this parameter is omitted, th
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
 Creates or updates a lifecycle policy\. For information about lifecycle policy syntax, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-ecr-repository-repositoryname"></a>
@@ -70,7 +71,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
 The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
-*Type*: Json  
+*Type*:   
 *Minimum*: `0`  
 *Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

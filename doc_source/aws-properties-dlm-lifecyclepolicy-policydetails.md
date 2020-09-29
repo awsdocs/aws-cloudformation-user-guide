@@ -55,10 +55,10 @@ The resource type\. Use VOLUME to create snapshots of individual volumes or use 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedules`  <a name="cfn-dlm-lifecyclepolicy-policydetails-schedules"></a>
-The schedule of policy\-defined actions\.  
+The schedules of policy\-defined actions\. A policy can have up to four schedules \- one mandatory schedule and up to three optional schedules\.  
 *Required*: Yes  
 *Type*: List of [Schedule](aws-properties-dlm-lifecyclepolicy-schedule.md)  
-*Maximum*: `1`  
+*Maximum*: `4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetTags`  <a name="cfn-dlm-lifecyclepolicy-policydetails-targettags"></a>

@@ -72,12 +72,28 @@ Inline Node\.js function that uses the cfn\-response library\.
 #### YAML<a name="aws-properties-lambda-function-code--examples--Inline_Function--yaml"></a>
 
 ```
- Code: ZipFile: | var aws = require('aws-sdk') var response = require('cfn-response')
-        exports.handler = function(event, context) { console.log("REQUEST RECEIVED:\n" + JSON.stringify(event)) // For
-        Delete requests, immediately send a SUCCESS response. if (event.RequestType == "Delete") { response.send(event,
-        context, "SUCCESS") return } var responseStatus = "FAILED" var responseData = {} var functionName =
-        event.ResourceProperties.FunctionName var lambda = new aws.Lambda() lambda.invoke({ FunctionName: functionName
-        }, function(err, invokeResult) { if (err) { responseData = {Error: "Invoke call failed"}
-        console.log(responseData.Error + ":\n", err) } else responseStatus = "SUCCESS" response.send(event, context,
-        responseStatus, responseData) }) }
+      Code:
+        ZipFile: |
+          var aws = require('aws-sdk')
+          var response = require('cfn-response')
+          exports.handler = function(event, context) {
+              console.log("REQUEST RECEIVED:\n" + JSON.stringify(event))
+              // For Delete requests, immediately send a SUCCESS response.
+              if (event.RequestType == "Delete") {
+                  response.send(event, context, "SUCCESS")
+                  return
+              }
+              var responseStatus = "FAILED"
+              var responseData = {}
+              var functionName = event.ResourceProperties.FunctionName
+              var lambda = new aws.Lambda()
+              lambda.invoke({ FunctionName: functionName }, function(err, invokeResult) {
+                  if (err) {
+                      responseData = {Error: "Invoke call failed"}
+                      console.log(responseData.Error + ":\n", err)
+                  }
+                  else responseStatus = "SUCCESS"
+                  response.send(event, context, responseStatus, responseData)
+              })
+          }
 ```

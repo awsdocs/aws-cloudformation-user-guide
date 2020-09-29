@@ -135,11 +135,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-resourcedatasync--examples"></a>
 
-### AWS Systems Manager Resource Data Sync \- SyncToDestination<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncToDestination"></a>
+### Create a SyncToDestination Resource Data Sync<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncToDestination_Resource_Data_Sync"></a>
 
 The following example synchronizes Systems Manager Inventory metadata in the US East \(Ohio\) Region \(us\-east\-2\) to a single Amazon S3 bucket\. Resource Data Sync then automatically updates the centralized data when new data is collected\.
 
-#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncToDestination--json"></a>
+#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncToDestination_Resource_Data_Sync--json"></a>
 
 ```
 {
@@ -163,7 +163,7 @@ The following example synchronizes Systems Manager Inventory metadata in the US 
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncToDestination--yaml"></a>
+#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncToDestination_Resource_Data_Sync--yaml"></a>
 
 ```
 ---
@@ -182,11 +182,11 @@ Resources:
         KMSKeyArn: kmsKeyARN
 ```
 
-### AWS Systems Manager Resource Data Sync \- SyncFromSource \- SingleAccountMultipleRegions<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_SingleAccountMultipleRegions"></a>
+### Create a SyncFromSource Resource Data Sync with type SingleAccountMultipleRegions<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_SingleAccountMultipleRegions"></a>
 
 The following example synchronizes Systems Manager Explorer OpsData and OpsItems from multiple AWS Regions in a single AWS account\.
 
-#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_SingleAccountMultipleRegions--json"></a>
+#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_SingleAccountMultipleRegions--json"></a>
 
 ```
 {
@@ -212,7 +212,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_SingleAccountMultipleRegions--yaml"></a>
+#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_SingleAccountMultipleRegions--yaml"></a>
 
 ```
 ---
@@ -232,11 +232,11 @@ Resources:
         IncludeFutureRegions: false
 ```
 
-### AWS Systems Manager Resource Data Sync \- SyncFromSource \- EntireOrganization<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_EntireOrganization"></a>
+### Create a SyncFromSource Resource Data Sync with type EntireOrganization<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_EntireOrganization"></a>
 
 The following example synchronizes Systems Manager Explorer OpsData and OpsItems from your entire organization in AWS Organizations in the us\-west\-1 Region\. 
 
-#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_EntireOrganization--json"></a>
+#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_EntireOrganization--json"></a>
 
 ```
 {
@@ -263,7 +263,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_EntireOrganization--yaml"></a>
+#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_EntireOrganization--yaml"></a>
 
 ```
 ---
@@ -283,11 +283,11 @@ Resources:
         IncludeFutureRegions: false
 ```
 
-### AWS Systems Manager Resource Data Sync \- SyncFromSource \- OrganizationalUnits<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_OrganizationalUnits"></a>
+### Creating a SyncFromSource Resource Data Sync with type OrganizationalUnits<a name="aws-resource-ssm-resourcedatasync--examples--Creating_a_SyncFromSource_Resource_Data_Sync_with_type_OrganizationalUnits"></a>
 
 The following example synchronizes Systems Manager Explorer OpsData and OpsItems from organization unit 12345 in AWS Organizations in the us\-west\-1 Region\. 
 
-#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_OrganizationalUnits--json"></a>
+#### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Creating_a_SyncFromSource_Resource_Data_Sync_with_type_OrganizationalUnits--json"></a>
 
 ```
 {
@@ -317,7 +317,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--AWS_Systems_Manager_Resource_Data_Sync_-_SyncFromSource_-_OrganizationalUnits--yaml"></a>
+#### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Creating_a_SyncFromSource_Resource_Data_Sync_with_type_OrganizationalUnits--yaml"></a>
 
 ```
 ---

@@ -72,7 +72,7 @@ The name of the schedule\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `500`  
+*Maximum*: `120`  
 *Pattern*: `[\p{all}]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

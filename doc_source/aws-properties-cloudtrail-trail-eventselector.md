@@ -40,6 +40,7 @@ For more information, see [Data Events](https://docs.aws.amazon.com/awscloudtrai
 Specify if you want your event selector to include management events for your trail\.  
  For more information, see [Management Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-management-events) in the *AWS CloudTrail User Guide*\.  
 By default, the value is `true`\.  
+The first copy of management events is free\. You are charged for additional copies of management events that you are logging on any subsequent trail in the same region\. For more information about CloudTrail pricing, see [AWS CloudTrail Pricing](http://aws.amazon.com/cloudtrail/pricing/)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

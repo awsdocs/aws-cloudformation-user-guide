@@ -8,6 +8,7 @@ Even as you manage your resources through CloudFormation, users can change those
 + [Considerations when detecting drift](#drift-considerations)
 + [Detect drift on an entire CloudFormation stack](detect-drift-stack.md)
 + [Detect drift on individual stack resources](detect-drift-resource.md)
++ [Resolve drift with an import operation](resource-import-resolve-drift.md)
 + [Resources that support drift detection](using-cfn-stack-drift-resource-list.md)
 
 ## What is drift?<a name="what-is-drift"></a>

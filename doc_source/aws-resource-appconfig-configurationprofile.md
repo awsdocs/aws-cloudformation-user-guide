@@ -161,7 +161,6 @@ The following examples creates an AWS AppConfig configuration profile named MyTe
 Resources:
   CodePipelineConfigurationProfile:
     Type: AWS::AppConfig::ConfigurationProfile
-    DependsOn: MyTestApplication
     Properties:
       ApplicationId: !Ref MyTestApplication
       Name: "MyTestConfigurationProfile"
@@ -228,7 +227,6 @@ The following examples creats an AWS AppConfig configuration profile named MyTes
 Resources:
   BasicConfigurationProfile:
     Type: AWS::AppConfig::ConfigurationProfile
-    DependsOn: MyTestApplication
     Properties:
       ApplicationId: !Ref MyTestApplication
       Name: "MyTestConfigurationProfile"

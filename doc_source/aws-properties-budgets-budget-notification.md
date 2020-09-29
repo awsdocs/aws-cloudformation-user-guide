@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget Notification<a name="aws-properties-budgets-budget-notification"></a>
 
-A notification that is associated with a budget\. A budget can have up to five notifications\. 
+A notification that is associated with a budget\. A budget can have up to ten notifications\. 
 
 Each notification must have at least one subscriber\. A notification can have one SNS subscriber and up to 10 email subscribers, for a total of 11 subscribers\.
 

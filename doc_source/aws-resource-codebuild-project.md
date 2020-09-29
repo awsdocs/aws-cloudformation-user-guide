@@ -274,6 +274,7 @@ The following example creates an AWS CodeBuild project\.
         "EnvironmentVariables": [
           {
             "Name": "varName",
+            "Type": "varType",
             "Value": "varValue"
           }
         ]
@@ -315,6 +316,7 @@ Project:
       Image: aws/codebuild/java:openjdk-8
       EnvironmentVariables:
       - Name: varName
+        Type: varType
         Value: varValue
     Source:
       Location: codebuild-demo-test/0123ab9a371ebf0187b0fe5614fbb72c

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings-properties"></a>
 
 `MultiplexId`  <a name="cfn-medialive-channel-multiplexprogramchanneldestinationsettings-multiplexid"></a>
-The ID of the Multiplex that the encoder is providing output to\.   
+The ID of the Multiplex that the encoder is providing output to\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

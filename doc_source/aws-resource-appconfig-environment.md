@@ -128,7 +128,6 @@ Resources": {
 Resources:
   BasicEnvironment:
     Type: AWS::AppConfig::Environment
-    DependsOn: DependentApplication
     Properties:
       ApplicationId: !Ref DependentApplication
       Name: "MyTestEnvironment"

@@ -92,13 +92,12 @@ This parameter is valid only for Provisioned IOPS SSD \(`io1` and `io2`\) volume
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this parameter is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
+The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this property is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
 You can specify the CMK using any of the following:  
-+ Key ID\. For example, key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
++ Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Key alias\. For example, alias/ExampleAlias\.
-+ Key ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:key/*abcd1234\-a123\-456a\-a12b\-a123b4cd56ef*\.
-+ Alias ARN\. For example, arn:aws:kms:*us\-east\-1*:*012345678910*:alias/*ExampleAlias*\.
-AWS authenticates the CMK asynchronously\. Therefore, if you specify an ID, alias, or ARN that is not valid, the action can appear to complete, but eventually fails\.  
++ Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
++ Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
 *Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.

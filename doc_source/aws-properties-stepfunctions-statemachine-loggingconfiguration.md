@@ -37,7 +37,7 @@ An array of objects that describes where your execution history events will be l
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeExecutionData`  <a name="cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata"></a>
-Determines whether execution data is included in your log\. When set to `FALSE`, data is excluded\.  
+Determines whether execution data is included in your log\. When set to `false`, data is excluded\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

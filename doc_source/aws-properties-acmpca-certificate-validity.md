@@ -38,6 +38,7 @@ Determines how *ACM Private CA* interprets the `Value` parameter, an integer\. S
 Example if `DAYS`, issued on 10/12/2020 at 12:34:54 UTC:  
 + Sample input value: 90
 + Output expiration date: 01/10/2020 12:34:54 UTC
+The minimum validity duration for a certificate using relative time \(`DAYS`\) is one day\. The minimum validity for a certificate using absolute time \(`ABSOLUTE` or `END_DATE`\) is one second\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `ABSOLUTE | DAYS | END_DATE | MONTHS | YEARS`  

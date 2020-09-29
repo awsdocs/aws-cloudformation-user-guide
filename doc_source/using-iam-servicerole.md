@@ -1,8 +1,8 @@
 # AWS CloudFormation service role<a name="using-iam-servicerole"></a>
 
-A *service role* is an AWS Identity and Access Management \(IAM\) role that allows AWS CloudFormation to make calls to resources in a stack on your behalf\. You can specify an IAM role that allows AWS CloudFormation to create, update, or delete your stack resources\. By default, AWS CloudFormation uses a temporary session that it generates from your user credentials for stack operations\. If you specify a service role, AWS CloudFormation uses the role's credentials\.
+A *service role* is an AWS Identity and Access Management \(IAM\) role that allows AWS CloudFormation to make calls to resources in a stack on your behalf\. You can specify an IAM role that allows AWS CloudFormation to create, update, or delete your stack resources\. By default, AWS CloudFormation uses a temporary session that it generates from your user credentials for stack operations\. If you specify a service role, AWS CloudFormation uses that role's credentials\.
 
-Use a service role to explicitly specify the actions that AWS CloudFormation can perform which might not always be the same actions that you or other users can do\. For example, you might have administrative privileges, but you can limit AWS CloudFormation access to only Amazon EC2 actions\. 
+Use a service role to explicitly specify the actions that AWS CloudFormation can perform, which might not always be the same actions that you or other users can do\. For example, you might have administrative privileges, but you can limit AWS CloudFormation access to only Amazon EC2 actions\. 
 
 You create the service role and its permission policy with the IAM service\. For more information about creating a service role, see [Creating a role to delegate permissions to an AWS service](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\. Specify AWS CloudFormation \(`cloudformation.amazonaws.com`\) as the service that can assume the role\.
 

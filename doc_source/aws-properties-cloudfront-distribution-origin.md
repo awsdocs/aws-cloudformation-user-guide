@@ -1,11 +1,17 @@
 # AWS::CloudFront::Distribution Origin<a name="aws-properties-cloudfront-distribution-origin"></a>
 
-A complex type that describes the Amazon S3 bucket, HTTP server \(for example, a web server\), Amazon MediaStore, or other server from which CloudFront gets your files\. This can also be an origin group, if you’ve created an origin group\. You must specify at least one origin or origin group\.
+An origin\.
 
-For the current quota \(limit\) on the number of origins or origin groups that you can specify for a distribution, see [Quotas](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html) in the *Amazon CloudFront Developer Guide*\.
+An origin is the location where content is stored, and from which CloudFront gets content to serve to viewers\. To specify an origin:
++ Use the `S3OriginConfig` type to specify an Amazon S3 bucket that is * **not** * configured with static website hosting\.
++ Use the `CustomOriginConfig` type to specify various other kinds of content containers or HTTP servers, including:
+  + An Amazon S3 bucket that is configured with static website hosting
+  + An Elastic Load Balancing load balancer
+  + An AWS Elemental MediaPackage origin
+  + An AWS Elemental MediaStore container
+  + Any other HTTP server, running on an Amazon EC2 instance or any other kind of host
 
-**Note**  
-If you use CloudFormation to create a CloudFront distribution and an S3 bucket origin at the same time, the distribution might return `HTTP 307 Temporary Redirect` responses for up to 24 hours\. It can take up to 24 hours for the S3 bucket name to propagate to all AWS Regions\. When the propagation is complete, the CloudFront distribution will automatically stop sending these redirect responses; you don’t need to take any action\. For more information, see [Why am I getting an HTTP 307 Temporary Redirect response from Amazon S3?](http://aws.amazon.com/premiumsupport/knowledge-center/s3-http-307-response/) and [Temporary Request Redirection](https://docs.aws.amazon.com/AmazonS3/latest/dev/Redirects.html#TemporaryRedirection)\.
+For the current maximum number of origins that you can specify per distribution, see [General Quotas on Web Distributions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html#limits-web-distributions) in the *Amazon CloudFront Developer Guide* \(quotas were formerly referred to as limits\)\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-origin-syntax"></a>
 

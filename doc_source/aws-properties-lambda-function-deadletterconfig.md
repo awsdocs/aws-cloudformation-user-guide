@@ -38,5 +38,6 @@ Add a dead\-letter queue to a function\.
 #### YAML<a name="aws-properties-lambda-function-deadletterconfig--examples--Dead-letter_Queue--yaml"></a>
 
 ```
- DeadLetterConfig: TargetArn: arn:aws:sqs:us-east-2:123456789012:dlq
+      DeadLetterConfig:
+        TargetArn: arn:aws:sqs:us-east-2:123456789012:dlq
 ```

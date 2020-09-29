@@ -59,7 +59,7 @@ Settings for a machine learning resource stored in Amazon S3\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SageMakerMachineLearningModelResourceData`  <a name="cfn-greengrass-resourcedefinitionversion-resourcedatacontainer-sagemakermachinelearningmodelresourcedata"></a>
-Settings for a machine learning resource saved as an Amazon SageMaker training job\.  
+Settings for a machine learning resource saved as an SageMaker training job\.  
 *Required*: No  
 *Type*: [SageMakerMachineLearningModelResourceData](aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

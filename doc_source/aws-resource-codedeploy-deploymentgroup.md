@@ -2,6 +2,9 @@
 
  The `AWS::CodeDeploy::DeploymentGroup` resource creates an AWS CodeDeploy deployment group that specifies which instances your application revisions are deployed to, along with other deployment options\. For more information, see [CreateDeploymentGroup](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeploymentGroup.html) in the *CodeDeploy API Reference*\. 
 
+**Note**  
+ ECS blue/green deployments through CodeDeploy do not use the `AWS::CodeDeploy::DeploymentGroup` resource\. To perform ECS blue/green deployments, use the `AWS::CodeDeploy::BlueGreen` hook\. See [Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) for more information\. 
+
 ## Syntax<a name="aws-resource-codedeploy-deploymentgroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -118,7 +121,7 @@ Information about the Amazon CloudWatch alarms that are associated with the depl
 `DeploymentStyle`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle"></a>
  Attributes that determine the type of deployment to run and whether to route deployment traffic behind a load balancer\.   
  If you specify this property with a blue/green deployment type, don't specify the `AutoScalingGroups`, `LoadBalancerInfo`, or `Deployment` properties\.   
- For blue/green deployments, AWS CloudFormation supports deployments on Lambda compute platforms only\. 
+ For blue/green deployments, AWS CloudFormation supports deployments on Lambda compute platforms only\. You can perform ECS blue/green deployments using `AWS::CodeDeploy::BlueGreen ` hook\. See [Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) for more information\. 
 *Required*: No  
 *Type*: [DeploymentStyle](aws-properties-codedeploy-deploymentgroup-deploymentstyle.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

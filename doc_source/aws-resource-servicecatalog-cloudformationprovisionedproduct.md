@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AcceptLanguage](#cfn-servicecatalog-cloudformationprovisionedproduct-acceptlanguage)" : String,
       "[NotificationArns](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns)" : [ String, ... ],
       "[PathId](#cfn-servicecatalog-cloudformationprovisionedproduct-pathid)" : String,
+      "[PathName](#cfn-servicecatalog-cloudformationprovisionedproduct-pathname)" : String,
       "[ProductId](#cfn-servicecatalog-cloudformationprovisionedproduct-productid)" : String,
       "[ProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-productname)" : String,
       "[ProvisionedProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname)" : String,
@@ -40,6 +41,7 @@ Properties:
   [NotificationArns](#cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns): 
     - String
   [PathId](#cfn-servicecatalog-cloudformationprovisionedproduct-pathid): String
+  [PathName](#cfn-servicecatalog-cloudformationprovisionedproduct-pathname): String
   [ProductId](#cfn-servicecatalog-cloudformationprovisionedproduct-productid): String
   [ProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-productname): String
   [ProvisionedProductName](#cfn-servicecatalog-cloudformationprovisionedproduct-provisionedproductname): String
@@ -74,11 +76,21 @@ Passed to CloudFormation\. The SNS topic ARNs to which to publish stack\-related
 
 `PathId`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-pathid"></a>
 The path identifier of the product\. This value is optional if the product has a default path, and required if the product has more than one path\. To list the paths for a product, use [ListLaunchPaths](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListLaunchPaths.html)\.  
+You must provide the name or ID, but not both\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
 *Pattern*: `^[a-zA-Z0-9_\-]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PathName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-pathname"></a>
+The name of the path\. This value is optional if the product has a default path, and required if the product has more than one path\. To list the paths for a product, use [ListLaunchPaths](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ListLaunchPaths.html)\.  
+You must provide the name or ID, but not both\.
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProductId`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-productid"></a>
@@ -176,6 +188,33 @@ The ID of the provisioned product\.
 
 `RecordId`  <a name="RecordId-fn::getatt"></a>
 The ID of the record, such as `rec-rjeatvy434trk`\.
+
+## Examples<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--examples"></a>
+
+### GetAtt Example<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--examples--GetAtt_Example"></a>
+
+#### YAML<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--examples--GetAtt_Example--yaml"></a>
+
+```
+      AWSTemplateFormatVersion: '2010-09-09'
+      Description: Serverless Stack
+      Resources:
+         SimpleLambda:
+           Type: AWS::ServiceCatalog::CloudFormationProvisionedProduct
+           Properties:
+            ProductName: Basic Lambda
+            ProvisioningArtifactName: '1.0'
+            
+         SimpleApiGateway:
+           Type: AWS::ServiceCatalog::CloudFormationProvisionedProduct
+           Properties:
+            ProductName: API Gateway
+            ProvisioningArtifactName: '1.0'
+            ProvisioningParameters:
+               -
+                  Key: LambdaArn
+                  Value: !GetAtt [SimpleLambda, Outputs.SCLambdaArn]
+```
 
 ## See also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
 + [ProvisionProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog API Reference*

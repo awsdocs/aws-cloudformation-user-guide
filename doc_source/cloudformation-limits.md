@@ -35,7 +35,6 @@ Not all features of CloudFormation may be available in every region\. For more i
 + [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following region:
   + Asia Pacific \(Osaka\-Local\)
 + For a list of regions in which AWS CloudFormation StackSets is available, refer to the [Global infrastructure Region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
-+ [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
 + [Stack sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) are currently not available in the following regions:
   + Africa \(Cape Town\)
   + Asia Pacific \(Osaka\)

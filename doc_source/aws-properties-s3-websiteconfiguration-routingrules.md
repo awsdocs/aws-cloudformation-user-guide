@@ -37,3 +37,6 @@ A container for describing a condition that must be met for the specified redire
 *Required*: No  
 *Type*: [RoutingRuleCondition](aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-websiteconfiguration-routingrules--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)

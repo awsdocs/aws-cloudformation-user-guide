@@ -67,6 +67,32 @@ If you structure your permissions this way, users do not pass an administrator r
    }
    ```
 
+   Be aware that to deploy stack instances into a target account that resides in a Region that is disabled by default, you will also need to include the regional service principal for that Region\. Each Region that is disabled by default will have its own regional service principal\.
+
+   For more information on regional endpoints, including a list of endpoints, see [Regional endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints) in the *AWS General Reference Guide*\.
+
+   The following example includes the regional service principal \(`cloudformation.ap-east-1.amazonaws.com`\) for the Asia Pacific \(Hong Kong\) region, a region which is disabled by default\.
+
+   ```
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "Service": [
+               "cloudformation.amazonaws.com",
+               "cloudformation.ap-east-1.amazonaws.com"
+            ]
+         },
+         "Action": "sts:AssumeRole"
+       }
+     ]
+   }
+   ```
+
+   For more information, see [Prerequisites for stack set operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html#stacksets-opt-in-regions)\.
+
 1. In each target account, create a service role named **AWSCloudFormationStackSetExecutionRole** that trusts the administrator account\. The role must have this exact name\. You can do this by creating a stack from the following AWS CloudFormation template, available online at [https://s3\.amazonaws\.com/cloudformation\-stackset\-sample\-templates\-us\-east\-1/AWSCloudFormationStackSetExecutionRole\.yml](https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/AWSCloudFormationStackSetExecutionRole.yml)\. When you use this template, you are prompted to provide the name of the administrator account with which your target account must have a trust relationship\.
 **Important**  
 Be aware that this template grants administrator access\. After you use the template to create a target account execution role, you must scope the permissions in the policy statement to the types of resources that you are creating by using StackSets\.
@@ -202,6 +228,32 @@ In general, here's how it works once you have the necessary permissions in place
      ] 
    }
    ```
+
+   Be aware that to deploy stack instances into a target account that resides in a Region that is disabled by default, you will also need to include the regional service principal for that Region\. Each Region that is disabled by default will have its own regional service principal\.
+
+   For more information on regional endpoints, including a list of endpoints, see [Regional endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints) in the *AWS General Reference Guide*\.
+
+   The following example includes the regional service principal \(`cloudformation.ap-east-1.amazonaws.com`\) for the Asia Pacific \(Hong Kong\) region, a region which is disabled by default\.
+
+   ```
+   {
+     "Version": "2012-10-17",
+     "Statement": [
+       {
+         "Effect": "Allow",
+         "Principal": {
+           "Service": [
+               "cloudformation.amazonaws.com",
+               "cloudformation.ap-east-1.amazonaws.com"
+            ]
+         },
+         "Action": "sts:AssumeRole"
+       }
+     ]
+   }
+   ```
+
+   For more information, see [Prerequisites for stack set operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html#stacksets-opt-in-regions)\.
 
 1. In each target account, create a service role named **AWSCloudFormationStackSetExecutionRole** that trusts the customized administration role you want to use with this account\.
 **Important**  

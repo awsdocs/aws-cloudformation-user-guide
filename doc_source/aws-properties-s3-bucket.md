@@ -173,7 +173,7 @@ Configuration that defines how Amazon S3 handles public access\.
 
 `ReplicationConfiguration`  <a name="cfn-s3-bucket-replicationconfiguration"></a>
 Configuration for replicating objects in an S3 bucket\. To enable replication, you must also enable versioning by using the `VersioningConfiguration` property\.  
-Amazon S3 can store replicated objects in only one destination bucket\. The destination bucket must already exist and be in a different AWS Region than your source bucket\.  
+Amazon S3 can store replicated objects in only one destination bucket\. The destination bucket must already exist\.  
 *Required*: No  
 *Type*: [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -202,7 +202,7 @@ Information used to configure the bucket as a static website\. For more informat
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the bucket name\.
 
-Example: `AWSDOC-EXAMPLE-BUCKET` 
+Example: `DOC-EXAMPLE-BUCKET` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -216,25 +216,25 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the specified bucket\.  
-Example: `arn:aws:s3:::AWSDOC-EXAMPLE-BUCKET` 
+Example: `arn:aws:s3:::DOC-EXAMPLE-BUCKET` 
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 Returns the IPv4 DNS name of the specified bucket\.  
-Example: `AWSDOC-EXAMPLE-BUCKET.s3.amazonaws.com` 
+Example: `DOC-EXAMPLE-BUCKET.s3.amazonaws.com` 
 
 `DualStackDomainName`  <a name="DualStackDomainName-fn::getatt"></a>
 Returns the IPv6 DNS name of the specified bucket\.  
-Example: ` AWSDOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com`   
+Example: ` DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com`   
 For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html)\.
 
 `RegionalDomainName`  <a name="RegionalDomainName-fn::getatt"></a>
 Returns the regional domain name of the specified bucket\.  
-Example: `AWSDOC-EXAMPLE-BUCKET.s3.us-east-2.amazonaws.com` 
+Example: `DOC-EXAMPLE-BUCKET.s3.us-east-2.amazonaws.com` 
 
 `WebsiteURL`  <a name="WebsiteURL-fn::getatt"></a>
 Returns the Amazon S3 website endpoint for the specified bucket\.  
-Example \(IPv4\): `http://AWSDOC-EXAMPLE-BUCKET.s3-website.us-east-2.amazonaws.com`   
-Example \(IPv6\): `http://AWSDOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com` 
+Example \(IPv4\): `http://DOC-EXAMPLE-BUCKET.s3-website.us-east-2.amazonaws.com`   
+Example \(IPv6\): `http://DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.com` 
 
 ## Examples<a name="aws-properties-s3-bucket--examples"></a>
 
@@ -250,7 +250,7 @@ The following example creates an S3 bucket with a `Retain` deletion policy\.
         "Type" : "AWS::S3::Bucket",
 	"DeletionPolicy": "Retain",
         "Properties" : {
-           "BucketName" : "AWSDOC-EXAMPLE-BUCKET"
+           "BucketName" : "DOC-EXAMPLE-BUCKET"
          }  
      }
 }
@@ -264,7 +264,7 @@ Resources:
     Type: AWS::S3::Bucket
     DeletionPolicy: Retain
     Properties:
-      BucketName: AWSDOC-EXAMPLE-BUCKET
+      BucketName: DOC-EXAMPLE-BUCKET
 ```
 
 ### Associate a Replication Configuration IAM Role with an S3 Bucket<a name="aws-properties-s3-bucket--examples--Associate_a_Replication_Configuration_IAM_Role_with_an_S3_Bucket"></a>

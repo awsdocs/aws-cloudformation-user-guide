@@ -1,6 +1,6 @@
 # AWS::CodeBuild::ReportGroup<a name="aws-resource-codebuild-reportgroup"></a>
 
- Creates a report group\. A report group contains a collection of reports\. 
+Represents a report group\. A report group contains a collection of reports\. 
 
 ## Syntax<a name="aws-resource-codebuild-reportgroup-syntax"></a>
 

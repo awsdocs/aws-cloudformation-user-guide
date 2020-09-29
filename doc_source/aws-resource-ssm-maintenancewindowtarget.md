@@ -97,11 +97,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-maintenancewindowtarget--examples"></a>
 
-### AWS Systems Manager Maintenance Window Target Example<a name="aws-resource-ssm-maintenancewindowtarget--examples--AWS_Systems_Manager_Maintenance_Window_Target_Example"></a>
+### Create a maintenance window that targets instances by using tags<a name="aws-resource-ssm-maintenancewindowtarget--examples--Create_a_maintenance_window_that_targets_instances_by_using_tags"></a>
 
 The following example creates a Systems Manager maintenance window target that targets managed instances with the tag key `ENV` and the tag value `DEV`\.
 
-#### JSON<a name="aws-resource-ssm-maintenancewindowtarget--examples--AWS_Systems_Manager_Maintenance_Window_Target_Example--json"></a>
+#### JSON<a name="aws-resource-ssm-maintenancewindowtarget--examples--Create_a_maintenance_window_that_targets_instances_by_using_tags--json"></a>
 
 ```
 {
@@ -129,7 +129,7 @@ The following example creates a Systems Manager maintenance window target that t
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-maintenancewindowtarget--examples--AWS_Systems_Manager_Maintenance_Window_Target_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-maintenancewindowtarget--examples--Create_a_maintenance_window_that_targets_instances_by_using_tags--yaml"></a>
 
 ```
 ---

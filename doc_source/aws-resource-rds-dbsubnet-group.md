@@ -45,8 +45,8 @@ The description for the DB Subnet Group\.
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupname"></a>
 The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
-Constraints: Must contain no more than 255 alphanumeric characters or hyphens\. Must not be "Default"\.  
-Example: `mySubnetgroup`   
+Constraints: Must contain no more than 255 lowercase alphanumeric characters or hyphens\. Must not be "Default"\.  
+Example: `mysubnetgroup`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -216,11 +216,11 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-taskdefinition--examples"></a>
 
-### Creating an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition"></a>
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
 The following example defines an Amazon ECS task definition, which includes two container definitions and one volume definition\.
 
-#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--json"></a>
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
 ```
 "taskdefinition": {
@@ -281,7 +281,7 @@ The following example defines an Amazon ECS task definition, which includes two 
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--yaml"></a>
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--yaml"></a>
 
 ```
 taskdefinition: 
@@ -331,81 +331,83 @@ taskdefinition:
         Name: "my-vol"
 ```
 
-### Creating an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition"></a>
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
 The following example defines an Amazon ECS task definition that specifies EC2 and FARGATE as required compatibilities\.
 
-#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--json"></a>
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
 ```
 {
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Resources": {
-    "taskdefinition": {
-      "Type": "AWS::ECS::TaskDefinition",
-      "Properties": {
-        "RequiresCompatibilities": [
-          "EC2",
-          "FARGATE"
-        ],
-        "ContainerDefinitions": [
-          {
-            "Name": "my-app",
-            "MountPoints": [
-              {
-                "SourceVolume": "my-vol",
-                "ContainerPath": "/var/www/my-vol"
-              }
-            ],
-            "Image": "amazon/amazon-ecs-sample",
-            "Cpu": 256,
-            "EntryPoint": [
-              "/usr/sbin/apache2",
-              "-D",
-              "FOREGROUND"
-            ],
-            "Memory": 512,
-            "Essential": true
-          },
-          {
-            "Name": "busybox",
-            "Image": "busybox",
-            "Cpu": 256,
-            "EntryPoint": [
-              "sh",
-              "-c"
-            ],
-            "Memory": 512,
-            "Command": [
-              "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-            ],
-            "Essential": false,
-            "DependsOn": [
-              "ContainerName": "my-app",
-              "Condition": "START"
-            ],
-            "VolumesFrom": [
-              {
-                "SourceContainer": "my-app"
-              }
-            ]
-          }
-        ],
-        "Volumes": [
-          {
-            "Host": {
-              "SourcePath": "/var/lib/docker/vfs/dir/"
-            },
-            "Name": "my-vol"
-          }
-        ]
-      }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "taskdefinition": {
+            "Type": "AWS::ECS::TaskDefinition",
+            "Properties": {
+                "RequiresCompatibilities": [
+                    "EC2",
+                    "FARGATE"
+                ],
+                "ContainerDefinitions": [
+                    {
+                        "Name": "my-app",
+                        "MountPoints": [
+                            {
+                                "SourceVolume": "my-vol",
+                                "ContainerPath": "/var/www/my-vol"
+                            }
+                        ],
+                        "Image": "amazon/amazon-ecs-sample",
+                        "Cpu": 256,
+                        "EntryPoint": [
+                            "/usr/sbin/apache2",
+                            "-D",
+                            "FOREGROUND"
+                        ],
+                        "Memory": 512,
+                        "Essential": true
+                    },
+                    {
+                        "Name": "busybox",
+                        "Image": "busybox",
+                        "Cpu": 256,
+                        "EntryPoint": [
+                            "sh",
+                            "-c"
+                        ],
+                        "Memory": 512,
+                        "Command": [
+                            "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
+                        ],
+                        "Essential": false,
+                        "DependsOn": [
+                            {
+                                "ContainerName": "my-app",
+                                "Condition": "START"
+                            }
+                        ],
+                        "VolumesFrom": [
+                            {
+                                "SourceContainer": "my-app"
+                            }
+                        ]
+                    }
+                ],
+                "Volumes": [
+                    {
+                        "Host": {
+                            "SourcePath": "/var/lib/docker/vfs/dir/"
+                        },
+                        "Name": "my-vol"
+                    }
+                ]
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--yaml"></a>
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -424,21 +426,21 @@ Resources:
               SourceVolume: "my-vol"
               ContainerPath: "/var/www/my-vol"
           Image: "amazon/amazon-ecs-sample"
-          Cpu: "10"
+          Cpu: 256
           EntryPoint: 
             - "/usr/sbin/apache2"
             - "-D"
             - "FOREGROUND"
-          Memory: "0.5GB"
+          Memory: 512
           Essential: true
         - 
           Name: "busybox"
           Image: "busybox"
-          Cpu: "10"
+          Cpu: 256
           EntryPoint: 
             - "sh"
             - "-c"
-          Memory: "0.5GB"
+          Memory: 512
           Command: 
             - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
           Essential: false

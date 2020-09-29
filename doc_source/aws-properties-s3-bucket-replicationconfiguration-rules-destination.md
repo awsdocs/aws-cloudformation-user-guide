@@ -1,6 +1,6 @@
 # AWS::S3::Bucket ReplicationDestination<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination"></a>
 
-Specifies which Amazon S3 bucket to store replicated objects in and their storage class\.
+A container for information about the replication destination and its configurations including enabling the S3 Replication Time Control \(S3 RTC\)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination-syntax"></a>
 
@@ -64,13 +64,13 @@ Specifies encryption\-related information\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-s3-bucket-replicationdestination-metrics"></a>
-Not currently supported by AWS CloudFormation\.  
+ A container specifying replication metrics\-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control \(S3 RTC\)\. Must be specified together with a `ReplicationTime` block\.   
 *Required*: No  
 *Type*: [Metrics](aws-properties-s3-bucket-metrics.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationTime`  <a name="cfn-s3-bucket-replicationdestination-replicationtime"></a>
-Not currently supported by AWS CloudFormation\.  
+ A container specifying S3 Replication Time Control \(S3 RTC\), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated\. Must be specified together with a `Metrics` block\.   
 *Required*: No  
 *Type*: [ReplicationTime](aws-properties-s3-bucket-replicationtime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

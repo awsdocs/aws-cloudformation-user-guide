@@ -130,6 +130,6 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
 ...
 ```
 
-### Additional example<a name="w6640ab1c25c38c35c15b8"></a>
+### Additional example<a name="w6948ab1c34c42c35c15b8"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

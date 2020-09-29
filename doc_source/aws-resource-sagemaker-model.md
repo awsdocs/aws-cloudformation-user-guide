@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
       "[Containers](#cfn-sagemaker-model-containers)" : [ ContainerDefinition, ... ],
+      "[EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation)" : Boolean,
       "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
       "[ModelName](#cfn-sagemaker-model-modelname)" : String,
       "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : ContainerDefinition,
@@ -29,6 +30,7 @@ Type: AWS::SageMaker::Model
 Properties: 
   [Containers](#cfn-sagemaker-model-containers): 
     - ContainerDefinition
+  [EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation): Boolean
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
   [ModelName](#cfn-sagemaker-model-modelname): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): 
@@ -46,6 +48,12 @@ Specifies the containers in the inference pipeline\.
 *Required*: No  
 *Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
 *Maximum*: `5`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>

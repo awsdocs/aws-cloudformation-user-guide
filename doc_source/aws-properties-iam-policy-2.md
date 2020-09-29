@@ -1,4 +1,4 @@
-# AWS::IAM::User Policy<a name="aws-properties-iam-policy-2"></a>
+# AWS::IAM::Group Policy<a name="aws-properties-iam-policy-2"></a>
 
 Contains information about an attached policy\.
 

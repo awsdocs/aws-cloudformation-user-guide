@@ -102,11 +102,11 @@ The date and time, in UTC and extended ISO 8601 format, when the custom data ide
 Specifies whether the custom data identifier was deleted\. If you delete a custom data identifier, Amazon Macie doesn't delete it permanently\. Instead, it soft deletes the identifier\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-The unique identifier for the custom data identifier that was created\.
+The unique identifier for the custom data identifier\.
 
 ## Examples<a name="aws-resource-macie-customdataidentifier--examples"></a>
 
-The following examples demonstrates how to declare an `AWS::Macie::CustomDataIdentifier` resource\.
+The following example demonstrates how to declare an `AWS::Macie::CustomDataIdentifier` resource\.
 
 ### Creating a Macie CustomDataIdentifier<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier"></a>
 

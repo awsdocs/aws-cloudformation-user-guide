@@ -346,7 +346,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
             }
         },
         "ConfigAggregator": {
-            "Type": "AWS::Config::ConfigurationAggregatorName",
+            "Type": "AWS::Config::ConfigurationAggregator",
             "Condition": "CreateAggregator",
             "Properties": {
                 "Name": "name",
@@ -528,7 +528,7 @@ Resources:
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
 
   ConfigAggregator:
-    Type: AWS::Config::ConfigurationAggregatorName
+    Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
     ConfigurationAggregatorName: name

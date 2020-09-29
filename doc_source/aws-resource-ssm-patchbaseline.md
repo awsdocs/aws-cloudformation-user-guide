@@ -170,11 +170,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-patchbaseline--examples"></a>
 
-### AWS Systems Manager Patch Baseline Example<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example"></a>
+### Create a patch baseline<a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline"></a>
 
 The following example creates a Systems Manager patch baseline that approves patches for Windows Server 2019 instances seven days after they are released by Microsoft\. The patch baseline also approves patches for Active Directory seven days after they are released by Microsoft\.
 
-#### <a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--language_owl_wvr_qlb"></a>
+#### <a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline--language_owl_wvr_qlb"></a>
 
 ```
 {
@@ -267,7 +267,7 @@ The following example creates a Systems Manager patch baseline that approves pat
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline--yaml"></a>
 
 ```
 ---

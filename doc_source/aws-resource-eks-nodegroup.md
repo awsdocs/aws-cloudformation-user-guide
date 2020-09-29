@@ -1,10 +1,8 @@
 # AWS::EKS::Nodegroup<a name="aws-resource-eks-nodegroup"></a>
 
-Creates a managed worker node group for an Amazon EKS cluster\. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster\. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster\.
+Creates a managed worker node group for an Amazon EKS cluster\. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster\. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template\. For more information about using launch templates, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)\.
 
-An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by AWS for an Amazon EKS cluster\. Each node group uses a version of the Amazon EKS\-optimized Amazon Linux 2 AMI\.
-
-You can only create a managed node group for Amazon EKS clusters that support managed nodes\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
+An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by AWS for an Amazon EKS cluster\. Each node group uses a version of the Amazon EKS optimized Amazon Linux 2 AMI\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
 
 ## Syntax<a name="aws-resource-eks-nodegroup-syntax"></a>
 
@@ -22,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ForceUpdateEnabled](#cfn-eks-nodegroup-forceupdateenabled)" : Boolean,
       "[InstanceTypes](#cfn-eks-nodegroup-instancetypes)" : [ String, ... ],
       "[Labels](#cfn-eks-nodegroup-labels)" : Json,
-      "[LaunchTemplate](#cfn-eks-nodegroup-launchtemplatespecification)" : LaunchTemplateSpecification,
+      "[LaunchTemplate](#cfn-eks-nodegroup-launchtemplate)" : LaunchTemplateSpecification,
       "[NodegroupName](#cfn-eks-nodegroup-nodegroupname)" : String,
       "[NodeRole](#cfn-eks-nodegroup-noderole)" : String,
       "[ReleaseVersion](#cfn-eks-nodegroup-releaseversion)" : String,
@@ -47,7 +45,7 @@ Properties:
   [InstanceTypes](#cfn-eks-nodegroup-instancetypes): 
     - String
   [Labels](#cfn-eks-nodegroup-labels): Json
-  [LaunchTemplate](#cfn-eks-nodegroup-launchtemplatespecification): 
+  [LaunchTemplate](#cfn-eks-nodegroup-launchtemplate): 
     LaunchTemplateSpecification
   [NodegroupName](#cfn-eks-nodegroup-nodegroupname): String
   [NodeRole](#cfn-eks-nodegroup-noderole): String
@@ -65,7 +63,7 @@ Properties:
 ## Properties<a name="aws-resource-eks-nodegroup-properties"></a>
 
 `AmiType`  <a name="cfn-eks-nodegroup-amitype"></a>
-The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type\. Non\-GPU instances should use the `AL2_x86_64` AMI type\. Arm instances should use the `AL2_ARM_64` AMI type\. All types use the Amazon EKS\-optimized Amazon Linux 2 AMI\. If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
+The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type\. Non\-GPU instances should use the `AL2_x86_64` AMI type\. Arm instances should use the `AL2_ARM_64` AMI type\. All types use the Amazon EKS optimized Amazon Linux 2 AMI\. If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU`  
@@ -101,7 +99,7 @@ The Kubernetes labels to be applied to the nodes in the node group when they are
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LaunchTemplate`  <a name="cfn-eks-nodegroup-launchtemplatespecification"></a>
+`LaunchTemplate`  <a name="cfn-eks-nodegroup-launchtemplate"></a>
 An object representing a node group's launch template specification\. If specified, then do not specify `instanceTypes`, `diskSize`, or `remoteAccess` and make sure that the launch template meets the requirements in `launchTemplateSpecification`\.  
 *Required*: No  
 *Type*: [LaunchTemplateSpecification](aws-properties-eks-nodegroup-launchtemplatespecification.md)  

@@ -6,7 +6,7 @@ To set up the required permissions for creating a stack set with **self\-managed
 
 To set up the required permissions for creating a stack set with **service\-managed** permissions, see [Enable Trusted Access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
 
-## Performing stack set operations involving accounts in opt\-in regions<a name="stacksets-opt-in-regions"></a>
+## Performing stack set operations involving regions that are disabled by default<a name="stacksets-opt-in-regions"></a>
 
 AWS Regions introduced after March 20, 2019, such as Asia Pacific \(Hong Kong\), are disabled by default\. You must enable these Regions for your account\(s\) before you can use them\. Because of this, consider the following when performing stack set operations involving accounts in Regions that are disabled by default\. 
 + You cannot create a stack set from an administrator account in a Region that is currently disabled for that account\.
@@ -20,6 +20,6 @@ In addition, if you disable a Region that contains an account in which stack set
 For more information on enabling and disabling regions, see [Managing AWS Regions](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) in the *AWS General Reference*\.
 
 **Topics**
-+ [Performing stack set operations involving accounts in opt\-in regions](#stacksets-opt-in-regions)
++ [Performing stack set operations involving regions that are disabled by default](#stacksets-opt-in-regions)
 + [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)
 + [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)

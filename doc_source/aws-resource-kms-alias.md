@@ -50,7 +50,7 @@ The alias must be string of 1\-256 characters\. It can contain only alphanumeric
 `TargetKeyId`  <a name="cfn-kms-alias-targetkeyid"></a>
 Associates the alias with the specified [customer managed CMK](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#customer-cmk)\. The CMK must be in the same AWS account and Region\.  
 A valid CMK ID is required\. If you supply a null or empty string value, this operation returns an error\.  
-For help finding the key ID and ARN, see [Finding the Key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.  
+For help finding the key ID and ARN, see [Finding the key ID and ARN](https://docs.aws.amazon.com/kms/latest/developerguide/viewing-keys.html#find-cmk-id-arn) in the *AWS Key Management Service Developer Guide*\.  
 Specify the key ID or the Amazon Resource Name \(ARN\) of the CMK\.  
 For example:  
 + Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab` 

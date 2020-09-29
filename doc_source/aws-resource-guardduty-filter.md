@@ -42,18 +42,23 @@ Properties:
 Specifies the action that is to be applied to the findings that match the filter\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `ARCHIVE | NOOP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-guardduty-filter-description"></a>
 The description of the filter\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `512`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DetectorId`  <a name="cfn-guardduty-filter-detectorid"></a>
-The ID of the detector to associate the `Filter` with\.  
+The ID of the detector belonging to the GuardDuty account that you want to create a filter for\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `300`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FindingCriteria`  <a name="cfn-guardduty-filter-findingcriteria"></a>
@@ -66,6 +71,8 @@ Represents the criteria to be used in the filter for querying findings\.
 The name of the filter\. Minimum length of 3\. Maximum length of 64\. Valid characters include alphanumeric characters, dot \(\.\), underscore \(\_\), and dash \(\-\)\. Spaces are not allowed\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rank`  <a name="cfn-guardduty-filter-rank"></a>

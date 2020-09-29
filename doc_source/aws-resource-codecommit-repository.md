@@ -104,9 +104,53 @@ When you pass the logical ID of this resource, the function returns the reposito
 
 ## Examples<a name="aws-resource-codecommit-repository--examples"></a>
 
+The following examples can help you create CodeCommit repositories using CloudFormation\.
+
 ### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
 
-The following example creates a CodeCommit repository with a trigger for all events in the Master branch\. 
+The following example creates a CodeCommit repository named *MyDemoRepo*\. The newly created repository is populated with code stored in an Amazon S3 bucket named *MySourceCodeBucket* and placed in a branch named *development*, which is the default branch for the repository\. 
+
+#### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
+
+```
+{
+    "MyRepo": {
+        "Type": "AWS: : CodeCommit: : Repository",
+        "Properties": {
+            "RepositoryName": "MyDemoRepo",
+            "RepositoryDescription": "This is a repository for my project with code from MySourceCodeBucket.",
+            "Code": {
+                "BranchName": "development",
+                "S3": {
+                    "Bucket": "MySourceCodeBucket",
+                    "Key": "MyKey",
+                    "ObjectVersion": "1"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-codecommit-repository--examples--Example--yaml"></a>
+
+```
+MyRepo:
+  Type: AWS::CodeCommit::Repository
+  Properties:
+    RepositoryName: MyDemoRepo
+    RepositoryDescription: This is a repository for my project with code from MySourceCodeBucket.
+    Code:
+        - BranchName: development
+        - S3: 
+          Bucket: MySourceCodeBucket,
+          Key: MyKey,
+          ObjectVersion: 1
+```
+
+### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
+
+The following example creates a CodeCommit repository with a trigger for all events in the main branch\. 
 
 #### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
 
@@ -119,13 +163,13 @@ The following example creates a CodeCommit repository with a trigger for all eve
             "RepositoryDescription": "a description",
             "Triggers": [
                 {
-                    "Name": "MasterTrigger",
+                    "Name": "MainTrigger",
                     "CustomData": "Project ID 12345",
                     "DestinationArn": {
                         "Ref": "SNSarn"
                     },
                     "Branches": [
-                        "Master"
+                        "main"
                     ],
                     "Events": [
                         "all"
@@ -146,12 +190,12 @@ MyRepo:
     RepositoryName: MyRepoName
     RepositoryDescription: a description
     Triggers:
-    - Name: MasterTrigger
+    - Name: MainTrigger
       CustomData: Project ID 12345
       DestinationArn:
         Ref: SNSarn
       Branches:
-      - Master
+      - main
       Events:
       - all
 ```

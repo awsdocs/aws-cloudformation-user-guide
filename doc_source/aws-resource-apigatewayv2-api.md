@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : Cors,
       "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-api-description)" : String,
+      "[DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint)" : Boolean,
       "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
       "[FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings)" : Boolean,
       "[Name](#cfn-apigatewayv2-api-name)" : String,
@@ -46,6 +47,7 @@ Properties:
     Cors
   [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
   [Description](#cfn-apigatewayv2-api-description): String
+  [DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint): Boolean
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
   [FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings): Boolean
   [Name](#cfn-apigatewayv2-api-name): String
@@ -99,6 +101,12 @@ This property is part of quick create\. It specifies the credentials required fo
 The description of the API\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableExecuteApiEndpoint`  <a name="cfn-apigatewayv2-api-disableexecuteapiendpoint"></a>
+Specifies whether clients can invoke your API by using the default `execute-api` endpoint\. By default, clients can invoke your API with the default https://\{api\_id\}\.execute\-api\.\{region\}\.amazonaws\.com endpoint\. To require that clients use a custom domain name to invoke your API, disable the default endpoint\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableSchemaValidation`  <a name="cfn-apigatewayv2-api-disableschemavalidation"></a>
@@ -162,6 +170,17 @@ A version identifier for the API\.
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the API ID, such as `a1bcdef2gh`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-api-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigatewayv2-api-return-values-fn--getatt-fn--getatt"></a>
+
+`ApiEndpoint`  <a name="ApiEndpoint-fn::getatt"></a>
+The default endpoint for an API\. For example: `https://abcdef.execute-api.us-west-2.amazonaws.com`\.
 
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
 

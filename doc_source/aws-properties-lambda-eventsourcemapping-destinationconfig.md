@@ -38,6 +38,7 @@ Configure a function to send a record of failed batches to an SQS queue\.
 #### YAML<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples--On-Failure_Destination_Configuration--yaml"></a>
 
 ```
- DestinationConfig: OnFailure: Destination:
-        arn:aws:sqs:us-east-2:123456789012:dlq
+      DestinationConfig:
+          OnFailure:
+            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
 ```

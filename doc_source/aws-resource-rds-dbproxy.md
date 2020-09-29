@@ -109,6 +109,7 @@ An optional set of key\-value pairs to associate arbitrary data of your choosing
 
 `VpcSecurityGroupIds`  <a name="cfn-rds-dbproxy-vpcsecuritygroupids"></a>
 One or more VPC security group IDs to associate with the new proxy\.  
+If you plan to update the resource, don't specify VPC security groups in a shared VPC\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

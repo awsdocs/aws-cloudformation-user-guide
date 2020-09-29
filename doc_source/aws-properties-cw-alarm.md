@@ -196,9 +196,9 @@ The actions to execute when this alarm transitions to the `OK` state from any ot
 `Period`  <a name="cfn-cloudwatch-alarms-period"></a>
 The period, in seconds, over which the statistic is applied\. This is required for an alarm based on a metric\. Valid values are 10, 30, 60, and any multiple of 60\.  
 For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
+*Minimum:* 10  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statistic`  <a name="cfn-cloudwatch-alarms-statistic"></a>

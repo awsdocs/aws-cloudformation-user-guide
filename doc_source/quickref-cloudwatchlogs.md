@@ -5,7 +5,7 @@ Amazon CloudWatch Logs can monitor your system, application, and custom log file
 **Topics**
 + [Send logs to CloudWatch Logs from a Linux instance](#quickref-cloudwatchlogs-example1)
 + [Send logs to CloudWatch Logs from a Windows instance](#quickref-cloudwatchlogs-example2)
-+ [See also](#w6640ab1c19c22c31c11)
++ [See also](#w6948ab1c28c22c31c11)
 
 ## Send logs to CloudWatch Logs from a Linux instance<a name="quickref-cloudwatchlogs-example1"></a>
 
@@ -1583,6 +1583,6 @@ Outputs:
     Value: !Ref 'LogGroup'
 ```
 
-## See also<a name="w6640ab1c19c22c31c11"></a>
+## See also<a name="w6948ab1c28c22c31c11"></a>
 
 For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWs::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.

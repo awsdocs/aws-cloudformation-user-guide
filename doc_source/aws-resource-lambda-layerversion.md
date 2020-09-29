@@ -94,15 +94,37 @@ Create a layer named `my-layer`\.
 #### JSON<a name="aws-resource-lambda-layerversion--examples--Layer_Version--json"></a>
 
 ```
-"MyLayer": { "Type": "AWS::Lambda::LayerVersion", "Properties": { "CompatibleRuntimes": [
-        "python3.6", "python3.7" ], "Content": { "S3Bucket": "my-bucket-us-west-2-123456789012", "S3Key": "layer.zip" },
-        "Description": "My layer", "LayerName": "my-layer", "LicenseInfo": "MIT" } }
+"MyLayer": {
+    "Type": "AWS::Lambda::LayerVersion",
+    "Properties": {
+        "CompatibleRuntimes": [
+            "python3.6",
+            "python3.7"
+        ],
+        "Content": {
+            "S3Bucket": "my-bucket-us-west-2-123456789012",
+            "S3Key": "layer.zip"
+        },
+        "Description": "My layer",
+        "LayerName": "my-layer",
+        "LicenseInfo": "MIT"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-lambda-layerversion--examples--Layer_Version--yaml"></a>
 
 ```
-MyLayer: Type: AWS::Lambda::LayerVersion Properties: CompatibleRuntimes: - python3.6 -
-        python3.7 Content: S3Bucket: my-bucket-us-west-2-123456789012 S3Key: layer.zip Description: My layer LayerName:
-        my-layer LicenseInfo: MIT
+MyLayer:
+  Type: AWS::Lambda::LayerVersion
+  Properties:
+    CompatibleRuntimes:
+      - python3.6
+      - python3.7
+    Content:
+      S3Bucket: my-bucket-us-west-2-123456789012
+      S3Key: layer.zip
+    Description: My layer
+    LayerName: my-layer
+    LicenseInfo: MIT
 ```

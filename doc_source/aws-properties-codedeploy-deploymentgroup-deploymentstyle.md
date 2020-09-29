@@ -34,7 +34,6 @@ Indicates whether to route deployment traffic behind a load balancer\.
 
 `DeploymentType`  <a name="cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype"></a>
 Indicates whether to run an in\-place or blue/green deployment\.  
-AWS CloudFormation supports blue/green deployments on Amazon ECS compute platforms only\. For more information about deploying on an Amazon ECS compute platform, see [ Deployments on an Amazon ECS Compute Platform](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps-ecs.html) in the *AWS CodeDeploy User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BLUE_GREEN | IN_PLACE`  

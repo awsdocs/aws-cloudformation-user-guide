@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream HttpEndpointDestinationConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration"></a>
 
-Describes the configuration of the HTTP endpoint destination\.
+Describes the configuration of the HTTP endpoint destination\. Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported third\-party service providers, including Datadog, MongoDB, and New Relic\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-syntax"></a>
 

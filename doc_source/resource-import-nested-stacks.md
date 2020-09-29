@@ -71,7 +71,7 @@ During a nested stack import operation, AWS CloudFormation performs the followin
    1. Under **Identifier property**, choose the type of resource identifier\. For example, an `AWS::CloudFormation::Stack` resource can be identified using the `StackId` property\.
 
    1. Under **Identifier value**, type the actual property value\. For example, `arn:aws:cloudformation:us-west-2:12345678910:stack/mystack/5b918d10-cd98-11ea-90d5-0a9cd3354c10`\.  
-![\[The Identify resources page in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/resources-to-import-identifiers.png)
+![\[The Identify resources page in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/resource-import-stackid.png)
 
    1. Choose **Next**\.
 

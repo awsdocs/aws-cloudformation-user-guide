@@ -60,12 +60,16 @@ The location of a layer archive in Amazon S3\.
 #### JSON<a name="aws-properties-lambda-layerversion-content--examples--Layer_Content--json"></a>
 
 ```
- "Content": { "S3Bucket": "my-bucket-us-west-2-123456789012", "S3Key": "layer.zip"
+        "Content": {
+            "S3Bucket": "my-bucket-us-west-2-123456789012",
+            "S3Key": "layer.zip"
         }
 ```
 
 #### YAML<a name="aws-properties-lambda-layerversion-content--examples--Layer_Content--yaml"></a>
 
 ```
- Content: S3Bucket: my-bucket-us-west-2-123456789012 S3Key: layer.zip
+    Content:
+      S3Bucket: my-bucket-us-west-2-123456789012
+      S3Key: layer.zip
 ```

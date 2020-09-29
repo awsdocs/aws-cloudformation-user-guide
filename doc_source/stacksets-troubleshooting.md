@@ -3,11 +3,11 @@
 This topic contains some common AWS CloudFormation StackSets issues, and suggested solutions for those issues\.
 
 **Topics**
-+ [Common reasons for stack operation failure](#w6640ab1c21c25b6)
-+ [Retrying failed stack creation or update operations](#w6640ab1c21c25b8)
++ [Common reasons for stack operation failure](#w6948ab1c30c25b6)
++ [Retrying failed stack creation or update operations](#w6948ab1c30c25b8)
 + [Stack instance deletion fails](#stack-instance-delete-fails)
 
-## Common reasons for stack operation failure<a name="w6640ab1c21c25b6"></a>
+## Common reasons for stack operation failure<a name="w6948ab1c30c25b6"></a>
 
 **Problem:** A stack operation failed, and the stack instance status is `OUTDATED`\.
 
@@ -22,7 +22,7 @@ This topic contains some common AWS CloudFormation StackSets issues, and suggest
 
 **Solution:** For more information about the permissions required of target and administrator accounts before you can create stack sets, see [Set up basic permissions for stack set operations](stacksets-prereqs-self-managed.md#stacksets-prereqs-accountsetup)\.
 
-## Retrying failed stack creation or update operations<a name="w6640ab1c21c25b8"></a>
+## Retrying failed stack creation or update operations<a name="w6948ab1c30c25b8"></a>
 
 **Problem:** A stack creation or update failed, and the stack instance status is `OUTDATED`\. To troubleshoot why a stack creation or update failed, open the AWS CloudFormation console, and view the events for the stack, which will have a status of `DELETED` \(for failed create operations\) or `FAILED` \(for failed update operations\)\. Browse the stack events, and find the **Status reason** column\. The value of **Status reason** explains why the stack operation failed\.
 

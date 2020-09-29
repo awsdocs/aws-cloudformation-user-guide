@@ -32,9 +32,11 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-master-properties"></a>
 
 `DetectorId`  <a name="cfn-guardduty-master-detectorid"></a>
-The unique ID of the detector associated with the GuardDuty master account\.  
+The unique ID of the detector of the GuardDuty member account\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `300`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InvitationId`  <a name="cfn-guardduty-master-invitationid"></a>

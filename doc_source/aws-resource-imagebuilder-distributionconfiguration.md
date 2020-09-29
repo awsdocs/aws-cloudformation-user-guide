@@ -118,7 +118,7 @@ Resources:
             Description: 'description'
       Tags:
         CustomerDistributionConfigTagKey1: 'CustomerDistributionConfigTagValue1'
-        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'br
+        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'
 ```
 
 #### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--json"></a>
