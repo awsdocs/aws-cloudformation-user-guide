@@ -172,7 +172,7 @@ MyRoute:
     Target: !Join
       - /
       - - integrations
-      - !Ref MyIntegration
+        - !Ref MyIntegration
 ```
 
 ### WebSocket API route creation example<a name="aws-resource-apigatewayv2-route--examples--WebSocket_API_route_creation_example"></a>
