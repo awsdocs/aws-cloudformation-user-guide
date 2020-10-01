@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The type of resource to assign to a container\. The supported values are `GPU` or `InferenceAccelerator`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GPU | InferenceAccelerator`  
+*Allowed values*: `GPU | InferenceAccelerator`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-ecs-taskdefinition-resourcerequirement-value"></a>

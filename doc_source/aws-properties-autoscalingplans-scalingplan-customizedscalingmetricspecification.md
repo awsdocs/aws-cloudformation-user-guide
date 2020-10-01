@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-dimensions)" : [ [MetricDimension](aws-properties-autoscalingplans-scalingplan-metricdimension.md), ... ],
+  "[Dimensions](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-dimensions)" : [ MetricDimension, ... ],
   "[MetricName](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-metricname)" : String,
   "[Namespace](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-namespace)" : String,
   "[Statistic](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-statistic)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-dimensions): 
-    - [MetricDimension](aws-properties-autoscalingplans-scalingplan-metricdimension.md)
+    - MetricDimension
   [MetricName](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-metricname): String
   [Namespace](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-namespace): String
   [Statistic](#cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-statistic): String
@@ -60,7 +60,7 @@ The namespace of the metric\.
 The statistic of the metric\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Average | Maximum | Minimum | SampleCount | Sum`  
+*Allowed values*: `Average | Maximum | Minimum | SampleCount | Sum`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-autoscalingplans-scalingplan-customizedscalingmetricspecification-unit"></a>
@@ -69,5 +69,5 @@ The unit of the metric\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification--seealso"></a>
+## See also<a name="aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification--seealso"></a>
 + [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::OrganizationConformancePack",
   "Properties" : {
-      "[ConformancePackInputParameters](#cfn-config-organizationconformancepack-conformancepackinputparameters)" : [ [ConformancePackInputParameter](aws-properties-config-organizationconformancepack-conformancepackinputparameter.md), ... ],
+      "[ConformancePackInputParameters](#cfn-config-organizationconformancepack-conformancepackinputparameters)" : [ ConformancePackInputParameter, ... ],
       "[DeliveryS3Bucket](#cfn-config-organizationconformancepack-deliverys3bucket)" : String,
       "[DeliveryS3KeyPrefix](#cfn-config-organizationconformancepack-deliverys3keyprefix)" : String,
       "[ExcludedAccounts](#cfn-config-organizationconformancepack-excludedaccounts)" : [ String, ... ],
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::OrganizationConformancePack
 Properties: 
   [ConformancePackInputParameters](#cfn-config-organizationconformancepack-conformancepackinputparameters): 
-    - [ConformancePackInputParameter](aws-properties-config-organizationconformancepack-conformancepackinputparameter.md)
+    - ConformancePackInputParameter
   [DeliveryS3Bucket](#cfn-config-organizationconformancepack-deliverys3bucket): String
   [DeliveryS3KeyPrefix](#cfn-config-organizationconformancepack-deliverys3keyprefix): String
   [ExcludedAccounts](#cfn-config-organizationconformancepack-excludedaccounts): 
@@ -92,7 +92,7 @@ Location of file containing the template body\. The uri must point to the confor
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-organizationconformancepack-return-values"></a>
+## Return values<a name="aws-resource-config-organizationconformancepack-return-values"></a>
 
 ### Ref<a name="aws-resource-config-organizationconformancepack-return-values-ref"></a>
 

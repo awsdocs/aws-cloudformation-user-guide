@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The default email option\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CONFIRM_WITH_CODE | CONFIRM_WITH_LINK`  
+*Allowed values*: `CONFIRM_WITH_CODE | CONFIRM_WITH_LINK`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailMessage`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailmessage"></a>

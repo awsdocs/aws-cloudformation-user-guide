@@ -7,6 +7,9 @@ Use an [AWS::WAFv2::RuleGroup](#aws-resource-wafv2-rulegroup) to define a collec
 
 When you create a rule group, you define an immutable capacity limit\. If you update a rule group, you must stay within the capacity\. This allows others to reuse the rule group with confidence in its capacity requirements\. 
 
+**Note**  
+You can only use up to 3 levels of nested rule statements when you manage your web ACLs and rule groups using AWS CloudFormation\. This limitation doesn't exist when you use the API and SDKs\. 
+
 ## Syntax<a name="aws-resource-wafv2-rulegroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,10 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
-      "[Rules](#cfn-wafv2-rulegroup-rules)" : [Rules](aws-properties-wafv2-rulegroup-rules.md),
+      "[Rules](#cfn-wafv2-rulegroup-rules)" : [ Rule, ... ],
       "[Scope](#cfn-wafv2-rulegroup-scope)" : String,
       "[Tags](#cfn-wafv2-rulegroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+      "[VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig)" : VisibilityConfig
     }
 }
 ```
@@ -37,12 +40,12 @@ Properties:
   [Description](#cfn-wafv2-rulegroup-description): String
   [Name](#cfn-wafv2-rulegroup-name): String
   [Rules](#cfn-wafv2-rulegroup-rules): 
-    [Rules](aws-properties-wafv2-rulegroup-rules.md)
+    - Rule
   [Scope](#cfn-wafv2-rulegroup-scope): String
   [Tags](#cfn-wafv2-rulegroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityConfig](#cfn-wafv2-rulegroup-visibilityconfig): 
-    [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+    VisibilityConfig
 ```
 
 ## Properties<a name="aws-resource-wafv2-rulegroup-properties"></a>
@@ -76,17 +79,19 @@ A friendly name of the rule group\. You cannot change the name of a rule group a
 `Rules`  <a name="cfn-wafv2-rulegroup-rules"></a>
 The Rule statements used to identify the web requests that you want to allow, block, or count\. Each rule includes one top\-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\.   
 *Required*: No  
-*Type*: [Rules](aws-properties-wafv2-rulegroup-rules.md)  
+*Type*: List of [Rule](aws-properties-wafv2-rulegroup-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-rulegroup-scope"></a>
 Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-wafv2-rulegroup-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
+To modify tags on existing resources, use the AWS WAF console or the APIs\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,7 +102,7 @@ Defines and enables Amazon CloudWatch metrics and web request sample collection\
 *Type*: [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-rulegroup-return-values"></a>
+## Return values<a name="aws-resource-wafv2-rulegroup-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-rulegroup-return-values-ref"></a>
 

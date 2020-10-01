@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The unit of measure for the scale value\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PERCENT`  
+*Allowed values*: `PERCENT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ecs-taskset-scale-value"></a>

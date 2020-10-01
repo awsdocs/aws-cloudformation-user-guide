@@ -22,12 +22,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoAssignPublicIps](#cfn-opsworks-layer-autoassignpublicips)" : Boolean,
       "[CustomInstanceProfileArn](#cfn-opsworks-layer-custominstanceprofilearn)" : String,
       "[CustomJson](#cfn-opsworks-layer-customjson)" : Json,
-      "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : [Recipes](aws-properties-opsworks-layer-recipes.md),
+      "[CustomRecipes](#cfn-opsworks-layer-customrecipes)" : Recipes,
       "[CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids)" : [ String, ... ],
       "[EnableAutoHealing](#cfn-opsworks-layer-enableautohealing)" : Boolean,
       "[InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot)" : Boolean,
-      "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md),
-      "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md),
+      "[LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration)" : LifecycleEventConfiguration,
+      "[LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling)" : LoadBasedAutoScaling,
       "[Name](#cfn-opsworks-layer-name)" : String,
       "[Packages](#cfn-opsworks-layer-packages)" : [ String, ... ],
       "[Shortname](#cfn-opsworks-layer-shortname)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Tags](#cfn-opsworks-layer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-opsworks-layer-type)" : String,
       "[UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances)" : Boolean,
-      "[VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations)" : [ [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md), ... ]
+      "[VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations)" : [ VolumeConfiguration, ... ]
     }
 }
 ```
@@ -53,15 +53,15 @@ Properties:
   [CustomJson](#cfn-opsworks-layer-customjson): 
     Json
   [CustomRecipes](#cfn-opsworks-layer-customrecipes): 
-    [Recipes](aws-properties-opsworks-layer-recipes.md)
+    Recipes
   [CustomSecurityGroupIds](#cfn-opsworks-layer-customsecuritygroupids): 
     - String
   [EnableAutoHealing](#cfn-opsworks-layer-enableautohealing): Boolean
   [InstallUpdatesOnBoot](#cfn-opsworks-layer-installupdatesonboot): Boolean
   [LifecycleEventConfiguration](#cfn-opsworks-layer-lifecycleeventconfiguration): 
-    [LifecycleEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md)
+    LifecycleEventConfiguration
   [LoadBasedAutoScaling](#cfn-opsworks-layer-loadbasedautoscaling): 
-    [LoadBasedAutoScaling](aws-properties-opsworks-layer-loadbasedautoscaling.md)
+    LoadBasedAutoScaling
   [Name](#cfn-opsworks-layer-name): String
   [Packages](#cfn-opsworks-layer-packages): 
     - String
@@ -72,7 +72,7 @@ Properties:
   [Type](#cfn-opsworks-layer-type): String
   [UseEbsOptimizedInstances](#cfn-opsworks-layer-useebsoptimizedinstances): Boolean
   [VolumeConfigurations](#cfn-opsworks-layer-volumeconfigurations): 
-    - [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md)
+    - VolumeConfiguration
 ```
 
 ## Properties<a name="aws-resource-opsworks-layer-properties"></a>
@@ -180,7 +180,7 @@ Specifies one or more sets of tags \(key–value pairs\) to associate with this 
 The layer type\. A stack cannot have more than one built\-in layer of the same type\. It can have any number of custom layers\. Built\-in layers are not available in Chef 12 stacks\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `aws-flow-ruby | custom | db-master | ecs-cluster | java-app | lb | memcached | monitoring-master | nodejs-app | php-app | rails-app | web`  
+*Allowed values*: `aws-flow-ruby | custom | db-master | ecs-cluster | java-app | lb | memcached | monitoring-master | nodejs-app | php-app | rails-app | web`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UseEbsOptimizedInstances`  <a name="cfn-opsworks-layer-useebsoptimizedinstances"></a>
@@ -195,7 +195,7 @@ A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes\.
 *Type*: List of [VolumeConfiguration](aws-properties-opsworks-layer-volumeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-opsworks-layer-return-values"></a>
+## Return values<a name="aws-resource-opsworks-layer-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworks-layer-return-values-ref"></a>
 
@@ -569,6 +569,6 @@ Parameters:
     Type: String
 ```
 
-## See Also<a name="aws-resource-opsworks-layer--seealso"></a>
+## See also<a name="aws-resource-opsworks-layer--seealso"></a>
 +  [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) in the *AWS OpsWorks API Reference*\.
 +  [Creating an OpsWorks Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html) in the *AWS OpsWorks User Guide*\.

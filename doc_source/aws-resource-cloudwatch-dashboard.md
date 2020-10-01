@@ -44,7 +44,7 @@ The name of the dashboard\. The name must be between 1 and 255 characters\. If y
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cloudwatch-dashboard-return-values"></a>
+## Return values<a name="aws-resource-cloudwatch-dashboard-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudwatch-dashboard-return-values-ref"></a>
 
@@ -52,5 +52,5 @@ The name of the dashboard\. The name must be between 1 and 255 characters\. If y
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-cloudwatch-dashboard--seealso"></a>
+## See also<a name="aws-resource-cloudwatch-dashboard--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 

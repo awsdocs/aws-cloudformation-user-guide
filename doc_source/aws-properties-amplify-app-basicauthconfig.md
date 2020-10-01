@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplify-app-basicauthconfig-properties"></a>
 
 `EnableBasicAuth`  <a name="cfn-amplify-app-basicauthconfig-enablebasicauth"></a>
- Enables Basic Authorization for branches for the Amplify App\.   
+ Enables basic authorization for the Amplify app's branches\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

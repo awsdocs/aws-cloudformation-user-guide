@@ -1,4 +1,4 @@
-# Name Type<a name="aws-properties-name"></a>
+# Name type<a name="aws-properties-name"></a>
 
 For some resources, you can specify a custom name\. By default, AWS CloudFormation generates a unique physical ID to name a resource\. For example, AWS CloudFormation might name an Amazon S3 bucket with the following physical ID `stack123123123123-s3bucket-abcdefghijk1`\. With custom names, you can specify a name that's easier to read and identify, such as `production-app-logs` or `business-metrics`\.
 
@@ -57,7 +57,7 @@ myDynamoDBTable:
     TableName: "SampleTable"
 ```
 
-## Supported Resources<a name="w5653ab1c26c10d228b9c13"></a>
+## Supported resources<a name="w6948ab1c34c10d264b9c13"></a>
 
 The following resource types support custom names:
 + [AWS::ApiGateway::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html)

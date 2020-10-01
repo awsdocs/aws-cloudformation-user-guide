@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Provider](#cfn-appmesh-virtualservice-virtualservicespec-provider)" : [VirtualServiceProvider](aws-properties-appmesh-virtualservice-virtualserviceprovider.md)
+  "[Provider](#cfn-appmesh-virtualservice-virtualservicespec-provider)" : VirtualServiceProvider
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Provider](#cfn-appmesh-virtualservice-virtualservicespec-provider): 
-    [VirtualServiceProvider](aws-properties-appmesh-virtualservice-virtualserviceprovider.md)
+    VirtualServiceProvider
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualservice-virtualservicespec-properties"></a>

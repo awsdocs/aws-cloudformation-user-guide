@@ -50,7 +50,7 @@ A list of VPC subnet IDs for the subnet group\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dax-subnetgroup-return-values"></a>
+## Return values<a name="aws-resource-dax-subnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dax-subnetgroup-return-values-ref"></a>
 

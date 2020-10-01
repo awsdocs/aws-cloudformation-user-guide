@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)" : [FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md),
-  "[Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides)" : [ [LaunchTemplateOverrides](aws-properties-ec2-spotfleet-launchtemplateoverrides.md), ... ]
+  "[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)" : FleetLaunchTemplateSpecification,
+  "[Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides)" : [ LaunchTemplateOverrides, ... ]
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification): 
-    [FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md)
+    FleetLaunchTemplateSpecification
   [Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides): 
-    - [LaunchTemplateOverrides](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)
+    - LaunchTemplateOverrides
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-properties"></a>

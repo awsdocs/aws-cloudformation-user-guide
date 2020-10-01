@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A string array representing the command that the container runs to determine if it is healthy\. The string array must start with `CMD` to execute the command arguments directly, or `CMD-SHELL` to run the command with the container's default shell\. For example:  
  `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`   
 An exit code of 0 indicates success, and non\-zero exit code indicates failure\. For more information, see `HealthCheck` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

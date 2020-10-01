@@ -118,7 +118,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-managedpolicy-return-values"></a>
+## Return values<a name="aws-resource-iam-managedpolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-managedpolicy-return-values-ref"></a>
 
@@ -247,5 +247,5 @@ CreateTestDBPolicy:
       - TestDBGroup
 ```
 
-## See Also<a name="aws-resource-iam-managedpolicy--seealso"></a>
+## See also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 

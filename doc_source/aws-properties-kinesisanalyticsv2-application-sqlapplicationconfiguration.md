@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application SqlApplicationConfiguration<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration"></a>
 
-Describes the inputs, outputs, and reference data sources for an SQL\-based Kinesis Data Analytics application\.
+Describes the inputs, outputs, and reference data sources for a SQL\-based Kinesis Data Analytics application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)" : [ [Input](aws-properties-kinesisanalyticsv2-application-input.md), ... ]
+  "[Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs)" : [ Input, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Inputs](#cfn-kinesisanalyticsv2-application-sqlapplicationconfiguration-inputs): 
-    - [Input](aws-properties-kinesisanalyticsv2-application-input.md)
+    - Input
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration-properties"></a>
@@ -29,5 +29,5 @@ The array of [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/A
 *Type*: List of [Input](aws-properties-kinesisanalyticsv2-application-input.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration--seealso"></a>
 +  [SqlApplicationConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SqlApplicationConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 

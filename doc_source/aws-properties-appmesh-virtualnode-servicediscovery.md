@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AWSCloudMap](#cfn-appmesh-virtualnode-servicediscovery-awscloudmap)" : [AwsCloudMapServiceDiscovery](aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.md),
-  "[DNS](#cfn-appmesh-virtualnode-servicediscovery-dns)" : [DnsServiceDiscovery](aws-properties-appmesh-virtualnode-dnsservicediscovery.md)
+  "[AWSCloudMap](#cfn-appmesh-virtualnode-servicediscovery-awscloudmap)" : AwsCloudMapServiceDiscovery,
+  "[DNS](#cfn-appmesh-virtualnode-servicediscovery-dns)" : DnsServiceDiscovery
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AWSCloudMap](#cfn-appmesh-virtualnode-servicediscovery-awscloudmap): 
-    [AwsCloudMapServiceDiscovery](aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.md)
+    AwsCloudMapServiceDiscovery
   [DNS](#cfn-appmesh-virtualnode-servicediscovery-dns): 
-    [DnsServiceDiscovery](aws-properties-appmesh-virtualnode-dnsservicediscovery.md)
+    DnsServiceDiscovery
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-servicediscovery-properties"></a>

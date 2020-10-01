@@ -75,7 +75,7 @@ The ARN of the AWS Identity and Access Management \(IAM\) role that you want Ama
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-emailchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-emailchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-emailchannel-return-values-ref"></a>
 

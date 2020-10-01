@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ArrayProperties](#cfn-events-rule-batchparameters-arrayproperties)" : [BatchArrayProperties](aws-properties-events-rule-batcharrayproperties.md),
+  "[ArrayProperties](#cfn-events-rule-batchparameters-arrayproperties)" : BatchArrayProperties,
   "[JobDefinition](#cfn-events-rule-batchparameters-jobdefinition)" : String,
   "[JobName](#cfn-events-rule-batchparameters-jobname)" : String,
-  "[RetryStrategy](#cfn-events-rule-batchparameters-retrystrategy)" : [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)
+  "[RetryStrategy](#cfn-events-rule-batchparameters-retrystrategy)" : BatchRetryStrategy
 }
 ```
 
@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ArrayProperties](#cfn-events-rule-batchparameters-arrayproperties): 
-    [BatchArrayProperties](aws-properties-events-rule-batcharrayproperties.md)
+    BatchArrayProperties
   [JobDefinition](#cfn-events-rule-batchparameters-jobdefinition): String
   [JobName](#cfn-events-rule-batchparameters-jobname): String
   [RetryStrategy](#cfn-events-rule-batchparameters-retrystrategy): 
-    [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)
+    BatchRetryStrategy
 ```
 
 ## Properties<a name="aws-properties-events-rule-batchparameters-properties"></a>

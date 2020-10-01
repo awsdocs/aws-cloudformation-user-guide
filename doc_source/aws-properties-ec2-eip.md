@@ -43,13 +43,13 @@ Properties:
 ## Properties<a name="aws-properties-ec2-eip-properties"></a>
 
 `Domain`  <a name="cfn-ec2-eip-domain"></a>
-Set to `vpc` to allocate the address for use with instances in a VPC\.  
-Default: The address is for use with instances in EC2\-Classic\.  
+Indicates whether the Elastic IP address is for use with instances in a VPC or instance in EC2\-Classic\.  
+Default: If the Region supports EC2\-Classic, the default is `standard`\. Otherwise, the default is `vpc`\.  
+Use when allocating an address for use with a VPC if the Region supports EC2\-Classic\.  
 If you define an Elastic IP address and associate it with a VPC that is defined in the same template, you must declare a dependency on the VPC\-gateway attachment by using the [ DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) on this resource\.  
-Required when allocating an address to a VPC  
-*Required*: Conditional  
+*Required*: No  
 *Type*: String  
-*Allowed Values*: `standard | vpc`  
+*Allowed values*: `standard | vpc`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceId`  <a name="cfn-ec2-eip-instanceid"></a>
@@ -73,7 +73,7 @@ Updates to the `Tags` property may require *some interruptions*\. Updates on an 
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-ec2-eip-return-values"></a>
+## Return values<a name="aws-properties-ec2-eip-return-values"></a>
 
 ### Ref<a name="aws-properties-ec2-eip-return-values-ref"></a>
 

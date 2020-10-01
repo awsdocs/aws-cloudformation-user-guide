@@ -1,8 +1,8 @@
-# Pseudo Parameters Reference<a name="pseudo-parameter-reference"></a>
+# Pseudo parameters reference<a name="pseudo-parameter-reference"></a>
 
 Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You do not declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
 
-## Example<a name="w5653ab1c26c29b5"></a>
+## Example<a name="w6948ab1c34c33b5"></a>
 
 The following snippet assigns the value of the `AWS::Region` pseudo parameter to an output value:
 
@@ -87,7 +87,7 @@ For example, you can use the `AWS::NoValue` parameter when you want to use a sna
   "Type" : "AWS::RDS::DBInstance",
   "Properties" : {
     "AllocatedStorage" : "5",
-    "DBInstanceClass" : "db.m1.small",
+    "DBInstanceClass" : "db.t2.small",
     "Engine" : "MySQL",
     "EngineVersion" : "5.5",
     "MasterUsername" : { "Ref" : "DBUser" },
@@ -111,7 +111,7 @@ MyDB:
   Type: AWS::RDS::DBInstance
   Properties:
     AllocatedStorage: '5'
-    DBInstanceClass: db.m1.small
+    DBInstanceClass: db.t2.small
     Engine: MySQL
     EngineVersion: '5.5'
     MasterUsername:

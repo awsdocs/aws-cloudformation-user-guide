@@ -1,6 +1,6 @@
-# Pinpoint Resource Type Reference<a name="AWS_Pinpoint"></a>
+# Pinpoint resource type reference<a name="AWS_Pinpoint"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Pinpoint::ADMChannel](aws-resource-pinpoint-admchannel.md)
 + [AWS::Pinpoint::APNSChannel](aws-resource-pinpoint-apnschannel.md)
 + [AWS::Pinpoint::APNSSandboxChannel](aws-resource-pinpoint-apnssandboxchannel.md)

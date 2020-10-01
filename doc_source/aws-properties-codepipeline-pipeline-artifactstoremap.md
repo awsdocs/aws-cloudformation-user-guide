@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)" : [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md),
+  "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)" : ArtifactStore,
   "[Region](#cfn-codepipeline-pipeline-artifactstoremap-region)" : String
 }
 ```
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore): 
-    [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
+    ArtifactStore
   [Region](#cfn-codepipeline-pipeline-artifactstoremap-region): String
 ```
 

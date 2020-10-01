@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns)" : [ [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md), ... ],
+  "[RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns)" : [ RecordColumn, ... ],
   "[RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding)" : String,
-  "[RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat)" : [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)
+  "[RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat)" : RecordFormat
 }
 ```
 
@@ -22,10 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RecordColumns](#cfn-kinesisanalytics-application-inputschema-recordcolumns): 
-    - [RecordColumn](aws-properties-kinesisanalytics-application-recordcolumn.md)
+    - RecordColumn
   [RecordEncoding](#cfn-kinesisanalytics-application-inputschema-recordencoding): String
   [RecordFormat](#cfn-kinesisanalytics-application-inputschema-recordformat): 
-    [RecordFormat](aws-properties-kinesisanalytics-application-recordformat.md)
+    RecordFormat
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputschema-properties"></a>

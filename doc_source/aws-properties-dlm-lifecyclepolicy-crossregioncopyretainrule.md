@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Interval`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-interval"></a>
 The amount of time to retain each snapshot\. The maximum is 100 years\. This is equivalent to 1200 months, 5200 weeks, or 36500 days\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntervalUnit`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyretainrule-intervalunit"></a>
 The unit of time for time\-based retention\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DAYS | MONTHS | WEEKS | YEARS`  
+*Allowed values*: `DAYS | MONTHS | WEEKS | YEARS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

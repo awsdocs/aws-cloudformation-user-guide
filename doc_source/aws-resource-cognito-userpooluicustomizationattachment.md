@@ -62,7 +62,7 @@ The user pool ID for the user pool\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values-ref"></a>
 
@@ -103,8 +103,12 @@ The following example sets UI customization settings in the referenced user pool
 #### YAML<a name="aws-resource-cognito-userpooluicustomizationattachment--examples--Creating_a_new_UI_customization_attachment_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolUICustomization: Type:
-        AWS::Cognito::UserPoolUICustomizationAttachment Properties: UserPoolId: !Ref UserPool
-        ClientId: !Ref Client CSS: ".banner-customizable { background: linear-gradient(#9940B8,
-        #C27BDB) }"
+UserPoolUICustomization: 
+  Type: AWS::Cognito::UserPoolUICustomizationAttachment 
+  Properties: 
+    UserPoolId: !Ref UserPool
+    ClientId: !Ref Client 
+    CSS: ".banner-customizable { 
+      background: linear-gradient(#9940B8, #C27BDB) 
+    }"
 ```

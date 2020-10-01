@@ -109,7 +109,7 @@ The ID of a VPC peering connection\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-route-return-values"></a>
+## Return values<a name="aws-resource-ec2-route-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-route-return-values-ref"></a>
 
@@ -151,6 +151,6 @@ The following example adds a route that is added to a gateway\.
          Ref: myInternetGateway
 ```
 
-## See Also<a name="aws-resource-ec2-route--seealso"></a>
+## See also<a name="aws-resource-ec2-route--seealso"></a>
 +  [CreateRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRoute.html) in the *Amazon EC2 API Reference*
 +  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*

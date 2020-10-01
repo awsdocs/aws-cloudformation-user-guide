@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::ResourceDefinitionVersion",
   "Properties" : {
       "[ResourceDefinitionId](#cfn-greengrass-resourcedefinitionversion-resourcedefinitionid)" : String,
-      "[Resources](#cfn-greengrass-resourcedefinitionversion-resources)" : [ [ResourceInstance](aws-properties-greengrass-resourcedefinitionversion-resourceinstance.md), ... ]
+      "[Resources](#cfn-greengrass-resourcedefinitionversion-resources)" : [ ResourceInstance, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::Greengrass::ResourceDefinitionVersion
 Properties: 
   [ResourceDefinitionId](#cfn-greengrass-resourcedefinitionversion-resourcedefinitionid): String
   [Resources](#cfn-greengrass-resourcedefinitionversion-resources): 
-    - [ResourceInstance](aws-properties-greengrass-resourcedefinitionversion-resourceinstance.md)
+    - ResourceInstance
 ```
 
 ## Properties<a name="aws-resource-greengrass-resourcedefinitionversion-properties"></a>
@@ -46,7 +46,7 @@ The resources in this version\.
 *Type*: List of [ResourceInstance](aws-properties-greengrass-resourcedefinitionversion-resourceinstance.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-resourcedefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-resourcedefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-resourcedefinitionversion-return-values-ref"></a>
 
@@ -229,6 +229,6 @@ TestResourceDefinition:
                 - label2
 ```
 
-## See Also<a name="aws-resource-greengrass-resourcedefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-resourcedefinitionversion--seealso"></a>
 +  [CreateResourceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createresourcedefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

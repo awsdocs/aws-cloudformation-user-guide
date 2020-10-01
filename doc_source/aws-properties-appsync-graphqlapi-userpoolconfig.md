@@ -2,8 +2,6 @@
 
 The `UserPoolConfig` property type specifies the optional authorization configuration for using Amazon Cognito user pools with your GraphQL endpoint for an AWS AppSync GraphQL API\. 
 
- `LogConfig` is a property of the [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) property type\. 
-
 ## Syntax<a name="aws-properties-appsync-graphqlapi-userpoolconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-iot-topicrule-topicrulepayload-actions)" : [ [Action](aws-properties-iot-topicrule-action.md), ... ],
+  "[Actions](#cfn-iot-topicrule-topicrulepayload-actions)" : [ Action, ... ],
   "[AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion)" : String,
   "[Description](#cfn-iot-topicrule-topicrulepayload-description)" : String,
-  "[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction)" : [Action](aws-properties-iot-topicrule-action.md),
+  "[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction)" : Action,
   "[RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled)" : Boolean,
   "[Sql](#cfn-iot-topicrule-topicrulepayload-sql)" : String
 }
@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-iot-topicrule-topicrulepayload-actions): 
-    - [Action](aws-properties-iot-topicrule-action.md)
+    - Action
   [AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion): String
   [Description](#cfn-iot-topicrule-topicrulepayload-description): String
   [ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction): 
-    [Action](aws-properties-iot-topicrule-action.md)
+    Action
   [RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled): Boolean
   [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
 ```

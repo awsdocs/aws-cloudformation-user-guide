@@ -11,11 +11,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags)" : Boolean,
-  "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md),
-  "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md), ... ],
-  "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : [FastRestoreRule](aws-properties-dlm-lifecyclepolicy-fastrestorerule.md),
+  "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : CreateRule,
+  "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ CrossRegionCopyRule, ... ],
+  "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : FastRestoreRule,
   "[Name](#cfn-dlm-lifecyclepolicy-schedule-name)" : String,
-  "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md),
+  "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : RetainRule,
   "[TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags): Boolean
   [CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule): 
-    [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md)
+    CreateRule
   [CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules): 
-    - [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)
+    - CrossRegionCopyRule
   [FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule): 
-    [FastRestoreRule](aws-properties-dlm-lifecyclepolicy-fastrestorerule.md)
+    FastRestoreRule
   [Name](#cfn-dlm-lifecyclepolicy-schedule-name): String
   [RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule): 
-    [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)
+    RetainRule
   [TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags): 
@@ -72,7 +72,7 @@ The name of the schedule\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `500`  
+*Maximum*: `120`  
 *Pattern*: `[\p{all}]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -86,12 +86,12 @@ The retention rule\.
 The tags to apply to policy\-created resources\. These user\-defined tags are in addition to the AWS\-added lifecycle tags\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+*Maximum*: `45`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VariableTags`  <a name="cfn-dlm-lifecyclepolicy-schedule-variabletags"></a>
 A collection of key/value pairs with values determined dynamically when the policy is executed\. Keys may be any valid Amazon EC2 tag key\. Values must be in one of the two following formats: `$(instance-id)` or `$(timestamp)`\. Variable tags are only valid for EBS Snapshot Management – Instance policies\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+*Maximum*: `45`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

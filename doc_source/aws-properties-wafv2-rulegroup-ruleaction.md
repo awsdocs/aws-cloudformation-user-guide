@@ -13,21 +13,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Allow](#cfn-wafv2-rulegroup-ruleaction-allow)" : [AllowAction](aws-properties-wafv2-rulegroup-allowaction.md),
-  "[Block](#cfn-wafv2-rulegroup-ruleaction-block)" : [BlockAction](aws-properties-wafv2-rulegroup-blockaction.md),
-  "[Count](#cfn-wafv2-rulegroup-ruleaction-count)" : [CountAction](aws-properties-wafv2-rulegroup-countaction.md)
+  "[Allow](#cfn-wafv2-rulegroup-ruleaction-allow)" : Json,
+  "[Block](#cfn-wafv2-rulegroup-ruleaction-block)" : Json,
+  "[Count](#cfn-wafv2-rulegroup-ruleaction-count)" : Json
 }
 ```
 
 ### YAML<a name="aws-properties-wafv2-rulegroup-ruleaction-syntax.yaml"></a>
 
 ```
-  [Allow](#cfn-wafv2-rulegroup-ruleaction-allow): 
-    [AllowAction](aws-properties-wafv2-rulegroup-allowaction.md)
-  [Block](#cfn-wafv2-rulegroup-ruleaction-block): 
-    [BlockAction](aws-properties-wafv2-rulegroup-blockaction.md)
-  [Count](#cfn-wafv2-rulegroup-ruleaction-count): 
-    [CountAction](aws-properties-wafv2-rulegroup-countaction.md)
+  [Allow](#cfn-wafv2-rulegroup-ruleaction-allow): Json
+  [Block](#cfn-wafv2-rulegroup-ruleaction-block): Json
+  [Count](#cfn-wafv2-rulegroup-ruleaction-count): Json
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-ruleaction-properties"></a>
@@ -35,17 +32,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Allow`  <a name="cfn-wafv2-rulegroup-ruleaction-allow"></a>
 Instructs AWS WAF to allow the web request\.  
 *Required*: No  
-*Type*: [AllowAction](aws-properties-wafv2-rulegroup-allowaction.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Block`  <a name="cfn-wafv2-rulegroup-ruleaction-block"></a>
 Instructs AWS WAF to block the web request\.  
 *Required*: No  
-*Type*: [BlockAction](aws-properties-wafv2-rulegroup-blockaction.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Count`  <a name="cfn-wafv2-rulegroup-ruleaction-count"></a>
 Instructs AWS WAF to count the web request and allow it\.  
 *Required*: No  
-*Type*: [CountAction](aws-properties-wafv2-rulegroup-countaction.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

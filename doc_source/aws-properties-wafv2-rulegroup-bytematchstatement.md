@@ -13,11 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch)" : [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch)" : FieldToMatch,
   "[PositionalConstraint](#cfn-wafv2-rulegroup-bytematchstatement-positionalconstraint)" : String,
   "[SearchString](#cfn-wafv2-rulegroup-bytematchstatement-searchstring)" : String,
   "[SearchStringBase64](#cfn-wafv2-rulegroup-bytematchstatement-searchstringbase64)" : String,
-  "[TextTransformations](#cfn-wafv2-rulegroup-bytematchstatement-texttransformations)" : [TextTransformations](aws-properties-wafv2-rulegroup-texttransformations.md)
+  "[TextTransformations](#cfn-wafv2-rulegroup-bytematchstatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
 
@@ -25,21 +25,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)
+    FieldToMatch
   [PositionalConstraint](#cfn-wafv2-rulegroup-bytematchstatement-positionalconstraint): String
   [SearchString](#cfn-wafv2-rulegroup-bytematchstatement-searchstring): 
     String
   [SearchStringBase64](#cfn-wafv2-rulegroup-bytematchstatement-searchstringbase64): 
     String
   [TextTransformations](#cfn-wafv2-rulegroup-bytematchstatement-texttransformations): 
-    [TextTransformations](aws-properties-wafv2-rulegroup-texttransformations.md)
+    - TextTransformation
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-bytematchstatement-properties"></a>
 
 `FieldToMatch`  <a name="cfn-wafv2-rulegroup-bytematchstatement-fieldtomatch"></a>
 The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -57,9 +57,9 @@ The value of the specified part of the web request must exactly match the value 
 The value of `SearchString` must appear at the beginning of the specified part of the web request\.  
  **ENDS\_WITH**   
 The value of `SearchString` must appear at the end of the specified part of the web request\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
+*Allowed values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SearchString`  <a name="cfn-wafv2-rulegroup-bytematchstatement-searchstring"></a>
@@ -80,6 +80,6 @@ You must specify either `SearchString` or `SearchStringBase64` in a `ByteMatchSt
 
 `TextTransformations`  <a name="cfn-wafv2-rulegroup-bytematchstatement-texttransformations"></a>
 Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection\. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content identified by `FieldToMatch`, starting from the lowest priority setting, before inspecting the content for a match\.  
-*Required*: No  
-*Type*: [TextTransformations](aws-properties-wafv2-rulegroup-texttransformations.md)  
+*Required*: Yes  
+*Type*: List of [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

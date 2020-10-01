@@ -54,6 +54,6 @@ The ARN of the core, which is an AWS IoT device \(thing\)\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-coredefinition-core--seealso"></a>
+## See also<a name="aws-properties-greengrass-coredefinition-core--seealso"></a>
 +  [Core](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-core.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

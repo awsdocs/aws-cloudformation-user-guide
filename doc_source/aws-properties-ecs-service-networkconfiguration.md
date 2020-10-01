@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
+  "[AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration)" : AwsVpcConfiguration
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AwsvpcConfiguration](#cfn-ecs-service-networkconfiguration-awsvpcconfiguration): 
-    [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)
+    AwsVpcConfiguration
 ```
 
 ## Properties<a name="aws-properties-ecs-service-networkconfiguration-properties"></a>

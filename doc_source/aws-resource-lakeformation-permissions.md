@@ -1,6 +1,6 @@
 # AWS::LakeFormation::Permissions<a name="aws-resource-lakeformation-permissions"></a>
 
-The AWS::LakeFormation::Permissions resource is an AWS Lake Formation resource type that grants or revokes AWS Lake Formation permissions\.
+The `AWS::LakeFormation::Permissions` resource represents the permissions that a principal has on an AWS Glue Data Catalog resource \(such as AWS Glue database or AWS Glue tables\)\. When you upload a permissions stack, the permissions are granted to the principal and when you remove the stack, the permissions are revoked from the principal\. If you remove a stack, and the principal does not have the permissions referenced in the stack then AWS Lake Formation will throw an error because you can’t call revoke on non\-existing permissions\. To successfully remove the stack, you’ll need to regrant those permissions and then remove the stack\. 
 
 ## Syntax<a name="aws-resource-lakeformation-permissions-syntax"></a>
 
@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LakeFormation::Permissions",
   "Properties" : {
-      "[DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal)" : [DataLakePrincipal](aws-properties-lakeformation-permissions-datalakeprincipal.md),
+      "[DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal)" : DataLakePrincipal,
       "[Permissions](#cfn-lakeformation-permissions-permissions)" : [ String, ... ],
       "[PermissionsWithGrantOption](#cfn-lakeformation-permissions-permissionswithgrantoption)" : [ String, ... ],
-      "[Resource](#cfn-lakeformation-permissions-resource)" : [Resource](aws-properties-lakeformation-permissions-resource.md)
+      "[Resource](#cfn-lakeformation-permissions-resource)" : Resource
     }
 }
 ```
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LakeFormation::Permissions
 Properties: 
   [DataLakePrincipal](#cfn-lakeformation-permissions-datalakeprincipal): 
-    [DataLakePrincipal](aws-properties-lakeformation-permissions-datalakeprincipal.md)
+    DataLakePrincipal
   [Permissions](#cfn-lakeformation-permissions-permissions): 
     - String
   [PermissionsWithGrantOption](#cfn-lakeformation-permissions-permissionswithgrantoption): 
     - String
   [Resource](#cfn-lakeformation-permissions-resource): 
-    [Resource](aws-properties-lakeformation-permissions-resource.md)
+    Resource
 ```
 
 ## Properties<a name="aws-resource-lakeformation-permissions-properties"></a>

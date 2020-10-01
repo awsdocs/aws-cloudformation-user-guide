@@ -65,5 +65,5 @@ The name of the policy type\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-elb-policy--seealso"></a>
+## See also<a name="aws-properties-ec2-elb-policy--seealso"></a>
 +  [CreateLoadBalancerPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 

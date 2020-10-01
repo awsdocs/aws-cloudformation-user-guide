@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
   "Properties" : {
       "[LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid)" : String,
-      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : [Tags](aws-properties-ec2-localgatewayroutetablevpcassociation-tags.md),
+      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : Tags,
       "[VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid)" : String
     }
 }
@@ -26,7 +26,7 @@ Type: AWS::EC2::LocalGatewayRouteTableVPCAssociation
 Properties: 
   [LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid): String
   [Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags): 
-    [Tags](aws-properties-ec2-localgatewayroutetablevpcassociation-tags.md)
+    Tags
   [VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid): String
 ```
 
@@ -50,7 +50,7 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-localgatewayroutetablevpcassociation-return-values"></a>
+## Return values<a name="aws-resource-ec2-localgatewayroutetablevpcassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-localgatewayroutetablevpcassociation-return-values-ref"></a>
 
@@ -71,6 +71,6 @@ The ID of the association\.
 `State`  <a name="State-fn::getatt"></a>
 The state of the association\.
 
-## See Also<a name="aws-resource-ec2-localgatewayroutetablevpcassociation--seealso"></a>
+## See also<a name="aws-resource-ec2-localgatewayroutetablevpcassociation--seealso"></a>
 + [Local Gateways](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
 + [CreateLocalGatewayRouteTableVpcAssociation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLocalGatewayRouteTableVpcAssociation.html) in the *Amazon EC2 API Reference*

@@ -15,9 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SNS::Topic",
   "Properties" : {
+      "[ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication)" : Boolean,
       "[DisplayName](#cfn-sns-topic-displayname)" : String,
       "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
-      "[Subscription](#cfn-sns-topic-subscription)" : [ [Subscription](aws-properties-sns-subscription.md), ... ],
+      "[Subscription](#cfn-sns-topic-subscription)" : [ Subscription, ... ],
       "[Tags](#cfn-sns-topic-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TopicName](#cfn-sns-topic-topicname)" : String
     }
@@ -29,16 +30,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SNS::Topic
 Properties: 
+  [ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication): Boolean
   [DisplayName](#cfn-sns-topic-displayname): String
   [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription): 
-    - [Subscription](aws-properties-sns-subscription.md)
+    - Subscription
   [Tags](#cfn-sns-topic-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TopicName](#cfn-sns-topic-topicname): String
 ```
 
 ## Properties<a name="aws-properties-sns-topic-properties"></a>
+
+`ContentBasedDeduplication`  <a name="cfn-sns-topic-contentbaseddeduplication"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisplayName`  <a name="cfn-sns-topic-displayname"></a>
 The display name to use for an Amazon SNS topic with SMS subscriptions\.  
@@ -74,7 +82,7 @@ If you specify a name, you can't perform updates that require replacement of thi
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-sns-topic-return-values"></a>
+## Return values<a name="aws-properties-sns-topic-return-values"></a>
 
 ### Ref<a name="aws-properties-sns-topic-return-values-ref"></a>
 
@@ -135,5 +143,5 @@ MySNSTopic:
     TopicName: "SampleTopic"
 ```
 
-## See Also<a name="aws-properties-sns-topic--seealso"></a>
+## See also<a name="aws-properties-sns-topic--seealso"></a>
 +  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 

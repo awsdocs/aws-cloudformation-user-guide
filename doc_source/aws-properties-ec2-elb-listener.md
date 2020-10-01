@@ -43,7 +43,7 @@ The port on which the instance is listening\.
 
 `InstanceProtocol`  <a name="cfn-ec2-elb-listener-instanceprotocol"></a>
 The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL\.  
-If the front\-end protocol is HTTP, HTTPS, TCP, or SSL, `InstanceProtocol` must be at the same protocol\.  
+If the front\-end protocol is TCP or SSL, the back\-end protocol must be TCP or SSL\. If the front\-end protocol is HTTP or HTTPS, the back\-end protocol must be HTTP or HTTPS\.  
 If there is another listener with the same `InstancePort` whose `InstanceProtocol` is secure, \(HTTPS or SSL\), the listener's `InstanceProtocol` must also be secure\.  
 If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP or TCP, the listener's `InstanceProtocol` must be HTTP or TCP\.  
 *Required*: No  
@@ -74,7 +74,7 @@ The Amazon Resource Name \(ARN\) of the server certificate\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-elb-listener--seealso"></a>
+## See also<a name="aws-properties-ec2-elb-listener--seealso"></a>
 +  [CreateLoadBalancerListeners](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerListeners.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html) in the *User Guide for Classic Load Balancers* 
 +  [HTTPS Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-https-load-balancers.html) in the *User Guide for Classic Load Balancers* 

@@ -1,4 +1,4 @@
-# CodeStar Resource Type Reference<a name="AWS_CodeStar"></a>
+# CodeStar resource type reference<a name="AWS_CodeStar"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::CodeStar::GitHubRepository](aws-resource-codestar-githubrepository.md)

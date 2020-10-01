@@ -61,7 +61,7 @@ The description of the role\.
 *Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-servicelinkedrole-return-values"></a>
+## Return values<a name="aws-resource-iam-servicelinkedrole-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-servicelinkedrole-return-values-ref"></a>
 

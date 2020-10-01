@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ImageId](#cfn-batch-computeenvironment-computeresources-imageid)" : String,
   "[InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole)" : String,
   "[InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes)" : [ String, ... ],
-  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md),
+  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : LaunchTemplateSpecification,
   "[MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus)" : Integer,
   "[MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus)" : Integer,
   "[PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup)" : String,
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes): 
     - String
   [LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate): 
-    [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)
+    LaunchTemplateSpecification
   [MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus): Integer
   [MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus): Integer
   [PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup): String
@@ -57,10 +57,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-computeenvironment-computeresources-properties"></a>
 
 `AllocationStrategy`  <a name="cfn-batch-computeenvironment-computeresources-allocationstrategy"></a>
-The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated\. This could be due to availability of the instance type in the region or [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)\. If this is not specified, the default is `BEST_FIT`, which will use only the best fitting instance type, waiting for additional capacity if it's not available\. This allocation strategy keeps costs lower but can limit scaling\. If you are using Spot Fleets with `BEST_FIT` then the Spot Fleet IAM Role must be specified\. `BEST_FIT_PROGRESSIVE` will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types with a lower cost per vCPU\. `SPOT_CAPACITY_OPTIMIZED` is only available for Spot Instance compute resources and will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types that are less likely to be interrupted\. For more information, see [Allocation Strategies](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html ) in the *AWS Batch User Guide*\.  
+The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated\. This could be due to availability of the instance type in the region or [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)\. If this is not specified, the default is `BEST_FIT`, which will use only the best fitting instance type, waiting for additional capacity if it's not available\. This allocation strategy keeps costs lower but can limit scaling\. If you are using Spot Fleets with `BEST_FIT` then the Spot Fleet IAM Role must be specified\. `BEST_FIT_PROGRESSIVE` will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types with a lower cost per vCPU\. `SPOT_CAPACITY_OPTIMIZED` is only available for Spot Instance compute resources and will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types that are less likely to be interrupted\. For more information, see [Allocation Strategies](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) in the *AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `BEST_FIT | BEST_FIT_PROGRESSIVE | SPOT_CAPACITY_OPTIMIZED`  
+*Allowed values*: `BEST_FIT | BEST_FIT_PROGRESSIVE | SPOT_CAPACITY_OPTIMIZED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BidPercentage`  <a name="cfn-batch-computeenvironment-computeresources-bidpercentage"></a>
@@ -151,8 +151,8 @@ Key\-value pair tags to be applied to resources that are launched in the compute
 The type of compute environment: `EC2` or `SPOT`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EC2 | SPOT`  
+*Allowed values*: `EC2 | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-batch-computeenvironment-computeresources--seealso"></a>
+## See also<a name="aws-properties-batch-computeenvironment-computeresources--seealso"></a>
 +  [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.

@@ -10,13 +10,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ByteMatchStatement](#cfn-wafv2-rulegroup-statementthree-bytematchstatement)" : [ByteMatchStatement](aws-properties-wafv2-rulegroup-bytematchstatement.md),
-  "[GeoMatchStatement](#cfn-wafv2-rulegroup-statementthree-geomatchstatement)" : [GeoMatchStatement](aws-properties-wafv2-rulegroup-geomatchstatement.md),
-  "[IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-ipsetreferencestatement)" : [IPSetReferenceStatement](aws-properties-wafv2-rulegroup-ipsetreferencestatement.md),
-  "[RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-regexpatternsetreferencestatement)" : [RegexPatternSetReferenceStatement](aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement.md),
-  "[SizeConstraintStatement](#cfn-wafv2-rulegroup-statementthree-sizeconstraintstatement)" : [SizeConstraintStatement](aws-properties-wafv2-rulegroup-sizeconstraintstatement.md),
-  "[SqliMatchStatement](#cfn-wafv2-rulegroup-statementthree-sqlimatchstatement)" : [SqliMatchStatement](aws-properties-wafv2-rulegroup-sqlimatchstatement.md),
-  "[XssMatchStatement](#cfn-wafv2-rulegroup-statementthree-xssmatchstatement)" : [XssMatchStatement](aws-properties-wafv2-rulegroup-xssmatchstatement.md)
+  "[ByteMatchStatement](#cfn-wafv2-rulegroup-statementthree-bytematchstatement)" : ByteMatchStatement,
+  "[GeoMatchStatement](#cfn-wafv2-rulegroup-statementthree-geomatchstatement)" : GeoMatchStatement,
+  "[IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-ipsetreferencestatement)" : IPSetReferenceStatement,
+  "[RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-regexpatternsetreferencestatement)" : RegexPatternSetReferenceStatement,
+  "[SizeConstraintStatement](#cfn-wafv2-rulegroup-statementthree-sizeconstraintstatement)" : SizeConstraintStatement,
+  "[SqliMatchStatement](#cfn-wafv2-rulegroup-statementthree-sqlimatchstatement)" : SqliMatchStatement,
+  "[XssMatchStatement](#cfn-wafv2-rulegroup-statementthree-xssmatchstatement)" : XssMatchStatement
 }
 ```
 
@@ -24,19 +24,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ByteMatchStatement](#cfn-wafv2-rulegroup-statementthree-bytematchstatement): 
-    [ByteMatchStatement](aws-properties-wafv2-rulegroup-bytematchstatement.md)
+    ByteMatchStatement
   [GeoMatchStatement](#cfn-wafv2-rulegroup-statementthree-geomatchstatement): 
-    [GeoMatchStatement](aws-properties-wafv2-rulegroup-geomatchstatement.md)
+    GeoMatchStatement
   [IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-ipsetreferencestatement): 
-    [IPSetReferenceStatement](aws-properties-wafv2-rulegroup-ipsetreferencestatement.md)
+    IPSetReferenceStatement
   [RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-regexpatternsetreferencestatement): 
-    [RegexPatternSetReferenceStatement](aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement.md)
+    RegexPatternSetReferenceStatement
   [SizeConstraintStatement](#cfn-wafv2-rulegroup-statementthree-sizeconstraintstatement): 
-    [SizeConstraintStatement](aws-properties-wafv2-rulegroup-sizeconstraintstatement.md)
+    SizeConstraintStatement
   [SqliMatchStatement](#cfn-wafv2-rulegroup-statementthree-sqlimatchstatement): 
-    [SqliMatchStatement](aws-properties-wafv2-rulegroup-sqlimatchstatement.md)
+    SqliMatchStatement
   [XssMatchStatement](#cfn-wafv2-rulegroup-statementthree-xssmatchstatement): 
-    [XssMatchStatement](aws-properties-wafv2-rulegroup-xssmatchstatement.md)
+    XssMatchStatement
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-statementthree-properties"></a>

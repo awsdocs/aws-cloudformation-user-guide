@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AllowAdminCreateUserOnly](#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly)" : Boolean,
-  "[InviteMessageTemplate](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate)" : [InviteMessageTemplate](aws-properties-cognito-userpool-invitemessagetemplate.md),
+  "[InviteMessageTemplate](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate)" : InviteMessageTemplate,
   "[UnusedAccountValidityDays](#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays)" : Integer
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AllowAdminCreateUserOnly](#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly): Boolean
   [InviteMessageTemplate](#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate): 
-    [InviteMessageTemplate](aws-properties-cognito-userpool-invitemessagetemplate.md)
+    InviteMessageTemplate
   [UnusedAccountValidityDays](#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays): Integer
 ```
 

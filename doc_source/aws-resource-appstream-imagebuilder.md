@@ -14,18 +14,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppStream::ImageBuilder",
   "Properties" : {
-      "[AccessEndpoints](#cfn-appstream-imagebuilder-accessendpoints)" : [ [AccessEndpoint](aws-properties-appstream-imagebuilder-accessendpoint.md), ... ],
+      "[AccessEndpoints](#cfn-appstream-imagebuilder-accessendpoints)" : [ AccessEndpoint, ... ],
       "[AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion)" : String,
       "[Description](#cfn-appstream-imagebuilder-description)" : String,
       "[DisplayName](#cfn-appstream-imagebuilder-displayname)" : String,
-      "[DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo)" : [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md),
+      "[DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo)" : DomainJoinInfo,
       "[EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess)" : Boolean,
       "[ImageArn](#cfn-appstream-imagebuilder-imagearn)" : String,
       "[ImageName](#cfn-appstream-imagebuilder-imagename)" : String,
       "[InstanceType](#cfn-appstream-imagebuilder-instancetype)" : String,
       "[Name](#cfn-appstream-imagebuilder-name)" : String,
       "[Tags](#cfn-appstream-imagebuilder-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcConfig](#cfn-appstream-imagebuilder-vpcconfig)" : [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
+      "[VpcConfig](#cfn-appstream-imagebuilder-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -36,12 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppStream::ImageBuilder
 Properties: 
   [AccessEndpoints](#cfn-appstream-imagebuilder-accessendpoints): 
-    - [AccessEndpoint](aws-properties-appstream-imagebuilder-accessendpoint.md)
+    - AccessEndpoint
   [AppstreamAgentVersion](#cfn-appstream-imagebuilder-appstreamagentversion): String
   [Description](#cfn-appstream-imagebuilder-description): String
   [DisplayName](#cfn-appstream-imagebuilder-displayname): String
   [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo): 
-    [DomainJoinInfo](aws-properties-appstream-imagebuilder-domainjoininfo.md)
+    DomainJoinInfo
   [EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess): Boolean
   [ImageArn](#cfn-appstream-imagebuilder-imagearn): String
   [ImageName](#cfn-appstream-imagebuilder-imagename): String
@@ -50,7 +50,7 @@ Properties:
   [Tags](#cfn-appstream-imagebuilder-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-appstream-imagebuilder-vpcconfig): 
-    [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-appstream-imagebuilder-properties"></a>
@@ -135,6 +135,12 @@ The instance type to use when launching the image builder\. The following instan
 + stream\.graphics\-design\.2xlarge
 + stream\.graphics\-design\.4xlarge
 + stream\.graphics\-desktop\.2xlarge
++ stream\.graphics\.g4dn\.xlarge
++ stream\.graphics\.g4dn\.2xlarge
++ stream\.graphics\.g4dn\.4xlarge
++ stream\.graphics\.g4dn\.8xlarge
++ stream\.graphics\.g4dn\.12xlarge
++ stream\.graphics\.g4dn\.16xlarge
 + stream\.graphics\-pro\.4xlarge
 + stream\.graphics\-pro\.8xlarge
 + stream\.graphics\-pro\.16xlarge
@@ -162,7 +168,7 @@ The VPC configuration for the image builder\. You can specify only one subnet\.
 *Type*: [VpcConfig](aws-properties-appstream-imagebuilder-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appstream-imagebuilder-return-values"></a>
+## Return values<a name="aws-resource-appstream-imagebuilder-return-values"></a>
 
 ### Ref<a name="aws-resource-appstream-imagebuilder-return-values-ref"></a>
 
@@ -177,5 +183,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `StreamingUrl`  <a name="StreamingUrl-fn::getatt"></a>
 The URL to start an image builder streaming session, returned as a string\.
 
-## See Also<a name="aws-resource-appstream-imagebuilder--seealso"></a>
+## See also<a name="aws-resource-appstream-imagebuilder--seealso"></a>
 +  [CreateImageBuilder](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateImageBuilder.html) in the *Amazon AppStream 2\.0 API Reference* 

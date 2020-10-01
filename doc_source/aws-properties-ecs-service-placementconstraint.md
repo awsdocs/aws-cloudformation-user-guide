@@ -34,5 +34,5 @@ A cluster query language expression to apply to the constraint\. You cannot spec
 The type of constraint\. Use `distinctInstance` to ensure that each task in a particular group is running on a different container instance\. Use `memberOf` to restrict the selection to a group of valid candidates\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `distinctInstance | memberOf`  
+*Allowed values*: `distinctInstance | memberOf`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

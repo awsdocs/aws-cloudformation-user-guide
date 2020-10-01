@@ -43,7 +43,7 @@ Specifies whether to enable the voice channel for the application\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-voicechannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-voicechannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-voicechannel-return-values-ref"></a>
 

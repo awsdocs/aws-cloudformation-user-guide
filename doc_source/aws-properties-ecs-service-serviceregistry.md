@@ -1,6 +1,6 @@
 # AWS::ECS::Service ServiceRegistry<a name="aws-properties-ecs-service-serviceregistry"></a>
 
-The `ServiceRegistry` property specifies details of the service registry\.
+The `ServiceRegistry` property specifies details of the service registry\. For more information, see [Service Discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## Syntax<a name="aws-properties-ecs-service-serviceregistry-syntax"></a>
 

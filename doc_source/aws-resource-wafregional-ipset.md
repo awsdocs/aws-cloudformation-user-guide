@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::IPSet",
   "Properties" : {
-      "[IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors)" : [ [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md), ... ],
+      "[IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors)" : [ IPSetDescriptor, ... ],
       "[Name](#cfn-wafregional-ipset-name)" : String
     }
 }
@@ -30,14 +30,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::IPSet
 Properties: 
   [IPSetDescriptors](#cfn-wafregional-ipset-ipsetdescriptors): 
-    - [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md)
+    - IPSetDescriptor
   [Name](#cfn-wafregional-ipset-name): String
 ```
 
 ## Properties<a name="aws-resource-wafregional-ipset-properties"></a>
 
 `IPSetDescriptors`  <a name="cfn-wafregional-ipset-ipsetdescriptors"></a>
-The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR notation\) that web requests originate from\. If the `WebACL` is associated with a CloudFront distribution and the viewer did not use an HTTP proxy or a load balancer to send the request, this is the value of the c\-ip field in the CloudFront access logs\.  
+The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR notation\) that web requests originate from\.   
 *Required*: No  
 *Type*: List of [IPSetDescriptor](aws-properties-wafregional-ipset-ipsetdescriptor.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -48,9 +48,10 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafregional-ipset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-ipset-return-values-ref"></a>
 

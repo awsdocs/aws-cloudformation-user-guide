@@ -2,7 +2,7 @@
 
 Parameters for a block device for an EBS volume in an Amazon EC2 launch template\.
 
- `Ebs` is a property of the [ Amazon EC2 LaunchTemplate BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html) property type\.
+ `Ebs` is a property of [ AWS::EC2::LaunchTemplate BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs-syntax"></a>
 
@@ -49,8 +49,8 @@ Indicates whether the EBS volume is encrypted\. Encrypted volumes can only be at
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Iops`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs-iops"></a>
-The number of I/O operations per second \(IOPS\) that the volume supports\. For io1, this represents the number of IOPS that are provisioned for the volume\. For gp2, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\. For more information about General Purpose SSD baseline performance, I/O credits, and bursting, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-Condition: This parameter is required for requests to create io1 volumes; it is not used in requests to create gp2, st1, sc1, or standard volumes\.  
+The number of I/O operations per second \(IOPS\) to provision for an `io1` or `io2` volume, with a maximum ratio of 50 IOPS/GiB for `io1`, and 500 IOPS/GiB for `io2`\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+This parameter is valid only for Provisioned IOPS SSD \(`io1` and `io2`\) volumes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -78,8 +78,8 @@ Default: If you're creating the volume from a snapshot and don't specify a volum
 The volume type\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `gp2 | io1 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | io1 | io2 | sc1 | st1 | standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs--seealso"></a>
 +  [ LaunchTemplateEbsBlockDeviceRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateEbsBlockDeviceRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

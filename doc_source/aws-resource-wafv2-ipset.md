@@ -3,7 +3,7 @@
 **Note**  
 This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
-The `AWS::WAFv2::IPSet` is used to identify web requests that originate from specific IP addresses or ranges of IP addresses\. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can configure AWS WAF to block them using an IP set that lists those IP addresses\. 
+Use an [AWS::WAFv2::IPSet](#aws-resource-wafv2-ipset) to identify web requests that originate from specific IP addresses or ranges of IP addresses\. For example, if you're receiving a lot of requests from a ranges of IP addresses, you can configure AWS WAF to block them using an IP set that lists those IP addresses\. 
 
 You use an IP set by providing its Amazon Resource Name \(ARN\) to the rule statement `IPSetReferenceStatement`, when you add a rule to a rule group or web ACL\. 
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IPAddressVersion](#cfn-wafv2-ipset-ipaddressversion)" : String,
       "[Name](#cfn-wafv2-ipset-name)" : String,
       "[Scope](#cfn-wafv2-ipset-scope)" : String,
-      "[Tags](#cfn-wafv2-ipset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Tags](#cfn-wafv2-ipset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -69,7 +69,7 @@ A friendly description of the IP set\. You cannot change the description of an I
 Specify IPV4 or IPV6\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IPV4 | IPV6`  
+*Allowed values*: `IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-ipset-name"></a>
@@ -82,18 +82,20 @@ A friendly name of the IP set\. You cannot change the name of an `IPSet` after y
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-ipset-scope"></a>
-Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
+For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-wafv2-ipset-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
+To modify tags on existing resources, use the AWS WAF console or the APIs\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-ipset-return-values"></a>
+## Return values<a name="aws-resource-wafv2-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-ipset-return-values-ref"></a>
 

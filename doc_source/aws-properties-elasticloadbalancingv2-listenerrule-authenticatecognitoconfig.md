@@ -50,7 +50,7 @@ The behavior if the user is not authenticated\. The following are possible value
 + authenticate`` \- Redirect the request to the IdP authorization endpoint\. This is the default value\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `allow | authenticate | deny`  
+*Allowed values*: `allow | authenticate | deny`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope"></a>

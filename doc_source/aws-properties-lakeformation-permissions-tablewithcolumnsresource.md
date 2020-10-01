@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ColumnNames](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnnames)" : [ String, ... ],
-  "[ColumnWildcard](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnwildcard)" : [ColumnWildcard](aws-properties-lakeformation-permissions-columnwildcard.md),
+  "[ColumnWildcard](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnwildcard)" : ColumnWildcard,
   "[DatabaseName](#cfn-lakeformation-permissions-tablewithcolumnsresource-databasename)" : String,
   "[Name](#cfn-lakeformation-permissions-tablewithcolumnsresource-name)" : String
 }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ColumnNames](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnnames): 
     - String
   [ColumnWildcard](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnwildcard): 
-    [ColumnWildcard](aws-properties-lakeformation-permissions-columnwildcard.md)
+    ColumnWildcard
   [DatabaseName](#cfn-lakeformation-permissions-tablewithcolumnsresource-databasename): String
   [Name](#cfn-lakeformation-permissions-tablewithcolumnsresource-name): String
 ```
