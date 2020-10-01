@@ -14,7 +14,7 @@ AWS Regions introduced after March 20, 2019, such as Asia Pacific \(Hong Kong\),
 + To deploy stack instances into a target account that resides in a Region that is disabled by default, and that is enabled for the target account but *disabled* for the administrator account, the `AdministrationRole` needs to trust both global CloudFormation service principal, as well as the regional service principal\. 
 
 **Important**  
-Be aware that during stack set operations, adminstrator and target accounts exchange metadata regarding the accounts themselves, as well as the stack set and stack set instances involved\.  
+Be aware that during stack set operations, administrator and target accounts exchange metadata regarding the accounts themselves, as well as the stack set and stack set instances involved\.  
 In addition, if you disable a Region that contains an account in which stack set instances reside, you are responsible for deleting any such instances or resources, if desired\. In addition, be aware that metadata regarding the target account in the disabled Region will be retained in the administrator account\.
 
 For more information on enabling and disabling regions, see [Managing AWS Regions](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) in the *AWS General Reference*\.
