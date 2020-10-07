@@ -73,10 +73,9 @@ The Amazon Simple Storage Service \(Amazon S3\) location of the FAQ input data\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-kendra-faq-tags"></a>
-An array of key\-value pairs to apply to this resource  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+A list of [tags](https://docs.aws.amazon.com/lambda/latest/dg/tagging.html) to apply to this resource\. 
 *Required*: No  
-*Type*: [TagList](aws-properties-kendra-faq-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-kendra-faq-return-values"></a>
