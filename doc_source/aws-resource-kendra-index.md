@@ -94,10 +94,9 @@ The identifier of the AWS KMS customer managed key \(CMK\) to use to encrypt dat
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-kendra-index-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+A list of [tags](https://docs.aws.amazon.com/lambda/latest/dg/tagging.html) to apply to this resource\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-kendra-index-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-kendra-index-return-values"></a>
