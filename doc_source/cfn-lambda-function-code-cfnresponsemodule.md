@@ -255,8 +255,9 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
         request.add_header('Content-Length', str(len(json_responseBody)))
 
         request.get_method = lambda: 'PUT'
+        response = urllib2.urlopen(request)
 
-        print "Status code: " + response.getcode()
+        print "Status code: " + str(response.getcode())
     except Exception as e:
         print "send(..) failed executing urllib2.Request(..): " + str(e)
 ```
