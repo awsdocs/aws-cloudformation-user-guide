@@ -77,11 +77,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-rds-optiongroup--examples"></a>
 
-### Multiple Option Configurations<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations"></a>
+### Creating an option group with multiple option configurations<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations"></a>
 
 The following example creates an option group with two option configurations \(`OEM` and `APEX`\)\. For more information about these options, see [ Options for Oracle DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html) in the *Amazon RDS User Guide*\.
 
-#### JSON<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations--json"></a>
+#### JSON<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations--json"></a>
 
 ```
 {
@@ -108,7 +108,7 @@ The following example creates an option group with two option configurations \(`
 }
 ```
 
-#### YAML<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations--yaml"></a>
+#### YAML<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations--yaml"></a>
 
 ```
 --- 

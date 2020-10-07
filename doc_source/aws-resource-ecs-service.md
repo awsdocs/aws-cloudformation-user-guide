@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::Service",
   "Properties" : {
+      "[CapacityProviderStrategy](#cfn-ecs-service-capacityproviderstrategy)" : [ CapacityProviderStrategyItem, ... ],
       "[Cluster](#cfn-ecs-service-cluster)" : String,
       "[DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration)" : DeploymentConfiguration,
       "[DeploymentController](#cfn-ecs-service-deploymentcontroller)" : DeploymentController,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PropagateTags](#cfn-ecs-service-propagatetags)" : String,
       "[Role](#cfn-ecs-service-role)" : String,
       "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
+      "[ServiceArn](#cfn-ecs-service-servicearn)" : String,
       "[ServiceName](#cfn-ecs-service-servicename)" : String,
       "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ ServiceRegistry, ... ],
       "[Tags](#cfn-ecs-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -40,6 +42,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECS::Service
 Properties: 
+  [CapacityProviderStrategy](#cfn-ecs-service-capacityproviderstrategy): 
+    - CapacityProviderStrategyItem
   [Cluster](#cfn-ecs-service-cluster): String
   [DeploymentConfiguration](#cfn-ecs-service-deploymentconfiguration): 
     DeploymentConfiguration
@@ -61,6 +65,7 @@ Properties:
   [PropagateTags](#cfn-ecs-service-propagatetags): String
   [Role](#cfn-ecs-service-role): String
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
+  [ServiceArn](#cfn-ecs-service-servicearn): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
     - ServiceRegistry
@@ -70,6 +75,17 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ecs-service-properties"></a>
+
+`CapacityProviderStrategy`  <a name="cfn-ecs-service-capacityproviderstrategy"></a>
+The capacity provider strategy to use for the service\.  
+A capacity provider strategy consists of one or more capacity providers along with the `base` and `weight` to assign to them\. A capacity provider must be associated with the cluster to be used in a capacity provider strategy\. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster\. Only capacity providers with an `ACTIVE` or `UPDATING` status can be used\.  
+If a `capacityProviderStrategy` is specified, the `launchType` parameter must be omitted\. If no `capacityProviderStrategy` or `launchType` is specified, the `defaultCapacityProviderStrategy` for the cluster is used\.  
+If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New capacity providers can be created with the CreateCapacityProvider API operation\.  
+To use a AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
+The PutClusterCapacityProviders API operation is used to update the list of available capacity providers for a cluster after the cluster is created\.  
+*Required*: No  
+*Type*: List of [CapacityProviderStrategyItem](aws-properties-ecs-service-capacityproviderstrategyitem.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cluster`  <a name="cfn-ecs-service-cluster"></a>
 The short name or full Amazon Resource Name \(ARN\) of the cluster on which to run your service\. If you do not specify a cluster, the default cluster is assumed\.  
@@ -119,7 +135,7 @@ The launch type on which to run your service\. For more information, see [Amazon
 `LoadBalancers`  <a name="cfn-ecs-service-loadbalancers"></a>
 A list of load balancer objects to associate with the service\. If you specify the `Role` property, `LoadBalancers` must be specified as well\. For information about the number of load balancers that you can specify per service, see [Service Load Balancing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
-*Type*: List of [LoadBalancer](aws-properties-ecs-service-loadbalancers.md)  
+*Type*: List of [LoadBalancer](aws-properties-ecs-service-loadbalancer.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkConfiguration`  <a name="cfn-ecs-service-networkconfiguration"></a>
@@ -172,6 +188,12 @@ Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deploymen
 *Type*: String  
 *Allowed values*: `DAEMON | REPLICA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ServiceArn`  <a name="cfn-ecs-service-servicearn"></a>
+The ARN that identifies the service\. The ARN contains the `arn:aws:ecs` namespace, followed by the Region of the service, the AWS account ID of the service owner, the `service` namespace, and then the service name\. For example, `arn:aws:ecs:region:012345678910:service/my-service`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-ecs-service-servicename"></a>
 The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  

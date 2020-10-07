@@ -73,11 +73,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-rds-security-group--examples"></a>
 
-### Single VPC security group<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group"></a>
+### Creating a single VPC security group<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group"></a>
 
 The following example creates a single VPC security group, referred to by `EC2SecurityGroupName`\. 
 
-#### JSON<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group--json"></a>
+#### JSON<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group--json"></a>
 
 ```
 {
@@ -118,7 +118,7 @@ The following example creates a single VPC security group, referred to by `EC2Se
 }
 ```
 
-#### YAML<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group--yaml"></a>
+#### YAML<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group--yaml"></a>
 
 ```
 Resources: 

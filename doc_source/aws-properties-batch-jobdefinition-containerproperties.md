@@ -12,15 +12,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Command](#cfn-batch-jobdefinition-containerproperties-command)" : [ String, ... ],
   "[Environment](#cfn-batch-jobdefinition-containerproperties-environment)" : [ Environment, ... ],
+  "[ExecutionRoleArn](#cfn-batch-jobdefinition-containerproperties-executionrolearn)" : String,
   "[Image](#cfn-batch-jobdefinition-containerproperties-image)" : String,
   "[InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype)" : String,
   "[JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn)" : String,
   "[LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters)" : LinuxParameters,
+  "[LogConfiguration](#cfn-batch-jobdefinition-containerproperties-logconfiguration)" : LogConfiguration,
   "[Memory](#cfn-batch-jobdefinition-containerproperties-memory)" : Integer,
   "[MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints)" : [ MountPoints, ... ],
   "[Privileged](#cfn-batch-jobdefinition-containerproperties-privileged)" : Boolean,
   "[ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem)" : Boolean,
   "[ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements)" : [ ResourceRequirement, ... ],
+  "[Secrets](#cfn-batch-jobdefinition-containerproperties-secrets)" : [ Secret, ... ],
   "[Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits)" : [ Ulimit, ... ],
   "[User](#cfn-batch-jobdefinition-containerproperties-user)" : String,
   "[Vcpus](#cfn-batch-jobdefinition-containerproperties-vcpus)" : Integer,
@@ -35,11 +38,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [Environment](#cfn-batch-jobdefinition-containerproperties-environment): 
     - Environment
+  [ExecutionRoleArn](#cfn-batch-jobdefinition-containerproperties-executionrolearn): String
   [Image](#cfn-batch-jobdefinition-containerproperties-image): String
   [InstanceType](#cfn-batch-jobdefinition-containerproperties-instancetype): String
   [JobRoleArn](#cfn-batch-jobdefinition-containerproperties-jobrolearn): String
   [LinuxParameters](#cfn-batch-jobdefinition-containerproperties-linuxparameters): 
     LinuxParameters
+  [LogConfiguration](#cfn-batch-jobdefinition-containerproperties-logconfiguration): 
+    LogConfiguration
   [Memory](#cfn-batch-jobdefinition-containerproperties-memory): Integer
   [MountPoints](#cfn-batch-jobdefinition-containerproperties-mountpoints): 
     - MountPoints
@@ -47,6 +53,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ReadonlyRootFilesystem](#cfn-batch-jobdefinition-containerproperties-readonlyrootfilesystem): Boolean
   [ResourceRequirements](#cfn-batch-jobdefinition-containerproperties-resourcerequirements): 
     - ResourceRequirement
+  [Secrets](#cfn-batch-jobdefinition-containerproperties-secrets): 
+    - Secret
   [Ulimits](#cfn-batch-jobdefinition-containerproperties-ulimits): 
     - Ulimit
   [User](#cfn-batch-jobdefinition-containerproperties-user): String
@@ -69,6 +77,12 @@ We do not recommend using plaintext environment variables for sensitive informat
 Environment variables must not start with `AWS_BATCH`; this naming convention is reserved for variables that are set by the AWS Batch service\.
 *Required*: No  
 *Type*: [List](aws-properties-batch-jobdefinition-environment.md) of [Environment](aws-properties-batch-jobdefinition-environment.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExecutionRoleArn`  <a name="cfn-batch-jobdefinition-containerproperties-executionrolearn"></a>
+The Amazon Resource Name \(ARN\) of the execution role that AWS Batch can assume\. For more information, see [AWS Batch execution IAM role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html)\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Image`  <a name="cfn-batch-jobdefinition-containerproperties-image"></a>
@@ -97,6 +111,16 @@ The Amazon Resource Name \(ARN\) of the IAM role that the container can assume f
 Linux\-specific modifications that are applied to the container, such as details for device mappings\.  
 *Required*: No  
 *Type*: [LinuxParameters](aws-properties-batch-jobdefinition-containerproperties-linuxparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LogConfiguration`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration"></a>
+The log configuration specification for the container\.  
+This parameter maps to `LogConfig` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--log-driver` option to [docker run](https://docs.docker.com/engine/reference/run/)\. By default, containers use the same logging driver that the Docker daemon uses\. However the container may use a different logging driver than the Docker daemon by specifying a log driver with this parameter in the container definition\. To use a different logging driver for a container, the log system must be configured properly on the container instance \(or on a different log server for remote logging options\)\. For more information on the options for different supported log drivers, see [Configure logging drivers](https://docs.docker.com/engine/admin/logging/overview/) in the Docker documentation\.  
+AWS Batch currently supports a subset of the logging drivers available to the Docker daemon \(shown in the [LogConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-logconfiguration) data type\)\.
+This parameter requires version 1\.18 of the Docker Remote API or greater on your container instance\. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: `sudo docker version | grep "Server API version"`   
+The Amazon ECS container agent running on a container instance must register the logging drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment variable before containers placed on that instance can use these log configuration options\. For more information, see [Amazon ECS Container Agent Configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html) in the *Amazon Elastic Container Service Developer Guide*\.
+*Required*: No  
+*Type*: [LogConfiguration](aws-properties-batch-jobdefinition-containerproperties-logconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Memory`  <a name="cfn-batch-jobdefinition-containerproperties-memory"></a>
@@ -128,6 +152,12 @@ When this parameter is true, the container is given read\-only access to its roo
 The type and amount of a resource to assign to a container\. Currently, the only supported resource is `GPU`\.  
 *Required*: No  
 *Type*: List of [ResourceRequirement](aws-properties-batch-jobdefinition-resourcerequirement.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Secrets`  <a name="cfn-batch-jobdefinition-containerproperties-secrets"></a>
+The secrets for the container\. For more information, see [Specifying Sensitive Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: List of [Secret](aws-properties-batch-jobdefinition-secret.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ulimits`  <a name="cfn-batch-jobdefinition-containerproperties-ulimits"></a>

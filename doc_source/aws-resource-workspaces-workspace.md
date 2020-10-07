@@ -1,6 +1,6 @@
 # AWS::WorkSpaces::Workspace<a name="aws-resource-workspaces-workspace"></a>
 
-Specifies a WorkSpace\.
+The `AWS::WorkSpaces::Workspace` resource specifies a WorkSpace\.
 
 Updates are not supported for the `BundleId`, `RootVolumeEncryptionEnabled`, `UserVolumeEncryptionEnabled`, or `VolumeEncryptionKey` properties\. To update these properties, you must also update a property that triggers a replacement, such as the `UserName` property\.
 

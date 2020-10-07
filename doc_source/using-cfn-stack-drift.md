@@ -9,7 +9,6 @@ Even as you manage your resources through CloudFormation, users can change those
 + [Detect drift on an entire CloudFormation stack](detect-drift-stack.md)
 + [Detect drift on individual stack resources](detect-drift-resource.md)
 + [Resolve drift with an import operation](resource-import-resolve-drift.md)
-+ [Resources that support drift detection](using-cfn-stack-drift-resource-list.md)
 
 ## What is drift?<a name="what-is-drift"></a>
 
@@ -19,7 +18,9 @@ In order to determine whether a resource has drifted, CloudFormation determines 
 
 AWS CloudFormation generates detailed information on each resource in the stack that has drifted\.
 
-CloudFormation detects drift on those resources that support drift detection\. Resources that do not support drift detection are assigned a drift status of NOT\_CHECKED\. For a list of resources that support drift detection, see [Resources that support drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift-resource-list.html)\.
+CloudFormation detects drift on those AWS resources that support drift detection\. Resources that do not support drift detection are assigned a drift status of NOT\_CHECKED\. For a list of AWS resources that support drift detection, see [Resources that support import and drift detection operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\.
+
+In addition, CloudFormation supports drift detection on private resource types that are *provisionable*; that is, whose provisioning type is either `FULLY_MUTABLE` or `IMMUTABLE`\. To perform drift detection on a resource of a private resource type, the default version of the resource type *that you have registered in your account* must be provisionable\. For more information on resource provision type, see the `ProvisioningType` parameter of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action in the AWS CloudFormation API Reference and of the [DescribeType](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-type.html) command in the AWS CLI Command Reference\. For more information on private resources, see [Using the AWS CloudFormation registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html)\.
 
 You can perform drift detection on stacks with the following statuses: `CREATE_COMPLETE`, `UPDATE_COMPLETE`, `UPDATE_ROLLBACK_COMPLETE`, and `UPDATE_ROLLBACK_FAILED`\.
 

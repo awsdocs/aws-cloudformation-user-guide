@@ -94,12 +94,9 @@ You can also validate your template for compliance to organization policy guidel
 
 You can use `cfn-guard` either locally, while editing templates, or automatically as part of a CI/CD pipeline to stop deployment of non\-compliant resources\.
 
-In addition, you can use another open\-source CLI tool, `cfn-guard-rulegen`, to extract rules from existing templates that are compliant\. 
+Additionally, `cfn-guard` includes a feature, `rulegen`, that enables you to extract rules from existing compliant CloudFormation templates\.
 
-**Note**  
-The `cfn-guard` and `cfn-guard-rulegen` tools are currently in preview\.
-
-For more information, see the [cfn\-guard](https://github.com/aws-cloudformation/cloudformation-guard) and [cfn\-guard\-rulegen](https://github.com/aws-cloudformation/cloudformation-guard/cfn-guard-rulegen) repositories on GitHub\.
+For more information, see the [cfn\-guard](https://github.com/aws-cloudformation/cloudformation-guard) repository on GitHub\.
 
 ## Manage all stack resources through AWS CloudFormation<a name="donttouch"></a>
 

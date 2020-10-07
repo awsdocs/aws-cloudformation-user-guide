@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CatalogId](#cfn-lakeformation-permissions-tablewithcolumnsresource-catalogid)" : String,
   "[ColumnNames](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnnames)" : [ String, ... ],
   "[ColumnWildcard](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnwildcard)" : ColumnWildcard,
   "[DatabaseName](#cfn-lakeformation-permissions-tablewithcolumnsresource-databasename)" : String,
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource-syntax.yaml"></a>
 
 ```
+  [CatalogId](#cfn-lakeformation-permissions-tablewithcolumnsresource-catalogid): String
   [ColumnNames](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnnames): 
     - String
   [ColumnWildcard](#cfn-lakeformation-permissions-tablewithcolumnsresource-columnwildcard): 
@@ -31,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-lakeformation-permissions-tablewithcolumnsresource-properties"></a>
+
+`CatalogId`  <a name="cfn-lakeformation-permissions-tablewithcolumnsresource-catalogid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColumnNames`  <a name="cfn-lakeformation-permissions-tablewithcolumnsresource-columnnames"></a>
 The list of column names for the table\. At least one of `ColumnNames` or `ColumnWildcard` is required\.  

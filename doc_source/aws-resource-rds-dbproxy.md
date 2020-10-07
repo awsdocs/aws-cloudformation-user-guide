@@ -140,11 +140,11 @@ The writer endpoint for the RDS DB instance or Aurora DB cluster\.
 
 ## Examples<a name="aws-resource-rds-dbproxy--examples"></a>
 
-### Creating a DB Proxy and Registering a DB Instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_Registering_a_DB_Instance"></a>
+### Creating a DB Proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance"></a>
 
 The following example creates a DB proxy and registers a DB instance\.
 
-#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_Registering_a_DB_Instance--json"></a>
+#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--json"></a>
 
 ```
 {
@@ -227,7 +227,7 @@ The following example creates a DB proxy and registers a DB instance\.
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_Registering_a_DB_Instance--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

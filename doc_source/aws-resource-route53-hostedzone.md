@@ -64,7 +64,7 @@ If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment
 Adds, edits, or deletes tags for a health check or a hosted zone\.  
 For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
 *Required*: No  
-*Type*: List of [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetags.md)  
+*Type*: List of [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-route53-hostedzone-name"></a>
@@ -123,8 +123,8 @@ If you want Route 53 to stop sending query logs to CloudWatch Logs, delete the q
 *Private hosted zones:* A complex type that contains information about the VPCs that are associated with the specified hosted zone\.  
 For public hosted zones, omit `VPCs`, `VPCId`, and `VPCRegion`\.
 *Required*: No  
-*Type*: List of [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md)  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Type*: List of [VPC](aws-properties-route53-hostedzone-vpc.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-route53-hostedzone-return-values"></a>
 
@@ -141,6 +141,9 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-route53-hostedzone-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `NameServers`  <a name="NameServers-fn::getatt"></a>
 Returns the set of name servers for the specific hosted zone\. For example: `ns1.example.com`\.  

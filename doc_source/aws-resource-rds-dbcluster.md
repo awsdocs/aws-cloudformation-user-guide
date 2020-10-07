@@ -5,7 +5,7 @@ The `AWS::RDS::DBCluster` resource creates an Amazon Aurora DB cluster\. For mor
 **Note**  
 You can only create this resource in regions where Amazon Aurora is supported\.
 
-**Updating DB Clusters**
+**Updating DB clusters**
 
 When properties labeled "*Update requires:* [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB cluster, then changes references from other dependent resources to point to the replacement DB cluster, and finally deletes the old DB cluster\.
 
@@ -19,7 +19,7 @@ Update the stack\.
 
 For more information about updating other properties of this resource, see ` [ModifyDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBCluster.html)`\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
-**Deleting DB Clusters**
+**Deleting DB clusters**
 
 The default `DeletionPolicy` for `AWS::RDS::DBCluster` resources is `Snapshot`\. For more information about how AWS CloudFormation deletes resources, see [ DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
 
@@ -218,8 +218,15 @@ Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(f
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
-The DB engine mode of the DB cluster, either `provisioned` or `serverless`\.   
-Limitations and requirements apply to the `serverless` DB engine mode\. For more information, see [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations)\.  
+The DB engine mode of the DB cluster, either `provisioned` `serverless`, `parallelquery`, or `multimaster`\.  
+The `parallelquery` engine mode is not required for Aurora MySQL version 1\.23 and higher 1\.x versions, and version 2\.09 and higher 2\.x versions\.  
+The `multimaster` engine mode only applies for DB clusters created with Aurora MySQL version 5\.6\.10a\.  
+For Aurora PostgreSQL, `parallelquery` and `multimaster` engine modes are not required\.  
+ The `global` engine mode isn't supported\. 
+Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
++  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
++  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
++  [ Limitations of Multi\-Master Clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations) 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -394,14 +401,14 @@ The following examples create DB clusters\.
 **Note**  
 For an example that adds a scaling policy for a DB cluster with Application Auto Scaling, see [Declaring a scaling policy for an Aurora DB cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#w2ab1c19c22c15c21c11)\.
 
-### Creating an Amazon Aurora DB Cluster with Two DB Instances<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_with_Two_DB_Instances"></a>
+### Creating an Amazon Aurora DB cluster with two DB instances<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_with_two_DB_instances"></a>
 
 The following example creates an Amazon Aurora DB cluster and adds two DB instances to it\. Because Amazon RDS automatically assigns a writer and reader DB instances in the cluster, use the cluster endpoint to read and write data, not the individual DB instance endpoints\. 
 
 **Note**  
 The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL, use the `timezone` parameter instead\.
 
-#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_with_Two_DB_Instances--json"></a>
+#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_with_two_DB_instances--json"></a>
 
 ```
 {
@@ -492,7 +499,7 @@ The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL,
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_with_Two_DB_Instances--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_with_two_DB_instances--yaml"></a>
 
 ```
 --- 
@@ -556,11 +563,11 @@ RDSDBParameterGroup:
   Type: "AWS::RDS::DBParameterGroup"
 ```
 
-### Creating an Amazon Aurora DB Cluster That Exports Logs to Amazon CloudWatch Logs<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_That_Exports_Logs_to_Amazon_CloudWatch_Logs"></a>
+### Creating an Amazon Aurora DB cluster that exports logs to Amazon CloudWatch Logs<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_that_exports_logs_to_Amazon_CloudWatch_Logs"></a>
 
 The following example creates an Amazon Aurora PostgreSQL DB cluster that exports logs to Amazon CloudWatch Logs\. For more information about exporting Aurora DB cluster logs to Amazon CloudWatch Logs, see [ Publishing Database Logs to Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Aurora User Guide*\.
 
-#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_That_Exports_Logs_to_Amazon_CloudWatch_Logs--json"></a>
+#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_that_exports_logs_to_Amazon_CloudWatch_Logs--json"></a>
 
 ```
 {
@@ -639,7 +646,7 @@ The following example creates an Amazon Aurora PostgreSQL DB cluster that export
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_Cluster_That_Exports_Logs_to_Amazon_CloudWatch_Logs--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_that_exports_logs_to_Amazon_CloudWatch_Logs--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -696,14 +703,14 @@ Resources:
       DBInstanceClass: db.r4.large
 ```
 
-### Creating an Amazon Aurora Serverless DB Cluster<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster"></a>
+### Creating an Amazon Aurora Serverless DB cluster<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_cluster"></a>
 
 The following example creates an Amazon Aurora Serverless DB cluster\. An Aurora Serverless DB cluster is a DB cluster that automatically starts up, shuts down, and scales up or down its compute capacity based on your application's needs\. For more information about Aurora Serverless DB clusters, see [Using Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html) in the *Amazon Aurora User Guide*\.
 
 **Note**  
 This example creates an Aurora MySQL Serverless DB cluster by setting `Engine` to `aurora` and `EngineVersion` to `5.6.10a`\. To create an Aurora PostgreSQL Serverless DB cluster, set `Engine` to `aurora-postgresql` and `EngineVersion` to `10.7`\.
 
-#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster--json"></a>
+#### JSON<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_cluster--json"></a>
 
 ```
 {
@@ -757,7 +764,7 @@ This example creates an Aurora MySQL Serverless DB cluster by setting `Engine` t
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_cluster--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

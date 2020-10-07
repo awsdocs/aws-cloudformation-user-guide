@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[BuildSpec](#cfn-amplify-app-autobranchcreationconfig-buildspec)" : String,
   "[EnableAutoBranchCreation](#cfn-amplify-app-autobranchcreationconfig-enableautobranchcreation)" : Boolean,
   "[EnableAutoBuild](#cfn-amplify-app-autobranchcreationconfig-enableautobuild)" : Boolean,
+  "[EnablePerformanceMode](#cfn-amplify-app-autobranchcreationconfig-enableperformancemode)" : Boolean,
   "[EnablePullRequestPreview](#cfn-amplify-app-autobranchcreationconfig-enablepullrequestpreview)" : Boolean,
   "[EnvironmentVariables](#cfn-amplify-app-autobranchcreationconfig-environmentvariables)" : [ EnvironmentVariable, ... ],
   "[PullRequestEnvironmentName](#cfn-amplify-app-autobranchcreationconfig-pullrequestenvironmentname)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BuildSpec](#cfn-amplify-app-autobranchcreationconfig-buildspec): String
   [EnableAutoBranchCreation](#cfn-amplify-app-autobranchcreationconfig-enableautobranchcreation): Boolean
   [EnableAutoBuild](#cfn-amplify-app-autobranchcreationconfig-enableautobuild): Boolean
+  [EnablePerformanceMode](#cfn-amplify-app-autobranchcreationconfig-enableperformancemode): Boolean
   [EnablePullRequestPreview](#cfn-amplify-app-autobranchcreationconfig-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-app-autobranchcreationconfig-environmentvariables): 
     - EnvironmentVariable
@@ -67,6 +69,12 @@ Enables automated branch creation for the Amplify app\.
 
 `EnableAutoBuild`  <a name="cfn-amplify-app-autobranchcreationconfig-enableautobuild"></a>
 Enables auto building for the auto created branch\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnablePerformanceMode`  <a name="cfn-amplify-app-autobranchcreationconfig-enableperformancemode"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

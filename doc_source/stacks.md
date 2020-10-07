@@ -14,6 +14,7 @@ You are charged for the stack resources for the time they were operating \(even 
 + [Using the AWS Command Line Interface](cfn-using-cli.md)
 + [AWS CloudFormation stack updates](using-cfn-updating-stacks.md)
 + [Detecting unmanaged configuration changes to stacks and resources](using-cfn-stack-drift.md)
++ [Bringing existing resources into CloudFormation management](resource-import.md)
 + [Moving resources between stacks](refactor-stacks.md)
 + [Exporting stack output values](using-cfn-stack-exports.md)
 + [Listing stacks that import an exported output value](using-cfn-stack-imports.md)

@@ -103,7 +103,7 @@ The IDs of the subnets\. You can specify only one subnet per Availability Zone\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-loadbalancer-tags"></a>
-One or more tags to assign to the load balancer\.  
+The tags to assign to the load balancer\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

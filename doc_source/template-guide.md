@@ -18,4 +18,4 @@ For details about the supported resources, type names, intrinsic functions, and 
 + [Using AWS CloudFormation macros to perform custom processing on templates](template-macros.md)
 + [Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation](blue-green.md)
 + [Using regular expressions in AWS CloudFormation templates](cfn-regexes.md)
-+ [Using CloudFormer \(beta\) to create AWS CloudFormation templates from existing AWS resources](cfn-using-cloudformer.md)
++ [Using CloudFormer to create AWS CloudFormation templates from existing AWS resources](cfn-using-cloudformer.md)

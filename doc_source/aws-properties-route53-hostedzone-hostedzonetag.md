@@ -1,30 +1,30 @@
-# AWS::Route53::HostedZone HostedZoneTag<a name="aws-properties-route53-hostedzone-hostedzonetags"></a>
+# AWS::Route53::HostedZone HostedZoneTag<a name="aws-properties-route53-hostedzone-hostedzonetag"></a>
 
 A complex type that contains information about a tag that you want to add or edit for the specified health check or hosted zone\.
 
-## Syntax<a name="aws-properties-route53-hostedzone-hostedzonetags-syntax"></a>
+## Syntax<a name="aws-properties-route53-hostedzone-hostedzonetag-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-route53-hostedzone-hostedzonetags-syntax.json"></a>
+### JSON<a name="aws-properties-route53-hostedzone-hostedzonetag-syntax.json"></a>
 
 ```
 {
-  "[Key](#cfn-route53-hostedzonetags-key)" : String,
-  "[Value](#cfn-route53-hostedzonetags-value)" : String
+  "[Key](#cfn-route53-hostedzone-hostedzonetag-key)" : String,
+  "[Value](#cfn-route53-hostedzone-hostedzonetag-value)" : String
 }
 ```
 
-### YAML<a name="aws-properties-route53-hostedzone-hostedzonetags-syntax.yaml"></a>
+### YAML<a name="aws-properties-route53-hostedzone-hostedzonetag-syntax.yaml"></a>
 
 ```
-  [Key](#cfn-route53-hostedzonetags-key): String
-  [Value](#cfn-route53-hostedzonetags-value): String
+  [Key](#cfn-route53-hostedzone-hostedzonetag-key): String
+  [Value](#cfn-route53-hostedzone-hostedzonetag-value): String
 ```
 
-## Properties<a name="aws-properties-route53-hostedzone-hostedzonetags-properties"></a>
+## Properties<a name="aws-properties-route53-hostedzone-hostedzonetag-properties"></a>
 
-`Key`  <a name="cfn-route53-hostedzonetags-key"></a>
+`Key`  <a name="cfn-route53-hostedzone-hostedzonetag-key"></a>
 The value of `Key` depends on the operation that you want to perform:  
 +  **Add a tag to a health check or hosted zone**: `Key` is the name that you want to give the new tag\.
 +  **Edit a tag**: `Key` is the name of the tag that you want to change the `Value` for\.
@@ -35,7 +35,7 @@ The value of `Key` depends on the operation that you want to perform:
 *Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Value`  <a name="cfn-route53-hostedzonetags-value"></a>
+`Value`  <a name="cfn-route53-hostedzone-hostedzonetag-value"></a>
 The value of `Value` depends on the operation that you want to perform:  
 +  **Add a tag to a health check or hosted zone**: `Value` is the value that you want to give the new tag\.
 +  **Edit a tag**: `Value` is the new value that you want to assign the tag\.
@@ -44,6 +44,6 @@ The value of `Value` depends on the operation that you want to perform:
 *Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See also<a name="aws-properties-route53-hostedzone-hostedzonetags--seealso"></a>
+## See also<a name="aws-properties-route53-hostedzone-hostedzonetag--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#aws-resource-route53-hostedzone-return-values) in the topic [AWS::Route53::HostedZone](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html) 
 +  [Tag](https://docs.aws.amazon.com/Route53/latest/APIReference/API_Tag.html) in the *Amazon Route 53 API Reference*

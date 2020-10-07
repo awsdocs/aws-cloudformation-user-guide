@@ -49,18 +49,20 @@ A list of `ConformancePackInputParameter` objects\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeliveryS3Bucket`  <a name="cfn-config-organizationconformancepack-deliverys3bucket"></a>
-Location of an Amazon S3 bucket where AWS Config can deliver evaluation results and conformance pack template that is used to create a pack\.   
+Amazon S3 bucket where AWS Config stores conformance pack templates\.   
+This field is optional\.
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `3`  
+*Minimum*: `0`  
 *Maximum*: `63`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeliveryS3KeyPrefix`  <a name="cfn-config-organizationconformancepack-deliverys3keyprefix"></a>
 Any folder structure you want to add to an Amazon S3 bucket\.  
+This field if optional\.
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -92,10 +92,11 @@ This parameter is valid only for Provisioned IOPS SSD \(`io1` and `io2`\) volume
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this property is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
-You can specify the CMK using any of the following:  
+The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
+If you omit this property and your account is enabled for encryption by default, or **Encrypted** is set to `true`, then the volume is encrypted using the default CMK specified for your account\. If your account does not have a default CMK, then the volume is encrypted using the AWS managed CMK\.  
+Alternatively, if you want to specify a different CMK, you can specify one of the following:  
 + Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
-+ Key alias\. For example, alias/ExampleAlias\.
++ Key alias\. Specify the alias for the CMK, prefixed with `alias/`\. For example, for a CMK with the alias `my_cmk`, use `alias/my_cmk`\. Or to specify the AWS managed CMK, use `alias/aws/ebs`\.
 + Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
 *Required*: No  

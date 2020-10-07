@@ -68,16 +68,17 @@ Application Auto Scaling provides a default value of 300 for the following scala
 For all other scalable targets, the default value is 0:  
 + DynamoDB tables
 + DynamoDB global secondary indexes
-+ Amazon Comprehend document classification endpoints
++ Amazon Comprehend document classification and entity recognizer endpoints
 + Lambda provisioned concurrency
 + Amazon Keyspaces tables
++ Amazon MSK cluster storage
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScaleOutCooldown`  <a name="cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-scaleoutcooldown"></a>
 The amount of time, in seconds, to wait for a previous scale\-out activity to take effect\.  
-With the *scale\-out cooldown period*, the intention is to continuously \(but not excessively\) scale out\. After Application Auto Scaling successfully scales out using a target tracking scaling policy, it starts to calculate the cooldown time\. While the scale\-out cooldown period is in effect, the capacity added by the initiating scale\-out activity is calculated as part of the desired capacity for the next scale\-out activity\.  
+With the *scale\-out cooldown period*, the intention is to continuously \(but not excessively\) scale out\. After Application Auto Scaling successfully scales out using a target tracking scaling policy, it starts to calculate the cooldown time\. The scaling policy won't increase the desired capacity again unless either a larger scale out is triggered or the cooldown period ends\. While the cooldown period is in effect, the capacity added by the initiating scale\-out activity is calculated as part of the desired capacity for the next scale\-out activity\.  
 Application Auto Scaling provides a default value of 300 for the following scalable targets:  
 + ECS services
 + Spot Fleet requests
@@ -89,9 +90,10 @@ Application Auto Scaling provides a default value of 300 for the following scala
 For all other scalable targets, the default value is 0:  
 + DynamoDB tables
 + DynamoDB global secondary indexes
-+ Amazon Comprehend document classification endpoints
++ Amazon Comprehend document classification and entity recognizer endpoints
 + Lambda provisioned concurrency
 + Amazon Keyspaces tables
++ Amazon MSK cluster storage
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

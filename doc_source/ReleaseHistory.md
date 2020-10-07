@@ -4,6 +4,97 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::Service 
+
+ [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
+Use the `CapacityProviderStrategy` property to specify a custom capacity provider strategy when creating a service\.  | October 1, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::ECS::Service 
+
+ [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
+Use the `CapacityProviderStrategy` property to specify a custom capacity provider strategy when creating a service\.  | October 1, 2020 | 
+| [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::CachePolicy\. 
+
+ [AWS::CloudFront::CachePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)   
+In the `AWS::CloudFront::CachePolicy` resource, some properties are now required that previously were not required\.  
+In the [AWS::CloudFront::CachePolicy ParametersInCacheKeyAndForwardedToOrigin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html) property type, use the `EnableAcceptEncodingBrotli` property to enable CloudFront to serve compressed objects to viewers that support the Brotli compression format\. For more information, see [Compression support](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-policy-compressed-objects) in the *Amazon CloudFront Developer Guide*\.  | October 1, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CloudFront::CachePolicy\. 
+
+ [AWS::CloudFront::CachePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)   
+In the `AWS::CloudFront::CachePolicy` resource, some properties are now required that previously were not required\.  
+In the [AWS::CloudFront::CachePolicy ParametersInCacheKeyAndForwardedToOrigin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html) property type, use the `EnableAcceptEncodingBrotli` property to enable CloudFront to serve compressed objects to viewers that support the Brotli compression format\. For more information, see [Compression support](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-policy-compressed-objects) in the *Amazon CloudFront Developer Guide*\.  | October 1, 2020 | 
+| [Updated Resource](AWS_Batch.md) | The following resource was updated: [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)\.These property types were added\. 
+
+[LogConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-logconfiguration.html)  
+Use the [LogConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-logconfiguration.html) property type to specify the log configuration options to send to a custom log driver for the container\. 
+
+[Secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-secret.html)  
+Use the [Secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-secret.html) property type to specify a secret to expose to the container\. 
+
+[Tmpfs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-tmpfs.html)  
+Use the [Tmpfs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-tmpfs.html) property type to specify the details of a `tmpfs` mount\. These property types were updated\. 
+
+[ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html)  
+These properties were added\.    
+ExecutionRoleArn  
+Specifies the execution role to be assumed for the job\.  
+LogConfiguration  
+Specifies the log configuration for a custom log driver for the job\.  
+Secrets  
+Specifies the secrets provided for the job\. 
+
+[LinuxParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html)  
+These properties were added\.    
+InitProcessEnabled  
+Indicates that an init process should be enabled inside the container that forwards signals and reaps processes\.  
+MaxSwap  
+Specifies the total amount of swap memory \(in MiB\) a job can use\.  
+SharedMemorySize  
+Specifies the size \(in MiB\) of the `/dev/shm` volume\.   
+Swappiness  
+Specifies the job container's memory swappiness behavior\.  
+Tmpfs  
+Specifies the details of the job's `tmpfs` mount\.  | October 1, 2020 | 
+| [Updated Resource](#ReleaseHistory) | The following resource was updated: [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)\.These property types were added\. 
+
+[LogConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-logconfiguration.html)  
+Use the [LogConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-logconfiguration.html) property type to specify the log configuration options to send to a custom log driver for the container\. 
+
+[Secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-secret.html)  
+Use the [Secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-secret.html) property type to specify a secret to expose to the container\. 
+
+[Tmpfs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-tmpfs.html)  
+Use the [Tmpfs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-tmpfs.html) property type to specify the details of a `tmpfs` mount\. These property types were updated\. 
+
+[ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html)  
+These properties were added\.    
+ExecutionRoleArn  
+Specifies the execution role to be assumed for the job\.  
+LogConfiguration  
+Specifies the log configuration for a custom log driver for the job\.  
+Secrets  
+Specifies the secrets provided for the job\. 
+
+[LinuxParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties-linuxparameters.html)  
+These properties were added\.    
+InitProcessEnabled  
+Indicates that an init process should be enabled inside the container that forwards signals and reaps processes\.  
+MaxSwap  
+Specifies the total amount of swap memory \(in MiB\) a job can use\.  
+SharedMemorySize  
+Specifies the size \(in MiB\) of the `/dev/shm` volume\.   
+Swappiness  
+Specifies the job container's memory swappiness behavior\.  
+Tmpfs  
+Specifies the details of the job's `tmpfs` mount\.  | October 1, 2020 | 
+| [New resource](AWS_WorkSpaces.md) | The following resource was added: `AWS::WorkSpaces::ConnectionAlias` 
+
+ [AWS::WorkSpaces::ConnectionAlias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)   
+Use the `AWS::WorkSpaces::ConnectionAlias` resource to specify a connection alias\. Connection aliases are used for cross\-Region redirection\.   | October 1, 2020 | 
+| [New resource](#ReleaseHistory) | The following resource was added: `AWS::WorkSpaces::ConnectionAlias` 
+
+ [AWS::WorkSpaces::ConnectionAlias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)   
+Use the `AWS::WorkSpaces::ConnectionAlias` resource to specify a connection alias\. Connection aliases are used for cross\-Region redirection\.   | October 1, 2020 | 
+| [Drift detection for private resources](#ReleaseHistory) | CloudFormation supports drift detection operations on an expanded list of AWS resources, as well as private resources that are defined as provisonable\.In addition to the resources that previously supported drift detection, CloudFormation now supports drift detection on all resources defined as provisionable in the CloudFormation registry\. For more information, see [Resources that support import and drift detection operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\. | October 1, 2020 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: `AWS::ApiGateway::DomainName`\. 
 
  [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   
@@ -16,18 +107,6 @@ Use the `AWS::ApiGatewayV2::DomainName` resource to configure mutual TLS authent
 
  [AWS::ApiGatewayV2::Api](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html)   
 Use the `AWS::ApiGatewayV2::Api` resource to disable the default endpoint for an HTTP API\.  | September 17, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: `AWS::ApiGatewayV2::DomainName`\. 
-
- [AWS::ApiGatewayV2::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html)   
-Use the `AWS::ApiGatewayV2::DomainName` resource to configure mutual TLS authentication for an API\.  | September 17, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: `AWS::ApiGatewayV2::Api`\. 
-
- [AWS::ApiGatewayV2::Api](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html)   
-Use the `AWS::ApiGatewayV2::Api` resource to disable the default endpoint for an HTTP API\.  | September 17, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: `AWS::ApiGateway::DomainName`\. 
-
- [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   
-Use the `AWS::ApiGateway::DomainName` resource to configure mutual TLS authentication for an API\.  | September 17, 2020 | 
 | [New resources](AWS_AppFlow.md) | The following resources were added: AWS::AppFlow::Flow and AWS::AppFlow::ConnectorProfile\. 
 
  [AWS::AppFlow::Flow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html)   
@@ -36,17 +115,6 @@ Use the `AWS::AppFlow::Flow` resource to specify a new flow in Amazon AppFlow\.
  [AWS::AppFlow::ConnectorProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html)   
 Use the `AWS::AppFlow::ConnectorProfile` describe an instance of a connector in Amazon AppFlow\.  | September 17, 2020 | 
 | [New resources](AWS_CloudFormation.md) | The following resource was added: AWS::CloudFormation::StackSet\. 
-
- [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)   
-Use the `AWS::CloudFormation::StackSet` to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\.  | September 17, 2020 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::AppFlow::Flow and AWS::AppFlow::ConnectorProfile\. 
-
- [AWS::AppFlow::Flow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-flow.html)   
-Use the `AWS::AppFlow::Flow` resource to specify a new flow in Amazon AppFlow\. 
-
- [AWS::AppFlow::ConnectorProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html)   
-Use the `AWS::AppFlow::ConnectorProfile` describe an instance of a connector in Amazon AppFlow\.  | September 17, 2020 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::CloudFormation::StackSet\. 
 
  [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)   
 Use the `AWS::CloudFormation::StackSet` to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\.  | September 17, 2020 | 
@@ -70,7 +138,6 @@ Use the `AWS::SSO::Assignment` resource to assign access to a principal for a sp
 
  [AWS::SSO::PermissionSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html)   
 Use the `AWS::SSO::PermissionSet` resource to create a permission set within a specified SSO instance\.  | September 10, 2020 | 
-| [New resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Kendra) | This is the first release of Amazon Kendra in AWS CloudFormation\. | September 10, 2020 | 
 | [New resource](#ReleaseHistory) | The following resource was added: AWS::IoT::Authorizer 
 
  [AWS::IoT::Authorizer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html)   
@@ -729,7 +796,7 @@ Use the `Tags` property to add tag keys and values to an AWS OpsWorks for Chef A
 | [New resource](AWS_WAFv2.md) | The following resource was added: AWS::WAFv2::WebACLAssociation\. 
 
  [AWS WAFv2](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_WAFv2.html)   
-Use the web ACL association to define an association between a Web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. For CloudFront distributions, you use AWS::CloudFront::Distribution to manage the association\.   | February 6, 2020 | 
+Use the web ACL association to define an association between a Web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. For CloudFront distributions, you use AWS::CloudFront::Distribution to manage the association\.   | February 6, 2020 | 
 | [Updated resources](AWS_Pinpoint.md) | The following resources were updated: AWS::Pinpoint::EmailTemplate, AWS::Pinpoint::PushTemplate, and AWS::Pinpoint::SmsTemplate 
 
  [AWS::Pinpoint::EmailTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html)   
@@ -918,7 +985,7 @@ Use the `AWS::CloudWatch::InsightRule` property to create a Contributor Insights
 | [New resource](AWS_WAFv2.md) | The following resource was added: AWS WAFv2 
 
  [AWS WAFv2](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_WAFv2.html)   
-This is the latest version of AWS WAF, a web application firewall that lets you monitor HTTP\(S\) requests that are forwarded to an Amazon API Gateway API, Amazon CloudFront, or an Application Load Balancer\. AWS WAF also lets you control access to your content\.  | November 25, 2019 | 
+This is the latest version of AWS WAF, a web application firewall that lets you monitor HTTP\(S\) requests that are forwarded to an Amazon API Gateway REST API, Amazon CloudFront, Application Load Balancer, or an AWS AppSync GraphQL API\. AWS WAF also lets you control access to your content\.  | November 25, 2019 | 
 | [Updated resources](AWS_AppSync.md) | The following resource were updated: AWS::AppSync::Resolver, AWS::AppSync::DataSource\. 
 
  [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)   

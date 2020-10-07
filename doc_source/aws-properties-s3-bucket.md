@@ -977,7 +977,7 @@ Resources:
 
 ### Create a Bucket with Default Encryption Enabled<a name="aws-properties-s3-bucket--examples--Create_a_Bucket_with_Default_Encryption_Enabled"></a>
 
-The following example creates a bucket with server\-side bucket encryption configured\. This example uses S3\-managed keys\. You can use KMS\-managed keys instead by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property\.
+The following example creates a bucket with server\-side bucket encryption configured\. This example uses KMS\-managed keys\. You can use S3\-managed keys instead by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property\.
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Create_a_Bucket_with_Default_Encryption_Enabled--json"></a>
 
@@ -995,7 +995,8 @@ The following example creates a bucket with server\-side bucket encryption confi
         "BucketEncryption": {
           "ServerSideEncryptionConfiguration": [{
             "ServerSideEncryptionByDefault": {
-              "SSEAlgorithm": "AES256"
+              "SSEAlgorithm": "aws:kms",
+              "KMSMasterKeyID": "KMS-KEY-ARN"
             }
           }]
         }
@@ -1019,7 +1020,8 @@ Resources:
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
-              SSEAlgorithm: AES256
+              SSEAlgorithm: aws:kms
+              KMSMasterKeyID: KMS-KEY-ARN
     DeletionPolicy: Delete
 ```
 

@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EKS::Cluster",
   "Properties" : {
       "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ EncryptionConfig, ... ],
+      "[KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig)" : KubernetesNetworkConfig,
       "[Name](#cfn-eks-cluster-name)" : String,
       "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : ResourcesVpcConfig,
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
@@ -43,6 +44,8 @@ Type: AWS::EKS::Cluster
 Properties: 
   [EncryptionConfig](#cfn-eks-cluster-encryptionconfig): 
     - EncryptionConfig
+  [KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig): 
+    KubernetesNetworkConfig
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
     ResourcesVpcConfig
@@ -57,6 +60,12 @@ The encryption configuration for the cluster\.
 *Required*: No  
 *Type*: [List](aws-properties-eks-cluster-encryptionconfig.md) of [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md)  
 *Maximum*: `1`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`KubernetesNetworkConfig`  <a name="cfn-eks-cluster-kubernetesnetworkconfig"></a>
+The Kubernetes network configuration for the cluster\.  
+*Required*: No  
+*Type*: [KubernetesNetworkConfig](aws-properties-eks-cluster-kubernetesnetworkconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-eks-cluster-name"></a>

@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MediaLive::Input",
   "Properties" : {
       "[Destinations](#cfn-medialive-input-destinations)" : [ InputDestinationRequest, ... ],
+      "[InputDevices](#cfn-medialive-input-inputdevices)" : [ InputDeviceSettings, ... ],
       "[InputSecurityGroups](#cfn-medialive-input-inputsecuritygroups)" : [ String, ... ],
       "[MediaConnectFlows](#cfn-medialive-input-mediaconnectflows)" : [ MediaConnectFlowRequest, ... ],
       "[Name](#cfn-medialive-input-name)" : String,
@@ -34,6 +35,8 @@ Type: AWS::MediaLive::Input
 Properties: 
   [Destinations](#cfn-medialive-input-destinations): 
     - InputDestinationRequest
+  [InputDevices](#cfn-medialive-input-inputdevices): 
+    - InputDeviceSettings
   [InputSecurityGroups](#cfn-medialive-input-inputsecuritygroups): 
     - String
   [MediaConnectFlows](#cfn-medialive-input-mediaconnectflows): 
@@ -54,6 +57,12 @@ Properties:
 Read\-only\. Specifies the URLs for a push input\. The input is pushing to these addresses in order to deliver to MediaLive\. You don't set these values\.  
 *Required*: No  
 *Type*: List of [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InputDevices`  <a name="cfn-medialive-input-inputdevices"></a>
+Include this element only for an INPUT\_DEVICE type of input\. Settings for the devices\.  
+*Required*: No  
+*Type*: List of [InputDeviceSettings](aws-properties-medialive-input-inputdevicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputSecurityGroups`  <a name="cfn-medialive-input-inputsecuritygroups"></a>

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ChannelClass](#cfn-medialive-channel-channelclass)" : String,
       "[Destinations](#cfn-medialive-channel-destinations)" : [ OutputDestination, ... ],
-      "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : Json,
+      "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : EncoderSettings,
       "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ InputAttachment, ... ],
       "[InputSpecification](#cfn-medialive-channel-inputspecification)" : InputSpecification,
       "[LogLevel](#cfn-medialive-channel-loglevel)" : String,
@@ -35,7 +35,8 @@ Properties:
   [ChannelClass](#cfn-medialive-channel-channelclass): String
   [Destinations](#cfn-medialive-channel-destinations): 
     - OutputDestination
-  [EncoderSettings](#cfn-medialive-channel-encodersettings): Json
+  [EncoderSettings](#cfn-medialive-channel-encodersettings): 
+    EncoderSettings
   [InputAttachments](#cfn-medialive-channel-inputattachments): 
     - InputAttachment
   [InputSpecification](#cfn-medialive-channel-inputspecification): 
@@ -66,7 +67,7 @@ For a MediaPackage output group, this ID is not used to make this association\.
 `EncoderSettings`  <a name="cfn-medialive-channel-encodersettings"></a>
 You must include this element once in the channel\. It contains information about all the output encodes \(video, audio, captions\), and about several channel\-wide fetures\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [EncoderSettings](aws-properties-medialive-channel-encodersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputAttachments`  <a name="cfn-medialive-channel-inputattachments"></a>
