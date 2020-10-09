@@ -51,7 +51,7 @@ Name of the conformance pack you want to create\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeliveryS3Bucket`  <a name="cfn-config-conformancepack-deliverys3bucket"></a>
-AWS Config stores intermediate files while processing conformance pack template\.  
+AWS Config stores intermediate files while processing conformance pack template\. Specify the Name of the bucket\. 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
