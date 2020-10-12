@@ -37,7 +37,7 @@ A descriptive or arbitrary ID for the subscription\. This value must be unique w
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Source`  <a name="cfn-greengrass-subscriptiondefinition-subscription-source"></a>
-The originator of the message\. The value can be a thing ARN, a Lambda function ARN, a connector ARN, `cloud` \(which represents the AWS IoT cloud\), or `GGShadowService`\.  
+The originator of the message\. The value can be a thing ARN, the ARN of a Lambda function alias \(recommended\) or version, a connector ARN, `cloud` \(which represents the AWS IoT cloud\), or `GGShadowService`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -49,11 +49,11 @@ The MQTT topic used to route the message\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Target`  <a name="cfn-greengrass-subscriptiondefinition-subscription-target"></a>
-The destination of the message\. The value can be a thing ARN, a Lambda function ARN, a connector ARN, `cloud` \(which represents the AWS IoT cloud\), or `GGShadowService`\.  
+The destination of the message\. The value can be a thing ARN, the ARN of a Lambda function alias \(recommended\) or version, a connector ARN, `cloud` \(which represents the AWS IoT cloud\), or `GGShadowService`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-subscriptiondefinition-subscription--seealso"></a>
+## See also<a name="aws-properties-greengrass-subscriptiondefinition-subscription--seealso"></a>
 +  [Subscription](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-subscription.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -2,7 +2,7 @@
 
 Specifies a route in a route table within a VPC\.
 
-You must specify one of the following targets: internet gateway or virtual private gateway, NAT instance, NAT gateway, VPC peering connection, network interface, or egress\-only internet gateway\.
+You must specify one of the following targets: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, `TransitGatewayId`, or `VpcPeeringConnectionId`\.
 
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NatGatewayId](#cfn-ec2-route-natgatewayid)" : String,
       "[NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid)" : String,
       "[RouteTableId](#cfn-ec2-route-routetableid)" : String,
+      "[TransitGatewayId](#cfn-ec2-route-transitgatewayid)" : String,
       "[VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid)" : String
     }
 }
@@ -40,6 +41,7 @@ Properties:
   [NatGatewayId](#cfn-ec2-route-natgatewayid): String
   [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid): String
   [RouteTableId](#cfn-ec2-route-routetableid): String
+  [TransitGatewayId](#cfn-ec2-route-transitgatewayid): String
   [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
@@ -54,7 +56,7 @@ You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` proper
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationCidrBlock` property\.  
+You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,29 +68,25 @@ The ID of the egress\-only internet gateway\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GatewayId`  <a name="cfn-ec2-route-gatewayid"></a>
-The ID of a gateway attached to your VPC\.  
- You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
+The ID of an internet gateway or virtual private gateway attached to your VPC\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceId`  <a name="cfn-ec2-route-instanceid"></a>
 The ID of a NAT instance in your VPC\.  
-You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NatGatewayId`  <a name="cfn-ec2-route-natgatewayid"></a>
 The ID of a NAT gateway\.  
-You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-route-networkinterfaceid"></a>
 The ID of the network interface\.  
-You must specify only one of the following properties: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, or `VpcPeeringConnectionId`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,17 +97,23 @@ The ID of the route table\. The routing table must be associated with the same V
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`TransitGatewayId`  <a name="cfn-ec2-route-transitgatewayid"></a>
+The ID of a transit gateway\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VpcPeeringConnectionId`  <a name="cfn-ec2-route-vpcpeeringconnectionid"></a>
 The ID of a VPC peering connection\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-route-return-values"></a>
+## Return values<a name="aws-resource-ec2-route-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-route-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the route\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the route\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -147,6 +151,6 @@ The following example adds a route that is added to a gateway\.
          Ref: myInternetGateway
 ```
 
-## See Also<a name="aws-resource-ec2-route--seealso"></a>
+## See also<a name="aws-resource-ec2-route--seealso"></a>
 +  [CreateRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRoute.html) in the *Amazon EC2 API Reference*
 +  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*

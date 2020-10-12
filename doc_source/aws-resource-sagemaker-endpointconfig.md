@@ -1,6 +1,6 @@
 # AWS::SageMaker::EndpointConfig<a name="aws-resource-sagemaker-endpointconfig"></a>
 
-The `AWS::SageMaker::EndpointConfig` resource creates a configuration for an Amazon SageMaker endpoint\. For more information, see [CreateEndpointConfig](https://docs-aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html) in the *SageMaker Developer Guide*\.
+The `AWS::SageMaker::EndpointConfig` resource creates a configuration for an Amazon SageMaker endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html) in the *SageMaker Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sagemaker-endpointconfig-syntax"></a>
 
@@ -12,9 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::EndpointConfig",
   "Properties" : {
+      "[DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig)" : DataCaptureConfig,
       "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
       "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
-      "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md), ... ],
+      "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ ProductionVariant, ... ],
       "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -25,18 +26,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::EndpointConfig
 Properties: 
+  [DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig): 
+    DataCaptureConfig
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
   [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
   [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
-    - [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)
+    - ProductionVariant
   [Tags](#cfn-sagemaker-endpointconfig-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
 
+`DataCaptureConfig`  <a name="cfn-sagemaker-endpointconfig-datacaptureconfig"></a>
+Specifies how to capture endpoint data for model monitor\. The data capture configuration applies to all prodcution variants hosted at the endpoint\.  
+*Required*: No  
+*Type*: [DataCaptureConfig](aws-properties-sagemaker-endpointconfig-datacaptureconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `EndpointConfigName`  <a name="cfn-sagemaker-endpointconfig-endpointconfigname"></a>
-The name of the endpoint configuration\. You specify this name in a [CreateEndpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpoint.html) request\.   
+The name of the endpoint configuration\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
@@ -45,6 +54,14 @@ The name of the endpoint configuration\. You specify this name in a [CreateEndpo
 
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
++ Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
++ Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
++ Alias name: `alias/ExampleAlias`
++ Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+The KMS key policy must grant permission to the IAM role that you specify in your `CreateEndpoint`, `UpdateEndpoint` requests\. For more information, refer to the AWS Key Management Service section[ Using Key Policies in AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)  
+Certain Nitro\-based instances include local storage, dependent on the instance type\. Local storage volumes are encrypted using a hardware module on the instance\. You can't request a `KmsKeyId` when using an instance type with local storage\. If any of the models that you specify in the `ProductionVariants` parameter use nitro\-based instances with local storage, do not specify a value for the `KmsKeyId` parameter\. If you specify a value for `KmsKeyId` when using any nitro\-based instances with local storage, the call to `CreateEndpointConfig` fails\.  
+For a list of instance types that support local instance storage, see [Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)\.  
+For more information about local instance storage encryption, see [SSD Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html)\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `2048`  
@@ -55,6 +72,7 @@ The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon
 A list of `ProductionVariant` objects, one for each model that you want to host at this endpoint\.  
 *Required*: Yes  
 *Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
+*Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-endpointconfig-tags"></a>
@@ -65,7 +83,7 @@ For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFor
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-endpointconfig-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-endpointconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-endpointconfig-return-values-ref"></a>
 

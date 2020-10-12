@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption",
   "Properties" : {
       "[ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname)" : String,
-      "[CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption)" : [CloudWatchLoggingOption](aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.md)
+      "[CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption)" : CloudWatchLoggingOption
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
 Properties: 
   [ApplicationName](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-applicationname): String
   [CloudWatchLoggingOption](#cfn-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption): 
-    [CloudWatchLoggingOption](aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption.md)
+    CloudWatchLoggingOption
 ```
 
 ## Properties<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption-properties"></a>
@@ -107,5 +107,5 @@ BasicApplicationV2CloudWatchLoggingOption:
           - !Ref TestCWLogStream
 ```
 
-## See Also<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--seealso"></a>
+## See also<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--seealso"></a>
 +  [AddApplicationCloudWatchLoggingOption](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationCloudWatchLoggingOption.html) in the *Amazon Kinesis Data Analytics API Reference* 

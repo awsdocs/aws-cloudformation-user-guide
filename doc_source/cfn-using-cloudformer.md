@@ -1,11 +1,11 @@
-# Using CloudFormer \(Beta\) to Create AWS CloudFormation Templates from Existing AWS Resources<a name="cfn-using-cloudformer"></a>
+# Using CloudFormer to create AWS CloudFormation templates from existing AWS resources<a name="cfn-using-cloudformer"></a>
+
+**Important**  
+The beta for the CloudFormer template creation tool has ended\. 
 
 CloudFormer is a template creation beta tool that creates an AWS CloudFormation template from existing AWS resources in your account\. You select any supported AWS resources that are running in your account, and CloudFormer creates a template in an Amazon S3 bucket\.
 
 Use CloudFormer to produce templates that you can use as a starting point\. Not all AWS resources or resource properties are supported\. 
-
-**Important**  
-CloudFormer is currently in beta\. We recommend against utilizing it in critical or production environments\.
 
 The following list outlines the basic procedure for using CloudFormer:
 
@@ -25,15 +25,15 @@ The following list outlines the basic procedure for using CloudFormer:
 
 The following topics describes how to use CloudFormer by walking you through a basic scenario \(a simple website on an Amazon EC2 instance\) that creates a template with multiple resources\. However, this example is just one of many possible scenarios; CloudFormer can create a template from any collection of supported AWS resources\.
 
-## Step 1: Create a CloudFormer Stack<a name="launch-cloudformer"></a>
+## Step 1: Create a CloudFormer stack<a name="launch-cloudformer"></a>
 
 CloudFormer is itself an AWS CloudFormation stack, so the first step is to create and launch the stack from the AWS CloudFormation [console](https://console.aws.amazon.com/cloudformation)\.
 
-**To create a CloudFormer stack using the AWS CloudFormation Console**
+**To create a CloudFormer stack using the AWS CloudFormation console**
 
-1.  Log in to the AWS CloudFormation console and click **Create New Stack** to launch the stack creation wizard\. For instructions on how to log in, see [Logging in to the AWS CloudFormation Console](cfn-console-login.html)\. 
+1.  Log in to the AWS CloudFormation console and click **Create stack**\. For instructions on how to log in, see [Logging in to the AWS CloudFormation console](cfn-console-login.html)\. 
 
-1. In the **Choose a template** section, select **Select a sample template** and then select **CloudFormer** from the drop\-down list\.
+1. Select **Use a sample template**, and in the **Select a sample template** section, select **Choose a sample template** and then select **CloudFormer** from the drop\-down list\.
 
 1. Click **Next** to specify the stack name and input parameters\.
 
@@ -53,7 +53,7 @@ You can't leave the password blank, and you can't use special characters in the 
 
    CloudFormer is an AWS CloudFormation stack, so it must go through the normal stack creation process, which can take a few minutes\.
 
-## Step 2: Launch the CloudFormer Stack<a name="launch-cloudformer-stack"></a>
+## Step 2: Launch the CloudFormer stack<a name="launch-cloudformer-stack"></a>
 
 After the CloudFormer stack's status is **CREATE\_COMPLETE**, you can launch the stack\.
 
@@ -74,7 +74,7 @@ The CloudFormer stack launches a t2\.medium Amazon EC2 instance\. You'll delete 
 
 After you create a CloudFormer stack, it is added to the collection of stacks in your account\. To create another template, just launch the CloudFormer stack again\.
 
-## Step 3: Use CloudFormer to Create a Template<a name="cfn-using-cloudformer-create-template"></a>
+## Step 3: Use CloudFormer to create a template<a name="cfn-using-cloudformer-create-template"></a>
 
 Before you start using CloudFormer to create a template, first ensure that your account has all the AWS resources that you want to include in your template\. This walkthrough assumes that your account has: 
 + An Amazon EC2 instance \(`AWS::EC2::Instance`\)\. 
@@ -150,6 +150,6 @@ In addition to the resources that you explicitly specified, the template include
 
      You can launch the stack later just like you would with any other template, for example, by using the AWS CloudFormation console\.
 
-## Step 4: Delete the CloudFormer Stack<a name="cfn-using-cloudformer-delete-stack"></a>
+## Step 4: Delete the CloudFormer stack<a name="cfn-using-cloudformer-delete-stack"></a>
 
 Now that you have the template, you don't need the CloudFormer stack any more\. To avoid unnecessary charges to your account, select the stack in the AWS CloudFormation console and then choose **Actions** > **Delete Stack**\.

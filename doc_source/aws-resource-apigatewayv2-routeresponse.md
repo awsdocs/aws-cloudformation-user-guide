@@ -44,7 +44,7 @@ The API identifier\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelSelectionExpression`  <a name="cfn-apigatewayv2-routeresponse-modelselectionexpression"></a>
-The model selection expression for the route response\.  
+The model selection expression for the route response\. Supported only for WebSocket APIs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,7 +73,7 @@ The route response key\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-routeresponse-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-routeresponse-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-routeresponse-return-values-ref"></a>
 
@@ -117,5 +117,5 @@ MyRouteResponse:
     RouteResponseKey: $default
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-routeresponse--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-routeresponse--seealso"></a>
 + [CreateRouteResponse](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes-routeid-routeresponses.html#CreateRouteResponse) in the *Amazon API Gateway Version 2 API Reference*

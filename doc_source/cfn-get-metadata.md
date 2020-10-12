@@ -26,7 +26,7 @@ cfn-get-metadata --access-key access.key \
 
 | Name | Description | Required | 
 | --- | --- | --- | 
-|   `-k, --key`   |  For a key\-value pair, returns the name of the key for the value that you specified\. *Type*: String *Example*: For `{ "SampleKey1" : "Key1", "SampleKey2" : "Key2" }`, `cfn-get-metadata -k Key2` returns `SampleKey2`\.  |  No  | 
+|   `-k, --key`   |  For a key\-value pair, returns the name of the key for the value that you specified\. *Type*: String *Example*: For `{ "Key1": "SampleKey1", "Key2": "SampleKey2" }`, `cfn-get-metadata -k Key2` returns `SampleKey2`\.  |  No  | 
 |   `-s, --stack`   |  Name of the Stack\. *Type*: String *Default*: None *Example*: `-s { "Ref" : "AWS::StackName" },`  |  Yes  | 
 |   `-r, --resource`   |  The logical resource ID of the resource that contains the metadata\. *Type*: String *Example*: `-r WebServerHost`  |  Yes  | 
 |  `--role` \(resource signaling only\)  |  The name of an IAM role that is associated with the instance\. *Type*: String Condition: The credential file parameter supersedes this parameter\.  |  No  | 

@@ -30,20 +30,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Broker",
   "Properties" : {
+      "[AuthenticationStrategy](#cfn-amazonmq-broker-authenticationstrategy)" : String,
       "[AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade)" : Boolean,
       "[BrokerName](#cfn-amazonmq-broker-brokername)" : String,
-      "[Configuration](#cfn-amazonmq-broker-configuration)" : [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md),
+      "[Configuration](#cfn-amazonmq-broker-configuration)" : ConfigurationId,
       "[DeploymentMode](#cfn-amazonmq-broker-deploymentmode)" : String,
+      "[EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions)" : EncryptionOptions,
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
-      "[Logs](#cfn-amazonmq-broker-logs)" : [LogList](aws-properties-amazonmq-broker-loglist.md),
-      "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md),
+      "[LdapMetadata](#cfn-amazonmq-broker-ldapmetadata)" : LdapMetadata,
+      "[LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata)" : LdapServerMetadata,
+      "[Logs](#cfn-amazonmq-broker-logs)" : LogList,
+      "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : MaintenanceWindow,
       "[PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible)" : Boolean,
       "[SecurityGroups](#cfn-amazonmq-broker-securitygroups)" : [ String, ... ],
+      "[StorageType](#cfn-amazonmq-broker-storagetype)" : String,
       "[SubnetIds](#cfn-amazonmq-broker-subnetids)" : [ String, ... ],
-      "[Tags](#cfn-amazonmq-broker-tags)" : [ [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md), ... ],
-      "[Users](#cfn-amazonmq-broker-users)" : [ [User](aws-properties-amazonmq-broker-user.md), ... ]
+      "[Tags](#cfn-amazonmq-broker-tags)" : [ TagsEntry, ... ],
+      "[Users](#cfn-amazonmq-broker-users)" : [ User, ... ]
     }
 }
 ```
@@ -53,30 +58,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AmazonMQ::Broker
 Properties: 
+  [AuthenticationStrategy](#cfn-amazonmq-broker-authenticationstrategy): String
   [AutoMinorVersionUpgrade](#cfn-amazonmq-broker-autominorversionupgrade): Boolean
   [BrokerName](#cfn-amazonmq-broker-brokername): String
   [Configuration](#cfn-amazonmq-broker-configuration): 
-    [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)
+    ConfigurationId
   [DeploymentMode](#cfn-amazonmq-broker-deploymentmode): String
+  [EncryptionOptions](#cfn-amazonmq-broker-encryptionoptions): 
+    EncryptionOptions
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
+  [LdapMetadata](#cfn-amazonmq-broker-ldapmetadata): 
+    LdapMetadata
+  [LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata): 
+    LdapServerMetadata
   [Logs](#cfn-amazonmq-broker-logs): 
-    [LogList](aws-properties-amazonmq-broker-loglist.md)
+    LogList
   [MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime): 
-    [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)
+    MaintenanceWindow
   [PubliclyAccessible](#cfn-amazonmq-broker-publiclyaccessible): Boolean
   [SecurityGroups](#cfn-amazonmq-broker-securitygroups): 
     - String
+  [StorageType](#cfn-amazonmq-broker-storagetype): String
   [SubnetIds](#cfn-amazonmq-broker-subnetids): 
     - String
   [Tags](#cfn-amazonmq-broker-tags): 
-    - [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md)
+    - TagsEntry
   [Users](#cfn-amazonmq-broker-users): 
-    - [User](aws-properties-amazonmq-broker-user.md)
+    - User
 ```
 
 ## Properties<a name="aws-resource-amazonmq-broker-properties"></a>
+
+`AuthenticationStrategy`  <a name="cfn-amazonmq-broker-authenticationstrategy"></a>
+Optional\. The authentication strategy used to secure the broker\. The default is `SIMPLE`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-amazonmq-broker-autominorversionupgrade"></a>
 Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions\. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot\.  
@@ -97,9 +116,17 @@ A list of information about the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
-The deployment mode of the broker\.  
+The deployment mode of the broker\. Available values:  
++ `SINGLE_INSTANCE`
++ `ACTIVE_STANDBY_MULTI_AZ`
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EncryptionOptions`  <a name="cfn-amazonmq-broker-encryptionoptions"></a>
+Encryption options for the broker\.  
+*Required*: No  
+*Type*: [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineType`  <a name="cfn-amazonmq-broker-enginetype"></a>
@@ -118,7 +145,19 @@ The version of the broker engine\. For a list of supported engine versions, see 
 The broker's instance type\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LdapMetadata`  <a name="cfn-amazonmq-broker-ldapmetadata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [LdapMetadata](aws-properties-amazonmq-broker-ldapmetadata.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LdapServerMetadata`  <a name="cfn-amazonmq-broker-ldapservermetadata"></a>
+Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\.  
+*Required*: No  
+*Type*: [LdapServerMetadata](aws-properties-amazonmq-broker-ldapservermetadata.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logs`  <a name="cfn-amazonmq-broker-logs"></a>
 Enables Amazon CloudWatch logging for brokers\.  
@@ -142,6 +181,12 @@ Enables connections from applications outside of the VPC that hosts the broker's
 The list of rules \(1 minimum, 125 maximum\) that authorize connections to brokers\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StorageType`  <a name="cfn-amazonmq-broker-storagetype"></a>
+The broker's storage type\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-amazonmq-broker-subnetids"></a>
@@ -162,7 +207,7 @@ The list of ActiveMQ users \(persons or applications\) who can access queues and
 *Type*: List of [User](aws-properties-amazonmq-broker-user.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-broker-return-values"></a>
+## Return values<a name="aws-resource-amazonmq-broker-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-broker-return-values-ref"></a>
 
@@ -346,53 +391,45 @@ The following example creates a complex Amazon MQ broker with two users that don
 #### YAML<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--yaml"></a>
 
 ```
---- 
-Description: "Create a complex AmazonMQ broker"
-Resources: 
+Description: Create a complex AmazonMQ broker
+Resources:
   ComplexBroker:
-    Type: "AWS::AmazonMQ::Broker"
-    Properties: 
-      AutoMinorVersionUpgrade: "false"
+    Type: 'AWS::AmazonMQ::Broker'
+    Properties:
+      AutoMinorVersionUpgrade: 'false'
       BrokerName: MyComplexBroker
-      Configuration: 
-        Id: !GetAtt Configuration1.Id
-        Revision: !GetAtt Configuration1.Revision
+      Configuration:
+        Id: !Ref Configuration1
+        Revision: !GetAtt 
+          - Configuration1
+          - Revision
       DeploymentMode: SINGLE_INSTANCE
       EngineType: ActiveMQ
-      EngineVersion: "5.15.0"
+      EngineVersion: 5.15.0
       HostInstanceType: mq.t2.micro
       Logs:
-        General: "true"
-        Audit: "false"
-      MaintenanceWindowStartTime: 
+        General: true
+        Audit: false
+      MaintenanceWindowStartTime:
         DayOfWeek: Monday
-        TimeOfDay: "22:45"
+        TimeOfDay: '22:45'
         TimeZone: America/Los_Angeles
-      PubliclyAccessible: "true"
+      PubliclyAccessible: 'true'
       SecurityGroups:
-        - "sg-a1b234cd"
-        - "sg-e5f678gh"
+        - sg-a1b234cd
+        - sg-e5f678gh
       SubnetIds:
-        - "subnet-12a3b45c"
-        - "subnet-67d8e90f"
-      Users: 
-        - 
-          ConsoleAccess: "true"
-          Password: 
-            Ref: "BrokerPassword1"
-          Username: 
-            Ref: "BrokerUsername1"
-        - 
-          Password: 
-            Ref: "BrokerPassword2"
-          Username: 
-            Ref: "BrokerUsername2"
-        - 
-          Groups: 
+        - subnet-12a3b45c
+        - subnet-67d8e90f
+      Users:
+        - ConsoleAccess: 'true'
+          Password: !Ref AmazonMqPassword1
+          Username: !Ref AmazonMqUsername1
+        - Password: !Ref AmazonMqPassword2
+          Username: !Ref AmazonMqUsername2
+        - Groups:
             - MyGroup1
             - MyGroup2
-          Password: 
-            Ref: "BrokerPassword3"
-          Username: 
-            Ref: "BrokerUsername3"
+          Password: !Ref AmazonMqPassword3
+          Username: !Ref AmazonMqUsername3
 ```

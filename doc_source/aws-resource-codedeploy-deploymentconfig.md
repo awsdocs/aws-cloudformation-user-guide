@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeDeploy::DeploymentConfig",
   "Properties" : {
       "[DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname)" : String,
-      "[MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)" : [MinimumHealthyHosts](aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.md)
+      "[MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)" : MinimumHealthyHosts
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::CodeDeploy::DeploymentConfig
 Properties: 
   [DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname): String
   [MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts): 
-    [MinimumHealthyHosts](aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.md)
+    MinimumHealthyHosts
 ```
 
 ## Properties<a name="aws-resource-codedeploy-deploymentconfig-properties"></a>
@@ -51,7 +51,7 @@ For example, to set a minimum of 95% healthy instance, specify a type of FLEET\_
 *Type*: [MinimumHealthyHosts](aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-codedeploy-deploymentconfig-return-values"></a>
+## Return values<a name="aws-resource-codedeploy-deploymentconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-codedeploy-deploymentconfig-return-values-ref"></a>
 
@@ -72,8 +72,8 @@ The following example requires at least 75% of the fleet to be healthy\. For exa
   "Type" : "AWS::CodeDeploy::DeploymentConfig",
   "Properties" : {
     "MinimumHealthyHosts" : {
-    "Type" : "FLEET_PERCENT",
-    "Value" : "75"
+      "Type" : "FLEET_PERCENT",
+      "Value" : 75
     }
   }
 }
@@ -86,6 +86,6 @@ TwentyFivePercentAtATime:
   Type: AWS::CodeDeploy::DeploymentConfig
   Properties: 
     MinimumHealthyHosts: 
-    Type: "FLEET_PERCENT"
-    Value: 75
+      Type: "FLEET_PERCENT"
+      Value: 75
 ```

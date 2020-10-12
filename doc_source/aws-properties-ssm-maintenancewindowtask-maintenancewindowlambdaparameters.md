@@ -1,6 +1,6 @@
 # AWS::SSM::MaintenanceWindowTask MaintenanceWindowLambdaParameters<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters"></a>
 
-The `MaintenanceWindowLambdaParameters` property type specifies the parameters for a `LAMBDA` task type for a Maintenance Window task in AWS Systems Manager\.
+The `MaintenanceWindowLambdaParameters` property type specifies the parameters for a `LAMBDA` task type for a maintenance window task in AWS Systems Manager\.
 
  `MaintenanceWindowLambdaParameters` is a property of the [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html) property type\.
 
@@ -38,6 +38,8 @@ Client\-specific information to pass to the Lambda function that you're invoking
 
 `Payload`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload"></a>
 JSON to provide to your Lambda function as input\.  
+Although `Type` is listed as "String" for this property, the payload content must be formatted as a Base64\-encoded binary data object\.
+*Length Constraint:* 4096  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

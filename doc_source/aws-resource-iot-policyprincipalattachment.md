@@ -53,21 +53,21 @@ The following example attaches a policy to a principal\.
 
 ```
 {
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources": {
-      "MyPolicyPrincipalAttachment": {
-         "Type": "AWS::IoT::PolicyPrincipalAttachment",
-         "Properties": {
-            "PolicyName": {
-            "Ref": "NameParameter"
-         },
-         "Principal": "arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2"
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Resources":{
+      "MyPolicyPrincipalAttachment":{
+         "Type":"AWS::IoT::PolicyPrincipalAttachment",
+         "Properties":{
+            "PolicyName":{
+               "Ref":"NameParameter"
+            },
+            "Principal":"arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2"
+         }
       }
-     }
    },
-   "Parameters": {
-      "NameParameter": {
-         "Type": "String"
+   "Parameters":{
+      "NameParameter":{
+         "Type":"String"
       }
    }
 }
@@ -76,15 +76,15 @@ The following example attaches a policy to a principal\.
 #### YAML<a name="aws-resource-iot-policyprincipalattachment--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-   MyPolicyPrincipalAttachment: 
-      Type: AWS::IoT::PolicyPrincipalAttachment
-      Properties: 
-         PolicyName: 
-            Ref: "NameParameter"
-         Principal: "arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2"
-Parameters: 
-   NameParameter: 
-      Type: "String"
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  MyPolicyPrincipalAttachment:
+    Type: AWS::IoT::PolicyPrincipalAttachment
+    Properties:
+      PolicyName:
+        Ref: NameParameter
+      Principal: arn:aws:iot:ap-southeast-2:123456789012:cert/a1234567b89c012d3e4fg567hij8k9l01mno1p23q45678901rs234567890t1u2
+Parameters:
+  NameParameter:
+    Type: String
 ```

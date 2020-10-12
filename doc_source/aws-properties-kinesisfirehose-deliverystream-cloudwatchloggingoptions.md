@@ -37,6 +37,9 @@ The name of the CloudWatch Logs log group that contains the log stream that Kine
 Conditional\. If you enable logging, you must specify this property\.  
 *Required*: Conditional  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `512`  
+*Pattern*: `[\.\-_/#A-Za-z0-9]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogStreamName`  <a name="cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname"></a>
@@ -44,4 +47,7 @@ The name of the CloudWatch Logs log stream that Kinesis Data Firehose uses to se
 Conditional\. If you enable logging, you must specify this property\.   
 *Required*: Conditional  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `512`  
+*Pattern*: `[^:*]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

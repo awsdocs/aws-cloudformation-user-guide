@@ -1,8 +1,8 @@
 # AWS::EC2::SecurityGroup Ingress<a name="aws-properties-ec2-security-group-rule-1"></a>
 
-Specifies an inbound rule for a security group\.
+Specifies an inbound rule for a security group\. An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address range, or from the instances associated with the specified security group\.
 
-You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, `DestinationSecurityGroupId`, or `SourceSecurityGroupId`\.
+You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\.
 
 The EC2 Security Group Rule is an embedded property of the `AWS::EC2::SecurityGroup` type\.
 
@@ -77,27 +77,27 @@ The IP protocol name \(`tcp`, `udp`, `icmp`, `icmpv6`\) or number \(see [Protoco
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourcePrefixListId`  <a name="cfn-ec2-securitygroup-ingress-sourceprefixlistid"></a>
-\[EC2\-VPC only\] The prefix list IDs for an AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
+\[EC2\-VPC only\] The ID of a prefix list\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceSecurityGroupId`  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupid"></a>
- *For VPC security groups only*\. The ID of the security group to allow access\. You can use the `Ref` intrinsic function to refer to the logical ID of a security group defined in the same template\.  
+The ID of the security group\. You must specify either the security group ID or the security group name in the request\. For security groups in a nondefault VPC, you must specify the security group ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceSecurityGroupName`  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupname"></a>
-\[EC2\-Classic, default VPC\] The name of the source security group\. You can't specify this parameter in combination with the following parameters: the CIDR IP address range, the start of the port range, the IP protocol, and the end of the port range\. Creates rules that grant full ICMP, UDP, and TCP access\. To create a rule with a specific IP protocol and port range, use a set of IP permissions instead\. For EC2\-VPC, the source security group must be in the same VPC\.  
+\[EC2\-Classic, default VPC\] The name of the source security group\. You can't specify this parameter in combination with an IP address range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceSecurityGroupOwnerId`  <a name="cfn-ec2-security-group-rule-sourcesecuritygroupownerid"></a>
-The AWS account ID of the owner of the security group that is specified in the `SourceSecurityGroupName` property\.  
-If you specify `SourceSecurityGroupName` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
-*Required*: No  
+\[nondefault VPC\] The AWS account ID for the source security group, if the source security group is in a different account\. You can't specify this property with an IP address range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
+If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Parameters](#cfn-glue-partition-partitioninput-parameters)" : Json,
-  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md),
+  "[StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor)" : StorageDescriptor,
   "[Values](#cfn-glue-partition-partitioninput-values)" : [ String, ... ]
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Parameters](#cfn-glue-partition-partitioninput-parameters): Json
   [StorageDescriptor](#cfn-glue-partition-partitioninput-storagedescriptor): 
-    [StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md)
+    StorageDescriptor
   [Values](#cfn-glue-partition-partitioninput-values): 
     - String
 ```
@@ -42,9 +42,10 @@ Provides information about the physical location where the partition is stored\.
 
 `Values`  <a name="cfn-glue-partition-partitioninput-values"></a>
 The values of the partition\. Although this parameter is not required by the SDK, you must specify this parameter for a valid input\.  
+The values for the keys for the new partition must be passed as an array of String objects that must be ordered in the same order as the partition keys appearing in the Amazon S3 prefix\. Otherwise AWS Glue will add the values to the wrong keys\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-glue-partition-partitioninput--seealso"></a>
+## See also<a name="aws-properties-glue-partition-partitioninput--seealso"></a>
 +  [PartitionInput](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-PartitionInput) in the *AWS Glue Developer Guide* 

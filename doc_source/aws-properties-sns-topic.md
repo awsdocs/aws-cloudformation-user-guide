@@ -4,7 +4,6 @@ The `AWS::SNS::Topic` resource creates a topic to which notifications can be pub
 
 **Note**  
 One user can create a maximum of 100,000 topics\.
-This action is idempotent: If the requester already owns a topic with the specified name, that topic's ARN is returned without creating a new topic\.
 
 ## Syntax<a name="aws-properties-sns-topic-syntax"></a>
 
@@ -16,9 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SNS::Topic",
   "Properties" : {
+      "[ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication)" : Boolean,
       "[DisplayName](#cfn-sns-topic-displayname)" : String,
       "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
-      "[Subscription](#cfn-sns-topic-subscription)" : [ [Subscription](aws-properties-sns-subscription.md), ... ],
+      "[Subscription](#cfn-sns-topic-subscription)" : [ Subscription, ... ],
+      "[Tags](#cfn-sns-topic-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TopicName](#cfn-sns-topic-topicname)" : String
     }
 }
@@ -29,14 +30,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SNS::Topic
 Properties: 
+  [ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication): Boolean
   [DisplayName](#cfn-sns-topic-displayname): String
   [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription): 
-    - [Subscription](aws-properties-sns-subscription.md)
+    - Subscription
+  [Tags](#cfn-sns-topic-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TopicName](#cfn-sns-topic-topicname): String
 ```
 
 ## Properties<a name="aws-properties-sns-topic-properties"></a>
+
+`ContentBasedDeduplication`  <a name="cfn-sns-topic-contentbaseddeduplication"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisplayName`  <a name="cfn-sns-topic-displayname"></a>
 The display name to use for an Amazon SNS topic with SMS subscriptions\.  
@@ -57,6 +67,13 @@ The SNS subscriptions \(endpoints\) for this topic\.
 *Type*: [List](aws-properties-sns-subscription.md) of [Subscription](aws-properties-sns-subscription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags`  <a name="cfn-sns-topic-tags"></a>
+The list of tags to add to a new topic\.  
+To be able to tag a topic on creation, you must have the `sns:CreateTopic` and `sns:TagResource` permissions\.
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TopicName`  <a name="cfn-sns-topic-topicname"></a>
 The name of the topic you want to create\. Topic names must include only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 256 characters long\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the topic name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
@@ -65,7 +82,7 @@ If you specify a name, you can't perform updates that require replacement of thi
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-sns-topic-return-values"></a>
+## Return values<a name="aws-properties-sns-topic-return-values"></a>
 
 ### Ref<a name="aws-properties-sns-topic-return-values-ref"></a>
 
@@ -86,9 +103,9 @@ Returns the name of an Amazon SNS topic\.
 
 ## Examples<a name="aws-properties-sns-topic--examples"></a>
 
-### An Amazon SNS topic subscribed to which two Amazon SQS queues are subscribed<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_subscribed_to_which_two_Amazon_SQS_queues_are_subscribed"></a>
+### An Amazon SNS topic with two Amazon SQS queue subscriptions<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions"></a>
 
-#### JSON<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_subscribed_to_which_two_Amazon_SQS_queues_are_subscribed--json"></a>
+#### JSON<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions--json"></a>
 
 ```
 "MySNSTopic" : {
@@ -106,26 +123,25 @@ Returns the name of an Amazon SNS topic\.
 }
 ```
 
-#### YAML<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_subscribed_to_which_two_Amazon_SQS_queues_are_subscribed--yaml"></a>
+#### YAML<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions--yaml"></a>
 
 ```
 MySNSTopic:
   Type: AWS::SNS::Topic
   Properties:
     Subscription:
-      -
-        Endpoint:
+      - Endpoint:
           Fn::GetAtt:
             - "MyQueue1"
             - "Arn"
-          Protocol: "sqs"
+        Protocol: "sqs"
       - Endpoint:
           Fn::GetAtt:
             - "MyQueue2"
             - "Arn"
-          Protocol: "sqs"
+        Protocol: "sqs"
     TopicName: "SampleTopic"
 ```
 
-## See Also<a name="aws-properties-sns-topic--seealso"></a>
+## See also<a name="aws-properties-sns-topic--seealso"></a>
 +  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 

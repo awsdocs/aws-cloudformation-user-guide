@@ -57,13 +57,13 @@ The ARN of an IAM role that permits CloudWatch Logs to send data to the specifie
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArn`  <a name="cfn-logs-destination-targetarn"></a>
-The Amazon Resource Name \(ARN\) of the physical target to where the log events are delivered \(for example, a Kinesis stream\)\.  
+The Amazon Resource Name \(ARN\) of the physical target where the log events are delivered \(for example, a Kinesis stream\)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-logs-destination-return-values"></a>
+## Return values<a name="aws-resource-logs-destination-return-values"></a>
 
 ### Ref<a name="aws-resource-logs-destination-return-values-ref"></a>
 

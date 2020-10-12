@@ -47,7 +47,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 `Path`  <a name="cfn-iam-instanceprofile-path"></a>
  The path to the instance profile\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
-This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(\\u0021\) through the DEL character \(\\u007F\), including most punctuation characters, digits, and upper and lowercased letters\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -56,12 +56,12 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Roles`  <a name="cfn-iam-instanceprofile-roles"></a>
-The role associated with the instance profile\.  
+The name of the role to associate with the instance profile\. Only one role can be assigned to an EC2 instance at a time, and all applications on the instance share the same role and permissions\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-instanceprofile-return-values"></a>
+## Return values<a name="aws-resource-iam-instanceprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-instanceprofile-return-values-ref"></a>
 
@@ -86,5 +86,44 @@ Returns the Amazon Resource Name \(ARN\) for the instance profile\. For example:
  `{"Fn::GetAtt" : ["MyProfile", "Arn"] }`   
 This returns a value such as `arn:aws:iam::1234567890:instance-profile/MyProfile-ASDNSDLKJ`\.
 
-## See Also<a name="aws-resource-iam-instanceprofile--seealso"></a>
+## Examples<a name="aws-resource-iam-instanceprofile--examples"></a>
+
+### IAM Instance Profile<a name="aws-resource-iam-instanceprofile--examples--IAM_Instance_Profile"></a>
+
+In this example, the InstanceProfile resource refers to the role by specifying its name, "MyRole"\.
+
+#### JSON<a name="aws-resource-iam-instanceprofile--examples--IAM_Instance_Profile--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources": {
+      "MyInstanceProfile": {
+         "Type": "AWS::IAM::InstanceProfile",
+         "Properties": {
+            "Path": "/",
+            "Roles": [ {
+               "Ref": "MyRole"
+            } ]
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-iam-instanceprofile--examples--IAM_Instance_Profile--yaml"></a>
+
+```
+AWSTemplateFormatVersion: "2010-09-09"
+Resources: 
+  MyInstanceProfile: 
+    Type: "AWS::IAM::InstanceProfile"
+    Properties: 
+      Path: "/"
+      Roles: 
+        - 
+          Ref: "MyRole"
+```
+
+## See also<a name="aws-resource-iam-instanceprofile--seealso"></a>
 +  [CreateInstanceProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html) in the *AWS Identity and Access Management API Reference* 

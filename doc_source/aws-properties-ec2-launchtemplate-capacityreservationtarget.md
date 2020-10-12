@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-capacityreservationtarget-properties"></a>
 
 `CapacityReservationId`  <a name="cfn-ec2-launchtemplate-capacityreservationtarget-capacityreservationid"></a>
-The ID of the Capacity Reservation\.  
+The ID of the Capacity Reservation in which to run the instance\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

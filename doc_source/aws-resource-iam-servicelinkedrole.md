@@ -61,6 +61,20 @@ The description of the role\.
 *Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+## Return values<a name="aws-resource-iam-servicelinkedrole-return-values"></a>
+
+### Ref<a name="aws-resource-iam-servicelinkedrole-return-values-ref"></a>
+
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+
+For example:
+
+ `{ "Ref": "BasicSLR" }` 
+
+For the `AWS::IAM::ServiceLinkedRole` resource with the logical ID `BasicSLR`, `Ref` will return the name of the service\-linked role\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ## Examples<a name="aws-resource-iam-servicelinkedrole--examples"></a>
 
 ### Create an IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling"></a>
@@ -70,45 +84,40 @@ The following example creates a service\-linked role that can be assumed by the 
 #### JSON<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--json"></a>
 
 ```
-            { 
-              "Description": "SLR resource create test - Auto Scaling",
-              "Resources": {
-                "BasicSLR": {
-                  "Type": "AWS::IAM::ServiceLinkedRole",
-                  "Properties": {
-                     "AWSServiceName": "autoscaling.amazonaws.com",
-                     "Description": "Test SLR description",
-                     "CustomSuffix":
-                     "TestSuffix"
-                     }
-                    }
-                   },
-                   "Outputs": {
-                     "SLRId": {
-                       "Value": {
-                       "Ref": "BasicSLR"
-                    }
-                   }
-                  }
-                }
+{
+    "Description": "SLR resource create test - Auto Scaling",
+    "Resources": {
+        "BasicSLR": {
+            "Type": "AWS::IAM::ServiceLinkedRole",
+            "Properties": {
+                "AWSServiceName": "autoscaling.amazonaws.com",
+                "Description": "Test SLR description",
+                "CustomSuffix": "TestSuffix"
+            }
+        }
+    },
+    "Outputs": {
+        "SLRId": {
+            "Value": {
+                "Ref": "BasicSLR"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
 
 ```
-            Description: "SLR resource create test - &AS;"
-            Resources:
-              BasicSLR:
-              Type: "AWS::&IAM;::ServiceLinkedRole"
-              Properties:
-                AWSServiceName: "autoscaling.amazonaws.com" 
-                Description: "Test SLR description"
-                CustomSuffix: "TestSuffix"
-            Outputs:
-              SLRId:
-                Value: !Ref BasicSLR
+Description: SLR resource create test - Auto Scaling
+Resources:
+  BasicSLR:
+    Type: 'AWS::IAM::ServiceLinkedRole'
+    Properties:
+      AWSServiceName: autoscaling.amazonaws.com
+      Description: Test SLR description
+      CustomSuffix: TestSuffix
+Outputs:
+  SLRId:
+    Value: !Ref BasicSLR
 ```
-
-## See Also<a name="aws-resource-iam-servicelinkedrole--seealso"></a>
-+  [CreateServiceLinkedRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateServiceLinkedRole.html) in the *AWS Identity and Access Management API Reference* 
-+  [Using Service\-Linked Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html) in the *AWS Identity and Access Management User Guide* 

@@ -5,7 +5,7 @@ The `AWS::RDS::DBParameterGroup` resource creates a custom parameter group for a
 This type can be declared in a template and referenced in the `DBParameterGroupName` property of an ` [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)` resource\.
 
 **Note**  
-Applying a parameter group to a DB instance may require the instance to reboot, resulting in a database outage for the duration of the reboot\.
+Applying a parameter group to a DB instance may require the DB instance to reboot, resulting in a database outage for the duration of the reboot\.
 
 ## Syntax<a name="aws-properties-rds-dbparametergroup-syntax"></a>
 
@@ -47,18 +47,21 @@ Provides the customer\-specified description for this DB Parameter Group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Family`  <a name="cfn-rds-dbparametergroup-family"></a>
-Provides the name of the DB Parameter Group Family that this DB Parameter Group is compatible with\.  
+The DB parameter group family name\. A DB parameter group can be associated with one and only one DB parameter group family, and can be applied only to a DB instance running a DB engine and engine version compatible with that DB parameter group family\.  
+The DB parameter group family can't be changed when updating a DB parameter group\.
+To list all of the available parameter group families, use the following command:  
+`aws rds describe-db-engine-versions --query "DBEngineVersions[].DBParameterGroupFamily"`  
+The output contains duplicates\.  
+For more information, see `[CreateDBParameterGroup](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBParameterGroup.html)`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-rds-dbparametergroup-parameters"></a>
-An array of parameter names, values, and the apply method for the parameter update\. At least one parameter name, value, and apply method must be supplied; subsequent arguments are optional\. A maximum of 20 parameters may be modified in a single request\.  
- **MySQL**   
-Valid Values \(for Apply method\): `immediate` \| `pending-reboot`   
-You can use the immediate value with dynamic parameters only\. You can use the `pending-reboot` value for both dynamic and static parameters, and changes are applied when DB Instance reboots\.  
- **Oracle**   
-Valid Values \(for Apply method\): `pending-reboot`   
+An array of parameter names and values for the parameter update\. At least one parameter name and value must be supplied\. Subsequent arguments are optional\. You can modify a maximum of 20 parameters in a single request\.  
+For more information about DB parameters and DB parameter groups for Amazon RDS DB engines, see [ Working with DB Parameter Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html) in the *Amazon RDS User Guide*\.  
+For more information about DB cluster and DB instance parameters and parameter groups for Amazon Aurora DB engines, see [ Working with DB Parameter Groups and DB Cluster Parameter Groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html) in the *Amazon Aurora User Guide*\.  
+AWS CloudFormation doesn't support specifying an apply method for each individual parameter\. The default apply method for each parameter is used\.
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -69,7 +72,7 @@ Tags to assign to the DB parameter group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-rds-dbparametergroup-return-values"></a>
+## Return values<a name="aws-properties-rds-dbparametergroup-return-values"></a>
 
 ### Ref<a name="aws-properties-rds-dbparametergroup-return-values-ref"></a>
 

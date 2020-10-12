@@ -33,7 +33,7 @@ In a call to `GetDeploymentConfig`, CodeDeployDefault\.OneAtATime returns a mini
 For more information, see [AWS CodeDeploy Instance Health](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-health.html) in the *AWS CodeDeploy User Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `FLEET_PERCENT | HOST_COUNT`  
+*Allowed values*: `FLEET_PERCENT | HOST_COUNT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value"></a>

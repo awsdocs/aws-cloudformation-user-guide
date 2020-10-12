@@ -1,14 +1,14 @@
-# Amazon RDS Template Snippets<a name="quickref-rds"></a>
+# Amazon RDS template snippets<a name="quickref-rds"></a>
 
 **Topics**
-+ [Amazon RDS DB Instance Resource](#scenario-rds-instance)
-+ [Amazon RDS Oracle Database DB Instance Resource](#scenario-rds-oracleinstance)
-+ [Amazon RDS DBSecurityGroup Resource for CIDR Range](#scenario-rds-security-group-cidr)
++ [Amazon RDS DB instance resource](#scenario-rds-instance)
++ [Amazon RDS oracle database DB instance resource](#scenario-rds-oracleinstance)
++ [Amazon RDS DBSecurityGroup resource for CIDR range](#scenario-rds-security-group-cidr)
 + [Amazon RDS DBSecurityGroup with an Amazon EC2 security group](#scenario-rds-security-group-ec2)
 + [Multiple VPC security groups](#scenario-multiple-vpc-security-groups)
-+ [Amazon RDS Database Instance in a VPC Security Group](#w4669ab1c17c23c77c15)
++ [Amazon RDS database instance in a VPC security group](#w6974ab1c27c22c77c15)
 
-## Amazon RDS DB Instance Resource<a name="scenario-rds-instance"></a>
+## Amazon RDS DB instance resource<a name="scenario-rds-instance"></a>
 
 This example shows an Amazon RDS DB Instance resource\. Because the optional EngineVersion property is not specified, the default engine version is used for this DB Instance\. For details about the default engine version and other default settings, see [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html)\. The DBSecurityGroups property authorizes network ingress to the AWS::RDS::DBSecurityGroup resources named MyDbSecurityByEC2SecurityGroup and MyDbSecurityByCIDRIPGroup\. For details, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. The DB Instance resource also has a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this DB Instance before deleting it during stack deletion\.
 
@@ -21,7 +21,7 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  4.      "DBSecurityGroups" : [
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
  6.      "AllocatedStorage" : "5",
- 7.      "DBInstanceClass" : "db.m1.small",
+ 7.      "DBInstanceClass" : "db.t2.small",
  8.      "Engine" : "MySQL",
  9.      "MasterUsername" : "MyName",
 10.      "MasterUserPassword" : "MyPassword"
@@ -40,14 +40,14 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  5.     - Ref: MyDbSecurityByEC2SecurityGroup
  6.     - Ref: MyDbSecurityByCIDRIPGroup
  7.     AllocatedStorage: '5'
- 8.     DBInstanceClass: db.m1.small
+ 8.     DBInstanceClass: db.t2.small
  9.     Engine: MySQL
 10.     MasterUsername: MyName
 11.     MasterUserPassword: MyPassword
 12.   DeletionPolicy: Snapshot
 ```
 
-## Amazon RDS Oracle Database DB Instance Resource<a name="scenario-rds-oracleinstance"></a>
+## Amazon RDS oracle database DB instance resource<a name="scenario-rds-oracleinstance"></a>
 
 This example creates an Oracle Database DB Instance resource by specifying the Engine as oracle\-ee with a license model of bring\-your\-own\-license\. For details about the settings for Oracle Database DB instances, see [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html)\. The DBSecurityGroups property authorizes network ingress to the AWS::RDS::DBSecurityGroup resources named MyDbSecurityByEC2SecurityGroup and MyDbSecurityByCIDRIPGroup\. For details, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. The DB Instance resource also has a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this DB Instance before deleting it during stack deletion\.
 
@@ -60,7 +60,7 @@ This example creates an Oracle Database DB Instance resource by specifying the E
  4.      "DBSecurityGroups" : [
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
  6.      "AllocatedStorage" : "5",
- 7.      "DBInstanceClass" : "db.m1.small",
+ 7.      "DBInstanceClass" : "db.t2.small",
  8.      "Engine" : "oracle-ee",
  9.      "LicenseModel" : "bring-your-own-license",
 10.      "MasterUsername" : "master",
@@ -80,7 +80,7 @@ This example creates an Oracle Database DB Instance resource by specifying the E
  5.     - Ref: MyDbSecurityByEC2SecurityGroup
  6.     - Ref: MyDbSecurityByCIDRIPGroup
  7.     AllocatedStorage: '5'
- 8.     DBInstanceClass: db.m1.small
+ 8.     DBInstanceClass: db.t2.small
  9.     Engine: oracle-ee
 10.     LicenseModel: bring-your-own-license
 11.     MasterUsername: master
@@ -88,7 +88,7 @@ This example creates an Oracle Database DB Instance resource by specifying the E
 13.   DeletionPolicy: Snapshot
 ```
 
-## Amazon RDS DBSecurityGroup Resource for CIDR Range<a name="scenario-rds-security-group-cidr"></a>
+## Amazon RDS DBSecurityGroup resource for CIDR range<a name="scenario-rds-security-group-cidr"></a>
 
 This example shows an Amazon RDS DBSecurityGroup resource with ingress authorization for the specified CIDR range in the format ddd\.ddd\.ddd\.ddd/dd\. For details, see [AWS::RDS::DBSecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html) and [Ingress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group-rule.html)\.
 
@@ -215,7 +215,7 @@ This example shows an [AWS::RDS::DBSecurityGroup](https://docs.aws.amazon.com/AW
          "Type" : "AWS::RDS::DBInstance",
          "Properties" : {
             "AllocatedStorage" : "5",
-            "DBInstanceClass" : "db.m1.small",
+            "DBInstanceClass" : "db.t2.small",
            "DBName" : {"Ref": "MyDBName" },
             "DBSecurityGroups" : [ { "Ref" : "DbSecurityByEC2SecurityGroup" } ],
             "DBSubnetGroupName" : { "Ref" : "MyDBSubnetGroup" },
@@ -251,7 +251,7 @@ Resources:
     Type: AWS::RDS::DBInstance
     Properties:
       AllocatedStorage: '5'
-      DBInstanceClass: db.m1.small
+      DBInstanceClass: db.t2.small
       DBName:
         Ref: MyDBName
       DBSecurityGroups:
@@ -277,7 +277,7 @@ Resources:
         EC2SecurityGroupOwnerId: '111122223333'
 ```
 
-## Amazon RDS Database Instance in a VPC Security Group<a name="w4669ab1c17c23c77c15"></a>
+## Amazon RDS database instance in a VPC security group<a name="w6974ab1c27c22c77c15"></a>
 
 This example shows an Amazon RDS database instance associated with an Amazon EC2 VPC security group\.
 

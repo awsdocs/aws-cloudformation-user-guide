@@ -1,5 +1,5 @@
-# Amazon Kinesis Resource Type Reference<a name="AWS_Kinesis"></a>
+# Amazon Kinesis resource type reference<a name="AWS_Kinesis"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Kinesis::Stream](aws-resource-kinesis-stream.md)
 + [AWS::Kinesis::StreamConsumer](aws-resource-kinesis-streamconsumer.md)

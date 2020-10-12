@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Host](#cfn-batch-jobdefinition-volumes-host)" : [VolumesHost](aws-properties-batch-jobdefinition-volumeshost.md),
+  "[Host](#cfn-batch-jobdefinition-volumes-host)" : VolumesHost,
   "[Name](#cfn-batch-jobdefinition-volumes-name)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Host](#cfn-batch-jobdefinition-volumes-host): 
-    [VolumesHost](aws-properties-batch-jobdefinition-volumeshost.md)
+    VolumesHost
   [Name](#cfn-batch-jobdefinition-volumes-name): String
 ```
 

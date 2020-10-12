@@ -55,15 +55,15 @@ The ID of the endpoint service\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VPCEndpointId`  <a name="cfn-ec2-vpcendpointconnectionnotification-vpcendpointid"></a>
-The ID of the endpoint\.   
+The ID of the endpoint\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcendpointconnectionnotification-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcendpointconnectionnotification-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcendpointconnectionnotification-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPC endpoint connection\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPC endpoint connection\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

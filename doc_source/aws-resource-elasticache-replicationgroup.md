@@ -14,15 +14,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled)" : Boolean,
       "[AuthToken](#cfn-elasticache-replicationgroup-authtoken)" : String,
-      "[AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade)" : Boolean,
       "[AutomaticFailoverEnabled](#cfn-elasticache-replicationgroup-automaticfailoverenabled)" : Boolean,
+      "[AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade)" : Boolean,
       "[CacheNodeType](#cfn-elasticache-replicationgroup-cachenodetype)" : String,
       "[CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname)" : String,
       "[CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames)" : [ String, ... ],
       "[CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname)" : String,
       "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
-      "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md), ... ],
+      "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
+      "[MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled)" : Boolean,
+      "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ NodeGroupConfiguration, ... ],
       "[NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
       "[NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters)" : Integer,
       "[NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups)" : Integer,
@@ -37,8 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshotArns](#cfn-elasticache-replicationgroup-snapshotarns)" : [ String, ... ],
       "[SnapshotName](#cfn-elasticache-replicationgroup-snapshotname)" : String,
       "[SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit)" : Integer,
-      "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
       "[SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid)" : String,
+      "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
       "[Tags](#cfn-elasticache-replicationgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean
     }
@@ -52,8 +54,8 @@ Type: AWS::ElastiCache::ReplicationGroup
 Properties: 
   [AtRestEncryptionEnabled](#cfn-elasticache-replicationgroup-atrestencryptionenabled): Boolean
   [AuthToken](#cfn-elasticache-replicationgroup-authtoken): String
-  [AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade): Boolean
   [AutomaticFailoverEnabled](#cfn-elasticache-replicationgroup-automaticfailoverenabled): Boolean
+  [AutoMinorVersionUpgrade](#cfn-elasticache-replicationgroup-autominorversionupgrade): Boolean
   [CacheNodeType](#cfn-elasticache-replicationgroup-cachenodetype): String
   [CacheParameterGroupName](#cfn-elasticache-replicationgroup-cacheparametergroupname): String
   [CacheSecurityGroupNames](#cfn-elasticache-replicationgroup-cachesecuritygroupnames): 
@@ -61,8 +63,10 @@ Properties:
   [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
   [Engine](#cfn-elasticache-replicationgroup-engine): String
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
+  [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
+  [MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled): Boolean
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
-    - [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
+    - NodeGroupConfiguration
   [NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn): String
   [NumCacheClusters](#cfn-elasticache-replicationgroup-numcacheclusters): Integer
   [NumNodeGroups](#cfn-elasticache-replicationgroup-numnodegroups): Integer
@@ -80,8 +84,8 @@ Properties:
     - String
   [SnapshotName](#cfn-elasticache-replicationgroup-snapshotname): String
   [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit): Integer
-  [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
   [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid): String
+  [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
   [Tags](#cfn-elasticache-replicationgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
@@ -92,7 +96,7 @@ Properties:
 `AtRestEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-atrestencryptionenabled"></a>
 A flag that enables encryption at rest when set to `true`\.  
 You cannot modify the value of `AtRestEncryptionEnabled` after the replication group is created\. To enable encryption at rest on a replication group you must set `AtRestEncryptionEnabled` to `true` when you create the replication group\.   
- **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x`\.  
+ **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x` onward\.  
 Default: `false`   
 *Required*: No  
 *Type*: Boolean  
@@ -100,7 +104,7 @@ Default: `false`
 
 `AuthToken`  <a name="cfn-elasticache-replicationgroup-authtoken"></a>
  **Reserved parameter\.** The password used to access a password protected server\.  
- `AuthToken` can be specified only on replication groups where `TransitEncryptionEnabled` is `true`\.  
+ `AuthToken` can be specified only on replication groups where `TransitEncryptionEnabled` is `true`\. For more information, see [Authenticating Users with the Redis AUTH Command](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html)\.  
 For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an `AuthToken`, and a `CacheSubnetGroup`\.
 Password constraints:  
 + Must be only printable ASCII characters\.
@@ -109,7 +113,15 @@ Password constraints:
 For more information, see [AUTH password](http://redis.io/commands/AUTH) at http://redis\.io/commands/AUTH\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`AutomaticFailoverEnabled`  <a name="cfn-elasticache-replicationgroup-automaticfailoverenabled"></a>
+Specifies whether a read\-only replica is automatically promoted to read/write primary if the existing primary fails\.  
+ `AutomaticFailoverEnabled` must be enabled for Redis \(cluster mode enabled\) replication groups\.  
+Default: false  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-elasticache-replicationgroup-autominorversionupgrade"></a>
 This parameter is currently disabled\.  
@@ -117,57 +129,42 @@ This parameter is currently disabled\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`AutomaticFailoverEnabled`  <a name="cfn-elasticache-replicationgroup-automaticfailoverenabled"></a>
-Specifies whether a read\-only replica is automatically promoted to read/write primary if the existing primary fails\.  
-If `true`, Multi\-AZ is enabled for this replication group\. If `false`, Multi\-AZ is disabled for this replication group\.  
- `AutomaticFailoverEnabled` must be enabled for Redis \(cluster mode enabled\) replication groups\.  
-Default: false  
-Amazon ElastiCache for Redis does not support Multi\-AZ with automatic failover on:  
-+ Redis versions earlier than 2\.8\.6\.
-+ Redis \(cluster mode disabled\): T1 node types\.
-+ Redis \(cluster mode enabled\): T1 node types\.
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `CacheNodeType`  <a name="cfn-elasticache-replicationgroup-cachenodetype"></a>
 The compute and memory capacity of the nodes in the node group \(shard\)\.  
 The following node types are supported by ElastiCache\. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts\.  
+ Changing the CacheNodeType of a Memcached instance is currently not supported\. If you need to scale using Memcached, we recommend forcing a replacement update by changing the `LogicalResourceId` of the resource\.  
 + General purpose:
   + Current generation: 
 
-     **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium` 
+    **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
-     **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge` 
+    **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
 
-     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge` 
+    **T3 node types:** `cache.t3.micro`, `cache.t3.small`, `cache.t3.medium`
+
+    **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium`
   + Previous generation: \(not recommended\)
 
-     **T1 node types:** `cache.t1.micro` 
+    **T1 node types:** `cache.t1.micro`
 
-     **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge` 
+    **M1 node types:** `cache.m1.small`, `cache.m1.medium`, `cache.m1.large`, `cache.m1.xlarge`
+
+    **M3 node types:** `cache.m3.medium`, `cache.m3.large`, `cache.m3.xlarge`, `cache.m3.2xlarge`
 + Compute optimized:
   + Previous generation: \(not recommended\)
 
-     **C1 node types:** `cache.c1.xlarge` 
+    **C1 node types:** `cache.c1.xlarge`
 + Memory optimized:
   + Current generation: 
 
-     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge` 
+    **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
-     **R4 node types;** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge` 
+    **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge`
   + Previous generation: \(not recommended\)
 
-     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge` 
- **Notes:**   
-+ All T2 instances are created in an Amazon Virtual Private Cloud \(Amazon VPC\)\.
-+ Redis \(cluster mode disabled\): Redis backup/restore is not supported on T1 and T2 instances\. 
-+ Redis \(cluster mode enabled\): Backup/restore is not supported on T1 instances\.
-+ Redis Append\-only files \(AOF\) functionality is not supported for T1 or T2 instances\.
-For a complete listing of node types and specifications, see:  
-+  [Amazon ElastiCache Product Features and Details](http://aws.amazon.com/elasticache/details) 
-+  [Cache Node Type\-Specific Parameters for Memcached](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/ParameterGroups.Memcached.html#ParameterGroups.Memcached.NodeSpecific) 
-+  [Cache Node Type\-Specific Parameters for Redis](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/ParameterGroups.Redis.html#ParameterGroups.Redis.NodeSpecific) 
+    **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
+
+    **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -190,7 +187,7 @@ A list of cache security group names to associate with this replication group\.
 
 `CacheSubnetGroupName`  <a name="cfn-elasticache-replicationgroup-cachesubnetgroupname"></a>
 The name of the cache subnet group to be used for the replication group\.  
-If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [Subnets and Subnet Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.html)\.
+If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -208,10 +205,24 @@ The version number of the cache engine to be used for the clusters in this repli
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`KmsKeyId`  <a name="cfn-elasticache-replicationgroup-kmskeyid"></a>
+The ID of the KMS key used to encrypt the disk on the cluster\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MultiAZEnabled`  <a name="cfn-elasticache-replicationgroup-multiazenabled"></a>
+A flag indicating if you have Multi\-AZ enabled to enhance fault tolerance\. For more information, see [Minimizing Downtime: Multi\-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `NodeGroupConfiguration`  <a name="cfn-elasticache-replicationgroup-nodegroupconfiguration"></a>
 `NodeGroupConfiguration ` is a property of the `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache \(ElastiCache\) Redis cluster node group\.   
+If you set [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding) to `true`, you can update `NodeGroupConfiguration` without interruption\. When `UseOnlineResharding` is set to `false`, or is not specified, updating `NodeGroupConfiguration` results in [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.  
 *Required*: No  
-*Type*: [List](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) of [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)
+*Type*: [List](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md) of [NodeGroupConfiguration](aws-properties-elasticache-replicationgroup-nodegroupconfiguration.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `NotificationTopicArn`  <a name="cfn-elasticache-replicationgroup-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic to which notifications are sent\.  
@@ -231,9 +242,11 @@ The maximum permitted value for `NumCacheClusters` is 6 \(1 primary plus 5 repli
 
 `NumNodeGroups`  <a name="cfn-elasticache-replicationgroup-numnodegroups"></a>
 An optional parameter that specifies the number of node groups \(shards\) for this Redis \(cluster mode enabled\) replication group\. For Redis \(cluster mode disabled\) either omit this parameter or set it to 1\.  
+If you set [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding) to `true`, you can update `NumNodeGroups` without interruption\. When `UseOnlineResharding` is set to `false`, or is not specified, updating `NumNodeGroups` results in [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.  
 Default: 1  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Port`  <a name="cfn-elasticache-replicationgroup-port"></a>
 The port number on which each member of the replication group accepts connections\.  
@@ -252,7 +265,6 @@ Default: system chosen Availability Zones\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreferredMaintenanceWindow`  <a name="cfn-elasticache-replicationgroup-preferredmaintenancewindow"></a>
-Specifies the weekly time range during which maintenance on the cluster is performed\. It is specified as a range in the format ddd:hh24:mi\-ddd:hh24:mi \(24H Clock UTC\)\. The minimum maintenance window is a 60 minute period\. Valid values for `ddd` are:  
 Specifies the weekly time range during which maintenance on the cluster is performed\. It is specified as a range in the format ddd:hh24:mi\-ddd:hh24:mi \(24H Clock UTC\)\. The minimum maintenance window is a 60 minute period\.  
 Valid values for `ddd` are:  
 +  `sun` 
@@ -289,7 +301,7 @@ A user\-created description for the replication group\.
 `ReplicationGroupId`  <a name="cfn-elasticache-replicationgroup-replicationgroupid"></a>
 The replication group identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ A name must contain from 1 to 20 alphanumeric characters or hyphens\.
++ A name must contain from 1 to 40 alphanumeric characters or hyphens\.
 + The first character must be a letter\.
 + A name cannot end with a hyphen or contain two consecutive hyphens\.
 *Required*: No  
@@ -323,16 +335,16 @@ Default: 0 \(i\.e\., automatic backups are disabled for this cluster\)\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SnapshotWindow`  <a name="cfn-elasticache-replicationgroup-snapshotwindow"></a>
-The daily time range \(in UTC\) during which ElastiCache begins taking a daily snapshot of your node group \(shard\)\.  
-Example: `05:00-09:00`   
-If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range\.  
+`SnapshottingClusterId`  <a name="cfn-elasticache-replicationgroup-snapshottingclusterid"></a>
+The cluster ID that is used as the daily snapshot source for the replication group\. This parameter cannot be set for Redis \(cluster mode enabled\) replication groups\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SnapshottingClusterId`  <a name="cfn-elasticache-replicationgroup-snapshottingclusterid"></a>
-The cluster ID that is used as the daily snapshot source for the replication group\. This parameter cannot be set for Redis \(cluster mode enabled\) replication groups\.  
+`SnapshotWindow`  <a name="cfn-elasticache-replicationgroup-snapshotwindow"></a>
+The daily time range \(in UTC\) during which ElastiCache begins taking a daily snapshot of your node group \(shard\)\.  
+Example: `05:00-09:00`   
+If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -346,16 +358,16 @@ A list of cost allocation tags to be added to this resource\. Tags are comma\-se
 `TransitEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-transitencryptionenabled"></a>
 A flag that enables in\-transit encryption when set to `true`\.  
 You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created\. To enable in\-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when you create a cluster\.  
-This parameter is valid only if the `Engine` parameter is `redis`, the `EngineVersion` parameter is `3.2.6` or `4.x`, and the cluster is being created in an Amazon VPC\.  
+This parameter is valid only if the `Engine` parameter is `redis`, the `EngineVersion` parameter is `3.2.6` or `4.x` or `5.x`, and the cluster is being created in an Amazon VPC\.  
 If you enable in\-transit encryption, you must also specify a value for `CacheSubnetGroup`\.  
- **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x`\.  
+ **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x` onward\.  
 Default: `false`   
 For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an `AuthToken`, and a `CacheSubnetGroup`\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-elasticache-replicationgroup-return-values"></a>
+## Return values<a name="aws-resource-elasticache-replicationgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticache-replicationgroup-return-values-ref"></a>
 
@@ -373,7 +385,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `ConfigurationEndPoint.Address`  <a name="ConfigurationEndPoint.Address-fn::getatt"></a>
  The DNS hostname of the cache node\.  
-Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
+Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\. For Redis \(cluster mode disabled\) replication groups, use the `PrimaryEndpoint` or `ReadEndpoint` attributes\.
 
 `ConfigurationEndPoint.Port`  <a name="ConfigurationEndPoint.Port-fn::getatt"></a>
 The port number that the cache engine is listening on\. 
@@ -385,7 +397,7 @@ The DNS address of the primary read\-write cache node\.
 The number of the port that the primary read\-write cache engine is listening on\. 
 
 `ReadEndPoint.Addresses`  <a name="ReadEndPoint.Addresses-fn::getatt"></a>
-A string with a list of endpoints for the read\-only replicas\. The order of the addresses maps to the order of the ports from the `ReadEndPoint.Ports` attribute\. 
+A string with a list of endpoints for the primary and read\-only replicas\. The order of the addresses maps to the order of the ports from the `ReadEndPoint.Ports` attribute\. 
 
 `ReadEndPoint.Addresses.List`  <a name="ReadEndPoint.Addresses.List-fn::getatt"></a>
 A string with a list of endpoints for the read\-only replicas\. The order of the addresses maps to the order of the ports from the `ReadEndPoint.Ports` attribute\. 
@@ -396,6 +408,12 @@ A string with a list of ports for the read\-only replicas\. The order of the por
 `ReadEndPoint.Ports.List`  <a name="ReadEndPoint.Ports.List-fn::getatt"></a>
 A string with a list of ports for the read\-only replicas\. The order of the ports maps to the order of the addresses from the ReadEndPoint\.Addresses attribute\. 
 
+`ReaderEndPoint.Address`  <a name="ReaderEndPoint.Address-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`ReaderEndPoint.Port`  <a name="ReaderEndPoint.Port-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-elasticache-replicationgroup--examples"></a>
 
 ### Declare a Replication Group with Two Nodes<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Nodes"></a>
@@ -405,20 +423,22 @@ The following example declares a replication group with two nodes and automatic 
 #### JSON<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Nodes--json"></a>
 
 ```
-"myReplicationGroup" : {
-   "Type": "AWS::ElastiCache::ReplicationGroup",
-   "Properties": {
-       "ReplicationGroupDescription" : "my description",
-       "NumCacheClusters" : "2",
-       "Engine" : "redis",
-       "CacheNodeType" : "cache.m3.medium",
-       "AutoMinorVersionUpgrade" : "true",
-       "AutomaticFailoverEnabled" : "true",
-       "CacheSubnetGroupName" : "subnetgroup",
-       "EngineVersion" : "2.8.6",
-       "PreferredMaintenanceWindow" : "wed:09:25-wed:22:30",
-       "SnapshotRetentionLimit" : "4",
-       "SnapshotWindow" : "03:30-05:30"
+{
+    "myReplicationGroup": {
+        "Type": "AWS::ElastiCache::ReplicationGroup",
+        "Properties": {
+            "ReplicationGroupDescription": "my description",
+            "NumCacheClusters": "2",
+            "Engine": "redis",
+            "CacheNodeType": "cache.m3.medium",
+            "AutoMinorVersionUpgrade": "true",
+            "AutomaticFailoverEnabled": "true",
+            "CacheSubnetGroupName": "subnetgroup",
+            "EngineVersion": "2.8.6",
+            "PreferredMaintenanceWindow": "wed:09:25-wed:22:30",
+            "SnapshotRetentionLimit": "4",
+            "SnapshotWindow": "03:30-05:30"
+        }
     }
 }
 ```
@@ -426,20 +446,20 @@ The following example declares a replication group with two nodes and automatic 
 #### YAML<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Nodes--yaml"></a>
 
 ```
-myReplicationGroup: 
-            Type: AWS::ElastiCache::ReplicationGroup
-            Properties: 
-            ReplicationGroupDescription: "my description"
-            NumCacheClusters: "2"
-            Engine: "redis"
-            CacheNodeType: "cache.m3.medium"
-            AutoMinorVersionUpgrade: "true"
-            AutomaticFailoverEnabled: "true"
-            CacheSubnetGroupName: "subnetgroup"
-            EngineVersion: "2.8.6"
-            PreferredMaintenanceWindow: "wed:09:25-wed:22:30"
-            SnapshotRetentionLimit: "4"
-            SnapshotWindow: "03:30-05:30"
+myReplicationGroup:
+  Type: 'AWS::ElastiCache::ReplicationGroup'
+  Properties:
+    ReplicationGroupDescription: my description
+    NumCacheClusters: '2'
+    Engine: redis
+    CacheNodeType: cache.m3.medium
+    AutoMinorVersionUpgrade: 'true'
+    AutomaticFailoverEnabled: 'true'
+    CacheSubnetGroupName: subnetgroup
+    EngineVersion: 2.8.6
+    PreferredMaintenanceWindow: 'wed:09:25-wed:22:30'
+    SnapshotRetentionLimit: '4'
+    SnapshotWindow: '03:30-05:30'
 ```
 
 ### Declare a Replication Group with Two Node Groups<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Node_Groups"></a>
@@ -449,51 +469,58 @@ The following example declares a replication group with two nodes groups \(shard
 #### JSON<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Node_Groups--json"></a>
 
 ```
-"BasicReplicationGroup" : {
-     "Type" : "AWS::ElastiCache::ReplicationGroup",
-     "Properties" : {
-         "AutomaticFailoverEnabled" : true,
-          "AutoMinorVersionUpgrade" : true,
-          "CacheNodeType" : "cache.r3.large",
-          "CacheSubnetGroupName" : { "Ref" : "CacheSubnetGroup" },
-          "Engine" : "redis",
-          "EngineVersion" : "3.2",
-          "NumNodeGroups" : "2",
-          "ReplicasPerNodeGroup" : "3",
-          "Port" : 6379,
-          "PreferredMaintenanceWindow" : "sun:05:00-sun:09:00",
-          "ReplicationGroupDescription" : "A sample replication group",
-          "SecurityGroupIds" : [
-              { "Ref" : "ReplicationGroupSG" }
+{
+    "BasicReplicationGroup": {
+        "Type": "AWS::ElastiCache::ReplicationGroup",
+        "Properties": {
+            "AutomaticFailoverEnabled": true,
+            "AutoMinorVersionUpgrade": true,
+            "CacheNodeType": "cache.r3.large",
+            "CacheSubnetGroupName": {
+                "Ref": "CacheSubnetGroup"
+            },
+            "Engine": "redis",
+            "EngineVersion": "3.2",
+            "NumNodeGroups": "2",
+            "ReplicasPerNodeGroup": "3",
+            "Port": 6379,
+            "PreferredMaintenanceWindow": "sun:05:00-sun:09:00",
+            "ReplicationGroupDescription": "A sample replication group",
+            "SecurityGroupIds": [
+                {
+                    "Ref": "ReplicationGroupSG"
+                }
             ],
-            "SnapshotRetentionLimit" : 5,
-            "SnapshotWindow" : "10:00-12:00"
+            "SnapshotRetentionLimit": 5,
+            "SnapshotWindow": "10:00-12:00"
         }
     }
+}
 ```
 
 #### YAML<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Node_Groups--yaml"></a>
 
 ```
+BasicReplicationGroup:
+  Type: 'AWS::ElastiCache::ReplicationGroup'
   Properties:
-            AutomaticFailoverEnabled: true
-            AutoMinorVersionUpgrade: true
-            CacheNodeType: cache.r3.large
-            CacheSubnetGroupName:
-            Ref: CacheSubnetGroup
-            Engine: redis
-            EngineVersion: '3.2'
-            NumNodeGroups: '2'
-            ReplicasPerNodeGroup: '3'
-            Port: 6379
-            PreferredMaintenanceWindow: sun:05:00-sun:09:00
-            ReplicationGroupDescription: A sample replication group
-            SecurityGroupIds:
-            - Ref: ReplicationGroupSG
-            SnapshotRetentionLimit: 5
-            SnapshotWindow: 10:00-12:00
+    AutomaticFailoverEnabled: true
+    AutoMinorVersionUpgrade: true
+    CacheNodeType: cache.r3.large
+    CacheSubnetGroupName: !Ref CacheSubnetGroup
+    Engine: redis
+    EngineVersion: '3.2'
+    NumNodeGroups: '2'
+    ReplicasPerNodeGroup: '3'
+    Port: 6379
+    PreferredMaintenanceWindow: 'sun:05:00-sun:09:00'
+    ReplicationGroupDescription: A sample replication group
+    SecurityGroupIds:
+      - !Ref ReplicationGroupSG
+    SnapshotRetentionLimit: 5
+    SnapshotWindow: '10:00-12:00'
 ```
 
-## See Also<a name="aws-resource-elasticache-replicationgroup--seealso"></a>
+## See also<a name="aws-resource-elasticache-replicationgroup--seealso"></a>
 
 [CreateReplicationGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateReplicationGroup.html) in the * Amazon ElastiCache API Reference Guide* 

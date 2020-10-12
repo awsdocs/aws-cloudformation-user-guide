@@ -1,6 +1,6 @@
 # AWS::EC2::SecurityGroup Egress<a name="aws-properties-ec2-security-group-rule"></a>
 
-Specifies an outbound rule for a security group\.
+Specifies an outbound rule for a security group\. An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 CIDR address ranges, or to the instances associated with the specified destination security groups\.
 
 You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, or `DestinationSecurityGroupId`\.
 
@@ -41,14 +41,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-security-group-rule-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-rule-cidrip"></a>
-The IPv4 address range, in CIDR format\.  
+The destination IPv4 address range, in CIDR format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CidrIpv6`  <a name="cfn-ec2-security-group-rule-cidripv6"></a>
 \[EC2\-VPC only\] The IPv6 ranges\.  
-The IPv6 address range, in CIDR format\.  
+The destination IPv6 address range, in CIDR format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -61,7 +61,7 @@ Constraints: Up to 255 characters in length\. Allowed characters are a\-z, A\-Z,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationPrefixListId`  <a name="cfn-ec2-security-group-rule-destinationprefixlistid"></a>
-\[EC2\-VPC only\] The prefix list IDs for an AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
+\[EC2\-VPC only\] The prefix list IDs for the destination AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

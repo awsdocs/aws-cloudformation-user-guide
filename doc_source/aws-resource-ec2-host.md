@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AutoPlacement](#cfn-ec2-host-autoplacement)" : String,
       "[AvailabilityZone](#cfn-ec2-host-availabilityzone)" : String,
+      "[HostRecovery](#cfn-ec2-host-hostrecovery)" : String,
       "[InstanceType](#cfn-ec2-host-instancetype)" : String
     }
 }
@@ -26,6 +27,7 @@ Type: AWS::EC2::Host
 Properties: 
   [AutoPlacement](#cfn-ec2-host-autoplacement): String
   [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
+  [HostRecovery](#cfn-ec2-host-hostrecovery): String
   [InstanceType](#cfn-ec2-host-instancetype): String
 ```
 
@@ -36,7 +38,7 @@ Indicates whether the host accepts any untargeted instance launches that match i
 Default: `on`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `off | on`  
+*Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-host-availabilityzone"></a>
@@ -45,13 +47,21 @@ The Availability Zone in which to allocate the Dedicated Host\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`HostRecovery`  <a name="cfn-ec2-host-hostrecovery"></a>
+Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host Recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Default: `off`   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `off | on`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `InstanceType`  <a name="cfn-ec2-host-instancetype"></a>
-Specifies the instance type for which to configure your Dedicated Hosts\. When you specify the instance type, that is the only instance type that you can launch onto that host\.  
+Specifies the instance type to be supported by the Dedicated Hosts\. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-host-return-values"></a>
+## Return values<a name="aws-resource-ec2-host-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-host-return-values-ref"></a>
 
@@ -83,7 +93,8 @@ The following example allocates a dedicated host for `c3.large` instances in the
 ```
 Host:
   Type: AWS::EC2::Host
-  Properties:
+
+  Properties: 
     AutoPlacement: on
     AvailabilityZone: us-east-1a
     InstanceType: c3.large

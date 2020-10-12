@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-deployment-accesslogsetting-properties"></a>
 
 `DestinationArn`  <a name="cfn-apigateway-deployment-accesslogsetting-destinationarn"></a>
-The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group to receive access logs\.  
+The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs\. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with `amazon-apigateway-`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -38,5 +38,5 @@ A single line format of the access logs of data, as specified by selected [$cont
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-deployment-accesslogsetting--seealso"></a>
-+ [accessLogSettings](https://docs.aws.amazon.com/api-reference/resource/stage/#accessLogSettings) in the *Amazon API Gateway REST API Reference*
+## See also<a name="aws-properties-apigateway-deployment-accesslogsetting--seealso"></a>
++ [accessLogSettings](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#accessLogSettings) in the *Amazon API Gateway REST API Reference*

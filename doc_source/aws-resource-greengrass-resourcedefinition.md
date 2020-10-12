@@ -18,8 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::ResourceDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-resourcedefinition-initialversion)" : [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md),
-      "[Name](#cfn-greengrass-resourcedefinition-name)" : String
+      "[InitialVersion](#cfn-greengrass-resourcedefinition-initialversion)" : ResourceDefinitionVersion,
+      "[Name](#cfn-greengrass-resourcedefinition-name)" : String,
+      "[Tags](#cfn-greengrass-resourcedefinition-tags)" : Json
     }
 }
 ```
@@ -30,8 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::ResourceDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-resourcedefinition-initialversion): 
-    [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md)
+    ResourceDefinitionVersion
   [Name](#cfn-greengrass-resourcedefinition-name): String
+  [Tags](#cfn-greengrass-resourcedefinition-tags): Json
 ```
 
 ## Properties<a name="aws-resource-greengrass-resourcedefinition-properties"></a>
@@ -49,7 +51,22 @@ The name of the resource definition\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-resourcedefinition-return-values"></a>
+`Tags`  <a name="cfn-greengrass-resourcedefinition-tags"></a>
+Application\-specific metadata to attach to the resource definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Developer Guide*\.  
+This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
+
+```
+"Tags": {
+    "KeyName0": "value",
+    "KeyName1": "value",
+    "KeyName2": "value"
+}
+```
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-greengrass-resourcedefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-resourcedefinition-return-values-ref"></a>
 
@@ -249,6 +266,6 @@ TestResourceDefinitionVersion:
               - label2
 ```
 
-## See Also<a name="aws-resource-greengrass-resourcedefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-resourcedefinition--seealso"></a>
 +  [CreateResourceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createresourcedefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

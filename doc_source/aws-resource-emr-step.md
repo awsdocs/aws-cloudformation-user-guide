@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EMR::Step",
   "Properties" : {
       "[ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure)" : String,
-      "[HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep)" : [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md),
+      "[HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep)" : HadoopJarStepConfig,
       "[JobFlowId](#cfn-elasticmapreduce-step-jobflowid)" : String,
       "[Name](#cfn-elasticmapreduce-step-name)" : String
     }
@@ -27,7 +27,7 @@ Type: AWS::EMR::Step
 Properties: 
   [ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure): String
   [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep): 
-    [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)
+    HadoopJarStepConfig
   [JobFlowId](#cfn-elasticmapreduce-step-jobflowid): String
   [Name](#cfn-elasticmapreduce-step-name): String
 ```
@@ -35,10 +35,9 @@ Properties:
 ## Properties<a name="aws-resource-emr-step-properties"></a>
 
 `ActionOnFailure`  <a name="cfn-elasticmapreduce-step-actiononfailure"></a>
-The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.  
+This specifies what action to take when the cluster step fails\. Possible values are `CANCEL_AND_WAIT` and `CONTINUE`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HadoopJarStep`  <a name="cfn-elasticmapreduce-step-hadoopjarstep"></a>
@@ -62,10 +61,10 @@ The name of the cluster step\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-emr-step-return-values"></a>
+## Return values<a name="aws-resource-emr-step-return-values"></a>
 
 ### Ref<a name="aws-resource-emr-step-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the step\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the step\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

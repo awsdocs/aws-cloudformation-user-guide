@@ -6,6 +6,8 @@ A `gateway` endpoint serves as a target for a route in your route table for traf
 
 An `interface` endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service\. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface\.
 
+For information about connectivity when you use a gateway endpoint to connect to an Amazon S3 bucket from an EC2 instance, see [Why can’t I connect to an S3 bucket using a gateway VPC endpoint](http://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)\.
+
 ## Syntax<a name="aws-resource-ec2-vpcendpoint-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -70,7 +72,8 @@ Default: `false`
 
 `SecurityGroupIds`  <a name="cfn-ec2-vpcendpoint-securitygroupids"></a>
 \(Interface endpoint\) The ID of one or more security groups to associate with the endpoint network interface\.  
-*Required*: No  
+This field is required when the endpoint is an interface\.  
+*Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -82,7 +85,8 @@ The service name\. To get a list of available services, use the [DescribeVpcEndp
 
 `SubnetIds`  <a name="cfn-ec2-vpcendpoint-subnetids"></a>
 \(Interface endpoint\) The ID of one or more subnets in which to create an endpoint network interface\.  
-*Required*: No  
+This field is required when the endpoint is an interface\.  
+*Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -91,16 +95,17 @@ The type of endpoint\.
 Default: Gateway  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Gateway | Interface`  
+*Allowed values*: `Gateway | Interface`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
 The ID of the VPC in which the endpoint will be used\.  
-*Required*: Yes  
+This field is required when the endpoint is an interface\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcendpoint-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcendpoint-return-values-ref"></a>
 
@@ -150,7 +155,7 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
          }]
    },
    "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-   "ServiceName" : { "Fn::Join": [ "", [ "com.amazonaws.", { "Ref": "AWS::Region" }, ".s3" ] ] },
+   "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
    "VpcId" : {"Ref" : "VPCID"}
  }
 }
@@ -160,24 +165,20 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
 
 ```
 S3Endpoint:
-  Type: AWS::EC2::VPCEndpoint
+  Type: 'AWS::EC2::VPCEndpoint'
   Properties:
-     PolicyDocument:
-       Version: 2012-10-17
-       Statement:
-         - Effect: Allow
-         Principal: '*'
-         Action:
-           - 's3:GetObject'
-         Resource:
-           - 'arn:aws:s3:::examplebucket/*'
-         RouteTableIds:
-          - !Ref routetableA
-          - !Ref routetableB
-         ServiceName: !Join 
-            - ''
-            - - com.amazonaws.
-              - !Ref 'AWS::Region'
-              - .s3
-         VpcId: !Ref VPCID
+    PolicyDocument:
+      Version: 2012-10-17
+      Statement:
+        - Effect: Allow
+          Principal: '*'
+          Action:
+            - 's3:GetObject'
+          Resource:
+            - 'arn:aws:s3:::examplebucket/*'
+    RouteTableIds:
+      - !Ref routetableA
+      - !Ref routetableB
+    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
+    VpcId: !Ref VPCID
 ```

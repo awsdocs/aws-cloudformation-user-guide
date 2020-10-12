@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GuardDuty::Detector",
   "Properties" : {
+      "[DataSources](#cfn-guardduty-detector-datasources)" : CFNDataSourceConfigurations,
       "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
       "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String
     }
@@ -23,25 +24,34 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::GuardDuty::Detector
 Properties: 
+  [DataSources](#cfn-guardduty-detector-datasources): 
+    CFNDataSourceConfigurations
   [Enable](#cfn-guardduty-detector-enable): Boolean
   [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
 
+`DataSources`  <a name="cfn-guardduty-detector-datasources"></a>
+Describes which data sources will be enabled for the detector\.  
+*Required*: No  
+*Type*: [CFNDataSourceConfigurations](aws-properties-guardduty-detector-cfndatasourceconfigurations.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Enable`  <a name="cfn-guardduty-detector-enable"></a>
-Specifies whether or not to enable the detector\.  
+Specifies whether the detector is to be enabled on creation\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>
-A enumeration value that specifies how frequently finding updates are published\.  
+Specifies how frequently updated findings are exported\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `FIFTEEN_MINUTES | ONE_HOUR | SIX_HOURS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-guardduty-detector-return-values"></a>
+## Return values<a name="aws-resource-guardduty-detector-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-detector-return-values-ref"></a>
 
@@ -70,7 +80,7 @@ The following example shows how to declare a GuardDuty `Detector` resource:
 #### YAML<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource--yaml"></a>
 
 ```
-mydectector:
+mydetector:
     Type: AWS::GuardDuty::Detector
     Properties:
         Enable: True
