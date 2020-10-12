@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype)" : String,
   "[InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount)" : Integer,
   "[InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype)" : String,
-  "[ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig)" : [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md),
+  "[ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig)" : ZoneAwarenessConfig,
   "[ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled)" : Boolean
 }
 ```
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount): Integer
   [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype): String
   [ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig): 
-    [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)
+    ZoneAwarenessConfig
   [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
 ```
 

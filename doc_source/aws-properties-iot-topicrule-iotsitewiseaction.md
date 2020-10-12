@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PutAssetPropertyValueEntries](#cfn-iot-topicrule-iotsitewiseaction-putassetpropertyvalueentries)" : [ [PutAssetPropertyValueEntry](aws-properties-iot-topicrule-putassetpropertyvalueentry.md), ... ],
+  "[PutAssetPropertyValueEntries](#cfn-iot-topicrule-iotsitewiseaction-putassetpropertyvalueentries)" : [ PutAssetPropertyValueEntry, ... ],
   "[RoleArn](#cfn-iot-topicrule-iotsitewiseaction-rolearn)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PutAssetPropertyValueEntries](#cfn-iot-topicrule-iotsitewiseaction-putassetpropertyvalueentries): 
-    - [PutAssetPropertyValueEntry](aws-properties-iot-topicrule-putassetpropertyvalueentry.md)
+    - PutAssetPropertyValueEntry
   [RoleArn](#cfn-iot-topicrule-iotsitewiseaction-rolearn): String
 ```
 

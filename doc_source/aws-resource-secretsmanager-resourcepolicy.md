@@ -42,7 +42,7 @@ If you use this property to change the `SecretId` for an existing resource\-base
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
+## Return values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-secretsmanager-resourcepolicy-return-values-ref"></a>
 
@@ -110,50 +110,6 @@ MySecretResourcePolicy:
         SecretId: !Ref MySecret
         ResourcePolicy:
           Version: 2012-10-17
-        "Properties": {
-            "Description": "This is a secret that I want to attach a resource-based policy to",
-            "MySecretResourcePolicy": {
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MySecret"
-                    },
-                    "ResourcePolicy": {
-                        "Version": "2019-10-19",
-                        "Statement": [
-                            {
-                                "Resource": "*",
-                                "Action": "secretsmanager:DeleteSecret",
-                                "Effect": "Deny",
-                                "Principal": {
-                                    "AWS": {
-                                        "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
-                                    }
-                                }
-                            }
-                        ]
-                    }
-                },
-                "Type": "AWS::SecretsManager::ResourcePolicy"
-            }
-        },
-        "Type": "AWS::SecretsManager::Secret"
-    }
-}
-```
-
-#### YAML<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_--yaml"></a>
-
-```
-MySecret:
-    Type: 'AWS::SecretsManager::Secret'
-    Properties:
-        Description: This is a secret that I want to attach a resource-based policy to
-MySecretResourcePolicy:
-    Type: 'AWS::SecretsManager::ResourcePolicy'
-    Properties:
-        SecretId: !Ref MySecret
-        ResourcePolicy:
-          Version: 2012-10-17
           Statement:
             - Resource: '*'
               Action: 'secretsmanager:DeleteSecret'
@@ -162,7 +118,7 @@ MySecretResourcePolicy:
                 AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
 ```
 
-## See Also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
+## See also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
 +  [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
 +  [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
 +  [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-networkmanager-device-description)" : String,
       "[GlobalNetworkId](#cfn-networkmanager-device-globalnetworkid)" : String,
-      "[Location](#cfn-networkmanager-device-location)" : [Location](aws-properties-networkmanager-device-location.md),
+      "[Location](#cfn-networkmanager-device-location)" : Location,
       "[Model](#cfn-networkmanager-device-model)" : String,
       "[SerialNumber](#cfn-networkmanager-device-serialnumber)" : String,
       "[SiteId](#cfn-networkmanager-device-siteid)" : String,
@@ -33,7 +33,7 @@ Properties:
   [Description](#cfn-networkmanager-device-description): String
   [GlobalNetworkId](#cfn-networkmanager-device-globalnetworkid): String
   [Location](#cfn-networkmanager-device-location): 
-    [Location](aws-properties-networkmanager-device-location.md)
+    Location
   [Model](#cfn-networkmanager-device-model): String
   [SerialNumber](#cfn-networkmanager-device-serialnumber): String
   [SiteId](#cfn-networkmanager-device-siteid): String
@@ -103,7 +103,7 @@ Length Constraints: Maximum length of 128 characters\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-networkmanager-device-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-device-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-device-return-values-ref"></a>
 

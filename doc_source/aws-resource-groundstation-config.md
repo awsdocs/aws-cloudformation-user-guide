@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::Config",
   "Properties" : {
-      "[ConfigData](#cfn-groundstation-config-configdata)" : [ConfigData](aws-properties-groundstation-config-configdata.md),
+      "[ConfigData](#cfn-groundstation-config-configdata)" : ConfigData,
       "[Name](#cfn-groundstation-config-name)" : String,
       "[Tags](#cfn-groundstation-config-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GroundStation::Config
 Properties: 
   [ConfigData](#cfn-groundstation-config-configdata): 
-    [ConfigData](aws-properties-groundstation-config-configdata.md)
+    ConfigData
   [Name](#cfn-groundstation-config-name): String
   [Tags](#cfn-groundstation-config-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -53,7 +53,7 @@ Properties:
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-groundstation-config-return-values"></a>
+## Return values<a name="aws-resource-groundstation-config-return-values"></a>
 
 ### Ref<a name="aws-resource-groundstation-config-return-values-ref"></a>
 

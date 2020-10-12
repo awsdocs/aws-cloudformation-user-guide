@@ -45,7 +45,7 @@ The file type of the application revision\. Must be one of the following:
 + zip: A zip archive file\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `JSON | tar | tgz | YAML | zip`  
+*Allowed values*: `JSON | tar | tgz | YAML | zip`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ETag`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag"></a>

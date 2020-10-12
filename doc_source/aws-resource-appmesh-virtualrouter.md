@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualrouter-meshname)" : String,
       "[MeshOwner](#cfn-appmesh-virtualrouter-meshowner)" : String,
-      "[Spec](#cfn-appmesh-virtualrouter-spec)" : [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md),
+      "[Spec](#cfn-appmesh-virtualrouter-spec)" : VirtualRouterSpec,
       "[Tags](#cfn-appmesh-virtualrouter-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername)" : String
     }
@@ -33,7 +33,7 @@ Properties:
   [MeshName](#cfn-appmesh-virtualrouter-meshname): String
   [MeshOwner](#cfn-appmesh-virtualrouter-meshowner): String
   [Spec](#cfn-appmesh-virtualrouter-spec): 
-    [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md)
+    VirtualRouterSpec
   [Tags](#cfn-appmesh-virtualrouter-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername): String
@@ -71,7 +71,7 @@ The name to use for the virtual router\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-virtualrouter-return-values"></a>
+## Return values<a name="aws-resource-appmesh-virtualrouter-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-virtualrouter-return-values-ref"></a>
 
@@ -237,6 +237,6 @@ Outputs:
       - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-virtualrouter--seealso"></a>
+## See also<a name="aws-resource-appmesh-virtualrouter--seealso"></a>
 +  [Virtual Routers](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualRouter](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualRouter.html) in the * AWS App Mesh API Reference *\.

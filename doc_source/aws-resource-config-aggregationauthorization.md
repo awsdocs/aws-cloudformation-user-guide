@@ -54,7 +54,7 @@ An array of tag object\.
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
+## Return values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
 
 ### Ref<a name="aws-resource-config-aggregationauthorization-return-values-ref"></a>
 
@@ -346,7 +346,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
             }
         },
         "ConfigAggregator": {
-            "Type": "AWS::Config::ConfigurationAggregatorName",
+            "Type": "AWS::Config::ConfigurationAggregator",
             "Condition": "CreateAggregator",
             "Properties": {
                 "Name": "name",
@@ -528,7 +528,7 @@ Resources:
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
 
   ConfigAggregator:
-    Type: AWS::Config::ConfigurationAggregatorName
+    Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
     ConfigurationAggregatorName: name

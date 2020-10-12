@@ -39,6 +39,6 @@ The Amazon Resource Name \(ARN\) of the Secrets Manager secret to make available
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata--seealso"></a>
 +  [SecretsManagerSecretResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-secretsmanagersecretresourcedata.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

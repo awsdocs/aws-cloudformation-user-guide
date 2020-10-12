@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EntryId](#cfn-iot-topicrule-putassetpropertyvalueentry-entryid)" : String,
   "[PropertyAlias](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyalias)" : String,
   "[PropertyId](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyid)" : String,
-  "[PropertyValues](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyvalues)" : [ [AssetPropertyValue](aws-properties-iot-topicrule-assetpropertyvalue.md), ... ]
+  "[PropertyValues](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyvalues)" : [ AssetPropertyValue, ... ]
 }
 ```
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PropertyAlias](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyalias): String
   [PropertyId](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyid): String
   [PropertyValues](#cfn-iot-topicrule-putassetpropertyvalueentry-propertyvalues): 
-    - [AssetPropertyValue](aws-properties-iot-topicrule-assetpropertyvalue.md)
+    - AssetPropertyValue
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-putassetpropertyvalueentry-properties"></a>

@@ -1,8 +1,5 @@
 # AWS::RDS::DBProxyTargetGroup ConnectionPoolConfigurationInfoFormat<a name="aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat"></a>
 
-**Note**  
-This is prerelease documentation for the RDS Database Proxy feature in preview release\. It is subject to change\.
-
 Specifies the settings that control the size and behavior of the connection pool associated with a `DBProxyTargetGroup`\.
 
 ## Syntax<a name="aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-syntax"></a>
@@ -44,7 +41,6 @@ Constraints: between 1 and 3600, or 0 representing unlimited
 
 `InitQuery`  <a name="cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-initquery"></a>
  One or more SQL statements for the proxy to run when opening each new database connection\. Typically used with `SET` statements to make sure that each connection has identical settings such as time zone and character set\. For multiple statements, use semicolons as the separator\. You can also include multiple variables in a single `SET` statement, such as `SET x=1, y=2`\.   
- `InitQuery` is not currently supported for PostgreSQL\.  
 Default: no initialization query  
 *Required*: No  
 *Type*: String  

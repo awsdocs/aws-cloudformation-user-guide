@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EMR::Step",
   "Properties" : {
       "[ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure)" : String,
-      "[HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep)" : [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md),
+      "[HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep)" : HadoopJarStepConfig,
       "[JobFlowId](#cfn-elasticmapreduce-step-jobflowid)" : String,
       "[Name](#cfn-elasticmapreduce-step-name)" : String
     }
@@ -27,7 +27,7 @@ Type: AWS::EMR::Step
 Properties: 
   [ActionOnFailure](#cfn-elasticmapreduce-step-actiononfailure): String
   [HadoopJarStep](#cfn-elasticmapreduce-step-hadoopjarstep): 
-    [HadoopJarStepConfig](aws-properties-elasticmapreduce-step-hadoopjarstepconfig.md)
+    HadoopJarStepConfig
   [JobFlowId](#cfn-elasticmapreduce-step-jobflowid): String
   [Name](#cfn-elasticmapreduce-step-name): String
 ```
@@ -61,7 +61,7 @@ The name of the cluster step\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-emr-step-return-values"></a>
+## Return values<a name="aws-resource-emr-step-return-values"></a>
 
 ### Ref<a name="aws-resource-emr-step-return-values-ref"></a>
 

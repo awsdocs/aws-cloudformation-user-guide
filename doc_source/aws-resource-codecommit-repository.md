@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeCommit::Repository",
   "Properties" : {
-      "[Code](#cfn-codecommit-repository-code)" : [Code](aws-properties-codecommit-repository-code.md),
+      "[Code](#cfn-codecommit-repository-code)" : Code,
       "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String,
       "[RepositoryName](#cfn-codecommit-repository-repositoryname)" : String,
       "[Tags](#cfn-codecommit-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[Triggers](#cfn-codecommit-repository-triggers)" : [ [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md), ... ]
+      "[Triggers](#cfn-codecommit-repository-triggers)" : [ RepositoryTrigger, ... ]
     }
 }
 ```
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeCommit::Repository
 Properties: 
   [Code](#cfn-codecommit-repository-code): 
-    [Code](aws-properties-codecommit-repository-code.md)
+    Code
   [RepositoryDescription](#cfn-codecommit-repository-repositorydescription): String
   [RepositoryName](#cfn-codecommit-repository-repositoryname): String
   [Tags](#cfn-codecommit-repository-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Triggers](#cfn-codecommit-repository-triggers): 
-    - [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md)
+    - RepositoryTrigger
 ```
 
 ## Properties<a name="aws-resource-codecommit-repository-properties"></a>
@@ -74,7 +74,7 @@ The JSON block of configuration information for each trigger\.
 *Type*: List of [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="aws-resource-codecommit-repository-return-values"></a>
+## Return values<a name="aws-resource-codecommit-repository-return-values"></a>
 
 ### Ref<a name="aws-resource-codecommit-repository-return-values-ref"></a>
 
@@ -104,9 +104,53 @@ When you pass the logical ID of this resource, the function returns the reposito
 
 ## Examples<a name="aws-resource-codecommit-repository--examples"></a>
 
+The following examples can help you create CodeCommit repositories using CloudFormation\.
+
 ### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
 
-The following example creates a CodeCommit repository with a trigger for all events in the Master branch\. 
+The following example creates a CodeCommit repository named *MyDemoRepo*\. The newly created repository is populated with code stored in an Amazon S3 bucket named *MySourceCodeBucket* and placed in a branch named *development*, which is the default branch for the repository\. 
+
+#### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
+
+```
+{
+    "MyRepo": {
+        "Type": "AWS: : CodeCommit: : Repository",
+        "Properties": {
+            "RepositoryName": "MyDemoRepo",
+            "RepositoryDescription": "This is a repository for my project with code from MySourceCodeBucket.",
+            "Code": {
+                "BranchName": "development",
+                "S3": {
+                    "Bucket": "MySourceCodeBucket",
+                    "Key": "MyKey",
+                    "ObjectVersion": "1"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-codecommit-repository--examples--Example--yaml"></a>
+
+```
+MyRepo:
+  Type: AWS::CodeCommit::Repository
+  Properties:
+    RepositoryName: MyDemoRepo
+    RepositoryDescription: This is a repository for my project with code from MySourceCodeBucket.
+    Code:
+        - BranchName: development
+        - S3: 
+          Bucket: MySourceCodeBucket,
+          Key: MyKey,
+          ObjectVersion: 1
+```
+
+### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
+
+The following example creates a CodeCommit repository with a trigger for all events in the main branch\. 
 
 #### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
 
@@ -119,13 +163,13 @@ The following example creates a CodeCommit repository with a trigger for all eve
             "RepositoryDescription": "a description",
             "Triggers": [
                 {
-                    "Name": "MasterTrigger",
+                    "Name": "MainTrigger",
                     "CustomData": "Project ID 12345",
                     "DestinationArn": {
                         "Ref": "SNSarn"
                     },
                     "Branches": [
-                        "Master"
+                        "main"
                     ],
                     "Events": [
                         "all"
@@ -146,12 +190,12 @@ MyRepo:
     RepositoryName: MyRepoName
     RepositoryDescription: a description
     Triggers:
-    - Name: MasterTrigger
+    - Name: MainTrigger
       CustomData: Project ID 12345
       DestinationArn:
         Ref: SNSarn
       Branches:
-      - Master
+      - main
       Events:
       - all
 ```

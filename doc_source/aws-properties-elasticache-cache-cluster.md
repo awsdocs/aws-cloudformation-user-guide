@@ -84,7 +84,7 @@ This parameter is only supported for Memcached clusters\.
 If the `AZMode` and `PreferredAvailabilityZones` are not specified, ElastiCache assumes `single-az` mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cross-az | single-az`  
+*Allowed values*: `cross-az | single-az`  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CacheNodeType`  <a name="cfn-elasticache-cachecluster-cachenodetype"></a>
@@ -147,7 +147,7 @@ Use this parameter only when you are creating a cluster outside of an Amazon Vir
 `CacheSubnetGroupName`  <a name="cfn-elasticache-cachecluster-cachesubnetgroupname"></a>
 The name of the subnet group to be used for the cluster\.  
 Use this parameter only when you are creating a cluster in an Amazon Virtual Private Cloud \(Amazon VPC\)\.  
-If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [Subnets and Subnet Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.html)\.
+If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -273,7 +273,7 @@ Use this parameter only when you are creating a cluster in an Amazon Virtual Pri
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-cache-cluster-return-values"></a>
+## Return values<a name="aws-properties-elasticache-cache-cluster-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-cache-cluster-return-values-ref"></a>
 
@@ -418,6 +418,6 @@ myCacheCluster:
       - us-west-2b
 ```
 
-## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
+## See also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
 + [CreateCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
 + [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 

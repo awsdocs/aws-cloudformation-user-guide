@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Sigv4](#cfn-iot-topicrule-httpauthorization-sigv4)" : [SigV4Authorization](aws-properties-iot-topicrule-sigv4authorization.md)
+  "[Sigv4](#cfn-iot-topicrule-httpauthorization-sigv4)" : SigV4Authorization
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Sigv4](#cfn-iot-topicrule-httpauthorization-sigv4): 
-    [SigV4Authorization](aws-properties-iot-topicrule-sigv4authorization.md)
+    SigV4Authorization
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-httpauthorization-properties"></a>

@@ -12,14 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::StateMachine",
   "Properties" : {
-      "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : [S3Location](aws-properties-stepfunctions-statemachine-s3location.md),
+      "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
-      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md),
-      "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md),
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : DefinitionSubstitutions,
+      "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : LoggingConfiguration,
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
       "[StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype)" : String,
-      "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md), ... ]
+      "[Tags](#cfn-stepfunctions-statemachine-tags)" : [ TagsEntry, ... ],
+      "[TracingConfiguration](#cfn-stepfunctions-statemachine-tracingconfiguration)" : TracingConfiguration
     }
 }
 ```
@@ -30,18 +31,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::StepFunctions::StateMachine
 Properties: 
   [DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location): 
-    [S3Location](aws-properties-stepfunctions-statemachine-s3location.md)
+    S3Location
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
   [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
-    [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md)
+    DefinitionSubstitutions
   [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
-    [LoggingConfiguration](aws-properties-stepfunctions-statemachine-loggingconfiguration.md)
+    LoggingConfiguration
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
   [StateMachineName](#cfn-stepfunctions-statemachine-statemachinename): String
   [StateMachineType](#cfn-stepfunctions-statemachine-statemachinetype): String
   [Tags](#cfn-stepfunctions-statemachine-tags): 
-    - [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)
+    - TagsEntry
+  [TracingConfiguration](#cfn-stepfunctions-statemachine-tracingconfiguration): 
+    TracingConfiguration
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
@@ -94,7 +97,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 Determines whether a `STANDARD` or `EXPRESS` state machine is created\. The default is `STANDARD`\. You cannot update the `type` of a state machine once it has been created\. For more information on `STANDARD` and `EXPRESS` workflows, see [Standard Versus Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html) in the AWS Step Functions Developer Guide\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-stepfunctions-statemachine-tags"></a>
 The list of tags to add to a resource\.  
@@ -103,7 +106,13 @@ Tags may only contain Unicode letters, digits, white space, or these symbols: `_
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-statemachine-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-stepfunctions-statemachine-return-values"></a>
+`TracingConfiguration`  <a name="cfn-stepfunctions-statemachine-tracingconfiguration"></a>
+Selects whether or not the state machine's AWS X\-Ray tracing is enabled\.  
+*Required*: No  
+*Type*: [TracingConfiguration](aws-properties-stepfunctions-statemachine-tracingconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-stepfunctions-statemachine-return-values"></a>
 
 ### Ref<a name="aws-resource-stepfunctions-statemachine-return-values-ref"></a>
 
@@ -122,6 +131,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-stepfunctions-statemachine-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the state machine\. For example:  

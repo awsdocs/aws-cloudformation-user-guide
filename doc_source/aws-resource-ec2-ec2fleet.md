@@ -13,12 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::EC2Fleet",
   "Properties" : {
       "[ExcessCapacityTerminationPolicy](#cfn-ec2-ec2fleet-excesscapacityterminationpolicy)" : String,
-      "[LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs)" : [ [FleetLaunchTemplateConfigRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.md), ... ],
-      "[OnDemandOptions](#cfn-ec2-ec2fleet-ondemandoptions)" : [OnDemandOptionsRequest](aws-properties-ec2-ec2fleet-ondemandoptionsrequest.md),
+      "[LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs)" : [ FleetLaunchTemplateConfigRequest, ... ],
+      "[OnDemandOptions](#cfn-ec2-ec2fleet-ondemandoptions)" : OnDemandOptionsRequest,
       "[ReplaceUnhealthyInstances](#cfn-ec2-ec2fleet-replaceunhealthyinstances)" : Boolean,
-      "[SpotOptions](#cfn-ec2-ec2fleet-spotoptions)" : [SpotOptionsRequest](aws-properties-ec2-ec2fleet-spotoptionsrequest.md),
-      "[TagSpecifications](#cfn-ec2-ec2fleet-tagspecifications)" : [ [TagSpecification](aws-properties-ec2-ec2fleet-tagspecification.md), ... ],
-      "[TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification)" : [TargetCapacitySpecificationRequest](aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.md),
+      "[SpotOptions](#cfn-ec2-ec2fleet-spotoptions)" : SpotOptionsRequest,
+      "[TagSpecifications](#cfn-ec2-ec2fleet-tagspecifications)" : [ TagSpecification, ... ],
+      "[TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification)" : TargetCapacitySpecificationRequest,
       "[TerminateInstancesWithExpiration](#cfn-ec2-ec2fleet-terminateinstanceswithexpiration)" : Boolean,
       "[Type](#cfn-ec2-ec2fleet-type)" : String,
       "[ValidFrom](#cfn-ec2-ec2fleet-validfrom)" : String,
@@ -34,16 +34,16 @@ Type: AWS::EC2::EC2Fleet
 Properties: 
   [ExcessCapacityTerminationPolicy](#cfn-ec2-ec2fleet-excesscapacityterminationpolicy): String
   [LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs): 
-    - [FleetLaunchTemplateConfigRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.md)
+    - FleetLaunchTemplateConfigRequest
   [OnDemandOptions](#cfn-ec2-ec2fleet-ondemandoptions): 
-    [OnDemandOptionsRequest](aws-properties-ec2-ec2fleet-ondemandoptionsrequest.md)
+    OnDemandOptionsRequest
   [ReplaceUnhealthyInstances](#cfn-ec2-ec2fleet-replaceunhealthyinstances): Boolean
   [SpotOptions](#cfn-ec2-ec2fleet-spotoptions): 
-    [SpotOptionsRequest](aws-properties-ec2-ec2fleet-spotoptionsrequest.md)
+    SpotOptionsRequest
   [TagSpecifications](#cfn-ec2-ec2fleet-tagspecifications): 
-    - [TagSpecification](aws-properties-ec2-ec2fleet-tagspecification.md)
+    - TagSpecification
   [TargetCapacitySpecification](#cfn-ec2-ec2fleet-targetcapacityspecification): 
-    [TargetCapacitySpecificationRequest](aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.md)
+    TargetCapacitySpecificationRequest
   [TerminateInstancesWithExpiration](#cfn-ec2-ec2fleet-terminateinstanceswithexpiration): Boolean
   [Type](#cfn-ec2-ec2fleet-type): String
   [ValidFrom](#cfn-ec2-ec2fleet-validfrom): String
@@ -56,7 +56,7 @@ Properties:
 Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2 Fleet\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `no-termination | termination`  
+*Allowed values*: `no-termination | termination`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplateConfigs`  <a name="cfn-ec2-ec2fleet-launchtemplateconfigs"></a>
@@ -106,7 +106,7 @@ Indicates whether running instances should be terminated when the EC2 Fleet expi
 The type of the request\. By default, the EC2 Fleet places an asynchronous request for your desired capacity, and maintains it by replenishing interrupted Spot Instances \(`maintain`\)\. A value of `instant` places a synchronous one\-time request, and returns errors for any instances that could not be launched\. A value of `request` places an asynchronous one\-time request without maintaining capacity or submitting requests in alternative capacity pools if capacity is unavailable\. For more information, see [EC2 Fleet Request Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-configuration-strategies.html#ec2-fleet-request-type) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `instant | maintain | request`  
+*Allowed values*: `instant | maintain | request`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ValidFrom`  <a name="cfn-ec2-ec2fleet-validfrom"></a>
@@ -121,7 +121,7 @@ The end date and time of the request, in UTC format \(for example, *YYYY*\-*MM*\
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-ec2fleet-return-values"></a>
+## Return values<a name="aws-resource-ec2-ec2fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-ec2fleet-return-values-ref"></a>
 
@@ -129,5 +129,5 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-ec2fleet--seealso"></a>
+## See also<a name="aws-resource-ec2-ec2fleet--seealso"></a>
 +  [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet.html) in the *Amazon EC2 API Reference* 

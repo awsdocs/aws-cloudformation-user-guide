@@ -44,8 +44,8 @@ The current status of the S3 build logs\. Valid values are:
 +  `DISABLED`: S3 build logs are not enabled for this build project\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-s3logsconfig--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-s3logsconfig--seealso"></a>
 +  [ S3LogsConfig](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_S3LogsConfig.html) in the *AWS CodeBuild API Reference* 

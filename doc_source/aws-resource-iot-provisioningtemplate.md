@@ -14,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-iot-provisioningtemplate-description)" : String,
       "[Enabled](#cfn-iot-provisioningtemplate-enabled)" : Boolean,
-      "[PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook)" : [ProvisioningHook](aws-properties-iot-provisioningtemplate-provisioninghook.md),
+      "[PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook)" : ProvisioningHook,
       "[ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn)" : String,
-      "[Tags](#cfn-iot-provisioningtemplate-tags)" : [ Json, ... ],
+      "[Tags](#cfn-iot-provisioningtemplate-tags)" : Tags,
       "[TemplateBody](#cfn-iot-provisioningtemplate-templatebody)" : String,
       "[TemplateName](#cfn-iot-provisioningtemplate-templatename)" : String
     }
@@ -31,10 +31,10 @@ Properties:
   [Description](#cfn-iot-provisioningtemplate-description): String
   [Enabled](#cfn-iot-provisioningtemplate-enabled): Boolean
   [PreProvisioningHook](#cfn-iot-provisioningtemplate-preprovisioninghook): 
-    [ProvisioningHook](aws-properties-iot-provisioningtemplate-provisioninghook.md)
+    ProvisioningHook
   [ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn): String
   [Tags](#cfn-iot-provisioningtemplate-tags): 
-    - Json
+    Tags
   [TemplateBody](#cfn-iot-provisioningtemplate-templatebody): String
   [TemplateName](#cfn-iot-provisioningtemplate-templatename): String
 ```
@@ -68,7 +68,7 @@ The role ARN for the role associated with the fleet provisioning template\. This
 `Tags`  <a name="cfn-iot-provisioningtemplate-tags"></a>
 Metadata which can be used to manage the fleet provisioning template\.  
 *Required*: No  
-*Type*: List of Json  
+*Type*: [Tags](aws-properties-iot-provisioningtemplate-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateBody`  <a name="cfn-iot-provisioningtemplate-templatebody"></a>
@@ -83,17 +83,17 @@ The JSON formatted contents of the fleet provisioning template\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-iot-provisioningtemplate-return-values"></a>
+## Return values<a name="aws-resource-iot-provisioningtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-provisioningtemplate-return-values-ref"></a>
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
 
- `{ "Ref": "MyThing" }` 
+ `{ "Ref": "MyTemplate" }` 
 
 For a stack named MyStack, a value similar to the following is returned:
 
- `MyStack-MyThing-AB1CDEFGHIJK` 
+ `MyStack-MyTemplate-AB1CDEFGHIJK` 
 
 ### Fn::GetAtt<a name="aws-resource-iot-provisioningtemplate-return-values-fn--getatt"></a>
 

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)" : [ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)
+  "[ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration)" : ShutdownEventConfiguration
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration): 
-    [ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)
+    ShutdownEventConfiguration
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-properties"></a>

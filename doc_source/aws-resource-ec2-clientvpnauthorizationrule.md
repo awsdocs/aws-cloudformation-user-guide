@@ -100,6 +100,6 @@ myAuthRule:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-clientvpnauthorizationrule--seealso"></a>
+## See also<a name="aws-resource-ec2-clientvpnauthorizationrule--seealso"></a>
 + [Getting Started with Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html) in the *AWS Client VPN Administrator Guide*
 + [Authorization Rules](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-rules.html) in the *AWS Client VPN Administrator Guide*

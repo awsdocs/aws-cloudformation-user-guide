@@ -57,7 +57,7 @@ Naming constraints for ledger names are defined in [Quotas in Amazon QLDB](https
 The permissions mode to assign to the ledger that you want to create\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ALLOW_ALL`  
+*Allowed values*: `ALLOW_ALL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-qldb-ledger-tags"></a>
@@ -67,7 +67,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-qldb-ledger-return-values"></a>
+## Return values<a name="aws-resource-qldb-ledger-return-values"></a>
 
 ### Ref<a name="aws-resource-qldb-ledger-return-values-ref"></a>
 
@@ -75,7 +75,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
  `{ "Ref": "myQLDBLedger" }` 
 
-For the resource with the logical ID `myQLDBLedger`, `Ref` will return the Amazon QLDB ledger name\.
+For the resource with the logical ID `myQLDBLedger`, `Ref` returns the Amazon QLDB ledger name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -99,8 +99,8 @@ The following example describes an Amazon QLDB ledger with a `PermissionsMode` o
         "PermissionsMode": "ALLOW_ALL",
         "Tags": [
           {
-            "Key": "foo",
-            "Value": "bar"
+            "Key": "Domain",
+            "Value": "Test"
           }
         ]
       }
@@ -121,9 +121,9 @@ Resources:
       Name: "exampleLedger"
       PermissionsMode: "ALLOW_ALL"
       Tags:
-        - Key: foo
-          Value: bar
+        - Key: Domain
+          Value: Test
 ```
 
-## See Also<a name="aws-resource-qldb-ledger--seealso"></a>
-+  [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*\.
+## See also<a name="aws-resource-qldb-ledger--seealso"></a>
++  [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*

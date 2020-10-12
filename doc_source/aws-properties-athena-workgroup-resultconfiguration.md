@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EncryptionConfiguration](#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md),
+  "[EncryptionConfiguration](#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
   "[OutputLocation](#cfn-athena-workgroup-resultconfiguration-outputlocation)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncryptionConfiguration](#cfn-athena-workgroup-resultconfiguration-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md)
+    EncryptionConfiguration
   [OutputLocation](#cfn-athena-workgroup-resultconfiguration-outputlocation): String
 ```
 

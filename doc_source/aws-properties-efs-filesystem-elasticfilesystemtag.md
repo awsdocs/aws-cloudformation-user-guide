@@ -30,6 +30,7 @@ The tag key \(String\)\. The key can't start with `aws:`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-@]+)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-efs-filesystem-elasticfilesystemtag-value"></a>
@@ -37,4 +38,5 @@ The value of the tag key\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `256`  
+*Pattern*: `^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

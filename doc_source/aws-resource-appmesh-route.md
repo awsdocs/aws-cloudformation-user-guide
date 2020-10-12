@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MeshName](#cfn-appmesh-route-meshname)" : String,
       "[MeshOwner](#cfn-appmesh-route-meshowner)" : String,
       "[RouteName](#cfn-appmesh-route-routename)" : String,
-      "[Spec](#cfn-appmesh-route-spec)" : [RouteSpec](aws-properties-appmesh-route-routespec.md),
+      "[Spec](#cfn-appmesh-route-spec)" : RouteSpec,
       "[Tags](#cfn-appmesh-route-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualRouterName](#cfn-appmesh-route-virtualroutername)" : String
     }
@@ -35,7 +35,7 @@ Properties:
   [MeshOwner](#cfn-appmesh-route-meshowner): String
   [RouteName](#cfn-appmesh-route-routename): String
   [Spec](#cfn-appmesh-route-spec): 
-    [RouteSpec](aws-properties-appmesh-route-routespec.md)
+    RouteSpec
   [Tags](#cfn-appmesh-route-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualRouterName](#cfn-appmesh-route-virtualroutername): String
@@ -79,7 +79,7 @@ The name of the virtual router in which to create the route\. If the virtual rou
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-route-return-values"></a>
+## Return values<a name="aws-resource-appmesh-route-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-route-return-values-ref"></a>
 
@@ -280,6 +280,6 @@ Outputs:
       - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-route--seealso"></a>
+## See also<a name="aws-resource-appmesh-route--seealso"></a>
 +  [Routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateRoute](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html) in the * AWS App Mesh API Reference *\.

@@ -80,7 +80,7 @@ The ARNs of the SNS topics that deliver notifications to AWS Chatbot\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-chatbot-slackchannelconfiguration-return-values"></a>
+## Return values<a name="aws-resource-chatbot-slackchannelconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-chatbot-slackchannelconfiguration-return-values-ref"></a>
 

@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::FunctionDefinitionVersion",
   "Properties" : {
-      "[DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig)" : [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md),
+      "[DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig)" : DefaultConfig,
       "[FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid)" : String,
-      "[Functions](#cfn-greengrass-functiondefinitionversion-functions)" : [ [Function](aws-properties-greengrass-functiondefinitionversion-function.md), ... ]
+      "[Functions](#cfn-greengrass-functiondefinitionversion-functions)" : [ Function, ... ]
     }
 }
 ```
@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::FunctionDefinitionVersion
 Properties: 
   [DefaultConfig](#cfn-greengrass-functiondefinitionversion-defaultconfig): 
-    [DefaultConfig](aws-properties-greengrass-functiondefinitionversion-defaultconfig.md)
+    DefaultConfig
   [FunctionDefinitionId](#cfn-greengrass-functiondefinitionversion-functiondefinitionid): String
   [Functions](#cfn-greengrass-functiondefinitionversion-functions): 
-    - [Function](aws-properties-greengrass-functiondefinitionversion-function.md)
+    - Function
 ```
 
 ## Properties<a name="aws-resource-greengrass-functiondefinitionversion-properties"></a>
@@ -55,7 +55,7 @@ The functions in this version\.
 *Type*: List of [Function](aws-properties-greengrass-functiondefinitionversion-function.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-functiondefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-functiondefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-functiondefinitionversion-return-values-ref"></a>
 
@@ -177,6 +177,6 @@ TestFunctionDefinitionVersion:
                 Gid: '10'
 ```
 
-## See Also<a name="aws-resource-greengrass-functiondefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-functiondefinitionversion--seealso"></a>
 +  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -41,7 +41,7 @@ The ID of the subnet to associate with the Client VPN endpoint\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-clientvpntargetnetworkassociation-return-values"></a>
+## Return values<a name="aws-resource-ec2-clientvpntargetnetworkassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-clientvpntargetnetworkassociation-return-values-ref"></a>
 
@@ -83,6 +83,6 @@ myNetworkAssociation:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-clientvpntargetnetworkassociation--seealso"></a>
+## See also<a name="aws-resource-ec2-clientvpntargetnetworkassociation--seealso"></a>
 + [ Getting Started with Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html) in the *AWS Client VPN Administrator Guide*
 + [Target Networks](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-target.html) in the *AWS Client VPN Administrator Guide*

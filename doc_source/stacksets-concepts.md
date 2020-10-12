@@ -1,4 +1,4 @@
-# StackSets Concepts<a name="stacksets-concepts"></a>
+# StackSets concepts<a name="stacksets-concepts"></a>
 
 When you use StackSets, you work with *stack sets*, *stack instances*, and *stacks*\.
 
@@ -69,7 +69,7 @@ The options described in this section help to control the time and number of fai
 Maximum concurrent accounts  
 This setting, available in create, update, and delete workflows, lets you specify the maximum number or percentage of target accounts in which an operation is performed at one time\. A lower number or percentage means that an operation is performed in fewer target accounts at one time\. Operations are performed in one Region at a time, in the order specified in the **Deployment order **box\. For example, if you are deploying stacks to 10 target accounts within two Regions, setting **Maximum concurrent accounts** to **50** and **By percentage** will deploy stacks to five accounts in the first Region, then the second five accounts within the first Region, before moving on to the next Region and beginning deployment to the first five target accounts\.  
 When you choose **By percentage**, if the specified percentage does not represent a whole number of your specified accounts, AWS CloudFormation rounds down\. For example, if you are deploying stacks to 10 target accounts, and you set **Maximum concurrent accounts** to **25** and **By percentage**, AWS CloudFormation rounds down from deploying 2\.5 stacks concurrently \(which would not be possible\) to deploying two stacks concurrently\.   
-Note that this setting lets you specify the *maximum* for operations\. For large deployments, under certain circumstances the actual number of accounts acted upon concurrently may be lower due to service throttling\. 
+Note that this setting lets you specify the *maximum* for operations\. For large deployments, under certain circumstances the actual number of accounts acted upon concurrently may be lower due to service throttling\. The maximum speed of deployment is 100 concurrent stack instances per stack set\. 
 
 Failure tolerance  
 This setting, available in create, update, and delete workflows, lets you specify the maximum number or percentage of stack operation failures that can occur, per Region, beyond which AWS CloudFormation stops an operation automatically\. A lower number or percentage means that the operation is performed on fewer stacks, but you are able to start troubleshooting failed operations faster\. For example, if you are updating 10 stacks in 10 target accounts within three Regions, setting **Failure tolerance** to **20** and **By percentage** means that a maximum of two stack updates in a Region can fail for the operation to continue\. If a third stack in the same Region fails, AWS CloudFormation stops the operation\. If a stack could not be updated in the first Region, the update operation continues in that Region, and then moves on to the next Region\. If two stacks cannot be updated in the second Region, the failure tolerance of 20% is reached; if a third stack in the Region fails, AWS CloudFormation stops the update operation, and does not go on to subsequent Regions\.  
@@ -80,7 +80,7 @@ This setting, available in delete stack workflows, lets you keep stacks and thei
 
 ## Tags<a name="stackset-concepts-tags"></a>
 
-You can add tags during stack set creation and update operations by specifying key and value pairs\. Tags are useful for sorting and filtering stack set resources for billing and cost allocation\. For more information about how tags are used in AWS, see [Using Cost Allocation Tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. After you specify the key\-value pair, choose **\+** to save the tag\.You can delete tags that you are no longer using by choosing the red **X** to the right of a tag\.
+You can add tags during stack set creation and update operations by specifying key and value pairs\. Tags are useful for sorting and filtering stack set resources for billing and cost allocation\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. After you specify the key\-value pair, choose **\+** to save the tag\.You can delete tags that you are no longer using by choosing the red **X** to the right of a tag\.
 
 Tags that you apply to stack sets are applied to all stacks, and the resources that are created by your stacks\. Tags can be added at the stack\-only level in AWS CloudFormation, but those tags might not show up in StackSets\.
 
@@ -93,7 +93,7 @@ AWS CloudFormation StackSets generates status codes for stack set operations and
 The following table describes status codes for stack set operations\.
 
 
-| Stack Set Operation Status | Description | 
+| Stack set operation status | Description | 
 | --- | --- | 
 |  `RUNNING`  |  The operation is currently in progress\.  | 
 |  `SUCCEEDED`  |  The operation finished without exceeding the failure tolerance for the operation\.  | 
@@ -105,8 +105,13 @@ The following table describes status codes for stack set operations\.
 The following table describes status codes for stack instances within stack sets\.
 
 
-| Stack Instance Status | Description | 
+| Stack instance status | Description | 
 | --- | --- | 
 |  `CURRENT`  |  The stack is currently up to date with the stack set\.  | 
 |  `OUTDATED`  |  The stack is not currently up to date with the stack set for one of the following reasons\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html)  | 
 |  `INOPERABLE`  |  A `DeleteStackInstances` operation has failed and left the stack in an unstable state\. Stacks in this state are excluded from further `UpdateStackSet` operations\. You might need to perform a `DeleteStackInstances` operation, with `RetainStacks` set to `true`, to delete the stack instance, and then delete the stack manually\.  | 
+|  `CANCELLED`  |  The operation in the specified account and Region has been cancelled\. This is either because a user has stopped the stack set operation, or because the failure tolerance of the stack set operation has been exceeded\.  | 
+|  `FAILED`  |  The operation in the specified account and Region failed\. If the stack set operation fails in enough accounts within a Region, the failure tolerance for the stack set operation as a whole might be exceeded\.  | 
+|  `PENDING`  |  The operation in the specified account and Region has yet to start\.  | 
+|  `RUNNING`  |  The operation in the specified account and Region is currently in progress\.  | 
+|  `SUCCEEDED`  |  The operation in the specified account and Region completed successfully\.  | 

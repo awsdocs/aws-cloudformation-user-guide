@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation)" : [S3ContentLocation](aws-properties-kinesisanalyticsv2-application-s3contentlocation.md),
+  "[S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation)" : S3ContentLocation,
   "[TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent)" : String,
   "[ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3ContentLocation](#cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation): 
-    [S3ContentLocation](aws-properties-kinesisanalyticsv2-application-s3contentlocation.md)
+    S3ContentLocation
   [TextContent](#cfn-kinesisanalyticsv2-application-codecontent-textcontent): String
   [ZipFileContent](#cfn-kinesisanalyticsv2-application-codecontent-zipfilecontent): String
 ```
@@ -47,5 +47,5 @@ The zip\-format code for a Flink\-based Kinesis Data Analytics application\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-codecontent--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-codecontent--seealso"></a>
 +  [CodeContent](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CodeContent.html) in the *Amazon Kinesis Data Analytics API Reference* 

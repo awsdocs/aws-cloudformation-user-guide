@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Certificate](#cfn-appmesh-virtualnode-listenertls-certificate)" : [ListenerTlsCertificate](aws-properties-appmesh-virtualnode-listenertlscertificate.md),
+  "[Certificate](#cfn-appmesh-virtualnode-listenertls-certificate)" : ListenerTlsCertificate,
   "[Mode](#cfn-appmesh-virtualnode-listenertls-mode)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Certificate](#cfn-appmesh-virtualnode-listenertls-certificate): 
-    [ListenerTlsCertificate](aws-properties-appmesh-virtualnode-listenertlscertificate.md)
+    ListenerTlsCertificate
   [Mode](#cfn-appmesh-virtualnode-listenertls-mode): String
 ```
 

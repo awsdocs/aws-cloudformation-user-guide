@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::ListenerRule",
   "Properties" : {
-      "[Actions](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md), ... ],
-      "[Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md), ... ],
+      "[Actions](#cfn-elasticloadbalancingv2-listenerrule-actions)" : [ Action, ... ],
+      "[Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions)" : [ RuleCondition, ... ],
       "[ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn)" : String,
       "[Priority](#cfn-elasticloadbalancingv2-listenerrule-priority)" : Integer
     }
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ElasticLoadBalancingV2::ListenerRule
 Properties: 
   [Actions](#cfn-elasticloadbalancingv2-listenerrule-actions): 
-    - [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)
+    - Action
   [Conditions](#cfn-elasticloadbalancingv2-listenerrule-conditions): 
-    - [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)
+    - RuleCondition
   [ListenerArn](#cfn-elasticloadbalancingv2-listenerrule-listenerarn): String
   [Priority](#cfn-elasticloadbalancingv2-listenerrule-priority): Integer
 ```
@@ -64,7 +64,7 @@ If you try to reorder rules by updating their priorities, do not specify a new p
 *Maximum*: `50000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values"></a>
+## Return values<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-ref"></a>
 
@@ -1544,6 +1544,6 @@ Outputs:
 }
 ```
 
-## See Also<a name="aws-resource-elasticloadbalancingv2-listenerrule--seealso"></a>
+## See also<a name="aws-resource-elasticloadbalancingv2-listenerrule--seealso"></a>
 +  [CreateRule](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateRule.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listener Rules](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html#listener-rules) in the *User Guide for Application Load Balancers* 

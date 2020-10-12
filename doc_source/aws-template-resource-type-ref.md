@@ -1,4 +1,4 @@
-# AWS Resource and Property Types Reference<a name="aws-template-resource-type-ref"></a>
+# AWS resource and property types reference<a name="aws-template-resource-type-ref"></a>
 
 This section contains reference information for all AWS resource and property types that are supported by AWS CloudFormation\.
 
@@ -17,7 +17,9 @@ service-provider::service-name::data-type-name
 + [API Gateway](AWS_ApiGateway.md)
 + [API Gateway V2](AWS_ApiGatewayV2.md)
 + [AppConfig](AWS_AppConfig.md)
++ [Amazon AppFlow](AWS_AppFlow.md)
 + [Application Auto Scaling](AWS_ApplicationAutoScaling.md)
++ [ApplicationInsights](AWS_ApplicationInsights.md)
 + [App Mesh](AWS_AppMesh.md)
 + [AppStream 2\.0](AWS_AppStream.md)
 + [AppSync](AWS_AppSync.md)
@@ -37,11 +39,11 @@ service-provider::service-name::data-type-name
 + [CloudTrail](AWS_CloudTrail.md)
 + [CloudWatch](AWS_CloudWatch.md)
 + [CloudWatch Logs](AWS_Logs.md)
-+ [Amazon EventBridge](AWS_Events.md)
 + [CodeBuild](AWS_CodeBuild.md)
 + [CodeCommit](AWS_CodeCommit.md)
 + [CodeDeploy](AWS_CodeDeploy.md)
 + [CodeGuruProfiler](AWS_CodeGuruProfiler.md)
++ [CodeGuruReviewer](AWS_CodeGuruReviewer.md)
 + [CodePipeline](AWS_CodePipeline.md)
 + [CodeStar](AWS_CodeStar.md)
 + [CodeStarConnections](AWS_CodeStarConnections.md)
@@ -68,6 +70,7 @@ service-provider::service-name::data-type-name
 + [Elastic Load Balancing](AWS_ElasticLoadBalancing.md)
 + [ElasticLoadBalancingV2](AWS_ElasticLoadBalancingV2.md)
 + [Amazon EMR](AWS_EMR.md)
++ [Amazon EventBridge](AWS_Events.md)
 + [EventSchemas](AWS_EventSchemas.md)
 + [FMS](AWS_FMS.md)
 + [FSx](AWS_FSx.md)
@@ -85,6 +88,7 @@ service-provider::service-name::data-type-name
 + [IoTEvents](AWS_IoTEvents.md)
 + [AWS IoT Greengrass](AWS_Greengrass.md)
 + [AWS IoT Things Graph](AWS_IoTThingsGraph.md)
++ [Kendra](AWS_Kendra.md)
 + [Amazon Kinesis](AWS_Kinesis.md)
 + [KinesisAnalytics](AWS_KinesisAnalytics.md)
 + [Amazon Kinesis Data Analytics V2](AWS_KinesisAnalyticsV2.md)
@@ -121,6 +125,7 @@ service-provider::service-name::data-type-name
 + [Amazon SimpleDB](AWS_SDB.md)
 + [Amazon SNS](AWS_SNS.md)
 + [Amazon SQS](AWS_SQS.md)
++ [SSO](AWS_SSO.md)
 + [Step Functions](AWS_StepFunctions.md)
 + [Systems Manager](AWS_SSM.md)
 + [Synthetics](AWS_Synthetics.md)
@@ -129,4 +134,4 @@ service-provider::service-name::data-type-name
 + [WAFv2](AWS_WAFv2.md)
 + [WAF Regional](AWS_WAFRegional.md)
 + [WorkSpaces](AWS_WorkSpaces.md)
-+ [Shared Property Types](cfn-reference-shared.md)
++ [Shared property types](cfn-reference-shared.md)

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath)" : String,
-  "[GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting)" : [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md),
+  "[GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting)" : GroupOwnerSetting,
   "[SourcePath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-destinationpath): String
   [GroupOwnerSetting](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-groupownersetting): 
-    [GroupOwnerSetting](aws-properties-greengrass-resourcedefinitionversion-groupownersetting.md)
+    GroupOwnerSetting
   [SourcePath](#cfn-greengrass-resourcedefinitionversion-localvolumeresourcedata-sourcepath): String
 ```
 
@@ -47,6 +47,6 @@ The local absolute path of the volume resource on the host\. The source path for
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinitionversion-localvolumeresourcedata--seealso"></a>
 +  [LocalVolumeResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-localvolumeresourcedata.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

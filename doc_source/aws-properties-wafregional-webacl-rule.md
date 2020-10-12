@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-wafregional-webacl-rule-action)" : [Action](aws-properties-wafregional-webacl-action.md),
+  "[Action](#cfn-wafregional-webacl-rule-action)" : Action,
   "[Priority](#cfn-wafregional-webacl-rule-priority)" : Integer,
   "[RuleId](#cfn-wafregional-webacl-rule-ruleid)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-wafregional-webacl-rule-action): 
-    [Action](aws-properties-wafregional-webacl-action.md)
+    Action
   [Priority](#cfn-wafregional-webacl-rule-priority): Integer
   [RuleId](#cfn-wafregional-webacl-rule-ruleid): String
 ```

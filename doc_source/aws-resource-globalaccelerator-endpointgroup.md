@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GlobalAccelerator::EndpointGroup",
   "Properties" : {
-      "[EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations)" : [ [EndpointConfiguration](aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.md), ... ],
+      "[EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations)" : [ EndpointConfiguration, ... ],
       "[EndpointGroupRegion](#cfn-globalaccelerator-endpointgroup-endpointgroupregion)" : String,
       "[HealthCheckIntervalSeconds](#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds)" : Integer,
       "[HealthCheckPath](#cfn-globalaccelerator-endpointgroup-healthcheckpath)" : String,
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GlobalAccelerator::EndpointGroup
 Properties: 
   [EndpointConfigurations](#cfn-globalaccelerator-endpointgroup-endpointconfigurations): 
-    - [EndpointConfiguration](aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.md)
+    - EndpointConfiguration
   [EndpointGroupRegion](#cfn-globalaccelerator-endpointgroup-endpointgroupregion): String
   [HealthCheckIntervalSeconds](#cfn-globalaccelerator-endpointgroup-healthcheckintervalseconds): Integer
   [HealthCheckPath](#cfn-globalaccelerator-endpointgroup-healthcheckpath): String
@@ -86,7 +86,7 @@ The default port is the port for the listener that this endpoint group is associ
 The protocol that Global Accelerator uses to perform health checks on endpoints that are part of this endpoint group\. The default value is TCP\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `HTTP | HTTPS | TCP`  
+*Allowed values*: `HTTP | HTTPS | TCP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ListenerArn`  <a name="cfn-globalaccelerator-endpointgroup-listenerarn"></a>
@@ -112,7 +112,7 @@ The default value is 100\.
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-globalaccelerator-endpointgroup-return-values"></a>
+## Return values<a name="aws-resource-globalaccelerator-endpointgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-globalaccelerator-endpointgroup-return-values-ref"></a>
 

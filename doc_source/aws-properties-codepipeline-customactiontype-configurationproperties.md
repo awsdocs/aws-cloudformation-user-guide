@@ -83,5 +83,5 @@ When updating a pipeline, passing \* \* \* \* \* without changing any other valu
 The type of the configuration property\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Boolean | Number | String`  
+*Allowed values*: `Boolean | Number | String`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

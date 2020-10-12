@@ -32,7 +32,7 @@ The key for the filter\.
 For information about valid keys, see [PatchFilter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PatchFilter.html) in the *AWS Systems Manager API Reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CLASSIFICATION | MSRC_SEVERITY | PATCH_ID | PATCH_SET | PRIORITY | PRODUCT | PRODUCT_FAMILY | SECTION | SEVERITY`  
+*Allowed values*: `CLASSIFICATION | MSRC_SEVERITY | PATCH_ID | PATCH_SET | PRIORITY | PRODUCT | PRODUCT_FAMILY | SECTION | SEVERITY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-patchbaseline-patchfilter-values"></a>

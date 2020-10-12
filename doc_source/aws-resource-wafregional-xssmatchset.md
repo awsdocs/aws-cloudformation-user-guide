@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAFRegional::XssMatchSet",
   "Properties" : {
       "[Name](#cfn-wafregional-xssmatchset-name)" : String,
-      "[XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples)" : [ [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md), ... ]
+      "[XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples)" : [ XssMatchTuple, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::WAFRegional::XssMatchSet
 Properties: 
   [Name](#cfn-wafregional-xssmatchset-name): String
   [XssMatchTuples](#cfn-wafregional-xssmatchset-xssmatchtuples): 
-    - [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)
+    - XssMatchTuple
 ```
 
 ## Properties<a name="aws-resource-wafregional-xssmatchset-properties"></a>
@@ -49,7 +49,7 @@ Specifies the parts of web requests that you want to inspect for cross\-site scr
 *Type*: List of [XssMatchTuple](aws-properties-wafregional-xssmatchset-xssmatchtuple.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-xssmatchset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-xssmatchset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-xssmatchset-return-values-ref"></a>
 

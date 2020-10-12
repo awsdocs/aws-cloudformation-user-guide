@@ -14,18 +14,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::PatchBaseline",
   "Properties" : {
-      "[ApprovalRules](#cfn-ssm-patchbaseline-approvalrules)" : [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md),
+      "[ApprovalRules](#cfn-ssm-patchbaseline-approvalrules)" : RuleGroup,
       "[ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches)" : [ String, ... ],
       "[ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel)" : String,
       "[ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity)" : Boolean,
       "[Description](#cfn-ssm-patchbaseline-description)" : String,
-      "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md),
+      "[GlobalFilters](#cfn-ssm-patchbaseline-globalfilters)" : PatchFilterGroup,
       "[Name](#cfn-ssm-patchbaseline-name)" : String,
       "[OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem)" : String,
       "[PatchGroups](#cfn-ssm-patchbaseline-patchgroups)" : [ String, ... ],
       "[RejectedPatches](#cfn-ssm-patchbaseline-rejectedpatches)" : [ String, ... ],
       "[RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction)" : String,
-      "[Sources](#cfn-ssm-patchbaseline-sources)" : [ [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md), ... ],
+      "[Sources](#cfn-ssm-patchbaseline-sources)" : [ PatchSource, ... ],
       "[Tags](#cfn-ssm-patchbaseline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -37,14 +37,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SSM::PatchBaseline
 Properties: 
   [ApprovalRules](#cfn-ssm-patchbaseline-approvalrules): 
-    [RuleGroup](aws-properties-ssm-patchbaseline-rulegroup.md)
+    RuleGroup
   [ApprovedPatches](#cfn-ssm-patchbaseline-approvedpatches): 
     - String
   [ApprovedPatchesComplianceLevel](#cfn-ssm-patchbaseline-approvedpatchescompliancelevel): String
   [ApprovedPatchesEnableNonSecurity](#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity): Boolean
   [Description](#cfn-ssm-patchbaseline-description): String
   [GlobalFilters](#cfn-ssm-patchbaseline-globalfilters): 
-    [PatchFilterGroup](aws-properties-ssm-patchbaseline-patchfiltergroup.md)
+    PatchFilterGroup
   [Name](#cfn-ssm-patchbaseline-name): String
   [OperatingSystem](#cfn-ssm-patchbaseline-operatingsystem): String
   [PatchGroups](#cfn-ssm-patchbaseline-patchgroups): 
@@ -53,7 +53,7 @@ Properties:
     - String
   [RejectedPatchesAction](#cfn-ssm-patchbaseline-rejectedpatchesaction): String
   [Sources](#cfn-ssm-patchbaseline-sources): 
-    - [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md)
+    - PatchSource
   [Tags](#cfn-ssm-patchbaseline-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -78,7 +78,7 @@ For information about accepted formats for lists of approved patches and rejecte
 Defines the compliance level for approved patches\. This means that if an approved patch is reported as missing, this is the severity of the compliance violation\. The default value is UNSPECIFIED\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CRITICAL | HIGH | INFORMATIONAL | LOW | MEDIUM | UNSPECIFIED`  
+*Allowed values*: `CRITICAL | HIGH | INFORMATIONAL | LOW | MEDIUM | UNSPECIFIED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApprovedPatchesEnableNonSecurity`  <a name="cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity"></a>
@@ -114,7 +114,7 @@ The name of the patch baseline\.
 Defines the operating system the patch baseline applies to\. The Default value is WINDOWS\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | DEBIAN | ORACLE_LINUX | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
+*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | DEBIAN | ORACLE_LINUX | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PatchGroups`  <a name="cfn-ssm-patchbaseline-patchgroups"></a>
@@ -140,7 +140,7 @@ The action for Patch Manager to take on patches included in the RejectedPackages
 +  **BLOCK**: Packages in the RejectedPatches list, and packages that include them as dependencies, are not installed under any circumstances\. If a package was installed before it was added to the Rejected patches list, it is considered non\-compliant with the patch baseline, and its status is reported as *InstalledRejected*\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ALLOW_AS_DEPENDENCY | BLOCK`  
+*Allowed values*: `ALLOW_AS_DEPENDENCY | BLOCK`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-ssm-patchbaseline-sources"></a>
@@ -157,7 +157,7 @@ Optional metadata that you assign to a resource\. Tags enable you to categorize 
 *Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-patchbaseline-return-values"></a>
+## Return values<a name="aws-resource-ssm-patchbaseline-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-patchbaseline-return-values-ref"></a>
 
@@ -170,11 +170,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-patchbaseline--examples"></a>
 
-### AWS Systems Manager Patch Baseline Example<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example"></a>
+### Create a patch baseline<a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline"></a>
 
 The following example creates a Systems Manager patch baseline that approves patches for Windows Server 2019 instances seven days after they are released by Microsoft\. The patch baseline also approves patches for Active Directory seven days after they are released by Microsoft\.
 
-#### <a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--language_owl_wvr_qlb"></a>
+#### <a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline--language_owl_wvr_qlb"></a>
 
 ```
 {
@@ -267,7 +267,7 @@ The following example creates a Systems Manager patch baseline that approves pat
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-patchbaseline--examples--AWS_Systems_Manager_Patch_Baseline_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline--yaml"></a>
 
 ```
 ---
@@ -321,5 +321,5 @@ Resources:
           ComplianceLevel: CRITICAL
 ```
 
-## See Also<a name="aws-resource-ssm-patchbaseline--seealso"></a>
+## See also<a name="aws-resource-ssm-patchbaseline--seealso"></a>
 +  [CreatePatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html) in the *AWS Systems Manager API Reference*\.

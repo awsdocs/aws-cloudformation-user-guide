@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Neptune::DBCluster",
   "Properties" : {
+      "[AssociatedRoles](#cfn-neptune-dbcluster-associatedroles)" : [ DBClusterRole, ... ],
       "[AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones)" : [ String, ... ],
       "[BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod)" : Integer,
       "[DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier)" : String,
@@ -49,6 +50,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Neptune::DBCluster
 Properties: 
+  [AssociatedRoles](#cfn-neptune-dbcluster-associatedroles): 
+    - DBClusterRole
   [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones): 
     - String
   [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod): Integer
@@ -77,6 +80,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-neptune-dbcluster-properties"></a>
+
+`AssociatedRoles`  <a name="cfn-neptune-dbcluster-associatedroles"></a>
+Provides a list of the AWS Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other AWS services on your behalf\.  
+*Required*: No  
+*Type*: List of [DBClusterRole](aws-properties-neptune-dbcluster-dbclusterrole.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZones`  <a name="cfn-neptune-dbcluster-availabilityzones"></a>
 Provides the list of EC2 Availability Zones that instances in the DB cluster can be created in\.  
@@ -211,7 +220,7 @@ Provides a list of VPC security groups that the DB cluster belongs to\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-neptune-dbcluster-return-values"></a>
+## Return values<a name="aws-resource-neptune-dbcluster-return-values"></a>
 
 ### Ref<a name="aws-resource-neptune-dbcluster-return-values-ref"></a>
 

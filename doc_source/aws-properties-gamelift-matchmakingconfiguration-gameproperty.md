@@ -38,7 +38,7 @@ The game property value\.
 *Maximum*: `96`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty--seealso"></a>
+## See also<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Design a FlexMatch Matchmaker](https://docs.aws.amazon.com/gamelift/latest/developerguide/match-configuration.html) in the *Amazon GameLift Developer Guide* 
 +  [GameProperty](https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameProperty.html) in the *Amazon GameLift API Reference* 

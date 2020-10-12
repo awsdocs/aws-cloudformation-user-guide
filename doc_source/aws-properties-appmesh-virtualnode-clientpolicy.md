@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TLS](#cfn-appmesh-virtualnode-clientpolicy-tls)" : [ClientPolicyTls](aws-properties-appmesh-virtualnode-clientpolicytls.md)
+  "[TLS](#cfn-appmesh-virtualnode-clientpolicy-tls)" : ClientPolicyTls
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [TLS](#cfn-appmesh-virtualnode-clientpolicy-tls): 
-    [ClientPolicyTls](aws-properties-appmesh-virtualnode-clientpolicytls.md)
+    ClientPolicyTls
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-clientpolicy-properties"></a>

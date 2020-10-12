@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KmsKeyId](#cfn-imagebuilder-component-kmskeyid)" : String,
       "[Name](#cfn-imagebuilder-component-name)" : String,
       "[Platform](#cfn-imagebuilder-component-platform)" : String,
+      "[SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions)" : [ String, ... ],
       "[Tags](#cfn-imagebuilder-component-tags)" : {Key : Value, ...},
       "[Uri](#cfn-imagebuilder-component-uri)" : String,
       "[Version](#cfn-imagebuilder-component-version)" : String
@@ -36,6 +37,8 @@ Properties:
   [KmsKeyId](#cfn-imagebuilder-component-kmskeyid): String
   [Name](#cfn-imagebuilder-component-name): String
   [Platform](#cfn-imagebuilder-component-platform): String
+  [SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions): 
+    - String
   [Tags](#cfn-imagebuilder-component-tags): 
     Key : Value
   [Uri](#cfn-imagebuilder-component-uri): String
@@ -85,7 +88,14 @@ The name of the component\.
 The platform of the component\. For example, `Windows`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Linux | Windows`  
+*Allowed values*: `Linux | Windows`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SupportedOsVersions`  <a name="cfn-imagebuilder-component-supportedosversions"></a>
+The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the parent image OS version during image recipe creation\.   
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `25`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-imagebuilder-component-tags"></a>
@@ -107,7 +117,7 @@ The component version\. For example, `1.0.0`\.
 *Pattern*: `^[0-9]+\.[0-9]+\.[0-9]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-imagebuilder-component-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-component-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-component-return-values-ref"></a>
 

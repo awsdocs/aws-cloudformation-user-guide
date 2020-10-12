@@ -67,5 +67,5 @@ The ARN of an encryption key for a destination in Amazon S3\. Must belong to the
 A supported sync format\. The following format is currently supported: JsonSerDe  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `JsonSerDe`  
+*Allowed values*: `JsonSerDe`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

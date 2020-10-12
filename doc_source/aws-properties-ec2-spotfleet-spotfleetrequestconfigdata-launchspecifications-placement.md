@@ -43,5 +43,5 @@ The name of the placement group\.
 The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for Spot Instances\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default | host`  
+*Allowed values*: `dedicated | default | host`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

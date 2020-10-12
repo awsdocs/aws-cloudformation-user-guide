@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Trust](#cfn-appmesh-virtualnode-tlsvalidationcontext-trust)" : [TlsValidationContextTrust](aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.md)
+  "[Trust](#cfn-appmesh-virtualnode-tlsvalidationcontext-trust)" : TlsValidationContextTrust
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Trust](#cfn-appmesh-virtualnode-tlsvalidationcontext-trust): 
-    [TlsValidationContextTrust](aws-properties-appmesh-virtualnode-tlsvalidationcontexttrust.md)
+    TlsValidationContextTrust
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-tlsvalidationcontext-properties"></a>

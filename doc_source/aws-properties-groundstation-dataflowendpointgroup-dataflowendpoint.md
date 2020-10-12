@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Address](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)" : [SocketAddress](aws-properties-groundstation-dataflowendpointgroup-socketaddress.md),
+  "[Address](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address)" : SocketAddress,
+  "[Mtu](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu)" : Integer,
   "[Name](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name)" : String
 }
 ```
@@ -19,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Address](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-address): 
-    [SocketAddress](aws-properties-groundstation-dataflowendpointgroup-socketaddress.md)
+    SocketAddress
+  [Mtu](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu): Integer
   [Name](#cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name): String
 ```
 
@@ -29,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The address and port of an endpoint\.   
 *Required*: No  
 *Type*: [SocketAddress](aws-properties-groundstation-dataflowendpointgroup-socketaddress.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Mtu`  <a name="cfn-groundstation-dataflowendpointgroup-dataflowendpoint-mtu"></a>
+Maximum transmission unit \(MTU\) size in bytes of a dataflow endpoint\. Valid values are between 1400 and 1500\. A default value of 1500 is used if not set\.   
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-groundstation-dataflowendpointgroup-dataflowendpoint-name"></a>
@@ -53,7 +61,8 @@ The following example creates a Ground Station `DataflowEndpoint`
     "Address": {
       "Name": "172.10.0.2",
       "Port": 44720
-  }
+    },
+    "Mtu": 1500
 }
 ```
 
@@ -65,4 +74,5 @@ Endpoint:
   Address:
     Name: 172.10.0.2
     Port: 44720
+  Mtu: 1500
 ```

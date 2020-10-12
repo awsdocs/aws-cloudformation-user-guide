@@ -74,7 +74,7 @@ The Amazon Resource Name \(ARN\) of the server certificate\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-elb-listener--seealso"></a>
+## See also<a name="aws-properties-ec2-elb-listener--seealso"></a>
 +  [CreateLoadBalancerListeners](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerListeners.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html) in the *User Guide for Classic Load Balancers* 
 +  [HTTPS Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-https-load-balancers.html) in the *User Guide for Classic Load Balancers* 

@@ -30,5 +30,5 @@ The total amount of time that Kinesis Data Firehose spends on retries\. This dur
 *Maximum*: `7200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions--seealso"></a>
+## See also<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions--seealso"></a>
 +  [SplunkRetryOptions](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkRetryOptions.html) in the *Amazon Kinesis Data Firehose API Reference*\. 

@@ -14,20 +14,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CertificateArn](#cfn-dms-endpoint-certificatearn)" : String,
       "[DatabaseName](#cfn-dms-endpoint-databasename)" : String,
-      "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)" : [DynamoDbSettings](aws-properties-dms-endpoint-dynamodbsettings.md),
-      "[ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings)" : [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md),
+      "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)" : DynamoDbSettings,
+      "[ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings)" : ElasticsearchSettings,
       "[EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier)" : String,
       "[EndpointType](#cfn-dms-endpoint-endpointtype)" : String,
       "[EngineName](#cfn-dms-endpoint-enginename)" : String,
       "[ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes)" : String,
-      "[KafkaSettings](#cfn-dms-endpoint-kafkasettings)" : [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md),
-      "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md),
+      "[KafkaSettings](#cfn-dms-endpoint-kafkasettings)" : KafkaSettings,
+      "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : KinesisSettings,
       "[KmsKeyId](#cfn-dms-endpoint-kmskeyid)" : String,
-      "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md),
-      "[NeptuneSettings](#cfn-dms-endpoint-neptunesettings)" : [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md),
+      "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : MongoDbSettings,
+      "[NeptuneSettings](#cfn-dms-endpoint-neptunesettings)" : NeptuneSettings,
       "[Password](#cfn-dms-endpoint-password)" : String,
       "[Port](#cfn-dms-endpoint-port)" : Integer,
-      "[S3Settings](#cfn-dms-endpoint-s3settings)" : [S3Settings](aws-properties-dms-endpoint-s3settings.md),
+      "[S3Settings](#cfn-dms-endpoint-s3settings)" : S3Settings,
       "[ServerName](#cfn-dms-endpoint-servername)" : String,
       "[SslMode](#cfn-dms-endpoint-sslmode)" : String,
       "[Tags](#cfn-dms-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -44,26 +44,26 @@ Properties:
   [CertificateArn](#cfn-dms-endpoint-certificatearn): String
   [DatabaseName](#cfn-dms-endpoint-databasename): String
   [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings): 
-    [DynamoDbSettings](aws-properties-dms-endpoint-dynamodbsettings.md)
+    DynamoDbSettings
   [ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings): 
-    [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md)
+    ElasticsearchSettings
   [EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier): String
   [EndpointType](#cfn-dms-endpoint-endpointtype): String
   [EngineName](#cfn-dms-endpoint-enginename): String
   [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes): String
   [KafkaSettings](#cfn-dms-endpoint-kafkasettings): 
-    [KafkaSettings](aws-properties-dms-endpoint-kafkasettings.md)
+    KafkaSettings
   [KinesisSettings](#cfn-dms-endpoint-kinesissettings): 
-    [KinesisSettings](aws-properties-dms-endpoint-kinesissettings.md)
+    KinesisSettings
   [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
   [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings): 
-    [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)
+    MongoDbSettings
   [NeptuneSettings](#cfn-dms-endpoint-neptunesettings): 
-    [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)
+    NeptuneSettings
   [Password](#cfn-dms-endpoint-password): String
   [Port](#cfn-dms-endpoint-port): Integer
   [S3Settings](#cfn-dms-endpoint-s3settings): 
-    [S3Settings](aws-properties-dms-endpoint-s3settings.md)
+    S3Settings
   [ServerName](#cfn-dms-endpoint-servername): String
   [SslMode](#cfn-dms-endpoint-sslmode): String
   [Tags](#cfn-dms-endpoint-tags): 
@@ -98,7 +98,7 @@ Settings in JSON format for the target Elasticsearch endpoint\. For more informa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointIdentifier`  <a name="cfn-dms-endpoint-endpointidentifier"></a>
-The database endpoint identifier\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen or contain two consecutive hyphens\.  
+The database endpoint identifier\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen, or contain two consecutive hyphens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,11 +107,11 @@ The database endpoint identifier\. Identifiers must begin with a letter and must
 The type of endpoint\. Valid values are `source` and `target`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `source | target`  
+*Allowed values*: `source | target`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"documentdb"`, and `"sqlserver"`\.  
+The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"docdb"`, `"sqlserver"`, and `"neptune"`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -149,7 +149,7 @@ Settings in JSON format for the source MongoDB endpoint\. For more information a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NeptuneSettings`  <a name="cfn-dms-endpoint-neptunesettings"></a>
-Settings in JSON format for the target Amazon Neptune endpoint\. For more information about the available settings, see [Specifying Endpoint Settings for Amazon Neptune as a Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.EndpointSettings) in the *AWS Database Migration Service User Guide\.*   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -183,6 +183,7 @@ The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The defaul
 *Required*: No  
 *Type*: String  
 *Allowed Values*: `none | require | verify-ca | verify-full` Note: When `engine_name` is set to `S3` then the only alowed value is `none`
+
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-endpoint-tags"></a>
@@ -197,7 +198,7 @@ The user name to be used to log in to the endpoint database\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dms-endpoint-return-values"></a>
+## Return values<a name="aws-resource-dms-endpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-endpoint-return-values-ref"></a>
 
@@ -223,23 +224,49 @@ A value that can be used for cross\-account validation\.
 #### JSON<a name="aws-resource-dms-endpoint--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
-                "myBasicEndpoint": { "Type": "AWS::DMS::Endpoint", "Properties": { "EngineName":
-                "mysql", "EndpointType": "source", "Username": "username", "Password": { "Ref":
-                "PasswordParameter" }, "ServerName": "source.db.amazon.com", "Port": 1234,
-                "DatabaseName": "source-db" } } } }
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "myBasicEndpoint": {
+      "Type": "AWS::DMS::Endpoint",
+      "Properties": {
+        "EngineName": "mysql",
+        "EndpointType": "source",
+        "Username": "username",
+        "Password": {
+          "Ref": "PasswordParameter"
+        },
+        "ServerName": "source.db.amazon.com",
+        "Port": 1234,
+        "DatabaseName": "source-db"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-dms-endpoint--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Description: "Endpoint
-                test" Resources: BasicEndpoint: Properties: DatabaseName: my-db EndpointType: target
-                EngineName: mysql Password: PasswordParameter Port: 1234 ServerName:
-                server.db.amazon.com Tags: - Key: type Value: new Username: username Type:
-                "AWS::DMS::Endpoint"
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Endpoint test"
+Resources: 
+  BasicEndpoint: 
+    Properties: 
+      DatabaseName: my-db
+      EndpointType: target
+      EngineName: mysql
+      Password: PasswordParameter
+      Port: 1234
+      ServerName: server.db.amazon.com
+      Tags: 
+        - 
+          Key: type
+          Value: new
+      Username: username
+    Type: "AWS::DMS::Endpoint"
 ```
 
-## See Also<a name="aws-resource-dms-endpoint--seealso"></a>
+## See also<a name="aws-resource-dms-endpoint--seealso"></a>
 +  [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

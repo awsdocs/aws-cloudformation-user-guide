@@ -62,6 +62,6 @@ The storage mechanism for log events\. Valid values are `FileSystem` or `AWSClou
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-loggerdefinitionversion-logger--seealso"></a>
+## See also<a name="aws-properties-greengrass-loggerdefinitionversion-logger--seealso"></a>
 +  [Logger](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-logger.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

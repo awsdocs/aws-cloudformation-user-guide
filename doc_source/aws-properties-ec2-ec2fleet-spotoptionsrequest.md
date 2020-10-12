@@ -50,7 +50,7 @@ If the allocation strategy is `capacityOptimized`, EC2 Fleet launches instances 
 The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `hibernate | stop | terminate`  
+*Allowed values*: `hibernate | stop | terminate`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstancePoolsToUseCount`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount"></a>
@@ -83,5 +83,5 @@ Indicates that the fleet uses a single instance type to launch all Spot Instance
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-ec2-ec2fleet-spotoptionsrequest--seealso"></a>
+## See also<a name="aws-properties-ec2-ec2fleet-spotoptionsrequest--seealso"></a>
 +  [ SpotOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotOptionsRequest.html) in the *Amazon EC2 API Reference*

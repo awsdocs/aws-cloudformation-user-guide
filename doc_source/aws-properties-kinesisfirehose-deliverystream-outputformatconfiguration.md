@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Serializer](#cfn-kinesisfirehose-deliverystream-outputformatconfiguration-serializer)" : [Serializer](aws-properties-kinesisfirehose-deliverystream-serializer.md)
+  "[Serializer](#cfn-kinesisfirehose-deliverystream-outputformatconfiguration-serializer)" : Serializer
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Serializer](#cfn-kinesisfirehose-deliverystream-outputformatconfiguration-serializer): 
-    [Serializer](aws-properties-kinesisfirehose-deliverystream-serializer.md)
+    Serializer
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-outputformatconfiguration-properties"></a>

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-wafv2-webacl-rulegroupreferencestatement-arn)" : String,
-  "[ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules)" : [ [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md), ... ]
+  "[ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules)" : [ ExcludedRule, ... ]
 }
 ```
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Arn](#cfn-wafv2-webacl-rulegroupreferencestatement-arn): String
   [ExcludedRules](#cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules): 
-    - [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)
+    - ExcludedRule
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-rulegroupreferencestatement-properties"></a>

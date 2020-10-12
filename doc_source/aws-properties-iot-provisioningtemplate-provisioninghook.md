@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-provisioningtemplate-provisioninghook-properties"></a>
 
 `PayloadVersion`  <a name="cfn-iot-provisioningtemplate-provisioninghook-payloadversion"></a>
-The payload that was sent to the target function\.  
+The payload that was sent to the target function\. The valid payload is `"2020-04-01"`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

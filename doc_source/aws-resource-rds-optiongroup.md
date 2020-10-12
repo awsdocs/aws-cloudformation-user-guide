@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[EngineName](#cfn-rds-optiongroup-enginename)" : String,
       "[MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion)" : String,
-      "[OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations)" : [ [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md), ... ],
+      "[OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations)" : [ OptionConfiguration, ... ],
       "[OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription)" : String,
       "[Tags](#cfn-rds-optiongroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -29,7 +29,7 @@ Properties:
   [EngineName](#cfn-rds-optiongroup-enginename): String
   [MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion): String
   [OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations): 
-    - [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)
+    - OptionConfiguration
   [OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription): String
   [Tags](#cfn-rds-optiongroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -67,7 +67,7 @@ Tags to assign to the option group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-rds-optiongroup-return-values"></a>
+## Return values<a name="aws-resource-rds-optiongroup-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-optiongroup-return-values-ref"></a>
 
@@ -77,11 +77,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-rds-optiongroup--examples"></a>
 
-### Multiple Option Configurations<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations"></a>
+### Creating an option group with multiple option configurations<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations"></a>
 
 The following example creates an option group with two option configurations \(`OEM` and `APEX`\)\. For more information about these options, see [ Options for Oracle DB Instances](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html) in the *Amazon RDS User Guide*\.
 
-#### JSON<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations--json"></a>
+#### JSON<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations--json"></a>
 
 ```
 {
@@ -108,7 +108,7 @@ The following example creates an option group with two option configurations \(`
 }
 ```
 
-#### YAML<a name="aws-resource-rds-optiongroup--examples--Multiple_Option_Configurations--yaml"></a>
+#### YAML<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations--yaml"></a>
 
 ```
 --- 

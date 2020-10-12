@@ -38,7 +38,7 @@ Indicates whether the host accepts any untargeted instance launches that match i
 Default: `on`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `off | on`  
+*Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-host-availabilityzone"></a>
@@ -52,7 +52,7 @@ Indicates whether to enable or disable host recovery for the Dedicated Host\. Ho
 Default: `off`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `off | on`  
+*Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-host-instancetype"></a>
@@ -61,7 +61,7 @@ Specifies the instance type to be supported by the Dedicated Hosts\. If you spec
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-host-return-values"></a>
+## Return values<a name="aws-resource-ec2-host-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-host-return-values-ref"></a>
 
@@ -93,6 +93,7 @@ The following example allocates a dedicated host for `c3.large` instances in the
 ```
 Host:
   Type: AWS::EC2::Host
+
   Properties: 
     AutoPlacement: on
     AvailabilityZone: us-east-1a

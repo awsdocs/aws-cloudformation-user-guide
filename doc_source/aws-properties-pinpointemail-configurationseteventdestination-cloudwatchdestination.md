@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DimensionConfigurations](#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)" : [ [DimensionConfiguration](aws-properties-pinpointemail-configurationseteventdestination-dimensionconfiguration.md), ... ]
+  "[DimensionConfigurations](#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)" : [ DimensionConfiguration, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DimensionConfigurations](#cfn-pinpointemail-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations): 
-    - [DimensionConfiguration](aws-properties-pinpointemail-configurationseteventdestination-dimensionconfiguration.md)
+    - DimensionConfiguration
 ```
 
 ## Properties<a name="aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination-properties"></a>

@@ -69,7 +69,7 @@ The authorization scopes supported by this route\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizationType`  <a name="cfn-apigatewayv2-route-authorizationtype"></a>
-The authorization type for the route\. For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens\.  
+The authorization type for the route\. For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -122,7 +122,7 @@ The target for the route\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-route-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-route-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-route-return-values-ref"></a>
 
@@ -172,7 +172,7 @@ MyRoute:
     Target: !Join
       - /
       - - integrations
-      - !Ref MyIntegration
+        - !Ref MyIntegration
 ```
 
 ### WebSocket API route creation example<a name="aws-resource-apigatewayv2-route--examples--WebSocket_API_route_creation_example"></a>
@@ -227,5 +227,5 @@ MyRoute:
         - !Ref MyIntegration
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-route--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-route--seealso"></a>
 + [CreateRoute](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes.html#CreateRoute) in the *Amazon API Gateway Version 2 API Reference*

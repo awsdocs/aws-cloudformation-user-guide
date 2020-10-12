@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthorizationType](#cfn-apigateway-method-authorizationtype)" : String,
       "[AuthorizerId](#cfn-apigateway-method-authorizerid)" : String,
       "[HttpMethod](#cfn-apigateway-method-httpmethod)" : String,
-      "[Integration](#cfn-apigateway-method-integration)" : [Integration](aws-properties-apitgateway-method-integration.md),
-      "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ [MethodResponse](aws-properties-apitgateway-method-methodresponse.md), ... ],
+      "[Integration](#cfn-apigateway-method-integration)" : Integration,
+      "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ MethodResponse, ... ],
       "[OperationName](#cfn-apigateway-method-operationname)" : String,
       "[RequestModels](#cfn-apigateway-method-requestmodels)" : {Key : Value, ...},
       "[RequestParameters](#cfn-apigateway-method-requestparameters)" : {Key : Value, ...},
@@ -41,9 +41,9 @@ Properties:
   [AuthorizerId](#cfn-apigateway-method-authorizerid): String
   [HttpMethod](#cfn-apigateway-method-httpmethod): String
   [Integration](#cfn-apigateway-method-integration): 
-    [Integration](aws-properties-apitgateway-method-integration.md)
+    Integration
   [MethodResponses](#cfn-apigateway-method-methodresponses): 
-    - [MethodResponse](aws-properties-apitgateway-method-methodresponse.md)
+    - MethodResponse
   [OperationName](#cfn-apigateway-method-operationname): String
   [RequestModels](#cfn-apigateway-method-requestmodels): 
     Key : Value
@@ -135,7 +135,7 @@ The ID of the [RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/Use
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-method-return-values"></a>
+## Return values<a name="aws-resource-apigateway-method-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-method-return-values-ref"></a>
 
@@ -427,5 +427,5 @@ Outputs:
     Value: !GetAtt RestApi.RootResourceId
 ```
 
-## See Also<a name="aws-resource-apigateway-method--seealso"></a>
+## See also<a name="aws-resource-apigateway-method--seealso"></a>
 + [method:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/method-put/) in the *Amazon API Gateway REST API Reference*

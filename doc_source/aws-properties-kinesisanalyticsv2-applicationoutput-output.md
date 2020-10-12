@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DestinationSchema](#cfn-kinesisanalyticsv2-applicationoutput-output-destinationschema)" : [DestinationSchema](aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema.md),
-  "[KinesisFirehoseOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput)" : [KinesisFirehoseOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.md),
-  "[KinesisStreamsOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput)" : [KinesisStreamsOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.md),
-  "[LambdaOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput)" : [LambdaOutput](aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.md),
+  "[DestinationSchema](#cfn-kinesisanalyticsv2-applicationoutput-output-destinationschema)" : DestinationSchema,
+  "[KinesisFirehoseOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput)" : KinesisFirehoseOutput,
+  "[KinesisStreamsOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput)" : KinesisStreamsOutput,
+  "[LambdaOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput)" : LambdaOutput,
   "[Name](#cfn-kinesisanalyticsv2-applicationoutput-output-name)" : String
 }
 ```
@@ -22,13 +22,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DestinationSchema](#cfn-kinesisanalyticsv2-applicationoutput-output-destinationschema): 
-    [DestinationSchema](aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema.md)
+    DestinationSchema
   [KinesisFirehoseOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisfirehoseoutput): 
-    [KinesisFirehoseOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput.md)
+    KinesisFirehoseOutput
   [KinesisStreamsOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-kinesisstreamsoutput): 
-    [KinesisStreamsOutput](aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.md)
+    KinesisStreamsOutput
   [LambdaOutput](#cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput): 
-    [LambdaOutput](aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.md)
+    LambdaOutput
   [Name](#cfn-kinesisanalyticsv2-applicationoutput-output-name): String
 ```
 
@@ -66,5 +66,5 @@ The name of the in\-application stream\.
 *Maximum*: `32`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>
 +  [Output](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Output.html) in the *Amazon Kinesis Data Analytics API Reference* 

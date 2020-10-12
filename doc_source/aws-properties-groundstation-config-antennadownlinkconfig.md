@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)" : [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)
+  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)" : SpectrumConfig
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig): 
-    [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)
+    SpectrumConfig
 ```
 
 ## Properties<a name="aws-properties-groundstation-config-antennadownlinkconfig-properties"></a>

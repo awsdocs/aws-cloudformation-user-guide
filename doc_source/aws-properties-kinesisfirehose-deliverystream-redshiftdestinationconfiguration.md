@@ -10,16 +10,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions)" : [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
+  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[ClusterJDBCURL](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-clusterjdbcurl)" : String,
-  "[CopyCommand](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand)" : [CopyCommand](aws-properties-kinesisfirehose-deliverystream-copycommand.md),
+  "[CopyCommand](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand)" : CopyCommand,
   "[Password](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password)" : String,
-  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration)" : [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md),
-  "[RetryOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-retryoptions)" : [RedshiftRetryOptions](aws-properties-kinesisfirehose-deliverystream-redshiftretryoptions.md),
+  "[ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration)" : ProcessingConfiguration,
+  "[RetryOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-retryoptions)" : RedshiftRetryOptions,
   "[RoleARN](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn)" : String,
-  "[S3BackupConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupconfiguration)" : [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
+  "[S3BackupConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupconfiguration)" : S3DestinationConfiguration,
   "[S3BackupMode](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupmode)" : String,
-  "[S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration)" : [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md),
+  "[S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration)" : S3DestinationConfiguration,
   "[Username](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username)" : String
 }
 ```
@@ -28,21 +28,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions): 
-    [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+    CloudWatchLoggingOptions
   [ClusterJDBCURL](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-clusterjdbcurl): String
   [CopyCommand](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand): 
-    [CopyCommand](aws-properties-kinesisfirehose-deliverystream-copycommand.md)
+    CopyCommand
   [Password](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password): String
   [ProcessingConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration): 
-    [ProcessingConfiguration](aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md)
+    ProcessingConfiguration
   [RetryOptions](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-retryoptions): 
-    [RedshiftRetryOptions](aws-properties-kinesisfirehose-deliverystream-redshiftretryoptions.md)
+    RedshiftRetryOptions
   [RoleARN](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn): String
   [S3BackupConfiguration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupconfiguration): 
-    [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    S3DestinationConfiguration
   [S3BackupMode](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupmode): String
   [S3Configuration](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration): 
-    [S3DestinationConfiguration](aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.md)
+    S3DestinationConfiguration
   [Username](#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username): String
 ```
 
@@ -109,7 +109,7 @@ The configuration for backup in Amazon S3\.
 The Amazon S3 backup mode\. After you create a delivery stream, you can update it to enable Amazon S3 backup if it is disabled\. If backup is enabled, you can't update the delivery stream to disable it\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Configuration`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration"></a>

@@ -10,11 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GrpcRoute](#cfn-appmesh-route-routespec-grpcroute)" : [GrpcRoute](aws-properties-appmesh-route-grpcroute.md),
-  "[Http2Route](#cfn-appmesh-route-routespec-http2route)" : [HttpRoute](aws-properties-appmesh-route-httproute.md),
-  "[HttpRoute](#cfn-appmesh-route-routespec-httproute)" : [HttpRoute](aws-properties-appmesh-route-httproute.md),
+  "[GrpcRoute](#cfn-appmesh-route-routespec-grpcroute)" : GrpcRoute,
+  "[Http2Route](#cfn-appmesh-route-routespec-http2route)" : HttpRoute,
+  "[HttpRoute](#cfn-appmesh-route-routespec-httproute)" : HttpRoute,
   "[Priority](#cfn-appmesh-route-routespec-priority)" : Integer,
-  "[TcpRoute](#cfn-appmesh-route-routespec-tcproute)" : [TcpRoute](aws-properties-appmesh-route-tcproute.md)
+  "[TcpRoute](#cfn-appmesh-route-routespec-tcproute)" : TcpRoute
 }
 ```
 
@@ -22,14 +22,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GrpcRoute](#cfn-appmesh-route-routespec-grpcroute): 
-    [GrpcRoute](aws-properties-appmesh-route-grpcroute.md)
+    GrpcRoute
   [Http2Route](#cfn-appmesh-route-routespec-http2route): 
-    [HttpRoute](aws-properties-appmesh-route-httproute.md)
+    HttpRoute
   [HttpRoute](#cfn-appmesh-route-routespec-httproute): 
-    [HttpRoute](aws-properties-appmesh-route-httproute.md)
+    HttpRoute
   [Priority](#cfn-appmesh-route-routespec-priority): Integer
   [TcpRoute](#cfn-appmesh-route-routespec-tcproute): 
-    [TcpRoute](aws-properties-appmesh-route-tcproute.md)
+    TcpRoute
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-routespec-properties"></a>

@@ -1,13 +1,15 @@
 # AWS::RDS::DBProxy<a name="aws-resource-rds-dbproxy"></a>
 
-**Note**  
-This is prerelease documentation for the RDS Database Proxy feature in preview release\. It is subject to change\.
-
 The `AWS::RDS::DBProxy` resource creates or updates a DB proxy\.
 
 For information about RDS Proxy for Amazon RDS, see [ Managing Connections with Amazon RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html) in the *Amazon RDS User Guide*\.
 
 For information about RDS Proxy for Amazon Aurora, see [ Managing Connections with Amazon RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html) in the *Amazon Aurora User Guide*\.
+
+**Note**  
+Limitations apply to RDS Proxy, including DB engine version limitations and AWS Region limitations\.  
+For information about limitations that apply to RDS Proxy for Amazon RDS, see [ Limitations for RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy.limitations) in the *Amazon RDS User Guide*\.  
+For information about that apply to RDS Proxy for Amazon Aurora, see [ Limitations for RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html#rds-proxy.limitations) in the *Amazon Aurora User Guide*\.
 
 ## Syntax<a name="aws-resource-rds-dbproxy-syntax"></a>
 
@@ -19,14 +21,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBProxy",
   "Properties" : {
-      "[Auth](#cfn-rds-dbproxy-auth)" : [ [AuthFormat](aws-properties-rds-dbproxy-authformat.md), ... ],
+      "[Auth](#cfn-rds-dbproxy-auth)" : [ AuthFormat, ... ],
       "[DBProxyName](#cfn-rds-dbproxy-dbproxyname)" : String,
       "[DebugLogging](#cfn-rds-dbproxy-debuglogging)" : Boolean,
       "[EngineFamily](#cfn-rds-dbproxy-enginefamily)" : String,
       "[IdleClientTimeout](#cfn-rds-dbproxy-idleclienttimeout)" : Integer,
       "[RequireTLS](#cfn-rds-dbproxy-requiretls)" : Boolean,
       "[RoleArn](#cfn-rds-dbproxy-rolearn)" : String,
-      "[Tags](#cfn-rds-dbproxy-tags)" : [ [TagFormat](aws-properties-rds-dbproxy-tagformat.md), ... ],
+      "[Tags](#cfn-rds-dbproxy-tags)" : [ TagFormat, ... ],
       "[VpcSecurityGroupIds](#cfn-rds-dbproxy-vpcsecuritygroupids)" : [ String, ... ],
       "[VpcSubnetIds](#cfn-rds-dbproxy-vpcsubnetids)" : [ String, ... ]
     }
@@ -39,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RDS::DBProxy
 Properties: 
   [Auth](#cfn-rds-dbproxy-auth): 
-    - [AuthFormat](aws-properties-rds-dbproxy-authformat.md)
+    - AuthFormat
   [DBProxyName](#cfn-rds-dbproxy-dbproxyname): String
   [DebugLogging](#cfn-rds-dbproxy-debuglogging): Boolean
   [EngineFamily](#cfn-rds-dbproxy-enginefamily): String
@@ -47,7 +49,7 @@ Properties:
   [RequireTLS](#cfn-rds-dbproxy-requiretls): Boolean
   [RoleArn](#cfn-rds-dbproxy-rolearn): String
   [Tags](#cfn-rds-dbproxy-tags): 
-    - [TagFormat](aws-properties-rds-dbproxy-tagformat.md)
+    - TagFormat
   [VpcSecurityGroupIds](#cfn-rds-dbproxy-vpcsecuritygroupids): 
     - String
   [VpcSubnetIds](#cfn-rds-dbproxy-vpcsubnetids): 
@@ -107,6 +109,7 @@ An optional set of key\-value pairs to associate arbitrary data of your choosing
 
 `VpcSecurityGroupIds`  <a name="cfn-rds-dbproxy-vpcsecuritygroupids"></a>
 One or more VPC security group IDs to associate with the new proxy\.  
+If you plan to update the resource, don't specify VPC security groups in a shared VPC\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -117,9 +120,13 @@ One or more VPC subnet IDs to associate with the new proxy\.
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-rds-dbproxy-return-values"></a>
+## Return values<a name="aws-resource-rds-dbproxy-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-dbproxy-return-values-ref"></a>
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB proxy\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-rds-dbproxy-return-values-fn--getatt"></a>
 
@@ -133,11 +140,11 @@ The writer endpoint for the RDS DB instance or Aurora DB cluster\.
 
 ## Examples<a name="aws-resource-rds-dbproxy--examples"></a>
 
-### Creating a DB Proxy and Registering a DB Instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_Registering_a_DB_Instance"></a>
+### Creating a DB Proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance"></a>
 
 The following example creates a DB proxy and registers a DB instance\.
 
-#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_Registering_a_DB_Instance--json"></a>
+#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--json"></a>
 
 ```
 {
@@ -220,7 +227,7 @@ The following example creates a DB proxy and registers a DB instance\.
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_Registering_a_DB_Instance--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

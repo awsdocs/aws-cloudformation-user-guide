@@ -16,8 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceProfileName](#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename)" : String,
       "[InstanceTypes](#cfn-imagebuilder-infrastructureconfiguration-instancetypes)" : [ String, ... ],
       "[KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair)" : String,
-      "[Logging](#cfn-imagebuilder-infrastructureconfiguration-logging)" : [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md),
+      "[Logging](#cfn-imagebuilder-infrastructureconfiguration-logging)" : Logging,
       "[Name](#cfn-imagebuilder-infrastructureconfiguration-name)" : String,
+      "[ResourceTags](#cfn-imagebuilder-infrastructureconfiguration-resourcetags)" : {Key : Value, ...},
       "[SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids)" : [ String, ... ],
       "[SnsTopicArn](#cfn-imagebuilder-infrastructureconfiguration-snstopicarn)" : String,
       "[SubnetId](#cfn-imagebuilder-infrastructureconfiguration-subnetid)" : String,
@@ -38,8 +39,10 @@ Properties:
     - String
   [KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair): String
   [Logging](#cfn-imagebuilder-infrastructureconfiguration-logging): 
-    [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md)
+    Logging
   [Name](#cfn-imagebuilder-infrastructureconfiguration-name): String
+  [ResourceTags](#cfn-imagebuilder-infrastructureconfiguration-resourcetags): 
+    Key : Value
   [SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids): 
     - String
   [SnsTopicArn](#cfn-imagebuilder-infrastructureconfiguration-snstopicarn): String
@@ -94,6 +97,12 @@ The name of the infrastructure configuration\.
 *Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ResourceTags`  <a name="cfn-imagebuilder-infrastructureconfiguration-resourcetags"></a>
+The tags attached to the resource created by Image Builder\.  
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecurityGroupIds`  <a name="cfn-imagebuilder-infrastructureconfiguration-securitygroupids"></a>
 The security group IDs of the infrastructure configuration\.  
 *Required*: No  
@@ -128,7 +137,7 @@ The terminate instance on failure configuration of the infrastructure configurat
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-imagebuilder-infrastructureconfiguration-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-infrastructureconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-infrastructureconfiguration-return-values-ref"></a>
 

@@ -51,7 +51,7 @@ The map of the roles associated with this pool\. For a given role, the key is ei
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-identitypoolroleattachment-return-values-ref"></a>
 

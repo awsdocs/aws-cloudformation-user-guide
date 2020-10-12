@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FailoverCriteria](#cfn-cloudfront-distribution-origingroup-failovercriteria)" : [OriginGroupFailoverCriteria](aws-properties-cloudfront-distribution-origingroupfailovercriteria.md),
+  "[FailoverCriteria](#cfn-cloudfront-distribution-origingroup-failovercriteria)" : OriginGroupFailoverCriteria,
   "[Id](#cfn-cloudfront-distribution-origingroup-id)" : String,
-  "[Members](#cfn-cloudfront-distribution-origingroup-members)" : [OriginGroupMembers](aws-properties-cloudfront-distribution-origingroupmembers.md)
+  "[Members](#cfn-cloudfront-distribution-origingroup-members)" : OriginGroupMembers
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FailoverCriteria](#cfn-cloudfront-distribution-origingroup-failovercriteria): 
-    [OriginGroupFailoverCriteria](aws-properties-cloudfront-distribution-origingroupfailovercriteria.md)
+    OriginGroupFailoverCriteria
   [Id](#cfn-cloudfront-distribution-origingroup-id): String
   [Members](#cfn-cloudfront-distribution-origingroup-members): 
-    [OriginGroupMembers](aws-properties-cloudfront-distribution-origingroupmembers.md)
+    OriginGroupMembers
 ```
 
 ## Properties<a name="aws-properties-cloudfront-distribution-origingroup-properties"></a>

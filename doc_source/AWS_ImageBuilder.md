@@ -1,6 +1,6 @@
-# ImageBuilder Resource Type Reference<a name="AWS_ImageBuilder"></a>
+# ImageBuilder resource type reference<a name="AWS_ImageBuilder"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ImageBuilder::Component](aws-resource-imagebuilder-component.md)
 + [AWS::ImageBuilder::DistributionConfiguration](aws-resource-imagebuilder-distributionconfiguration.md)
 + [AWS::ImageBuilder::Image](aws-resource-imagebuilder-image.md)

@@ -1,11 +1,11 @@
-# AWS CloudFormation StackSets Sample Templates<a name="stacksets-sampletemplates"></a>
+# AWS CloudFormation StackSets sample templates<a name="stacksets-sampletemplates"></a>
 
-This section includes links to some sample AWS CloudFormation templates that can help you use AWS CloudFormation StackSets in your enterprise\. Templates listed in this section enable [AWS Config](http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) and rules within it\.
+This section includes links to some sample AWS CloudFormation templates that can help you use AWS CloudFormation StackSets in your enterprise\. Templates listed in this section enable [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) or [AWS Config](http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html) and rules within it\.
 
 
-**Sample Templates**  
+**Sample templates**  
 
-| Description | S3 Link | 
+| Description | S3 link | 
 | --- | --- | 
 | Enable AWS CloudTrail | [https://s3\.amazonaws\.com/cloudformation\-stackset\-sample\-templates\-us\-east\-1/EnableAWSCloudtrail\.yml](https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/EnableAWSCloudtrail.yml) | 
 | Enable AWS Config | [https://s3\.amazonaws\.com/cloudformation\-stackset\-sample\-templates\-us\-east\-1/EnableAWSConfig\.yml](https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/EnableAWSConfig.yml) | 

@@ -47,7 +47,7 @@ The current revision id for the simulation application\. If you provide a value 
 *Pattern*: `[a-zA-Z0-9_.\-]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-robomaker-simulationapplicationversion-return-values"></a>
+## Return values<a name="aws-resource-robomaker-simulationapplicationversion-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-simulationapplicationversion-return-values-ref"></a>
 

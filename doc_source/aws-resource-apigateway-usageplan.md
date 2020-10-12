@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::UsagePlan",
   "Properties" : {
-      "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ [ApiStage](aws-properties-apigateway-usageplan-apistage.md), ... ],
+      "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ ApiStage, ... ],
       "[Description](#cfn-apigateway-usageplan-description)" : String,
-      "[Quota](#cfn-apigateway-usageplan-quota)" : [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md),
+      "[Quota](#cfn-apigateway-usageplan-quota)" : QuotaSettings,
       "[Tags](#cfn-apigateway-usageplan-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[Throttle](#cfn-apigateway-usageplan-throttle)" : [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md),
+      "[Throttle](#cfn-apigateway-usageplan-throttle)" : ThrottleSettings,
       "[UsagePlanName](#cfn-apigateway-usageplan-usageplanname)" : String
     }
 }
@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::UsagePlan
 Properties: 
   [ApiStages](#cfn-apigateway-usageplan-apistages): 
-    - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
+    - ApiStage
   [Description](#cfn-apigateway-usageplan-description): String
   [Quota](#cfn-apigateway-usageplan-quota): 
-    [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
+    QuotaSettings
   [Tags](#cfn-apigateway-usageplan-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Throttle](#cfn-apigateway-usageplan-throttle): 
-    [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
+    ThrottleSettings
   [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
 ```
 
@@ -77,7 +77,7 @@ A name for the usage plan\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-usageplan-return-values"></a>
+## Return values<a name="aws-resource-apigateway-usageplan-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-usageplan-return-values-ref"></a>
 
@@ -142,5 +142,5 @@ usagePlan:
     UsagePlanName: Plan_ABC
 ```
 
-## See Also<a name="aws-resource-apigateway-usageplan--seealso"></a>
+## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
 + [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*

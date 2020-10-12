@@ -1,6 +1,6 @@
-# Enable Trusted Access with AWS Organizations<a name="stacksets-orgs-enable-trusted-access"></a>
+# Enable trusted access with AWS Organizations<a name="stacksets-orgs-enable-trusted-access"></a>
 
-To set up the required permissions to create a stack set with **self\-managed** permissions, see [Grant Self\-Managed Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
+To set up the required permissions to create a stack set with **self\-managed** permissions, see [Grant self\-managed permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
 
 Before you create a stack set with **service\-managed** permissions, you must first complete the following tasks:
 + [Enable all features](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html) in AWS Organizations\. With only consolidated billing features enabled, you cannot create a stack set with service\-managed permissions\.
@@ -10,11 +10,11 @@ The IAM service\-linked role created in the organization master account has the 
 
 This topic describes how to enable trusted access with AWS Organizations\.
 
-Only an account administrator in an AWS Organizations master account has permissions to enable trusted access\. An *administrator user* is an *IAM user* with full permissions to your AWS account\. For more information, see [IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users) and [Creating Your First IAM Admin User and Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the IAM User Guide\.
+Only an account administrator in an AWS Organizations master account has permissions to enable trusted access\. An *administrator user* is an *IAM user* with full permissions to your AWS account\. For more information, see [IAM best practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html#create-iam-users) and [Creating your first IAM admin user and group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the IAM User Guide\.
 
 **To enable trusted access in the **Create StackSet** wizard:**
 
-See [Create a Stack Set with Service\-Managed Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html#create-stack-set-service-managed-permissions)\.
+See [Create a stack set with service\-managed permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html#create-stack-set-service-managed-permissions)\.
 
 **To enable trusted access in the StackSets page of the AWS CloudFormation console:**
 

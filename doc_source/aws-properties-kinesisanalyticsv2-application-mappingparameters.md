@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)" : [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md),
-  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)" : [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
+  "[CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters)" : CSVMappingParameters,
+  "[JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters)" : JSONMappingParameters
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CSVMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-csvmappingparameters): 
-    [CSVMappingParameters](aws-properties-kinesisanalyticsv2-application-csvmappingparameters.md)
+    CSVMappingParameters
   [JSONMappingParameters](#cfn-kinesisanalyticsv2-application-mappingparameters-jsonmappingparameters): 
-    [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)
+    JSONMappingParameters
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters-properties"></a>
@@ -38,5 +38,5 @@ Provides additional mapping information when JSON is the record format on the st
 *Type*: [JSONMappingParameters](aws-properties-kinesisanalyticsv2-application-jsonmappingparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters--seealso"></a>
 +  [MappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_MappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 

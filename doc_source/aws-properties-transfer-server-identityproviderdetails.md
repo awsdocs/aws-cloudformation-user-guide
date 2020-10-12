@@ -40,6 +40,6 @@ Provides the location of the service endpoint used to authenticate users\.
 *Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
+## See also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
 
 [IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer Family User Guide*\.

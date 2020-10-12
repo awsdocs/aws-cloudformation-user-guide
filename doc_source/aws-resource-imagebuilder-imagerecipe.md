@@ -12,13 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ImageBuilder::ImageRecipe",
   "Properties" : {
-      "[BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings)" : [ [InstanceBlockDeviceMapping](aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.md), ... ],
-      "[Components](#cfn-imagebuilder-imagerecipe-components)" : [ [ComponentConfiguration](aws-properties-imagebuilder-imagerecipe-componentconfiguration.md), ... ],
+      "[BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings)" : [ InstanceBlockDeviceMapping, ... ],
+      "[Components](#cfn-imagebuilder-imagerecipe-components)" : [ ComponentConfiguration, ... ],
       "[Description](#cfn-imagebuilder-imagerecipe-description)" : String,
       "[Name](#cfn-imagebuilder-imagerecipe-name)" : String,
       "[ParentImage](#cfn-imagebuilder-imagerecipe-parentimage)" : String,
       "[Tags](#cfn-imagebuilder-imagerecipe-tags)" : {Key : Value, ...},
-      "[Version](#cfn-imagebuilder-imagerecipe-version)" : String
+      "[Version](#cfn-imagebuilder-imagerecipe-version)" : String,
+      "[WorkingDirectory](#cfn-imagebuilder-imagerecipe-workingdirectory)" : String
     }
 }
 ```
@@ -29,15 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ImageBuilder::ImageRecipe
 Properties: 
   [BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings): 
-    - [InstanceBlockDeviceMapping](aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.md)
+    - InstanceBlockDeviceMapping
   [Components](#cfn-imagebuilder-imagerecipe-components): 
-    - [ComponentConfiguration](aws-properties-imagebuilder-imagerecipe-componentconfiguration.md)
+    - ComponentConfiguration
   [Description](#cfn-imagebuilder-imagerecipe-description): String
   [Name](#cfn-imagebuilder-imagerecipe-name): String
   [ParentImage](#cfn-imagebuilder-imagerecipe-parentimage): String
   [Tags](#cfn-imagebuilder-imagerecipe-tags): 
     Key : Value
   [Version](#cfn-imagebuilder-imagerecipe-version): String
+  [WorkingDirectory](#cfn-imagebuilder-imagerecipe-workingdirectory): String
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-imagerecipe-properties"></a>
@@ -90,7 +92,15 @@ The semantic version of the image recipe\.
 *Pattern*: `^[0-9]+\.[0-9]+\.[0-9]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-imagebuilder-imagerecipe-return-values"></a>
+`WorkingDirectory`  <a name="cfn-imagebuilder-imagerecipe-workingdirectory"></a>
+The working directory to be used during build and test workflows\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-imagebuilder-imagerecipe-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-imagerecipe-return-values-ref"></a>
 
@@ -198,5 +208,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
+## See also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
 + [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *EC2 Image Builder User Guide*\.

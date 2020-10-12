@@ -1,6 +1,6 @@
 # AWS::ResourceGroups::Group Query<a name="aws-properties-resourcegroups-group-query"></a>
 
-The underlying resource query of a resource group\. Resources that match query results are part of the group\.
+A mapping of a query attached to a resource group that determines the AWS resources that are members of the group\.
 
 ## Syntax<a name="aws-properties-resourcegroups-group-query-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ResourceTypeFilters](#cfn-resourcegroups-group-query-resourcetypefilters)" : [ String, ... ],
   "[StackIdentifier](#cfn-resourcegroups-group-query-stackidentifier)" : String,
-  "[TagFilters](#cfn-resourcegroups-group-query-tagfilters)" : [ [TagFilter](aws-properties-resourcegroups-group-tagfilter.md), ... ]
+  "[TagFilters](#cfn-resourcegroups-group-query-tagfilters)" : [ TagFilter, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [StackIdentifier](#cfn-resourcegroups-group-query-stackidentifier): String
   [TagFilters](#cfn-resourcegroups-group-query-tagfilters): 
-    - [TagFilter](aws-properties-resourcegroups-group-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-resourcegroups-group-query-properties"></a>

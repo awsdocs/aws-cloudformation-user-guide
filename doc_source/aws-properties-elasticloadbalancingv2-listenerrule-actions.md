@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig)" : [AuthenticateCognitoConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.md),
-  "[AuthenticateOidcConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticateoidcconfig)" : [AuthenticateOidcConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.md),
-  "[FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig)" : [FixedResponseConfig](aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.md),
-  "[ForwardConfig](#cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig)" : [ForwardConfig](aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.md),
+  "[AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig)" : AuthenticateCognitoConfig,
+  "[AuthenticateOidcConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticateoidcconfig)" : AuthenticateOidcConfig,
+  "[FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig)" : FixedResponseConfig,
+  "[ForwardConfig](#cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig)" : ForwardConfig,
   "[Order](#cfn-elasticloadbalancingv2-listenerrule-action-order)" : Integer,
-  "[RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig)" : [RedirectConfig](aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.md),
+  "[RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig)" : RedirectConfig,
   "[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn)" : String,
   "[Type](#cfn-elasticloadbalancingv2-listener-actions-type)" : String
 }
@@ -25,16 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticatecognitoconfig): 
-    [AuthenticateCognitoConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.md)
+    AuthenticateCognitoConfig
   [AuthenticateOidcConfig](#cfn-elasticloadbalancingv2-listenerrule-action-authenticateoidcconfig): 
-    [AuthenticateOidcConfig](aws-properties-elasticloadbalancingv2-listenerrule-authenticateoidcconfig.md)
+    AuthenticateOidcConfig
   [FixedResponseConfig](#cfn-elasticloadbalancingv2-listenerrule-action-fixedresponseconfig): 
-    [FixedResponseConfig](aws-properties-elasticloadbalancingv2-listenerrule-fixedresponseconfig.md)
+    FixedResponseConfig
   [ForwardConfig](#cfn-elasticloadbalancingv2-listenerrule-action-forwardconfig): 
-    [ForwardConfig](aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig.md)
+    ForwardConfig
   [Order](#cfn-elasticloadbalancingv2-listenerrule-action-order): Integer
   [RedirectConfig](#cfn-elasticloadbalancingv2-listenerrule-action-redirectconfig): 
-    [RedirectConfig](aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.md)
+    RedirectConfig
   [TargetGroupArn](#cfn-elasticloadbalancingv2-listener-actions-targetgrouparn): String
   [Type](#cfn-elasticloadbalancingv2-listener-actions-type): String
 ```
@@ -89,5 +89,5 @@ The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` 
 The type of action\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  
+*Allowed values*: `authenticate-cognito | authenticate-oidc | fixed-response | forward | redirect`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

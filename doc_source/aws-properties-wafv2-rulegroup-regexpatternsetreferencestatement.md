@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-arn)" : String,
-  "[FieldToMatch](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch)" : [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md),
-  "[TextTransformations](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations)" : [ [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md), ... ]
+  "[FieldToMatch](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch)" : FieldToMatch,
+  "[TextTransformations](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
 
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Arn](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-arn): String
   [FieldToMatch](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)
+    FieldToMatch
   [TextTransformations](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations): 
-    - [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md)
+    - TextTransformation
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement-properties"></a>

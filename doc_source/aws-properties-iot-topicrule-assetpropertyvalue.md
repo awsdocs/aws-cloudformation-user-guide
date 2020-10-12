@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Quality](#cfn-iot-topicrule-assetpropertyvalue-quality)" : String,
-  "[Timestamp](#cfn-iot-topicrule-assetpropertyvalue-timestamp)" : [AssetPropertyTimestamp](aws-properties-iot-topicrule-assetpropertytimestamp.md),
-  "[Value](#cfn-iot-topicrule-assetpropertyvalue-value)" : [AssetPropertyVariant](aws-properties-iot-topicrule-assetpropertyvariant.md)
+  "[Timestamp](#cfn-iot-topicrule-assetpropertyvalue-timestamp)" : AssetPropertyTimestamp,
+  "[Value](#cfn-iot-topicrule-assetpropertyvalue-value)" : AssetPropertyVariant
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Quality](#cfn-iot-topicrule-assetpropertyvalue-quality): String
   [Timestamp](#cfn-iot-topicrule-assetpropertyvalue-timestamp): 
-    [AssetPropertyTimestamp](aws-properties-iot-topicrule-assetpropertytimestamp.md)
+    AssetPropertyTimestamp
   [Value](#cfn-iot-topicrule-assetpropertyvalue-value): 
-    [AssetPropertyVariant](aws-properties-iot-topicrule-assetpropertyvariant.md)
+    AssetPropertyVariant
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-assetpropertyvalue-properties"></a>

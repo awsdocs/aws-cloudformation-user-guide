@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption)" : [CloudWatchEncryption](aws-properties-glue-securityconfiguration-cloudwatchencryption.md),
-  "[JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption)" : [JobBookmarksEncryption](aws-properties-glue-securityconfiguration-jobbookmarksencryption.md),
-  "[S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions)" : [S3Encryptions](aws-properties-glue-securityconfiguration-s3encryptions.md)
+  "[CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption)" : CloudWatchEncryption,
+  "[JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption)" : JobBookmarksEncryption,
+  "[S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions)" : S3Encryptions
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption): 
-    [CloudWatchEncryption](aws-properties-glue-securityconfiguration-cloudwatchencryption.md)
+    CloudWatchEncryption
   [JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption): 
-    [JobBookmarksEncryption](aws-properties-glue-securityconfiguration-jobbookmarksencryption.md)
+    JobBookmarksEncryption
   [S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions): 
-    [S3Encryptions](aws-properties-glue-securityconfiguration-s3encryptions.md)
+    S3Encryptions
 ```
 
 ## Properties<a name="aws-properties-glue-securityconfiguration-encryptionconfiguration-properties"></a>

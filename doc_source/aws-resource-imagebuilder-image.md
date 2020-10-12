@@ -13,8 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ImageBuilder::Image",
   "Properties" : {
       "[DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn)" : String,
+      "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
-      "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md),
+      "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn)" : String,
       "[Tags](#cfn-imagebuilder-image-tags)" : {Key : Value, ...}
     }
@@ -27,9 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ImageBuilder::Image
 Properties: 
   [DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn): String
+  [EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn): String
   [ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration): 
-    [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md)
+    ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn): String
   [Tags](#cfn-imagebuilder-image-tags): 
     Key : Value
@@ -42,6 +44,12 @@ The Amazon Resource Name \(ARN\) of the distribution configuration\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-image-enhancedimagemetadataenabled"></a>
+ Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageRecipeArn`  <a name="cfn-imagebuilder-image-imagerecipearn"></a>
@@ -70,7 +78,7 @@ The tags of the image\.
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-imagebuilder-image-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-image-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-image-return-values-ref"></a>
 

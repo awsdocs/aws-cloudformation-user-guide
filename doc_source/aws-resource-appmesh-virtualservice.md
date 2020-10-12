@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualservice-meshname)" : String,
       "[MeshOwner](#cfn-appmesh-virtualservice-meshowner)" : String,
-      "[Spec](#cfn-appmesh-virtualservice-spec)" : [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md),
+      "[Spec](#cfn-appmesh-virtualservice-spec)" : VirtualServiceSpec,
       "[Tags](#cfn-appmesh-virtualservice-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename)" : String
     }
@@ -33,7 +33,7 @@ Properties:
   [MeshName](#cfn-appmesh-virtualservice-meshname): String
   [MeshOwner](#cfn-appmesh-virtualservice-meshowner): String
   [Spec](#cfn-appmesh-virtualservice-spec): 
-    [VirtualServiceSpec](aws-properties-appmesh-virtualservice-virtualservicespec.md)
+    VirtualServiceSpec
   [Tags](#cfn-appmesh-virtualservice-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualServiceName](#cfn-appmesh-virtualservice-virtualservicename): String
@@ -71,7 +71,7 @@ The name to use for the virtual service\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-virtualservice-return-values"></a>
+## Return values<a name="aws-resource-appmesh-virtualservice-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-virtualservice-return-values-ref"></a>
 
@@ -109,131 +109,6 @@ The unique identifier for the virtual service\.
 `VirtualServiceName`  <a name="VirtualServiceName-fn::getatt"></a>
 The name of the virtual service\.
 
-## Examples<a name="aws-resource-appmesh-virtualservice--examples"></a>
-
-### Create a Virtual Service<a name="aws-resource-appmesh-virtualservice--examples--Create_a_Virtual_Service"></a>
-
-This example creates a virtual service that is provided by a virtual node\.
-
-#### JSON<a name="aws-resource-appmesh-virtualservice--examples--Create_a_Virtual_Service--json"></a>
-
-```
-{
-   "Description": "Basic Test VirtualService",
-   "Resources": {
-      "BasicVirtualService1": {
-         "Type": "AWS::AppMesh::VirtualService",
-         "Properties": {
-            "VirtualServiceName": "TestVirtualService1.internal",
-            "MeshName": null,
-            "Spec": {
-               "Provider": {
-                  "VirtualNode": {
-                     "VirtualNodeName": null
-                  }
-               }
-            },
-            "Tags": [
-               {
-                  "Key": "Key1",
-                  "Value": "Value1"
-               },
-               {
-                  "Key": "Key2",
-                  "Value": "Value2"
-               }
-            ]
-         }
-      }
-   },
-   "Outputs": {
-      "VirtualServiceName1": {
-         "Description": "Name of the VirtualService",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualService1",
-               "VirtualServiceName"
-            ]
-         }
-      },
-      "MeshName": {
-         "Description": "Name of the Mesh",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualService1",
-               "MeshName"
-            ]
-         }
-      },
-      "Arn": {
-         "Description": "Arn of the VirtualService created",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualService1",
-               "Arn"
-            ]
-         }
-      },
-      "Uid": {
-         "Description": "Uid of the VirtualService created",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualService1",
-               "Uid"
-            ]
-         }
-      }
-   }
-}
-```
-
-#### YAML<a name="aws-resource-appmesh-virtualservice--examples--Create_a_Virtual_Service--yaml"></a>
-
-```
-Description: "Basic Test VirtualService"
-Resources:
-  BasicVirtualService1:
-    Type: "AWS::AppMesh::VirtualService"
-    Properties:
-      VirtualServiceName: "TestVirtualService1.internal"
-      MeshName: !ImportValue TestMeshName
-      Spec:
-        Provider:
-          VirtualNode:
-            VirtualNodeName: !ImportValue TestVirtualNodeName1
-      Tags:
-      - Key: "Key1"
-        Value: "Value1"
-      - Key: "Key2"
-        Value: "Value2"
-
-Outputs:
-  VirtualServiceName1:
-    Description: Name of the VirtualService
-    Value:
-      Fn::GetAtt:
-        - BasicVirtualService1
-        - VirtualServiceName
-  MeshName:
-    Description: Name of the Mesh
-    Value:
-      Fn::GetAtt:
-        - BasicVirtualService1
-        - MeshName
-  Arn:
-    Description: Arn of the VirtualService created
-    Value:
-      Fn::GetAtt:
-        - BasicVirtualService1
-        - Arn
-  Uid:
-    Description: Uid of the VirtualService created
-    Value:
-      Fn::GetAtt:
-        - BasicVirtualService1
-        - Uid
-```
-
-## See Also<a name="aws-resource-appmesh-virtualservice--seealso"></a>
+## See also<a name="aws-resource-appmesh-virtualservice--seealso"></a>
 +  [Virtual Services](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualService](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualService.html) in the * AWS App Mesh API Reference *\.

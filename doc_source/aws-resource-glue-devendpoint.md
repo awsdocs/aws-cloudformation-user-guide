@@ -163,7 +163,7 @@ Known issue: when a development endpoint is created with the `G.2X` `WorkerType`
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-devendpoint-return-values"></a>
+## Return values<a name="aws-resource-glue-devendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-devendpoint-return-values-ref"></a>
 
@@ -171,5 +171,5 @@ Known issue: when a development endpoint is created with the `G.2X` `WorkerType`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-glue-devendpoint--seealso"></a>
+## See also<a name="aws-resource-glue-devendpoint--seealso"></a>
 +  [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 

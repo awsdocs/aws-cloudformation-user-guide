@@ -38,5 +38,5 @@ A single line format of the access logs of data, as specified by selected [$cont
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-stage-accesslogsetting--seealso"></a>
+## See also<a name="aws-properties-apigateway-stage-accesslogsetting--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*

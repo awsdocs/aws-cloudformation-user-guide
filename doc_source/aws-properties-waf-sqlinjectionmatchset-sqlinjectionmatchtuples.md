@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)" : [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md),
+  "[FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch)" : FieldToMatch,
   "[TextTransformation](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch): 
-    [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md)
+    FieldToMatch
   [TextTransformation](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-texttransformation): String
 ```
 
@@ -70,5 +70,5 @@ Use this option to decode a URL\-encoded value\.
 Specify `NONE` if you don't want to perform any text transformations\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

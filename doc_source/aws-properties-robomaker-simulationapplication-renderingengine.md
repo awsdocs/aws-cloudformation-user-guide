@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the rendering engine\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `OGRE`  
+*Allowed values*: `OGRE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-robomaker-simulationapplication-renderingengine-version"></a>

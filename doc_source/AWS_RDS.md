@@ -1,6 +1,6 @@
-# RDS Resource Type Reference<a name="AWS_RDS"></a>
+# RDS resource type reference<a name="AWS_RDS"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)
 + [AWS::RDS::DBClusterParameterGroup](aws-resource-rds-dbclusterparametergroup.md)
 + [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)

@@ -17,9 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication)" : Boolean,
       "[DisplayName](#cfn-sns-topic-displayname)" : String,
-      "[FifoTopic](#cfn-sns-topic-fifotopic)" : Boolean,
       "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
-      "[Subscription](#cfn-sns-topic-subscription)" : [ [Subscription](aws-properties-sns-subscription.md), ... ],
+      "[Subscription](#cfn-sns-topic-subscription)" : [ Subscription, ... ],
       "[Tags](#cfn-sns-topic-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TopicName](#cfn-sns-topic-topicname)" : String
     }
@@ -33,10 +32,9 @@ Type: AWS::SNS::Topic
 Properties: 
   [ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication): Boolean
   [DisplayName](#cfn-sns-topic-displayname): String
-  [FifoTopic](#cfn-sns-topic-fifotopic): Boolean
   [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription): 
-    - [Subscription](aws-properties-sns-subscription.md)
+    - Subscription
   [Tags](#cfn-sns-topic-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TopicName](#cfn-sns-topic-topicname): String
@@ -55,12 +53,6 @@ The display name to use for an Amazon SNS topic with SMS subscriptions\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`FifoTopic`  <a name="cfn-sns-topic-fifotopic"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsMasterKeyId`  <a name="cfn-sns-topic-kmsmasterkeyid"></a>
 The ID of an AWS\-managed customer master key \(CMK\) for Amazon SNS or a custom CMK\. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)\. For more examples, see ` [KeyId](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters) ` in the *AWS Key Management Service API Reference*\.  
@@ -90,7 +82,7 @@ If you specify a name, you can't perform updates that require replacement of thi
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-sns-topic-return-values"></a>
+## Return values<a name="aws-properties-sns-topic-return-values"></a>
 
 ### Ref<a name="aws-properties-sns-topic-return-values-ref"></a>
 
@@ -151,5 +143,5 @@ MySNSTopic:
     TopicName: "SampleTopic"
 ```
 
-## See Also<a name="aws-properties-sns-topic--seealso"></a>
+## See also<a name="aws-properties-sns-topic--seealso"></a>
 +  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 

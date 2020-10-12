@@ -1,8 +1,5 @@
 # AWS::RDS::DBProxy AuthFormat<a name="aws-properties-rds-dbproxy-authformat"></a>
 
-**Note**  
-This is prerelease documentation for the RDS Database Proxy feature in preview release\. It is subject to change\.
-
 Specifies the details of authentication used by a proxy to log in as a specific database user\.
 
 ## Syntax<a name="aws-properties-rds-dbproxy-authformat-syntax"></a>
@@ -35,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AuthScheme`  <a name="cfn-rds-dbproxy-authformat-authscheme"></a>
 The type of authentication that the proxy uses for connections from the proxy to the underlying database\.  
+Valid Values: `SECRETS`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,6 +45,7 @@ A user\-specified description about the authentication used by a proxy to log in
 
 `IAMAuth`  <a name="cfn-rds-dbproxy-authformat-iamauth"></a>
 Whether to require or disallow AWS Identity and Access Management \(IAM\) authentication for connections to the proxy\.  
+Valid Values: `DISABLED | REQUIRED`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

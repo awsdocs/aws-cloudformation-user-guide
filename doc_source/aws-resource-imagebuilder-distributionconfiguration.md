@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ImageBuilder::DistributionConfiguration",
   "Properties" : {
       "[Description](#cfn-imagebuilder-distributionconfiguration-description)" : String,
-      "[Distributions](#cfn-imagebuilder-distributionconfiguration-distributions)" : [ [Distribution](aws-properties-imagebuilder-distributionconfiguration-distribution.md), ... ],
+      "[Distributions](#cfn-imagebuilder-distributionconfiguration-distributions)" : [ Distribution, ... ],
       "[Name](#cfn-imagebuilder-distributionconfiguration-name)" : String,
       "[Tags](#cfn-imagebuilder-distributionconfiguration-tags)" : {Key : Value, ...}
     }
@@ -27,7 +27,7 @@ Type: AWS::ImageBuilder::DistributionConfiguration
 Properties: 
   [Description](#cfn-imagebuilder-distributionconfiguration-description): String
   [Distributions](#cfn-imagebuilder-distributionconfiguration-distributions): 
-    - [Distribution](aws-properties-imagebuilder-distributionconfiguration-distribution.md)
+    - Distribution
   [Name](#cfn-imagebuilder-distributionconfiguration-name): String
   [Tags](#cfn-imagebuilder-distributionconfiguration-tags): 
     Key : Value
@@ -62,11 +62,11 @@ The tags of this distribution configuration\.
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-imagebuilder-distributionconfiguration-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-distributionconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-distributionconfiguration-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN, such as `arn:aws:imagebuilder:us-west-2:123456789012:distribution-configuration/myexampledistribution`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the resource, such as `arn:aws:imagebuilder:us-west-2:123456789012:distribution-configuration/myexampledistribution`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -118,7 +118,7 @@ Resources:
             Description: 'description'
       Tags:
         CustomerDistributionConfigTagKey1: 'CustomerDistributionConfigTagValue1'
-        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'br
+        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'
 ```
 
 #### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--json"></a>
@@ -173,5 +173,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
+## See also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
 + [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *EC2 Image Builder User Guide*\.

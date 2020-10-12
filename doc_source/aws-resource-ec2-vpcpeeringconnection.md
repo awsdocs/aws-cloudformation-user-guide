@@ -7,7 +7,7 @@ Limitations and rules apply to a VPC peering connection\. For more information, 
 
 The owner of the accepter VPC must accept the peering request to activate the peering connection\. The VPC peering connection request expires after 7 days, after which it cannot be accepted or rejected\.
 
-If you create a VPC peering connection request between VPCs with overlapping CIDR blocks, the VPC peering connection has a status of `failed`\. If you get a `VpcPeeringConnection failed to stabilize` error, review the troubleshooting steps in this [Knowledge Center article](http://aws.amazon.com/premiumsupport/knowledge-center/cloudformation-vpc-peering-error/)\.
+If you create a VPC peering connection request between VPCs with overlapping CIDR blocks, the VPC peering connection has a status of `failed`\.
 
 ## Syntax<a name="aws-resource-ec2-vpcpeeringconnection-syntax"></a>
 
@@ -84,7 +84,7 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcpeeringconnection-return-values-ref"></a>
 
@@ -543,3 +543,7 @@ Resources:
       VpcId: !Ref myVPC
       PeerVpcId: !Ref myPrivateVPC
 ```
+
+## See also<a name="aws-resource-ec2-vpcpeeringconnection--seealso"></a>
++ [What is VPC peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) in *AWS Outposts User Guide*
++ [CreateVpcPeeringConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcPeeringConnection.html) in the *Amazon EC2 API Reference*

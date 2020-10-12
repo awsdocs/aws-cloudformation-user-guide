@@ -42,7 +42,7 @@ The ID of the transit gateway\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-transitgatewayroutetable-return-values"></a>
+## Return values<a name="aws-resource-ec2-transitgatewayroutetable-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-transitgatewayroutetable-return-values-ref"></a>
 
@@ -50,5 +50,5 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-transitgatewayroutetable--seealso"></a>
+## See also<a name="aws-resource-ec2-transitgatewayroutetable--seealso"></a>
 +  [CreateTransitGatewayRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayRouteTable.html) in the *Amazon EC2 API Reference*

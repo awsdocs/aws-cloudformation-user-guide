@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-actions)" : [AccountTakeoverActionsType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.md),
-  "[NotifyConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-notifyconfiguration)" : [NotifyConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.md)
+  "[Actions](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-actions)" : AccountTakeoverActionsType,
+  "[NotifyConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-notifyconfiguration)" : NotifyConfigurationType
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-actions): 
-    [AccountTakeoverActionsType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.md)
+    AccountTakeoverActionsType
   [NotifyConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-notifyconfiguration): 
-    [NotifyConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.md)
+    NotifyConfigurationType
 ```
 
 ## Properties<a name="aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype-properties"></a>

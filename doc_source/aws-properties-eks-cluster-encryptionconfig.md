@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Provider](#cfn-eks-cluster-encryptionconfig-provider)" : [Provider](aws-properties-eks-cluster-provider.md),
+  "[Provider](#cfn-eks-cluster-encryptionconfig-provider)" : Provider,
   "[Resources](#cfn-eks-cluster-encryptionconfig-resources)" : [ String, ... ]
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Provider](#cfn-eks-cluster-encryptionconfig-provider): 
-    [Provider](aws-properties-eks-cluster-provider.md)
+    Provider
   [Resources](#cfn-eks-cluster-encryptionconfig-resources): 
     - String
 ```

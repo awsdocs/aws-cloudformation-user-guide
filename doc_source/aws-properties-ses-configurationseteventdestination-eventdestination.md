@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchDestination](#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination)" : [CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md),
+  "[CloudWatchDestination](#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination)" : CloudWatchDestination,
   "[Enabled](#cfn-ses-configurationseteventdestination-eventdestination-enabled)" : Boolean,
-  "[KinesisFirehoseDestination](#cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination)" : [KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md),
+  "[KinesisFirehoseDestination](#cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination)" : KinesisFirehoseDestination,
   "[MatchingEventTypes](#cfn-ses-configurationseteventdestination-eventdestination-matchingeventtypes)" : [ String, ... ],
   "[Name](#cfn-ses-configurationseteventdestination-eventdestination-name)" : String
 }
@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchDestination](#cfn-ses-configurationseteventdestination-eventdestination-cloudwatchdestination): 
-    [CloudWatchDestination](aws-properties-ses-configurationseteventdestination-cloudwatchdestination.md)
+    CloudWatchDestination
   [Enabled](#cfn-ses-configurationseteventdestination-eventdestination-enabled): Boolean
   [KinesisFirehoseDestination](#cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination): 
-    [KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)
+    KinesisFirehoseDestination
   [MatchingEventTypes](#cfn-ses-configurationseteventdestination-eventdestination-matchingeventtypes): 
     - String
   [Name](#cfn-ses-configurationseteventdestination-eventdestination-name): String

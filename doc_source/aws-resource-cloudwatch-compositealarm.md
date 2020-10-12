@@ -103,7 +103,7 @@ The actions to execute when this alarm transitions to the OK state from any othe
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudwatch-compositealarm-return-values"></a>
+## Return values<a name="aws-resource-cloudwatch-compositealarm-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudwatch-compositealarm-return-values-ref"></a>
 

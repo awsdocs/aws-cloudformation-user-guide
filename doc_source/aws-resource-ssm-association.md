@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::Association",
   "Properties" : {
+      "[ApplyOnlyAtCronInterval](#cfn-ssm-association-applyonlyatcroninterval)" : Boolean,
       "[AssociationName](#cfn-ssm-association-associationname)" : String,
       "[AutomationTargetParameterName](#cfn-ssm-association-automationtargetparametername)" : String,
       "[ComplianceSeverity](#cfn-ssm-association-complianceseverity)" : String,
@@ -20,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxConcurrency](#cfn-ssm-association-maxconcurrency)" : String,
       "[MaxErrors](#cfn-ssm-association-maxerrors)" : String,
       "[Name](#cfn-ssm-association-name)" : String,
-      "[OutputLocation](#cfn-ssm-association-outputlocation)" : [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md),
+      "[OutputLocation](#cfn-ssm-association-outputlocation)" : InstanceAssociationOutputLocation,
       "[Parameters](#cfn-ssm-association-parameters)" : {Key : Value, ...},
       "[ScheduleExpression](#cfn-ssm-association-scheduleexpression)" : String,
       "[SyncCompliance](#cfn-ssm-association-synccompliance)" : String,
-      "[Targets](#cfn-ssm-association-targets)" : [ [Target](aws-properties-ssm-association-target.md), ... ],
+      "[Targets](#cfn-ssm-association-targets)" : [ Target, ... ],
       "[WaitForSuccessTimeoutSeconds](#cfn-ssm-association-waitforsuccesstimeoutseconds)" : Integer
     }
 }
@@ -35,6 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SSM::Association
 Properties: 
+  [ApplyOnlyAtCronInterval](#cfn-ssm-association-applyonlyatcroninterval): Boolean
   [AssociationName](#cfn-ssm-association-associationname): String
   [AutomationTargetParameterName](#cfn-ssm-association-automationtargetparametername): String
   [ComplianceSeverity](#cfn-ssm-association-complianceseverity): String
@@ -44,20 +46,26 @@ Properties:
   [MaxErrors](#cfn-ssm-association-maxerrors): String
   [Name](#cfn-ssm-association-name): String
   [OutputLocation](#cfn-ssm-association-outputlocation): 
-    [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)
+    InstanceAssociationOutputLocation
   [Parameters](#cfn-ssm-association-parameters): 
     Key : Value
   [ScheduleExpression](#cfn-ssm-association-scheduleexpression): String
   [SyncCompliance](#cfn-ssm-association-synccompliance): String
   [Targets](#cfn-ssm-association-targets): 
-    - [Target](aws-properties-ssm-association-target.md)
+    - Target
   [WaitForSuccessTimeoutSeconds](#cfn-ssm-association-waitforsuccesstimeoutseconds): Integer
 ```
 
 ## Properties<a name="aws-resource-ssm-association-properties"></a>
 
+`ApplyOnlyAtCronInterval`  <a name="cfn-ssm-association-applyonlyatcroninterval"></a>
+By default, when you create a new associations, the system runs it immediately after it is created and then according to the schedule you specified\. Specify this option if you don't want an association to run immediately after you create it\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AssociationName`  <a name="cfn-ssm-association-associationname"></a>
-The name of the association\.  
+Specify a descriptive name for the association\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
@@ -75,7 +83,7 @@ Specify the target for the association\. This target is required for association
 The severity level that is assigned to the association\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CRITICAL | HIGH | LOW | MEDIUM | UNSPECIFIED`  
+*Allowed values*: `CRITICAL | HIGH | LOW | MEDIUM | UNSPECIFIED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocumentVersion`  <a name="cfn-ssm-association-documentversion"></a>
@@ -114,7 +122,10 @@ Executions that are already running an association when MaxErrors is reached are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-association-name"></a>
-The name of the Systems Manager document\.  
+The name of the SSM document that contains the configuration information for the instance\. You can specify `Command` or `Automation` documents\. The documents can be AWS\-predefined documents, documents you created, or a document that is shared with you from another account\. For SSM documents that are shared with you from other AWS accounts, you must specify the complete SSM document ARN, in the following format:  
+`arn:partition:ssm:region:account-id:document/document-name`  
+For example: `arn:aws:ssm:us-east-2:12345678912:document/My-Shared-Document`  
+For AWS\-predefined documents and SSM documents you created in your account, you only need to specify the document name\. For example, AWS\-ApplyPatchBaseline or My\-Document\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.:/]{3,128}$`  
@@ -141,9 +152,12 @@ A cron expression that specifies a schedule when the association runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncCompliance`  <a name="cfn-ssm-association-synccompliance"></a>
-Not currently supported by AWS CloudFormation\.  
+The mode for generating association compliance\. You can specify `AUTO` or `MANUAL`\. In `AUTO` mode, the system uses the status of the association execution to determine the compliance status\. If the association execution runs successfully, then the association is `COMPLIANT`\. If the association execution doesn't run successfully, the association is `NON-COMPLIANT`\.  
+In `MANUAL` mode, you must specify the `AssociationId` as a parameter for the PutComplianceItems API action\. In this case, compliance data is not managed by State Manager\. It is managed by your direct call to the PutComplianceItems API action\.  
+By default, all associations use `AUTO` mode\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `AUTO | MANUAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>
@@ -159,7 +173,7 @@ The number of seconds the service should wait for the association status to show
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-association-return-values"></a>
+## Return values<a name="aws-resource-ssm-association-return-values"></a>
 
 ### Fn::GetAtt<a name="aws-resource-ssm-association-return-values-fn--getatt"></a>
 
@@ -227,11 +241,11 @@ Resources:
       WaitForSuccessTimeoutSeconds: 300
 ```
 
-### Create an association for all managed instances in your AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account"></a>
+### Create an association for all managed instances in an AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account"></a>
 
 The following example creates an association that uses the AWS\-UpdateSSMAgent SSM document\. The association updates SSM Agent on all managed instances \(instances configured for Systems Manager\) in the user's AWS account according to the specified CRON schedule\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account--json"></a>
 
 ```
 {
@@ -257,7 +271,7 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_your_AWS_account--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account--yaml"></a>
 
 ```
 ---
@@ -323,14 +337,14 @@ Resources:
       WaitForSuccessTimeoutSeconds: 300
 ```
 
-### Associate an automation document with an instance<a name="aws-resource-ssm-association--examples--Associate_an_automation_document_with_an_instance"></a>
+### Create an association that associates an automation document with an instance<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance"></a>
 
 The following example creates an association that assigns the AWS\-StopEC2Instance automation document to a specific instance\. 
 
 **Note**  
 This example specifies the following Amazon Resource Name \(ARN\): `arn:${AWS::Partition}:iam::aws:policy/AmazonEC2FullAccess`\. This policy provides more than the required permissions to stop the instance\. We recommend that you use a policy with more restrictive permissions\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Associate_an_automation_document_with_an_instance--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance--json"></a>
 
 ```
 {
@@ -382,7 +396,7 @@ This example specifies the following Amazon Resource Name \(ARN\): `arn:${AWS::P
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Associate_an_automation_document_with_an_instance--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_associates_an_automation_document_with_an_instance--yaml"></a>
 
 ```
 ---
@@ -415,11 +429,11 @@ Resources:
       AutomationTargetParameterName: InstanceId
 ```
 
-### Create an association that uses rate controls and logs output to Amazon S3<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_logs_output_to_Amazon_S3"></a>
+### Create an association that uses rate controls and sends log output to Amazon S3<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3"></a>
 
 The following example creates an association that uses rate controls\. The association attempts to update SSM Agent on only 20% of instances at one time\. Systems Manager stops the association from running on any additional instances if the execution fails on 5% of the total number of instances\. System Manager also logs the association output to Amazon S3\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_logs_output_to_Amazon_S3--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3--json"></a>
 
 ```
 {
@@ -451,7 +465,7 @@ The following example creates an association that uses rate controls\. The assoc
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_logs_output_to_Amazon_S3--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3--yaml"></a>
 
 ```
 ---
@@ -3080,5 +3094,5 @@ Resources:
           - !GetAtt 'SSMExecutionRole.Arn'
 ```
 
-## See Also<a name="aws-resource-ssm-association--seealso"></a>
+## See also<a name="aws-resource-ssm-association--seealso"></a>
 +  [Reference: Cron and Rate Expressions for Systems Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/reference-cron-and-rate-expressions.html) 

@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions)" : [ [MetricDimension](aws-properties-autoscalingplans-scalingplan-metricdimension.md), ... ],
+  "[Dimensions](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions)" : [ MetricDimension, ... ],
   "[MetricName](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-metricname)" : String,
   "[Namespace](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-namespace)" : String,
   "[Statistic](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-statistic)" : String,
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-dimensions): 
-    - [MetricDimension](aws-properties-autoscalingplans-scalingplan-metricdimension.md)
+    - MetricDimension
   [MetricName](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-metricname): String
   [Namespace](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-namespace): String
   [Statistic](#cfn-autoscalingplans-scalingplan-customizedloadmetricspecification-statistic): String
@@ -73,5 +73,5 @@ The unit of the metric\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification--seealso"></a>
+## See also<a name="aws-properties-autoscalingplans-scalingplan-customizedloadmetricspecification--seealso"></a>
 + [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

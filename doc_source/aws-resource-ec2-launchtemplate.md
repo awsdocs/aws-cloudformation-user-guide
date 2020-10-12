@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate<a name="aws-resource-ec2-launchtemplate"></a>
 
-Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\.
+Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [Launching an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-templates.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-launchtemplate-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::LaunchTemplate",
   "Properties" : {
-      "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md),
+      "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : LaunchTemplateData,
       "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::LaunchTemplate
 Properties: 
   [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata): 
-    [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)
+    LaunchTemplateData
   [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
 ```
 
@@ -45,7 +45,7 @@ A name for the launch template\.
 *Pattern*: `[a-zA-Z0-9\(\)\.\-/_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
+## Return values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-launchtemplate-return-values-ref"></a>
 
@@ -136,5 +136,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
+## See also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
 + [ CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference* 

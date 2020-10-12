@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::IPSet",
   "Properties" : {
-      "[IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors)" : [ [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md), ... ],
+      "[IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors)" : [ IPSetDescriptor, ... ],
       "[Name](#cfn-waf-ipset-name)" : String
     }
 }
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::IPSet
 Properties: 
   [IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors): 
-    - [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md)
+    - IPSetDescriptor
   [Name](#cfn-waf-ipset-name): String
 ```
 
@@ -51,7 +51,7 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 *Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-waf-ipset-return-values"></a>
+## Return values<a name="aws-resource-waf-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-ipset-return-values-ref"></a>
 

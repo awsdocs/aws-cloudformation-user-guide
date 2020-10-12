@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::Activity",
   "Properties" : {
-      "[Name](#cfn-stepfunctions-activity-name)" : String,
-      "[Tags](#cfn-stepfunctions-activity-tags)" : [ [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md), ... ]
+      "[Arn](#cfn-stepfunctions-activity-arn)" : String,
+      "[Tags](#cfn-stepfunctions-activity-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -25,25 +25,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::StepFunctions::Activity
 Properties: 
-  [Name](#cfn-stepfunctions-activity-name): String
+  [Arn](#cfn-stepfunctions-activity-arn): String
   [Tags](#cfn-stepfunctions-activity-tags): 
-    - [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-activity-properties"></a>
 
-`Name`  <a name="cfn-stepfunctions-activity-name"></a>
-The name of the activity\.  
-A name must *not* contain:  
-+ white space
-+ brackets `< > { } [ ]` 
-+ wildcard characters `? *` 
-+ special characters `" # % \ ^ | ~ ` $ & , ; : /` 
-+ control characters \(`U+0000-001F`, `U+007F-009F`\)
-To enable logging with CloudWatch Logs, the name should only contain 0\-9, A\-Z, a\-z, \- and \_\.  
-*Required*: Yes  
+`Arn`  <a name="cfn-stepfunctions-activity-arn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-stepfunctions-activity-tags"></a>
 The list of tags to add to a resource\.  
@@ -52,7 +45,7 @@ Tags may only contain Unicode letters, digits, white space, or these symbols: `_
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-stepfunctions-activity-return-values"></a>
+## Return values<a name="aws-resource-stepfunctions-activity-return-values"></a>
 
 ### Ref<a name="aws-resource-stepfunctions-activity-return-values-ref"></a>
 

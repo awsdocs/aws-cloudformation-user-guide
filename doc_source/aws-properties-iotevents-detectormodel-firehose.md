@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeliveryStreamName](#cfn-iotevents-detectormodel-firehose-deliverystreamname)" : String,
-  "[Payload](#cfn-iotevents-detectormodel-firehose-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md),
+  "[Payload](#cfn-iotevents-detectormodel-firehose-payload)" : Payload,
   "[Separator](#cfn-iotevents-detectormodel-firehose-separator)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeliveryStreamName](#cfn-iotevents-detectormodel-firehose-deliverystreamname): String
   [Payload](#cfn-iotevents-detectormodel-firehose-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
   [Separator](#cfn-iotevents-detectormodel-firehose-separator): String
 ```
 

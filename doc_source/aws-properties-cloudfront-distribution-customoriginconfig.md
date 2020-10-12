@@ -59,7 +59,7 @@ Specifies the protocol \(HTTP or HTTPS\) that CloudFront uses to connect to the 
 +  `https-only` – CloudFront always uses HTTPS to connect to the origin\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `http-only | https-only | match-viewer`  
+*Allowed values*: `http-only | https-only | match-viewer`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginReadTimeout`  <a name="cfn-cloudfront-distribution-customoriginconfig-originreadtimeout"></a>
@@ -76,5 +76,5 @@ For more information, see [Minimum Origin SSL Protocol](https://docs.aws.amazon.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-customoriginconfig--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-customoriginconfig--seealso"></a>
 +  [CustomOriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomOriginConfig.html) in the *Amazon CloudFront API Reference* 

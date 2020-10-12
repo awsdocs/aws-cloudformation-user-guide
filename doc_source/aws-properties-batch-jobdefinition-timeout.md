@@ -28,5 +28,5 @@ The time duration in seconds \(measured from the job attempt's `startedAt` times
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-batch-jobdefinition-timeout--seealso"></a>
+## See also<a name="aws-properties-batch-jobdefinition-timeout--seealso"></a>
 +  [JobTimeout](https://docs.aws.amazon.com/batch/latest/APIReference/API_JobTimeout.html) in the *AWS Batch API Reference*\.

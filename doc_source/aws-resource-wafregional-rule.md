@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MetricName](#cfn-wafregional-rule-metricname)" : String,
       "[Name](#cfn-wafregional-rule-name)" : String,
-      "[Predicates](#cfn-wafregional-rule-predicates)" : [ [Predicate](aws-properties-wafregional-rule-predicate.md), ... ]
+      "[Predicates](#cfn-wafregional-rule-predicates)" : [ Predicate, ... ]
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [MetricName](#cfn-wafregional-rule-metricname): String
   [Name](#cfn-wafregional-rule-name): String
   [Predicates](#cfn-wafregional-rule-predicates): 
-    - [Predicate](aws-properties-wafregional-rule-predicate.md)
+    - Predicate
 ```
 
 ## Properties<a name="aws-resource-wafregional-rule-properties"></a>
@@ -60,7 +60,7 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 *Type*: List of [Predicate](aws-properties-wafregional-rule-predicate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-rule-return-values"></a>
+## Return values<a name="aws-resource-wafregional-rule-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-rule-return-values-ref"></a>
 

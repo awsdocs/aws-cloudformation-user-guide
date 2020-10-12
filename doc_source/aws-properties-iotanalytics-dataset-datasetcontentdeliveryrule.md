@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)" : [DatasetContentDeliveryRuleDestination](aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.md),
+  "[Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination)" : DatasetContentDeliveryRuleDestination,
   "[EntryName](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destination](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-destination): 
-    [DatasetContentDeliveryRuleDestination](aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.md)
+    DatasetContentDeliveryRuleDestination
   [EntryName](#cfn-iotanalytics-dataset-datasetcontentdeliveryrule-entryname): String
 ```
 

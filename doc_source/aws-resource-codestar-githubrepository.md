@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeStar::GitHubRepository",
   "Properties" : {
-      "[Code](#cfn-codestar-githubrepository-code)" : [Code](aws-properties-codestar-githubrepository-code.md),
+      "[Code](#cfn-codestar-githubrepository-code)" : Code,
       "[EnableIssues](#cfn-codestar-githubrepository-enableissues)" : Boolean,
       "[IsPrivate](#cfn-codestar-githubrepository-isprivate)" : Boolean,
       "[RepositoryAccessToken](#cfn-codestar-githubrepository-repositoryaccesstoken)" : String,
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeStar::GitHubRepository
 Properties: 
   [Code](#cfn-codestar-githubrepository-code): 
-    [Code](aws-properties-codestar-githubrepository-code.md)
+    Code
   [EnableIssues](#cfn-codestar-githubrepository-enableissues): Boolean
   [IsPrivate](#cfn-codestar-githubrepository-isprivate): Boolean
   [RepositoryAccessToken](#cfn-codestar-githubrepository-repositoryaccesstoken): String
@@ -82,7 +82,7 @@ The GitHub user name for the owner of the GitHub repository to be created\. If t
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="aws-resource-codestar-githubrepository-return-values"></a>
+## Return values<a name="aws-resource-codestar-githubrepository-return-values"></a>
 
 ### Ref<a name="aws-resource-codestar-githubrepository-return-values-ref"></a>
 

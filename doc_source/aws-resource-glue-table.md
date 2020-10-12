@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CatalogId](#cfn-glue-table-catalogid)" : String,
       "[DatabaseName](#cfn-glue-table-databasename)" : String,
-      "[TableInput](#cfn-glue-table-tableinput)" : [TableInput](aws-properties-glue-table-tableinput.md)
+      "[TableInput](#cfn-glue-table-tableinput)" : TableInput
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [CatalogId](#cfn-glue-table-catalogid): String
   [DatabaseName](#cfn-glue-table-databasename): String
   [TableInput](#cfn-glue-table-tableinput): 
-    [TableInput](aws-properties-glue-table-tableinput.md)
+    TableInput
 ```
 
 ## Properties<a name="aws-resource-glue-table-properties"></a>
@@ -50,7 +50,7 @@ A structure used to define a table\.
 *Type*: [TableInput](aws-properties-glue-table-tableinput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-table-return-values"></a>
+## Return values<a name="aws-resource-glue-table-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-table-return-values-ref"></a>
 

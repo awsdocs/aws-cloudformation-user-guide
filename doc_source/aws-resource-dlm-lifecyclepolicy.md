@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-dlm-lifecyclepolicy-description)" : String,
       "[ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn)" : String,
-      "[PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails)" : [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md),
+      "[PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails)" : PolicyDetails,
       "[State](#cfn-dlm-lifecyclepolicy-state)" : String
     }
 }
@@ -30,7 +30,7 @@ Properties:
   [Description](#cfn-dlm-lifecyclepolicy-description): String
   [ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn): String
   [PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails): 
-    [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)
+    PolicyDetails
   [State](#cfn-dlm-lifecyclepolicy-state): String
 ```
 
@@ -64,10 +64,10 @@ The configuration details of the lifecycle policy\.
 The activation state of the lifecycle policy\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED | ERROR`  
+*Allowed values*: `DISABLED | ENABLED | ERROR`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dlm-lifecyclepolicy-return-values"></a>
+## Return values<a name="aws-resource-dlm-lifecyclepolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-dlm-lifecyclepolicy-return-values-ref"></a>
 
@@ -179,6 +179,6 @@ Resources:
     }
 ```
 
-## See Also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>
+## See also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>
 +  [CreateLifecyclePolicy](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CreateLifecyclePolicy.html) in the *Amazon Data Lifecycle Manager API Reference* 
 +  [Automating the Amazon EBS Snapshot Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) in the *Amazon Elastic Compute Cloud User Guide* 

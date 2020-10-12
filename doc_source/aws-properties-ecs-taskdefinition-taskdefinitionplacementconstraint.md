@@ -38,5 +38,5 @@ A cluster query language expression to apply to the constraint\. For more inform
 The type of constraint\. The `MemberOf` constraint restricts selection to be from a group of valid candidates\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `memberOf`  
+*Allowed values*: `memberOf`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

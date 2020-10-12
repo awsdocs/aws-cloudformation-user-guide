@@ -45,8 +45,8 @@ The description for the DB Subnet Group\.
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupname"></a>
 The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
-Constraints: Must contain no more than 255 alphanumeric characters or hyphens\. Must not be "Default"\.  
-Example: `mySubnetgroup`   
+Constraints: Must contain no more than 255 lowercase alphanumeric characters or hyphens\. Must not be "Default"\.  
+Example: `mysubnetgroup`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -63,7 +63,7 @@ Tags to assign to the DB subnet group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-rds-dbsubnet-group-return-values"></a>
+## Return values<a name="aws-resource-rds-dbsubnet-group-return-values"></a>
 
 ### Ref<a name="aws-resource-rds-dbsubnet-group-return-values-ref"></a>
 

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AmazonMQ::ConfigurationAssociation",
   "Properties" : {
       "[Broker](#cfn-amazonmq-configurationassociation-broker)" : String,
-      "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
+      "[Configuration](#cfn-amazonmq-configurationassociation-configuration)" : ConfigurationId
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::AmazonMQ::ConfigurationAssociation
 Properties: 
   [Broker](#cfn-amazonmq-configurationassociation-broker): String
   [Configuration](#cfn-amazonmq-configurationassociation-configuration): 
-    [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)
+    ConfigurationId
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configurationassociation-properties"></a>
@@ -42,7 +42,7 @@ The configuration to associate with a broker\.
 *Type*: [ConfigurationId](aws-properties-amazonmq-configurationassociation-configurationid.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-amazonmq-configurationassociation-return-values"></a>
+## Return values<a name="aws-resource-amazonmq-configurationassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-amazonmq-configurationassociation-return-values-ref"></a>
 

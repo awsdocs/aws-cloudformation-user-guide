@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions)" : [EventDimensions](aws-properties-pinpoint-campaign-eventdimensions.md),
+  "[Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions)" : EventDimensions,
   "[FilterType](#cfn-pinpoint-campaign-campaigneventfilter-filtertype)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-pinpoint-campaign-campaigneventfilter-dimensions): 
-    [EventDimensions](aws-properties-pinpoint-campaign-eventdimensions.md)
+    EventDimensions
   [FilterType](#cfn-pinpoint-campaign-campaigneventfilter-filtertype): String
 ```
 

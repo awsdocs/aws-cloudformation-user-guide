@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ [VersionWeight](aws-properties-lambda-alias-versionweight.md), ... ]
+  "[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ VersionWeight, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights): 
-    - [VersionWeight](aws-properties-lambda-alias-versionweight.md)
+    - VersionWeight
 ```
 
 ## Properties<a name="aws-properties-lambda-alias-aliasroutingconfiguration-properties"></a>

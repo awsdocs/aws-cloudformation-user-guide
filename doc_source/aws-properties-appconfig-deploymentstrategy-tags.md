@@ -1,6 +1,6 @@
 # AWS::AppConfig::DeploymentStrategy Tags<a name="aws-properties-appconfig-deploymentstrategy-tags"></a>
 
-Metadata to assign to the deployment strategy\. Tags help organize and categorize your AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.
+Metadata to assign to the deployment strategy\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.
 
 ## Syntax<a name="aws-properties-appconfig-deploymentstrategy-tags-syntax"></a>
 

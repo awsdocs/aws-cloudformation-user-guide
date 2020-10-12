@@ -10,11 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AccessLogSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-accesslogsettings)" : [AccessLogSettings](aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.md),
+  "[AccessLogSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-accesslogsettings)" : AccessLogSettings,
   "[AutoDeploy](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-autodeploy)" : Boolean,
-  "[DefaultRouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-defaultroutesettings)" : [RouteSettings](aws-properties-apigatewayv2-apigatewaymanagedoverrides-routesettings.md),
+  "[DefaultRouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-defaultroutesettings)" : RouteSettings,
   "[Description](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-description)" : String,
-  "[RouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-routesettings)" : [Json](aws-properties-apigatewayv2-apigatewaymanagedoverrides-routesettings.md),
+  "[RouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-routesettings)" : Json,
   "[StageVariables](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-stagevariables)" : Json
 }
 ```
@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessLogSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-accesslogsettings): 
-    [AccessLogSettings](aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.md)
+    AccessLogSettings
   [AutoDeploy](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-autodeploy): Boolean
   [DefaultRouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-defaultroutesettings): 
-    [RouteSettings](aws-properties-apigatewayv2-apigatewaymanagedoverrides-routesettings.md)
+    RouteSettings
   [Description](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-description): String
-  [RouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-routesettings): [Json](aws-properties-apigatewayv2-apigatewaymanagedoverrides-routesettings.md)
+  [RouteSettings](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-routesettings): Json
   [StageVariables](#cfn-apigatewayv2-apigatewaymanagedoverrides-stageoverrides-stagevariables): Json
 ```
 

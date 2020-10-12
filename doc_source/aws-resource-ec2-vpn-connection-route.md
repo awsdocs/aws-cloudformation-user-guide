@@ -43,7 +43,7 @@ The ID of the VPN connection\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpn-connection-route-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpn-connection-route-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpn-connection-route-return-values-ref"></a>
 
@@ -80,5 +80,5 @@ MyConnectionRoute0:
      !Ref Connection0
 ```
 
-## See Also<a name="aws-resource-ec2-vpn-connection-route--seealso"></a>
+## See also<a name="aws-resource-ec2-vpn-connection-route--seealso"></a>
 +  [CreateVpnConnectionRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpnConnectionRoute.html) in the *Amazon EC2 API Reference*

@@ -19,8 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[GroupDescription](#cfn-ec2-securitygroup-groupdescription)" : String,
       "[GroupName](#cfn-ec2-securitygroup-groupname)" : String,
-      "[SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress)" : [ [Egress](aws-properties-ec2-security-group-rule.md), ... ],
-      "[SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress)" : [ [Ingress](aws-properties-ec2-security-group-rule-1.md), ... ],
+      "[SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress)" : [ Egress, ... ],
+      "[SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress)" : [ Ingress, ... ],
       "[Tags](#cfn-ec2-securitygroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-ec2-securitygroup-vpcid)" : String
     }
@@ -35,9 +35,9 @@ Properties:
   [GroupDescription](#cfn-ec2-securitygroup-groupdescription): String
   [GroupName](#cfn-ec2-securitygroup-groupname): String
   [SecurityGroupEgress](#cfn-ec2-securitygroup-securitygroupegress): 
-    - [Egress](aws-properties-ec2-security-group-rule.md)
+    - Egress
   [SecurityGroupIngress](#cfn-ec2-securitygroup-securitygroupingress): 
-    - [Ingress](aws-properties-ec2-security-group-rule-1.md)
+    - Ingress
   [Tags](#cfn-ec2-securitygroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-securitygroup-vpcid): String
@@ -87,7 +87,7 @@ Any tags assigned to the security group\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-ec2-security-group-return-values"></a>
+## Return values<a name="aws-properties-ec2-security-group-return-values"></a>
 
 ### Ref<a name="aws-properties-ec2-security-group-return-values-ref"></a>
 
@@ -196,7 +196,7 @@ sgwithoutegress:
       Ref: myVPC
 ```
 
-## See Also<a name="aws-properties-ec2-security-group--seealso"></a>
+## See also<a name="aws-properties-ec2-security-group--seealso"></a>
 +  [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
 +  [EC2\-Classic](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html) in the *Amazon EC2 User Guide for Linux Instances* for information about accounts that support EC2\-Classic security groups
 +  [Amazon EC2 Security Groups for Linux Instances ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*

@@ -2,7 +2,7 @@
 
 Specifies the metadata options for the instance\.
 
-`MetadataOptions` is a property of the [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
+`MetadataOptions` is a property of [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions-syntax"></a>
 
@@ -33,7 +33,7 @@ This parameter enables or disables the HTTP metadata endpoint on your instances\
 If you specify a value of `disabled`, you will not be able to access your instance metadata\. 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disabled | enabled`  
+*Allowed values*: `disabled | enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpPutResponseHopLimit`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpputresponsehoplimit"></a>
@@ -50,5 +50,5 @@ If the state is `optional`, you can choose to retrieve instance metadata with or
 If the state is `required`, you must send a signed token header with any instance metadata retrieval requests\. In this state, retrieving the IAM role credentials always returns the version 2\.0 credentials; the version 1\.0 credentials are not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `optional | required`  
+*Allowed values*: `optional | required`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

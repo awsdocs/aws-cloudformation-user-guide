@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EncryptionConfiguration](#cfn-athena-workgroup-resultconfigurationupdates-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md),
+  "[EncryptionConfiguration](#cfn-athena-workgroup-resultconfigurationupdates-encryptionconfiguration)" : EncryptionConfiguration,
   "[OutputLocation](#cfn-athena-workgroup-resultconfigurationupdates-outputlocation)" : String,
   "[RemoveEncryptionConfiguration](#cfn-athena-workgroup-resultconfigurationupdates-removeencryptionconfiguration)" : Boolean,
   "[RemoveOutputLocation](#cfn-athena-workgroup-resultconfigurationupdates-removeoutputlocation)" : Boolean
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncryptionConfiguration](#cfn-athena-workgroup-resultconfigurationupdates-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-athena-workgroup-encryptionconfiguration.md)
+    EncryptionConfiguration
   [OutputLocation](#cfn-athena-workgroup-resultconfigurationupdates-outputlocation): String
   [RemoveEncryptionConfiguration](#cfn-athena-workgroup-resultconfigurationupdates-removeencryptionconfiguration): Boolean
   [RemoveOutputLocation](#cfn-athena-workgroup-resultconfigurationupdates-removeoutputlocation): Boolean

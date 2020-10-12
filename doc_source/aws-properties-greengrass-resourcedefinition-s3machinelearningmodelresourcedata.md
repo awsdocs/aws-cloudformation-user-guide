@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)" : String,
-  "[OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)" : [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md),
+  "[OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)" : ResourceDownloadOwnerSetting,
   "[S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath): String
   [OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting): 
-    [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md)
+    ResourceDownloadOwnerSetting
   [S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri): String
 ```
 
@@ -47,6 +47,6 @@ The URI of the source model in an Amazon S3 bucket\. The model package must be i
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
 +  [S3MachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-s3machinelearningmodelresourcedata.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

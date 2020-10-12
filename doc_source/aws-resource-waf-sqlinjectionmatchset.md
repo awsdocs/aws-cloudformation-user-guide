@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAF::SqlInjectionMatchSet",
   "Properties" : {
       "[Name](#cfn-waf-sqlinjectionmatchset-name)" : String,
-      "[SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md), ... ]
+      "[SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples)" : [ SqlInjectionMatchTuple, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::WAF::SqlInjectionMatchSet
 Properties: 
   [Name](#cfn-waf-sqlinjectionmatchset-name): String
   [SqlInjectionMatchTuples](#cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples): 
-    - [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)
+    - SqlInjectionMatchTuple
 ```
 
 ## Properties<a name="aws-resource-waf-sqlinjectionmatchset-properties"></a>
@@ -49,7 +49,7 @@ Specifies the parts of web requests that you want to inspect for snippets of mal
 *Type*: List of [SqlInjectionMatchTuple](aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-sqlinjectionmatchset-return-values"></a>
+## Return values<a name="aws-resource-waf-sqlinjectionmatchset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-sqlinjectionmatchset-return-values-ref"></a>
 

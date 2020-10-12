@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Payload](#cfn-iotevents-detectormodel-sns-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md),
+  "[Payload](#cfn-iotevents-detectormodel-sns-payload)" : Payload,
   "[TargetArn](#cfn-iotevents-detectormodel-sns-targetarn)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Payload](#cfn-iotevents-detectormodel-sns-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
   [TargetArn](#cfn-iotevents-detectormodel-sns-targetarn): String
 ```
 

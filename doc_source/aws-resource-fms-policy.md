@@ -23,16 +23,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::FMS::Policy",
   "Properties" : {
       "[DeleteAllPolicyResources](#cfn-fms-policy-deleteallpolicyresources)" : Boolean,
-      "[ExcludeMap](#cfn-fms-policy-excludemap)" : [IEMap](aws-properties-fms-policy-iemap.md),
+      "[ExcludeMap](#cfn-fms-policy-excludemap)" : IEMap,
       "[ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags)" : Boolean,
-      "[IncludeMap](#cfn-fms-policy-includemap)" : [IEMap](aws-properties-fms-policy-iemap.md),
+      "[IncludeMap](#cfn-fms-policy-includemap)" : IEMap,
       "[PolicyName](#cfn-fms-policy-policyname)" : String,
       "[RemediationEnabled](#cfn-fms-policy-remediationenabled)" : Boolean,
-      "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ [ResourceTag](aws-properties-fms-policy-resourcetag.md), ... ],
+      "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ ResourceTag, ... ],
       "[ResourceType](#cfn-fms-policy-resourcetype)" : String,
       "[ResourceTypeList](#cfn-fms-policy-resourcetypelist)" : [ String, ... ],
       "[SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata)" : Json,
-      "[Tags](#cfn-fms-policy-tags)" : [ [PolicyTag](aws-properties-fms-policy-policytag.md), ... ]
+      "[Tags](#cfn-fms-policy-tags)" : [ PolicyTag, ... ]
     }
 }
 ```
@@ -44,20 +44,20 @@ Type: AWS::FMS::Policy
 Properties: 
   [DeleteAllPolicyResources](#cfn-fms-policy-deleteallpolicyresources): Boolean
   [ExcludeMap](#cfn-fms-policy-excludemap): 
-    [IEMap](aws-properties-fms-policy-iemap.md)
+    IEMap
   [ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags): Boolean
   [IncludeMap](#cfn-fms-policy-includemap): 
-    [IEMap](aws-properties-fms-policy-iemap.md)
+    IEMap
   [PolicyName](#cfn-fms-policy-policyname): String
   [RemediationEnabled](#cfn-fms-policy-remediationenabled): Boolean
   [ResourceTags](#cfn-fms-policy-resourcetags): 
-    - [ResourceTag](aws-properties-fms-policy-resourcetag.md)
+    - ResourceTag
   [ResourceType](#cfn-fms-policy-resourcetype): String
   [ResourceTypeList](#cfn-fms-policy-resourcetypelist): 
     - String
   [SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata): Json
   [Tags](#cfn-fms-policy-tags): 
-    - [PolicyTag](aws-properties-fms-policy-policytag.md)
+    - PolicyTag
 ```
 
 ## Properties<a name="aws-resource-fms-policy-properties"></a>
@@ -77,9 +77,12 @@ After the cleanup, in\-scope resources are no longer protected by web ACLs in th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeMap`  <a name="cfn-fms-policy-excludemap"></a>
-Specifies the AWS account IDs to exclude from the policy\.   
+Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\) to exclude from the policy\. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time\.  
 You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
-The following example is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.  
+You can specify account IDs, OUs, or a combination:   
++ Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
++ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,15 +94,18 @@ Used only when tags are specified in the `ResourceTags` property\. If this prope
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeMap`  <a name="cfn-fms-policy-includemap"></a>
-Specifies the AWS account IDs to include in the policy\.   
+Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\) to include in the policy\. Specifying an OU is the equivalent of specifying all accounts in the OU and in any of its child OUs, including any child OUs and accounts that are added at a later time\.  
 You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
-The following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.  
+You can specify account IDs, OUs, or a combination:   
++ Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
++ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-fms-policy-policyname"></a>
-The friendly name of the AWS Firewall Manager policy\.  
+The name of the AWS Firewall Manager policy\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -144,7 +150,9 @@ This contains the following settings:
 + ManagedServiceData \- Details about the service that are specific to the service type, in JSON format\. For `SHIELD_ADVANCED`, this is an empty string\.
   + Example: `WAFV2` 
 
-    `"ManagedServiceData": "{\"type\":\"WAFV2\",\"defaultAction\":{\"type\":\"ALLOW\"},\"preProcessRuleGroups\":[{\"managedRuleGroupIdentifier\":null,\"ruleGroupArn\":\"rulegrouparn\",\"overrideAction\":{\"type\":\"COUNT\"},\"excludeRules\":[{\"name\":\"EntityName\"}],\"ruleGroupType\":\"RuleGroup\"}],\"postProcessRuleGroups\":[{\"managedRuleGroupIdentifier\":{\"managedRuleGroupName\":\"AWSManagedRulesAdminProtectionRuleSet\",\"vendor\":\"AWS\"},\"ruleGroupArn\":\"rulegrouparn\",\"overrideAction\":{\"type\":\"NONE\"},\"excludeRules\":[],\"ruleGroupType\":\"ManagedRuleGroup\"}],\"overrideCustomerWebACLAssociation\":false}"`
+    `"ManagedServiceData": "{\"type\":\"WAFV2\",\"preProcessRuleGroups\":[{\"ruleGroupArn\":null,\"overrideAction\":{\"type\":\"NONE\"},\"managedRuleGroupIdentifier\":{\"version\":null,\"vendorName\":\"AWS\",\"managedRuleGroupName\":\"AWSManagedRulesAmazonIpReputationList\"},\"ruleGroupType\":\"ManagedRuleGroup\",\"excludeRules\":[]}],\"postProcessRuleGroups\":[],\"defaultAction\":{\"type\":\"ALLOW\"},\"overrideCustomerWebACLAssociation\":false,\"loggingConfiguration\":{\"logDestinationConfigs\":[\"arn:aws:firehose:us-west-2:12345678912:deliverystream/aws-waf-logs-fms-admin-destination\"],\"redactedFields\":[{\"redactedFieldType\":\"SingleHeader\",\"redactedFieldValue\":\"Cookies\"},{\"redactedFieldType\":\"Method\"}]}}"`
+
+    In the `loggingConfiguration`, you can specify one `logDestinationConfigs`, you can optionally provide up to 20 `redactedFields`, and the `RedactedFieldType` must be one of `URI`, `QUERY_STRING`, `HEADER`, or `METHOD`\.
   + Example: `WAF Classic` 
 
     `"ManagedServiceData": "{\"type\": \"WAF\", \"ruleGroups\": [{\"id\":\"12345678-1bcd-9012-efga-0987654321ab\", \"overrideAction\" : {\"type\": \"COUNT\"}}],\"defaultAction\": {\"type\": \"BLOCK\"}}`
@@ -171,7 +179,7 @@ A collection of key:value pairs associated with an AWS resource\. The key:value 
 *Type*: List of [PolicyTag](aws-properties-fms-policy-policytag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-fms-policy-return-values"></a>
+## Return values<a name="aws-resource-fms-policy-return-values"></a>
 
 ### Ref<a name="aws-resource-fms-policy-return-values-ref"></a>
 

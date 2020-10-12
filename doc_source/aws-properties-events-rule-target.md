@@ -13,17 +13,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-events-rule-target-arn)" : String,
-  "[BatchParameters](#cfn-events-rule-target-batchparameters)" : [BatchParameters](aws-properties-events-rule-batchparameters.md),
-  "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : [EcsParameters](aws-properties-events-rule-ecsparameters.md),
-  "[HttpParameters](#cfn-events-rule-target-httpparameters)" : [HttpParameters](aws-properties-events-rule-httpparameters.md),
+  "[BatchParameters](#cfn-events-rule-target-batchparameters)" : BatchParameters,
+  "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : EcsParameters,
+  "[HttpParameters](#cfn-events-rule-target-httpparameters)" : HttpParameters,
   "[Id](#cfn-events-rule-target-id)" : String,
   "[Input](#cfn-events-rule-target-input)" : String,
   "[InputPath](#cfn-events-rule-target-inputpath)" : String,
-  "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : [InputTransformer](aws-properties-events-rule-inputtransformer.md),
-  "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : [KinesisParameters](aws-properties-events-rule-kinesisparameters.md),
+  "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : InputTransformer,
+  "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : KinesisParameters,
   "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
-  "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md),
-  "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : [SqsParameters](aws-properties-events-rule-sqsparameters.md)
+  "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : RunCommandParameters,
+  "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : SqsParameters
 }
 ```
 
@@ -32,23 +32,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Arn](#cfn-events-rule-target-arn): String
   [BatchParameters](#cfn-events-rule-target-batchparameters): 
-    [BatchParameters](aws-properties-events-rule-batchparameters.md)
+    BatchParameters
   [EcsParameters](#cfn-events-rule-target-ecsparameters): 
-    [EcsParameters](aws-properties-events-rule-ecsparameters.md)
+    EcsParameters
   [HttpParameters](#cfn-events-rule-target-httpparameters): 
-    [HttpParameters](aws-properties-events-rule-httpparameters.md)
+    HttpParameters
   [Id](#cfn-events-rule-target-id): String
   [Input](#cfn-events-rule-target-input): String
   [InputPath](#cfn-events-rule-target-inputpath): String
   [InputTransformer](#cfn-events-rule-target-inputtransformer): 
-    [InputTransformer](aws-properties-events-rule-inputtransformer.md)
+    InputTransformer
   [KinesisParameters](#cfn-events-rule-target-kinesisparameters): 
-    [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
+    KinesisParameters
   [RoleArn](#cfn-events-rule-target-rolearn): String
   [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
-    [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
+    RunCommandParameters
   [SqsParameters](#cfn-events-rule-target-sqsparameters): 
-    [SqsParameters](aws-properties-events-rule-sqsparameters.md)
+    SqsParameters
 ```
 
 ## Properties<a name="aws-properties-events-rule-target-properties"></a>
@@ -74,7 +74,8 @@ Contains the Amazon ECS task definition and task count to be used, if the event 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpParameters`  <a name="cfn-events-rule-target-httpparameters"></a>
-Not currently supported by AWS CloudFormation\.  
+Contains the HTTP parameters to use when the target is a API Gateway REST endpoint\.  
+If you specify an API Gateway REST API as a target, you can use this parameter to specify headers, path parameter, query string keys/values as part of your target invoking request\.  
 *Required*: No  
 *Type*: [HttpParameters](aws-properties-events-rule-httpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

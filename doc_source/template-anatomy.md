@@ -1,4 +1,4 @@
-# Template Anatomy<a name="template-anatomy"></a>
+# Template anatomy<a name="template-anatomy"></a>
 
 A template is a JSON\- or YAML\-formatted text file that describes your AWS infrastructure\. The following examples show an AWS CloudFormation template structure and its sections\.
 
@@ -75,7 +75,7 @@ Outputs:
   set of outputs
 ```
 
-## Template Sections<a name="template-anatomy-sections"></a>
+## Template sections<a name="template-anatomy-sections"></a>
 
 Templates include several major sections\. The `Resources` section is the only required section\. Some sections in a template can be in any order\. However, as you build your template, it can be helpful to use the logical order shown in the following list because values in one section might refer to values from a previous section\. 
 

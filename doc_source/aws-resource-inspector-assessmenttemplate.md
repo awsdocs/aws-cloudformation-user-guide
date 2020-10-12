@@ -75,7 +75,7 @@ The user\-defined attributes that are assigned to every finding that is generate
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-inspector-assessmenttemplate-return-values"></a>
+## Return values<a name="aws-resource-inspector-assessmenttemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-assessmenttemplate-return-values-ref"></a>
 

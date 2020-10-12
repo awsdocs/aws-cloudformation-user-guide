@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::CoreDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-coredefinition-initialversion)" : [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-coredefinition-initialversion)" : CoreDefinitionVersion,
       "[Name](#cfn-greengrass-coredefinition-name)" : String,
       "[Tags](#cfn-greengrass-coredefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::CoreDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-coredefinition-initialversion): 
-    [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)
+    CoreDefinitionVersion
   [Name](#cfn-greengrass-coredefinition-name): String
   [Tags](#cfn-greengrass-coredefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-coredefinition-return-values-ref"></a>
 
@@ -196,6 +196,6 @@ Outputs:
     Value: !Ref CoreDefinition
 ```
 
-## See Also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
 +  [CreateCoreDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[FunctionArn](#cfn-iotevents-detectormodel-lambda-functionarn)" : String,
-  "[Payload](#cfn-iotevents-detectormodel-lambda-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md)
+  "[Payload](#cfn-iotevents-detectormodel-lambda-payload)" : Payload
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [FunctionArn](#cfn-iotevents-detectormodel-lambda-functionarn): String
   [Payload](#cfn-iotevents-detectormodel-lambda-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-lambda-properties"></a>

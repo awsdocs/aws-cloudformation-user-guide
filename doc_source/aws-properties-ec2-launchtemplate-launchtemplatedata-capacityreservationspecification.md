@@ -2,7 +2,7 @@
 
 Specifies an instance's Capacity Reservation targeting option\. You can specify only one option at a time\.
 
- `CapacityReservationSpecification` is a property of the [ Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+ `CapacityReservationSpecification` is a property of [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference)" : String,
-  "[CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget)" : [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
+  "[CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget)" : CapacityReservationTarget
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CapacityReservationPreference](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationpreference): String
   [CapacityReservationTarget](#cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget): 
-    [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)
+    CapacityReservationTarget
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-properties"></a>
@@ -33,11 +33,11 @@ Indicates the instance's Capacity Reservation preferences\. Possible preferences
 +  `none` \- The instance avoids running in a Capacity Reservation even if one is available\. The instance runs in On\-Demand capacity\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `none | open`  
+*Allowed values*: `none | open`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CapacityReservationTarget`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-capacityreservationspecification-capacityreservationtarget"></a>
-Information about the target Capacity Reservation\.  
+Information about the target Capacity Reservation or Capacity Reservation group\.  
 *Required*: No  
 *Type*: [CapacityReservationTarget](aws-properties-ec2-launchtemplate-capacityreservationtarget.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

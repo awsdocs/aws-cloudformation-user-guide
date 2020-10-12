@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Statement](#cfn-wafv2-webacl-notstatementone-statement)" : [StatementTwo](aws-properties-wafv2-webacl-statementtwo.md)
+  "[Statement](#cfn-wafv2-webacl-notstatementone-statement)" : StatementTwo
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Statement](#cfn-wafv2-webacl-notstatementone-statement): 
-    [StatementTwo](aws-properties-wafv2-webacl-statementtwo.md)
+    StatementTwo
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-notstatementone-properties"></a>

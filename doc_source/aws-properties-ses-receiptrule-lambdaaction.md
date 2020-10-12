@@ -41,7 +41,7 @@ The invocation type of the AWS Lambda function\. An invocation type of `RequestR
 There is a 30\-second timeout on `RequestResponse` invocations\. You should use `Event` invocation in most cases\. Use `RequestResponse` only when you want to make a mail flow decision, such as whether to stop the receipt rule or the receipt rule set\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Event | RequestResponse`  
+*Allowed values*: `Event | RequestResponse`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-lambdaaction-topicarn"></a>

@@ -1,6 +1,6 @@
 # AWS::S3::Bucket ReplicationTime<a name="aws-properties-s3-bucket-replicationtime"></a>
 
-Not currently supported by AWS CloudFormation\.
+ A container specifying S3 Replication Time Control \(S3 RTC\) related information, including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated\. Must be specified together with a `Metrics` block\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-replicationtime-syntax"></a>
 
@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Status](#cfn-s3-bucket-replicationtime-status)" : String,
-  "[Time](#cfn-s3-bucket-replicationtime-time)" : [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)
+  "[Time](#cfn-s3-bucket-replicationtime-time)" : ReplicationTimeValue
 }
 ```
 
@@ -20,20 +20,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Status](#cfn-s3-bucket-replicationtime-status): String
   [Time](#cfn-s3-bucket-replicationtime-time): 
-    [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)
+    ReplicationTimeValue
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-replicationtime-properties"></a>
 
 `Status`  <a name="cfn-s3-bucket-replicationtime-status"></a>
-Not currently supported by AWS CloudFormation\.  
+ Specifies whether the replication time is enabled\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Time`  <a name="cfn-s3-bucket-replicationtime-time"></a>
-Not currently supported by AWS CloudFormation\.  
+ A container specifying the time by which replication should be complete for all objects and operations on objects\.   
 *Required*: Yes  
 *Type*: [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

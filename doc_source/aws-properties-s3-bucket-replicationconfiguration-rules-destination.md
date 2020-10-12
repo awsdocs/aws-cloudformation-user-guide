@@ -1,6 +1,6 @@
 # AWS::S3::Bucket ReplicationDestination<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination"></a>
 
-Specifies which Amazon S3 bucket to store replicated objects in and their storage class\.
+A container for information about the replication destination and its configurations including enabling the S3 Replication Time Control \(S3 RTC\)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination-syntax"></a>
 
@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md),
+  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : AccessControlTranslation,
   "[Account](#cfn-s3-bucket-replicationdestination-account)" : String,
   "[Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket)" : String,
-  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md),
-  "[Metrics](#cfn-s3-bucket-replicationdestination-metrics)" : [Metrics](aws-properties-s3-bucket-metrics.md),
-  "[ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime)" : [ReplicationTime](aws-properties-s3-bucket-replicationtime.md),
+  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : EncryptionConfiguration,
+  "[Metrics](#cfn-s3-bucket-replicationdestination-metrics)" : Metrics,
+  "[ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime)" : ReplicationTime,
   "[StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass)" : String
 }
 ```
@@ -24,15 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation): 
-    [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md)
+    AccessControlTranslation
   [Account](#cfn-s3-bucket-replicationdestination-account): String
   [Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket): String
   [EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)
+    EncryptionConfiguration
   [Metrics](#cfn-s3-bucket-replicationdestination-metrics): 
-    [Metrics](aws-properties-s3-bucket-metrics.md)
+    Metrics
   [ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime): 
-    [ReplicationTime](aws-properties-s3-bucket-replicationtime.md)
+    ReplicationTime
   [StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass): String
 ```
 
@@ -64,13 +64,13 @@ Specifies encryption\-related information\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-s3-bucket-replicationdestination-metrics"></a>
-Not currently supported by AWS CloudFormation\.  
+ A container specifying replication metrics\-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control \(S3 RTC\)\. Must be specified together with a `ReplicationTime` block\.   
 *Required*: No  
 *Type*: [Metrics](aws-properties-s3-bucket-metrics.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationTime`  <a name="cfn-s3-bucket-replicationdestination-replicationtime"></a>
-Not currently supported by AWS CloudFormation\.  
+ A container specifying S3 Replication Time Control \(S3 RTC\), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated\. Must be specified together with a `Metrics` block\.   
 *Required*: No  
 *Type*: [ReplicationTime](aws-properties-s3-bucket-replicationtime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,5 +80,5 @@ Not currently supported by AWS CloudFormation\.
 For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

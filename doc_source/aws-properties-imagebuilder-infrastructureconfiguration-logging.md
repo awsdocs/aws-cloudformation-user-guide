@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3Logs](#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)" : [S3Logs](aws-properties-imagebuilder-infrastructureconfiguration-s3logs.md)
+  "[S3Logs](#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs)" : S3Logs
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3Logs](#cfn-imagebuilder-infrastructureconfiguration-logging-s3logs): 
-    [S3Logs](aws-properties-imagebuilder-infrastructureconfiguration-s3logs.md)
+    S3Logs
 ```
 
 ## Properties<a name="aws-properties-imagebuilder-infrastructureconfiguration-logging-properties"></a>

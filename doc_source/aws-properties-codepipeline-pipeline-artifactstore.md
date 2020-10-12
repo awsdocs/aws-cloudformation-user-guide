@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey)" : [EncryptionKey](aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.md),
+  "[EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey)" : EncryptionKey,
   "[Location](#cfn-codepipeline-pipeline-artifactstore-location)" : String,
   "[Type](#cfn-codepipeline-pipeline-artifactstore-type)" : String
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncryptionKey](#cfn-codepipeline-pipeline-artifactstore-encryptionkey): 
-    [EncryptionKey](aws-properties-codepipeline-pipeline-artifactstore-encryptionkey.md)
+    EncryptionKey
   [Location](#cfn-codepipeline-pipeline-artifactstore-location): String
   [Type](#cfn-codepipeline-pipeline-artifactstore-type): String
 ```
@@ -49,5 +49,5 @@ The S3 bucket used for storing the artifacts for a pipeline\. You can specify th
 The type of the artifact store, such as S3\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `S3`  
+*Allowed values*: `S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ActiveDirectory](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory)" : [DirectoryServiceAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.md),
-  "[FederatedAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-federatedauthentication)" : [FederatedAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.md),
-  "[MutualAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication)" : [CertificateAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.md),
+  "[ActiveDirectory](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory)" : DirectoryServiceAuthenticationRequest,
+  "[FederatedAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-federatedauthentication)" : FederatedAuthenticationRequest,
+  "[MutualAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication)" : CertificateAuthenticationRequest,
   "[Type](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-type)" : String
 }
 ```
@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ActiveDirectory](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-activedirectory): 
-    [DirectoryServiceAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-directoryserviceauthenticationrequest.md)
+    DirectoryServiceAuthenticationRequest
   [FederatedAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-federatedauthentication): 
-    [FederatedAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.md)
+    FederatedAuthenticationRequest
   [MutualAuthentication](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-mutualauthentication): 
-    [CertificateAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-certificateauthenticationrequest.md)
+    CertificateAuthenticationRequest
   [Type](#cfn-ec2-clientvpnendpoint-clientauthenticationrequest-type): String
 ```
 
@@ -53,5 +53,5 @@ Information about the authentication certificates to be used, if applicable\. Yo
 The type of client authentication to be used\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `certificate-authentication | directory-service-authentication | federated-authentication`  
+*Allowed values*: `certificate-authentication | directory-service-authentication | federated-authentication`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

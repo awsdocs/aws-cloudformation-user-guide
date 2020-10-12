@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::DataflowEndpointGroup",
   "Properties" : {
-      "[EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist)" : [ [EndpointDetails](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md), ... ],
+      "[EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist)" : [ EndpointDetails, ... ],
       "[Tags](#cfn-groundstation-dataflowendpointgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::GroundStation::DataflowEndpointGroup
 Properties: 
   [EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist): 
-    - [EndpointDetails](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md)
+    - EndpointDetails
   [Tags](#cfn-groundstation-dataflowendpointgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -47,7 +47,7 @@ Properties:
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-groundstation-dataflowendpointgroup-return-values"></a>
+## Return values<a name="aws-resource-groundstation-dataflowendpointgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-groundstation-dataflowendpointgroup-return-values-ref"></a>
 
@@ -103,7 +103,8 @@ The following example creates a Ground Station `DataflowEndpointGroup`
               "Address": {
                 "Name": "172.10.0.2",
                 "Port": 44720
-              }
+              },
+              "Mtu": 1500
             }
           }
         ]
@@ -132,4 +133,5 @@ Resources:
         Address:
           Name: 172.10.0.2
           Port: 44720
+        Mtu: 1500
 ```

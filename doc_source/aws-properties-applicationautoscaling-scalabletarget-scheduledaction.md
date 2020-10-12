@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime)" : Timestamp,
-  "[ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction)" : [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md),
+  "[ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction)" : ScalableTargetAction,
   "[Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule)" : String,
   "[ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname)" : String,
   "[StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime)" : Timestamp
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EndTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-endtime): Timestamp
   [ScalableTargetAction](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scalabletargetaction): 
-    [ScalableTargetAction](aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction.md)
+    ScalableTargetAction
   [Schedule](#cfn-applicationautoscaling-scalabletarget-scheduledaction-schedule): String
   [ScheduledActionName](#cfn-applicationautoscaling-scalabletarget-scheduledaction-scheduledactionname): String
   [StartTime](#cfn-applicationautoscaling-scalabletarget-scheduledaction-starttime): Timestamp
@@ -52,7 +52,7 @@ The schedule for this action\. The following formats are supported:
 + Cron expressions \- "`cron(fields)`"
 At expressions are useful for one\-time schedules\. Specify the time in UTC\.  
 For rate expressions, *value* is a positive integer and *unit* is `minute` \| `minutes` \| `hour` \| `hours` \| `day` \| `days`\.  
-For more information about cron expressions, see [Cron Expressions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions) in the *Amazon CloudWatch Events User Guide*\.  
+For more information about cron expressions, see [Cron expressions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions) in the *Amazon CloudWatch Events User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -75,5 +75,7 @@ The date and time that the action is scheduled to start\.
 *Type*: Timestamp  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction--seealso"></a>
-+ [Scheduled Scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html) in the *Application Auto Scaling User Guide* 
+## See also<a name="aws-properties-applicationautoscaling-scalabletarget-scheduledaction--seealso"></a>
++ [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)
++ [Scheduled scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html) in the *Application Auto Scaling User Guide* 
++ [Scheduling AWS Lambda Provisioned Concurrency for recurring peak usage](http://aws.amazon.com/blogs/compute/scheduling-aws-lambda-provisioned-concurrency-for-recurring-peak-usage/)

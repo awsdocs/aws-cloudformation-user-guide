@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
       "[CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
-      "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ [EventSelector](aws-properties-cloudtrail-trail-eventselector.md), ... ],
+      "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ EventSelector, ... ],
       "[IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents)" : Boolean,
       "[IsLogging](#cfn-cloudtrail-trail-islogging)" : Boolean,
       "[IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail)" : Boolean,
@@ -38,7 +38,7 @@ Properties:
   [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
   [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
   [EventSelectors](#cfn-cloudtrail-trail-eventselectors): 
-    - [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)
+    - EventSelector
   [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents): Boolean
   [IsLogging](#cfn-cloudtrail-trail-islogging): Boolean
   [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail): Boolean
@@ -143,7 +143,7 @@ Specifies the name of the trail\. The name must meet the following requirements:
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cloudtrail-trail-return-values"></a>
+## Return values<a name="aws-resource-cloudtrail-trail-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudtrail-trail-return-values-ref"></a>
 

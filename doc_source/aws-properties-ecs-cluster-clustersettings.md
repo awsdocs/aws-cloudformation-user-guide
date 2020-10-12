@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the cluster setting\. The only supported value is `containerInsights`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `containerInsights`  
+*Allowed values*: `containerInsights`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ecs-cluster-clustersettings-value"></a>

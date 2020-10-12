@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-cloudwatch-alarm-metric-dimensions)" : [ [Dimension](aws-properties-cw-dimension.md), ... ],
+  "[Dimensions](#cfn-cloudwatch-alarm-metric-dimensions)" : [ Dimension, ... ],
   "[MetricName](#cfn-cloudwatch-alarm-metric-metricname)" : String,
   "[Namespace](#cfn-cloudwatch-alarm-metric-namespace)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-cloudwatch-alarm-metric-dimensions): 
-    - [Dimension](aws-properties-cw-dimension.md)
+    - Dimension
   [MetricName](#cfn-cloudwatch-alarm-metric-metricname): String
   [Namespace](#cfn-cloudwatch-alarm-metric-namespace): String
 ```

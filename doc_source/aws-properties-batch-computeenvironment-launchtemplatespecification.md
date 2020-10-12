@@ -46,5 +46,5 @@ Default: `$Default`\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-batch-computeenvironment-launchtemplatespecification--seealso"></a>
+## See also<a name="aws-properties-batch-computeenvironment-launchtemplatespecification--seealso"></a>
 +  [Launch Template Support](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS Batch User Guide*\.

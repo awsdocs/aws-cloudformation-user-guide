@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::NetworkManager::Link",
   "Properties" : {
-      "[Bandwidth](#cfn-networkmanager-link-bandwidth)" : [Bandwidth](aws-properties-networkmanager-link-bandwidth.md),
+      "[Bandwidth](#cfn-networkmanager-link-bandwidth)" : Bandwidth,
       "[Description](#cfn-networkmanager-link-description)" : String,
       "[GlobalNetworkId](#cfn-networkmanager-link-globalnetworkid)" : String,
       "[Provider](#cfn-networkmanager-link-provider)" : String,
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::NetworkManager::Link
 Properties: 
   [Bandwidth](#cfn-networkmanager-link-bandwidth): 
-    [Bandwidth](aws-properties-networkmanager-link-bandwidth.md)
+    Bandwidth
   [Description](#cfn-networkmanager-link-description): String
   [GlobalNetworkId](#cfn-networkmanager-link-globalnetworkid): String
   [Provider](#cfn-networkmanager-link-provider): String
@@ -88,7 +88,7 @@ Length Constraints: Maximum length of 128 characters\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-networkmanager-link-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-link-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-link-return-values-ref"></a>
 

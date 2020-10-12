@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups)" : [ [FilterGroup](aws-properties-codebuild-project-filtergroup.md), ... ],
+  "[FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups)" : [ FilterGroup, ... ],
   "[Webhook](#cfn-codebuild-project-projecttriggers-webhook)" : Boolean
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups): 
-    - [FilterGroup](aws-properties-codebuild-project-filtergroup.md)
+    - FilterGroup
   [Webhook](#cfn-codebuild-project-projecttriggers-webhook): Boolean
 ```
 

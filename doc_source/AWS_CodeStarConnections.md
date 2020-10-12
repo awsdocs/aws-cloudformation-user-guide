@@ -1,4 +1,4 @@
-# CodeStarConnections Resource Type Reference<a name="AWS_CodeStarConnections"></a>
+# CodeStarConnections resource type reference<a name="AWS_CodeStarConnections"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::CodeStarConnections::Connection](aws-resource-codestarconnections-connection.md)

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobQueue",
   "Properties" : {
-      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md), ... ],
+      "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
       "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
       "[State](#cfn-batch-jobqueue-state)" : String
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Batch::JobQueue
 Properties: 
   [ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder): 
-    - [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)
+    - ComputeEnvironmentOrder
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [State](#cfn-batch-jobqueue-state): String
@@ -53,13 +53,13 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-batch-jobqueue-state"></a>
-The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\.  
+The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\. If the job queue state is `DISABLED`, new jobs cannot be added to the queue, but jobs already in the queue can finish\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-jobqueue-return-values"></a>
+## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-jobqueue-return-values-ref"></a>
 
@@ -113,3 +113,6 @@ JobQueue:
     Priority: 1
     JobQueueName: HighPriority
 ```
+
+## See also<a name="aws-resource-batch-jobqueue--seealso"></a>
++  [Job Queue Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_queue_parameters.html) in the *AWS Batch User Guide*\.

@@ -18,9 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ComparisonOperator](#cfn-wafv2-webacl-sizeconstraintstatement-comparisonoperator)" : String,
-  "[FieldToMatch](#cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch)" : [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch)" : FieldToMatch,
   "[Size](#cfn-wafv2-webacl-sizeconstraintstatement-size)" : Integer,
-  "[TextTransformations](#cfn-wafv2-webacl-sizeconstraintstatement-texttransformations)" : [ [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md), ... ]
+  "[TextTransformations](#cfn-wafv2-webacl-sizeconstraintstatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
 
@@ -29,10 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ComparisonOperator](#cfn-wafv2-webacl-sizeconstraintstatement-comparisonoperator): String
   [FieldToMatch](#cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)
+    FieldToMatch
   [Size](#cfn-wafv2-webacl-sizeconstraintstatement-size): Integer
   [TextTransformations](#cfn-wafv2-webacl-sizeconstraintstatement-texttransformations): 
-    - [TextTransformation](aws-properties-wafv2-webacl-texttransformation.md)
+    - TextTransformation
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-sizeconstraintstatement-properties"></a>
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The operator to use to compare the request part to the size setting\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EQ | GE | GT | LE | LT | NE`  
+*Allowed values*: `EQ | GE | GT | LE | LT | NE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch"></a>

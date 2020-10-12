@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::InstanceGroupConfig",
   "Properties" : {
-      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md),
+      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
       "[BidPrice](#cfn-emr-instancegroupconfig-bidprice)" : String,
-      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ [Configuration](aws-properties-emr-cluster-configuration.md), ... ],
-      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-emr-ebsconfiguration.md),
+      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ Configuration, ... ],
+      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
       "[InstanceCount](#cfn-emr-instancegroupconfiginstancecount-)" : Integer,
       "[InstanceRole](#cfn-emr-instancegroupconfig-instancerole)" : String,
       "[InstanceType](#cfn-emr-instancegroupconfig-instancetype)" : String,
@@ -32,12 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EMR::InstanceGroupConfig
 Properties: 
   [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy): 
-    [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
+    AutoScalingPolicy
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
   [Configurations](#cfn-emr-instancegroupconfig-configurations): 
-    - [Configuration](aws-properties-emr-cluster-configuration.md)
+    - Configuration
   [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
   [InstanceRole](#cfn-emr-instancegroupconfig-instancerole): String
   [InstanceType](#cfn-emr-instancegroupconfig-instancetype): String
@@ -86,7 +86,7 @@ Target number of instances for the instance group\.
 The role of the instance group in the cluster\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CORE | MASTER | TASK`  
+*Allowed values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-emr-instancegroupconfig-instancetype"></a>
@@ -108,7 +108,7 @@ The ID of an Amazon EMR cluster that you want to associate this instance group w
 Market type of the EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-emr-instancegroupconfig-name"></a>
@@ -120,7 +120,7 @@ Friendly name given to the instance group\.
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
+## Return values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-emr-instancegroupconfig-return-values-ref"></a>
 

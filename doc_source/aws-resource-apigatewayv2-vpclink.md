@@ -59,7 +59,7 @@ The collection of tags\. Each tag element is associated with a given resource\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-vpclink-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-vpclink-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-vpclink-return-values-ref"></a>
 

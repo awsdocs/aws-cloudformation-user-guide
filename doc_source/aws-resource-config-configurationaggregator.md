@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::ConfigurationAggregator",
   "Properties" : {
-      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md), ... ],
+      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ AccountAggregationSource, ... ],
       "[ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname)" : String,
-      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md),
+      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : OrganizationAggregationSource,
       "[Tags](#cfn-config-configurationaggregator-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::ConfigurationAggregator
 Properties: 
   [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
-    - [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
+    - AccountAggregationSource
   [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
   [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
-    [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
+    OrganizationAggregationSource
   [Tags](#cfn-config-configurationaggregator-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -65,7 +65,7 @@ An array of tag object\.
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-configurationaggregator-return-values"></a>
+## Return values<a name="aws-resource-config-configurationaggregator-return-values"></a>
 
 ### Ref<a name="aws-resource-config-configurationaggregator-return-values-ref"></a>
 

@@ -1,4 +1,4 @@
-# AWS CloudFormation Resource Specification<a name="cfn-resource-specification"></a>
+# AWS CloudFormation resource specification<a name="cfn-resource-specification"></a>
 
 The AWS CloudFormation resource specification is a JSON\-formatted text file that defines the resources and properties that AWS CloudFormation supports\. The document is a machine\-readable, strongly typed specification that you can use to build tools for creating AWS CloudFormation templates\. For example, you can use the specification to build auto completion and validation functionality for AWS CloudFormation templates in your IDE \(integrated development environment\)\.
 
@@ -9,9 +9,9 @@ To download the resource specification, see the following table\.
 Resource availability may vary by region\. To check the availability of a resource in a given region, refer to the resource specification for that region\.
 
 
-**Resource Specification**  
+**Resource specification**  
 
-|  Region Name  |  Region  |  Single File  |  All Files  | 
+|  Region name  |  Region  |  Single file  |  All files  | 
 | --- | --- | --- | --- | 
 |  US East \(Ohio\)  |  us\-east\-2  |  [\.json](https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://dnwj8swjjbsbt.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
 |  US East \(N\. Virginia\)  |  us\-east\-1  |  [\.json](https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
@@ -39,7 +39,7 @@ Resource availability may vary by region\. To check the availability of a resour
 |  AWS GovCloud \(US\-East\)  |  us\-gov\-east\-1  |  [\.json](https://s3.us-gov-east-1.amazonaws.com/cfn-resource-specifications-us-gov-east-1-prod/latest/CloudFormationResourceSpecification.json)  |  [\.zip](https://s3.us-gov-east-1.amazonaws.com/cfn-resource-specifications-us-gov-east-1-prod/latest/CloudFormationResourceSpecification.zip)  | 
 |  AWS GovCloud \(US\-West\)  |  us\-gov\-west\-1  |  [\.json](https://s3.us-gov-west-1.amazonaws.com/cfn-resource-specifications-us-gov-west-1-prod/latest/CloudFormationResourceSpecification.json)  |  [\.zip](https://s3.us-gov-west-1.amazonaws.com/cfn-resource-specifications-us-gov-west-1-prod/latest/CloudFormationResourceSpecification.zip)  | 
 
-The following example shows the specification for an AWS Key Management Service key resource \(`AWS::KMS::Key`\)\. It shows the properties for the `AWS::KMS::Key` resource, which properties are required, the type of allowed value for each property, and their update behavior\. For details about the specification, see [Specification Format](cfn-resource-specification-format.md)\.
+The following example shows the specification for an AWS Key Management Service key resource \(`AWS::KMS::Key`\)\. It shows the properties for the `AWS::KMS::Key` resource, which properties are required, the type of allowed value for each property, and their update behavior\. For details about the specification, see [Specification format](cfn-resource-specification-format.md)\.
 
 ```
     "AWS::KMS::Key": {

@@ -69,7 +69,7 @@ A friendly description of the IP set\. You cannot change the description of an I
 Specify IPV4 or IPV6\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IPV4 | IPV6`  
+*Allowed values*: `IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-ipset-name"></a>
@@ -82,7 +82,7 @@ A friendly name of the IP set\. You cannot change the name of an `IPSet` after y
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-ipset-scope"></a>
-Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
+Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -90,11 +90,12 @@ For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virg
 
 `Tags`  <a name="cfn-wafv2-ipset-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
+To modify tags on existing resources, use the AWS WAF console or the APIs\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-ipset-return-values"></a>
+## Return values<a name="aws-resource-wafv2-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-ipset-return-values-ref"></a>
 

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::Group",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-group-initialversion)" : [GroupVersion](aws-properties-greengrass-group-groupversion.md),
+      "[InitialVersion](#cfn-greengrass-group-initialversion)" : GroupVersion,
       "[Name](#cfn-greengrass-group-name)" : String,
       "[RoleArn](#cfn-greengrass-group-rolearn)" : String,
       "[Tags](#cfn-greengrass-group-tags)" : Json
@@ -43,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::Group
 Properties: 
   [InitialVersion](#cfn-greengrass-group-initialversion): 
-    [GroupVersion](aws-properties-greengrass-group-groupversion.md)
+    GroupVersion
   [Name](#cfn-greengrass-group-name): String
   [RoleArn](#cfn-greengrass-group-rolearn): String
   [Tags](#cfn-greengrass-group-tags): Json
@@ -85,7 +85,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-group-return-values"></a>
+## Return values<a name="aws-resource-greengrass-group-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-group-return-values-ref"></a>
 
@@ -625,6 +625,6 @@ Resources:
         KeyName2: value
 ```
 
-## See Also<a name="aws-resource-greengrass-group--seealso"></a>
+## See also<a name="aws-resource-greengrass-group--seealso"></a>
 +  [CreateGroup](https://docs.aws.amazon.com/greengrass/latest/apireference/creategroup-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -17,17 +17,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Synthetics::Canary",
   "Properties" : {
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
-      "[Code](#cfn-synthetics-canary-code)" : [Code](aws-properties-synthetics-canary-code.md),
+      "[Code](#cfn-synthetics-canary-code)" : Code,
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
       "[FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod)" : Integer,
       "[Name](#cfn-synthetics-canary-name)" : String,
-      "[RunConfig](#cfn-synthetics-canary-runconfig)" : [RunConfig](aws-properties-synthetics-canary-runconfig.md),
+      "[RunConfig](#cfn-synthetics-canary-runconfig)" : RunConfig,
       "[RuntimeVersion](#cfn-synthetics-canary-runtimeversion)" : String,
-      "[Schedule](#cfn-synthetics-canary-schedule)" : [Schedule](aws-properties-synthetics-canary-schedule.md),
+      "[Schedule](#cfn-synthetics-canary-schedule)" : Schedule,
       "[StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation)" : Boolean,
       "[SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod)" : Integer,
       "[Tags](#cfn-synthetics-canary-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : [VPCConfig](aws-properties-synthetics-canary-vpcconfig.md)
+      "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : VPCConfig
     }
 }
 ```
@@ -39,21 +39,21 @@ Type: AWS::Synthetics::Canary
 Properties: 
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
-    [Code](aws-properties-synthetics-canary-code.md)
+    Code
   [ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn): String
   [FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod): Integer
   [Name](#cfn-synthetics-canary-name): String
   [RunConfig](#cfn-synthetics-canary-runconfig): 
-    [RunConfig](aws-properties-synthetics-canary-runconfig.md)
+    RunConfig
   [RuntimeVersion](#cfn-synthetics-canary-runtimeversion): String
   [Schedule](#cfn-synthetics-canary-schedule): 
-    [Schedule](aws-properties-synthetics-canary-schedule.md)
+    Schedule
   [StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation): Boolean
   [SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod): Integer
   [Tags](#cfn-synthetics-canary-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VPCConfig](#cfn-synthetics-canary-vpcconfig): 
-    [VPCConfig](aws-properties-synthetics-canary-vpcconfig.md)
+    VPCConfig
 ```
 
 ## Properties<a name="aws-resource-synthetics-canary-properties"></a>
@@ -83,7 +83,9 @@ The ARN of the IAM role to be used to run the canary\. This role must already ex
 +  `logs:PutLogEvents` 
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso-{0,1}[a-z]{0,1}):[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.-]{0,1023}$`  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureRetentionPeriod`  <a name="cfn-synthetics-canary-failureretentionperiod"></a>
@@ -105,13 +107,13 @@ Do not include secrets or proprietary information in your canary names\. The can
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RunConfig`  <a name="cfn-synthetics-canary-runconfig"></a>
-A structure that contains input information for a canary run\. This structure is required\.  
-*Required*: Yes  
+A structure that contains input information for a canary run\. If you omit this structure, the frequency of the canary is used as canary's timeout value, up to a maximum of 900 seconds\.  
+*Required*: No  
 *Type*: [RunConfig](aws-properties-synthetics-canary-runconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeVersion`  <a name="cfn-synthetics-canary-runtimeversion"></a>
-Specifies the runtime version to use for the canary\. Currently, the only valid value is `syn-1.0`\. For more information about runtime versions, see [ Canary Runtime Versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html)\.  
+Specifies the runtime version to use for the canary\. Currently, the only valid values are `syn-nodejs-2.0`, `syn-nodejs-2.0-beta`, and `syn-1.0`\. For more information about runtime versions, see [ Canary Runtime Versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -151,7 +153,7 @@ If this canary is to test an endpoint in a VPC, this structure contains informat
 *Type*: [VPCConfig](aws-properties-synthetics-canary-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-synthetics-canary-return-values"></a>
+## Return values<a name="aws-resource-synthetics-canary-return-values"></a>
 
 ### Ref<a name="aws-resource-synthetics-canary-return-values-ref"></a>
 
@@ -177,7 +179,7 @@ The state of the canary\. For example, `RUNNING`\.
 
 ### Canary with script stored in an Amazon S3 bucket<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket"></a>
 
-This example creates a canary that uses an existing script stored in an S3 bucket\.
+This example creates a canary that uses an existing script stored in an S3 bucket\. The canary is started as soon as it is created\.
 
 #### JSON<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket--json"></a>
 
@@ -211,6 +213,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
                 },
                 "FailureRetentionPeriod": 30,
                 "SuccessRetentionPeriod": 30,
+                "StartCanaryAfterCreation": true,
                 "Tags": [
                     {
                         "Id": "key00AtCreate",
@@ -240,7 +243,7 @@ Resources:
             FailureRetentionPeriod: 30
             SuccessRetentionPeriod: 30
             Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
-            StartCanaryAfterCreation: false
+            StartCanaryAfterCreation: true
 ```
 
 ### Canary with script passed through CloudFormation<a name="aws-resource-synthetics-canary--examples--Canary_with_script_passed_through_CloudFormation"></a>
@@ -277,9 +280,9 @@ This example creates a canary and passes the script code directly into the canar
                     "TimeoutInSeconds": 60
                 },
                 "FailureRetentionPeriod": 30,
-                "SuccessRetentionPeriod": 30
-            },
-            "Tags": [
+                "SuccessRetentionPeriod": 30,
+                "StartCanaryAfterCreation": false,
+                "Tags": [
                 {
                     "Id": "key00AtCreate",
                     "Value": "value001AtCreate"

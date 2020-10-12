@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceleratorArn](#cfn-globalaccelerator-listener-acceleratorarn)" : String,
       "[ClientAffinity](#cfn-globalaccelerator-listener-clientaffinity)" : String,
-      "[PortRanges](#cfn-globalaccelerator-listener-portranges)" : [ [PortRange](aws-properties-globalaccelerator-listener-portrange.md), ... ],
+      "[PortRanges](#cfn-globalaccelerator-listener-portranges)" : [ PortRange, ... ],
       "[Protocol](#cfn-globalaccelerator-listener-protocol)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [AcceleratorArn](#cfn-globalaccelerator-listener-acceleratorarn): String
   [ClientAffinity](#cfn-globalaccelerator-listener-clientaffinity): String
   [PortRanges](#cfn-globalaccelerator-listener-portranges): 
-    - [PortRange](aws-properties-globalaccelerator-listener-portrange.md)
+    - PortRange
   [Protocol](#cfn-globalaccelerator-listener-protocol): String
 ```
 
@@ -48,7 +48,7 @@ If you want a given client to always be routed to the same endpoint, set client 
 The default value is `NONE`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `NONE | SOURCE_IP`  
+*Allowed values*: `NONE | SOURCE_IP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PortRanges`  <a name="cfn-globalaccelerator-listener-portranges"></a>
@@ -62,10 +62,10 @@ The list of port ranges for the connections from clients to the accelerator\.
 The protocol for the connections from clients to the accelerator\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `TCP | UDP`  
+*Allowed values*: `TCP | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-globalaccelerator-listener-return-values"></a>
+## Return values<a name="aws-resource-globalaccelerator-listener-return-values"></a>
 
 ### Ref<a name="aws-resource-globalaccelerator-listener-return-values-ref"></a>
 

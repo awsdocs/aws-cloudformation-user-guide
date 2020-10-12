@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-networkmanager-site-description)" : String,
       "[GlobalNetworkId](#cfn-networkmanager-site-globalnetworkid)" : String,
-      "[Location](#cfn-networkmanager-site-location)" : [Location](aws-properties-networkmanager-site-location.md),
+      "[Location](#cfn-networkmanager-site-location)" : Location,
       "[Tags](#cfn-networkmanager-site-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-networkmanager-site-description): String
   [GlobalNetworkId](#cfn-networkmanager-site-globalnetworkid): String
   [Location](#cfn-networkmanager-site-location): 
-    [Location](aws-properties-networkmanager-site-location.md)
+    Location
   [Tags](#cfn-networkmanager-site-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -63,7 +63,7 @@ The tags for the site\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-networkmanager-site-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-site-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-site-return-values-ref"></a>
 

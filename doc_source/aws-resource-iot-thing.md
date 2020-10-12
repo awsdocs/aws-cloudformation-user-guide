@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoT::Thing",
   "Properties" : {
-      "[AttributePayload](#cfn-iot-thing-attributepayload)" : [AttributePayload](aws-properties-iot-thing-attributepayload.md),
+      "[AttributePayload](#cfn-iot-thing-attributepayload)" : AttributePayload,
       "[ThingName](#cfn-iot-thing-thingname)" : String
     }
 }
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoT::Thing
 Properties: 
   [AttributePayload](#cfn-iot-thing-attributepayload): 
-    [AttributePayload](aws-properties-iot-thing-attributepayload.md)
+    AttributePayload
   [ThingName](#cfn-iot-thing-thingname): String
 ```
 
@@ -45,7 +45,7 @@ You can't change a thing's name\. To change a thing's name, you must create a ne
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-iot-thing-return-values"></a>
+## Return values<a name="aws-resource-iot-thing-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-thing-return-values-ref"></a>
 

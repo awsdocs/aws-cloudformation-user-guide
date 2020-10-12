@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules)" : [ [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md), ... ]
+  "[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules)" : [ FilterRule, ... ]
 }
 ```
 
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules): 
-    - [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)
+    - FilterRule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-properties"></a>

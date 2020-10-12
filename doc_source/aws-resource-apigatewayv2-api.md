@@ -15,10 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiKeySelectionExpression](#cfn-apigatewayv2-api-apikeyselectionexpression)" : String,
       "[BasePath](#cfn-apigatewayv2-api-basepath)" : String,
       "[Body](#cfn-apigatewayv2-api-body)" : Json,
-      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md),
-      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : [Cors](aws-properties-apigatewayv2-api-cors.md),
+      "[BodyS3Location](#cfn-apigatewayv2-api-bodys3location)" : BodyS3Location,
+      "[CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration)" : Cors,
       "[CredentialsArn](#cfn-apigatewayv2-api-credentialsarn)" : String,
       "[Description](#cfn-apigatewayv2-api-description)" : String,
+      "[DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint)" : Boolean,
       "[DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation)" : Boolean,
       "[FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings)" : Boolean,
       "[Name](#cfn-apigatewayv2-api-name)" : String,
@@ -41,11 +42,12 @@ Properties:
   [BasePath](#cfn-apigatewayv2-api-basepath): String
   [Body](#cfn-apigatewayv2-api-body): Json
   [BodyS3Location](#cfn-apigatewayv2-api-bodys3location): 
-    [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md)
+    BodyS3Location
   [CorsConfiguration](#cfn-apigatewayv2-api-corsconfiguration): 
-    [Cors](aws-properties-apigatewayv2-api-cors.md)
+    Cors
   [CredentialsArn](#cfn-apigatewayv2-api-credentialsarn): String
   [Description](#cfn-apigatewayv2-api-description): String
+  [DisableExecuteApiEndpoint](#cfn-apigatewayv2-api-disableexecuteapiendpoint): Boolean
   [DisableSchemaValidation](#cfn-apigatewayv2-api-disableschemavalidation): Boolean
   [FailOnWarnings](#cfn-apigatewayv2-api-failonwarnings): Boolean
   [Name](#cfn-apigatewayv2-api-name): String
@@ -99,6 +101,12 @@ This property is part of quick create\. It specifies the credentials required fo
 The description of the API\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableExecuteApiEndpoint`  <a name="cfn-apigatewayv2-api-disableexecuteapiendpoint"></a>
+Specifies whether clients can invoke your API by using the default `execute-api` endpoint\. By default, clients can invoke your API with the default https://\{api\_id\}\.execute\-api\.\{region\}\.amazonaws\.com endpoint\. To require that clients use a custom domain name to invoke your API, disable the default endpoint\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableSchemaValidation`  <a name="cfn-apigatewayv2-api-disableschemavalidation"></a>
@@ -155,13 +163,24 @@ A version identifier for the API\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-api-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-api-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-api-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the API ID, such as `a1bcdef2gh`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-api-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigatewayv2-api-return-values-fn--getatt-fn--getatt"></a>
+
+`ApiEndpoint`  <a name="ApiEndpoint-fn::getatt"></a>
+The default endpoint for an API\. For example: `https://abcdef.execute-api.us-west-2.amazonaws.com`\.
 
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
 
@@ -230,5 +249,5 @@ HttpApi:
     Target: arn:aws:apigateway:{region}:lambda:path/2015-03-31/functions/arn:aws:lambda:{region}:{account-id}:function:{function-name}/invocations
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-api--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-api--seealso"></a>
 + [CreateApi](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis.html#CreateApi) in the *Amazon API Gateway Version 2 API Reference*

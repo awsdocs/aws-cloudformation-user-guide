@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Distributor](#cfn-servicecatalog-cloudformationproduct-distributor)" : String,
       "[Name](#cfn-servicecatalog-cloudformationproduct-name)" : String,
       "[Owner](#cfn-servicecatalog-cloudformationproduct-owner)" : String,
-      "[ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)" : [ [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md), ... ],
+      "[ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)" : [ ProvisioningArtifactProperties, ... ],
       "[ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts)" : Boolean,
       "[SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription)" : String,
       "[SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail)" : String,
@@ -38,7 +38,7 @@ Properties:
   [Name](#cfn-servicecatalog-cloudformationproduct-name): String
   [Owner](#cfn-servicecatalog-cloudformationproduct-owner): String
   [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters): 
-    - [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)
+    - ProvisioningArtifactProperties
   [ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts): Boolean
   [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription): String
   [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail): String
@@ -128,7 +128,7 @@ One or more tags\.
 *Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-cloudformationproduct-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-cloudformationproduct-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-cloudformationproduct-return-values-ref"></a>
 
@@ -153,5 +153,5 @@ The IDs of the provisioning artifacts\.
 `ProvisioningArtifactNames`  <a name="ProvisioningArtifactNames-fn::getatt"></a>
 The names of the provisioning artifacts\.
 
-## See Also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
 + [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog API Reference*
