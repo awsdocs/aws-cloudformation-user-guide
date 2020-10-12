@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AuthorizationType](#cfn-appsync-datasource-authorizationconfig-authorizationtype)" : String,
-  "[AwsIamConfig](#cfn-appsync-datasource-authorizationconfig-awsiamconfig)" : [AwsIamConfig](aws-properties-appsync-datasource-awsiamconfig.md)
+  "[AwsIamConfig](#cfn-appsync-datasource-authorizationconfig-awsiamconfig)" : AwsIamConfig
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AuthorizationType](#cfn-appsync-datasource-authorizationconfig-authorizationtype): String
   [AwsIamConfig](#cfn-appsync-datasource-authorizationconfig-awsiamconfig): 
-    [AwsIamConfig](aws-properties-appsync-datasource-awsiamconfig.md)
+    AwsIamConfig
 ```
 
 ## Properties<a name="aws-properties-appsync-datasource-authorizationconfig-properties"></a>

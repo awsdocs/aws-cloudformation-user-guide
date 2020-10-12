@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Exact](#cfn-appmesh-route-headermatchmethod-exact)" : String,
   "[Prefix](#cfn-appmesh-route-headermatchmethod-prefix)" : String,
-  "[Range](#cfn-appmesh-route-headermatchmethod-range)" : [MatchRange](aws-properties-appmesh-route-matchrange.md),
+  "[Range](#cfn-appmesh-route-headermatchmethod-range)" : MatchRange,
   "[Regex](#cfn-appmesh-route-headermatchmethod-regex)" : String,
   "[Suffix](#cfn-appmesh-route-headermatchmethod-suffix)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Exact](#cfn-appmesh-route-headermatchmethod-exact): String
   [Prefix](#cfn-appmesh-route-headermatchmethod-prefix): String
   [Range](#cfn-appmesh-route-headermatchmethod-range): 
-    [MatchRange](aws-properties-appmesh-route-matchrange.md)
+    MatchRange
   [Regex](#cfn-appmesh-route-headermatchmethod-regex): String
   [Suffix](#cfn-appmesh-route-headermatchmethod-suffix): String
 ```

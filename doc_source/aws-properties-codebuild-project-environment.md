@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Certificate](#cfn-codebuild-project-environment-certificate)" : String,
   "[ComputeType](#cfn-codebuild-project-environment-computetype)" : String,
-  "[EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables)" : [ [EnvironmentVariable](aws-properties-codebuild-project-environmentvariable.md), ... ],
+  "[EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables)" : [ EnvironmentVariable, ... ],
   "[Image](#cfn-codebuild-project-environment-image)" : String,
   "[ImagePullCredentialsType](#cfn-codebuild-project-environment-imagepullcredentialstype)" : String,
   "[PrivilegedMode](#cfn-codebuild-project-environment-privilegedmode)" : Boolean,
-  "[RegistryCredential](#cfn-codebuild-project-environment-registrycredential)" : [RegistryCredential](aws-properties-codebuild-project-registrycredential.md),
+  "[RegistryCredential](#cfn-codebuild-project-environment-registrycredential)" : RegistryCredential,
   "[Type](#cfn-codebuild-project-environment-type)" : String
 }
 ```
@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Certificate](#cfn-codebuild-project-environment-certificate): String
   [ComputeType](#cfn-codebuild-project-environment-computetype): String
   [EnvironmentVariables](#cfn-codebuild-project-environment-environmentvariables): 
-    - [EnvironmentVariable](aws-properties-codebuild-project-environmentvariable.md)
+    - EnvironmentVariable
   [Image](#cfn-codebuild-project-environment-image): String
   [ImagePullCredentialsType](#cfn-codebuild-project-environment-imagepullcredentialstype): String
   [PrivilegedMode](#cfn-codebuild-project-environment-privilegedmode): Boolean
   [RegistryCredential](#cfn-codebuild-project-environment-registrycredential): 
-    [RegistryCredential](aws-properties-codebuild-project-registrycredential.md)
+    RegistryCredential
   [Type](#cfn-codebuild-project-environment-type): String
 ```
 
@@ -62,8 +62,8 @@ A set of environment variables to make available to builds for this build projec
 
 `Image`  <a name="cfn-codebuild-project-environment-image"></a>
 The image tag or image digest that identifies the Docker image to use for this build project\. Use the following formats:  
-+ For an image tag: `registry/repository:tag`\. For example, to specify an image with the tag "latest," use `registry/repository:latest`\.
-+ For an image digest: `registry/repository@digest`\. For example, to specify an image with the digest "sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf," use `registry/repository@sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf`\.
++ For an image tag: `<registry>/<repository>:<tag>`\. For example, in the Docker repository that CodeBuild uses to manage its Docker images, this would be `aws/codebuild/standard:4.0`\. To specify the latest version of this image, this would be `aws/codebuild/standard:latest`\.
++ For an image digest: `<registry>/<repository>@<digest>`\. For example, to specify an image with the digest "sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf," use `<registry>/<repository>@sha256:cbbf2f9a99b47fc460d422812b6a5adff7dfee951d8fa2e4a98caa0382cfbdbf`\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -76,7 +76,7 @@ The image tag or image digest that identifies the Docker image to use for this b
  When you use a cross\-account or private registry image, you must use SERVICE\_ROLE credentials\. When you use an AWS CodeBuild curated image, you must use CODEBUILD credentials\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CODEBUILD | SERVICE_ROLE`  
+*Allowed values*: `CODEBUILD | SERVICE_ROLE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivilegedMode`  <a name="cfn-codebuild-project-environment-privilegedmode"></a>
@@ -107,5 +107,5 @@ The type of build environment to use for related builds\.
 + The environment type `LINUX_GPU_CONTAINER` is available only in regions US East \(N\. Virginia\), US East \(Ohio\), US West \(Oregon\), Canada \(Central\), EU \(Ireland\), EU \(London\), EU \(Frankfurt\), Asia Pacific \(Tokyo\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\) , China \(Beijing\), and China \(Ningxia\)\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ARM_CONTAINER | LINUX_CONTAINER | LINUX_GPU_CONTAINER | WINDOWS_CONTAINER`  
+*Allowed values*: `ARM_CONTAINER | LINUX_CONTAINER | LINUX_GPU_CONTAINER | WINDOWS_CONTAINER | WINDOWS_SERVER_2019_CONTAINER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

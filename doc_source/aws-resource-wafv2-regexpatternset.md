@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-wafv2-regexpatternset-description)" : String,
       "[Name](#cfn-wafv2-regexpatternset-name)" : String,
-      "[RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist)" : [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md),
+      "[RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist)" : [ String, ... ],
       "[Scope](#cfn-wafv2-regexpatternset-scope)" : String,
-      "[Tags](#cfn-wafv2-regexpatternset-tags)" : [TagList](aws-properties-wafv2-regexpatternset-taglist.md)
+      "[Tags](#cfn-wafv2-regexpatternset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -34,10 +34,10 @@ Properties:
   [Description](#cfn-wafv2-regexpatternset-description): String
   [Name](#cfn-wafv2-regexpatternset-name): String
   [RegularExpressionList](#cfn-wafv2-regexpatternset-regularexpressionlist): 
-    [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)
+    - String
   [Scope](#cfn-wafv2-regexpatternset-scope): String
   [Tags](#cfn-wafv2-regexpatternset-tags): 
-    [TagList](aws-properties-wafv2-regexpatternset-taglist.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-wafv2-regexpatternset-properties"></a>
@@ -63,22 +63,24 @@ A friendly name of the set\. You cannot change the name after you create the set
 `RegularExpressionList`  <a name="cfn-wafv2-regexpatternset-regularexpressionlist"></a>
 The regular expression patterns in the set\.  
 *Required*: Yes  
-*Type*: [RegularExpressionList](aws-properties-wafv2-regexpatternset-regularexpressionlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-regexpatternset-scope"></a>
-Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-wafv2-regexpatternset-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
+To modify tags on existing resources, use the AWS WAF console or the APIs\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
-*Type*: [TagList](aws-properties-wafv2-regexpatternset-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafv2-regexpatternset-return-values"></a>
+## Return values<a name="aws-resource-wafv2-regexpatternset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-regexpatternset-return-values-ref"></a>
 

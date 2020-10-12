@@ -33,7 +33,7 @@ The tags to add to the hub resource\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-securityhub-hub-return-values"></a>
+## Return values<a name="aws-resource-securityhub-hub-return-values"></a>
 
 ### Ref<a name="aws-resource-securityhub-hub-return-values-ref"></a>
 
@@ -52,38 +52,39 @@ The following example shows how to declare a Security Hub `Hub` resource:
 ```
 {
     "Description": "Example Hub with Tags",
-        "Resources" : {
-            "ExampleHubWithTags" : {
-                "Type" : "AWS::SecurityHub::Hub",
-                    "Properties" : {
-                        "Tags" : {
-                            "key1" : "value1",
-                            "key2" : "value2"
-                        }
-                    }
-            }
-        },
-        "Outputs" : {
-            "HubArn" : {
-                "Value" : {"Ref" : "ExampleHubWithTags"}
+    "Resources": {
+        "ExampleHubWithTags": {
+            "Type": "AWS::SecurityHub::Hub",
+            "Properties": {
+                "Tags": {
+                    "key1": "value1",
+                    "key2": "value2"
+                }
             }
         }
-            
+    },
+    "Outputs": {
+        "HubArn": {
+            "Value": {
+                "Ref": "ExampleHubWithTags"
+            }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-securityhub-hub--examples--Declare_a_Hub_Resource--yaml"></a>
 
 ```
-Description: "Example Hub with Tags"
-    Resources:
-        ExampleHubWithTags:
-            Type: "AWS::SecurityHub::Hub"
-            Properties:
-                Tags:
-                    "key1" : "value1"
-                    "key2" : "value2"
-            Outputs:
-                HubArn:
-                    Value: !Ref ExampleHubWithTags
+Description: Example Hub with Tags
+Resources:
+  ExampleHubWithTags:
+    Type: 'AWS::SecurityHub::Hub'
+    Properties:
+      Tags:
+        key1: value1
+        key2: value2
+Outputs:
+  HubArn:
+    Value: !Ref ExampleHubWithTags
 ```

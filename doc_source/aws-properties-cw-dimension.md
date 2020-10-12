@@ -1,6 +1,6 @@
 # AWS::CloudWatch::Alarm Dimension<a name="aws-properties-cw-dimension"></a>
 
-Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type\. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric\. You can specify a maximum of 10 dimensions for a given metric\.
+Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type\. Dimensions are name/value pairs that can be associated with a CloudWatch metric\. You can specify a maximum of 10 dimensions for a given metric\.
 
 ## Syntax<a name="aws-properties-cw-dimension-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cw-dimension-properties"></a>
 
 `Name`  <a name="cfn-cloudwatch-alarm-dimension-name"></a>
-The name of the dimension, from 1–255 characters in length\.  
+The name of the dimension, from 1–255 characters in length\. This dimension name must have been included when the metric was published\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -109,6 +109,7 @@ The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrins
 
 ```
 CPUAlarmHigh:
+
   Type: 'AWS::CloudWatch::Alarm'
   Properties:
     AlarmDescription: Scale-up if CPU is greater than 90% for 10 minutes
@@ -140,4 +141,3 @@ CPUAlarmLow:
       - Name: AutoScalingGroupName
         Value: !Ref WebServerGroup
     ComparisonOperator: LessThanThreshold
-```

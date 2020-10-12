@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Neptune::DBCluster",
   "Properties" : {
+      "[AssociatedRoles](#cfn-neptune-dbcluster-associatedroles)" : [ DBClusterRole, ... ],
       "[AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones)" : [ String, ... ],
       "[BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod)" : Integer,
       "[DBClusterIdentifier](#cfn-neptune-dbcluster-dbclusteridentifier)" : String,
@@ -32,9 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Port](#cfn-neptune-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow)" : String,
+      "[RestoreToTime](#cfn-neptune-dbcluster-restoretotime)" : String,
+      "[RestoreType](#cfn-neptune-dbcluster-restoretype)" : String,
       "[SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier)" : String,
+      "[SourceDBClusterIdentifier](#cfn-neptune-dbcluster-sourcedbclusteridentifier)" : String,
       "[StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted)" : Boolean,
       "[Tags](#cfn-neptune-dbcluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UseLatestRestorableTime](#cfn-neptune-dbcluster-uselatestrestorabletime)" : Boolean,
       "[VpcSecurityGroupIds](#cfn-neptune-dbcluster-vpcsecuritygroupids)" : [ String, ... ]
     }
 }
@@ -45,6 +50,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Neptune::DBCluster
 Properties: 
+  [AssociatedRoles](#cfn-neptune-dbcluster-associatedroles): 
+    - DBClusterRole
   [AvailabilityZones](#cfn-neptune-dbcluster-availabilityzones): 
     - String
   [BackupRetentionPeriod](#cfn-neptune-dbcluster-backupretentionperiod): Integer
@@ -60,15 +67,25 @@ Properties:
   [Port](#cfn-neptune-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow): String
+  [RestoreToTime](#cfn-neptune-dbcluster-restoretotime): String
+  [RestoreType](#cfn-neptune-dbcluster-restoretype): String
   [SnapshotIdentifier](#cfn-neptune-dbcluster-snapshotidentifier): String
+  [SourceDBClusterIdentifier](#cfn-neptune-dbcluster-sourcedbclusteridentifier): String
   [StorageEncrypted](#cfn-neptune-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-neptune-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [UseLatestRestorableTime](#cfn-neptune-dbcluster-uselatestrestorabletime): Boolean
   [VpcSecurityGroupIds](#cfn-neptune-dbcluster-vpcsecuritygroupids): 
     - String
 ```
 
 ## Properties<a name="aws-resource-neptune-dbcluster-properties"></a>
+
+`AssociatedRoles`  <a name="cfn-neptune-dbcluster-associatedroles"></a>
+Provides a list of the AWS Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other AWS services on your behalf\.  
+*Required*: No  
+*Type*: List of [DBClusterRole](aws-properties-neptune-dbcluster-dbclusterrole.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZones`  <a name="cfn-neptune-dbcluster-availabilityzones"></a>
 Provides the list of EC2 Availability Zones that instances in the DB cluster can be created in\.  
@@ -151,10 +168,28 @@ Specifies the weekly time range during which system maintenance can occur, in Un
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RestoreToTime`  <a name="cfn-neptune-dbcluster-restoretotime"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RestoreType`  <a name="cfn-neptune-dbcluster-restoretype"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SnapshotIdentifier`  <a name="cfn-neptune-dbcluster-snapshotidentifier"></a>
 Specifies the identifier for a DB cluster snapshot\. Must match the identifier of an existing snapshot\.  
 After you restore a DB cluster using a `SnapshotIdentifier`, you must specify the same `SnapshotIdentifier` for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the snapshot again, and the data in the database is not changed\.  
 However, if you don't specify the `SnapshotIdentifier`, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, the DB cluster is restored from the snapshot specified by the `SnapshotIdentifier`, and the original DB cluster is deleted\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SourceDBClusterIdentifier`  <a name="cfn-neptune-dbcluster-sourcedbclusteridentifier"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -173,13 +208,19 @@ The tags assigned to this cluster\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`UseLatestRestorableTime`  <a name="cfn-neptune-dbcluster-uselatestrestorabletime"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `VpcSecurityGroupIds`  <a name="cfn-neptune-dbcluster-vpcsecuritygroupids"></a>
 Provides a list of VPC security groups that the DB cluster belongs to\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-neptune-dbcluster-return-values"></a>
+## Return values<a name="aws-resource-neptune-dbcluster-return-values"></a>
 
 ### Ref<a name="aws-resource-neptune-dbcluster-return-values-ref"></a>
 

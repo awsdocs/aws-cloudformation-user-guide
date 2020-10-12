@@ -32,7 +32,7 @@ The event action\.
 +  `NO_ACTION` Allow the user sign\-in\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BLOCK | MFA_IF_CONFIGURED | MFA_REQUIRED | NO_ACTION`  
+*Allowed values*: `BLOCK | MFA_IF_CONFIGURED | MFA_REQUIRED | NO_ACTION`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Notify`  <a name="cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype-notify"></a>

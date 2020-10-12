@@ -1,6 +1,6 @@
-# Lambda Resource Type Reference<a name="AWS_Lambda"></a>
+# Lambda resource type reference<a name="AWS_Lambda"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Lambda::Alias](aws-resource-lambda-alias.md)
 + [AWS::Lambda::EventInvokeConfig](aws-resource-lambda-eventinvokeconfig.md)
 + [AWS::Lambda::EventSourceMapping](aws-resource-lambda-eventsourcemapping.md)

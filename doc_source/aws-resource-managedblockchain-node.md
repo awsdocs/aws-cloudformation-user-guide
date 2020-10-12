@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MemberId](#cfn-managedblockchain-node-memberid)" : String,
       "[NetworkId](#cfn-managedblockchain-node-networkid)" : String,
-      "[NodeConfiguration](#cfn-managedblockchain-node-nodeconfiguration)" : [NodeConfiguration](aws-properties-managedblockchain-node-nodeconfiguration.md)
+      "[NodeConfiguration](#cfn-managedblockchain-node-nodeconfiguration)" : NodeConfiguration
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [MemberId](#cfn-managedblockchain-node-memberid): String
   [NetworkId](#cfn-managedblockchain-node-networkid): String
   [NodeConfiguration](#cfn-managedblockchain-node-nodeconfiguration): 
-    [NodeConfiguration](aws-properties-managedblockchain-node-nodeconfiguration.md)
+    NodeConfiguration
 ```
 
 ## Properties<a name="aws-resource-managedblockchain-node-properties"></a>
@@ -50,7 +50,7 @@ Configuration properties of a peer node\.
 *Type*: [NodeConfiguration](aws-properties-managedblockchain-node-nodeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-managedblockchain-node-return-values"></a>
+## Return values<a name="aws-resource-managedblockchain-node-return-values"></a>
 
 ### Ref<a name="aws-resource-managedblockchain-node-return-values-ref"></a>
 

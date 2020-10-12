@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BidPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice)" : String,
   "[BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice)" : Double,
-  "[Configurations](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations)" : [ [Configuration](aws-properties-elasticmapreduce-instancefleetconfig-configuration.md), ... ],
-  "[EbsConfiguration](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.md),
+  "[Configurations](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations)" : [ Configuration, ... ],
+  "[EbsConfiguration](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration)" : EbsConfiguration,
   "[InstanceType](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype)" : String,
   "[WeightedCapacity](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity)" : Integer
 }
@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BidPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice): String
   [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
   [Configurations](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations): 
-    - [Configuration](aws-properties-elasticmapreduce-instancefleetconfig-configuration.md)
+    - Configuration
   [EbsConfiguration](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceType](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype): String
   [WeightedCapacity](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity): Integer
 ```

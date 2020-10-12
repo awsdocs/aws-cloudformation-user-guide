@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::GameLift::Script",
   "Properties" : {
       "[Name](#cfn-gamelift-script-name)" : String,
-      "[StorageLocation](#cfn-gamelift-script-storagelocation)" : [S3Location](aws-properties-gamelift-script-s3location.md),
+      "[StorageLocation](#cfn-gamelift-script-storagelocation)" : S3Location,
       "[Version](#cfn-gamelift-script-version)" : String
     }
 }
@@ -26,7 +26,7 @@ Type: AWS::GameLift::Script
 Properties: 
   [Name](#cfn-gamelift-script-name): String
   [StorageLocation](#cfn-gamelift-script-storagelocation): 
-    [S3Location](aws-properties-gamelift-script-s3location.md)
+    S3Location
   [Version](#cfn-gamelift-script-version): String
 ```
 
@@ -54,7 +54,7 @@ The version that is associated with a build or script\. Version strings do not n
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-gamelift-script-return-values"></a>
+## Return values<a name="aws-resource-gamelift-script-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-script-return-values-ref"></a>
 
@@ -190,7 +190,7 @@ Resources:
         RoleArn: !GetAtt IAMRole.Arn
 ```
 
-## See Also<a name="aws-resource-gamelift-script--seealso"></a>
+## See also<a name="aws-resource-gamelift-script--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Upload Script Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [CreateScript](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateScript.html) in the *Amazon GameLift API Reference* 

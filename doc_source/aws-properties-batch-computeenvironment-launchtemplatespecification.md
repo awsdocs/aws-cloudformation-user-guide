@@ -39,11 +39,12 @@ The name of the launch template\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-batch-computeenvironment-launchtemplatespecification-version"></a>
-The version number of the launch template\.  
-Default: The default version of the launch template\.  
+The version number of the launch template, `$Latest`, or `$Default`\.  
+If the value is `$Latest`, the latest version of the launch template is used\. If the value is `$Default`, the default version of the launch template is used\.  
+Default: `$Default`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-batch-computeenvironment-launchtemplatespecification--seealso"></a>
+## See also<a name="aws-properties-batch-computeenvironment-launchtemplatespecification--seealso"></a>
 +  [Launch Template Support](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS Batch User Guide*\.

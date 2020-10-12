@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)" : [ [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md), ... ]
+  "[ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)" : [ ClassicLoadBalancer, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers): 
-    - [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md)
+    - ClassicLoadBalancer
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-classicloadbalancersconfig-properties"></a>

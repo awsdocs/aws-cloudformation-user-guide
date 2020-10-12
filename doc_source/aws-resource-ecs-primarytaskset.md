@@ -49,7 +49,7 @@ The short name or full Amazon Resource Name \(ARN\) of the task set to set as th
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ecs-primarytaskset-return-values"></a>
+## Return values<a name="aws-resource-ecs-primarytaskset-return-values"></a>
 
 ### Ref<a name="aws-resource-ecs-primarytaskset-return-values-ref"></a>
 

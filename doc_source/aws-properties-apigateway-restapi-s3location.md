@@ -55,5 +55,5 @@ For versioning\-enabled buckets, a specific version of the OpenAPI file\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-restapi-s3location--seealso"></a>
+## See also<a name="aws-properties-apigateway-restapi-s3location--seealso"></a>
 + [RestApi](https://docs.aws.amazon.com/apigateway/api-reference/resource/rest-api/) in the *Amazon API Gateway REST API Reference*

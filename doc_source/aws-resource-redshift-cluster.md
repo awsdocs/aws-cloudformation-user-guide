@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier)" : String,
       "[IamRoles](#cfn-redshift-cluster-iamroles)" : [ String, ... ],
       "[KmsKeyId](#cfn-redshift-cluster-kmskeyid)" : String,
-      "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md),
+      "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : LoggingProperties,
       "[MasterUsername](#cfn-redshift-cluster-masterusername)" : String,
       "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
       "[NodeType](#cfn-redshift-cluster-nodetype)" : String,
@@ -71,7 +71,7 @@ Properties:
     - String
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
   [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
-    [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
+    LoggingProperties
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
   [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String
@@ -253,7 +253,7 @@ Constraints:
 
 `NodeType`  <a name="cfn-redshift-cluster-nodetype"></a>
 The node type to be provisioned for the cluster\. For information about node types, go to [ Working with Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes) in the *Amazon Redshift Cluster Management Guide*\.   
-Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge` \| `ra3.16xlarge`   
+Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge` \| `ra3.4xlarge` \| `ra3.16xlarge`   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -325,7 +325,7 @@ Default: The default VPC security group is associated with the cluster\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-redshift-cluster-return-values"></a>
+## Return values<a name="aws-resource-redshift-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-redshift-cluster-return-values-ref"></a>
 
@@ -394,6 +394,6 @@ myCluster:
         Value: bar
 ```
 
-## See Also<a name="aws-resource-redshift-cluster--seealso"></a>
+## See also<a name="aws-resource-redshift-cluster--seealso"></a>
 + For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html)\.
 +  [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.

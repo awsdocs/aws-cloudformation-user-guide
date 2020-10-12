@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `IntervalInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-bufferinghints-intervalinseconds"></a>
 The length of time, in seconds, that Kinesis Data Firehose buffers incoming data before delivering it to the destination\. For valid values, see the `IntervalInSeconds` content for the [BufferingHints](https://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `60`  
 *Maximum*: `900`  
@@ -34,7 +34,7 @@ The length of time, in seconds, that Kinesis Data Firehose buffers incoming data
 
 `SizeInMBs`  <a name="cfn-kinesisfirehose-deliverystream-bufferinghints-sizeinmbs"></a>
 The size of the buffer, in MBs, that Kinesis Data Firehose uses for incoming data before delivering it to the destination\. For valid values, see the `SizeInMBs` content for the [BufferingHints](https://docs.aws.amazon.com/firehose/latest/APIReference/API_BufferingHints.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `128`  

@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AdditionalMasterSecurityGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalmastersecuritygroups)" : [ String, ... ],
   "[AdditionalSlaveSecurityGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalslavesecuritygroups)" : [ String, ... ],
-  "[CoreInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet)" : [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md),
-  "[CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup)" : [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md),
+  "[CoreInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet)" : InstanceFleetConfig,
+  "[CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup)" : InstanceGroupConfig,
   "[Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname)" : String,
   "[Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid)" : String,
   "[Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids)" : [ String, ... ],
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EmrManagedSlaveSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup)" : String,
   "[HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion)" : String,
   "[KeepJobFlowAliveWhenNoSteps](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps)" : Boolean,
-  "[MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet)" : [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md),
-  "[MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup)" : [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md),
-  "[Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement)" : [PlacementType](aws-properties-elasticmapreduce-cluster-placementtype.md),
+  "[MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet)" : InstanceFleetConfig,
+  "[MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup)" : InstanceGroupConfig,
+  "[Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement)" : PlacementType,
   "[ServiceAccessSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup)" : String,
   "[TerminationProtected](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected)" : Boolean
 }
@@ -37,9 +37,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AdditionalSlaveSecurityGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalslavesecuritygroups): 
     - String
   [CoreInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet): 
-    [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md)
+    InstanceFleetConfig
   [CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup): 
-    [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)
+    InstanceGroupConfig
   [Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname): String
   [Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid): String
   [Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids): 
@@ -49,11 +49,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion): String
   [KeepJobFlowAliveWhenNoSteps](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps): Boolean
   [MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet): 
-    [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md)
+    InstanceFleetConfig
   [MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup): 
-    [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)
+    InstanceGroupConfig
   [Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement): 
-    [PlacementType](aws-properties-elasticmapreduce-cluster-placementtype.md)
+    PlacementType
   [ServiceAccessSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup): String
   [TerminationProtected](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected): Boolean
 ```

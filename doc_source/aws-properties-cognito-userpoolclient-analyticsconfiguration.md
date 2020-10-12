@@ -3,7 +3,7 @@
 The Amazon Pinpoint analytics configuration for collecting metrics for a user pool\.
 
 **Note**  
-Cognito User Pools only supports sending events to Amazon Pinpoint projects in the US East \(N\. Virginia\) us\-east\-1 Region, regardless of the region in which the user pool resides\.
+In regions where Pinpoint is not available, Cognito User Pools only supports sending events to Amazon Pinpoint projects in us\-east\-1\. In regions where Pinpoint is available, Cognito User Pools will support sending events to Amazon Pinpoint projects within that same region\. 
 
 ## Syntax<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax"></a>
 
@@ -42,6 +42,9 @@ The application ID for an Amazon Pinpoint application\.
 The external ID\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `2`  
+*Maximum*: `1224`  
+*Pattern*: `[\w+=,.@:\/-]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-rolearn"></a>

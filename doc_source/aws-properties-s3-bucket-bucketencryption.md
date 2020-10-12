@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration)" : [ [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md), ... ]
+  "[ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration)" : [ ServerSideEncryptionRule, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ServerSideEncryptionConfiguration](#cfn-s3-bucket-bucketencryption-serversideencryptionconfiguration): 
-    - [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)
+    - ServerSideEncryptionRule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-bucketencryption-properties"></a>
@@ -28,3 +28,6 @@ Specifies the default server\-side\-encryption configuration\.
 *Required*: Yes  
 *Type*: List of [ServerSideEncryptionRule](aws-properties-s3-bucket-serversideencryptionrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-bucketencryption--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)

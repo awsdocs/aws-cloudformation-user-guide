@@ -62,13 +62,13 @@ The log group to associate with the subscription filter\. All log events that ar
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-cwl-subscriptionfilter-rolearn"></a>
-The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream\.  
+The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingested log events to the destination stream\. You don't need to provide the ARN when you are working with a logical destination for cross\-account delivery\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-logs-subscriptionfilter-return-values"></a>
+## Return values<a name="aws-resource-logs-subscriptionfilter-return-values"></a>
 
 ### Ref<a name="aws-resource-logs-subscriptionfilter-return-values-ref"></a>
 

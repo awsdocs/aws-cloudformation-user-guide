@@ -41,5 +41,5 @@ Valid values depend on the value of `BudgetType`:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-timeperiod--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-timeperiod--seealso"></a>
 +  [TimePeriod](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_TimePeriod.html) in the *AWS Cost Explorer Service Cost Management APIs* 

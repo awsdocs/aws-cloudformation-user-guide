@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `aws.config`  
+*Allowed values*: `aws.config`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumExecutionFrequency`  <a name="cfn-config-configrule-sourcedetail-maximumexecutionfrequency"></a>
@@ -39,7 +39,7 @@ By default, rules with a periodic trigger are evaluated every 24 hours\. To chan
 Based on the valid value you choose, AWS Config runs evaluations once for each valid value\. For example, if you choose `Three_Hours`, AWS Config runs evaluations once every three hours\. In this case, `Three_Hours` is the frequency of this rule\. 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageType`  <a name="cfn-config-configrule-source-sourcedetail-messagetype"></a>
@@ -51,5 +51,5 @@ The type of notification that triggers AWS Config to run an evaluation for a rul
 If you want your custom rule to be triggered by configuration changes, specify two SourceDetail objects, one for `ConfigurationItemChangeNotification` and one for `OversizedConfigurationItemChangeNotification`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ConfigurationItemChangeNotification | ConfigurationSnapshotDeliveryCompleted | OversizedConfigurationItemChangeNotification | ScheduledNotification`  
+*Allowed values*: `ConfigurationItemChangeNotification | ConfigurationSnapshotDeliveryCompleted | OversizedConfigurationItemChangeNotification | ScheduledNotification`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

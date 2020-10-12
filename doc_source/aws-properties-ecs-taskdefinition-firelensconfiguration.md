@@ -37,7 +37,7 @@ The options to use when configuring the log router\. This field is optional and 
 
 `Type`  <a name="cfn-ecs-taskdefinition-firelensconfiguration-type"></a>
 The log router to use\. The valid values are `fluentd` or `fluentbit`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Allowed Values*: `fluentbit | fluentd`  
+*Allowed values*: `fluentbit | fluentd`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

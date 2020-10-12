@@ -36,5 +36,5 @@ Specifies whether the user is required to set a new password on next sign\-in\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-iam-user-loginprofile--seealso"></a>
+## See also<a name="aws-properties-iam-user-loginprofile--seealso"></a>
 +  [LoginProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_LoginProfile.html) in the *AWS Identity and Access Management API Reference* 

@@ -111,7 +111,7 @@ The type of authorizer\. Valid values include:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-authorizer-return-values"></a>
+## Return values<a name="aws-resource-apigateway-authorizer-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-authorizer-return-values-ref"></a>
 
@@ -194,5 +194,5 @@ Authorizer:
     RestApiId: !Ref RestApi
 ```
 
-## See Also<a name="aws-resource-apigateway-authorizer--seealso"></a>
+## See also<a name="aws-resource-apigateway-authorizer--seealso"></a>
 + [authorizer:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/) in the *Amazon API Gateway REST API Reference*

@@ -84,7 +84,7 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcpeeringconnection-return-values-ref"></a>
 
@@ -543,3 +543,7 @@ Resources:
       VpcId: !Ref myVPC
       PeerVpcId: !Ref myPrivateVPC
 ```
+
+## See also<a name="aws-resource-ec2-vpcpeeringconnection--seealso"></a>
++ [What is VPC peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) in *AWS Outposts User Guide*
++ [CreateVpcPeeringConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcPeeringConnection.html) in the *Amazon EC2 API Reference*

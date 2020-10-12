@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TargetGroups](#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups)" : [ [TargetGroupTuple](aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.md), ... ],
-  "[TargetGroupStickinessConfig](#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig)" : [TargetGroupStickinessConfig](aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.md)
+  "[TargetGroups](#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups)" : [ TargetGroupTuple, ... ],
+  "[TargetGroupStickinessConfig](#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig)" : TargetGroupStickinessConfig
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [TargetGroups](#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroups): 
-    - [TargetGroupTuple](aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.md)
+    - TargetGroupTuple
   [TargetGroupStickinessConfig](#cfn-elasticloadbalancingv2-listenerrule-forwardconfig-targetgroupstickinessconfig): 
-    [TargetGroupStickinessConfig](aws-properties-elasticloadbalancingv2-listenerrule-targetgroupstickinessconfig.md)
+    TargetGroupStickinessConfig
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig-properties"></a>

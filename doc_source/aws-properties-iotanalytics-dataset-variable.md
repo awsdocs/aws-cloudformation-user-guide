@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DatasetContentVersionValue](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue)" : [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue.md),
+  "[DatasetContentVersionValue](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue)" : DatasetContentVersionValue,
   "[DoubleValue](#cfn-iotanalytics-dataset-variable-doublevalue)" : Double,
-  "[OutputFileUriValue](#cfn-iotanalytics-dataset-variable-outputfileurivalue)" : [OutputFileUriValue](aws-properties-iotanalytics-dataset-variable-outputfileurivalue.md),
+  "[OutputFileUriValue](#cfn-iotanalytics-dataset-variable-outputfileurivalue)" : OutputFileUriValue,
   "[StringValue](#cfn-iotanalytics-dataset-variable-stringvalue)" : String,
   "[VariableName](#cfn-iotanalytics-dataset-variable-variablename)" : String
 }
@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DatasetContentVersionValue](#cfn-iotanalytics-dataset-variable-datasetcontentversionvalue): 
-    [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue.md)
+    DatasetContentVersionValue
   [DoubleValue](#cfn-iotanalytics-dataset-variable-doublevalue): 
     Double
   [OutputFileUriValue](#cfn-iotanalytics-dataset-variable-outputfileurivalue): 
-    [OutputFileUriValue](aws-properties-iotanalytics-dataset-variable-outputfileurivalue.md)
+    OutputFileUriValue
   [StringValue](#cfn-iotanalytics-dataset-variable-stringvalue): 
     String
   [VariableName](#cfn-iotanalytics-dataset-variable-variablename): String

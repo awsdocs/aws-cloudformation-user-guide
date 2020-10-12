@@ -1,6 +1,6 @@
-# IAM Resource Type Reference<a name="AWS_IAM"></a>
+# IAM resource type reference<a name="AWS_IAM"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)
 + [AWS::IAM::Group](aws-properties-iam-group.md)
 + [AWS::IAM::InstanceProfile](aws-resource-iam-instanceprofile.md)

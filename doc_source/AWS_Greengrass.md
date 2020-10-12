@@ -1,6 +1,6 @@
-# AWS IoT Greengrass Resource Type Reference<a name="AWS_Greengrass"></a>
+# AWS IoT Greengrass resource type reference<a name="AWS_Greengrass"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Greengrass::ConnectorDefinition](aws-resource-greengrass-connectordefinition.md)
 + [AWS::Greengrass::ConnectorDefinitionVersion](aws-resource-greengrass-connectordefinitionversion.md)
 + [AWS::Greengrass::CoreDefinition](aws-resource-greengrass-coredefinition.md)

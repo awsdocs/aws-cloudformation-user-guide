@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-dms-certificate-properties"></a>
 
 `CertificateIdentifier`  <a name="cfn-dms-certificate-certificateidentifier"></a>
-A customer\-assigned name for the certificate\. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens\.  
+A customer\-assigned name for the certificate\. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens\. They can't end with a hyphen or contain two consecutive hyphens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -49,7 +49,7 @@ The location of an imported Oracle Wallet certificate for use with SSL\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-certificate-return-values"></a>
+## Return values<a name="aws-resource-dms-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-certificate-return-values-ref"></a>
 
@@ -93,6 +93,6 @@ Resources:
     Type: "AWS::DMS::Certificate"
 ```
 
-## See Also<a name="aws-resource-dms-certificate--seealso"></a>
+## See also<a name="aws-resource-dms-certificate--seealso"></a>
 +  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

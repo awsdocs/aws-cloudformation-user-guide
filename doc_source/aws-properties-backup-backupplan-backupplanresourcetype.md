@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BackupPlanName](#cfn-backup-backupplan-backupplanresourcetype-backupplanname)" : String,
-  "[BackupPlanRule](#cfn-backup-backupplan-backupplanresourcetype-backupplanrule)" : [ [BackupRuleResourceType](aws-properties-backup-backupplan-backupruleresourcetype.md), ... ]
+  "[BackupPlanRule](#cfn-backup-backupplan-backupplanresourcetype-backupplanrule)" : [ BackupRuleResourceType, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BackupPlanName](#cfn-backup-backupplan-backupplanresourcetype-backupplanname): String
   [BackupPlanRule](#cfn-backup-backupplan-backupplanresourcetype-backupplanrule): 
-    - [BackupRuleResourceType](aws-properties-backup-backupplan-backupruleresourcetype.md)
+    - BackupRuleResourceType
 ```
 
 ## Properties<a name="aws-properties-backup-backupplan-backupplanresourcetype-properties"></a>

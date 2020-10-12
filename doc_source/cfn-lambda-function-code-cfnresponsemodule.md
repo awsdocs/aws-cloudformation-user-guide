@@ -1,4 +1,4 @@
-# `cfn-response` Module<a name="cfn-lambda-function-code-cfnresponsemodule"></a>
+# `cfn-response` module<a name="cfn-lambda-function-code-cfnresponsemodule"></a>
 
 When you use the `ZipFile` property to specify your [function's](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html) source code and that function interacts with an AWS CloudFormation custom resource, you can load the `cfn-response` module to send responses to those resources\. The module contains a `send` method, which sends a [response object](crpg-ref-responses.md) to a custom resource by way of an Amazon S3 presigned URL \(the `ResponseURL`\)\.
 
@@ -7,7 +7,7 @@ After executing the `send` method, the Lambda function terminates, so anything y
 **Note**  
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
-## Loading the `cfn-response` Module<a name="w5653ab1c20c25c14b9b9"></a>
+## Loading the `cfn-response` module<a name="w6974ab1c27c24c14b9b9"></a>
 
 For Node\.js functions, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
@@ -24,7 +24,7 @@ Use this exact import statement\. If you use other variants of the import statem
 import cfnresponse
 ```
 
-## `send` Method Parameters<a name="w5653ab1c20c25c14b9c11"></a>
+## `send` method parameters<a name="w6974ab1c27c24c14b9c11"></a>
 
 You can use the following parameters with the `send` method\.
 
@@ -32,7 +32,7 @@ You can use the following parameters with the `send` method\.
 The fields in a [custom resource request](crpg-ref-requesttypes.md)\.
 
 `context`  
-An object, specific to Lambda functions, that you can use to specify when the function and any callbacks have completed execution, or to access information from within the Lambda execution environment\. For more information, see [Programming Model \(Node\.js\)](https://docs.aws.amazon.com/lambda/latest/dg/programming-model.html) in the *AWS Lambda Developer Guide*\.
+An object, specific to Lambda functions, that you can use to specify when the function and any callbacks have completed execution, or to access information from within the Lambda execution environment\. For more information, see [Programming model \(Node\.js\)](https://docs.aws.amazon.com/lambda/latest/dg/programming-model.html) in the *AWS Lambda Developer Guide*\.
 
 `responseStatus`  
 Whether the function successfully completed\. Use the `cfnresponse` module constants to specify the status: `SUCCESS` for successful executions and `FAILED` for failed executions\.
@@ -44,12 +44,17 @@ The `Data` field of a custom resource [response object](crpg-ref-responses.md)\.
 Optional\. The unique identifier of the custom resource that invoked the function\. By default, the module uses the name of the Amazon CloudWatch Logs log stream that's associated with the Lambda function\.
 
 `noEcho`  
-Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\)\. By default, this value is `false`\.  
-For more information about using `NoEcho` to mask sensitive information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+Optional\. Indicates whether to mask the output of the custom resource when it's retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\), except for information stored in the locations specified below\. By default, this value is `false`\.  
+Using the `NoEcho` attribute does not mask any information stored in the following:  
++ The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
++ The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
++ The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
+We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
+For more information about using `NoEcho` to mask sensitive information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-## Examples<a name="w5653ab1c20c25c14b9c13"></a>
+## Examples<a name="w6974ab1c27c24c14b9c13"></a>
 
-### Node\.js<a name="w5653ab1c20c25c14b9c13b3"></a>
+### Node\.js<a name="w6974ab1c27c24c14b9c13b3"></a>
 
 In the following Node\.js example, the inline Lambda function takes an input value and multiplies it by 5\. Inline functions are especially useful for smaller functions because they allow you to specify the source code directly in the template, instead of creating a package and uploading it to an Amazon S3 bucket\. The function uses the `cfn-response` `send` method to send the result back to the custom resource that invoked it\.
 
@@ -78,7 +83,7 @@ ZipFile: >
   };
 ```
 
-### Python<a name="w5653ab1c20c25c14b9c13b5"></a>
+### Python<a name="w6974ab1c27c24c14b9c13b5"></a>
 
 In the following Python example, the inline Lambda function takes an integer value and multiplies it by 5\.
 
@@ -109,17 +114,13 @@ ZipFile: |
     cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
 ```
 
-## Module Source Code<a name="w5653ab1c20c25c14b9c15"></a>
+## Module source code<a name="w6974ab1c27c24c14b9c15"></a>
 
 The following is the response module source code for the Node\.js functions\. Review it to understand what the module does and for help with implementing your own response functions\.
 
 ```
-/* Copyright 2015 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
-   This file is licensed to you under the AWS Customer Agreement (the "License").
-   You may not use this file except in compliance with the License.
-   A copy of the License is located at http://aws.amazon.com/agreement/ .
-   This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
-   See the License for the specific language governing permissions and limitations under the License. */
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: MIT-0
  
 exports.SUCCESS = "SUCCESS";
 exports.FAILED = "FAILED";
@@ -173,24 +174,20 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
 The following is the response module source code for Python 3 functions: 
 
 ```
-#  Copyright 2016 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
-#  This file is licensed to you under the AWS Customer Agreement (the "License").
-#  You may not use this file except in compliance with the License.
-#  A copy of the License is located at http://aws.amazon.com/agreement/ .
-#  This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
-#  See the License for the specific language governing permissions and limitations under the License.
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
  
-from botocore.vendored import requests
+import urllib3
 import json
- 
+http = urllib3.PoolManager()
 SUCCESS = "SUCCESS"
 FAILED = "FAILED"
- 
+
 def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False):
     responseUrl = event['ResponseURL']
- 
+
     print(responseUrl)
- 
+
     responseBody = {}
     responseBody['Status'] = responseStatus
     responseBody['Reason'] = 'See the details in CloudWatch Log Stream: ' + context.log_stream_name
@@ -200,20 +197,19 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
     responseBody['LogicalResourceId'] = event['LogicalResourceId']
     responseBody['NoEcho'] = noEcho
     responseBody['Data'] = responseData
- 
+
     json_responseBody = json.dumps(responseBody)
- 
+
     print("Response body:\n" + json_responseBody)
- 
+
     headers = {
         'content-type' : '',
         'content-length' : str(len(json_responseBody))
     }
- 
+
     try:
-        response = requests.put(responseUrl,
-                                data=json_responseBody,
-                                headers=headers)
+        
+        response = http.request('PUT',responseUrl,body=json_responseBody.encode('utf-8'),headers=headers)
         print("Status code: " + response.reason)
     except Exception as e:
         print("send(..) failed executing requests.put(..): " + str(e))
@@ -222,24 +218,21 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
 The following is the response module source code for Python 2 functions:
 
 ```
-#  Copyright 2016 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
-#  This file is licensed to you under the AWS Customer Agreement (the "License").
-#  You may not use this file except in compliance with the License.
-#  A copy of the License is located at http://aws.amazon.com/agreement/ .
-#  This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied.
-#  See the License for the specific language governing permissions and limitations under the License.
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
  
-from botocore.vendored import requests
+import urllib2
 import json
- 
+
 SUCCESS = "SUCCESS"
 FAILED = "FAILED"
- 
+
 def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False):
     responseUrl = event['ResponseURL']
- 
+
     print responseUrl
- 
+
+
     responseBody = {}
     responseBody['Status'] = responseStatus
     responseBody['Reason'] = 'See the details in CloudWatch Log Stream: ' + context.log_stream_name
@@ -249,21 +242,22 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
     responseBody['LogicalResourceId'] = event['LogicalResourceId']
     responseBody['NoEcho'] = noEcho
     responseBody['Data'] = responseData
- 
+
     json_responseBody = json.dumps(responseBody)
    
     print "Response body:\n" + json_responseBody
- 
-    headers = {
-        'content-type' : '', 
-        'content-length' : str(len(json_responseBody))
-    }
-    
+
     try:
-        response = requests.put(responseUrl,
-                                data=json_responseBody,
-                                headers=headers)
-        print "Status code: " + response.reason
+        opener = urllib2.build_opener(urllib2.HTTPHandler)
+
+        request = urllib2.Request(responseUrl, data=json_responseBody)
+        request.add_header('Content-Type', '')
+        request.add_header('Content-Length', str(len(json_responseBody)))
+
+        request.get_method = lambda: 'PUT'
+        response = urllib2.urlopen(request)
+
+        print "Status code: " + str(response.getcode())
     except Exception as e:
-        print "send(..) failed executing requests.put(..): " + str(e)
+        print "send(..) failed executing urllib2.Request(..): " + str(e)
 ```

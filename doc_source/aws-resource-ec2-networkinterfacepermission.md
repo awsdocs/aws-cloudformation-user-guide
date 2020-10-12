@@ -47,10 +47,10 @@ The ID of the network interface\.
 The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EIP-ASSOCIATE | INSTANCE-ATTACH`  
+*Allowed values*: `EIP-ASSOCIATE | INSTANCE-ATTACH`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-networkinterfacepermission-return-values"></a>
+## Return values<a name="aws-resource-ec2-networkinterfacepermission-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-networkinterfacepermission-return-values-ref"></a>
 

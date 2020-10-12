@@ -1,8 +1,10 @@
 # AWS::EC2::LaunchTemplate IamInstanceProfile<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile"></a>
 
-Specifies an IAM instance profile\. You must provide either the name or the ARN of the instance profile\.
+Specifies an IAM instance profile, which is a container for an IAM role for your instance\. You can use an IAM role to distribute your AWS credentials to your instances\.
 
- `IamInstanceProfile` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+If you are creating the launch template for use with an Amazon EC2 Auto Scaling group, you can specify either the name or the ARN of the instance profile, but not both\.
+
+ `IamInstanceProfile` is a property of [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile-syntax"></a>
 
@@ -38,5 +40,5 @@ The name of the instance profile\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile--seealso"></a>
 +  [ LaunchTemplateIamInstanceProfileSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateIamInstanceProfileSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

@@ -2,6 +2,8 @@
 
 Contains configuration information for a certificate revocation list \(CRL\)\. Your private certificate authority \(CA\) creates base CRLs\. Delta CRLs are not supported\. You can enable CRLs for your new or an existing private CA by setting the **Enabled** parameter to `true`\. Your private CA writes CRLs to an S3 bucket that you specify in the **S3BucketName** parameter\. You can hide the name of your bucket by specifying a value for the **CustomCname** parameter\. Your private CA copies the CNAME or the S3 bucket name to the **CRL Distribution Points** extension of each certificate it issues\. Your S3 bucket policy must give write permission to ACM Private CA\. 
 
+ACM Private CAA assets that are stored in Amazon S3 can be protected with encryption\. For more information, see [Encrypting Your CRLs](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#crl-encryption)\.
+
 Your private CA uses the value in the **ExpirationInDays** parameter to calculate the **nextUpdate** field in the CRL\. The CRL is refreshed at 1/2 the age of next update or when a certificate is revoked\. When a certificate is revoked, it is recorded in the next CRL that is generated and in the next audit report\. Only time valid certificates are listed in the CRL\. Expired certificates are not included\. 
 
 CRLs contain the following fields:

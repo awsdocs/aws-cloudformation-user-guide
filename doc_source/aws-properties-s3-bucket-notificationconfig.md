@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md), ... ],
-  "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md), ... ],
-  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md), ... ]
+  "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ LambdaConfiguration, ... ],
+  "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ QueueConfiguration, ... ],
+  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ TopicConfiguration, ... ]
 }
 ```
 
@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig): 
-    - [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md)
+    - LambdaConfiguration
   [QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig): 
-    - [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md)
+    - QueueConfiguration
   [TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig): 
-    - [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)
+    - TopicConfiguration
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-properties"></a>
@@ -52,3 +52,6 @@ The topic to which notifications are sent and the events for which notifications
 *Required*: No  
 *Type*: List of [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-notificationconfig--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)

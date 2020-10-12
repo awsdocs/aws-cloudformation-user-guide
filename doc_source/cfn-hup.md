@@ -21,7 +21,7 @@ cfn-hup --config|-c config.dir \
 |   `--no-daemon`   |  Specify this option to run the cfn\-hup script once and exit\.  |  No  | 
 |   `-v, --verbose `   |  Specify this option to use verbose mode\.  |  No  | 
 
-## cfn\-hup\.conf Configuration File<a name="cfn-hup-config-file"></a>
+## cfn\-hup\.conf configuration file<a name="cfn-hup-config-file"></a>
 
 The cfn\-hup\.conf file stores the name of the stack and the AWS credentials that the cfn\-hup daemon targets\.
 
@@ -43,7 +43,7 @@ stack=<stack-name-or-id>
 |   `interval`   |  The interval used to check for changes to the resource metadata in minutes *Type*: Number *Default*: `15`  |  No  | 
 |   `verbose`   |  Specifies whether to use verbose logging\. *Type*: Boolean *Default*: `false`  |  No  | 
 
-## hooks\.conf Configuration File<a name="cfn-hup-hook-file"></a>
+## hooks\.conf configuration file<a name="cfn-hup-hook-file"></a>
 
 The user actions that the cfn\-hup daemon calls periodically are defined in the hooks\.conf configuration file\. The hooks\.conf file uses the following *format*:
 
@@ -68,7 +68,7 @@ The hooks configuration file is loaded at cfn\-hup daemon startup only, so new h
 |   `action`   |  An arbitrary shell command that is run as given\.  |  Yes  | 
 |   `runas`   |  A user to run the commands as\. Cfn\-hup uses the su command to switch to the user\.  |  Yes  | 
 
-## hooks\.d Directory<a name="cfn-hup-hooks-dir"></a>
+## hooks\.d directory<a name="cfn-hup-hooks-dir"></a>
 
 To support composition of several applications deploying change notification hooks, cfn\-hup supports a directory named hooks\.d that is located in the hooks configuration directory\. You can place one or more additional hooks configuration files in the hooks\.d directory\. The additional hooks files must use the same layout as the hooks\.conf file\.
 
@@ -130,6 +130,6 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
 ...
 ```
 
-### Additional Example<a name="w5653ab1c26c34c35c15b8"></a>
+### Additional example<a name="w6974ab1c33c42c35c15b8"></a>
 
-For a sample template, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodePipeline::Webhook",
   "Properties" : {
       "[Authentication](#cfn-codepipeline-webhook-authentication)" : String,
-      "[AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration)" : [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md),
-      "[Filters](#cfn-codepipeline-webhook-filters)" : [ [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md), ... ],
+      "[AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration)" : WebhookAuthConfiguration,
+      "[Filters](#cfn-codepipeline-webhook-filters)" : [ WebhookFilterRule, ... ],
       "[Name](#cfn-codepipeline-webhook-name)" : String,
       "[RegisterWithThirdParty](#cfn-codepipeline-webhook-registerwiththirdparty)" : Boolean,
       "[TargetAction](#cfn-codepipeline-webhook-targetaction)" : String,
@@ -36,9 +36,9 @@ Type: AWS::CodePipeline::Webhook
 Properties: 
   [Authentication](#cfn-codepipeline-webhook-authentication): String
   [AuthenticationConfiguration](#cfn-codepipeline-webhook-authenticationconfiguration): 
-    [WebhookAuthConfiguration](aws-properties-codepipeline-webhook-webhookauthconfiguration.md)
+    WebhookAuthConfiguration
   [Filters](#cfn-codepipeline-webhook-filters): 
-    - [WebhookFilterRule](aws-properties-codepipeline-webhook-webhookfilterrule.md)
+    - WebhookFilterRule
   [Name](#cfn-codepipeline-webhook-name): String
   [RegisterWithThirdParty](#cfn-codepipeline-webhook-registerwiththirdparty): Boolean
   [TargetAction](#cfn-codepipeline-webhook-targetaction): String
@@ -55,7 +55,7 @@ Supported options are GITHUB\_HMAC, IP, and UNAUTHENTICATED\.
 +  UNAUTHENTICATED accepts all webhook trigger requests regardless of origin\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GITHUB_HMAC | IP | UNAUTHENTICATED`  
+*Allowed values*: `GITHUB_HMAC | IP | UNAUTHENTICATED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationConfiguration`  <a name="cfn-codepipeline-webhook-authenticationconfiguration"></a>
@@ -113,7 +113,7 @@ Type: Integer
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codepipeline-webhook-return-values"></a>
+## Return values<a name="aws-resource-codepipeline-webhook-return-values"></a>
 
 ### Ref<a name="aws-resource-codepipeline-webhook-return-values-ref"></a>
 

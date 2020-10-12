@@ -58,7 +58,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule\. You ar
 By default, rules with a periodic trigger are evaluated every 24 hours\. To change the frequency, specify a valid value for the `MaximumExecutionFrequency` parameter\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceIdScope`  <a name="cfn-config-organizationconfigrule-organizationmanagedrulemetadata-resourceidscope"></a>

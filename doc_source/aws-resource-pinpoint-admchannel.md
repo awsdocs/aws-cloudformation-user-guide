@@ -59,7 +59,7 @@ Specifies whether to enable the ADM channel for the application\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-admchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-admchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-admchannel-return-values-ref"></a>
 

@@ -3,11 +3,11 @@
 This topic contains some common AWS CloudFormation StackSets issues, and suggested solutions for those issues\.
 
 **Topics**
-+ [Common reasons for stack operation failure](#w5653ab1c22c25b6)
-+ [Retrying failed stack creation or update operations](#w5653ab1c22c25b8)
++ [Common reasons for stack operation failure](#w6974ab1c29c25b6)
++ [Retrying failed stack creation or update operations](#w6974ab1c29c25b8)
 + [Stack instance deletion fails](#stack-instance-delete-fails)
 
-## Common reasons for stack operation failure<a name="w5653ab1c22c25b6"></a>
+## Common reasons for stack operation failure<a name="w6974ab1c29c25b6"></a>
 
 **Problem:** A stack operation failed, and the stack instance status is `OUTDATED`\.
 
@@ -18,11 +18,11 @@ This topic contains some common AWS CloudFormation StackSets issues, and suggest
 + A specified target account number doesn't exist\. Check the target account numbers that you specified on the **Set deployment options** page of the wizard\.
 + The administrator account does not have a trust relationship with the target account\.
 + The maximum number of a resource that is specified in your template already exists in your target account\. For example, you might have reached the limit of allowed IAM roles in a target account, but the template creates more IAM roles\.
-+ You have reached the maximum number of stacks that are allowed in a stack set\. See [AWS CloudFormation Limits](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) for the maximum number of stacks per stack set\.
++ You have reached the maximum number of stacks that are allowed in a stack set\. See [AWS CloudFormation limits](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) for the maximum number of stacks per stack set\.
 
-**Solution:** For more information about the permissions required of target and administrator accounts before you can create stack sets, see [Set Up Basic Permissions for Stack Sets Operations](stacksets-prereqs-self-managed.md#stacksets-prereqs-accountsetup)\.
+**Solution:** For more information about the permissions required of target and administrator accounts before you can create stack sets, see [Set up basic permissions for stack set operations](stacksets-prereqs-self-managed.md#stacksets-prereqs-accountsetup)\.
 
-## Retrying failed stack creation or update operations<a name="w5653ab1c22c25b8"></a>
+## Retrying failed stack creation or update operations<a name="w6974ab1c29c25b8"></a>
 
 **Problem:** A stack creation or update failed, and the stack instance status is `OUTDATED`\. To troubleshoot why a stack creation or update failed, open the AWS CloudFormation console, and view the events for the stack, which will have a status of `DELETED` \(for failed create operations\) or `FAILED` \(for failed update operations\)\. Browse the stack events, and find the **Status reason** column\. The value of **Status reason** explains why the stack operation failed\.
 

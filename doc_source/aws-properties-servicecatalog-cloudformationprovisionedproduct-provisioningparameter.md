@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Key`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-key"></a>
 The parameter key\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1000`  
@@ -34,10 +34,10 @@ The parameter key\.
 
 `Value`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningparameter-value"></a>
 The parameter value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter--seealso"></a>
+## See also<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningparameter--seealso"></a>
 + [ProvisioningParameter](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisioningParameter.html) in the *AWS Service Catalog API Reference*

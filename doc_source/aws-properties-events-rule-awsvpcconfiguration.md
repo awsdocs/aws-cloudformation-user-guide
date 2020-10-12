@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies whether the task's elastic network interface receives a public IP address\. You can specify `ENABLED` only when `LaunchType` in `EcsParameters` is set to `FARGATE`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-events-rule-awsvpcconfiguration-securitygroups"></a>
@@ -47,5 +47,5 @@ Specifies the subnets associated with the task\. These subnets must all be in th
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
+## See also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
 + [AwsVpcConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_AwsVpcConfiguration.html)

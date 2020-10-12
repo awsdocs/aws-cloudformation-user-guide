@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ConflictDetection](#cfn-appsync-resolver-syncconfig-conflictdetection)" : String,
   "[ConflictHandler](#cfn-appsync-resolver-syncconfig-conflicthandler)" : String,
-  "[LambdaConflictHandlerConfig](#cfn-appsync-resolver-syncconfig-lambdaconflicthandlerconfig)" : [LambdaConflictHandlerConfig](aws-properties-appsync-resolver-lambdaconflicthandlerconfig.md)
+  "[LambdaConflictHandlerConfig](#cfn-appsync-resolver-syncconfig-lambdaconflicthandlerconfig)" : LambdaConflictHandlerConfig
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ConflictDetection](#cfn-appsync-resolver-syncconfig-conflictdetection): String
   [ConflictHandler](#cfn-appsync-resolver-syncconfig-conflicthandler): String
   [LambdaConflictHandlerConfig](#cfn-appsync-resolver-syncconfig-lambdaconflicthandlerconfig): 
-    [LambdaConflictHandlerConfig](aws-properties-appsync-resolver-lambdaconflicthandlerconfig.md)
+    LambdaConflictHandlerConfig
 ```
 
 ## Properties<a name="aws-properties-appsync-resolver-syncconfig-properties"></a>

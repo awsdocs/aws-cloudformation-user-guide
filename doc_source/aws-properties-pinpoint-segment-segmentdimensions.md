@@ -11,9 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Attributes](#cfn-pinpoint-segment-segmentdimensions-attributes)" : Json,
-  "[Behavior](#cfn-pinpoint-segment-segmentdimensions-behavior)" : [Behavior](aws-properties-pinpoint-segment-segmentdimensions-behavior.md),
-  "[Demographic](#cfn-pinpoint-segment-segmentdimensions-demographic)" : [Demographic](aws-properties-pinpoint-segment-segmentdimensions-demographic.md),
-  "[Location](#cfn-pinpoint-segment-segmentdimensions-location)" : [Location](aws-properties-pinpoint-segment-segmentdimensions-location.md),
+  "[Behavior](#cfn-pinpoint-segment-segmentdimensions-behavior)" : Behavior,
+  "[Demographic](#cfn-pinpoint-segment-segmentdimensions-demographic)" : Demographic,
+  "[Location](#cfn-pinpoint-segment-segmentdimensions-location)" : Location,
   "[Metrics](#cfn-pinpoint-segment-segmentdimensions-metrics)" : Json,
   "[UserAttributes](#cfn-pinpoint-segment-segmentdimensions-userattributes)" : Json
 }
@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Attributes](#cfn-pinpoint-segment-segmentdimensions-attributes): Json
   [Behavior](#cfn-pinpoint-segment-segmentdimensions-behavior): 
-    [Behavior](aws-properties-pinpoint-segment-segmentdimensions-behavior.md)
+    Behavior
   [Demographic](#cfn-pinpoint-segment-segmentdimensions-demographic): 
-    [Demographic](aws-properties-pinpoint-segment-segmentdimensions-demographic.md)
+    Demographic
   [Location](#cfn-pinpoint-segment-segmentdimensions-location): 
-    [Location](aws-properties-pinpoint-segment-segmentdimensions-location.md)
+    Location
   [Metrics](#cfn-pinpoint-segment-segmentdimensions-metrics): Json
   [UserAttributes](#cfn-pinpoint-segment-segmentdimensions-userattributes): Json
 ```

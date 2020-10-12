@@ -61,13 +61,13 @@ The absolute path, starting with the leading "/"\. This component is not percent
 
 `Port`  <a name="cfn-elasticloadbalancingv2-listener-redirectconfig-port"></a>
 The port\. You can specify a value from 1 to 65535 or \#\{port\}\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-listener-redirectconfig-protocol"></a>
 The protocol\. You can specify HTTP, HTTPS, or \#\{protocol\}\. You can redirect HTTP to HTTP, HTTP to HTTPS, and HTTPS to HTTPS\. You cannot redirect HTTPS to HTTP\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Pattern*: `^(HTTPS?|#\{protocol\})$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,5 +84,5 @@ The query parameters, URL\-encoded when necessary, but not percent\-encoded\. Do
 The HTTP redirect code\. The redirect is either permanent \(HTTP 301\) or temporary \(HTTP 302\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `HTTP_301 | HTTP_302`  
+*Allowed values*: `HTTP_301 | HTTP_302`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
