@@ -178,8 +178,7 @@ ScheduledRule:
 PermissionForEventsToInvokeLambda: 
   Type: AWS::Lambda::Permission
   Properties: 
-    FunctionName: 
-      Ref: "LambdaFunction"
+    FunctionName: !Ref "LambdaFunction"
     Action: "lambda:InvokeFunction"
     Principal: "events.amazonaws.com"
     SourceArn: 
