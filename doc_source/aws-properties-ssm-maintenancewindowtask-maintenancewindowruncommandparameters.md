@@ -87,7 +87,7 @@ The S3 bucket subfolder\.
 The parameters for the `RUN_COMMAND` task execution\.  
 The supported parameters are the same as those for the `SendCommand` API call\. For more information, see [SendCommand](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_SendCommand.html) in the *AWS Systems Manager API Reference*\.  
 *Required*: No  
-*Type*: Object with properties that represent the parameters for the `RUN_COMMAND` task
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 This is an object that defines the items like `executionTimeout` and `commands` for the `RUN_COMMAND` task.
