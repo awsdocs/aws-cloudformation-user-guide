@@ -108,6 +108,7 @@ This example maps an ephemeral drive to device /dev/sdc\.
 ]
 ```
 
+
 #### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive--yaml"></a>
 
 ```
@@ -136,6 +137,7 @@ To unmap a device defined in the AMI, set the `NoDevice` property to an empty ma
 ```
 BlockDeviceMappings:
   - DeviceName: /dev/sde
+
     NoDevice: {}
 ```
 

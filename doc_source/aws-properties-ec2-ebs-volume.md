@@ -179,7 +179,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ```
 NewVolume:
   Type: AWS::EC2::Volume
+
   Properties: 
+
     Size: 100
     Encrypted: true
     AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
@@ -210,12 +212,15 @@ NewVolume:
 ```
 NewVolume:
   Type: AWS::EC2::Volume
-  Properties: 
+
+  Properties:
+
     Size: 100
     VolumeType: io1
     Iops: 100
     AvailabilityZone: !GetAtt Ec2Instance.AvailabilityZone
 ```
+
 
 ## See also<a name="aws-properties-ec2-ebs-volume--seealso"></a>
 +  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*

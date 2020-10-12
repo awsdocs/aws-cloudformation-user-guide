@@ -370,4 +370,5 @@ Properties:
   TablePrefix: test-
   Name: my-crawler
   Configuration: "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
+
 ```

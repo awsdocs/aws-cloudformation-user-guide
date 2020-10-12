@@ -109,6 +109,7 @@ The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrins
 
 ```
 CPUAlarmHigh:
+
   Type: 'AWS::CloudWatch::Alarm'
   Properties:
     AlarmDescription: Scale-up if CPU is greater than 90% for 10 minutes
@@ -140,4 +141,3 @@ CPUAlarmLow:
       - Name: AutoScalingGroupName
         Value: !Ref WebServerGroup
     ComparisonOperator: LessThanThreshold
-```
