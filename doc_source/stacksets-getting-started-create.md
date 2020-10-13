@@ -186,7 +186,9 @@ When you create stack sets using the AWS CLI, you run two separate commands\. Du
 1. Run the `create-stack-instances` command to add stack instances to your stack set\. For the `--deployment-targets` parameter, specify the organization root ID to deploy to all accounts in your organization, or specify OU IDs to deploy to all accounts in those OUs\. In this example, we specify OUs with `ou-rcuk-1x5j1lwo` and `ou-rcuk-slr5lh0a` IDs\.
 
    ```
+
    aws cloudformation create-stack-instances --stack-set-name StackSet_myApp --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]'
+
    ```
 **Important**  
 Wait until an operation is complete before starting another one\. You can run only one operation at a time\.

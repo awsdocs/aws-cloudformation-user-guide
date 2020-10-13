@@ -69,7 +69,9 @@ In the example command shown here, we are updating the stack set by using `--par
    \[Service\-managed permissions\] Provide the organization \(root\) ID, OU IDs, or AWS Organizations account IDs you want your update to target\.
 
    ```
+
    aws cloudformation update-stack-set --stack-set-name my-awsconfig-stackset --use-previous-template --parameters ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]' 
+
    ```
 
 1. Verify that your stack set was updated successfully by running the `describe-stack-set-operation` command to show the status and results of your update operation\. For `--operation-id`, use the operation ID that was returned by your `update-stack-set` command\.

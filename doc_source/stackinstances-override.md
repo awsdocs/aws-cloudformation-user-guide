@@ -73,7 +73,9 @@ In the example command shown here, we change the default snapshot delivery frequ
    \[Self\-managed permissions\] Provide the account IDs for which you want to override parameter values on stack instances\.
 
    ```
+
    aws cloudformation update-stack-instances --stack-set-name my-awsconfig-stackset --parameter-overrides ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --accounts '["012345678901"]' --regions '["eu-west-1", "us-west-2"]'
+   
    ```
 
    \[Service\-managed permissions\] Provide the organization root ID, OU IDs, or AWS Organizations account IDs for which you want to override parameters on stack instances\. In this example, we override parameter values for stack instances in all accounts in the OU with the *ou\-rcuk\-1x5j1lwo* ID\.
@@ -81,7 +83,9 @@ In the example command shown here, we change the default snapshot delivery frequ
    The overridden parameter values only apply to the accounts that are currently in the target OU and its child OUs\. Accounts added to the target OU and its child OUs in the future will use the stack set default values and not the overridden values\.
 
    ```
+
    aws cloudformation update-stack-instances --stack-set-name my-awsconfig-stackset --parameter-overrides ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo"]' --regions '["eu-west-1", "us-west-2"]'
+
    ```
 
 1. Verify that your parameter values were successfully overidden on stack instances by running the `describe-stack-set-operation` command to show the status and results of your update operation\. For `--operation-id`, use the operation ID that was returned by your `update-stack-instances` command\.
