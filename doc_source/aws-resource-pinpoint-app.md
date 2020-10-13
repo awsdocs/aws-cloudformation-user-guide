@@ -41,7 +41,7 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-app-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-app-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-app-return-values-ref"></a>
 

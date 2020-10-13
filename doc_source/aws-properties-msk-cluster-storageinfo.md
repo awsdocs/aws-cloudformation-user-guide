@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EBSStorageInfo](#cfn-msk-cluster-storageinfo-ebsstorageinfo)" : [EBSStorageInfo](aws-properties-msk-cluster-ebsstorageinfo.md)
+  "[EBSStorageInfo](#cfn-msk-cluster-storageinfo-ebsstorageinfo)" : EBSStorageInfo
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EBSStorageInfo](#cfn-msk-cluster-storageinfo-ebsstorageinfo): 
-    [EBSStorageInfo](aws-properties-msk-cluster-ebsstorageinfo.md)
+    EBSStorageInfo
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-storageinfo-properties"></a>

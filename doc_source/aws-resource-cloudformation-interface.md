@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 "Metadata" : {
   "AWS::CloudFormation::Interface" : {
-    "[ParameterGroups](#cfn-cloudformation-interface-parametergroups)" : [ ParameterGroup, ... ],
-    "[ParameterLabels](#cfn-cloudformation-interface-parameterlabels)" : ParameterLabel
+    "" : [ ParameterGroup, ... ],
+    "" : ParameterLabel
   }
 }
 ```
@@ -27,27 +27,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Metadata:
   AWS::CloudFormation::Interface:
-    [ParameterGroups](#cfn-cloudformation-interface-parametergroups):
+    :
       - ParameterGroup
-    [ParameterLabels](#cfn-cloudformation-interface-parameterlabels):
+    :
       ParameterLabel
 ```
 
-## Properties<a name="w5635ab1c20c15c15c25c13"></a>
+## Properties<a name="w6974ab1c27c15c15c27c13"></a>
 
 `ParameterGroups`  <a name="cfn-cloudformation-interface-parametergroups"></a>
 A list of parameter group types, where you specify group names, the parameters in each group, and the order in which the parameters are shown\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Interface ParameterGroup](aws-properties-cloudformation-interface-parametergroup.md)  
+*Type*: [AWS CloudFormation interface ParameterGroup](aws-properties-cloudformation-interface-parametergroup.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
 `ParameterLabels`  <a name="cfn-cloudformation-interface-parameterlabels"></a>
 A mapping of parameters and their friendly names that the AWS CloudFormation console shows when a stack is created or updated\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Interface ParameterLabel](aws-properties-cloudformation-interface-parameterlabel.md)  
+*Type*: [AWS CloudFormation interface ParameterLabel](aws-properties-cloudformation-interface-parameterlabel.md)  
 *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
 
-## Example<a name="w5635ab1c20c15c15c25c15"></a>
+## Example<a name="w6974ab1c27c15c15c27c15"></a>
 
 The following example defines two parameter groups: `Network Configuration` and `Amazon EC2 Configuration`\. The `Network Configuration` group includes the `VPCID`, `SubnetId`, and `SecurityGroupID` parameters, which are defined in the `Parameters` section of the template \(not shown\)\. The order in which the console shows these parameters is defined by the order in which the parameters are listed, starting with the `VPCID` parameter\. The example similarly groups and orders the `Amazon EC2 Configuration` parameters\.
 
@@ -99,7 +99,7 @@ Metadata:
         default: "Which VPC should this be deployed to?"
 ```
 
-### Parameter Groups in the Console<a name="w5635ab1c20c15c15c25c15c10"></a>
+### Parameter groups in the console<a name="w6974ab1c27c15c15c27c15c10"></a>
 
 Using the metadata key from this example, the following figure shows how the console displays parameter groups when a stack is created or updated: **Parameter groups in the console** 
 

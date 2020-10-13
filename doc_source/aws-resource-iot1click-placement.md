@@ -57,7 +57,7 @@ The name of the project containing the placement\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-iot1click-placement-return-values"></a>
+## Return values<a name="aws-resource-iot1click-placement-return-values"></a>
 
 ### Ref<a name="aws-resource-iot1click-placement-return-values-ref"></a>
 
@@ -146,7 +146,7 @@ BasicPlacement:
     PlacementName: "placement"
 ```
 
-## See Also<a name="aws-resource-iot1click-placement--seealso"></a>
+## See also<a name="aws-resource-iot1click-placement--seealso"></a>
 + [CreatePlacement](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_CreatePlacement.html)
 + [Projects, Templates, and Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html)
 + [AWS IoT 1\-Click Programming Model](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-programming.html)

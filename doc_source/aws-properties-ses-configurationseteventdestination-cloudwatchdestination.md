@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)" : [ [DimensionConfiguration](aws-properties-ses-configurationseteventdestination-dimensionconfiguration.md), ... ]
+  "[DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)" : [ DimensionConfiguration, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations): 
-    - [DimensionConfiguration](aws-properties-ses-configurationseteventdestination-dimensionconfiguration.md)
+    - DimensionConfiguration
 ```
 
 ## Properties<a name="aws-properties-ses-configurationseteventdestination-cloudwatchdestination-properties"></a>

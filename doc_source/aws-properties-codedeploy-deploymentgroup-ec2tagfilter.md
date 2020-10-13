@@ -36,12 +36,12 @@ The tag filter key\.
 
 `Type`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilter-type"></a>
 The tag filter type:  
-+ KEY\_ONLY: Key only\.
-+ VALUE\_ONLY: Value only\.
-+ KEY\_AND\_VALUE: Key and value\.
++  `KEY_ONLY`: Key only\.
++  `VALUE_ONLY`: Value only\.
++  `KEY_AND_VALUE`: Key and value\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
+*Allowed values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilter-value"></a>

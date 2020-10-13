@@ -1,10 +1,10 @@
-# Custom Resource Reference<a name="crpg-ref"></a>
+# Custom resource reference<a name="crpg-ref"></a>
 
 This section provides detail about:
 + The JSON request and response fields that are used in messages sent to and from AWS CloudFormation when providing a custom resource\.
 + Expected fields for requests to, and responses to, the custom resource provider in response to stack creation, stack updates, and stack deletion\.
 
-## In This Section<a name="w5635ab1c20c25c17b7"></a>
-+ [Custom Resource Request Objects](crpg-ref-requests.md)
-+ [Custom Resource Response Objects](crpg-ref-responses.md)
-+ [Custom Resource Request Types](crpg-ref-requesttypes.md)
+## In this section<a name="w6974ab1c27c24c17b7"></a>
++ [Custom resource request objects](crpg-ref-requests.md)
++ [Custom resource response objects](crpg-ref-responses.md)
++ [Custom resource request types](crpg-ref-requesttypes.md)

@@ -81,10 +81,10 @@ Along with `path` and `name`, the pattern that AWS CodeBuild uses to determine t
 + If `type` is set to `S3`, valid values include:
   +  `BUILD_ID`: Include the build ID in the location of the build output artifact\.
   +  `NONE`: Do not include the build ID\. This is the default if `namespaceType` is not specified\.
-For example, if `path` is set to `MyArtifacts`, `namespaceType` is set to `BUILD_ID`, and `name` is set to `MyArtifact.zip`, the output artifact is stored in `MyArtifacts/build-ID/MyArtifact.zip`\.  
+For example, if `path` is set to `MyArtifacts`, `namespaceType` is set to `BUILD_ID`, and `name` is set to `MyArtifact.zip`, the output artifact is stored in `MyArtifacts/<build-ID>/MyArtifact.zip`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `BUILD_ID | NONE`  
+*Allowed values*: `BUILD_ID | NONE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OverrideArtifactName`  <a name="cfn-codebuild-project-artifacts-overrideartifactname"></a>
@@ -102,7 +102,7 @@ The type of build output artifact to create:
   +  `ZIP`: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `NONE | ZIP`  
+*Allowed values*: `NONE | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-codebuild-project-artifacts-path"></a>
@@ -124,5 +124,5 @@ The `CODEPIPELINE` type is not supported for `secondaryArtifacts`\.
 +  `S3`: The build project stores build output in Amazon Simple Storage Service \(Amazon S3\)\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CODEPIPELINE | NO_ARTIFACTS | S3`  
+*Allowed values*: `CODEPIPELINE | NO_ARTIFACTS | S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -38,7 +38,7 @@ The duration from the time that a proposal is created until it expires\. If memb
 Determines whether the vote percentage must be greater than the `ThresholdPercentage` or must be greater than or equal to the `ThreholdPercentage` to be approved\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `GREATER_THAN | GREATER_THAN_OR_EQUAL_TO`  
+*Allowed values*: `GREATER_THAN | GREATER_THAN_OR_EQUAL_TO`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThresholdPercentage`  <a name="cfn-managedblockchain-member-approvalthresholdpolicy-thresholdpercentage"></a>

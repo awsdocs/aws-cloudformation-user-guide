@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplicationCode](#cfn-kinesisanalytics-application-applicationcode)" : String,
       "[ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription)" : String,
       "[ApplicationName](#cfn-kinesisanalytics-application-applicationname)" : String,
-      "[Inputs](#cfn-kinesisanalytics-application-inputs)" : [ [Input](aws-properties-kinesisanalytics-application-input.md), ... ]
+      "[Inputs](#cfn-kinesisanalytics-application-inputs)" : [ Input, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription): String
   [ApplicationName](#cfn-kinesisanalytics-application-applicationname): String
   [Inputs](#cfn-kinesisanalytics-application-inputs): 
-    - [Input](aws-properties-kinesisanalytics-application-input.md)
+    - Input
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-application-properties"></a>

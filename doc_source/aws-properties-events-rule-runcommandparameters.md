@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RunCommandTargets](#cfn-events-rule-runcommandparameters-runcommandtargets)" : [ [RunCommandTarget](aws-properties-events-rule-runcommandtarget.md), ... ]
+  "[RunCommandTargets](#cfn-events-rule-runcommandparameters-runcommandtargets)" : [ RunCommandTarget, ... ]
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RunCommandTargets](#cfn-events-rule-runcommandparameters-runcommandtargets): 
-    - [RunCommandTarget](aws-properties-events-rule-runcommandtarget.md)
+    - RunCommandTarget
 ```
 
 ## Properties<a name="aws-properties-events-rule-runcommandparameters-properties"></a>

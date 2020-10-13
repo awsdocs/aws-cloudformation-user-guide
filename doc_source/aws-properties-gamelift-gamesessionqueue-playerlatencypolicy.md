@@ -38,7 +38,7 @@ The length of time, in seconds, that the policy is enforced while placing a new 
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-gamelift-gamesessionqueue-playerlatencypolicy--seealso"></a>
+## See also<a name="aws-properties-gamelift-gamesessionqueue-playerlatencypolicy--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Create a Queue](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-creating.html) in the *Amazon GameLift Developer Guide*
 + [PlayerLatencyPolicy](https://docs.aws.amazon.com/gamelift/latest/apireference/API_PlayerLatencyPolicy.html) in the *Amazon GameLift API Reference*

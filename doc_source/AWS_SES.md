@@ -1,6 +1,6 @@
-# SES Resource Type Reference<a name="AWS_SES"></a>
+# SES resource type reference<a name="AWS_SES"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::SES::ConfigurationSet](aws-resource-ses-configurationset.md)
 + [AWS::SES::ConfigurationSetEventDestination](aws-resource-ses-configurationseteventdestination.md)
 + [AWS::SES::ReceiptFilter](aws-resource-ses-receiptfilter.md)

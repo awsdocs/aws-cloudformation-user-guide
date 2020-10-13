@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Prometheus](#cfn-msk-cluster-openmonitoring-prometheus)" : [Prometheus](aws-properties-msk-cluster-prometheus.md)
+  "[Prometheus](#cfn-msk-cluster-openmonitoring-prometheus)" : Prometheus
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Prometheus](#cfn-msk-cluster-openmonitoring-prometheus): 
-    [Prometheus](aws-properties-msk-cluster-prometheus.md)
+    Prometheus
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-openmonitoring-properties"></a>

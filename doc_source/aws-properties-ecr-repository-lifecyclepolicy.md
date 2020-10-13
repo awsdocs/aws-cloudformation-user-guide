@@ -39,6 +39,6 @@ The AWS account ID associated with the registry that contains the repository\. I
 *Pattern*: `[0-9]{12}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ecr-repository-lifecyclepolicy--seealso"></a>
+## See also<a name="aws-properties-ecr-repository-lifecyclepolicy--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 

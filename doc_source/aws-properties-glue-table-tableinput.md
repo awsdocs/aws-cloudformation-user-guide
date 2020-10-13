@@ -14,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Name](#cfn-glue-table-tableinput-name)" : String,
   "[Owner](#cfn-glue-table-tableinput-owner)" : String,
   "[Parameters](#cfn-glue-table-tableinput-parameters)" : Json,
-  "[PartitionKeys](#cfn-glue-table-tableinput-partitionkeys)" : [ [Column](aws-properties-glue-table-column.md), ... ],
+  "[PartitionKeys](#cfn-glue-table-tableinput-partitionkeys)" : [ Column, ... ],
   "[Retention](#cfn-glue-table-tableinput-retention)" : Integer,
-  "[StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor)" : [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md),
+  "[StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor)" : StorageDescriptor,
   "[TableType](#cfn-glue-table-tableinput-tabletype)" : String,
   "[ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext)" : String,
   "[ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext)" : String
@@ -31,10 +31,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Owner](#cfn-glue-table-tableinput-owner): String
   [Parameters](#cfn-glue-table-tableinput-parameters): Json
   [PartitionKeys](#cfn-glue-table-tableinput-partitionkeys): 
-    - [Column](aws-properties-glue-table-column.md)
+    - Column
   [Retention](#cfn-glue-table-tableinput-retention): Integer
   [StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor): 
-    [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md)
+    StorageDescriptor
   [TableType](#cfn-glue-table-tableinput-tabletype): String
   [ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext): String
   [ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext): String

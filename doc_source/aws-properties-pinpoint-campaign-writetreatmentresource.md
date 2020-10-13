@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign WriteTreatmentResource<a name="aws-properties-pinpoint-campaign-writetreatmentresource"></a>
 
-Specifies the settings for a campaign treatment\. A treatment is a variation of a campaign that's used for A/B testing of a campaign\.
+Specifies the settings for a campaign treatment\. A *treatment* is a variation of a campaign that's used for A/B testing of a campaign\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-writetreatmentresource-syntax"></a>
 
@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)" : [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md),
-  "[Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule)" : [Schedule](aws-properties-pinpoint-campaign-schedule.md),
+  "[MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration)" : MessageConfiguration,
+  "[Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule)" : Schedule,
   "[SizePercent](#cfn-pinpoint-campaign-writetreatmentresource-sizepercent)" : Integer,
   "[TreatmentDescription](#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription)" : String,
   "[TreatmentName](#cfn-pinpoint-campaign-writetreatmentresource-treatmentname)" : String
@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MessageConfiguration](#cfn-pinpoint-campaign-writetreatmentresource-messageconfiguration): 
-    [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)
+    MessageConfiguration
   [Schedule](#cfn-pinpoint-campaign-writetreatmentresource-schedule): 
-    [Schedule](aws-properties-pinpoint-campaign-schedule.md)
+    Schedule
   [SizePercent](#cfn-pinpoint-campaign-writetreatmentresource-sizepercent): Integer
   [TreatmentDescription](#cfn-pinpoint-campaign-writetreatmentresource-treatmentdescription): String
   [TreatmentName](#cfn-pinpoint-campaign-writetreatmentresource-treatmentname): String
@@ -57,7 +57,7 @@ A custom description of the treatment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentName`  <a name="cfn-pinpoint-campaign-writetreatmentresource-treatmentname"></a>
-The custom name of the treatment\. A treatment is a variation of a campaign that's used for A/B testing of a campaign\.  
+A custom name for the treatment\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

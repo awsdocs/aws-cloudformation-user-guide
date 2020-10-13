@@ -43,7 +43,7 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values-ref"></a>
 
@@ -81,6 +81,6 @@ myVPCDHCPOptionsAssociation:
        Ref: myDHCPOptions
 ```
 
-## See Also<a name="aws-resource-ec2-vpc-dhcp-options-assoc--seealso"></a>
+## See also<a name="aws-resource-ec2-vpc-dhcp-options-assoc--seealso"></a>
 +  [AssociateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateDhcpOptions.html) in the *Amazon EC2 API Reference*
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*

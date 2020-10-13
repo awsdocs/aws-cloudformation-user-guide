@@ -54,6 +54,6 @@ The ARN of the device, which is an AWS IoT device \(thing\)\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-devicedefinition-device--seealso"></a>
+## See also<a name="aws-properties-greengrass-devicedefinition-device--seealso"></a>
 +  [Device](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-device.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

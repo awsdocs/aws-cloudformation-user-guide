@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CrlConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration-crlconfiguration)" : [CrlConfiguration](aws-properties-acmpca-certificateauthority-crlconfiguration.md)
+  "[CrlConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration-crlconfiguration)" : CrlConfiguration
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CrlConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration-crlconfiguration): 
-    [CrlConfiguration](aws-properties-acmpca-certificateauthority-crlconfiguration.md)
+    CrlConfiguration
 ```
 
 ## Properties<a name="aws-properties-acmpca-certificateauthority-revocationconfiguration-properties"></a>

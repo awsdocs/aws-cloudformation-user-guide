@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoT1Click::Project",
   "Properties" : {
       "[Description](#cfn-iot1click-project-description)" : String,
-      "[PlacementTemplate](#cfn-iot1click-project-placementtemplate)" : [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md),
+      "[PlacementTemplate](#cfn-iot1click-project-placementtemplate)" : PlacementTemplate,
       "[ProjectName](#cfn-iot1click-project-projectname)" : String
     }
 }
@@ -26,7 +26,7 @@ Type: AWS::IoT1Click::Project
 Properties: 
   [Description](#cfn-iot1click-project-description): String
   [PlacementTemplate](#cfn-iot1click-project-placementtemplate): 
-    [PlacementTemplate](aws-properties-iot1click-project-placementtemplate.md)
+    PlacementTemplate
   [ProjectName](#cfn-iot1click-project-projectname): String
 ```
 
@@ -50,7 +50,7 @@ The name of the project from which to obtain information\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-iot1click-project-return-values"></a>
+## Return values<a name="aws-resource-iot1click-project-return-values"></a>
 
 ### Ref<a name="aws-resource-iot1click-project-return-values-ref"></a>
 
@@ -140,7 +140,7 @@ Outputs:
     Value: !Ref BasicProject
 ```
 
-## See Also<a name="aws-resource-iot1click-project--seealso"></a>
+## See also<a name="aws-resource-iot1click-project--seealso"></a>
 + [CreateProject](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_CreateProject.html)
 + [Projects, Templates, and Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html)
 + [AWS IoT 1\-Click Programming Model](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-programming.html)

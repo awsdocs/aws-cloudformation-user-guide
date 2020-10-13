@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The object key name prefix or suffix identifying one or more objects to which the filtering rule applies\. The maximum length is 1,024 characters\. Overlapping prefixes and suffixes are not supported\. For more information, see [Configuring Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `prefix | suffix`  
+*Allowed values*: `prefix | suffix`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules-value"></a>

@@ -99,7 +99,7 @@ DELETE
 Deletes a stack instance in the stack set represented by the provisioned product\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CREATE | DELETE | UPDATE`  
+*Allowed values*: `CREATE | DELETE | UPDATE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StackSetRegions`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetregions"></a>

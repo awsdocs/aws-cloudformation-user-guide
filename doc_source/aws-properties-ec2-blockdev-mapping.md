@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-ec2-blockdev-mapping-devicename)" : String,
-  "[Ebs](#cfn-ec2-blockdev-mapping-ebs)" : [Ebs](aws-properties-ec2-blockdev-template.md),
-  "[NoDevice](#cfn-ec2-blockdev-mapping-nodevice)" : [NoDevice](aws-properties-ec2-instance-nodevice.md),
+  "[Ebs](#cfn-ec2-blockdev-mapping-ebs)" : Ebs,
+  "[NoDevice](#cfn-ec2-blockdev-mapping-nodevice)" : NoDevice,
   "[VirtualName](#cfn-ec2-blockdev-mapping-virtualname)" : String
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-ec2-blockdev-mapping-devicename): String
   [Ebs](#cfn-ec2-blockdev-mapping-ebs): 
-    [Ebs](aws-properties-ec2-blockdev-template.md)
+    Ebs
   [NoDevice](#cfn-ec2-blockdev-mapping-nodevice): 
-    [NoDevice](aws-properties-ec2-instance-nodevice.md)
+    NoDevice
   [VirtualName](#cfn-ec2-blockdev-mapping-virtualname): String
 ```
 
@@ -108,6 +108,7 @@ This example maps an ephemeral drive to device /dev/sdc\.
 ]
 ```
 
+
 #### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive--yaml"></a>
 
 ```
@@ -136,8 +137,9 @@ To unmap a device defined in the AMI, set the `NoDevice` property to an empty ma
 ```
 BlockDeviceMappings:
   - DeviceName: /dev/sde
+
     NoDevice: {}
 ```
 
-## See Also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>
+## See also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>
 +  [ Amazon EC2 Instance Store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon Elastic Compute Cloud User Guide*\.

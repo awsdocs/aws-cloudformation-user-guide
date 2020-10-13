@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AccessSysfs](#cfn-greengrass-functiondefinition-environment-accesssysfs)" : Boolean,
-  "[Execution](#cfn-greengrass-functiondefinition-environment-execution)" : [Execution](aws-properties-greengrass-functiondefinition-execution.md),
-  "[ResourceAccessPolicies](#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies)" : [ [ResourceAccessPolicy](aws-properties-greengrass-functiondefinition-resourceaccesspolicy.md), ... ],
+  "[Execution](#cfn-greengrass-functiondefinition-environment-execution)" : Execution,
+  "[ResourceAccessPolicies](#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies)" : [ ResourceAccessPolicy, ... ],
   "[Variables](#cfn-greengrass-functiondefinition-environment-variables)" : Json
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AccessSysfs](#cfn-greengrass-functiondefinition-environment-accesssysfs): Boolean
   [Execution](#cfn-greengrass-functiondefinition-environment-execution): 
-    [Execution](aws-properties-greengrass-functiondefinition-execution.md)
+    Execution
   [ResourceAccessPolicies](#cfn-greengrass-functiondefinition-environment-resourceaccesspolicies): 
-    - [ResourceAccessPolicy](aws-properties-greengrass-functiondefinition-resourceaccesspolicy.md)
+    - ResourceAccessPolicy
   [Variables](#cfn-greengrass-functiondefinition-environment-variables): Json
 ```
 
@@ -58,6 +58,6 @@ Environment variables for the Lambda function\.
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinition-environment--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinition-environment--seealso"></a>
 +  [FunctionConfigurationEnvironment](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfigurationenvironment.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

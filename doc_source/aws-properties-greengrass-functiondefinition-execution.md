@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IsolationMode](#cfn-greengrass-functiondefinition-execution-isolationmode)" : String,
-  "[RunAs](#cfn-greengrass-functiondefinition-execution-runas)" : [RunAs](aws-properties-greengrass-functiondefinition-runas.md)
+  "[RunAs](#cfn-greengrass-functiondefinition-execution-runas)" : RunAs
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IsolationMode](#cfn-greengrass-functiondefinition-execution-isolationmode): String
   [RunAs](#cfn-greengrass-functiondefinition-execution-runas): 
-    [RunAs](aws-properties-greengrass-functiondefinition-runas.md)
+    RunAs
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-execution-properties"></a>
@@ -45,6 +45,6 @@ Running as the root user increases risks to your data and device\. Do not run as
 *Type*: [RunAs](aws-properties-greengrass-functiondefinition-runas.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinition-execution--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinition-execution--seealso"></a>
 +  [FunctionExecutionConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionexecutionconfig.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

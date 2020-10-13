@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExcessCapacityTerminationPolicy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)" : String,
   "[IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)" : String,
   "[InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior)" : String,
-  "[LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)" : [ [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md), ... ],
-  "[LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)" : [ [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md), ... ],
-  "[LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)" : [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md),
+  "[LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)" : [ SpotFleetLaunchSpecification, ... ],
+  "[LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)" : [ LaunchTemplateConfig, ... ],
+  "[LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)" : LoadBalancersConfig,
   "[ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)" : Boolean,
   "[SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)" : String,
   "[TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)" : Integer,
@@ -37,11 +37,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole): String
   [InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior): String
   [LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications): 
-    - [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)
+    - SpotFleetLaunchSpecification
   [LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs): 
-    - [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)
+    - LaunchTemplateConfig
   [LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig): 
-    [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)
+    LoadBalancersConfig
   [ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances): Boolean
   [SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice): String
   [TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity): Integer
@@ -60,14 +60,14 @@ If the allocation strategy is `diversified`, Spot Fleet launches instances from 
 If the allocation strategy is `capacityOptimized`, Spot Fleet launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `capacityOptimized | diversified | lowestPrice`  
+*Allowed values*: `capacityOptimized | diversified | lowestPrice`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExcessCapacityTerminationPolicy`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy"></a>
 Indicates whether running Spot Instances should be terminated if you decrease the target capacity of the Spot Fleet request below the current size of the Spot Fleet\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `default | noTermination`  
+*Allowed values*: `default | noTermination`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamFleetRole`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole"></a>
@@ -80,7 +80,7 @@ The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\
 The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `hibernate | stop | terminate`  
+*Allowed values*: `hibernate | stop | terminate`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchSpecifications`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications"></a>
@@ -130,7 +130,7 @@ Indicates whether running Spot Instances are terminated when the Spot Fleet requ
 The type of request\. Indicates whether the Spot Fleet only requests the target capacity or also attempts to maintain it\. When this value is `request`, the Spot Fleet only places the required requests\. It does not attempt to replenish Spot Instances if capacity is diminished, nor does it submit requests in alternative Spot pools if capacity is not available\. When this value is `maintain`, the Spot Fleet maintains the target capacity\. The Spot Fleet places the required requests to meet capacity and automatically replenishes any interrupted instances\. Default: `maintain`\. `instant` is listed but is not used by Spot Fleet\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `instant | maintain | request`  
+*Allowed values*: `instant | maintain | request`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ValidFrom`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom"></a>

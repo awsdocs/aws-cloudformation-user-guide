@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Priority`  <a name="cfn-wafv2-rulegroup-texttransformation-priority"></a>
 Sets the relative processing order for multiple transformations that are defined for a rule statement\. AWS WAF processes all transformations, from lowest priority to highest, before inspecting the transformed content\. The priorities don't need to be consecutive, but they must all be different\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,7 +66,7 @@ Use this option to convert uppercase letters \(A\-Z\) to lowercase \(a\-z\)\.
 Use this option to decode a URL\-encoded value\.  
  **NONE**   
 Specify `NONE` if you don't want any text transformations\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

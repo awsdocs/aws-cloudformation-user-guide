@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[File](#cfn-appmesh-virtualnode-accesslog-file)" : [FileAccessLog](aws-properties-appmesh-virtualnode-fileaccesslog.md)
+  "[File](#cfn-appmesh-virtualnode-accesslog-file)" : FileAccessLog
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [File](#cfn-appmesh-virtualnode-accesslog-file): 
-    [FileAccessLog](aws-properties-appmesh-virtualnode-fileaccesslog.md)
+    FileAccessLog
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-accesslog-properties"></a>

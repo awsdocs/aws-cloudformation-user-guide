@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FindMatchesParameters](#cfn-glue-mltransform-transformparameters-findmatchesparameters)" : [FindMatchesParameters](aws-properties-glue-mltransform-transformparameters-findmatchesparameters.md),
+  "[FindMatchesParameters](#cfn-glue-mltransform-transformparameters-findmatchesparameters)" : FindMatchesParameters,
   "[TransformType](#cfn-glue-mltransform-transformparameters-transformtype)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FindMatchesParameters](#cfn-glue-mltransform-transformparameters-findmatchesparameters): 
-    [FindMatchesParameters](aws-properties-glue-mltransform-transformparameters-findmatchesparameters.md)
+    FindMatchesParameters
   [TransformType](#cfn-glue-mltransform-transformparameters-transformtype): String
 ```
 

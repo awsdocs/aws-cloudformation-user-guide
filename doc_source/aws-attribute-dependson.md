@@ -1,21 +1,22 @@
-# DependsOn Attribute<a name="aws-attribute-dependson"></a>
+# DependsOn attribute<a name="aws-attribute-dependson"></a>
 
 With the `DependsOn` attribute you can specify that the creation of a specific resource follows another\. When you add a `DependsOn` attribute to a resource, that resource is created only after the creation of the resource specified in the `DependsOn` attribute\.
 
 **Important**  
-Dependent stacks also have implicit dependencies\. For example, if the properties of resource A use a `!Ref` to resource B, the following rule apply:  
+Dependent stacks also have implicit dependencies in the form of target properties `!Ref` and `!GetAtt`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rule apply:  
 Resource B is created before resource A\.
 Resource A is deleted before resource B\.
+Resource B is updated before resource A\.
 
 You can use the `DependsOn` attribute with any resource\. Here are some typical uses:
-+ Determine when a wait condition goes into effect\. For more information, see [Creating Wait Conditions in a Template](using-cfn-waitcondition.md)\.
++ Determine when a wait condition goes into effect\. For more information, see [Creating wait conditions in a template](using-cfn-waitcondition.md)\.
 + Declare dependencies for resources that must be created or deleted in a specific order\. For example, you must explicitly declare dependencies on gateway attachments for some resources in a VPC\. For more information, see [When a DependsOn attribute is required](#gatewayattachment)\.
 + Override default parallelism when creating, updating, or deleting resources\. AWS CloudFormation creates, updates, and deletes resources in parallel to the extent possible\. It automatically determines which resources in a template can be parallelized and which have dependencies that require other operations to finish first\. You can use `DependsOn` to explicitly specify dependencies, which overrides the default parallelism and directs CloudFormation to operate on those resources in a specified order\.
 
 **Note**  
 During a stack update, resources that depend on updated resources are updated automatically\. AWS CloudFormation makes no changes to the automatically\-updated resources, but, if a stack policy is associated with these resources, your account must have the permissions to update them\.
 
-## Syntax<a name="w5635ab1c26c19c15c13"></a>
+## Syntax<a name="w6974ab1c33c23c15c13"></a>
 
 The `DependsOn` attribute can take a single string or list of strings\.
 
@@ -23,7 +24,7 @@ The `DependsOn` attribute can take a single string or list of strings\.
 "DependsOn" : [ String, ... ]
 ```
 
-## Example<a name="w5635ab1c26c19c15c15"></a>
+## Example<a name="w6974ab1c33c23c15c15"></a>
 
 The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource with a `DependsOn` attribute that specifies myDB, an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. When AWS CloudFormation creates this stack, it first creates myDB, then creates Ec2Instance\.
 
@@ -71,7 +72,7 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 39.             "Type" : "AWS::RDS::DBInstance",
 40.             "Properties" : {
 41.                "AllocatedStorage" : "5",
-42.                "DBInstanceClass" : "db.m1.small",
+42.                "DBInstanceClass" : "db.t2.small",
 43.                "Engine" : "MySQL",
 44.                "EngineVersion" : "5.5",
 45.                "MasterUsername" : "MyName",
@@ -112,7 +113,7 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 25.     Type: AWS::RDS::DBInstance
 26.     Properties:
 27.       AllocatedStorage: '5'
-28.       DBInstanceClass: db.m1.small
+28.       DBInstanceClass: db.t2.small
 29.       Engine: MySQL
 30.       EngineVersion: '5.5'
 31.       MasterUsername: MyName
@@ -234,7 +235,7 @@ EC2Host:
         Ref: PublicSubnet
 ```
 
-### Amazon ECS Service and Auto Scaling Group<a name="w5635ab1c26c19c15c17c18"></a>
+### Amazon ECS service and Auto Scaling group<a name="w6974ab1c33c23c15c17c18"></a>
 
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service\.
 
@@ -292,7 +293,7 @@ service:
       Ref: taskdefinition
 ```
 
-### IAM Role Policy<a name="w5635ab1c26c19c15c17c20"></a>
+### IAM role policy<a name="w6974ab1c33c23c15c17c20"></a>
 
 Resources that make additional calls to AWS require a service role, which permits a service to make calls to AWS on your behalf\. For example, the `AWS::CodeDeploy::DeploymentGroup` resource requires a service role so that CodeDeploy has permissions to deploy applications to your instances\. When you have a single template that defines a service role, the role's policy \(by using the `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy` resource\), and a resource that uses the role, add a dependency so that the resource depends on the role's policy\. This dependency ensures that the policy is available throughout the resource's lifecycle\.
 

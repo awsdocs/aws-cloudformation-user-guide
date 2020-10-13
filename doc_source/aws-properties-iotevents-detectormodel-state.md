@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnEnter](#cfn-iotevents-detectormodel-state-onenter)" : [OnEnter](aws-properties-iotevents-detectormodel-onenter.md),
-  "[OnExit](#cfn-iotevents-detectormodel-state-onexit)" : [OnExit](aws-properties-iotevents-detectormodel-onexit.md),
-  "[OnInput](#cfn-iotevents-detectormodel-state-oninput)" : [OnInput](aws-properties-iotevents-detectormodel-oninput.md),
+  "[OnEnter](#cfn-iotevents-detectormodel-state-onenter)" : OnEnter,
+  "[OnExit](#cfn-iotevents-detectormodel-state-onexit)" : OnExit,
+  "[OnInput](#cfn-iotevents-detectormodel-state-oninput)" : OnInput,
   "[StateName](#cfn-iotevents-detectormodel-state-statename)" : String
 }
 ```
@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnEnter](#cfn-iotevents-detectormodel-state-onenter): 
-    [OnEnter](aws-properties-iotevents-detectormodel-onenter.md)
+    OnEnter
   [OnExit](#cfn-iotevents-detectormodel-state-onexit): 
-    [OnExit](aws-properties-iotevents-detectormodel-onexit.md)
+    OnExit
   [OnInput](#cfn-iotevents-detectormodel-state-oninput): 
-    [OnInput](aws-properties-iotevents-detectormodel-oninput.md)
+    OnInput
   [StateName](#cfn-iotevents-detectormodel-state-statename): String
 ```
 
@@ -38,7 +38,7 @@ When entering this state, perform these `actions` if the `condition` is TRUE\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnExit`  <a name="cfn-iotevents-detectormodel-state-onexit"></a>
-When exiting this state, perform these `actions` if the specified `condition` is TRUE\.  
+When exiting this state, perform these `actions` if the specified `condition` is `TRUE`\.  
 *Required*: No  
 *Type*: [OnExit](aws-properties-iotevents-detectormodel-onexit.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

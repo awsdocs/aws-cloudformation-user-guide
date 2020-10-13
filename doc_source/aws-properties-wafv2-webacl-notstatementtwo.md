@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Statement](#cfn-wafv2-webacl-notstatementtwo-statement)" : [StatementThree](aws-properties-wafv2-webacl-statementthree.md)
+  "[Statement](#cfn-wafv2-webacl-notstatementtwo-statement)" : StatementThree
 }
 ```
 
@@ -18,13 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Statement](#cfn-wafv2-webacl-notstatementtwo-statement): 
-    [StatementThree](aws-properties-wafv2-webacl-statementthree.md)
+    StatementThree
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-notstatementtwo-properties"></a>
 
 `Statement`  <a name="cfn-wafv2-webacl-notstatementtwo-statement"></a>
 Logical NOT statement used to negate the match results of a nested statement\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [StatementThree](aws-properties-wafv2-webacl-statementthree.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

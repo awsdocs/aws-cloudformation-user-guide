@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ErrorDocument](#cfn-s3-websiteconfiguration-errordocument)" : String,
   "[IndexDocument](#cfn-s3-websiteconfiguration-indexdocument)" : String,
-  "[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo)" : [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md),
-  "[RoutingRules](#cfn-s3-websiteconfiguration-routingrules)" : [ [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md), ... ]
+  "[RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo)" : RedirectAllRequestsTo,
+  "[RoutingRules](#cfn-s3-websiteconfiguration-routingrules)" : [ RoutingRule, ... ]
 }
 ```
 
@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ErrorDocument](#cfn-s3-websiteconfiguration-errordocument): String
   [IndexDocument](#cfn-s3-websiteconfiguration-indexdocument): String
   [RedirectAllRequestsTo](#cfn-s3-websiteconfiguration-redirectallrequeststo): 
-    [RedirectAllRequestsTo](aws-properties-s3-websiteconfiguration-redirectallrequeststo.md)
+    RedirectAllRequestsTo
   [RoutingRules](#cfn-s3-websiteconfiguration-routingrules): 
-    - [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)
+    - RoutingRule
 ```
 
 ## Properties<a name="aws-properties-s3-websiteconfiguration-properties"></a>
@@ -54,3 +54,6 @@ Rules that define when a redirect is applied and the redirect behavior\.
 *Required*: No  
 *Type*: List of [RoutingRule](aws-properties-s3-websiteconfiguration-routingrules.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-websiteconfiguration--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)

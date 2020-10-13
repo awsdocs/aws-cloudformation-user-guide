@@ -66,7 +66,7 @@ The schema to use to transform data to one or more output formats\. Specify null
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-model-return-values"></a>
+## Return values<a name="aws-resource-apigateway-model-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-model-return-values-ref"></a>
 
@@ -142,5 +142,5 @@ PetsModelNoFlatten:
             type: number
 ```
 
-## See Also<a name="aws-resource-apigateway-model--seealso"></a>
+## See also<a name="aws-resource-apigateway-model--seealso"></a>
 + [model:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/model-create/) in the *Amazon API Gateway REST API Reference*

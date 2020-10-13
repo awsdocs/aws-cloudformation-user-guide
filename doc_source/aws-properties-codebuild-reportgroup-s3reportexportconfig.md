@@ -56,7 +56,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 +  `ZIP`: AWS CodeBuild creates a ZIP file with the raw data in the output bucket\. 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `NONE | ZIP`  
+*Allowed values*: `NONE | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-codebuild-reportgroup-s3reportexportconfig-path"></a>

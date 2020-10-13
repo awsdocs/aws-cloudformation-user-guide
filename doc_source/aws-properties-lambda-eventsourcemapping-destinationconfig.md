@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)" : [OnFailure](aws-properties-lambda-eventsourcemapping-onfailure.md)
+  "[OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure)" : OnFailure
 }
 ```
 
@@ -18,14 +18,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnFailure](#cfn-lambda-eventsourcemapping-destinationconfig-onfailure): 
-    [OnFailure](aws-properties-lambda-eventsourcemapping-onfailure.md)
+    OnFailure
 ```
 
 ## Properties<a name="aws-properties-lambda-eventsourcemapping-destinationconfig-properties"></a>
 
 `OnFailure`  <a name="cfn-lambda-eventsourcemapping-destinationconfig-onfailure"></a>
 The destination configuration for failed invocations\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [OnFailure](aws-properties-lambda-eventsourcemapping-onfailure.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -72,7 +72,7 @@ For EC2\-VPC, you can specify either the instance ID or the network interface ID
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-ec2-eip-association-return-values"></a>
+## Return values<a name="aws-properties-ec2-eip-association-return-values"></a>
 
 ### Ref<a name="aws-properties-ec2-eip-association-return-values-ref"></a>
 
@@ -246,10 +246,10 @@ Resources:
       Tags:
       - Key: Role
         Value: Test Instance
-UserData:
-  Fn::Base64: !Sub |
-    #!/bin/bash -xe
-    yum install ec2-net-utils -y
-    ec2ifup eth1
-    service httpd start
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -xe
+          yum install ec2-net-utils -y
+          ec2ifup eth1
+          service httpd start
 ```

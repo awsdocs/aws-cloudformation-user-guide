@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specify `IPV4` or `IPV6`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IPV4 | IPV6`  
+*Allowed values*: `IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-wafregional-ipset-ipsetdescriptor-value"></a>
@@ -45,4 +45,7 @@ Specify an IPv6 address by using CIDR notation\. For example:
 + To configure AWS WAF to allow, block, or count requests that originated from IP addresses 1111:0000:0000:0000:0000:0000:0000:0000 to 1111:0000:0000:0000:ffff:ffff:ffff:ffff, specify `1111:0000:0000:0000:0000:0000:0000:0000/64`\.
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `50`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

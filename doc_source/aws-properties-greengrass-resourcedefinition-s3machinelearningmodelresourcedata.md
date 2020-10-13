@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath)" : String,
+  "[OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting)" : ResourceDownloadOwnerSetting,
   "[S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri)" : String
 }
 ```
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DestinationPath](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-destinationpath): String
+  [OwnerSetting](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting): 
+    ResourceDownloadOwnerSetting
   [S3Uri](#cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri): String
 ```
 
@@ -32,12 +35,18 @@ The absolute local path of the resource inside the Lambda environment\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OwnerSetting`  <a name="cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-ownersetting"></a>
+The owner setting for the downloaded machine learning resource\. For more information, see [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html) in the *AWS IoT Greengrass Developer Guide*\.  
+*Required*: No  
+*Type*: [ResourceDownloadOwnerSetting](aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `S3Uri`  <a name="cfn-greengrass-resourcedefinition-s3machinelearningmodelresourcedata-s3uri"></a>
 The URI of the source model in an Amazon S3 bucket\. The model package must be in `tar.gz` or `.zip` format\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata--seealso"></a>
 +  [S3MachineLearningModelResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-s3machinelearningmodelresourcedata.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

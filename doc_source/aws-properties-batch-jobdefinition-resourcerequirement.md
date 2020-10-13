@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The type of resource to assign to a container\. Currently, the only supported resource type is `GPU`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `GPU`  
+*Allowed values*: `GPU`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-batch-jobdefinition-resourcerequirement-value"></a>

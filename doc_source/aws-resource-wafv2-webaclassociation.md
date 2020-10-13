@@ -3,7 +3,7 @@
 **Note**  
 This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
-Use a web ACL association to define an association between a Web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. 
+Use a web ACL association to define an association between a Web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. 
 
 For AWS CloudFront, don't use this resource\. Instead, use your CloudFront distribution configuration\. To associate a Web ACL with a distribution, provide the Amazon Resource Name \(ARN\) of the [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) to your CloudFront distribution configuration\. To disassociate a web ACL, provide an empty ARN\. For information, see [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)\. 
 
@@ -38,13 +38,14 @@ Properties:
 The Amazon Resource Name \(ARN\) of the resource to associate with the web ACL\.   
 The ARN must be in one of the following formats:  
 + For an Application Load Balancer: `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id ` 
-+ For an Amazon API Gateway stage: `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name ` 
++ For an Amazon API Gateway REST API: `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name ` 
++ For an AppSync GraphQL API: `arn:aws:appsync:region:account-id:apis/ GraphQLApiId`
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `.*\S.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WebACLArn`  <a name="cfn-wafv2-webaclassociation-webaclarn"></a>
 The Amazon Resource Name \(ARN\) of the Web ACL that you want to associate with the resource\.  
@@ -53,9 +54,9 @@ The Amazon Resource Name \(ARN\) of the Web ACL that you want to associate with 
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `.*\S.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafv2-webaclassociation-return-values"></a>
+## Return values<a name="aws-resource-wafv2-webaclassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-wafv2-webaclassociation-return-values-ref"></a>
 

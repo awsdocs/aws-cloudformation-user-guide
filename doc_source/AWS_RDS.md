@@ -1,10 +1,12 @@
-# RDS Resource Type Reference<a name="AWS_RDS"></a>
+# RDS resource type reference<a name="AWS_RDS"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)
 + [AWS::RDS::DBClusterParameterGroup](aws-resource-rds-dbclusterparametergroup.md)
 + [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)
 + [AWS::RDS::DBParameterGroup](aws-properties-rds-dbparametergroup.md)
++ [AWS::RDS::DBProxy](aws-resource-rds-dbproxy.md)
++ [AWS::RDS::DBProxyTargetGroup](aws-resource-rds-dbproxytargetgroup.md)
 + [AWS::RDS::DBSecurityGroup](aws-properties-rds-security-group.md)
 + [AWS::RDS::DBSecurityGroupIngress](aws-resource-rds-security-group-ingress.md)
 + [AWS::RDS::DBSubnetGroup](aws-resource-rds-dbsubnet-group.md)

@@ -3,7 +3,7 @@
 Defines what execution history events are logged and where they are logged\.
 
 **Note**  
-The `loggingConfiguration` parameter is only valid when `type` is set to `EXPRESS`\. By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
+By default, the `level` is set to `OFF`\. For more information see [Log Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS Step Functions User Guide\.
 
 ## Syntax<a name="aws-properties-stepfunctions-statemachine-loggingconfiguration-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destinations](#cfn-stepfunctions-statemachine-loggingconfiguration-destinations)" : [ [LogDestination](aws-properties-stepfunctions-statemachine-logdestination.md), ... ],
+  "[Destinations](#cfn-stepfunctions-statemachine-loggingconfiguration-destinations)" : [ LogDestination, ... ],
   "[IncludeExecutionData](#cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata)" : Boolean,
   "[Level](#cfn-stepfunctions-statemachine-loggingconfiguration-level)" : String
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Destinations](#cfn-stepfunctions-statemachine-loggingconfiguration-destinations): 
-    - [LogDestination](aws-properties-stepfunctions-statemachine-logdestination.md)
+    - LogDestination
   [IncludeExecutionData](#cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata): Boolean
   [Level](#cfn-stepfunctions-statemachine-loggingconfiguration-level): String
 ```
@@ -37,7 +37,7 @@ An array of objects that describes where your execution history events will be l
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeExecutionData`  <a name="cfn-stepfunctions-statemachine-loggingconfiguration-includeexecutiondata"></a>
-Determines whether execution data is included in your log\. When set to `FALSE`, data is excluded\.  
+Determines whether execution data is included in your log\. When set to `false`, data is excluded\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

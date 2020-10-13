@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution GeoRestriction<a name="aws-properties-cloudfront-distribution-georestriction"></a>
 
-A complex type that controls the countries in which your content is distributed\. CloudFront determines the location of your users using `MaxMind` GeoIP databases\. 
+A complex type that controls the countries in which your content is distributed\. CloudFront determines the location of your users using `MaxMind` GeoIP databases\. To disable geo restriction, remove the [Restrictions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-restrictions) property from your stack template\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-georestriction-syntax"></a>
 
@@ -40,8 +40,8 @@ The method that you want to use to restrict distribution of your content by coun
 +  `whitelist`: The `Location` elements specify the countries in which you want CloudFront to distribute your content\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `blacklist | none | whitelist`  
+*Allowed values*: `blacklist | none | whitelist`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-georestriction--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-georestriction--seealso"></a>
 +  [GeoRestriction](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GeoRestriction.html) in the *Amazon CloudFront API Reference* 

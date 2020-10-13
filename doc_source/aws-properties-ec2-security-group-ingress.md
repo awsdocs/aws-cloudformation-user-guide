@@ -6,7 +6,7 @@ An inbound rule permits instances to receive traffic from the specified IPv4 or 
 
 You specify a protocol for each rule \(for example, TCP\)\. For TCP and UDP, you must also specify a port or port range\. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code\. You can use \-1 to mean all types or all codes\.
 
-You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.
+You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\. If you do not specify one of these parameters, the stack will launch successfully but the rule will not be added to the security group\.
 
 Rule changes are propagated to instances within the security group as quickly as possible\. However, a small delay might occur\.
 
@@ -106,7 +106,7 @@ The IP protocol name \(`tcp`, `udp`, `icmp`, `icmpv6`\) or number \(see [Protoco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourcePrefixListId`  <a name="cfn-ec2-securitygroupingress-sourceprefixlistid"></a>
-\[EC2\-VPC only\] The prefix list IDs for an AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
+\[EC2\-VPC only\] The ID of a prefix list\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -125,7 +125,7 @@ You must specify the `GroupName` property or the `GroupId` property\. For securi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceSecurityGroupOwnerId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupownerid"></a>
-\[nondefault VPC\] The AWS account ID for the source security group, if the source security group is in a different account\. You can't specify this parameter in combination with the following parameters: the CIDR IP address range, the IP protocol, the start of the port range, and the end of the port range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
+\[nondefault VPC\] The AWS account ID that owns the source security group\. You can't specify this property with an IP address range\.  
 If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
 *Required*: Conditional  
 *Type*: String  
@@ -166,7 +166,7 @@ The following template example defines an EC2 security group with an ingress rul
 "SGBaseIngress": {
    "Type": "AWS::EC2::SecurityGroupIngress",
    "Properties": {
-      "GroupName": {
+      "GroupId": {
          "Ref": "SGBase"
       },
       "IpProtocol": "tcp",
@@ -197,7 +197,7 @@ SGBase:
 SGBaseIngress:
    Type: 'AWS::EC2::SecurityGroupIngress'
    Properties:
-      GroupName: !Ref SGBase
+      GroupId: !Ref SGBase
       IpProtocol: tcp
       FromPort: 80
       ToPort: 80

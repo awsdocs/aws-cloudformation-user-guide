@@ -35,10 +35,10 @@ Properties:
 The placement strategy\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cluster | partition | spread`  
+*Allowed values*: `cluster | partition | spread`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-placementgroup-return-values"></a>
+## Return values<a name="aws-resource-ec2-placementgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-placementgroup-return-values-ref"></a>
 
