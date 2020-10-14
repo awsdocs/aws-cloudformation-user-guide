@@ -85,24 +85,47 @@ The following example creates a custom csvclassifier in AWS Glue.
 
 ```
 {
-  "Description": "AWS Glue Custom  classifier Test",
-  "Resources": {
-    "MyCSVclassifier": {
-  "Type" : "AWS::Glue::Classifier",
-  "Properties" : {
-      "CsvClassifier" : {
-  "AllowSingleColumn" : true,
-  "ContainsHeader" : "PRESENT",
-  "Delimiter" : ",",
-  "Header" : [ "id","name" ],
-  "Name" : csvclassify,
-  "QuoteSymbol" : "\""
-}
-     
+    "Description": "AWS Glue Custom Classifier Test",
+    "Resources": {
+        "MyCSVclassifier": {
+            "Type": "AWS::Glue::Classifier",
+            "Properties": {
+                "CsvClassifier": {
+                    "AllowSingleColumn": true,
+                    "ContainsHeader": "PRESENT",
+                    "Delimiter": ",",
+                    "Header": [
+                        "id",
+                        "name"
+                    ],
+                    "Name": "csvclassify",
+                    "QuoteSymbol": "\""
+                }
+            }
+        }
     }
 }
-  }
-}
+
+```
+
+YAML
+
+```
+
+Description: AWS Glue Custom Classifier Test
+Resources:
+  MyCSVclassifier:
+    Type: 'AWS::Glue::Classifier'
+    Properties:
+      CsvClassifier:
+        AllowSingleColumn: true
+        ContainsHeader: PRESENT
+        Delimiter: ','
+        Header:
+          - id
+          - name
+        Name: csvclassify
+        QuoteSymbol: '"'
 
 ```
 
