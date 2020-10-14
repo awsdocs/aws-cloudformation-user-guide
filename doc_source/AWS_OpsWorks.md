@@ -1,6 +1,6 @@
-# AWS OpsWorks Resource Type Reference<a name="AWS_OpsWorks"></a>
+# AWS OpsWorks resource type reference<a name="AWS_OpsWorks"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::OpsWorks::App](aws-resource-opsworks-app.md)
 + [AWS::OpsWorks::ElasticLoadBalancerAttachment](aws-resource-opsworks-elbattachment.md)
 + [AWS::OpsWorks::Instance](aws-resource-opsworks-instance.md)

@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Deployment<a name="aws-resource-apigatewayv2-deployment"></a>
 
-The `AWS::ApiGatewayV2::Deployment` resource creates a deployment for an API\. For more information, see [Deploy a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-websocket-deployment.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGatewayV2::Deployment` resource creates a deployment for an API\.
 
 ## Syntax<a name="aws-resource-apigatewayv2-deployment-syntax"></a>
 
@@ -49,7 +49,7 @@ The name of the `Stage` resource for the `Deployment` resource to create\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-deployment-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-deployment-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-deployment-return-values-ref"></a>
 
@@ -96,5 +96,5 @@ Deployment:
     StageName: Beta
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-deployment--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-deployment--seealso"></a>
 + [CreateDeployment](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-deployments.html#CreateDeployment) in the *Amazon API Gateway Version 2 API Reference*

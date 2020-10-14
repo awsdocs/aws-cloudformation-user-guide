@@ -44,5 +44,5 @@ The time period for which the maximum limit of requests applies, such as `DAY` o
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-usageplan-quotasettings--seealso"></a>
+## See also<a name="aws-properties-apigateway-usageplan-quotasettings--seealso"></a>
 + [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan/) in the *Amazon API Gateway REST API Reference*

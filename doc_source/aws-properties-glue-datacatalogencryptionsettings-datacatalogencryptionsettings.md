@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ConnectionPasswordEncryption](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-connectionpasswordencryption)" : [ConnectionPasswordEncryption](aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.md),
-  "[EncryptionAtRest](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-encryptionatrest)" : [EncryptionAtRest](aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.md)
+  "[ConnectionPasswordEncryption](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-connectionpasswordencryption)" : ConnectionPasswordEncryption,
+  "[EncryptionAtRest](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-encryptionatrest)" : EncryptionAtRest
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ConnectionPasswordEncryption](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-connectionpasswordencryption): 
-    [ConnectionPasswordEncryption](aws-properties-glue-datacatalogencryptionsettings-connectionpasswordencryption.md)
+    ConnectionPasswordEncryption
   [EncryptionAtRest](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-encryptionatrest): 
-    [EncryptionAtRest](aws-properties-glue-datacatalogencryptionsettings-encryptionatrest.md)
+    EncryptionAtRest
 ```
 
 ## Properties<a name="aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings-properties"></a>

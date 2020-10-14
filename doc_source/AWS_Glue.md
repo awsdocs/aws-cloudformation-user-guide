@@ -1,6 +1,6 @@
-# AWS Glue Resource Type Reference<a name="AWS_Glue"></a>
+# AWS Glue resource type reference<a name="AWS_Glue"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Glue::Classifier](aws-resource-glue-classifier.md)
 + [AWS::Glue::Connection](aws-resource-glue-connection.md)
 + [AWS::Glue::Crawler](aws-resource-glue-crawler.md)

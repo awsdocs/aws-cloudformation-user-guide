@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution<a name="aws-resource-cloudfront-streamingdistribution"></a>
 
-A streaming distribution\. 
+A streaming distribution tells CloudFront where you want RTMP content to be delivered from, and the details about how to track and manage content delivery\.
 
 ## Syntax<a name="aws-resource-cloudfront-streamingdistribution-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::StreamingDistribution",
   "Properties" : {
-      "[StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)" : [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md),
+      "[StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)" : StreamingDistributionConfig,
       "[Tags](#cfn-cloudfront-streamingdistribution-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::StreamingDistribution
 Properties: 
   [StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig): 
-    [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md)
+    StreamingDistributionConfig
   [Tags](#cfn-cloudfront-streamingdistribution-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -43,7 +43,7 @@ A complex type that contains zero or more `Tag` elements\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-streamingdistribution-return-values"></a>
+## Return values<a name="aws-resource-cloudfront-streamingdistribution-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudfront-streamingdistribution-return-values-ref"></a>
 
@@ -60,7 +60,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-cloudfront-streamingdistribution-return-values-fn--getatt-fn--getatt"></a>
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-The domain name of the resource, such as `sct27g85mgx04.cloudfront.net`\. 
+The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 ## Examples<a name="aws-resource-cloudfront-streamingdistribution--examples"></a>
 

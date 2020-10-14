@@ -57,14 +57,14 @@ One or more tags for the customer gateway\.
 The type of VPN connection that this customer gateway supports \(`ipsec.1`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ipsec.1`  
+*Allowed values*: `ipsec.1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-customer-gateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-customer-gateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-customer-gateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the customer gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the customer gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -100,5 +100,5 @@ myCustomerGateway:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
+## See also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
 +  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 

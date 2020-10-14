@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool EmailConfiguration<a name="aws-properties-cognito-userpool-emailconfiguration"></a>
 
-`EmailConfiguration` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the email configuration of an Amazon Cognito User Pool\.
+The email configuration\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-emailconfiguration-syntax"></a>
 
@@ -10,7 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ConfigurationSet](#cfn-cognito-userpool-emailconfiguration-configurationset)" : String,
   "[EmailSendingAccount](#cfn-cognito-userpool-emailconfiguration-emailsendingaccount)" : String,
+  "[From](#cfn-cognito-userpool-emailconfiguration-from)" : String,
   "[ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress)" : String,
   "[SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn)" : String
 }
@@ -19,12 +21,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpool-emailconfiguration-syntax.yaml"></a>
 
 ```
+  [ConfigurationSet](#cfn-cognito-userpool-emailconfiguration-configurationset): String
   [EmailSendingAccount](#cfn-cognito-userpool-emailconfiguration-emailsendingaccount): String
+  [From](#cfn-cognito-userpool-emailconfiguration-from): String
   [ReplyToEmailAddress](#cfn-cognito-userpool-emailconfiguration-replytoemailaddress): String
   [SourceArn](#cfn-cognito-userpool-emailconfiguration-sourcearn): String
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-emailconfiguration-properties"></a>
+
+`ConfigurationSet`  <a name="cfn-cognito-userpool-emailconfiguration-configurationset"></a>
+The set of configuration rules that can be applied to emails sent using Amazon SES\. A configuration set is applied to an email by including a reference to the configuration set in the headers of the email\. Once applied, all of the rules in that configuration set are applied to the email\. Configuration sets can be used to apply the following types of rules to emails:   
++ Event publishing – Amazon SES can track the number of send, delivery, open, click, bounce, and complaint events for each email sent\. Use event publishing to send information about these events to other AWS services such as SNS and CloudWatch\.
++ IP pool management – When leasing dedicated IP addresses with Amazon SES, you can create groups of IP addresses, called dedicated IP pools\. You can then associate the dedicated IP pools with configuration sets\.
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `^[a-zA-Z0-9_-]+$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSendingAccount`  <a name="cfn-cognito-userpool-emailconfiguration-emailsendingaccount"></a>
 Specifies whether Amazon Cognito emails your users by using its built\-in email functionality or your Amazon SES email configuration\. Specify one of the following values:    
@@ -38,7 +53,13 @@ If you use this option, you must provide the ARN of an Amazon SES verified email
 Before Amazon Cognito can email your users, it requires additional permissions to call Amazon SES on your behalf\. When you update your user pool with this option, Amazon Cognito creates a *service\-linked role*, which is a type of IAM role, in your AWS account\. This role contains the permissions that allow Amazon Cognito to access Amazon SES and send email messages with your address\. For more information about the service\-linked role that Amazon Cognito creates, see [Using Service\-Linked Roles for Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/using-service-linked-roles.html) in the *Amazon Cognito Developer Guide*\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `COGNITO_DEFAULT | DEVELOPER`  
+*Allowed values*: `COGNITO_DEFAULT | DEVELOPER`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`From`  <a name="cfn-cognito-userpool-emailconfiguration-from"></a>
+Identifies either the sender's email address or the sender's name with their email address\. For example, `testuser@example.com` or `Test User <testuser@example.com>`\. This address appears before the body of the email\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplyToEmailAddress`  <a name="cfn-cognito-userpool-emailconfiguration-replytoemailaddress"></a>

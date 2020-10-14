@@ -62,7 +62,7 @@ For example:
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-parameter-group-return-values"></a>
+## Return values<a name="aws-properties-elasticache-parameter-group-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-parameter-group-return-values-ref"></a>
 
@@ -77,33 +77,35 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### JSON<a name="aws-properties-elasticache-parameter-group--examples----json"></a>
 
 ```
-"MyParameterGroup": {
- "Type": "AWS::ElastiCache::ParameterGroup",
- "Properties": {
-    "Description": "MyNewParameterGroup",
-       "CacheParameterGroupFamily": "memcached1.4",
-          "Properties" : {
-            "cas_disabled" : "1",
-            "chunk_size_growth_factor" : "1.02"
-      }
-   }
+{
+    "MyParameterGroup": {
+        "Type": "AWS::ElastiCache::ParameterGroup",
+        "Properties": {
+            "Description": "MyNewParameterGroup",
+            "CacheParameterGroupFamily": "memcached1.4",
+            "Properties": {
+                "cas_disabled": "1",
+                "chunk_size_growth_factor": "1.02"
+            }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-properties-elasticache-parameter-group--examples----yaml"></a>
 
 ```
-MyParameterGroup: 
-   Type: AWS::ElastiCache::ParameterGroup
-   Properties: 
-      Description: "MyNewParameterGroup"
-      CacheParameterGroupFamily: "memcached1.4"
-      Properties: 
-         cas_disabled: "1"
-         chunk_size_growth_factor: "1.02"
+MyParameterGroup:
+  Type: 'AWS::ElastiCache::ParameterGroup'
+  Properties:
+    Description: MyNewParameterGroup
+    CacheParameterGroupFamily: memcached1.4
+    Properties:
+      cas_disabled: '1'
+      chunk_size_growth_factor: '1.02'
 ```
 
-## See Also<a name="aws-properties-elasticache-parameter-group--seealso"></a>
+## See also<a name="aws-properties-elasticache-parameter-group--seealso"></a>
 + [CreateCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
 + [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
 + [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

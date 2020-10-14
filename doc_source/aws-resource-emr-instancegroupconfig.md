@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::InstanceGroupConfig",
   "Properties" : {
-      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md),
+      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
       "[BidPrice](#cfn-emr-instancegroupconfig-bidprice)" : String,
-      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ [Configuration](aws-properties-emr-cluster-configuration.md), ... ],
-      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-emr-ebsconfiguration.md),
+      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ Configuration, ... ],
+      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
       "[InstanceCount](#cfn-emr-instancegroupconfiginstancecount-)" : Integer,
       "[InstanceRole](#cfn-emr-instancegroupconfig-instancerole)" : String,
       "[InstanceType](#cfn-emr-instancegroupconfig-instancetype)" : String,
@@ -32,12 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EMR::InstanceGroupConfig
 Properties: 
   [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy): 
-    [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
+    AutoScalingPolicy
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
   [Configurations](#cfn-emr-instancegroupconfig-configurations): 
-    - [Configuration](aws-properties-emr-cluster-configuration.md)
+    - Configuration
   [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
   [InstanceRole](#cfn-emr-instancegroupconfig-instancerole): String
   [InstanceType](#cfn-emr-instancegroupconfig-instancetype): String
@@ -55,8 +55,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BidPrice`  <a name="cfn-emr-instancegroupconfig-bidprice"></a>
-The maximum Spot price your are willing to pay for EC2 instances\.  
-If `BidPrice` is specified, Amazon EMR uses Spot Instances for the instance group\. Specified in USD\. Alternatively, a value of `OnDemandPrice` indicates that the maximum Spot price is set equal to the On\-Demand price\.  
+The bid price for each EC2 Spot instance type as defined by `InstanceType`\. Expressed in USD\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -87,7 +86,7 @@ Target number of instances for the instance group\.
 The role of the instance group in the cluster\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CORE | MASTER | TASK`  
+*Allowed values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-emr-instancegroupconfig-instancetype"></a>
@@ -109,7 +108,7 @@ The ID of an Amazon EMR cluster that you want to associate this instance group w
 Market type of the EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-emr-instancegroupconfig-name"></a>
@@ -121,11 +120,11 @@ Friendly name given to the instance group\.
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
+## Return values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-emr-instancegroupconfig-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance group\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the instance group\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

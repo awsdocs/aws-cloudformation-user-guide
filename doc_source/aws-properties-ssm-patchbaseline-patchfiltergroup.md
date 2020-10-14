@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)" : [ [PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md), ... ]
+  "[PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters)" : [ PatchFilter, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PatchFilters](#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters): 
-    - [PatchFilter](aws-properties-ssm-patchbaseline-patchfilter.md)
+    - PatchFilter
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-patchfiltergroup-properties"></a>

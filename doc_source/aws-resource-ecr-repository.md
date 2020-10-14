@@ -1,6 +1,6 @@
 # AWS::ECR::Repository<a name="aws-resource-ecr-repository"></a>
 
-The `AWS::ECR::Repository` resource specifies an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon Elastic Container Registry User Guide*\.
+The `AWS::ECR::Repository` resource specifies an Amazon Elastic Container Registry \(Amazon ECR\) repository, where users can push and pull Docker images, Open Container Initiative \(OCI\) images, and OCI compatible artifacts\. For more information, see [Amazon ECR Repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the *Amazon ECR User Guide*\.
 
 ## Syntax<a name="aws-resource-ecr-repository-syntax"></a>
 
@@ -12,9 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md),
+      "[ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration)" : Json,
+      "[ImageTagMutability](#cfn-ecr-repository-imagetagmutability)" : String,
+      "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
-      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
+      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : ,
       "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -25,15 +27,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::Repository
 Properties: 
+  [ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration): Json
+  [ImageTagMutability](#cfn-ecr-repository-imagetagmutability): String
   [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
-    [LifecyclePolicy](aws-properties-ecr-repository-lifecyclepolicy.md)
+    LifecyclePolicy
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
-  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
+  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): 
   [Tags](#cfn-ecr-repository-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ecr-repository-properties"></a>
+
+`ImageScanningConfiguration`  <a name="cfn-ecr-repository-imagescanningconfiguration"></a>
+The image scanning configuration for the repository\. This determines whether images are scanned for known vulnerabilities after being pushed to the repository\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ImageTagMutability`  <a name="cfn-ecr-repository-imagetagmutability"></a>
+The tag mutability setting for the repository\. If this parameter is omitted, the default setting of `MUTABLE` will be used which will allow image tags to be overwritten\. If `IMMUTABLE` is specified, all image tags within the repository will be immutable which will prevent them from being overwritten\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `IMMUTABLE | MUTABLE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LifecyclePolicy`  <a name="cfn-ecr-repository-lifecyclepolicy"></a>
 Creates or updates a lifecycle policy\. For information about lifecycle policy syntax, see [Lifecycle Policy Template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html)\.  
@@ -52,9 +69,9 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
-The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policy Examples](https://docs.aws.amazon.com/AmazonECR/latest/userguide/RepositoryPolicyExamples.html) in the *Amazon Elastic Container Registry User Guide*\.  
+The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
-*Type*: Json  
+*Type*:   
 *Minimum*: `0`  
 *Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -65,7 +82,7 @@ An array of key\-value pairs to apply to this resource\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ecr-repository-return-values"></a>
+## Return values<a name="aws-resource-ecr-repository-return-values"></a>
 
 ### Ref<a name="aws-resource-ecr-repository-return-values-ref"></a>
 
@@ -225,6 +242,35 @@ Outputs:
     Value: !GetAtt MyRepository.Arn
 ```
 
-## See Also<a name="aws-resource-ecr-repository--seealso"></a>
+### Specify a repository with an image scanning configuration<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_an_image_scanning_configuration"></a>
+
+The following example creates a repository named `test-repository` with image scanning enabled\. For more information on image scanning, see [Image scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) in the *Amazon Elastic Container Registry User Guide*\.
+
+#### JSON<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_an_image_scanning_configuration--json"></a>
+
+```
+"MyRepository": {
+  "Type": "AWS::ECR::Repository",
+  "Properties": {
+    "RepositoryName" : "test-repository",
+    "ImageScanningConfiguration" : {
+      "scanOnPush": "true"
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_an_image_scanning_configuration--yaml"></a>
+
+```
+MyRepository: 
+  Type: AWS::ECR::Repository
+  Properties: 
+    RepositoryName: "test-repository"
+    ImageScanningConfiguration: 
+      scanOnPush: "true"
+```
+
+## See also<a name="aws-resource-ecr-repository--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 

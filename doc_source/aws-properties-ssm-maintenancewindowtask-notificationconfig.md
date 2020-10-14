@@ -47,5 +47,5 @@ The notification type\.
 +  `Invocation`: For commands sent to multiple instances, receive notification on a per\-instance basis when the status of a command changes\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Command | Invocation`  
+*Allowed values*: `Command | Invocation`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

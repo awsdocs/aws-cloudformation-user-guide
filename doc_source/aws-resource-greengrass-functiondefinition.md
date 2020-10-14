@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::FunctionDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : FunctionDefinitionVersion,
       "[Name](#cfn-greengrass-functiondefinition-name)" : String,
       "[Tags](#cfn-greengrass-functiondefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::FunctionDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-functiondefinition-initialversion): 
-    [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
+    FunctionDefinitionVersion
   [Name](#cfn-greengrass-functiondefinition-name): String
   [Tags](#cfn-greengrass-functiondefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-functiondefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-functiondefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-functiondefinition-return-values-ref"></a>
 
@@ -194,6 +194,6 @@ TestFunctionDefinition:
                   Gid: '10'
 ```
 
-## See Also<a name="aws-resource-greengrass-functiondefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-functiondefinition--seealso"></a>
 +  [CreateFunctionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

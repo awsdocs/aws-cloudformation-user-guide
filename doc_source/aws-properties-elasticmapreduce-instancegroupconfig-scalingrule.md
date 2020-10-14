@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action)" : [ScalingAction](aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.md),
+  "[Action](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action)" : ScalingAction,
   "[Description](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description)" : String,
   "[Name](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name)" : String,
-  "[Trigger](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger)" : [ScalingTrigger](aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.md)
+  "[Trigger](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger)" : ScalingTrigger
 }
 ```
 
@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action): 
-    [ScalingAction](aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.md)
+    ScalingAction
   [Description](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description): String
   [Name](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name): String
   [Trigger](#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger): 
-    [ScalingTrigger](aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.md)
+    ScalingTrigger
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-scalingrule-properties"></a>

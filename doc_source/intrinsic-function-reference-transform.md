@@ -1,8 +1,8 @@
 # `Fn::Transform`<a name="intrinsic-function-reference-transform"></a>
 
-The intrinsic function `Fn::Transform` specifies a macro to perform custom processing on part of a stack template\. Macros enable you to perform custom processing on templates, from simple actions like find\-and\-replace operations to extensive transformations of entire templates\. For more information, see [Using AWS CloudFormation Macros to Perform Custom Processing on Templates](template-macros.md)\.
+The intrinsic function `Fn::Transform` specifies a macro to perform custom processing on part of a stack template\. Macros enable you to perform custom processing on templates, from simple actions like find\-and\-replace operations to extensive transformations of entire templates\. For more information, see [Using AWS CloudFormation macros to perform custom processing on templates](template-macros.md)\.
 
-You can also use `Fn::Transform` to call the `[AWS::Include Transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)` transform, which is a macro hosted by AWS CloudFormation\.
+You can also use `Fn::Transform` to call the `` transform, which is a macro hosted by AWS CloudFormation\.
 
 ## Declaration<a name="intrinsic-function-reference-transform-declaration"></a>
 
@@ -37,7 +37,7 @@ The name of the macro you want to perform the processing\.
 Parameters  
 The list parameters, specified as key\-value pairs, to pass to the macro\.
 
-## Return Value<a name="intrinsic-function-reference-transform-returnvalue"></a>
+## Return value<a name="intrinsic-function-reference-transform-returnvalue"></a>
 
 The processed template snippet to be included in the processed stack template\.
 
@@ -89,6 +89,6 @@ The following example calls the `AWS::Include` transform, specifying that the lo
 3.     Parameters: {Location: {'Fn::FindInMap': [RegionMap, us-east-1, s3Location]}}
 ```
 
-## Supported Functions<a name="intrinsic-function-reference-transform-supported-functions"></a>
+## Supported functions<a name="intrinsic-function-reference-transform-supported-functions"></a>
 
-None\. AWS CloudFormation passes any intrinsic function calls included in `Fn::Transform` to the specified macro as literal strings\. For more information, see [AWS CloudFormation Macro Function Interface](template-macros.md#template-macros-lambda-interface)\.
+None\. AWS CloudFormation passes any intrinsic function calls included in `Fn::Transform` to the specified macro as literal strings\. For more information, see [AWS CloudFormation macro function interface](template-macros.md#template-macros-lambda-interface)\.

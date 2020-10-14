@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnPremisesTagGroup](#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)" : [ [TagFilter](aws-properties-codedeploy-deploymentgroup-tagfilter.md), ... ]
+  "[OnPremisesTagGroup](#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup)" : [ TagFilter, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnPremisesTagGroup](#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup): 
-    - [TagFilter](aws-properties-codedeploy-deploymentgroup-tagfilter.md)
+    - TagFilter
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject-properties"></a>

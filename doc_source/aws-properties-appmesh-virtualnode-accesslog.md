@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode AccessLog<a name="aws-properties-appmesh-virtualnode-accesslog"></a>
 
-An object representing the access logging information for a virtual node\.
+An object that represents the access logging information for a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-accesslog-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[File](#cfn-appmesh-virtualnode-accesslog-file)" : [FileAccessLog](aws-properties-appmesh-virtualnode-fileaccesslog.md)
+  "[File](#cfn-appmesh-virtualnode-accesslog-file)" : FileAccessLog
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [File](#cfn-appmesh-virtualnode-accesslog-file): 
-    [FileAccessLog](aws-properties-appmesh-virtualnode-fileaccesslog.md)
+    FileAccessLog
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-accesslog-properties"></a>

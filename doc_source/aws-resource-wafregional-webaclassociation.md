@@ -68,5 +68,5 @@ MyWebACLAssociation:
     ResourceArn:
       Ref: MyLoadBalancer
     WebACLId:
-Ref: MyWebACL
+      Ref: MyWebACL
 ```

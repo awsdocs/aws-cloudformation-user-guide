@@ -78,7 +78,7 @@ Valid values are 1\-32766\.
 The tags to assign to a Traffic Mirror session\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficMirrorFilterId`  <a name="cfn-ec2-trafficmirrorsession-trafficmirrorfilterid"></a>
 The ID of the Traffic Mirror filter\.  
@@ -98,7 +98,7 @@ The VXLAN ID for the Traffic Mirror session\. For more information about the VXL
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-trafficmirrorsession-return-values"></a>
+## Return values<a name="aws-resource-ec2-trafficmirrorsession-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorsession-return-values-ref"></a>
 
@@ -155,6 +155,6 @@ SampleTrafficMirrorSession:
       Value: "SampleSession"
 ```
 
-## See Also<a name="aws-resource-ec2-trafficmirrorsession--seealso"></a>
+## See also<a name="aws-resource-ec2-trafficmirrorsession--seealso"></a>
 + [Traffic Mirror Sessions](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-sessions) in *Traffic Mirroring*
 + [CreateTrafficMirrorSession](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorSession.html) in the *Amazon EC2 API Reference*

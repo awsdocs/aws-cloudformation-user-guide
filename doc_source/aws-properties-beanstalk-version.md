@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname)" : String,
       "[Description](#cfn-elasticbeanstalk-applicationversion-description)" : String,
-      "[SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle)" : [SourceBundle](aws-properties-beanstalk-sourcebundle.md)
+      "[SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle)" : SourceBundle
     }
 }
 ```
@@ -30,7 +30,7 @@ Properties:
   [ApplicationName](#cfn-elasticbeanstalk-applicationversion-applicationname): String
   [Description](#cfn-elasticbeanstalk-applicationversion-description): String
   [SourceBundle](#cfn-elasticbeanstalk-applicationversion-sourcebundle): 
-    [SourceBundle](aws-properties-beanstalk-sourcebundle.md)
+    SourceBundle
 ```
 
 ## Properties<a name="aws-properties-beanstalk-version-properties"></a>
@@ -57,7 +57,7 @@ The Amazon S3 bucket must be in the same region as the environment\.
 *Type*: [SourceBundle](aws-properties-beanstalk-sourcebundle.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-beanstalk-version-return-values"></a>
+## Return values<a name="aws-properties-beanstalk-version-return-values"></a>
 
 ### Ref<a name="aws-properties-beanstalk-version-return-values-ref"></a>
 
@@ -105,5 +105,5 @@ myAppVersion:
       S3Key: "php-newsample-app.zip"
 ```
 
-## See Also<a name="aws-properties-beanstalk-version--seealso"></a>
+## See also<a name="aws-properties-beanstalk-version--seealso"></a>
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.

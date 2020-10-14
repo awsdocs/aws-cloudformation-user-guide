@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobDefinition",
   "Properties" : {
-      "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md),
+      "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : ContainerProperties,
       "[JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname)" : String,
-      "[NodeProperties](#cfn-batch-jobdefinition-nodeproperties)" : [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md),
+      "[NodeProperties](#cfn-batch-jobdefinition-nodeproperties)" : NodeProperties,
       "[Parameters](#cfn-batch-jobdefinition-parameters)" : Json,
-      "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md),
-      "[Timeout](#cfn-batch-jobdefinition-timeout)" : [Timeout](aws-properties-batch-jobdefinition-timeout.md),
+      "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : RetryStrategy,
+      "[Timeout](#cfn-batch-jobdefinition-timeout)" : Timeout,
       "[Type](#cfn-batch-jobdefinition-type)" : String
     }
 }
@@ -29,28 +29,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Batch::JobDefinition
 Properties: 
   [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
-    [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
+    ContainerProperties
   [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
   [NodeProperties](#cfn-batch-jobdefinition-nodeproperties): 
-    [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)
+    NodeProperties
   [Parameters](#cfn-batch-jobdefinition-parameters): Json
   [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
-    [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)
+    RetryStrategy
   [Timeout](#cfn-batch-jobdefinition-timeout): 
-    [Timeout](aws-properties-batch-jobdefinition-timeout.md)
+    Timeout
   [Type](#cfn-batch-jobdefinition-type): String
 ```
 
 ## Properties<a name="aws-resource-batch-jobdefinition-properties"></a>
 
 `ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
-An object with various properties specific to container\-based jobs\.   
+An object with various properties specific to container\-based jobs\.  
 *Required*: No  
 *Type*: [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-batch-jobdefinition-jobdefinitionname"></a>
-The name of the job definition\.   
+The name of the job definition\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -83,9 +83,10 @@ The timeout configuration for jobs that are submitted with this job definition\.
 The type of job definition\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `container | multinode`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-jobdefinition-return-values"></a>
+## Return values<a name="aws-resource-batch-jobdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-jobdefinition-return-values-ref"></a>
 
@@ -166,5 +167,5 @@ JobDefinition:
       Image: nvidia/cuda
 ```
 
-## See Also<a name="aws-resource-batch-jobdefinition--seealso"></a>
+## See also<a name="aws-resource-batch-jobdefinition--seealso"></a>
 +  [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.

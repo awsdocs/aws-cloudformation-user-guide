@@ -11,8 +11,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arguments](#cfn-glue-trigger-action-arguments)" : Json,
+  "[CrawlerName](#cfn-glue-trigger-action-crawlername)" : String,
   "[JobName](#cfn-glue-trigger-action-jobname)" : String,
-  "[SecurityConfiguration](#cfn-glue-trigger-action-securityconfiguration)" : String
+  "[NotificationProperty](#cfn-glue-trigger-action-notificationproperty)" : NotificationProperty,
+  "[SecurityConfiguration](#cfn-glue-trigger-action-securityconfiguration)" : String,
+  "[Timeout](#cfn-glue-trigger-action-timeout)" : Integer
 }
 ```
 
@@ -20,8 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Arguments](#cfn-glue-trigger-action-arguments): Json
+  [CrawlerName](#cfn-glue-trigger-action-crawlername): String
   [JobName](#cfn-glue-trigger-action-jobname): String
+  [NotificationProperty](#cfn-glue-trigger-action-notificationproperty): 
+    NotificationProperty
   [SecurityConfiguration](#cfn-glue-trigger-action-securityconfiguration): String
+  [Timeout](#cfn-glue-trigger-action-timeout): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-action-properties"></a>
@@ -35,10 +42,22 @@ For information about the key\-value pairs that AWS Glue consumes to set up your
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CrawlerName`  <a name="cfn-glue-trigger-action-crawlername"></a>
+The name of the crawler to be used with this action\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `JobName`  <a name="cfn-glue-trigger-action-jobname"></a>
 The name of a job to be executed\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NotificationProperty`  <a name="cfn-glue-trigger-action-notificationproperty"></a>
+Specifies configuration properties of a job run notification\.  
+*Required*: No  
+*Type*: [NotificationProperty](aws-properties-glue-trigger-notificationproperty.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityConfiguration`  <a name="cfn-glue-trigger-action-securityconfiguration"></a>
@@ -47,5 +66,11 @@ The name of the `SecurityConfiguration` structure to be used with this action\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-trigger-action--seealso"></a>
+`Timeout`  <a name="cfn-glue-trigger-action-timeout"></a>
+The `JobRun` timeout in minutes\. This is the maximum time that a job run can consume resources before it is terminated and enters TIMEOUT status\. The default is 2,880 minutes \(48 hours\)\. This overrides the timeout value set in the parent job\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-glue-trigger-action--seealso"></a>
 +  [Action Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Action) in the *AWS Glue Developer Guide* 

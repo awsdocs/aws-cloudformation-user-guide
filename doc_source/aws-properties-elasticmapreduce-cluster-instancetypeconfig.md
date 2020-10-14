@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice)" : String,
   "[BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)" : Double,
-  "[Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations)" : [ [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md), ... ],
-  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md),
+  "[Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations)" : [ Configuration, ... ],
+  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration)" : EbsConfiguration,
   "[InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype)" : String,
   "[WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity)" : Integer
 }
@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice): String
   [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
   [Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations): 
-    - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
+    - Configuration
   [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype): String
   [WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity): Integer
 ```

@@ -54,9 +54,9 @@ Valid values are `amazon-dns`\.
 The tags to assign to a Traffic Mirror filter\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-trafficmirrorfilter-return-values"></a>
+## Return values<a name="aws-resource-ec2-trafficmirrorfilter-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorfilter-return-values-ref"></a>
 
@@ -106,6 +106,6 @@ SampleTrafficMirrorFilter:
       Value: "SampleFilter"
 ```
 
-## See Also<a name="aws-resource-ec2-trafficmirrorfilter--seealso"></a>
+## See also<a name="aws-resource-ec2-trafficmirrorfilter--seealso"></a>
 + [Traffic Mirror Filters and Filter Rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-filters) in *Traffic Mirroring*
 + [CreateTrafficMirrorFilter](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorFilter.html) in the *Amazon EC2 API Reference*

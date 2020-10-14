@@ -1,6 +1,6 @@
 # AWS::AppMesh::Mesh EgressFilter<a name="aws-properties-appmesh-mesh-egressfilter"></a>
 
-An object representing the egress filter rules for a service mesh\.
+An object that represents the egress filter rules for a service mesh\.
 
 ## Syntax<a name="aws-properties-appmesh-mesh-egressfilter-syntax"></a>
 

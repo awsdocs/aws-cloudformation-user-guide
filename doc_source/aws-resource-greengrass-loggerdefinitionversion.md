@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::LoggerDefinitionVersion",
   "Properties" : {
       "[LoggerDefinitionId](#cfn-greengrass-loggerdefinitionversion-loggerdefinitionid)" : String,
-      "[Loggers](#cfn-greengrass-loggerdefinitionversion-loggers)" : [ [Logger](aws-properties-greengrass-loggerdefinitionversion-logger.md), ... ]
+      "[Loggers](#cfn-greengrass-loggerdefinitionversion-loggers)" : [ Logger, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::Greengrass::LoggerDefinitionVersion
 Properties: 
   [LoggerDefinitionId](#cfn-greengrass-loggerdefinitionversion-loggerdefinitionid): String
   [Loggers](#cfn-greengrass-loggerdefinitionversion-loggers): 
-    - [Logger](aws-properties-greengrass-loggerdefinitionversion-logger.md)
+    - Logger
 ```
 
 ## Properties<a name="aws-resource-greengrass-loggerdefinitionversion-properties"></a>
@@ -46,7 +46,7 @@ The loggers in this version\.
 *Type*: List of [Logger](aws-properties-greengrass-loggerdefinitionversion-logger.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-loggerdefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-loggerdefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-loggerdefinitionversion-return-values-ref"></a>
 
@@ -109,6 +109,6 @@ TestLoggerDefinitionVersion:
         Space: '128'
 ```
 
-## See Also<a name="aws-resource-greengrass-loggerdefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-loggerdefinitionversion--seealso"></a>
 +  [CreateLoggerDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::IntegrationResponse<a name="aws-resource-apigatewayv2-integrationresponse"></a>
 
-The `AWS::ApiGatewayV2::IntegrationResponse` resource updates an integration response for an API\. For more information, see [Set up WebSocket API Integration Responses in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-integration-responses.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGatewayV2::IntegrationResponse` resource updates an integration response for an WebSocket API\. For more information, see [Set up WebSocket API Integration Responses in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-integration-responses.html) in the *API Gateway Developer Guide*\.
 
 ## Syntax<a name="aws-resource-apigatewayv2-integrationresponse-syntax"></a>
 
@@ -46,7 +46,7 @@ The API identifier\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContentHandlingStrategy`  <a name="cfn-apigatewayv2-integrationresponse-contenthandlingstrategy"></a>
-Specifies how to handle response payload content type conversions\. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the following behaviors:  
+Supported only for WebSocket APIs\. Specifies how to handle response payload content type conversions\. Supported values are `CONVERT_TO_BINARY` and `CONVERT_TO_TEXT`, with the following behaviors:  
  `CONVERT_TO_BINARY`: Converts a response payload from a Base64\-encoded string to the corresponding binary blob\.  
  `CONVERT_TO_TEXT`: Converts a response payload from a binary blob to a Base64\-encoded string\.  
 If this property is not defined, the response payload will be passed through from the integration response to the route response or method response without modification\.  
@@ -79,12 +79,12 @@ The collection of response templates for the integration response as a string\-t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateSelectionExpression`  <a name="cfn-apigatewayv2-integrationresponse-templateselectionexpression"></a>
-The template selection expression for the integration response\.  
+The template selection expression for the integration response\. Supported only for WebSocket APIs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-integrationresponse-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-integrationresponse-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-integrationresponse-return-values-ref"></a>
 
@@ -128,5 +128,5 @@ IntegrationResponse:
     ApiId: !Ref MyApi
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-integrationresponse--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-integrationresponse--seealso"></a>
 + [CreateIntegrationResponse](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-integrations-integrationid-integrationresponses.html#CreateIntegrationResponse) in the *Amazon API Gateway Version 2 API Reference*

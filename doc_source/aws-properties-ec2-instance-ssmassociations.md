@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters)" : [ [AssociationParameter](aws-properties-ec2-instance-ssmassociations-associationparameters.md), ... ],
+  "[AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters)" : [ AssociationParameter, ... ],
   "[DocumentName](#cfn-ec2-instance-ssmassociations-documentname)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AssociationParameters](#cfn-ec2-instance-ssmassociations-associationparameters): 
-    - [AssociationParameter](aws-properties-ec2-instance-ssmassociations-associationparameters.md)
+    - AssociationParameter
   [DocumentName](#cfn-ec2-instance-ssmassociations-documentname): String
 ```
 

@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxSessionDuration](#cfn-iam-role-maxsessionduration)" : Integer,
       "[Path](#cfn-iam-role-path)" : String,
       "[PermissionsBoundary](#cfn-iam-role-permissionsboundary)" : String,
-      "[Policies](#cfn-iam-role-policies)" : [ [Policy](aws-properties-iam-policy.md), ... ],
+      "[Policies](#cfn-iam-role-policies)" : [ Policy, ... ],
       "[RoleName](#cfn-iam-role-rolename)" : String,
       "[Tags](#cfn-iam-role-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -38,7 +38,7 @@ Properties:
   [Path](#cfn-iam-role-path): String
   [PermissionsBoundary](#cfn-iam-role-permissionsboundary): String
   [Policies](#cfn-iam-role-policies): 
-    - [Policy](aws-properties-iam-policy.md)
+    - Policy
   [RoleName](#cfn-iam-role-rolename): String
   [Tags](#cfn-iam-role-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -47,7 +47,7 @@ Properties:
 ## Properties<a name="aws-resource-iam-role-properties"></a>
 
 `AssumeRolePolicyDocument`  <a name="cfn-iam-role-assumerolepolicydocument"></a>
-The trust policy that is associated with this role\. Trust policies define which entities can assume the role\. You can associate only one trust policy with a role\. For an example of a policy that can be used to assume a role, see [Template Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-templateexamples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
+The trust policy that is associated with this role\. Trust policies define which entities can assume the role\. You can associate only one trust policy with a role\. For an example of a policy that can be used to assume a role, see [Template Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#aws-resource-iam-role--examples)\. For more information about the elements that you can use in an IAM policy, see [IAM Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html) in the *IAM User Guide*\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,7 +79,7 @@ Anyone who assumes the role from the AWS CLI or API can use the `DurationSeconds
 `Path`  <a name="cfn-iam-role-path"></a>
  The path to the role\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
-This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(\\u0021\) through the DEL character \(\\u007F\), including most punctuation characters, digits, and upper and lowercased letters\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -121,7 +121,7 @@ A list of tags that are attached to the specified role\. For more information ab
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-role-return-values"></a>
+## Return values<a name="aws-resource-iam-role-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-role-return-values-ref"></a>
 
@@ -158,88 +158,96 @@ For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.co
 
 This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is specified inline in the `Policies` property of the `AWS::IAM::Role`\.
 
-#### JSON<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--json"></a>
+#### <a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--language_sc3_fgs_qjb"></a>
 
 ```
-            {
-              "AWSTemplateFormatVersion": "2010-09-09",
-              "Resources": {
-                 "RootRole": {
-                   "Type": "AWS::IAM::Role",
-                   "Properties": {
-                     "AssumeRolePolicyDocument": {
-                        "Version" : "2012-10-17",
-                        "Statement": [ {
-                          "Effect": "Allow",
-                          "Principal": {
-                             "Service": [ "ec2.&api-domain;" ]
-                          },
-                          "Action": [ "sts:AssumeRole" ]
-                       } ]
-                       },
-                       "Path": "/",
-                       "Policies": [ {
-                          "PolicyName": "root",
-                          "PolicyDocument": {
-                             "Version" : "2012-10-17",
-                             "Statement": [ {
-                               "Effect": "Allow",
-                               "Action": "*",
-                               "Resource": "*"
-                             } ]
-                          }
-                          } ]
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "RootRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
                         }
-                 },
-                 "RootInstanceProfile": {
-                   "Type": "AWS::IAM::InstanceProfile",
-                   "Properties": {
-                     "Path": "/",
-                     "Roles": [ {
-                       "Ref": "RootRole"
-                     } ]
-                   }
-                 }
-                }
-               }
+                    ]
+                },
+                "Path": "/",
+                "Policies": [
+                    {
+                        "PolicyName": "root",
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": "*",
+                                    "Resource": "*"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "RootInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Path": "/",
+                "Roles": [
+                    {
+                        "Ref": "RootRole"
+                    }
+                ]
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
-            AWSTemplateFormatVersion: "2010-09-09"
-            Resources:
-              RootRole:
-                Type: "AWS::IAM::Role"
-                Properties:
-                  AssumeRolePolicyDocument:
-                    Version: "2012-10-17"
-                    Statement:
-                      -
-                        Effect: "Allow"
-                        Principal:
-                          Service:
-                            - "ec2.&api-domain;" 
-                        Action: 
-                          - "sts:AssumeRole"
-                 Path: "/"
-                 Policies:
-                   -
-                     PolicyName: "root"
-                     PolicyDocument:
-                       Version: "2012-10-17"
-                       Statement:
-                         -
-                           Effect: "Allow"
-                           Action: "*"
-                           Resource: "*"
-           RootInstanceProfile:
-             Type: "AWS::IAM::InstanceProfile"
-             Properties:
-               Path: "/"
-               Roles:
-                 -
-                   Ref: "RootRole"
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  RootRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+              - ec2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: '*'
+                Resource: '*'
+  RootInstanceProfile:
+    Type: 'AWS::IAM::InstanceProfile'
+    Properties:
+      Path: /
+      Roles:
+        - !Ref RootRole
 ```
 
 ### IAM Role with External Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles"></a>
@@ -340,7 +348,7 @@ Resources:
           Ref: "RootRole"
 ```
 
-## See Also<a name="aws-resource-iam-role--seealso"></a>
+## See also<a name="aws-resource-iam-role--seealso"></a>
 +  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
 +  [AWS Identity and Access Management Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html) 
 +  [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) 

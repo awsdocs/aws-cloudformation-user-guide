@@ -1,6 +1,6 @@
 # AWS::Route53Resolver::ResolverRule<a name="aws-resource-route53resolver-resolverrule"></a>
 
-For DNS queries that originate in your VPCs, specifies which resolver endpoint the queries pass through, one domain name that you want to forward to your network, and the IP addresses of the DNS resolvers in your network\.
+For DNS queries that originate in your VPCs, specifies which Resolver endpoint the queries pass through, one domain name that you want to forward to your network, and the IP addresses of the DNS resolvers in your network\.
 
 ## Syntax<a name="aws-resource-route53resolver-resolverrule-syntax"></a>
 
@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ResolverEndpointId](#cfn-route53resolver-resolverrule-resolverendpointid)" : String,
       "[RuleType](#cfn-route53resolver-resolverrule-ruletype)" : String,
       "[Tags](#cfn-route53resolver-resolverrule-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TargetIps](#cfn-route53resolver-resolverrule-targetips)" : [ [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md), ... ]
+      "[TargetIps](#cfn-route53resolver-resolverrule-targetips)" : [ TargetAddress, ... ]
     }
 }
 ```
@@ -34,13 +34,13 @@ Properties:
   [Tags](#cfn-route53resolver-resolverrule-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TargetIps](#cfn-route53resolver-resolverrule-targetips): 
-    - [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)
+    - TargetAddress
 ```
 
 ## Properties<a name="aws-resource-route53resolver-resolverrule-properties"></a>
 
 `DomainName`  <a name="cfn-route53resolver-resolverrule-domainname"></a>
-DNS queries for this domain name are forwarded to the IP addresses that are specified in `TargetIps`\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.  
+DNS queries for this domain name are forwarded to the IP addresses that are specified in `TargetIps`\. If a query matches multiple Resolver rules \(example\.com and www\.example\.com\), the query is routed using the Resolver rule that contains the most specific domain name \(www\.example\.com\)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -48,11 +48,11 @@ DNS queries for this domain name are forwarded to the IP addresses that are spec
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-route53resolver-resolverrule-name"></a>
-The name for the resolver rule, which you specified when you created the resolver rule\.  
+The name for the Resolver rule, which you specified when you created the Resolver rule\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResolverEndpointId`  <a name="cfn-route53resolver-resolverrule-resolverendpointid"></a>
@@ -64,16 +64,20 @@ The ID of the endpoint that the rule is associated with\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleType`  <a name="cfn-route53resolver-resolverrule-ruletype"></a>
-This value is always `FORWARD`\. Other resolver rule types aren't supported\.  
+When you want to forward DNS queries for specified domain name to resolvers on your network, specify `FORWARD`\.  
+When you have a forwarding rule to forward DNS queries for a domain to your network and you want Resolver to process queries for a subdomain of that domain, specify `SYSTEM`\.  
+For example, to forward DNS queries for example\.com to resolvers on your network, you create a rule and specify `FORWARD` for `RuleType`\. To then have Resolver process queries for apex\.example\.com, you create a rule and specify `SYSTEM` for `RuleType`\.  
+Currently, only Resolver can create rules that have a value of `RECURSIVE` for `RuleType`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `FORWARD | RECURSIVE | SYSTEM`  
+*Allowed values*: `FORWARD | RECURSIVE | SYSTEM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
 A list of the tag keys and values that you want to associate with the endpoint\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetIps`  <a name="cfn-route53resolver-resolverrule-targetips"></a>
@@ -82,7 +86,7 @@ An array that contains the IP addresses and ports that an outbound endpoint forw
 *Type*: List of [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53resolver-resolverrule-return-values"></a>
+## Return values<a name="aws-resource-route53resolver-resolverrule-return-values"></a>
 
 ### Ref<a name="aws-resource-route53resolver-resolverrule-return-values-ref"></a>
 
@@ -140,10 +144,12 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
     ],
     "TargetIps" : [
       {
-        "IP" : "192.0.2.6"
+        "Ip" : "192.0.2.6",
+        "Port" : "53"
       },
       {
-        "IP" : "192.0.2.99"
+        "Ip" : "192.0.2.99,
+        "Port" : "53"
       }
     ]
   }
@@ -165,9 +171,12 @@ Properties :
       Value : Engineering
   TargetIps :
     - 
-      IP : 192.0.2.6
-      IP : 192.0.2.99
+      Ip : 192.0.2.6
+      Port : 53
+    -  
+      Ip : 192.0.2.99
+      Port : 53
 ```
 
-## See Also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
+## See also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
 +  [ResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRule.html) in the *Amazon Route 53 API Reference* 

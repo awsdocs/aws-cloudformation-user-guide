@@ -1,23 +1,23 @@
-# CreationPolicy Attribute<a name="aws-attribute-creationpolicy"></a>
+# CreationPolicy attribute<a name="aws-attribute-creationpolicy"></a>
 
 Associate the `CreationPolicy` attribute with a resource to prevent its status from reaching create complete until AWS CloudFormation receives a specified number of success signals or the timeout period is exceeded\. To signal a resource, you can use the [cfn\-signal](cfn-signal.md) helper script or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html) API\. AWS CloudFormation publishes valid signals to the stack events so that you track the number of signals sent\.
 
 The creation policy is invoked only when AWS CloudFormation creates the associated resource\. Currently, the only AWS CloudFormation resources that support creation policies are [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html), and [AWS::CloudFormation::WaitCondition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitcondition.html)\.
 
-Use the `CreationPolicy` attribute when you want to wait on resource configuration actions before stack creation proceeds\. For example, if you install and configure software applications on an EC2 instance, you might want those applications to be running before proceeding\. In such cases, you can add a `CreationPolicy` attribute to the instance, and then send a success signal to the instance after the applications are installed and configured\. For a detailed example, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+Use the `CreationPolicy` attribute when you want to wait on resource configuration actions before stack creation proceeds\. For example, if you install and configure software applications on an EC2 instance, you might want those applications to be running before proceeding\. In such cases, you can add a `CreationPolicy` attribute to the instance, and then send a success signal to the instance after the applications are installed and configured\. For a detailed example, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
-## Syntax<a name="w4784ab1c21c19b7b9"></a>
+## Syntax<a name="w6974ab1c33c23b7b9"></a>
 
 ### JSON<a name="aws-attribute-creationpolicy-syntax.json"></a>
 
 ```
 "CreationPolicy" : {
-  "[AutoScalingCreationPolicy](#cfn-attributes-creationpolicy-autoscalingcreationpolicy)" : {
-    "[MinSuccessfulInstancesPercent](#cfn-attributes-creationpolicy-autoscalingcreationpolicy-minsuccessfulinstancespercent)" : Integer
+  "" : {
+    "" : Integer
   },
-  "[ResourceSignal](#cfn-attributes-creationpolicy-resourcesignal)" : {    
-    "[Count](#cfn-attributes-creationpolicy-resourcesignal-count)" : Integer,
-    "[Timeout](#cfn-attributes-creationpolicy-resourcesignal-timeout)" : String
+  "" : {    
+    "" : Integer,
+    "" : String
   }
 }
 ```
@@ -26,14 +26,14 @@ Use the `CreationPolicy` attribute when you want to wait on resource configurati
 
 ```
 CreationPolicy:
-  [AutoScalingCreationPolicy](#cfn-attributes-creationpolicy-autoscalingcreationpolicy):
-    [MinSuccessfulInstancesPercent](#cfn-attributes-creationpolicy-autoscalingcreationpolicy-minsuccessfulinstancespercent): Integer
-  [ResourceSignal](#cfn-attributes-creationpolicy-resourcesignal):    
-    [Count](#cfn-attributes-creationpolicy-resourcesignal-count): Integer
-    [Timeout](#cfn-attributes-creationpolicy-resourcesignal-timeout): String
+  :
+    : Integer
+  :    
+    : Integer
+    : String
 ```
 
-## CreationPolicy Properties<a name="cfn-attributes-creationpolicy-properties"></a>
+## CreationPolicy properties<a name="cfn-attributes-creationpolicy-properties"></a>
 
 `AutoScalingCreationPolicy`  <a name="cfn-attributes-creationpolicy-autoscalingcreationpolicy"></a>
 For an Auto Scaling group [replacement update](aws-attribute-updatepolicy.md#cfn-attributes-updatepolicy-replacingupdate), specifies how many instances must signal success for the update to succeed\.    
@@ -57,9 +57,9 @@ The value must be in [ISO8601 duration format](http://en.wikipedia.org/wiki/ISO_
 *Type*: String  
 *Required*: No
 
-## Examples<a name="w4784ab1c21c19b7c13"></a>
+## Examples<a name="w6974ab1c33c23b7c13"></a>
 
-### Auto Scaling Group<a name="w4784ab1c21c19b7c13b2"></a>
+### Auto Scaling group<a name="w6974ab1c33c23b7c13b2"></a>
 
 The following example shows how to add a creation policy to an Auto Scaling group\. The creation policy requires three success signals and times out after 15 minutes\.
 
@@ -153,7 +153,7 @@ LaunchConfig:
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```
 
-### WaitCondition<a name="w4784ab1c21c19b7c13b4"></a>
+### WaitCondition<a name="w6974ab1c33c23b7c13b4"></a>
 
 The following example shows how to add a creation policy to a wait condition\.
 

@@ -40,7 +40,7 @@ The defined duration for Spot instances \(also known as Spot blocks\) in minutes
 The action to take when `TargetSpotCapacity` has not been fulfilled when the `TimeoutDurationMinutes` has expired; that is, when all Spot instances could not be provisioned within the Spot provisioning timeout\. Valid values are `TERMINATE_CLUSTER` and `SWITCH_TO_ON_DEMAND`\. SWITCH\_TO\_ON\_DEMAND specifies that if no Spot instances are available, On\-Demand Instances should be provisioned to fulfill any remaining Spot capacity\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SWITCH_TO_ON_DEMAND | TERMINATE_CLUSTER`  
+*Allowed values*: `SWITCH_TO_ON_DEMAND | TERMINATE_CLUSTER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutDurationMinutes`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes"></a>

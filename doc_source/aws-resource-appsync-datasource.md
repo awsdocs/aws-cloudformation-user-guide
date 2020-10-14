@@ -14,12 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApiId](#cfn-appsync-datasource-apiid)" : String,
       "[Description](#cfn-appsync-datasource-description)" : String,
-      "[DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig)" : [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md),
-      "[ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig)" : [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md),
-      "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : [HttpConfig](aws-properties-appsync-datasource-httpconfig.md),
-      "[LambdaConfig](#cfn-appsync-datasource-lambdaconfig)" : [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md),
+      "[DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig)" : DynamoDBConfig,
+      "[ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig)" : ElasticsearchConfig,
+      "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : HttpConfig,
+      "[LambdaConfig](#cfn-appsync-datasource-lambdaconfig)" : LambdaConfig,
       "[Name](#cfn-appsync-datasource-name)" : String,
-      "[RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig)" : [RelationalDatabaseConfig](aws-properties-appsync-datasource-relationaldatabaseconfig.md),
+      "[RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig)" : RelationalDatabaseConfig,
       "[ServiceRoleArn](#cfn-appsync-datasource-servicerolearn)" : String,
       "[Type](#cfn-appsync-datasource-type)" : String
     }
@@ -34,16 +34,16 @@ Properties:
   [ApiId](#cfn-appsync-datasource-apiid): String
   [Description](#cfn-appsync-datasource-description): String
   [DynamoDBConfig](#cfn-appsync-datasource-dynamodbconfig): 
-    [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)
+    DynamoDBConfig
   [ElasticsearchConfig](#cfn-appsync-datasource-elasticsearchconfig): 
-    [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)
+    ElasticsearchConfig
   [HttpConfig](#cfn-appsync-datasource-httpconfig): 
-    [HttpConfig](aws-properties-appsync-datasource-httpconfig.md)
+    HttpConfig
   [LambdaConfig](#cfn-appsync-datasource-lambdaconfig): 
-    [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)
+    LambdaConfig
   [Name](#cfn-appsync-datasource-name): String
   [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig): 
-    [RelationalDatabaseConfig](aws-properties-appsync-datasource-relationaldatabaseconfig.md)
+    RelationalDatabaseConfig
   [ServiceRoleArn](#cfn-appsync-datasource-servicerolearn): String
   [Type](#cfn-appsync-datasource-type): String
 ```
@@ -117,7 +117,7 @@ The type of the data source\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-datasource-return-values"></a>
+## Return values<a name="aws-resource-appsync-datasource-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-datasource-return-values-ref"></a>
 
@@ -226,5 +226,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-datasource--seealso"></a>
+## See also<a name="aws-resource-appsync-datasource--seealso"></a>
 +  [CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*\.

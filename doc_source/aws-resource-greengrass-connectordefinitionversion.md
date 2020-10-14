@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::ConnectorDefinitionVersion",
   "Properties" : {
       "[ConnectorDefinitionId](#cfn-greengrass-connectordefinitionversion-connectordefinitionid)" : String,
-      "[Connectors](#cfn-greengrass-connectordefinitionversion-connectors)" : [ [Connector](aws-properties-greengrass-connectordefinitionversion-connector.md), ... ]
+      "[Connectors](#cfn-greengrass-connectordefinitionversion-connectors)" : [ Connector, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::Greengrass::ConnectorDefinitionVersion
 Properties: 
   [ConnectorDefinitionId](#cfn-greengrass-connectordefinitionversion-connectordefinitionid): String
   [Connectors](#cfn-greengrass-connectordefinitionversion-connectors): 
-    - [Connector](aws-properties-greengrass-connectordefinitionversion-connector.md)
+    - Connector
 ```
 
 ## Properties<a name="aws-resource-greengrass-connectordefinitionversion-properties"></a>
@@ -46,7 +46,7 @@ The connectors in this version\. Only one instance of a given connector can be a
 *Type*: List of [Connector](aws-properties-greengrass-connectordefinitionversion-connector.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-connectordefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-connectordefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-connectordefinitionversion-return-values-ref"></a>
 
@@ -142,6 +142,6 @@ TestConnectorDefinitionVersion:
               - defaultSns
 ```
 
-## See Also<a name="aws-resource-greengrass-connectordefinitionversion--seealso"></a>
+## See also<a name="aws-resource-greengrass-connectordefinitionversion--seealso"></a>
 +  [CreateConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

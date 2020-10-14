@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::ClientCertificate",
   "Properties" : {
-      "[Description](#cfn-apigateway-clientcertificate-description)" : String
+      "[Description](#cfn-apigateway-clientcertificate-description)" : String,
+      "[Tags](#cfn-apigateway-clientcertificate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::ClientCertificate
 Properties: 
   [Description](#cfn-apigateway-clientcertificate-description): String
+  [Tags](#cfn-apigateway-clientcertificate-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-apigateway-clientcertificate-properties"></a>
@@ -33,7 +36,13 @@ A description of the client certificate\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-clientcertificate-return-values"></a>
+`Tags`  <a name="cfn-apigateway-clientcertificate-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the client certificate\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-apigateway-clientcertificate-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-clientcertificate-return-values-ref"></a>
 
@@ -69,5 +78,5 @@ TestClientCertificate:
     Description: A test client certificate
 ```
 
-## See Also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
+## See also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
 + [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/clientcertificate-generate/) in the *Amazon API Gateway REST API Reference*

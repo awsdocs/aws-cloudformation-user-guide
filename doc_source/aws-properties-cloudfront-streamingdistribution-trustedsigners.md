@@ -1,14 +1,10 @@
 # AWS::CloudFront::StreamingDistribution TrustedSigners<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners"></a>
 
-A complex type that specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content\.
+Specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content\.
 
-If you want to require signed URLs in requests for objects in the target origin that match the `PathPattern` for this cache behavior, specify `true` for `Enabled`, and specify the applicable values for `Quantity` and `Items`\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the * Amazon CloudFront Developer Guide*\.
+If you want to require signed URLs in requests for objects in the target origin, specify `true` for `Enabled`, and specify a list of AWS account IDs\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the * Amazon CloudFront Developer Guide*\.
 
-If you don't want to require signed URLs in requests for objects that match `PathPattern`, specify `false` for `Enabled` and `0` for `Quantity`\. Omit `Items`\.
-
-To add, change, or remove one or more trusted signers, change `Enabled` to `true` \(if it's currently `false`\), change `Quantity` as applicable, and specify all of the trusted signers that you want to include in the updated distribution\.
-
-For more information about updating the distribution configuration, see [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/DistributionConfig.html) in the *Amazon CloudFront API Reference*\.
+If you don't want to require signed URLs in requests for objects, specify `false` for `Enabled` and omit the list of AWS account IDs\.
 
 ## Syntax<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-syntax"></a>
 
@@ -47,5 +43,5 @@ Specifies whether you want to require viewers to use signed URLs to access the f
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners--seealso"></a>
+## See also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners--seealso"></a>
 +  [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference* 
