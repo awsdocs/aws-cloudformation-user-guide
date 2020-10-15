@@ -103,9 +103,7 @@ The following examples create a usage plan for the Prod API stage, with a quota 
                     "ApiId": {
                         "Ref": "MyRestApi"
                     },
-                    "Stage": {
-                        "Ref": "Prod"
-                    }
+                    "Stage": "Prod"
                 }
             ],
             "Description": "Customer ABC's usage plan",
@@ -131,7 +129,7 @@ usagePlan:
   Properties:
     ApiStages:
       - ApiId: !Ref MyRestApi
-        Stage: !Ref Prod
+        Stage: Prod
     Description: Customer ABC's usage plan
     Quota:
       Limit: 5000
