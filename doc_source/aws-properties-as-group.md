@@ -213,8 +213,7 @@ You must specify one of the following properties: `LaunchConfigurationName`, `La
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NewInstancesProtectedFromScaleIn`  <a name="cfn-as-group-newinstancesprotectedfromscalein"></a>
-Not currently supported by AWS CloudFormation\.  
-To suspend specific processes, use the `ScalingProcesses` property when you specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)\. While a stack update is in progress, if you suspended the `AlarmNotification` process type, Amazon EC2 Auto Scaling does not automatically execute scaling policies that would be triggered by an alarm\.   
+Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling in\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

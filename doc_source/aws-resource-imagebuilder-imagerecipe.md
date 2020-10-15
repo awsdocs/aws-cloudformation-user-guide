@@ -15,7 +15,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings)" : [ InstanceBlockDeviceMapping, ... ],
       "[Components](#cfn-imagebuilder-imagerecipe-components)" : [ ComponentConfiguration, ... ],
       "[Description](#cfn-imagebuilder-imagerecipe-description)" : String,
-      "[Name](#cfn-imagebuilder-imagerecipe-name)" : String,
       "[ParentImage](#cfn-imagebuilder-imagerecipe-parentimage)" : String,
       "[Tags](#cfn-imagebuilder-imagerecipe-tags)" : {Key : Value, ...},
       "[Version](#cfn-imagebuilder-imagerecipe-version)" : String,
@@ -34,7 +33,6 @@ Properties:
   [Components](#cfn-imagebuilder-imagerecipe-components): 
     - ComponentConfiguration
   [Description](#cfn-imagebuilder-imagerecipe-description): String
-  [Name](#cfn-imagebuilder-imagerecipe-name): String
   [ParentImage](#cfn-imagebuilder-imagerecipe-parentimage): String
   [Tags](#cfn-imagebuilder-imagerecipe-tags): 
     Key : Value
@@ -62,13 +60,6 @@ The description of the image recipe\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Name`  <a name="cfn-imagebuilder-imagerecipe-name"></a>
-The name of the image recipe\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParentImage`  <a name="cfn-imagebuilder-imagerecipe-parentimage"></a>
@@ -118,6 +109,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/mybasicrecipe/2019.12.03`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-imagebuilder-imagerecipe--examples"></a>
 

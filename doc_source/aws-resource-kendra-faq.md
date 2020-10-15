@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Kendra::Faq",
   "Properties" : {
       "[Description](#cfn-kendra-faq-description)" : String,
+      "[FileFormat](#cfn-kendra-faq-fileformat)" : String,
       "[IndexId](#cfn-kendra-faq-indexid)" : String,
       "[Name](#cfn-kendra-faq-name)" : String,
       "[RoleArn](#cfn-kendra-faq-rolearn)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Kendra::Faq
 Properties: 
   [Description](#cfn-kendra-faq-description): String
+  [FileFormat](#cfn-kendra-faq-fileformat): String
   [IndexId](#cfn-kendra-faq-indexid): String
   [Name](#cfn-kendra-faq-name): String
   [RoleArn](#cfn-kendra-faq-rolearn): String
@@ -43,6 +45,13 @@ Properties:
 A description of the FAQ\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FileFormat`  <a name="cfn-kendra-faq-fileformat"></a>
+The file type used to create the FAQ\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CSV | CSV_WITH_HEADER | JSON`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IndexId`  <a name="cfn-kendra-faq-indexid"></a>

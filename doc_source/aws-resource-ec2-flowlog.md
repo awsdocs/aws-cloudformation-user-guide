@@ -220,7 +220,6 @@ The following example creates a flow log for the specified subnet and captures R
 }
 ```
 
-
 #### YAML<a name="aws-resource-ec2-flowlog--examples--Publish_a_custom_format_flow_log_to_CloudWatch_Logs_for_REJECT_traffic--yaml"></a>
 
 ```

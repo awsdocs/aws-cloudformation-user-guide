@@ -115,7 +115,6 @@ This example creates a 50GB io1 EBS volume from a snapshot, and configures it to
 #### YAML<a name="aws-properties-ec2-blockdev-template--examples--Creating_an_EBS_volume_from_a_snapshot--yaml"></a>
 
 ```
-
 BlockDeviceMappings:
   - DeviceName: /dev/sdc
     Ebs:

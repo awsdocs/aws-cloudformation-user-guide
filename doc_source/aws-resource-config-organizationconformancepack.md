@@ -51,7 +51,7 @@ A list of `ConformancePackInputParameter` objects\.
 `DeliveryS3Bucket`  <a name="cfn-config-organizationconformancepack-deliverys3bucket"></a>
 Amazon S3 bucket where AWS Config stores conformance pack templates\.   
 This field is optional\.
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `63`  

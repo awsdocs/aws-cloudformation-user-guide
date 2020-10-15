@@ -66,9 +66,7 @@ If you add an OU that your stack set already targets, StackSets creates new stac
    \[Service\-managed permissions\] Provide the organization \(root\) ID or OU IDs for which you want to create stack instances\. In this example, we specify OUs with `ou-rcuk-1x5j1lwo` and `ou-rcuk-slr5lh0a` IDs\.
 
    ```
-
    aws cloudformation create-stack-instances --stack-set-name StackSet-myApp --deployment-targets OrganizationalUnitIds='["ou-rcuk-r1qi0wl7"]' --regions '["eu-west-1", "us-west-2"]'
-
    ```
 **Note**  
 If you add an OU that your stack set already targets, StackSets creates new stack instances in any accounts in the OU that don't already have stack instances from your stack set \(for example, accounts that were added to the OU after your stack set was created and with automatic deployments disabled\)\.

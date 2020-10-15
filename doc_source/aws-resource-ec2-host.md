@@ -93,7 +93,6 @@ The following example allocates a dedicated host for `c3.large` instances in the
 ```
 Host:
   Type: AWS::EC2::Host
-
   Properties: 
     AutoPlacement: on
     AvailabilityZone: us-east-1a

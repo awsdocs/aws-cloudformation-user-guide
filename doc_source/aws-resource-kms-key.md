@@ -74,11 +74,10 @@ The key policy that authorizes use of the CMK\. The key policy must observe the 
 + Each statement in the key policy must contain one or more principals\. The principals in the key policy must exist and be visible to AWS KMS\. When you create a new AWS principal \(for example, an IAM user or role\), you might need to enforce a delay before including the new principal in a key policy because the new principal might not be immediately visible to AWS KMS\. For more information, see [Changes that I make are not always immediately visible](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency) in the *AWS Identity and Access Management User Guide*\.
 + The key policy size limit is 32 kilobytes \(32768 bytes\)\.
 If you are unsure of which policy to use, consider the *default key policy*\. This is the key policy that AWS KMS applies to CMKs that are created by using the CreateKey API with no specified key policy\. It gives the AWS account that owns the key permission to perform all operations on the key\. It also allows you write IAM policies to authorize access to the key\. For details, see [Default key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default) in the *AWS Key Management Service Developer Guide*\.  
+*Minimum*: `1`  
+*Maximum*: `32768`  
 *Required*: Yes  
 *Type*:   
-*Minimum*: `1`  
-*Maximum*: `131072`  
-*Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyUsage`  <a name="cfn-kms-key-keyusage"></a>

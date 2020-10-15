@@ -18,7 +18,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn)" : String,
       "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn)" : String,
-      "[Name](#cfn-imagebuilder-imagepipeline-name)" : String,
       "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : Schedule,
       "[Status](#cfn-imagebuilder-imagepipeline-status)" : String,
       "[Tags](#cfn-imagebuilder-imagepipeline-tags)" : {Key : Value, ...}
@@ -38,7 +37,6 @@ Properties:
   [ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration): 
     ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn): String
-  [Name](#cfn-imagebuilder-imagepipeline-name): String
   [Schedule](#cfn-imagebuilder-imagepipeline-schedule): 
     Schedule
   [Status](#cfn-imagebuilder-imagepipeline-status): String
@@ -86,13 +84,6 @@ The Amazon Resource Name \(ARN\) of the infrastructure configuration associated 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Name`  <a name="cfn-imagebuilder-imagepipeline-name"></a>
-The name of the image pipeline\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `Schedule`  <a name="cfn-imagebuilder-imagepipeline-schedule"></a>
 The schedule of the image pipeline\. A schedule configures how often and when a pipeline will automatically create a new image\.  
 *Required*: No  
@@ -130,6 +121,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-imagebuilder-imagepipeline--examples"></a>
 

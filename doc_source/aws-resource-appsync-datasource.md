@@ -81,7 +81,7 @@ Endpoints for an HTTP data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaConfig`  <a name="cfn-appsync-datasource-lambdaconfig"></a>
-A valid ARN of a Lambda function in your account\.  
+An ARN of a Lambda function in valid ARN format\. This can be the ARN of a Lambda function that exists in the current account or in another account\.  
 *Required*: No  
 *Type*: [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

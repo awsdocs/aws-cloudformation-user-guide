@@ -16,7 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Data](#cfn-imagebuilder-component-data)" : String,
       "[Description](#cfn-imagebuilder-component-description)" : String,
       "[KmsKeyId](#cfn-imagebuilder-component-kmskeyid)" : String,
-      "[Name](#cfn-imagebuilder-component-name)" : String,
       "[Platform](#cfn-imagebuilder-component-platform)" : String,
       "[SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions)" : [ String, ... ],
       "[Tags](#cfn-imagebuilder-component-tags)" : {Key : Value, ...},
@@ -35,7 +34,6 @@ Properties:
   [Data](#cfn-imagebuilder-component-data): String
   [Description](#cfn-imagebuilder-component-description): String
   [KmsKeyId](#cfn-imagebuilder-component-kmskeyid): String
-  [Name](#cfn-imagebuilder-component-name): String
   [Platform](#cfn-imagebuilder-component-platform): String
   [SupportedOsVersions](#cfn-imagebuilder-component-supportedosversions): 
     - String
@@ -75,13 +73,6 @@ The KMS key identifier used to encrypt the component\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Name`  <a name="cfn-imagebuilder-component-name"></a>
-The name of the component\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Platform`  <a name="cfn-imagebuilder-component-platform"></a>
@@ -138,6 +129,9 @@ Returns the Amazon Resource Name \(ARN\) of the component\. The following patter
 
 `Encrypted`  <a name="Encrypted-fn::getatt"></a>
 Returns the encryption status of the component\. For example `true` or `false`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Type`  <a name="Type-fn::getatt"></a>
 Returns the component type\. For example, `BUILD` or `TEST`\.

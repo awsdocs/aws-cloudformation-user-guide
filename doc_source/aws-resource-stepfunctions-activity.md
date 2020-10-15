@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::Activity",
   "Properties" : {
-      "[Arn](#cfn-stepfunctions-activity-arn)" : String,
+      "[Name](#cfn-stepfunctions-activity-name)" : String,
       "[Tags](#cfn-stepfunctions-activity-tags)" : [ TagsEntry, ... ]
     }
 }
@@ -25,18 +25,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::StepFunctions::Activity
 Properties: 
-  [Arn](#cfn-stepfunctions-activity-arn): String
+  [Name](#cfn-stepfunctions-activity-name): String
   [Tags](#cfn-stepfunctions-activity-tags): 
     - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-activity-properties"></a>
 
-`Arn`  <a name="cfn-stepfunctions-activity-arn"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+`Name`  <a name="cfn-stepfunctions-activity-name"></a>
+The name of the activity\.  
+A name must *not* contain:  
++ white space
++ brackets `< > { } [ ]` 
++ wildcard characters `? *` 
++ special characters `" # % \ ^ | ~ ` $ & , ; : /` 
++ control characters \(`U+0000-001F`, `U+007F-009F`\)
+To enable logging with CloudWatch Logs, the name should only contain 0\-9, A\-Z, a\-z, \- and \_\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-stepfunctions-activity-tags"></a>
 The list of tags to add to a resource\.  

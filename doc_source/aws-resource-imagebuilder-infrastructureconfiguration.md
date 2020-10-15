@@ -17,7 +17,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceTypes](#cfn-imagebuilder-infrastructureconfiguration-instancetypes)" : [ String, ... ],
       "[KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair)" : String,
       "[Logging](#cfn-imagebuilder-infrastructureconfiguration-logging)" : Logging,
-      "[Name](#cfn-imagebuilder-infrastructureconfiguration-name)" : String,
       "[ResourceTags](#cfn-imagebuilder-infrastructureconfiguration-resourcetags)" : {Key : Value, ...},
       "[SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids)" : [ String, ... ],
       "[SnsTopicArn](#cfn-imagebuilder-infrastructureconfiguration-snstopicarn)" : String,
@@ -40,7 +39,6 @@ Properties:
   [KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair): String
   [Logging](#cfn-imagebuilder-infrastructureconfiguration-logging): 
     Logging
-  [Name](#cfn-imagebuilder-infrastructureconfiguration-name): String
   [ResourceTags](#cfn-imagebuilder-infrastructureconfiguration-resourcetags): 
     Key : Value
   [SecurityGroupIds](#cfn-imagebuilder-infrastructureconfiguration-securitygroupids): 
@@ -89,13 +87,6 @@ The logging configuration of the infrastructure configuration\.
 *Required*: No  
 *Type*: [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Name`  <a name="cfn-imagebuilder-infrastructureconfiguration-name"></a>
-The name of the infrastructure configuration\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceTags`  <a name="cfn-imagebuilder-infrastructureconfiguration-resourcetags"></a>
 The tags attached to the resource created by Image Builder\.  
@@ -155,6 +146,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples"></a>
 

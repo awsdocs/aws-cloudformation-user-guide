@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-capacityprovider-managedscaling-properties"></a>
 
 `MaximumScalingStepSize`  <a name="cfn-ecs-capacityprovider-managedscaling-maximumscalingstepsize"></a>
-The maximum number of container instances that Amazon ECS will scale in or scale out at one time\. If this parameter is omitted, the default value of `10000` is used\.  
+The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time\. The scale in process is not affected by this parameter\. If this parameter is omitted, the default value of `10000` is used\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -41,7 +41,9 @@ The maximum number of container instances that Amazon ECS will scale in or scale
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MinimumScalingStepSize`  <a name="cfn-ecs-capacityprovider-managedscaling-minimumscalingstepsize"></a>
-The minimum number of container instances that Amazon ECS will scale in or scale out at one time\. If this parameter is omitted, the default value of `1` is used\.  
+The minimum number of Amazon EC2 instances that Amazon ECS will scale out at one time\. The scale in process is not affected by this parameter If this parameter is omitted, the default value of `1` is used\.  
+When additional capacity is required, Amazon ECS will scale up the minimum scaling step size even if the actual demand is less than the minimum scaling step size\.  
+If you use a capacity provider with an Auto Scaling group configured with more than one Amazon EC2 instance type or Availability Zone, Amazon ECS will scale up by the exact minimum scaling step size value and will ignore both the maximum scaling step size as well as the capacity demand\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

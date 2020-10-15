@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-imagebuilder-distributionconfiguration-description)" : String,
       "[Distributions](#cfn-imagebuilder-distributionconfiguration-distributions)" : [ Distribution, ... ],
-      "[Name](#cfn-imagebuilder-distributionconfiguration-name)" : String,
       "[Tags](#cfn-imagebuilder-distributionconfiguration-tags)" : {Key : Value, ...}
     }
 }
@@ -28,7 +27,6 @@ Properties:
   [Description](#cfn-imagebuilder-distributionconfiguration-description): String
   [Distributions](#cfn-imagebuilder-distributionconfiguration-distributions): 
     - Distribution
-  [Name](#cfn-imagebuilder-distributionconfiguration-name): String
   [Tags](#cfn-imagebuilder-distributionconfiguration-tags): 
     Key : Value
 ```
@@ -48,13 +46,6 @@ The distributions of this distribution configuration formatted as an array of Di
 *Required*: Yes  
 *Type*: List of [Distribution](aws-properties-imagebuilder-distributionconfiguration-distribution.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Name`  <a name="cfn-imagebuilder-distributionconfiguration-name"></a>
-The name of this distribution configuration\.  
-*Required*: Yes  
-*Type*: String  
-*Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-imagebuilder-distributionconfiguration-tags"></a>
 The tags of this distribution configuration\.  
@@ -80,6 +71,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-imagebuilder-distributionconfiguration--examples"></a>
 

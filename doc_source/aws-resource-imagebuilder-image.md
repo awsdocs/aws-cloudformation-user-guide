@@ -100,6 +100,9 @@ Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:im
 `ImageId`  <a name="ImageId-fn::getatt"></a>
 Returns the AMI ID of the EC2 AMI in the Region in which you are using Image Builder\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Returns the name of the image\.
+
 ## Examples<a name="aws-resource-imagebuilder-image--examples"></a>
 
 ### Create an image<a name="aws-resource-imagebuilder-image--examples--Create_an_image"></a>

@@ -115,7 +115,7 @@ Describes how the IAM roles required for stack set operations are created\.
 + With `SELF-MANAGED` permissions, you must create the administrator and execution roles required to deploy to target accounts\. For more information, see [Grant Self\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
 + With `SERVICE-MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\. For more information, see [Grant Service\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html)\.
 *Allowed Values*: `SERVICE_MANAGED` \| `SELF_MANAGED`  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -129,7 +129,7 @@ A group of stack instances with parameters in some specific accounts and Regions
 The name to associate with the stack set\. The name must be unique in the Region where you create your stack set\.  
 *Maximum*: `128`  
 *Pattern*: `^[a-zA-Z][a-zA-Z0-9-]{0,127}$`  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -120,7 +120,7 @@ Wait until an operation is complete before starting another one\. You can run on
 + Your stack set cannot deploy nested stacks\.
 + StackSets does not deploy stack instances to the organization master account, even if the master account is in your organization or in an OU in your organization\.
 + Automatic deployment is set at the stack set level\. You cannot adjust automatic deployments selectively for OUs, accounts, or Regions\.
-+ The permissions of the IAM principal entity \(user, role, or group\) that you use to sign in to the organization master account determine whether you are authorized to deploy with StackSets\. For an example IAM policy that grants permissions to deploy to an organization, see [Sample policy that grants service\-managed stack set permissions](using-iam-template.md#resource-level-permissions-service-managed-stack-set)\.
++ The permissions of the IAM principal entity \(user, role, or group\) that you use to sign in to the master account determine whether you are authorized to deploy with StackSets\. For an example IAM policy that grants permissions to deploy to an organization, see [Sample policy that grants service\-managed stack set permissions](using-iam-template.md#resource-level-permissions-service-managed-stack-set)\.
 
 ### Create a stack set with service\-managed permissions using the AWS CloudFormation console<a name="stacksets-orgs-associate-stackset-with-org-console"></a>
 
@@ -140,7 +140,7 @@ Wait until an operation is complete before starting another one\. You can run on
 
 1. Under **Permissions**, choose **Service\-managed permissions**\.
 
-   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the account administrator in the organization master account has permissions to [enable trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
+   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the master account has permissions to [enable trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
 ![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
 
 1. Choose **Next** to proceed and to enable trusted access if not already enabled\.
@@ -186,9 +186,7 @@ When you create stack sets using the AWS CLI, you run two separate commands\. Du
 1. Run the `create-stack-instances` command to add stack instances to your stack set\. For the `--deployment-targets` parameter, specify the organization root ID to deploy to all accounts in your organization, or specify OU IDs to deploy to all accounts in those OUs\. In this example, we specify OUs with `ou-rcuk-1x5j1lwo` and `ou-rcuk-slr5lh0a` IDs\.
 
    ```
-
    aws cloudformation create-stack-instances --stack-set-name StackSet_myApp --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]'
-
    ```
 **Important**  
 Wait until an operation is complete before starting another one\. You can run only one operation at a time\.
