@@ -3,6 +3,7 @@
 Specifies a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic\.
 
 Before you can create a delivery channel, you must create a configuration recorder\.
+This does not imply a `DependsOn` reference in the CloudFormation script though. The AWS Config service will resolve the dependency natively.
 
 You can use this action to change the Amazon S3 bucket or an Amazon SNS topic of the existing delivery channel\. To change the Amazon S3 bucket or an Amazon SNS topic, call this action and specify the changed values for the S3 bucket and the SNS topic\. If you specify a different value for either the S3 bucket or the SNS topic, this action will keep the existing value for the parameter that is not changed\.
 
