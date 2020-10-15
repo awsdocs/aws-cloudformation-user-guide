@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-athena-workgroup-name)" : String,
       "[RecursiveDeleteOption](#cfn-athena-workgroup-recursivedeleteoption)" : Boolean,
       "[State](#cfn-athena-workgroup-state)" : String,
-      "[Tags](#cfn-athena-workgroup-tags)" : Tags,
+      "[Tags](#cfn-athena-workgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration)" : WorkGroupConfiguration,
       "[WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates)" : WorkGroupConfigurationUpdates
     }
@@ -32,8 +32,8 @@ Properties:
   [Name](#cfn-athena-workgroup-name): String
   [RecursiveDeleteOption](#cfn-athena-workgroup-recursivedeleteoption): Boolean
   [State](#cfn-athena-workgroup-state): String
-  [Tags](#cfn-athena-workgroup-tags): 
-    Tags
+  [Tags](#cfn-athena-workgroup-tags):
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration): 
     WorkGroupConfiguration
   [WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates): 
@@ -71,10 +71,9 @@ The state of the workgroup: ENABLED or DISABLED\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-athena-workgroup-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+The tags \(key\-value pairs\) to associate with this resource\.
 *Required*: No  
-*Type*: [Tags](aws-properties-athena-workgroup-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkGroupConfiguration`  <a name="cfn-athena-workgroup-workgroupconfiguration"></a>
