@@ -342,13 +342,13 @@ Resources:
             TableName: !Ref GlueTable 
             Region: !Ref AWS::Region
             VersionId: LATEST 
-            InputFormatConfiguration: 
-              Deserializer: 
-                OpenXJsonSerDe: {}
-            OutputFormatConfiguration: 
-              Serializer: 
-                ParquetSerDe: {} 
-            Enabled: True 
+          InputFormatConfiguration: 
+            Deserializer: 
+              OpenXJsonSerDe: {}
+          OutputFormatConfiguration: 
+            Serializer: 
+              ParquetSerDe: {} 
+          Enabled: True 
   s3bucket: 
     Type: AWS::S3::Bucket 
     Properties: 
