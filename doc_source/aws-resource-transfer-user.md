@@ -48,7 +48,7 @@ Properties:
 
 `HomeDirectory`  <a name="cfn-transfer-user-homedirectory"></a>
 The landing directory \(folder\) for a user when they log in to the file transfer protocol\-enabled server using the client\.  
-An example is * `your-Amazon-S3-bucket-name>/home/username` *\.  
+An example is * `<your-Amazon-S3-bucket-name>/home/username` *\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
