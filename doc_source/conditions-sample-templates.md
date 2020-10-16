@@ -199,7 +199,7 @@ For more information, see the [Do not embed credentials in your templates](https
       "Properties" : {
         "AllocatedStorage" : "5",
         "DBInstanceClass" : "db.t2.small",
-        "Engine" : "MySQL",
+        "Engine" : "mysql",
         "EngineVersion" : "5.5",
         "MasterUsername" : { "Ref" : "DBUser" },
         "MasterUserPassword" : { "Ref" : "DBPassword" },
@@ -263,7 +263,7 @@ Resources:
     Properties: 
       AllocatedStorage: 5
       DBInstanceClass: db.t2.small
-      Engine: MySQL
+      Engine: mysql
       EngineVersion: 5.5
       MasterUsername: !Ref DBUser
       MasterUserPassword: !Ref DBPassword
