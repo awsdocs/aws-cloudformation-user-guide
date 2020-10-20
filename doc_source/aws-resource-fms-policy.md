@@ -150,13 +150,65 @@ This contains the following settings:
 + ManagedServiceData \- Details about the service that are specific to the service type, in JSON format\. For `SHIELD_ADVANCED`, this is an empty string\.
   + Example: `WAFV2` 
 
-    `"ManagedServiceData": "{\"type\":\"WAFV2\",\"preProcessRuleGroups\":[{\"ruleGroupArn\":null,\"overrideAction\":{\"type\":\"NONE\"},\"managedRuleGroupIdentifier\":{\"version\":null,\"vendorName\":\"AWS\",\"managedRuleGroupName\":\"AWSManagedRulesAmazonIpReputationList\"},\"ruleGroupType\":\"ManagedRuleGroup\",\"excludeRules\":[]}],\"postProcessRuleGroups\":[],\"defaultAction\":{\"type\":\"ALLOW\"},\"overrideCustomerWebACLAssociation\":false,\"loggingConfiguration\":{\"logDestinationConfigs\":[\"arn:aws:firehose:us-west-2:12345678912:deliverystream/aws-waf-logs-fms-admin-destination\"],\"redactedFields\":[{\"redactedFieldType\":\"SingleHeader\",\"redactedFieldValue\":\"Cookies\"},{\"redactedFieldType\":\"Method\"}]}}"`
+    ### JSON<a name="wfav2-ManagedServiceData-syntax.json"></a>
 
-    In the `loggingConfiguration`, you can specify one `logDestinationConfigs`, you can optionally provide up to 20 `redactedFields`, and the `RedactedFieldType` must be one of `URI`, `QUERY_STRING`, `HEADER`, or `METHOD`\.
+    ```
+    "ManagedServiceData": "{
+        "type":"WAFV2",
+        "preProcessRuleGroups":[{
+           "ruleGroupArn":null,
+           "overrideAction":{
+              "type":"NONE"
+           },
+           "managedRuleGroupIdentifier":{
+             "version":null,
+             "vendorName":"AWS",
+             "managedRuleGroupName":"AWSManagedRulesAmazonIpReputationList"
+           },
+           "ruleGroupType":"ManagedRuleGroup",
+           "excludeRules":[]
+           }
+        ],
+        "postProcessRuleGroups":[],
+        "defaultAction":{
+          "type":"ALLOW"
+        },
+        "overrideCustomerWebACLAssociation":false,
+        "loggingConfiguration":{
+          "logDestinationConfigs":["arn:aws:firehose:us-west-2:12345678912:deliverystream/aws-waf-logs-fms-admin-destination"],
+          "redactedFields":[
+            {
+              "redactedFieldType":"SingleHeader",
+              "redactedFieldValue":"Cookies"
+            },
+            {
+              "redactedFieldType":"Method"
+            }
+          ]
+        }
+    }"
+    ```
+
+    In the `loggingConfiguration`, you can specify one `logDestinationConfigs`, you can optionally provide up to 20 `redactedFields`, and the `RedactedFieldType` must be one of `URI`, `QUERY_STRING`, `HEADER`, or `METHOD`\. In `overrideAction`, you can override entire group action from default 'action set by rule group' to Count by setting `type` as `COUNT` instread of `NONE`.
+
   + Example: `WAF Classic` 
+  
+    ### JSON<a name="wfa-ManagedServiceData-syntax.json"></a>
 
-    `"ManagedServiceData": "{\"type\": \"WAF\", \"ruleGroups\": [{\"id\":\"12345678-1bcd-9012-efga-0987654321ab\", \"overrideAction\" : {\"type\": \"COUNT\"}}],\"defaultAction\": {\"type\": \"BLOCK\"}}`
-
+    ```
+    "ManagedServiceData": "{
+      "type": "WAF", 
+      "ruleGroups": [{
+         "id":"12345678-1bcd-9012-efga-0987654321ab", 
+         "overrideAction" : {
+            "type": "COUNT"
+         }
+      }],
+      "defaultAction": {
+        "type": "BLOCK"
+      }
+    }
+    ```
     AWS WAF Classic doesn't support rule groups in CloudFormation\. To create a WAF Classic policy through CloudFormation, create your rule groups outside of CloudFormation, then provide the rule group IDs in the WAF managed service data specification\.
   + Example: `SECURITY_GROUPS_COMMON` 
 
