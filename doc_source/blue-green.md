@@ -63,9 +63,12 @@ You should consider the following when defining your blue/green deployment using
   + Parameters that use dynamic references to retrieve their values from external services\. For more information, see [Using dynamic references to specify template values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
 + To cancel a green deployment that is still in progress, cancel the stack update in CloudFormation, not CodeDeploy or ECS\. For more information, see [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html)\. \(After an update has finished, you cannot cancel it\. You can, however, update a stack again with any previous settings\.\)
 + Declaring [output values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) or [importing values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html) from other stacks is not currently supported for templates defining blue/green ECS deployments\.
-+ [Importing existing resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is not currently supported for templates defining blue/green ECS deployments\.
++ [Importing existing resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is not currently supported for templates defining blue/green ECS deployments\. The way to overcome this is to pass the ARNs via [dynamic references](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html), e.g. ssm parameters.
 + You cannot use the `AWS::CodeDeploy::BlueGreen` hook in a template that includes nested stack resources\.
 + You cannot use the `AWS::CodeDeploy::BlueGreen` hook in a [nested stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)\.
++ The ALB listeners need to be in the same stack. The implication of this is that two separate services defined in 2 different blue/green deployment stacks cannot have the same listeners with the same ports, i.e. there must be:
+  + Separate ports/listeners per service (but same ALB for all) or
+  + Separate ALB (but same ports) per service
 
 For information on how using CloudFormation to perform your ECS blue/green deployments through CodeDeploy differs from a standard Amazon ECS deployment using just CodeDeploy, see [Differences between Amazon ECS Blue/Green deployments through AWS CloudFormation and standard Amazon ECS deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-create-prerequisites.html) in the *AWS CodeDeploy User Guide*\.
 
