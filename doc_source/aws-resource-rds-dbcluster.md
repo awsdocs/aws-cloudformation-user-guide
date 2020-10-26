@@ -492,7 +492,9 @@ The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL,
             "Description": "CloudFormation Sample Aurora Parameter Group",
             "Family": "aurora5.6",
             "Parameters": {
-                "sql_mode": "IGNORE_SPACE"
+                "sql_mode": "IGNORE_SPACE",
+                "max_allowed_packet": 1024,
+                "innodb_buffer_pool_size": "{DBInstanceClassMemory*3/4}"
             }
         }
     }
@@ -502,7 +504,6 @@ The example uses the `time_zone` Aurora MySQL parameter\. For Aurora PostgreSQL,
 #### YAML<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_with_two_DB_instances--yaml"></a>
 
 ```
---- 
 RDSCluster: 
   Properties: 
     DBClusterParameterGroupName: 
@@ -554,13 +555,15 @@ RDSDBInstance2:
     Engine: aurora
     PubliclyAccessible: "true"
   Type: "AWS::RDS::DBInstance"
-RDSDBParameterGroup: 
-  Properties: 
-    Description: "CloudFormation Sample Aurora Parameter Group"
+RDSDBParameterGroup:
+  Type: 'AWS::RDS::DBParameterGroup'
+  Properties:
+    Description: CloudFormation Sample Aurora Parameter Group
     Family: aurora5.6
-    Parameters: 
+    Parameters:
       sql_mode: IGNORE_SPACE
-  Type: "AWS::RDS::DBParameterGroup"
+      max_allowed_packet: 1024
+      innodb_buffer_pool_size: '{DBInstanceClassMemory*3/4}'
 ```
 
 ### Creating an Amazon Aurora DB cluster that exports logs to Amazon CloudWatch Logs<a name="aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_DB_cluster_that_exports_logs_to_Amazon_CloudWatch_Logs"></a>

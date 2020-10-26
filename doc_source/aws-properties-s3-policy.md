@@ -2,9 +2,6 @@
 
 Applies an Amazon S3 bucket policy to an Amazon S3 bucket\. If you are using an identity other than the root user of the AWS account that owns the bucket, the calling identity must have the `PutBucketPolicy` permissions on the specified bucket and belong to the bucket owner's account in order to use this operation\.
 
-**Important**  
-Only one bucket policy should be applied to a bucket\.
-
 If you don't have `PutBucketPolicy` permissions, Amazon S3 returns a `403 Access Denied` error\. If you have the correct permissions, but you're not using an identity that belongs to the bucket owner's account, Amazon S3 returns a `405 Method Not Allowed` error\.
 
 **Important**  

@@ -15,7 +15,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::VPCEndpointService",
   "Properties" : {
       "[AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired)" : Boolean,
-      "[ApplianceLoadBalancerArns](#cfn-ec2-vpcendpointservice-applianceloadbalancerarns)" : [ String, ... ],
       "[NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns)" : [ String, ... ]
     }
 }
@@ -27,8 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::VPCEndpointService
 Properties: 
   [AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired): Boolean
-  [ApplianceLoadBalancerArns](#cfn-ec2-vpcendpointservice-applianceloadbalancerarns): 
-    - String
   [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns): 
     - String
 ```
@@ -39,12 +36,6 @@ Properties:
 Indicates whether requests from service consumers to create an endpoint to your service must be accepted\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ApplianceLoadBalancerArns`  <a name="cfn-ec2-vpcendpointservice-applianceloadbalancerarns"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkLoadBalancerArns`  <a name="cfn-ec2-vpcendpointservice-networkloadbalancerarns"></a>

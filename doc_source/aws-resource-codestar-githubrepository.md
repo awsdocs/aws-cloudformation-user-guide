@@ -13,7 +13,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeStar::GitHubRepository",
   "Properties" : {
       "[Code](#cfn-codestar-githubrepository-code)" : Code,
-      "[ConnectionArn](#cfn-codestar-githubrepository-connectionarn)" : String,
       "[EnableIssues](#cfn-codestar-githubrepository-enableissues)" : Boolean,
       "[IsPrivate](#cfn-codestar-githubrepository-isprivate)" : Boolean,
       "[RepositoryAccessToken](#cfn-codestar-githubrepository-repositoryaccesstoken)" : String,
@@ -31,7 +30,6 @@ Type: AWS::CodeStar::GitHubRepository
 Properties: 
   [Code](#cfn-codestar-githubrepository-code): 
     Code
-  [ConnectionArn](#cfn-codestar-githubrepository-connectionarn): String
   [EnableIssues](#cfn-codestar-githubrepository-enableissues): Boolean
   [IsPrivate](#cfn-codestar-githubrepository-isprivate): Boolean
   [RepositoryAccessToken](#cfn-codestar-githubrepository-repositoryaccesstoken): String
@@ -48,12 +46,6 @@ Information about code to be committed to a repository after it is created in an
 *Type*: [Code](aws-properties-codestar-githubrepository-code.md)  
 *Update requires*: Updates are not supported\.
 
-`ConnectionArn`  <a name="cfn-codestar-githubrepository-connectionarn"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `EnableIssues`  <a name="cfn-codestar-githubrepository-enableissues"></a>
 Indicates whether to enable issues for the GitHub repository\. You can use GitHub issues to track information and bugs for your repository\.  
 *Required*: No  
@@ -68,7 +60,7 @@ Indicates whether the GitHub repository is a private repository\. If so, you cho
 
 `RepositoryAccessToken`  <a name="cfn-codestar-githubrepository-repositoryaccesstoken"></a>
 The GitHub user's personal access token for the GitHub repository\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 

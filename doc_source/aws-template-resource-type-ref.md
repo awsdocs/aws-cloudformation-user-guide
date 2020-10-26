@@ -101,6 +101,7 @@ service-provider::service-name::data-type-name
 + [ManagedBlockchain](AWS_ManagedBlockchain.md)
 + [MediaConvert](AWS_MediaConvert.md)
 + [MediaLive](AWS_MediaLive.md)
++ [MediaPackage](AWS_MediaPackage.md)
 + [MediaStore](AWS_MediaStore.md)
 + [MSK](AWS_MSK.md)
 + [Amazon Neptune](AWS_Neptune.md)

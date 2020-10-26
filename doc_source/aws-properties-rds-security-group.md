@@ -52,7 +52,7 @@ The `EC2VpcId` property is for backward compatibility with older regions, and is
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupDescription`  <a name="cfn-rds-dbsecuritygroup-groupdescription"></a>
-Provides the description of the DB Security Group\.  
+Provides the description of the DB security group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

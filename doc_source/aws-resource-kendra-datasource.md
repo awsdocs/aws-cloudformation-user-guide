@@ -50,6 +50,7 @@ Configuration information for an Amazon Kendra data source\. The contents of the
 + Amazon S3
 + Database
 + Microsoft OneDrive
++ Microsoft SharePoint 
 + Salesforce
 + ServiceNow
 *Required*: Yes  
@@ -100,7 +101,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 The type of the data source\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `DATABASE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT`  
+*Allowed values*: `CUSTOM | DATABASE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-kendra-datasource-return-values"></a>

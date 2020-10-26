@@ -48,10 +48,14 @@ A description of the FAQ\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileFormat`  <a name="cfn-kendra-faq-fileformat"></a>
-The file type used to create the FAQ\.   
+The format of the input file\. You can choose between a basic CSV format, a CSV format that includes customs attributes in a header, and a JSON format that includes custom attributes\.   
+ The format must match the format of the file stored in the S3 bucket identified in the S3Path parameter\.   
+Valid values are:  
++ `CSV`
++ `CSV_WITH_HEADER`
++ `JSON`
 *Required*: No  
 *Type*: String  
-*Allowed values*: `CSV | CSV_WITH_HEADER | JSON`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IndexId`  <a name="cfn-kendra-faq-indexid"></a>

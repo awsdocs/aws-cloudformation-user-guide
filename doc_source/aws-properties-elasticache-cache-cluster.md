@@ -93,6 +93,8 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + General purpose:
   + Current generation: 
 
+    **M6 node types:** `cache.m6.large`, `cache.m6.xlarge`, `cache.m6.2xlarge`, `cache.m6.4xlarge`, `cache.m6.12xlarge`, `cache.m6.24xlarge` 
+
     **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
@@ -113,6 +115,8 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
     **C1 node types:** `cache.c1.xlarge`
 + Memory optimized:
   + Current generation: 
+
+    **R6 node types:** `cache.r6.large`, `cache.r6.xlarge`, `cache.r6.2xlarge`, `cache.r6.4xlarge`, `cache.r6.12xlarge`, `cache.r6.24xlarge`
 
     **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 

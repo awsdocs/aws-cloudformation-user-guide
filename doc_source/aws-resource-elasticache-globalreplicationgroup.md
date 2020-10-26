@@ -59,7 +59,7 @@ The cache node type of the Global Datastore
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-elasticache-globalreplicationgroup-engineversion"></a>
-The Elasticache Redis engine version\. For preview, it is Redis version 5\.0\.5 only\.  
+The Elasticache Redis engine version\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

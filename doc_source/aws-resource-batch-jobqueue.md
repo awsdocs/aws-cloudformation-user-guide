@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
       "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
-      "[State](#cfn-batch-jobqueue-state)" : String
+      "[State](#cfn-batch-jobqueue-state)" : String,
+      "[Tags](#cfn-batch-jobqueue-tags)" : Json
     }
 }
 ```
@@ -30,6 +31,7 @@ Properties:
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [State](#cfn-batch-jobqueue-state): String
+  [Tags](#cfn-batch-jobqueue-tags): Json
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
@@ -58,6 +60,12 @@ The state of the job queue\. If the job queue state is `ENABLED`, it is able to 
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-batch-jobqueue-tags"></a>
+The tags applied to the job queue\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
 

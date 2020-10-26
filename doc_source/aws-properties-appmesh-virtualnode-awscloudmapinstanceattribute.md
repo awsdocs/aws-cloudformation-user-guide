@@ -2,6 +2,9 @@
 
 An object that represents the AWS Cloud Map attribute information for your virtual node\.
 
+**Note**  
+AWS Cloud Map is not available in the MXP Region\.
+
 ## Syntax<a name="aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

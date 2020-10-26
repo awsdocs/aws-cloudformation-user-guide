@@ -41,7 +41,7 @@ The name of the Timestream database that contains this table\.
 *Minimum*: `3`  
 *Maximum*: `64`  
 *Pattern*: `[a-zA-Z0-9_.-]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RetentionProperties`  <a name="cfn-timestream-table-retentionproperties"></a>
 The retention duration for the memory store and magnetic store\. This object has the following attributes:  
@@ -87,7 +87,7 @@ The name of the Timestream table\.
 *Minimum*: `3`  
 *Maximum*: `64`  
 *Pattern*: `[a-zA-Z0-9_.-]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-timestream-table-tags"></a>
 The tags to add to the table  
@@ -102,3 +102,12 @@ The tags to add to the table
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the table name `TABLE_NAME` in the form `DATABASE_NAME|TABLE_NAME`\. `DATABASE_NAME` is the name of the Timestream database that the table is contained in\. 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-timestream-table-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` returns a value for the specified attribute of this type\. The following are the available attributes:
+
+#### <a name="aws-resource-timestream-table-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The `arn` of the table\.

@@ -396,8 +396,9 @@ This parameter is not supported for Windows containers\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `User`  <a name="cfn-ecs-taskdefinition-containerdefinition-user"></a>
-The user name to use inside the container\. This parameter maps to `User` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--user` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-You can use the following formats\. If specifying a UID or GID, you must specify it as a positive integer\.  
+The user to use inside the container\. This parameter maps to `User` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--user` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
+When running tasks using the `host` network mode, you should not run containers using the root user \(UID 0\)\. It is considered best practice to use a non\-root user\.
+You can specify the `user` using the following formats\. If specifying a UID or GID, you must specify it as a positive integer\.  
 +  `user` 
 +  `user:group` 
 +  `uid` 

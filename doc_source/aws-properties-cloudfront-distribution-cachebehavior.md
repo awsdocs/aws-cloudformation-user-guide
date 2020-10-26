@@ -34,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MinTTL](#cfn-cloudfront-distribution-cachebehavior-minttl)" : Double,
   "[OriginRequestPolicyId](#cfn-cloudfront-distribution-cachebehavior-originrequestpolicyid)" : String,
   "[PathPattern](#cfn-cloudfront-distribution-cachebehavior-pathpattern)" : String,
+  "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-cachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-cachebehavior-targetoriginid)" : String,
   "[TrustedSigners](#cfn-cloudfront-distribution-cachebehavior-trustedsigners)" : [ String, ... ],
@@ -60,6 +61,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MinTTL](#cfn-cloudfront-distribution-cachebehavior-minttl): Double
   [OriginRequestPolicyId](#cfn-cloudfront-distribution-cachebehavior-originrequestpolicyid): String
   [PathPattern](#cfn-cloudfront-distribution-cachebehavior-pathpattern): String
+  [RealtimeLogConfigArn](#cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn): String
   [SmoothStreaming](#cfn-cloudfront-distribution-cachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-cachebehavior-targetoriginid): String
   [TrustedSigners](#cfn-cloudfront-distribution-cachebehavior-trustedsigners): 
@@ -155,6 +157,12 @@ You can optionally include a slash \(`/`\) at the beginning of the path pattern\
 The path pattern for the default cache behavior is `*` and cannot be changed\. If the request for an object does not match the path pattern for any cache behaviors, CloudFront applies the behavior in the default cache behavior\.  
 For more information, see [Path Pattern](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern) in the * Amazon CloudFront Developer Guide*\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RealtimeLogConfigArn`  <a name="cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn"></a>
+The Amazon Resource Name \(ARN\) of the real\-time log configuration that is attached to this cache behavior\. For more information, see [Real\-time logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

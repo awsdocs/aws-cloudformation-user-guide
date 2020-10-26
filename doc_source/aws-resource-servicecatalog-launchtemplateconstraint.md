@@ -84,5 +84,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+## Remarks<a name="aws-resource-servicecatalog-launchtemplateconstraint--remarks"></a>
+
+ *Using AWS CloudFormation constraint rules* 
+
+Administrators can create and apply rules to create template contraints in an AWS Service Catalog portfolio\. The rules prevent end users from entering incorrect values in the AWS CloudFormation template the administrator used to create the product\. 
+
+For more information about template constraint rules and how to create them, see [Template Constraint Rules](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/reference-template_constraint_rules.html) in the *AWS Service Catalog Admin Guide*\. 
+
 ## See also<a name="aws-resource-servicecatalog-launchtemplateconstraint--seealso"></a>
 + [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*

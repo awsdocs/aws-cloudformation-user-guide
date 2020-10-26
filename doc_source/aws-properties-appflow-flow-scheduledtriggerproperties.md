@@ -62,6 +62,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-scheduledtriggerproperties--seealso"></a>

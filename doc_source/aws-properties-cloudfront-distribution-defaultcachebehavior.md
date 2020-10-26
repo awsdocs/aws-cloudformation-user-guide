@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl)" : Double,
   "[MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl)" : Double,
   "[OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid)" : String,
+  "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid)" : String,
   "[TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners)" : [ String, ... ],
@@ -46,6 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl): Double
   [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl): Double
   [OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid): String
+  [RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn): String
   [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
   [TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners): 
@@ -131,6 +133,12 @@ You must specify `0` for `MinTTL` if you configure CloudFront to forward all hea
 
 `OriginRequestPolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid"></a>
 The unique identifier of the origin request policy that is attached to the default cache behavior\. For more information, see [Creating origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy) or [Using the managed origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RealtimeLogConfigArn`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn"></a>
+The Amazon Resource Name \(ARN\) of the real\-time log configuration that is attached to this cache behavior\. For more information, see [Real\-time logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

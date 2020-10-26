@@ -4,6 +4,149 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_AppStream.md) | The following resources were updated: `AWS::AppStream::Fleet` and `AWS::AppStream::ImageBuilder` 
+
+ [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)   
+Use the `IAMRoleArn` property to specify an ARN for the IAM role to apply to the fleet\.  
+Use the `StreamView` property to specify the AppStream 2\.0 view that is displayed to your users when they stream from the fleet\. 
+
+ [AWS::AppStream::ImageBuilder](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html)   
+Use the `IAMRoleArn` property to specify an ARN for the IAM role to apply to the image builder\.  | October 22, 2020 | 
+| [Updated resource](AWS_AppSync.md) | The following resource was updated: AWS::AppSync::ApiKey\. 
+
+ [AWS::AppSync::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)   
+Use the `ApiKeyID` property to specify the API key ID\.  | October 22, 2020 | 
+| [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
+
+[AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)  
+In the [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html) property type, use the `OriginShield` property to enable CloudFront Origin Shield\.  
+For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the *Amazon CloudFront Developer Guide*\.  | October 22, 2020 | 
+| [Updated resource](AWS_Elasticsearch.md) | The following resource was updated: AWS::Elasticsearch::Domain\. 
+
+ [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
+In the [ElasticsearchClusterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html) property type:  
++ Use the `WarmCount` property to specify the number of warm nodes in the cluster\.
++ Use the `WarmEnabled` property to specify whether to enable warm storage for the cluster\.
++ Use the `WarmType` property to specify the instance type for the cluster's warm nodes\.  | October 22, 2020 | 
+| [Updated resource](AWS_EMR.md) | The following resource was updated: AWS::EMR::Cluster\. 
+
+ [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html)   
+Use the `LogEncryptionKmsKeyId` property to specify the AWS KMS customer master key \(CMK\) used for encrypting log files\.  
+Use the `ManagedScalingPolicy` property to create a managed scaling policy for an Amazon EMR cluster\.  
+Use the `StepConcurrencyLevel` property to specify the number of steps that can be executed concurrently\.  | October 22, 2020 | 
+| [Updated resource](AWS_Events.md) | The following resource was updated: AWS::Events::Rule\. 
+
+ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+Added [AWS::Events::Rule DeadLetterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html)  
+Added [AWS::Events::Rule RetryPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html) 
+
+[AWS::Events::Rule Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html)  
+Added [DeadLetterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-deadletterconfig)  
+Added [RetryPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html##cfn-events-rule-target-retrypolicy)  | October 22, 2020 | 
+| [Updated resource](AWS_Kendra.md) | Added a new property, `FileFormat`, to the FAQ resource\. For more information, see [https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) | October 22, 2020 | 
+| [Updated resource](AWS_KinesisFirehose.md) | The following resource was updated: AWS::KinesisFirehose::DeliveryStream 
+
+ [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)   
+DeliveryStreamEncryptionConfigurationInput property type is now supported for the delivery streams in CloudFormation\.  | October 22, 2020 | 
+| [Updated resource](AWS_SNS.md) | The following resource was updated: AWS::SNS::Topic\. 
+
+ [AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)   
+Use the `ContentBasedDeduplication` property to enable content\-based deduplication for FIFO topics\.  
+Use the `FifoTopic` property to create a FIFO topic\.  | October 22, 2020 | 
+| [Updated resource](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server\. 
+
+ [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityPolicy` property to specify the name of the security policy to attach to the server\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CloudFront::Distribution\. 
+
+[AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)  
+In the [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html) property type, use the `OriginShield` property to enable CloudFront Origin Shield\.  
+For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the *Amazon CloudFront Developer Guide*\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Elasticsearch::Domain\. 
+
+ [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
+In the [ElasticsearchClusterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html) property type:  
++ Use the `WarmCount` property to specify the number of warm nodes in the cluster\.
++ Use the `WarmEnabled` property to specify whether to enable warm storage for the cluster\.
++ Use the `WarmType` property to specify the instance type for the cluster's warm nodes\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::AppSync::ApiKey\. 
+
+ [AWS::AppSync::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)   
+Use the `ApiKeyID` property to specify the API key ID\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Transfer::Server\. 
+
+ [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityPolicy` property to specify the name of the security policy to attach to the server\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | Added a new property, `FileFormat`, to the FAQ resource\. For more information, see [https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::KinesisFirehose::DeliveryStream 
+
+ [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)   
+DeliveryStreamEncryptionConfigurationInput property type is now supported for the delivery streams in CloudFormation\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Events::Rule\. 
+
+ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+Added [AWS::Events::Rule DeadLetterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html)  
+Added [AWS::Events::Rule RetryPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html) 
+
+[AWS::Events::Rule Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html)  
+Added [DeadLetterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-deadletterconfig)  
+Added [RetryPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html##cfn-events-rule-target-retrypolicy)  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EMR::Cluster\. 
+
+ [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html)   
+Use the `LogEncryptionKmsKeyId` property to specify the AWS KMS customer master key \(CMK\) used for encrypting log files\.  
+Use the `ManagedScalingPolicy` property to create a managed scaling policy for an Amazon EMR cluster\.  
+Use the `StepConcurrencyLevel` property to specify the number of steps that can be executed concurrently\.  | October 22, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::SNS::Topic\. 
+
+ [AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)   
+Use the `ContentBasedDeduplication` property to enable content\-based deduplication for FIFO topics\.  
+Use the `FifoTopic` property to create a FIFO topic\.  | October 22, 2020 | 
+| [Updated Resources](AWS_Batch.md) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)\. 
+
+[AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)  
+Use the `Tags` property to specify tags for the compute environment\. 
+
+[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
+Use the `Tags` property to specify tags for the job definition\. 
+
+[AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)  
+Use the `Tags` property to specify tags for the job queue\.  | October 22, 2020 | 
+| [Updated Resources](#ReleaseHistory) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)\. 
+
+[AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)  
+Use the `Tags` property to specify tags for the compute environment\. 
+
+[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
+Use the `Tags` property to specify tags for the job definition\. 
+
+[AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)  
+Use the `Tags` property to specify tags for the job queue\.  | October 22, 2020 | 
+| [New resources](AWS_MediaPackage.md) | The following resources were added: AWS::MediaPackage::Asset, AWS::MediaPackage::Channel, , AWS::MediaPackage::OriginEndpoint, AWS::MediaPackage::PackagingConfiguration, and AWS::MediaPackage::PackagingGroup\. 
+
+ [AWS::MediaPackage::Asset\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)   
+Use the `AWS::MediaPackage::Asset` to specify an asset to ingest VOD content\. 
+
+ [AWS::MediaPackage::Channel\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ws-resource-mediapackage-channel.html)   
+Use the `AWS::MediaPackage::Channel` to specify a channel to receive content\. 
+
+ [AWS::MediaPackage::OriginEndpoint\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)   
+Use the `AWS::MediaPackage::OriginEndpoint` to specify an endpoint on an AWS Elemental MediaPackage channel\. 
+
+ [AWS::MediaPackage::PackagingConfiguration\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html)   
+Use the `AWS::MediaPackage::PackagingConfiguration` to specify a packaging configuration in a packaging group\. 
+
+ [AWS::MediaPackage::AWS::MediaPackage::PackagingGroup\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ws-resource-mediapackage-packaginggroup.html)   
+Use the `AWS::MediaPackage::PackagingGroup` to specify a packaging group\.  | October 22, 2020 | 
+| [New resource](AWS_SecretsManager.md) | The following new resource was added: `BlockPublicPolicy` 
+
+ [Resource Policies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)   
+Use the `BlockPublicPolicy` when adding resource policies to Secrets Manager\.  | October 22, 2020 | 
+| [New resource](#ReleaseHistory) | The following new resource was added: `BlockPublicPolicy` 
+
+ [Resource Policies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)   
+Use the `BlockPublicPolicy` when adding resource policies to Secrets Manager\.  | October 22, 2020 | 
+| [Increased quotas](#ReleaseHistory) | The following AWS CloudFormation quotas have been updated\.  You can now declare a maximum of `200` mappings in your AWS CloudFormation template\.   You can now declare a maximum of `200` mapping attributes for each mapping in your AWS CloudFormation template\.   You can now declare a maximum of `200` outputs in your AWS CloudFormation template\.   You can now declare a maximum of `200` parameters in your AWS CloudFormation template\.   You can now declare a maximum of `500` resources in your AWS CloudFormation template\.   You can now pass a template body with a maximum size of `1 MB` in an Amazon S3 object\.   | October 22, 2020 | 
 | [Updated resource](AWS_AmazonMQ.md) | The following resource was updated: AWS::AmazonMQ::Broker\. 
 
  [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
@@ -17,27 +160,7 @@ In the [BackupPlanResourceType](https://docs.aws.amazon.com/AWSCloudFormation/la
  [AWS::EKS::Cluster](https://docs.aws.amazon.com/aws-resource-eks-cluster.html)   
 Use the `KubernetesNetworkConfig` property to specify a Kubernetes network configuration\.  
 In the [AWS::EKS::Cluster KubernetesNetworkConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html) property type, use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kubernetes to assign service IP addresses from\.  | October 8, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was: AWS::EKS::Cluster\. 
-
- [AWS::EKS::Cluster](https://docs.aws.amazon.com/aws-resource-eks-cluster.html)   
-Use the `KubernetesNetworkConfig` property to specify a Kubernetes network configuration\.  
-In the [AWS::EKS::Cluster KubernetesNetworkConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html) property type, use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kubernetes to assign service IP addresses from\.  | October 8, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::AmazonMQ::Broker\. 
-
- [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
-Use the `LdapServerMetadata` property to to authenticate and authorize connections to a broker\.  | October 8, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Backup::BackupPlan 
-
- [AWS::Backup::BackupPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html)   
-In the [BackupPlanResourceType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html) property type, use the `AdvancedBackupSetting` property to specify a list of backup options for each resource type you want to back up\.  | October 8, 2020 | 
 | [New resources](AWS_CodeArtifact.md) | The following resources were added: AWS::CodeArtifact::Domain and AWS::CodeArtifact::Repository\. 
-
- [AWS::CodeArtifact::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)   
-Use the `AWS::CodeArtifact::Domain` resource to create an AWS CodeArtifact domain\. 
-
- [AWS::CodeArtifact::Repository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html)   
-Use the `AWS::CodeArtifact::Repository` resource to create an AWS CodeArtifact repository\.  | October 8, 2020 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::CodeArtifact::Domain and AWS::CodeArtifact::Repository\. 
 
  [AWS::CodeArtifact::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)   
 Use the `AWS::CodeArtifact::Domain` resource to create an AWS CodeArtifact domain\. 
@@ -206,10 +329,6 @@ In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/lates
 
  [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   
 Use the `Topics` property to specify the Amazon MSK topics to stream to a Lambda function\.  | August 13, 2020 | 
-| [Updated resource](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server\. 
-
- [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
-Use the `SecurityPolicy` property to specify the name of the security policy that is attached to the server\.  | August 13, 2020 | 
 | [New resources](AWS_SageMaker.md) | The following resource was added: AWS::SageMaker::MonitoringSchedule 
 
  [AWS::SageMaker::MonitoringSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html)   
@@ -263,10 +382,6 @@ Use the `AWS::CodeGuruProfiler::ProfilingGroup.AnomalyDetectionNotificationConfi
 
  [AWS::CodeGuruProfiler::ProfilingGroup\.Tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)   
 Use the `AWS::CodeGuruProfiler::ProfilingGroup.Tags` property to add tags to a profiling group\.  | July 30, 2020 | 
-| [Updated resource](AWS_KinesisFirehose.md) | The following resource was updated: AWS::KinesisFirehose::DeliveryStream 
-
- [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)   
-You can now use the `VpcConfiguration` property to deliver data to an Amazon ES cluster that is in a VPC\. This update also includes support for Amazon ES 7\.\* and for cross\-account delivery to Amazon ES\.  | July 29, 2020 | 
 | [Updated resources](AWS_WAFv2.md) | The following resources were updated: AWS::WAFv2::WebACL and AWS::WAFv2::RuleGroup 
 
  [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
@@ -299,10 +414,6 @@ In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/lates
 Use the `CaptureContentTypeHeader` property to specify content types \(JSON and/or CSV\) to capture\.  
 Use the `CaptureOption` property to specify whether to capture input data, output data, or both\.  
 Use the `DataCaptureConfig` resource/property to configure how the endpoint captures data\.  | July 23, 2020 | 
-| [New resource](AWS_SecretsManager.md) | The following resource was added: AWS::SecretsManager::RotationSchedule\.HostedRotationLambda\. 
-
-[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)  
-Use the `RESOURCE` AWS::SecretsManager::RotationSchedule\.HostedRotationLambda to create a rotation Lambda\.   | July 23, 2020 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
 
  [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
@@ -1139,18 +1250,6 @@ Use the `MatchmakingConfiguration` resource to create a matchmaker that processe
  [AWS::GameLift::MatchmakingRuleSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html)   
 Use the `MatchmakingRuleSet` resource to create rules that specify how to form matches and evaluate players for inclusion in a match\.  | November 14, 2019 | 
 | [Resource import added](#ReleaseHistory) | If you created an AWS resource outside of AWS CloudFormation management, you can bring this existing resource into CloudFormation management using `resource import`\.For more information, see [Bringing Existing Resources Into CloudFormation Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html)\. | November 11, 2019 | 
-| [Updated resource](AWS_AppStream.md) | The following resources were updated: AWS::AppStream::ImageBuilder, AWS::AppStream::Stack 
-
- [AWS::AppStream::ImageBuilder](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html)   
-In the [AccessEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-accessendpoint.html) property type:  
-+ Use the `EndpointType` property to specify the type of interface VPC endpoint \(interface endpoint\)\.
-+ Use the `VpceId` property to specify the identifier \(ID\) of the VPC in which the interface endpoint is used\. 
-
- [AWS::AppStream::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html)   
-In the [AccessEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-accessendpoint.html) property type:  
-+ Use the `EndpointType` property to specify the type of interface VPC endpoint \(interface endpoint\)\.
-+ Use the `VpceId` property to specify the identifier \(ID\) of the VPC in which the interface endpoint is used\.
-Use the `EmbedHostDomains` property to specify the domains where AppStream 2\.0 streaming sessions can be embedded in an iframe\.  | November 7, 2019 | 
 | [New resource](AWS_CodeStarNotifications.md) | The following resource was added: AWS::CodeStarNotifications::NotificationRule 
 
  [AWS::CodeStarNotifications::NotificationRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html)   

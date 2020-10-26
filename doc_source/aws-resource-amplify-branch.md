@@ -89,7 +89,8 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnablePerformanceMode`  <a name="cfn-amplify-branch-enableperformancemode"></a>
-Not currently supported by AWS CloudFormation\.  
+Enables performance mode for the branch\.  
+Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval\. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

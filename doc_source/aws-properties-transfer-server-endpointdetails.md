@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AddressAllocationIds](#cfn-transfer-server-endpointdetails-addressallocationids)" : [ String, ... ],
+  "[SecurityGroupIds](#cfn-transfer-server-endpointdetails-securitygroupids)" : [ String, ... ],
   "[SubnetIds](#cfn-transfer-server-endpointdetails-subnetids)" : [ String, ... ],
   "[VpcEndpointId](#cfn-transfer-server-endpointdetails-vpcendpointid)" : String,
   "[VpcId](#cfn-transfer-server-endpointdetails-vpcid)" : String
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AddressAllocationIds](#cfn-transfer-server-endpointdetails-addressallocationids): 
     - String
+  [SecurityGroupIds](#cfn-transfer-server-endpointdetails-securitygroupids): 
+    - String
   [SubnetIds](#cfn-transfer-server-endpointdetails-subnetids): 
     - String
   [VpcEndpointId](#cfn-transfer-server-endpointdetails-vpcendpointid): String
@@ -35,21 +38,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AddressAllocationIds`  <a name="cfn-transfer-server-endpointdetails-addressallocationids"></a>
 A list of address allocation IDs that are required to attach an Elastic IP address to your server's endpoint\. This is only valid in the `UpdateServer` API\.  
-This property can only be used when `EndpointType` is set to `VPC`\.
+This property can only be set when `EndpointType` is set to `VPC`\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
+`SecurityGroupIds`  <a name="cfn-transfer-server-endpointdetails-securitygroupids"></a>
+A list of security groups IDs that are available to attach to your server's endpoint\.  
+This property can only be set when `EndpointType` is set to `VPC`\.
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SubnetIds`  <a name="cfn-transfer-server-endpointdetails-subnetids"></a>
 A list of subnet IDs that are required to host your server endpoint in your VPC\.  
-This property can only be used when `EndpointType` is set to `VPC`\.
+This property can only be set when `EndpointType` is set to `VPC`\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcEndpointId`  <a name="cfn-transfer-server-endpointdetails-vpcendpointid"></a>
 The ID of the VPC endpoint\.  
-This property can only be used when `EndpointType` is set to `VPC_ENDPOINT`\.
+This property can only be set when `EndpointType` is set to `VPC_ENDPOINT`\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `22`  
@@ -59,7 +69,7 @@ This property can only be used when `EndpointType` is set to `VPC_ENDPOINT`\.
 
 `VpcId`  <a name="cfn-transfer-server-endpointdetails-vpcid"></a>
 The VPC ID of the virtual private cloud in which the server's endpoint will be hosted\.  
-This property can only be used when `EndpointType` is set to `VPC`\.
+This property can only be set when `EndpointType` is set to `VPC`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

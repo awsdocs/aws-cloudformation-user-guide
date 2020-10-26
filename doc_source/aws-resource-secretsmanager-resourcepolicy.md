@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SecretsManager::ResourcePolicy",
   "Properties" : {
+      "[BlockPublicPolicy](#cfn-secretsmanager-resourcepolicy-blockpublicpolicy)" : Boolean,
       "[ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy)" : Json,
       "[SecretId](#cfn-secretsmanager-resourcepolicy-secretid)" : String
     }
@@ -23,11 +24,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SecretsManager::ResourcePolicy
 Properties: 
+  [BlockPublicPolicy](#cfn-secretsmanager-resourcepolicy-blockpublicpolicy): Boolean
   [ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy): Json
   [SecretId](#cfn-secretsmanager-resourcepolicy-secretid): String
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>
+
+`BlockPublicPolicy`  <a name="cfn-secretsmanager-resourcepolicy-blockpublicpolicy"></a>
+Specifies if you configuired a check for a resource policy that exposes information publicly\.  
+For more information on using this parameter, see [Managing a resource\-based policy for a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_secret-policy.html)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcePolicy`  <a name="cfn-secretsmanager-resourcepolicy-resourcepolicy"></a>
 Specifies a JSON object constructed according to the grammar and syntax for a resource\-based policy\. The policy identifies who can access or manage this secret and associated versions\. For information on how to format a JSON object as a parameter for this resource type, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html) in the AWS Secrets Manager User Guide\. Those same rules apply here\.   
@@ -73,6 +82,7 @@ The following examples shows how to attach a resource\-based policy to the speci
     "MySecretResourcePolicy": {
         "Type": "AWS::SecretsManager::ResourcePolicy",
         "Properties": {
+            "BlockPublicPolicy": {
             "SecretId": {
                 "Ref": "MySecret"
             },

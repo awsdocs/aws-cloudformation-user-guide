@@ -48,7 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AcmCertificateArn`  <a name="cfn-cloudfront-distribution-viewercertificate-acmcertificatearn"></a>
 In CloudFormation, this field name is `AcmCertificateArn`\. Note the different capitalization\.
 If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [AWS Certificate Manager \(ACM\)](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html), provide the Amazon Resource Name \(ARN\) of the ACM certificate\. CloudFront only supports ACM certificates in the US East \(N\. Virginia\) Region \(`us-east-1`\)\.  
-If you specify an ACM certificate ARN, you must also specify values for `MinimumProtocolVerison` and `SSLSupportMethod`\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)   
+If you specify an ACM certificate ARN, you must also specify values for `MinimumProtocolVersion` and `SSLSupportMethod`\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,7 +68,7 @@ If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), set thi
 `IamCertificateId`  <a name="cfn-cloudfront-distribution-viewercertificate-iamcertificateid"></a>
 In CloudFormation, this field name is `IamCertificateId`\. Note the different capitalization\.
 If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [AWS Identity and Access Management \(AWS IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html), provide the ID of the IAM certificate\.  
-If you specify an IAM certificate ID, you must also specify values for `MinimumProtocolVerison` and `SSLSupportMethod`\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)   
+If you specify an IAM certificate ID, you must also specify values for `MinimumProtocolVersion` and `SSLSupportMethod`\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
