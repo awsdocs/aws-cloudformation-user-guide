@@ -63,7 +63,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StorageEncrypted](#cfn-rds-dbcluster-storageencrypted)" : Boolean,
       "[Tags](#cfn-rds-dbcluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UseLatestRestorableTime](#cfn-rds-dbcluster-uselatestrestorabletime)" : Boolean,
-      "[VpcSecurityGroupIds](#cfn-rds-dbcluster-vpcsecuritygroupids)" : [ String, ... ]
+      "[VpcSecurityGroups](#cfn-rds-dbcluster-vpcsecuritygroups)" : [ String, ... ]
     }
 }
 ```
@@ -108,7 +108,7 @@ Properties:
   [Tags](#cfn-rds-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UseLatestRestorableTime](#cfn-rds-dbcluster-uselatestrestorabletime): Boolean
-  [VpcSecurityGroupIds](#cfn-rds-dbcluster-vpcsecuritygroupids): 
+  [VpcSecurityGroups](#cfn-rds-dbcluster-vpcsecuritygroups): 
     - String
 ```
 
@@ -362,7 +362,7 @@ A value that indicates whether to restore the DB cluster to the latest restorabl
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`VpcSecurityGroupIds`  <a name="cfn-rds-dbcluster-vpcsecuritygroupids"></a>
+`VpcSecurityGroups`  <a name="cfn-rds-dbcluster-vpcsecuritygroups"></a>
 A list of EC2 VPC security groups to associate with this DB cluster\.  
 If you plan to update the resource, don't specify VPC security groups in a shared VPC\.  
 *Required*: No  
