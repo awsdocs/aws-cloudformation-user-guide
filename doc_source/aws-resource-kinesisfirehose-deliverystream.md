@@ -261,178 +261,158 @@ The following example shows record format conversion\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-            Description: Stack for Firehose DeliveryStream S3 Destination.
-            Resources:
-            
-            GlueDatabase:
-            Type: AWS::Glue::Database
-            Properties: 
-            CatalogId: !Ref AWS::AccountId
-            DatabaseInput: {}
-            
-            GlueTable:
-            Type: AWS::Glue::Table
-            Properties:
-            CatalogId: !Ref AWS::AccountId
-            DatabaseName: !Ref GlueDatabase
-            TableInput:
-            Owner: owner
-            Retention: 0
-            StorageDescriptor:
-            Columns:
-            - Name: pickup_latitude
-            Type: double
-            - Name: pickup_longitude
-            Type: double
-            - Name: dropoff_latitude
-            Type: double
-            - Name: dropoff_longitude
-            Type: double
-            - Name: trip_id
-            Type: int
-            - Name: trip_distance
-            Type: double
-            - Name: passenger_count
-            Type: int
-            - Name: pickup_datetime
-            Type: timestamp
-            - Name: dropoff_datetime
-            Type: timestamp
-            - Name: total_amount
-            Type: double
-            InputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
-            OutputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
-            Compressed: false
-            NumberOfBuckets: -1
-            SerdeInfo:
+Description: Stack for Firehose DeliveryStream S3 Destination.
+Resources:          
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Description: Example Glue database
+  GlueTable:
+    Type: AWS::Glue::Table
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref GlueDatabase
+      TableInput:
+        Name: example-table
+        Retention: 0
+        StorageDescriptor:
+          Columns:
+            - Name: ticker_symbol
+              Type: string
+            - Name: sector
+              Type: string
+            - Name: change
+              Type: doubley
+            - Name: price
+              Type: double
+          InputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat
+          Compressed: false
+          NumberOfBuckets: -1
+          SerdeInfo:
             SerializationLibrary: org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe
             Parameters:
-            serialization.format: '1'
-            BucketColumns: []
-            SortColumns: []
-            StoredAsSubDirectories: false
-            PartitionKeys:
-            - Name: year
-            Type: string
-            - Name: month
-            Type: string
-            - Name: day
-            Type: string
-            - Name: hour
-            Type: string
-            TableType: EXTERNAL_TABLE
-            
-            deliverystream:
-            Type: AWS::KinesisFirehose::DeliveryStream
-            Properties: 
-            DeliveryStreamType: DirectPut
-            ExtendedS3DestinationConfiguration:
-            RoleARN: !GetAtt deliveryRole.Arn
-            BucketARN: !Join 
-            - ''
-            - - 'arn:aws:s3:::'
+              {
+                "serialization.format": "1",
+                "BucketColumns": "[]",
+                "SortColumns": "[]",
+                "StoredAsSubDirectories": false,
+                "PartitionKeys": '[
+                  { "Name": year, "Type": string },
+                  { "Name": month, "Type": string },
+                  { "Name": day, "Type": string },
+                  { "Name": hour, "Type": string },
+                  ]',
+              }
+        TableType: EXTERNAL_TABLE
+  deliverystream:
+    Type: AWS::KinesisFirehose::DeliveryStream
+    Properties:
+      DeliveryStreamType: DirectPut
+      ExtendedS3DestinationConfiguration:
+        RoleARN: !GetAtt deliveryRole.Arn
+        BucketARN: !Join
+          - ""
+          - - "arn:aws:s3:::"
             - !Ref s3bucket
-            Prefix: !Join 
-            - ''
-            - - !Ref GlueTable
-            -  '/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/'
-            ErrorOutputPrefix: !Join 
-            - ''
-            - - !Ref GlueTable
-            -  'error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/'
-            BufferingHints:
-            SizeInMBs: 128
-            IntervalInSeconds: 300
-            CompressionFormat: UNCOMPRESSED
-            EncryptionConfiguration:
-            NoEncryptionConfig: NoEncryption
-            CloudWatchLoggingOptions:
-            Enabled: true
-            LogGroupName: !Join
-            - ''
-            - - 'KDF-'
-            - !Ref GlueTable
-            LogStreamName: S3Delivery
-            S3BackupMode: Disabled
-            DataFormatConversionConfiguration:
-            SchemaConfiguration:
+        Prefix: !Join
+          - ""
+          - - !Ref GlueTable
+            - "/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/"
+        ErrorOutputPrefix: !Join
+          - ""
+          - - !Ref GlueTable
+            - "error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/"
+        BufferingHints:
+          SizeInMBs: 128
+          IntervalInSeconds: 300
+        CompressionFormat: UNCOMPRESSED
+        EncryptionConfiguration:
+          NoEncryptionConfig: NoEncryption
+        CloudWatchLoggingOptions:
+          Enabled: true
+          LogGroupName: !Join
+            - ""
+            - - "KDF-"
+              - !Ref GlueTable
+          LogStreamName: S3Delivery
+        S3BackupMode: Disabled
+        DataFormatConversionConfiguration:
+          SchemaConfiguration:
             CatalogId: !Ref AWS::AccountId
             RoleARN: !GetAtt deliveryRole.Arn
             DatabaseName: !Ref GlueDatabase
             TableName: !Ref GlueTable
             Region: !Ref AWS::Region
             VersionId: LATEST
-            InputFormatConfiguration:
+          InputFormatConfiguration:
             Deserializer:
-            OpenXJsonSerDe: {}
-            OutputFormatConfiguration:
+              OpenXJsonSerDe: {}
+          OutputFormatConfiguration:
             Serializer:
-            ParquetSerDe: {}
-            Enabled: True
-            
-            s3bucket:
-            Type: AWS::S3::Bucket
-            Properties:
-            VersioningConfiguration:
-            Status: Enabled
-            
-            deliveryRole:
-            Type: AWS::IAM::Role
-            Properties:
-            AssumeRolePolicyDocument:
-            Version: 2012-10-17
-            Statement:
-            - Sid: ''
+              ParquetSerDe: {}
+          Enabled: True
+  s3bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      VersioningConfiguration:
+        Status: Enabled
+  deliveryRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: ""
             Effect: Allow
             Principal:
-            Service: firehose.amazonaws.com
-            Action: 'sts:AssumeRole'
+              Service: firehose.amazonaws.com
+            Action: "sts:AssumeRole"
             Condition:
-            StringEquals:
-            'sts:ExternalId': !Ref 'AWS::AccountId'
-            Path: "/"
-            Policies:
-            - PolicyName: firehose_delivery_policy
-            PolicyDocument:
+              StringEquals:
+                "sts:ExternalId": !Ref "AWS::AccountId"
+      Path: "/"
+      Policies:
+        - PolicyName: firehose_delivery_policy
+          PolicyDocument:
             Version: 2012-10-17
             Statement:
-            - Effect: Allow
-            Action:
-            - 's3:AbortMultipartUpload'
-            - 's3:GetBucketLocation'
-            - 's3:GetObject'
-            - 's3:ListBucket'
-            - 's3:ListBucketMultipartUploads'
-            - 's3:PutObject'
-            Resource:
-            - !Join 
-            - ''
-            - - 'arn:aws:s3:::'
-            - !Ref s3bucket
-            - !Join 
-            - ''
-            - - 'arn:aws:s3:::'
-            - !Ref s3bucket
-            - '/*'
-            - Effect: Allow
-            Action: 'glue:GetTableVersions'
-            Resource: '*'
-            - Effect: Allow
-            Action: 'logs:PutLogEvents'
-            Resource: 
-            - !Join 
-            - ''
-            - - 'arn:aws:logs:'
-            - !Ref 'AWS::Region'
-            - ':'
-            - !Ref 'AWS::AccountId'
-            - 'log-group:/aws/kinesisfirehose/KDF-'
-            - !Ref GlueTable
-            - ':log-stream:*'
-            Outputs:
-            deliverysreamARN:
-            Description: The ARN of the firehose delivery stream
-            Value: !GetAtt deliverystream.Arn
+              - Effect: Allow
+                Action:
+                  - "s3:AbortMultipartUpload"
+                  - "s3:GetBucketLocation"
+                  - "s3:GetObject"
+                  - "s3:ListBucket"
+                  - "s3:ListBucketMultipartUploads"
+                  - "s3:PutObject"
+                Resource:
+                  - !Join
+                    - ""
+                    - - "arn:aws:s3:::"
+                      - !Ref s3bucket
+                  - !Join
+                    - ""
+                    - - "arn:aws:s3:::"
+                      - !Ref s3bucket
+                      - "/*"
+              - Effect: Allow
+                Action: "glue:GetTableVersions"
+                Resource: "*"
+              - Effect: Allow
+                Action: "logs:PutLogEvents"
+                Resource:
+                  - !Join
+                    - ""
+                    - - "arn:aws:logs:"
+                      - !Ref "AWS::Region"
+                      - ":"
+                      - !Ref "AWS::AccountId"
+                      - "log-group:/aws/kinesisfirehose/KDF-"
+                      - !Ref GlueTable
+                      - ":log-stream:*"
+
 ```
 
 ### Specify an Amazon S3 Destination for the Delivery Stream<a name="aws-resource-kinesisfirehose-deliverystream--examples--Specify_an_Amazon_S3_Destination_for_the_Delivery_Stream"></a>
