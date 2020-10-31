@@ -269,6 +269,7 @@ Resources:
       CatalogId: !Ref AWS::AccountId
       DatabaseInput:
         Description: Example Glue database
+        Name: example-database
   GlueTable:
     Type: AWS::Glue::Table
     Properties:
@@ -276,7 +277,6 @@ Resources:
       DatabaseName: !Ref GlueDatabase
       TableInput:
         Name: example-table
-        Retention: 0
         StorageDescriptor:
           Columns:
             - Name: ticker_symbol
@@ -284,7 +284,7 @@ Resources:
             - Name: sector
               Type: string
             - Name: change
-              Type: doubley
+              Type: double
             - Name: price
               Type: double
           InputFormat: org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat
@@ -324,10 +324,10 @@ Resources:
         ErrorOutputPrefix: !Join
           - ""
           - - !Ref GlueTable
-            - "error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/"
+            - "-error/!{firehose:error-output-type}/year=!{timestamp:YYYY}/month=!{timestamp:MM}/day=!{timestamp:dd}/hour=!{timestamp:HH}/"
         BufferingHints:
-          SizeInMBs: 128
-          IntervalInSeconds: 300
+          SizeInMBs: 64 # must be at least 64 when format conversion is enabled
+          IntervalInSeconds: 60
         CompressionFormat: UNCOMPRESSED
         EncryptionConfiguration:
           NoEncryptionConfig: NoEncryption
