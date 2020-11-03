@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SseKmsEncryptedObjects`  <a name="cfn-s3-bucket-sourceselectioncriteria-ssekmsencryptedobjects"></a>
  A container for filter information for the selection of Amazon S3 objects encrypted with AWS KMS\. If you include `SourceSelectionCriteria` in the replication configuration, this element is required\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [SseKmsEncryptedObjects](aws-properties-s3-bucket-ssekmsencryptedobjects.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

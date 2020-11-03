@@ -80,7 +80,9 @@ The approximate amount of time, in seconds, between health checks of an individu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckPath`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckpath"></a>
-\[HTTP/HTTPS health checks\] The ping path that is the destination on the targets for health checks\. The default is /\.  
+\[HTTP/HTTPS health checks\] The destination for health checks on the targets\.  
+\[HTTP1 or HTTP2 protocol version\] The ping path\. The default is /\.  
+\[GRPC protocol version\] The path of a custom health check method with the format /package\.service/method\. The default is /AWS\.ALB/healthcheck\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -117,7 +119,7 @@ The number of consecutive health checks successes required before considering an
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Matcher`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher"></a>
-\[HTTP/HTTPS health checks\] The HTTP codes to use when checking for a successful response from a target\.  
+\[HTTP/HTTPS health checks\] The HTTP or gRPC codes to use when checking for a successful response from a target\.  
 *Required*: No  
 *Type*: [Matcher](aws-properties-elasticloadbalancingv2-targetgroup-matcher.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

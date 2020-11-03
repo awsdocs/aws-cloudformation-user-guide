@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname)" : String,
       "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
+      "[GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid)" : String,
       "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
       "[MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled)" : Boolean,
       "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ NodeGroupConfiguration, ... ],
@@ -63,6 +64,7 @@ Properties:
   [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
   [Engine](#cfn-elasticache-replicationgroup-engine): String
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
+  [GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid): String
   [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
   [MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled): Boolean
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
@@ -136,7 +138,7 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + General purpose:
   + Current generation: 
 
-    **M6 node types:** `cache.m6.large`, `cache.m6.xlarge`, `cache.m6.2xlarge`, `cache.m6.4xlarge`, `cache.m6.12xlarge`, `cache.m6.24xlarge` 
+    **M6g node types:** `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`, `cache.m6g.4xlarge`, `cache.m6g.12xlarge`, `cache.m6g.24xlarge` 
 
     **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
@@ -159,7 +161,7 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + Memory optimized:
   + Current generation: 
 
-    **R6 node types:** `cache.r6.large`, `cache.r6.xlarge`, `cache.r6.2xlarge`, `cache.r6.4xlarge`, `cache.r6.12xlarge`, `cache.r6.24xlarge`
+    **R6g node types:** `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`, `cache.r6g.4xlarge`, `cache.r6g.12xlarge`, `cache.r6g.24xlarge`
 
     **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
@@ -208,6 +210,12 @@ The version number of the cache engine to be used for the clusters in this repli
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GlobalReplicationGroupId`  <a name="cfn-elasticache-replicationgroup-globalreplicationgroupid"></a>
+The name of the Global Datastore  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-elasticache-replicationgroup-kmskeyid"></a>
 The ID of the KMS key used to encrypt the disk on the cluster\.  

@@ -48,6 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Engine](#cfn-rds-dbcluster-engine)" : String,
       "[EngineMode](#cfn-rds-dbcluster-enginemode)" : String,
       "[EngineVersion](#cfn-rds-dbcluster-engineversion)" : String,
+      "[GlobalClusterIdentifier](#cfn-rds-dbcluster-globalclusteridentifier)" : String,
       "[KmsKeyId](#cfn-rds-dbcluster-kmskeyid)" : String,
       "[MasterUsername](#cfn-rds-dbcluster-masterusername)" : String,
       "[MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword)" : String,
@@ -91,6 +92,7 @@ Properties:
   [Engine](#cfn-rds-dbcluster-engine): String
   [EngineMode](#cfn-rds-dbcluster-enginemode): String
   [EngineVersion](#cfn-rds-dbcluster-engineversion): String
+  [GlobalClusterIdentifier](#cfn-rds-dbcluster-globalclusteridentifier): String
   [KmsKeyId](#cfn-rds-dbcluster-kmskeyid): String
   [MasterUsername](#cfn-rds-dbcluster-masterusername): String
   [MasterUserPassword](#cfn-rds-dbcluster-masteruserpassword): String
@@ -215,7 +217,7 @@ The name of the database engine to be used for this DB cluster\.
 Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\), and `aurora-postgresql`   
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
 The DB engine mode of the DB cluster, either `provisioned` `serverless`, `parallelquery`, or `multimaster`\.  
@@ -241,7 +243,13 @@ To list all of the available engine versions for `aurora-postgresql`, use the fo
 `aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"`  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GlobalClusterIdentifier`  <a name="cfn-rds-dbcluster-globalclusteridentifier"></a>
+ The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `KmsKeyId`  <a name="cfn-rds-dbcluster-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key that is used to encrypt the database instances in the DB cluster, such as `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you enable the `StorageEncrypted` property but don't specify this property, the default master key is used\. If you specify this property, you must set the `StorageEncrypted` property to `true`\.  

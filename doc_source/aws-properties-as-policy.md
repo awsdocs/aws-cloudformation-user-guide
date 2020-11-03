@@ -1,8 +1,6 @@
 # AWS::AutoScaling::ScalingPolicy<a name="aws-properties-as-policy"></a>
 
-Specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can change the number of instances available for your application in response to changing demand\.
-
-If you create either a step scaling policy or a simple scaling policy, you must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. Note that you can associate a CloudWatch alarm with only one scaling policy\. 
+The AWS::AutoScaling::ScalingPolicy resource specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can change the number of instances available for your application in response to changing demand\.
 
 For more information about using scaling policies to scale your Auto Scaling group automatically, see [Dynamic scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
 
@@ -124,7 +122,7 @@ The following predefined metrics are available:
 + `ASGAverageNetworkIn`
 + `ASGAverageNetworkOut`
 + `ALBRequestCountPerTarget` 
-If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `ResourceLabel` parameter with the `PredefinedMetricSpecification`\.  
+If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `ResourceLabel` property with the `PredefinedMetricSpecification`\.  
 *Required*: Conditional  
 *Type*: [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -367,7 +365,9 @@ Resources:
 
 ### Step scaling policy<a name="aws-properties-as-policy--examples--Step_scaling_policy"></a>
 
-The following example creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. When an associated alarm is triggered, the policy increases the capacity of the Auto Scaling group based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
+The following example creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. You must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. You can associate a CloudWatch alarm with only one scaling policy\. 
+
+When the associated alarm is triggered, the policy increases the capacity of the Auto Scaling group based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
 + Increase capacity by 1 when the value of the metric is greater than or equal to 70 percent but less than 85 percent 
 + Increase capacity by 2 when the value of the metric is greater than or equal to 85 percent but less than 95 percent 
 + Increase capacity by 3 when the value of the metric is greater than or equal to 95 percent 
@@ -436,7 +436,7 @@ Resources:
 
 ### Simple scaling policy<a name="aws-properties-as-policy--examples--Simple_scaling_policy"></a>
 
-The following example creates a scaling policy with the `SimpleScaling` policy type and the `ChangeInCapacity` adjustment type\. The policy increases capacity by one when it is triggered\.
+The following example creates a scaling policy with the `SimpleScaling` policy type and the `ChangeInCapacity` adjustment type\. The policy increases capacity by one when it is triggered\. You must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. You can associate a CloudWatch alarm with only one scaling policy\. 
 
 #### JSON<a name="aws-properties-as-policy--examples--Simple_scaling_policy--json"></a>
 

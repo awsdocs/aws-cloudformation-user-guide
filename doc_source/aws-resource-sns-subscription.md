@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery)" : Boolean,
       "[RedrivePolicy](#cfn-sns-subscription-redrivepolicy)" : Json,
       "[Region](#cfn-sns-subscription-region)" : String,
+      "[SubscriptionRoleArn](#cfn-sns-subscription-subscriptionrolearn)" : String,
       "[TopicArn](#topicarn)" : String
     }
 }
@@ -36,6 +37,7 @@ Properties:
   [RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery): Boolean
   [RedrivePolicy](#cfn-sns-subscription-redrivepolicy): Json
   [Region](#cfn-sns-subscription-region): String
+  [SubscriptionRoleArn](#cfn-sns-subscription-subscriptionrolearn): String
   [TopicArn](#topicarn): String
 ```
 
@@ -83,6 +85,12 @@ If no region is specified, CloudFormation uses the region of the caller as the d
 If you perform an update operation that only updates the `Region` property of a `AWS::SNS::Subscription` resource, that operation will fail unless you are either:  
 + Updating the `Region` from `NULL` to the caller region\.
 + Updating the `Region` from the caller region to `NULL`\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SubscriptionRoleArn`  <a name="cfn-sns-subscription-subscriptionrolearn"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

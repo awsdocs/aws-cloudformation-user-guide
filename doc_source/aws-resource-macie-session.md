@@ -80,10 +80,10 @@ This example enables Amazon Macie for an account\. It also configures Macie to p
 
 ```
 {
-  "Type" : "AWS::Macie::Session",
-  "Properties" : {
-      "FindingPublishingFrequency" : "ONE_HOUR",
-      "Status" : "ENABLED"
+    "Type": "AWS::Macie::Session",
+    "Properties": {
+        "FindingPublishingFrequency": "ONE_HOUR",
+        "Status": "ENABLED"
     }
 }
 ```
@@ -92,7 +92,7 @@ This example enables Amazon Macie for an account\. It also configures Macie to p
 
 ```
 Type: AWS::Macie::Session
-Properties: 
-  FindingPublishingFrequency: ONE_HOUR
-  Status: ENABLED
+Properties:
+    FindingPublishingFrequency: ONE_HOUR
+    Status: ENABLED
 ```

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `EventThreshold`  <a name="cfn-s3-bucket-metrics-eventthreshold"></a>
  A container specifying the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

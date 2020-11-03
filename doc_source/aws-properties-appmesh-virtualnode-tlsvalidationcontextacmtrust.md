@@ -2,9 +2,6 @@
 
 An object that represents a TLS validation context trust for an AWS Certicate Manager \(ACM\) certificate\.
 
-**Note**  
-AWS Certificate Manager Private Certificate Authority is not available in the MXP Region\.
-
 ## Syntax<a name="aws-properties-appmesh-virtualnode-tlsvalidationcontextacmtrust-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

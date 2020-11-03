@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AdMarkers](#cfn-mediapackage-originendpoint-hlsmanifest-admarkers)" : String,
   "[AdsOnDeliveryRestrictions](#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions)" : String,
-  "[AdTriggers](#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers)" : AdTriggers,
+  "[AdTriggers](#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers)" : [ String, ... ],
   "[Id](#cfn-mediapackage-originendpoint-hlsmanifest-id)" : String,
   "[IncludeIframeOnlyStream](#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream)" : Boolean,
   "[ManifestName](#cfn-mediapackage-originendpoint-hlsmanifest-manifestname)" : String,
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AdMarkers](#cfn-mediapackage-originendpoint-hlsmanifest-admarkers): String
   [AdsOnDeliveryRestrictions](#cfn-mediapackage-originendpoint-hlsmanifest-adsondeliveryrestrictions): String
   [AdTriggers](#cfn-mediapackage-originendpoint-hlsmanifest-adtriggers): 
-    AdTriggers
+    - String
   [Id](#cfn-mediapackage-originendpoint-hlsmanifest-id): String
   [IncludeIframeOnlyStream](#cfn-mediapackage-originendpoint-hlsmanifest-includeiframeonlystream): Boolean
   [ManifestName](#cfn-mediapackage-originendpoint-hlsmanifest-manifestname): String
@@ -57,9 +57,18 @@ The flags on SCTE\-35 segmentation descriptors that have to be present for Media
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdTriggers`  <a name="cfn-mediapackage-originendpoint-hlsmanifest-adtriggers"></a>
-The SCTE\-35 message types that MediaPackage treats as ad markers in the output manifest\. For information about SCTE\-35 in MediaPackage, see [SCTE\-35 Message Options in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/scte.html)\.   
+The SCTE\-35 message types that MediaPackage treats as ad markers in the output manifest\.  
+Valid values:  
++  **BREAK**
++  **DISTRIBUTOR\_ADVERTISEMENT**
++  **DISTRIBUTOR\_OVERLAY\_PLACEMENT\_OPPORTUNITY**
++  **DISTRIBUTOR\_PLACEMENT\_OPPORTUNITY**
++  **PROVIDER\_ADVERTISEMENT**
++  **PROVIDER\_OVERLAY\_PLACEMENT\_OPPORTUNITY**
++  **PROVIDER\_PLACEMENT\_OPPORTUNITY**
++  **SPLICE\_INSERT**
 *Required*: No  
-*Type*: [AdTriggers](aws-properties-mediapackage-originendpoint-adtriggers.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-mediapackage-originendpoint-hlsmanifest-id"></a>

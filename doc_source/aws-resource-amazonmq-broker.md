@@ -39,7 +39,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
-      "[LdapMetadata](#cfn-amazonmq-broker-ldapmetadata)" : LdapMetadata,
       "[LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata)" : LdapServerMetadata,
       "[Logs](#cfn-amazonmq-broker-logs)" : LogList,
       "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : MaintenanceWindow,
@@ -69,8 +68,6 @@ Properties:
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
-  [LdapMetadata](#cfn-amazonmq-broker-ldapmetadata): 
-    LdapMetadata
   [LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata): 
     LdapServerMetadata
   [Logs](#cfn-amazonmq-broker-logs): 
@@ -145,12 +142,6 @@ The version of the broker engine\. For a list of supported engine versions, see 
 The broker's instance type\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`LdapMetadata`  <a name="cfn-amazonmq-broker-ldapmetadata"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: [LdapMetadata](aws-properties-amazonmq-broker-ldapmetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LdapServerMetadata`  <a name="cfn-amazonmq-broker-ldapservermetadata"></a>

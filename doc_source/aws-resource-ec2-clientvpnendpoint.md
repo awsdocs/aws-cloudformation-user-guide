@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-ec2-clientvpnendpoint-description)" : String,
       "[DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers)" : [ String, ... ],
       "[SecurityGroupIds](#cfn-ec2-clientvpnendpoint-securitygroupids)" : [ String, ... ],
+      "[SelfServicePortal](#cfn-ec2-clientvpnendpoint-selfserviceportal)" : String,
       "[ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn)" : String,
       "[SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel)" : Boolean,
       "[TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications)" : [ TagSpecification, ... ],
@@ -43,6 +44,7 @@ Properties:
     - String
   [SecurityGroupIds](#cfn-ec2-clientvpnendpoint-securitygroupids): 
     - String
+  [SelfServicePortal](#cfn-ec2-clientvpnendpoint-selfserviceportal): String
   [ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn): String
   [SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel): Boolean
   [TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications): 
@@ -93,6 +95,12 @@ Information about the DNS servers to be used for DNS resolution\. A Client VPN e
 The IDs of one or more security groups to apply to the target network\. You must also specify the ID of the VPC that contains the security groups\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SelfServicePortal`  <a name="cfn-ec2-clientvpnendpoint-selfserviceportal"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerCertificateArn`  <a name="cfn-ec2-clientvpnendpoint-servercertificatearn"></a>

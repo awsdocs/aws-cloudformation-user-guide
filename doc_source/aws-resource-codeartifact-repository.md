@@ -13,8 +13,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeArtifact::Repository",
   "Properties" : {
       "[Description](#cfn-codeartifact-repository-description)" : String,
-      "[DomainName](#cfn-codeartifact-repository-domainname)" : String,
-      "[DomainOwner](#cfn-codeartifact-repository-domainowner)" : String,
       "[ExternalConnections](#cfn-codeartifact-repository-externalconnections)" : [ String, ... ],
       "[PermissionsPolicyDocument](#cfn-codeartifact-repository-permissionspolicydocument)" : Json,
       "[RepositoryName](#cfn-codeartifact-repository-repositoryname)" : String,
@@ -29,8 +27,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeArtifact::Repository
 Properties: 
   [Description](#cfn-codeartifact-repository-description): String
-  [DomainName](#cfn-codeartifact-repository-domainname): String
-  [DomainOwner](#cfn-codeartifact-repository-domainowner): String
   [ExternalConnections](#cfn-codeartifact-repository-externalconnections): 
     - String
   [PermissionsPolicyDocument](#cfn-codeartifact-repository-permissionspolicydocument): Json
@@ -48,24 +44,6 @@ Properties:
 *Maximum*: `1000`  
 *Pattern*: `\P{C}+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`DomainName`  <a name="cfn-codeartifact-repository-domainname"></a>
- The name of the domain that contains the repository\.   
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `2`  
-*Maximum*: `50`  
-*Pattern*: `[a-z][a-z0-9\-]{0,48}[a-z0-9]`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`DomainOwner`  <a name="cfn-codeartifact-repository-domainowner"></a>
- The 12\-digit account number of the AWS account that owns the domain that contains the repository\. It does not include dashes or spaces\.   
-*Required*: No  
-*Type*: String  
-*Minimum*: `12`  
-*Maximum*: `12`  
-*Pattern*: `[0-9]{12}`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExternalConnections`  <a name="cfn-codeartifact-repository-externalconnections"></a>
  An array of external connections associated with the repository\.   
@@ -119,3 +97,131 @@ When you pass the logical ID of this resource, the function returns the 12\-digi
 
 `Name`  <a name="Name-fn::getatt"></a>
 When you pass the logical ID of this resource, the function returns the name of the repository\.
+
+## Examples<a name="aws-resource-codeartifact-repository--examples"></a>
+
+The following examples can help you create CodeArtifact repositories using CloudFormation\.
+
+### Create a domain and repository<a name="aws-resource-codeartifact-repository--examples--Create_a_domain_and_repository"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain* and a CodeArtifact repository named *my\-repo* inside it\.
+
+#### YAML<a name="aws-resource-codeartifact-repository--examples--Create_a_domain_and_repository--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+  MyCodeArtifactRepository:
+    Type: 'AWS::CodeArtifact::Repository'
+    Properties:
+      RepositoryName: "my-repo"
+      DomainName: !GetAtt MyCodeArtifactDomain.Name
+```
+
+#### JSON<a name="aws-resource-codeartifact-repository--examples--Create_a_domain_and_repository--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain"
+      }
+    },
+    "MyCodeArtifactRepository": {
+      "Type": "AWS::CodeArtifact::Repository",
+      "Properties": {
+        "RepositoryName": "my-repo",
+        "DomainName": {
+          "Fn::GetAtt": [
+            "MyCodeArtifactDomain",
+            "Name"
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+### Create a repository with an upstream repository and external connection<a name="aws-resource-codeartifact-repository--examples--Create_a_repository_with_an_upstream_repository_and_external_connection"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain* to store repositories\. It also creates two CodeArtifact repositories: *my\-repo* and *my\-upstream\-repo* within the domain\. *my\-repo* has *my\-upstream\-repo* configured as an upstream repository, and *my\-upstream\-repo* has an external connection to the public repository, **npmjs**\.
+
+#### YAML<a name="aws-resource-codeartifact-repository--examples--Create_a_repository_with_an_upstream_repository_and_external_connection--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+  MyCodeArtifactUpstreamRepository:
+    Type: 'AWS::CodeArtifact::Repository'
+    Properties:
+      RepositoryName: "my-upstream-repo"
+      DomainName: !GetAtt MyCodeArtifactDomain.Name
+      ExternalConnections:
+        - public:npmjs
+  MyCodeArtifactRepository:
+    Type: 'AWS::CodeArtifact::Repository'
+    Properties:
+      RepositoryName: "my-repo"
+      DomainName: !GetAtt MyCodeArtifactDomain.Name
+      Upstreams:
+        - !GetAtt MyCodeArtifactUpstreamRepository.Name
+```
+
+#### JSON<a name="aws-resource-codeartifact-repository--examples--Create_a_repository_with_an_upstream_repository_and_external_connection--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain"
+      }
+    },
+    "MyCodeArtifactUpstreamRepository": {
+      "Type": "AWS::CodeArtifact::Repository",
+      "Properties": {
+        "RepositoryName": "my-upstream-repo",
+        "DomainName": {
+          "Fn::GetAtt": [
+            "MyCodeArtifactDomain",
+            "Name"
+          ]
+        },
+        "ExternalConnections": [
+          "public:npmjs"
+        ]
+      }
+    },
+    "MyCodeArtifactRepository": {
+      "Type": "AWS::CodeArtifact::Repository",
+      "Properties": {
+        "RepositoryName": "my-repo",
+        "DomainName": {
+          "Fn::GetAtt": [
+            "MyCodeArtifactDomain",
+            "Name"
+          ]
+        },
+        "Upstreams": [
+          {
+            "Fn::GetAtt": [
+              "MyCodeArtifactUpstreamRepository",
+              "Name"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+```

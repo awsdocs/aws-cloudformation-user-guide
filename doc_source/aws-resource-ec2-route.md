@@ -14,15 +14,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::Route",
   "Properties" : {
+      "[CarrierGatewayId](#cfn-ec2-route-carriergatewayid)" : String,
       "[DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock)" : String,
       "[DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock)" : String,
       "[EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid)" : String,
       "[GatewayId](#cfn-ec2-route-gatewayid)" : String,
       "[InstanceId](#cfn-ec2-route-instanceid)" : String,
+      "[LocalGatewayId](#cfn-ec2-route-localgatewayid)" : String,
       "[NatGatewayId](#cfn-ec2-route-natgatewayid)" : String,
       "[NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid)" : String,
       "[RouteTableId](#cfn-ec2-route-routetableid)" : String,
       "[TransitGatewayId](#cfn-ec2-route-transitgatewayid)" : String,
+      "[VpcEndpointId](#cfn-ec2-route-vpcendpointid)" : String,
       "[VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid)" : String
     }
 }
@@ -33,19 +36,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::Route
 Properties: 
+  [CarrierGatewayId](#cfn-ec2-route-carriergatewayid): String
   [DestinationCidrBlock](#cfn-ec2-route-destinationcidrblock): String
   [DestinationIpv6CidrBlock](#cfn-ec2-route-destinationipv6cidrblock): String
   [EgressOnlyInternetGatewayId](#cfn-ec2-route-egressonlyinternetgatewayid): String
   [GatewayId](#cfn-ec2-route-gatewayid): String
   [InstanceId](#cfn-ec2-route-instanceid): String
+  [LocalGatewayId](#cfn-ec2-route-localgatewayid): String
   [NatGatewayId](#cfn-ec2-route-natgatewayid): String
   [NetworkInterfaceId](#cfn-ec2-route-networkinterfaceid): String
   [RouteTableId](#cfn-ec2-route-routetableid): String
   [TransitGatewayId](#cfn-ec2-route-transitgatewayid): String
+  [VpcEndpointId](#cfn-ec2-route-vpcendpointid): String
   [VpcPeeringConnectionId](#cfn-ec2-route-vpcpeeringconnectionid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-route-properties"></a>
+
+`CarrierGatewayId`  <a name="cfn-ec2-route-carriergatewayid"></a>
+The ID of the carrier gateway\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR block used for the destination match\.  
@@ -79,6 +91,12 @@ The ID of a NAT instance in your VPC\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`LocalGatewayId`  <a name="cfn-ec2-route-localgatewayid"></a>
+The ID of the local gateway\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NatGatewayId`  <a name="cfn-ec2-route-natgatewayid"></a>
 The ID of a NAT gateway\.  
 *Required*: No  
@@ -99,6 +117,12 @@ The ID of the route table\. The routing table must be associated with the same V
 
 `TransitGatewayId`  <a name="cfn-ec2-route-transitgatewayid"></a>
 The ID of a transit gateway\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VpcEndpointId`  <a name="cfn-ec2-route-vpcendpointid"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

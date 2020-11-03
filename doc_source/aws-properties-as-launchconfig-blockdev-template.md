@@ -63,8 +63,7 @@ You must specify either a `VolumeSize` or a `SnapshotId`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSize`  <a name="cfn-as-launchconfig-blockdev-template-volumesize"></a>
-The volume size, in Gibibytes \(GiB\)\.   
-This can be a number from 1\-1,024 for `standard`, 4\-16,384 for `io1`, 1\-16,384 for `gp2`, and 500\-16,384 for `st1` and `sc1`\.   
+The volume size, in Gibibytes \(GiB\)\. This can be a number from 1\-1,024 for `standard`, 4\-16,384 for `io1`, 1\-16,384 for `gp2`, and 500\-16,384 for `st1` and `sc1`\.   
 If you create a volume from a snapshot and you don't specify a volume size, the default is the snapshot size\.   
 You must specify either a `VolumeSize` or a `SnapshotId`\. If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
 *Required*: Conditional  

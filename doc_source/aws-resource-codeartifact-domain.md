@@ -13,7 +13,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeArtifact::Domain",
   "Properties" : {
       "[DomainName](#cfn-codeartifact-domain-domainname)" : String,
-      "[EncryptionKey](#cfn-codeartifact-domain-encryptionkey)" : String,
       "[PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument)" : Json
     }
 }
@@ -25,7 +24,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeArtifact::Domain
 Properties: 
   [DomainName](#cfn-codeartifact-domain-domainname): String
-  [EncryptionKey](#cfn-codeartifact-domain-encryptionkey): String
   [PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument): Json
 ```
 
@@ -38,15 +36,6 @@ Properties:
 *Minimum*: `2`  
 *Maximum*: `50`  
 *Pattern*: `[a-z][a-z0-9\-]{0,48}[a-z0-9]`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`EncryptionKey`  <a name="cfn-codeartifact-domain-encryptionkey"></a>
- The key used to encrypt the domain\.   
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
-*Pattern*: `\S+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PermissionsPolicyDocument`  <a name="cfn-codeartifact-domain-permissionspolicydocument"></a>
@@ -82,3 +71,109 @@ When you pass the logical ID of this resource, the function returns the name of 
 
 `Owner`  <a name="Owner-fn::getatt"></a>
 When you pass the logical ID of this resource, the function returns the 12\-digit account number of the AWS account that owns the domain\.
+
+## Examples<a name="aws-resource-codeartifact-domain--examples"></a>
+
+The following examples can help you create CodeArtifact domains using CloudFormation\.
+
+### Create a domain<a name="aws-resource-codeartifact-domain--examples--Create_a_domain"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain*\.
+
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+```
+
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain"
+      }
+    }
+  }
+}
+```
+
+### Create a domain with an attached AWS KMS permissions policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_permissions_policy"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain* and attaches an AWS KMS permissions policy\.
+
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_permissions_policy--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+      EncryptionKey: arn:aws:kms:us-west-2:123456789012:key/12345678-9abc-def1-2345-6789abcdef12
+      PermissionsPolicyDocument:
+          Version: 2012-10-17
+          Statement:
+            - Action:
+                - codeartifact:ReadFromRepository
+                - codeartifact:DescribePackageVersion
+                - codeartifact:DescribeRepository
+                - codeartifact:GetPackageVersionReadme
+                - codeartifact:GetRepositoryEndpoint
+                - codeartifact:ListPackageVersionAssets
+                - codeartifact:ListPackageVersionDependencies
+                - codeartifact:ListPackageVersions
+                - codeartifact:ListPackages
+                - codeartifact:ReadFromRepository
+              Effect: Allow
+              Principal:
+                AWS: "arn:aws:iam::123456789012:root"
+              Resource: "*"
+```
+
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_permissions_policy--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain",
+        "EncryptionKey": "arn:aws:kms:us-west-2:123456789012:key/12345678-9abc-def1-2345-6789abcdef12",
+        "PermissionsPolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Action": [
+                "codeartifact:ReadFromRepository",
+                "codeartifact:DescribePackageVersion",
+                "codeartifact:DescribeRepository",
+                "codeartifact:GetPackageVersionReadme",
+                "codeartifact:GetRepositoryEndpoint",
+                "codeartifact:ListPackageVersionAssets",
+                "codeartifact:ListPackageVersionDependencies",
+                "codeartifact:ListPackageVersions",
+                "codeartifact:ListPackages",
+                "codeartifact:ReadFromRepository"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "arn:aws:iam::123456789012:root"
+              },
+              "Resource": "*"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```

@@ -28,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)" : Integer,
       "[MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts)" : Integer,
       "[ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor)" : Integer,
+      "[Queues](#cfn-lambda-eventsourcemapping-queues)" : [ String, ... ],
+      "[SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)" : [ SourceAccessConfiguration, ... ],
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String,
       "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ]
     }
@@ -50,6 +52,10 @@ Properties:
   [MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds): Integer
   [MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts): Integer
   [ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor): Integer
+  [Queues](#cfn-lambda-eventsourcemapping-queues): 
+    - String
+  [SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations): 
+    - SourceAccessConfiguration
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
   [Topics](#cfn-lambda-eventsourcemapping-topics): 
     - String
@@ -144,6 +150,18 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `10`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [SourceAccessConfiguration](aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartingPosition`  <a name="cfn-lambda-eventsourcemapping-startingposition"></a>

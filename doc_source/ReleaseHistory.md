@@ -4,6 +4,38 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_GlobalAccelerator.md) | The following resource was updated: AWS::GlobalAccelerator::EndpointGroup\. 
+
+ [ AWS::GlobalAccelerator::EndpointGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)   
+Use the `PortOverride` property to override the listener port used for routing traffic to endpoints\.  | October 29, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::GlobalAccelerator::EndpointGroup\. 
+
+ [ AWS::GlobalAccelerator::EndpointGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)   
+Use the `PortOverride` property to override the listener port used for routing traffic to endpoints\.  | October 29, 2020 | 
+| [New resources](AWS_IVS.md) | The following resources were added: AWS::IVS::Channel, AWS::IVS::StreamKey, and AWS::IVS::PlaybackKeyPair 
+
+ [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
+Use the `AWS::IVS::Channel` resource to specify an Amazon IVS Channel, which stores configuration information related to your live stream\. 
+
+ [AWS::IVS::StreamKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html)   
+Use the `AWS::IVS::StreamKey` resource to specify an Amazon IVS Stream Key, which creates a stream key for the specified IVS Channel\. Use a stream key to initiate a live stream\. 
+
+ [AWS::IVS::PlaybackKeyPair](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html)   
+Use the `AWS::IVS::PlaybackKeyPair` resource to specify an Amazon IVS PlaybackKeyPair, which is used to sign and validate a playback authorization token for a private channel\.  | October 29, 2020 | 
+| [New resource](AWS_IoTSiteWise.md) | The following resources were added: AWS::IoTSitewise::Asset, AWS::IoTSiteWise::AssetModel, and AWS::IoTSiteWise::Gateway\. 
+
+ [AWS::IoTSiteWise::Asset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html)   
+Use the `AWS::IoTSiteWise::Asset` resource to create a new asset in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::AssetModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html)   
+Use the `AWS::IoTSiteWise::AssetModel` resource to create a new asset model in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Gateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html)   
+Use the `AWS::IoTSiteWise::Gateway` resource to create a new gateway in AWS IoT SiteWise\.  | October 28, 2020 | 
+| [Updated resource](AWS_AutoScaling.md) | The following resource was updated: AWS::AutoScaling::AutoScalingGroup\. 
+
+ [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)   
+Use the `NewInstancesProtectedFromScaleIn` property to specify whether newly launched instances are protected from termination by Amazon EC2 Auto Scaling when scaling in\.  | October 26, 2020 | 
 | [Updated resources](AWS_AppStream.md) | The following resources were updated: `AWS::AppStream::Fleet` and `AWS::AppStream::ImageBuilder` 
 
  [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)   
@@ -57,62 +89,7 @@ Use the `FifoTopic` property to create a FIFO topic\.  | October 22, 2020 |
 
  [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
 In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityPolicy` property to specify the name of the security policy to attach to the server\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CloudFront::Distribution\. 
-
-[AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)  
-In the [Origin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html) property type, use the `OriginShield` property to enable CloudFront Origin Shield\.  
-For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the *Amazon CloudFront Developer Guide*\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Elasticsearch::Domain\. 
-
- [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
-In the [ElasticsearchClusterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html) property type:  
-+ Use the `WarmCount` property to specify the number of warm nodes in the cluster\.
-+ Use the `WarmEnabled` property to specify whether to enable warm storage for the cluster\.
-+ Use the `WarmType` property to specify the instance type for the cluster's warm nodes\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::AppSync::ApiKey\. 
-
- [AWS::AppSync::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)   
-Use the `ApiKeyID` property to specify the API key ID\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Transfer::Server\. 
-
- [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
-In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityPolicy` property to specify the name of the security policy to attach to the server\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | Added a new property, `FileFormat`, to the FAQ resource\. For more information, see [https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html](https://docs.aws.amazon.com/kendra/latest/dg/in-creating-faq.html) | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::KinesisFirehose::DeliveryStream 
-
- [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)   
-DeliveryStreamEncryptionConfigurationInput property type is now supported for the delivery streams in CloudFormation\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Events::Rule\. 
-
- [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
-Added [AWS::Events::Rule DeadLetterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html)  
-Added [AWS::Events::Rule RetryPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html) 
-
-[AWS::Events::Rule Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html)  
-Added [DeadLetterConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-deadletterconfig)  
-Added [RetryPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html##cfn-events-rule-target-retrypolicy)  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EMR::Cluster\. 
-
- [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html)   
-Use the `LogEncryptionKmsKeyId` property to specify the AWS KMS customer master key \(CMK\) used for encrypting log files\.  
-Use the `ManagedScalingPolicy` property to create a managed scaling policy for an Amazon EMR cluster\.  
-Use the `StepConcurrencyLevel` property to specify the number of steps that can be executed concurrently\.  | October 22, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::SNS::Topic\. 
-
- [AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)   
-Use the `ContentBasedDeduplication` property to enable content\-based deduplication for FIFO topics\.  
-Use the `FifoTopic` property to create a FIFO topic\.  | October 22, 2020 | 
 | [Updated Resources](AWS_Batch.md) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)\. 
-
-[AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)  
-Use the `Tags` property to specify tags for the compute environment\. 
-
-[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
-Use the `Tags` property to specify tags for the job definition\. 
-
-[AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)  
-Use the `Tags` property to specify tags for the job queue\.  | October 22, 2020 | 
-| [Updated Resources](#ReleaseHistory) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)\. 
 
 [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)  
 Use the `Tags` property to specify tags for the compute environment\. 
@@ -127,7 +104,7 @@ Use the `Tags` property to specify tags for the job queue\.  | October 22, 2020 
  [AWS::MediaPackage::Asset\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)   
 Use the `AWS::MediaPackage::Asset` to specify an asset to ingest VOD content\. 
 
- [AWS::MediaPackage::Channel\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ws-resource-mediapackage-channel.html)   
+ [AWS::MediaPackage::Channel\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html)   
 Use the `AWS::MediaPackage::Channel` to specify a channel to receive content\. 
 
  [AWS::MediaPackage::OriginEndpoint\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)   
@@ -136,13 +113,9 @@ Use the `AWS::MediaPackage::OriginEndpoint` to specify an endpoint on an AWS Ele
  [AWS::MediaPackage::PackagingConfiguration\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html)   
 Use the `AWS::MediaPackage::PackagingConfiguration` to specify a packaging configuration in a packaging group\. 
 
- [AWS::MediaPackage::AWS::MediaPackage::PackagingGroup\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ws-resource-mediapackage-packaginggroup.html)   
+ [AWS::MediaPackage::PackagingGroup\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html)   
 Use the `AWS::MediaPackage::PackagingGroup` to specify a packaging group\.  | October 22, 2020 | 
 | [New resource](AWS_SecretsManager.md) | The following new resource was added: `BlockPublicPolicy` 
-
- [Resource Policies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)   
-Use the `BlockPublicPolicy` when adding resource policies to Secrets Manager\.  | October 22, 2020 | 
-| [New resource](#ReleaseHistory) | The following new resource was added: `BlockPublicPolicy` 
 
  [Resource Policies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)   
 Use the `BlockPublicPolicy` when adding resource policies to Secrets Manager\.  | October 22, 2020 | 
@@ -588,16 +561,6 @@ Use the `ReplaceProvisioningArtifacts` property to choose whether provisioning a
 
  [AWS::Synthetics::Canary](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)   
 The RunConfig parameter is required\.  | May 14, 2020 | 
-| [New resources](AWS_GlobalAccelerator.md) | The following resources were added: AWS::GlobalAccelerator::Accelerator, AWS::GlobalAccelerator::EndpointGroup, and AWS::GlobalAccelerator::Listener 
-
- [ AWS::GlobalAccelerator::Accelerator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html)   
-Use the `AWS::GlobalAccelerator::Accelerator` resource to create or update an accelerator for AWS Global Accelerator\. 
-
- [ AWS::GlobalAccelerator::EndpointGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)   
-Use the `AWS::GlobalAccelerator::EndpointGroup` resource to create or update an endpoint group for AWS Global Accelerator\. 
-
- [ AWS::GlobalAccelerator::Listener](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)   
-Use the `AWS::GlobalAccelerator::Listener` resource to create or update a listener for AWS Global Accelerator\.  | May 14, 2020 | 
 | [New resources](AWS_Macie.md) | The following resources were added: AWS::Macie::CustomDataIdentifier, AWS::Macie::FindingsFilter, and AWS::Macie::Session 
 
  [AWS::Macie::CustomDataIdentifier](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html)   
@@ -686,7 +649,7 @@ Use the `LocalRoleName` property to specify an IAM role to use when an account u
 
  [AWS::ApiGatewayV2::Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)   
 Use the `AWS::ApiGatewayV2::Integration` resource to create a private integration for an HTTP API\.  | March 26, 2020 | 
-| [Updated resource](AWS_AutoScaling.md) | The following resource was updated: AWS::AutoScaling::AutoScalingGroup 
+| [Updated resource](AWS_AutoScaling.md) | The following resource was updated: AWS::AutoScaling::AutoScalingGroup\. 
 
  [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)   
 Use the `MaxInstanceLifetime` property to specify the maximum amount of time, in seconds, that an instance can be in service\.  | March 26, 2020 | 

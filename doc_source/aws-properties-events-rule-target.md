@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[InputPath](#cfn-events-rule-target-inputpath)" : String,
   "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : InputTransformer,
   "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : KinesisParameters,
+  "[RedshiftDataParameters](#cfn-events-rule-target-redshiftdataparameters)" : RedshiftDataParameters,
   "[RetryPolicy](#cfn-events-rule-target-retrypolicy)" : RetryPolicy,
   "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
   "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : RunCommandParameters,
@@ -48,6 +49,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     InputTransformer
   [KinesisParameters](#cfn-events-rule-target-kinesisparameters): 
     KinesisParameters
+  [RedshiftDataParameters](#cfn-events-rule-target-redshiftdataparameters): 
+    RedshiftDataParameters
   [RetryPolicy](#cfn-events-rule-target-retrypolicy): 
     RetryPolicy
   [RoleArn](#cfn-events-rule-target-rolearn): String
@@ -127,6 +130,13 @@ Settings to enable you to provide custom input to a target based on certain even
 The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream\. If you do not include this parameter, the default is to use the `eventId` as the partition key\.  
 *Required*: No  
 *Type*: [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RedshiftDataParameters`  <a name="cfn-events-rule-target-redshiftdataparameters"></a>
+Contains the Redshift Data API parameters to use when the target is a Redshift cluster\.  
+If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data API ExecuteStatement based on EventBridge events\.  
+*Required*: No  
+*Type*: [RedshiftDataParameters](aws-properties-events-rule-redshiftdataparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryPolicy`  <a name="cfn-events-rule-target-retrypolicy"></a>

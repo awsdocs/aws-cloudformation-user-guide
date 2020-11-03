@@ -1,6 +1,6 @@
 # AWS::IoT::Authorizer Tags<a name="aws-properties-iot-authorizer-tags"></a>
 
-<a name="aws-properties-iot-authorizer-tags-description"></a>The `Tags` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoT::Authorizer](aws-resource-iot-authorizer.md)\.
+Metadata which can be used to manage the authorizer\.
 
 ## Syntax<a name="aws-properties-iot-authorizer-tags-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-authorizer-tags-properties"></a>
 
 `Tags`  <a name="cfn-iot-authorizer-tags-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+Metadata which can be used to manage the authorizer\.  
 *Required*: No  
 *Type*: [List](#aws-properties-iot-authorizer-tags) of [Json](#aws-properties-iot-authorizer-tags)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

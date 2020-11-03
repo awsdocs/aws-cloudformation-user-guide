@@ -1,12 +1,13 @@
 # AWS::AutoScaling::LaunchConfiguration<a name="aws-properties-as-launchconfig"></a>
 
-The `LaunchConfiguration` resource specifies the Amazon EC2 Auto Scaling launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
+The `AWS::AutoScaling::LaunchConfiguration` resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
-**Important**  
-When you update the launch configuration, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. This update action does not deploy any change across the running Amazon EC2 instances in the Auto Scaling group\. In other words, after you associate a new launch configuration with an Auto Scaling group, all new instances will get the updated configuration, but existing instances continue to run with the configuration that they were originally launched with\. This works the same way as any other Auto Scaling group that uses a launch configuration\.   
-If you want to update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you must specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
+When you update the launch configuration for an Auto Scaling group, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. Existing instances are not affected\. To update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. 
 
 For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference* and [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+
+**Note**  
+To configure Amazon EC2 instances launched as part of the Auto Scaling group, you can specify a launch template or a launch configuration\. We recommend that you use a [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to make sure that you can use the latest features of Amazon EC2, such as Dedicated Hosts and T2 Unlimited instances\. For more information, see [Creating a launch template for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\.
 
 ## Syntax<a name="aws-properties-as-launchconfig-syntax"></a>
 
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KernelId](#cfn-as-launchconfig-kernelid)" : String,
       "[KeyName](#cfn-as-launchconfig-keyname)" : String,
       "[LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname)" : String,
+      "[MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions)" : MetadataOption,
       "[PlacementTenancy](#cfn-as-launchconfig-placementtenancy)" : String,
       "[RamDiskId](#cfn-as-launchconfig-ramdiskid)" : String,
       "[SecurityGroups](#cfn-as-launchconfig-securitygroups)" : [ String, ... ],
@@ -60,6 +62,8 @@ Properties:
   [KernelId](#cfn-as-launchconfig-kernelid): String
   [KeyName](#cfn-as-launchconfig-keyname): String
   [LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname): String
+  [MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions): 
+    MetadataOption
   [PlacementTenancy](#cfn-as-launchconfig-placementtenancy): String
   [RamDiskId](#cfn-as-launchconfig-ramdiskid): String
   [SecurityGroups](#cfn-as-launchconfig-securitygroups): 
@@ -120,8 +124,7 @@ Provides the unique ID of the Amazon Machine Image \(AMI\) that was assigned dur
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceId`  <a name="cfn-as-launchconfig-instanceid"></a>
-The ID of the Amazon EC2 instance you want to use to create the launch configuration\. Use this property if you want the launch configuration to use settings from an existing Amazon EC2 instance\.   
-When you use an instance to create a launch configuration, all properties are derived from the instance with the exception of `BlockDeviceMapping` and `AssociatePublicIpAddress`\. You can override any properties from the instance by specifying them in the launch configuration\.   
+The ID of the Amazon EC2 instance you want to use to create the launch configuration\. Use this property if you want the launch configuration to use settings from an existing Amazon EC2 instance\. When you use an instance to create a launch configuration, all properties are derived from the instance with the exception of `BlockDeviceMapping` and `AssociatePublicIpAddress`\. You can override any properties from the instance by specifying them in the launch configuration\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -162,10 +165,16 @@ The name of the launch configuration\. This name must be unique per Region per a
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`MetadataOptions`  <a name="cfn-autoscaling-launchconfig-metadataoptions"></a>
+The metadata options for the instances\. For more information, see [Configuring the Instance Metadata Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds) in the *Amazon EC2 Auto Scaling User Guide*\.  
+*Required*: No  
+*Type*: [MetadataOption](aws-properties-autoscaling-launchconfig-metadataoption.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
 The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs on isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
-If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.   
-For more information, see [Instance placement tenancy](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-vpc-tenancy) in the *Amazon EC2 Auto Scaling User Guide*\.   
+If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.  
+For more information, see [Configuring instance tenancy with Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -219,7 +228,7 @@ For more template snippets, see [Auto scaling template snippets](https://docs.aw
 
 This example shows a launch configuration with a `BlockDeviceMappings` property that lists two devices: a 30 gigabyte EBS root volume mapped to /dev/sda1 and a 100 gigabyte EBS volume mapped to /dev/sdm\. The /dev/sdm volume uses the default EBS volume type based on the region and is not deleted when terminating the instance it is attached to\. 
 
-CloudFormation supports Parameter Store parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::AutoScaling::LaunchConfiguration references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
+CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::AutoScaling::LaunchConfiguration references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--json"></a>
 
@@ -379,7 +388,7 @@ Resources:
 This example demonstrates a launch configuration that configures the `EbsOptmized` property to launch instances with a provisioned IOPS EBS\-optimized volume\. This can increase the performance of your EBS\-backed instances\.
 
 **Note**  
- For instances that are not EBS–optimized by default, you must enable EBS optimization to achieve the level of performance described in the [Amazon EBS\-optimized instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) documentation in the *Amazon Elastic Compute Cloud User Guide*\. For current generation instance types, EBS\-optimization is enabled by default at no additional cost\. Enabling EBS optimization for a previous generation instance type that is not EBS\-optimized by default incurs additional fees\.
+For instances that are not EBS–optimized by default, you must enable EBS optimization to achieve the level of performance described in the [Amazon EBS\-optimized instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) documentation in the *Amazon Elastic Compute Cloud User Guide*\. For current generation instance types, EBS\-optimization is enabled by default at no additional cost\. Enabling EBS optimization for a previous generation instance type that is not EBS\-optimized by default incurs additional fees\.
 
 When you use a launch configuration such as this one, your `m1.large` instances will contain optimized EBS root volumes with the provisioned IOPS settings that you specified in the AMI\. Because you cannot specify the IOPS settings in a launch configuration, the AMI must be configured with a block device mapping that specifies the desired number of IOPS\. The following are key attributes of this EBS\-optimized instance configuration:
 + An instance type of `m1.large` or greater\. This is required for EBS optimization\. This optimization is only available for certain instance types and sizes\.

@@ -63,7 +63,7 @@ The ID of the packaging group associated with this asset\.
 
 `ResourceId`  <a name="cfn-mediapackage-asset-resourceid"></a>
 Unique identifier for this asset, as it's configured in the key provider service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ExcludeBootVolume](#cfn-dlm-lifecyclepolicy-parameters-excludebootvolume)" : Boolean
+  "[ExcludeBootVolume](#cfn-dlm-lifecyclepolicy-parameters-excludebootvolume)" : Boolean,
+  "[NoReboot](#cfn-dlm-lifecyclepolicy-parameters-noreboot)" : Boolean
 }
 ```
 
@@ -18,12 +19,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ExcludeBootVolume](#cfn-dlm-lifecyclepolicy-parameters-excludebootvolume): Boolean
+  [NoReboot](#cfn-dlm-lifecyclepolicy-parameters-noreboot): Boolean
 ```
 
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-parameters-properties"></a>
 
 `ExcludeBootVolume`  <a name="cfn-dlm-lifecyclepolicy-parameters-excludebootvolume"></a>
 \[EBS Snapshot Management – Instance policies only\] Indicates whether to exclude the root volume from snapshots created using [CreateSnapshots](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSnapshots.html)\. The default is false\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NoReboot`  <a name="cfn-dlm-lifecyclepolicy-parameters-noreboot"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

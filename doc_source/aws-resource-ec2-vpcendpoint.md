@@ -72,8 +72,7 @@ Default: `false`
 
 `SecurityGroupIds`  <a name="cfn-ec2-vpcendpoint-securitygroupids"></a>
 \(Interface endpoint\) The ID of one or more security groups to associate with the endpoint network interface\.  
-This field is required when the endpoint is an interface\.  
-*Required*: Conditional  
+*Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -100,8 +99,7 @@ Default: Gateway
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
 The ID of the VPC in which the endpoint will be used\.  
-This field is required when the endpoint is an interface\.  
-*Required*: Conditional  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -6,9 +6,6 @@ A virtual gateway allows resources outside your mesh to communicate to resources
 
 For more information about virtual gateways, see [Virtual gateways](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html)\. 
 
-**Note**  
-AWS Certificate Manager Private Certificate Authority is not available in the MXP Region\.
-
 ## Syntax<a name="aws-resource-appmesh-virtualgateway-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
