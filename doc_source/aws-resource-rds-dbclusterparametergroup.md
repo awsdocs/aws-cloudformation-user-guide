@@ -81,7 +81,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-rds-dbclusterparametergroup--examples--"></a>
 
-The following snippet creates a DB cluster parameter group for an Aurora MySQL DB cluster and sets the `time_zone` and `characater_set_database` parameters: 
+The following snippet creates a DB cluster parameter group for an Aurora MySQL DB cluster and sets the `time_zone` and `character_set_database` parameters: 
 
 #### JSON<a name="aws-resource-rds-dbclusterparametergroup--examples----json"></a>
 
