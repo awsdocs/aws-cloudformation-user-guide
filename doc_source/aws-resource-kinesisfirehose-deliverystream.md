@@ -166,7 +166,7 @@ The following example creates a Kinesis Data Firehose delivery stream that deliv
 #### JSON<a name="aws-resource-kinesisfirehose-deliverystream--examples--Create_a_Kinesis_Data_Firehose_Delivery_Stream--json"></a>
 
 ```
-"ElasticSearchDeliveryStream":  {
+"ElasticSearchDeliveryStream": {
   "Type": "AWS::KinesisFirehose::DeliveryStream",
   "Properties": {
     "ElasticsearchDestinationConfiguration": {
