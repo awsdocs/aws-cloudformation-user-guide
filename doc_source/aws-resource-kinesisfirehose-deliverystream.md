@@ -167,45 +167,45 @@ The following example creates a Kinesis Data Firehose delivery stream that deliv
 
 ```
 "ElasticSearchDeliveryStream": {
-            "Type": "AWS::KinesisFirehose::DeliveryStream",
-            "Properties": {
-            "ElasticsearchDestinationConfiguration": {
-            "BufferingHints": {
-            "IntervalInSeconds": 60,
-            "SizeInMBs": 50
-            },
-            "CloudWatchLoggingOptions": {
-            "Enabled": true,
-            "LogGroupName": "deliverystream",
-            "LogStreamName": "elasticsearchDelivery"
-            },
-            "DomainARN": { "Ref" : "MyDomainARN" },
-            "IndexName": { "Ref" : "MyIndexName" },
-            "IndexRotationPeriod": "NoRotation",
-            "TypeName" : "fromFirehose",
-            "RetryOptions": {
-            "DurationInSeconds": "60"
-            },
-            "RoleARN": { "Fn::GetAtt" : ["ESdeliveryRole", "Arn"] },
-            "S3BackupMode": "AllDocuments",
-            "S3Configuration": { 
-            "BucketARN": { "Ref" : "MyBackupBucketARN" },
-            "BufferingHints": {
-            "IntervalInSeconds": "60",
-            "SizeInMBs": "50"
-            },
-            "CompressionFormat": "UNCOMPRESSED",
-            "Prefix": "firehose/",
-            "RoleARN": { "Fn::GetAtt" : ["S3deliveryRole", "Arn"] },
-            "CloudWatchLoggingOptions" : {
-            "Enabled" : true,
-            "LogGroupName" : "deliverystream",
-            "LogStreamName" : "s3Backup"
-            }
-            }
-            }              
-            }
-            }
+  "Type": "AWS::KinesisFirehose::DeliveryStream",
+  "Properties": {
+    "ElasticsearchDestinationConfiguration": {
+      "BufferingHints": {
+        "IntervalInSeconds": 60,
+        "SizeInMBs": 50
+      },
+      "CloudWatchLoggingOptions": {
+          "Enabled": true,
+          "LogGroupName": "deliverystream",
+          "LogStreamName": "elasticsearchDelivery"
+      },
+      "DomainARN": { "Ref" : "MyDomainARN" },
+      "IndexName": { "Ref" : "MyIndexName" },
+      "IndexRotationPeriod": "NoRotation",
+      "TypeName" : "fromFirehose",
+      "RetryOptions": {
+          "DurationInSeconds": "60"
+      },
+      "RoleARN": { "Fn::GetAtt" : ["ESdeliveryRole", "Arn"] },
+      "S3BackupMode": "AllDocuments",
+      "S3Configuration": {
+        "BucketARN": { "Ref" : "MyBackupBucketARN" },
+        "BufferingHints": {
+          "IntervalInSeconds": "60",
+          "SizeInMBs": "50"
+        },
+        "CompressionFormat": "UNCOMPRESSED",
+        "Prefix": "firehose/",
+        "RoleARN": { "Fn::GetAtt" : ["S3deliveryRole", "Arn"] },
+        "CloudWatchLoggingOptions" : {
+          "Enabled" : true,
+          "LogGroupName" : "deliverystream",
+          "LogStreamName" : "s3Backup"
+        }
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-kinesisfirehose-deliverystream--examples--Create_a_Kinesis_Data_Firehose_Delivery_Stream--yaml"></a>
