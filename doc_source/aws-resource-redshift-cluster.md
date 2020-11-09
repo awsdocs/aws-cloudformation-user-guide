@@ -368,7 +368,7 @@ The following example describes a single\-node Redshift cluster\. The master use
     "MasterUserPassword": { "Ref" : "MasterUserPassword" },
     "NodeType": "ds2.xlarge",
     "ClusterType": "single-node",
-    "Tags": [
+    "Tags": [{
         "Key": "foo",
         "Value": "bar"
      }
