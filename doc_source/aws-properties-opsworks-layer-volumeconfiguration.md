@@ -49,13 +49,13 @@ If you specify `io1` for the volume type, you must specify this property\.
 
 `MountPoint`  <a name="cfn-opsworks-layer-volconfig-mountpoint"></a>
 The volume mount point\. For example "/dev/sdh"\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfDisks`  <a name="cfn-opsworks-layer-volconfig-numberofdisks"></a>
 The number of disks in the volume\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -67,7 +67,7 @@ The volume [RAID level](http://en.wikipedia.org/wiki/Standard_RAID_levels)\.
 
 `Size`  <a name="cfn-opsworks-layer-volconfig-size"></a>
 The volume size\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
