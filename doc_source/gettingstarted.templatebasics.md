@@ -162,20 +162,20 @@ One of the greatest benefits of templates and AWS CloudFormation is the ability 
 ```
 Resources:
   Ec2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
       KeyName: mykey
       ImageId: ''
   InstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
 ```
 
@@ -222,7 +222,7 @@ The SecurityGroups property is a list of security groups, and in the previous ex
 ```
 Resources:
   Ec2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
@@ -230,13 +230,13 @@ Resources:
       KeyName: mykey
       ImageId: ami-7a11e213
   InstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
 ```
 
@@ -294,10 +294,10 @@ In the example above, the KeyName property of the [AWS::EC2::Instance](https://d
 Parameters:
   KeyName:
     Description: The EC2 Key Pair to allow SSH access to the instance
-    Type: 'AWS::EC2::KeyPair::KeyName'
+    Type: AWS::EC2::KeyPair::KeyName
 Resources:
   Ec2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       SecurityGroups:
         - !Ref InstanceSecurityGroup
@@ -305,13 +305,13 @@ Resources:
       KeyName: !Ref KeyName
       ImageId: ami-7a11e213
   InstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
 ```
 
@@ -361,9 +361,9 @@ The Ref function is handy if the parameter or the value returned for a resource 
 ```
 Resources:
   myBucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
   myDistribution:
-    Type: 'AWS::CloudFront::Distribution'
+    Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
         Origins:
@@ -372,11 +372,11 @@ Resources:
               - DomainName
             Id: myS3Origin
             S3OriginConfig: {}
-        Enabled: 'true'
+        Enabled: true
         DefaultCacheBehavior:
           TargetOriginId: myS3Origin
           ForwardedValues:
-            QueryString: 'false'
+            QueryString: false
           ViewerProtocolPolicy: allow-all
 ```
 
@@ -546,7 +546,7 @@ Mappings:
       AMI: ami-8e08a38f
 Resources:
   Ec2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       KeyName: !Ref KeyName
       ImageId: !FindInMap 
@@ -622,14 +622,14 @@ Parameters and mappings are an excellent way to pass or determine specific value
 ```
 Resources:
   ElasticLoadBalancer:
-    Type: 'AWS::ElasticLoadBalancing::LoadBalancer'
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
     Properties:
       AvailabilityZones: !GetAZs ''
       Instances:
         - !Ref Ec2Instance1
         - !Ref Ec2Instance2
       Listeners:
-        - LoadBalancerPort: '80'
+        - LoadBalancerPort: 80
           InstancePort: !Ref WebServerPort
           Protocol: HTTP
       HealthCheck:
@@ -638,10 +638,10 @@ Resources:
           - - 'HTTP:'
             - !Ref WebServerPort
             - /
-        HealthyThreshold: '3'
-        UnhealthyThreshold: '5'
-        Interval: '30'
-        Timeout: '5'
+        HealthyThreshold: 3
+        UnhealthyThreshold: 5
+        Interval: 30
+        Timeout: 5
 ```
 
 The Fn::Join function takes two parameters, a delimiter that separates the values you want to concatenate and an array of values in the order that you want them to appear\. In the example above, the Fn::Join function specifies an empty string as the delimiter and HTTP:, the value of the WebServerPort parameter, and a / character as the values to concatenate\. If WebServerPort had a value of 8888, the Target property would be set to the following value: 
