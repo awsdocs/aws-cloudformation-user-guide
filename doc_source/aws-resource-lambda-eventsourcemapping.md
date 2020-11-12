@@ -7,6 +7,7 @@ For details about each event source type, see the following topics\.
 +  [Using AWS Lambda with Amazon SQS](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html) 
 +  [Using AWS Lambda with Amazon DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) 
 +  [Using AWS Lambda with Amazon MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html) 
++  [Using AWS Lambda with Amazon MQ](https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html) 
 
 ## Syntax<a name="aws-resource-lambda-eventsourcemapping-syntax"></a>
 
@@ -132,7 +133,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) Discard records older than the specified age\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `60`  
+*Minimum*: `-1`  
 *Maximum*: `604800`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -140,7 +141,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) Discard records after the specified number of retries\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `0`  
+*Minimum*: `-1`  
 *Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -153,13 +154,13 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
-Not currently supported by AWS CloudFormation\.  
+\(MQ\) The name of the Amazon MQ broker destination queue to consume\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
-Not currently supported by AWS CloudFormation\.  
+\(MQ\) The Secrets Manager secret that stores your broker credentials\.  
 *Required*: No  
 *Type*: List of [SourceAccessConfiguration](aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,7 +174,7 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
- \(MSK\) The name of the Kafka topic\.   
+ \(MSK\) The name of the Kafka topic to consume\.   
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  

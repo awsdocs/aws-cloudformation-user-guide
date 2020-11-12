@@ -72,7 +72,7 @@ Indicates whether health checks are enabled\. If the target type is `lambda`, he
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckIntervalSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds"></a>
-The approximate amount of time, in seconds, between health checks of an individual target\. For HTTP and HTTPS health checks, the range is 5–300 seconds\. For TCP health checks, the supported values are 10 and 30 seconds\. If the target type is `instance` or `ip`, the default is 30 seconds\. If the target type is `lambda`, the default is 35 seconds\.  
+The approximate amount of time, in seconds, between health checks of an individual target\. For TCP health checks, the supported values are 10 and 30 seconds\. If the target type is `instance` or `ip`, the default is 30 seconds\. If the target group protocol is GENEVE, the default is 10 seconds\. If the target type is `lambda`, the default is 35 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `5`  
@@ -90,20 +90,20 @@ The approximate amount of time, in seconds, between health checks of an individu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckPort`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckport"></a>
-The port the load balancer uses when performing health checks on targets\. The default is `traffic-port`, which is the port on which each target receives traffic from the load balancer\.  
+The port the load balancer uses when performing health checks on targets\. If the protocol is HTTP, HTTPS, TCP, TLS, UDP, or TCP\_UDP, the default is `traffic-port`, which is the port on which each target receives traffic from the load balancer\. If the protocol is GENEVE, the default is port 80\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckProtocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol"></a>
-The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. For Network Load Balancers, the default is TCP\. The TCP protocol is supported for health checks only if the protocol of the target group is TCP, TLS, UDP, or TCP\_UDP\. The TLS, UDP, and TCP\_UDP protocols are not supported for health checks\.  
+The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. For Network Load Balancers and Gateway Load Balancers, the default is TCP\. The TCP protocol is not supported for health checks if the protocol of the target group is HTTP or HTTPS\. The GENEVE, TLS, UDP, and TCP\_UDP protocols are not supported for health checks\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
-The amount of time, in seconds, during which no response from a target means a failed health check\. For target groups with a protocol of HTTP or HTTPS, the default is 5 seconds\. For target groups with a protocol of TCP or TLS, this value must be 6 seconds for HTTP health checks and 10 seconds for TCP and HTTPS health checks\. If the target type is `lambda`, the default is 30 seconds\.  
+The amount of time, in seconds, during which no response from a target means a failed health check\. For target groups with a protocol of HTTP, HTTPS, or GENEVE, the default is 5 seconds\. For target groups with a protocol of TCP or TLS, this value must be 6 seconds for HTTP health checks and 10 seconds for TCP and HTTPS health checks\. If the target type is `lambda`, the default is 30 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -111,7 +111,7 @@ The amount of time, in seconds, during which no response from a target means a f
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount"></a>
-The number of consecutive health checks successes required before considering an unhealthy target healthy\. For target groups with a protocol of HTTP or HTTPS, the default is 5\. For target groups with a protocol of TCP or TLS, the default is 3\. If the target type is `lambda`, the default is 5\.  
+The number of consecutive health checks successes required before considering an unhealthy target healthy\. For target groups with a protocol of HTTP or HTTPS, the default is 5\. For target groups with a protocol of TCP, TLS, or GENEVE, the default is 3\. If the target type is `lambda`, the default is 5\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -132,7 +132,7 @@ This name must be unique per region per account, can have a maximum of 32 charac
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-elasticloadbalancingv2-targetgroup-port"></a>
-The port on which the targets receive traffic\. This port is used unless you specify a port override when registering the target\. If the target is a Lambda function, this parameter does not apply\.  
+The port on which the targets receive traffic\. This port is used unless you specify a port override when registering the target\. If the target is a Lambda function, this parameter does not apply\. If the protocol is GENEVE, the supported port is 6081\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -140,10 +140,10 @@ The port on which the targets receive traffic\. This port is used unless you spe
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-protocol"></a>
-The protocol to use for routing traffic to the targets\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, or TCP\_UDP\. A TCP\_UDP listener must be associated with a TCP\_UDP target group\. If the target is a Lambda function, this parameter does not apply\.  
+The protocol to use for routing traffic to the targets\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, or TCP\_UDP\. For Gateway Load Balancers, the supported protocol is GENEVE\. A TCP\_UDP listener must be associated with a TCP\_UDP target group\. If the target is a Lambda function, this parameter does not apply\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-targetgroup-tags"></a>
@@ -166,16 +166,16 @@ The targets\.
 
 `TargetType`  <a name="cfn-elasticloadbalancingv2-targetgroup-targettype"></a>
 The type of target that you must specify when registering targets with this target group\. You can't specify targets for a target group using more than one target type\.  
-+  `instance` \- Targets are specified by instance ID\. This is the default value\.
-+  `ip` \- Targets are specified by IP address\. You can specify IP addresses from the subnets of the virtual private cloud \(VPC\) for the target group, the RFC 1918 range \(10\.0\.0\.0/8, 172\.16\.0\.0/12, and 192\.168\.0\.0/16\), and the RFC 6598 range \(100\.64\.0\.0/10\)\. You can't specify publicly routable IP addresses\.
-+  `lambda` \- The target groups contains a single Lambda function\.
++  `instance` \- Register targets by instance ID\. This is the default value\.
++  `ip` \- Register targets by IP address\. You can specify IP addresses from the subnets of the virtual private cloud \(VPC\) for the target group, the RFC 1918 range \(10\.0\.0\.0/8, 172\.16\.0\.0/12, and 192\.168\.0\.0/16\), and the RFC 6598 range \(100\.64\.0\.0/10\)\. You can't specify publicly routable IP addresses\.
++  `lambda` \- Register a single Lambda function as a target\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `instance | ip | lambda`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
-The number of consecutive health check failures required before considering a target unhealthy\. For target groups with a protocol of HTTP or HTTPS, the default is 2\. For target groups with a protocol of TCP or TLS, this value must be the same as the healthy threshold count\. If the target type is `lambda`, the default is 2\.  
+The number of consecutive health check failures required before considering a target unhealthy\. If the target group protocol is HTTP or HTTPS, the default is 2\. If the target group protocol is TCP or TLS, this value must be the same as the healthy threshold count\. If the target group protocol is GENEVE, the default is 3\. If the target type is `lambda`, the default is 2\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  

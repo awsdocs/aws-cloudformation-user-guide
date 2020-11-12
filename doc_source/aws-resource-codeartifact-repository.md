@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ExternalConnections](#cfn-codeartifact-repository-externalconnections)" : [ String, ... ],
       "[PermissionsPolicyDocument](#cfn-codeartifact-repository-permissionspolicydocument)" : Json,
       "[RepositoryName](#cfn-codeartifact-repository-repositoryname)" : String,
+      "[Tags](#cfn-codeartifact-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Upstreams](#cfn-codeartifact-repository-upstreams)" : [ String, ... ]
     }
 }
@@ -31,6 +32,8 @@ Properties:
     - String
   [PermissionsPolicyDocument](#cfn-codeartifact-repository-permissionspolicydocument): Json
   [RepositoryName](#cfn-codeartifact-repository-repositoryname): String
+  [Tags](#cfn-codeartifact-repository-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Upstreams](#cfn-codeartifact-repository-upstreams): 
     - String
 ```
@@ -65,6 +68,12 @@ The document that defines the resource policy that is set on a repository\.
 *Maximum*: `100`  
 *Pattern*: `[A-Za-z0-9][A-Za-z0-9._\-]{1,99}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-codeartifact-repository-tags"></a>
+A list of tags to be applied to the repository\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Upstreams`  <a name="cfn-codeartifact-repository-upstreams"></a>
  A list of upstream repositories to associate with the repository\. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version\. For more information, see [Working with upstream repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/repos-upstream.html)\.   

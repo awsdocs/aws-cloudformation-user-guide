@@ -3,6 +3,7 @@
 **Resource types**
 + [AWS::IoT::Authorizer](aws-resource-iot-authorizer.md)
 + [AWS::IoT::Certificate](aws-resource-iot-certificate.md)
++ [AWS::IoT::DomainConfiguration](aws-resource-iot-domainconfiguration.md)
 + [AWS::IoT::Policy](aws-resource-iot-policy.md)
 + [AWS::IoT::PolicyPrincipalAttachment](aws-resource-iot-policyprincipalattachment.md)
 + [AWS::IoT::ProvisioningTemplate](aws-resource-iot-provisioningtemplate.md)

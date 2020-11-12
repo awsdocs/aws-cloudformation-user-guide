@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeArtifact::Domain",
   "Properties" : {
       "[DomainName](#cfn-codeartifact-domain-domainname)" : String,
-      "[PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument)" : Json
+      "[PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument)" : Json,
+      "[Tags](#cfn-codeartifact-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::CodeArtifact::Domain
 Properties: 
   [DomainName](#cfn-codeartifact-domain-domainname): String
   [PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument): Json
+  [Tags](#cfn-codeartifact-domain-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-codeartifact-domain-properties"></a>
@@ -42,6 +45,12 @@ Properties:
 The document that defines the resource policy that is set on a domain\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-codeartifact-domain-tags"></a>
+A list of tags to be applied to the domain\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-codeartifact-domain-return-values"></a>
@@ -105,11 +114,11 @@ Resources:
 }
 ```
 
-### Create a domain with an attached AWS KMS permissions policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_permissions_policy"></a>
+### Create a domain with an attached AWS KMS encryption key and IAM permissions policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_encryption_key_and_IAM_permissions_policy"></a>
 
-The following example creates a CodeArtifact domain named *my\-domain* and attaches an AWS KMS permissions policy\.
+The following example creates a CodeArtifact domain named *my\-domain* and attaches an AWS KMS encryption key and IAM permissions policy\.
 
-#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_permissions_policy--yaml"></a>
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_encryption_key_and_IAM_permissions_policy--yaml"></a>
 
 ```
 Resources:
@@ -138,7 +147,7 @@ Resources:
               Resource: "*"
 ```
 
-#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_permissions_policy--json"></a>
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_encryption_key_and_IAM_permissions_policy--json"></a>
 
 ```
 {

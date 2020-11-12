@@ -64,7 +64,7 @@ Specifies encryption\-related information\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-s3-bucket-replicationdestination-metrics"></a>
- A container specifying replication metrics\-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control \(S3 RTC\)\. Must be specified together with a `ReplicationTime` block\.   
+ A container specifying replication metrics\-related settings enabling replication metrics and events\.   
 *Required*: No  
 *Type*: [Metrics](aws-properties-s3-bucket-metrics.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -124,7 +124,7 @@ Indicates whether to use On\-Demand instances or Spot instances for this fleet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceRoleARN`  <a name="cfn-gamelift-fleet-instancerolearn"></a>
-A unique identifier for an AWS IAM role that manages access to your AWS services\. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons \(background processes\)\. Create a role or look up a role's ARN from the [IAM dashboard](https://console.aws.amazon.com/iam/) in the AWS Management Console\. Learn more about using on\-box credentials for your game servers at [ Access external resources from a game server](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)\.  
+A unique identifier for an AWS IAM role that manages access to your AWS services\. Fleets with an instance role ARN allow applications that are running on the fleet's instances to assume the role\. Learn more about using on\-box credentials for your game servers at [ Access external resources from a game server](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)\. To call this operation with instance role ARN, you must have IAM PassRole permissions\. See [IAM policy examples for GameLift](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-iam-policy-examples.html)\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

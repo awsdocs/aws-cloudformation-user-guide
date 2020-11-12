@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AutoScalingGroupName](#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)" : String,
       "[AvailabilityZones](#cfn-as-group-availabilityzones)" : [ String, ... ],
+      "[CapacityRebalance](#cfn-as-group-capacityrebalance)" : Boolean,
       "[Cooldown](#cfn-as-group-cooldown)" : String,
       "[DesiredCapacity](#cfn-as-group-desiredcapacity)" : String,
       "[HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod)" : Integer,
@@ -57,6 +58,7 @@ Properties:
   [AutoScalingGroupName](#cfn-autoscaling-autoscalinggroup-autoscalinggroupname): String
   [AvailabilityZones](#cfn-as-group-availabilityzones): 
     - String
+  [CapacityRebalance](#cfn-as-group-capacityrebalance): Boolean
   [Cooldown](#cfn-as-group-cooldown): String
   [DesiredCapacity](#cfn-as-group-desiredcapacity): String
   [HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod): Integer
@@ -106,6 +108,12 @@ The name of the Auto Scaling group\. This name must be unique per Region per acc
 A list of Availability Zones where instances in the Auto Scaling group can be created\. You must specify one of the following properties: `VPCZoneIdentifier` or `AvailabilityZones`\. If your account supports EC2\-Classic and VPC, this property is required to create an Auto Scaling group that launches instances into EC2\-Classic\.   
 *Required*: Conditional  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CapacityRebalance`  <a name="cfn-as-group-capacityrebalance"></a>
+Indicates whether Capacity Rebalancing is enabled\. For more information, see [Amazon EC2 Auto Scaling Capacity Rebalancing](https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cooldown`  <a name="cfn-as-group-cooldown"></a>
@@ -170,7 +178,7 @@ A list of Classic Load Balancers associated with this Auto Scaling group\. For A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxInstanceLifetime`  <a name="cfn-as-group-maxinstancelifetime"></a>
-The maximum amount of time, in seconds, that an instance can be in service\. The default is null\. If specified, the value must be either 0 or a number equal to or greater than 604,800 seconds \(7 days\)\. For more information, see [Replacing Auto Scaling instances based on maximum instance lifetime](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+The maximum amount of time, in seconds, that an instance can be in service\. The default is null\. If specified, the value must be either 0 or a number equal to or greater than 86,400 seconds \(1 day\)\. For more information, see [Replacing Auto Scaling instances based on maximum instance lifetime](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -196,8 +204,7 @@ The minimum size of the group\.
 
 `MixedInstancesPolicy`  <a name="cfn-as-group-mixedinstancespolicy"></a>
 An embedded object that specifies a mixed instances policy\.  
-The policy includes properties that not only define the distribution of On\-Demand Instances and Spot Instances, the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill On\-Demand and Spot capacity, but also the properties that specify the instance configuration information—the launch template and instance types\.  
-The policy can also include a weight for each instance type\.  
+The policy includes properties that not only define the distribution of On\-Demand Instances and Spot Instances, the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill On\-Demand and Spot capacities, but also the properties that specify the instance configuration information—the launch template and instance types\. The policy can also include a weight for each instance type\.  
 For more information, see [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 If you specify `LaunchTemplate`, `InstanceId`, or `LaunchConfigurationName`, don't specify `MixedInstancesPolicy`\.  
 *Required*: Conditional  

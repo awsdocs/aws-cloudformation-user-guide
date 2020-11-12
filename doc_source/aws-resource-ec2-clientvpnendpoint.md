@@ -98,9 +98,11 @@ The IDs of one or more security groups to apply to the target network\. You must
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelfServicePortal`  <a name="cfn-ec2-clientvpnendpoint-selfserviceportal"></a>
-Not currently supported by AWS CloudFormation\.  
+Specify whether to enable the self\-service portal for the Client VPN endpoint\.  
+Default Value: `enabled`   
 *Required*: No  
 *Type*: String  
+*Allowed values*: `disabled | enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerCertificateArn`  <a name="cfn-ec2-clientvpnendpoint-servercertificatearn"></a>

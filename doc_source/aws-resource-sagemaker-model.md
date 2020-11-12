@@ -51,7 +51,7 @@ Specifies the containers in the inference pipeline\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>
-Not currently supported by AWS CloudFormation\.  
+Isolates the model container\. No inbound or outbound network calls can be made to or from the model container\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

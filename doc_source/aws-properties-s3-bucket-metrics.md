@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Metrics<a name="aws-properties-s3-bucket-metrics"></a>
 
- A container specifying replication metrics\-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control \(S3 RTC\)\. Must be specified together with a `ReplicationTime` block\. 
+ A container specifying replication metrics\-related settings enabling replication metrics and events\.
 
 ## Syntax<a name="aws-properties-s3-bucket-metrics-syntax"></a>
 

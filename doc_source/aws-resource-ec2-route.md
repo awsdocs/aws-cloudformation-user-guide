@@ -175,6 +175,38 @@ The following example adds a route that is added to a gateway\.
          Ref: myInternetGateway
 ```
 
+### Create a route to a carrier gateway<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_carrier_gateway"></a>
+
+The following example creates a route to a carrier gateway\.
+
+#### JSON<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_carrier_gateway--json"></a>
+
+```
+"myCarrierRoute" : {
+   "Type" : "AWS::EC2::Route",
+   "DependsOn" : "GatewayToInternetAndCarrierNetwork",
+   "Properties" : {
+      "RouteTableId" : { "Ref" : "myRouteTable" },
+      "DestinationCidrBlock" : "0.0.0.0/0",
+      "GatewayId" : { "Ref" : "myCarrierGateway" }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_carrier_gateway--yaml"></a>
+
+```
+ myCarrierRoute:
+    Type: AWS::EC2::Route
+    DependsOn: GatewayToInternetAndCarrierNetwork
+    Properties:
+       RouteTableId:
+         Ref: myRouteTable
+       DestinationCidrBlock: 0.0.0.0/0
+       GatewayId:
+         Ref: myCarrierGateway
+```
+
 ## See also<a name="aws-resource-ec2-route--seealso"></a>
 +  [CreateRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRoute.html) in the *Amazon EC2 API Reference*
 +  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*

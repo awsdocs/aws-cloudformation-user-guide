@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoReboot`  <a name="cfn-dlm-lifecyclepolicy-parameters-noreboot"></a>
-Not currently supported by AWS CloudFormation\.  
+Applies to AMI lifecycle policies only\. Indicates whether targeted instances are rebooted when the lifecycle policy runs\. `true` indicates that targeted instances are not rebooted when the policy runs\. `false` indicates that target instances are rebooted when the policy runs\. The default is `true` \(instances are not rebooted\)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

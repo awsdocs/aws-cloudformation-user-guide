@@ -51,7 +51,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpcendpoint-properties"></a>
 
 `PolicyDocument`  <a name="cfn-ec2-vpcendpoint-policydocument"></a>
-A policy to attach to the endpoint that controls access to the service\. The policy must be in valid JSON format\. If this parameter is not specified, we attach a default policy that allows full access to the service\.  
+\(Interface and gateway endpoints\) A policy to attach to the endpoint that controls access to the service\. The policy must be in valid JSON format\. If this parameter is not specified, we attach a default policy that allows full access to the service\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,7 +94,7 @@ The type of endpoint\.
 Default: Gateway  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Gateway | Interface`  
+*Allowed values*: `Gateway | GatewayLoadBalancer | Interface`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>

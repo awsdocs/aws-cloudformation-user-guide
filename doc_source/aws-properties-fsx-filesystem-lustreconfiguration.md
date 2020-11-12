@@ -97,7 +97,7 @@ The Amazon S3 export bucket must be the same as the import bucket specified by `
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
-*Maximum*: `900`  
+*Maximum*: `4357`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{3,4357}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -115,7 +115,7 @@ The default chunk size is 1,024 MiB \(1 GiB\) and can go as high as 512,000 MiB 
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
-*Maximum*: `900`  
+*Maximum*: `4357`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{3,4357}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

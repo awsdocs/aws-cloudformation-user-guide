@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amazonmq-broker-loglist-properties"></a>
 
 `Audit`  <a name="cfn-amazonmq-broker-loglist-audit"></a>
-Enables audit logging\. Every user management action made using JMX or the ActiveMQ Web Console is logged\.  
+Enables audit logging\. Every user management action made using JMX or the ActiveMQ Web Console is logged\. Does not apply to RabbitMQ brokers\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -26,8 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Key`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key"></a>
 The name of the attribute\.  
-The following attributes are supported by both Application Load Balancers and Network Load Balancers:  
+The following attribute is supported by all load balancers:  
 +  `deregistration_delay.timeout_seconds` \- The amount of time, in seconds, for Elastic Load Balancing to wait before changing the state of a deregistering target from `draining` to `unused`\. The range is 0\-3600 seconds\. The default value is 300 seconds\. If the target is a Lambda function, this attribute is not supported\.
+The following attributes are supported by both Application Load Balancers and Network Load Balancers:  
 +  `stickiness.enabled` \- Indicates whether sticky sessions are enabled\. The value is `true` or `false`\. The default is `false`\.
 +  `stickiness.type` \- The type of sticky sessions\. The possible values are `lb_cookie` for Application Load Balancers or `source_ip` for Network Load Balancers\.
 The following attributes are supported only if the load balancer is an Application Load Balancer and the target is an instance or an IP address:  

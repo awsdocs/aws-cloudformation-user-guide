@@ -3,7 +3,7 @@
 The `AWS::RDS::DBCluster` resource creates an Amazon Aurora DB cluster\. For more information, see [Managing an Amazon Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_Aurora.html) in the *Amazon Aurora User Guide*\.
 
 **Note**  
-You can only create this resource in regions where Amazon Aurora is supported\.
+You can only create this resource in AWS Regions where Amazon Aurora is supported\.
 
 **Updating DB clusters**
 
@@ -220,14 +220,15 @@ Valid Values: `aurora` \(for MySQL 5\.6\-compatible Aurora\), `aurora-mysql` \(f
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
-The DB engine mode of the DB cluster, either `provisioned` `serverless`, `parallelquery`, or `multimaster`\.  
-The `parallelquery` engine mode is not required for Aurora MySQL version 1\.23 and higher 1\.x versions, and version 2\.09 and higher 2\.x versions\.  
+The DB engine mode of the DB cluster, either `provisioned` `serverless`, `parallelquery`, `global`, or `multimaster`\.  
+The `parallelquery` engine mode isn't required for Aurora MySQL version 1\.23 and higher 1\.x versions, and version 2\.09 and higher 2\.x versions\.  
+The `global` engine mode isn't required for Aurora MySQL version 1\.22 and higher 1\.x versions, and `global` engine mode isn't required for any 2\.x versions\.  
 The `multimaster` engine mode only applies for DB clusters created with Aurora MySQL version 5\.6\.10a\.  
-For Aurora PostgreSQL, `parallelquery` and `multimaster` engine modes are not required\.  
- The `global` engine mode isn't supported\. 
+For Aurora PostgreSQL, the `global` engine mode isn't required, and both the `parallelquery` and the `multimaster` engine modes currently aren't supported\.  
 Limitations and requirements apply to some DB engine modes\. For more information, see the following sections in the *Amazon Aurora User Guide*:  
 +  [ Limitations of Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations) 
 +  [ Limitations of Parallel Query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations) 
++  [ Limitations of Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations) 
 +  [ Limitations of Multi\-Master Clusters](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html#aurora-multi-master-limitations) 
 *Required*: No  
 *Type*: String  
@@ -246,7 +247,10 @@ To list all of the available engine versions for `aurora-postgresql`, use the fo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-dbcluster-globalclusteridentifier"></a>
- The global cluster ID of an Aurora cluster that becomes the primary cluster in the new global database cluster\.   
+ If you are configuring an Aurora global database cluster and want your Aurora DB cluster to be a member in the global database cluster, specify the global cluster ID of the global database cluster\.   
+ If you aren't configuring a global database cluster, don't specify this property\.   
+To remove the DB cluster from a global database cluster, specify an empty value for the `GlobalClusterIdentifier` property\.
+For information about Aurora global databases, see [ Working with Amazon Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html) in the *Amazon Aurora User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -381,7 +385,7 @@ If you plan to update the resource, don't specify VPC security groups in a share
 
 ### Ref<a name="aws-resource-rds-dbcluster-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster as an uppercase string\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -394,13 +398,13 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-rds-dbcluster-return-values-fn--getatt-fn--getatt"></a>
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
-The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+The connection endpoint for the DB cluster\. For example: `mystack-mydbcluster-123456789012.us-east-2.rds.amazonaws.com` 
 
 `Endpoint.Port`  <a name="Endpoint.Port-fn::getatt"></a>
 The port number that will accept connections on this DB cluster\. For example: `3306` 
 
 `ReadEndpoint.Address`  <a name="ReadEndpoint.Address-fn::getatt"></a>
-The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-1apw1j4phylrk.cg034hpkmmjt.us-east-2.rds.amazonaws.com` 
+The reader endpoint for the DB cluster\. For example: `mystack-mydbcluster-ro-123456789012.us-east-2.rds.amazonaws.com` 
 
 ## Examples<a name="aws-resource-rds-dbcluster--examples"></a>
 

@@ -118,7 +118,7 @@ Wait until an operation is complete before starting another one\. You can run on
 + Multiple stack sets can target the same organization or OU\.
 + Your stack set cannot target accounts outside your organization\.
 + Your stack set cannot deploy nested stacks\.
-+ StackSets does not deploy stack instances to the organization management account, even if the management account is in your organization or in an OU in your organization\.
++ StackSets does not deploy stack instances to the organization's management account, even if the management account is in your organization or in an OU in your organization\.
 + Automatic deployment is set at the stack set level\. You cannot adjust automatic deployments selectively for OUs, accounts, or Regions\.
 + The permissions of the IAM principal entity \(user, role, or group\) that you use to sign in to the management account determine whether you are authorized to deploy with StackSets\. For an example IAM policy that grants permissions to deploy to an organization, see [Sample policy that grants service\-managed stack set permissions](using-iam-template.md#resource-level-permissions-service-managed-stack-set)\.
 
@@ -140,7 +140,7 @@ Wait until an operation is complete before starting another one\. You can run on
 
 1. Under **Permissions**, choose **Service\-managed permissions**\.
 
-   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the management account has permissions to [enable trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
+   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the organization's management account has permissions to [enable trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
 ![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
 
 1. Choose **Next** to proceed and to enable trusted access if not already enabled\.

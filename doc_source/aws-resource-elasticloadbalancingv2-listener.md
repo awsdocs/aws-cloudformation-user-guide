@@ -69,7 +69,7 @@ The Amazon Resource Name \(ARN\) of the load balancer\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-elasticloadbalancingv2-listener-port"></a>
-The port on which the load balancer is listening\.  
+The port on which the load balancer is listening\. You cannot specify a port for a Gateway Load Balancer\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -77,24 +77,15 @@ The port on which the load balancer is listening\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-listener-protocol"></a>
-The protocol for connections from clients to the load balancer\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP\_UDP\.  
+The protocol for connections from clients to the load balancer\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP\_UDP\. You cannot specify a protocol for a Gateway Load Balancer\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslPolicy`  <a name="cfn-elasticloadbalancingv2-listener-sslpolicy"></a>
-\[HTTPS and TLS listeners\] The security policy that defines which protocols and ciphers are supported\. The following are the possible values:  
-+  `ELBSecurityPolicy-2016-08` 
-+  `ELBSecurityPolicy-TLS-1-0-2015-04` 
-+  `ELBSecurityPolicy-TLS-1-1-2017-01` 
-+  `ELBSecurityPolicy-TLS-1-2-2017-01` 
-+  `ELBSecurityPolicy-TLS-1-2-Ext-2018-06` 
-+  `ELBSecurityPolicy-FS-2018-06` 
-+  `ELBSecurityPolicy-FS-1-1-2019-08` 
-+  `ELBSecurityPolicy-FS-1-2-2019-08` 
-+  `ELBSecurityPolicy-FS-1-2-Res-2019-08` 
-For more information, see [Security Policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies) in the *Application Load Balancers Guide* and [Security Policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies) in the *Network Load Balancers Guide*\.  
+\[HTTPS and TLS listeners\] The security policy that defines which protocols and ciphers are supported\.  
+For more information, see [Security policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies) in the *Application Load Balancers Guide* and [Security policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies) in the *Network Load Balancers Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

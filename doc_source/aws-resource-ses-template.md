@@ -45,68 +45,22 @@ Specifies an email template, which is used when sending templated email messages
 #### JSON<a name="aws-resource-ses-template--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES Template Sample Template",
-    "Parameters": {
-        "TemplateName": {
-            "Type": "String"
-        },
-        "SubjectPart": {
-            "Type": "String"
-        },
-        "TextPart": {
-            "Type": "String"
-        },
-        "HtmlPart": {
-            "Type": "String"
-        }
-    },
-    "Resources": {
-        "Template": {
-            "Type": "AWS::SES::Template",
-            "Properties": {
-                "Template": {
-                    "TemplateName": {
-                        "Ref": "TemplateName"
-                    },
-                    "SubjectPart": {
-                        "Ref": "SubjectPart"
-                    },
-                    "TextPart": {
-                        "Ref": "TextPart"
-                    },
-                    "HtmlPart": {
-                        "Ref": "HtmlPart"
-                    }
-                }
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
+                SES Template Sample Template", "Parameters": { "TemplateName": { "Type": "String" },
+                "SubjectPart": { "Type": "String" }, "TextPart": { "Type": "String" }, "HtmlPart": {
+                "Type": "String" } }, "Resources": { "Template": { "Type": "AWS::SES::Template",
+                "Properties": { "Template": { "TemplateName": { "Ref": "TemplateName" },
+                "SubjectPart": { "Ref": "SubjectPart" }, "TextPart": { "Ref": "TextPart" },
+                "HtmlPart": { "Ref": "HtmlPart" } } } } } }
 ```
 
 #### YAML<a name="aws-resource-ses-template--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES Template Sample Template'
-Parameters:
-  TemplateName:
-    Type: String
-  SubjectPart:
-    Type: String
-  TextPart:
-    Type: String
-  HtmlPart:
-    Type: String
-Resources:
-  Template:
-    Type: AWS::SES::Template
-    Properties:
-      Template:
-        TemplateName: !Ref TemplateName
-        SubjectPart: !Ref SubjectPart
-        TextPart: !Ref TextPart
-        HtmlPart: !Ref HtmlPart
+AWSTemplateFormatVersion: 2010-09-09 Description: 'AWS SES
+                Template Sample Template' Parameters: TemplateName: Type: String SubjectPart: Type:
+                String TextPart: Type: String HtmlPart: Type: String Resources: Template: Type:
+                AWS::SES::Template Properties: Template: TemplateName: !Ref TemplateName
+                SubjectPart: !Ref SubjectPart TextPart: !Ref TextPart HtmlPart: !Ref
+                HtmlPart
 ```
