@@ -12,15 +12,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MSK::Cluster",
   "Properties" : {
-      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md),
-      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md),
+      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : BrokerNodeGroupInfo,
+      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : ClientAuthentication,
       "[ClusterName](#cfn-msk-cluster-clustername)" : String,
-      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md),
-      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md),
+      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : ConfigurationInfo,
+      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : EncryptionInfo,
       "[EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring)" : String,
       "[KafkaVersion](#cfn-msk-cluster-kafkaversion)" : String,
+      "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : LoggingInfo,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
-      "[Tags](#cfn-msk-cluster-tags)" : {Key : Value, ...}
+      "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
+      "[Tags](#cfn-msk-cluster-tags)" : Json
     }
 }
 ```
@@ -31,19 +33,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MSK::Cluster
 Properties: 
   [BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo): 
-    [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)
+    BrokerNodeGroupInfo
   [ClientAuthentication](#cfn-msk-cluster-clientauthentication): 
-    [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)
+    ClientAuthentication
   [ClusterName](#cfn-msk-cluster-clustername): String
   [ConfigurationInfo](#cfn-msk-cluster-configurationinfo): 
-    [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)
+    ConfigurationInfo
   [EncryptionInfo](#cfn-msk-cluster-encryptioninfo): 
-    [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)
+    EncryptionInfo
   [EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring): String
   [KafkaVersion](#cfn-msk-cluster-kafkaversion): String
+  [LoggingInfo](#cfn-msk-cluster-logginginfo): 
+    LoggingInfo
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
-  [Tags](#cfn-msk-cluster-tags): 
-    Key : Value
+  [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
+    OpenMonitoring
+  [Tags](#cfn-msk-cluster-tags): Json
 ```
 
 ## Properties<a name="aws-resource-msk-cluster-properties"></a>
@@ -70,7 +75,7 @@ The name of the cluster\.
 The Amazon MSK configuration to use for the cluster\.  
 *Required*: No  
 *Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionInfo`  <a name="cfn-msk-cluster-encryptioninfo"></a>
 Includes all encryption\-related information\.  
@@ -82,13 +87,19 @@ Includes all encryption\-related information\.
 Specifies the level of monitoring for the MSK cluster\. The possible values are `DEFAULT`, `PER_BROKER`, and `PER_TOPIC_PER_BROKER`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KafkaVersion`  <a name="cfn-msk-cluster-kafkaversion"></a>
-The version of Apache Kafka\.  
+The version of Apache Kafka\. You can use Amazon MSK to create clusters that use Apache Kafka versions 1\.1\.1 and 2\.2\.1\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LoggingInfo`  <a name="cfn-msk-cluster-logginginfo"></a>
+You can configure your MSK cluster to send broker logs to different destination types\. This is a container for the configuration details related to broker logs\.  
+*Required*: No  
+*Type*: [LoggingInfo](aws-properties-msk-cluster-logginginfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfBrokerNodes`  <a name="cfn-msk-cluster-numberofbrokernodes"></a>
 The number of broker nodes you want in the Amazon MSK cluster\. You can submit an update to increase the number of broker nodes in a cluster\.  
@@ -96,13 +107,19 @@ The number of broker nodes you want in the Amazon MSK cluster\. You can submit a
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OpenMonitoring`  <a name="cfn-msk-cluster-openmonitoring"></a>
+The settings for open monitoring\.  
+*Required*: No  
+*Type*: [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-msk-cluster-tags"></a>
 A map of key:value pairs to apply to this resource\. Both key and value are of type String\.  
 *Required*: No  
-*Type*: Map  
+*Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-msk-cluster-return-values"></a>
+## Return values<a name="aws-resource-msk-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-msk-cluster-return-values-ref"></a>
 
@@ -117,6 +134,173 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## Examples<a name="aws-resource-msk-cluster--examples"></a>
 
 In the following examples you can find the YAML for each template, followed by the equivalent JSON\. You can use either language\.
+
+### Create an MSK Cluster Where You Only Specify Values for the Required Properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties"></a>
+
+#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--yaml"></a>
+
+```
+Description: MSK Cluster with required properties.
+Resources:
+  TestCluster:
+    Type: 'AWS::MSK::Cluster'
+    Properties:
+      ClusterName: ClusterWithRequiredProperties
+      KafkaVersion: 2.2.1
+      NumberOfBrokerNodes: 3
+      BrokerNodeGroupInfo:
+        InstanceType: kafka.m5.large
+        ClientSubnets:
+          - ReplaceWithSubnetId1
+          - ReplaceWithSubnetId2
+          - ReplaceWithSubnetId3
+```
+
+#### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--JSON"></a>
+
+```
+{
+    "Description": "MSK Cluster with required properties.",
+    "Resources": {
+        "TestCluster": {
+            "Type": "AWS::MSK::Cluster",
+            "Properties": {
+                "ClusterName": "ClusterWithRequiredProperties",
+                "KafkaVersion": "2.2.1",
+                "NumberOfBrokerNodes": 3,
+                "BrokerNodeGroupInfo": {
+                    "InstanceType": "kafka.m5.large",
+                    "ClientSubnets": [
+                        "ReplaceWithSubnetId1",
+                        "ReplaceWithSubnetId2",
+                        "ReplaceWithSubnetId3"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+### Create an MSK Cluster Where You Explicitly Set All Properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties"></a>
+
+#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--yaml"></a>
+
+```
+Description: MSK Cluster with all properties
+Resources:
+  TestCluster:
+    Type: 'AWS::MSK::Cluster'
+    Properties:
+      ClusterName: ClusterWithAllProperties
+      KafkaVersion: 2.2.1
+      NumberOfBrokerNodes: 3
+      EnhancedMonitoring: PER_BROKER
+      EncryptionInfo:
+        EncryptionAtRest:
+          DataVolumeKMSKeyId: ReplaceWithKmsKeyArn
+        EncryptionInTransit:
+          ClientBroker: TLS
+          InCluster: true
+      OpenMonitoring:
+        Prometheus:
+          JmxExporter:
+            EnabledInBroker: "true"
+          NodeExporter:
+            EnabledInBroker: "true"
+      ConfigurationInfo:
+        Arn: ReplaceWithConfigurationArn
+        Revision: 1
+      ClientAuthentication:
+        Tls:
+          CertificateAuthorityArnList:
+            - ReplaceWithCAArn
+      Tags:
+        Environment: Test
+        Owner: QATeam
+      BrokerNodeGroupInfo:
+        BrokerAZDistribution: DEFAULT
+        InstanceType: kafka.m5.large
+        SecurityGroups:
+          - ReplaceWithSecurityGroupId
+        StorageInfo:
+          EBSStorageInfo:
+            VolumeSize: 100
+        ClientSubnets:
+          - ReplaceWithSubnetId1
+          - ReplaceWithSubnetId2
+          - ReplaceWithSubnetId3
+```
+
+#### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--JSON"></a>
+
+```
+{
+    "Description": "MSK Cluster with all properties",
+    "Resources": {
+        "TestCluster": {
+            "Type": "AWS::MSK::Cluster",
+            "Properties": {
+                "ClusterName": "ClusterWithAllProperties",
+                "KafkaVersion": "2.2.1",
+                "NumberOfBrokerNodes": 3,
+                "EnhancedMonitoring": "PER_BROKER",
+                "EncryptionInfo": {
+                    "EncryptionAtRest": {
+                        "DataVolumeKMSKeyId": "ReplaceWithKmsKeyArn"
+                    },
+                    "EncryptionInTransit": {
+                        "ClientBroker": "TLS",
+                        "InCluster": true
+                    }
+                },
+                "OpenMonitoring": {
+                    "Prometheus": {
+                        "JmxExporter": {
+                            "EnabledInBroker": "true"
+                        }
+                        "NodeExporter": {
+                            "EnabledInBroker": "true"
+                        }
+                    }
+                },
+                "ConfigurationInfo": {
+                    "Arn": "ReplaceWithConfigurationArn",
+                    "Revision": 1
+                },
+                "ClientAuthentication": {
+                    "Tls": {
+                        "CertificateAuthorityArnList": [
+                            "ReplaceWithCAArn"
+                        ]
+                    }
+                },
+                "Tags": {
+                    "Environment": "Test",
+                    "Owner" : "QATeam"
+                },
+                "BrokerNodeGroupInfo": {
+                    "BrokerAZDistribution": "DEFAULT",
+                    "InstanceType": "kafka.m5.large",
+                    "SecurityGroups": [
+                        "ReplaceWithSecurityGroupId"
+                    ],
+                    "StorageInfo": {
+                        "EBSStorageInfo": {
+                            "VolumeSize": 100
+                        }
+                    },
+                    "ClientSubnets": [
+                        "ReplaceWithSubnetId1",
+                        "ReplaceWithSubnetId2",
+                        "ReplaceWithSubnetId3"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
 
 ### Get Started With Amazon MSK<a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK"></a>
 
@@ -169,9 +353,6 @@ Resources:
       Tags:
         - Key: Name
           Value: MMVPC
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: e191108b-e241-404a-bed2-b2863bcd5235
   PublicSubnetOne:
     Type: 'AWS::EC2::Subnet'
     Properties:
@@ -188,9 +369,6 @@ Resources:
       Tags:
         - Key: Name
           Value: MMPublicSubnet
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 90cff42d-8429-4a50-b584-5a2ba16651ea
   PrivateSubnetOne:
     Type: 'AWS::EC2::Subnet'
     Properties:
@@ -206,9 +384,6 @@ Resources:
       Tags:
         - Key: Name
           Value: MMPrivateSubnetOne
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: be121547-ef38-4d55-a9a9-f67eb35c9cd0
   PrivateSubnetTwo:
     Type: 'AWS::EC2::Subnet'
     Properties:
@@ -224,9 +399,6 @@ Resources:
       Tags:
         - Key: Name
           Value: MMPrivateSubnetTwo
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 1a1c22e5-745b-443d-93d6-78c3572de3c4
   PrivateSubnetThree:
     Type: 'AWS::EC2::Subnet'
     Properties:
@@ -242,29 +414,17 @@ Resources:
       Tags:
         - Key: Name
           Value: MMPrivateSubnetThree
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 69ad49b5-ffb5-4019-82dd-1b5433531511
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: d2a821e3-5c45-46a4-92fd-09268f72f679
   GatewayAttachement:
     Type: 'AWS::EC2::VPCGatewayAttachment'
     Properties:
       VpcId: !Ref VPC
       InternetGatewayId: !Ref InternetGateway
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 988bff04-9cdd-4ce1-8b5d-59fc3291eae1
   PublicRouteTable:
     Type: 'AWS::EC2::RouteTable'
     Properties:
       VpcId: !Ref VPC
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 93747341-451f-4c6e-8265-6873b110ae9e
   PublicRoute:
     Type: 'AWS::EC2::Route'
     DependsOn: GatewayAttachement
@@ -272,48 +432,30 @@ Resources:
       RouteTableId: !Ref PublicRouteTable
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref InternetGateway
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 412c8444-e8b8-43eb-8c07-3f822c921e34
   PublicSubnetOneRouteTableAssociation:
     Type: 'AWS::EC2::SubnetRouteTableAssociation'
     Properties:
       SubnetId: !Ref PublicSubnetOne
       RouteTableId: !Ref PublicRouteTable
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: c2c64928-4fe4-4640-a449-08cdc9e50d84
   PrivateRouteTable:
     Type: 'AWS::EC2::RouteTable'
     Properties:
       VpcId: !Ref VPC
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
   PrivateSubnetOneRouteTableAssociation:
     Type: 'AWS::EC2::SubnetRouteTableAssociation'
     Properties:
       RouteTableId: !Ref PrivateRouteTable
       SubnetId: !Ref PrivateSubnetOne
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 912ef118-eda5-437f-afd7-3f92d83fd70b
   PrivateSubnetTwoRouteTableAssociation:
     Type: 'AWS::EC2::SubnetRouteTableAssociation'
     Properties:
       RouteTableId: !Ref PrivateRouteTable
       SubnetId: !Ref PrivateSubnetTwo
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: d345d815-288f-4446-add0-dd637cc6c57f
   PrivateSubnetThreeRouteTableAssociation:
     Type: 'AWS::EC2::SubnetRouteTableAssociation'
     Properties:
       RouteTableId: !Ref PrivateRouteTable
       SubnetId: !Ref PrivateSubnetThree
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 4f6ec5cd-f063-4163-8494-31bd55bcb27f
   KafkaClientInstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -324,9 +466,6 @@ Resources:
           FromPort: 22
           ToPort: 22
           CidrIp: !Ref SSHLocation
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 758d2702-7bfd-470e-84a0-5101471dd251
   MSKSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -351,9 +490,6 @@ Resources:
           SourceSecurityGroupId: !GetAtt 
             - KafkaClientInstanceSecurityGroup
             - GroupId
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 20d8d324-9da6-49f9-9e37-4bd433625c47
   KafkaClientEC2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
@@ -420,9 +556,6 @@ Resources:
         chown -R ec2-user ./mm
 
         chgrp -R ec2-user ./mm
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 25e7995f-31fc-45b0-b790-42bcb519905a
   EC2Role:
     Type: 'AWS::IAM::Role'
     Properties:
@@ -438,18 +571,12 @@ Resources:
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/AmazonMSKFullAccess'
         - 'arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess'
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 268a951d-285d-438a-a365-d135a51bd01c
   EC2InstanceProfile:
     Type: 'AWS::IAM::InstanceProfile'
     Properties:
       InstanceProfileName: EC2MSKCFProfile
       Roles:
         - !Ref EC2Role
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 01de5e28-2175-45f1-a37f-65e5bd7d9356
   MSKCluster:
     Type: 'AWS::MSK::Cluster'
     Properties:
@@ -474,9 +601,6 @@ Resources:
       EnhancedMonitoring: PER_TOPIC_PER_BROKER
       KafkaVersion: 2.2.1
       NumberOfBrokerNodes: 3
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 56f5417a-ddff-49c4-9f30-8041824a0601
 Outputs:
   VPCId:
     Description: The ID of the VPC created
@@ -506,216 +630,6 @@ Outputs:
   MSKClusterArn:
     Description: The Arn for the MSKMMCluster1 MSK cluster
     Value: !Ref MSKCluster
-Metadata:
-  'AWS::CloudFormation::Designer':
-    268a951d-285d-438a-a365-d135a51bd01c:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 60
-        'y': 930
-      z: 1
-      embeds: []
-    01de5e28-2175-45f1-a37f-65e5bd7d9356:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 180
-        'y': 930
-      z: 1
-      embeds: []
-      isassociatedwith:
-        - 268a951d-285d-438a-a365-d135a51bd01c
-    d2a821e3-5c45-46a4-92fd-09268f72f679:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 300
-        'y': 930
-      z: 1
-      embeds: []
-    e191108b-e241-404a-bed2-b2863bcd5235:
-      size:
-        width: 870
-        height: 780
-      position:
-        x: 320
-        'y': 40
-      z: 1
-      embeds:
-        - 758d2702-7bfd-470e-84a0-5101471dd251
-        - 20d8d324-9da6-49f9-9e37-4bd433625c47
-        - 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-        - 93747341-451f-4c6e-8265-6873b110ae9e
-        - 69ad49b5-ffb5-4019-82dd-1b5433531511
-        - 1a1c22e5-745b-443d-93d6-78c3572de3c4
-        - be121547-ef38-4d55-a9a9-f67eb35c9cd0
-        - 90cff42d-8429-4a50-b584-5a2ba16651ea
-    758d2702-7bfd-470e-84a0-5101471dd251:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 980
-        'y': 310
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    20d8d324-9da6-49f9-9e37-4bd433625c47:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 980
-        'y': 430
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    7a45b627-d06a-4956-9f4b-a79b5e65bc7d:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 950
-        'y': 100
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    93747341-451f-4c6e-8265-6873b110ae9e:
-      size:
-        width: 240
-        height: 240
-      position:
-        x: 650
-        'y': 100
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds:
-        - 412c8444-e8b8-43eb-8c07-3f822c921e34
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    988bff04-9cdd-4ce1-8b5d-59fc3291eae1:
-      source:
-        id: e191108b-e241-404a-bed2-b2863bcd5235
-      target:
-        id: d2a821e3-5c45-46a4-92fd-09268f72f679
-    412c8444-e8b8-43eb-8c07-3f822c921e34:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 680
-        'y': 160
-      z: 3
-      parent: 93747341-451f-4c6e-8265-6873b110ae9e
-      embeds: []
-      isassociatedwith:
-        - d2a821e3-5c45-46a4-92fd-09268f72f679
-      iscontainedinside:
-        - 93747341-451f-4c6e-8265-6873b110ae9e
-      dependson:
-        - 988bff04-9cdd-4ce1-8b5d-59fc3291eae1
-    69ad49b5-ffb5-4019-82dd-1b5433531511:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 770
-        'y': 400
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    4f6ec5cd-f063-4163-8494-31bd55bcb27f:
-      source:
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-      target:
-        id: 69ad49b5-ffb5-4019-82dd-1b5433531511
-    1a1c22e5-745b-443d-93d6-78c3572de3c4:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 560
-        'y': 400
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    d345d815-288f-4446-add0-dd637cc6c57f:
-      source:
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-      target:
-        id: 1a1c22e5-745b-443d-93d6-78c3572de3c4
-    be121547-ef38-4d55-a9a9-f67eb35c9cd0:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 350
-        'y': 400
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    56f5417a-ddff-49c4-9f30-8041824a0601:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 420
-        'y': 930
-      z: 1
-      embeds: []
-    912ef118-eda5-437f-afd7-3f92d83fd70b:
-      source:
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-      target:
-        id: be121547-ef38-4d55-a9a9-f67eb35c9cd0
-    90cff42d-8429-4a50-b584-5a2ba16651ea:
-      size:
-        width: 240
-        height: 240
-      position:
-        x: 350
-        'y': 100
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds:
-        - 25e7995f-31fc-45b0-b790-42bcb519905a
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    25e7995f-31fc-45b0-b790-42bcb519905a:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 380
-        'y': 160
-      z: 3
-      parent: 90cff42d-8429-4a50-b584-5a2ba16651ea
-      embeds: []
-      isassociatedwith:
-        - 758d2702-7bfd-470e-84a0-5101471dd251
-      iscontainedinside:
-        - 90cff42d-8429-4a50-b584-5a2ba16651ea
-    c2c64928-4fe4-4640-a449-08cdc9e50d84:
-      source:
-        id: 93747341-451f-4c6e-8265-6873b110ae9e
-      target:
-        id: 90cff42d-8429-4a50-b584-5a2ba16651ea
 ```
 
 #### <a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK--JSON"></a>
@@ -785,11 +699,6 @@ Metadata:
                         "Value": "MMVPC"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "e191108b-e241-404a-bed2-b2863bcd5235"
-                }
             }
         },
         "PublicSubnetOne": {
@@ -822,11 +731,6 @@ Metadata:
                         "Value": "MMPublicSubnet"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                }
             }
         },
         "PrivateSubnetOne": {
@@ -858,11 +762,6 @@ Metadata:
                         "Value": "MMPrivateSubnetOne"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "be121547-ef38-4d55-a9a9-f67eb35c9cd0"
-                }
             }
         },
         "PrivateSubnetTwo": {
@@ -894,11 +793,6 @@ Metadata:
                         "Value": "MMPrivateSubnetTwo"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "1a1c22e5-745b-443d-93d6-78c3572de3c4"
-                }
             }
         },
         "PrivateSubnetThree": {
@@ -930,20 +824,10 @@ Metadata:
                         "Value": "MMPrivateSubnetThree"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "69ad49b5-ffb5-4019-82dd-1b5433531511"
-                }
             }
         },
         "InternetGateway": {
-            "Type": "AWS::EC2::InternetGateway",
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "d2a821e3-5c45-46a4-92fd-09268f72f679"
-                }
-            }
+            "Type": "AWS::EC2::InternetGateway"
         },
         "GatewayAttachement": {
             "Type": "AWS::EC2::VPCGatewayAttachment",
@@ -954,11 +838,6 @@ Metadata:
                 "InternetGatewayId": {
                     "Ref": "InternetGateway"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "988bff04-9cdd-4ce1-8b5d-59fc3291eae1"
-                }
             }
         },
         "PublicRouteTable": {
@@ -966,11 +845,6 @@ Metadata:
             "Properties": {
                 "VpcId": {
                     "Ref": "VPC"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "93747341-451f-4c6e-8265-6873b110ae9e"
                 }
             }
         },
@@ -985,11 +859,6 @@ Metadata:
                 "GatewayId": {
                     "Ref": "InternetGateway"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "412c8444-e8b8-43eb-8c07-3f822c921e34"
-                }
             }
         },
         "PublicSubnetOneRouteTableAssociation": {
@@ -1001,11 +870,6 @@ Metadata:
                 "RouteTableId": {
                     "Ref": "PublicRouteTable"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "c2c64928-4fe4-4640-a449-08cdc9e50d84"
-                }
             }
         },
         "PrivateRouteTable": {
@@ -1013,11 +877,6 @@ Metadata:
             "Properties": {
                 "VpcId": {
                     "Ref": "VPC"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
                 }
             }
         },
@@ -1030,11 +889,6 @@ Metadata:
                 "SubnetId": {
                     "Ref": "PrivateSubnetOne"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "912ef118-eda5-437f-afd7-3f92d83fd70b"
-                }
             }
         },
         "PrivateSubnetTwoRouteTableAssociation": {
@@ -1046,11 +900,6 @@ Metadata:
                 "SubnetId": {
                     "Ref": "PrivateSubnetTwo"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "d345d815-288f-4446-add0-dd637cc6c57f"
-                }
             }
         },
         "PrivateSubnetThreeRouteTableAssociation": {
@@ -1061,11 +910,6 @@ Metadata:
                 },
                 "SubnetId": {
                     "Ref": "PrivateSubnetThree"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "4f6ec5cd-f063-4163-8494-31bd55bcb27f"
                 }
             }
         },
@@ -1086,11 +930,6 @@ Metadata:
                         }
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "758d2702-7bfd-470e-84a0-5101471dd251"
-                }
             }
         },
         "MSKSecurityGroup": {
@@ -1135,11 +974,6 @@ Metadata:
                         }
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "20d8d324-9da6-49f9-9e37-4bd433625c47"
-                }
             }
         },
         "KafkaClientEC2Instance": {
@@ -1191,11 +1025,6 @@ Metadata:
                 "UserData": {
                     "Fn::Base64": "#!/bin/bash\nyum update -y \nyum install python3.7 -y\nyum install java-1.8.0-openjdk-devel -y\nyum erase awscli -y\ncd /home/ec2-user\necho \"export PATH=.local/bin:$PATH\" >> .bash_profile\nmkdir kafka\nmkdir mm\ncd kafka\nwget https://archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz\ntar -xzf kafka_2.12-2.2.1.tgz\ncd /home/ec2-user\nwget https://bootstrap.pypa.io/get-pip.py\nsu -c \"python3.7 get-pip.py --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install boto3 --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install awscli --user\" -s /bin/sh ec2-user\nchown -R ec2-user ./kafka\nchgrp -R ec2-user ./kafka\nchown -R ec2-user ./mm\nchgrp -R ec2-user ./mm\n"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "25e7995f-31fc-45b0-b790-42bcb519905a"
-                }
             }
         },
         "EC2Role": {
@@ -1219,11 +1048,6 @@ Metadata:
                     "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
                     "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess"
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "268a951d-285d-438a-a365-d135a51bd01c"
-                }
             }
         },
         "EC2InstanceProfile": {
@@ -1235,11 +1059,6 @@ Metadata:
                         "Ref": "EC2Role"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "01de5e28-2175-45f1-a37f-65e5bd7d9356"
-                }
             }
         },
         "MSKCluster": {
@@ -1282,11 +1101,6 @@ Metadata:
                 "EnhancedMonitoring": "PER_TOPIC_PER_BROKER",
                 "KafkaVersion": "2.2.1",
                 "NumberOfBrokerNodes": 3
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "56f5417a-ddff-49c4-9f30-8041824a0601"
-                }
             }
         }
     },
@@ -1343,446 +1157,6 @@ Metadata:
             "Description": "The Arn for the MSKMMCluster1 MSK cluster",
             "Value": {
                 "Ref": "MSKCluster"
-            }
-        }
-    },
-    "Metadata": {
-        "AWS::CloudFormation::Designer": {
-            "268a951d-285d-438a-a365-d135a51bd01c": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 60,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": []
-            },
-            "01de5e28-2175-45f1-a37f-65e5bd7d9356": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 180,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": [],
-                "isassociatedwith": [
-                    "268a951d-285d-438a-a365-d135a51bd01c"
-                ]
-            },
-            "d2a821e3-5c45-46a4-92fd-09268f72f679": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 300,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": []
-            },
-            "e191108b-e241-404a-bed2-b2863bcd5235": {
-                "size": {
-                    "width": 870,
-                    "height": 780
-                },
-                "position": {
-                    "x": 60,
-                    "y": -140
-                },
-                "z": 1,
-                "embeds": [
-                    "758d2702-7bfd-470e-84a0-5101471dd251",
-                    "20d8d324-9da6-49f9-9e37-4bd433625c47",
-                    "7a45b627-d06a-4956-9f4b-a79b5e65bc7d",
-                    "93747341-451f-4c6e-8265-6873b110ae9e",
-                    "69ad49b5-ffb5-4019-82dd-1b5433531511",
-                    "1a1c22e5-745b-443d-93d6-78c3572de3c4",
-                    "be121547-ef38-4d55-a9a9-f67eb35c9cd0",
-                    "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                ]
-            },
-            "758d2702-7bfd-470e-84a0-5101471dd251": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 720,
-                    "y": 130
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "20d8d324-9da6-49f9-9e37-4bd433625c47": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 720,
-                    "y": 250
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "7a45b627-d06a-4956-9f4b-a79b5e65bc7d": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 690,
-                    "y": -80
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "93747341-451f-4c6e-8265-6873b110ae9e": {
-                "size": {
-                    "width": 240,
-                    "height": 240
-                },
-                "position": {
-                    "x": 390,
-                    "y": -80
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [
-                    "412c8444-e8b8-43eb-8c07-3f822c921e34"
-                ],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "988bff04-9cdd-4ce1-8b5d-59fc3291eae1": {
-                "source": {
-                    "id": "e191108b-e241-404a-bed2-b2863bcd5235"
-                },
-                "target": {
-                    "id": "d2a821e3-5c45-46a4-92fd-09268f72f679"
-                }
-            },
-            "412c8444-e8b8-43eb-8c07-3f822c921e34": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 420,
-                    "y": -20
-                },
-                "z": 3,
-                "parent": "93747341-451f-4c6e-8265-6873b110ae9e",
-                "embeds": [],
-                "isassociatedwith": [
-                    "d2a821e3-5c45-46a4-92fd-09268f72f679"
-                ],
-                "iscontainedinside": [
-                    "93747341-451f-4c6e-8265-6873b110ae9e"
-                ],
-                "dependson": [
-                    "988bff04-9cdd-4ce1-8b5d-59fc3291eae1"
-                ]
-            },
-            "69ad49b5-ffb5-4019-82dd-1b5433531511": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 510,
-                    "y": 220
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "4f6ec5cd-f063-4163-8494-31bd55bcb27f": {
-                "source": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
-                },
-                "target": {
-                    "id": "69ad49b5-ffb5-4019-82dd-1b5433531511"
-                }
-            },
-            "1a1c22e5-745b-443d-93d6-78c3572de3c4": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 300,
-                    "y": 220
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "d345d815-288f-4446-add0-dd637cc6c57f": {
-                "source": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
-                },
-                "target": {
-                    "id": "1a1c22e5-745b-443d-93d6-78c3572de3c4"
-                }
-            },
-            "be121547-ef38-4d55-a9a9-f67eb35c9cd0": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 90,
-                    "y": 220
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "56f5417a-ddff-49c4-9f30-8041824a0601": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 420,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": []
-            },
-            "912ef118-eda5-437f-afd7-3f92d83fd70b": {
-                "source": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
-                },
-                "target": {
-                    "id": "be121547-ef38-4d55-a9a9-f67eb35c9cd0"
-                }
-            },
-            "90cff42d-8429-4a50-b584-5a2ba16651ea": {
-                "size": {
-                    "width": 240,
-                    "height": 240
-                },
-                "position": {
-                    "x": 90,
-                    "y": -80
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [
-                    "25e7995f-31fc-45b0-b790-42bcb519905a"
-                ],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "25e7995f-31fc-45b0-b790-42bcb519905a": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 120,
-                    "y": -20
-                },
-                "z": 3,
-                "parent": "90cff42d-8429-4a50-b584-5a2ba16651ea",
-                "embeds": [],
-                "isassociatedwith": [
-                    "758d2702-7bfd-470e-84a0-5101471dd251"
-                ],
-                "iscontainedinside": [
-                    "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                ]
-            },
-            "c2c64928-4fe4-4640-a449-08cdc9e50d84": {
-                "source": {
-                    "id": "93747341-451f-4c6e-8265-6873b110ae9e"
-                },
-                "target": {
-                    "id": "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                }
-            }
-        }
-    }
-}
-```
-
-### Create an MSK Cluster Where You Only Specify Values for the Required Properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties"></a>
-
-#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--yaml"></a>
-
-```
----
-Description: "MSK Cluster with required properties."
-Resources:
-  TestCluster:
-    Type: "AWS::MSK::Cluster"
-    Properties:
-      ClusterName: "ClusterWithRequiredProperties"
-      KafkaVersion: "2.2.1"
-      NumberOfBrokerNodes: 3
-      BrokerNodeGroupInfo:
-        InstanceType: "kafka.m5.large"
-        ClientSubnets:
-        - "ReplaceWithSubnetId1"
-        - "ReplaceWithSubnetId2"
-        - "ReplaceWithSubnetId3"
-```
-
-#### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--JSON"></a>
-
-```
-{
-    "Description": "MSK Cluster with required properties.",
-    "Resources": {
-        "TestCluster": {
-            "Type": "AWS::MSK::Cluster",
-            "Properties": {
-                "ClusterName": "ClusterWithRequiredProperties",
-                "KafkaVersion": "2.2.1",
-                "NumberOfBrokerNodes": 3,
-                "BrokerNodeGroupInfo": {
-                    "InstanceType": "kafka.m5.large",
-                    "ClientSubnets": [
-                        "ReplaceWithSubnetId1",
-                        "ReplaceWithSubnetId2",
-                        "ReplaceWithSubnetId3"
-                    ]
-                }
-            }
-        }
-    }
-}
-```
-
-### Create an MSK Cluster Where You Explicitly Set All Properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties"></a>
-
-#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--yaml"></a>
-
-```
----
-Description: "MSK Cluster with all properties"
-Resources:
-  TestCluster:
-    Type: "AWS::MSK::Cluster"
-    Properties:
-      ClusterName: "ClusterWithAllProperties"
-      KafkaVersion: "2.2.1"
-      NumberOfBrokerNodes: 3
-      EnhancedMonitoring: "PER_BROKER"
-      EncryptionInfo:
-        EncryptionAtRest:
-          DataVolumeKMSKeyId: "ReplaceWithKmsKeyArn"
-        EncryptionInTransit:
-          ClientBroker: "TLS"
-          InCluster: true
-      ConfigurationInfo:
-        Arn: "ReplaceWithConfigurationArn"
-        Revision: 1
-      ClientAuthentication:
-        Tls:
-          CertificateAuthorityArnList:
-          - "ReplaceWithCAArn"
-      Tags:
-        MyTagName: "MyTagValue"
-      BrokerNodeGroupInfo:
-        BrokerAZDistribution: "DEFAULT"
-        InstanceType: "kafka.m5.large"
-        SecurityGroups:
-        - "ReplaceWithSecurityGroupId"
-        StorageInfo:
-          EBSStorageInfo:
-            VolumeSize: 100
-        ClientSubnets:
-        - "ReplaceWithSubnetId1"
-        - "ReplaceWithSubnetId2"
-        - "ReplaceWithSubnetId3"
-```
-
-#### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--JSON"></a>
-
-```
-{
-    "Description": "MSK Cluster with all properties",
-    "Resources": {
-        "TestCluster": {
-            "Type": "AWS::MSK::Cluster",
-            "Properties": {
-                "ClusterName": "ClusterWithAllProperties",
-                "KafkaVersion": "2.2.1",
-                "NumberOfBrokerNodes": 3,
-                "EnhancedMonitoring": "PER_BROKER",
-                "EncryptionInfo": {
-                    "EncryptionAtRest": {
-                        "DataVolumeKMSKeyId": "ReplaceWithKmsKeyArn"
-                    },
-                    "EncryptionInTransit": {
-                        "ClientBroker": "TLS",
-                        "InCluster": true
-                    }
-                },
-                "ConfigurationInfo": {
-                    "Arn": "ReplaceWithConfigurationArn",
-                    "Revision": 1
-                },
-                "ClientAuthentication": {
-                    "Tls": {
-                        "CertificateAuthorityArnList": [
-                            "ReplaceWithCAArn"
-                        ]
-                    }
-                },
-                "Tags": {
-                    "MyTagName": "MyTagValue"
-                },
-                "BrokerNodeGroupInfo": {
-                    "BrokerAZDistribution": "DEFAULT",
-                    "InstanceType": "kafka.m5.large",
-                    "SecurityGroups": [
-                        "ReplaceWithSecurityGroupId"
-                    ],
-                    "StorageInfo": {
-                        "EBSStorageInfo": {
-                            "VolumeSize": 100
-                        }
-                    },
-                    "ClientSubnets": [
-                        "ReplaceWithSubnetId1",
-                        "ReplaceWithSubnetId2",
-                        "ReplaceWithSubnetId3"
-                    ]
-                }
             }
         }
     }

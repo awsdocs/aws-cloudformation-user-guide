@@ -64,10 +64,10 @@ The ARN of the principal \(IAM user, role, or group\)\.
 The principal type\. The supported value is `IAM`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IAM`  
+*Allowed values*: `IAM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicecatalog-portfolioprincipalassociation-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-portfolioprincipalassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-portfolioprincipalassociation-return-values-ref"></a>
 
@@ -75,5 +75,5 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-servicecatalog-portfolioprincipalassociation--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-portfolioprincipalassociation--seealso"></a>
 + [AssociatePrincipalWithPortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociatePrincipalWithPortfolio.html) in the *AWS Service Catalog API Reference*

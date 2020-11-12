@@ -44,11 +44,11 @@ The ID of the virtual private gateway that is attached to a VPC\. The virtual pr
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-vpn-gatewayrouteprop-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpn-gatewayrouteprop-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpn-gatewayrouteprop-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPN gateway resource\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -73,7 +73,6 @@ The following example enables route propagation for the private route table name
 #### YAML<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_Gateway_Route_Propagation--yaml"></a>
 
 ```
-myVPNGatewayRouteProp:
 Type: AWS::EC2::VPNGatewayRoutePropagation
    Properties:
        RouteTableIds: 
@@ -81,5 +80,5 @@ Type: AWS::EC2::VPNGatewayRoutePropagation
        VpnGatewayId: !Ref VPNGateway
 ```
 
-## See Also<a name="aws-resource-ec2-vpn-gatewayrouteprop--seealso"></a>
+## See also<a name="aws-resource-ec2-vpn-gatewayrouteprop--seealso"></a>
 +  [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*

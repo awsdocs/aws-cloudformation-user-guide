@@ -63,7 +63,7 @@ An account ID, or `*` to grant permission to all AWS accounts\.
 *Pattern*: `\d{12}|\*|arn:(aws[a-zA-Z-]*):iam::\d{12}:root`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-lambda-layerversionpermission-return-values"></a>
+## Return values<a name="aws-resource-lambda-layerversionpermission-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-layerversionpermission-return-values-ref"></a>
 
@@ -84,7 +84,7 @@ Grant layer use permission to accounts in organization `o-t194hfs8cz`\.
     "Type": "AWS::Lambda::LayerVersionPermission",
     "Properties": {
         "Action": "lambda:GetLayerVersion",
-        "LayerVersionArn": "arn:aws:lambda:us-west-2:011685312445:layer:my-layer:1",
+        "LayerVersionArn": "arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1",
         "OrganizationId": "o-t194hfs8cz",
         "Principal": "*"
     }
@@ -95,10 +95,10 @@ Grant layer use permission to accounts in organization `o-t194hfs8cz`\.
 
 ```
 MyLayerPermission:
-  Type: "AWS::Lambda::LayerVersionPermission"
+  Type: AWS::Lambda::LayerVersionPermission
   Properties:
     Action: lambda:GetLayerVersion
-    LayerVersionArn: arn:aws:lambda:us-west-2:011685312445:layer:my-layer:1
+    LayerVersionArn: arn:aws:lambda:us-west-2:123456789012:layer:my-layer:1
     OrganizationId: o-t194hfs8cz
     Principal: *
 ```

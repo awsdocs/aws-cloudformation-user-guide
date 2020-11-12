@@ -1,8 +1,8 @@
 # AWS::ServiceDiscovery::HttpNamespace<a name="aws-resource-servicediscovery-httpnamespace"></a>
 
-The `HttpNamespace` resource is a Cloud Map resource type that contains information about an HTTP namespace\. Service instances that you register using an HTTP namespace can be discovered using a `DiscoverInstances` request but can't be discovered using DNS\. 
+The `HttpNamespace` resource is an AWS Cloud Map resource type that contains information about an HTTP namespace\. Service instances that you register using an HTTP namespace can be discovered using a `DiscoverInstances` request but can't be discovered using DNS\. 
 
-For the current limit on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
+For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map quotas](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
 
 ## Syntax<a name="aws-resource-servicediscovery-httpnamespace-syntax"></a>
 
@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ServiceDiscovery::HttpNamespace",
   "Properties" : {
       "[Description](#cfn-servicediscovery-httpnamespace-description)" : String,
-      "[Name](#cfn-servicediscovery-httpnamespace-name)" : String
+      "[Name](#cfn-servicediscovery-httpnamespace-name)" : String,
+      "[Tags](#cfn-servicediscovery-httpnamespace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -27,6 +28,8 @@ Type: AWS::ServiceDiscovery::HttpNamespace
 Properties: 
   [Description](#cfn-servicediscovery-httpnamespace-description): String
   [Name](#cfn-servicediscovery-httpnamespace-name): String
+  [Tags](#cfn-servicediscovery-httpnamespace-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-httpnamespace-properties"></a>
@@ -45,11 +48,18 @@ The name that you want to assign to this namespace\.
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicediscovery-httpnamespace-return-values"></a>
+`Tags`  <a name="cfn-servicediscovery-httpnamespace-tags"></a>
+The tags for the namespace\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: Updates are not supported\.
+
+## Return values<a name="aws-resource-servicediscovery-httpnamespace-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-httpnamespace-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `Id` for the namespace, such as `ns-e4anhexample0004`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `Id` for the namespace, such as `ns-e4anhexample0004`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -79,7 +89,7 @@ The following example creates an HTTP namespace named `example-namespace`\.
 {
   "Type" : "AWS::ServiceDiscovery::HttpNamespace",
   "Properties" : {
-    "Description" : "Cloud Map HTTP namespace for resources for example.com website",
+    "Description" : "AWS Cloud Map HTTP namespace for resources for example.com website",
     "Name" : "example-namespace"
   }
 }
@@ -90,9 +100,9 @@ The following example creates an HTTP namespace named `example-namespace`\.
 ```
 Type: 'AWS::ServiceDiscovery::HttpNamespace'
 Properties:
-  Description: Cloud Map HTTP namespace for resources for example.com website
+  Description: AWS Cloud Map HTTP namespace for resources for example.com website
   Name: example-namespace
 ```
 
-## See Also<a name="aws-resource-servicediscovery-httpnamespace--seealso"></a>
+## See also<a name="aws-resource-servicediscovery-httpnamespace--seealso"></a>
 +  [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) in the *AWS Cloud Map API Reference* 

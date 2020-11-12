@@ -43,13 +43,13 @@ The ID of the propagation route table\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-transitgatewayroutetablepropagation-return-values"></a>
+## Return values<a name="aws-resource-ec2-transitgatewayroutetablepropagation-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-transitgatewayroutetablepropagation-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the transit gateway route table that is propagated\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the transit gateway route table that is propagated\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-transitgatewayroutetablepropagation--seealso"></a>
+## See also<a name="aws-resource-ec2-transitgatewayroutetablepropagation--seealso"></a>
 +  [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon Elastic Compute Cloud API Reference* 

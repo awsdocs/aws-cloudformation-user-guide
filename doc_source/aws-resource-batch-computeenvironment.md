@@ -13,9 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Batch::ComputeEnvironment",
   "Properties" : {
       "[ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname)" : String,
-      "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md),
+      "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : ComputeResources,
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
+      "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
       "[Type](#cfn-batch-computeenvironment-type)" : String
     }
 }
@@ -28,9 +29,10 @@ Type: AWS::Batch::ComputeEnvironment
 Properties: 
   [ComputeEnvironmentName](#cfn-batch-computeenvironment-computeenvironmentname): String
   [ComputeResources](#cfn-batch-computeenvironment-computeresources): 
-    [ComputeResources](aws-properties-batch-computeenvironment-computeresources.md)
+    ComputeResources
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
+  [Tags](#cfn-batch-computeenvironment-tags): Json
   [Type](#cfn-batch-computeenvironment-type): String
 ```
 
@@ -60,17 +62,23 @@ Depending on how you created your AWS Batch service role, its ARN may contain th
 The state of the compute environment\. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-batch-computeenvironment-tags"></a>
+The tags applied to the compute environment\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
 The type of the compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `MANAGED | UNMANAGED`  
+*Allowed values*: `MANAGED | UNMANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-batch-computeenvironment-return-values"></a>
+## Return values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-computeenvironment-return-values-ref"></a>
 
@@ -155,10 +163,10 @@ ComputeEnvironment:
         - c4.4xlarge
         - c4.8xlarge
       Ec2KeyPair: id_rsa
-      Tags: '{"Name": "Batch Instance - C4OnDemand"}'
+      Tags: {"Name" : "Batch Instance - C4OnDemand"}
       DesiredvCpus: 48
     State: ENABLED
 ```
 
-## See Also<a name="aws-resource-batch-computeenvironment--seealso"></a>
+## See also<a name="aws-resource-batch-computeenvironment--seealso"></a>
 +  [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.

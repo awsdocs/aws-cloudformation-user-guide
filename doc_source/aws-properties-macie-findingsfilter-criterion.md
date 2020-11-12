@@ -1,0 +1,3 @@
+# AWS::Macie::FindingsFilter Criterion<a name="aws-properties-macie-findingsfilter-criterion"></a>
+
+A condition that specifies the property, operator, and value to use to filter the results of a query for findings\. For more information, see [Criterion](https://docs.aws.amazon.com/macie/latest/APIReference/findingsfilters-id.html#findingsfilters-id-model-criterion) in the *Amazon Macie API Reference*\.

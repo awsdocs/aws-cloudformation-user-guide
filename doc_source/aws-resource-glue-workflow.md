@@ -47,7 +47,7 @@ A description of the workflow
 
 `Name`  <a name="cfn-glue-workflow-name"></a>
 The name of the workflow representing the flow  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -57,7 +57,7 @@ The tags to use with this workflow\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-workflow-return-values"></a>
+## Return values<a name="aws-resource-glue-workflow-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-workflow-return-values-ref"></a>
 

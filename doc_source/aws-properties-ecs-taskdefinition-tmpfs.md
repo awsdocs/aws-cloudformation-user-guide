@@ -41,7 +41,7 @@ Valid values: `"defaults" | "ro" | "rw" | "suid" | "nosuid" | "dev" | "nodev" | 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Size`  <a name="cfn-ecs-taskdefinition-tmpfs-size"></a>
-The size \(in MiB\) of the tmpfs volume\.  
-*Required*: No  
+The maximum size \(in MiB\) of the tmpfs volume\.  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

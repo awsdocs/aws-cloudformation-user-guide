@@ -1,13 +1,13 @@
-# Amazon CloudWatch Logs Template Snippets<a name="quickref-cloudwatchlogs"></a>
+# Amazon CloudWatch Logs template snippets<a name="quickref-cloudwatchlogs"></a>
 
-Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring System, Application, and Custom Log Files ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
+Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring system, application, and custom log files ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
 
 **Topics**
-+ [Send Logs to CloudWatch Logs from a Linux Instance](#quickref-cloudwatchlogs-example1)
-+ [Send Logs to CloudWatch Logs from a Windows Instance](#quickref-cloudwatchlogs-example2)
-+ [See Also](#w4784ab1c17c23c31c11)
++ [Send logs to CloudWatch Logs from a Linux instance](#quickref-cloudwatchlogs-example1)
++ [Send logs to CloudWatch Logs from a Windows instance](#quickref-cloudwatchlogs-example2)
++ [See also](#w7199ab1c27c22c31c11)
 
-## Send Logs to CloudWatch Logs from a Linux Instance<a name="quickref-cloudwatchlogs-example1"></a>
+## Send logs to CloudWatch Logs from a Linux instance<a name="quickref-cloudwatchlogs-example1"></a>
 
 The following template describes a web server and its custom metrics\. Log events from the web server's log provides the data for the custom metrics\. To send log events to a custom metric, the `UserData` field installs a CloudWatch Logs agent on the Amazon EC2 instance\. The configuration information for the agent, such as the location of the server log file, the log group name, and the log stream name, are defined in the `/tmp/cwlogs/apacheaccess.conf` file\. The log stream is created after the web server starts sending log events to the `/var/log/httpd/access_log` file\.
 
@@ -669,7 +669,7 @@ Outputs:
     Value: !Ref WebServerLogGroup
 ```
 
-## Send Logs to CloudWatch Logs from a Windows Instance<a name="quickref-cloudwatchlogs-example2"></a>
+## Send logs to CloudWatch Logs from a Windows instance<a name="quickref-cloudwatchlogs-example2"></a>
 
 The following template configures CloudWatch Logs for a Windows 2012R2 instance\.
 
@@ -780,7 +780,7 @@ The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2
                                 }
                             ]
                         },
-                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"],
+                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"],
                         "Path": "/",
                         "Policies": [
                             {
@@ -1283,7 +1283,7 @@ Resources:
           Action:
           - sts:AssumeRole
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+      - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
       Path: /
       Policies:
       - PolicyName: LogRolePolicy
@@ -1583,6 +1583,6 @@ Outputs:
     Value: !Ref 'LogGroup'
 ```
 
-## See Also<a name="w4784ab1c17c23c31c11"></a>
+## See also<a name="w7199ab1c27c22c31c11"></a>
 
 For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWs::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.

@@ -41,6 +41,6 @@ The user ID whose permissions are used to run the Lambda function\. You can use 
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinitionversion-runas--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinitionversion-runas--seealso"></a>
 +  [FunctionRunAsConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionrunasconfig.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

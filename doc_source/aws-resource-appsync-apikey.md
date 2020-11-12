@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppSync::ApiKey",
   "Properties" : {
       "[ApiId](#cfn-appsync-apikey-apiid)" : String,
+      "[ApiKeyId](#cfn-appsync-apikey-apikeyid)" : String,
       "[Description](#cfn-appsync-apikey-description)" : String,
       "[Expires](#cfn-appsync-apikey-expires)" : Double
     }
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppSync::ApiKey
 Properties: 
   [ApiId](#cfn-appsync-apikey-apiid): String
+  [ApiKeyId](#cfn-appsync-apikey-apikeyid): String
   [Description](#cfn-appsync-apikey-description): String
   [Expires](#cfn-appsync-apikey-expires): Double
 ```
@@ -37,6 +39,12 @@ Unique AWS AppSync GraphQL API ID for this API key\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ApiKeyId`  <a name="cfn-appsync-apikey-apikeyid"></a>
+The API key ID\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Description`  <a name="cfn-appsync-apikey-description"></a>
 Unique description of your API key\.  
 *Required*: No  
@@ -44,12 +52,12 @@ Unique description of your API key\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Expires`  <a name="cfn-appsync-apikey-expires"></a>
-Expiration time of the API key in seconds \(using Unix Epoch time\), with a minimum of 1 day and a maximum of 365 days\. The default value is 7 days\.   
+The time after which the API key expires\. The date is represented as seconds since the epoch, rounded down to the nearest hour\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-apikey-return-values"></a>
+## Return values<a name="aws-resource-appsync-apikey-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-apikey-return-values-ref"></a>
 
@@ -133,5 +141,5 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-apikey--seealso"></a>
+## See also<a name="aws-resource-appsync-apikey--seealso"></a>
 +  [CreateApiKey](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*\.

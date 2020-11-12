@@ -1,6 +1,6 @@
 # AWS::Events::Rule BatchRetryStrategy<a name="aws-properties-events-rule-batchretrystrategy"></a>
 
-The retry strategy to use for failed jobs if the target is an AWS Batch job\. If you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.
+The retry strategy to use for failed jobs, if the target is an AWS Batch job\. If you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.
 
 ## Syntax<a name="aws-properties-events-rule-batchretrystrategy-syntax"></a>
 

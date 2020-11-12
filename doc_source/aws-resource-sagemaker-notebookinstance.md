@@ -58,7 +58,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
 
 `AcceleratorTypes`  <a name="cfn-sagemaker-notebookinstance-acceleratortypes"></a>
-A list of Elastic Inference \(EI\) instance types to associate with this notebook instance\. Currently, only one instance type can be associated with a notebook instance\. For more information, see Using Elastic Inference in Amazon SageMaker\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,14 +84,15 @@ Sets whether Amazon SageMaker provides internet access to the notebook instance\
 For more information, see [Notebook Instances Are Internet\-Enabled by Default](https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-additional-considerations.html#appendix-notebook-and-internet-access)\. You can set the value of this parameter to `Disabled` only if you set a value for the `SubnetId` parameter\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-sagemaker-notebookinstance-instancetype"></a>
 The type of ML compute instance to launch for the notebook instance\.  
+Expect some interruption of service if this parameter is changed as CloudFormation stops a notebook instance and starts it up again to update it\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
+*Allowed values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
@@ -103,7 +104,7 @@ The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LifecycleConfigName`  <a name="cfn-sagemaker-notebookinstance-lifecycleconfigname"></a>
-The name of a lifecycle configuration to associate with the notebook instance\. For information about lifestyle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
+The name of a lifecycle configuration to associate with the notebook instance\. For information about lifecycle configurations, see [Customize a Notebook Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the *Amazon SageMaker Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
@@ -133,7 +134,7 @@ Whether root access is enabled or disabled for users of the notebook instance\. 
 Lifecycle configurations need root access to be able to set up a notebook instance\. Because of this, lifecycle configurations associated with a notebook instance always run with root access even if you disable root access for users\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-sagemaker-notebookinstance-securitygroupids"></a>
@@ -162,13 +163,14 @@ You can add tags later by using the `CreateTags` API\.
 
 `VolumeSizeInGB`  <a name="cfn-sagemaker-notebookinstance-volumesizeingb"></a>
 The size, in GB, of the ML storage volume to attach to the notebook instance\. The default value is 5 GB\.  
+Expect some interruption of service if this parameter is changed as CloudFormation stops a notebook instance and starts it up again to update it\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `5`  
 *Maximum*: `16384`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-notebookinstance-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-notebookinstance-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-notebookinstance-return-values-ref"></a>
 
@@ -181,6 +183,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-sagemaker-notebookinstance-return-values-fn--getatt-fn--getatt"></a>
 

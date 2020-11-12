@@ -51,18 +51,18 @@ The identifier for the replication subnet group\. If you don't specify a name, A
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-dms-replicationsubnetgroup-subnetids"></a>
-The EC2 subnet IDs for the subnet group\.  
+One or more subnet IDs to be assigned to the subnet group\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-replicationsubnetgroup-tags"></a>
-The tag to be assigned to the subnet group\.  
+One or more tags to be assigned to the subnet group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-replicationsubnetgroup-return-values"></a>
+## Return values<a name="aws-resource-dms-replicationsubnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationsubnetgroup-return-values-ref"></a>
 
@@ -120,6 +120,6 @@ Resources:
     Type: "AWS::DMS::ReplicationSubnetGroup"
 ```
 
-## See Also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>
+## See also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>
 +  [CreateReplicationSubnetGroup](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationSubnetGroup.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

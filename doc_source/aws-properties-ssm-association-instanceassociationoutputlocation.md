@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location)" : [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)
+  "[S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location)" : S3OutputLocation
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3Location](#cfn-ssm-association-instanceassociationoutputlocation-s3location): 
-    [S3OutputLocation](aws-properties-ssm-association-s3outputlocation.md)
+    S3OutputLocation
 ```
 
 ## Properties<a name="aws-properties-ssm-association-instanceassociationoutputlocation-properties"></a>

@@ -4,7 +4,7 @@ The AWS::MediaConvert::Preset resource is an AWS Elemental MediaConvert resource
 
 When you declare this entity in your AWS CloudFormation template, you pass in your transcoding job settings in JSON or YAML format\. This settings specification must be formed in a particular way that conforms to AWS Elemental MediaConvert job validation\. For more information about creating an output preset model for the `SettingsJson` property, see the Remarks section later in this topic\.
 
-For more information about output presets, see [Working with AWS Elemental MediaConvert Output Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the *AWS Elemental MediaConvert User Guide*\.
+For more information about output MediaConvert presets, see [Working with AWS Elemental MediaConvert Output Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the *AWS Elemental MediaConvert User Guide*\.
 
 ## Syntax<a name="aws-resource-mediaconvert-preset-syntax"></a>
 
@@ -59,7 +59,8 @@ The name of the preset that you are modifying\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SettingsJson`  <a name="cfn-mediaconvert-preset-settingsjson"></a>
-Specify the name and location of the JSON file that specifies the transcoding settings for this output preset\. You can use the AWS Elemental MediaConvert console at https://console\.aws\.amazon\.com/mediaconvert to set up an output preset visually\. For more information about output presets, see [Working with AWS Elemental MediaConvert Output Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the *AWS Elemental MediaConvert User Guide*\.  
+Specify, in JSON format, the transcoding job settings for this output preset\. This specification must conform to the AWS Elemental MediaConvert job validation\. For information about forming this specification, see the Remarks section later in this topic\.  
+For more information about MediaConvert output presets, see [Working with AWS Elemental MediaConvert Output Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the *AWS Elemental MediaConvert User Guide*\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,7 +72,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-mediaconvert-preset-return-values"></a>
+## Return values<a name="aws-resource-mediaconvert-preset-return-values"></a>
 
 ### Ref<a name="aws-resource-mediaconvert-preset-return-values-ref"></a>
 

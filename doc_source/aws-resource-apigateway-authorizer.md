@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Authorizer",
   "Properties" : {
-      "[AuthType](#cfn-apigateway-authorizer-authtype)" : String,
       "[AuthorizerCredentials](#cfn-apigateway-authorizer-authorizercredentials)" : String,
       "[AuthorizerResultTtlInSeconds](#cfn-apigateway-authorizer-authorizerresultttlinseconds)" : Integer,
       "[AuthorizerUri](#cfn-apigateway-authorizer-authorizeruri)" : String,
+      "[AuthType](#cfn-apigateway-authorizer-authtype)" : String,
       "[IdentitySource](#cfn-apigateway-authorizer-identitysource)" : String,
       "[IdentityValidationExpression](#cfn-apigateway-authorizer-identityvalidationexpression)" : String,
       "[Name](#cfn-apigateway-authorizer-name)" : String,
@@ -31,10 +31,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ApiGateway::Authorizer
 Properties: 
-  [AuthType](#cfn-apigateway-authorizer-authtype): String
   [AuthorizerCredentials](#cfn-apigateway-authorizer-authorizercredentials): String
   [AuthorizerResultTtlInSeconds](#cfn-apigateway-authorizer-authorizerresultttlinseconds): Integer
   [AuthorizerUri](#cfn-apigateway-authorizer-authorizeruri): String
+  [AuthType](#cfn-apigateway-authorizer-authtype): String
   [IdentitySource](#cfn-apigateway-authorizer-identitysource): String
   [IdentityValidationExpression](#cfn-apigateway-authorizer-identityvalidationexpression): String
   [Name](#cfn-apigateway-authorizer-name): String
@@ -45,12 +45,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-apigateway-authorizer-properties"></a>
-
-`AuthType`  <a name="cfn-apigateway-authorizer-authtype"></a>
-An optional customer\-defined field that's used in OpenApi imports and exports without functional impact\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizerCredentials`  <a name="cfn-apigateway-authorizer-authorizercredentials"></a>
 The credentials that are required for the authorizer\. To specify an IAM role that API Gateway assumes, specify the role's Amazon Resource Name \(ARN\)\. To use resource\-based permissions on the Lambda function, specify null\.  
@@ -67,6 +61,12 @@ The time\-to\-live \(TTL\) period, in seconds, that specifies how long API Gatew
 `AuthorizerUri`  <a name="cfn-apigateway-authorizer-authorizeruri"></a>
 The authorizer's Uniform Resource Identifier \(URI\)\. If you specify `TOKEN` for the authorizer's `Type` property, specify a Lambda function URI that has the form `arn:aws:apigateway:region:lambda:path/path`\. The path usually has the form /2015\-03\-31/functions/*LambdaFunctionARN*/invocations\.  
 *Required*: Conditional  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AuthType`  <a name="cfn-apigateway-authorizer-authtype"></a>
+An optional customer\-defined field that's used in OpenApi imports and exports without functional impact\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -111,7 +111,7 @@ The type of authorizer\. Valid values include:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-authorizer-return-values"></a>
+## Return values<a name="aws-resource-apigateway-authorizer-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-authorizer-return-values-ref"></a>
 
@@ -194,5 +194,5 @@ Authorizer:
     RestApiId: !Ref RestApi
 ```
 
-## See Also<a name="aws-resource-apigateway-authorizer--seealso"></a>
+## See also<a name="aws-resource-apigateway-authorizer--seealso"></a>
 + [authorizer:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/) in the *Amazon API Gateway REST API Reference*

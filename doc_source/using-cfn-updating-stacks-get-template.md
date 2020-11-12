@@ -1,4 +1,4 @@
-# Modifying a Stack Template<a name="using-cfn-updating-stacks-get-template"></a>
+# Modifying a stack template<a name="using-cfn-updating-stacks-get-template"></a>
 
 If you want to modify resources and properties that are declared in a stack template, you must modify the stack's template\. To ensure that you update only the resources that you intend to update, use the template for the existing stack as a starting point and make your updates to that template\. If you are managing your template in a source control system, use a copy of that template as a starting point\. Otherwise, you can get a copy of a stack template from AWS CloudFormation\.
 
@@ -8,19 +8,20 @@ If you want to modify just the parameters or settings of a stack \(like a stack'
 If your template includes an unsupported change, AWS CloudFormation returns a message saying that the change is not permitted\. This message might occur asynchronously, however, because resources are created and updated by AWS CloudFormation in a non\-deterministic order by default\.
 
 **Topics**
-+ [Update a Stack's Template \(Console\)](#using-cfn-updating-stacks-get-stack.CON)
-+ [Get and Update a Template for a Stack \(CLI\)](#using-cfn-updating-stacks-get-stack.CLI)
++ [Update a stack's template \(console\)](#using-cfn-updating-stacks-get-stack.CON)
++ [Get and update a template for a stack \(CLI\)](#using-cfn-updating-stacks-get-stack.CLI)
 
-## Update a Stack's Template \(Console\)<a name="using-cfn-updating-stacks-get-stack.CON"></a>
+## Update a stack's template \(console\)<a name="using-cfn-updating-stacks-get-stack.CON"></a>
 
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), select the stack that you want to update and then choose the **Actions** and then **View in Designer**\.  
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stack-detail-pane-template.png)
+1. On the **Stacks** page of the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), click the name of the stack that you want to update\. 
+
+1. In the stack details pane for the selected stack, select the **Template** pane, and then click **View in Designer**\.
 
    AWS CloudFormation opens a copy of the stack's template in AWS CloudFormation Designer\.
 
 1. Modify the template\.
 
-   You can use the AWS CloudFormation Designer drag\-and\-drop interface or the integrated JSON and YAML editor to modify the template\. For more information about using AWS CloudFormation Designer, see [What Is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
+   You can use the AWS CloudFormation Designer drag\-and\-drop interface or the integrated JSON and YAML editor to modify the template\. For more information about using AWS CloudFormation Designer, see [What is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
 
    Modify only the resources that you want to update\. Use the *same values* as the current stack configuration for resources and properties that you aren't updating\. You can modify the template by completing any of the following actions:
    + Add new resources, or remove existing resources\.
@@ -54,7 +55,7 @@ You cannot update conditions by themselves\. You can update conditions only when
 
 1. From the AWS CloudFormation Designer toolbar, choose the **File** menu \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-file-menu.png)\) and then **Save** to save the template in an S3 bucket or locally\.
 
-## Get and Update a Template for a Stack \(CLI\)<a name="using-cfn-updating-stacks-get-stack.CLI"></a>
+## Get and update a template for a stack \(CLI\)<a name="using-cfn-updating-stacks-get-stack.CLI"></a>
 
 1. To get the template for the stack you want to update, use the command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html)\.
 

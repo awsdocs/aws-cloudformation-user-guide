@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool VerificationMessageTemplate<a name="aws-properties-cognito-userpool-verificationmessagetemplate"></a>
 
-`VerificationMessageTemplate` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the template for verification messages\.
+The template for verification messages\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-verificationmessagetemplate-syntax"></a>
 
@@ -36,11 +36,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The default email option\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CONFIRM_WITH_CODE | CONFIRM_WITH_LINK`  
+*Allowed values*: `CONFIRM_WITH_CODE | CONFIRM_WITH_LINK`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailMessage`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailmessage"></a>
-The email message template\.  
+The email message template\. EmailMessage is allowed only if [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -49,7 +49,7 @@ The email message template\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailMessageByLink`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink"></a>
-The email message template for sending a confirmation link to the user\.  
+The email message template for sending a confirmation link to the user\. EmailMessageByLink is allowed only if [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -58,7 +58,7 @@ The email message template for sending a confirmation link to the user\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSubject`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailsubject"></a>
-The subject line for the email message template\.  
+The subject line for the email message template\. EmailSubject is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -67,7 +67,7 @@ The subject line for the email message template\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSubjectByLink`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink"></a>
-The subject line for the email message template for sending a confirmation link to the user\.  
+The subject line for the email message template for sending a confirmation link to the user\. EmailSubjectByLink is allowed only [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

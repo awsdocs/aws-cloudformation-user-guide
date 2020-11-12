@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MetricName](#cfn-wafregional-rule-metricname)" : String,
       "[Name](#cfn-wafregional-rule-name)" : String,
-      "[Predicates](#cfn-wafregional-rule-predicates)" : [ [Predicate](aws-properties-wafregional-rule-predicate.md), ... ]
+      "[Predicates](#cfn-wafregional-rule-predicates)" : [ Predicate, ... ]
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [MetricName](#cfn-wafregional-rule-metricname): String
   [Name](#cfn-wafregional-rule-name): String
   [Predicates](#cfn-wafregional-rule-predicates): 
-    - [Predicate](aws-properties-wafregional-rule-predicate.md)
+    - Predicate
 ```
 
 ## Properties<a name="aws-resource-wafregional-rule-properties"></a>
@@ -40,6 +40,9 @@ Properties:
 A friendly name or description for the metrics for this `Rule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `Rule`\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-wafregional-rule-name"></a>
@@ -48,6 +51,7 @@ The friendly name or description for the `Rule`\. You can't change the name of a
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Predicates`  <a name="cfn-wafregional-rule-predicates"></a>
@@ -56,7 +60,7 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 *Type*: List of [Predicate](aws-properties-wafregional-rule-predicate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-rule-return-values"></a>
+## Return values<a name="aws-resource-wafregional-rule-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-rule-return-values-ref"></a>
 
@@ -102,5 +106,5 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-    Type: "IPMatch"
+        Type: "IPMatch"
 ```

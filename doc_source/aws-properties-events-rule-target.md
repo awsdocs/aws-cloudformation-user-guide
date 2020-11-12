@@ -13,16 +13,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-events-rule-target-arn)" : String,
-  "[BatchParameters](#cfn-events-rule-target-batchparameters)" : [BatchParameters](aws-properties-events-rule-batchparameters.md),
-  "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : [EcsParameters](aws-properties-events-rule-ecsparameters.md),
+  "[BatchParameters](#cfn-events-rule-target-batchparameters)" : BatchParameters,
+  "[DeadLetterConfig](#cfn-events-rule-target-deadletterconfig)" : DeadLetterConfig,
+  "[EcsParameters](#cfn-events-rule-target-ecsparameters)" : EcsParameters,
+  "[HttpParameters](#cfn-events-rule-target-httpparameters)" : HttpParameters,
   "[Id](#cfn-events-rule-target-id)" : String,
   "[Input](#cfn-events-rule-target-input)" : String,
   "[InputPath](#cfn-events-rule-target-inputpath)" : String,
-  "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : [InputTransformer](aws-properties-events-rule-inputtransformer.md),
-  "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : [KinesisParameters](aws-properties-events-rule-kinesisparameters.md),
+  "[InputTransformer](#cfn-events-rule-target-inputtransformer)" : InputTransformer,
+  "[KinesisParameters](#cfn-events-rule-target-kinesisparameters)" : KinesisParameters,
+  "[RedshiftDataParameters](#cfn-events-rule-target-redshiftdataparameters)" : RedshiftDataParameters,
+  "[RetryPolicy](#cfn-events-rule-target-retrypolicy)" : RetryPolicy,
   "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
-  "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md),
-  "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : [SqsParameters](aws-properties-events-rule-sqsparameters.md)
+  "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : RunCommandParameters,
+  "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : SqsParameters
 }
 ```
 
@@ -31,21 +35,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Arn](#cfn-events-rule-target-arn): String
   [BatchParameters](#cfn-events-rule-target-batchparameters): 
-    [BatchParameters](aws-properties-events-rule-batchparameters.md)
+    BatchParameters
+  [DeadLetterConfig](#cfn-events-rule-target-deadletterconfig): 
+    DeadLetterConfig
   [EcsParameters](#cfn-events-rule-target-ecsparameters): 
-    [EcsParameters](aws-properties-events-rule-ecsparameters.md)
+    EcsParameters
+  [HttpParameters](#cfn-events-rule-target-httpparameters): 
+    HttpParameters
   [Id](#cfn-events-rule-target-id): String
   [Input](#cfn-events-rule-target-input): String
   [InputPath](#cfn-events-rule-target-inputpath): String
   [InputTransformer](#cfn-events-rule-target-inputtransformer): 
-    [InputTransformer](aws-properties-events-rule-inputtransformer.md)
+    InputTransformer
   [KinesisParameters](#cfn-events-rule-target-kinesisparameters): 
-    [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)
+    KinesisParameters
+  [RedshiftDataParameters](#cfn-events-rule-target-redshiftdataparameters): 
+    RedshiftDataParameters
+  [RetryPolicy](#cfn-events-rule-target-retrypolicy): 
+    RetryPolicy
   [RoleArn](#cfn-events-rule-target-rolearn): String
   [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
-    [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)
+    RunCommandParameters
   [SqsParameters](#cfn-events-rule-target-sqsparameters): 
-    [SqsParameters](aws-properties-events-rule-sqsparameters.md)
+    SqsParameters
 ```
 
 ## Properties<a name="aws-properties-events-rule-target-properties"></a>
@@ -64,10 +76,24 @@ If the event target is an AWS Batch job, this contains the job definition, job n
 *Type*: [BatchParameters](aws-properties-events-rule-batchparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DeadLetterConfig`  <a name="cfn-events-rule-target-deadletterconfig"></a>
+The `DeadLetterConfig` that defines the target queue to send dead\-letter queue events to\.   
+To learn more using a dead\-letter queue to send events that fail to be delivered to a target, see [Event retry policy and using dead\-letter queues](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html)\.  
+*Required*: No  
+*Type*: [DeadLetterConfig](aws-properties-events-rule-deadletterconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EcsParameters`  <a name="cfn-events-rule-target-ecsparameters"></a>
-Contains the Amazon ECS task definition and task count to be used if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
+Contains the Amazon ECS task definition and task count to be used, if the event target is an Amazon ECS task\. For more information about Amazon ECS tasks, see [Task Definitions ](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon EC2 Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: [EcsParameters](aws-properties-events-rule-ecsparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HttpParameters`  <a name="cfn-events-rule-target-httpparameters"></a>
+Contains the HTTP parameters to use when the target is a API Gateway REST endpoint\.  
+If you specify an API Gateway REST API as a target, you can use this parameter to specify headers, path parameter, query string keys/values as part of your target invoking request\.  
+*Required*: No  
+*Type*: [HttpParameters](aws-properties-events-rule-httpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>
@@ -101,9 +127,23 @@ Settings to enable you to provide custom input to a target based on certain even
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisParameters`  <a name="cfn-events-rule-target-kinesisparameters"></a>
-The custom parameter that you can use to control the shard assignment when the target is a Kinesis data stream\. If you don't include this parameter, the default is to use the `eventId` as the partition key\.  
+The custom parameter you can use to control the shard assignment, when the target is a Kinesis data stream\. If you do not include this parameter, the default is to use the `eventId` as the partition key\.  
 *Required*: No  
 *Type*: [KinesisParameters](aws-properties-events-rule-kinesisparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RedshiftDataParameters`  <a name="cfn-events-rule-target-redshiftdataparameters"></a>
+Contains the Redshift Data API parameters to use when the target is a Redshift cluster\.  
+If you specify a Redshift Cluster as a Target, you can use this to specify parameters to invoke the Redshift Data API ExecuteStatement based on EventBridge events\.  
+*Required*: No  
+*Type*: [RedshiftDataParameters](aws-properties-events-rule-redshiftdataparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RetryPolicy`  <a name="cfn-events-rule-target-retrypolicy"></a>
+A `RetryPolicy` object that includes information about the retry policy settings\.  
+To learn more using retry policy settings and using dead\-letter queues, see [Event retry policy and using dead\-letter queues](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html)\.  
+*Required*: No  
+*Type*: [RetryPolicy](aws-properties-events-rule-retrypolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>

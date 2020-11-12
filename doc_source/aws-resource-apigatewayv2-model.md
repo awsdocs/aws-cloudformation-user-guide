@@ -65,7 +65,7 @@ The schema for the model\. For application/json models, this should be JSON sche
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-model-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-model-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-model-return-values-ref"></a>
 
@@ -124,5 +124,5 @@ MyModel:
           type: string
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-model--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-model--seealso"></a>
 + [CreateModel](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-models.html#CreateModel) in the *Amazon API Gateway Version 2 API Reference*

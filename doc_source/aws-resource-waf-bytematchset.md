@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::ByteMatchSet",
   "Properties" : {
-      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md), ... ],
+      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ ByteMatchTuple, ... ],
       "[Name](#cfn-waf-bytematchset-name)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::ByteMatchSet
 Properties: 
   [ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples): 
-    - [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md)
+    - ByteMatchTuple
   [Name](#cfn-waf-bytematchset-name): String
 ```
 
@@ -42,9 +42,10 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-waf-bytematchset-return-values"></a>
+## Return values<a name="aws-resource-waf-bytematchset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-bytematchset-return-values-ref"></a>
 
@@ -110,7 +111,7 @@ BadReferers:
           Data: "referer"
         TargetString: "badrefer2"
         TextTransformation: "NONE"
-PositionalConstraint: "CONTAINS"
+        PositionalConstraint: "CONTAINS"
 ```
 
 ### Associate a ByteMatchSet with a Web ACL Rule<a name="aws-resource-waf-bytematchset--examples--Associate_a_ByteMatchSet_with_a_Web_ACL_Rule"></a>
@@ -149,7 +150,7 @@ BadReferersRule:
         DataId: 
           Ref: "BadReferers"
         Negated: false
-Type: "ByteMatch"
+        Type: "ByteMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-waf-bytematchset--examples--Create_a_Web_ACL"></a>
@@ -196,5 +197,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-Ref: "BadReferersRule"
+          Ref: "BadReferersRule"
 ```

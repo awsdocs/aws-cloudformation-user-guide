@@ -12,11 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::KinesisAnalyticsV2::Application",
   "Properties" : {
-      "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : [ApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-applicationconfiguration.md),
+      "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : ApplicationConfiguration,
       "[ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription)" : String,
       "[ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname)" : String,
       "[RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment)" : String,
-      "[ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole)" : String
+      "[ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole)" : String,
+      "[Tags](#cfn-kinesisanalyticsv2-application-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -27,11 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::KinesisAnalyticsV2::Application
 Properties: 
   [ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration): 
-    [ApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-applicationconfiguration.md)
+    ApplicationConfiguration
   [ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription): String
   [ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname): String
   [RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment): String
   [ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole): String
+  [Tags](#cfn-kinesisanalyticsv2-application-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-kinesisanalyticsv2-application-properties"></a>
@@ -60,10 +63,10 @@ The name of the application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuntimeEnvironment`  <a name="cfn-kinesisanalyticsv2-application-runtimeenvironment"></a>
-The runtime environment for the application \(`SQL-1.0` or `FLINK-1_6`\)\.  
+The runtime environment for the application \(`SQL-1.0`, `FLINK-1_6`, or `FLINK-1_8`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `FLINK-1_6 | SQL-1_0`  
+*Allowed values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -72,7 +75,13 @@ Specifies the IAM role that the application uses to access external resources\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `arn:aws:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`  
+*Pattern*: `arn:.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-kinesisanalyticsv2-application-tags"></a>
+A list of one or more tags to assign to the application\. A tag is a key\-value pair that identifies an application\. Note that the maximum number of application tags includes system tags\. The maximum number of user\-defined application tags is 50\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-application--examples"></a>
@@ -122,7 +131,7 @@ Specifies the IAM role that the application uses to access external resources\.
                                 "KinesisStreamsInput": {
                                     "ResourceARN": {
                                         "Fn::GetAtt": [
-                                            "SQLCanaryInputStream",
+                                            "InputKinesisStream",
                                             "Arn"
                                         ]
                                     }
@@ -168,7 +177,7 @@ Specifies the IAM role that the application uses to access external resources\.
                                 }
                             ]
                         }
-                    }
+                    } 
                 ]
             }
         },
@@ -212,7 +221,7 @@ Specifies the IAM role that the application uses to access external resources\.
             }
         },
         "BasicApplicationOutputs": {
-            "Type": "AWS::KinesisAnalytics::ApplicationOutput",
+            "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
             "DependsOn": "BasicApplication",
             "Properties": {
                 "ApplicationName": {
@@ -229,12 +238,6 @@ Specifies the IAM role that the application uses to access external resources\.
                                 "OutputKinesisStream",
                                 "Arn"
                             ]
-                        },
-                        "RoleARN": {
-                            "Fn::GetAtt": [
-                                "KinesisAnalyticsRole",
-                                "Arn"
-                            ]
                         }
                     }
                 }
@@ -247,7 +250,7 @@ Specifies the IAM role that the application uses to access external resources\.
             }
         },
         "BasicApplicationReferenceDataSource": {
-            "Type": "AWS::KinesisAnalytics::ApplicationReferenceDataSource",
+            "Type": "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource",
             "DependsOn": "BasicApplicationOutputs",
             "Properties": {
                 "ApplicationName": {
@@ -279,13 +282,7 @@ Specifies the IAM role that the application uses to access external resources\.
                                 "Arn"
                             ]
                         },
-                        "FileKey": "fakeKey",
-                        "ReferenceRoleARN": {
-                            "Fn::GetAtt": [
-                                "KinesisAnalyticsRole",
-                                "Arn"
-                            ]
-                        }
+                        "FileKey": "fakeKey"
                     }
                 }
             }
@@ -307,6 +304,8 @@ Specifies the IAM role that the application uses to access external resources\.
 #### YAML<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application--yaml"></a>
 
 ```
+Description: Sample KinesisAnalytics via CloudFormation
+
 Description: Sample KinesisAnalytics via CloudFormation
 Resources:
   BasicApplication:
@@ -334,7 +333,7 @@ Resources:
                       RecordRowPath: $
               KinesisStreamsInput:
                 ResourceARN: !GetAtt 
-                  - SQLCanaryInputStream
+                  - InputKinesisStream
                   - Arn
         ApplicationCodeConfiguration:
           CodeContent:
@@ -383,7 +382,7 @@ Resources:
                 Action: '*'
                 Resource: '*'
   BasicApplicationOutputs:
-    Type: 'AWS::KinesisAnalytics::ApplicationOutput'
+    Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput'
     DependsOn: BasicApplication
     Properties:
       ApplicationName: !Ref BasicApplication
@@ -395,15 +394,12 @@ Resources:
           ResourceARN: !GetAtt 
             - OutputKinesisStream
             - Arn
-          RoleARN: !GetAtt 
-            - KinesisAnalyticsRole
-            - Arn
   OutputKinesisStream:
     Type: 'AWS::Kinesis::Stream'
     Properties:
       ShardCount: 1
   BasicApplicationReferenceDataSource:
-    Type: 'AWS::KinesisAnalytics::ApplicationReferenceDataSource'
+    Type: 'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource'
     DependsOn: BasicApplicationOutputs
     Properties:
       ApplicationName: !Ref BasicApplication
@@ -424,9 +420,6 @@ Resources:
             - S3Bucket
             - Arn
           FileKey: fakeKey
-          ReferenceRoleARN: !GetAtt 
-            - KinesisAnalyticsRole
-            - Arn
   S3Bucket:
     Type: 'AWS::S3::Bucket'
 Outputs:
@@ -434,5 +427,5 @@ Outputs:
     Value: !Ref BasicApplication
 ```
 
-## See Also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
+## See also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
 +  [CreateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplication.html) in the *Amazon Kinesis Data Analytics API Reference* 

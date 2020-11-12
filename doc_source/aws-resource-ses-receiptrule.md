@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SES::ReceiptRule",
   "Properties" : {
       "[After](#cfn-ses-receiptrule-after)" : String,
-      "[Rule](#cfn-ses-receiptrule-rule)" : [Rule](aws-properties-ses-receiptrule-rule.md),
+      "[Rule](#cfn-ses-receiptrule-rule)" : Rule,
       "[RuleSetName](#cfn-ses-receiptrule-rulesetname)" : String
     }
 }
@@ -30,7 +30,7 @@ Type: AWS::SES::ReceiptRule
 Properties: 
   [After](#cfn-ses-receiptrule-after): String
   [Rule](#cfn-ses-receiptrule-rule): 
-    [Rule](aws-properties-ses-receiptrule-rule.md)
+    Rule
   [RuleSetName](#cfn-ses-receiptrule-rulesetname): String
 ```
 
@@ -54,7 +54,7 @@ The name of the rule set that you want to add the receipt rule to\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-receiptrule-return-values"></a>
+## Return values<a name="aws-resource-ses-receiptrule-return-values"></a>
 
 ### Ref<a name="aws-resource-ses-receiptrule-return-values-ref"></a>
 
@@ -71,119 +71,30 @@ Specifies a receipt rule for incoming email\.
 #### JSON<a name="aws-resource-ses-receiptrule--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ReceiptRule Sample Template",
-    "Parameters": {
-        "RuleSetName": {
-            "Type": "String"
-        },
-        "ReceiptRuleName1": {
-            "Type": "String"
-        },
-        "ReceiptRuleName2": {
-            "Type": "String"
-        },
-        "TlsPolicy": {
-            "Type": "String"
-        },
-        "HeaderName": {
-            "Type": "String"
-        },
-        "HeaderValue": {
-            "Type": "String"
-        }
-    },
-    "Resources": {
-        "ReceiptRule1": {
-            "Type": "AWS::SES::ReceiptRule",
-            "Properties": {
-                "RuleSetName": {
-                    "Ref": "RuleSetName"
-                },
-                "Rule": {
-                    "Name": {
-                        "Ref": "ReceiptRuleName1"
-                    },
-                    "Enabled": true,
-                    "ScanEnabled": true,
-                    "TlsPolicy": {
-                        "Ref": "TlsPolicy"
-                    },
-                    "Actions": [
-                        {
-                            "AddHeaderAction": {
-                                "HeaderName": {
-                                    "Ref": "HeaderName"
-                                },
-                                "HeaderValue": {
-                                    "Ref": "HeaderValue"
-                                }
-                            }
-                        }
-                    ]
-                }
-            }
-        },
-        "ReceiptRule2": {
-            "Type": "AWS::SES::ReceiptRule",
-            "Properties": {
-                "RuleSetName": {
-                    "Ref": "RuleSetName"
-                },
-                "After": {
-                    "Ref": "ReceiptRule1"
-                },
-                "Rule": {
-                    "Name": {
-                        "Ref": "ReceiptRuleName2"
-                    }
-                }
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
+                SES ReceiptRule Sample Template", "Parameters": { "RuleSetName": { "Type": "String"
+                }, "ReceiptRuleName1": { "Type": "String" }, "ReceiptRuleName2": { "Type": "String"
+                }, "TlsPolicy": { "Type": "String" }, "HeaderName": { "Type": "String" },
+                "HeaderValue": { "Type": "String" } }, "Resources": { "ReceiptRule1": { "Type":
+                "AWS::SES::ReceiptRule", "Properties": { "RuleSetName": { "Ref": "RuleSetName" },
+                "Rule": { "Name": { "Ref": "ReceiptRuleName1" }, "Enabled": true, "ScanEnabled":
+                true, "TlsPolicy": { "Ref": "TlsPolicy" }, "Actions": [ { "AddHeaderAction": {
+                "HeaderName": { "Ref": "HeaderName" }, "HeaderValue": { "Ref": "HeaderValue" } } } ]
+                } } }, "ReceiptRule2": { "Type": "AWS::SES::ReceiptRule", "Properties": {
+                "RuleSetName": { "Ref": "RuleSetName" }, "After": { "Ref": "ReceiptRule1" }, "Rule":
+                { "Name": { "Ref": "ReceiptRuleName2" } } } } } }
 ```
 
 #### YAML<a name="aws-resource-ses-receiptrule--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRule Sample Template'
-Parameters:
-  RuleSetName:
-    Type: String
-  ReceiptRuleName1:
-    Type: String
-  ReceiptRuleName2:
-    Type: String
-  TlsPolicy:
-    Type: String
-  HeaderName:
-    Type: String
-  HeaderValue:
-    Type: String
-
-Resources:
-  ReceiptRule1:
-    Type: AWS::SES::ReceiptRule
-    Properties:
-      RuleSetName: !Ref RuleSetName
-      Rule:
-        Name: !Ref ReceiptRuleName1
-        Enabled: true
-        ScanEnabled: true
-        TlsPolicy: !Ref TlsPolicy
-        Actions:
-          - AddHeaderAction:
-              HeaderName: !Ref HeaderName
-              HeaderValue: !Ref HeaderValue
-
-  ReceiptRule2:
-    Type: AWS::SES::ReceiptRule
-    Properties:
-      RuleSetName: !Ref RuleSetName
-      After: !Ref ReceiptRule1
-      Rule:
-        Name: !Ref ReceiptRuleName2
+AWSTemplateFormatVersion: 2010-09-09 Description: 'AWS SES
+                ReceiptRule Sample Template' Parameters: RuleSetName: Type: String ReceiptRuleName1:
+                Type: String ReceiptRuleName2: Type: String TlsPolicy: Type: String HeaderName:
+                Type: String HeaderValue: Type: String Resources: ReceiptRule1: Type:
+                AWS::SES::ReceiptRule Properties: RuleSetName: !Ref RuleSetName Rule: Name: !Ref
+                ReceiptRuleName1 Enabled: true ScanEnabled: true TlsPolicy: !Ref TlsPolicy Actions:
+                - AddHeaderAction: HeaderName: !Ref HeaderName HeaderValue: !Ref HeaderValue
+                ReceiptRule2: Type: AWS::SES::ReceiptRule Properties: RuleSetName: !Ref RuleSetName
+                After: !Ref ReceiptRule1 Rule: Name: !Ref ReceiptRuleName2
 ```

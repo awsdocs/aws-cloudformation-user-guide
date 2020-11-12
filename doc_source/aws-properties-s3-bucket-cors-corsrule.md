@@ -43,7 +43,7 @@ Headers that are specified in the `Access-Control-Request-Headers` header\. Thes
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedMethods`  <a name="cfn-s3-bucket-cors-corsrule-allowedmethods"></a>
-An HTTP method that you allow the origin to execute\. Valid values are `GET`, `PUT`, `HEAD`, `POST`, and `DELETE`\.  
+An HTTP method that you allow the origin to run\. Valid values are `GET`, `PUT`, `HEAD`, `POST`, and `DELETE`\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,3 +71,6 @@ The time in seconds that your browser is to cache the preflight response for the
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-cors-corsrule--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)

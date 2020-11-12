@@ -37,7 +37,7 @@ The name of the receipt rule set that you want to reorder\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-receiptruleset-return-values"></a>
+## Return values<a name="aws-resource-ses-receiptruleset-return-values"></a>
 
 ### Ref<a name="aws-resource-ses-receiptruleset-return-values-ref"></a>
 
@@ -54,38 +54,17 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 #### JSON<a name="aws-resource-ses-receiptruleset--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ReceiptRuleSet Sample Template",
-    "Parameters": {
-        "ReceiptRuleSetName": {
-            "Type": "String"
-        }
-    },
-    "Resources": {
-        "ReceiptRuleSet": {
-            "Type": "AWS::SES::ReceiptRuleSet",
-            "Properties": {
-                "RuleSetName": {
-                    "Ref": "ReceiptRuleSetName"
-                }
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
+                SES ReceiptRuleSet Sample Template", "Parameters": { "ReceiptRuleSetName": { "Type":
+                "String" } }, "Resources": { "ReceiptRuleSet": { "Type": "AWS::SES::ReceiptRuleSet",
+                "Properties": { "RuleSetName": { "Ref": "ReceiptRuleSetName" } } } } }
 ```
 
 #### YAML<a name="aws-resource-ses-receiptruleset--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRuleSet Sample Template'
-Parameters:
-  ReceiptRuleSetName:
-    Type: String
-Resources:
-  ReceiptRuleSet:
-    Type: AWS::SES::ReceiptRuleSet
-    Properties:
-      RuleSetName: !Ref ReceiptRuleSetName
+AWSTemplateFormatVersion: 2010-09-09 Description: 'AWS SES
+                ReceiptRuleSet Sample Template' Parameters: ReceiptRuleSetName: Type: String
+                Resources: ReceiptRuleSet: Type: AWS::SES::ReceiptRuleSet Properties: RuleSetName:
+                !Ref ReceiptRuleSetName
 ```

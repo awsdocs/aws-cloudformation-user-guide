@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies the replica ownership\. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the *Amazon Simple Storage Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Destination`  
+*Allowed values*: `Destination`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

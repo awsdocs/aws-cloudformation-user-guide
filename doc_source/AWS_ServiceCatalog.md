@@ -1,6 +1,6 @@
-# AWS Service Catalog Resource Type Reference<a name="AWS_ServiceCatalog"></a>
+# AWS Service Catalog resource type reference<a name="AWS_ServiceCatalog"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ServiceCatalog::AcceptedPortfolioShare](aws-resource-servicecatalog-acceptedportfolioshare.md)
 + [AWS::ServiceCatalog::CloudFormationProduct](aws-resource-servicecatalog-cloudformationproduct.md)
 + [AWS::ServiceCatalog::CloudFormationProvisionedProduct](aws-resource-servicecatalog-cloudformationprovisionedproduct.md)

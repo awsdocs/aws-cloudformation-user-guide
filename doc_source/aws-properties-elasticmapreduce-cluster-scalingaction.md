@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Market](#cfn-elasticmapreduce-cluster-scalingaction-market)" : String,
-  "[SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration)" : [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.md)
+  "[SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration)" : SimpleScalingPolicyConfiguration
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Market](#cfn-elasticmapreduce-cluster-scalingaction-market): String
   [SimpleScalingPolicyConfiguration](#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration): 
-    [SimpleScalingPolicyConfiguration](aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.md)
+    SimpleScalingPolicyConfiguration
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-scalingaction-properties"></a>
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Not available for instance groups\. Instance groups use the market type specified for the group\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SimpleScalingPolicyConfiguration`  <a name="cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration"></a>

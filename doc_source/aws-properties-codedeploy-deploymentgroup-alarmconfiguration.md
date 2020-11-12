@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Alarms](#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms)" : [ [Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md), ... ],
+  "[Alarms](#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms)" : [ Alarm, ... ],
   "[Enabled](#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled)" : Boolean,
   "[IgnorePollAlarmFailure](#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure)" : Boolean
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Alarms](#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms): 
-    - [Alarm](aws-properties-codedeploy-deploymentgroup-alarm.md)
+    - Alarm
   [Enabled](#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled): Boolean
   [IgnorePollAlarmFailure](#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure): Boolean
 ```

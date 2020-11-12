@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IamRoleArn](#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn)" : String,
-  "[ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags)" : [ [ConditionResourceType](aws-properties-backup-backupselection-conditionresourcetype.md), ... ],
+  "[ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags)" : [ ConditionResourceType, ... ],
   "[Resources](#cfn-backup-backupselection-backupselectionresourcetype-resources)" : [ String, ... ],
   "[SelectionName](#cfn-backup-backupselection-backupselectionresourcetype-selectionname)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IamRoleArn](#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn): String
   [ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags): 
-    - [ConditionResourceType](aws-properties-backup-backupselection-conditionresourcetype.md)
+    - ConditionResourceType
   [Resources](#cfn-backup-backupselection-backupselectionresourcetype-resources): 
     - String
   [SelectionName](#cfn-backup-backupselection-backupselectionresourcetype-selectionname): String
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupselection-backupselectionresourcetype-properties"></a>
 
 `IamRoleArn`  <a name="cfn-backup-backupselection-backupselectionresourcetype-iamrolearn"></a>
-The ARN of the IAM role that AWS Backup uses to authenticate when restoring the target resource; for example, `arn:aws:iam::123456789012:role/S3Access`\.  
+The ARN of the IAM role that AWS Backup uses to authenticate when backing up the target resource; for example, `arn:aws:iam::123456789012:role/S3Access`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,7 +43,7 @@ An array of conditions used to specify a set of resources to assign to a backup 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Resources`  <a name="cfn-backup-backupselection-backupselectionresourcetype-resources"></a>
-An array of strings that either contain Amazon Resource Names \(ARNs\) or match patterns such as "`arn:aws:ec2:us-east-1:123456789012:volume/*`" of resources to assign to a backup plan\.  
+An array of strings that contain Amazon Resource Names \(ARNs\) of resources to assign to a backup plan\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

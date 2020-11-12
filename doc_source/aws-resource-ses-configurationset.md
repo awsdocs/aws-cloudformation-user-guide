@@ -35,7 +35,7 @@ The name of the configuration set\. The name must:
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-configurationset-return-values"></a>
+## Return values<a name="aws-resource-ses-configurationset-return-values"></a>
 
 ### Ref<a name="aws-resource-ses-configurationset-return-values-ref"></a>
 
@@ -52,38 +52,17 @@ Specifies a configuration set\.
 #### JSON<a name="aws-resource-ses-configurationset--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ConfigurationSet Sample Template",
-    "Parameters": {
-        "ConfigSetName": {
-            "Type": "String"
-        }
-    },
-    "Resources": {
-        "ConfigSet": {
-            "Type": "AWS::SES::ConfigurationSet",
-            "Properties": {
-                "Name": {
-                    "Ref": "ConfigSetName"
-                }
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
+                SES ConfigurationSet Sample Template", "Parameters": { "ConfigSetName": { "Type":
+                "String" } }, "Resources": { "ConfigSet": { "Type": "AWS::SES::ConfigurationSet",
+                "Properties": { "Name": { "Ref": "ConfigSetName" } } } } }
 ```
 
 #### YAML<a name="aws-resource-ses-configurationset--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: "AWS SES ConfigurationSet Sample Template"
-Parameters:
-  ConfigSetName:
-    Type: String
-Resources:
-  ConfigSet:
-    Type: AWS::SES::ConfigurationSet
-    Properties:
-      Name: !Ref ConfigSetName
+AWSTemplateFormatVersion: 2010-09-09 Description: "AWS SES
+                ConfigurationSet Sample Template" Parameters: ConfigSetName: Type: String Resources:
+                ConfigSet: Type: AWS::SES::ConfigurationSet Properties: Name: !Ref
+                ConfigSetName
 ```

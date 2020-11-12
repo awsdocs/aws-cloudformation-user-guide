@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist)" : [ [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md), ... ]
+  "[OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist)" : [ OnPremisesTagSetListObject, ... ]
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnPremisesTagSetList](#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist): 
-    - [OnPremisesTagSetListObject](aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.md)
+    - OnPremisesTagSetListObject
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-onpremisestagset-properties"></a>

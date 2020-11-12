@@ -1,6 +1,6 @@
 # AWS::Pinpoint::EmailTemplate<a name="aws-resource-pinpoint-emailtemplate"></a>
 
-Creates a message template that you can use in messages that are sent through the email channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
+The AWS::Pinpoint::EmailTemplate resource is a message template that you can use in messages that are sent through the email channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for one or more Amazon Pinpoint applications\.
 
 ## Syntax<a name="aws-resource-pinpoint-emailtemplate-syntax"></a>
 
@@ -12,9 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Pinpoint::EmailTemplate",
   "Properties" : {
+      "[DefaultSubstitutions](#cfn-pinpoint-emailtemplate-defaultsubstitutions)" : String,
       "[HtmlPart](#cfn-pinpoint-emailtemplate-htmlpart)" : String,
       "[Subject](#cfn-pinpoint-emailtemplate-subject)" : String,
       "[Tags](#cfn-pinpoint-emailtemplate-tags)" : Json,
+      "[TemplateDescription](#cfn-pinpoint-emailtemplate-templatedescription)" : String,
       "[TemplateName](#cfn-pinpoint-emailtemplate-templatename)" : String,
       "[TextPart](#cfn-pinpoint-emailtemplate-textpart)" : String
     }
@@ -26,17 +28,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Pinpoint::EmailTemplate
 Properties: 
+  [DefaultSubstitutions](#cfn-pinpoint-emailtemplate-defaultsubstitutions): String
   [HtmlPart](#cfn-pinpoint-emailtemplate-htmlpart): String
   [Subject](#cfn-pinpoint-emailtemplate-subject): String
   [Tags](#cfn-pinpoint-emailtemplate-tags): Json
+  [TemplateDescription](#cfn-pinpoint-emailtemplate-templatedescription): String
   [TemplateName](#cfn-pinpoint-emailtemplate-templatename): String
   [TextPart](#cfn-pinpoint-emailtemplate-textpart): String
 ```
 
 ## Properties<a name="aws-resource-pinpoint-emailtemplate-properties"></a>
 
+`DefaultSubstitutions`  <a name="cfn-pinpoint-emailtemplate-defaultsubstitutions"></a>
+A JSON object that specifies the default values to use for message variables in the message template\. This object is a set of key\-value pairs\. Each key defines a message variable in the template\. The corresponding value defines the default value for that variable\. When you create a message that's based on the template, you can override these defaults with message\-specific and address\-specific variables and values\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HtmlPart`  <a name="cfn-pinpoint-emailtemplate-htmlpart"></a>
-The message body, in HTML format, to use in email messages that are based on the message template\. We recommend using HTML format for email clients that support HTML\. You can include links, formatted text, and more in an HTML message\.  
+The message body, in HTML format, to use in email messages that are based on the message template\. We recommend using HTML format for email clients that render HTML content\. You can include links, formatted text, and more in an HTML message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,6 +63,12 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TemplateDescription`  <a name="cfn-pinpoint-emailtemplate-templatedescription"></a>
+A custom description of the message template\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TemplateName`  <a name="cfn-pinpoint-emailtemplate-templatename"></a>
 The name of the message template\.  
 *Required*: Yes  
@@ -60,12 +76,12 @@ The name of the message template\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TextPart`  <a name="cfn-pinpoint-emailtemplate-textpart"></a>
-The message body, in text format, to use in email messages that are based on the message template\. We recommend using text format for email clients that don't support HTML and clients that are connected to high\-latency networks, such as mobile devices\.  
+The message body, in plain text format, to use in email messages that are based on the message template\. We recommend using plain text format for email clients that don't render HTML content and clients that are connected to high\-latency networks, such as mobile devices\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-emailtemplate-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-emailtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-emailtemplate-return-values-ref"></a>
 

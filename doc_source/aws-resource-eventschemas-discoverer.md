@@ -1,6 +1,6 @@
 # AWS::EventSchemas::Discoverer<a name="aws-resource-eventschemas-discoverer"></a>
 
-Use the `AWS::EventSchemas::Discoverer` resource to create a *discoverer* that is associated with an event bus\. A discoverer allows EventBridge Schemas to automatically generate schemas based on events on an event bus\. 
+Use the `AWS::EventSchemas::Discoverer` resource to specify a *discoverer* that is associated with an event bus\. A discoverer allows the Amazon EventBridge Schema Registry to automatically generate schemas based on events on an event bus\. 
 
 ## Syntax<a name="aws-resource-eventschemas-discoverer-syntax"></a>
 
@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-eventschemas-discoverer-description)" : String,
       "[SourceArn](#cfn-eventschemas-discoverer-sourcearn)" : String,
-      "[Tags](#cfn-eventschemas-discoverer-tags)" : [ [TagsEntry](aws-properties-eventschemas-discoverer-tagsentry.md), ... ]
+      "[Tags](#cfn-eventschemas-discoverer-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [Description](#cfn-eventschemas-discoverer-description): String
   [SourceArn](#cfn-eventschemas-discoverer-sourcearn): String
   [Tags](#cfn-eventschemas-discoverer-tags): 
-    - [TagsEntry](aws-properties-eventschemas-discoverer-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-eventschemas-discoverer-properties"></a>
@@ -50,7 +50,7 @@ Tags associated with the resource\.
 *Type*: List of [TagsEntry](aws-properties-eventschemas-discoverer-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eventschemas-discoverer-return-values"></a>
+## Return values<a name="aws-resource-eventschemas-discoverer-return-values"></a>
 
 ### Ref<a name="aws-resource-eventschemas-discoverer-return-values-ref"></a>
 
