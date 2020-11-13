@@ -96,10 +96,10 @@ The port the load balancer uses when performing health checks on targets\. If th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckProtocol`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol"></a>
-The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. For Network Load Balancers and Gateway Load Balancers, the default is TCP\. The TCP protocol is not supported for health checks if the protocol of the target group is HTTP or HTTPS\. The GENEVE, TLS, UDP, and TCP\_UDP protocols are not supported for health checks\.  
+The protocol the load balancer uses when performing health checks on targets\. For Application Load Balancers, the default is HTTP\. If the protocol is GRPC, you must specify the `Matcher` property. For Network Load Balancers and Gateway Load Balancers, the default is TCP\. The TCP protocol is not supported for health checks if the protocol of the target group is HTTP or HTTPS\. The GENEVE, TLS, UDP, and TCP\_UDP protocols are not supported for health checks\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP | GRPC`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTimeoutSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds"></a>
