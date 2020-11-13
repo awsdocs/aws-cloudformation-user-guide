@@ -77,7 +77,10 @@ The Lustre configuration for the file system being created\.
 
 `SecurityGroupIds`  <a name="cfn-fsx-filesystem-securitygroupids"></a>
 A list of IDs specifying the security groups to apply to all network interfaces created for file system access\. This list isn't returned in later requests to describe the file system\.  
-*Required*: No  
+
+The SecurityGroup(s) provided must allow outbound (egress) connectivity on the following port(s): UDP `53,88,123,389,464` to allow network traffic between Amazon FSx and your domain controller(s) as recommended in the [Amazon FSx user guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/aws-ad-integration-fsxW.html).
+
+*Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
