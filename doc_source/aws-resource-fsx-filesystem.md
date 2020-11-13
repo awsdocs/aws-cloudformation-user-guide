@@ -91,7 +91,7 @@ For Lustre file systems:
 For Windows file systems:  
 + If `StorageType=SSD`, valid values are 32 GiB \- 65,536 GiB \(64 TiB\)\.
 + If `StorageType=HDD`, valid values are 2000 GiB \- 65,536 GiB \(64 TiB\)\.
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `2147483647`  
