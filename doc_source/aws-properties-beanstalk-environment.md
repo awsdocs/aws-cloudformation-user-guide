@@ -576,11 +576,11 @@ Resources:
       ApplicationName: !Ref Application
       Description: Version 1.0
       SourceBundle:
-        S3Bucket: Fn::Join:
+        S3Bucket:
+          Fn::Join:
           - '-'
-          - 
-          - 'elasticbeanstalk-samples'
-          - !Ref 'AWS::Region'
+          - - 'elasticbeanstalk-samples'
+            - !Ref 'AWS::Region'
         S3Key: python-sample-20150402.zip
   Environment:
     Type: AWS::ElasticBeanstalk::Environment
