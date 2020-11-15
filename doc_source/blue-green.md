@@ -211,7 +211,7 @@ Function to use to run tasks after the second target group serves traffic to the
 *Required*: No  
 `ServiceRole`  
 The execution role for CloudFormation to use to perform the blue\-green deployments\. For a list of the necessary permissions, see [IAM permissions necessary for blue\-green deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-iam)  
-*Required*: Yes  
+*Required*: No 
 `Applications`  
 Specifies properties of the Amazon ECS application\.  
 *Required*: Yes    
