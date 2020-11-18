@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeArtifact::Domain",
   "Properties" : {
       "[DomainName](#cfn-codeartifact-domain-domainname)" : String,
+      "[EncryptionKey](#cfn-codeartifact-domain-encryptionkey)" : String,
       "[PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument)" : Json,
       "[Tags](#cfn-codeartifact-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeArtifact::Domain
 Properties: 
   [DomainName](#cfn-codeartifact-domain-domainname): String
+  [EncryptionKey](#cfn-codeartifact-domain-encryptionkey): String
   [PermissionsPolicyDocument](#cfn-codeartifact-domain-permissionspolicydocument): Json
   [Tags](#cfn-codeartifact-domain-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -39,6 +41,15 @@ Properties:
 *Minimum*: `2`  
 *Maximum*: `50`  
 *Pattern*: `[a-z][a-z0-9\-]{0,48}[a-z0-9]`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EncryptionKey`  <a name="cfn-codeartifact-domain-encryptionkey"></a>
+ The key used to encrypt the domain\.   
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1011`  
+*Pattern*: `\S+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PermissionsPolicyDocument`  <a name="cfn-codeartifact-domain-permissionspolicydocument"></a>

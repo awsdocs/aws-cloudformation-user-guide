@@ -4,18 +4,37 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resource](AWS_ElastiCache.md) | The following resource was updated: AWS::ElastiCache::GlobalReplicationGroup\. 
+| [Change sets for nested stacks](#ReleaseHistory) | With *change sets for nested stacks* you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you’ve confirmed that all the changes are as intended\. For more information, see [Change sets for nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/change-sets-for-nested-stacks.html)\. | November 18, 2020 | 
+| [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::Route and AWS::EC2::VPCEndpointService\. 
 
- [AWS::ElastiCache::GlobalReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.htmll)   
-Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.   | November 11, 2020 | 
+ [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)   
+Use the `VpcEndpointId` property to create a route to a Gateway Load Balancer endpoint\. 
+
+ [AWS::EC2::VPCEndpointService](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html)   
+Use the `GatewayLoadBalancerArns` property to specify a Gateway Load Balancer for your VPC endpoint service\.  | November 12, 2020 | 
+| [Updated resource](AWS_Kendra.md) | The following resource was updated: AWS::Kendra::DataSource\. 
+
+ [AWS::Kendra::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)   
+Use the new `CUSTOM` value to specify the custom data sources\.  | November 12, 2020 | 
+| [New resources: AWS Glue DataBrew](AWS_DataBrew.md) | This is the first release of [AWS Glue DataBrew](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_DataBrew.html)\. | November 12, 2020 | 
+| [New resource](AWS_AppMesh.md) | The following resource was updated: AWS::AppMesh::VirtualNode and AWS::AppMesh::VirtualGateway 
+
+ [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
+Use the `ConnectionPool` property to specify the type of connection pool for the listener\.  
+Use the `VirtualNodeHttp2ConnectionPool` property to specify an http2 type of connection pool\.  
+Use the `VirtualNodeGrpcConnectionPool` property to specify a grpc type of connection pool\.  
+Use the `VirtualNodeConnectionPool` property to specify the type of virtual node connection pool\.  
+Use the `VirtualNodeHttpConnectionPool` property to specify an http type of connection pool\.  
+Use the `OutlierDetection` property to specify the type of outlier detection for the listener\.  
+Use the `VirtualNodeTcpConnectionPool` property to specify an http2 type of connection pool\. 
+
+ [AWS::AppMesh::VirtualGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html)   
+Use the `ConnectionPool` property to specify the type of connection pool for the listener\.  
+Use the `VirtualGatewayHttpConnectionPool` property to specify an http type of connection pool\.  
+Use the `VirtualGatewayHttp2ConnectionPool` property to specify an http2 type of connection pool\.  
+Use the `VirtualGatewayConnectionPool` property to specify the type of virtual gateway connection pool\.  
+Use the `VirtualGatewayGrpcConnectionPool` property to specify a grpc type of connection pool\.  | November 12, 2020 | 
 | [Updated resource](AWS_S3.md) | The following resources were updated: AWS::S3::Bucket 
-
- [IntelligentTieringConfiguration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access)   
-Use the `IntelligentTieringConfiguration` property to specify an S3 Intelligent\-Tiering configuration\. 
-
- [OwnershipControls](https://docs.aws.amazon.com/AmazonS3/latest/dev/about-object-ownership.html)   
-Use the `OwnershipControls` property to specify object ownership on a bucket\.  | November 9, 2020 | 
-| [Updated resource](#ReleaseHistory) | The following resources were updated: AWS::S3::Bucket 
 
  [IntelligentTieringConfiguration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access)   
 Use the `IntelligentTieringConfiguration` property to specify an S3 Intelligent\-Tiering configuration\. 
@@ -45,10 +64,6 @@ Use the `CarrierGatewayId` property to create a route to a carrier gateway\.  | 
 
  [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   
 Use the `Queues` property to specify the Amazon MQ queue to stream to a Lambda function\. Use the `Source access configuration` property to specify the Secrets Manager secret that stores your MQ broker credentials\.  | November 5, 2020 | 
-| [Updated resource](AWS_SES.md) | The following resource was added: AWS::SES::ContactList 
-
- [AWS::SES::ContactList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_SES.html)   
-Use the `ContactList` resource to create a list that contains contacts that have subscribed to a particular topic or topics\.  | November 5, 2020 | 
 | [New resource](AWS_Events.md) | The following new resource was added: AWS::Events::Archive\. 
 
  [AWS::Events::Archive](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
@@ -61,6 +76,14 @@ Use the `AWS::IoT::DomainConfiguration` resource to specify a domain configurati
 
  [AWS::RDS::GlobalCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html)   
 Use the `AWS::RDS::GlobalCluster` resource to create or update an Aurora global database cluster\.  | November 5, 2020 | 
+| [New resource](AWS_SES.md) | The following resource was added: AWS::SES::ContactList 
+
+ [AWS::SES::ContactList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_SES.html)   
+Use the `ContactList` resource to create a list that contains contacts that have subscribed to a particular topic or topics\.  | November 5, 2020 | 
+| [Updated resource](AWS_AmazonMQ.md) | The following resources were updated: AWS::AmazonMQ::Broker, AWS::AmazonMQ::Configuration, AWS::AmazonMQ::ConfigurationAssociation 
+
+ [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
+Amazon MQ now supports RabbitMQ broker engine\.  | November 4, 2020 | 
 | [Updated resource](AWS_GlobalAccelerator.md) | The following resource was updated: AWS::GlobalAccelerator::EndpointGroup\. 
 
  [ AWS::GlobalAccelerator::EndpointGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)   
@@ -75,10 +98,6 @@ Use the `AWS::IVS::StreamKey` resource to specify an Amazon IVS Stream Key, whic
 
  [AWS::IVS::PlaybackKeyPair](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html)   
 Use the `AWS::IVS::PlaybackKeyPair` resource to specify an Amazon IVS PlaybackKeyPair, which is used to sign and validate a playback authorization token for a private channel\.  | October 29, 2020 | 
-| [Updated resource](AWS_AmazonMQ.md) | The following resources were updated: AWS::AmazonMQ::Broker, AWS::AmazonMQ::Configuration, AWS::AmazonMQ::ConfigurationAssociation 
-
- [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
-Amazon MQ now supports RabbitMQ broker engine\.  | October 28, 2020 | 
 | [New resource](AWS_IoTSiteWise.md) | The following resources were added: AWS::IoTSitewise::Asset, AWS::IoTSiteWise::AssetModel, and AWS::IoTSiteWise::Gateway\. 
 
  [AWS::IoTSiteWise::Asset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html)   

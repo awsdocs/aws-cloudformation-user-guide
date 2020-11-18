@@ -1,6 +1,6 @@
 # AWS::S3::Bucket OwnershipControlsRule<a name="aws-properties-s3-bucket-ownershipcontrolsrule"></a>
 
-Specifies an object ownership control rule\.
+Specifies an object ownership rule\.
 
 ## Syntax<a name="aws-properties-s3-bucket-ownershipcontrolsrule-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-ownershipcontrolsrule-properties"></a>
 
 `ObjectOwnership`  <a name="cfn-s3-bucket-ownershipcontrolsrule-objectownership"></a>
-Specifies an object ownership control rule\.  
+Specifies an object ownership rule\.  
 *Allowed values*: `ObjectWriter` \| `BucketOwnerPreferred`  
 *Required*: No  
 *Type*: String  

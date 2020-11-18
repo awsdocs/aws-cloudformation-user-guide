@@ -1,5 +1,8 @@
 # AWS::AmazonMQ::Broker EncryptionOptions<a name="aws-properties-amazonmq-broker-encryptionoptions"></a>
 
+**Important**  
+Does not apply to RabbitMQ brokers\.
+
 Encryption options for the broker\.
 
 ## Syntax<a name="aws-properties-amazonmq-broker-encryptionoptions-syntax"></a>
@@ -31,7 +34,7 @@ The customer master key \(CMK\) to use for the AWS Key Management Service \(KMS\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseAwsOwnedKey`  <a name="cfn-amazonmq-broker-encryptionoptions-useawsownedkey"></a>
-Enables the use of an AWS owned CMK using AWS Key Management Service \(KMS\)\.  
+Enables the use of an AWS owned CMK using AWS Key Management Service \(KMS\)\. Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

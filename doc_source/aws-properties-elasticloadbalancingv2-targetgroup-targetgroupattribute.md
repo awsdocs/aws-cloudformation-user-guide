@@ -37,7 +37,8 @@ The following attributes are supported only if the load balancer is an Applicati
 +  `stickiness.lb_cookie.duration_seconds` \- The time period, in seconds, during which requests from a client should be routed to the same target\. After this time period expires, the load balancer\-generated cookie is considered stale\. The range is 1 second to 1 week \(604800 seconds\)\. The default value is 1 day \(86400 seconds\)\.
 The following attribute is supported only if the load balancer is an Application Load Balancer and the target is a Lambda function:  
 +  `lambda.multi_value_headers.enabled` \- Indicates whether the request and response headers that are exchanged between the load balancer and the Lambda function include arrays of values or strings\. The value is `true` or `false`\. The default is `false`\. If the value is `false` and the request contains a duplicate header field name or query parameter key, the load balancer uses the last value sent by the client\.
-The following attribute is supported only by Network Load Balancers:  
+The following attributes are supported only by Network Load Balancers:  
++  `deregistration_delay.connection_termination.enabled` \- Indicates whether the load balancer terminates connections at the end of the deregistration timeout\. The value is `true` or `false`\. The default is `false`\.
 +  `proxy_protocol_v2.enabled` \- Indicates whether Proxy Protocol version 2 is enabled\. The value is `true` or `false`\. The default is `false`\.
 *Required*: No  
 *Type*: String  

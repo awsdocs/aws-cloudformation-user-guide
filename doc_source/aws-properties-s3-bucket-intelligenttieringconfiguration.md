@@ -41,7 +41,7 @@ The ID used to identify the S3 Intelligent\-Tiering configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-s3-bucket-intelligenttieringconfiguration-prefix"></a>
-Not currently supported by AWS CloudFormation\.  
+An object key name prefix that identifies the subset of objects to which the rule applies\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -54,7 +54,7 @@ Specifies the status of the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagFilters`  <a name="cfn-s3-bucket-intelligenttieringconfiguration-tagfilters"></a>
-Not currently supported by AWS CloudFormation\.  
+A container for a key\-value pair\.  
 *Required*: No  
 *Type*: List of [TagFilter](aws-properties-s3-bucket-tagfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

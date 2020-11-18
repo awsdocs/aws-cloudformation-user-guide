@@ -61,20 +61,72 @@ The name of the Amazon S3 bucket to which the policy applies\.
 #### JSON<a name="aws-properties-s3-policy--examples--Bucket_policy_that_allows_GET_requests_from_specific_referers--json"></a>
 
 ```
- "SampleBucketPolicy" : { "Type" : "AWS::S3::BucketPolicy",
-            "Properties" : { "Bucket" : {"Ref" : "DOC-EXAMPLE-BUCKET"}, "PolicyDocument": {
-            "Statement":[{ "Action":["s3:GetObject"], "Effect":"Allow", "Resource": { "Fn::Join" :
-            ["", ["arn:aws:s3:::", { "Ref" : "DOC-EXAMPLE-BUCKET" } , "/*" ]]}, "Principal":"*",
-            "Condition":{ "StringLike":{ "aws:Referer":[ "http://www.example.com/*",
-            "http://example.net/*" ] } } }] } } }
+{
+  "SampleBucketPolicy": {
+    "Type": "AWS::S3::BucketPolicy",
+    "Properties": {
+      "Bucket": {
+        "Ref": "DOC-EXAMPLE-BUCKET"
+      },
+      "PolicyDocument": {
+        "Statement": [
+          {
+            "Action": [
+              "s3:GetObject"
+            ],
+            "Effect": "Allow",
+            "Resource": {
+              "Fn::Join": [
+                "",
+                [
+                  "arn:aws:s3:::",
+                  {
+                    "Ref": "DOC-EXAMPLE-BUCKET"
+                  },
+                  "/*"
+                ]
+              ]
+            },
+            "Principal": "*",
+            "Condition": {
+              "StringLike": {
+                "aws:Referer": [
+                  "http://www.example.com/*",
+                  "http://example.net/*"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-properties-s3-policy--examples--Bucket_policy_that_allows_GET_requests_from_specific_referers--yaml"></a>
 
 ```
- SampleBucketPolicy: Type: 'AWS::S3::BucketPolicy' Properties:
-            Bucket: Ref: DOC-EXAMPLE-BUCKET PolicyDocument: Statement: - Action: - 's3:GetObject'
-            Effect: Allow Resource: 'Fn::Join': - '' - - 'arn:aws:s3:::' - Ref: DOC-EXAMPLE-BUCKET -
-            /* Principal: '*' Condition: StringLike: 'aws:Referer': - 'http://www.example.com/*' -
-            'http://example.net/*'
+SampleBucketPolicy:
+  Type: 'AWS::S3::BucketPolicy'
+  Properties:
+    Bucket:
+      Ref: DOC-EXAMPLE-BUCKET
+    PolicyDocument:
+      Statement:
+        - Action:
+            - 's3:GetObject'
+          Effect: Allow
+          Resource:
+            'Fn::Join':
+              - ''
+              - - 'arn:aws:s3:::'
+                - Ref: DOC-EXAMPLE-BUCKET
+                - /*
+          Principal: '*'
+          Condition:
+            StringLike:
+              'aws:Referer':
+                - 'http://www.example.com/*'
+                - 'http://example.net/*'
 ```

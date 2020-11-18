@@ -92,9 +92,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-appflow-connectorprofile-return-values-fn--getatt-fn--getatt"></a>
 
 `ConnectorProfileArn`  <a name="ConnectorProfileArn-fn::getatt"></a>
-The unique name of the connector profile\.
-
-`CredentialsArn`  <a name="CredentialsArn-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.
 
 ## See also<a name="aws-resource-appflow-connectorprofile--seealso"></a>

@@ -122,7 +122,7 @@ The ID of a transit gateway\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcEndpointId`  <a name="cfn-ec2-route-vpcendpointid"></a>
-Not currently supported by AWS CloudFormation\.  
+The ID of a VPC endpoint\. Supported for Gateway Load Balancer endpoints only\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,12 +1,12 @@
-# AWS::ElasticLoadBalancingV2::Listener Action<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions"></a>
+# AWS::ElasticLoadBalancingV2::Listener Action<a name="aws-properties-elasticloadbalancingv2-listener-action"></a>
 
 Specifies an action for a listener rule\.
 
-## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-syntax"></a>
+## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-action-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-syntax.json"></a>
+### JSON<a name="aws-properties-elasticloadbalancingv2-listener-action-syntax.json"></a>
 
 ```
 {
@@ -16,12 +16,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ForwardConfig](#cfn-elasticloadbalancingv2-listener-action-forwardconfig)" : ForwardConfig,
   "[Order](#cfn-elasticloadbalancingv2-listener-action-order)" : Integer,
   "[RedirectConfig](#cfn-elasticloadbalancingv2-listener-action-redirectconfig)" : RedirectConfig,
-  "[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn)" : String,
-  "[Type](#cfn-elasticloadbalancingv2-listener-defaultactions-type)" : String
+  "[TargetGroupArn](#cfn-elasticloadbalancingv2-listener-action-targetgrouparn)" : String,
+  "[Type](#cfn-elasticloadbalancingv2-listener-action-type)" : String
 }
 ```
 
-### YAML<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-syntax.yaml"></a>
+### YAML<a name="aws-properties-elasticloadbalancingv2-listener-action-syntax.yaml"></a>
 
 ```
   [AuthenticateCognitoConfig](#cfn-elasticloadbalancingv2-listener-action-authenticatecognitoconfig): 
@@ -35,11 +35,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Order](#cfn-elasticloadbalancingv2-listener-action-order): Integer
   [RedirectConfig](#cfn-elasticloadbalancingv2-listener-action-redirectconfig): 
     RedirectConfig
-  [TargetGroupArn](#cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn): String
-  [Type](#cfn-elasticloadbalancingv2-listener-defaultactions-type): String
+  [TargetGroupArn](#cfn-elasticloadbalancingv2-listener-action-targetgrouparn): String
+  [Type](#cfn-elasticloadbalancingv2-listener-action-type): String
 ```
 
-## Properties<a name="aws-properties-elasticloadbalancingv2-listener-defaultactions-properties"></a>
+## Properties<a name="aws-properties-elasticloadbalancingv2-listener-action-properties"></a>
 
 `AuthenticateCognitoConfig`  <a name="cfn-elasticloadbalancingv2-listener-action-authenticatecognitoconfig"></a>
 \[HTTPS listeners\] Information for using Amazon Cognito to authenticate users\. Specify only when `Type` is `authenticate-cognito`\.  
@@ -79,13 +79,13 @@ The order for the action\. This value is required for rules with multiple action
 *Type*: [RedirectConfig](aws-properties-elasticloadbalancingv2-listener-redirectconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-targetgrouparn"></a>
+`TargetGroupArn`  <a name="cfn-elasticloadbalancingv2-listener-action-targetgrouparn"></a>
 The Amazon Resource Name \(ARN\) of the target group\. Specify only when `Type` is `forward` and you want to route to a single target group\. To route to one or more target groups, use `ForwardConfig` instead\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Type`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions-type"></a>
+`Type`  <a name="cfn-elasticloadbalancingv2-listener-action-type"></a>
 The type of action\.  
 *Required*: Yes  
 *Type*: String  

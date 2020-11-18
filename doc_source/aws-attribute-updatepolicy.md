@@ -301,7 +301,7 @@ For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::
 
 The following examples show how to add an update policy to an Auto Scaling group and how to maintain availability when updating metadata\.
 
-### Add an UpdatePolicy to an Auto Scaling group<a name="w7199ab1c33c23c23c19b4"></a>
+### Add an UpdatePolicy to an Auto Scaling group<a name="w7250ab1c33c23c23c19b4"></a>
 
 The following example shows how to add an update policy\. During an update, the Auto Scaling group updates instances in batches of two and keeps a minimum of one instance in service\. Because the `WaitOnResourceSignals` flag is set, the Auto Scaling group waits for new instances that are added to the group\. The new instances must signal the Auto Scaling group before it updates the next batch of instances\.
 
@@ -377,7 +377,7 @@ ScheduledAction:
     StartTime: '2017-06-02T20 : 00 : 00Z'
 ```
 
-### AutoScalingReplacingUpdate policy<a name="w7199ab1c33c23c23c19b6"></a>
+### AutoScalingReplacingUpdate policy<a name="w7250ab1c33c23c23c19b6"></a>
 
 The following example declares a policy that forces an associated Auto Scaling group to be replaced during an update\. For the update to succeed, a percentage of instances \(specified by the `MinSuccessfulPercentParameter` parameter\) must signal success within the `Timeout` period\.
 
@@ -414,7 +414,7 @@ CreationPolicy:
     MinSuccessfulInstancesPercent: !Ref 'MinSuccessfulPercentParameter'
 ```
 
-### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w7199ab1c33c23c23c19b8"></a>
+### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w7250ab1c33c23c23c19b8"></a>
 
 When you install software applications on your instances, you might use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html) metadata key and the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script to bootstrap the instances in your Auto Scaling group\. AWS CloudFormation installs the packages, runs the commands, and performs other bootstrapping actions described in the metadata\.
 
@@ -425,7 +425,7 @@ Forcing a rolling update requires AWS CloudFormation to create a new instance an
 
 To force a rolling update, change the logical ID of the launch configuration resource, and then update the stack and any references pointing to the original logic ID \(such as the associated Auto Scaling group\)\. AWS CloudFormation triggers a rolling update on the Auto Scaling group, replacing all instances\.
 
-### Original template<a name="w7199ab1c33c23c23c19c10"></a>
+### Original template<a name="w7250ab1c33c23c23c19c10"></a>
 
 ```
 "LaunchConfig": {
@@ -439,7 +439,7 @@ To force a rolling update, change the logical ID of the launch configuration res
 }
 ```
 
-### Updated logical ID<a name="w7199ab1c33c23c23c19c12"></a>
+### Updated logical ID<a name="w7250ab1c33c23c23c19c12"></a>
 
 ```
 "LaunchConfigUpdateRubygemsPkg": {

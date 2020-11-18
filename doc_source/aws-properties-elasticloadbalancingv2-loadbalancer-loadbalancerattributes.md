@@ -37,6 +37,7 @@ The following attributes are supported by only Application Load Balancers:
 +  `routing.http.desync_mitigation_mode` \- Determines how the load balancer handles requests that might pose a security risk to your application\. The possible values are `monitor`, `defensive`, and `strictest`\. The default is `defensive`\.
 +  `routing.http.drop_invalid_header_fields.enabled` \- Indicates whether HTTP headers with invalid header fields are removed by the load balancer \(`true`\) or routed to targets \(`false`\)\. The default is `false`\.
 +  `routing.http2.enabled` \- Indicates whether HTTP/2 is enabled\. The value is `true` or `false`\. The default is `true`\. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens\.
++  `waf.fail_open.enabled` \- Indicates whether to allow a WAF\-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF\. The value is `true` or `false`\. The default is `false`\.
 The following attribute is supported by Network Load Balancers and Gateway Load Balancers:  
 +  `load_balancing.cross_zone.enabled` \- Indicates whether cross\-zone load balancing is enabled\. The value is `true` or `false`\. The default is `false`\.
 *Required*: No  

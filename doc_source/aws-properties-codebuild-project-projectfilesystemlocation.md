@@ -31,15 +31,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-projectfilesystemlocation-properties"></a>
 
 `Identifier`  <a name="cfn-codebuild-project-projectfilesystemlocation-identifier"></a>
- The name used to access a file system created by Amazon EFS\. CodeBuild creates an environment variable by appending the `identifier` in all capital letters to `CODEBUILD_`\. For example, if you specify `my-efs` for `identifier`, a new environment variable is create named `CODEBUILD_MY-EFS`\.   
+The name used to access a file system created by Amazon EFS\. CodeBuild creates an environment variable by appending the `identifier` in all capital letters to `CODEBUILD_`\. For example, if you specify `my_efs` for `identifier`, a new environment variable is create named `CODEBUILD_MY_EFS`\.   
  The `identifier` is used to mount your file system\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Location`  <a name="cfn-codebuild-project-projectfilesystemlocation-location"></a>
- A string that specifies the location of the file system created by Amazon EFS\. Its format is `efs-dns-name:/directory-path`\. You can find the DNS name of file system when you view it in the AWS EFS console\. The directory path is a path to a directory in the file system that CodeBuild mounts\. For example, if the DNS name of a file system is `fs-abcd1234.efs.us-west-2.amazonaws.com`, and its mount directory is `my-efs-mount-directory`, then the `location` is `fs-abcd1234.efs.us-west-2.amazonaws.com:/my-efs-mount-directory`\.   
- The directory path in the format `efs-dns-name:/directory-path` is optional\. If you do not specify a directory path, the location is only the DNS name and CodeBuild mounts the entire file system\.   
+A string that specifies the location of the file system created by Amazon EFS\. Its format is `efs-dns-name:/directory-path`\. You can find the DNS name of file system when you view it in the AWS EFS console\. The directory path is a path to a directory in the file system that CodeBuild mounts\. For example, if the DNS name of a file system is `fs-abcd1234.efs.us-west-2.amazonaws.com`, and its mount directory is `my-efs-mount-directory`, then the `location` is `fs-abcd1234.efs.us-west-2.amazonaws.com:/my-efs-mount-directory`\.   
+The directory path in the format `efs-dns-name:/directory-path` is optional\. If you do not specify a directory path, the location is only the DNS name and CodeBuild mounts the entire file system\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MountPoint`  <a name="cfn-codebuild-project-projectfilesystemlocation-mountpoint"></a>
- The location in the container where you mount the file system\.   
+The location in the container where you mount the file system\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

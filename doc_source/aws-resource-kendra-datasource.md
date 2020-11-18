@@ -48,11 +48,15 @@ Properties:
 `DataSourceConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration"></a>
 Configuration information for an Amazon Kendra data source\. The contents of the configuration depend on the type of data source\. You can only specify one type of data source in the configuration\. Choose from one of the following data sources\.  
 + Amazon S3
++ Confluence
++ Custom
 + Database
 + Microsoft OneDrive
 + Microsoft SharePoint 
 + Salesforce
 + ServiceNow
+You can't specify the `Configuration` parameter when the `Type` parameter is set to `CUSTOM`\.  
+The `Configuration` parameter is required for all other data sources\.  
 *Required*: No  
 *Type*: [DataSourceConfiguration](aws-properties-kendra-datasource-datasourceconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,6 +84,8 @@ The name of the data source\.
 
 `RoleArn`  <a name="cfn-kendra-datasource-rolearn"></a>
 The Amazon Resource Name \(ARN\) of a role with permission to access the data source\.  
+You can't specify the `RoleArn` parameter when the `Type` parameter is set to `CUSTOM`\.  
+The `RoleArn` parameter is required for all other data sources\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -13,6 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeArtifact::Repository",
   "Properties" : {
       "[Description](#cfn-codeartifact-repository-description)" : String,
+      "[DomainName](#cfn-codeartifact-repository-domainname)" : String,
+      "[DomainOwner](#cfn-codeartifact-repository-domainowner)" : String,
       "[ExternalConnections](#cfn-codeartifact-repository-externalconnections)" : [ String, ... ],
       "[PermissionsPolicyDocument](#cfn-codeartifact-repository-permissionspolicydocument)" : Json,
       "[RepositoryName](#cfn-codeartifact-repository-repositoryname)" : String,
@@ -28,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeArtifact::Repository
 Properties: 
   [Description](#cfn-codeartifact-repository-description): String
+  [DomainName](#cfn-codeartifact-repository-domainname): String
+  [DomainOwner](#cfn-codeartifact-repository-domainowner): String
   [ExternalConnections](#cfn-codeartifact-repository-externalconnections): 
     - String
   [PermissionsPolicyDocument](#cfn-codeartifact-repository-permissionspolicydocument): Json
@@ -47,6 +51,24 @@ Properties:
 *Maximum*: `1000`  
 *Pattern*: `\P{C}+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DomainName`  <a name="cfn-codeartifact-repository-domainname"></a>
+ The name of the domain that contains the repository\.   
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `2`  
+*Maximum*: `50`  
+*Pattern*: `[a-z][a-z0-9\-]{0,48}[a-z0-9]`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DomainOwner`  <a name="cfn-codeartifact-repository-domainowner"></a>
+ The 12\-digit account number of the AWS account that owns the domain that contains the repository\. It does not include dashes or spaces\.   
+*Required*: No  
+*Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
+*Pattern*: `[0-9]{12}`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExternalConnections`  <a name="cfn-codeartifact-repository-externalconnections"></a>
  An array of external connections associated with the repository\.   

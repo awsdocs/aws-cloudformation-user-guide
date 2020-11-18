@@ -40,7 +40,7 @@ Properties:
 ## Properties<a name="aws-resource-ivs-channel-properties"></a>
 
 `Authorized`  <a name="cfn-ivs-channel-authorized"></a>
-Whether the channel is authorized\. Default: `false`   
+Whether the channel is authorized\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

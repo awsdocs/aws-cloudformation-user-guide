@@ -54,44 +54,158 @@ Specifies an event destination for a configuration set\.
 #### JSON<a name="aws-resource-ses-configurationseteventdestination--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
-                SES ConfigurationSetEventDestination Sample Template", "Parameters": {
-                "ConfigSetName": { "Type": "String" }, "EventDestinationName": { "Type": "String" },
-                "EventType1": { "Type": "String" }, "EventType2": { "Type": "String" },
-                "EventType3": { "Type": "String" }, "DimensionName1": { "Type": "String" },
-                "DimensionValueSource1": { "Type": "String" }, "DefaultDimensionValue1": { "Type":
-                "String" }, "DimensionName2": { "Type": "String" }, "DimensionValueSource2": {
-                "Type": "String" }, "DefaultDimensionValue2": { "Type": "String" } }, "Resources": {
-                "ConfigSet": { "Type": "AWS::SES::ConfigurationSet", "Properties": { "Name": {
-                "Ref": "ConfigSetName" } } }, "CWEventDestination": { "Type":
-                "AWS::SES::ConfigurationSetEventDestination", "Properties": {
-                "ConfigurationSetName": { "Ref": "ConfigSet" }, "EventDestination": { "Name": {
-                "Ref": "EventDestinationName" }, "Enabled": true, "MatchingEventTypes": [ { "Ref":
-                "EventType1" }, { "Ref": "EventType2" }, { "Ref": "EventType3" } ],
-                "CloudWatchDestination": { "DimensionConfigurations": [ { "DimensionName": { "Ref":
-                "DimensionName1" }, "DimensionValueSource": { "Ref": "DimensionValueSource1" },
-                "DefaultDimensionValue": { "Ref": "DefaultDimensionValue1" } }, { "DimensionName": {
-                "Ref": "DimensionName2" }, "DimensionValueSource": { "Ref": "DimensionValueSource2"
-                }, "DefaultDimensionValue": { "Ref": "DefaultDimensionValue2" } } ] } } } } }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS SES ConfigurationSetEventDestination Sample Template",
+    "Parameters": {
+        "ConfigSetName": {
+            "Type": "String"
+        },
+        "EventDestinationName": {
+            "Type": "String"
+        },
+        "EventType1": {
+            "Type": "String"
+        },
+        "EventType2": {
+            "Type": "String"
+        },
+        "EventType3": {
+            "Type": "String"
+        },
+        "DimensionName1": {
+            "Type": "String"
+        },
+        "DimensionValueSource1": {
+            "Type": "String"
+        },
+        "DefaultDimensionValue1": {
+            "Type": "String"
+        },
+        "DimensionName2": {
+            "Type": "String"
+        },
+        "DimensionValueSource2": {
+            "Type": "String"
+        },
+        "DefaultDimensionValue2": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "ConfigSet": {
+            "Type": "AWS::SES::ConfigurationSet",
+            "Properties": {
+                "Name": {
+                    "Ref": "ConfigSetName"
                 }
+            }
+        },
+        "CWEventDestination": {
+            "Type": "AWS::SES::ConfigurationSetEventDestination",
+            "Properties": {
+                "ConfigurationSetName": {
+                    "Ref": "ConfigSet"
+                },
+                "EventDestination": {
+                    "Name": {
+                        "Ref": "EventDestinationName"
+                    },
+                    "Enabled": true,
+                    "MatchingEventTypes": [
+                        {
+                            "Ref": "EventType1"
+                        },
+                        {
+                            "Ref": "EventType2"
+                        },
+                        {
+                            "Ref": "EventType3"
+                        }
+                    ],
+                    "CloudWatchDestination": {
+                        "DimensionConfigurations": [
+                            {
+                                "DimensionName": {
+                                    "Ref": "DimensionName1"
+                                },
+                                "DimensionValueSource": {
+                                    "Ref": "DimensionValueSource1"
+                                },
+                                "DefaultDimensionValue": {
+                                    "Ref": "DefaultDimensionValue1"
+                                }
+                            },
+                            {
+                                "DimensionName": {
+                                    "Ref": "DimensionName2"
+                                },
+                                "DimensionValueSource": {
+                                    "Ref": "DimensionValueSource2"
+                                },
+                                "DefaultDimensionValue": {
+                                    "Ref": "DefaultDimensionValue2"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ses-configurationseteventdestination--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Description: 'AWS SES
-                ConfigurationSetEventDestination Sample Template' Parameters: ConfigSetName: Type:
-                String EventDestinationName: Type: String EventType1: Type: String EventType2: Type:
-                String EventType3: Type: String DimensionName1: Type: String DimensionValueSource1:
-                Type: String DefaultDimensionValue1: Type: String DimensionName2: Type: String
-                DimensionValueSource2: Type: String DefaultDimensionValue2: Type: String Resources:
-                ConfigSet: Type: AWS::SES::ConfigurationSet Properties: Name: !Ref ConfigSetName
-                CWEventDestination: Type: AWS::SES::ConfigurationSetEventDestination Properties:
-                ConfigurationSetName: !Ref ConfigSet EventDestination: Name: !Ref
-                EventDestinationName Enabled: true MatchingEventTypes: - !Ref EventType1 - !Ref
-                EventType2 - !Ref EventType3 CloudWatchDestination: DimensionConfigurations: -
-                DimensionName: !Ref DimensionName1 DimensionValueSource: !Ref DimensionValueSource1
-                DefaultDimensionValue: !Ref DefaultDimensionValue1 - DimensionName: !Ref
-                DimensionName2 DimensionValueSource: !Ref DimensionValueSource2
-                DefaultDimensionValue: !Ref DefaultDimensionValue2
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS SES ConfigurationSetEventDestination Sample Template
+Parameters:
+  ConfigSetName:
+    Type: String
+  EventDestinationName:
+    Type: String
+  EventType1:
+    Type: String
+  EventType2:
+    Type: String
+  EventType3:
+    Type: String
+  DimensionName1:
+    Type: String
+  DimensionValueSource1:
+    Type: String
+  DefaultDimensionValue1:
+    Type: String
+  DimensionName2:
+    Type: String
+  DimensionValueSource2:
+    Type: String
+  DefaultDimensionValue2:
+    Type: String
+Resources:
+  ConfigSet:
+    Type: 'AWS::SES::ConfigurationSet'
+    Properties:
+      Name: !Ref ConfigSetName
+  CWEventDestination:
+    Type: 'AWS::SES::ConfigurationSetEventDestination'
+    Properties:
+      ConfigurationSetName: !Ref ConfigSet
+      EventDestination:
+        Name: !Ref EventDestinationName
+        Enabled: true
+        MatchingEventTypes:
+          - !Ref EventType1
+          - !Ref EventType2
+          - !Ref EventType3
+        CloudWatchDestination:
+          DimensionConfigurations:
+            - DimensionName: !Ref DimensionName1
+              DimensionValueSource: !Ref DimensionValueSource1
+              DefaultDimensionValue: !Ref DefaultDimensionValue1
+            - DimensionName: !Ref DimensionName2
+              DimensionValueSource: !Ref DimensionValueSource2
+              DefaultDimensionValue: !Ref DefaultDimensionValue2
 ```

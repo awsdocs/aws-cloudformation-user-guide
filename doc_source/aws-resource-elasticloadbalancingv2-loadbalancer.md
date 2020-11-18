@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-elasticloadbalancingv2-loadbalancer-properties"></a>
 
 `IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
-The IP address type\. The possible values are `ipv4` \(for IPv4 addresses\) and `dualstack` \(for IPv4 and IPv6 addresses\)\. Internal load balancers must use `ipv4`\.   
+The IP address type\. The possible values are `ipv4` \(for IPv4 addresses\) and `dualstack` \(for IPv4 and IPv6 addresses\)\. Internal load balancers must use `ipv4`\. You can’t specify `dualstack` for a load balancer with a UDP or TCP\_UDP listener\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dualstack | ipv4`  
@@ -90,7 +90,7 @@ The IDs of the public subnets\. You can specify only one subnet per Availability
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. You cannot specify Elastic IP addresses for your subnets\.  
 \[Application Load Balancers on Outposts\] You must specify one Outpost subnet\.  
 \[Application Load Balancers on Local Zones\] You can specify subnets from one or more Local Zones\.  
-\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\. You can specify one Elastic IP address per subnet if you need static IP addresses for your internet\-facing load balancer\. For internal load balancers, you can specify one private IP address per subnet from the IPv4 range of the subnet\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\. You can specify one Elastic IP address per subnet if you need static IP addresses for your internet\-facing load balancer\. For internal load balancers, you can specify one private IP address per subnet from the IPv4 range of the subnet\. For internet\-facing load balancer, you can specify one IPv6 address per subnet\.  
 \[Gateway Load Balancers\] You can specify subnets from one or more Availability Zones\. You cannot specify Elastic IP addresses for your subnets\.  
 *Required*: No  
 *Type*: List of [SubnetMapping](aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.md)  

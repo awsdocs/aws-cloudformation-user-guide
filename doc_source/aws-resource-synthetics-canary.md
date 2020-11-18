@@ -216,7 +216,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
                 "StartCanaryAfterCreation": true,
                 "Tags": [
                     {
-                        "Id": "key00AtCreate",
+                        "Key": "key00AtCreate",
                         "Value": "value001AtCreate"
                     }
                 ]

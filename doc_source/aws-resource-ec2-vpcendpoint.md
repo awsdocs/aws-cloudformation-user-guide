@@ -1,12 +1,14 @@
 # AWS::EC2::VPCEndpoint<a name="aws-resource-ec2-vpcendpoint"></a>
 
-Specifies a VPC endpoint for a service\. An endpoint enables you to create a private connection between your VPC and the service\. The service may be provided by AWS, an AWS Marketplace partner, or another AWS account\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-endpoints.html) in the *Amazon Virtual Private Cloud User Guide*\.
+Specifies a VPC endpoint for a service\. An endpoint enables you to create a private connection between your VPC and the service\. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon Virtual Private Cloud User Guide*\.
 
-A `gateway` endpoint serves as a target for a route in your route table for traffic destined for the AWS service\. You can specify an endpoint policy to attach to the endpoint that will control access to the service from your VPC\. You can also specify the VPC route tables that use the endpoint\.
+A `gateway` endpoint serves as a target for a route in your route table for traffic destined for the AWS service\. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC\. You can also specify the VPC route tables that use the endpoint\.
+
+For information about connectivity when you use a gateway endpoint to connect to an Amazon S3 bucket from an EC2 instance, see [Why can’t I connect to an S3 bucket using a gateway VPC endpoint](http://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)\.
 
 An `interface` endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service\. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface\.
 
-For information about connectivity when you use a gateway endpoint to connect to an Amazon S3 bucket from an EC2 instance, see [Why can’t I connect to an S3 bucket using a gateway VPC endpoint](http://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)\.
+A `GatewayLoadBalancer` endpoint is a network interface in your subnet that serves an endpoint for communicating with a Gateway Load Balancer that you've configured as a VPC endpoint service\.
 
 ## Syntax<a name="aws-resource-ec2-vpcendpoint-syntax"></a>
 
@@ -83,8 +85,7 @@ The service name\. To get a list of available services, use the [DescribeVpcEndp
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-ec2-vpcendpoint-subnetids"></a>
-\(Interface endpoint\) The ID of one or more subnets in which to create an endpoint network interface\.  
-This field is required when the endpoint is an interface\.  
+\(Interface and Gateway Load Balancer endpoints\) The ID of one or more subnets in which to create an endpoint network interface\. For a Gateway Load Balancer endpoint, you can specify one subnet only\.  
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

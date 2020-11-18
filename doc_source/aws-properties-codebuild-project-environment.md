@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-environment-properties"></a>
 
 `Certificate`  <a name="cfn-codebuild-project-environment-certificate"></a>
-The certificate to use with this build project\.  
+The ARN of the Amazon Simple Storage Service \(Amazon S3\) bucket, path prefix, and object key that contains the PEM\-encoded certificate for the build project\. For more information, see [certificate](https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate) in the *AWS CodeBuild User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

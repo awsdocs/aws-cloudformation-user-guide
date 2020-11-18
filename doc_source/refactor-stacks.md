@@ -206,7 +206,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    1. The **Events** pane of the **Stack details** page for your parent stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 **Note**  
-It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack`resource is already managed by AWS CloudFormation\.
+It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack` resource is already managed by AWS CloudFormation\.
 
 ## Refactor a stack using the AWS CLI<a name="refactor-stacks-cli"></a>
 

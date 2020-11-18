@@ -172,7 +172,7 @@ One or more lifecycle hooks for the group, which specify actions to perform when
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerNames`  <a name="cfn-as-group-loadbalancernames"></a>
-A list of Classic Load Balancers associated with this Auto Scaling group\. For Application Load Balancers and Network Load Balancers, specify `TargetGroupARNs` instead\.   
+A list of Classic Load Balancers associated with this Auto Scaling group\. For Application Load Balancers, Network Load Balancers, and Gateway Load Balancers, specify the `TargetGroupARNs` property instead\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -242,7 +242,7 @@ One or more tags\. You can tag your Auto Scaling group and propagate the tags to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetGroupARNs`  <a name="cfn-as-group-targetgrouparns"></a>
-A list of Amazon Resource Names \(ARN\) of load balancer target groups to associate with the Auto Scaling group\. Instances are registered as targets in a target group, and traffic is routed to the target group\. For more information, see [Elastic Load Balancing and Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+One or more Amazon Resource Names \(ARN\) of load balancer target groups to associate with the Auto Scaling group\. Instances are registered as targets in a target group, and traffic is routed to the target group\. For more information, see [Elastic Load Balancing and Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-evaluateonexit-properties"></a>
 
 `Action`  <a name="cfn-batch-jobdefinition-evaluateonexit-action"></a>
-Specifies the action to take if all of the specified conditions \(`onStatusReason`, `onReason`, and `onExitCode`\) are met\.  
+Specifies the action to take if all of the specified conditions \(`onStatusReason`, `onReason`, and `onExitCode`\) are met\. The values are not case sensitive\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `EXIT | RETRY`  

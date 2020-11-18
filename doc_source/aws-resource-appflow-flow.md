@@ -122,6 +122,176 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `FlowArn`  <a name="FlowArn-fn::getatt"></a>
 The flow's Amazon Resource Name \(ARN\)\.
 
+## Examples<a name="aws-resource-appflow-flow--examples"></a>
+
+### Test flow for CloudFormation from Salesforce to Amazon S3<a name="aws-resource-appflow-flow--examples--Test_flow_for_CloudFormation_from_Salesforce_to_Amazon_S3"></a>
+
+The following example shows a test event flow for CloudFormation using Salesforce as the source and Amazon S3 as the destination\.
+
+#### JSON<a name="aws-resource-appflow-flow--examples--Test_flow_for_CloudFormation_from_Salesforce_to_Amazon_S3--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion":"2010-09-09",
+    "Resources": {
+        "TestFlow": {
+            "Type": "AWS::AppFlow::Flow",
+            "Properties": {
+                "flowName": "MyEventFlow",
+                "description": "Test event flow for CloudFormation from salesforce to s3",
+                "triggerConfig": {
+                    "triggerType": "Event"
+                 },
+                "sourceFlowConfig": {
+                    "connectorType": "Salesforce",
+                    "connectorProfileName": "TestConnectorProfile",
+                    "sourceConnectorProperties": {
+                        "Salesforce": {
+                            "object": "Account",
+                            "enableDynamicFieldUpdate": false,
+                            "includeDeletedRecords": true
+                        }
+                    }
+                },
+                "destinationFlowConfigList": [
+                    {
+                        "connectorType": "S3",
+                        "destinationConnectorProperties": {
+                            "S3": {
+                                "bucketName": "TestOutputBucket",
+                                "s3OutputFormatConfig": {
+                                    "fileType": "JSON",
+                                    "aggregationConfig": {
+                                        "aggregationType": "None"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "tasks": [
+                    {
+                        "taskType": "Filter",
+                        "sourceFields": [
+                            "Id",
+                            "Name"
+                        ],
+                        "connectorOperator": {
+"Salesforce": "PROJECTION"
+                            }
+                     },
+                    {
+                        "taskType": "Map",
+                        "sourceFields": [
+                            "Id"
+                        ],
+                        "taskProperties": [
+                            {
+                                "Key": "SOURCE_DATA_TYPE",
+                                "Value": "id"
+                            },
+                             {
+                                "Key": "DESTINATION_DATA_TYPE",
+                                "Value": "id"
+                            }
+                        ],
+                        "destinationField": "Id",
+                        "connectorOperator": {
+                            "Salesforce": "NO_OP"
+                        }
+                    },
+                    {
+                        "taskType": "Map",
+                        "sourceFields": [
+                            "Name"
+                        ],
+                        "taskProperties": [
+                            {
+                                "Key": "SOURCE_DATA_TYPE",
+                                "Value": "string"
+                            },
+                            {
+                                "Key": "DESTINATION_DATA_TYPE",
+                                "Value": "string"
+                            }
+                        ],
+                        "destinationField": "Name",
+                        "connectorOperator": {
+                            "Salesforce": "NO_OP"
+                        }
+                    }
+                ],
+                "tags": [
+                    {
+                        "Key": "testKey",
+                        "Value": "testValue"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-appflow-flow--examples--Test_flow_for_CloudFormation_from_Salesforce_to_Amazon_S3--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  TestFlow:
+    Type: AWS::AppFlow::Flow
+    Properties:
+      FlowName: MyEventFlow
+      Description: Test flow for CloudFormation from salesforce to s3
+      TriggerConfig:
+        TriggerType: Event
+      SourceFlowConfig:
+        ConnectorType: Salesforce
+        ConnectorProfileName: TestConnectorProfile
+        SourceConnectorProperties:
+          Salesforce:
+            Object: Account
+            EnableDynamicFieldUpdate: false
+            IncludeDeletedRecords: true
+      DestinationFlowConfigList:
+        - ConnectorType: S3
+          DestinationConnectorProperties:
+            S3:
+              BucketName: TestOutputBucket
+              S3OutputFormatConfig:
+                 FileType: JSON
+                AggregationConfig:
+                AggregationType: None
+      Tasks:
+        - TaskType: Filter
+          ConnectorOperator:
+            Salesforce: PROJECTION
+          SourceFields:
+            - Id
+        - TaskType: Map
+          SourceFields:
+            - Id
+          TaskProperties:
+            - Key: SOURCE_DATA_TYPE
+              Value: id
+            - Key: DESTINATION_DATA_TYPE
+              Value: id
+          DestinationField: Id
+          ConnectorOperator:
+            Salesforce: NO_OP
+        - TaskType: Map
+          SourceFields:
+            - Name
+          TaskProperties:
+            - Key: SOURCE_DATA_TYPE
+              Value: string
+            - Key: DESTINATION_DATA_TYPE
+              Value: string
+          DestinationField: Name
+          ConnectorOperator:
+            Salesforce: NO_OP
+```
+
 ## See also<a name="aws-resource-appflow-flow--seealso"></a>
 + [CreateFlow](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_CreateFlow.html) in the *Amazon AppFlow API Reference*\.
 + [DescribeFlow](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeFlow.html) in the *Amazon AppFlow API Reference*\.

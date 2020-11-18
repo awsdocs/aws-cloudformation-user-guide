@@ -80,7 +80,7 @@ The Availability Zone that the replication instance will be created in\.
 The default value is a random, system\-chosen Availability Zone in the endpoint's AWS Region, for example: `us-east-1d`   
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-dms-replicationinstance-engineversion"></a>
 The engine version number of the replication instance\.  
