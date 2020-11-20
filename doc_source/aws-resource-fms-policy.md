@@ -417,6 +417,48 @@ Policy:
 }
 ```
 
+### Create a Firewall Manager common security group policy including resources from shared VPCs<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_common_security_group_policy_including_shared_VPCs"></a>
+
+The following shows an example Firewall Manager common security group policy including resources from shared VPCs\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_common_security_group_policy_including_shared_VPCs--yaml"></a>
+
+```
+Policy:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: SecurityGroupsCommonsPolicy
+      RemediationEnabled: false
+      ResourceType: AWS::EC2::Instance
+      SecurityServicePolicyData:
+        Type: SECURITY_GROUPS_COMMON
+        ManagedServiceData: !Sub '{"type":"SECURITY_GROUPS_COMMON",
+                                  "revertManualSecurityGroupChanges":true,
+                                  "securityGroups":[{"id":"${SecurityGroup.GroupId}"}],
+                                  "includeSharedVPC":true}}'
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_common_security_group_policy_including_shared_VPCs--json"></a>
+
+```
+"Policy": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+        "ExcludeResourceTags": false,
+        "PolicyName": "SecurityGroupsCommonsPolicy",
+        "RemediationEnabled": false,
+        "ResourceType": "AWS::EC2::Instance",
+        "SecurityServicePolicyData": {
+            "Type": "SECURITY_GROUPS_COMMON",
+            "ManagedServiceData": {
+                "Fn::Sub": "{\"type\":\"SECURITY_GROUPS_COMMON\",\"revertManualSecurityGroupChanges\":true,\"securityGroups\":[{\"id\":\"${SecurityGroup.GroupId}\"}],\"includeSharedVPC\":true}"
+            }
+        }
+    }
+}
+```
+
 ### Create a Firewall Manager content audit security group policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_content_audit_security_group_policy"></a>
 
 The following shows an example Firewall Manager usage audit security group policy\. 
