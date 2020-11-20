@@ -38,8 +38,6 @@ You can use your own bucket and manage its permissions by manually uploading tem
 **Use a sample template**  
    + Select a sample template from a collection of templates provided by CloudFormation to get you started\. For descriptions of the templates, see [Sample templates](cfn-sample-templates.md)\.
 
-     To create a stack from existing AWS resources by using the CloudFormer tool, select **CloudFormer**, located in the **Tools** section, from the list\. For more information, see [Using CloudFormer to create AWS CloudFormation templates from existing AWS resourcesUsing CloudFormer to create templates](cfn-using-cloudformer.md)\.
-
      To view more templates samples and snippets, organized by AWS service, click **View more sample templates**\.   
 **Create template in Designer**  
 Create or modify a template using AWS CloudFormation Designer, a drag\-and\-drop interface for graphically diagramming your templates\. For more information, see [What is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.

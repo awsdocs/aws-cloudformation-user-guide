@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate)" : String,
       "[RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location)" : String,
       "[ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate)" : String,
-      "[ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location)" : String
+      "[ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location)" : String,
+      "[SyncConfig](#cfn-appsync-functionconfiguration-syncconfig)" : SyncConfig
     }
 }
 ```
@@ -43,6 +44,8 @@ Properties:
   [RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location): String
   [ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate): String
   [ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location): String
+  [SyncConfig](#cfn-appsync-functionconfiguration-syncconfig): 
+    SyncConfig
 ```
 
 ## Properties<a name="aws-resource-appsync-functionconfiguration-properties"></a>
@@ -99,6 +102,12 @@ The `Function` response mapping template\.
 The location of a response mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SyncConfig`  <a name="cfn-appsync-functionconfiguration-syncconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SyncConfig](aws-properties-appsync-functionconfiguration-syncconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>

@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BucketEncryption](#cfn-s3-bucket-bucketencryption)" : BucketEncryption,
       "[BucketName](#cfn-s3-bucket-name)" : String,
       "[CorsConfiguration](#cfn-s3-bucket-crossoriginconfig)" : CorsConfiguration,
+      "[IntelligentTieringConfigurations](#cfn-s3-bucket-intelligenttieringconfigurations)" : [ IntelligentTieringConfiguration, ... ],
       "[InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations)" : [ InventoryConfiguration, ... ],
       "[LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig)" : LifecycleConfiguration,
       "[LoggingConfiguration](#cfn-s3-bucket-loggingconfig)" : LoggingConfiguration,
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NotificationConfiguration](#cfn-s3-bucket-notification)" : NotificationConfiguration,
       "[ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration)" : ObjectLockConfiguration,
       "[ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled)" : Boolean,
+      "[OwnershipControls](#cfn-s3-bucket-ownershipcontrols)" : OwnershipControls,
       "[PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
       "[ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration)" : ReplicationConfiguration,
       "[Tags](#cfn-s3-bucket-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -54,6 +56,8 @@ Properties:
   [BucketName](#cfn-s3-bucket-name): String
   [CorsConfiguration](#cfn-s3-bucket-crossoriginconfig): 
     CorsConfiguration
+  [IntelligentTieringConfigurations](#cfn-s3-bucket-intelligenttieringconfigurations): 
+    - IntelligentTieringConfiguration
   [InventoryConfigurations](#cfn-s3-bucket-inventoryconfigurations): 
     - InventoryConfiguration
   [LifecycleConfiguration](#cfn-s3-bucket-lifecycleconfig): 
@@ -67,6 +71,8 @@ Properties:
   [ObjectLockConfiguration](#cfn-s3-bucket-objectlockconfiguration): 
     ObjectLockConfiguration
   [ObjectLockEnabled](#cfn-s3-bucket-objectlockenabled): Boolean
+  [OwnershipControls](#cfn-s3-bucket-ownershipcontrols): 
+    OwnershipControls
   [PublicAccessBlockConfiguration](#cfn-s3-bucket-publicaccessblockconfiguration): 
     PublicAccessBlockConfiguration
   [ReplicationConfiguration](#cfn-s3-bucket-replicationconfiguration): 
@@ -119,6 +125,12 @@ Describes the cross\-origin access configuration for objects in an Amazon S3 buc
 *Type*: [CorsConfiguration](aws-properties-s3-bucket-cors.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IntelligentTieringConfigurations`  <a name="cfn-s3-bucket-intelligenttieringconfigurations"></a>
+Configuration that defines how Amazon S3 handles Intelligent\-Tiering storage\.  
+*Required*: No  
+*Type*: List of [IntelligentTieringConfiguration](aws-properties-s3-bucket-intelligenttieringconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `InventoryConfigurations`  <a name="cfn-s3-bucket-inventoryconfigurations"></a>
 Specifies the inventory configuration for an Amazon S3 bucket\. For more information, see [GET Bucket inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon Simple Storage Service API Reference*\.   
 *Required*: No  
@@ -164,6 +176,12 @@ Indicates whether this bucket has an Object Lock configuration enabled\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OwnershipControls`  <a name="cfn-s3-bucket-ownershipcontrols"></a>
+Configuration that defines how Amazon S3 handles object ownership rules\.  
+*Required*: No  
+*Type*: [OwnershipControls](aws-properties-s3-bucket-ownershipcontrols.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-bucket-publicaccessblockconfiguration"></a>
 Configuration that defines how Amazon S3 handles public access\.  
@@ -245,14 +263,16 @@ The following example creates an S3 bucket with a `Retain` deletion policy\.
 #### JSON<a name="aws-properties-s3-bucket--examples--Create_an_S3_bucket--json"></a>
 
 ```
-"Resources" : {
-     "S3Bucket" : {
-        "Type" : "AWS::S3::Bucket",
-	"DeletionPolicy": "Retain",
-        "Properties" : {
-           "BucketName" : "DOC-EXAMPLE-BUCKET"
-         }  
-     }
+{
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "BucketName": "DOC-EXAMPLE-BUCKET"
+      }
+    }
+  }
 }
 ```
 
@@ -261,7 +281,7 @@ The following example creates an S3 bucket with a `Retain` deletion policy\.
 ```
 Resources:
   S3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     DeletionPolicy: Retain
     Properties:
       BucketName: DOC-EXAMPLE-BUCKET
@@ -274,114 +294,164 @@ The following example creates an S3 bucket and grants it permission to write to 
 #### JSON<a name="aws-properties-s3-bucket--examples--Associate_a_Replication_Configuration_IAM_Role_with_an_S3_Bucket--json"></a>
 
 ```
-"Resources": { 
-  "RecordServiceS3Bucket": {
-    "Type": "AWS::S3::Bucket",
-    "DeletionPolicy": "Retain",
-    "Properties": {
-      "ReplicationConfiguration": {
-        "Role": {
-          "Fn::GetAtt": [
-            "WorkItemBucketBackupRole",
-            "Arn"
+{
+  "Resources": {
+    "RecordServiceS3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "ReplicationConfiguration": {
+          "Role": {
+            "Fn::GetAtt": [
+              "WorkItemBucketBackupRole",
+              "Arn"
+            ]
+          },
+          "Rules": [
+            {
+              "Destination": {
+                "Bucket": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      {
+                        "Fn::Join": [
+                          "-",
+                          [
+                            {
+                              "Ref": "AWS::Region"
+                            },
+                            {
+                              "Ref": "AWS::StackName"
+                            },
+                            "replicationbucket"
+                          ]
+                        ]
+                      }
+                    ]
+                  ]
+                },
+                "StorageClass": "STANDARD"
+              },
+              "Id": "Backup",
+              "Prefix": "",
+              "Status": "Enabled"
+            }
           ]
         },
-        "Rules": [{
-          "Destination": {
-            "Bucket": {
-              "Fn::Join": [ "", [
-                "arn:aws:s3:::", {
-                  "Fn::Join": [ "-", [
-                    { "Ref": "AWS::Region" },
-                    { "Ref": "AWS::StackName" },
-                    "replicationbucket"
-                  ]]
-                }
-              ]]
-            },
-            "StorageClass": "STANDARD"
-          },
-          "Id": "Backup",
-          "Prefix": "",
+        "VersioningConfiguration": {
           "Status": "Enabled"
-        }]
-      },
-      "VersioningConfiguration": {
-        "Status": "Enabled"
+        }
       }
-    }
-  },
-  "WorkItemBucketBackupRole": {
-    "Type": "AWS::IAM::Role",
-    "Properties": {
-      "AssumeRolePolicyDocument": {
-        "Statement": [{
-          "Action": [ "sts:AssumeRole" ],
-          "Effect": "Allow",
-          "Principal": {
-            "Service": [ "s3.amazonaws.com" ]
-          }
-        }]
+    },
+    "WorkItemBucketBackupRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sts:AssumeRole"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "s3.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        }
       }
-    }    
-  },
-  "BucketBackupPolicy": {
-    "Type": "AWS::IAM::Policy",
-    "Properties": {
-      "PolicyDocument": {
-        "Statement": [{
-          "Action": [
-            "s3:GetReplicationConfiguration",
-            "s3:ListBucket"
-          ],
-          "Effect": "Allow",
-          "Resource": [{
-            "Fn::Join": [ "", [
-                "arn:aws:s3:::", {
-                  "Ref": "RecordServiceS3Bucket"
+    },
+    "BucketBackupPolicy": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetReplicationConfiguration",
+                "s3:ListBucket"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      {
+                        "Ref": "RecordServiceS3Bucket"
+                      }
+                    ]
+                  ]
                 }
               ]
-            ]
-          }]
-        },{
-          "Action": [
-            "s3:GetObjectVersion",
-            "s3:GetObjectVersionAcl"
-          ],
-          "Effect": "Allow",
-          "Resource": [{
-            "Fn::Join": [ "", [
-                "arn:aws:s3:::", {
-                  "Ref": "RecordServiceS3Bucket"
-                },
-                "/*"
+            },
+            {
+              "Action": [
+                "s3:GetObjectVersion",
+                "s3:GetObjectVersionAcl"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      {
+                        "Ref": "RecordServiceS3Bucket"
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
               ]
-            ]
-          }]
-        }, {
-          "Action": [
-            "s3:ReplicateObject",
-            "s3:ReplicateDelete"
-          ],
-          "Effect": "Allow",
-          "Resource": [{
-            "Fn::Join": [ "", [ 
-               "arn:aws:s3:::", {
-                 "Fn::Join": [ "-", [ 
-                   { "Ref": "AWS::Region" }, 
-                   { "Ref": "AWS::StackName" }, 
-                   "replicationbucket"
-                 ]]
-               }, 
-               "/*"
-            ]]
-          }]
-        }]
-      },
-      "PolicyName": "BucketBackupPolicy",
-      "Roles": [{
-        "Ref": "WorkItemBucketBackupRole"
-      }]
+            },
+            {
+              "Action": [
+                "s3:ReplicateObject",
+                "s3:ReplicateDelete"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      {
+                        "Fn::Join": [
+                          "-",
+                          [
+                            {
+                              "Ref": "AWS::Region"
+                            },
+                            {
+                              "Ref": "AWS::StackName"
+                            },
+                            "replicationbucket"
+                          ]
+                        ]
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "PolicyName": "BucketBackupPolicy",
+        "Roles": [
+          {
+            "Ref": "WorkItemBucketBackupRole"
+          }
+        ]
+      }
     }
   }
 }
@@ -392,50 +462,83 @@ The following example creates an S3 bucket and grants it permission to write to 
 ```
 Resources:
   RecordServiceS3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     DeletionPolicy: Retain
     Properties:
       ReplicationConfiguration:
-        Role: !GetAtt [WorkItemBucketBackupRole, Arn]
+        Role:
+          'Fn::GetAtt':
+            - WorkItemBucketBackupRole
+            - Arn
         Rules:
-        - Destination:
-            Bucket: !Join ['', ['arn:aws:s3:::', !Join ['-', [!Ref 'AWS::Region', !Ref 'AWS::StackName',
-                    replicationbucket]]]]
-            StorageClass: STANDARD
-          Id: Backup
-          Prefix: ''
-          Status: Enabled
+          - Destination:
+              Bucket:
+                'Fn::Join':
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - 'Fn::Join':
+                        - '-'
+                        - - Ref: 'AWS::Region'
+                          - Ref: 'AWS::StackName'
+                          - replicationbucket
+              StorageClass: STANDARD
+            Id: Backup
+            Prefix: ''
+            Status: Enabled
       VersioningConfiguration:
         Status: Enabled
   WorkItemBucketBackupRole:
-    Type: AWS::IAM::Role
+    Type: 'AWS::IAM::Role'
     Properties:
       AssumeRolePolicyDocument:
         Statement:
-        - Action: ['sts:AssumeRole']
-          Effect: Allow
-          Principal:
-            Service: [s3.amazonaws.com]
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              Service:
+                - s3.amazonaws.com
   BucketBackupPolicy:
-    Type: AWS::IAM::Policy
+    Type: 'AWS::IAM::Policy'
     Properties:
       PolicyDocument:
         Statement:
-        - Action: ['s3:GetReplicationConfiguration', 's3:ListBucket']
-          Effect: Allow
-          Resource:
-          - !Join ['', ['arn:aws:s3:::', !Ref 'RecordServiceS3Bucket']]
-        - Action: ['s3:GetObjectVersion', 's3:GetObjectVersionAcl']
-          Effect: Allow
-          Resource:
-          - !Join ['', ['arn:aws:s3:::', !Ref 'RecordServiceS3Bucket', /*]]
-        - Action: ['s3:ReplicateObject', 's3:ReplicateDelete']
-          Effect: Allow
-          Resource:
-          - !Join ['', ['arn:aws:s3:::', !Join ['-', [!Ref 'AWS::Region', !Ref 'AWS::StackName',
-                  replicationbucket]], /*]]
+          - Action:
+              - 's3:GetReplicationConfiguration'
+              - 's3:ListBucket'
+            Effect: Allow
+            Resource:
+              - 'Fn::Join':
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - Ref: RecordServiceS3Bucket
+          - Action:
+              - 's3:GetObjectVersion'
+              - 's3:GetObjectVersionAcl'
+            Effect: Allow
+            Resource:
+              - 'Fn::Join':
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - Ref: RecordServiceS3Bucket
+                    - /*
+          - Action:
+              - 's3:ReplicateObject'
+              - 's3:ReplicateDelete'
+            Effect: Allow
+            Resource:
+              - 'Fn::Join':
+                  - ''
+                  - - 'arn:aws:s3:::'
+                    - 'Fn::Join':
+                        - '-'
+                        - - Ref: 'AWS::Region'
+                          - Ref: 'AWS::StackName'
+                          - replicationbucket
+                    - /*
       PolicyName: BucketBackupPolicy
-      Roles: [!Ref 'WorkItemBucketBackupRole']
+      Roles:
+        - Ref: WorkItemBucketBackupRole
 ```
 
 ### Configure a Static Website with a Routing Rule<a name="aws-properties-s3-bucket--examples--Configure_a_Static_Website_with_a_Routing_Rule"></a>
@@ -447,51 +550,66 @@ This example also specifies a metrics configuration called `EntireBucket` that e
 #### JSON<a name="aws-properties-s3-bucket--examples--Configure_a_Static_Website_with_a_Routing_Rule--json"></a>
 
 ```
-{                 
-  "Resources" : {
-     "S3Bucket" : {
-        "Type" : "AWS::S3::Bucket",
-        "Properties" : {
-           "AccessControl" : "PublicRead",
-           "BucketName" : "public-bucket",
-           "MetricsConfigurations": [
-              {
-                 "Id": "EntireBucket"
+{
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "PublicRead",
+        "BucketName": "public-bucket",
+        "MetricsConfigurations": [
+          {
+            "Id": "EntireBucket"
+          }
+        ],
+        "WebsiteConfiguration": {
+          "IndexDocument": "index.html",
+          "ErrorDocument": "error.html",
+          "RoutingRules": [
+            {
+              "RoutingRuleCondition": {
+                "HttpErrorCodeReturnedEquals": "404",
+                "KeyPrefixEquals": "out1/"
+              },
+              "RedirectRule": {
+                "HostName": "ec2-11-22-333-44.compute-1.amazonaws.com",
+                "ReplaceKeyPrefixWith": "report-404/"
               }
-           ],
-           "WebsiteConfiguration" : {
-              "IndexDocument" : "index.html",
-              "ErrorDocument" : "error.html",
-              "RoutingRules": [
-                  {
-                      "RoutingRuleCondition": {
-                          "HttpErrorCodeReturnedEquals": "404",
-                          "KeyPrefixEquals": "out1/"
-                      },
-                      "RedirectRule": {
-                          "HostName": "ec2-11-22-333-44.compute-1.amazonaws.com",
-                          "ReplaceKeyPrefixWith": "report-404/"
-                        }
-                  }
-              ]
-           }
-        },
-        "DeletionPolicy" : "Retain"
-     }
+            }
+          ]
+        }
+      },
+      "DeletionPolicy": "Retain"
+    }
   },
-
-  "Outputs" : {
-     "WebsiteURL" : {
-        "Value" : { "Fn::GetAtt" : [ "S3Bucket", "WebsiteURL" ] },
-        "Description" : "URL for website hosted on S3"
-     },
-     "S3BucketSecureURL" : {
-        "Value" : { "Fn::Join" : [
-           "", [ "https://", { "Fn::GetAtt" : [ "S3Bucket", "DomainName" ] } ]
-        ] },
-        "Description" : "Name of S3 bucket to hold website content"
-     }
-   } 
+  "Outputs": {
+    "WebsiteURL": {
+      "Value": {
+        "Fn::GetAtt": [
+          "S3Bucket",
+          "WebsiteURL"
+        ]
+      },
+      "Description": "URL for website hosted on S3"
+    },
+    "S3BucketSecureURL": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Fn::GetAtt": [
+                "S3Bucket",
+                "DomainName"
+              ]
+            }
+          ]
+        ]
+      },
+      "Description": "Name of S3 bucket to hold website content"
+    }
+  }
 }
 ```
 
@@ -500,29 +618,38 @@ This example also specifies a metrics configuration called `EntireBucket` that e
 ```
 Resources:
   S3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: PublicRead
       BucketName: public-bucket
-      MetricsConfigurations: 
+      MetricsConfigurations:
         - Id: EntireBucket
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
         RoutingRules:
-        - RoutingRuleCondition:
-            HttpErrorCodeReturnedEquals: '404'
-            KeyPrefixEquals: out1/
-          RedirectRule:
-            HostName: ec2-11-22-333-44.compute-1.amazonaws.com
-            ReplaceKeyPrefixWith: report-404/
+          - RoutingRuleCondition:
+              HttpErrorCodeReturnedEquals: '404'
+              KeyPrefixEquals: out1/
+            RedirectRule:
+              HostName: ec2-11-22-333-44.compute-1.amazonaws.com
+              ReplaceKeyPrefixWith: report-404/
     DeletionPolicy: Retain
 Outputs:
   WebsiteURL:
-    Value: !GetAtt [S3Bucket, WebsiteURL]
+    Value:
+      'Fn::GetAtt':
+        - S3Bucket
+        - WebsiteURL
     Description: URL for website hosted on S3
   S3BucketSecureURL:
-    Value: !Join ['', ['https://', !GetAtt [S3Bucket, DomainName]]]
+    Value:
+      'Fn::Join':
+        - ''
+        - - 'https://'
+          - 'Fn::GetAtt':
+              - S3Bucket
+              - DomainName
     Description: Name of S3 bucket to hold website content
 ```
 
@@ -536,60 +663,60 @@ The following example template shows a public S3 bucket with two cross\-origin r
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Resources": {
-        "S3Bucket": {
-            "Type": "AWS::S3::Bucket",
-            "Properties": {
-                "AccessControl": "PublicRead",
-                "CorsConfiguration": {
-                    "CorsRules": [
-                        {
-                            "AllowedHeaders": [
-                                "*"
-                            ],
-                            "AllowedMethods": [
-                                "GET"
-                            ],
-                            "AllowedOrigins": [
-                                "*"
-                            ],
-                            "ExposedHeaders": [
-                                "Date"
-                            ],
-                            "Id": "myCORSRuleId1",
-                            "MaxAge": "3600"
-                        },
-                        {
-                            "AllowedHeaders": [
-                                "x-amz-*"
-                            ],
-                            "AllowedMethods": [
-                                "DELETE"
-                            ],
-                            "AllowedOrigins": [
-                                "http://www.example.com",
-                                "http://www.example.net"
-                            ],
-                            "ExposedHeaders": [
-                                "Connection",
-                                "Server",
-                                "Date"
-                            ],
-                            "Id": "myCORSRuleId2",
-                            "MaxAge": "1800"
-                        }
-                    ]
-                }
-            }
-        }
-    },
-    "Outputs": {
-        "BucketName": {
-            "Value": {
-                "Ref": "S3Bucket"
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "PublicRead",
+        "CorsConfiguration": {
+          "CorsRules": [
+            {
+              "AllowedHeaders": [
+                "*"
+              ],
+              "AllowedMethods": [
+                "GET"
+              ],
+              "AllowedOrigins": [
+                "*"
+              ],
+              "ExposedHeaders": [
+                "Date"
+              ],
+              "Id": "myCORSRuleId1",
+              "MaxAge": "3600"
             },
-            "Description": "Name of the sample Amazon S3 bucket with CORS enabled."
+            {
+              "AllowedHeaders": [
+                "x-amz-*"
+              ],
+              "AllowedMethods": [
+                "DELETE"
+              ],
+              "AllowedOrigins": [
+                "http://www.example.com",
+                "http://www.example.net"
+              ],
+              "ExposedHeaders": [
+                "Connection",
+                "Server",
+                "Date"
+              ],
+              "Id": "myCORSRuleId2",
+              "MaxAge": "1800"
+            }
+          ]
         }
+      }
     }
+  },
+  "Outputs": {
+    "BucketName": {
+      "Value": {
+        "Ref": "S3Bucket"
+      },
+      "Description": "Name of the sample Amazon S3 bucket with CORS enabled."
+    }
+  }
 }
 ```
 
@@ -599,26 +726,38 @@ The following example template shows a public S3 bucket with two cross\-origin r
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: PublicRead
       CorsConfiguration:
         CorsRules:
-        - AllowedHeaders: ['*']
-          AllowedMethods: [GET]
-          AllowedOrigins: ['*']
-          ExposedHeaders: [Date]
-          Id: myCORSRuleId1
-          MaxAge: '3600'
-        - AllowedHeaders: [x-amz-*]
-          AllowedMethods: [DELETE]
-          AllowedOrigins: ['http://www.example.com', 'http://www.example.net']
-          ExposedHeaders: [Connection, Server, Date]
-          Id: myCORSRuleId2
-          MaxAge: '1800'
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - '*'
+            ExposedHeaders:
+              - Date
+            Id: myCORSRuleId1
+            MaxAge: '3600'
+          - AllowedHeaders:
+              - x-amz-*
+            AllowedMethods:
+              - DELETE
+            AllowedOrigins:
+              - 'http://www.example.com'
+              - 'http://www.example.net'
+            ExposedHeaders:
+              - Connection
+              - Server
+              - Date
+            Id: myCORSRuleId2
+            MaxAge: '1800'
 Outputs:
   BucketName:
-    Value: !Ref 'S3Bucket'
+    Value:
+      Ref: S3Bucket
     Description: Name of the sample Amazon S3 bucket with CORS enabled.
 ```
 
@@ -630,39 +769,39 @@ The following example template shows an S3 bucket with a lifecycle configuration
 
 ```
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "S3Bucket": {
-            "Type": "AWS::S3::Bucket",
-            "Properties": {
-                "AccessControl": "Private",
-                "LifecycleConfiguration": {
-                    "Rules": [
-                        {
-                            "Id": "GlacierRule",
-                            "Prefix": "glacier",
-                            "Status": "Enabled",
-                            "ExpirationInDays": "365",
-                            "Transitions": [
-                                {
-                                  "TransitionInDays": "1",
-                                  "StorageClass": "GLACIER"
-                                }
-                            ]
-                        }
-                    ]
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "Private",
+        "LifecycleConfiguration": {
+          "Rules": [
+            {
+              "Id": "GlacierRule",
+              "Prefix": "glacier",
+              "Status": "Enabled",
+              "ExpirationInDays": "365",
+              "Transitions": [
+                {
+                  "TransitionInDays": "1",
+                  "StorageClass": "GLACIER"
                 }
+              ]
             }
+          ]
         }
-    },
-    "Outputs": {
-        "BucketName": {
-            "Value": {
-                "Ref": "S3Bucket"
-            },
-            "Description": "Name of the sample Amazon S3 bucket with a lifecycle configuration."
-        }
+      }
     }
+  },
+  "Outputs": {
+    "BucketName": {
+      "Value": {
+        "Ref": "S3Bucket"
+      },
+      "Description": "Name of the sample Amazon S3 bucket with a lifecycle configuration."
+    }
+  }
 }
 ```
 
@@ -672,21 +811,22 @@ The following example template shows an S3 bucket with a lifecycle configuration
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: Private
       LifecycleConfiguration:
         Rules:
-        - Id: GlacierRule
-          Prefix: glacier
-          Status: Enabled
-          ExpirationInDays: '365'
-          Transitions:
-            - TransitionInDays: '1'
-              StorageClass: GLACIER
+          - Id: GlacierRule
+            Prefix: glacier
+            Status: Enabled
+            ExpirationInDays: '365'
+            Transitions:
+              - TransitionInDays: '1'
+                StorageClass: GLACIER
 Outputs:
   BucketName:
-    Value: !Ref 'S3Bucket'
+    Value:
+      Ref: S3Bucket
     Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.
 ```
 
@@ -698,33 +838,35 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
 
 ```
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "S3Bucket": {
-            "Type": "AWS::S3::Bucket",
-            "Properties": {
-                "AccessControl": "Private",
-                "LoggingConfiguration": {
-                    "DestinationBucketName": {"Ref" : "LoggingBucket"},
-                    "LogFilePrefix": "testing-logs"
-                }
-            }
-        },
-        "LoggingBucket": {
-            "Type": "AWS::S3::Bucket",
-            "Properties": {
-                "AccessControl": "LogDeliveryWrite"
-            }
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "Private",
+        "LoggingConfiguration": {
+          "DestinationBucketName": {
+            "Ref": "LoggingBucket"
+          },
+          "LogFilePrefix": "testing-logs"
         }
+      }
     },
-    "Outputs": {
-        "BucketName": {
-            "Value": {
-                "Ref": "S3Bucket"
-            },
-            "Description": "Name of the sample Amazon S3 bucket with a logging configuration."
-        }
+    "LoggingBucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "LogDeliveryWrite"
+      }
     }
+  },
+  "Outputs": {
+    "BucketName": {
+      "Value": {
+        "Ref": "S3Bucket"
+      },
+      "Description": "Name of the sample Amazon S3 bucket with a logging configuration."
+    }
+  }
 }
 ```
 
@@ -734,19 +876,21 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: Private
       LoggingConfiguration:
-        DestinationBucketName: !Ref 'LoggingBucket'
+        DestinationBucketName:
+          Ref: LoggingBucket
         LogFilePrefix: testing-logs
   LoggingBucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: LogDeliveryWrite
 Outputs:
   BucketName:
-    Value: !Ref 'S3Bucket'
+    Value:
+      Ref: S3Bucket
     Description: Name of the sample Amazon S3 bucket with a logging configuration.
 ```
 
@@ -758,31 +902,31 @@ The following example template shows an Amazon S3 bucket with a notification con
 
 ```
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "S3Bucket": {
-            "Type": "AWS::S3::Bucket",
-            "Properties": {
-                "AccessControl": "Private",
-                "NotificationConfiguration": {
-                    "TopicConfigurations": [
-                        {
-                            "Topic": "arn:aws:sns:us-east-1:123456789012:TestTopic",
-                            "Event": "s3:ReducedRedundancyLostObject"
-                        }
-                    ]
-                }
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "AccessControl": "Private",
+        "NotificationConfiguration": {
+          "TopicConfigurations": [
+            {
+              "Topic": "arn:aws:sns:us-east-1:123456789012:TestTopic",
+              "Event": "s3:ReducedRedundancyLostObject"
             }
+          ]
         }
-    },
-    "Outputs": {
-        "BucketName": {
-            "Value": {
-                "Ref": "S3Bucket"
-            },
-            "Description": "Name of the sample Amazon S3 bucket with a notification configuration."
-        }
+      }
     }
+  },
+  "Outputs": {
+    "BucketName": {
+      "Value": {
+        "Ref": "S3Bucket"
+      },
+      "Description": "Name of the sample Amazon S3 bucket with a notification configuration."
+    }
+  }
 }
 ```
 
@@ -792,16 +936,17 @@ The following example template shows an Amazon S3 bucket with a notification con
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   S3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: Private
       NotificationConfiguration:
         TopicConfigurations:
-        - Topic: arn:aws:sns:us-east-1:123456789012:TestTopic
-          Event: s3:ReducedRedundancyLostObject
+          - Topic: 'arn:aws:sns:us-east-1:123456789012:TestTopic'
+            Event: 's3:ReducedRedundancyLostObject'
 Outputs:
   BucketName:
-    Value: !Ref 'S3Bucket'
+    Value:
+      Ref: S3Bucket
     Description: Name of the sample Amazon S3 bucket with a notification configuration.
 ```
 
@@ -812,32 +957,34 @@ The following example includes two replication rules\. Amazon S3 replicates obje
 #### JSON<a name="aws-properties-s3-bucket--examples--Replicate_Objects_and_Store_Them_in_Another_S3_Bucket--json"></a>
 
 ```
-"S3Bucket": {
-  "Type": "AWS::S3::Bucket",
-  "Properties": {
-    "VersioningConfiguration":{
-      "Status":"Enabled"
-    },
-    "ReplicationConfiguration": {
-      "Role": "arn:aws:iam::123456789012:role/replication_role",
-      "Rules": [
-        {
-          "Id": "MyRule1",
-          "Status": "Enabled",
-          "Prefix": "MyPrefix",
-          "Destination": {
-            "Bucket": "arn:aws:s3:::my-replication-bucket",
-            "StorageClass": "STANDARD"
+{
+  "S3Bucket": {
+    "Type": "AWS::S3::Bucket",
+    "Properties": {
+      "VersioningConfiguration": {
+        "Status": "Enabled"
+      },
+      "ReplicationConfiguration": {
+        "Role": "arn:aws:iam::123456789012:role/replication_role",
+        "Rules": [
+          {
+            "Id": "MyRule1",
+            "Status": "Enabled",
+            "Prefix": "MyPrefix",
+            "Destination": {
+              "Bucket": "arn:aws:s3:::my-replication-bucket",
+              "StorageClass": "STANDARD"
+            }
+          },
+          {
+            "Status": "Enabled",
+            "Prefix": "MyOtherPrefix",
+            "Destination": {
+              "Bucket": "arn:aws:s3:::my-replication-bucket"
+            }
           }
-        },
-        {
-          "Status": "Enabled",
-          "Prefix": "MyOtherPrefix",
-          "Destination": {
-            "Bucket": "arn:aws:s3:::my-replication-bucket"
-          }
-        }
-      ]
+        ]
+      }
     }
   }
 }
@@ -847,23 +994,23 @@ The following example includes two replication rules\. Amazon S3 replicates obje
 
 ```
 S3Bucket:
-  Type: AWS::S3::Bucket
+  Type: 'AWS::S3::Bucket'
   Properties:
     VersioningConfiguration:
       Status: Enabled
     ReplicationConfiguration:
-      Role: arn:aws:iam::123456789012:role/replication_role
+      Role: 'arn:aws:iam::123456789012:role/replication_role'
       Rules:
-      - Id: MyRule1
-        Status: Enabled
-        Prefix: MyPrefix
-        Destination:
-          Bucket: arn:aws:s3:::my-replication-bucket
-          StorageClass: STANDARD
-      - Status: Enabled
-        Prefix: MyOtherPrefix
-        Destination:
-          Bucket: arn:aws:s3:::my-replication-bucket
+        - Id: MyRule1
+          Status: Enabled
+          Prefix: MyPrefix
+          Destination:
+            Bucket: 'arn:aws:s3:::my-replication-bucket'
+            StorageClass: STANDARD
+        - Status: Enabled
+          Prefix: MyOtherPrefix
+          Destination:
+            Bucket: 'arn:aws:s3:::my-replication-bucket'
 ```
 
 ### Specify Analytics and Inventory Configurations for an Amazon S3 Bucket<a name="aws-properties-s3-bucket--examples--Specify_Analytics_and_Inventory_Configurations_for_an_Amazon_S3_Bucket"></a>
@@ -993,12 +1140,14 @@ The following example creates a bucket with server\-side bucket encryption confi
           "Fn::Sub": "encryptedbucket-${AWS::Region}-${AWS::AccountId}"
         },
         "BucketEncryption": {
-          "ServerSideEncryptionConfiguration": [{
-            "ServerSideEncryptionByDefault": {
-              "SSEAlgorithm": "aws:kms",
-              "KMSMasterKeyID": "KMS-KEY-ARN"
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "aws:kms",
+                "KMSMasterKeyID": "KMS-KEY-ARN"
+              }
             }
-          }]
+          ]
         }
       },
       "DeletionPolicy": "Delete"
@@ -1010,17 +1159,18 @@ The following example creates a bucket with server\-side bucket encryption confi
 #### YAML<a name="aws-properties-s3-bucket--examples--Create_a_Bucket_with_Default_Encryption_Enabled--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: '2010-09-09'
 Description: S3 bucket with default encryption
 Resources:
   EncryptedS3Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: !Sub 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
+      BucketName:
+        'Fn::Sub': 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
-              SSEAlgorithm: aws:kms
+              SSEAlgorithm: 'aws:kms'
               KMSMasterKeyID: KMS-KEY-ARN
     DeletionPolicy: Delete
 ```

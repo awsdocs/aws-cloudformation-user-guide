@@ -1,6 +1,6 @@
 # AWS::IoT::Authorizer<a name="aws-resource-iot-authorizer"></a>
 
-Creates an authorizer\.
+Specifies an authorizer\.
 
 ## Syntax<a name="aws-resource-iot-authorizer-syntax"></a>
 
@@ -54,7 +54,7 @@ The authorizer name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SigningDisabled`  <a name="cfn-iot-authorizer-signingdisabled"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether AWS IoT validates the token signature in an authorization request\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -66,7 +66,10 @@ The status of the authorizer\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iot-authorizer-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+Metadata which can be used to manage the custom authorizer\.  
+For URI Request parameters use format: \.\.\.key1=value1&key2=value2\.\.\.  
+For the CLI command\-line parameter use format: &&tags "key1=value1&key2=value2\.\.\."  
+For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\."
 *Required*: No  
 *Type*: [Tags](aws-properties-iot-authorizer-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -87,9 +90,19 @@ The public keys used to validate the token signature returned by your custom aut
 
 ### Ref<a name="aws-resource-iot-authorizer-return-values-ref"></a>
 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the authorizer name\. For example:
+
+ `{ "Ref": "MyAuthorizer" }` 
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-iot-authorizer-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-authorizer-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the authorizer\.

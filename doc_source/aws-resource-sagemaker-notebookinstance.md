@@ -89,6 +89,7 @@ For more information, see [Notebook Instances Are Internet\-Enabled by Default](
 
 `InstanceType`  <a name="cfn-sagemaker-notebookinstance-instancetype"></a>
 The type of ML compute instance to launch for the notebook instance\.  
+Expect some interruption of service if this parameter is changed as CloudFormation stops a notebook instance and starts it up again to update it\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
@@ -162,6 +163,7 @@ You can add tags later by using the `CreateTags` API\.
 
 `VolumeSizeInGB`  <a name="cfn-sagemaker-notebookinstance-volumesizeingb"></a>
 The size, in GB, of the ML storage volume to attach to the notebook instance\. The default value is 5 GB\.  
+Expect some interruption of service if this parameter is changed as CloudFormation stops a notebook instance and starts it up again to update it\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `5`  

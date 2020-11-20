@@ -67,7 +67,7 @@ Ec2Instance:
 ## General requirements for parameters<a name="parameters-section-structure-requirements"></a>
 
 The following requirements apply when using parameters:
-+ You can have a maximum of 60 parameters in an AWS CloudFormation template\.
++ You can have a maximum of 200 parameters in an AWS CloudFormation template\.
 + Each parameter must be given a logical name \(also called logical ID\), which must be alphanumeric and unique among all logical names within the template\.
 + Each parameter must be assigned a parameter type that is supported by AWS CloudFormation\. For more information, see [Type](#parameters-section-structure-properties-type)\.
 + Each parameter must be assigned a value at runtime for AWS CloudFormation to successfully provision the stack\. You can optionally specify a default value for AWS CloudFormation to use unless another value is provided\.

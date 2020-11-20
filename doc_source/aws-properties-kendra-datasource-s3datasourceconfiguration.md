@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[BucketName](#cfn-kendra-datasource-s3datasourceconfiguration-bucketname)" : String,
   "[DocumentsMetadataConfiguration](#cfn-kendra-datasource-s3datasourceconfiguration-documentsmetadataconfiguration)" : DocumentsMetadataConfiguration,
   "[ExclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
+  "[InclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
   "[InclusionPrefixes](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes)" : DataSourceInclusionsExclusionsStrings
 }
 ```
@@ -27,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DocumentsMetadataConfiguration](#cfn-kendra-datasource-s3datasourceconfiguration-documentsmetadataconfiguration): 
     DocumentsMetadataConfiguration
   [ExclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns): 
+    DataSourceInclusionsExclusionsStrings
+  [InclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns): 
     DataSourceInclusionsExclusionsStrings
   [InclusionPrefixes](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes): 
     DataSourceInclusionsExclusionsStrings
@@ -56,7 +59,15 @@ Specifies document metadata files that contain information such as the document 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns"></a>
-A list of glob patterns for documents that should not be indexed\. If a document that matches an inclusion prefix also matches an exclusion pattern, the document is not indexed\.  
+A list of glob patterns for documents that should not be indexed\. If a document that matches an inclusion prefix or inclusion pattern also matches an exclusion pattern, the document is not indexed\.  
+For more information about glob patterns, see [glob \(programming\)](https://en.wikipedia.org/wiki/Glob_(programming)) in *Wikipedia*\.  
+*Required*: No  
+*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InclusionPatterns`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns"></a>
+A list of glob patterns for documents that should be indexed\. If a document that matches an inclusion pattern also matches an exclusion pattern, the document is not indexed\.  
 For more information about glob patterns, see [glob \(programming\)](https://en.wikipedia.org/wiki/Glob_(programming)) in *Wikipedia*\.  
 *Required*: No  
 *Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  

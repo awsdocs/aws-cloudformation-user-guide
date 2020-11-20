@@ -41,10 +41,10 @@ A set of optional parameters for the policy\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyType`  <a name="cfn-dlm-lifecyclepolicy-policydetails-policytype"></a>
-The valid target resource types and actions a policy can manage\. The default is EBS\_SNAPSHOT\_MANAGEMENT\.  
+The valid target resource types and actions a policy can manage\. Specify `EBS_SNAPSHOT_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of Amazon EBS snapshots\. Specify `IMAGE_MANAGEMENT` to create a lifecycle policy that manages the lifecycle of EBS\-backed AMIs\. The default is `EBS_SNAPSHOT_MANAGEMENT`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `EBS_SNAPSHOT_MANAGEMENT`  
+*Allowed values*: `EBS_SNAPSHOT_MANAGEMENT | IMAGE_MANAGEMENT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceTypes`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcetypes"></a>

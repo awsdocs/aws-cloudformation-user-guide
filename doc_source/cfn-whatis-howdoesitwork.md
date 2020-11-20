@@ -50,7 +50,7 @@ AWS CloudFormation provisions and configures resources by making calls to the AW
 
 After all the resources have been created, AWS CloudFormation reports that your stack has been created\. You can then start using the resources in your stack\. If stack creation fails, AWS CloudFormation rolls back your changes by deleting the resources that it created\.
 
-## Updating a stack with change sets<a name="w7002ab1b5c17c17"></a>
+## Updating a stack with change sets<a name="w7250ab1b5c17c17"></a>
 
 When you need to update your stack's resources, you can modify the stack's template\. You don't need to create a new stack and delete the old one\. To update a stack, create a change set by submitting a modified version of the original stack template, different input parameter values, or both\. AWS CloudFormation compares the modified template with the original template and generates a change set\. The change set lists the proposed changes\. After reviewing the changes, you can execute the change set to update your stack or you can create a new change set\. The following diagram summarizes the workflow for updating a stack\.
 
@@ -77,7 +77,7 @@ Change sets don't indicate whether your stack update will be successful\. For ex
 
 1. Execute the change set that you want to apply to your stack\. AWS CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, AWS CloudFormation rolls back changes to restore the stack to the last known working state\.
 
-## Deleting a stack<a name="w7002ab1b5c17c19"></a>
+## Deleting a stack<a name="w7250ab1b5c17c19"></a>
 
 When you delete a stack, you specify the stack to delete, and AWS CloudFormation deletes the stack and all the resources in that stack\. You can delete stacks by using the AWS CloudFormation [console](cfn-console-delete-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.html)\.
 
@@ -85,6 +85,6 @@ If you want to delete a stack but want to retain some resources in that stack, y
 
 After all the resources have been deleted, AWS CloudFormation signals that your stack has been successfully deleted\. If AWS CloudFormation cannot delete a resource, the stack will not be deleted\. Any resources that haven't been deleted will remain until you can successfully delete the stack\.
 
-## Additional resources<a name="w7002ab1b5c17c21"></a>
+## Additional resources<a name="w7250ab1b5c17c21"></a>
 + For more information about creating AWS CloudFormation templates, see [Template anatomy](template-anatomy.md)\.
 + For more information about creating, updating, or deleting stacks, see [Working with stacks](stacks.md)\.

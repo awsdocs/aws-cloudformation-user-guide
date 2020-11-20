@@ -1,6 +1,6 @@
 # AWS::AutoScaling::LifecycleHook<a name="aws-resource-as-lifecyclehook"></a>
 
-Defines lifecycle hooks for an Auto Scaling group\. Lifecycle hooks specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. When you use a lifecycle hook, the Auto Scaling group pauses the instance either after it is launched \(before it is put into service\) or as it is terminated \(before it is fully terminated\)\. 
+The AWS::AutoScaling::LifecycleHook resource specifies lifecycle hooks for an Auto Scaling group\. Lifecycle hooks specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. When you use a lifecycle hook, the Auto Scaling group pauses the instance either after it is launched \(before it is put into service\) or as it is terminated \(before it is fully terminated\)\. 
 
 For more information, see [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference* and [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 

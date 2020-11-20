@@ -2,22 +2,59 @@
 
 After you create a change set, you can view the proposed changes before executing them\. You can use the AWS CloudFormation console, AWS CLI, or AWS CloudFormation API to view change sets\. The AWS CloudFormation console provides a summary of the changes and a detailed list of changes in JSON format\. The AWS CLI and AWS CloudFormation API return a detailed list of changes in JSON format\.
 
-**To view a change \(console\)**
+------
+#### [ View a change set for nested stack \(console\) ]
+
+**To view a change set for nested stacks \(console\)**
 
 1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), in **Stacks**, choose the name of the stack that contains the change set that you want to view\.
 
 1. In the navigation pane, choose **Change Sets** to view a list of the stack's change sets\.
 
-1. Choose the name of the change set that you want view\.
+1. Choose the name of the change set that you want to view\.
+
+   The AWS CloudFormation console directs you to the change set's details page, where you can see the time the change set was created, its status, the input used to generate the change set, and a summary of the changes\.  
+![\[The details page for the change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-nested-stacks-change-sets-details.png)
+
+   In the **Changes** section, each row represents a resource that AWS CloudFormation will add, modify, remove, or show the status of dynamic\. 
+   + **Add** \- AWS CloudFormation creates a resource when you add a resource to the stack's template\.
+   + **Modify** \- AWS CloudFormation modifies a resource when you change the properties of a resource in the stack's template\.
+   + **Remove** \- AWS CloudFormation deletes a resource when you delete a resource from the stack's template\.
+   + **Dynamic** \- AWS CloudFormation cannot determine the exact resource change action from the nested stack's template\.
+**Note**  
+A modification can cause the resource to be interrupted or replaced \(recreated\)\. For more information about resource update behaviors, see [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)\.
+
+   To focus on specific changes, use the filter view\. For example, filter for a specific resource type, such as **AWS::CloudFormation::Stack**\. To filter for a specific resource, specify its logical or physical ID, such as **DeadLetterQueue** or **NestedStack**\.
+
+1. In the **Changes** section, choose **View nested change set** of the nested change set you want to view\.
+
+   The AWS CloudFormation console directs you to the nested change set's details page\. You can choose **Go to root change set** to view the root change set or, you can choose **View parent change set** to view the parent change set\. For more information see, [Change sets for nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/change-sets-for-nested-stacks.html)\.  
+![\[The details page for the nested change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-nested-stacks-change-sets-details01.png)
+
+------
+#### [ View a change set \(console\) ]
+
+**To view a change set \(console\)**
+
+1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), in **Stacks**, choose the name of the stack that contains the change set that you want to view\.
+
+1. In the navigation pane, choose **Change Sets** to view a list of the stack's change sets\.
+
+1. Choose the name of the change set that you want to view\.
 
    The AWS CloudFormation console directs you to the change set's details page, where you can see the time the change set was created, its status, the input used to generate the change set, and a summary of the changes\.  
 ![\[The details page for the change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-change-sets-details.png)
 
-   In the **Changes** section, each row represents a resource that AWS CloudFormation will add, delete, or modify\. AWS CloudFormation creates a resource when you add a resource to the stack's template\. AWS CloudFormation deletes a resource when you delete a resource from the stack's template\. AWS CloudFormation modifies a resource when you change the properties of a resource in the stack's template\. Note that a modification can cause the resource to be interrupted or replaced \(recreated\)\. For more information about resource update behaviors, see [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)\.
+   In the **Changes** section, each row represents a resource that AWS CloudFormation will add, modify, or remove\. 
+   + **Add** \- AWS CloudFormation creates a resource when you add a resource to the stack's template\.
+   + **Modify** \- AWS CloudFormation modifies a resource when you change the properties of a resource in the stack's template\.
+   + **Remove** \- AWS CloudFormation deletes a resource when you delete a resource from the stack's template\.
+**Note**  
+A modification can cause the resource to be interrupted or replaced \(recreated\)\. For more information about resource update behaviors, see [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
    To focus on specific changes, use the filter view\. For example, filter for a specific resource type, such as **AWS::EC2::Instance**\. To filter for a specific resource, specify its logical or physical ID, such as **myWebServer** or **i\-123abcd4**\.
 
-   If you want to consider other changes before you decide which changes to make, create additional change sets\.
+------
 
 **To view a change set \(AWS CLI\)**
 
@@ -38,7 +75,7 @@ After you create a change set, you can view the proposed changes before executin
                "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/SampleStack/1a2345b6-0000-00a0-a123-00abc0abc000",
                "Status": "CREATE_COMPLETE",
                "ChangeSetName": "SampleChangeSet",
-               "CreationTime": "2016-03-16T20:44:05.889Z",
+               "CreationTime": "2020-11-18T20:44:05.889Z",
                "StackName": "SampleStack",
                "ChangeSetId": "arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet/1a2345b6-0000-00a0-a123-00abc0abc000"
            },
@@ -46,7 +83,7 @@ After you create a change set, you can view the proposed changes before executin
                "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/SampleStack/1a2345b6-0000-00a0-a123-00abc0abc000",
                "Status": "CREATE_COMPLETE",
                "ChangeSetName": "SampleChangeSet-conditional",
-               "CreationTime": "2016-03-16T21:15:56.398Z",
+               "CreationTime": "2020-11-18T21:15:56.398Z",
                "StackName": "SampleStack",
                "ChangeSetId": "arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet-conditional/1a2345b6-0000-00a0-a123-00abc0abc000"
            },
@@ -54,7 +91,7 @@ After you create a change set, you can view the proposed changes before executin
                "StackId": "arn:aws:cloudformation:us-east-1:123456789012:stack/SampleStack/1a2345b6-0000-00a0-a123-00abc0abc000",
                "Status": "CREATE_COMPLETE",
                "ChangeSetName": "SampleChangeSet-replacement",
-               "CreationTime": "2016-03-16T21:03:37.706Z",
+               "CreationTime": "2020-11-18T21:03:37.706Z",
                "StackName": "SampleStack",
                "ChangeSetId": "arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet-replacement/1a2345b6-0000-00a0-a123-00abc0abc000"
            }
@@ -114,7 +151,7 @@ After you create a change set, you can view the proposed changes before executin
                "Type": "Resource"
            }
        ],
-       "CreationTime": "2016-03-17T23:35:25.813Z",
+       "CreationTime": "2020-11-18T23:35:25.813Z",
        "Capabilities": [],
        "StackName": "SampleStack",
        "NotificationARNs": [],

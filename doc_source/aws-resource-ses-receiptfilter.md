@@ -84,7 +84,7 @@ Specifies an IP address filter for incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptFilter Sample Template'
+Description: AWS SES ReceiptFilter Sample Template
 Parameters:
   FilterName:
     Type: String
@@ -94,7 +94,7 @@ Parameters:
     Type: String
 Resources:
   ReceiptFilter:
-    Type: AWS::SES::ReceiptFilter
+    Type: 'AWS::SES::ReceiptFilter'
     Properties:
       Filter:
         Name: !Ref FilterName

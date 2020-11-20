@@ -3,7 +3,7 @@
 The `AWS::SNS::Topic` resource creates a topic to which notifications can be published\.
 
 **Note**  
-One user can create a maximum of 100,000 topics\.
+One account can create a maximum of 100,000 standard topics and 1,000 FIFO topics\. For more information, see [Amazon Simple Notification Service endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/sns.html) in the *AWS General Reference*\.
 
 ## Syntax<a name="aws-properties-sns-topic-syntax"></a>
 
@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication)" : Boolean,
       "[DisplayName](#cfn-sns-topic-displayname)" : String,
+      "[FifoTopic](#cfn-sns-topic-fifotopic)" : Boolean,
       "[KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid)" : String,
       "[Subscription](#cfn-sns-topic-subscription)" : [ Subscription, ... ],
       "[Tags](#cfn-sns-topic-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -32,6 +33,7 @@ Type: AWS::SNS::Topic
 Properties: 
   [ContentBasedDeduplication](#cfn-sns-topic-contentbaseddeduplication): Boolean
   [DisplayName](#cfn-sns-topic-displayname): String
+  [FifoTopic](#cfn-sns-topic-fifotopic): Boolean
   [KmsMasterKeyId](#cfn-sns-topic-kmsmasterkeyid): String
   [Subscription](#cfn-sns-topic-subscription): 
     - Subscription
@@ -43,7 +45,11 @@ Properties:
 ## Properties<a name="aws-properties-sns-topic-properties"></a>
 
 `ContentBasedDeduplication`  <a name="cfn-sns-topic-contentbaseddeduplication"></a>
-Not currently supported by AWS CloudFormation\.  
+Enables content\-based deduplication for FIFO topics\.  
++ By default, `ContentBasedDeduplication` is set to `false`\. If you create a FIFO topic and this attribute is `false`, you must specify a value for the `MessageDeduplicationId` parameter for the [Publish](https://docs.aws.amazon.com/sns/latest/api/API_Publish.html) action\. 
++ When you set `ContentBasedDeduplication` to `true`, Amazon SNS uses a SHA\-256 hash to generate the `MessageDeduplicationId` using the body of the message \(but not the attributes of the message\)\.
+
+  \(Optional\) To override the generated value, you can specify a value for the the `MessageDeduplicationId` parameter for the `Publish` action\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,6 +59,12 @@ The display name to use for an Amazon SNS topic with SMS subscriptions\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FifoTopic`  <a name="cfn-sns-topic-fifotopic"></a>
+Set to true to create a FIFO topic\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsMasterKeyId`  <a name="cfn-sns-topic-kmsmasterkeyid"></a>
 The ID of an AWS\-managed customer master key \(CMK\) for Amazon SNS or a custom CMK\. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)\. For more examples, see ` [KeyId](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters) ` in the *AWS Key Management Service API Reference*\.  
@@ -145,3 +157,4 @@ MySNSTopic:
 
 ## See also<a name="aws-properties-sns-topic--seealso"></a>
 +  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 
++ The [Using AWS CloudFormation](https://docs.aws.amazon.com/sns/latest/dg/fifo-topic-code-examples.html#fifo-topic-cfn) code example for FIFO topics in the *Amazon Simple Notification Service Developer Guide*

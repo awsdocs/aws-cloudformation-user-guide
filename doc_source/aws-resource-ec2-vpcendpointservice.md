@@ -1,8 +1,12 @@
 # AWS::EC2::VPCEndpointService<a name="aws-resource-ec2-vpcendpointservice"></a>
 
-Specifies a VPC endpoint service configuration to which service consumers \(AWS accounts, IAM users, and IAM roles\) can connect\. Service consumers can create an interface VPC endpoint to connect to your service\.
+Creates a VPC endpoint service configuration to which service consumers \(AWS accounts, IAM users, and IAM roles\) can connect\.
 
-To create an endpoint service configuration, you must first create a Network Load Balancer for your service\.
+To create an endpoint service configuration, you must first create one of the following for your service:
++ A [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html)\. Service consumers connect to your service using an interface endpoint\.
++ A [Gateway Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html)\. Service consumers connect to your service using a Gateway Load Balancer endpoint\.
+
+For more information, see [VPC Endpoint Services](https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html) in the *Amazon Virtual Private Cloud User Guide*\. 
 
 ## Syntax<a name="aws-resource-ec2-vpcendpointservice-syntax"></a>
 
@@ -15,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::VPCEndpointService",
   "Properties" : {
       "[AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired)" : Boolean,
-      "[ApplianceLoadBalancerArns](#cfn-ec2-vpcendpointservice-applianceloadbalancerarns)" : [ String, ... ],
+      "[GatewayLoadBalancerArns](#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns)" : [ String, ... ],
       "[NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns)" : [ String, ... ]
     }
 }
@@ -27,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::VPCEndpointService
 Properties: 
   [AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired): Boolean
-  [ApplianceLoadBalancerArns](#cfn-ec2-vpcendpointservice-applianceloadbalancerarns): 
+  [GatewayLoadBalancerArns](#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns): 
     - String
   [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns): 
     - String
@@ -41,8 +45,8 @@ Indicates whether requests from service consumers to create an endpoint to your 
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ApplianceLoadBalancerArns`  <a name="cfn-ec2-vpcendpointservice-applianceloadbalancerarns"></a>
-Not currently supported by AWS CloudFormation\.  
+`GatewayLoadBalancerArns`  <a name="cfn-ec2-vpcendpointservice-gatewayloadbalancerarns"></a>
+The Amazon Resource Names \(ARNs\) of one or more Gateway Load Balancers\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

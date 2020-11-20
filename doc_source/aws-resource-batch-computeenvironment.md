@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : ComputeResources,
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
+      "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
       "[Type](#cfn-batch-computeenvironment-type)" : String
     }
 }
@@ -31,6 +32,7 @@ Properties:
     ComputeResources
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
+  [Tags](#cfn-batch-computeenvironment-tags): Json
   [Type](#cfn-batch-computeenvironment-type): String
 ```
 
@@ -62,6 +64,12 @@ The state of the compute environment\. If the state is `ENABLED`, then the compu
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-batch-computeenvironment-tags"></a>
+The tags applied to the compute environment\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
 The type of the compute environment\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  

@@ -117,9 +117,7 @@ The following example creates a notification rule with a name of My Notification
         "Targets": [
             {
                 "TargetType": "SNS",
-                "TargetAddress": {
-                    "Fn::Sub": "arn:aws:sns:us-east-2:123456789012:MyNotificationTopic"
-                }
+                "TargetAddress": "arn:aws:sns:us-east-2:123456789012:MyNotificationTopic"
             }
         ],
         "Tags": {
@@ -141,7 +139,7 @@ Properties:
             - codecommit-repository-comments-on-commits
         Targets: 
             - TargetType: SNS 
-              TargetAddress: 'Fn::Sub': 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
+              TargetAddress: 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
         Tags: 
              Team: Saanvi
 ```

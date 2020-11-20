@@ -39,7 +39,7 @@ The name of the Timestream database\.
 *Minimum*: `3`  
 *Maximum*: `64`  
 *Pattern*: `[a-zA-Z0-9_.-]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-timestream-database-kmskeyid"></a>
 The identifier of the KMS key used to encrypt the data stored in the database\.  
@@ -62,3 +62,12 @@ The tags to add to the database\.
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the database name `DATABASE_NAME`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-timestream-database-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` returns a value for the specified attribute of this type\. The following are the available attributes:
+
+#### <a name="aws-resource-timestream-database-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The `arn` of the database\.

@@ -160,7 +160,7 @@ Specifies an event destination for a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ConfigurationSetEventDestination Sample Template'
+Description: AWS SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String
@@ -184,15 +184,13 @@ Parameters:
     Type: String
   DefaultDimensionValue2:
     Type: String
-
 Resources:
   ConfigSet:
-    Type: AWS::SES::ConfigurationSet
+    Type: 'AWS::SES::ConfigurationSet'
     Properties:
       Name: !Ref ConfigSetName
-
   CWEventDestination:
-    Type: AWS::SES::ConfigurationSetEventDestination
+    Type: 'AWS::SES::ConfigurationSetEventDestination'
     Properties:
       ConfigurationSetName: !Ref ConfigSet
       EventDestination:

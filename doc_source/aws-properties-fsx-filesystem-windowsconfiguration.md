@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ActiveDirectoryId`  <a name="cfn-fsx-filesystem-windowsconfiguration-activedirectoryid"></a>
 The ID for an existing AWS Managed Microsoft Active Directory \(AD\) instance that the file system should join when it's created\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `12`  
 *Maximum*: `12`  
@@ -87,7 +87,7 @@ Required when `DeploymentType` is set to `MULTI_AZ_1`\. This specifies the subne
 
 `SelfManagedActiveDirectoryConfiguration`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration"></a>
 The configuration that Amazon FSx uses to join the Windows File Server instance to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [SelfManagedActiveDirectoryConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

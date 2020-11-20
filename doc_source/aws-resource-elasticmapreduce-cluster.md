@@ -22,12 +22,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Instances](#cfn-elasticmapreduce-cluster-instances)" : JobFlowInstancesConfig,
       "[JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole)" : String,
       "[KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes)" : KerberosAttributes,
+      "[LogEncryptionKmsKeyId](#cfn-elasticmapreduce-cluster-logencryptionkmskeyid)" : String,
       "[LogUri](#cfn-elasticmapreduce-cluster-loguri)" : String,
+      "[ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy)" : ManagedScalingPolicy,
       "[Name](#cfn-elasticmapreduce-cluster-name)" : String,
       "[ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel)" : String,
       "[ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior)" : String,
       "[SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration)" : String,
       "[ServiceRole](#cfn-elasticmapreduce-cluster-servicerole)" : String,
+      "[StepConcurrencyLevel](#cfn-elasticmapreduce-cluster-stepconcurrencylevel)" : Integer,
       "[Steps](#cfn-elasticmapreduce-cluster-steps)" : [ StepConfig, ... ],
       "[Tags](#cfn-elasticmapreduce-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibleToAllUsers](#cfn-elasticmapreduce-cluster-visibletoallusers)" : Boolean
@@ -55,12 +58,16 @@ Properties:
   [JobFlowRole](#cfn-elasticmapreduce-cluster-jobflowrole): String
   [KerberosAttributes](#cfn-elasticmapreduce-cluster-kerberosattributes): 
     KerberosAttributes
+  [LogEncryptionKmsKeyId](#cfn-elasticmapreduce-cluster-logencryptionkmskeyid): String
   [LogUri](#cfn-elasticmapreduce-cluster-loguri): String
+  [ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy): 
+    ManagedScalingPolicy
   [Name](#cfn-elasticmapreduce-cluster-name): String
   [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
   [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior): String
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
   [ServiceRole](#cfn-elasticmapreduce-cluster-servicerole): String
+  [StepConcurrencyLevel](#cfn-elasticmapreduce-cluster-stepconcurrencylevel): Integer
   [Steps](#cfn-elasticmapreduce-cluster-steps): 
     - StepConfig
   [Tags](#cfn-elasticmapreduce-cluster-tags): 
@@ -142,11 +149,23 @@ Attributes for Kerberos configuration when Kerberos authentication is enabled us
 *Type*: [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`LogEncryptionKmsKeyId`  <a name="cfn-elasticmapreduce-cluster-logencryptionkmskeyid"></a>
+ The AWS KMS customer master key \(CMK\) used for encrypting log files\. This attribute is only available with EMR version 5\.30\.0 and later, excluding EMR 6\.0\.0\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `LogUri`  <a name="cfn-elasticmapreduce-cluster-loguri"></a>
 The path to the Amazon S3 location where logs for this cluster are stored\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ManagedScalingPolicy`  <a name="cfn-elasticmapreduce-cluster-managedscalingpolicy"></a>
+ Creates or updates a managed scaling policy for an Amazon EMR cluster\. The managed scaling policy defines the limits for resources, such as EC2 instances that can be added or terminated from a cluster\. The policy only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
+*Required*: No  
+*Type*: [ManagedScalingPolicy](aws-properties-elasticmapreduce-cluster-managedscalingpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-name"></a>
 The name of the cluster\.  
@@ -182,6 +201,12 @@ The IAM role that will be assumed by the Amazon EMR service to access AWS resour
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`StepConcurrencyLevel`  <a name="cfn-elasticmapreduce-cluster-stepconcurrencylevel"></a>
+Specifies the number of steps that can be executed concurrently\. The default value is `1`\. The maximum value is `256`\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Steps`  <a name="cfn-elasticmapreduce-cluster-steps"></a>
 A list of steps to run\.  
 *Required*: No  
@@ -205,7 +230,7 @@ When you create clusters directly through the EMR console or API, this value is 
 
 ### Ref<a name="aws-resource-elasticmapreduce-cluster-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the cluster ID, such as j\-1ABCD123AB1A\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the cluster ID, such as j\-1ABCD123AB1A\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -917,4 +942,127 @@ Outputs:
     Value: !GetAtt 
       - key
       - Arn
+```
+
+### Create a cluster with a managed scaling policy<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_managed_scaling_policy"></a>
+
+The following example template enables you to specify the managed scaling policy for an EMR cluster\. 
+
+#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_managed_scaling_policy--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters" : {
+    "InstanceType" : {
+      "Type" : "String"
+    },
+    "ReleaseLabel" : {
+      "Type" : "String"
+    },
+    "SubnetId" : {
+      "Type" : "String"
+    },
+    "MinimumCapacityUnits" : {
+      "Type" : "String"
+    },
+    "MaximumCapacityUnits" : {
+      "Type" : "String"
+    },
+    "MaximumCoreCapacityUnits" : {
+      "Type" : "String"
+    },
+    "MaximumOnDemandCapacityUnits" : {
+      "Type" : "String"
+    },
+    "UnitType" : {
+      "Type" : "String"
+    }
+  },
+  "Resources": {
+    "cluster": {
+      "Type": "AWS::EMR::Cluster",
+      "Properties": {
+        "Instances": {
+          "MasterInstanceGroup": {
+            "InstanceCount": 1,
+            "InstanceType": {"Ref" : "InstanceType"},
+            "Market": "ON_DEMAND",
+            "Name": "primary"
+          },
+          "CoreInstanceGroup": {
+            "InstanceCount": 1,
+            "InstanceType": {"Ref" : "InstanceType"},
+            "Market": "ON_DEMAND",
+            "Name": "core"
+          },
+          "Ec2SubnetId" : {"Ref" : "SubnetId"}
+        },
+        "Name": "ManagedScalingExample",
+        "JobFlowRole" : "EMR_EC2_DefaultRole",
+        "ServiceRole" : "EMR_DefaultRole",
+        "ReleaseLabel" : {"Ref" : "ReleaseLabel"},
+        "ManagedScalingPolicy" : {
+          "ComputeLimits" : {
+            "MinimumCapacityUnits" : {"Ref": "MinimumCapacityUnits"},
+            "MaximumCapacityUnits" : {"Ref": "MaximumCapacityUnits"},
+            "MaximumCoreCapacityUnits" : {"Ref": "MaximumCoreCapacityUnits"},
+            "MaximumOnDemandCapacityUnits" : {"Ref": "MaximumOnDemandCapacityUnits"},
+            "UnitType" : {"Ref": "UnitType"}
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_managed_scaling_policy--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  InstanceType:
+    Type: String
+  ReleaseLabel:
+    Type: String
+  SubnetId:
+    Type: String
+  MinimumCapacityUnits:
+    Type: String
+  MaximumCapacityUnits:
+    Type: String
+  MaximumCoreCapacityUnits:
+    Type: String
+  MaximumOnDemandCapacityUnits:
+    Type: String
+  UnitType:
+    Type: String
+Resources:
+  cluster:
+    Type: 'AWS::EMR::Cluster'
+    Properties:
+      Instances:
+        MasterInstanceGroup:
+          InstanceCount: 1
+          InstanceType: !Ref InstanceType
+          Market: ON_DEMAND
+          Name: primary
+        CoreInstanceGroup:
+          InstanceCount: 1
+          InstanceType: !Ref InstanceType
+          Market: ON_DEMAND
+          Name: core
+        Ec2SubnetId: !Ref SubnetId
+      Name: ManagedScalingExample
+      JobFlowRole: EMR_EC2_DefaultRole
+      ServiceRole: EMR_DefaultRole
+      ReleaseLabel: !Ref ReleaseLabel
+      ManagedScalingPolicy:
+        ComputeLimits:
+          MinimumCapacityUnits: !Ref MinimumCapacityUnits
+          MaximumCapacityUnits: !Ref MaximumCapacityUnits
+          MaximumCoreCapacityUnits: !Ref MaximumCoreCapacityUnits
+          MaximumOnDemandCapacityUnits: !Ref MaximumOnDemandCapacityUnits
+          UnitType: !Ref UnitType
 ```
