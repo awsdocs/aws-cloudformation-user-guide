@@ -1,12 +1,6 @@
 # AWS::GuardDuty::Detector<a name="aws-resource-guardduty-detector"></a>
 
-The `AWS::GuardDuty::Detector` resource creates a single Amazon GuardDuty detector\. A detector is an object that represents the GuardDuty service\. You must create a detector for GuardDuty to become operational\. 
-
-**Topics**
-+ [Syntax](#aws-resource-guardduty-detector-syntax)
-+ [Properties](#aws-resource-guardduty-detector-properties)
-+ [Return Values](#aws-resource-guardduty-detector-returnvalues)
-+ [Examples](#aws-resource-guardduty-detector-examples)
+The `AWS::GuardDuty::Detector` resource specifies a new Amazon GuardDuty detector\. A detector is an object that represents the Amazon GuardDuty service\. A detector is required for Amazon GuardDuty to become operational\.
 
 ## Syntax<a name="aws-resource-guardduty-detector-syntax"></a>
 
@@ -18,9 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GuardDuty::Detector",
   "Properties" : {
-    "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
-    "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency) : String
-  }
+      "[DataSources](#cfn-guardduty-detector-datasources)" : CFNDataSourceConfigurations,
+      "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
+      "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String
+    }
 }
 ```
 
@@ -28,57 +23,66 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::GuardDuty::Detector
-Properties:
+Properties: 
+  [DataSources](#cfn-guardduty-detector-datasources): 
+    CFNDataSourceConfigurations
   [Enable](#cfn-guardduty-detector-enable): Boolean
   [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
 
+`DataSources`  <a name="cfn-guardduty-detector-datasources"></a>
+Describes which data sources will be enabled for the detector\.  
+*Required*: No  
+*Type*: [CFNDataSourceConfigurations](aws-properties-guardduty-detector-cfndatasourceconfigurations.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Enable`  <a name="cfn-guardduty-detector-enable"></a>
-A Boolean value that specifies whether the detector is to be enabled\.  
- *Required*: Yes  
- *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies whether the detector is to be enabled on creation\.  
+*Required*: Yes  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>
-Specifies the frequency of notifications sent about the subsequent finding occurrences\. Valid values include only the following: FIFTEEN\_MINUTES, ONE\_HOUR, SIX\_HOURS\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies how frequently updated findings are exported\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `FIFTEEN_MINUTES | ONE_HOUR | SIX_HOURS`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-guardduty-detector-returnvalues"></a>
+## Return values<a name="aws-resource-guardduty-detector-return-values"></a>
 
-### Ref<a name="aws-resource-guardduty-detector-ref"></a>
+### Ref<a name="aws-resource-guardduty-detector-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::GuardDuty::Detector` resource to the intrinsic `Ref` function, the function returns the unique ID of the created detector\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique ID of the detector\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-guardduty-detector-examples"></a>
+## Examples<a name="aws-resource-guardduty-detector--examples"></a>
 
-### Declaring a GuardDuty Detector Resource<a name="aws-resource-guardduty-detector-example1"></a>
+### Declare a Detector Resource<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource"></a>
 
-The following example shows how to declare an `AWS::GuardDuty::Detector` resource to create a GuardDuty detector\.
+The following example shows how to declare a GuardDuty `Detector` resource:
 
-#### JSON<a name="aws-resource-guardduty-detector-example1.json"></a>
+#### JSON<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource--json"></a>
 
 ```
 "mydetector": {
-  "Type": "AWS::GuardDuty::Detector",
-  "Properties": {
-    "Enable": true,
-    "FindingPublishingFrequency": "FIFTEEN_MINUTES"
-  }
+    "Type" : "AWS::GuardDuty::Detector",
+    "Properties" : {
+        "Enable" : True,
+        "FindingPublishingFrequency" : "FIFTEEN_MINUTES"
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-guardduty-detector-example1.yaml"></a>
+#### YAML<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource--yaml"></a>
 
 ```
 mydetector:
-  Type: AWS::GuardDuty::Detector
-  Properties:
-    Enable: true
-    FindingPublishingFrequency: FIFTEEN_MINUTES
+    Type: AWS::GuardDuty::Detector
+    Properties:
+        Enable: True
+        FindingPublishingFrequency: FIFTEEN_MINUTES
 ```

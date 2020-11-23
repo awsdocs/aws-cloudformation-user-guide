@@ -1,12 +1,8 @@
 # AWS::Redshift::ClusterSubnetGroup<a name="aws-resource-redshift-clustersubnetgroup"></a>
 
-Creates an Amazon Redshift subnet group\. You must provide a list of one or more subnets in your existing Amazon VPC when creating an Amazon Redshift subnet group\.
+Specifies an Amazon Redshift subnet group\. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud \(Amazon VPC\) when creating Amazon Redshift subnet group\.
 
-**Topics**
-+ [Syntax](#aws-resource-redshift-clustersubnetgroup-syntax)
-+ [Properties](#w4ab1c21c10d174c35b9)
-+ [Return Values](#w4ab1c21c10d174c35c11)
-+ [Example](#w4ab1c21c10d174c35c13)
+ For information about subnet groups, go to [Amazon Redshift Cluster Subnet Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 ## Syntax<a name="aws-resource-redshift-clustersubnetgroup-syntax"></a>
 
@@ -18,64 +14,64 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Redshift::ClusterSubnetGroup",
   "Properties" : {
-    "[Description](#cfn-redshift-clustersubnetgroup-description)" : String,
-    "[SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids)" : [ String, ... ],
-    "[Tags](#cfn-redshift-clustersubnetgroup-tags)" : [ Resource Tag, ... ]
-  }
+      "[Description](#cfn-redshift-clustersubnetgroup-description)" : String,
+      "[SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-redshift-clustersubnetgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-redshift-clustersubnetgroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::Redshift::ClusterSubnetGroup"
+Type: AWS::Redshift::ClusterSubnetGroup
 Properties: 
   [Description](#cfn-redshift-clustersubnetgroup-description): String
-  [SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids):
+  [SubnetIds](#cfn-redshift-clustersubnetgroup-subnetids): 
     - String
-  [Tags](#cfn-redshift-clustersubnetgroup-tags):
-    - Resource Tag
+  [Tags](#cfn-redshift-clustersubnetgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="w4ab1c21c10d174c35b9"></a>
+## Properties<a name="aws-resource-redshift-clustersubnetgroup-properties"></a>
 
 `Description`  <a name="cfn-redshift-clustersubnetgroup-description"></a>
-A description of the subnet group\.  
+A description for the subnet group\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetIds`  <a name="cfn-redshift-clustersubnetgroup-subnetids"></a>
-A list of VPC subnet IDs\. You can modify a maximum of 20 subnets\.  
+An array of VPC subnet IDs\. A maximum of 20 subnets can be modified in a single request\.  
 *Required*: Yes  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-redshift-clustersubnetgroup-tags"></a>
 Specifies an arbitrary set of tags \(key–value pairs\) to associate with this subnet group\. Use tags to manage your resources\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d174c35c11"></a>
+## Return values<a name="aws-resource-redshift-clustersubnetgroup-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d174c35c11b2"></a>
+### Ref<a name="aws-resource-redshift-clustersubnetgroup-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
-```
-{ "Ref": "myClusterSubnetGroup" }
-```
+ `{ "Ref": "myClusterSubnetGroup" }` 
 
-For the Amazon Redshift cluster subnet group `myClusterSubnetGroup`, `Ref` returns the name of the cluster subnet group\.
+For the Amazon Redshift subnet group `myClusterSubnetGroup`, Ref returns the name of the cluster subnet group\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w4ab1c21c10d174c35c13"></a>
+## Examples<a name="aws-resource-redshift-clustersubnetgroup--examples"></a>
+
+### Specify a Subnet<a name="aws-resource-redshift-clustersubnetgroup--examples--Specify_a_Subnet"></a>
 
 The following example specifies one subnet for an Amazon Redshift cluster subnet group\.
 
-### JSON<a name="aws-resource-redshift-clustersubnetgroup-example-json"></a>
+#### JSON<a name="aws-resource-redshift-clustersubnetgroup--examples--Specify_a_Subnet--json"></a>
 
 ```
 "myClusterSubnetGroup": {
@@ -95,7 +91,7 @@ The following example specifies one subnet for an Amazon Redshift cluster subnet
 }
 ```
 
-### YAML<a name="aws-resource-redshift-clustersubnetgroup-example-yaml"></a>
+#### YAML<a name="aws-resource-redshift-clustersubnetgroup--examples--Specify_a_Subnet--yaml"></a>
 
 ```
 myClusterSubnetGroup:

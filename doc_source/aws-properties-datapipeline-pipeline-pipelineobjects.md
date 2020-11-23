@@ -1,14 +1,16 @@
-# AWS Data Pipeline PipelineObject<a name="aws-properties-datapipeline-pipeline-pipelineobjects"></a>
+# AWS::DataPipeline::Pipeline PipelineObject<a name="aws-properties-datapipeline-pipeline-pipelineobjects"></a>
 
-`PipelineObjects` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that describes a data pipeline object\.
+PipelineObject is property of the AWS::DataPipeline::Pipeline resource that contains information about a pipeline object\. This can be a logical, physical, or physical attempt pipeline object\. The complete set of components of a pipeline defines the pipeline\.
 
-## Syntax<a name="w4ab1c21c10c84c14c33b5"></a>
+## Syntax<a name="aws-properties-datapipeline-pipeline-pipelineobjects-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-pipelineobjects-syntax.json"></a>
 
 ```
 {
-  "[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields)" : [ Field type ],
+  "[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields)" : [ Field, ... ],
   "[Id](#cfn-datapipeline-pipeline-pipelineobjects-id)" : String,
   "[Name](#cfn-datapipeline-pipeline-pipelineobjects-name)" : String
 }
@@ -17,124 +19,34 @@
 ### YAML<a name="aws-properties-datapipeline-pipeline-pipelineobjects-syntax.yaml"></a>
 
 ```
-[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields):
-  - Field type
-[Id](#cfn-datapipeline-pipeline-pipelineobjects-id): String
-[Name](#cfn-datapipeline-pipeline-pipelineobjects-name): String
+  [Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields): 
+    - Field
+  [Id](#cfn-datapipeline-pipeline-pipelineobjects-id): String
+  [Name](#cfn-datapipeline-pipeline-pipelineobjects-name): String
 ```
 
-## Properties<a name="w4ab1c21c10c84c14c33b7"></a>
+## Properties<a name="aws-properties-datapipeline-pipeline-pipelineobjects-properties"></a>
 
 `Fields`  <a name="cfn-datapipeline-pipeline-pipelineobjects-fields"></a>
-Key\-value pairs that define the properties of the object\. Duplicates allowed\. You can use the same key multiple times within a field to define array attributes\.  
+Key\-value pairs that define the properties of the object\.  
 *Required*: Yes  
-*Type*: List of [AWS Data Pipeline Pipeline Field](aws-properties-datapipeline-pipeline-pipelineobjects-fields.md)
+*Type*: List of [Field](aws-properties-datapipeline-pipeline-pipelineobjects-fields.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-datapipeline-pipeline-pipelineobjects-id"></a>
-Identifier of the object\.  
+The ID of the object\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-datapipeline-pipeline-pipelineobjects-name"></a>
-Name of the object\.  
+The name of the object\.  
 *Required*: Yes  
-*Type*: String
-
-## Examples<a name="aws-properties-datapipeline-pipeline-pipelineobjects-examples"></a>
-
-### <a name="aws-properties-datapipeline-pipeline-pipelineobjects-example1"></a>
-
-The following snippet shows how to use the same key for fields in the `PipelineObjects` property for an `AWS::DataPipeline::Pipeline` resource\.
-
-#### JSON<a name="aws-properties-datapipeline-pipeline-pipelineobjects-example1.json"></a>
-
-```
-"PipelineObjects": [
-  {
-    "Id": "ResourceId_I1mCc",
-    "Name": "ReleaseLabelCluster",
-    "Fields": [
-      {
-        "Key": "releaseLabel",
-        "StringValue": "emr-4.1.0"
-      },
-      {
-        "Key": "applications",
-        "StringValue": "spark"
-      },
-      {
-        "Key": "applications",
-        "StringValue": "hive"
-      },
-      {
-        "Key": "applications",
-        "StringValue": "pig"
-      },
-      {
-        "Key": "type",
-        "StringValue": "EmrCluster"
-      },
-      {
-        "Key": "configuration",
-        "RefValue": "coresite"
-      }
-    ]
-  },
-  {
-    "Id": "coresite",
-    "Name": "coresite",
-    "Fields": [
-      {
-        "Key": "type",
-        "StringValue": "EmrConfiguration"
-      },
-      {
-        "Key": "classification",
-        "StringValue": "core-site"
-      },
-      {
-        "Key": "property",
-        "RefValue": "io-file-buffer-size"
-      },
-      {
-        "Key": "property",
-        "RefValue": "fs-s3-block-size"
-      }
-    ]
-  },
-  ...
-]
-```
-
-#### YAML<a name="aws-properties-datapipeline-pipeline-pipelineobjects-example1.yaml"></a>
-
-```
-PipelineObjects:
-  - Id: ResourceId_I1mCc
-    Name: ReleaseLabelCluster
-    Fields:
-      - Key: releaseLabel
-        StringValue: emr-4.1.0
-      - Key: applications
-        StringValue: spark
-      - Key: applications
-        StringValue: hive
-      - Key: applications
-        StringValue: pig
-      - Key: type
-        StringValue: EmrCluster
-      - Key: configuration
-        RefValue: coresite
-  - Id: coresite
-    Name: coresite
-    Fields:
-      - Key: type
-        StringValue: EmrConfiguration
-      - Key: classification
-        StringValue: core-site
-      - Key: property
-        RefValue: io-file-buffer-size
-      - Key: property
-        RefValue: fs-s3-block-size
-  ...
-```
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

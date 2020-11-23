@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application KinesisFirehoseInput<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput"></a>
+# AWS::KinesisAnalytics::Application KinesisFirehoseInput<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput"></a>
 
-The `KinesisFirehoseInput` property type identifies an Amazon Kinesis Data Firehose delivery stream as the streaming source for an Amazon Kinesis Data Analytics application\.
-
- `KinesisFirehoseInput` is a property of the [Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+ Identifies an Amazon Kinesis Firehose delivery stream as the streaming source\. You provide the delivery stream's Amazon Resource Name \(ARN\) and an IAM role ARN that enables Amazon Kinesis Analytics to access the stream on your behalf\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput-syntax"></a>
 
@@ -27,13 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-application-kinesisfirehoseinput-properties"></a>
 
 `ResourceARN`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-resourcearn"></a>
-The Amazon Resource Name \(ARN\) of the input Kinesis Data Firehose delivery stream\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+ARN of the input delivery stream\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-kinesisanalytics-application-kinesisfirehoseinput-rolearn"></a>
-The ARN of the IAM role that Kinesis Data Analytics can assume to access the stream on your behalf\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+ARN of the IAM role that Amazon Kinesis Analytics can assume to access the stream on your behalf\. You need to make sure that the role has the necessary permissions to access the stream\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

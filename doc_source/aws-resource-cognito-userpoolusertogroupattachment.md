@@ -1,11 +1,8 @@
 # AWS::Cognito::UserPoolUserToGroupAttachment<a name="aws-resource-cognito-userpoolusertogroupattachment"></a>
 
-The `AWS::Cognito::UserPoolUserToGroupAttachment` resource attaches a user to an Amazon Cognito user pool user group\. 
+Adds the specified user to the specified group\.
 
-**Topics**
-+ [Syntax](#aws-resource-cognito-userpoolusertogroupattachment-syntax)
-+ [Properties](#w4ab1c21c10c78c38b9)
-+ [Return Value](#w4ab1c21c10c78c38c11)
+Calling this action requires developer credentials\.
 
 ## Syntax<a name="aws-resource-cognito-userpoolusertogroupattachment-syntax"></a>
 
@@ -17,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolUserToGroupAttachment",
   "Properties" : {
-    "[GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname)" : String,
-    "[Username](#cfn-cognito-userpoolusertogroupattachment-username)" : String,
-    "[UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String
-  }
+      "[GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname)" : String,
+      "[Username](#cfn-cognito-userpoolusertogroupattachment-username)" : String,
+      "[UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid)" : String
+    }
 }
 ```
 
@@ -28,36 +25,45 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Cognito::UserPoolUserToGroupAttachment
-Properties:
+Properties: 
   [GroupName](#cfn-cognito-userpoolusertogroupattachment-groupname): String
   [Username](#cfn-cognito-userpoolusertogroupattachment-username): String
   [UserPoolId](#cfn-cognito-userpoolusertogroupattachment-userpoolid): String
 ```
 
-## Properties<a name="w4ab1c21c10c78c38b9"></a>
+## Properties<a name="aws-resource-cognito-userpoolusertogroupattachment-properties"></a>
 
 `GroupName`  <a name="cfn-cognito-userpoolusertogroupattachment-groupname"></a>
-The name of the group\.  
+The group name\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Username`  <a name="cfn-cognito-userpoolusertogroupattachment-username"></a>
-The user's user name\.  
+The username for the user\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolusertogroupattachment-userpoolid"></a>
-The ID of the user pool\.  
+The user pool ID for the user pool\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `55`  
+*Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="w4ab1c21c10c78c38c11"></a>
+## Return values<a name="aws-resource-cognito-userpoolusertogroupattachment-return-values"></a>
 
-### Ref<a name="w4ab1c21c10c78c38c11b2"></a>
+### Ref<a name="aws-resource-cognito-userpoolusertogroupattachment-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a generated ID, such as `UserToGroupAttachment-YejJvzrEXAMPLE`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

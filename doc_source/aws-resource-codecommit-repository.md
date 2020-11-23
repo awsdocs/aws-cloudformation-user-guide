@@ -1,6 +1,6 @@
 # AWS::CodeCommit::Repository<a name="aws-resource-codecommit-repository"></a>
 
-The `AWS::CodeCommit::Repository` resource creates an AWS CodeCommit repository that is hosted by Amazon Web Services\. For more information, see [Create an AWS CodeCommit Repository](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-repository.html) in the *AWS CodeCommit User Guide*\.
+Creates a new, empty repository\.
 
 ## Syntax<a name="aws-resource-codecommit-repository-syntax"></a>
 
@@ -12,10 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeCommit::Repository",
   "Properties" : {
-    "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String,
-    "[RepositoryName](#cfn-codecommit-repository-repositoryname)" : String,
-    "[Triggers](#cfn-codecommit-repository-triggers)" : [ [Trigger](aws-properties-codecommit-repository-triggers.md) ]
-  }
+      "[Code](#cfn-codecommit-repository-code)" : Code,
+      "[RepositoryDescription](#cfn-codecommit-repository-repositorydescription)" : String,
+      "[RepositoryName](#cfn-codecommit-repository-repositoryname)" : String,
+      "[Tags](#cfn-codecommit-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Triggers](#cfn-codecommit-repository-triggers)" : [ RepositoryTrigger, ... ]
+    }
 }
 ```
 
@@ -24,84 +26,163 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeCommit::Repository
 Properties: 
+  [Code](#cfn-codecommit-repository-code): 
+    Code
   [RepositoryDescription](#cfn-codecommit-repository-repositorydescription): String
   [RepositoryName](#cfn-codecommit-repository-repositoryname): String
-  [Triggers](#cfn-codecommit-repository-triggers):
-  - [Trigger](aws-properties-codecommit-repository-triggers.md)
+  [Tags](#cfn-codecommit-repository-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Triggers](#cfn-codecommit-repository-triggers): 
+    - RepositoryTrigger
 ```
 
-## Properties<a name="w4ab1c21c10c69c13b9"></a>
+## Properties<a name="aws-resource-codecommit-repository-properties"></a>
+
+`Code`  <a name="cfn-codecommit-repository-code"></a>
+Information about code to be committed to a repository after it is created in an AWS CloudFormation stack\.  
+You can only use this property to add code when creating a repository with a CloudFormation template at creation time\. This property cannot be used for updating code to an existing repository\.
+*Required*: No  
+*Type*: [Code](aws-properties-codecommit-repository-code.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryDescription`  <a name="cfn-codecommit-repository-repositorydescription"></a>
-A description about the AWS CodeCommit repository\. For constraints, see the [CreateRepository](https://docs.aws.amazon.com/codecommit/latest/APIReference/API_CreateRepository.html) action in the *AWS CodeCommit API Reference*\.  
+A comment or description about the new repository\.  
+The description field for a repository accepts all HTML characters and all valid Unicode characters\. Applications that do not HTML\-encode the description and display it in a webpage can expose users to potentially malicious code\. Make sure that you HTML\-encode the description field in any application that uses this API to display the repository description on a webpage\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Maximum*: `1000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-codecommit-repository-repositoryname"></a>
-A name for the AWS CodeCommit repository\.  
+The name of the new repository to be created\.  
+The repository name must be unique across the calling AWS account\. Repository names are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters\. For more information about the limits on repository names, see [Limits](https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html) in the *AWS CodeCommit User Guide*\. The suffix \.git is prohibited\.
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `[\w\.-]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-codecommit-repository-tags"></a>
+One or more tag key\-value pairs to use when tagging this repository\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Triggers`  <a name="cfn-codecommit-repository-triggers"></a>
-Defines the actions to take in response to events that occur in the repository\. For example, you can send email notifications when someone pushes to the repository\.  
+The JSON block of configuration information for each trigger\.  
 *Required*: No  
-*Type*: List of [AWS CodeCommit Repository Trigger](aws-properties-codecommit-repository-triggers.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [RepositoryTrigger](aws-properties-codecommit-repository-repositorytrigger.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="w4ab1c21c10c69c13c11"></a>
+## Return values<a name="aws-resource-codecommit-repository-return-values"></a>
 
-### Ref<a name="w4ab1c21c10c69c13c11b2"></a>
+### Ref<a name="aws-resource-codecommit-repository-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the repository ID, such as `12a345b6-bbb7-4bb6-90b0-8c9577a2d2b9`\.
+When the logical ID of this resource is provided to the Ref intrinsic function, `Ref` returns the repository ID\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w4ab1c21c10c69c13c11b4"></a>
+### Fn::GetAtt<a name="aws-resource-codecommit-repository-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the repository, such as `arn:aws:codecommit:us-east-1:123456789012:MyDemoRepo`\.
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-`CloneUrlHttp`  
-The URL to use for cloning the repository over HTTPS, such as `https://codecommit.us-east-1.amazonaws.com/v1/repos/MyDemoRepo`\.
+#### <a name="aws-resource-codecommit-repository-return-values-fn--getatt-fn--getatt"></a>
 
-`CloneUrlSsh`  
-The URL to use for cloning the repository over SSH, such as `ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/MyDemoRepo`\.
+`Arn`  <a name="Arn-fn::getatt"></a>
+When you pass the logical ID of this resource, the function returns the Amazon Resource Name \(ARN\) of the repository\.
 
-`Name`  
-The name of the repository, such `MyDemoRepo`\.
+`CloneUrlHttp`  <a name="CloneUrlHttp-fn::getatt"></a>
+When you pass the logical ID of this resource, the function returns the URL to use for cloning the repository over HTTPS\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+`CloneUrlSsh`  <a name="CloneUrlSsh-fn::getatt"></a>
+When you pass the logical ID of this resource, the function returns the URL to use for cloning the repository over SSH\.
 
-## Example<a name="w4ab1c21c10c69c13c13"></a>
+`Name`  <a name="Name-fn::getatt"></a>
+When you pass the logical ID of this resource, the function returns the repository's name\.
 
-The following example creates an AWS CodeCommit repository with a trigger for all events in the `Master` branch\.
+## Examples<a name="aws-resource-codecommit-repository--examples"></a>
 
-### JSON<a name="aws-resource-codecommit-repository-example.json"></a>
+The following examples can help you create CodeCommit repositories using CloudFormation\.
+
+### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
+
+The following example creates a CodeCommit repository named *MyDemoRepo*\. The newly created repository is populated with code stored in an Amazon S3 bucket named *MySourceCodeBucket* and placed in a branch named *development*, which is the default branch for the repository\. 
+
+#### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
 
 ```
-"MyRepo" : {
-  "Type" : "AWS::CodeCommit::Repository",
-  "Properties" : {
-    "RepositoryName" : "MyRepoName",
-    "RepositoryDescription" : "a description",
-    "Triggers" : [
-      {
-        "Name" : "MasterTrigger",
-        "CustomData" : "Project ID 12345",
-        "DestinationArn" : { "Ref":"SNSarn" },
-        "Branches" : ["Master"],
-        "Events" : ["all"]
-      }
-    ]
-  }
+{
+    "MyRepo": {
+        "Type": "AWS::CodeCommit::Repository",
+        "Properties": {
+            "RepositoryName": "MyDemoRepo",
+            "RepositoryDescription": "This is a repository for my project with code from MySourceCodeBucket.",
+            "Code": {
+                "BranchName": "development",
+                "S3": {
+                    "Bucket": "MySourceCodeBucket",
+                    "Key": "MyKey",
+                    "ObjectVersion": "1"
+                }
+            }
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-codecommit-repository-example.yaml"></a>
+#### YAML<a name="aws-resource-codecommit-repository--examples--Example--yaml"></a>
+
+```
+MyRepo:
+  Type: AWS::CodeCommit::Repository
+  Properties:
+    RepositoryName: MyDemoRepo
+    RepositoryDescription: This is a repository for my project with code from MySourceCodeBucket.
+      Code:
+        BranchName: development
+        S3: 
+          Bucket: MySourceCodeBucket,
+          Key: MyKey,
+          ObjectVersion: 1
+```
+
+### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
+
+The following example creates a CodeCommit repository with a trigger for all events in the main branch\. 
+
+#### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
+
+```
+{
+    "MyRepo": {
+        "Type": "AWS: : CodeCommit: : Repository",
+        "Properties": {
+            "RepositoryName": "MyRepoName",
+            "RepositoryDescription": "a description",
+            "Triggers": [
+                {
+                    "Name": "MainTrigger",
+                    "CustomData": "Project ID 12345",
+                    "DestinationArn": {
+                        "Ref": "SNSarn"
+                    },
+                    "Branches": [
+                        "main"
+                    ],
+                    "Events": [
+                        "all"
+                    ]
+                }
+            ]
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-codecommit-repository--examples--Example--yaml"></a>
 
 ```
 MyRepo:
@@ -110,12 +191,12 @@ MyRepo:
     RepositoryName: MyRepoName
     RepositoryDescription: a description
     Triggers:
-    - Name: MasterTrigger
+    - Name: MainTrigger
       CustomData: Project ID 12345
       DestinationArn:
         Ref: SNSarn
       Branches:
-      - Master
+      - main
       Events:
       - all
 ```

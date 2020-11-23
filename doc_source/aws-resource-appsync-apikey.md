@@ -1,13 +1,6 @@
 # AWS::AppSync::ApiKey<a name="aws-resource-appsync-apikey"></a>
 
-The `AWS::AppSync::ApiKey` resource creates a unique key that you can distribute to clients who are executing GraphQL operations with AWS AppSync that require an API key\. 
-
-**Topics**
-+ [Syntax](#aws-resource-appsync-apikey-syntax)
-+ [Properties](#aws-resource-appsync-apikey-properties)
-+ [Return Values](#aws-resource-appsync-apikey-returnvalues)
-+ [Examples](#aws-resource-appsync-apikey-examples)
-+ [See Also](#aws-resource-appsync-apikey-seealso)
+The `AWS::AppSync::ApiKey` resource creates a unique key that you can distribute to clients who are executing GraphQL operations with AWS AppSync that require an API key\.
 
 ## Syntax<a name="aws-resource-appsync-apikey-syntax"></a>
 
@@ -19,70 +12,102 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppSync::ApiKey",
   "Properties" : {
-    "[Description](#cfn-appsync-apikey-description)" : String,
-    "[Expires](#cfn-appsync-apikey-expires)" : Number,
-    "[ApiId](#cfn-appsync-apikey-apiid)" : String
-  }
+      "[ApiId](#cfn-appsync-apikey-apiid)" : String,
+      "[ApiKeyId](#cfn-appsync-apikey-apikeyid)" : String,
+      "[Description](#cfn-appsync-apikey-description)" : String,
+      "[Expires](#cfn-appsync-apikey-expires)" : Double
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-appsync-apikey-syntax.yaml"></a>
 
 ```
-Type: "AWS::AppSync::ApiKey"
-Properties:
-  [Description](#cfn-appsync-apikey-description): String
-  [Expires](#cfn-appsync-apikey-expires): Number
+Type: AWS::AppSync::ApiKey
+Properties: 
   [ApiId](#cfn-appsync-apikey-apiid): String
+  [ApiKeyId](#cfn-appsync-apikey-apikeyid): String
+  [Description](#cfn-appsync-apikey-description): String
+  [Expires](#cfn-appsync-apikey-expires): Double
 ```
 
 ## Properties<a name="aws-resource-appsync-apikey-properties"></a>
 
+`ApiId`  <a name="cfn-appsync-apikey-apiid"></a>
+Unique AWS AppSync GraphQL API ID for this API key\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ApiKeyId`  <a name="cfn-appsync-apikey-apikeyid"></a>
+The API key ID\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Description`  <a name="cfn-appsync-apikey-description"></a>
-Unique description of your API Key\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Unique description of your API key\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Expires`  <a name="cfn-appsync-apikey-expires"></a>
-Expiration time of the API Key in seconds \(using Unix Epoch time\), with a minimum of 1 day and a maximum of 365 days\. The default value is 7 days\.  
- *Required*: No  
- *Type*: Number  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The time after which the API key expires\. The date is represented as seconds since the epoch, rounded down to the nearest hour\.  
+*Required*: No  
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ApiId`  <a name="cfn-appsync-apikey-apiid"></a>
-Unique AWS AppSync GraphQL API Identifier for this API Key\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+## Return values<a name="aws-resource-appsync-apikey-return-values"></a>
 
-## Return Values<a name="aws-resource-appsync-apikey-returnvalues"></a>
+### Ref<a name="aws-resource-appsync-apikey-return-values-ref"></a>
 
-### Ref<a name="aws-resource-appsync-apikey-ref"></a>
+When you pass the logical ID of an `AWS::AppSync::ApiKey` resource to the intrinsic `Ref` function, the function returns the ARN of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\. 
 
-When you pass the logical ID of an `AWS::AppSync::ApiKey` resource to the intrinsic `Ref` function, the function returns the ARN of the API Key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref)\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
-
-### Fn::GetAtt<a name="aws-resource-appsync-apikey-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-appsync-apikey-return-values-fn--getatt"></a>
 
  `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
-`ApiKey`  
-The API key\. 
+For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt)\. 
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\. 
+#### <a name="aws-resource-appsync-apikey-return-values-fn--getatt-fn--getatt"></a>
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+`ApiKey`  <a name="ApiKey-fn::getatt"></a>
+The API key\.
 
-## Examples<a name="aws-resource-appsync-apikey-examples"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi`\.
 
-### API Key creation example<a name="aws-resource-appsync-apikey-example1"></a>
+## Examples<a name="aws-resource-appsync-apikey--examples"></a>
 
-The following example creates an API Key and associates it with an existing GraphQL API by passing the GraphQL API Id as a paramater\.
+### API Key Creation Example<a name="aws-resource-appsync-apikey--examples--API_Key_Creation_Example"></a>
 
-#### JSON<a name="aws-resource-appsync-apikey-example1.json"></a>
+The following example creates an API key and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\. 
+
+#### YAML<a name="aws-resource-appsync-apikey--examples--API_Key_Creation_Example--yaml"></a>
+
+```
+Parameters:
+  graphQlApiId:
+    Type: String
+  apiKeyDescription:
+    Type: String
+  apiKeyExpires:
+    Type: Number
+Resources:
+  ApiKey:
+    Type: AWS::AppSync::ApiKey
+    Properties:
+      ApiId:
+	Ref: graphQlApiId
+      Description:
+        Ref: apiKeyDescription
+      Expires:
+        Ref: apiKeyExpires
+```
+
+#### JSON<a name="aws-resource-appsync-apikey--examples--API_Key_Creation_Example--json"></a>
 
 ```
 {
@@ -116,27 +141,5 @@ The following example creates an API Key and associates it with an existing Grap
 }
 ```
 
-#### YAML<a name="aws-resource-appsync-apikey-example1.yaml"></a>
-
-```
-Parameters:
-  graphQlApiId:
-    Type: String
-  apiKeyDescription:
-    Type: String
-  apiKeyExpires:
-    Type: Number
-Resources:
-  ApiKey:
-    Type: AWS::AppSync::ApiKey
-    Properties:
-      ApiId:
-	Ref: graphQlApiId
-      Description:
-        Ref: apiKeyDescription
-      Expires:
-        Ref: apiKeyExpires
-```
-
-## See Also<a name="aws-resource-appsync-apikey-seealso"></a>
-+ [ CreateApiKey](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*
+## See also<a name="aws-resource-appsync-apikey--seealso"></a>
++  [CreateApiKey](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*\.

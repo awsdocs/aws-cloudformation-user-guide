@@ -1,27 +1,45 @@
-# AWS Lambda Function Environment<a name="aws-properties-lambda-function-environment"></a>
+# AWS::Lambda::Function Environment<a name="aws-properties-lambda-function-environment"></a>
 
-`Environment` is a property of the [AWS::Lambda::Function](aws-resource-lambda-function.md) resource that specifies key\-value pairs that the AWS Lambda \(Lambda\) function can access so that you can apply configuration changes, such as test and production environment configurations, without changing the function code\.
+A function's environment variable settings\.
 
-## Syntax<a name="w4ab1c21c10d162c21c21b5"></a>
+## Syntax<a name="aws-properties-lambda-function-environment-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-lambda-function-environment-syntax.json"></a>
 
 ```
 {
-  "[Variables](#cfn-lambda-function-environment-variables)" : { String:String, ... }
+  "[Variables](#cfn-lambda-function-environment-variables)" : {Key : Value, ...}
 }
 ```
 
 ### YAML<a name="aws-properties-lambda-function-environment-syntax.yaml"></a>
 
 ```
-[Variables](#cfn-lambda-function-environment-variables):
-  String: String
+  [Variables](#cfn-lambda-function-environment-variables): 
+    Key : Value
 ```
 
-## Properties<a name="w4ab1c21c10d162c21c21b7"></a>
+## Properties<a name="aws-properties-lambda-function-environment-properties"></a>
 
 `Variables`  <a name="cfn-lambda-function-environment-variables"></a>
-A map of key\-value pairs that the Lambda function can access\.  
+Environment variable key\-value pairs\.  
 *Required*: No  
-*Type*: Mapping of key\-value pairs
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-lambda-function-environment--examples"></a>
+
+### Environment Variables<a name="aws-properties-lambda-function-environment--examples--Environment_Variables"></a>
+
+Add environment variables to a function\.
+
+#### YAML<a name="aws-properties-lambda-function-environment--examples--Environment_Variables--yaml"></a>
+
+```
+      Environment:
+        Variables:
+          databaseName: lambdadb
+          databaseUser: admin
+```

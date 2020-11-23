@@ -1,6 +1,6 @@
 # AWS::SageMaker::EndpointConfig<a name="aws-resource-sagemaker-endpointconfig"></a>
 
-The `AWS::SageMaker::EndpointConfig` resource creates a configuration for an Amazon SageMaker endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html) in the *SageMaker Developer Guide*\. 
+The `AWS::SageMaker::EndpointConfig` resource creates a configuration for an Amazon SageMaker endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html) in the *SageMaker Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sagemaker-endpointconfig-syntax"></a>
 
@@ -12,77 +12,105 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::EndpointConfig",
   "Properties" : {
-    "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ [*ProductionVariants*](aws-properties-sagemaker-endpointconfig-productionvariant.md), ... ]
-    "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
-    "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
-    "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig)" : DataCaptureConfig,
+      "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
+      "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
+      "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ ProductionVariant, ... ],
+      "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-sagemaker-endpointconfig-syntax.yaml"></a>
 
 ```
-Type: "AWS::SageMaker::EndpointConfig"
-Properties:
-  [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
-    - [*ProductionVariants*](aws-properties-sagemaker-endpointconfig-productionvariant.md)
+Type: AWS::SageMaker::EndpointConfig
+Properties: 
+  [DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig): 
+    DataCaptureConfig
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
   [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
+  [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
+    - ProductionVariant
   [Tags](#cfn-sagemaker-endpointconfig-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
 
-`ProductionVariants`  <a name="cfn-sagemaker-endpointconfig-productionvariants"></a>
-A list of the production variants that specify the models you want to host at this endpoint\.  
- *Required*: Yes  
- *Type*: List of [Amazon SageMaker EndpointConfig ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+`DataCaptureConfig`  <a name="cfn-sagemaker-endpointconfig-datacaptureconfig"></a>
+Specifies how to capture endpoint data for model monitor\. The data capture configuration applies to all production variants hosted at the endpoint\.  
+*Required*: No  
+*Type*: [DataCaptureConfig](aws-properties-sagemaker-endpointconfig-datacaptureconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EndpointConfigName`  <a name="cfn-sagemaker-endpointconfig-endpointconfigname"></a>
 The name of the endpoint configuration\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
-If you provide a AWS KMS key ID, Amazon SageMaker uses it to encrypt data at rest on the ML storage volume that is attached to your notebook instance\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
++ Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
++ Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
++ Alias name: `alias/ExampleAlias`
++ Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
+The KMS key policy must grant permission to the IAM role that you specify in your `CreateEndpoint`, `UpdateEndpoint` requests\. For more information, refer to the AWS Key Management Service section[ Using Key Policies in AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)  
+Certain Nitro\-based instances include local storage, dependent on the instance type\. Local storage volumes are encrypted using a hardware module on the instance\. You can't request a `KmsKeyId` when using an instance type with local storage\. If any of the models that you specify in the `ProductionVariants` parameter use nitro\-based instances with local storage, do not specify a value for the `KmsKeyId` parameter\. If you specify a value for `KmsKeyId` when using any nitro\-based instances with local storage, the call to `CreateEndpointConfig` fails\.  
+For a list of instance types that support local instance storage, see [Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)\.  
+For more information about local instance storage encryption, see [SSD Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html)\.
+*Required*: No  
+*Type*: String  
+*Maximum*: `2048`  
+*Pattern*: `.*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ProductionVariants`  <a name="cfn-sagemaker-endpointconfig-productionvariants"></a>
+A list of `ProductionVariant` objects, one for each model that you want to host at this endpoint\.  
+*Required*: Yes  
+*Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
+*Maximum*: `10`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-endpointconfig-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
- *Required*: Yes  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A list of key\-value pairs to apply to this resource\.  
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what)\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-endpointconfig-returnvalues"></a>
+## Return values<a name="aws-resource-sagemaker-endpointconfig-return-values"></a>
 
-### Ref<a name="aws-resource-sagemaker-endpointconfig-ref"></a>
+### Ref<a name="aws-resource-sagemaker-endpointconfig-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::SageMaker::EndpointConfig` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:012345678901:endpoint-config/myendpointconfig`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the endpoint configuration, such as `arn:aws:sagemaker:us-west-2:01234567>8901:endpoint-config/myendpointconfig` 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-sagemaker-endpointconfig-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-sagemaker-endpointconfig-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`EndpointConfigName`  
-The name of the endpoint confugration, such as `MyEndpointConfiguration`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-## Examples<a name="aws-resource-sagemaker-endpointconfig-examples"></a>
+#### <a name="aws-resource-sagemaker-endpointconfig-return-values-fn--getatt-fn--getatt"></a>
 
-### SageMaker Endpoint Example<a name="aws-resource-sagemaker-endpointconfig-example1"></a>
+`EndpointConfigName`  <a name="EndpointConfigName-fn::getatt"></a>
+The name of the endpoint configuration, such as `MyEndpointConfiguration`\.
+
+## Examples<a name="aws-resource-sagemaker-endpointconfig--examples"></a>
+
+### SageMaker EndpointConfig Example<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Example"></a>
 
 The following example creates an endpoint configuration from a trained model, and then creates an endpoint\.
 
-#### JSON<a name="aws-resource-sagemaker-endpoint-example1.json"></a>
+#### JSON<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Example--json"></a>
 
 ```
 {
@@ -196,7 +224,7 @@ The following example creates an endpoint configuration from a trained model, an
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-endpoint-example1.yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-endpointconfig--examples--SageMaker_EndpointConfig_Example--yaml"></a>
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."

@@ -1,6 +1,6 @@
-# Amazon EMR Cluster InstanceFleetProvisioningSpecifications<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications"></a>
+# AWS::EMR::Cluster InstanceFleetProvisioningSpecifications<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications"></a>
 
-The `InstanceFleetProvisioningSpecifications` property specifies the launch specification for Spot instances in the fleet, which determines the defined duration and provisioning timeout behavior\. `InstanceFleetProvisioningSpecifications` is the property type for the `LaunchSpecifications` property of the [Amazon EMR Cluster InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md) property type\.
+`InstanceFleetProvisioningSpecification` is a subproperty of `InstanceFleetConfig`\. `InstanceFleetProvisioningSpecification` defines the launch specification for Spot instances in an instance fleet, which determines the defined duration and provisioning timeout behavior for Spot instances\.
 
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
@@ -13,21 +13,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : [*SpotProvisioningSpecification*](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)
+  "[OnDemandSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-ondemandspecification)" : OnDemandProvisioningSpecification,
+  "[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification)" : SpotProvisioningSpecification
 }
 ```
 
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications-syntax.yaml"></a>
 
 ```
-[SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification): 
-  [*SpotProvisioningSpecification*](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)
+  [OnDemandSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-ondemandspecification): 
+    OnDemandProvisioningSpecification
+  [SpotSpecification](#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification): 
+    SpotProvisioningSpecification
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications-properties"></a>
 
+`OnDemandSpecification`  <a name="cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-ondemandspecification"></a>
+ The launch specification for On\-Demand instances in the instance fleet, which determines the allocation strategy\.   
+The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\. On\-Demand instances allocation strategy is available in Amazon EMR version 5\.12\.1 and later\.
+*Required*: No  
+*Type*: [OnDemandProvisioningSpecification](aws-properties-elasticmapreduce-cluster-ondemandprovisioningspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SpotSpecification`  <a name="cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification"></a>
-The launch specification for Spot instances in the fleet, which determines the defined duration and provisioning timeout behavior\.  
-*Required*: Yes  
-*Type*: [Amazon EMR Cluster SpotProvisioningSpecification](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The launch specification for Spot instances in the fleet, which determines the defined duration, provisioning timeout behavior, and allocation strategy\.  
+*Required*: No  
+*Type*: [SpotProvisioningSpecification](aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

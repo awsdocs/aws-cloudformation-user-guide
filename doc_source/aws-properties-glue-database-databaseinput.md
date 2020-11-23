@@ -1,8 +1,6 @@
-# AWS Glue Database DatabaseInput<a name="aws-properties-glue-database-databaseinput"></a>
+# AWS::Glue::Database DatabaseInput<a name="aws-properties-glue-database-databaseinput"></a>
 
-<a name="aws-properties-glue-database-databaseinput-description"></a>The `DatabaseInput` property type specifies the metadata that is used to create or update an AWS Glue database\.
-
-<a name="aws-properties-glue-database-databaseinput-inheritance"></a> `DatabaseInput` is a property of the [AWS::Glue::Database](aws-resource-glue-database.md) resource\.
+The structure used to create or update a database\.
 
 ## Syntax<a name="aws-properties-glue-database-databaseinput-syntax"></a>
 
@@ -12,46 +10,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
   "[Description](#cfn-glue-database-databaseinput-description)" : String,
-  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : JSON object,
-  "[Name](#cfn-glue-database-databaseinput-name)" : String
+  "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
+  "[Name](#cfn-glue-database-databaseinput-name)" : String,
+  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json
 }
 ```
 
 ### YAML<a name="aws-properties-glue-database-databaseinput-syntax.yaml"></a>
 
 ```
-[LocationUri](#cfn-glue-database-databaseinput-locationuri): String
-[Description](#cfn-glue-database-databaseinput-description): String
-[Parameters](#cfn-glue-database-databaseinput-parameters): JSON object
-[Name](#cfn-glue-database-databaseinput-name): String
+  [Description](#cfn-glue-database-databaseinput-description): String
+  [LocationUri](#cfn-glue-database-databaseinput-locationuri): String
+  [Name](#cfn-glue-database-databaseinput-name): String
+  [Parameters](#cfn-glue-database-databaseinput-parameters): Json
 ```
 
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>
 
-For more information, see [DatabaseInput Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-DatabaseInput) in the *AWS Glue Developer Guide*\.
+`Description`  <a name="cfn-glue-database-databaseinput-description"></a>
+A description of the database\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-glue-database-databaseinput-locationuri"></a>
-The location of the database \(for example, an HDFS path\)\. It must match the URI address multi\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`Description`  <a name="cfn-glue-database-databaseinput-description"></a>
-The description of the database\. It must match the URI address multi\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`Parameters`  <a name="cfn-glue-database-databaseinput-parameters"></a>
-UTF\-8 string–to–UTF\-8 string key\-value pairs that specify the properties that are associated with the database\.  
- *Required*: No  
- *Type*: JSON object  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The location of the database \(for example, an HDFS path\)\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-database-databaseinput-name"></a>
-The name of the database\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The name of the database\. For Hive compatibility, this is folded to lowercase when it is stored\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Parameters`  <a name="cfn-glue-database-databaseinput-parameters"></a>
+These key\-value pairs define parameters and properties of the database\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,11 +1,9 @@
 # AWS::SES::ConfigurationSetEventDestination<a name="aws-resource-ses-configurationseteventdestination"></a>
 
-The `AWS::SES::ConfigurationSetEventDestination` resource specifies a configuration set event destination for Amazon SES\. For more information, see [CreateConfigurationSetEventDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*\. 
+Specifies a configuration set event destination\. An event destination is an AWS service that Amazon SES publishes email sending events to\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch or Amazon Kinesis Data Firehose\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
 
 **Note**  
-When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch or Amazon Kinesis Data Firehose\.
-
-An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information, see [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*\.
+You can't specify Amazon SNS event destinations in CloudFormation templates\.
 
 ## Syntax<a name="aws-resource-ses-configurationseteventdestination-syntax"></a>
 
@@ -17,40 +15,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SES::ConfigurationSetEventDestination",
   "Properties" : {
-    "[ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname)" : String,
-    "[EventDestination](#cfn-ses-configurationseteventdestination-eventdestination)" : [*EventDestination*](aws-properties-ses-configurationseteventdestination-eventdestination.md)
-  }
+      "[ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname)" : String,
+      "[EventDestination](#cfn-ses-configurationseteventdestination-eventdestination)" : EventDestination
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ses-configurationseteventdestination-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ConfigurationSetEventDestination"
-Properties:
+Type: AWS::SES::ConfigurationSetEventDestination
+Properties: 
   [ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname): String
-  [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination): [*EventDestination*](aws-properties-ses-configurationseteventdestination-eventdestination.md)
+  [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination): 
+    EventDestination
 ```
 
 ## Properties<a name="aws-resource-ses-configurationseteventdestination-properties"></a>
 
 `ConfigurationSetName`  <a name="cfn-ses-configurationseteventdestination-configurationsetname"></a>
-The name of the configuration set that the event destination should be associated with\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The name of the configuration set that contains the event destination that you want to update\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EventDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination"></a>
-The AWS service that email sending event information will be published to\.  
- *Required*: Yes  
- *Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The event destination object that you want to apply to the specified configuration set\.  
+*Required*: Yes  
+*Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Example<a name="aws-resource-ses-configurationseteventdestination-examples"></a>
+## Examples<a name="aws-resource-ses-configurationseteventdestination--examples"></a>
 
-### <a name="aws-resource-ses-configurationseteventdestination-example1"></a>
+Specifies an event destination for a configuration set\.
 
-#### JSON<a name="aws-resource-ses-configurationseteventdestination-example1.json"></a>
+### <a name="aws-resource-ses-configurationseteventdestination--examples--"></a>
+
+#### JSON<a name="aws-resource-ses-configurationseteventdestination--examples----json"></a>
 
 ```
 {
@@ -155,11 +156,11 @@ The AWS service that email sending event information will be published to\.
 }
 ```
 
-#### YAML<a name="aws-resource-ses-configurationseteventdestination-example1.yaml"></a>
+#### YAML<a name="aws-resource-ses-configurationseteventdestination--examples----yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ConfigurationSetEventDestination Sample Template'
+Description: AWS SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String
@@ -183,15 +184,13 @@ Parameters:
     Type: String
   DefaultDimensionValue2:
     Type: String
-
 Resources:
   ConfigSet:
-    Type: AWS::SES::ConfigurationSet
+    Type: 'AWS::SES::ConfigurationSet'
     Properties:
       Name: !Ref ConfigSetName
-
   CWEventDestination:
-    Type: AWS::SES::ConfigurationSetEventDestination
+    Type: 'AWS::SES::ConfigurationSetEventDestination'
     Properties:
       ConfigurationSetName: !Ref ConfigSet
       EventDestination:
@@ -210,7 +209,3 @@ Resources:
               DimensionValueSource: !Ref DimensionValueSource2
               DefaultDimensionValue: !Ref DefaultDimensionValue2
 ```
-
-## See Also<a name="aws-resource-ses-configurationseteventdestination-seealso"></a>
-+ [Using Amazon SES Configuration Sets](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html) in the *Amazon Simple Email Service Developer Guide*
-+ [CreateConfigurationSetEventDestination](https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateConfigurationSetEventDestination.html) in the *Amazon Simple Email Service API Reference*

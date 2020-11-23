@@ -1,8 +1,6 @@
-# AWS Billing and Cost Management Budget TimePeriod<a name="aws-properties-budgets-budget-timeperiod"></a>
+# AWS::Budgets::Budget TimePeriod<a name="aws-properties-budgets-budget-timeperiod"></a>
 
-<a name="aws-properties-budgets-budget-timeperiod-description"></a>The `TimePeriod` property type specifies the period of time covered by a Billing and Cost Management budget\.
-
-<a name="aws-properties-budgets-budget-timeperiod-inheritance"></a> `TimePeriod` is a property of the [AWS Billing and Cost Management Budget BudgetData](aws-properties-budgets-budget-budgetdata.md) property type\.
+The period of time that is covered by a budget\. The period has a start date and an end date\. The start date must come before the end date\. There are no restrictions on the end date\. 
 
 ## Syntax<a name="aws-properties-budgets-budget-timeperiod-syntax"></a>
 
@@ -12,33 +10,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Start](#cfn-budgets-budget-timeperiod-start)" : String,
-  "[End](#cfn-budgets-budget-timeperiod-end)" : String
+  "[End](#cfn-budgets-budget-timeperiod-end)" : String,
+  "[Start](#cfn-budgets-budget-timeperiod-start)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-budgets-budget-timeperiod-syntax.yaml"></a>
 
 ```
-[Start](#cfn-budgets-budget-timeperiod-start): String
-[End](#cfn-budgets-budget-timeperiod-end): String
+  [End](#cfn-budgets-budget-timeperiod-end): String
+  [Start](#cfn-budgets-budget-timeperiod-start): String
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-timeperiod-properties"></a>
 
-`Start`  <a name="cfn-budgets-budget-timeperiod-start"></a>
-The start date for a budget\. If you create your budget and don't specify a start date, AWS defaults to the start of your chosen time period \(i\.e\. DAILY, MONTHLY, QUARTERLY, ANNUALLY\)\. For example, if you create your budget on January 24th 2018, choose `DAILY`, and don't set a start date, AWS sets your start date to `01/24/18 00:00 UTC`\. If you choose `MONTHLY`, AWS sets your start date to `01/01/18 00:00 UTC`\. The defaults are the same for the AWS Billing and Cost Management console and the API\.  
-You can change your start date with the `UpdateBudget` API operation\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
-
 `End`  <a name="cfn-budgets-budget-timeperiod-end"></a>
-The end date for a budget\. If you don't specify an end date, AWS sets your end date to `06/15/2087 00:00 UTC`\. The defaults are the same for the AWS Billing and Cost Management console and the API\.  
-After the end date, AWS deletes the budget and all associated notifications and subscribers\.   
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The end date for a budget\. If you didn't specify an end date, AWS set your end date to `06/15/87 00:00 UTC`\. The defaults are the same for the AWS Billing and Cost Management console and the API\.  
+After the end date, AWS deletes the budget and all associated notifications and subscribers\. You can change your end date with the `UpdateBudget` operation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-timeperiod-seealso"></a>
-+ [TimePeriod](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Budget.html#awscostmanagement-Type-budgets_Budget-TimePeriod) in the [AWS Billing and Cost Management API Reference](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/Welcome.html)\. 
+`Start`  <a name="cfn-budgets-budget-timeperiod-start"></a>
+The start date for a budget\. If you created your budget and didn't specify a start date, the start date defaults to the start of the chosen time period \(MONTHLY, QUARTERLY, or ANNUALLY\)\. For example, if you create your budget on January 24, 2019, choose `MONTHLY`, and don't set a start date, the start date defaults to `01/01/19 00:00 UTC`\. The defaults are the same for the AWS Billing and Cost Management console and the API\.  
+You can change your start date with the `UpdateBudget` operation\.  
+Valid values depend on the value of `BudgetType`:  
++ If `BudgetType` is `COST` or `USAGE`: Valid values are `MONTHLY`, `QUARTERLY`, and `ANNUALLY`\.
++ If `BudgetType` is `RI_UTILIZATION` or `RI_COVERAGE`: Valid values are `DAILY`, `MONTHLY`, `QUARTERLY`, and `ANNUALLY`\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-budgets-budget-timeperiod--seealso"></a>
++  [TimePeriod](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_TimePeriod.html) in the *AWS Cost Explorer Service Cost Management APIs* 

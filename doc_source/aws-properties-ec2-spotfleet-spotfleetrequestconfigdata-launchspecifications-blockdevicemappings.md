@@ -1,48 +1,58 @@
-# Amazon Elastic Compute Cloud SpotFleet BlockDeviceMappings<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings"></a>
+# AWS::EC2::SpotFleet BlockDeviceMapping<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings"></a>
 
-`BlockDeviceMappings` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the block devices that are mapped to an instance\.
+Specifies a block device mapping\.
 
-## Syntax<a name="w4ab1c21c10d102d118c22b5"></a>
+You can specify `Ebs` or `VirtualName`, but not both\.
+
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-syntax.json"></a>
 
 ```
 {
-  "[DeviceName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-devicename)" : String,
-  "[Ebs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs)" : EBSBlockDevice,
-  "[NoDevice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-nodevice)" : Boolean,
-  "[VirtualName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-virtualname)" : String
+  "[DeviceName](#cfn-ec2-spotfleet-blockdevicemapping-devicename)" : String,
+  "[Ebs](#cfn-ec2-spotfleet-blockdevicemapping-ebs)" : EbsBlockDevice,
+  "[NoDevice](#cfn-ec2-spotfleet-blockdevicemapping-nodevice)" : String,
+  "[VirtualName](#cfn-ec2-spotfleet-blockdevicemapping-virtualname)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-syntax.yaml"></a>
 
 ```
-[DeviceName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-devicename): String
-[Ebs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs):
-  EBSBlockDevice
-[NoDevice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-nodevice): Boolean
-[VirtualName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-virtualname): String
+  [DeviceName](#cfn-ec2-spotfleet-blockdevicemapping-devicename): String
+  [Ebs](#cfn-ec2-spotfleet-blockdevicemapping-ebs): 
+    EbsBlockDevice
+  [NoDevice](#cfn-ec2-spotfleet-blockdevicemapping-nodevice): String
+  [VirtualName](#cfn-ec2-spotfleet-blockdevicemapping-virtualname): String
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c22b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-properties"></a>
 
-`DeviceName`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-devicename"></a>
-The name of the device within the EC2 instance, such as `/dev/dsh` or `xvdh`\.  
+`DeviceName`  <a name="cfn-ec2-spotfleet-blockdevicemapping-devicename"></a>
+The device name \(for example, `/dev/sdh` or `xvdh`\)\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Ebs`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs"></a>
-The Amazon Elastic Block Store \(Amazon EBS\) volume information\.  
-*Required*: Conditional You can specify either the `VirtualName` or `Ebs`, but not both\.  
-*Type*: [Amazon Elastic Compute Cloud SpotFleet Ebs](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.md)
+`Ebs`  <a name="cfn-ec2-spotfleet-blockdevicemapping-ebs"></a>
+Parameters used to automatically set up EBS volumes when the instance is launched\.  
+*Required*: Conditional  
+*Type*: [EbsBlockDevice](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`NoDevice`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-nodevice"></a>
-Suppresses the specified device that is included in the block device mapping of the Amazon Machine Image \(AMI\)\.  
+`NoDevice`  <a name="cfn-ec2-spotfleet-blockdevicemapping-nodevice"></a>
+Suppresses the specified device included in the block device mapping of the AMI\.  
 *Required*: No  
-*Type*: Boolean
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`VirtualName`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-virtualname"></a>
-The name of the virtual device\. The name must be in the form `ephemeralX` where *X* is a number equal to or greater than zero \(0\), for example, `ephemeral0`\.  
-*Required*: Conditional You can specify either the `VirtualName` or `Ebs`, but not both\.  
-*Type*: String
+`VirtualName`  <a name="cfn-ec2-spotfleet-blockdevicemapping-virtualname"></a>
+The virtual device name \(`ephemeral`N\)\. Instance store volumes are numbered starting from 0\. An instance type with 2 available instance store volumes can specify mappings for `ephemeral0` and `ephemeral1`\. The number of available instance store volumes depends on the instance type\. After you connect to the instance, you must mount the volume\.  
+NVMe instance store volumes are automatically enumerated and assigned a device name\. Including them in your block device mapping has no effect\.  
+Constraints: For M3 instances, you must specify instance store volumes in the block device mapping for the instance\. When you launch an M3 instance, we ignore any instance store volumes specified in the block device mapping for the AMI\.  
+*Required*: Conditional  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,4 +1,4 @@
-# Name Type<a name="aws-properties-name"></a>
+# Name type<a name="aws-properties-name"></a>
 
 For some resources, you can specify a custom name\. By default, AWS CloudFormation generates a unique physical ID to name a resource\. For example, AWS CloudFormation might name an Amazon S3 bucket with the following physical ID `stack123123123123-s3bucket-abcdefghijk1`\. With custom names, you can specify a name that's easier to read and identify, such as `production-app-logs` or `business-metrics`\.
 
@@ -57,36 +57,36 @@ myDynamoDBTable:
     TableName: "SampleTable"
 ```
 
-## Supported Resources<a name="w4ab1c21c10d219b9c13"></a>
+## Supported resources<a name="w7250ab1c33c10d276b9c13"></a>
 
 The following resource types support custom names:
-+ [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)
-+ [AWS::ApiGateway::Model](aws-resource-apigateway-model.md)
-+ [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)
-+ [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)
-+ [AWS::ElasticBeanstalk::Application](aws-properties-beanstalk.md)
-+ [AWS::ElasticBeanstalk::Environment](aws-properties-beanstalk-environment.md)
-+ [AWS::CodeDeploy::Application](aws-resource-codedeploy-application.md)
-+ [AWS::CodeDeploy::DeploymentConfig](aws-resource-codedeploy-deploymentconfig.md)
-+ [AWS::CodeDeploy::DeploymentGroup](aws-resource-codedeploy-deploymentgroup.md)
-+ [AWS::Config::ConfigRule](aws-resource-config-configrule.md)
-+ [AWS::Config::DeliveryChannel](aws-resource-config-deliverychannel.md)
-+ [AWS::Config::ConfigurationRecorder](aws-resource-config-configurationrecorder.md)
-+ [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)
-+ [AWS::ElasticLoadBalancingV2::LoadBalancer](aws-resource-elasticloadbalancingv2-loadbalancer.md)
-+ [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md)
-+ [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)
-+ [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)
-+ [AWS::ECR::Repository](aws-resource-ecr-repository.md)
-+ [AWS::ECS::Cluster](aws-resource-ecs-cluster.md)
-+ [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)
-+ [AWS::Events::Rule](aws-resource-events-rule.md)
-+ [AWS::IAM::Group](aws-properties-iam-group.md)
-+ [AWS::IAM::ManagedPolicy](aws-resource-iam-managedpolicy.md)
-+ [AWS::IAM::Role](aws-resource-iam-role.md)
-+ [AWS::IAM::User](aws-properties-iam-user.md)
-+ [AWS::Lambda::Function](aws-resource-lambda-function.md)
-+ [AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)
-+ [AWS::S3::Bucket](aws-properties-s3-bucket.md)
-+ [AWS::SNS::Topic](aws-properties-sns-topic.md)
-+ [AWS::SQS::Queue](aws-properties-sqs-queues.md)
++ [AWS::ApiGateway::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html)
++ [AWS::ApiGateway::Model](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html)
++ [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html)
++ [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)
++ [AWS::ElasticBeanstalk::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk.html)
++ [AWS::ElasticBeanstalk::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html)
++ [AWS::CodeDeploy::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html)
++ [AWS::CodeDeploy::DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html)
++ [AWS::CodeDeploy::DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
++ [AWS::Config::ConfigRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html)
++ [AWS::Config::DeliveryChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html)
++ [AWS::Config::ConfigurationRecorder](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html)
++ [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html)
++ [AWS::ElasticLoadBalancingV2::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html)
++ [AWS::ElasticLoadBalancingV2::TargetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html)
++ [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html)
++ [AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)
++ [AWS::ECR::Repository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
++ [AWS::ECS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html)
++ [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)
++ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)
++ [AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)
++ [AWS::IAM::ManagedPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
++ [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
++ [AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)
++ [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)
++ [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)
++ [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)
++ [AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)
++ [AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)

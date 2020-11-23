@@ -1,8 +1,8 @@
-# Amazon EC2 Template Snippets<a name="quickref-ec2"></a>
+# Amazon EC2 template snippets<a name="quickref-ec2"></a>
 
-## EC2 Block Device Mapping Examples<a name="scenario-ec2-bdm"></a>
+## EC2 block device mapping examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 Instance with Block Device Mapping<a name="w4ab1c17c23c39b3b2"></a>
+### EC2 instance with block device mapping<a name="w7250ab1c27c22c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 Instance with Ephemeral Drives<a name="w4ab1c17c23c39b3b4"></a>
+### EC2 instance with ephemeral drives<a name="w7250ab1c27c22c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -89,9 +89,9 @@ EC2Instance:
 	      VirtualName: ephemeral0
 ```
 
-## Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet<a name="scenario-ec2-eip"></a>
+## Assigning an Amazon EC2 elastic IP using AWS::EC2::EIP snippet<a name="scenario-ec2-eip"></a>
 
-This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](aws-properties-ec2-eip.md)\.
+This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html)\.
 
 ### JSON<a name="quickref-ec2-example-3.json"></a>
 
@@ -113,9 +113,9 @@ This example shows how to allocate an Amazon EC2 Elastic IP address and assign i
 4.     InstanceId: !Ref Logical name of an AWS::EC2::Instance resource
 ```
 
-## Assigning an Existing Elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation Snippet<a name="scenario-ec2-eip-association"></a>
+## Assigning an existing elastic IP to an amazon EC2 instance using AWS::EC2::EIPAssociation snippet<a name="scenario-ec2-eip-association"></a>
 
-This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](aws-properties-ec2-eip-association.md)\.
+This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html)\.
 
 ### JSON<a name="quickref-ec2-example-4.json"></a>
 
@@ -139,9 +139,9 @@ This example shows how to assign an existing Amazon EC2 Elastic IP address to an
 5.     EIP: existing Elastic IP Address
 ```
 
-## Assigning an Existing VPC Elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation Snippet<a name="scenario-ec2-eip-association-vpc"></a>
+## Assigning an existing VPC elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation snippet<a name="scenario-ec2-eip-association-vpc"></a>
 
-This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](aws-properties-ec2-eip-association.md)\.
+This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html)\.
 
 ### JSON<a name="quickref-ec2-example-5.json"></a>
 
@@ -165,9 +165,9 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 5.     AllocationId: Existing VPC Elastic IP allocation ID
 ```
 
-## Elastic Network Interface \(ENI\) Template Snippets<a name="cfn-template-snippets-eni"></a>
+## Elastic network interface \(ENI\) template snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w4ab1c17c23c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w7250ab1c27c22c39c13b3"></a>
 
 Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
 
@@ -346,7 +346,7 @@ Resources:
           service httpd start
 ```
 
-## Amazon EC2 Instance Resource<a name="scenario-ec2-instance"></a>
+## Amazon EC2 instance resource<a name="scenario-ec2-instance"></a>
 
 This snippet shows a simple AWS::EC2::Instance resource\.
 
@@ -372,7 +372,7 @@ This snippet shows a simple AWS::EC2::Instance resource\.
 5.     ImageId: ami-0ff8a91507f77f867
 ```
 
-## Amazon EC2 Instance with Volume, Tag, and UserData Properties<a name="scenario-ec2-instance-with-vol-and-tags"></a>
+## Amazon EC2 instance with Volume, Tag, and UserData properties<a name="scenario-ec2-instance-with-vol-and-tags"></a>
 
 This snippet shows an AWS::EC2::Instance resource with one Amazon EC2 volume, one tag, and a user data property\. An AWS::EC2::SecurityGroup resource, an AWS::SNS::Topic resource, and an AWS::EC2::Volume resource all must be defined in the same template\. Also, the reference to `KeyName` is a parameters that must be defined in the Parameters section of the template\.
 
@@ -440,7 +440,7 @@ This snippet shows an AWS::EC2::Instance resource with one Amazon EC2 volume, on
 21.         Value: MyTag
 ```
 
-## Amazon EC2 Instance Resource with an Amazon SimpleDB Domain<a name="scenario-ec2-with-sdb-domain"></a>
+## Amazon EC2 instance resource with an Amazon SimpleDB Domain<a name="scenario-ec2-with-sdb-domain"></a>
 
 This snippet shows an AWS::EC2::Instance resource with an Amazon SimpleDB domain specified in the UserData\.
 
@@ -478,7 +478,7 @@ This snippet shows an AWS::EC2::Instance resource with an Amazon SimpleDB domain
 8.     ImageId: ami-0ff8a91507f77f867
 ```
 
-## Amazon EC2 Security Group Resource with Two CIDR Range Ingress Rules<a name="scenario-ec2-security-group-two-ports"></a>
+## Amazon EC2 security group resource with two CIDR range ingress rules<a name="scenario-ec2-security-group-two-ports"></a>
 
 This snippet shows an AWS::EC2::SecurityGroup resource that describes two ingress rules giving access to a specified CIDR range for the TCP protocol on the specified ports\.
 
@@ -524,7 +524,7 @@ This snippet shows an AWS::EC2::SecurityGroup resource that describes two ingres
 13.       CidrIp: 192.168.1.1/32
 ```
 
-## Amazon EC2 Security Group Resource with Two Security Group Ingress Rules<a name="scenario-ec2-security-group-rule"></a>
+## Amazon EC2 security group resource with two security group ingress rules<a name="scenario-ec2-security-group-rule"></a>
 
 This snippet shows an AWS::EC2::SecurityGroup resource that describes two security group ingress rules\. The first ingress rule grants access to the existing security group myadminsecuritygroup, which is owned by the 1234\-5678\-9012 AWS account, for the TCP protocol on port 22\. The second ingress rule grants access to the security group mysecuritygroupcreatedincfn for TCP on port 80\. This ingress rule uses the Ref intrinsic function to refer to a security group \(whose logical name is mysecuritygroupcreatedincfn\) created in the same template\. You must declare a value for both the `SourceSecurityGroupName` and `SourceSecurityGroupOwnerId` properties\.
 
@@ -573,7 +573,7 @@ This snippet shows an AWS::EC2::SecurityGroup resource that describes two securi
 14.       SourceSecurityGroupName: !Ref mysecuritygroupcreatedincfn
 ```
 
-## Amazon EC2 Security Group Resource with LoadBalancer Ingress Rule<a name="scenario-ec2-security-group-elbingress"></a>
+## Amazon EC2 security group resource with LoadBalancer ingress rule<a name="scenario-ec2-security-group-elbingress"></a>
 
 This template shows an AWS::EC2::SecurityGroup resource that contains a security group ingress rule that grants access to the LoadBalancer myELB for TCP on port 80\. Note that the rule uses the `SourceSecurityGroup.OwnerAlias` and `SourceSecurityGroup.GroupName` properties of the myELB resource to specify the source security group of the LoadBalancer\.
 
@@ -605,20 +605,18 @@ This template shows an AWS::EC2::SecurityGroup resource that contains a security
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupOwnerId": {
                             "Fn::GetAtt": [
                                 "myELB",
-                                "SourceSecurityGroup",
-                                "OwnerAlias"
+                                "SourceSecurityGroup.OwnerAlias"
                             ]
                         },
                         "SourceSecurityGroupName": {
                             "Fn::GetAtt": [
                                 "myELB",
-                                "SourceSecurityGroup",
-                                "GroupName"
+                                "SourceSecurityGroup.GroupName"
                             ]
                         }
                     }
@@ -649,13 +647,13 @@ Resources:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupOwnerId: !GetAtt myELB.SourceSecurityGroup.OwnerAlias
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```
 
-## Using AWS::EC2::SecurityGroupIngress to Create Mutually Referencing Amazon EC2 Security Group Resources<a name="scenario-ec2-security-group-ingress"></a>
+## Using AWS::EC2::SecurityGroupIngress to create mutually referencing Amazon EC2 security group resources<a name="scenario-ec2-security-group-ingress"></a>
 
 This snippet shows two AWS::EC2::SecurityGroupIngress resources that add mutual ingress rules to the EC2 security groups SGroup1 and SGroup2\. The SGroup1Ingress resource enables ingress from SGroup2 through TCP/IP port 80 to SGroup1\. The SGroup2Ingress resource enables ingress from SGroup1 through TCP/IP port 80 to SGroup2\. 
 
@@ -728,7 +726,7 @@ If you are using an Amazon VPC, use the `AWS::EC2::SecurityGroup` resource and s
 24.     SourceSecurityGroupName: !Ref SGroup1
 ```
 
-## Amazon EC2 Volume Resource<a name="scenario-ec2-volume"></a>
+## Amazon EC2 volume resource<a name="scenario-ec2-volume"></a>
 
 This snippet shows a simple Amazon EC2 volume resource with a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this volume before deleting it during stack deletion\. Make sure you specify a value for `SnapShotId`, or a value for `Size`, but not both\. Remove the one you don't need\.
 
@@ -758,7 +756,7 @@ This snippet shows a simple Amazon EC2 volume resource with a DeletionPolicy att
 7.   DeletionPolicy: Snapshot
 ```
 
-## Amazon EC2 VolumeAttachment Resource<a name="scenario-ec2-volumeattachment"></a>
+## Amazon EC2 VolumeAttachment resource<a name="scenario-ec2-volumeattachment"></a>
 
 This snippet shows the following resources: an Amazon EC2 instance using an Amazon Linux AMI from the US\-East \(Northern Virginia\) Region, an EC2 security group that allows SSH access to IP addresses, a new Amazon EBS volume sized at 100 GB and in the same Availability Zone as the EC2 instance, and a volume attachment that attaches the new volume to the EC2 instance\. 
 
@@ -838,7 +836,7 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
 27.       Device: /dev/sdh
 ```
 
-## Amazon EC2 Instance in a Default VPC Security Group<a name="using-cfn-getatt-default-values"></a>
+## Amazon EC2 instance in a default VPC security group<a name="using-cfn-getatt-default-values"></a>
 
 Whenever you create a VPC, AWS automatically creates default resources for that VPC, such as a security group\. However, when you define a VPC in AWS CloudFormation templates, you don't yet have the physical IDs of those default resources\. To obtain the IDs, use the [`Fn::GetAtt`](intrinsic-function-reference-getatt.md) intrinsic function\. That way, you can use the default resources instead of creating new ones in your template\. For example, the following template snippet associates the default security group of the `myVPC` VPC with the `myInstance` Amazon EC2 instance\.
 
@@ -885,7 +883,7 @@ myInstance:
     SubnetId: !Ref mySubnet
 ```
 
-## Amazon EC2 Route with Egress\-Only Internet Gateway<a name="quickref-ec2-route-egressonlyinternetgateway"></a>
+## Amazon EC2 route with egress\-only Internet gateway<a name="quickref-ec2-route-egressonlyinternetgateway"></a>
 
 The following template sets up an egress\-only Internet gateway that's used with an EC2 route\.
 

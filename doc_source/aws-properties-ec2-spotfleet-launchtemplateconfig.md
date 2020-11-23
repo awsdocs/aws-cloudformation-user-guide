@@ -1,36 +1,39 @@
-# Amazon Elastic Compute Cloud SpotFleet LaunchTemplateConfig<a name="aws-properties-ec2-spotfleet-launchtemplateconfig"></a>
+# AWS::EC2::SpotFleet LaunchTemplateConfig<a name="aws-properties-ec2-spotfleet-launchtemplateconfig"></a>
 
-`LaunchTemplateConfig` is a property of the [Amazon EC2 SpotFleet SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md) property that describes a launch template and overrides\.
+Specifies a launch template and overrides\.
 
-## Syntax<a name="w4ab1c21c10d102d118c46b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-syntax.json"></a>
 
 ```
 {
-  "[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)" : [*LaunchTemplateSpecification*](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md),
-  "[Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides)" : [ [*LaunchTemplateOverrides*](aws-properties-ec2-spotfleet-launchtemplateoverrides.md), ... ]
+  "[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification)" : FleetLaunchTemplateSpecification,
+  "[Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides)" : [ LaunchTemplateOverrides, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-syntax.yaml"></a>
 
 ```
-[LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification): LaunchTemplateSpecification
-[Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides):
-  - [*LaunchTemplateOverrides*](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)
+  [LaunchTemplateSpecification](#cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification): 
+    FleetLaunchTemplateSpecification
+  [Overrides](#cfn-ec2-spotfleet-launchtemplateconfig-overrides): 
+    - LaunchTemplateOverrides
 ```
 
-## Properties<a name="w4ab1c21c10d102d118c46b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-launchtemplateconfig-properties"></a>
 
 `LaunchTemplateSpecification`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-launchtemplatespecification"></a>
 The launch template\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-overrides"></a>
 Any parameters that you specify override the same parameters in the launch template\.  
 *Required*: No  
 *Type*: List of [LaunchTemplateOverrides](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

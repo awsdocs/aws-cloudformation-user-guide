@@ -1,8 +1,8 @@
-# AWS AppSync GraphQLApi OpenId Connect Config<a name="aws-properties-appsync-graphqlapi-openidconnectconfig"></a>
+# AWS::AppSync::GraphQLApi OpenIDConnectConfig<a name="aws-properties-appsync-graphqlapi-openidconnectconfig"></a>
 
-<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-description"></a>The `OpenIDConnectConfig` property type specifies the optional authorization configuration for using an Open Id Connect compliant service with your GraphQL endpoint for an AWS AppSync GraphQL API\.
+The `OpenIDConnectConfig` property type specifies the optional authorization configuration for using an OpenID Connect compliant service with your GraphQL endpoint for an AWS AppSync GraphQL API\.
 
-<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-inheritance"></a> `OpenIDConnectConfig` is a property of the [AWS::AppSync::GraphQLApi](aws-resource-appsync-graphqlapi.md) property type\.
+ `OpenIDConnectConfig` is a property of the [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) property type\. 
 
 ## Syntax<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-syntax"></a>
 
@@ -12,47 +12,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Issuer](#cfn-appsync-graphqlapi-openidconnectconfig-issuer)" : String,
+  "[AuthTTL](#cfn-appsync-graphqlapi-openidconnectconfig-authttl)" : Double,
   "[ClientId](#cfn-appsync-graphqlapi-openidconnectconfig-clientid)" : String,
-  "[IatTTL](#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)" : Number,
-  "[AuthTTL](#cfn-appsync-graphqlapi-openidconnectconfig-authttl)" : Number
+  "[IatTTL](#cfn-appsync-graphqlapi-openidconnectconfig-iatttl)" : Double,
+  "[Issuer](#cfn-appsync-graphqlapi-openidconnectconfig-issuer)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-syntax.yaml"></a>
 
 ```
-[Issuer](#cfn-appsync-graphqlapi-openidconnectconfig-issuer): String
-[ClientId](#cfn-appsync-graphqlapi-openidconnectconfig-clientid): String
-[IatTTL](#cfn-appsync-graphqlapi-openidconnectconfig-iatttl): Number
-[AuthTTL](#cfn-appsync-graphqlapi-openidconnectconfig-authttl): Number
+  [AuthTTL](#cfn-appsync-graphqlapi-openidconnectconfig-authttl): Double
+  [ClientId](#cfn-appsync-graphqlapi-openidconnectconfig-clientid): String
+  [IatTTL](#cfn-appsync-graphqlapi-openidconnectconfig-iatttl): Double
+  [Issuer](#cfn-appsync-graphqlapi-openidconnectconfig-issuer): String
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-properties"></a>
 
-`Issuer`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-issuer"></a>
-The issuer for the open id connect configuration\. The issuer returned by discovery MUST exactly match the value of iss in the ID Token\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+`AuthTTL`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-authttl"></a>
+The number of milliseconds a token is valid after being authenticated\.  
+*Required*: No  
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientId`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-clientid"></a>
-The client identifier of the Relying party at the OpenID Provider\. This identifier is typically obtained when the Relying party is registered with the OpenID Provider\. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The client identifier of the Relying party at the OpenID identity provider\. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider\. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IatTTL`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-iatttl"></a>
 The number of milliseconds a token is valid after being issued to a user\.  
- *Required*: No  
- *Type*: Number  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`AuthTTL`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-authttl"></a>
-The number of milliseconds a token is valid after being authenticated\.  
- *Required*: No  
- *Type*: Number  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-seealso"></a>
-+ [ OpenIDConnectConfig](https://docs.aws.amazon.com/appsync/latest/APIReference/API_OpenIDConnectConfig.html) operation in the *AWS AppSync API Reference*
+`Issuer`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-issuer"></a>
+The issuer for the OpenID Connect configuration\. The issuer returned by discovery must exactly match the value of `iss` in the ID token\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

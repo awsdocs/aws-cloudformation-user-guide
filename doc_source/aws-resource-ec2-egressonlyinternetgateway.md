@@ -1,13 +1,6 @@
 # AWS::EC2::EgressOnlyInternetGateway<a name="aws-resource-ec2-egressonlyinternetgateway"></a>
 
-The `AWS::EC2::EgressOnlyInternetGateway` resource creates an egress\-only Internet gateway for your VPC \(over IPv6 only\)\. An egress\-only Internet gateway enables outbound communication over IPv6 from instances in your VPC to the Internet\. It also prevents hosts outside of your VPC from initiating an IPv6 connection with your instance\.
-
-**Topics**
-+ [Syntax](#aws-resource-ec2-egressonlyinternetgateway-syntax)
-+ [Properties](#aws-resource-ec2-egressonlyinternetgateway-properties)
-+ [Return Values](#w4ab1c21c10d102c27c11)
-+ [Example](#aws-resource-ec2-egressonlyinternetgateway-examples)
-+ [More Info](#w4ab1c21c10d102c27c15)
+\[IPv6 only\] Specifies an egress\-only internet gateway for your VPC\. An egress\-only internet gateway is used to enable outbound communication over IPv6 from instances in your VPC to the internet, and prevents hosts outside of your VPC from initiating an IPv6 connection with your instance\.
 
 ## Syntax<a name="aws-resource-ec2-egressonlyinternetgateway-syntax"></a>
 
@@ -17,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type": "AWS::EC2::EgressOnlyInternetGateway",
-  "Properties": {
-    "[VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid)": String
-  }
+  "Type" : "AWS::EC2::EgressOnlyInternetGateway",
+  "Properties" : {
+      "[VpcId](#cfn-ec2-egressonlyinternetgateway-vpcid)" : String
+    }
 }
 ```
 
@@ -35,49 +28,46 @@ Properties:
 ## Properties<a name="aws-resource-ec2-egressonlyinternetgateway-properties"></a>
 
 `VpcId`  <a name="cfn-ec2-egressonlyinternetgateway-vpcid"></a>
-The ID of the VPC for which to create the egress\-only Internet gateway\.  
+The ID of the VPC for which to create the egress\-only internet gateway\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w4ab1c21c10d102c27c11"></a>
+## Return values<a name="aws-resource-ec2-egressonlyinternetgateway-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d102c27c11b2"></a>
+### Ref<a name="aws-resource-ec2-egressonlyinternetgateway-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ID of the egress\-only Internet gateway \(the physical resource ID\)\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the egress\-only Internet gateway \(the physical resource ID\)\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="aws-resource-ec2-egressonlyinternetgateway-examples"></a>
+## Examples<a name="aws-resource-ec2-egressonlyinternetgateway--examples"></a>
 
-The following example creates an egress\-only Internet gateway for the specified VPC\.
+### <a name="aws-resource-ec2-egressonlyinternetgateway--examples--"></a>
 
-### JSON<a name="aws-resource-ec2-egressonlyinternetgateway-example.json"></a>
+#### YAML<a name="aws-resource-ec2-egressonlyinternetgateway--examples----yaml"></a>
+
+```
+myEgressOnlyInternetGateway: 
+    Type: AWS::EC2::EgressOnlyInternetGateway
+    Properties: 
+        VpcId: vpc-1a2b3c4d
+```
+
+### <a name="aws-resource-ec2-egressonlyinternetgateway--examples--"></a>
+
+#### JSON<a name="aws-resource-ec2-egressonlyinternetgateway--examples----json"></a>
 
 ```
 {
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Resources": {
-    "myEgressOnlyInternetGateway": {
-      "Type": "AWS::EC2::EgressOnlyInternetGateway",
-      "Properties": {
-        "VpcId": "vpc-1a2b3c4d"
-      }
+    "myEgressOnlyInternetGateway" : {
+        "Type" : "AWS::EC2::EgressOnlyInternetGateway",
+        "Properties" : {
+            "VpcId" : "vpc-1a2b3c4d"
+        }
     }
-  }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-egressonlyinternetgateway-example.yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  myEgressOnlyInternetGateway:
-    Type: AWS::EC2::EgressOnlyInternetGateway
-    Properties:
-      VpcId: vpc-1a2b3c4d
-```
-
-## More Info<a name="w4ab1c21c10d102c27c15"></a>
-+ [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com//AWSEC2/latest/APIReference/API_CreateEgressOnlyInternetGateway.html) in the *Amazon EC2 API Reference*\.
+## See also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
++  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
