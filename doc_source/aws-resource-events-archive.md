@@ -61,6 +61,8 @@ The ARN of the event source associated with the archive\.
 
 ### Ref<a name="aws-resource-events-archive-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the archive name\.
+
 ### Fn::GetAtt<a name="aws-resource-events-archive-return-values-fn--getatt"></a>
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
@@ -70,7 +72,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-events-archive-return-values-fn--getatt-fn--getatt"></a>
 
 `ArchiveName`  <a name="ArchiveName-fn::getatt"></a>
-The name of the archive\.
+The archive name\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the archive created\.

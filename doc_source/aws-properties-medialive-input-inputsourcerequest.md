@@ -1,6 +1,6 @@
 # AWS::MediaLive::Input InputSourceRequest<a name="aws-properties-medialive-input-inputsourcerequest"></a>
 
-Settings for an input that is a pull input\. This element belongs to CreateInput, UpdateInput, and Input\.
+Settings for for a PULL type input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputsourcerequest-syntax"></a>
 
@@ -33,7 +33,7 @@ The key used to extract the password from EC2 Parameter store\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-medialive-input-inputsourcerequest-url"></a>
-This represents the customer's source URL where stream is pulled from\.  
+This represents the customer's source URL where stream is pulled from\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

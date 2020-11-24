@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Scte20SourceSettings<a name="aws-properties-medialive-channel-scte20sourcesettings"></a>
 
-Specifies how MediaLive will extract the SCTE\-20 captions from the input\. This element belongs to CaptionSelectorSettings\.
+Scte20 Source Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-scte20sourcesettings-syntax"></a>
 

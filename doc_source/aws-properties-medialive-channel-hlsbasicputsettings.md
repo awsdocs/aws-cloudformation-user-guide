@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsBasicPutSettings<a name="aws-properties-medialive-channel-hlsbasicputsettings"></a>
 
-Configures the connection between MediaLive and the downstream system that is a server that supports HTTP basic PUT\. This element belongs to HlsCdnSettings\.
+Hls Basic Put Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsbasicputsettings-syntax"></a>
 

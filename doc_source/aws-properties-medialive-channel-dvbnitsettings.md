@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel DvbNitSettings<a name="aws-properties-medialive-channel-dvbnitsettings"></a>
 
-Configure the DVB network information table \(NIT\)\. This element belongs to M2tsSettings\.
+DVB Network Information Table \(NIT\)
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbnitsettings-syntax"></a>
 

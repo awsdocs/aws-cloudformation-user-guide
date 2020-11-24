@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel MsSmoothOutputSettings<a name="aws-properties-medialive-channel-mssmoothoutputsettings"></a>
 
-Configures one output in a Microsoft Smooth output group\. This element belongs to OutputSettings\.
+Ms Smooth Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-mssmoothoutputsettings-syntax"></a>
 

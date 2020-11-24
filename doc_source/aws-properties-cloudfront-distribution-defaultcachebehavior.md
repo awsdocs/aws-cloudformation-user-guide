@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid)" : String,
+  "[TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups)" : [ String, ... ],
   "[TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners)" : [ String, ... ],
   "[ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy)" : String
 }
@@ -50,6 +51,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn): String
   [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
+  [TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups): 
+    - String
   [TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners): 
     - String
   [ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy): String
@@ -155,9 +158,17 @@ The value of `ID` for the origin that you want CloudFront to route requests to w
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TrustedKeyGroups`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups"></a>
+A list of key groups that CloudFront can use to validate signed URLs or signed cookies\.  
+When a cache behavior contains trusted key groups, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior\. The URLs or cookies must be signed with a private key whose corresponding public key is in the key group\. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature\. For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TrustedSigners`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners"></a>
-Specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content\.  
-If you want to require signed URLs in requests for objects in the target origin, specify a list of AWS account IDs\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the * Amazon CloudFront Developer Guide*\.  
+We recommend using `TrustedKeyGroups` instead of `TrustedSigners`\.
+A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or signed cookies\.  
+When a cache behavior contains trusted signers, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior\. The URLs or cookies must be signed with the private key of a CloudFront key pair in a trusted signer’s AWS account\. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature\. For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

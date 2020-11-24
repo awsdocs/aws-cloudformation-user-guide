@@ -1,6 +1,6 @@
 # AWS::EC2::ClientVpnEndpoint ClientConnectOptions<a name="aws-properties-ec2-clientvpnendpoint-clientconnectoptions"></a>
 
-The options for managing connection authorization for new client connections\.
+Indicates whether client connect options are enabled\. The default is `false` \(not enabled\)\.
 
 ## Syntax<a name="aws-properties-ec2-clientvpnendpoint-clientconnectoptions-syntax"></a>
 

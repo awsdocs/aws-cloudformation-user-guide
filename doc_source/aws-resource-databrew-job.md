@@ -1,6 +1,6 @@
 # AWS::DataBrew::Job<a name="aws-resource-databrew-job"></a>
 
-Represents all of the attributes of a DataBrew job\.
+Creates a new DataBrew job\.
 
 ## Syntax<a name="aws-resource-databrew-job-syntax"></a>
 
@@ -172,6 +172,58 @@ The job type of the job, which must be one of the following:
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myDataset" }` 
+ `{ "Ref": "myJob" }` 
 
-For the AWS Glue DataBrew dataset `myDataset`, `Ref` returns the name of the dataset\.
+For an AWS Glue DataBrew job named `myJob`, `Ref` returns the name of the job\. 
+
+## Examples<a name="aws-resource-databrew-job--examples"></a>
+
+### Creating jobs<a name="aws-resource-databrew-job--examples--Creating_jobs"></a>
+
+The following examples create new DataBrew profile jobs\.
+
+#### YAML<a name="aws-resource-databrew-job--examples--Creating_jobs--yaml"></a>
+
+```
+Resources:
+  TestDataBrewJob:
+    Type: AWS::DataBrew::Job
+    Properties:
+      Type: PROFILE
+      Name: job-name
+      DatasetName: dataset-name
+      RoleArn: arn:aws:iam::12345678910:role/PassRoleAdmin
+      OutputLocation:
+        Bucket: !Join [ '', ['databrew-cfn-integration-tests-', !Ref 'AWS::Region', '-', !Ref 'AWS::AccountId' ] ]
+      Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
+```
+
+#### JSON<a name="aws-resource-databrew-job--examples--Creating_jobs--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This CloudFormation template creates a DataBrew Profile Job",
+    "Resources": {
+        "MyDataBrewProfileJob": {
+            "Type": "AWS::DataBrew::Job",
+            "Properties": {
+                "Type": "PROFILE",
+                "Name": "job-test",
+                "DatasetName": "dataset-test",
+                "RoleArn": "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+                "OutputLocation": {
+                    "Bucket": "test-output",
+                    "Key": "job-output.json"
+                },
+                "Tags": [
+                    {
+                        "Key": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+            }
+        }
+    }
+}
+```

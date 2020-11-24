@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel TeletextSourceSettings<a name="aws-properties-medialive-channel-teletextsourcesettings"></a>
 
-Specifies how MediaLive will extract the Teletext captions from the input\. This element belongs to CaptionSelectorSettings\.
+Teletext Source Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-teletextsourcesettings-syntax"></a>
 

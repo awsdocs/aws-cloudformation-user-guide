@@ -56,28 +56,25 @@ The class for this channel\. STANDARD for a channel with two pipelines or SINGLE
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Destinations`  <a name="cfn-medialive-channel-destinations"></a>
-An ID for this destination information\. Must be unique in the channel\. This ID associates this destination information with its output group\.  
-For most output groups, enter a value there, then enter the same value in the destinaton field in the output group\.  
-For an RTMP output group or Multiplex output group, enter a value here, then enter the same value in the destination field in the output \(not the output group\)\.  
-For a MediaPackage output group, this ID is not used to make this association\.  
+User\-specified id\. This is used in an output group or an output\.  
 *Required*: No  
 *Type*: List of [OutputDestination](aws-properties-medialive-channel-outputdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncoderSettings`  <a name="cfn-medialive-channel-encodersettings"></a>
-You must include this element once in the channel\. It contains information about all the output encodes \(video, audio, captions\), and about several channel\-wide fetures\.  
+Encoder Settings  
 *Required*: No  
 *Type*: [EncoderSettings](aws-properties-medialive-channel-encodersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputAttachments`  <a name="cfn-medialive-channel-inputattachments"></a>
-You must include this element\. It contains the list of inputs to attach to the channel\. The channel ingests and transcodes these inputs\.  
+List of input attachments for channel\.  
 *Required*: No  
 *Type*: List of [InputAttachment](aws-properties-medialive-channel-inputattachment.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputSpecification`  <a name="cfn-medialive-channel-inputspecification"></a>
-Include this element if you want to change the default values for the input specification\.  
+Specification of network and file inputs for this channel  
 *Required*: No  
 *Type*: [InputSpecification](aws-properties-medialive-channel-inputspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

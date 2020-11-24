@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AacSettings<a name="aws-properties-medialive-channel-aacsettings"></a>
 
-Configures the output audio encode to use the AC3 audio codec\. This element belongs to AudioCodecSettings\.
+Aac Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-aacsettings-syntax"></a>
 
@@ -51,7 +51,7 @@ Mono, Stereo, or 5\.1 channel layout\. Valid values depend on rate control mode 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputType`  <a name="cfn-medialive-channel-aacsettings-inputtype"></a>
-Always include this element\.  
+Set to "broadcasterMixedAd" when input contains pre\-mixed main audio \+ AD \(narration\) as a stereo pair\. The Audio Type field \(audioType\) will be set to 3, which signals to downstream systems that this stream contains "broadcaster mixed AD"\. Note that the input received by the encoder must contain pre\-mixed audio; the encoder does not perform the mixing\. The values in audioTypeControl and audioType \(in AudioDescription\) are ignored when set to broadcasterMixedAd\. Leave set to "normal" when input does not contain pre\-mixed audio \+ AD\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

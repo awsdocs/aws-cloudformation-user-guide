@@ -25,7 +25,7 @@ A root change set is the change set associated with the stack from which the who
 ## Working with change sets for nested stacks \(AWS CLI\)<a name="change-sets-for-nested-stacks-cli"></a>
 
 ### create\-change\-set<a name="working-with-change-sets-for-nested-stacks-cli"></a>
-+ [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) – Change sets for nested stacks is not enabled by default for the AWS CLI\. To create a change set for the entire stack hierarchy, specify the `–include-nested-stacks` parameter\. For more information, see [To create a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-create.md)\.
++ [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) – Change sets for nested stacks is not enabled by default for the AWS CLI\. To create a change set for the entire stack hierarchy, specify the `--include-nested-stacks` parameter\. For more information, see [To create a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-create.md)\.
 
 The following AWS CLI example is of a `create-change-set` input\.
 

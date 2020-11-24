@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-s3datasourceconfiguration-properties"></a>
 
 `AccessControlListConfiguration`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-accesscontrollistconfiguration"></a>
-Provides the path to the S3 bucket that contains the user context filtering files for the data source\.  
+Provides the path to the S3 bucket that contains the user context filtering files for the data source\. For the format of the file, see [Access control for S3 data sources](https://docs.aws.amazon.com/kendra/latest/dg/s3-acl.html)\.  
 *Required*: No  
 *Type*: [AccessControlListConfiguration](aws-properties-kendra-datasource-accesscontrollistconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

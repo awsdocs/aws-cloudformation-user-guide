@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EbsOptimized](#cfn-ec2-launchtemplate-launchtemplatedata-ebsoptimized)" : Boolean,
   "[ElasticGpuSpecifications](#cfn-ec2-launchtemplate-launchtemplatedata-elasticgpuspecifications)" : [ ElasticGpuSpecification, ... ],
   "[ElasticInferenceAccelerators](#cfn-ec2-launchtemplate-launchtemplatedata-elasticinferenceaccelerators)" : [ LaunchTemplateElasticInferenceAccelerator, ... ],
+  "[EnclaveOptions](#cfn-ec2-launchtemplate-launchtemplatedata-enclaveoptions)" : EnclaveOptions,
   "[HibernationOptions](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions)" : HibernationOptions,
   "[IamInstanceProfile](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile)" : IamInstanceProfile,
   "[ImageId](#cfn-ec2-launchtemplate-launchtemplatedata-imageid)" : String,
@@ -56,6 +57,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ElasticGpuSpecification
   [ElasticInferenceAccelerators](#cfn-ec2-launchtemplate-launchtemplatedata-elasticinferenceaccelerators): 
     - LaunchTemplateElasticInferenceAccelerator
+  [EnclaveOptions](#cfn-ec2-launchtemplate-launchtemplatedata-enclaveoptions): 
+    EnclaveOptions
   [HibernationOptions](#cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions): 
     HibernationOptions
   [IamInstanceProfile](#cfn-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile): 
@@ -135,6 +138,12 @@ An elastic GPU to associate with the instance\.
  The elastic inference accelerator for the instance\.   
 *Required*: No  
 *Type*: List of [LaunchTemplateElasticInferenceAccelerator](aws-properties-ec2-launchtemplate-launchtemplateelasticinferenceaccelerator.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnclaveOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-enclaveoptions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [EnclaveOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-enclaveoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HibernationOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-hibernationoptions"></a>

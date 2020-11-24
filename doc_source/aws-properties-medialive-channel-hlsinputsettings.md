@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsInputSettings<a name="aws-properties-medialive-channel-hlsinputsettings"></a>
 
-This element contains fields that configure the connection to the upstream system\. This element belongs to NetworkInputSettings\.
+Hls Input Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsinputsettings-syntax"></a>
 

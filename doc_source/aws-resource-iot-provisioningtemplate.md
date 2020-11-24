@@ -72,13 +72,13 @@ Metadata which can be used to manage the fleet provisioning template\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateBody`  <a name="cfn-iot-provisioningtemplate-templatebody"></a>
-The JSON formatted contents of the fleet provisioning template\.  
+The name of the fleet provisioning template\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateName`  <a name="cfn-iot-provisioningtemplate-templatename"></a>
-The JSON formatted contents of the fleet provisioning template\.  
+The name of the fleet provisioning template\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

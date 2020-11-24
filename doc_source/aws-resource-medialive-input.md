@@ -54,13 +54,13 @@ Properties:
 ## Properties<a name="aws-resource-medialive-input-properties"></a>
 
 `Destinations`  <a name="cfn-medialive-input-destinations"></a>
-Read\-only\. Specifies the URLs for a push input\. The input is pushing to these addresses in order to deliver to MediaLive\. You don't set these values\.  
+Destination settings for PUSH type inputs\.  
 *Required*: No  
 *Type*: List of [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputDevices`  <a name="cfn-medialive-input-inputdevices"></a>
-Include this element only for an INPUT\_DEVICE type of input\. Settings for the devices\.  
+Settings for the devices\.  
 *Required*: No  
 *Type*: List of [InputDeviceSettings](aws-properties-medialive-input-inputdevicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,13 +72,13 @@ A list of security groups referenced by IDs to attach to the input\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MediaConnectFlows`  <a name="cfn-medialive-input-mediaconnectflows"></a>
-Include this element only for a MEDIACONNECT type of input\. A list of the MediaConnect Flows that you want to use in this input\. You can specify as few as one Flow and presently, as many as two\. The only requirement is when you have more than one is that each Flow is in a separate Availability Zone as this ensures your EML input is redundant to AZ issues\.  
+A list of the MediaConnect Flows that you want to use in this input\. You can specify as few as one Flow and presently, as many as two\. The only requirement is when you have more than one is that each Flow is in a separate Availability Zone as this ensures your EML input is redundant to AZ issues\.   
 *Required*: No  
 *Type*: List of [MediaConnectFlowRequest](aws-properties-medialive-input-mediaconnectflowrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-medialive-input-name"></a>
-Name of the input\. Required\.  
+Name of the input\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,7 @@ The Amazon Resource Name \(ARN\) of the role this input assumes during and after
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-medialive-input-sources"></a>
-Include this element only if the input is a pull input\. Specifies the source URLs for the input\.  
+The source URLs for a PULL\-type input\. Every PULL type input needs exactly two source URLs for redundancy\. Only specify sources for PULL type Inputs\. Leave Destinations empty\.   
 *Required*: No  
 *Type*: List of [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,13 +102,13 @@ A collection of key\-value pairs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-medialive-input-type"></a>
-You must include this element\. It sets the type of the input, which then determines which other elements you must include in this CreateInput element\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Vpc`  <a name="cfn-medialive-input-vpc"></a>
-Include this element only for a VPC type of input\.  
+Settings for a private VPC Input\. When this property is specified, the input destination addresses will be created in a VPC rather than with public Internet addresses\. This property requires setting the roleArn property on Input creation\. Not compatible with the inputSecurityGroups property\.   
 *Required*: No  
 *Type*: [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

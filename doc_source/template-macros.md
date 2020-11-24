@@ -96,6 +96,11 @@ AWS CloudFormation expects the underlying function to return a response in the f
   The processed template content must be valid JSON, and its inclusion in the processed template must result in a valid template\.
 
   If your function doesn't actually change the template content that AWS CloudFormation passes to it, but you still need to include that content in the processed template, your function needs to return that template content to AWS CloudFormation in its response\.
++ **errorMessage**
+
+  The error message that explains why the transform failed\. CloudFormation displays this error message in the **Events** pane of the **Stack details** page for your stack\. 
+
+  For example, "Error creating change set: Transform *AWS account number*::*macro name* failed with: *error message string*"\.
 
 For information about additional considerations when creating macros, see [Considerations when creating AWS CloudFormation macro definitions](#template-macros-considerations)\.
 

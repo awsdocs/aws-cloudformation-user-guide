@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel StandardHlsSettings<a name="aws-properties-medialive-channel-standardhlssettings"></a>
 
-Configures the HLS output as a transport stream\. This element belongs to HlsSettings\.
+Standard Hls Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-standardhlssettings-syntax"></a>
 
@@ -32,7 +32,7 @@ List all the audio groups that are used with the video output stream\. Input all
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `M3u8Settings`  <a name="cfn-medialive-channel-standardhlssettings-m3u8settings"></a>
-You must include this element\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [M3u8Settings](aws-properties-medialive-channel-m3u8settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

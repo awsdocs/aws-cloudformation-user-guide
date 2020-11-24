@@ -258,7 +258,7 @@ Characters to remove from a step that applies one\-hot encoding or tokenization\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CollapseConsecutiveWhitespace`  <a name="cfn-databrew-recipe-recipeparameters-collapseconsecutivewhitespace"></a>
-If `true`, replaces two or more whitespace characters with exactly one whitespace character\.  
+Remove any non\-word non\-punctuation character\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -294,7 +294,7 @@ A list of words to ignore in a step that applies word tokenization\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomValue`  <a name="cfn-databrew-recipe-recipeparameters-customvalue"></a>
-One or more values that can be substituted or removed, depending on the context\.  
+A list of custom values to use in a step that requires that you provide a value to finish the operation\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -552,19 +552,19 @@ If `true`, removes all single quotes and double quotes\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveAllWhitespace`  <a name="cfn-databrew-recipe-recipeparameters-removeallwhitespace"></a>
-If `true`, removes all whitespace characters\.  
+If `true`, removes all whitespaces from the value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveCustomCharacters`  <a name="cfn-databrew-recipe-recipeparameters-removecustomcharacters"></a>
-If `true`, removes all characters specified by `CustomCharacters`\.  
+If `true`, removes all chraracters specified by `CustomCharacters`\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveCustomValue`  <a name="cfn-databrew-recipe-recipeparameters-removecustomvalue"></a>
-If `true`, removes all chraracters specified by `CustomValue`\.  
+If `true`, removes all chraracters specified by `CustomValue`\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -720,7 +720,7 @@ The index ID of a step\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StopWordsMode`  <a name="cfn-databrew-recipe-recipeparameters-stopwordsmode"></a>
-Indicates this operation uses stop words as part of word tokenization\.   
+Indicates this operation uses stop words as part of word tokenization\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel OutputDestinationSettings<a name="aws-properties-medialive-channel-outputdestinationsettings"></a>
 
-This element specifies the destination information for one output group, when the output group is not type MediaPackage or Multiplex\. Create an array of one OutputDestinationSettings if the output group is in a single\-pipeline channel\. Create an array of two OutputDestinationSettings if it's in a standard channel\. This element belongs to OutputDestination\.
+<a name="aws-properties-medialive-channel-outputdestinationsettings-description"></a>The `OutputDestinationSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
 
 ## Syntax<a name="aws-properties-medialive-channel-outputdestinationsettings-syntax"></a>
 
@@ -29,25 +29,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-outputdestinationsettings-properties"></a>
 
 `PasswordParam`  <a name="cfn-medialive-channel-outputdestinationsettings-passwordparam"></a>
-key used to extract the password from EC2 Parameter store\.  
+key used to extract the password from EC2 Parameter store  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamName`  <a name="cfn-medialive-channel-outputdestinationsettings-streamname"></a>
-Stream name for RTMP destinations \(URLs of type rtmp://\)\.  
+Stream name for RTMP destinations \(URLs of type rtmp://\)  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-medialive-channel-outputdestinationsettings-url"></a>
-A URL specifying a destination\.  
+A URL specifying a destination  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-medialive-channel-outputdestinationsettings-username"></a>
-username for destination\.  
+username for destination  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

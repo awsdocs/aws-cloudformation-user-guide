@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel GlobalConfiguration<a name="aws-properties-medialive-channel-globalconfiguration"></a>
 
-Configures features that apply to all the inputs, and configures the input loss behavior feature and output locking feature\. The element belongs to EncoderSettings\.
+Global Configuration
 
 ## Syntax<a name="aws-properties-medialive-channel-globalconfiguration-syntax"></a>
 
@@ -46,7 +46,7 @@ Indicates the action to take when the current input completes \(e\.g\. end\-of\-
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputLossBehavior`  <a name="cfn-medialive-channel-globalconfiguration-inputlossbehavior"></a>
-Include this element only if you want to change the default behavior of the input loss behavior feature\.  
+Settings for system actions when input is lost\.  
 *Required*: No  
 *Type*: [InputLossBehavior](aws-properties-medialive-channel-inputlossbehavior.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

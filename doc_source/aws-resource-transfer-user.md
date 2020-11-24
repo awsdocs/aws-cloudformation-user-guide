@@ -47,10 +47,8 @@ Properties:
 ## Properties<a name="aws-resource-transfer-user-properties"></a>
 
 `HomeDirectory`  <a name="cfn-transfer-user-homedirectory"></a>
-
 The landing directory \(folder\) for a user when they log in to the server using the client\.  
 A `HomeDirectory` example is `/bucket_name/home/mydirectory`\.  
-
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  

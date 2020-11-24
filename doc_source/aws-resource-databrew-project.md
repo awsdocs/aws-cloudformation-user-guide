@@ -1,6 +1,6 @@
 # AWS::DataBrew::Project<a name="aws-resource-databrew-project"></a>
 
-Represents all of the attributes of a DataBrew project\.
+Creates a new DataBrew project\.
 
 ## Syntax<a name="aws-resource-databrew-project-syntax"></a>
 
@@ -88,6 +88,58 @@ Metadata tags that have been applied to the project\.
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myDataset" }` 
+ `{ "Ref": "myProject" }` 
 
-For the AWS Glue DataBrew dataset `myDataset`, `Ref` returns the name of the dataset\.
+For an AWS Glue DataBrew project named `myProject`,  `Ref` returns the name of the project\. 
+
+## Examples<a name="aws-resource-databrew-project--examples"></a>
+
+### Creating projects<a name="aws-resource-databrew-project--examples--Creating_projects"></a>
+
+The following examples create new DataBrew projects\.
+
+#### YAML<a name="aws-resource-databrew-project--examples--Creating_projects--yaml"></a>
+
+```
+Resources:
+  TestDataBrewProject:
+    Type: AWS::DataBrew::Project
+    Properties:
+      Name: project-name
+      RecipeName: recipe-name
+      DatasetName: dataset-name
+      RoleArn: arn:aws:iam::12345678910:role/PassRoleAdmin
+      Sample:
+        Size: 500
+        Type: LAST_N
+```
+
+#### JSON<a name="aws-resource-databrew-project--examples--Creating_projects--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This CloudFormation template creates a DataBrew Project",
+    "Resources": {
+        "MyDataBrewProject": {
+            "Type": "AWS::DataBrew::Project",
+            "Properties": {
+                "Name": "test-project",
+                "RecipeName": "test-project-recipe",
+                "DatasetName": "test-dataset",
+                "RoleArn": "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+                "Sample": {
+                    "Size": 500,
+                    "Type": "LAST_N"
+                },
+                "Tags": [
+                    {
+                        "Key": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+            }
+        }
+    }
+}
+```

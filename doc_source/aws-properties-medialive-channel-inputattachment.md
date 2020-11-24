@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel InputAttachment<a name="aws-properties-medialive-channel-inputattachment"></a>
 
- Contains information to associate one input with this channel\. An array of these elements is in the top\-level of the channel\.
+<a name="aws-properties-medialive-channel-inputattachment-description"></a>The `InputAttachment` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
 
 ## Syntax<a name="aws-properties-medialive-channel-inputattachment-syntax"></a>
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-inputattachment-properties"></a>
 
 `AutomaticInputFailoverSettings`  <a name="cfn-medialive-channel-inputattachment-automaticinputfailoversettings"></a>
-Include this element in the InputAttachment only if you want to set up the input for automatic input failover\.  
+User\-specified settings for defining what the conditions are for declaring the input unhealthy and failing over to a different input\.  
 *Required*: No  
 *Type*: [AutomaticInputFailoverSettings](aws-properties-medialive-channel-automaticinputfailoversettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,13 +43,13 @@ User\-specified name for the attachment\. This is required if the user wants to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputId`  <a name="cfn-medialive-channel-inputattachment-inputid"></a>
-The ID of the input\.  
+The ID of the input  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InputSettings`  <a name="cfn-medialive-channel-inputattachment-inputsettings"></a>
-Include this element in order to identify the video, audio and captions to extract from the input, and to customize some of the handling of the input\.  
+Settings of an input \(caption selector, etc\.\)  
 *Required*: No  
 *Type*: [InputSettings](aws-properties-medialive-channel-inputsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

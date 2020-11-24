@@ -40,7 +40,7 @@ The Amazon S3 bucket event about which you want to publish messages to Amazon SQ
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queue`  <a name="cfn-s3-bucket-notificationconfig-queueconfig-queue"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type\.  
+The Amazon Resource Name \(ARN\) of the Amazon SQS queue to which Amazon S3 publishes a message when it detects events of the specified type\. FIFO queues are not allowed when enabling an SQS queue as the event notification destination\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

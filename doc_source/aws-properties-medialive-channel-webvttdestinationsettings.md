@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel WebvttDestinationSettings<a name="aws-properties-medialive-channel-webvttdestinationsettings"></a>
 
-Configures the output captions encode for the Web\-VTT format\. This element belongs to CaptionDestinationSettings \.
+Webvtt Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-webvttdestinationsettings-syntax"></a>
 

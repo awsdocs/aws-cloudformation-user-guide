@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AvailSettings<a name="aws-properties-medialive-channel-availsettings"></a>
 
-This element is part of the configuration for SCTE\-35 message processing in the channel\. In this element, include only one of the child elements\. This element belongs to AvailConfig\.
+Avail Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-availsettings-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-availsettings-properties"></a>
 
 `Scte35SpliceInsert`  <a name="cfn-medialive-channel-availsettings-scte35spliceinsert"></a>
-Include this element if the input uses splice inserts to indicate ad avails\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [Scte35SpliceInsert](aws-properties-medialive-channel-scte35spliceinsert.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scte35TimeSignalApos`  <a name="cfn-medialive-channel-availsettings-scte35timesignalapos"></a>
-Include this element if the inputs contain time signals of segmentation type 'placement opportunity'\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [Scte35TimeSignalApos](aws-properties-medialive-channel-scte35timesignalapos.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

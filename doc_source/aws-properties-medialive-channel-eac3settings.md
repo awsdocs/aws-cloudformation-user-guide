@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Eac3Settings<a name="aws-properties-medialive-channel-eac3settings"></a>
 
-Configures the output audio encode to use the EAC3 audio codec\. This element belongs to AudioCodecSettings\.
+Eac3 Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-eac3settings-syntax"></a>
 
@@ -109,7 +109,7 @@ Sets the profile for heavy Dolby dynamic range compression, ensures that the ins
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LfeControl`  <a name="cfn-medialive-channel-eac3settings-lfecontrol"></a>
-When encoding 3/2 audio, setting to lfe enables the LFE channel\.  
+When encoding 3/2 audio, setting to lfe enables the LFE channel  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

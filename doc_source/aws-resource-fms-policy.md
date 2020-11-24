@@ -81,8 +81,8 @@ Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\)
 You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
 You can specify account IDs, OUs, or a combination:   
 + Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
-+ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
-+ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify OUs by setting the key to `ORGUNIT`\. For example, the following is a valid map: `{“ORGUNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORGUNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,8 +98,8 @@ Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\)
 You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
 You can specify account IDs, OUs, or a combination:   
 + Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
-+ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
-+ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify OUs by setting the key to `ORGUNIT`\. For example, the following is a valid map: `{“ORGUNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORGUNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

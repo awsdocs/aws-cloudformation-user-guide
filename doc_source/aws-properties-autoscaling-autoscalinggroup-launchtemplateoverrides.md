@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[InstanceType](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype)" : String,
+  "[LaunchTemplateSpecification](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification)" : LaunchTemplateSpecification,
   "[WeightedCapacity](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity)" : String
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InstanceType](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-instancetype): String
+  [LaunchTemplateSpecification](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification): 
+    LaunchTemplateSpecification
   [WeightedCapacity](#cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity): String
 ```
 
@@ -32,6 +35,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The instance type, such as `m3.xlarge`\. You must use an instance type that is supported in your requested Region and Availability Zones\. For more information, see [Available instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes) in the *Amazon EC2 User Guide for Linux Instances\.*   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LaunchTemplateSpecification`  <a name="cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-launchtemplatespecification"></a>
+Provides the launch template to be used when launching the instance type\. For example, some instance types might require a launch template with a different AMI\. If not provided, Amazon EC2 Auto Scaling uses the launch template that's defined for your mixed instances policy\. For more information, see [Specifying a different launch template for an instance type](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-template-overrides.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+*Required*: No  
+*Type*: [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WeightedCapacity`  <a name="cfn-autoscaling-autoscalinggroup-launchtemplateoverrides-weightedcapacity"></a>

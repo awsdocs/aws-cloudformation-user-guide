@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel MediaPackageGroupSettings<a name="aws-properties-medialive-channel-mediapackagegroupsettings"></a>
 
-Identifies this output group as a MediaPackage output group, and configures all the parts of the output group except for its outputs\. This element belongs to OutputGroupSettings\.
+Media Package Group Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-mediapackagegroupsettings-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Hdr10Settings<a name="aws-properties-medialive-channel-hdr10settings"></a>
 
-Configures the output video with the HDR10 color space\. This element belongs to H265ColorSpaceSettings\.
+Hdr10 Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hdr10settings-syntax"></a>
 

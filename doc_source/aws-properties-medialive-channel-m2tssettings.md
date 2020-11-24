@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel M2tsSettings<a name="aws-properties-medialive-channel-m2tssettings"></a>
 
-Configures the MPEG2 TS container that holds the video, audio, captions and other streams\. This element is used by ArchiveContainerSettings and UdpContainerSettings\.
+M2ts Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-m2tssettings-syntax"></a>
 
@@ -172,7 +172,7 @@ The output bitrate of the transport stream in bits per second\. Setting to 0 let
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BufferModel`  <a name="cfn-medialive-channel-m2tssettings-buffermodel"></a>
-If set to multiplex, use multiplex buffer model for accurate interleaving\. Setting to bufferModel to none can lead to lower latency, but low\-memory devices may not be able to play back the stream without interruptions\.  
+Controls the timing accuracy for output network traffic\. Leave as MULTIPLEX to ensure accurate network packet timing\. Or set to NONE, which might result in lower latency but will result in more variability in output network packet timing\. This variability might cause interruptions, jitter, or bursty behavior in your playback or receiving devices\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

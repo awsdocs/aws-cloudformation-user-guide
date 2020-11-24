@@ -31,11 +31,11 @@ Specifies the container element for object ownership rules\.
 
 ## Examples<a name="aws-properties-s3-bucket-ownershipcontrols--examples"></a>
 
-### Object Ownership Examples<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_Ownership_Examples"></a>
+### Object ownership<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_ownership"></a>
 
 The following examples show object ownership set to `BucketOwnerPreferred`\.
 
-#### JSON<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_Ownership_Examples--json"></a>
+#### JSON<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_ownership--json"></a>
 
 ```
 {
@@ -57,7 +57,7 @@ The following examples show object ownership set to `BucketOwnerPreferred`\.
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_Ownership_Examples--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_ownership--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'

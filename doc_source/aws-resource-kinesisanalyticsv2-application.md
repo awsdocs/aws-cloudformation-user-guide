@@ -66,7 +66,7 @@ The name of the application\.
 The runtime environment for the application \(`SQL-1.0`, `FLINK-1_6`, or `FLINK-1_8`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>

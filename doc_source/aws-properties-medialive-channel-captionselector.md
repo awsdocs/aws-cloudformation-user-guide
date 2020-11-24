@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel CaptionSelector<a name="aws-properties-medialive-channel-captionselector"></a>
 
-This element identifies one captions asset to extract from the input\. This element belongs to InputSettings\.
+Output groups for this Live Event\. Output groups contain information about where streams should be distributed\.
 
 ## Syntax<a name="aws-properties-medialive-channel-captionselector-syntax"></a>
 
@@ -40,7 +40,7 @@ Name identifier for a caption selector\. This name is used to associate this cap
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectorSettings`  <a name="cfn-medialive-channel-captionselector-selectorsettings"></a>
-You must include this element, in order to specify the captions asset to extract from the input\.  
+Caption selector settings\.  
 *Required*: No  
 *Type*: [CaptionSelectorSettings](aws-properties-medialive-channel-captionselectorsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsAkamaiSettings<a name="aws-properties-medialive-channel-hlsakamaisettings"></a>
 
-Configures the connection between MediaLive and the downstream Akamai server\. This element belongs to HlsCdnSettings\.
+Hls Akamai Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsakamaisettings-syntax"></a>
 

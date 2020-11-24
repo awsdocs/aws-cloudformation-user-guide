@@ -126,7 +126,7 @@ Describes the cross\-origin access configuration for objects in an Amazon S3 buc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntelligentTieringConfigurations`  <a name="cfn-s3-bucket-intelligenttieringconfigurations"></a>
-Configuration that defines how Amazon S3 handles Intelligent\-Tiering storage\.  
+Defines how Amazon S3 handles Intelligent\-Tiering storage\.  
 *Required*: No  
 *Type*: List of [IntelligentTieringConfiguration](aws-properties-s3-bucket-intelligenttieringconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -287,11 +287,11 @@ Resources:
       BucketName: DOC-EXAMPLE-BUCKET
 ```
 
-### Associate a Replication Configuration IAM Role with an S3 Bucket<a name="aws-properties-s3-bucket--examples--Associate_a_Replication_Configuration_IAM_Role_with_an_S3_Bucket"></a>
+### Associate a replication configuration IAM role with an S3 bucket<a name="aws-properties-s3-bucket--examples--Associate_a_replication_configuration_IAM_role_with_an_S3_bucket"></a>
 
 The following example creates an S3 bucket and grants it permission to write to a replication bucket by using an AWS Identity and Access Management \(IAM\) role\. To avoid a circular dependency, the role's policy is declared as a separate resource\. The bucket depends on the `WorkItemBucketBackupRole` role\. If the policy is included in the role, the role also depends on the bucket\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Associate_a_Replication_Configuration_IAM_Role_with_an_S3_Bucket--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Associate_a_replication_configuration_IAM_role_with_an_S3_bucket--json"></a>
 
 ```
 {
@@ -457,7 +457,7 @@ The following example creates an S3 bucket and grants it permission to write to 
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Associate_a_Replication_Configuration_IAM_Role_with_an_S3_Bucket--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Associate_a_replication_configuration_IAM_role_with_an_S3_bucket--yaml"></a>
 
 ```
 Resources:
@@ -541,13 +541,13 @@ Resources:
         - Ref: WorkItemBucketBackupRole
 ```
 
-### Configure a Static Website with a Routing Rule<a name="aws-properties-s3-bucket--examples--Configure_a_Static_Website_with_a_Routing_Rule"></a>
+### Configure a static website with a routing rule<a name="aws-properties-s3-bucket--examples--Configure_a_static_website_with_a_routing_rule"></a>
 
 In this example, `AWS::S3::Bucket's Fn::GetAtt` values are used to provide outputs\. If an HTTP 404 error occurs, the routing rule redirects requests to an EC2 instance and inserts the object key prefix `report-404/` in the redirect\. For example, if you request a page called `ExamplePage.html` and it results in an HTTP 404 error, the request is routed to a page called `report-404/ExamplePage.html` on the specified instance\. For all other HTTP error codes, `error.html` is returned\. 
 
 This example also specifies a metrics configuration called `EntireBucket` that enables CloudWatch request metrics at the bucket level\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Configure_a_Static_Website_with_a_Routing_Rule--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Configure_a_static_website_with_a_routing_rule--json"></a>
 
 ```
 {
@@ -613,7 +613,7 @@ This example also specifies a metrics configuration called `EntireBucket` that e
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Configure_a_Static_Website_with_a_Routing_Rule--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Configure_a_static_website_with_a_routing_rule--yaml"></a>
 
 ```
 Resources:
@@ -653,11 +653,11 @@ Outputs:
     Description: Name of S3 bucket to hold website content
 ```
 
-### Enable Cross\-Origin Resource Sharing<a name="aws-properties-s3-bucket--examples--Enable_Cross-Origin_Resource_Sharing"></a>
+### Enable cross\-origin resource sharing<a name="aws-properties-s3-bucket--examples--Enable_cross-origin_resource_sharing"></a>
 
 The following example template shows a public S3 bucket with two cross\-origin resource sharing rules\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Enable_Cross-Origin_Resource_Sharing--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Enable_cross-origin_resource_sharing--json"></a>
 
 ```
 {
@@ -720,7 +720,7 @@ The following example template shows a public S3 bucket with two cross\-origin r
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Enable_Cross-Origin_Resource_Sharing--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Enable_cross-origin_resource_sharing--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -761,11 +761,11 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with CORS enabled.
 ```
 
-### Manage the Lifecycle for Amazon S3 Objects<a name="aws-properties-s3-bucket--examples--Manage_the_Lifecycle_for_Amazon_S3_Objects"></a>
+### Manage the lifecycle for S3 objects<a name="aws-properties-s3-bucket--examples--Manage_the_lifecycle_for_S3_objects"></a>
 
 The following example template shows an S3 bucket with a lifecycle configuration rule\. The rule applies to all objects with the `glacier` key prefix\. The objects are transitioned to Glacier after one day, and deleted after one year\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Manage_the_Lifecycle_for_Amazon_S3_Objects--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Manage_the_lifecycle_for_S3_objects--json"></a>
 
 ```
 {
@@ -805,7 +805,7 @@ The following example template shows an S3 bucket with a lifecycle configuration
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Manage_the_Lifecycle_for_Amazon_S3_Objects--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Manage_the_lifecycle_for_S3_objects--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -830,11 +830,11 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.
 ```
 
-### Log Access Requests for a Specific S3 Bucket<a name="aws-properties-s3-bucket--examples--Log_Access_Requests_for_a_Specific_S3_Bucket"></a>
+### Log access requests for a specific S3 bucket<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket"></a>
 
 The following example template creates two S3 buckets\. The `LoggingBucket` bucket store the logs from the `S3Bucket` bucket\. To receive logs from the `S3Bucket` bucket, the logging bucket requires log delivery write permissions\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Log_Access_Requests_for_a_Specific_S3_Bucket--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket--json"></a>
 
 ```
 {
@@ -870,7 +870,7 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Log_Access_Requests_for_a_Specific_S3_Bucket--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -894,11 +894,11 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with a logging configuration.
 ```
 
-### Receive S3 Bucket Notifications to an SNS Topic<a name="aws-properties-s3-bucket--examples--Receive_S3_Bucket_Notifications_to_an_SNS_Topic"></a>
+### Receive S3 bucket notifications to an SNS topic<a name="aws-properties-s3-bucket--examples--Receive_S3_bucket_notifications_to_an_SNS_topic"></a>
 
 The following example template shows an Amazon S3 bucket with a notification configuration that sends an event to the specified SNS topic when S3 has lost all replicas of an object\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Receive_S3_Bucket_Notifications_to_an_SNS_Topic--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Receive_S3_bucket_notifications_to_an_SNS_topic--json"></a>
 
 ```
 {
@@ -930,7 +930,7 @@ The following example template shows an Amazon S3 bucket with a notification con
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Receive_S3_Bucket_Notifications_to_an_SNS_Topic--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Receive_S3_bucket_notifications_to_an_SNS_topic--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -950,11 +950,11 @@ Outputs:
     Description: Name of the sample Amazon S3 bucket with a notification configuration.
 ```
 
-### Replicate Objects and Store Them in Another S3 Bucket<a name="aws-properties-s3-bucket--examples--Replicate_Objects_and_Store_Them_in_Another_S3_Bucket"></a>
+### Replicate objects and store them in another S3 bucket<a name="aws-properties-s3-bucket--examples--Replicate_objects_and_store_them_in_another_S3_bucket"></a>
 
 The following example includes two replication rules\. Amazon S3 replicates objects with the `MyPrefix` or `MyOtherPrefix` prefixes and stores them in the `my-replication-bucket` bucket, which must be in a different AWS Region than the `S3Bucket` bucket\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Replicate_Objects_and_Store_Them_in_Another_S3_Bucket--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Replicate_objects_and_store_them_in_another_S3_bucket--json"></a>
 
 ```
 {
@@ -990,7 +990,7 @@ The following example includes two replication rules\. Amazon S3 replicates obje
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Replicate_Objects_and_Store_Them_in_Another_S3_Bucket--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Replicate_objects_and_store_them_in_another_S3_bucket--yaml"></a>
 
 ```
 S3Bucket:
@@ -1013,11 +1013,11 @@ S3Bucket:
             Bucket: 'arn:aws:s3:::my-replication-bucket'
 ```
 
-### Specify Analytics and Inventory Configurations for an Amazon S3 Bucket<a name="aws-properties-s3-bucket--examples--Specify_Analytics_and_Inventory_Configurations_for_an_Amazon_S3_Bucket"></a>
+### Specify analytics and inventory configurations for an S3 bucket<a name="aws-properties-s3-bucket--examples--Specify_analytics_and_inventory_configurations_for_an_S3_bucket"></a>
 
 The following example specifies analytics and inventory results to be generated for an S3 bucket, including the format of the results and the bucket to which they are published\. The inventory list is enabled to generate weekly, and only includes the current version of each object\.
 
-#### JSON<a name="aws-properties-s3-bucket--examples--Specify_Analytics_and_Inventory_Configurations_for_an_Amazon_S3_Bucket--json"></a>
+#### JSON<a name="aws-properties-s3-bucket--examples--Specify_analytics_and_inventory_configurations_for_an_S3_bucket--json"></a>
 
 ```
 {
@@ -1082,7 +1082,7 @@ The following example specifies analytics and inventory results to be generated 
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket--examples--Specify_Analytics_and_Inventory_Configurations_for_an_Amazon_S3_Bucket--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket--examples--Specify_analytics_and_inventory_configurations_for_an_S3_bucket--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -1120,59 +1120,6 @@ Resources:
           IncludedObjectVersions: Current
           Prefix: InventoryConfigurationPrefix
           ScheduleFrequency: Weekly
-```
-
-### Create a Bucket with Default Encryption Enabled<a name="aws-properties-s3-bucket--examples--Create_a_Bucket_with_Default_Encryption_Enabled"></a>
-
-The following example creates a bucket with server\-side bucket encryption configured\. This example uses KMS\-managed keys\. You can use S3\-managed keys instead by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property\.
-
-#### JSON<a name="aws-properties-s3-bucket--examples--Create_a_Bucket_with_Default_Encryption_Enabled--json"></a>
-
-```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "S3 bucket with default encryption",
-  "Resources": {
-    "EncryptedS3Bucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "BucketName": {
-          "Fn::Sub": "encryptedbucket-${AWS::Region}-${AWS::AccountId}"
-        },
-        "BucketEncryption": {
-          "ServerSideEncryptionConfiguration": [
-            {
-              "ServerSideEncryptionByDefault": {
-                "SSEAlgorithm": "aws:kms",
-                "KMSMasterKeyID": "KMS-KEY-ARN"
-              }
-            }
-          ]
-        }
-      },
-      "DeletionPolicy": "Delete"
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-properties-s3-bucket--examples--Create_a_Bucket_with_Default_Encryption_Enabled--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: S3 bucket with default encryption
-Resources:
-  EncryptedS3Bucket:
-    Type: 'AWS::S3::Bucket'
-    Properties:
-      BucketName:
-        'Fn::Sub': 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
-      BucketEncryption:
-        ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: 'aws:kms'
-              KMSMasterKeyID: KMS-KEY-ARN
-    DeletionPolicy: Delete
 ```
 
 ## See also<a name="aws-properties-s3-bucket--seealso"></a>

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Scte27DestinationSettings<a name="aws-properties-medialive-channel-scte27destinationsettings"></a>
 
-Configures the output captions encode for the SCTE\-27 format\. This element belongs to CaptionDestinationSettings \.
+Scte27 Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-scte27destinationsettings-syntax"></a>
 

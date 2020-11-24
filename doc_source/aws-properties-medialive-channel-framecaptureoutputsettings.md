@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel FrameCaptureOutputSettings<a name="aws-properties-medialive-channel-framecaptureoutputsettings"></a>
 
-Configures the single output in a FrameCapture output group\. This element belongs to OutputSettings\.
+Frame Capture Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-framecaptureoutputsettings-syntax"></a>
 

@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-rds-optiongroup-optionconfigurations-properties"></a>
 
 `DBSecurityGroupMemberships`  <a name="cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships"></a>
-A list of DBSecurityGroupMemebrship name strings used for this option\.  
+A list of DBSecurityGroupMembership name strings used for this option\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

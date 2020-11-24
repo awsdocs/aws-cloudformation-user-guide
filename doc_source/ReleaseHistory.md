@@ -4,6 +4,94 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New resource](AWS_Lambda.md) | The following resource was added: AWS::Lambda::CodeSigningConfig\. 
+
+ [AWS::Lambda::CodeSigningConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html)   
+Use the `CodeSigningConfig` resource to specify code\-signing capability to your Lambda functions\.  | November 23, 2020 | 
+| [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
+
+ [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
+Use the `CustomHeaders` property to declare custom headers for each HTTP request made to your Amplify Apps\.  | November 19, 2020 | 
+| [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::LaunchTemplate and AWS::EC2::ClientVpnEndpoint\. 
+
+ [AWS::EC2::ClientVpnEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)   
+Use the `ClientConnectOptions` property to indicate whether client connect options are used for Client VPN\. 
+
+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
+Use the `AssociateCarrierIpAddress` property to indicates whether to associate a Carrier IP address with eth0 for a new network interface\. 
+
+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
+Use the `EnclaveOptions` property to indicate whether the instance is enabled for AWS Nitro Enclaves\. 
+
+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
+Use the `NetworkCardIndex` property to specify the network card index\.  | November 19, 2020 | 
+| [Updated resource](AWS_ElastiCache.md) | The following resource was updated: AWS::ElastiCache::GlobalReplicationGroup\. 
+
+ [AWS::ElastiCache::GlobalReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)   
+Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.   | November 19, 2020 | 
+| [Updated resource](AWS_Events.md) | The following resource was upded: AWS::Events::EventBusPolicy\. 
+
+ [AWS::Events::EventBusPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)   
+Added the `Statement` property\. Use the `Statement` property to add a statement to the policy attached to an event bus\.  | November 19, 2020 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+In the [WindowsConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html) property type, use the `Aliases` property to associate up to 50 DNS aliases with a file system\.  | November 19, 2020 | 
+| [Updated resource](AWS_KMS.md) | The following resource was updated: AWS::KMS::Key\. 
+
+ [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
+Added support for asymmetric CMKs, including the `KeySpec` property and the SIGN\_VERIFY value for the `KeyUsage` property\.  | November 19, 2020 | 
+| [Update resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
+
+ [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
+In the [CacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html) and [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) property types, use the `TrustedKeyGroups` property to specify a list of the key groups that CloudFront can use to verify signed URLs or signed cookies\.  
+For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  | November 19, 2020 | 
+| [New resources](AWS_CloudFront.md) | The following resources were added: AWS::CloudFront::KeyGroup and AWS::CloudFront::PublicKey\. 
+
+ [AWS::CloudFront::KeyGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html)   
+Use the `AWS::CloudFront::KeyGroup` resource to create a key group in Amazon CloudFront to use with CloudFront signed URLs and signed cookies\.  
+For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\. 
+
+ [AWS::CloudFront::PublicKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html)   
+Use the `AWS::CloudFront::PublicKey` resource to create a public key in Amazon CloudFront to use with CloudFront signed URLs and signed cookies, or with field\-level encryption\.  
+For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) or [Using field\-level encryption to help protect sensitive data](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html) in the *Amazon CloudFront Developer Guide*\.  | November 19, 2020 | 
+| [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::Registry 
+
+ [AWS::Glue::Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html)   
+Use the `AWS::Glue::Registry` resource to manage registries in the AWS Glue Schema Registry\.  | November 19, 2020 | 
+| [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::Schema 
+
+ [AWS::Glue::Schema](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html)   
+Use the `AWS::Glue::Schema` resource to manage schemas in the AWS Glue Schema Registry\.  | November 19, 2020 | 
+| [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::SchemaVersion 
+
+ [AWS::Glue::SchemaVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html)   
+Use the `AWS::Glue::SchemaVersion` resource to manage schema versions in the AWS Glue Schema Registry\.  | November 19, 2020 | 
+| [New resource](AWS_Glue.md) | The following resource was added: AWS::Glue::SchemaVersionMetadata 
+
+ [AWS::Glue::SchemaVersionMetadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html)   
+Use the `AWS::Glue::SchemaVersionMetadata` resource to manage schema version metadata in the AWS Glue Schema Registry\.  | November 19, 2020 | 
+| [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::TopicRuleDestination 
+
+ [AWS::IoT::TopicRuleDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)   
+Use the `AWS::IoT::TopicRuleDestination` to specify a topic rule destination\.  | November 19, 2020 | 
+| [New resource](AWS_NetworkFirewall.md) | The following resources were added: AWS::NetworkFirewall::Firewall, AWS::NetworkFirewall::FirewallPolicy, AWS::NetworkFirewall::LoggingConfiguration, and AWS::NetworkFirewall::RuleGroup 
+
+ [AWS::NetworkFirewall::Firewall](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html)   
+Use the `AWS::NetworkFirewall::Firewall` resource to specify stateful, managed, network firewall and intrusion detection and prevention for your VPCs in Amazon VPC\.  
+
+ [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
+Use the `AWS::NetworkFirewall::FirewallPolicy` resource to specify the stateless and stateful network traffic filtering behavior for your `AWS::NetworkFirewall::Firewall`\.  
+
+ [AWS::NetworkFirewall::LoggingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html)   
+Use the `AWS::NetworkFirewall::LoggingConfiguration` resource to specify the destinations and logging options for an `AWS::NetworkFirewall::Firewall`\.  
+
+ [AWS::NetworkFirewall::RuleGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html)   
+Use the `AWS::NetworkFirewall::RuleGroup` resource to specify a reusable collection of stateless or stateful network traffic filtering rules for use in your `AWS::NetworkFirewall::FirewallPolicy`\.   | November 19, 2020 | 
+| [New resource](AWS_S3.md) | The following resource was added: AWS::S3::StorageLens 
+
+ [S3 Storage Lens](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html)   
+Use the `AWS::S3::StorageLens` resource to create a S3 Storage Lens configuration in the *Amazon Simple Storage Service*\.  | November 19, 2020 | 
 | [Change sets for nested stacks](#ReleaseHistory) | With *change sets for nested stacks* you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you’ve confirmed that all the changes are as intended\. For more information, see [Change sets for nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/change-sets-for-nested-stacks.html)\. | November 18, 2020 | 
 | [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::Route and AWS::EC2::VPCEndpointService\. 
 
@@ -66,7 +154,7 @@ Use the `CarrierGatewayId` property to create a route to a carrier gateway\.  | 
 Use the `Queues` property to specify the Amazon MQ queue to stream to a Lambda function\. Use the `Source access configuration` property to specify the Secrets Manager secret that stores your MQ broker credentials\.  | November 5, 2020 | 
 | [New resource](AWS_Events.md) | The following new resource was added: AWS::Events::Archive\. 
 
- [AWS::Events::Archive](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+ [AWS::Events::Archive](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html)   
 Use the `Archive` resource to create an EventBridge archive to store events in\.  | November 5, 2020 | 
 | [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::DomainConfiguration\. 
 
@@ -174,7 +262,7 @@ Use the `FifoTopic` property to create a FIFO topic\.  | October 22, 2020 |
 | [Updated resource](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server\. 
 
  [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
-In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityPolicy` property to specify the name of the security policy to attach to the server\.  | October 22, 2020 | 
+In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityGroupIds` property to specify a list of security groups IDs that are available to attach to your server's endpoint\.  | October 22, 2020 | 
 | [New resources](AWS_MediaPackage.md) | The following resources were added: AWS::MediaPackage::Asset, AWS::MediaPackage::Channel, , AWS::MediaPackage::OriginEndpoint, AWS::MediaPackage::PackagingConfiguration, and AWS::MediaPackage::PackagingGroup\. 
 
  [AWS::MediaPackage::Asset\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)   
@@ -441,7 +529,7 @@ Use the `BackupPolicy` property to turn automatic backups on or off for your Ama
 | [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
 
 [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
-In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicy` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
+In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicyType` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
 | [Updated resource](AWS_SageMaker.md) | The following resource was updated: EndpointConfig 
 
  [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)   

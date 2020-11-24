@@ -70,6 +70,50 @@ Metadata tags that have been applied to the schedule\.
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myDataset" }` 
+ `{ "Ref": "mySchedule" }` 
 
-For the AWS Glue DataBrew dataset `myDataset`, `Ref` returns the name of the dataset\.
+For an AWS Glue DataBrew schedule named `mySchedule`,  `Ref` returns the name of the schedule\. 
+
+## Examples<a name="aws-resource-databrew-schedule--examples"></a>
+
+### Creating schedules<a name="aws-resource-databrew-schedule--examples--Creating_schedules"></a>
+
+The following examples create new DataBrew schedules\.
+
+#### YAML<a name="aws-resource-databrew-schedule--examples--Creating_schedules--yaml"></a>
+
+```
+Resources:
+  TestDataBrewSchedule:
+    Type: AWS::DataBrew::Schedule
+    Properties:
+      JobNames: ["job-name"]
+      Name: schedule-name
+      CronExpression: "cron(0 0/1 ? * * *)"
+      Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
+```
+
+#### JSON<a name="aws-resource-databrew-schedule--examples--Creating_schedules--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This CloudFormation template creates a DataBrew Schedule",
+    "Resources": {
+        "MyDataBrewSchedule": {
+            "Type": "AWS::DataBrew::Schedule",
+            "Properties": {
+                "JobNames": ["job-test"],
+                "Name": "cf-test-schedule1",
+                "CronExpression": "cron(0 0/1 ? * * *)"
+            },
+            "Tags": [
+                    {
+                        "Key": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+        }
+    }
+}
+```

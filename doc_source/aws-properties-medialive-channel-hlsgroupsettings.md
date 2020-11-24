@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsGroupSettings<a name="aws-properties-medialive-channel-hlsgroupsettings"></a>
 
-Identifies this output group as an HLS output group, and configures all the parts of the output group except for its outputs\. This element belongs to OutputGroupSettings\.
+Hls Group Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsgroupsettings-syntax"></a>
 
@@ -136,7 +136,7 @@ Optional\. One value per output group\. Complete this field only if you are comp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptionLanguageMappings`  <a name="cfn-medialive-channel-hlsgroupsettings-captionlanguagemappings"></a>
-Include this element if you want to assign language codes to the four channels in embedded captions\. Include one element for each channel\.  
+Mapping of up to 4 caption channels to caption languages\. Is only meaningful if captionLanguageSetting is set to "insert"\.  
 *Required*: No  
 *Type*: List of [CaptionLanguageMapping](aws-properties-medialive-channel-captionlanguagemapping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -184,25 +184,25 @@ Encrypts the segments with the given encryption scheme\. Exclude this parameter 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsCdnSettings`  <a name="cfn-medialive-channel-hlsgroupsettings-hlscdnsettings"></a>
-You must include this element\. It configures the connection to the downstream system\.  
+Parameters that control interactions with the CDN\.  
 *Required*: No  
 *Type*: [HlsCdnSettings](aws-properties-medialive-channel-hlscdnsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsId3SegmentTagging`  <a name="cfn-medialive-channel-hlsgroupsettings-hlsid3segmenttagging"></a>
-State of HLS ID3 Segment Tagging\.  
+State of HLS ID3 Segment Tagging  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IFrameOnlyPlaylists`  <a name="cfn-medialive-channel-hlsgroupsettings-iframeonlyplaylists"></a>
-DISABLED: Do not create an I\-frame\-only manifest, but do create the master and media manifests \(according to the Output Selection field\)\. STANDARD: Create an I\-frame\-only manifest for each output that contains video, as well as the other manifests \(according to the Output Selection field\)\. The I\-frame manifest contains a \#EXT\-X\-I\-FRAMES\-ONLY tag to indicate it is I\-frame only, and one or more \#EXT\-X\-BYTERANGE entries identifying the I\-frame position\. For example, \#EXT\-X\-BYTERANGE:160364@1461888"\.  
+DISABLED: Do not create an I\-frame\-only manifest, but do create the master and media manifests \(according to the Output Selection field\)\. STANDARD: Create an I\-frame\-only manifest for each output that contains video, as well as the other manifests \(according to the Output Selection field\)\. The I\-frame manifest contains a \#EXT\-X\-I\-FRAMES\-ONLY tag to indicate it is I\-frame only, and one or more \#EXT\-X\-BYTERANGE entries identifying the I\-frame position\. For example, \#EXT\-X\-BYTERANGE:160364@1461888"  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexNSegments`  <a name="cfn-medialive-channel-hlsgroupsettings-indexnsegments"></a>
-Applies only if Mode field is LIVE\. Specifies the maximum number of segments in the media manifest file\. After this maximum, older segments are removed from the media manifest\. This number must be less than or equal to the Keep Segments field\.  
+Applies only if Mode field is LIVE\. Specifies the maximum number of segments in the media manifest file\. After this maximum, older segments are removed from the media manifest\. This number must be smaller than the number in the Keep Segments field\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -226,7 +226,7 @@ For use with encryptionType\. The IV \(Initialization Vector\) is a 128\-bit num
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeepSegments`  <a name="cfn-medialive-channel-hlsgroupsettings-keepsegments"></a>
-Applies only if Mode field is LIVE\. Specifies the number of media segments \(\.ts files\) to retain in the destination directory\.  
+Applies only if Mode field is LIVE\. Specifies the number of media segments to retain in the destination directory\. This number should be bigger than indexNSegments \(Num segments\)\. We recommend \(value = \(2 x indexNsegments\) \+ 1\)\. If this "keep segments" number is too low, the following might happen: the player is still reading a media manifest file that lists this segment, but that segment has been removed from the destination directory \(as directed by indexNSegments\)\. This situation would result in a 404 HTTP error on the player\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -244,7 +244,7 @@ Either a single positive integer version value or a slash delimited list of vers
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyProviderSettings`  <a name="cfn-medialive-channel-hlsgroupsettings-keyprovidersettings"></a>
-Include this element only if you want to use a static key to encrypt the HLS output\.  
+The key provider settings\.  
 *Required*: No  
 *Type*: [KeyProviderSettings](aws-properties-medialive-channel-keyprovidersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

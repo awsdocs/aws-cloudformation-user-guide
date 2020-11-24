@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsOutputSettings<a name="aws-properties-medialive-channel-hlsoutputsettings"></a>
 
-Configures one output in an HLS output group\. This element belongs to OutputSettings\.
+Hls Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsoutputsettings-syntax"></a>
 
@@ -36,7 +36,7 @@ Only applicable when this output is referencing an H\.265 video description\. Sp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsSettings`  <a name="cfn-medialive-channel-hlsoutputsettings-hlssettings"></a>
-This element configures the stream or container in the HLS output\.  
+Settings regarding the underlying stream\. These settings are different for audio\-only outputs\.  
 *Required*: No  
 *Type*: [HlsSettings](aws-properties-medialive-channel-hlssettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

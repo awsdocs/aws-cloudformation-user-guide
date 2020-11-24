@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel DvbSubDestinationSettings<a name="aws-properties-medialive-channel-dvbsubdestinationsettings"></a>
 
-Configures the output captions encode for the DVB\-Sub format\. This element belongs to CaptionDestinationSettings \.
+Dvb Sub Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbsubdestinationsettings-syntax"></a>
 

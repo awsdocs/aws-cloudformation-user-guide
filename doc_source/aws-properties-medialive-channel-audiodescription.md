@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AudioDescription<a name="aws-properties-medialive-channel-audiodescription"></a>
 
-The configuration information for an individual output audio encode\. To associate this AudioDescription with its Output, you enter the same value in the name field of the AudioDescription and the AudioDescriptionNames field of the Output\. This element belongs to EncoderSettings\.
+Audio Description
 
 ## Syntax<a name="aws-properties-medialive-channel-audiodescription-syntax"></a>
 
@@ -44,13 +44,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audiodescription-properties"></a>
 
 `AudioNormalizationSettings`  <a name="cfn-medialive-channel-audiodescription-audionormalizationsettings"></a>
-Include this element only if you want to implement audio normalization\.  
+Advanced audio normalization settings\.  
 *Required*: No  
 *Type*: [AudioNormalizationSettings](aws-properties-medialive-channel-audionormalizationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioSelectorName`  <a name="cfn-medialive-channel-audiodescription-audioselectorname"></a>
-Identifies the input audio that is the source for this output audio encode\. The input audio is one of the AudioSelectors in the channel\. In this audioSelectorName field, enter the value from the name field of that AudioSelector\.  
+The name of the AudioSelector used as the source for this AudioDescription\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,7 +68,7 @@ Determines how audio type is determined\. followInput: If the input contains an 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodecSettings`  <a name="cfn-medialive-channel-audiodescription-codecsettings"></a>
-Include this element once in each AudioDescription in the channel\. This element configures one output audio encode\.  
+Audio codec settings\.  
 *Required*: No  
 *Type*: [AudioCodecSettings](aws-properties-medialive-channel-audiocodecsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,13 +86,13 @@ Choosing followInput will cause the ISO 639 language code of the output to follo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-medialive-channel-audiodescription-name"></a>
-A name for this AudioDescription\. Must be unique in the channel\. MediaLive uses this name to associate the AudioDescription with the output group it belongs to: you enter the same value in this field and in the AudioDescriptionNames field of the output in the appropriate output group\.  
+The name of this AudioDescription\. Outputs will use this name to uniquely identify this AudioDescription\. Description names should be unique within this Live Event\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemixSettings`  <a name="cfn-medialive-channel-audiodescription-remixsettings"></a>
-Include this element if you want to take the source audio and remix it in the output\.  
+Settings that control how input audio channels are remixed into the output audio channels\.  
 *Required*: No  
 *Type*: [RemixSettings](aws-properties-medialive-channel-remixsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

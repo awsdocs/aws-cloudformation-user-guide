@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel M3u8Settings<a name="aws-properties-medialive-channel-m3u8settings"></a>
 
-Configures the HLS output as an M3U8transport stream\. This element belongs to StandardHlsSettings\.
+Settings information for the \.m3u8 container
 
 ## Syntax<a name="aws-properties-medialive-channel-m3u8settings-syntax"></a>
 

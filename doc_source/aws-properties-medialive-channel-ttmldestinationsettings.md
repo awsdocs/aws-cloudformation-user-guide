@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel TtmlDestinationSettings<a name="aws-properties-medialive-channel-ttmldestinationsettings"></a>
 
-Configures the output captions encode for the TTML format\. This element belongs to CaptionDestinationSettings \.
+Ttml Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-ttmldestinationsettings-syntax"></a>
 

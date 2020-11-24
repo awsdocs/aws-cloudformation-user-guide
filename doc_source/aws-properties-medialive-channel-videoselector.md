@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel VideoSelector<a name="aws-properties-medialive-channel-videoselector"></a>
 
-This element specifies the video asset to extract from the input and configures the optional color space feature\. This element belongs to InputSettings\.
+Specifies a particular video stream within an input source\. An input may have only a single video selector\.
 
 ## Syntax<a name="aws-properties-medialive-channel-videoselector-syntax"></a>
 
@@ -40,7 +40,7 @@ Applies only if colorSpace is a value other than follow\. This field controls ho
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectorSettings`  <a name="cfn-medialive-channel-videoselector-selectorsettings"></a>
-Include this element in the VideoSelector if the input contains more than one video asset\.  
+The video selector settings\.  
 *Required*: No  
 *Type*: [VideoSelectorSettings](aws-properties-medialive-channel-videoselectorsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

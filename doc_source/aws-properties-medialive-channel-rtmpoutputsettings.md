@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel RtmpOutputSettings<a name="aws-properties-medialive-channel-rtmpoutputsettings"></a>
 
-Configures the single output in an RTMP output group\. This element belongs to OutputSettings\.
+Rtmp Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-rtmpoutputsettings-syntax"></a>
 

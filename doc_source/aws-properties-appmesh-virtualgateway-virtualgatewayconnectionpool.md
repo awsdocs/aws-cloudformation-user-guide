@@ -14,10 +14,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[GRPC](#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc)" : VirtualGatewayGrpcConnectionPool,
+  "[HTTP](#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http)" : VirtualGatewayHttpConnectionPool,
+  "[HTTP2](#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2)" : VirtualGatewayHttp2ConnectionPool
 }
 ```
 
 ### YAML<a name="aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool-syntax.yaml"></a>
 
 ```
+  [GRPC](#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc): 
+    VirtualGatewayGrpcConnectionPool
+  [HTTP](#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http): 
+    VirtualGatewayHttpConnectionPool
+  [HTTP2](#cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2): 
+    VirtualGatewayHttp2ConnectionPool
 ```
+
+## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool-properties"></a>
+
+`GRPC`  <a name="cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-grpc"></a>
+An object that represents a type of connection pool\.   
+*Required*: No  
+*Type*: [VirtualGatewayGrpcConnectionPool](aws-properties-appmesh-virtualgateway-virtualgatewaygrpcconnectionpool.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HTTP`  <a name="cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http"></a>
+An object that represents a type of connection pool\.  
+*Required*: No  
+*Type*: [VirtualGatewayHttpConnectionPool](aws-properties-appmesh-virtualgateway-virtualgatewayhttpconnectionpool.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HTTP2`  <a name="cfn-appmesh-virtualgateway-virtualgatewayconnectionpool-http2"></a>
+An object that represents a type of connection pool\.  
+*Required*: No  
+*Type*: [VirtualGatewayHttp2ConnectionPool](aws-properties-appmesh-virtualgateway-virtualgatewayhttp2connectionpool.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

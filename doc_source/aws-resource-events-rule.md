@@ -54,7 +54,7 @@ The description of the rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventBusName`  <a name="cfn-events-rule-eventbusname"></a>
-The event bus to associate with this rule\. If you omit this, the default event bus is used\.  
+The event bus name or ARN to associate with this rule\. If you omit this, the default event bus is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

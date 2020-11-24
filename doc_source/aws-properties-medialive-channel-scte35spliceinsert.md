@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Scte35SpliceInsert<a name="aws-properties-medialive-channel-scte35spliceinsert"></a>
 
-Configures the handling of splice inserts that are in the inputs\. This element belongs to AvailSettings\.
+Scte35 Splice Insert
 
 ## Syntax<a name="aws-properties-medialive-channel-scte35spliceinsert-syntax"></a>
 
@@ -33,13 +33,13 @@ When specified, this offset \(in milliseconds\) is added to the input Ad Avail P
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoRegionalBlackoutFlag`  <a name="cfn-medialive-channel-scte35spliceinsert-noregionalblackoutflag"></a>
-When set to ignore, Segment Descriptors with noRegionalBlackoutFlag set to 0 will no longer trigger blackouts or Ad Avail slates\.  
+When set to ignore, Segment Descriptors with noRegionalBlackoutFlag set to 0 will no longer trigger blackouts or Ad Avail slates  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebDeliveryAllowedFlag`  <a name="cfn-medialive-channel-scte35spliceinsert-webdeliveryallowedflag"></a>
-When set to ignore, Segment Descriptors with webDeliveryAllowedFlag set to 0 will no longer trigger blackouts or Ad Avail slates\.  
+When set to ignore, Segment Descriptors with webDeliveryAllowedFlag set to 0 will no longer trigger blackouts or Ad Avail slates  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel DvbSdtSettings<a name="aws-properties-medialive-channel-dvbsdtsettings"></a>
 
-Configure the DVB service description table \(SDT\)\. This element belongs to M2tsSettings\.
+DVB Service Description Table \(SDT\)
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbsdtsettings-syntax"></a>
 

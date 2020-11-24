@@ -1,6 +1,6 @@
 # AWS::DataBrew::Recipe<a name="aws-resource-databrew-recipe"></a>
 
-Creates a new DataBrew recipe\.
+Creates a new DataBrew transformation recipe\.
 
 ## Syntax<a name="aws-resource-databrew-recipe-syntax"></a>
 
@@ -75,7 +75,7 @@ Metadata tags that have been applied to the recipe\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-databrew-recipe-version"></a>
-The identifier for a particular version of the recipe\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,6 +86,83 @@ The identifier for a particular version of the recipe\.
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
- `{ "Ref": "myDataset" }` 
+ `{ "Ref": "myRecipe" }` 
 
-For the AWS Glue DataBrew dataset `myDataset`, `Ref` returns the name of the dataset\.
+For an AWS Glue DataBrew recipe named `myRecipe`, `Ref` returns the name of the recipe\. 
+
+## Examples<a name="aws-resource-databrew-recipe--examples"></a>
+
+### Creating recipes<a name="aws-resource-databrew-recipe--examples--Creating_recipes"></a>
+
+The following examples create new DataBrew recipes\.
+
+#### YAML<a name="aws-resource-databrew-recipe--examples--Creating_recipes--yaml"></a>
+
+```
+Resources:
+  TestDataBrewRecipe:
+    Type: AWS::DataBrew::Recipe
+    Properties:
+      Name: recipe-name
+      Description: This is the recipe description.
+      Steps:
+      - Action:
+          Operation: EXTRACT_PATTERN
+          Parameters:
+            SourceColumn: Consulate
+            Pattern: A
+            TargetColumn: extract_pattern
+        ConditionExpressions:
+        - Condition : LESS_THAN_EQUAL
+          Value: 5
+          TargetColumn: Target
+      Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
+```
+
+#### JSON<a name="aws-resource-databrew-recipe--examples--Creating_recipes--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This CloudFormation template creates a DataBrew Recipe",
+    "Resources": {
+        "MyDataBrewRecipe": {
+            "Type": "AWS::DataBrew::Recipe",
+            "Properties": {
+              "Name": "na-recipe-cf-test",
+              "Description": "This is the recipe description.",
+              "Steps":[
+                {
+                  "Action":{
+                    "Operation":"EXTRACT_PATTERN",
+                    "Parameters":{
+                      "SourceColumn": "Consulate",
+                      "Pattern": "A",
+                      "TargetColumn": "extract_pattern"
+                  }
+                },
+                  "ConditionExpressions":[
+                    {
+                      "Condition": "LESS_THAN",
+                      "ConditionValue": "2",
+                      "TargetColumn": "target"
+                    },
+                    {
+                      "Condition": "GREATER_THAN",
+                      "Value": "0",
+                      "TargetColumn": "target"
+                    }
+                  ]
+                }
+              ],
+              "Tags": [
+                    {
+                        "Key": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+            }
+        }
+    }
+}
+```

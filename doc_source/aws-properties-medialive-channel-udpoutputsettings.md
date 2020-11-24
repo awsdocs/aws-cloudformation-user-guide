@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel UdpOutputSettings<a name="aws-properties-medialive-channel-udpoutputsettings"></a>
 
-Configures one output in a UDP output group\. This element belongs to OutputSettings\.
+Udp Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-udpoutputsettings-syntax"></a>
 
@@ -38,7 +38,7 @@ UDP output buffering in milliseconds\. Larger values increase latency through th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContainerSettings`  <a name="cfn-medialive-channel-udpoutputsettings-containersettings"></a>
-Configures the container in the output group\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [UdpContainerSettings](aws-properties-medialive-channel-udpcontainersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,7 +50,7 @@ Destination address and port number for RTP or UDP packets\. Can be unicast or m
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FecOutputSettings`  <a name="cfn-medialive-channel-udpoutputsettings-fecoutputsettings"></a>
-Include this element if you want to configure the UDP output for FEC \(forward error correction\)\.  
+Settings for enabling and adjusting Forward Error Correction on UDP outputs\.  
 *Required*: No  
 *Type*: [FecOutputSettings](aws-properties-medialive-channel-fecoutputsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

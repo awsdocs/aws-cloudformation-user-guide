@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel ColorSpacePassthroughSettings<a name="aws-properties-medialive-channel-colorspacepassthroughsettings"></a>
 
-Configures the output video to pass through the color space metadata from the source video, and to omit any color space conversion\. This element belongs to H264ColorSpaceSettings and H265ColorSpaceSettings\.
+Passthrough applies no color space conversion to the output
 
 ## Syntax<a name="aws-properties-medialive-channel-colorspacepassthroughsettings-syntax"></a>
 

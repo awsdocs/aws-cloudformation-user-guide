@@ -1,6 +1,6 @@
 # AWS::DataBrew::Dataset<a name="aws-resource-databrew-dataset"></a>
 
-Represents a dataset that can be processed by DataBrew\.
+Creates a new DataBrew dataset\.
 
 ## Syntax<a name="aws-resource-databrew-dataset-syntax"></a>
 
@@ -68,4 +68,61 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myDataset" }` 
 
-For the AWS Glue DataBrew dataset `myDataset`, `Ref` returns the name of the dataset\.
+For an AWS Glue DataBrew dataset named `myDataset`, `Ref` returns the name of the dataset\. 
+
+## Examples<a name="aws-resource-databrew-dataset--examples"></a>
+
+### Creating datasets<a name="aws-resource-databrew-dataset--examples--Creating_datasets"></a>
+
+The following examples create new DataBrew datasets\.
+
+#### YAML<a name="aws-resource-databrew-dataset--examples--Creating_datasets--yaml"></a>
+
+```
+Resources:
+  TestDataBrewDataset:
+    Type: AWS::DataBrew::Dataset
+    Properties:
+      Name: dataset-name
+      Input:
+        S3InputDefinition:
+          Bucket: !Join [ '', ['databrew-cfn-integration-tests-', !Ref 'AWS::Region', '-', !Ref 'AWS::AccountId' ] ]
+          Key: cocktails.json
+      FormatOptions:
+        Json:
+          MultiLine: True
+```
+
+#### JSON<a name="aws-resource-databrew-dataset--examples--Creating_datasets--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This CloudFormation template creates a DataBrew Dataset",
+    "Resources": {
+    "TestDataBrewDataset": {
+      "Type": "AWS::DataBrew::Dataset",
+      "Properties": {
+        "Name": "cf-test-dataset1",
+        "Input": {
+          "S3InputDefinition": {
+            "Bucket": "test-location",
+            "Key": "test.xlsx"
+          }
+        },
+        "FormatOptions": {
+          "Excel": {
+            "SheetNames": ["test"]
+          }
+        },
+        "Tags": [
+                    {
+                        "Key": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+      }
+    }
+  }
+}
+```

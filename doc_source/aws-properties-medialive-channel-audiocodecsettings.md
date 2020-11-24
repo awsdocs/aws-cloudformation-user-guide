@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AudioCodecSettings<a name="aws-properties-medialive-channel-audiocodecsettings"></a>
 
-This element configures the codec \(format\) for one output audio encode\. In this element, include only one type of the child elements\. This element belongs to AudioDescription\.
+Audio Codec Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-audiocodecsettings-syntax"></a>
 
@@ -36,31 +36,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audiocodecsettings-properties"></a>
 
 `AacSettings`  <a name="cfn-medialive-channel-audiocodecsettings-aacsettings"></a>
-Include this element if you want to set up the audio encode to use the AAC audio format \(codec\)\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [AacSettings](aws-properties-medialive-channel-aacsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ac3Settings`  <a name="cfn-medialive-channel-audiocodecsettings-ac3settings"></a>
-Include this element if you want to set up the audio encode to use the AC3 audio format \(codec\)\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [Ac3Settings](aws-properties-medialive-channel-ac3settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Eac3Settings`  <a name="cfn-medialive-channel-audiocodecsettings-eac3settings"></a>
-Include this element if you want to set up the audio encode to use the EAC3 audio format \(codec\)\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [Eac3Settings](aws-properties-medialive-channel-eac3settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mp2Settings`  <a name="cfn-medialive-channel-audiocodecsettings-mp2settings"></a>
-Include this element if you want to set up the audio encode to use the MP2 audio format \(codec\)\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [Mp2Settings](aws-properties-medialive-channel-mp2settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PassThroughSettings`  <a name="cfn-medialive-channel-audiocodecsettings-passthroughsettings"></a>
-Include this element if you want to take the source audio \(from the input associated with this AudioDescription\) and pass it through to the output\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [PassThroughSettings](aws-properties-medialive-channel-passthroughsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
