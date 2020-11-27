@@ -36,7 +36,7 @@ The default branch for the Git repository\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RepositoryUrl`  <a name="cfn-sagemaker-coderepository-gitconfig-repositoryurl"></a>
-The URL where the Git repository is located\.  
+The URL where the Git repository is located\. The URL must not contain an username\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^https://([^/]+)/?(.*)$`  
