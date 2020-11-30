@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Comment](#cfn-cloudfront-keygroup-keygroupconfig-comment)" : String,
-  "[items](#cfn-cloudfront-keygroup-keygroupconfig-items)" : [ String, ... ],
+  "[Items](#cfn-cloudfront-keygroup-keygroupconfig-items)" : [ String, ... ],
   "[Name](#cfn-cloudfront-keygroup-keygroupconfig-name)" : String
 }
 ```
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Comment](#cfn-cloudfront-keygroup-keygroupconfig-comment): String
-  [items](#cfn-cloudfront-keygroup-keygroupconfig-items): 
+  [Items](#cfn-cloudfront-keygroup-keygroupconfig-items): 
     - String
   [Name](#cfn-cloudfront-keygroup-keygroupconfig-name): String
 ```
@@ -35,7 +35,7 @@ A comment to describe the key group\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`items`  <a name="cfn-cloudfront-keygroup-keygroupconfig-items"></a>
+`Items`  <a name="cfn-cloudfront-keygroup-keygroupconfig-items"></a>
 A list of the identifiers of the public keys in the key group\.  
 *Required*: No  
 *Type*: List of String  
