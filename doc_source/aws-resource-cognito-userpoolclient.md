@@ -205,7 +205,7 @@ The time limit, in days, after which the refresh token is no longer valid and ca
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportedIdentityProviders`  <a name="cfn-cognito-userpoolclient-supportedidentityproviders"></a>
-A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `Google` and `LoginWithAmazon`\.  
+A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `Google`, `SignInWithApple` and `LoginWithAmazon`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
