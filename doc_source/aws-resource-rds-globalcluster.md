@@ -115,7 +115,7 @@ The following example creates a global database cluster with an Aurora MySQL DB 
         },
         "password": {
             "NoEcho": "true",
-            "Description": "Password MySQL database access",
+            "Description": "Password for MySQL database access",
             "Type": "String",
             "MinLength": "8",
             "MaxLength": "41",
@@ -184,7 +184,7 @@ Parameters:
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
   password:
     NoEcho: 'true'
-    Description: Password MySQL database access
+    Description: Password for MySQL database access
     Type: String
     MinLength: '8'
     MaxLength: '41'
@@ -231,7 +231,7 @@ The following example creates a global database cluster with an Aurora PostgreSQ
         },
         "username": {
             "NoEcho": "true",
-            "Description": "Username for MySQL database access",
+            "Description": "Username for PostgreSQL database access",
             "Type": "String",
             "MinLength": "1",
             "MaxLength": "16",
@@ -240,7 +240,7 @@ The following example creates a global database cluster with an Aurora PostgreSQ
         },
         "password": {
             "NoEcho": "true",
-            "Description": "Password MySQL database access",
+            "Description": "Password for PostgreSQL database access",
             "Type": "String",
             "MinLength": "8",
             "MaxLength": "41",
@@ -301,7 +301,7 @@ Parameters:
     AllowedPattern: '^[a-zA-Z]{1}(?:-?[a-zA-Z0-9]){0,62}$'
   username:
     NoEcho: 'true'
-    Description: Username for MySQL database access
+    Description: Username for PostgreSQL database access
     Type: String
     MinLength: '1'
     MaxLength: '16'
@@ -309,7 +309,7 @@ Parameters:
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
   password:
     NoEcho: 'true'
-    Description: Password MySQL database access
+    Description: Password for PostgreSQL database access
     Type: String
     MinLength: '8'
     MaxLength: '41'
@@ -436,7 +436,7 @@ The following template was used to create DB cluster that you want to add to the
          },
          "password": {
              "NoEcho": "true",
-             "Description": "Password MySQL database access",
+             "Description": "Password for MySQL database access",
              "Type": "String",
              "MinLength": "8",
              "MaxLength": "41",
@@ -493,7 +493,7 @@ The following template adds the DB cluster created by the previous template to a
         },
         "password": {
             "NoEcho": "true",
-            "Description": "Password MySQL database access",
+            "Description": "Password for MySQL database access",
             "Type": "String",
             "MinLength": "8",
             "MaxLength": "41",
