@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition RetryStrategy<a name="aws-properties-batch-jobdefinition-retrystrategy"></a>
 
-The retry strategy associated with a job\.
+The retry strategy associated with a job\. For more information, see [Automated job retries](https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html) in the *AWS Batch User Guide*\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-retrystrategy-syntax"></a>
 
