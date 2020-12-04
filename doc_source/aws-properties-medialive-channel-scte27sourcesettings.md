@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Scte27SourceSettings<a name="aws-properties-medialive-channel-scte27sourcesettings"></a>
 
-Specifies how MediaLive will extract the SCTE\-27 captions from the input\. This element belongs to CaptionSelectorSettings\.
+Scte27 Source Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-scte27sourcesettings-syntax"></a>
 

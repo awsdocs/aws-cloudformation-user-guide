@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel RtmpGroupSettings<a name="aws-properties-medialive-channel-rtmpgroupsettings"></a>
 
-Identifies this output group as an RTMP output group, and configures all the parts of the output group except for the outputs\. This element belongs to OutputGroupSettings\.
+Rtmp Group Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-rtmpgroupsettings-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-rtmpgroupsettings-properties"></a>
 
 `AuthenticationScheme`  <a name="cfn-medialive-channel-rtmpgroupsettings-authenticationscheme"></a>
-Authentication scheme to use when connecting with CDN\.  
+Authentication scheme to use when connecting with CDN  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

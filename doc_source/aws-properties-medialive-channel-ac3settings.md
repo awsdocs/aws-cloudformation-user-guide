@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Ac3Settings<a name="aws-properties-medialive-channel-ac3settings"></a>
 
-Configures the output audio encode to use the AC3 audio codec\. This element belongs to AudioCodecSettings\.
+Ac3 Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-ac3settings-syntax"></a>
 

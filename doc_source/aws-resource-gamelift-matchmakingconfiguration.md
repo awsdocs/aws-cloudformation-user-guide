@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackfillMode](#cfn-gamelift-matchmakingconfiguration-backfillmode)" : String,
       "[CustomEventData](#cfn-gamelift-matchmakingconfiguration-customeventdata)" : String,
       "[Description](#cfn-gamelift-matchmakingconfiguration-description)" : String,
+      "[FlexMatchMode](#cfn-gamelift-matchmakingconfiguration-flexmatchmode)" : String,
       "[GameProperties](#cfn-gamelift-matchmakingconfiguration-gameproperties)" : [ GameProperty, ... ],
       "[GameSessionData](#cfn-gamelift-matchmakingconfiguration-gamesessiondata)" : String,
       "[GameSessionQueueArns](#cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns)" : [ String, ... ],
@@ -40,6 +41,7 @@ Properties:
   [BackfillMode](#cfn-gamelift-matchmakingconfiguration-backfillmode): String
   [CustomEventData](#cfn-gamelift-matchmakingconfiguration-customeventdata): String
   [Description](#cfn-gamelift-matchmakingconfiguration-description): String
+  [FlexMatchMode](#cfn-gamelift-matchmakingconfiguration-flexmatchmode): String
   [GameProperties](#cfn-gamelift-matchmakingconfiguration-gameproperties): 
     - GameProperty
   [GameSessionData](#cfn-gamelift-matchmakingconfiguration-gamesessiondata): String
@@ -97,6 +99,12 @@ A descriptive label that is associated with matchmaking configuration\.
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FlexMatchMode`  <a name="cfn-gamelift-matchmakingconfiguration-flexmatchmode"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `GameProperties`  <a name="cfn-gamelift-matchmakingconfiguration-gameproperties"></a>
 A set of custom properties for a game session, formatted as key\-value pairs\. These properties are passed to a game server process with a request to start a new game session\. See [ Start a Game Session](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession)\.   
 *Required*: No  
@@ -114,7 +122,7 @@ A set of custom game session properties, formatted as a single string value\. Th
 
 `GameSessionQueueArns`  <a name="cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns"></a>
 Amazon Resource Name \([ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\) that is assigned to a GameLift game session queue resource and uniquely identifies it\. ARNs are unique across all Regions\. These queues are used when placing game sessions for matches that are created with this matchmaking configuration\. Queues can be located in any Region\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

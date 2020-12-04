@@ -99,6 +99,6 @@ If not specified or set to 0, only On\-Demand instances are provisioned for the 
 
 ### Ref<a name="aws-resource-elasticmapreduce-instancefleetconfig-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the instance fleet\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance fleet\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

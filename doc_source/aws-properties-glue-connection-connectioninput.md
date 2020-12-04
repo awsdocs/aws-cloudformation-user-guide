@@ -42,9 +42,10 @@ These key\-value pairs define parameters for the connection\.
 
 `ConnectionType`  <a name="cfn-glue-connection-connectioninput-connectiontype"></a>
 The type of the connection\. Currently, these types are supported:  
-+  `JDBC` \- Designates a connection to a database through Java Database Connectivity \(JDBC\)\.
-+  `KAFKA` \- Designates a connection to an Apache Kafka streaming platform\.
-+  `MONGODB` \- Designates a connection to a MongoDB document database\.
++ `JDBC` \- Designates a connection to a database through Java Database Connectivity \(JDBC\)\.
++ `KAFKA` \- Designates a connection to an Apache Kafka streaming platform\.
++ `MONGODB` \- Designates a connection to a MongoDB document database\.
++ `NETWORK` \- Designates a network connection to a data source within an Amazon Virtual Private Cloud environment \(Amazon VPC\)\.
 SFTP is not supported\.  
 *Required*: Yes  
 *Type*: String  

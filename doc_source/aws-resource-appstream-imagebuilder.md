@@ -122,6 +122,7 @@ The name of the image used to create the image builder\.
 
 `InstanceType`  <a name="cfn-appstream-imagebuilder-instancetype"></a>
 The instance type to use when launching the image builder\. The following instance types are available:  
++ stream\.standard\.small
 + stream\.standard\.medium
 + stream\.standard\.large
 + stream\.compute\.large

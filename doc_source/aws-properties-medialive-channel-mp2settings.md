@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Mp2Settings<a name="aws-properties-medialive-channel-mp2settings"></a>
 
-Configures the output audio encode to use the MP2 audio codec\. This element belongs to AudioCodecSettings\.
+Mp2 Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-mp2settings-syntax"></a>
 

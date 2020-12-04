@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AudioPidSelection<a name="aws-properties-medialive-channel-audiopidselection"></a>
 
-This element specifies the audio by its PID\. This element belongs to AudioSelectorSettings\.
+Audio Pid Selection
 
 ## Syntax<a name="aws-properties-medialive-channel-audiopidselection-syntax"></a>
 

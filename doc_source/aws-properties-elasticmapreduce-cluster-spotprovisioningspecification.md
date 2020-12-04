@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AllocationStrategy](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-allocationstrategy)" : String,
   "[BlockDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes)" : Integer,
   "[TimeoutAction](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction)" : String,
   "[TimeoutDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes)" : Integer
@@ -22,12 +23,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-cluster-spotprovisioningspecification-syntax.yaml"></a>
 
 ```
+  [AllocationStrategy](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-allocationstrategy): String
   [BlockDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes): Integer
   [TimeoutAction](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction): String
   [TimeoutDurationMinutes](#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-spotprovisioningspecification-properties"></a>
+
+`AllocationStrategy`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-allocationstrategy"></a>
+ Specifies the strategy to use in launching Spot instance fleets\. Currently, the only option is capacity\-optimized \(the default\), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `capacity-optimized`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlockDurationMinutes`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes"></a>
 The defined duration for Spot instances \(also known as Spot blocks\) in minutes\. When specified, the Spot instance does not terminate before the defined duration expires, and defined duration pricing for Spot instances applies\. Valid values are 60, 120, 180, 240, 300, or 360\. The duration period starts as soon as a Spot instance receives its instance ID\. At the end of the duration, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two\-minute warning before it terminates\.   

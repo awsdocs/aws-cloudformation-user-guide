@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel FecOutputSettings<a name="aws-properties-medialive-channel-fecoutputsettings"></a>
 
-Settings to enable and adjust FEC \(Forward Error Correction\) on UDP outputs\. This element belongs to UdpOutputSettings\.
+Fec Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-fecoutputsettings-syntax"></a>
 
@@ -33,7 +33,7 @@ Parameter D from SMPTE 2022\-1\. The height of the FEC protection matrix\. The n
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeFec`  <a name="cfn-medialive-channel-fecoutputsettings-includefec"></a>
-Enables column only or column and row based FEC\.  
+Enables column only or column and row based FEC  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

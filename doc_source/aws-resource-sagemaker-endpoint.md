@@ -46,7 +46,7 @@ The name of the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWS
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointName`  <a name="cfn-sagemaker-endpoint-endpointname"></a>
-The name of the endpoint\. The name must be unique within an AWS Region in your AWS account\.  
+The name of the endpoint\.The name must be unique within an AWS Region in your AWS account\. The name is case\-insensitive in `CreateEndpoint`, but the case is preserved and must be matched in API\_runtime\_InvokeEndpoint\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  

@@ -2,6 +2,9 @@
 
 Creates a new configuration for the specified configuration name\. Amazon MQ uses the default configuration \(the engine type and version\)\.
 
+**Note**  
+Does not apply to RabbitMQ brokers\.
+
 ## Syntax<a name="aws-resource-amazonmq-configuration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -51,7 +54,7 @@ The description of the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineType`  <a name="cfn-amazonmq-configuration-enginetype"></a>
-The type of broker engine\. Note: Currently, Amazon MQ supports only ACTIVEMQ\.  
+The type of broker engine\. Note: Currently, Amazon MQ only supports ACTIVEMQ for creating and editing broker configurations\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -110,7 +113,7 @@ The revision number of the configuration\.
 
 ```
 {
-  "Description": "Create an Amazon MQ configuration",
+  "Description": "Create an Amazon MQ ActiveMQ configuration",
     "Configuration1": {
       "Type": "AWS::AmazonMQ::Configuration",
       "Properties": {
@@ -129,7 +132,7 @@ The revision number of the configuration\.
 
 ```
 --- 
-Description: "Create an Amazon MQ configuration"
+Description: "Create an Amazon MQ ActiveMQ configuration"
 Resources: 
   Configuration: 
     Type: "AWS::AmazonMQ::Configuration"

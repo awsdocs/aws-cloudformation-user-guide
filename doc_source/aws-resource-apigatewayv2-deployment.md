@@ -44,7 +44,7 @@ The description for the deployment resource\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigatewayv2-deployment-stagename"></a>
-The name of the `Stage` resource for the `Deployment` resource to create\.  
+The name of an existing stage to associate with the deployment\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

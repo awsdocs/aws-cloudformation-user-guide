@@ -7,6 +7,7 @@ For details about each event source type, see the following topics\.
 +  [Using AWS Lambda with Amazon SQS](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html) 
 +  [Using AWS Lambda with Amazon DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) 
 +  [Using AWS Lambda with Amazon MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html) 
++  [Using AWS Lambda with Amazon MQ](https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html) 
 
 ## Syntax<a name="aws-resource-lambda-eventsourcemapping-syntax"></a>
 
@@ -28,8 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)" : Integer,
       "[MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts)" : Integer,
       "[ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor)" : Integer,
+      "[PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse)" : Boolean,
+      "[Queues](#cfn-lambda-eventsourcemapping-queues)" : [ String, ... ],
+      "[SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)" : [ SourceAccessConfiguration, ... ],
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String,
-      "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ]
+      "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ],
+      "[TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds)" : Integer
     }
 }
 ```
@@ -50,9 +55,15 @@ Properties:
   [MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds): Integer
   [MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts): Integer
   [ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor): Integer
+  [PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse): Boolean
+  [Queues](#cfn-lambda-eventsourcemapping-queues): 
+    - String
+  [SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations): 
+    - SourceAccessConfiguration
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
   [Topics](#cfn-lambda-eventsourcemapping-topics): 
     - String
+  [TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds): Integer
 ```
 
 ## Properties<a name="aws-resource-lambda-eventsourcemapping-properties"></a>
@@ -126,7 +137,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) Discard records older than the specified age\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `60`  
+*Minimum*: `-1`  
 *Maximum*: `604800`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -134,7 +145,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 \(Streams\) Discard records after the specified number of retries\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `0`  
+*Minimum*: `-1`  
 *Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -146,6 +157,24 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`PartialBatchResponse`  <a name="cfn-lambda-eventsourcemapping-partialbatchresponse"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
+\(MQ\) The name of the Amazon MQ broker destination queue to consume\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
+\(MQ\) The Secrets Manager secret that stores your broker credentials\.  
+*Required*: No  
+*Type*: List of [SourceAccessConfiguration](aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `StartingPosition`  <a name="cfn-lambda-eventsourcemapping-startingposition"></a>
 The position in a stream from which to start reading\. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources\.  
 + **LATEST** \- Read only new records\.
@@ -155,10 +184,16 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
- \(MSK\) The name of the Kafka topic\.   
+ \(MSK\) The name of the Kafka topic to consume\.   
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TumblingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-tumblingwindowinseconds"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lambda-eventsourcemapping-return-values"></a>

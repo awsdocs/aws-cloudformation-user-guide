@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActiveDirectoryId](#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid)" : String,
+  "[Aliases](#cfn-fsx-filesystem-windowsconfiguration-aliases)" : [ String, ... ],
   "[AutomaticBackupRetentionDays](#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays)" : Integer,
   "[CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)" : Boolean,
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)" : String,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ActiveDirectoryId](#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid): String
+  [Aliases](#cfn-fsx-filesystem-windowsconfiguration-aliases): 
+    - String
   [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays): Integer
   [CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups): Boolean
   [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime): String
@@ -41,12 +44,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ActiveDirectoryId`  <a name="cfn-fsx-filesystem-windowsconfiguration-activedirectoryid"></a>
 The ID for an existing AWS Managed Microsoft Active Directory \(AD\) instance that the file system should join when it's created\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `12`  
 *Maximum*: `12`  
 *Pattern*: `^d-[0-9a-f]{10}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Aliases`  <a name="cfn-fsx-filesystem-windowsconfiguration-aliases"></a>
+An array of one or more DNS alias names that you want to associate with the Amazon FSx file system\. Aliases allow you to use existing DNS names to access the data in your Amazon FSx file system\. You can associate up to 50 aliases with a file system at any time\.   
+For more information, see [Working with DNS Aliases](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-dns-aliases.html) and [Walkthrough 5: Using DNS aliases to access your file system](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/walkthrough05-file-system-custom-CNAME.html), including additional steps you must take to be able to access your file system using a DNS alias\.  
+An alias name has to meet the following requirements:  
++ Formatted as a fully\-qualified domain name \(FQDN\), `hostname.domain`, for example, `accounting.example.com`\.
++ Can contain alphanumeric characters and the hyphen \(\-\)\.
++ Cannot start or end with a hyphen\.
++ Can start with a numeric\.
+For DNS alias names, Amazon FSx stores alphabetic characters as lowercase letters \(a\-z\), regardless of how you specify them: as uppercase letters, lowercase letters, or the corresponding letters in escape codes\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomaticBackupRetentionDays`  <a name="cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays"></a>
 The number of days to retain automatic backups\. The default is to retain backups for 7 days\. Setting this value to 0 disables the creation of automatic backups\. The maximum retention period for backups is 90 days\.  

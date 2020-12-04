@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest)" : String,
   "[Scope](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope)" : String,
   "[SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename)" : String,
-  "[SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout)" : Long,
+  "[SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout)" : String,
   "[UserPoolArn](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn)" : String,
   "[UserPoolClientId](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid)" : String,
   "[UserPoolDomain](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain)" : String
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-onunauthenticatedrequest): String
   [Scope](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-scope): String
   [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessioncookiename): String
-  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout): Long
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout): String
   [UserPoolArn](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn): String
   [UserPoolClientId](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolclientid): String
   [UserPoolDomain](#cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpooldomain): String
@@ -69,7 +69,7 @@ The name of the cookie used to maintain session information\. The default is AWS
 `SessionTimeout`  <a name="cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-sessiontimeout"></a>
 The maximum duration of the authentication session, in seconds\. The default is 604800 seconds \(7 days\)\.  
 *Required*: No  
-*Type*: Long  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolArn`  <a name="cfn-elasticloadbalancingv2-listener-authenticatecognitoconfig-userpoolarn"></a>

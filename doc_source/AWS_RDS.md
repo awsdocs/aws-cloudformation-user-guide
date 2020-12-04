@@ -11,4 +11,5 @@
 + [AWS::RDS::DBSecurityGroupIngress](aws-resource-rds-security-group-ingress.md)
 + [AWS::RDS::DBSubnetGroup](aws-resource-rds-dbsubnet-group.md)
 + [AWS::RDS::EventSubscription](aws-resource-rds-eventsubscription.md)
++ [AWS::RDS::GlobalCluster](aws-resource-rds-globalcluster.md)
 + [AWS::RDS::OptionGroup](aws-resource-rds-optiongroup.md)

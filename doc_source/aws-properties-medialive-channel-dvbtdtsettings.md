@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel DvbTdtSettings<a name="aws-properties-medialive-channel-dvbtdtsettings"></a>
 
-Configure the DVB time and date table \(TDT\)\. This element belongs to M2tsSettings\.
+DVB Time and Date Table \(SDT\)
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbtdtsettings-syntax"></a>
 

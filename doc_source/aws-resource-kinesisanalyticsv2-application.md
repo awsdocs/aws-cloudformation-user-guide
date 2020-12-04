@@ -66,7 +66,7 @@ The name of the application\.
 The runtime environment for the application \(`SQL-1.0`, `FLINK-1_6`, or `FLINK-1_8`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -75,7 +75,7 @@ Specifies the IAM role that the application uses to access external resources\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `arn:aws:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`  
+*Pattern*: `arn:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-kinesisanalyticsv2-application-tags"></a>

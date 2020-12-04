@@ -7,7 +7,7 @@ CloudFormation does not redact or obfuscate any information you include in the O
 
 ## Syntax<a name="outputs-section-syntax"></a>
 
-The `Outputs` section consists of the key name `Outputs`, followed by a space and a single colon\. You can declare a maximum of 60 outputs in a template\.
+The `Outputs` section consists of the key name `Outputs`, followed by a space and a single colon\. You can declare a maximum of 200 outputs in a template\.
 
 The following example demonstrates the structure of the `Outputs` section\.
 

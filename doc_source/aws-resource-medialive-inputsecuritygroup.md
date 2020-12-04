@@ -39,7 +39,7 @@ A collection of key\-value pairs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WhitelistRules`  <a name="cfn-medialive-inputsecuritygroup-whitelistrules"></a>
-A list of one or more IPv4 CIDR addresses to allow\. The input security group must include this list\.  
+List of IPv4 CIDR addresses to whitelist  
 *Required*: No  
 *Type*: List of [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

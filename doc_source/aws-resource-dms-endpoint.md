@@ -180,6 +180,7 @@ The name of the server where the endpoint database resides\.
 
 `SslMode`  <a name="cfn-dms-endpoint-sslmode"></a>
 The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The default is `none`   
+When `engine_name` is set to S3 then the only alowed value is `none`
 *Required*: No  
 *Type*: String  
 *Allowed values*: `none | require | verify-ca | verify-full`  

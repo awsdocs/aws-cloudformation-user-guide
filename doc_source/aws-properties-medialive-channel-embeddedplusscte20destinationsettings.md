@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel EmbeddedPlusScte20DestinationSettings<a name="aws-properties-medialive-channel-embeddedplusscte20destinationsettings"></a>
 
-Configures the output captions encode for the Embedded format and the SCTE\-20 format\. This element belongs to CaptionDestinationSettings \.
+Embedded Plus Scte20 Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-embeddedplusscte20destinationsettings-syntax"></a>
 

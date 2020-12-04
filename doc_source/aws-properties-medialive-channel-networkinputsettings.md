@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel NetworkInputSettings<a name="aws-properties-medialive-channel-networkinputsettings"></a>
 
-This element configures the connection to the upstream system\. This element belongs to InputSettings\.
+Network source to transcode\. Must be accessible to the Elemental Live node that is running the live event through a network connection\.
 
 ## Syntax<a name="aws-properties-medialive-channel-networkinputsettings-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-networkinputsettings-properties"></a>
 
 `HlsInputSettings`  <a name="cfn-medialive-channel-networkinputsettings-hlsinputsettings"></a>
-You must include this element if you include a NetworkInputSettings element\.  
+Specifies HLS input settings when the uri is for a HLS manifest\.  
 *Required*: No  
 *Type*: [HlsInputSettings](aws-properties-medialive-channel-hlsinputsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

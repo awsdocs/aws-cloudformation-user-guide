@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AudioNormalizationSettings<a name="aws-properties-medialive-channel-audionormalizationsettings"></a>
 
-Contains fields for implementing audio normalization in conformity with the CALM act and the EBU R\-128 specification\. This element belongs to AudioDescription\.
+Audio Normalization Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-audionormalizationsettings-syntax"></a>
 

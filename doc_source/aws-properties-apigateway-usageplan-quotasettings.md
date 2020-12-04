@@ -33,7 +33,7 @@ The maximum number of requests that users can make within the specified time per
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Offset`  <a name="cfn-apigateway-usageplan-quotasettings-offset"></a>
-For the initial time period, the number of requests to subtract from the specified limit\. When you first implement a usage plan, the plan might start in the middle of the week or month\. With this property, you can decrease the limit for this initial time period\.  
+The day that a time period starts\. For example, with a time period of `WEEK`, an offset of `0` starts on Sunday, and an offset of `1` starts on Monday\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

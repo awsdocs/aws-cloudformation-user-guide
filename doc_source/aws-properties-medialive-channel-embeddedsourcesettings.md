@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel EmbeddedSourceSettings<a name="aws-properties-medialive-channel-embeddedsourcesettings"></a>
 
-Specifies how MediaLive will extract the embedded captions from the input\. This element belongs to CaptionSelectorSettings\.
+Embedded Source Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-embeddedsourcesettings-syntax"></a>
 

@@ -34,6 +34,7 @@ When you come across the following errors with your AWS CloudFormation stack, yo
 + [Security group does not exist in VPC](#troubleshooting-errors-security-group-does-not-exist-in-vpc)
 + [Update rollback failed](#troubleshooting-errors-update-rollback-failed)
 + [Wait condition didn't receive the required number of signals from an Amazon EC2 instance](#troubleshooting-errors-wait-condition-didnt-receive-the-required-number-of-signals)
++ [Resource removed from stack but not deleted\.](#troubleshooting-errors-resource-removed-not-deleted)
 
 ### Delete stack fails<a name="troubleshooting-errors-delete-stack-fails"></a>
 
@@ -74,7 +75,7 @@ For resource property names and values, update your template to use valid names 
 
 ### Limit exceeded<a name="troubleshooting-errors-limit-exceeded"></a>
 
-Verify that you didn't reach a resource limit\. For example, the default number Amazon EC2 instances that you can launch is 20\. If try to create more Amazon EC2 instances than your account limit, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS limits by service, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
+Verify that you didn't reach a resource limit\. For example, the default maximum number of Amazon EC2 instances that you can launch is 20\. If try to create more Amazon EC2 instances than your account limit, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS limits by service, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
 For AWS CloudFormation limits and tweaking strategies, see [AWS CloudFormation quotas](cloudformation-limits.md)\.
 
@@ -155,6 +156,18 @@ To resolve this situation, try the following:
   ```
 
   For information about configuring a NAT device, see [NAT](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat.html) in the *Amazon VPC User Guide*\.
+
+### Resource removed from stack but not deleted\.<a name="troubleshooting-errors-resource-removed-not-deleted"></a>
+
+During a stack update, CloudFormation has removed a resource from a stack but not deleted the resource\. The resource still exists, but is no longer accessible through CloudFormation\. This may occur during stack updates where:
++ CloudFormation needs to replace an existing resource, so it first creates a new resource, then attempts to delete the old resource\.
++ You have removed the resource from the stack template, so CloudFormation attempts to delete the resource from the stack\.
+
+However, there may be cases where CloudFormation cannot delete the resource\. For example, if the user does not have permissions to delete a resource of a given type\.
+
+CloudFormation attempts to delete the old resource three times\. If CloudFormation cannot delete the old resource, it removes the old resource from the stack and continues updating the stack\. When the stack update is complete, CloudFormation issues an `UPDATE_COMPLETE` stack event, but includes a `StatusReason` that states that one or more resources could not be deleted\. CloudFormation also issues a `DELETE_FAILED` event for the specific resource, with a corresponding `StatusReason` providing more detail on why CloudFormation failed to delete the resource\.
+
+To resolve this situation, delete the resource directly using the console or API for the underlying service\.
 
 ## Contacting support<a name="contacting-support"></a>
 

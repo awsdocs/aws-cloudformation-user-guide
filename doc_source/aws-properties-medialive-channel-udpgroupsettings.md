@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel UdpGroupSettings<a name="aws-properties-medialive-channel-udpgroupsettings"></a>
 
-Identifies this output group as a UDP output group, and configures all the parts of the output group except for its outputs\. This element belongs to OutputGroupSettings\.
+Udp Group Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-udpgroupsettings-syntax"></a>
 

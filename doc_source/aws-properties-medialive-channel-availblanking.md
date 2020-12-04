@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AvailBlanking<a name="aws-properties-medialive-channel-availblanking"></a>
 
-Configures the ad avail blanking feature in SCTE\-35 message processing\. This feature blanks out the content for an SCTE\-35 message that is considered an ad avail\. This element belongs to EncoderSettings\.
+Avail Blanking
 
 ## Syntax<a name="aws-properties-medialive-channel-availblanking-syntax"></a>
 

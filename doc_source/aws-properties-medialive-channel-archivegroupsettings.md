@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel ArchiveGroupSettings<a name="aws-properties-medialive-channel-archivegroupsettings"></a>
 
-Identifies this output group as an Archive output group, and configures all the parts of the output group except for its outputs\. This element belongs to OutputGroupSettings\.
+Archive Group Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-archivegroupsettings-syntax"></a>
 

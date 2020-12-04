@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel DvbSubSourceSettings<a name="aws-properties-medialive-channel-dvbsubsourcesettings"></a>
 
-Specifies how MediaLive will extract the DVB\-Sub captions from the input\. This element belongs to CaptionSelectorSettings\.
+Dvb Sub Source Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbsubsourcesettings-syntax"></a>
 

@@ -64,6 +64,7 @@ The name of the in\-application stream\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
+*Pattern*: `[^-\s<>&]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>

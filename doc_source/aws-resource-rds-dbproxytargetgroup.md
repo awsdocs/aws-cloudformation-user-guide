@@ -8,6 +8,8 @@ For information about RDS Proxy for Amazon RDS, see [ Managing Connections with 
 
 For information about RDS Proxy for Amazon Aurora, see [ Managing Connections with Amazon RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html) in the *Amazon Aurora User Guide*\.
 
+For a sample template that creates a DB proxy and registers a DB instance, see [ Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html#aws-resource-rds-dbproxy--examples) in AWS::RDS::DBProxy\.
+
 **Note**  
 Limitations apply to RDS Proxy, including DB engine version limitations and AWS Region limitations\.  
 For information about limitations that apply to RDS Proxy for Amazon RDS, see [ Limitations for RDS Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy.limitations) in the *Amazon RDS User Guide*\.  

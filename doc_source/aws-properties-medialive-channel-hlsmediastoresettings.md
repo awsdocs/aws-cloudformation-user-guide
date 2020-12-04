@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsMediaStoreSettings<a name="aws-properties-medialive-channel-hlsmediastoresettings"></a>
 
-Configures the connection between MediaLive and AWS Elemental MediaStore, when MediaStore is the downstream system\. This element belongs to HlsCdnSettings\.
+Hls Media Store Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsmediastoresettings-syntax"></a>
 

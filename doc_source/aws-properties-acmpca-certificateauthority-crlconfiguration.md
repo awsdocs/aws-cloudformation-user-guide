@@ -68,7 +68,7 @@ Boolean value that specifies whether certificate revocation lists \(CRLs\) are e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExpirationInDays`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-expirationindays"></a>
-Number of days until a certificate expires\.  
+Validity period of the CRL in days\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

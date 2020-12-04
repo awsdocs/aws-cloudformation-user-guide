@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel OutputGroup<a name="aws-properties-medialive-channel-outputgroup"></a>
 
-Configuration information for one output group \(and its outputs\)\. This element belongs to EncoderSettings\.
+Output groups for this Live Event\. Output groups contain information about where streams should be distributed\.
 
 ## Syntax<a name="aws-properties-medialive-channel-outputgroup-syntax"></a>
 
@@ -35,13 +35,13 @@ Custom output group name optionally defined by the user\. Only letters, numbers,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputGroupSettings`  <a name="cfn-medialive-channel-outputgroup-outputgroupsettings"></a>
-Configures the output group, including assigning its type\.  
+Settings associated with the output group\.  
 *Required*: No  
 *Type*: [OutputGroupSettings](aws-properties-medialive-channel-outputgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Outputs`  <a name="cfn-medialive-channel-outputgroup-outputs"></a>
-Include one element for each output that you want in this output group\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of [Output](aws-properties-medialive-channel-output.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

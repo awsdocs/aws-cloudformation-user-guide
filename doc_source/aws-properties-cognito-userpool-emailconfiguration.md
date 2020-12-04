@@ -47,6 +47,16 @@ COGNITO\_DEFAULT
 When Amazon Cognito emails your users, it uses its built\-in email functionality\. When you use the default option, Amazon Cognito allows only a limited number of emails each day for your user pool\. For typical production environments, the default email limit is below the required delivery volume\. To achieve a higher delivery volume, specify DEVELOPER to use your Amazon SES email configuration\.  
 To look up the email delivery limit for the default option, see [Limits in Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/limits.html) in the *Amazon Cognito Developer Guide*\.  
 The default FROM address is no\-reply@verificationemail\.com\. To customize the FROM address, provide the ARN of an Amazon SES verified email address for the `SourceArn` parameter\.  
+ If EmailSendingAccount is COGNITO\_DEFAULT, the following parameters aren't allowed:  
++ EmailVerificationMessage
++ EmailVerificationSubject
++ InviteMessageTemplate\.EmailMessage
++ InviteMessageTemplate\.EmailSubject
++ VerificationMessageTemplate\.EmailMessage
++ VerificationMessageTemplate\.EmailMessageByLink
++ VerificationMessageTemplate\.EmailSubject,
++ VerificationMessageTemplate\.EmailSubjectByLink
+DEVELOPER EmailSendingAccount is required\.  
 DEVELOPER  
 When Amazon Cognito emails your users, it uses your Amazon SES configuration\. Amazon Cognito calls Amazon SES on your behalf to send email from your verified email address\. When you use this option, the email delivery limits are the same limits that apply to your Amazon SES verified email address in your AWS account\.  
 If you use this option, you must provide the ARN of an Amazon SES verified email address for the `SourceArn` parameter\.  

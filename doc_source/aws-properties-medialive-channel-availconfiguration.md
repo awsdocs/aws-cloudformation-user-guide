@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AvailConfiguration<a name="aws-properties-medialive-channel-availconfiguration"></a>
 
-This element configures some parts of the SCTE\-35 message processing feature in the channel\. This element belongs to EncoderSettings\.
+Avail Configuration
 
 ## Syntax<a name="aws-properties-medialive-channel-availconfiguration-syntax"></a>
 

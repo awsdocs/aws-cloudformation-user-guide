@@ -78,34 +78,34 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
   },
   "Mappings":{
     "AWSRegionToAMI":{
-      "us-east-1":{
-        "AMIID":"ami-eca289fb"
-      },
-      "us-east-2":{
-        "AMIID":"ami-446f3521"
-      },
-      "us-west-1":{
-        "AMIID":"ami-9fadf8ff"
-      },
-      "us-west-2":{
-        "AMIID":"ami-7abc111a"
-      },
-      "eu-west-1":{
-        "AMIID":"ami-a1491ad2"
-      },
-      "eu-central-1":{
-        "AMIID":"ami-54f5303b"
-      },
-      "ap-northeast-1":{
-        "AMIID":"ami-9cd57ffd"
-      },
-      "ap-southeast-1":{
-        "AMIID":"ami-a900a3ca"
-      },
-      "ap-southeast-2":{
-        "AMIID":"ami-5781be34"
+      "us-east-1": {
+              "AMIID": "ami-09bee01cc997a78a6"
+          },
+          "us-east-2": {
+              "AMIID": "ami-0a9e12068cb98a01d"
+          },
+          "us-west-1": {
+              "AMIID": "ami-0fa6c8d131a220017"
+          },
+          "us-west-2": {
+              "AMIID": "ami-078c97cf1cefd1b38"
+          },
+          "eu-west-1": {
+              "AMIID": "ami-0c9ef930279337028"
+          },
+          "eu-central-1": {
+              "AMIID": "ami-065c1e34da68f2b02"
+          },
+          "ap-northeast-1": {
+              "AMIID": "ami-02265963d1614d04d"
+          },
+          "ap-southeast-1": {
+              "AMIID": "ami-0b68661b29b9e058c"
+          },
+          "ap-southeast-2": {
+              "AMIID": "ami-00e4b147599c13588"
+          }
       }
-    }
   },
   "Resources":{
     "ECSCluster":{
@@ -738,32 +738,60 @@ Parameters:
     Description: EC2 instance type
     Type: String
     Default: t2.micro
-    AllowedValues: [t2.micro, t2.small, t2.medium, t2.large, m3.medium, m3.large,
-      m3.xlarge, m3.2xlarge, m4.large, m4.xlarge, m4.2xlarge, m4.4xlarge, m4.10xlarge,
-      c4.large, c4.xlarge, c4.2xlarge, c4.4xlarge, c4.8xlarge, c3.large, c3.xlarge,
-      c3.2xlarge, c3.4xlarge, c3.8xlarge, r3.large, r3.xlarge, r3.2xlarge, r3.4xlarge,
-      r3.8xlarge, i2.xlarge, i2.2xlarge, i2.4xlarge, i2.8xlarge]
+    AllowedValues:
+      - t2.micro
+      - t2.small
+      - t2.medium
+      - t2.large
+      - m3.medium
+      - m3.large
+      - m3.xlarge
+      - m3.2xlarge
+      - m4.large
+      - m4.xlarge
+      - m4.2xlarge
+      - m4.4xlarge
+      - m4.10xlarge
+      - c4.large
+      - c4.xlarge
+      - c4.2xlarge
+      - c4.4xlarge
+      - c4.8xlarge
+      - c3.large
+      - c3.xlarge
+      - c3.2xlarge
+      - c3.4xlarge
+      - c3.8xlarge
+      - r3.large
+      - r3.xlarge
+      - r3.2xlarge
+      - r3.4xlarge
+      - r3.8xlarge
+      - i2.xlarge
+      - i2.2xlarge
+      - i2.4xlarge
+      - i2.8xlarge
     ConstraintDescription: Please choose a valid instance type.
 Mappings:
   AWSRegionToAMI:
     us-east-1:
-      AMIID: ami-eca289fb
+      AMIID: ami-09bee01cc997a78a6
     us-east-2:
-      AMIID: ami-446f3521
+      AMIID: ami-0a9e12068cb98a01d
     us-west-1:
-      AMIID: ami-9fadf8ff
+      AMIID: ami-0fa6c8d131a220017
     us-west-2:
-      AMIID: ami-7abc111a
+      AMIID: ami-078c97cf1cefd1b38
     eu-west-1:
-      AMIID: ami-a1491ad2
+      AMIID: ami-0c9ef930279337028
     eu-central-1:
-      AMIID: ami-54f5303b
+      AMIID: ami-065c1e34da68f2b02
     ap-northeast-1:
-      AMIID: ami-9cd57ffd
+      AMIID: ami-02265963d1614d04d
     ap-southeast-1:
-      AMIID: ami-a900a3ca
+      AMIID: ami-0b68661b29b9e058c
     ap-southeast-2:
-      AMIID: ami-5781be34
+      AMIID: ami-00e4b147599c13588
 Resources:
   ECSCluster:
     Type: AWS::ECS::Cluster

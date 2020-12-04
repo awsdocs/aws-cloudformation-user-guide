@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel BurnInDestinationSettings<a name="aws-properties-medialive-channel-burnindestinationsettings"></a>
 
-Configures the output captions encode for burned\-in captions\. This element belongs to CaptionDestinationSettings \.
+Burn In Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-burnindestinationsettings-syntax"></a>
 

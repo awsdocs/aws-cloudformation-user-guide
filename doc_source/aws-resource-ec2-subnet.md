@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CidrBlock](#cfn-ec2-subnet-cidrblock)" : String,
       "[Ipv6CidrBlock](#cfn-ec2-subnet-ipv6cidrblock)" : String,
       "[MapPublicIpOnLaunch](#cfn-ec2-subnet-mappubliciponlaunch)" : Boolean,
+      "[OutpostArn](#cfn-ec2-subnet-outpostarn)" : String,
       "[Tags](#cfn-ec2-subnet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-awsec2subnet-prop-vpcid)" : String
     }
@@ -37,6 +38,7 @@ Properties:
   [CidrBlock](#cfn-ec2-subnet-cidrblock): String
   [Ipv6CidrBlock](#cfn-ec2-subnet-ipv6cidrblock): String
   [MapPublicIpOnLaunch](#cfn-ec2-subnet-mappubliciponlaunch): Boolean
+  [OutpostArn](#cfn-ec2-subnet-outpostarn): String
   [Tags](#cfn-ec2-subnet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-awsec2subnet-prop-vpcid): String
@@ -80,6 +82,12 @@ If you specify `MapPublicIpOnLaunch`, you cannot specify `AssignIpv6AddressOnCre
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OutpostArn`  <a name="cfn-ec2-subnet-outpostarn"></a>
+The Amazon Resource Name \(ARN\) of the Outpost\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-ec2-subnet-tags"></a>
 Any tags assigned to the subnet\.  
 *Required*: No  
@@ -118,6 +126,9 @@ The IPv6 CIDR blocks that are associated with the subnet, such as `[ 2001:db8:12
 
 `NetworkAclAssociationId`  <a name="NetworkAclAssociationId-fn::getatt"></a>
 The ID of the network ACL that is associated with the subnet's VPC, such as `acl-5fb85d36`\.
+
+`OutpostArn`  <a name="OutpostArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the Outpost\.
 
 `VpcId`  <a name="VpcId-fn::getatt"></a>
 The ID of the subnet's VPC, such as `vpc-11ad4878`\.

@@ -113,7 +113,7 @@ A structure that contains input information for a canary run\. If you omit this 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeVersion`  <a name="cfn-synthetics-canary-runtimeversion"></a>
-Specifies the runtime version to use for the canary\. Currently, the only valid values are `syn-nodejs-2.0`, `syn-nodejs-2.0-beta`, and `syn-1.0`\. For more information about runtime versions, see [ Canary Runtime Versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html)\.  
+Specifies the runtime version to use for the canary\. For more information about runtime versions, see [ Canary Runtime Versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -216,7 +216,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
                 "StartCanaryAfterCreation": true,
                 "Tags": [
                     {
-                        "Id": "key00AtCreate",
+                        "Key": "key00AtCreate",
                         "Value": "value001AtCreate"
                     }
                 ]
@@ -283,11 +283,12 @@ This example creates a canary and passes the script code directly into the canar
                 "SuccessRetentionPeriod": 30,
                 "StartCanaryAfterCreation": false,
                 "Tags": [
-                {
-                    "Id": "key00AtCreate",
-                    "Value": "value001AtCreate"
-                }
-            ]
+                    {
+                        "Id": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+            }
         }
     }
 }

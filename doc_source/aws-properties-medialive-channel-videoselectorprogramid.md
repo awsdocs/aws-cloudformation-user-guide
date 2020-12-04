@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel VideoSelectorProgramId<a name="aws-properties-medialive-channel-videoselectorprogramid"></a>
 
-Fields for specifying the video asset using the program ID\. This element belongs to VideoSelectorSettings\.
+Video Selector Program Id
 
 ## Syntax<a name="aws-properties-medialive-channel-videoselectorprogramid-syntax"></a>
 

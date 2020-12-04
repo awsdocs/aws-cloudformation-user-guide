@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel EmbeddedDestinationSettings<a name="aws-properties-medialive-channel-embeddeddestinationsettings"></a>
 
-Configures the output captions encode for the Embedded format\. This element belongs to CaptionDestinationSettings \.
+Embedded Destination Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-embeddeddestinationsettings-syntax"></a>
 

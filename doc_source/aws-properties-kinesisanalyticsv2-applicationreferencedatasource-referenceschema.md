@@ -39,6 +39,8 @@ A list of `RecordColumn` objects\.
 Specifies the encoding of the records in the streaming source\. For example, UTF\-8\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `5`  
+*Maximum*: `5`  
 *Pattern*: `UTF-8`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel ArchiveOutputSettings<a name="aws-properties-medialive-channel-archiveoutputsettings"></a>
 
-Configures one output in an Archive output group\. This element belongs to OutputSettings\.
+Archive Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-archiveoutputsettings-syntax"></a>
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-archiveoutputsettings-properties"></a>
 
 `ContainerSettings`  <a name="cfn-medialive-channel-archiveoutputsettings-containersettings"></a>
-You must include this element\. It configures the container in the output group\.  
+Settings specific to the container type of the file\.  
 *Required*: No  
 *Type*: [ArchiveContainerSettings](aws-properties-medialive-channel-archivecontainersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

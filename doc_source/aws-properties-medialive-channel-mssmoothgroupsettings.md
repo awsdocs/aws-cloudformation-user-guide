@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel MsSmoothGroupSettings<a name="aws-properties-medialive-channel-mssmoothgroupsettings"></a>
 
-Identifies this output group as a Microsoft Smooth output group, and configures all the parts of the output group except for the outputs\. This element belongs to OutputGroupSettings\.
+Ms Smooth Group Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-mssmoothgroupsettings-syntax"></a>
 

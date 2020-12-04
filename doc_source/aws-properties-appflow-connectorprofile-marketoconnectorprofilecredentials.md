@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientSecret`  <a name="cfn-appflow-connectorprofile-marketoconnectorprofilecredentials-clientsecret"></a>
- The client secret used by the oauth client to authenticate to the authorization server\.   
+ The client secret used by the OAuth client to authenticate to the authorization server\.   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `512`  

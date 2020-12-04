@@ -77,13 +77,13 @@ Specifies a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: "AWS SES ConfigurationSet Sample Template"
+Description: AWS SES ConfigurationSet Sample Template
 Parameters:
   ConfigSetName:
     Type: String
 Resources:
   ConfigSet:
-    Type: AWS::SES::ConfigurationSet
+    Type: 'AWS::SES::ConfigurationSet'
     Properties:
       Name: !Ref ConfigSetName
 ```

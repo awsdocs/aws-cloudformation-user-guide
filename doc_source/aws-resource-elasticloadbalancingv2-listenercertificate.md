@@ -33,7 +33,7 @@ Properties:
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listenercertificate-certificates"></a>
 The certificate\. You can specify one certificate per resource\.  
 *Required*: Yes  
-*Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates-1.md)  
+*Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>

@@ -222,10 +222,12 @@ A value that indicates whether minor engine upgrades are applied automatically t
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `AvailabilityZone`  <a name="cfn-rds-dbinstance-availabilityzone"></a>
-The Availability Zone that the database instance will be created in\.  
-Default: A random, system\-chosen Availability Zone in the endpoint's region\.  
+ The Availability Zone \(AZ\) where the database will be created\. For information on AWS Regions and Availability Zones, see [Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\.   
+Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
  Example: `us-east-1d`   
- Constraint: The AvailabilityZone parameter cannot be specified if the MultiAZ parameter is set to `true`\. The specified Availability Zone must be in the same region as the current endpoint\.   
+ Constraint: The `AvailabilityZone` parameter can't be specified if the DB instance is a Multi\-AZ deployment\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.   
+If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom Availability Zone to create the DB instance in\.  
+For more information about RDS on VMware, see the [ *RDS on VMware User Guide\.* ](https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html) 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -426,17 +428,7 @@ Possible values are `postgresql` and `upgrade`\.
 
 `EnableIAMDatabaseAuthentication`  <a name="cfn-rds-dbinstance-enableiamdatabaseauthentication"></a>
 A value that indicates whether to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\. By default, mapping is disabled\.  
-You can enable IAM database authentication for the following database engines:  
- **Amazon Aurora**   
-Not applicable\. Mapping AWS IAM accounts to database accounts is managed by the DB cluster\.  
- **MySQL**   
-+ For MySQL 5\.6, minor version 5\.6\.34 or higher
-+ For MySQL 5\.7, minor version 5\.7\.16 or higher
-+ For MySQL 8\.0, minor version 8\.0\.16 or higher
- **PostgreSQL**   
-+ For PostgreSQL 9\.5, minor version 9\.5\.15 or higher
-+ For PostgreSQL 9\.6, minor version 9\.6\.11 or higher
-+ PostgreSQL 10\.6, 10\.7, and 10\.9
+This setting doesn't apply to Amazon Aurora\. Mapping AWS IAM accounts to database accounts is managed by the DB cluster\.  
 For more information, see [ IAM Database Authentication for MySQL and PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) in the *Amazon RDS User Guide\.*   
 *Required*: No  
 *Type*: Boolean  
@@ -469,7 +461,7 @@ Valid Values:
 + `sqlserver-web`
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EngineVersion`  <a name="cfn-rds-dbinstance-engineversion"></a>
 The version number of the database engine to use\.  
@@ -679,6 +671,7 @@ The `standard` value is also known as magnetic\.
  If you specify `io1`, you must also include a value for the `Iops` parameter\.   
  Default: `io1` if the `Iops` parameter is specified, otherwise `standard`   
 For more information, see [Amazon RDS DB Instance Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the *Amazon RDS User Guide*\.  
+This setting doesn't apply to Amazon Aurora\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

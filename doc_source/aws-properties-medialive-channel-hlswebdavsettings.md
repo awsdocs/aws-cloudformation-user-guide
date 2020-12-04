@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel HlsWebdavSettings<a name="aws-properties-medialive-channel-hlswebdavsettings"></a>
 
-Configures the connection between MediaLive and the downstream system that is a WebDAV server\. This element belongs to HlsCdnSettings\.
+Hls Webdav Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-hlswebdavsettings-syntax"></a>
 

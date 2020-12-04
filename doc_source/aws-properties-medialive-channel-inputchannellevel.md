@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel InputChannelLevel<a name="aws-properties-medialive-channel-inputchannellevel"></a>
 
-Indices and gain values for each input channel that should be remixed into this output channel\. This element belongs to AudioChannelMapping\.
+Input Channel Level
 
 ## Syntax<a name="aws-properties-medialive-channel-inputchannellevel-syntax"></a>
 

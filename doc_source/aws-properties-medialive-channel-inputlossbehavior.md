@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel InputLossBehavior<a name="aws-properties-medialive-channel-inputlossbehavior"></a>
 
-Changes the default behavior of the input loss behavior feature\. This element belongs to GlobalConfiguration\.
+Input Loss Behavior
 
 ## Syntax<a name="aws-properties-medialive-channel-inputlossbehavior-syntax"></a>
 

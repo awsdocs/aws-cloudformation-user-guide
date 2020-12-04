@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel BlackoutSlate<a name="aws-properties-medialive-channel-blackoutslate"></a>
 
-Configures the blackout feature in SCTE\-35 message processing\. This feature blacks out the content for an SCTE\-35 message that is not considered to be an ad avail\. This element belongs to EncoderSettings\.
+Blackout Slate
 
 ## Syntax<a name="aws-properties-medialive-channel-blackoutslate-syntax"></a>
 

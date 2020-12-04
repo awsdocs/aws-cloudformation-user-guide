@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Scte35TimeSignalApos<a name="aws-properties-medialive-channel-scte35timesignalapos"></a>
 
-Configures the handling of time signals that are in the inputs\. This element belongs to AvailSettings\.
+Scte35 Time Signal Apos
 
 ## Syntax<a name="aws-properties-medialive-channel-scte35timesignalapos-syntax"></a>
 
@@ -33,13 +33,13 @@ When specified, this offset \(in milliseconds\) is added to the input Ad Avail P
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoRegionalBlackoutFlag`  <a name="cfn-medialive-channel-scte35timesignalapos-noregionalblackoutflag"></a>
-When set to ignore, Segment Descriptors with noRegionalBlackoutFlag set to 0 will no longer trigger blackouts or Ad Avail slates\.  
+When set to ignore, Segment Descriptors with noRegionalBlackoutFlag set to 0 will no longer trigger blackouts or Ad Avail slates  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebDeliveryAllowedFlag`  <a name="cfn-medialive-channel-scte35timesignalapos-webdeliveryallowedflag"></a>
-When set to ignore, Segment Descriptors with webDeliveryAllowedFlag set to 0 will no longer trigger blackouts or Ad Avail slates\.  
+When set to ignore, Segment Descriptors with webDeliveryAllowedFlag set to 0 will no longer trigger blackouts or Ad Avail slates  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

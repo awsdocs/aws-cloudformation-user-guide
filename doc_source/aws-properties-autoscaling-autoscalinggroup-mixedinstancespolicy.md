@@ -29,14 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy-properties"></a>
 
 `InstancesDistribution`  <a name="cfn-as-mixedinstancespolicy-instancesdistribution"></a>
-The instances distribution to use\.  
-If you leave this property unspecified, the value for each property in `InstancesDistribution` uses a default value\.  
+The instances distribution to use\. If you leave this property unspecified, the value for each property in `InstancesDistribution` uses a default value\.  
 *Required*: No  
 *Type*: [InstancesDistribution](aws-properties-autoscaling-autoscalinggroup-instancesdistribution.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplate`  <a name="cfn-as-mixedinstancespolicy-launchtemplate"></a>
-The launch template and instance types \(overrides\)\.  
+Specifies the launch template to use and optionally the instance types \(overrides\) that are used to provision EC2 instances to fulfill On\-Demand and Spot capacities\.  
 *Required*: Yes  
 *Type*: [LaunchTemplate](aws-properties-autoscaling-autoscalinggroup-launchtemplate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

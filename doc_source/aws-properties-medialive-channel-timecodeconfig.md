@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel TimecodeConfig<a name="aws-properties-medialive-channel-timecodeconfig"></a>
 
-Set up the channel to include timecode metadata in all the outputs\. This element belongs to EncoderSettings\.
+Timecode Config
 
 ## Syntax<a name="aws-properties-medialive-channel-timecodeconfig-syntax"></a>
 

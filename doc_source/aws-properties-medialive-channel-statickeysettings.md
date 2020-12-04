@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel StaticKeySettings<a name="aws-properties-medialive-channel-statickeysettings"></a>
 
-Configures the static key settings\. This element belongs to KeyProviderSettings\.
+Static Key Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-statickeysettings-syntax"></a>
 

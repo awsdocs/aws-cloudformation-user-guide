@@ -42,6 +42,7 @@ The name of the connection\. Connection names must be unique in an AWS user acco
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostArn`  <a name="cfn-codestarconnections-connection-hostarn"></a>

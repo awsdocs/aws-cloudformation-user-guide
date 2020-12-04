@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel FrameCaptureSettings<a name="aws-properties-medialive-channel-framecapturesettings"></a>
 
-Configures the output video encode as a set of frame capatures \(JPEG files\)\. This element belongs to VideoCodecSettings\.
+Frame Capture Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-framecapturesettings-syntax"></a>
 

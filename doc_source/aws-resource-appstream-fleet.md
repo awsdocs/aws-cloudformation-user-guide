@@ -145,6 +145,7 @@ The name of the image used to create the fleet\.
 
 `InstanceType`  <a name="cfn-appstream-fleet-instancetype"></a>
 The instance type to use when launching fleet instances\. The following instance types are available:  
++ stream\.standard\.small
 + stream\.standard\.medium
 + stream\.standard\.large
 + stream\.compute\.large

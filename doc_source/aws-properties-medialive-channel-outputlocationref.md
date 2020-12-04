@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel OutputLocationRef<a name="aws-properties-medialive-channel-outputlocationref"></a>
 
-Contains an OutputDestination ID\. This element is used by all the output groups\.
+Reference to an OutputDestination ID defined in the channel
 
 ## Syntax<a name="aws-properties-medialive-channel-outputlocationref-syntax"></a>
 

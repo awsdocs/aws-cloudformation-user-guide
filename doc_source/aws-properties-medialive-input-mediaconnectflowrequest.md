@@ -1,6 +1,6 @@
 # AWS::MediaLive::Input MediaConnectFlowRequest<a name="aws-properties-medialive-input-mediaconnectflowrequest"></a>
 
-The settings for a MediaConnect Flow\. This element belongs to CreateInput, UpdateInput, and Input\.
+The settings for a MediaConnect Flow\.
 
 ## Syntax<a name="aws-properties-medialive-input-mediaconnectflowrequest-syntax"></a>
 

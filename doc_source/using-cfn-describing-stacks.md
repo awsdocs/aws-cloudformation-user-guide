@@ -65,11 +65,11 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 If you don't use the `--stack-name` option to limit the output to one stack, information on all your running stacks is returned\.
 
-## Stack status codes<a name="w6974ab1c23c15c17c11"></a>
+## Stack status codes<a name="w7379ab1c23c15c17c11"></a>
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w6974ab1c23c15c17c11b4"></a>
+### <a name="w7379ab1c23c15c17c11b4"></a>
 
 
 | Stack Status | Description | 

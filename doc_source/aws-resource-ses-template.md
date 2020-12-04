@@ -90,7 +90,7 @@ Specifies an email template, which is used when sending templated email messages
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES Template Sample Template'
+Description: AWS SES Template Sample Template
 Parameters:
   TemplateName:
     Type: String
@@ -102,7 +102,7 @@ Parameters:
     Type: String
 Resources:
   Template:
-    Type: AWS::SES::Template
+    Type: 'AWS::SES::Template'
     Properties:
       Template:
         TemplateName: !Ref TemplateName

@@ -36,7 +36,7 @@ To include the `AWS::Include` transform at the top level of a template, in the `
 
 ### Syntax when the transform is embedded within a section of a template<a name="aws-include-syntax-embedded-within-section-overview"></a>
 
-To include a transform that is embedded within a section, use the `` intrinsic function and the following syntax\.
+To include a transform that is embedded within a section, use the ``Fn::Transform`` intrinsic function and the following syntax\.
 
 #### JSON<a name="aws-include-syntax-within-section.json"></a>
 

@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Sub` substitutes variables in an input string with values that you specify\. In your templates, you can use this function to construct commands or outputs that include values that aren't available until you create or update a stack\.
 
-## Declaration<a name="w6974ab1c33c28c59b5"></a>
+## Declaration<a name="w7379ab1c33c28c59b5"></a>
 
 The following sections show the function's syntax\.
 
@@ -52,7 +52,7 @@ Syntax for the short form:
 !Sub String
 ```
 
-## Parameters<a name="w6974ab1c33c28c59b7"></a>
+## Parameters<a name="w7379ab1c33c28c59b7"></a>
 
 `String`  
 A string with variables that AWS CloudFormation substitutes with their associated values at runtime\. Write variables as `${MyVarName}`\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\. If you specify only template parameter names, resource logical IDs, and resource attributes, don't specify a key\-value map\.  
@@ -65,15 +65,15 @@ The name of a variable that you included in the `String` parameter\.
 `VarValue`  
 The value that AWS CloudFormation substitutes for the associated variable name at runtime\.
 
-## Return value<a name="w6974ab1c33c28c59b9"></a>
+## Return value<a name="w7379ab1c33c28c59b9"></a>
 
 AWS CloudFormation returns the original string, substituting the values for all of the variables\.
 
-## Examples<a name="w6974ab1c33c28c59c11"></a>
+## Examples<a name="w7379ab1c33c28c59c11"></a>
 
 The following examples demonstrate how to use the `Fn::Sub` function\.
 
-### Fn::Sub with a mapping<a name="w6974ab1c33c28c59c11b4"></a>
+### Fn::Sub with a mapping<a name="w7379ab1c33c28c59c11b4"></a>
 
 The following example uses a mapping to substitute the `${Domain}` variable with the resulting value from the `Ref` function\.
 
@@ -93,7 +93,7 @@ Name: !Sub
 
  
 
-### Fn::Sub without a mapping<a name="w6974ab1c33c28c59c11b6"></a>
+### Fn::Sub without a mapping<a name="w7379ab1c33c28c59c11b6"></a>
 
 The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` pseudo parameters and the `vpc` resource logical ID to create an Amazon Resource Name \(ARN\) for a VPC\.
 
@@ -111,7 +111,7 @@ The following example uses Fn::Sub with the `AWS::Region` and `AWS::AccountId` p
 
  
 
-### UserData commands<a name="w6974ab1c33c28c59c11b8"></a>
+### UserData commands<a name="w7379ab1c33c28c59c11b8"></a>
 
 The following example uses `Fn::Sub` to substitute the `AWS::StackName` and `AWS::Region` pseudo parameters for the actual stack name and region at runtime\.
 
@@ -142,7 +142,7 @@ UserData:
       /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerGroup --region ${AWS::Region}
 ```
 
-## Supported functions<a name="w6974ab1c33c28c59c13"></a>
+## Supported functions<a name="w7379ab1c33c28c59c13"></a>
 
 For the `String` parameter, you cannot use any functions\. You must specify a string value\.
 
