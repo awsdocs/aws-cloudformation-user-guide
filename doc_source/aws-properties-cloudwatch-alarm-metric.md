@@ -36,7 +36,7 @@ The metric dimensions that you want to be used for the metric that the alarm wil
 
 `MetricName`  <a name="cfn-cloudwatch-alarm-metric-metricname"></a>
 The name of the metric that you want the alarm to watch\. This is a required field\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
