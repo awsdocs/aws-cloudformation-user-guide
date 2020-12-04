@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActiveTracing](#cfn-synthetics-canary-runconfig-activetracing)" : Boolean,
+  "[EnvironmentVariables](#cfn-synthetics-canary-runconfig-environmentvariables)" : {Key : Value, ...},
   "[MemoryInMB](#cfn-synthetics-canary-runconfig-memoryinmb)" : Integer,
   "[TimeoutInSeconds](#cfn-synthetics-canary-runconfig-timeoutinseconds)" : Integer
 }
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ActiveTracing](#cfn-synthetics-canary-runconfig-activetracing): Boolean
+  [EnvironmentVariables](#cfn-synthetics-canary-runconfig-environmentvariables): 
+    Key : Value
   [MemoryInMB](#cfn-synthetics-canary-runconfig-memoryinmb): Integer
   [TimeoutInSeconds](#cfn-synthetics-canary-runconfig-timeoutinseconds): Integer
 ```
@@ -31,6 +34,14 @@ Specifies whether this canary is to use active AWS X\-Ray tracing when it runs\.
  You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later for their canary runtime\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnvironmentVariables`  <a name="cfn-synthetics-canary-runconfig-environmentvariables"></a>
+Specifies the keys and values to use for any environment variables used in the canary script\. Use the following format:  
+\{ "key1" : "value1", "key2" : "value2", \.\.\.\}  
+Keys must start with a letter and be at least two characters\. The total size of your environment variables cannot exceed 4 KB\. You can't specify any Lambda reserved environment variables as the keys for your environment variables\. For more information about reserved keys, see [ Runtime environment variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html#configuration-envvars-runtime)\.  
+*Required*: No  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MemoryInMB`  <a name="cfn-synthetics-canary-runconfig-memoryinmb"></a>

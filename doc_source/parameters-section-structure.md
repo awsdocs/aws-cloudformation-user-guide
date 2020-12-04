@@ -24,11 +24,11 @@ Note that `InstanceTypeParameter` has a default value of `t2.micro`\. This is th
 ### YAML<a name="parameters-section-structure-example.yaml"></a>
 
 ```
-Parameters:
-  InstanceTypeParameter:
+Parameters: 
+  InstanceTypeParameter: 
     Type: String
     Default: t2.micro
-    AllowedValues:
+    AllowedValues: 
       - t2.micro
       - m1.small
       - m1.large
@@ -95,80 +95,80 @@ Parameters:
 
 ## Properties<a name="parameters-section-structure-properties"></a>
 
-`AllowedPattern`
-A regular expression that represents the patterns to allow for `String` types\. Pattern is required to match entire parameter value to be considered valid, in effect start/end anchors are implied e.g. `^pattern$`.
+`AllowedPattern`  
+A regular expression that represents the patterns to allow for `String` types\.  
 *Required*: No
 
-`AllowedValues`
-An array containing the list of values allowed for the parameter\.
+`AllowedValues`  
+An array containing the list of values allowed for the parameter\.  
 *Required*: No
 
-`ConstraintDescription`
-A string that explains a constraint when the constraint is violated\. For example, without a constraint description, a parameter that has an allowed pattern of `[A-Za-z0-9]+` displays the following error message when the user specifies an invalid value:
-`Malformed input-Parameter MyParameter must match pattern [A-Za-z0-9]+`
-By adding a constraint description, such as *must only contain letters \(uppercase and lowercase\) and numbers*, you can display the following customized error message:
-`Malformed input-Parameter MyParameter must only contain uppercase and lowercase letters and numbers`
+`ConstraintDescription`  
+A string that explains a constraint when the constraint is violated\. For example, without a constraint description, a parameter that has an allowed pattern of `[A-Za-z0-9]+` displays the following error message when the user specifies an invalid value:  
+`Malformed input-Parameter MyParameter must match pattern [A-Za-z0-9]+`  
+By adding a constraint description, such as *must only contain letters \(uppercase and lowercase\) and numbers*, you can display the following customized error message:  
+`Malformed input-Parameter MyParameter must only contain uppercase and lowercase letters and numbers`  
 *Required*: No
 
-`Default`
-A value of the appropriate type for the template to use if no value is specified when a stack is created\. If you define constraints for the parameter, you must specify a value that adheres to those constraints\.
+`Default`  
+A value of the appropriate type for the template to use if no value is specified when a stack is created\. If you define constraints for the parameter, you must specify a value that adheres to those constraints\.  
 *Required*: No
 
-`Description`
-A string of up to 4000 characters that describes the parameter\.
+`Description`  
+A string of up to 4000 characters that describes the parameter\.  
 *Required*: No
 
-`MaxLength`
-An integer value that determines the largest number of characters you want to allow for `String` types\.
+`MaxLength`  
+An integer value that determines the largest number of characters you want to allow for `String` types\.  
 *Required*: No
 
-`MaxValue`
-A numeric value that determines the largest numeric value you want to allow for `Number` types\.
+`MaxValue`  
+A numeric value that determines the largest numeric value you want to allow for `Number` types\.  
 *Required*: No
 
-`MinLength`
-An integer value that determines the smallest number of characters you want to allow for `String` types\.
+`MinLength`  
+An integer value that determines the smallest number of characters you want to allow for `String` types\.  
 *Required*: No
 
-`MinValue`
-A numeric value that determines the smallest numeric value you want to allow for `Number` types\.
+`MinValue`  
+A numeric value that determines the smallest numeric value you want to allow for `Number` types\.  
 *Required*: No
 
-`NoEcho`
-Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
-Using the `NoEcho` attribute does not mask any information stored in the following:
+`NoEcho`  
+Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.   
+Using the `NoEcho` attribute does not mask any information stored in the following:  
 + The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
 + The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
 + The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 *Required*: No
 
 `Type`  <a name="parameters-section-structure-properties-type"></a>
-The data type for the parameter \(`DataType`\)\.
-*Required*: Yes
-AWS CloudFormation supports the following parameter types:
-`String`
-A literal string\.
-For example, users could specify `"MyUserName"`\.
-`Number`
-An integer or float\. AWS CloudFormation validates the parameter value as a number; however, when you use the parameter elsewhere in your template \(for example, by using the `Ref` intrinsic function\), the parameter value becomes a string\.
-For example, users could specify `"8888"`\.
-`List<Number>`
-An array of integers or floats that are separated by commas\. AWS CloudFormation validates the parameter value as numbers; however, when you use the parameter elsewhere in your template \(for example, by using the `Ref` intrinsic function\), the parameter value becomes a list of strings\.
-For example, users could specify `"80,20"`, and a `Ref` would result in `["80","20"]`\.
-`CommaDelimitedList`
-An array of literal strings that are separated by commas\. The total number of strings should be one more than the total number of commas\. Also, each member string is space trimmed\.
-For example, users could specify `"test,dev,prod"`, and a `Ref` would result in `["test","dev","prod"]`\.
-AWS\-Specific Parameter Types
-AWS values such as Amazon EC2 key pair names and VPC IDs\. For more information, see [AWS\-specific parameter types](#aws-specific-parameter-types)\.
-`SSM` Parameter Types
+The data type for the parameter \(`DataType`\)\.  
+*Required*: Yes  
+AWS CloudFormation supports the following parameter types:    
+`String`  
+A literal string\.  
+For example, users could specify `"MyUserName"`\.  
+`Number`  
+An integer or float\. AWS CloudFormation validates the parameter value as a number; however, when you use the parameter elsewhere in your template \(for example, by using the `Ref` intrinsic function\), the parameter value becomes a string\.  
+For example, users could specify `"8888"`\.  
+`List<Number>`  
+An array of integers or floats that are separated by commas\. AWS CloudFormation validates the parameter value as numbers; however, when you use the parameter elsewhere in your template \(for example, by using the `Ref` intrinsic function\), the parameter value becomes a list of strings\.  
+For example, users could specify `"80,20"`, and a `Ref` would result in `["80","20"]`\.  
+`CommaDelimitedList`  
+An array of literal strings that are separated by commas\. The total number of strings should be one more than the total number of commas\. Also, each member string is space trimmed\.  
+For example, users could specify `"test,dev,prod"`, and a `Ref` would result in `["test","dev","prod"]`\.  
+AWS\-Specific Parameter Types  
+AWS values such as Amazon EC2 key pair names and VPC IDs\. For more information, see [AWS\-specific parameter types](#aws-specific-parameter-types)\.  
+`SSM` Parameter Types  
 Parameters that correspond to existing parameters in Systems Manager Parameter Store\. You specify a Systems Manager parameter key as the value of the `SSM` parameter, and AWS CloudFormation fetches the latest value from Parameter Store to use for the stack\. For more information, see [SSM parameter types](#aws-ssm-parameter-types)\.
 
 ## AWS\-specific parameter types<a name="aws-specific-parameter-types"></a>
 
-AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\.
+AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\. 
 
 If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` \(or `CommaDelimitedList`\)\.
 
@@ -176,61 +176,61 @@ If you want to allow template users to enter input values from different AWS acc
 
 AWS CloudFormation supports the following AWS\-specific types:
 
-`AWS::EC2::AvailabilityZone::Name`
+`AWS::EC2::AvailabilityZone::Name`  
 An Availability Zone, such as `us-west-2a`\.
 
-`AWS::EC2::Image::Id`
+`AWS::EC2::Image::Id`  
 An Amazon EC2 image ID, such as `ami-0ff8a91507f77f867`\. Note that the AWS CloudFormation console doesn't show a drop\-down list of values for this parameter type\.
 
-`AWS::EC2::Instance::Id`
+`AWS::EC2::Instance::Id`  
 An Amazon EC2 instance ID, such as `i-1e731a32`\.
 
-`AWS::EC2::KeyPair::KeyName`
+`AWS::EC2::KeyPair::KeyName`  
 An Amazon EC2 key pair name\.
 
-`AWS::EC2::SecurityGroup::GroupName`
+`AWS::EC2::SecurityGroup::GroupName`  
 An EC2\-Classic or default VPC security group name, such as `my-sg-abc`\.
 
-`AWS::EC2::SecurityGroup::Id`
+`AWS::EC2::SecurityGroup::Id`  
 A security group ID, such as `sg-a123fd85`\.
 
-`AWS::EC2::Subnet::Id`
+`AWS::EC2::Subnet::Id`  
 A subnet ID, such as `subnet-123a351e`\.
 
-`AWS::EC2::Volume::Id`
+`AWS::EC2::Volume::Id`  
 An Amazon EBS volume ID, such as `vol-3cdd3f56`\.
 
-`AWS::EC2::VPC::Id`
+`AWS::EC2::VPC::Id`  
 A VPC ID, such as `vpc-a123baa3`\.
 
-`AWS::Route53::HostedZone::Id`
+`AWS::Route53::HostedZone::Id`  
 An Amazon Route 53 hosted zone ID, such as `Z23YXV4OVPL04A`\.
 
-`List<AWS::EC2::AvailabilityZone::Name>`
+`List<AWS::EC2::AvailabilityZone::Name>`  
 An array of Availability Zones for a region, such as `us-west-2a, us-west-2b`\.
 
-`List<AWS::EC2::Image::Id>`
+`List<AWS::EC2::Image::Id>`  
 An array of Amazon EC2 image IDs, such as `ami-0ff8a91507f77f867, ami-0a584ac55a7631c0c`\. Note that the AWS CloudFormation console doesn't show a drop\-down list of values for this parameter type\.
 
-`List<AWS::EC2::Instance::Id>`
+`List<AWS::EC2::Instance::Id>`  
 An array of Amazon EC2 instance IDs, such as `i-1e731a32, i-1e731a34`\.
 
-`List<AWS::EC2::SecurityGroup::GroupName>`
+`List<AWS::EC2::SecurityGroup::GroupName>`  
 An array of EC2\-Classic or default VPC security group names, such as `my-sg-abc, my-sg-def`\.
 
-`List<AWS::EC2::SecurityGroup::Id>`
+`List<AWS::EC2::SecurityGroup::Id>`  
 An array of security group IDs, such as `sg-a123fd85, sg-b456fd85`\.
 
-`List<AWS::EC2::Subnet::Id>`
+`List<AWS::EC2::Subnet::Id>`  
 An array of subnet IDs, such as `subnet-123a351e, subnet-456b351e`\.
 
-`List<AWS::EC2::Volume::Id>`
+`List<AWS::EC2::Volume::Id>`  
 An array of Amazon EBS volume IDs, such as `vol-3cdd3f56, vol-4cdd3f56`\.
 
-`List<AWS::EC2::VPC::Id>`
+`List<AWS::EC2::VPC::Id>`  
 An array of VPC IDs, such as `vpc-a123baa3, vpc-b456baa3`\.
 
-`List<AWS::Route53::HostedZone::Id>`
+`List<AWS::Route53::HostedZone::Id>`  
 An array of Amazon Route 53 hosted zone IDs, such as `Z23YXV4OVPL04A, Z23YXV4OVPL04B`\.
 
 ## SSM parameter types<a name="aws-ssm-parameter-types"></a>
@@ -243,9 +243,9 @@ When you create or update stacks and create change sets, AWS CloudFormation uses
 
 When you execute a change set, AWS CloudFormation uses the values that are specified in the change set\. You should review these values before executing the change set because they might change in Parameter Store between the time that you create the change set and run it\.
 
-**Tip**
-You can see the *resolved values* for `SSM` parameters on the stack's **Parameters** tab in the console, or by running [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html) or [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html)\. These are the values that are currently used in the stack definition for the corresponding Systems Manager parameter keys\. Note that these values are set when the stack is created or updated, so they might differ from the latest values in Parameter Store\.
-If you specify Secure Strings as parameter values using the `ssm-secure` pattern, AWS CloudFormation does not store the Secure String value or display it in the console or in the results of API calls\.
+**Tip**  
+You can see the *resolved values* for `SSM` parameters on the stack's **Parameters** tab in the console, or by running [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html) or [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html)\. These are the values that are currently used in the stack definition for the corresponding Systems Manager parameter keys\. Note that these values are set when the stack is created or updated, so they might differ from the latest values in Parameter Store\.  
+If you specify Secure Strings as parameter values using the `ssm-secure` pattern, AWS CloudFormation does not store the Secure String value or display it in the console or in the results of API calls\. 
 
 Because the value of an `SSM` parameter is a Systems Manager parameter key, you should be aware of the following behavior:
 + For stack updates, the **Use existing value** option in the console and the `UsePreviousValue` attribute for [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) tell AWS CloudFormation to use the existing Systems Manager parameter key—not its value\. AWS CloudFormation always fetches the latest values from Parameter Store when it updates stacks\.
@@ -259,22 +259,22 @@ See [`SSM` Parameter Types](#parameters-section-ssm-examples) for examples that 
 
 AWS CloudFormation supports the following `SSM` parameter types:
 
-`AWS::SSM::Parameter::Name`
-The name of a Systems Manager parameter key\.
+`AWS::SSM::Parameter::Name`  
+The name of a Systems Manager parameter key\.  
 Use this parameter when you want to pass the parameter key\. For example, you can use this type to validate that the parameter exists\.
 
-`AWS::SSM::Parameter::Value<String>`
+`AWS::SSM::Parameter::Value<String>`  
 A Systems Manager parameter whose value is a string\. This corresponds to the `String` parameter type in Parameter Store\.
 
-`AWS::SSM::Parameter::Value<List<String>>` or `AWS::SSM::Parameter::Value<CommaDelimitedList>`
+`AWS::SSM::Parameter::Value<List<String>>` or `AWS::SSM::Parameter::Value<CommaDelimitedList>`  
 A Systems Manager parameter whose value is a list of strings\. This corresponds to the `StringList` parameter type in Parameter Store\.
 
-`AWS::SSM::Parameter::Value<AWS-specific parameter type>`
-A Systems Manager parameter whose value is an [AWS\-specific parameter type](#aws-specific-parameter-types)\. For example, the following specifies the `AWS::EC2::KeyPair::KeyName` type:
+`AWS::SSM::Parameter::Value<AWS-specific parameter type>`  
+A Systems Manager parameter whose value is an [AWS\-specific parameter type](#aws-specific-parameter-types)\. For example, the following specifies the `AWS::EC2::KeyPair::KeyName` type:  
 `AWS::SSM::Parameter::Value<AWS::EC2::KeyPair::KeyName>`
 
-`AWS::SSM::Parameter::Value<List<AWS-specific parameter type>>`
-A Systems Manager parameter whose value is a list of [AWS\-specific parameter types](#aws-specific-parameter-types)\. For example, the following specifies a list of `AWS::EC2::KeyPair::KeyName` types:
+`AWS::SSM::Parameter::Value<List<AWS-specific parameter type>>`  
+A Systems Manager parameter whose value is a list of [AWS\-specific parameter types](#aws-specific-parameter-types)\. For example, the following specifies a list of `AWS::EC2::KeyPair::KeyName` types:  
 `AWS::SSM::Parameter::Value<List<AWS::EC2::KeyPair::KeyName>>`
 
 ### Unsupported SSM parameter types<a name="aws-ssm-parameter-types-unsupported"></a>
@@ -323,14 +323,14 @@ The following example `Parameters` section declares two parameters\. The `DBPort
 #### YAML<a name="parameters-section-structure-examples-example.yaml"></a>
 
 ```
-Parameters:
-  DBPort:
+Parameters: 
+  DBPort: 
     Default: 3306
     Description: TCP/IP port for the database
     Type: Number
     MinValue: 1150
     MaxValue: 65535
-  DBPwd:
+  DBPwd: 
     NoEcho: true
     Description: The database admin account password
     Type: String
@@ -365,11 +365,11 @@ The following example declares two parameters with the types `AWS::EC2::KeyPair:
 #### YAML<a name="parameters-section-structure-examples-example2.yaml"></a>
 
 ```
-Parameters:
-  myKeyPair:
+Parameters: 
+  myKeyPair: 
     Description: Amazon EC2 Key Pair
     Type: "AWS::EC2::KeyPair::KeyName"
-  mySubnetIDs:
+  mySubnetIDs: 
     Description: Subnet IDs
     Type: "List<AWS::EC2::Subnet::Id>"
 ```
@@ -397,8 +397,8 @@ You can use the `CommaDelimitedList` parameter type to specify multiple string v
 #### YAML<a name="parameters-section-structure-examples-example3.yaml"></a>
 
 ```
-Parameters:
-  DbSubnetIpBlocks:
+Parameters: 
+  DbSubnetIpBlocks: 
     Description: "Comma-delimited list of three CIDR blocks"
     Type: CommaDelimitedList
     Default: "10.0.48.0/24, 10.0.112.0/24, 10.0.176.0/24"
@@ -448,7 +448,7 @@ DbSubnet1:
       - AZ: !Select [0, !Ref VpcAzs]
     VpcId: !Ref VPC
     CidrBlock: !Select [0, !Ref DbSubnetIpBlocks]
-DbSubnet2:
+DbSubnet2: 
   Type: AWS::EC2::Subnet
   Properties:
     AvailabilityZone: !Sub
@@ -456,7 +456,7 @@ DbSubnet2:
       - AZ: !Select [1, !Ref VpcAzs]
     VpcId: !Ref VPC
     CidrBlock: !Select [1, !Ref DbSubnetIpBlocks]
-DbSubnet3:
+DbSubnet3: 
   Type: AWS::EC2::Subnet
   Properties:
     AvailabilityZone: !Sub
@@ -497,13 +497,13 @@ The following template declares an `AWS::SSM::Parameter::Value<String>` paramete
 ##### YAML<a name="parameters-ssm-string.yaml"></a>
 
 ```
-Parameters:
-  InstanceType:
+Parameters: 
+  InstanceType: 
     Type: 'AWS::SSM::Parameter::Value<String>'
-Resources:
-  Instance:
+Resources: 
+  Instance: 
     Type: 'AWS::EC2::Instance'
-    Properties:
+    Properties: 
       InstanceType: !Ref InstanceType
 ```
 
@@ -544,11 +544,11 @@ The following template declares an `AWS::SSM::Parameter::Value<AWS::EC2::Image::
 ##### YAML<a name="parameters-ssm-ec2keypair.yaml"></a>
 
 ```
-Parameters:
-  ImageId:
+Parameters: 
+  ImageId: 
     Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
-Resources:
-  Instance:
+Resources: 
+  Instance: 
     Type: 'AWS::EC2::Instance'
     Properties:
       ImageId: !Ref ImageId

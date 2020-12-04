@@ -1,9 +1,9 @@
 # AWS::AmazonMQ::Broker EncryptionOptions<a name="aws-properties-amazonmq-broker-encryptionoptions"></a>
 
+Encryption options for the broker\.
+
 **Important**  
 Does not apply to RabbitMQ brokers\.
-
-Encryption options for the broker\.
 
 ## Syntax<a name="aws-properties-amazonmq-broker-encryptionoptions-syntax"></a>
 

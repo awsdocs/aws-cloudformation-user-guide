@@ -1,6 +1,6 @@
 # AWS::Lambda::CodeSigningConfig AllowedPublishers<a name="aws-properties-lambda-codesigningconfig-allowedpublishers"></a>
 
-List of allowed publishers\.
+List of signing profiles that can sign a code package\. 
 
 ## Syntax<a name="aws-properties-lambda-codesigningconfig-allowedpublishers-syntax"></a>
 

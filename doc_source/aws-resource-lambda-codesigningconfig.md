@@ -1,6 +1,6 @@
 # AWS::Lambda::CodeSigningConfig<a name="aws-resource-lambda-codesigningconfig"></a>
 
-Creates a code signing configuration\. A [code signing configuration](https://docs.aws.amazon.com/lambda/latest/dg/configuration-trustedcode.html) defines a list of allowed signing profiles and defines the code\-signing validation policy \(action to be taken if deployment validation checks fail\)\. 
+Details about a Code signing configuration\. 
 
 ## Syntax<a name="aws-resource-lambda-codesigningconfig-syntax"></a>
 
@@ -34,19 +34,19 @@ Properties:
 ## Properties<a name="aws-resource-lambda-codesigningconfig-properties"></a>
 
 `AllowedPublishers`  <a name="cfn-lambda-codesigningconfig-allowedpublishers"></a>
-Signing profiles for this code signing configuration\.  
+List of allowed publishers\.  
 *Required*: Yes  
 *Type*: [AllowedPublishers](aws-properties-lambda-codesigningconfig-allowedpublishers.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodeSigningPolicies`  <a name="cfn-lambda-codesigningconfig-codesigningpolicies"></a>
-The code signing policies define the actions to take if the validation checks fail\.   
+The code signing policy controls the validation failure action for signature mismatch or expiry\.  
 *Required*: No  
 *Type*: [CodeSigningPolicies](aws-properties-lambda-codesigningconfig-codesigningpolicies.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lambda-codesigningconfig-description"></a>
-Descriptive name for this code signing configuration\.  
+Code signing configuration description\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

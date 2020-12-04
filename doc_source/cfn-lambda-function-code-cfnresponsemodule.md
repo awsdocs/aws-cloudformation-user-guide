@@ -7,7 +7,7 @@ After executing the `send` method, the Lambda function terminates, so anything y
 **Note**  
 The `cfn-response` module is available only when you use the `ZipFile` property to write your source code\. It isn't available for source code that's stored in Amazon S3 buckets\. For code in buckets, you must write your own functions to send responses\.
 
-## Loading the `cfn-response` module<a name="w7379ab1c27c24c14b9b9"></a>
+## Loading the `cfn-response` module<a name="w7423ab1c27c24c14b9b9"></a>
 
 For Node\.js functions, use the `require()` function to load the `cfn-response` module\. For example, the following code example creates a `cfn-response` object with the name `response`:
 
@@ -24,7 +24,7 @@ Use this exact import statement\. If you use other variants of the import statem
 import cfnresponse
 ```
 
-## `send` method parameters<a name="w7379ab1c27c24c14b9c11"></a>
+## `send` method parameters<a name="w7423ab1c27c24c14b9c11"></a>
 
 You can use the following parameters with the `send` method\.
 
@@ -52,9 +52,9 @@ Using the `NoEcho` attribute does not mask any information stored in the followi
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
 For more information about using `NoEcho` to mask sensitive information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-## Examples<a name="w7379ab1c27c24c14b9c13"></a>
+## Examples<a name="w7423ab1c27c24c14b9c13"></a>
 
-### Node\.js<a name="w7379ab1c27c24c14b9c13b3"></a>
+### Node\.js<a name="w7423ab1c27c24c14b9c13b3"></a>
 
 In the following Node\.js example, the inline Lambda function takes an input value and multiplies it by 5\. Inline functions are especially useful for smaller functions because they allow you to specify the source code directly in the template, instead of creating a package and uploading it to an Amazon S3 bucket\. The function uses the `cfn-response` `send` method to send the result back to the custom resource that invoked it\.
 
@@ -83,7 +83,7 @@ ZipFile: >
   };
 ```
 
-### Python<a name="w7379ab1c27c24c14b9c13b5"></a>
+### Python<a name="w7423ab1c27c24c14b9c13b5"></a>
 
 In the following Python example, the inline Lambda function takes an integer value and multiplies it by 5\.
 
@@ -114,7 +114,7 @@ ZipFile: |
     cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
 ```
 
-## Module source code<a name="w7379ab1c27c24c14b9c15"></a>
+## Module source code<a name="w7423ab1c27c24c14b9c15"></a>
 
 The following is the response module source code for the Node\.js functions\. Review it to understand what the module does and for help with implementing your own response functions\.
 
@@ -171,36 +171,42 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
 }
 ```
 
-The following is the response module source code for Python 3 functions: 
+The following is the response module source code for Python 2 and 3 functions: 
 
 ```
 # Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: MIT-0
  
+from __future__ import print_function
 import urllib3
 import json
-http = urllib3.PoolManager()
+
 SUCCESS = "SUCCESS"
 FAILED = "FAILED"
 
-def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False):
+http = urllib3.PoolManager()
+
+
+def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False, reason=None):
     responseUrl = event['ResponseURL']
 
     print(responseUrl)
 
-    responseBody = {}
-    responseBody['Status'] = responseStatus
-    responseBody['Reason'] = 'See the details in CloudWatch Log Stream: ' + context.log_stream_name
-    responseBody['PhysicalResourceId'] = physicalResourceId or context.log_stream_name
-    responseBody['StackId'] = event['StackId']
-    responseBody['RequestId'] = event['RequestId']
-    responseBody['LogicalResourceId'] = event['LogicalResourceId']
-    responseBody['NoEcho'] = noEcho
-    responseBody['Data'] = responseData
+    responseBody = {
+        'Status' : responseStatus,
+        'Reason' : reason or "See the details in CloudWatch Log Stream: {}".format(context.log_stream_name),
+        'PhysicalResourceId' : physicalResourceId or context.log_stream_name,
+        'StackId' : event['StackId'],
+        'RequestId' : event['RequestId'],
+        'LogicalResourceId' : event['LogicalResourceId'],
+        'NoEcho' : noEcho,
+        'Data' : responseData
+    }
 
     json_responseBody = json.dumps(responseBody)
 
-    print("Response body:\n" + json_responseBody)
+    print("Response body:")
+    print(json_responseBody)
 
     headers = {
         'content-type' : '',
@@ -208,56 +214,11 @@ def send(event, context, responseStatus, responseData, physicalResourceId=None, 
     }
 
     try:
-        
-        response = http.request('PUT',responseUrl,body=json_responseBody.encode('utf-8'),headers=headers)
-        print("Status code: " + response.reason)
+        response = http.request('PUT', responseUrl, headers=headers, body=json_responseBody)
+        print("Status code:", response.status)
+
+
     except Exception as e:
-        print("send(..) failed executing requests.put(..): " + str(e))
-```
 
-The following is the response module source code for Python 2 functions:
-
-```
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
-# SPDX-License-Identifier: MIT-0
- 
-import urllib2
-import json
-
-SUCCESS = "SUCCESS"
-FAILED = "FAILED"
-
-def send(event, context, responseStatus, responseData, physicalResourceId=None, noEcho=False):
-    responseUrl = event['ResponseURL']
-
-    print responseUrl
-
-
-    responseBody = {}
-    responseBody['Status'] = responseStatus
-    responseBody['Reason'] = 'See the details in CloudWatch Log Stream: ' + context.log_stream_name
-    responseBody['PhysicalResourceId'] = physicalResourceId or context.log_stream_name
-    responseBody['StackId'] = event['StackId']
-    responseBody['RequestId'] = event['RequestId']
-    responseBody['LogicalResourceId'] = event['LogicalResourceId']
-    responseBody['NoEcho'] = noEcho
-    responseBody['Data'] = responseData
-
-    json_responseBody = json.dumps(responseBody)
-   
-    print "Response body:\n" + json_responseBody
-
-    try:
-        opener = urllib2.build_opener(urllib2.HTTPHandler)
-
-        request = urllib2.Request(responseUrl, data=json_responseBody)
-        request.add_header('Content-Type', '')
-        request.add_header('Content-Length', str(len(json_responseBody)))
-
-        request.get_method = lambda: 'PUT'
-        response = urllib2.urlopen(request)
-
-        print "Status code: " + str(response.getcode())
-    except Exception as e:
-        print "send(..) failed executing urllib2.Request(..): " + str(e)
+        print("send(..) failed executing http.request(..):", e)
 ```

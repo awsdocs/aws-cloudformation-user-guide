@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-networkfirewall-firewallpolicy-description)" : String,
       "[FirewallPolicy](#cfn-networkfirewall-firewallpolicy-firewallpolicy)" : FirewallPolicy,
       "[FirewallPolicyName](#cfn-networkfirewall-firewallpolicy-firewallpolicyname)" : String,
-      "[Tags](#cfn-networkfirewall-firewallpolicy-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-networkfirewall-firewallpolicy-tags)" : [ Tag, ... ]
     }
 }
 ```
@@ -30,7 +30,7 @@ Properties:
     FirewallPolicy
   [FirewallPolicyName](#cfn-networkfirewall-firewallpolicy-firewallpolicyname): String
   [Tags](#cfn-networkfirewall-firewallpolicy-tags): 
-    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+    - Tag
 ```
 
 ## Properties<a name="aws-resource-networkfirewall-firewallpolicy-properties"></a>
@@ -62,7 +62,7 @@ The descriptive name of the firewall policy\. You can't change the name of a fir
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Type*: [List](aws-properties-networkfirewall-firewallpolicy-tags.md) of [Tag](aws-properties-networkfirewall-firewallpolicy-tags.md)  
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

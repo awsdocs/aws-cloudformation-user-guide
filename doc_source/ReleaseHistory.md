@@ -4,10 +4,19 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [New resource](AWS_Lambda.md) | The following resource was added: AWS::Lambda::CodeSigningConfig\. 
+| [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::Service 
 
- [AWS::Lambda::CodeSigningConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html)   
-Use the `CodeSigningConfig` resource to specify code\-signing capability to your Lambda functions\.  | November 23, 2020 | 
+ [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
+Use the `DeploymentCircuitBreaker` property to enable the deployment circuit breaker for a service\.  | November 24, 2020 | 
+| [Updated resource](AWS_GameLift.md) | The following resource was updated: AWS::GameLift::MatchmakingConfiguration\. 
+
+ [AWS::GameLift::MatchmakingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html)   
+Use the `FlexMatchMode` property to specify that the matchmaker is for a standalone FlexMatch solution or for matchmaking with GameLift managed hosting\.  | November 24, 2020 | 
+| [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::CreateEventSourceMapping\. 
+
+ [AWS::Lambda::EventSourceMapping\.BatchSize](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize)   
+The `BatchSize` has been increased for standard SQS queues, and allows for the use of a `MaximumBatchingWindowInSeconds`\.  | November 24, 2020 | 
+| [Modules](#ReleaseHistory) | Modules are a way for you to package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way\. Modules can encapsulate common service configurations and best practices as modular, customizable building blocks for you to include in your stack templates\. For more information, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html)\. | November 24, 2020 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
 
  [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
@@ -33,10 +42,6 @@ Consists of a primary cluster that accepts writes and an associated secondary cl
 
  [AWS::Events::EventBusPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)   
 Added the `Statement` property\. Use the `Statement` property to add a statement to the policy attached to an event bus\.  | November 19, 2020 | 
-| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
-
-[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
-In the [WindowsConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html) property type, use the `Aliases` property to associate up to 50 DNS aliases with a file system\.  | November 19, 2020 | 
 | [Updated resource](AWS_KMS.md) | The following resource was updated: AWS::KMS::Key\. 
 
  [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
@@ -92,7 +97,7 @@ Use the `AWS::NetworkFirewall::RuleGroup` resource to specify a reusable collect
 
  [S3 Storage Lens](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html)   
 Use the `AWS::S3::StorageLens` resource to create a S3 Storage Lens configuration in the *Amazon Simple Storage Service*\.  | November 19, 2020 | 
-| [Change sets for nested stacks](#ReleaseHistory) | With *change sets for nested stacks* you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you’ve confirmed that all the changes are as intended\. For more information, see [Change sets for nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/change-sets-for-nested-stacks.html)\. | November 18, 2020 | 
+| [Change sets for nested stacks](#ReleaseHistory) | With change sets for nested stacks you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you’ve confirmed that all the changes are as intended\. For more information, see [Change sets for nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/change-sets-for-nested-stacks.html)\. | November 18, 2020 | 
 | [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::Route and AWS::EC2::VPCEndpointService\. 
 
  [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)   
@@ -529,7 +534,7 @@ Use the `BackupPolicy` property to turn automatic backups on or off for your Ama
 | [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
 
 [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
-In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicyType` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
+In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicy` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
 | [Updated resource](AWS_SageMaker.md) | The following resource was updated: EndpointConfig 
 
  [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)   
@@ -1333,8 +1338,8 @@ Use the `OperatingSystem` property to specify the operating system that the buil
 Use the `CertificateConfiguration` property to generate a TLS/SSL certificate for the new fleet\.  
 Use the `FleetType` property to specify use of On\-Demand or Spot instances in the fleet\.  
 Use the `InstanceRoleArn` property to manage access to your non\-GameLift AWS resources from GameLift fleet instances\.  
-Use the `MetricGroups` property to add fleet metrics to a CoudWatch metric group\.  
-Use the `NewGameSessionProtectionPolicy` property to prevent the fleet's active game sessions from being terminated during a scaledown event\.  
+Use the `MetricGroups` property to add fleet metrics to a CloudWatch metric group\.  
+Use the `NewGameSessionProtectionPolicy` property to prevent the fleet's active game sessions from being terminated during a scale down event\.  
 Use the `PeerVpcAwsAccountId` property when setting up VPC peering for the fleet\.  
 Use the `PeerVpcId` property when setting up VPC peering for the fleet\.  
 Use the `ResourceCreationLimitPolicy` property to limit an individual player's ability to use the fleet's available hosting resources\.  

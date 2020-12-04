@@ -42,9 +42,6 @@ The application ID for an Amazon Pinpoint application\.
 The external ID\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `2`  
-*Maximum*: `1224`  
-*Pattern*: `[\w+=,.@:\/-]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-rolearn"></a>

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-networkfirewall-rulegroup-description)" : String,
       "[RuleGroup](#cfn-networkfirewall-rulegroup-rulegroup)" : RuleGroup,
       "[RuleGroupName](#cfn-networkfirewall-rulegroup-rulegroupname)" : String,
-      "[Tags](#cfn-networkfirewall-rulegroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Tags](#cfn-networkfirewall-rulegroup-tags)" : [ Tag, ... ],
       "[Type](#cfn-networkfirewall-rulegroup-type)" : String
     }
 }
@@ -33,7 +33,7 @@ Properties:
     RuleGroup
   [RuleGroupName](#cfn-networkfirewall-rulegroup-rulegroupname): String
   [Tags](#cfn-networkfirewall-rulegroup-tags): 
-    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+    - Tag
   [Type](#cfn-networkfirewall-rulegroup-type): String
 ```
 
@@ -73,7 +73,7 @@ The descriptive name of the rule group\. You can't change the name of a rule gro
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Type*: [List](aws-properties-networkfirewall-rulegroup-tags.md) of [Tag](aws-properties-networkfirewall-rulegroup-tags.md)  
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

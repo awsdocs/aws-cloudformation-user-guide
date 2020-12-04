@@ -33,7 +33,7 @@ An endpoint in customer's account which has enabled `DataCaptureConfig` enabled\
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocalPath`  <a name="cfn-sagemaker-monitoringschedule-endpointinput-localpath"></a>

@@ -50,7 +50,7 @@ The operating system that the game server binaries are built to run on\. This va
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
-The location where your game build files are stored\. Use this parameter only when creating a build using files that are stored in an S3 bucket that you own\. Identify an S3 bucket name and key, which must in the same Region where you're creating a build\. This parameter must also specify the ARN for an IAM role that you've set up to give Amazon GameLift access your S3 bucket\. To call this operation with a storage location, you must have IAM PassRole permission\. For more details on IAM roles and PassRole permissions, see [ Set up a role for GameLift access](https://docs.aws.amazon.com/gamelift/latest/developerguide/setting-up-role.html)\.   
+Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an S3 bucket that you own\. The storage location must specify an S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
 *Required*: No  
 *Type*: [S3Location](aws-properties-gamelift-build-storagelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

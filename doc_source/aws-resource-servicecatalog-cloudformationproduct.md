@@ -116,6 +116,7 @@ The contact email for product support\.
 
 `SupportUrl`  <a name="cfn-servicecatalog-cloudformationproduct-supporturl"></a>
 The contact URL for product support\.  
+ `^https?:\/\// `/ is the pattern used to validate SupportUrl\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2083`  

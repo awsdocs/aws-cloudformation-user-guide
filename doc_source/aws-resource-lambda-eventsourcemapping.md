@@ -72,7 +72,7 @@ Properties:
 The maximum number of items to retrieve in a single batch\.  
 +  **Amazon Kinesis** \- Default 100\. Max 10,000\.
 +  **Amazon DynamoDB Streams** \- Default 100\. Max 1,000\.
-+  **Amazon Simple Queue Service** \- Default 10\. Max 10\.
++  **Amazon Simple Queue Service** \- Default 10\. For standard queues the max is 10,000\. For FIFO queues the max is 10\.
 +  **Amazon Managed Streaming for Apache Kafka** \- Default 100\. Max 10,000\.
 *Required*: No  
 *Type*: Integer  
@@ -126,7 +126,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
-\(Streams\) The maximum amount of time to gather records before invoking the function, in seconds\.  
+\(Streams and SQS standard queues\) The maximum amount of time to gather records before invoking the function, in seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

@@ -2,9 +2,6 @@
 
 An object representing a container instance host device\.
 
-**Note**  
-This object isn't applicable to jobs running on Fargate resources and shouldn't be provided\.
-
 ## Syntax<a name="aws-properties-batch-jobdefinition-device-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -31,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-device-properties"></a>
 
 `ContainerPath`  <a name="cfn-batch-jobdefinition-device-containerpath"></a>
-The path inside the container used to expose the host device\. By default the `hostPath` value is used\.  
+The path inside the container at which to expose the host device\. By default the `hostPath` value is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

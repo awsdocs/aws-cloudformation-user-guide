@@ -16,6 +16,7 @@ You are charged for the stack resources for the time they were operating \(even 
 + [Detecting unmanaged configuration changes to stacks and resources](using-cfn-stack-drift.md)
 + [Bringing existing resources into CloudFormation management](resource-import.md)
 + [Moving resources between stacks](refactor-stacks.md)
++ [Resources that support import and drift detection operations](resource-import-supported-resources.md)
 + [Exporting stack output values](using-cfn-stack-exports.md)
 + [Listing stacks that import an exported output value](using-cfn-stack-imports.md)
 + [Working with nested stacks](using-cfn-nested-stacks.md)

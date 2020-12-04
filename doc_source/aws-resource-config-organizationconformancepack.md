@@ -59,7 +59,7 @@ This field is optional\.
 
 `DeliveryS3KeyPrefix`  <a name="cfn-config-organizationconformancepack-deliverys3keyprefix"></a>
 Any folder structure you want to add to an Amazon S3 bucket\.  
-This field if optional\.
+This field is optional\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

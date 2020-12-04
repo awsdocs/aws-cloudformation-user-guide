@@ -255,7 +255,7 @@ Outputs:
 
 ### Create an Amazon FSx for Windows File Server File System in a Self\-managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory"></a>
 
-The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a self\-managed active directory\.
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a Self\-managed active directory\.
 
 #### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory--json"></a>
 
@@ -289,9 +289,6 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                 ],
                 "WindowsConfiguration": {
                     "ThroughputCapacity": 8,
-                    "Aliases": [
-                        "financials.corp.example.com"
-                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 30,
@@ -369,8 +366,6 @@ Resources:
           Value: windows
       WindowsConfiguration:
         ThroughputCapacity: 8
-        Aliases: 
-            - financials.corp.example.com         
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 30
@@ -438,9 +433,6 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                         "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
                     },
                     "ThroughputCapacity": 8,
-                    "Aliases": [
-                        "financials.corp.example.com"
-                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 90,
@@ -484,8 +476,6 @@ Resources:
       WindowsConfiguration:
         ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
         ThroughputCapacity: 8
-        Aliases: 
-            - financials.corp.example.com
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 90

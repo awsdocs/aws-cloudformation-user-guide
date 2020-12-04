@@ -42,7 +42,7 @@ The name of the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWS
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointName`  <a name="cfn-sagemaker-endpoint-endpointname"></a>
@@ -50,7 +50,7 @@ The name of the endpoint\.The name must be unique within an AWS Region in your A
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExcludeRetainedVariantProperties`  <a name="cfn-sagemaker-endpoint-excluderetainedvariantproperties"></a>

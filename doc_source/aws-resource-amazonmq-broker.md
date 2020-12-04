@@ -182,7 +182,8 @@ The broker's storage type\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-amazonmq-broker-subnetids"></a>
-The list of groups that define which subnets and IP ranges the broker can use from different Availability Zones\. A SINGLE\_INSTANCE deployment requires one subnet \(for example, the default subnet\)\. An ACTIVE\_STANDBY\_MULTI\_AZ deployment \(ACTIVEMQ\) requires two subnets\. A CLUSTER\_MULTI\_AZ deployment \(RABBITMQ\) has no subnet requirements when deployed with public accessibility, deployment without public accessibility requires at least one subnet\.  
+The list of groups that define which subnets and IP ranges the broker can use from different Availability Zones\. If you specify more than one subnet, the subnets must be in different Availability Zones\. Amazon MQ will not be able to create VPC endpoints for your broker with multiple subnets in the same Availability Zone\. A SINGLE\_INSTANCE deployment requires one subnet \(for example, the default subnet\)\. An ACTIVE\_STANDBY\_MULTI\_AZ deployment \(ACTIVEMQ\) requires two subnets\. A CLUSTER\_MULTI\_AZ deployment \(RABBITMQ\) has no subnet requirements when deployed with public accessibility, deployment without public accessibility requires at least one subnet\.  
+ If you specify subnets in a shared VPC for a RabbitMQ broker, the associated VPC to which the specified subnets belong must be owned by your AWS account\. Amazon MQ will not be able to create VPC enpoints in VPCs that are not owned by your AWS account\. 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -76,11 +76,9 @@ The code for the function\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodeSigningConfigArn`  <a name="cfn-lambda-function-codesigningconfigarn"></a>
-To enable code signing for this function, specify the ARN of a code\-signing configuration\. A code\-signing configuration includes set set of signing profiles, which define the trusted publishers for this function\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `200`  
-*Pattern*: `arn:(aws[a-zA-Z-]*)?:lambda:[a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-\d{1}:\d{12}:code-signing-config:csc-[a-z0-9]{17}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeadLetterConfig`  <a name="cfn-lambda-function-deadletterconfig"></a>
@@ -140,11 +138,11 @@ A list of [function layers](https://docs.aws.amazon.com/lambda/latest/dg/configu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MemorySize`  <a name="cfn-lambda-function-memorysize"></a>
-The amount of memory that your function has access to\. Increasing the function's memory also increases its CPU allocation\. The default value is 128 MB\. The value must be a multiple of 64 MB\.  
+The amount of memory available to the function at runtime\. Increasing the function's memory also increases its CPU allocation\. The default value is 128 MB\. The value can be any multiple of 1 MB\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `128`  
-*Maximum*: `3008`  
+*Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReservedConcurrentExecutions`  <a name="cfn-lambda-function-reservedconcurrentexecutions"></a>

@@ -12,11 +12,15 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 |  [Mappings](template-anatomy.md)  |  Maximum number of mappings that you can declare in your AWS CloudFormation template\.  |  200 mappings  |  To specify more mappings, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
 |  [Mapping attributes](template-anatomy.md)  | Maximum number of mapping attributes for each mapping that you can declare in your AWS CloudFormation template\. |  200 attributes  |  To specify more mapping attributes, separate the attributes into multiple mappings\.  | 
 |  [Mapping name and mapping attribute name](template-anatomy.md)  |  Maximum size of each mapping name\.  |  255 characters  |   | 
+|  [Modules](modules.md)  |  Maximum number of modules you can register in the CloudFormation registry, per account and region\.  |  100 modules  |   | 
+|  [Module versions](modules.md)  |  Maximum number of versions you can register in the CloudFormation registry for a given module\.  |  100 versions  |  To register new versions, first use [DeregisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeregisterType.html) to deregister versions you aren't using anymore\.  | 
 |  [Outputs](template-anatomy.md)  |  Maximum number of outputs that you can declare in your AWS CloudFormation template\.  |  200 outputs  |   | 
 |  [Output name](template-anatomy.md)  |  Maximum size of an output name\.  |  255 characters  |   | 
 |  [Parameters](template-anatomy.md)  |  Maximum number of parameters that you can declare in your AWS CloudFormation template\.  |  200 parameters  |  To specify more parameters, you can use mappings or lists in order to assign multiple values to a single parameter\.  | 
 |  [Parameter name](template-anatomy.md)  |  Maximum size of a parameter name\.  |  255 characters  |   | 
 |  [Parameter value](template-anatomy.md)  |  Maximum size of a parameter value\.  |  4,096 bytes  |  To use a larger parameter value, create multiple parameters and then use `Fn::Join` to append the multiple values into a single value\.  | 
+|  [Private resources](registry.md)  |  Maximum number of private resources that you can register in the CloudFormation registry per account and region\.  |  50 private resources  |   | 
+|  [Private resource versions](registry.md)  |  Maximum number of versions that you can register in the CloudFormation registry for a given private resource\.  |  50 private resources  |  To register new versions, first use [DeregisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeregisterType.html) to deregister versions you aren't using anymore\.  | 
 |  [Resources](template-anatomy.md)  |  Maximum number of resources that you can declare in your AWS CloudFormation template\.  |  500 resources  |  To specify more resources, separate your template into multiple templates by using, for example, [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html)\.  | 
 |  [Resources in concurrent stack operations](template-anatomy.md)   |  Maximum number of resources you can have involved in stack operations \(create, update, or delete operations\) in your region at a given time\.  | Use the [DescribeAccountLimits](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeAccountLimits.html) API to determine the current limit for an account in a specific region\. |  | 
 |  [Resource name](template-anatomy.md)  |  Maximum size of a resource name\.  |  255 characters  |  | 
@@ -34,11 +38,6 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 Not all features of CloudFormation may be available in every region\. For more information on AWS regions, see [Global infrastructure Region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
 + [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following region:
   + Asia Pacific \(Osaka\-Local\)
-+ [For AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) are currently not available in the following regions:
-  + Africa \(Cape Town\)
-  + Asia Pacific \(Osaka\)
-  + Europe \(Milan\)
-  + Middle East \(Bahrain\)
 + [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
   + Africa \(Cape Town\)
   + Asia Pacific \(Osaka\)

@@ -10,6 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Actions](#cfn-dlm-lifecyclepolicy-policydetails-actions)" : [ Action, ... ],
+  "[EventSource](#cfn-dlm-lifecyclepolicy-policydetails-eventsource)" : EventSource,
   "[Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters)" : Parameters,
   "[PolicyType](#cfn-dlm-lifecyclepolicy-policydetails-policytype)" : String,
   "[ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes)" : [ String, ... ],
@@ -21,6 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dlm-lifecyclepolicy-policydetails-syntax.yaml"></a>
 
 ```
+  [Actions](#cfn-dlm-lifecyclepolicy-policydetails-actions): 
+    - Action
+  [EventSource](#cfn-dlm-lifecyclepolicy-policydetails-eventsource): 
+    EventSource
   [Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters): 
     Parameters
   [PolicyType](#cfn-dlm-lifecyclepolicy-policydetails-policytype): String
@@ -33,6 +39,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-policydetails-properties"></a>
+
+`Actions`  <a name="cfn-dlm-lifecyclepolicy-policydetails-actions"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Action](aws-properties-dlm-lifecyclepolicy-action.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EventSource`  <a name="cfn-dlm-lifecyclepolicy-policydetails-eventsource"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [EventSource](aws-properties-dlm-lifecyclepolicy-eventsource.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-dlm-lifecyclepolicy-policydetails-parameters"></a>
 A set of optional parameters for the policy\.   
@@ -49,21 +67,21 @@ The valid target resource types and actions a policy can manage\. Specify `EBS_S
 
 `ResourceTypes`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcetypes"></a>
 The resource type\. Use VOLUME to create snapshots of individual volumes or use INSTANCE to create multi\-volume snapshots from the volumes for an instance\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedules`  <a name="cfn-dlm-lifecyclepolicy-policydetails-schedules"></a>
 The schedules of policy\-defined actions\. A policy can have up to four schedules \- one mandatory schedule and up to three optional schedules\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [Schedule](aws-properties-dlm-lifecyclepolicy-schedule.md)  
 *Maximum*: `4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetTags`  <a name="cfn-dlm-lifecyclepolicy-policydetails-targettags"></a>
 The single tag that identifies targeted resources for this policy\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

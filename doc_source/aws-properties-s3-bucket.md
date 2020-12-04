@@ -107,13 +107,13 @@ Be aware that the syntax for this property differs from the information provided
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketEncryption`  <a name="cfn-s3-bucket-bucketencryption"></a>
-Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\) or AWS KMS\-managed keys \(SSE\-KMS\) bucket\. For information about the Amazon S3 default encryption feature, see [ Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+Specifies default encryption for a bucket using server\-side encryption with Amazon S3\-managed keys \(SSE\-S3\) or AWS KMS\-managed keys \(SSE\-KMS\) bucket\. For information about the Amazon S3 default encryption feature, see [Amazon S3 Default Encryption for S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: No  
 *Type*: [BucketEncryption](aws-properties-s3-bucket-bucketencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketName`  <a name="cfn-s3-bucket-name"></a>
-A name for the bucket\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the bucket name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\. The bucket name must contain only lowercase letters, numbers, periods \(\.\), and dashes \(\-\)\.  
+A name for the bucket\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the bucket name\. The bucket name must contain only lowercase letters, numbers, periods \(\.\), and dashes \(\-\) and must follow [Amazon S3 bucket restrictions and limitations](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html)\. For more information, see [Rules for naming Amazon S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html#bucketnamingrules) in the *Amazon Simple Storage Service Developer Guide*\.   
 If you specify a name, you can't perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you need to replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  

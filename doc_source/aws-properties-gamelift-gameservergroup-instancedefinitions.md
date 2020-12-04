@@ -1,6 +1,6 @@
 # AWS::GameLift::GameServerGroup InstanceDefinitions<a name="aws-properties-gamelift-gameservergroup-instancedefinitions"></a>
 
-The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in the corresponding Auto Scaling group\. 
+<a name="aws-properties-gamelift-gameservergroup-instancedefinitions-description"></a>The `InstanceDefinitions` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::GameLift::GameServerGroup](aws-resource-gamelift-gameservergroup.md)\.
 
 ## Syntax<a name="aws-properties-gamelift-gameservergroup-instancedefinitions-syntax"></a>
 
@@ -24,8 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-gameservergroup-instancedefinitions-properties"></a>
 
 `InstanceDefinitions`  <a name="cfn-gamelift-gameservergroup-instancedefinitions-instancedefinitions"></a>
-The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in the corresponding Auto Scaling group\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [List](#aws-properties-gamelift-gameservergroup-instancedefinitions) of [InstanceDefinition](aws-properties-gamelift-gameservergroup-instancedefinition.md)  
-*Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
