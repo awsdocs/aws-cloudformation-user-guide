@@ -90,7 +90,6 @@ The following example creates an archive for all EC2 events sent from the defaul
   "SampleArchive": 
     "Type" : "AWS::Events::Archive",
     "Properties" : {
-        "ArchiveName" : "MyArchive",
         "Description" : "Archive for all EC2 events",
         "EventPattern" : {
               "source": [
@@ -109,7 +108,6 @@ The following example creates an archive for all EC2 events sent from the defaul
 SampleArchive:
   Type: 'AWS::Events::Archive'
   Properties: 
-    ArchiveName: MyArchive
     Description: Archive for all EC2 events
     EventPattern:
       source:
