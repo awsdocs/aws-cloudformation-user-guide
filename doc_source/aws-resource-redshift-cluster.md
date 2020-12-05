@@ -177,8 +177,7 @@ The name of the first database to be created when the cluster is created\.
 To create additional databases after the cluster is created, connect to the cluster with a SQL client and use SQL commands to create a database\. For more information, go to [Create a Database](https://docs.aws.amazon.com/redshift/latest/dg/t_creating_database.html) in the Amazon Redshift Database Developer Guide\.   
 Default: `dev`   
 Constraints:  
-+ Must contain 1 to 64 alphanumeric characters\.
-+ Must contain only lowercase letters\.
++ Must contain 1 to 64 alphanumeric characters (alphabetic characters must be lowercase)\.
 + Cannot be a word that is reserved by the service\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
 *Required*: Yes  
 *Type*: String  
