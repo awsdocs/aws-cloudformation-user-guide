@@ -136,5 +136,75 @@ Resources:
 }
 ```
 
+### Launch template with defined block device mapping<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_defined_block_device_mapping"></a>
+
+The following example creates a launch template with a block device mapping: an encrypted 22 gigabyte EBS volume mapped to /dev/xvdcz\. The /dev/xvdcz volume uses the General Purpose SSD (gp2) volume type and is deleted when terminating the instance it is attached to\. This example uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) function to customize the name of the launch template to include the stack name\. 
+
+The launch template also provisions T2 instances in unlimited mode by specifying a value of `unlimited` for the `CPUCredits` property\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\.
+
+#### JSON<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_defined_block_device_mapping--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources":{
+    "myLaunchTemplate":{
+      "Type":"AWS::EC2::LaunchTemplate",
+      "Properties":{
+        "LaunchTemplateName":{"Fn::Sub":"${AWS::StackName}-launch-template"},
+        "LaunchTemplateData":{
+          "BlockDeviceMappings":[{
+            "Ebs":{
+              "VolumeSize":"22",
+              "VolumeType":"gp2",
+              "DeleteOnTermination": true,
+              "Encrypted": true
+            },
+            "DeviceName":"/dev/xvdcz"
+          }],
+          "CreditSpecification":{
+            "CpuCredits":"unlimited"
+          },
+          "ImageId":"ami-04d5cc9b88example",
+          "InstanceType":"t2.micro",
+          "KeyName":"MyKeyPair",
+          "Monitoring":{"Enabled":true},
+          "SecurityGroupIds":["sg-7c2270198example", "sg-903004f88example"]
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_defined_block_device_mapping--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  myLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties: 
+      LaunchTemplateName: !Sub ${AWS::StackName}-launch-template
+      LaunchTemplateData: 
+        BlockDeviceMappings: 
+          - Ebs:
+              VolumeSize: 22
+              VolumeType: gp2
+              DeleteOnTermination: true
+              Encrypted: true
+            DeviceName: /dev/xvdcz
+        CreditSpecification: 
+          CpuCredits: Unlimited
+        ImageId: ami-04d5cc9b88example
+        InstanceType: t2.micro
+        KeyName: MyKeyPair
+        Monitoring: 
+          Enabled: true
+        SecurityGroupIds: 
+          - sg-7c2270198example
+          - sg-903004f88example
+```
+
 ## See also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
 + [ CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference* 
