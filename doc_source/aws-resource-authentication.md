@@ -218,7 +218,7 @@ The following example template snippet includes both *basic* and *S3* authentica
       "type" : "basic",
       "username" : { "Ref" : "UserName" },
       "password" : { "Ref" : "Password" },
-      "uris" : [ "http://www.example.com/test" ]
+      "uris" : [ "example.com/test" ]
    },
    "testS3" : {
       "type" : "S3",
@@ -240,7 +240,7 @@ AWS::CloudFormation::Authentication:
     password: 
       Ref: "Password"
     uris: 
-      - "http://www.example.com/test"
+      - "example.com/test"
   testS3: 
     type: "S3"
     accessKeyId: 
