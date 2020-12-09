@@ -17,6 +17,15 @@ The metadata is organized into config keys, which you can group into configsets\
 **Note**  
 The cfn\-init helper script processes these configuration sections in the following order: packages, groups, users, sources, files, commands, and then services\. If you require a different order, separate your sections into different config keys, and then use a configset that specifies the order in which the config keys should be processed\.
 
+Nothing specified in AWS::CloudFormation::Init will be applied automatically without a call to cfn\-init in the [UserData](aws-properties-ec2-instance.html#cfn-ec2-instance-userdata) Property of your AWS::EC2::Instance. E.g. for Linux:
+```yaml
+...
+      UserData:
+        Fn::Base64: !Sub |
+         #!/bin/bash -xe
+         /<path>/<to>/cfn-init -v --stack ${AWS::StackName} --resource <ec2-resource-name> --region ${AWS::Region} --configsets <your-configset-name>
+```
+
 ### JSON<a name="aws-resource-cloudformation-init-syntax.json"></a>
 
 ```
