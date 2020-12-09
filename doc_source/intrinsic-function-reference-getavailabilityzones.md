@@ -1,10 +1,12 @@
 # `Fn::GetAZs`<a name="intrinsic-function-reference-getavailabilityzones"></a>
 
-The intrinsic function `Fn::GetAZs` returns an array that lists Availability Zones for a specified region in alphabetical order\. Because customers have access to different Availability Zones, the intrinsic function `Fn::GetAZs` enables template authors to write templates that adapt to the calling user's access\. That way you don't have to hard\-code a full list of Availability Zones for a specified region\.
+
+The intrinsic function `Fn::GetAZs` returns an array that lists Availability Zones depending on the configuration of the EC2 Platform in the account. EC2\-Classic returns all availbility zones in the region. [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) returns all the availability zones which have a default subnet, or _all_ availability zones if there are no default subnets.
+
+Because customers have access to different Availability Zones, the intrinsic function `Fn::GetAZs` enables template authors to write templates that adapt to the calling user's access\. That way you don't have to hard\-code a full list of Availability Zones for a specified region\.
 
 **Important**  
-For the EC2\-Classic platform, the `Fn::GetAZs` function returns all Availability Zones for a region\. For the [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) platform, the `Fn::GetAZs` function returns only Availability Zones that have a default subnet unless none of the Availability Zones has a default subnet; in that case, all Availability Zones are returned\.  
-Similarly to the response from the `describe-availability-zones` AWS CLI command, the order of the results from the `Fn::GetAZs` function is not guaranteed and can change when new Availability Zones are added\.
+The response from the `describe-availability-zones` AWS CLI command, the order of the results from the `Fn::GetAZs` function is not guaranteed and can change when new Availability Zones are added\.
 
 IAM permissions
 
