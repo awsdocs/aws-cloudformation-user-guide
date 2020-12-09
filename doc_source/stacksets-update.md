@@ -60,6 +60,10 @@ In the example command shown here, we are updating the stack set by using `--par
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
 
+   **Note**
+   The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`.
+
+
    \[Self\-managed permissions\] Provide the account IDs you want your update to target\.
 
    ```
