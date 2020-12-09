@@ -1,10 +1,10 @@
-# Amazon DynamoDB Table Projection<a name="aws-properties-dynamodb-projectionobject"></a>
+# AWS::DynamoDB::Table Projection<a name="aws-properties-dynamodb-projectionobject"></a>
 
-Attributes that are copied \(projected\) from the source table into the index\. These attributes are additions to the primary key attributes and index key attributes, which are automatically projected\.
+Represents attributes that are copied \(projected\) from the table into an index\. These are in addition to the primary key attributes and index key attributes, which are automatically projected\.
 
-Projection is a property of the [DynamoDB Table GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md) and [DynamoDB Table LocalSecondaryIndex](aws-properties-dynamodb-lsi.md) property types\.
+## Syntax<a name="aws-properties-dynamodb-projectionobject-syntax"></a>
 
-## Syntax<a name="w3ab2c21c14d540b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-dynamodb-projectionobject-syntax.json"></a>
 
@@ -18,28 +18,25 @@ Projection is a property of the [DynamoDB Table GlobalSecondaryIndex](aws-proper
 ### YAML<a name="aws-properties-dynamodb-projectionobject-syntax.yaml"></a>
 
 ```
-[NonKeyAttributes](#cfn-dynamodb-projectionobj-nonkeyatt):
-  - String
-[ProjectionType](#cfn-dynamodb-projectionobj-projtype): String
+  [NonKeyAttributes](#cfn-dynamodb-projectionobj-nonkeyatt): 
+    - String
+  [ProjectionType](#cfn-dynamodb-projectionobj-projtype): String
 ```
 
-## Properties<a name="w3ab2c21c14d540b9"></a>
-
-For more information about each property, including constraints, see [ Projection](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Projection.html) in the *Amazon DynamoDB API Reference*\.
+## Properties<a name="aws-properties-dynamodb-projectionobject-properties"></a>
 
 `NonKeyAttributes`  <a name="cfn-dynamodb-projectionobj-nonkeyatt"></a>
-The non\-key attribute names that are projected into the index\.  
-For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the local secondary indexes must not exceed 20\. If you project the same attribute into two different indexes, this counts as two distinct attributes in determining the total\. This limit does not apply for secondary indexes with a ProjectionType of `KEYS_ONLY` or `ALL`\.  
-*Required: *No  
-*Type*: List of String values
+Represents the non\-key attribute names which will be projected into the index\.  
+For local secondary indexes, the total count of `NonKeyAttributes` summed across all of the local secondary indexes, must not exceed 20\. If you project the same attribute into two different indexes, this counts as two distinct attributes when determining the total\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProjectionType`  <a name="cfn-dynamodb-projectionobj-projtype"></a>
-The set of attributes that are projected into the index:    
-`KEYS_ONLY`  
-Only the index and primary keys are projected into the index\.  
-`INCLUDE`  
-Only the specified table attributes are projected into the index\. The list of projected attributes are in `NonKeyAttributes`\.  
-`ALL`  
-All of the table attributes are projected into the index\.
-*Required: *Yes  
-*Type*: String
+The set of attributes that are projected into the index:  
++  `KEYS_ONLY` \- Only the index and primary keys are projected into the index\.
++  `INCLUDE` \- In addition to the attributes described in `KEYS_ONLY`, the secondary index will include other non\-key attributes that you specify\.
++  `ALL` \- All of the table attributes are projected into the index\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

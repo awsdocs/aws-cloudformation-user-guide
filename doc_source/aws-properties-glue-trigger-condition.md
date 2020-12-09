@@ -1,8 +1,6 @@
-# AWS Glue Trigger Condition<a name="aws-properties-glue-trigger-condition"></a>
+# AWS::Glue::Trigger Condition<a name="aws-properties-glue-trigger-condition"></a>
 
-<a name="aws-properties-glue-trigger-condition-description"></a>The `Condition` property type specifies a condition for an AWS Glue job trigger predicate\.
-
-<a name="aws-properties-glue-trigger-condition-inheritance"></a> The `Conditions` property of the [AWS Glue Trigger Predicate](aws-properties-glue-trigger-predicate.md) property type contains a list of `Condition` property types\.
+Defines a condition under which a trigger fires\.
 
 ## Syntax<a name="aws-properties-glue-trigger-condition-syntax"></a>
 
@@ -12,8 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LogicalOperator](#cfn-glue-trigger-condition-logicaloperator)" : String,
+  "[CrawlerName](#cfn-glue-trigger-condition-crawlername)" : String,
+  "[CrawlState](#cfn-glue-trigger-condition-crawlstate)" : String,
   "[JobName](#cfn-glue-trigger-condition-jobname)" : String,
+  "[LogicalOperator](#cfn-glue-trigger-condition-logicaloperator)" : String,
   "[State](#cfn-glue-trigger-condition-state)" : String
 }
 ```
@@ -21,33 +21,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-trigger-condition-syntax.yaml"></a>
 
 ```
-[LogicalOperator](#cfn-glue-trigger-condition-logicaloperator): String
-[JobName](#cfn-glue-trigger-condition-jobname): String
-[State](#cfn-glue-trigger-condition-state): String
+  [CrawlerName](#cfn-glue-trigger-condition-crawlername): String
+  [CrawlState](#cfn-glue-trigger-condition-crawlstate): String
+  [JobName](#cfn-glue-trigger-condition-jobname): String
+  [LogicalOperator](#cfn-glue-trigger-condition-logicaloperator): String
+  [State](#cfn-glue-trigger-condition-state): String
 ```
 
 ## Properties<a name="aws-properties-glue-trigger-condition-properties"></a>
 
-`LogicalOperator`  <a name="cfn-glue-trigger-condition-logicaloperator"></a>
-The logical operator for the condition\.  
-*Valid values*: `EQUALS`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+`CrawlerName`  <a name="cfn-glue-trigger-condition-crawlername"></a>
+The name of the crawler to which this condition applies\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CrawlState`  <a name="cfn-glue-trigger-condition-crawlstate"></a>
+The state of the crawler to which this condition applies\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobName`  <a name="cfn-glue-trigger-condition-jobname"></a>
-The name of the associated job\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name of the job whose `JobRuns` this condition applies to, and on which this trigger waits\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LogicalOperator`  <a name="cfn-glue-trigger-condition-logicaloperator"></a>
+A logical operator\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-glue-trigger-condition-state"></a>
-The state of the condition\.  
-*Valid values*: `SUCCEEDED`  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The condition state\. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT`, and `FAILED`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-trigger-condition-seealso"></a>
-
-+ [ Condition Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Condition) in the *AWS Glue Developer Guide*
+## See also<a name="aws-properties-glue-trigger-condition--seealso"></a>
++  [Condition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Condition) in the *AWS Glue Developer Guide* 

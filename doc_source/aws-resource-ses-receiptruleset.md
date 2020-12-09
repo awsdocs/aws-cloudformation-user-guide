@@ -1,12 +1,10 @@
 # AWS::SES::ReceiptRuleSet<a name="aws-resource-ses-receiptruleset"></a>
 
-The `AWS::SES::ReceiptRuleSet` resource specifies an empty rule set for Amazon SES\. For more information, see [CreateReceiptRuleSet](url-ses-api;API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*\. 
+Specifies an empty receipt rule set\.
 
+For information about setting up receipt rule sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rule-set.html)\.
 
-+ [Syntax](#aws-resource-ses-receiptruleset-syntax)
-+ [Properties](#aws-resource-ses-receiptruleset-properties)
-+ [Example](#aws-resource-ses-receiptruleset-examples)
-+ [See Also](#aws-resource-ses-receiptruleset-seealso)
+You can execute this operation no more than once per second\.
 
 ## Syntax<a name="aws-resource-ses-receiptruleset-syntax"></a>
 
@@ -18,38 +16,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SES::ReceiptRuleSet",
   "Properties" : {
-    "[RuleSetName](#cfn-ses-receiptruleset-rulesetname)" : String
-  }
+      "[RuleSetName](#cfn-ses-receiptruleset-rulesetname)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ses-receiptruleset-syntax.yaml"></a>
 
 ```
-Type: "AWS::SES::ReceiptRuleSet"
-Properties:
+Type: AWS::SES::ReceiptRuleSet
+Properties: 
   [RuleSetName](#cfn-ses-receiptruleset-rulesetname): String
 ```
 
 ## Properties<a name="aws-resource-ses-receiptruleset-properties"></a>
 
 `RuleSetName`  <a name="cfn-ses-receiptruleset-rulesetname"></a>
-The name of the rule set to create\. The name must:  
+The name of the receipt rule set that you want to reorder\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-+ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
+## Return values<a name="aws-resource-ses-receiptruleset-return-values"></a>
 
-+ Start and end with a letter or number\.
+### Ref<a name="aws-resource-ses-receiptruleset-return-values-ref"></a>
 
-+ Contain less than 64 characters\.
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
 
-## Example<a name="aws-resource-ses-receiptruleset-examples"></a>
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### <a name="aws-resource-ses-receiptruleset-example1"></a>
+## Examples<a name="aws-resource-ses-receiptruleset--examples"></a>
 
-#### JSON<a name="aws-resource-ses-receiptruleset-example1.json"></a>
+Specifies a collection of receipt rules that are applied to incoming email\.
+
+### <a name="aws-resource-ses-receiptruleset--examples--"></a>
+
+#### JSON<a name="aws-resource-ses-receiptruleset--examples----json"></a>
 
 ```
 {
@@ -73,11 +75,11 @@ The name of the rule set to create\. The name must:
 }
 ```
 
-#### YAML<a name="aws-resource-ses-receiptruleset-example1.yaml"></a>
+#### YAML<a name="aws-resource-ses-receiptruleset--examples----yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRuleSet Sample Template'
+Description: AWS SES ReceiptRuleSet Sample Template
 Parameters:
   ReceiptRuleSetName:
     Type: String
@@ -87,9 +89,3 @@ Resources:
     Properties:
       RuleSetName: !Ref ReceiptRuleSetName
 ```
-
-## See Also<a name="aws-resource-ses-receiptruleset-seealso"></a>
-
-+ [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [CreateReceiptRuleSet](url-ses-api;API_CreateReceiptRuleSet.html) in the *Amazon Simple Email Service API Reference*

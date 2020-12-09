@@ -1,8 +1,6 @@
-# AWS Glue Table SkewedInfo<a name="aws-properties-glue-table-skewedinfo"></a>
+# AWS::Glue::Table SkewedInfo<a name="aws-properties-glue-table-skewedinfo"></a>
 
-<a name="aws-properties-glue-table-skewedinfo-description"></a>The `SkewedInfo` property type specifies skewed values \(values that occur with very high frequency\) in an AWS Glue table\.
-
-<a name="aws-properties-glue-table-skewedinfo-inheritance"></a> `SkewedInfo` is a property of the [AWS Glue Table StorageDescriptor](aws-properties-glue-table-storagedescriptor.md) property type\.
+Specifies skewed values in a table\. Skewed values are those that occur with very high frequency\.
 
 ## Syntax<a name="aws-properties-glue-table-skewedinfo-syntax"></a>
 
@@ -13,43 +11,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[SkewedColumnNames](#cfn-glue-table-skewedinfo-skewedcolumnnames)" : [ String, ... ],
-  "[SkewedColumnValues](#cfn-glue-table-skewedinfo-skewedcolumnvalues)" : [ String, ... ],
-  "[SkewedColumnValueLocationMaps](#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps)" : JSON object
+  "[SkewedColumnValueLocationMaps](#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps)" : Json,
+  "[SkewedColumnValues](#cfn-glue-table-skewedinfo-skewedcolumnvalues)" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-glue-table-skewedinfo-syntax.yaml"></a>
 
 ```
-[SkewedColumnNames](#cfn-glue-table-skewedinfo-skewedcolumnnames): 
-  - String
-[SkewedColumnValues](#cfn-glue-table-skewedinfo-skewedcolumnvalues): 
-  - String
-[SkewedColumnValueLocationMaps](#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps): JSON object
+  [SkewedColumnNames](#cfn-glue-table-skewedinfo-skewedcolumnnames): 
+    - String
+  [SkewedColumnValueLocationMaps](#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps): Json
+  [SkewedColumnValues](#cfn-glue-table-skewedinfo-skewedcolumnvalues): 
+    - String
 ```
 
 ## Properties<a name="aws-properties-glue-table-skewedinfo-properties"></a>
 
-For more information, see [SkewedInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*\.
-
 `SkewedColumnNames`  <a name="cfn-glue-table-skewedinfo-skewedcolumnnames"></a>
-A list of UTF\-8 strings that specify the names of columns that contain skewed values\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-`SkewedColumnValues`  <a name="cfn-glue-table-skewedinfo-skewedcolumnvalues"></a>
-A list of UTF\-8 strings that specify values that appear so frequently that they're considered to be skewed\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A list of names of columns that contain skewed values\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SkewedColumnValueLocationMaps`  <a name="cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps"></a>
-UTF\-8 string–to–UTF\-8 string key\-value pairs that map skewed values to the columns that contain them\.  
- *Required*: No  
- *Type*: JSON object  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A mapping of skewed values to the columns that contain them\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-table-skewedinfo-seealso"></a>
-
-+ [SkewedInfo Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SkewedInfo) in the *AWS Glue Developer Guide*
+`SkewedColumnValues`  <a name="cfn-glue-table-skewedinfo-skewedcolumnvalues"></a>
+A list of values that appear so frequently as to be considered skewed\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

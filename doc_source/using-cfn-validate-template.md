@@ -1,6 +1,6 @@
-# Validating a Template<a name="using-cfn-validate-template"></a>
+# Validating a template<a name="using-cfn-validate-template"></a>
 
-To check your template file for syntax errors, you can use the [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command\.
+To check your template file for syntax errors, you can use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command\.
 
 **Note**  
 The `aws cloudformation validate-template` command is designed to check only the syntax of your template\. It does not ensure that the property values that you have specified for a resource are valid for that resource\. Nor does it determine the number of resources that will exist when the stack is created\.

@@ -1,10 +1,10 @@
-# Continue Rolling Back an Update<a name="using-cfn-updating-stacks-continueupdaterollback"></a>
+# Continue rolling back an update<a name="using-cfn-updating-stacks-continueupdaterollback"></a>
 
 A stack goes into the `UPDATE_ROLLBACK_FAILED` state when AWS CloudFormation cannot roll back all changes during an update\. For example, you might have a stack that begins to roll back to an old database instance that was deleted outside of AWS CloudFormation\. Because AWS CloudFormation doesn't know that the database was deleted, it assumes that the database instance still exists and attempts to roll back to it, causing the update rollback to fail\.
 
 When a stack is in the `UPDATE_ROLLBACK_FAILED` state, you can continue to roll it back to a working state \(`UPDATE_ROLLBACK_COMPLETE`\)\. You can't update a stack that is in the `UPDATE_ROLLBACK_FAILED` state\. However, if you can continue to roll it back, you can return the stack to its original settings and then try to update it again\.
 
-In most cases, you must [fix the error](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed) that causes the update rollback to fail before you can continue to roll back your stack\. In other cases, you can continue to roll back the update without any changes, for example when a stack operation times out\.
+In most cases, you must [fix the error](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed) that causes the update rollback to fail before you can continue to roll back your stack\. In other cases, you can continue to roll back the update without any changes, for example when a stack operation times out\.
 
 **Note**  
 If you use nested stacks, rolling back the parent stack will attempt to roll back all the child stacks as well\.
@@ -13,10 +13,9 @@ If you use nested stacks, rolling back the parent stack will attempt to roll bac
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Select the stack that you want to update, choose **Actions**, and then choose **Continue Update Rollback**\.  
-![\[The Continue Update Rollback option in the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-update-stack-continue-update-rollback.png)
+1. Select the stack that you want to update, choose **Stack actions**, and then choose **Continue update rollback**\.
 
-   If none of the solutions in the [troubleshooting guide](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed) worked, you can use the advanced option to skip the resources that AWS CloudFormation can't successfully roll back\. You must [look up](cfn-console-view-stack-data-resources.md) and type the logical IDs of the resources that you want to skip\. Specify only resources that went into the `UPDATE_FAILED` state during the UpdateRollback and not during the forward update\.
+   If none of the solutions in the [troubleshooting guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html#troubleshooting-errors-update-rollback-failed) worked, you can use the advanced option to skip the resources that AWS CloudFormation can't successfully roll back\. You must [look up](cfn-console-view-stack-data-resources.md) and type the logical IDs of the resources that you want to skip\. Specify only resources that went into the `UPDATE_FAILED` state during the UpdateRollback and not during the forward update\.
 **Warning**  
 AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLETE` and continues to roll back the stack\. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template\. Before performing another stack update, you must update the stack or resources to be consistent with each other\. If you don't, subsequent stack updates might fail, and the stack will become unrecoverable\.
 
@@ -25,8 +24,7 @@ AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLET
    To skip resources that are part of nested stacks, use the following format: `NestedStackName.ResourceLogicalID`\. If you want to specify the logical ID of a stack resource \(`Type: AWS::CloudFormation::Stack`\) in the `ResourcesToSkip` list, then its corresponding embedded stack must be in one of the following states: `DELETE_IN_PROGRESS`, `DELETE_COMPLETE`, or `DELETE_FAILED`\.
 
 **To continue rolling back an update \(AWS CLI\)**
-
-+ Use the `[aws cloudformation continue\-update\-rollback](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/continue-update-rollback.html)` command with the `stack-name` option to specify the ID of the stack that you want to continue to roll back\.
++ Use the `[aws cloudformation continue\-update\-rollback](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/continue-update-rollback.html)` command with the `stack-name` option to specify the ID of the stack that you want to continue to roll back\.
 
 ## Using `ResourcesToSkip` to recover a nested stacks hierarchy<a name="nested-stacks"></a>
 

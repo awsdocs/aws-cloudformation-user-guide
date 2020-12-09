@@ -1,59 +1,56 @@
 # AWS::ElastiCache::ParameterGroup<a name="aws-properties-elasticache-parameter-group"></a>
 
-The AWS::ElastiCache::ParameterGroup type creates a new cache parameter group\. Cache parameter groups control the parameters for a cache cluster\.
+The `AWS::ElastiCache::ParameterGroup` type creates a new cache parameter group\. Cache parameter groups control the parameters for a cache cluster\. 
 
+**Note**  
+Updates are not supported\.
 
-+ [Syntax](#aws-resource-elasticache-parametergroup-syntax)
-+ [Properties](#aws-properties-elasticache-parameter-group-prop)
-+ [Return Values](#w3ab2c21c10d544c11)
-+ [Example](#w3ab2c21c10d544c13)
-+ [See Also](#w3ab2c21c10d544c15)
-
-## Syntax<a name="aws-resource-elasticache-parametergroup-syntax"></a>
+## Syntax<a name="aws-properties-elasticache-parameter-group-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-elasticache-parametergroup-syntax.json"></a>
+### JSON<a name="aws-properties-elasticache-parameter-group-syntax.json"></a>
 
 ```
 {
-   "Type": "AWS::ElastiCache::ParameterGroup",
-   "Properties": {
-      "CacheParameterGroupFamily" : String,
-      "Description" : String,
-      "Properties" : { String:String, ... }
-   }
+  "Type" : "AWS::ElastiCache::ParameterGroup",
+  "Properties" : {
+      "[CacheParameterGroupFamily](#cfn-elasticache-parametergroup-cacheparametergroupfamily)" : String,
+      "[Description](#cfn-elasticache-parametergroup-description)" : String,
+      "[Properties](#cfn-elasticache-parametergroup-properties)" : {Key : Value, ...}
+    }
 }
 ```
 
-### YAML<a name="aws-resource-elasticache-parametergroup-syntax.yaml"></a>
+### YAML<a name="aws-properties-elasticache-parameter-group-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::ParameterGroup"
+Type: AWS::ElastiCache::ParameterGroup
 Properties: 
-  CacheParameterGroupFamily: String
-  Description: String
-  Properties:
-    String: String
+  [CacheParameterGroupFamily](#cfn-elasticache-parametergroup-cacheparametergroupfamily): String
+  [Description](#cfn-elasticache-parametergroup-description): String
+  [Properties](#cfn-elasticache-parametergroup-properties): 
+    Key : Value
 ```
 
-## Properties<a name="aws-properties-elasticache-parameter-group-prop"></a>
+## Properties<a name="aws-properties-elasticache-parameter-group-properties"></a>
 
 `CacheParameterGroupFamily`  <a name="cfn-elasticache-parametergroup-cacheparametergroupfamily"></a>
-The name of the cache parameter group family that the cache parameter group can be used with\.  
-*Required: *Yes  
+The name of the cache parameter group family that this cache parameter group is compatible with\.  
+Valid values are: `memcached1.4` \| `memcached1.5` \| `memcached1.6` \| `redis2.6` \| `redis2.8` \| `redis3.2` \| `redis4.0` \| `redis5.0` \| `redis6.x`   
+*Required*: Yes  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-elasticache-parametergroup-description"></a>
-The description for the Cache Parameter Group\.  
-*Required: *Yes  
+The description for this cache parameter group\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Properties`  <a name="cfn-elasticache-parametergroup-properties"></a>
-A comma\-delimited list of parameter name/value pairs\. For more information, go to [ModifyCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*\.  
-*Example*:  
+A comma\-delimited list of parameter name/value pairs\. For more information, see [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*\.   
+For example:   
 
 ```
 "Properties" : {
@@ -61,53 +58,54 @@ A comma\-delimited list of parameter name/value pairs\. For more information, go
    "chunk_size_growth_factor" : "1.02"
 }
 ```
-*Required: *No  
-*Type*: Mapping of key\-value pairs  
-*Update requires*: Updates are not supported\.
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d544c11"></a>
+## Return values<a name="aws-properties-elasticache-parameter-group-return-values"></a>
 
-### Ref<a name="aws-properties-elasticache-parameter-group-ref"></a>
+### Ref<a name="aws-properties-elasticache-parameter-group-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w3ab2c21c10d544c13"></a>
+## Examples<a name="aws-properties-elasticache-parameter-group--examples"></a>
 
-### JSON<a name="aws-resource-elasticache-parametergroup-example.json"></a>
+### <a name="aws-properties-elasticache-parameter-group--examples--"></a>
+
+#### JSON<a name="aws-properties-elasticache-parameter-group--examples----json"></a>
 
 ```
-"MyParameterGroup": {
-   "Type": "AWS::ElastiCache::ParameterGroup",
-   "Properties": {
-      "Description": "MyNewParameterGroup",
-      "CacheParameterGroupFamily": "memcached1.4",
-      "Properties" : {
-         "cas_disabled" : "1",
-         "chunk_size_growth_factor" : "1.02"
-      }
-   }
+{
+    "MyParameterGroup": {
+        "Type": "AWS::ElastiCache::ParameterGroup",
+        "Properties": {
+            "Description": "MyNewParameterGroup",
+            "CacheParameterGroupFamily": "memcached1.4",
+            "Properties": {
+                "cas_disabled": "1",
+                "chunk_size_growth_factor": "1.02"
+            }
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-elasticache-parametergroup-example.yaml"></a>
+#### YAML<a name="aws-properties-elasticache-parameter-group--examples----yaml"></a>
 
 ```
-MyParameterGroup: 
-  Type: "AWS::ElastiCache::ParameterGroup"
-  Properties: 
-    Description: "MyNewParameterGroup"
-    CacheParameterGroupFamily: "memcached1.4"
-    Properties: 
-      cas_disabled: "1"
-      chunk_size_growth_factor: "1.02"
+MyParameterGroup:
+  Type: 'AWS::ElastiCache::ParameterGroup'
+  Properties:
+    Description: MyNewParameterGroup
+    CacheParameterGroupFamily: memcached1.4
+    Properties:
+      cas_disabled: '1'
+      chunk_size_growth_factor: '1.02'
 ```
 
-## See Also<a name="w3ab2c21c10d544c15"></a>
-
-+ [CreateCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*
-
-+ [ModifyCacheParameterGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the *Amazon ElastiCache API Reference Guide*
-
-+ [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)
+## See also<a name="aws-properties-elasticache-parameter-group--seealso"></a>
++ [CreateCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
++ [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
++ [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

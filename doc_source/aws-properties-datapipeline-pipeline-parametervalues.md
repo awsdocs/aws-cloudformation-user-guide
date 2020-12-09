@@ -1,8 +1,10 @@
-# AWS Data Pipeline Pipeline ParameterValues<a name="aws-properties-datapipeline-pipeline-parametervalues"></a>
+# AWS::DataPipeline::Pipeline ParameterValue<a name="aws-properties-datapipeline-pipeline-parametervalues"></a>
 
-`ParameterValues` is a property of the [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md) resource that sets values for parameters that are used in a pipeline definition\.
+A value or list of parameter values\.
 
-## Syntax<a name="w3ab2c21c14d483b5"></a>
+## Syntax<a name="aws-properties-datapipeline-pipeline-parametervalues-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-parametervalues-syntax.json"></a>
 
@@ -16,18 +18,27 @@
 ### YAML<a name="aws-properties-datapipeline-pipeline-parametervalues-syntax.yaml"></a>
 
 ```
-[Id](#cfn-datapipeline-pipeline-parametervalues-id): String
-[StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue): String
+  [Id](#cfn-datapipeline-pipeline-parametervalues-id): String
+  [StringValue](#cfn-datapipeline-pipeline-parametervalues-stringvalue): 
+    String
 ```
 
-## Properties<a name="w3ab2c21c14d483b7"></a>
+## Properties<a name="aws-properties-datapipeline-pipeline-parametervalues-properties"></a>
 
 `Id`  <a name="cfn-datapipeline-pipeline-parametervalues-id"></a>
-The ID of a parameter object\.  
-*Required: *Yes  
-*Type*: String
+The ID of the parameter value\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StringValue`  <a name="cfn-datapipeline-pipeline-parametervalues-stringvalue"></a>
-A value to associate with the parameter object\.  
-*Required: *Yes  
-*Type*: String
+The field value, expressed as a String\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `10240`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

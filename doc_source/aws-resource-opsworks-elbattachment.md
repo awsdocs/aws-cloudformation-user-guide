@@ -2,12 +2,6 @@
 
 Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify\.
 
-
-+ [Syntax](#aws-resource-opsworks-elbattachment-syntax)
-+ [Properties](#w3ab2c21c10d847b9)
-+ [Template Snippet](#w3ab2c21c10d847c11)
-+ [See Also](#w3ab2c21c10d847c13)
-
 ## Syntax<a name="aws-resource-opsworks-elbattachment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -16,42 +10,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "Type": "AWS::OpsWorks::ElasticLoadBalancerAttachment",
-  "Properties": {
-    "[ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname)" : String,
-    "[LayerId](#cfn-opsworks-elbattachment-layerid)" : String
-  }
+  "Type" : "AWS::OpsWorks::ElasticLoadBalancerAttachment",
+  "Properties" : {
+      "[ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname)" : String,
+      "[LayerId](#cfn-opsworks-elbattachment-layerid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-opsworks-elbattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::ElasticLoadBalancerAttachment"
+Type: AWS::OpsWorks::ElasticLoadBalancerAttachment
 Properties: 
   [ElasticLoadBalancerName](#cfn-opsworks-elbattachment-elbname): String
   [LayerId](#cfn-opsworks-elbattachment-layerid): String
 ```
 
-## Properties<a name="w3ab2c21c10d847b9"></a>
+## Properties<a name="aws-resource-opsworks-elbattachment-properties"></a>
 
 `ElasticLoadBalancerName`  <a name="cfn-opsworks-elbattachment-elbname"></a>
-Elastic Load Balancing load balancer name\.  
-*Required: *Yes  
+The Elastic Load Balancing instance's name\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LayerId`  <a name="cfn-opsworks-elbattachment-layerid"></a>
 The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Template Snippet<a name="w3ab2c21c10d847c11"></a>
+## Examples<a name="aws-resource-opsworks-elbattachment--examples"></a>
+
+### Template Snippet<a name="aws-resource-opsworks-elbattachment--examples--Template_Snippet"></a>
 
 The following snippet specifies a load balancer attachment to an AWS OpsWorks layer, both of which would be described elsewhere in the same template:
 
-### JSON<a name="aws-resource-opsworks-elbattachment-example.json"></a>
+#### JSON<a name="aws-resource-opsworks-elbattachment--examples--Template_Snippet--json"></a>
 
 ```
 "ELBAttachment" : {
@@ -63,7 +59,7 @@ The following snippet specifies a load balancer attachment to an AWS OpsWorks la
 }
 ```
 
-### YAML<a name="aws-resource-opsworks-elbattachment-example.yaml"></a>
+#### YAML<a name="aws-resource-opsworks-elbattachment--examples--Template_Snippet--yaml"></a>
 
 ```
 ELBAttachment: 
@@ -75,6 +71,6 @@ ELBAttachment:
       Ref: "Layer"
 ```
 
-## See Also<a name="w3ab2c21c10d847c13"></a>
-
-+ [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md)
+## See also<a name="aws-resource-opsworks-elbattachment--seealso"></a>
++  [AttachElasticLoadBalancer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_AttachElasticLoadBalancer.html) in the *AWS OpsWorks API Reference*\.
++  [Elastic Load Balancing Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/layers-elb.html) in the *AWS OpsWorks User Guide*\.

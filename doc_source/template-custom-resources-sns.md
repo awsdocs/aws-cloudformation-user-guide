@@ -1,12 +1,12 @@
-# Amazon Simple Notification Service\-backed Custom Resources<a name="template-custom-resources-sns"></a>
+# Amazon Simple Notification Service\-backed custom resources<a name="template-custom-resources-sns"></a>
 
 When you associate an Amazon SNS topic with a custom resource, you use Amazon SNS notifications to trigger custom provisioning logic\. With custom resources and Amazon SNS, you can enable scenarios such as adding new resources to a stack and injecting dynamic data into a stack\. For example, when you create a stack, AWS CloudFormation can send a `create` request to a topic that's monitored by an application that's running on an Amazon Elastic Compute Cloud instance\. The Amazon SNS notification triggers the application to carry out additional provisioning tasks, such as retrieve a pool of white\-listed Elastic IPs\. After it's done, the application sends a response \(and any output data\) that notifies AWS CloudFormation to proceed with the stack operation\.
 
-## Walkthrough: Using Amazon Simple Notification Service to Create Custom Resources<a name="walkthrough-custom-resources-sns-adding-nonaws-resource"></a>
+## Walkthrough: Using Amazon Simple Notification Service to create custom resources<a name="walkthrough-custom-resources-sns-adding-nonaws-resource"></a>
 
 This walkthrough will step through the custom resource process, explaining the sequence of events and messages sent and received as a result of custom resource stack creation, updates, and deletion\.
 
-### Step 1: Stack Creation<a name="crpg-walkthrough-stack-creation"></a>
+### Step 1: Stack creation<a name="crpg-walkthrough-stack-creation"></a>
 
 1. <a name="crpg-walkthrough-stack-creation-customer-template"></a>The template developer creates an AWS CloudFormation stack that contains a custom resource; in the template example below, we use the custom resource type name `Custom::SeleniumTester` for the custom resource `MySeleniumTest`\. 
 
@@ -105,11 +105,11 @@ The names and values of the data accessed with `Fn::GetAtt` are returned by the 
 
 For detailed information about the request and response objects involved in `Create` requests, see [Create](crpg-ref-requesttypes-create.md) in the [Custom Resource Reference](crpg-ref.md)\.
 
-### Step 2: Stack Updates<a name="crpg-walkthrough-stack-updates"></a>
+### Step 2: Stack updates<a name="crpg-walkthrough-stack-updates"></a>
 
-To update an existing stack, you must submit a template that specifies updates for the properties of resources in the stack, as shown in the example below\. AWS CloudFormation updates only the resources that have changes specified in the template\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](using-cfn-updating-stacks.md)\.
+To update an existing stack, you must submit a template that specifies updates for the properties of resources in the stack, as shown in the example below\. AWS CloudFormation updates only the resources that have changes specified in the template\. For more information about updating stacks, see [AWS CloudFormation stack updates](using-cfn-updating-stacks.md)\.
 
-You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in an AWS CloudFormation template, AWS CloudFormation sends an update request to that custom resource\. If a custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When AWS CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, AWS CloudFormation recognizes the update as a replacement and sends a delete request to the old resource, as shown in [Step 3: Stack Deletion](#crpg-walkthrough-stack-deletion)\. 
+You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in an AWS CloudFormation template, AWS CloudFormation sends an update request to that custom resource\. If a custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When AWS CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, AWS CloudFormation recognizes the update as a replacement and sends a delete request to the old resource, as shown in [Step 3: Stack deletion](#crpg-walkthrough-stack-deletion)\. 
 
 **Note**  
 If you didn't make changes to the custom resource, AWS CloudFormation won't send requests to it during a stack update\.
@@ -156,14 +156,14 @@ If you didn't make changes to the custom resource, AWS CloudFormation won't send
       "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/stack-name/guid",
       "RequestId" : "uniqueid for this update request",
       "LogicalResourceId" : "MySeleniumTester",
-      "ResourceType" : "Custom::SeleniumTester"  
+      "ResourceType" : "Custom::SeleniumTester",  
       "PhysicalResourceId" : "Tester1",
       "ResourceProperties" : {
          "seleniumTester" : "SeleniumTest()",
          "endpoints" : [ "http://mysite.com", "http://myecommercesite.com/", "http://search.mysite.com",
             "http://mynewsite.com" ],
          "frequencyOfTestsPerHour" : [ "3", "2", "4", "3" ]
-      }
+      },
       "OldResourceProperties" : {
          "seleniumTester" : "SeleniumTest()",
          "endpoints" : [ "http://mysite.com", "http://myecommercesite.com/", "http://search.mysite.com" ],
@@ -190,7 +190,7 @@ If you didn't make changes to the custom resource, AWS CloudFormation won't send
 
 For detailed information about the request and response objects involved in `Update` requests, see [Update](crpg-ref-requesttypes-update.md) in the [Custom Resource Reference](crpg-ref.md)\.
 
-### Step 3: Stack Deletion<a name="crpg-walkthrough-stack-deletion"></a>
+### Step 3: Stack deletion<a name="crpg-walkthrough-stack-deletion"></a>
 
 1. <a name="crpg-walkthrough-stack-deletion-customer-template"></a>The template developer deletes a stack that contains a custom resource\. AWS CloudFormation gets the current properties specified in the stack template along with the SNS topic, and prepares to make a request to the custom resource provider\.
 
@@ -236,12 +236,9 @@ For detailed information about the request and response objects involved in `Upd
 
 1. <a name="crpg-walkthrough-stack-updates-stack-status-delete"></a>AWS CloudFormation declares the stack status as `DELETE_COMPLETE` or `DELETE_FAILED`\.
 
-For detailed information about the request and response objects involved in `Delete` requests, see [Delete](crpg-ref-requesttypes-delete.md) in the [Custom Resource Reference](crpg-ref.md)\.
+For detailed information about the request and response objects involved in `Delete` requests, see [Delete](crpg-ref-requesttypes-delete.md) in the [Custom resource reference](crpg-ref.md)\.
 
-### See Also<a name="w3ab2c17c26c12b5c12"></a>
-
+### See also<a name="w7423ab1c27c24c12b5c12"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)
-
-+ [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)
-
++ [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)
 + [Fn::GetAtt](intrinsic-function-reference-getatt.md)

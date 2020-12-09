@@ -1,8 +1,10 @@
-# AWS Data Pipeline Parameter Objects Attributes<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes"></a>
+# AWS::DataPipeline::Pipeline ParameterAttribute<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes"></a>
 
-`Attribute` is a property of the [AWS Data Pipeline Pipeline ParameterObjects](aws-properties-datapipeline-pipeline-parameterobjects.md) property that defines the attributes of a parameter object as key\-value pairs\.
+ `Attribute` is a property of `ParameterObject` that defines the attributes of a parameter object as key\-value pairs\.
 
-## Syntax<a name="w3ab2c21c14d479b5"></a>
+## Syntax<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes-syntax.json"></a>
 
@@ -16,18 +18,27 @@
 ### YAML<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes-syntax.yaml"></a>
 
 ```
-[Key](#cfn-datapipeline-pipeline-parameterobjects-attribtues-key): String
-[StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue): String
+  [Key](#cfn-datapipeline-pipeline-parameterobjects-attribtues-key): String
+  [StringValue](#cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue): 
+    String
 ```
 
-## Properties<a name="w3ab2c21c14d479b7"></a>
+## Properties<a name="aws-properties-datapipeline-pipeline-parameterobjects-attributes-properties"></a>
 
 `Key`  <a name="cfn-datapipeline-pipeline-parameterobjects-attribtues-key"></a>
-Specifies the name of a parameter attribute\. To view parameter attributes, see [Creating a Pipeline Using Parameterized Templates](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-custom-templates.html) in the *AWS Data Pipeline Developer Guide*\.  
-*Required: *Yes  
-*Type*: String
+The field identifier\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StringValue`  <a name="cfn-datapipeline-pipeline-parameterobjects-attribtues-stringvalue"></a>
-A parameter attribute value\.  
-*Required: *Conditional if the key that you are using requires it\.  
-*Type*: String
+The field value, expressed as a String\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `10240`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

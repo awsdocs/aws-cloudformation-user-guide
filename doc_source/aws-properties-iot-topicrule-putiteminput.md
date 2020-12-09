@@ -1,8 +1,6 @@
-# AWS IoT TopicRule PutItemInput<a name="aws-properties-iot-topicrule-putiteminput"></a>
+# AWS::IoT::TopicRule PutItemInput<a name="aws-properties-iot-topicrule-putiteminput"></a>
 
-<a name="aws-properties-iot-topicrule-putiteminput-description"></a>The `PutItemInput` property type specifies the database table for an AWS IoT topic rule\.
-
-<a name="aws-properties-iot-topicrule-putiteminput-inheritance"></a> `PutItemInput` is a property of the [AWS IoT TopicRule DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md) property type\. 
+The input for the DynamoActionVS action that specifies the DynamoDB table to which the message data will be written\.
 
 ## Syntax<a name="aws-properties-iot-topicrule-putiteminput-syntax"></a>
 
@@ -19,14 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-putiteminput-syntax.yaml"></a>
 
 ```
-[TableName](#cfn-iot-topicrule-putiteminput-tablename): String
+  [TableName](#cfn-iot-topicrule-putiteminput-tablename): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-putiteminput-properties"></a>
 
 `TableName`  <a name="cfn-iot-topicrule-putiteminput-tablename"></a>
-The name of the DynamoDB table\.  
-The MQTT message payload must contain a root\-level key that matches the table's primary partition key and a root\-level key that matches the table's primary sort key, if one is defined\. For more information, see [DynamoDBv2 Action](http://docs.aws.amazon.com/iot/latest/developerguide/dynamodb-v2-rule.html) in the *AWS IoT Developer Guide\.*\.
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The table where the message data will be written\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

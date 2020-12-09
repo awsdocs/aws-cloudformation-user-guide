@@ -1,4 +1,4 @@
-# Deploying Applications on Amazon EC2 with AWS CloudFormation<a name="deploying.applications"></a>
+# Deploying applications on Amazon EC2 with AWS CloudFormation<a name="deploying.applications"></a>
 
 You can use AWS CloudFormation to automatically install, configure, and start applications on Amazon EC2 instances\. Doing so enables you to easily duplicate deployments and update existing installations without connecting directly to the instance, which can save you a lot of time and effort\.
 
@@ -6,15 +6,15 @@ AWS CloudFormation includes a set of helper scripts \(cfn\-init, cfn\-signal, cf
 
 The following walkthrough describes how to create a template that launches a LAMP stack by using cfn helper scripts to install, configure and start Apache, MySQL, and PHP\. You'll start with a simple template that sets up a basic Amazon EC2 instance running Amazon Linux, and then continue adding to the template until it describes a full LAMP stack\.
 
-For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping Applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
+For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
 
+**Topics**
++ [Basic Amazon EC2 instance](#deployment-walkthrough-basic-server)
++ [LAMP installation](#deployment-walkthrough-lamp-install)
++ [LAMP configuration](#deployment-walkthrough-config)
++ [CreationPolicy attribute](#deployment-walkthrough-cfn-signal)
 
-+ [Basic Amazon EC2 Instance](#deployment-walkthrough-basic-server)
-+ [LAMP Installation](#deployment-walkthrough-lamp-install)
-+ [LAMP Configuration](#deployment-walkthrough-config)
-+ [CreationPolicy Attribute](#deployment-walkthrough-cfn-signal)
-
-## Basic Amazon EC2 Instance<a name="deployment-walkthrough-basic-server"></a>
+## Basic Amazon EC2 instance<a name="deployment-walkthrough-basic-server"></a>
 
 You start with a basic template that defines a single Amazon EC2 instance with a security group that allows SSH traffic on port 22 and HTTP traffic on port 80, as shown in the following example:
 
@@ -22,10 +22,7 @@ You start with a basic template that defines a single Amazon EC2 instance with a
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "AWS CloudFormation sample template LAMP_Single_Instance: Create a LAMP stack using a single EC2
-instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap
-scripts to install the packages and files necessary to deploy the Apache web server, PHP, and MySQL at instance launch time.
-**WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
+  "Description" : "AWS CloudFormation sample template LAMP_Single_Instance: Create a LAMP stack using a single EC2 instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap scripts to install the packages and files necessary to deploy the Apache web server, PHP, and MySQL at instance launch time. **WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
 
   "Parameters" : {
     "KeyName": {
@@ -36,9 +33,64 @@ scripts to install the packages and files necessary to deploy the Apache web ser
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
-      "Default" : "m1.small",
-      "AllowedValues" : [ "t1.micro", "t2.micro", "t2.small", "t2.medium", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "g2.2xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"],
-      "ConstraintDescription" : "Must be a valid EC2 instance type"
+      "Default" : "t2.small",
+      "AllowedValues" : [ 
+        "t1.micro", 
+        "t2.nano", 
+        "t2.micro", 
+        "t2.small", 
+        "t2.medium", 
+        "t2.large", 
+        "m1.small", 
+        "m1.medium", 
+        "m1.large", 
+        "m1.xlarge", 
+        "m2.xlarge", 
+        "m2.2xlarge", 
+        "m2.4xlarge", 
+        "m3.medium", 
+        "m3.large", 
+        "m3.xlarge", 
+        "m3.2xlarge", 
+        "m4.large", 
+        "m4.xlarge", 
+        "m4.2xlarge", 
+        "m4.4xlarge", 
+        "m4.10xlarge", 
+        "c1.medium", 
+        "c1.xlarge", 
+        "c3.large", 
+        "c3.xlarge", 
+        "c3.2xlarge", 
+        "c3.4xlarge", 
+        "c3.8xlarge", 
+        "c4.large", 
+        "c4.xlarge", 
+        "c4.2xlarge", 
+        "c4.4xlarge", 
+        "c4.8xlarge", 
+        "g2.2xlarge", 
+        "g2.8xlarge", 
+        "r3.large", 
+        "r3.xlarge", 
+        "r3.2xlarge", 
+        "r3.4xlarge", 
+        "r3.8xlarge", 
+        "i2.xlarge", 
+        "i2.2xlarge", 
+        "i2.4xlarge", 
+        "i2.8xlarge", 
+        "d2.xlarge", 
+        "d2.2xlarge", 
+        "d2.4xlarge", 
+        "d2.8xlarge", 
+        "hi1.4xlarge", 
+        "hs1.8xlarge", 
+        "cr1.8xlarge", 
+        "cc2.8xlarge", 
+        "cg1.4xlarge"
+      ],
+      "ConstraintDescription" : "must be a valid EC2 instance type."
     },
     "SSHLocation" : {
       "Description" : "The IP address range that can be used to SSH to the EC2 instances",
@@ -51,31 +103,45 @@ scripts to install the packages and files necessary to deploy the Apache web ser
     } 
   },
 
+      
   "Mappings" : {
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
+      "t1.micro"    : { "Arch" : "HVM64"  },
+      "t2.nano"     : { "Arch" : "HVM64"  },
       "t2.micro"    : { "Arch" : "HVM64"  },
       "t2.small"    : { "Arch" : "HVM64"  },
       "t2.medium"   : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   },
-      "m1.medium"   : { "Arch" : "PV64"   },
-      "m1.large"    : { "Arch" : "PV64"   },
-      "m1.xlarge"   : { "Arch" : "PV64"   },
-      "m2.xlarge"   : { "Arch" : "PV64"   },
-      "m2.2xlarge"  : { "Arch" : "PV64"   },
-      "m2.4xlarge"  : { "Arch" : "PV64"   },
+      "t2.large"    : { "Arch" : "HVM64"  },
+      "m1.small"    : { "Arch" : "HVM64"  },
+      "m1.medium"   : { "Arch" : "HVM64"  },
+      "m1.large"    : { "Arch" : "HVM64"  },
+      "m1.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.2xlarge"  : { "Arch" : "HVM64"  },
+      "m2.4xlarge"  : { "Arch" : "HVM64"  },
       "m3.medium"   : { "Arch" : "HVM64"  },
       "m3.large"    : { "Arch" : "HVM64"  },
       "m3.xlarge"   : { "Arch" : "HVM64"  },
       "m3.2xlarge"  : { "Arch" : "HVM64"  },
-      "c1.medium"   : { "Arch" : "PV64"   },
-      "c1.xlarge"   : { "Arch" : "PV64"   },
+      "m4.large"    : { "Arch" : "HVM64"  },
+      "m4.xlarge"   : { "Arch" : "HVM64"  },
+      "m4.2xlarge"  : { "Arch" : "HVM64"  },
+      "m4.4xlarge"  : { "Arch" : "HVM64"  },
+      "m4.10xlarge" : { "Arch" : "HVM64"  },
+      "c1.medium"   : { "Arch" : "HVM64"  },
+      "c1.xlarge"   : { "Arch" : "HVM64"  },
       "c3.large"    : { "Arch" : "HVM64"  },
       "c3.xlarge"   : { "Arch" : "HVM64"  },
       "c3.2xlarge"  : { "Arch" : "HVM64"  },
       "c3.4xlarge"  : { "Arch" : "HVM64"  },
       "c3.8xlarge"  : { "Arch" : "HVM64"  },
+      "c4.large"    : { "Arch" : "HVM64"  },
+      "c4.xlarge"   : { "Arch" : "HVM64"  },
+      "c4.2xlarge"  : { "Arch" : "HVM64"  },
+      "c4.4xlarge"  : { "Arch" : "HVM64"  },
+      "c4.8xlarge"  : { "Arch" : "HVM64"  },
       "g2.2xlarge"  : { "Arch" : "HVMG2"  },
+      "g2.8xlarge"  : { "Arch" : "HVMG2"  },
       "r3.large"    : { "Arch" : "HVM64"  },
       "r3.xlarge"   : { "Arch" : "HVM64"  },
       "r3.2xlarge"  : { "Arch" : "HVM64"  },
@@ -85,6 +151,10 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "i2.2xlarge"  : { "Arch" : "HVM64"  },
       "i2.4xlarge"  : { "Arch" : "HVM64"  },
       "i2.8xlarge"  : { "Arch" : "HVM64"  },
+      "d2.xlarge"   : { "Arch" : "HVM64"  },
+      "d2.2xlarge"  : { "Arch" : "HVM64"  },
+      "d2.4xlarge"  : { "Arch" : "HVM64"  },
+      "d2.8xlarge"  : { "Arch" : "HVM64"  },
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
@@ -92,16 +162,24 @@ scripts to install the packages and files necessary to deploy the Apache web ser
     },
 
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  },
-      "us-west-2"      : { "PV64" : "ami-af86c69f", "HVM64" : "ami-8786c6b7", "HVMG2" : "ami-47296a77"  },
-      "us-west-1"      : { "PV64" : "ami-c7a8a182", "HVM64" : "ami-cfa8a18a", "HVMG2" : "ami-331b1376"  },
-      "eu-west-1"      : { "PV64" : "ami-aa8f28dd", "HVM64" : "ami-748e2903", "HVMG2" : "ami-00913777"  },
-      "ap-southeast-1" : { "PV64" : "ami-20e1c572", "HVM64" : "ami-d6e1c584", "HVMG2" : "ami-fabe9aa8"  },
-      "ap-northeast-1" : { "PV64" : "ami-21072820", "HVM64" : "ami-35072834", "HVMG2" : "ami-5dd1ff5c"  },
-      "ap-southeast-2" : { "PV64" : "ami-8b4724b1", "HVM64" : "ami-fd4724c7", "HVMG2" : "ami-e98ae9d3"  },
-      "sa-east-1"      : { "PV64" : "ami-9d6cc680", "HVM64" : "ami-956cc688", "HVMG2" : "NOT_SUPPORTED" },
-      "cn-north-1"     : { "PV64" : "ami-a857c591", "HVM64" : "ami-ac57c595", "HVMG2" : "NOT_SUPPORTED" },
-      "eu-central-1"   : { "PV64" : "ami-a03503bd", "HVM64" : "ami-b43503a9", "HVMG2" : "ami-b03503ad"  }
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-west-3"        : {"HVM64" : "ami-0ebc281c20e89ba4b", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-northeast-2"   : {"HVM64" : "ami-0a10b2721688ce9d2", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-northeast-3"   : {"HVM64" : "ami-0d98120a9fb693f07", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "ap-south-1"       : {"HVM64" : "ami-0912f71e06545ad88", "HVMG2" : "ami-097b15e89dbdcfcf4"},
+      "us-east-2"        : {"HVM64" : "ami-0b59bfac6be064b78", "HVMG2" : "NOT_SUPPORTED"},
+      "ca-central-1"     : {"HVM64" : "ami-0b18956f", "HVMG2" : "NOT_SUPPORTED"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
   },
 
@@ -140,7 +218,7 @@ scripts to install the packages and files necessary to deploy the Apache web ser
 
 In addition to the Amazon EC2 instance and security group, we create three input parameters that specify the instance type, an Amazon EC2 key pair to use for SSH access, and an IP address range that can be used to SSH to the instance\. The mapping section ensures that AWS CloudFormation uses the correct AMI ID for the stack's region and the Amazon EC2 instance type\. Finally, the output section outputs the public URL of the web server\.
 
-## LAMP Installation<a name="deployment-walkthrough-lamp-install"></a>
+## LAMP installation<a name="deployment-walkthrough-lamp-install"></a>
 
 You'll build on the previous basic Amazon EC2 template to automatically install Apache, MySQL, and PHP\. To install the applications, you'll add a `UserData` property and `Metadata` property\. However, the template won't configure and start the applications until the next section\.
 
@@ -233,7 +311,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
                   "      $DBPassword = \"", {"Ref" : "DBPassword"}, "\";\n",
                   "      print \"Database = \" . $Database . \"<br />\";\n",
                   "      $dbconnection = mysql_connect($Database, $DBUser, $DBPassword)\n",
-                  "                      or die(\"Could not connect: \" . ysql_error());\n",
+                  "                      or die(\"Could not connect: \" . mysql_error());\n",
                   "      print (\"Connected to $Database successfully\");\n",
                   "      mysql_close($dbconnection);\n",
                   "    ?>\n",
@@ -248,7 +326,8 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
                 "mode"  : "000600",
                 "owner" : "apache",
                 "group" : "apache"
-              },
+              }
+            },
             "services" : {
               "sysvinit" : {  
                 "httpd"   : { "enabled" : "true", "ensureRunning" : "true" }
@@ -286,9 +365,22 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
 
 The `UserData` property runs two shell commands: install the AWS CloudFormation helper scripts and then run the [cfn\-init](cfn-init.md) helper script\. Because the helper scripts are updated periodically, running the `yum install -y aws-cfn-bootstrap` command ensures that you get the latest helper scripts\. When you run cfn\-init, it reads metadata from the [AWS::CloudFormation::Init](aws-resource-init.md) resource, which describes the actions to be carried out by cfn\-init\. For example, you can use cfn\-init and AWS::CloudFormation::Init to install packages, write files to disk, or start a service\. In our case, cfn\-init installs the listed packages \(httpd, mysql, and php\) and creates the `/var/www/html/index.php` file \(a sample PHP application\)\.
 
-## LAMP Configuration<a name="deployment-walkthrough-config"></a>
+## LAMP configuration<a name="deployment-walkthrough-config"></a>
 
 Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll need to expand the template so that it automatically configures and runs Apache, MySQL, and PHP\. In the following example, we expand on the `Parameters` section, `AWS::CloudFormation::Init` resource, and `UserData` property to complete the configuration\. As with the previous template, sections marked with an ellipsis \(\.\.\.\) are omitted for brevity\. Additions to the template are shown in red italic text\.
+
+Note that the example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
+
+**Important**  
+Using the `NoEcho` attribute does not mask any information stored in the following:  
+The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
+The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
+The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
+We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
+
+**Important**  
+Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ```
 {
@@ -451,7 +543,7 @@ Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll n
           "# Install the files and packages from the metadata\n",
           "/opt/aws/bin/cfn-init ",
           "         --stack ", { "Ref" : "AWS::StackName" },
-          "         --resource WebServerInstance ",^M
+          "         --resource WebServerInstance ",
           "         --configsets InstallAndRun ",
           "         --region ", { "Ref" : "AWS::Region" }, "\n"
 		]]}}
@@ -469,9 +561,9 @@ The example adds more parameters to obtain information for configuring the MySQL
 
 In the `AWS::CloudFormation::Init` resource, we added a MySQL setup file, containing the database name, user name, and password\. The example also adds a `services` property to ensure that the httpd and mysqld services are running \(`ensureRunning` set to `true`\) and to ensure that the services are restarted if the instance is rebooted \(`enabled` set to `true`\)\. A good practice is to also include the [cfn\-hup](cfn-hup.md) helper script, with which you can make configuration updates to running instances by updating the stack template\. For example, you could change the sample PHP application and then run a stack update to deploy the change\.
 
-In order to run the MySQL commands after the installation is complete, the example adds another configuration set to run the commands\. Configuration sets are useful when you have a series of tasks that must be completed in a specific order\. The example first runs the `Installation` configuration set and then the `Configure` configuration set\. The `Configure` configuration set specifies the database root password and then creates a database\. In the commands section, the commands are processed in alphabetical order by name, so the example adds a number before each command name to indicate its desired run order\.
+In order to run the MySQL commands after the installation is complete, the example adds another configuration set to run the commands\. Configuration sets are useful when you have a series of tasks that must be completed in a specific order\. The example first runs the `Install` configuration set and then the `Configure` configuration set\. The `Configure` configuration set specifies the database root password and then creates a database\. In the commands section, the commands are processed in alphabetical order by name, so the example adds a number before each command name to indicate its desired run order\.
 
-## CreationPolicy Attribute<a name="deployment-walkthrough-cfn-signal"></a>
+## CreationPolicy attribute<a name="deployment-walkthrough-cfn-signal"></a>
 
 Finally, you need a way to instruct AWS CloudFormation to complete stack creation only after all the services \(such as Apache and MySQL\) are running and not after all the stack resources are created\. In other words, if you use the template from the previous section to launch a stack, AWS CloudFormation sets the status of the stack as `CREATE_COMPLETE` after it successfully creates all the resources\. However, if one or more services failed to start, AWS CloudFormation still sets the stack status as `CREATE_COMPLETE`\. To prevent the status from changing to `CREATE_COMPLETE` until all the services have successfully started, you can add a [CreationPolicy](aws-attribute-creationpolicy.md) attribute to the instance\. This attribute puts the instance's status in `CREATE_IN_PROGRESS` until AWS CloudFormation receives the required number of success signals or the timeout period is exceeded, so you can control when the instance has been successfully created\.
 
@@ -504,7 +596,7 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
              "# Install the files and packages from the metadata\n",
              "/opt/aws/bin/cfn-init ",
              "         --stack ", { "Ref" : "AWS::StackName" },
-             "         --resource WebServerInstance ",^M
+             "         --resource WebServerInstance ",
              "         --configsets InstallAndRun ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n",
 
@@ -535,9 +627,11 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
 
 The creation policy attribute uses the ISO 8601 format to define a timeout period of 5 minutes\. And because you're waiting for just 1 instance to be configured, you only need to wait for one success signal, which is the default count\.
 
-In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails or if the timeout period is exceeded, cfn\-signal sends a failure signal that causes the resource creation to fail\.
+In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails, cfn\-signal sends a failure signal that causes the resource creation to fail\. The resource creation also fails if AWS CloudFormation doesn't receive a success signal within the timeout period\.
 
-The following example shows final complete template\. You can also view the template at the following location:
+The following example shows the final complete template\.
+
+You can also view the template at the following location:
 
 [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/LAMP\_Single\_Instance\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template)
 
@@ -598,9 +692,64 @@ The following example shows final complete template\. You can also view the temp
     "InstanceType" : {
       "Description" : "WebServer EC2 instance type",
       "Type" : "String",
-      "Default" : "m1.small",
-      "AllowedValues" : [ "t1.micro", "t2.micro", "t2.small", "t2.medium", "m1.small", "m1.medium", "m1.large", "m1.xlarge", "m2.xlarge", "m2.2xlarge", "m2.4xlarge", "m3.medium", "m3.large", "m3.xlarge", "m3.2xlarge", "c1.medium", "c1.xlarge", "c3.large", "c3.xlarge", "c3.2xlarge", "c3.4xlarge", "c3.8xlarge", "g2.2xlarge", "r3.large", "r3.xlarge", "r3.2xlarge", "r3.4xlarge", "r3.8xlarge", "i2.xlarge", "i2.2xlarge", "i2.4xlarge", "i2.8xlarge", "hi1.4xlarge", "hs1.8xlarge", "cr1.8xlarge", "cc2.8xlarge", "cg1.4xlarge"],
-      "ConstraintDescription" : "Must be a valid EC2 instance type"
+      "Default" : "t2.small",
+      "AllowedValues" : [ 
+        "t1.micro", 
+        "t2.nano", 
+        "t2.micro", 
+        "t2.small", 
+        "t2.medium", 
+        "t2.large", 
+        "m1.small", 
+        "m1.medium", 
+        "m1.large", 
+        "m1.xlarge", 
+        "m2.xlarge", 
+        "m2.2xlarge", 
+        "m2.4xlarge", 
+        "m3.medium", 
+        "m3.large", 
+        "m3.xlarge", 
+        "m3.2xlarge", 
+        "m4.large", 
+        "m4.xlarge", 
+        "m4.2xlarge", 
+        "m4.4xlarge", 
+        "m4.10xlarge", 
+        "c1.medium", 
+        "c1.xlarge", 
+        "c3.large", 
+        "c3.xlarge", 
+        "c3.2xlarge", 
+        "c3.4xlarge", 
+        "c3.8xlarge", 
+        "c4.large", 
+        "c4.xlarge", 
+        "c4.2xlarge", 
+        "c4.4xlarge", 
+        "c4.8xlarge", 
+        "g2.2xlarge", 
+        "g2.8xlarge", 
+        "r3.large", 
+        "r3.xlarge", 
+        "r3.2xlarge", 
+        "r3.4xlarge", 
+        "r3.8xlarge", 
+        "i2.xlarge", 
+        "i2.2xlarge", 
+        "i2.4xlarge", 
+        "i2.8xlarge", 
+        "d2.xlarge", 
+        "d2.2xlarge", 
+        "d2.4xlarge", 
+        "d2.8xlarge", 
+        "hi1.4xlarge", 
+        "hs1.8xlarge", 
+        "cr1.8xlarge", 
+        "cc2.8xlarge", 
+        "cg1.4xlarge"
+      ],
+      "ConstraintDescription" : "must be a valid EC2 instance type."
     },
     "SSHLocation" : {
       "Description" : "The IP address range that can be used to SSH to the EC2 instances",
@@ -615,29 +764,42 @@ The following example shows final complete template\. You can also view the temp
   
   "Mappings" : {
     "AWSInstanceType2Arch" : {
-      "t1.micro"    : { "Arch" : "PV64"   },
+      "t1.micro"    : { "Arch" : "HVM64"  },
+      "t2.nano"     : { "Arch" : "HVM64"  },
       "t2.micro"    : { "Arch" : "HVM64"  },
       "t2.small"    : { "Arch" : "HVM64"  },
       "t2.medium"   : { "Arch" : "HVM64"  },
-      "m1.small"    : { "Arch" : "PV64"   },
-      "m1.medium"   : { "Arch" : "PV64"   },
-      "m1.large"    : { "Arch" : "PV64"   },
-      "m1.xlarge"   : { "Arch" : "PV64"   },
-      "m2.xlarge"   : { "Arch" : "PV64"   },
-      "m2.2xlarge"  : { "Arch" : "PV64"   },
-      "m2.4xlarge"  : { "Arch" : "PV64"   },
+      "t2.large"    : { "Arch" : "HVM64"  },
+      "m1.small"    : { "Arch" : "HVM64"  },
+      "m1.medium"   : { "Arch" : "HVM64"  },
+      "m1.large"    : { "Arch" : "HVM64"  },
+      "m1.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.xlarge"   : { "Arch" : "HVM64"  },
+      "m2.2xlarge"  : { "Arch" : "HVM64"  },
+      "m2.4xlarge"  : { "Arch" : "HVM64"  },
       "m3.medium"   : { "Arch" : "HVM64"  },
       "m3.large"    : { "Arch" : "HVM64"  },
       "m3.xlarge"   : { "Arch" : "HVM64"  },
       "m3.2xlarge"  : { "Arch" : "HVM64"  },
-      "c1.medium"   : { "Arch" : "PV64"   },
-      "c1.xlarge"   : { "Arch" : "PV64"   },
+      "m4.large"    : { "Arch" : "HVM64"  },
+      "m4.xlarge"   : { "Arch" : "HVM64"  },
+      "m4.2xlarge"  : { "Arch" : "HVM64"  },
+      "m4.4xlarge"  : { "Arch" : "HVM64"  },
+      "m4.10xlarge" : { "Arch" : "HVM64"  },
+      "c1.medium"   : { "Arch" : "HVM64"  },
+      "c1.xlarge"   : { "Arch" : "HVM64"  },
       "c3.large"    : { "Arch" : "HVM64"  },
       "c3.xlarge"   : { "Arch" : "HVM64"  },
       "c3.2xlarge"  : { "Arch" : "HVM64"  },
       "c3.4xlarge"  : { "Arch" : "HVM64"  },
       "c3.8xlarge"  : { "Arch" : "HVM64"  },
+      "c4.large"    : { "Arch" : "HVM64"  },
+      "c4.xlarge"   : { "Arch" : "HVM64"  },
+      "c4.2xlarge"  : { "Arch" : "HVM64"  },
+      "c4.4xlarge"  : { "Arch" : "HVM64"  },
+      "c4.8xlarge"  : { "Arch" : "HVM64"  },
       "g2.2xlarge"  : { "Arch" : "HVMG2"  },
+      "g2.8xlarge"  : { "Arch" : "HVMG2"  },
       "r3.large"    : { "Arch" : "HVM64"  },
       "r3.xlarge"   : { "Arch" : "HVM64"  },
       "r3.2xlarge"  : { "Arch" : "HVM64"  },
@@ -647,23 +809,34 @@ The following example shows final complete template\. You can also view the temp
       "i2.2xlarge"  : { "Arch" : "HVM64"  },
       "i2.4xlarge"  : { "Arch" : "HVM64"  },
       "i2.8xlarge"  : { "Arch" : "HVM64"  },
+      "d2.xlarge"   : { "Arch" : "HVM64"  },
+      "d2.2xlarge"  : { "Arch" : "HVM64"  },
+      "d2.4xlarge"  : { "Arch" : "HVM64"  },
+      "d2.8xlarge"  : { "Arch" : "HVM64"  },
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
       "cc2.8xlarge" : { "Arch" : "HVM64"  }
     },
-
     "AWSRegionArch2AMI" : {
-      "us-east-1"      : { "PV64" : "ami-50842d38", "HVM64" : "ami-08842d60", "HVMG2" : "ami-3a329952"  },
-      "us-west-2"      : { "PV64" : "ami-af86c69f", "HVM64" : "ami-8786c6b7", "HVMG2" : "ami-47296a77"  },
-      "us-west-1"      : { "PV64" : "ami-c7a8a182", "HVM64" : "ami-cfa8a18a", "HVMG2" : "ami-331b1376"  },
-      "eu-west-1"      : { "PV64" : "ami-aa8f28dd", "HVM64" : "ami-748e2903", "HVMG2" : "ami-00913777"  },
-      "ap-southeast-1" : { "PV64" : "ami-20e1c572", "HVM64" : "ami-d6e1c584", "HVMG2" : "ami-fabe9aa8"  },
-      "ap-northeast-1" : { "PV64" : "ami-21072820", "HVM64" : "ami-35072834", "HVMG2" : "ami-5dd1ff5c"  },
-      "ap-southeast-2" : { "PV64" : "ami-8b4724b1", "HVM64" : "ami-fd4724c7", "HVMG2" : "ami-e98ae9d3"  },
-      "sa-east-1"      : { "PV64" : "ami-9d6cc680", "HVM64" : "ami-956cc688", "HVMG2" : "NOT_SUPPORTED" },
-      "cn-north-1"     : { "PV64" : "ami-a857c591", "HVM64" : "ami-ac57c595", "HVMG2" : "NOT_SUPPORTED" },
-      "eu-central-1"   : { "PV64" : "ami-a03503bd", "HVM64" : "ami-b43503a9", "HVMG2" : "ami-b03503ad"  }
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-2"        : {"HVM64" : "ami-a0cfeed8", "HVMG2" : "ami-0e09505bc235aa82d"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "eu-west-2"        : {"HVM64" : "ami-f976839e", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-west-3"        : {"HVM64" : "ami-0ebc281c20e89ba4b", "HVMG2" : "NOT_SUPPORTED"},
+      "eu-central-1"     : {"HVM64" : "ami-0233214e13e500f77", "HVMG2" : "ami-06223d46a6d0661c7"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-northeast-2"   : {"HVM64" : "ami-0a10b2721688ce9d2", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-northeast-3"   : {"HVM64" : "ami-0d98120a9fb693f07", "HVMG2" : "NOT_SUPPORTED"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"},
+      "ap-southeast-2"   : {"HVM64" : "ami-09b42976632b27e9b", "HVMG2" : "ami-0a9ce9fecc3d1daf8"},
+      "ap-south-1"       : {"HVM64" : "ami-0912f71e06545ad88", "HVMG2" : "ami-097b15e89dbdcfcf4"},
+      "us-east-2"        : {"HVM64" : "ami-0b59bfac6be064b78", "HVMG2" : "NOT_SUPPORTED"},
+      "ca-central-1"     : {"HVM64" : "ami-0b18956f", "HVMG2" : "NOT_SUPPORTED"},
+      "sa-east-1"        : {"HVM64" : "ami-07b14488da8ea02a0", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-north-1"       : {"HVM64" : "ami-0a4eaf6c4454eda75", "HVMG2" : "NOT_SUPPORTED"},
+      "cn-northwest-1"   : {"HVM64" : "ami-6b6a7d09", "HVMG2" : "NOT_SUPPORTED"}
     }
 
   },
@@ -739,7 +912,7 @@ The following example shows final complete template\. You can also view the temp
                   "      $DBPassword = \"", {"Ref" : "DBPassword"}, "\";\n",
                   "      print \"Database = \" . $Database . \"<br />\";\n",
                   "      $dbconnection = mysql_connect($Database, $DBUser, $DBPassword)\n",
-                  "                      or die(\"Could not connect: \" . ysql_error());\n",
+                  "                      or die(\"Could not connect: \" . mysql_error());\n",
                   "      print (\"Connected to $Database successfully\");\n",
                   "      mysql_close($dbconnection);\n",
                   "    ?>\n",
@@ -755,7 +928,6 @@ The following example shows final complete template\. You can also view the temp
                 "owner" : "apache",
                 "group" : "apache"
               },
-
               "/tmp/setup.mysql" : {
                 "content" : { "Fn::Join" : ["", [
                   "CREATE DATABASE ", { "Ref" : "DBName" }, ";\n",

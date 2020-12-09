@@ -1,12 +1,6 @@
 # AWS::Logs::Destination<a name="aws-resource-logs-destination"></a>
 
-The `AWS::Logs::Destination` resource creates an Amazon CloudWatch Logs \(CloudWatch Logs\) destination, which enables you to specify a physical resource \(such as an Kinesis stream\) that subscribes to CloudWatch Logs log events from another AWS account\. For more information, see [Cross\-Account Log Data Sharing with Subscriptions](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CrossAccountSubscriptions.html) in the *Amazon CloudWatch User Guide*\.
-
-
-+ [Syntax](#aws-resource-logs-destination-syntax)
-+ [Properties](#w3ab2c21c10d821b9)
-+ [Return Values](#w3ab2c21c10d821c11)
-+ [Example](#w3ab2c21c10d821c13)
+The AWS::Logs::Destination resource specifies a CloudWatch Logs destination\. A destination encapsulates a physical resource \(such as an Amazon Kinesis data stream\) and enables you to subscribe that resource to a stream of log events\. 
 
 ## Syntax<a name="aws-resource-logs-destination-syntax"></a>
 
@@ -18,18 +12,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Logs::Destination",
   "Properties" : {
-    "[DestinationName](#cfn-logs-destination-destinationname)" : String,
-    "[DestinationPolicy](#cfn-logs-destination-destinationpolicy)" : String,
-    "[RoleArn](#cfn-logs-destination-rolearn)" : String,
-    "[TargetArn](#cfn-logs-destination-targetarn)" : String
-  }
+      "[DestinationName](#cfn-logs-destination-destinationname)" : String,
+      "[DestinationPolicy](#cfn-logs-destination-destinationpolicy)" : String,
+      "[RoleArn](#cfn-logs-destination-rolearn)" : String,
+      "[TargetArn](#cfn-logs-destination-targetarn)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-logs-destination-syntax.yaml"></a>
 
 ```
-Type: "AWS::Logs::Destination"
+Type: AWS::Logs::Destination
 Properties: 
   [DestinationName](#cfn-logs-destination-destinationname): String
   [DestinationPolicy](#cfn-logs-destination-destinationpolicy): String
@@ -37,54 +31,64 @@ Properties:
   [TargetArn](#cfn-logs-destination-targetarn): String
 ```
 
-## Properties<a name="w3ab2c21c10d821b9"></a>
+## Properties<a name="aws-resource-logs-destination-properties"></a>
 
 `DestinationName`  <a name="cfn-logs-destination-destinationname"></a>
-The name of the CloudWatch Logs destination\.  
-*Required: *Yes  
+The name of the destination\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `[^:*]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationPolicy`  <a name="cfn-logs-destination-destinationpolicy"></a>
-An AWS Identity and Access Management \(IAM\) policy that specifies who can write to your destination\.  
-*Required: *Yes  
+An IAM policy document that governs which AWS accounts can create subscription filters against this destination\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-logs-destination-rolearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource \(`TargetArn`\)\.  
-*Required: *Yes  
+The ARN of an IAM role that permits CloudWatch Logs to send data to the specified AWS resource\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArn`  <a name="cfn-logs-destination-targetarn"></a>
-The ARN of the AWS resource that receives log events\. Currently, you can specify only an Kinesis stream\.  
-*Required: *Yes  
+The Amazon Resource Name \(ARN\) of the physical target where the log events are delivered \(for example, a Kinesis stream\)\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d821c11"></a>
+## Return values<a name="aws-resource-logs-destination-return-values"></a>
 
-### Ref<a name="w3ab2c21c10d821c11b2"></a>
+### Ref<a name="aws-resource-logs-destination-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `TestDestination`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name, such as `TestDestination`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-logs-destination-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-logs-destination-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-east-2:123456789012:destination:MyDestination`\.
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+#### <a name="aws-resource-logs-destination-return-values-fn--getatt-fn--getatt"></a>
 
-## Example<a name="w3ab2c21c10d821c13"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
+The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-west-1:123456789012:destination:MyDestination`\.
 
-In the following example, the target stream \(`TestStream`\) can receive log events from the `logger` IAM user that is in the `234567890123` AWS account\. The user can call only the `PutSubscriptionFilter` action against the `TestDestination` destination\.
+## Examples<a name="aws-resource-logs-destination--examples"></a>
 
-### JSON<a name="aws-resource-logs-destination-example.json"></a>
+### Create a Destination<a name="aws-resource-logs-destination--examples--Create_a_Destination"></a>
+
+In the following example, the target stream \(`TestStream`\) can receive log events from the `logger` IAM user that is in the account `234567890123`\. The user can call only the `PutSubscriptionFilter` action against the `TestDestination` destination\.
+
+#### JSON<a name="aws-resource-logs-destination--examples--Create_a_Destination--json"></a>
 
 ```
 "DestinationWithName" : {
@@ -99,11 +103,11 @@ In the following example, the target stream \(`TestStream`\) can receive log eve
 }
 ```
 
-### YAML<a name="aws-resource-logs-destination-example.yaml"></a>
+#### YAML<a name="aws-resource-logs-destination--examples--Create_a_Destination--yaml"></a>
 
 ```
 DestinationWithName: 
-  Type: "AWS::Logs::Destination"
+  Type: AWS::Logs::Destination
   Properties: 
     DestinationName: "TestDestination"
     RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"

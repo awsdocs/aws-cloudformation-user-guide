@@ -1,50 +1,47 @@
 # AWS::ElastiCache::SecurityGroup<a name="aws-properties-elasticache-security-group"></a>
 
-The `AWS::ElastiCache::SecurityGroup` resource creates a cache security group\. For more information about cache security groups, go to [Cache Security Groups](http://docs.aws.amazon.com/AmazonElastiCache/latest/UserGuide/CacheSecurityGroup.html) in the *Amazon ElastiCache User Guide* or go to [CreateCacheSecurityGroup](http://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSecurityGroup.html) in the *Amazon ElastiCache API Reference Guide*\.
+The `AWS::ElastiCache::SecurityGroup` resource creates a cache security group\. For more information about cache security groups, go to [CacheSecurityGroups](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/VPCs.html) in the *Amazon ElastiCache User Guide* or go to [CreateCacheSecurityGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSecurityGroup.html) in the *Amazon ElastiCache API Reference Guide*\. 
 
-To create an ElastiCache cluster in a VPC, use the [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md) resource\. For more information, see the `VpcSecurityGroupIds` property in the [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md) resource\.
+For more information, see [CreateCacheSubnetGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSubnetGroup.html)\.
 
+**Note**  
+Updates are not supported\.
 
-+ [Syntax](#aws-resource-elasticache-securitygroup-syntax)
-+ [Properties](#w3ab2c21c10d553c11)
-+ [Return Values](#w3ab2c21c10d553c13)
-
-## Syntax<a name="aws-resource-elasticache-securitygroup-syntax"></a>
+## Syntax<a name="aws-properties-elasticache-security-group-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-elasticache-securitygroup-syntax.json"></a>
+### JSON<a name="aws-properties-elasticache-security-group-syntax.json"></a>
 
 ```
 {
   "Type" : "AWS::ElastiCache::SecurityGroup",
-  "Properties" :
-  {
-    "[Description](#cfn-elasticache-securitygroup-description)" : String
-  }
+  "Properties" : {
+      "[Description](#cfn-elasticache-securitygroup-description)" : String
+    }
 }
 ```
 
-### YAML<a name="aws-resource-elasticache-securitygroup-syntax.yaml"></a>
+### YAML<a name="aws-properties-elasticache-security-group-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElastiCache::SecurityGroup"
-Properties:
+Type: AWS::ElastiCache::SecurityGroup
+Properties: 
   [Description](#cfn-elasticache-securitygroup-description): String
 ```
 
-## Properties<a name="w3ab2c21c10d553c11"></a>
+## Properties<a name="aws-properties-elasticache-security-group-properties"></a>
 
 `Description`  <a name="cfn-elasticache-securitygroup-description"></a>
 A description for the cache security group\.  
+*Required*: Yes  
 *Type*: String  
-*Required: *No  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w3ab2c21c10d553c13"></a>
+## Return values<a name="aws-properties-elasticache-security-group-return-values"></a>
 
-### Ref<a name="w3ab2c21c10d553c13b2"></a>
+### Ref<a name="aws-properties-elasticache-security-group-return-values-ref"></a>
 
-When you specify the `AWS::ElastiCache::SecurityGroup` resource as an argument to the `Ref` function, AWS CloudFormation returns the `CacheSecurityGroupName` property of the cache security group\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

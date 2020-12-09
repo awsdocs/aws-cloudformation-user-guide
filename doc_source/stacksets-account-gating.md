@@ -6,14 +6,11 @@ If your target account fails an account gate check, the failed operation counts 
 
 Account gating is only available for StackSets operations\. This functionality is not available for other AWS CloudFormation operations outside of StackSets\.
 
-## Setup Requirements<a name="stacksets-accountgating_reqs"></a>
+## Setup requirements<a name="stacksets-accountgating_reqs"></a>
 
 The following list describes setup requirements for account gating\.
-
 + To work with the StackSets account gating functionality, your Lambda function must be named **AWSCloudFormationStackSetAccountGate**\.
-
 + The **AWSCloudFormationStackSetExecutionRole** needs permissions to invoke your Lambda function\. Without these permissions, StackSets skips the account gating check, and continues with stack operations\.
-
 + The Lambda `InvokeFunction` permission must be added to target accounts for account gating to work\. The target account trust policy must have a trust relationship with the administrator account\. The following is an example of a policy statement that grants Lambda `invokefunction` permissions\.
 
   ```
@@ -31,12 +28,12 @@ The following list describes setup requirements for account gating\.
   }
   ```
 
-## Sample Lambda Account Gating Functions<a name="stacksets-sample-accountgate"></a>
+## Sample Lambda account gating functions<a name="stacksets-sample-accountgate"></a>
 
-The following sample AWS CloudFormation templates are available for you to create Lambda **AWSCloudFormationStackSetAccountGate** functions\. For more information about how to create a new stack using either of these templates, see [Creating a Stack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html) in this guide\.
+The following sample AWS CloudFormation templates are available for you to create Lambda **AWSCloudFormationStackSetAccountGate** functions\. For more information about how to create a new stack using either of these templates, see [Creating a stack](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-create-stack.html) in this guide\.
 
 
-|  Template Location  |  Description  | 
+|  Template location  |  Description  | 
 | --- | --- | 
 |  [https://s3\.amazonaws\.com/cloudformation\-stackset\-templates\-us\-east\-1/cloudformation\-stack\-set\-accountgate\-succeeded\.template](https://s3.amazonaws.com/cloudformation-stackset-templates-us-east-1/cloudformation-stack-set-accountgate-succeeded.template)  |  Creates a stack that implements a Lambda account gate function that will return a status of `SUCCEEDED`\.  | 
 |  [https://s3\.amazonaws\.com/cloudformation\-stackset\-templates\-us\-east\-1/cloudformation\-stack\-set\-accountgate\-failed\.template](https://s3.amazonaws.com/cloudformation-stackset-templates-us-east-1/cloudformation-stack-set-accountgate-failed.template)  |  Creates a stack that implements a Lambda account gate function that will return a status of `FAILED`\.  | 

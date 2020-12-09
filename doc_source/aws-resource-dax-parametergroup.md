@@ -1,20 +1,20 @@
 # AWS::DAX::ParameterGroup<a name="aws-resource-dax-parametergroup"></a>
 
-Use the AWS CloudFormation `AWS::DAX::ParameterGroup` resource to create a parameter group for use with Amazon DynamoDB\.
-
-For more information, see [http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_ParameterGroup.html](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_dax_ParameterGroup.html) in the *Amazon DynamoDB Developer Guide*\.
+A named set of parameters that are applied to all of the nodes in a DAX cluster\.
 
 ## Syntax<a name="aws-resource-dax-parametergroup-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-resource-dax-parametergroup-syntax.json"></a>
 
 ```
 {
-   "Type": "AWS::DAX::ParameterGroup",
-   "Properties": {
-      "[ParameterGroupName](#cfn-dax-parametergroup-name)": String,
-      "[Description](#cfn-dax-parametergroup-description)": String,
-      "[ParameterNameValues](#cfn-dax-parametergroup-name-values)": { String:String, ... }
+  "Type" : "AWS::DAX::ParameterGroup",
+  "Properties" : {
+      "[Description](#cfn-dax-parametergroup-description)" : String,
+      "[ParameterGroupName](#cfn-dax-parametergroup-parametergroupname)" : String,
+      "[ParameterNameValues](#cfn-dax-parametergroup-parameternamevalues)" : Json
     }
 }
 ```
@@ -22,38 +22,39 @@ For more information, see [http://docs.aws.amazon.com/amazondynamodb/latest/APIR
 ### YAML<a name="aws-resource-dax-parametergroup-syntax.yaml"></a>
 
 ```
-Type: "AWS::DAX::ParameterGroup"
-Properties:
-      [ParameterGroupName](#cfn-dax-parametergroup-name): String
-      [Description](#cfn-dax-parametergroup-description): String
-      [ParameterNameValues](#cfn-dax-parametergroup-name-values): { String:String, ... }
+Type: AWS::DAX::ParameterGroup
+Properties: 
+  [Description](#cfn-dax-parametergroup-description): String
+  [ParameterGroupName](#cfn-dax-parametergroup-parametergroupname): String
+  [ParameterNameValues](#cfn-dax-parametergroup-parameternamevalues): Json
 ```
 
 ## Properties<a name="aws-resource-dax-parametergroup-properties"></a>
 
-`ParameterGroupName`  <a name="cfn-dax-parametergroup-name"></a>
-The name of the parameter group\.  
-*Required: *No  
-*Type*: String  
-*Update requires*: Updates are not supported\.
-
 `Description`  <a name="cfn-dax-parametergroup-description"></a>
-A description of the parameter group\.   
-*Required: *No  
+A description of the parameter group\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt);
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ParameterNameValues`  <a name="cfn-dax-parametergroup-name-values"></a>
-A map of DAX parameter names and values\.  
-*Required: *No  
-*Type*: String to String map  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+`ParameterGroupName`  <a name="cfn-dax-parametergroup-parametergroupname"></a>
+The name of the parameter group\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dax-parametergroup-returnvalues"></a>
+`ParameterNameValues`  <a name="cfn-dax-parametergroup-parameternamevalues"></a>
+An array of name\-value pairs for the parameters in the group\. Each element in the array represents a single parameter\.  
+ `record-ttl-millis` and `query-ttl-millis` are the only supported parameter names\. For more details, see [Configuring TTL Settings](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DAX.cluster-management.html#DAX.cluster-management.custom-settings.ttl)\.
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="w3ab2c21c10d295c11b2"></a>
+## Return values<a name="aws-resource-dax-parametergroup-return-values"></a>
 
-When you provide the logical ID of this resource to the `Ref` intrinsic function, `Ref` returns the ARN of the created parameter group\. For example:
+### Ref<a name="aws-resource-dax-parametergroup-return-values-ref"></a>
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created parameter group\. For example: 
 
 ```
 { "Ref": "MyDAXParameterGroup" }
@@ -65,31 +66,15 @@ Returns a value similar to the following:
 my-dax-parameter-group
 ```
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d295c11b4"></a>
+## Examples<a name="aws-resource-dax-parametergroup--examples"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-`ParameterGroupName`  
-Returns the name of the parameter group\. For example:  
-
-```
-{ "Fn::GetAtt": ["MyDAXParameterGroup", "ParameterGroupName"] }
-```
-Returns a value similar to the following:  
-
-```
-mydaxparametergroup
-```
-
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
-
-## Example<a name="aws-resource-dax-parametergroup-examples"></a>
+### Create Parameter Group<a name="aws-resource-dax-parametergroup--examples--Create__Parameter_Group"></a>
 
 The following example creates a DAX parameter group\.
 
-### JSON<a name="aws-resource-dax-parametergroup-example.json"></a>
+#### JSON<a name="aws-resource-dax-parametergroup--examples--Create__Parameter_Group--json"></a>
 
 ```
 {
@@ -100,7 +85,7 @@ The following example creates a DAX parameter group\.
       "Type": "AWS::DAX::ParameterGroup",
       "Properties": {
         "ParameterGroupName": "MyDAXParameterGroup",
-        "ParameterGroupDescription": "Description for my DAX parameter group",
+        "Description": "Description for my DAX parameter group",
         "ParameterNameValues": {
           "query-ttl-millis": "75000",
           "record-ttl-millis": "88000"
@@ -110,13 +95,15 @@ The following example creates a DAX parameter group\.
   },
   "Outputs": {
     "ParameterGroup": {
-      "Value": "daxParamGroup"
+      "Value": {
+        "Ref": "daxParamGroup"
+      }
     }
   }
 }
 ```
 
-### YAML<a name="aws-resource-dax-cluster-parametergroup.yaml"></a>
+#### YAML<a name="aws-resource-dax-parametergroup--examples--Create__Parameter_Group--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -126,7 +113,7 @@ Resources:
     Type: AWS::DAX::ParameterGroup
     Properties:
       ParameterGroupName: "MyDAXParameterGroup" 
-      ParameterGroupDescription: "Description for my DAX parameter group" 
+      Description: "Description for my DAX parameter group" 
       ParameterNameValues:
          "query-ttl-millis" : "75000"
          "record-ttl-millis" : "88000"

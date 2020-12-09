@@ -1,10 +1,10 @@
-# Elastic Load Balancing Listener Certificate<a name="aws-properties-elasticloadbalancingv2-listener-certificates"></a>
+# AWS::ElasticLoadBalancingV2::ListenerCertificate Certificate<a name="aws-properties-elasticloadbalancingv2-listener-certificates"></a>
 
-The `Certificate` property type specifies the default SSL server certificate that Elastic Load Balancing will deploy on an listener\. For more information, see [Create an HTTPS Listener for Your Application Load Balancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html) in the *Application Load Balancers Guide*\.
+Specifies an SSL server certificate for the certificate list of a secure listener\.
 
-The `Certificates` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md) resource contains a list of one `Certificate` property type\.
+## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-certificates-syntax"></a>
 
-## Syntax<a name="w3ab2c21c14d838b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-listener-certificates-syntax.json"></a>
 
@@ -17,12 +17,13 @@ The `Certificates` property of the [AWS::ElasticLoadBalancingV2::Listener](aws-r
 ### YAML<a name="aws-properties-elasticloadbalancingv2-listener-certificates-syntax.yaml"></a>
 
 ```
-[CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
+  [CertificateArn](#cfn-elasticloadbalancingv2-listener-certificates-certificatearn): String
 ```
 
-## Properties<a name="w3ab2c21c14d838b9"></a>
+## Properties<a name="aws-properties-elasticloadbalancingv2-listener-certificates-properties"></a>
 
 `CertificateArn`  <a name="cfn-elasticloadbalancingv2-listener-certificates-certificatearn"></a>
-The Amazon Resource Name \(ARN\) of the certificate to associate with the listener\.  
-*Required: *No  
-*Type*: String
+The Amazon Resource Name \(ARN\) of the certificate\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

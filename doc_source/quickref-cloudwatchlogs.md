@@ -1,13 +1,13 @@
-# Amazon CloudWatch Logs Template Snippets<a name="quickref-cloudwatchlogs"></a>
+# Amazon CloudWatch Logs template snippets<a name="quickref-cloudwatchlogs"></a>
 
-Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring System, Application, and Custom Log Files ](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
+Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring system, application, and custom log files ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
 
+**Topics**
++ [Send logs to CloudWatch Logs from a Linux instance](#quickref-cloudwatchlogs-example1)
++ [Send logs to CloudWatch Logs from a Windows instance](#quickref-cloudwatchlogs-example2)
++ [See also](#w7423ab1c27c22c31c11)
 
-+ [Send Logs to CloudWatch Logs from a Linux Instance](#quickref-cloudwatchlogs-example1)
-+ [Send Logs to CloudWatch Logs from a Windows Instance](#quickref-cloudwatchlogs-example2)
-+ [See Also](#w3ab2c17c24c31c11)
-
-## Send Logs to CloudWatch Logs from a Linux Instance<a name="quickref-cloudwatchlogs-example1"></a>
+## Send logs to CloudWatch Logs from a Linux instance<a name="quickref-cloudwatchlogs-example1"></a>
 
 The following template describes a web server and its custom metrics\. Log events from the web server's log provides the data for the custom metrics\. To send log events to a custom metric, the `UserData` field installs a CloudWatch Logs agent on the Amazon EC2 instance\. The configuration information for the agent, such as the location of the server log file, the log group name, and the log stream name, are defined in the `/tmp/cwlogs/apacheaccess.conf` file\. The log stream is created after the web server starts sending log events to the `/var/log/httpd/access_log` file\.
 
@@ -46,31 +46,31 @@ The two metric filters describe how the log information is transformed into Clou
     "Mappings": {
         "RegionMap": {
             "us-east-1": {
-                "AMI": "ami-fb8e9292"
+                "AMI": "ami-0ff8a91507f77f867"
             },
             "us-west-1": {
-                "AMI": "ami-7aba833f"
+                "AMI": "ami-0bdb828fd58c52235"
             },
             "us-west-2": {
-                "AMI": "ami-043a5034"
+                "AMI": "ami-a0cfeed8"
             },
             "eu-west-1": {
-                "AMI": "ami-2918e35e"
+                "AMI": "ami-047bb4163c506cd98"
             },
             "ap-southeast-1": {
-                "AMI": "ami-b40d5ee6"
+                "AMI": "ami-08569b978cc4dfa10"
             },
             "ap-southeast-2": {
-                "AMI": "ami-3b4bd301"
+                "AMI": "ami-09b42976632b27e9b"
             },
             "ap-northeast-1": {
-                "AMI": "ami-c9562fc8"
+                "AMI": "ami-06cd52961ce9f0d85"
             },
             "sa-east-1": {
-                "AMI": "ami-215dff3c"
+                "AMI": "ami-07b14488da8ea02a0"
             },
             "eu-central-1": {
-                "AMI" : "ami-a03503bd"
+                "AMI" : "ami-0233214e13e500f77"
             }
         }
     },
@@ -442,23 +442,23 @@ Parameters:
 Mappings:
   RegionMap:
     us-east-1:
-      AMI: ami-fb8e9292
+      AMI: ami-0ff8a91507f77f867
     us-west-1:
-      AMI: ami-7aba833f
+      AMI: ami-0bdb828fd58c52235
     us-west-2:
-      AMI: ami-043a5034
+      AMI: ami-a0cfeed8
     eu-west-1:
-      AMI: ami-2918e35e
+      AMI: ami-047bb4163c506cd98
     ap-southeast-1:
-      AMI: ami-b40d5ee6
+      AMI: ami-0d98120a9fb693f07
     ap-southeast-2:
-      AMI: ami-3b4bd301
+      AMI: ami-09b42976632b27e9b
     ap-northeast-1:
-      AMI: ami-c9562fc8
+      AMI: ami-06cd52961ce9f0d85
     sa-east-1:
-      AMI: ami-215dff3c
+      AMI: ami-07b14488da8ea02a0
     eu-central-1:
-      AMI: ami-a03503bd
+      AMI: ami-0233214e13e500f77
 Resources:
   LogRole:
     Type: AWS::IAM::Role
@@ -669,14 +669,12 @@ Outputs:
     Value: !Ref WebServerLogGroup
 ```
 
-## Send Logs to CloudWatch Logs from a Windows Instance<a name="quickref-cloudwatchlogs-example2"></a>
+## Send logs to CloudWatch Logs from a Windows instance<a name="quickref-cloudwatchlogs-example2"></a>
 
 The following template configures CloudWatch Logs for a Windows 2012R2 instance\.
 
 The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2016 AMIs\) only sends logs after it is started, so any logs that are generated prior to startup are not sent\. To work around this, the template helps to ensure that the agent starts before any logs are written by:
-
 + Configuring the agent setup as the first `config` item in cfn\-init `configSets`\.
-
 + Using `waitAfterCompletion` to insert a pause after the command that starts the agent\.
 
 ### JSON<a name="quickref-cloudwatchlogs-example2.json"></a>
@@ -708,46 +706,46 @@ The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2
     "Mappings": {
       "AWSAMIRegionMap": {
           "ap-northeast-1": {
-              "WS2012R2": "ami-cb7429ac"
+              "WS2012R2": "ami-06cd52961ce9f0d85"
           },
           "ap-northeast-2": {
-              "WS2012R2": "ami-34d4075a"
+              "WS2012R2": "ami-0a10b2721688ce9d2"
           },
           "ap-south-1": {
-              "WS2012R2": "ami-dd8cfcb2"
+              "WS2012R2": "ami-0912f71e06545ad88"
           },
           "ap-southeast-1": {
-              "WS2012R2": "ami-e5a51786"
+              "WS2012R2": "ami-08569b978cc4dfa10"
           },
           "ap-southeast-2": {
-              "WS2012R2": "ami-a63934c5"
+              "WS2012R2": "ami-09b42976632b27e9b"
           },
           "ca-central-1": {
-              "WS2012R2": "ami-d242ffb6"
+              "WS2012R2": "ami-0b18956f"
           },
           "eu-central-1": {
-              "WS2012R2": "ami-d029febf"
+              "WS2012R2": "ami-0233214e13e500f77"
           },
           "eu-west-1": {
-              "WS2012R2": "ami-d3dee9b5"
+              "WS2012R2": "ami-047bb4163c506cd98"
           },
           "eu-west-2": {
-              "WS2012R2": "ami-e5b3a681"
+              "WS2012R2": "ami-f976839e"
           },
           "sa-east-1": {
-              "WS2012R2": "ami-83f594ef"
+              "WS2012R2": "ami-07b14488da8ea02a0"
           },
           "us-east-1": {
-              "WS2012R2": "ami-11e84107"
+              "WS2012R2": "ami-0ff8a91507f77f867"
           },
           "us-east-2": {
-              "WS2012R2": "ami-d85773bd"
+              "WS2012R2": "ami-0b59bfac6be064b78"
           },
           "us-west-1": {
-              "WS2012R2": "ami-052d7565"
+              "WS2012R2": "ami-0bdb828fd58c52235"
           },
           "us-west-2": {
-              "WS2012R2": "ami-09f47d69"
+              "WS2012R2": "ami-a0cfeed8"
           }
       }
 
@@ -782,7 +780,7 @@ The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2
                                 }
                             ]
                         },
-                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"],
+                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"],
                         "Path": "/",
                         "Policies": [
                             {
@@ -1231,33 +1229,33 @@ Parameters:
 Mappings:
   AWSAMIRegionMap:
     ap-northeast-1:
-      WS2012R2: ami-cb7429ac
+      WS2012R2: ami-06cd52961ce9f0d85
     ap-northeast-2:
-      WS2012R2: ami-34d4075a
+      WS2012R2: ami-0a10b2721688ce9d2
     ap-south-1:
-      WS2012R2: ami-dd8cfcb2
+      WS2012R2: ami-0912f71e06545ad88
     ap-southeast-1:
-      WS2012R2: ami-e5a51786
+      WS2012R2: ami-08569b978cc4dfa10
     ap-southeast-2:
-      WS2012R2: ami-a63934c5
+      WS2012R2: ami-09b42976632b27e9b
     ca-central-1:
-      WS2012R2: ami-d242ffb6
+      WS2012R2: ami-0b18956f
     eu-central-1:
-      WS2012R2: ami-d029febf
+      WS2012R2: ami-0233214e13e500f77
     eu-west-1:
-      WS2012R2: ami-d3dee9b5
+      WS2012R2: ami-047bb4163c506cd98
     eu-west-2:
-      WS2012R2: ami-e5b3a681
+      WS2012R2: ami-f976839e
     sa-east-1:
-      WS2012R2: ami-83f594ef
+      WS2012R2: ami-07b14488da8ea02a0
     us-east-1:
-      WS2012R2: ami-11e84107
+      WS2012R2: ami-0ff8a91507f77f867
     us-east-2:
-      WS2012R2: ami-d85773bd
+      WS2012R2: ami-0b59bfac6be064b78
     us-west-1:
-      WS2012R2: ami-052d7565
+      WS2012R2: ami-0bdb828fd58c52235
     us-west-2:
-      WS2012R2: ami-09f47d69
+      WS2012R2: ami-a0cfeed8
 Resources:
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -1285,7 +1283,7 @@ Resources:
           Action:
           - sts:AssumeRole
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+      - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
       Path: /
       Policies:
       - PolicyName: LogRolePolicy
@@ -1585,6 +1583,6 @@ Outputs:
     Value: !Ref 'LogGroup'
 ```
 
-## See Also<a name="w3ab2c17c24c31c11"></a>
+## See also<a name="w7423ab1c27c22c31c11"></a>
 
-For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md) or [AWS::Logs::MetricFilter](aws-resource-logs-metricfilter.md)\.
+For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWs::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.

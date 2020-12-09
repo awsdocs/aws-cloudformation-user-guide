@@ -1,8 +1,6 @@
-# AWS Glue Partition Order<a name="aws-properties-glue-partition-order"></a>
+# AWS::Glue::Partition Order<a name="aws-properties-glue-partition-order"></a>
 
-<a name="aws-properties-glue-partition-order-description"></a>The `Order` property type specifies the sort order of a column in an AWS Glue partition\.
-
-<a name="aws-properties-glue-partition-order-inheritance"></a> The `SortColumns` property of the [AWS Glue Partition StorageDescriptor](aws-properties-glue-partition-storagedescriptor.md) property type contains a list of `Order` property types\.
+Specifies the sort order of a sorted column\.
 
 ## Syntax<a name="aws-properties-glue-partition-order-syntax"></a>
 
@@ -20,20 +18,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-order-syntax.yaml"></a>
 
 ```
-[Column](#cfn-glue-partition-order-column): String
-[SortOrder](#cfn-glue-partition-order-sortorder): Integer
+  [Column](#cfn-glue-partition-order-column): String
+  [SortOrder](#cfn-glue-partition-order-sortorder): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-partition-order-properties"></a>
 
 `Column`  <a name="cfn-glue-partition-order-column"></a>
-The name of the column\. It must match the single\-line string pattern: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name of the column\.  
+*Required*: Yes  
+*Type*: [String](aws-properties-glue-partition-column.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SortOrder`  <a name="cfn-glue-partition-order-sortorder"></a>
-Indicates whether the column is sorted in ascending order \(`1`\) or descending order \(`0`\)\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Indicates that the column is sorted in ascending order \(`== 1`\), or in descending order \(`==0`\)\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

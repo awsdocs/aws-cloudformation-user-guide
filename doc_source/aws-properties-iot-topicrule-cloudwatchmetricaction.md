@@ -1,61 +1,69 @@
-# AWS IoT TopicRule CloudwatchMetricAction<a name="aws-properties-iot-topicrule-cloudwatchmetricaction"></a>
+# AWS::IoT::TopicRule CloudwatchMetricAction<a name="aws-properties-iot-topicrule-cloudwatchmetricaction"></a>
 
-`CloudwatchMetric` is a property of the `Actions` property that describes an action that captures a CloudWatch metric\.
+Describes an action that captures a CloudWatch metric\.
 
-## Syntax<a name="w3ab2c21c14e1155b5"></a>
+## Syntax<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-syntax.json"></a>
 
 ```
 {
-  "[MetricName](#cfn-iot-topicrule-cloudwatchmetricaction-metricname)": String,
-  "[MetricNamespace](#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace)": String,
-  "[MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp)": String,
-  "[MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit)": String,
-  "[MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue)": String,
-  "[RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn)": String
+  "[MetricName](#cfn-iot-topicrule-cloudwatchmetricaction-metricname)" : String,
+  "[MetricNamespace](#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace)" : String,
+  "[MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp)" : String,
+  "[MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit)" : String,
+  "[MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue)" : String,
+  "[RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-syntax.yaml"></a>
 
 ```
-[MetricName](#cfn-iot-topicrule-cloudwatchmetricaction-metricname): String
-[MetricNamespace](#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace): String
-[MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp): String
-[MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit): String
-[MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue): String
-[RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
+  [MetricName](#cfn-iot-topicrule-cloudwatchmetricaction-metricname): String
+  [MetricNamespace](#cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace): String
+  [MetricTimestamp](#cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp): String
+  [MetricUnit](#cfn-iot-topicrule-cloudwatchmetricaction-metricunit): String
+  [MetricValue](#cfn-iot-topicrule-cloudwatchmetricaction-metricvalue): String
+  [RoleArn](#cfn-iot-topicrule-cloudwatchmetricaction-rolearn): String
 ```
 
-## Properties<a name="w3ab2c21c14e1155b7"></a>
+## Properties<a name="aws-properties-iot-topicrule-cloudwatchmetricaction-properties"></a>
 
 `MetricName`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricname"></a>
-The name of the CloudWatch metric\.  
-*Required: *Yes  
-*Type*: String
+The CloudWatch metric name\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricNamespace`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricnamespace"></a>
-The name of the CloudWatch metric namespace\.  
-*Required: *Yes  
-*Type*: String
+The CloudWatch metric namespace name\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricTimestamp`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metrictimestamp"></a>
-An optional [Unix timestamp](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp)\.  
-*Required: *No  
-*Type*: String
+An optional [Unix timestamp](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricUnit`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricunit"></a>
-The [metric unit](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit) supported by Amazon CloudWatch\.  
-*Required: *Yes  
-*Type*: String
+The [metric unit](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit) supported by CloudWatch\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricValue`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-metricvalue"></a>
-The value to publish to the metric\. For example, if you count the occurrences of a particular term such as `Error`, the value will be `1` for each occurrence\.  
-*Required: *Yes  
-*Type*: String
+The CloudWatch metric value\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-cloudwatchmetricaction-rolearn"></a>
-The ARN of the IAM role that grants access to the CloudWatch metric\.  
-*Required: *Yes  
-*Type*: String
+The IAM role that allows access to the CloudWatch metric\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

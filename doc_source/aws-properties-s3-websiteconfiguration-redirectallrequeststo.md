@@ -1,8 +1,10 @@
-# Amazon S3 Website Configuration Redirect All Requests To Property<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo"></a>
+# AWS::S3::Bucket RedirectAllRequestsTo<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo"></a>
 
-The `RedirectAllRequestsTo` code is an embedded property of the [Amazon S3 Website Configuration Property](aws-properties-s3-websiteconfiguration.md) property that describes the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket\.
+Specifies the redirect behavior of all requests to a website endpoint of an Amazon S3 bucket\.
 
-## Syntax<a name="w3ab2c21c14e1608b5"></a>
+## Syntax<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-syntax.json"></a>
 
@@ -16,18 +18,21 @@ The `RedirectAllRequestsTo` code is an embedded property of the [Amazon S3 Websi
 ### YAML<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-syntax.yaml"></a>
 
 ```
-[HostName](#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname): String
-[Protocol](#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol): String
+  [HostName](#cfn-s3-websiteconfiguration-redirectallrequeststo-hostname): String
+  [Protocol](#cfn-s3-websiteconfiguration-redirectallrequeststo-protocol): String
 ```
 
-## Properties<a name="w3ab2c21c14e1608b7"></a>
+## Properties<a name="aws-properties-s3-websiteconfiguration-redirectallrequeststo-properties"></a>
 
 `HostName`  <a name="cfn-s3-websiteconfiguration-redirectallrequeststo-hostname"></a>
 Name of the host where requests are redirected\.  
-*Required: *Yes  
-*Type*: String
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-s3-websiteconfiguration-redirectallrequeststo-protocol"></a>
-Protocol to use \(`http` or `https`\) when redirecting requests\. The default is the protocol that is used in the original request\.  
-*Required: *No  
-*Type*: String
+Protocol to use when redirecting requests\. The default is the protocol that is used in the original request\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `http | https`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

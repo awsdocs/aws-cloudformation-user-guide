@@ -1,12 +1,6 @@
 # AWS::ElasticLoadBalancingV2::Listener<a name="aws-resource-elasticloadbalancingv2-listener"></a>
 
-The `AWS::ElasticLoadBalancingV2::Listener` resource creates a listener for an Elastic Load Balancing Application or Network load balancer\. The listener checks for connection requests and forwards them to one or more target groups\. For more information, see [Getting Started](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/load-balancer-getting-started.html) in the *Elastic Load Balancing User Guide*\.
-
-
-+ [Syntax](#aws-resource-elasticloadbalancingv2-listener-syntax)
-+ [Properties](#w3ab2c21c10d591b9)
-+ [Return Value](#w3ab2c21c10d591c11)
-+ [Example](#w3ab2c21c10d591c13)
+Specifies a listener for an Application Load Balancer or Network Load Balancer\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
@@ -18,113 +12,154 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElasticLoadBalancingV2::Listener",
   "Properties" : {
-    "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md) ],
-    "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md), ... ],
-    "[LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
-    "[Port](#cfn-elasticloadbalancingv2-listener-port)" : Integer,
-    "[Protocol](#cfn-elasticloadbalancingv2-listener-protocol)" : String,
-    "[SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy)" : String
-  }
+      "[AlpnPolicy](#cfn-elasticloadbalancingv2-listener-alpnpolicy)" : [ String, ... ],
+      "[Certificates](#cfn-elasticloadbalancingv2-listener-certificates)" : [ Certificate, ... ],
+      "[DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions)" : [ Action, ... ],
+      "[LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn)" : String,
+      "[Port](#cfn-elasticloadbalancingv2-listener-port)" : Integer,
+      "[Protocol](#cfn-elasticloadbalancingv2-listener-protocol)" : String,
+      "[SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-elasticloadbalancingv2-listener-syntax.yaml"></a>
 
 ```
-Type: "AWS::ElasticLoadBalancingV2::Listener"
+Type: AWS::ElasticLoadBalancingV2::Listener
 Properties: 
-  [Certificates](#cfn-elasticloadbalancingv2-listener-certificates):
-    - [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)
-  [DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions):
-    - [Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)
+  [AlpnPolicy](#cfn-elasticloadbalancingv2-listener-alpnpolicy): 
+    - String
+  [Certificates](#cfn-elasticloadbalancingv2-listener-certificates): 
+    - Certificate
+  [DefaultActions](#cfn-elasticloadbalancingv2-listener-defaultactions): 
+    - Action
   [LoadBalancerArn](#cfn-elasticloadbalancingv2-listener-loadbalancerarn): String
   [Port](#cfn-elasticloadbalancingv2-listener-port): Integer
   [Protocol](#cfn-elasticloadbalancingv2-listener-protocol): String
   [SslPolicy](#cfn-elasticloadbalancingv2-listener-sslpolicy): String
 ```
 
-## Properties<a name="w3ab2c21c10d591b9"></a>
+## Properties<a name="aws-resource-elasticloadbalancingv2-listener-properties"></a>
+
+`AlpnPolicy`  <a name="cfn-elasticloadbalancingv2-listener-alpnpolicy"></a>
+\[TLS listener\] The name of the Application\-Layer Protocol Negotiation \(ALPN\) policy\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Certificates`  <a name="cfn-elasticloadbalancingv2-listener-certificates"></a>
-The SSL server certificate for the listener\. With a certificate, you can encrypt traffic between the load balancer and the clients that initiate HTTPS sessions, and traffic between the load balancer and your targets\.  
-This property represents the default certificate for the listener\. You can specify only one certificate for the `AWS::ElasticLoadBalancingV2::Listener` resource\.  
-*Required: *Conditional\. If you specify `HTTPS` for the `Protocol` property, specify a certificate\.  
-*Type*: List of [Elastic Load Balancing Listener Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The default SSL server certificate for a secure listener\. You must provide exactly one certificate if the listener protocol is HTTPS or TLS\.  
+To create a certificate list for a secure listener, use [AWS::ElasticLoadBalancingV2::ListenerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)\.  
+*Required*: Conditional  
+*Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultActions`  <a name="cfn-elasticloadbalancingv2-listener-defaultactions"></a>
-The default actions that the listener takes when handling incoming requests\.  
-*Required: *Yes  
-*Type*: List of [Elastic Load Balancing Listener Action](aws-properties-elasticloadbalancingv2-listener-defaultactions.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The actions for the default rule\. You cannot define a condition for a default rule\.  
+To create additional rules for an Application Load Balancer, use [AWS::ElasticLoadBalancingV2::ListenerRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html)\.  
+*Required*: Yes  
+*Type*: List of [Action](aws-properties-elasticloadbalancingv2-listener-action.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerArn`  <a name="cfn-elasticloadbalancingv2-listener-loadbalancerarn"></a>
-The Amazon Resource Name \(ARN\) of the load balancer to associate with the listener\.  
-*Required: *Yes  
+The Amazon Resource Name \(ARN\) of the load balancer\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-elasticloadbalancingv2-listener-port"></a>
-The port on which the listener listens for requests\.  
-For valid values, see the `Port` parameter for the [CreateListener](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
-*Required: *Yes  
+The port on which the load balancer is listening\. You cannot specify a port for a Gateway Load Balancer\.  
+*Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Minimum*: `1`  
+*Maximum*: `65535`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-listener-protocol"></a>
-The protocol that clients must use to send requests to the listener\.  
-For valid values, see the `Protocol` parameter for the [CreateListener](http://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) action in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
-*Required: *Yes  
+The protocol for connections from clients to the load balancer\. For Application Load Balancers, the supported protocols are HTTP and HTTPS\. For Network Load Balancers, the supported protocols are TCP, TLS, UDP, and TCP\_UDP\. You can’t specify the UDP or TCP\_UDP protocol if dual\-stack mode is enabled\. You cannot specify a protocol for a Gateway Load Balancer\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslPolicy`  <a name="cfn-elasticloadbalancingv2-listener-sslpolicy"></a>
-The security policy that defines the ciphers and protocols that the load balancer supports\.  
-*Required: *No  
+\[HTTPS and TLS listeners\] The security policy that defines which protocols and ciphers are supported\.  
+For more information, see [Security policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#describe-ssl-policies) in the *Application Load Balancers Guide* and [Security policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#describe-ssl-policies) in the *Network Load Balancers Guide*\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10d591c11"></a>
+## Return values<a name="aws-resource-elasticloadbalancingv2-listener-return-values"></a>
 
-### Ref<a name="w3ab2c21c10d591c11b2"></a>
+### Ref<a name="aws-resource-elasticloadbalancingv2-listener-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the listener's ARN, such as `arn:aws:elasticloadbalancing:us-west-2:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the listener\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w3ab2c21c10d591c13"></a>
+### Fn::GetAtt<a name="aws-resource-elasticloadbalancingv2-listener-return-values-fn--getatt"></a>
 
-The following example creates a listener for the `myLoadBalancer` resource\. The listener's default action is to forward requests to the `myTargetGroup` target group\.
+#### <a name="aws-resource-elasticloadbalancingv2-listener-return-values-fn--getatt-fn--getatt"></a>
 
-### JSON<a name="aws-resource-elasticloadbalancingv2-listener-example.json"></a>
+`ListenerArn`  <a name="ListenerArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+## Examples<a name="aws-resource-elasticloadbalancingv2-listener--examples"></a>
+
+The following example creates a listener with a default action that redirects HTTP requests on port 80 to HTTPS requests on port 443, retaining the original host name, path, and query string\.
+
+### <a name="aws-resource-elasticloadbalancingv2-listener--examples--"></a>
+
+#### YAML<a name="aws-resource-elasticloadbalancingv2-listener--examples----yaml"></a>
 
 ```
-"Listener": {
-  "Type": "AWS::ElasticLoadBalancingV2::Listener",
-  "Properties": {
-    "DefaultActions": [{
-      "Type": "forward",
-      "TargetGroupArn": { "Ref": "myTargetGroup" }
-    }],
-    "LoadBalancerArn": { "Ref": "myLoadBalancer" },
-    "Port": "8000",
-    "Protocol": "HTTP"
-  }
+HTTPlistener:
+   Type: "AWS::ElasticLoadBalancingV2::Listener"
+   Properties:
+     DefaultActions:
+       - Type: "redirect"
+         RedirectConfig:
+           Protocol: "HTTPS"
+           Port: "443"
+           Host: "#{host}"
+           Path: "/#{path}"
+           Query: "#{query}"
+           StatusCode: "HTTP_301"
+     LoadBalancerArn: !Ref myLoadBalancer
+     Port: 80
+     Protocol: "HTTP"
+```
+
+#### JSON<a name="aws-resource-elasticloadbalancingv2-listener--examples----json"></a>
+
+```
+"HTTPlistener": {
+    "Type": "AWS::ElasticLoadBalancingV2::Listener",
+    "Properties": {
+        "DefaultActions": [
+            {
+                "Type": "redirect",
+                "RedirectConfig": {
+                    "Protocol": "HTTPS",
+                    "Port": "443",
+                    "Host": "#{host}",
+                    "Path": "/#{path}",
+                    "Query": "#{query}",
+                    "StatusCode": "HTTP_301"
+                }
+            }
+        ],
+        "LoadBalancerArn": {
+            "Ref": "myLoadBalancer"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+    }
 }
 ```
 
-### YAML<a name="aws-resource-elasticloadbalancingv2-listener-example.yaml"></a>
-
-```
-Listener:
-  Type: AWS::ElasticLoadBalancingV2::Listener
-  Properties:
-    DefaultActions:
-    - Type: forward
-      TargetGroupArn:
-        Ref: myTargetGroup
-    LoadBalancerArn:
-      Ref: myLoadBalancer
-    Port: '8000'
-    Protocol: HTTP
-```
+## See also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>
++  [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
++  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* 
++  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) in the *User Guide for Network Load Balancers* 

@@ -1,8 +1,10 @@
-# AWS CodePipeline Pipeline Stages Blockers<a name="aws-properties-codepipeline-pipeline-stages-blockers"></a>
+# AWS::CodePipeline::Pipeline BlockerDeclaration<a name="aws-properties-codepipeline-pipeline-stages-blockers"></a>
 
-`Blockers` is a property of the [AWS CodePipeline Pipeline Stages](aws-properties-codepipeline-pipeline-stages.md) property that specifies an AWS CodePipeline gate declaration\.
+Reserved for future use\.
 
-## Syntax<a name="w3ab2c21c14d409b5"></a>
+## Syntax<a name="aws-properties-codepipeline-pipeline-stages-blockers-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-codepipeline-pipeline-stages-blockers-syntax.json"></a>
 
@@ -16,18 +18,23 @@
 ### YAML<a name="aws-properties-codepipeline-pipeline-stages-blockers-syntax.yaml"></a>
 
 ```
-[Name](#cfn-codepipeline-pipeline-stages-blockers-name): String
-[Type](#cfn-codepipeline-pipeline-stages-blockers-type): String
+  [Name](#cfn-codepipeline-pipeline-stages-blockers-name): String
+  [Type](#cfn-codepipeline-pipeline-stages-blockers-type): String
 ```
 
-## Properties<a name="w3ab2c21c14d409b7"></a>
+## Properties<a name="aws-properties-codepipeline-pipeline-stages-blockers-properties"></a>
 
 `Name`  <a name="cfn-codepipeline-pipeline-stages-blockers-name"></a>
-The name of the gate declaration\.  
-*Required: *Yes  
-*Type*: String
+Reserved for future use\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codepipeline-pipeline-stages-blockers-type"></a>
-The type of gate declaration\. For valid values, see [BlockerDeclaration](http://docs.aws.amazon.com/codepipeline/latest/APIReference/API_BlockerDeclaration.html) in the *AWS CodePipeline API Reference*\.  
-*Required: *Yes  
-*Type*: String
+Reserved for future use\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed values*: `Schedule`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

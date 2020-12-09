@@ -1,14 +1,10 @@
 # AWS::ApiGateway::UsagePlanKey<a name="aws-resource-apigateway-usageplankey"></a>
 
-The `AWS::ApiGateway::UsagePlanKey` resource associates an Amazon API Gateway API key with an API Gateway usage plan\. This association determines which users the usage plan is applied to\.
-
-
-+ [Syntax](#aws-resource-apigateway-usageplankey-syntax)
-+ [Properties](#aws-resource-apigateway-usageplankey-properties)
-+ [Return Value](#aws-resource-apigateway-usageplankey-returnvalues)
-+ [Example](#aws-resource-apigateway-usageplankey-examples)
+The `AWS::ApiGateway::UsagePlanKey` resource associates an API key with a usage plan\. This association determines which users the usage plan is applied to\.
 
 ## Syntax<a name="aws-resource-apigateway-usageplankey-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-resource-apigateway-usageplankey-syntax.json"></a>
 
@@ -16,79 +12,84 @@ The `AWS::ApiGateway::UsagePlanKey` resource associates an Amazon API Gateway AP
 {
   "Type" : "AWS::ApiGateway::UsagePlanKey",
   "Properties" : {
-    "[KeyId](#cfn-apigateway-keyid)" : String,
-    "[KeyType](#cfn-apigateway-keytype)" : String,
-    "[UsagePlanId](#cfn-apigateway-usageplanid)" : String
-  }
+      "[KeyId](#cfn-apigateway-usageplankey-keyid)" : String,
+      "[KeyType](#cfn-apigateway-usageplankey-keytype)" : String,
+      "[UsagePlanId](#cfn-apigateway-usageplankey-usageplanid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-apigateway-usageplankey-syntax.yaml"></a>
 
 ```
-Type: "AWS::ApiGateway::UsagePlanKey"
-Properties:
-  [KeyId](#cfn-apigateway-keyid): String
-  [KeyType](#cfn-apigateway-keytype): String
-  [UsagePlanId](#cfn-apigateway-usageplanid): String
+Type: AWS::ApiGateway::UsagePlanKey
+Properties: 
+  [KeyId](#cfn-apigateway-usageplankey-keyid): String
+  [KeyType](#cfn-apigateway-usageplankey-keytype): String
+  [UsagePlanId](#cfn-apigateway-usageplankey-usageplanid): String
 ```
 
 ## Properties<a name="aws-resource-apigateway-usageplankey-properties"></a>
 
-`KeyId`  <a name="cfn-apigateway-keyid"></a>
+`KeyId`  <a name="cfn-apigateway-usageplankey-keyid"></a>
 The ID of the usage plan key\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`KeyType`  <a name="cfn-apigateway-keytype"></a>
-The type of usage plan key\. Currently, the valid key type is `API_KEY`\.  
-*Required: *Yes  
+`KeyType`  <a name="cfn-apigateway-usageplankey-keytype"></a>
+The type of usage plan key\. Currently, the only valid key type is `API_KEY`\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`UsagePlanId`  <a name="cfn-apigateway-usageplanid"></a>
-The value of the usage plan key\.  
-*Required: *Yes  
+`UsagePlanId`  <a name="cfn-apigateway-usageplankey-usageplanid"></a>
+The ID of the usage plan\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="aws-resource-apigateway-usageplankey-returnvalues"></a>
+## Return values<a name="aws-resource-apigateway-usageplankey-return-values"></a>
 
-### Ref<a name="w3ab2c21c10c88c11b2"></a>
+### Ref<a name="aws-resource-apigateway-usageplankey-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the key and ID of the usage plan combined with a ":", such as `123abcdef:abc123`\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Examples<a name="aws-resource-apigateway-usageplankey--examples"></a>
+
+### Create usage plan key<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key"></a>
+
+#### JSON<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key--json"></a>
 
 ```
-{ "Ref": "MyProfile" }
-```
-
-For the `IAM::InstanceProfile` with the logical ID `MyProfile`, `Ref` returns the resource name\.
-
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
-
-## Example<a name="aws-resource-apigateway-usageplankey-examples"></a>
-
-### JSON<a name="aws-resource-apigateway-usageplankey-example.json"></a>
-
-```
-"usagePlanKey" : {
-  "Type": "AWS::ApiGateway::UsagePlanKey",
-  "Properties": {
-    "KeyId" : {"Ref" : "myApiKey"},
-    "KeyType" : "API_KEY",
-    "UsagePlanId" : {"Ref" : "myUsagePlan"}
-  }
+{
+    "usagePlanKey": {
+        "Type": "AWS::ApiGateway::UsagePlanKey",
+        "Properties": {
+            "KeyId": {
+                "Ref": "myApiKey"
+            },
+            "KeyType": "API_KEY",
+            "UsagePlanId": {
+                "Ref": "myUsagePlan"
+            }
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-apigateway-usageplankey-example.yaml"></a>
+#### YAML<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key--yaml"></a>
 
 ```
 usagePlanKey:
-  Type: "AWS::ApiGateway::UsagePlanKey"
-  Properties : 
-    KeyId: !Ref 'myApiKey'
+  Type: 'AWS::ApiGateway::UsagePlanKey'
+  Properties:
+    KeyId: !Ref myApiKey
     KeyType: API_KEY
-    UsagePlanId: !Ref 'myUsagePlan'
+    UsagePlanId: !Ref myUsagePlan
 ```
+
+## See also<a name="aws-resource-apigateway-usageplankey--seealso"></a>
++ [usageplankey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplankey-create/) in the *Amazon API Gateway REST API Reference*
