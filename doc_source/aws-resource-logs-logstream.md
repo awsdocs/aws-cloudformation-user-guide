@@ -54,7 +54,7 @@ The name of the log stream\. The name must be unique within the log group\.
 *Pattern*: `[^:*]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-logs-logstream-return-values"></a>
+## Return values<a name="aws-resource-logs-logstream-return-values"></a>
 
 ### Ref<a name="aws-resource-logs-logstream-return-values-ref"></a>
 

@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KinesisAnalytics::ApplicationOutput",
   "Properties" : {
       "[ApplicationName](#cfn-kinesisanalytics-applicationoutput-applicationname)" : String,
-      "[Output](#cfn-kinesisanalytics-applicationoutput-output)" : [Output](aws-properties-kinesisanalytics-applicationoutput-output.md)
+      "[Output](#cfn-kinesisanalytics-applicationoutput-output)" : Output
     }
 }
 ```
@@ -35,7 +35,7 @@ Type: AWS::KinesisAnalytics::ApplicationOutput
 Properties: 
   [ApplicationName](#cfn-kinesisanalytics-applicationoutput-applicationname): String
   [Output](#cfn-kinesisanalytics-applicationoutput-output): 
-    [Output](aws-properties-kinesisanalytics-applicationoutput-output.md)
+    Output
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-applicationoutput-properties"></a>

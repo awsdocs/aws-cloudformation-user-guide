@@ -1,5 +1,5 @@
-# IoTEvents Resource Type Reference<a name="AWS_IoTEvents"></a>
+# IoTEvents resource type reference<a name="AWS_IoTEvents"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::IoTEvents::DetectorModel](aws-resource-iotevents-detectormodel.md)
 + [AWS::IoTEvents::Input](aws-resource-iotevents-input.md)

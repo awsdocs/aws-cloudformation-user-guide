@@ -1,6 +1,6 @@
 # AWS::Pinpoint::EmailTemplate<a name="aws-resource-pinpoint-emailtemplate"></a>
 
-Creates a message template that you can use in messages that are sent through the email channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
+The AWS::Pinpoint::EmailTemplate resource is a message template that you can use in messages that are sent through the email channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for one or more Amazon Pinpoint applications\.
 
 ## Syntax<a name="aws-resource-pinpoint-emailtemplate-syntax"></a>
 
@@ -81,7 +81,7 @@ The message body, in plain text format, to use in email messages that are based 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-emailtemplate-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-emailtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-emailtemplate-return-values-ref"></a>
 

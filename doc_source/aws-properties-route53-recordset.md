@@ -16,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::RecordSet",
   "Properties" : {
-      "[AliasTarget](#cfn-route53-recordset-aliastarget)" : [AliasTarget](aws-properties-route53-aliastarget-1.md),
+      "[AliasTarget](#cfn-route53-recordset-aliastarget)" : AliasTarget,
       "[Comment](#cfn-route53-recordset-comment)" : String,
       "[Failover](#cfn-route53-recordset-failover)" : String,
-      "[GeoLocation](#cfn-route53-recordset-geolocation)" : [GeoLocation](aws-properties-route53-recordset-geolocation.md),
+      "[GeoLocation](#cfn-route53-recordset-geolocation)" : GeoLocation,
       "[HealthCheckId](#cfn-route53-recordset-healthcheckid)" : String,
       "[HostedZoneId](#cfn-route53-recordset-hostedzoneid)" : String,
       "[HostedZoneName](#cfn-route53-recordset-hostedzonename)" : String,
@@ -41,11 +41,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Route53::RecordSet
 Properties: 
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
-    [AliasTarget](aws-properties-route53-aliastarget-1.md)
+    AliasTarget
   [Comment](#cfn-route53-recordset-comment): String
   [Failover](#cfn-route53-recordset-failover): String
   [GeoLocation](#cfn-route53-recordset-geolocation): 
-    [GeoLocation](aws-properties-route53-recordset-geolocation.md)
+    GeoLocation
   [HealthCheckId](#cfn-route53-recordset-healthcheckid): String
   [HostedZoneId](#cfn-route53-recordset-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordset-hostedzonename): String
@@ -93,19 +93,19 @@ For more information about configuring failover for Route 53, see the following 
 +  [Configuring Failover in a Private Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html) 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PRIMARY | SECONDARY`  
+*Allowed values*: `PRIMARY | SECONDARY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GeoLocation`  <a name="cfn-route53-recordset-geolocation"></a>
  *Geolocation resource record sets only:* A complex type that lets you control how Amazon Route 53 responds to DNS queries based on the geographic origin of the query\. For example, if you want all queries from Africa to be routed to a web server with an IP address of `192.0.2.111`, create a resource record set with a `Type` of `A` and a `ContinentCode` of `AF`\.  
-Creating geolocation and geolocation alias resource record sets in private hosted zones is not supported\.
+Although creating geolocation and geolocation alias resource record sets in a private hosted zone is allowed, it's not supported\.
 If you create separate resource record sets for overlapping geographic regions \(for example, one resource record set for a continent and one for a country on the same continent\), priority goes to the smallest geographic region\. This allows you to route most queries for a continent to one resource and to route queries for a country on that continent to a different resource\.  
 You can't create two geolocation resource record sets that specify the same geographic location\.  
 The value `*` in the `CountryCode` element matches all geographic locations that aren't specified in other geolocation resource record sets that have the same values for the `Name` and `Type` elements\.  
 Geolocation works by mapping IP addresses to locations\. However, some IP addresses aren't mapped to geographic locations, so even if you create geolocation resource record sets that cover all seven continents, Route 53 will receive some DNS queries from locations that it can't identify\. We recommend that you create a resource record set for which the value of `CountryCode` is `*`\. Two groups of queries are routed to the resource that you specify in this record: queries that come from locations for which you haven't created geolocation resource record sets and queries from IP addresses that aren't mapped to a location\. If you don't create a `*` resource record set, Route 53 returns a "no answer" response for queries from those locations\.
 You can't create non\-geolocation resource record sets that have the same values for the `Name` and `Type` elements as geolocation resource record sets\.  
 *Required*: No  
-*Type*: [GeoLocation](aws-properties-route53-recordset-geolocation.md)  
+*Type*: [GeoLocation](aws-properties-route53-recordset-geolocation-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckId`  <a name="cfn-route53-recordset-healthcheckid"></a>
@@ -154,7 +154,7 @@ Health check results will be unpredictable if you do the following:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostedZoneId`  <a name="cfn-route53-recordset-hostedzoneid"></a>
-The ID of the hosted zone that you want to create the record in\.   
+The ID of the hosted zone that you want to create records in\.   
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.  
 *Required*: No  
 *Type*: String  
@@ -162,7 +162,7 @@ Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have mu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordset-hostedzonename"></a>
-The name of the domain for the hosted zone where you want to add the record\.  
+The name of the hosted zone that you want to create records in\.  
 When you create a stack using an AWS::Route53::RecordSet that specifies HostedZoneName, AWS CloudFormation attempts to find a hosted zone whose name matches the HostedZoneName\. If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.  
 *Required*: No  
@@ -202,7 +202,7 @@ You can use the \* wildcard as the leftmost label in a domain name, for example,
 
 `Region`  <a name="cfn-route53-recordset-region"></a>
  *Latency\-based resource record sets only:* The Amazon EC2 Region where you created the resource that this resource record set refers to\. The resource typically is an AWS resource, such as an EC2 instance or an ELB load balancer, and is referred to by an IP address or a DNS domain name, depending on the record type\.  
-Creating latency and latency alias resource record sets in private hosted zones is not supported\.
+Although creating latency and latency alias resource record sets in a private hosted zone is allowed, it's not supported\.
 When Amazon Route 53 receives a DNS query for a domain name and type for which you have created latency resource record sets, Route 53 selects the latency resource record set that has the lowest latency between the end user and the associated Amazon EC2 Region\. Route 53 then returns the value that is associated with the selected resource record set\.  
 Note the following:  
 + You can only specify one `ResourceRecord` per latency resource record set\.
@@ -211,7 +211,7 @@ Note the following:
 + You can't create non\-latency resource record sets that have the same values for the `Name` and `Type` elements as latency resource record sets\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ap-east-1 | ap-northeast-1 | ap-northeast-2 | ap-northeast-3 | ap-south-1 | ap-southeast-1 | ap-southeast-2 | ca-central-1 | cn-north-1 | cn-northwest-1 | eu-central-1 | eu-north-1 | eu-west-1 | eu-west-2 | eu-west-3 | me-south-1 | sa-east-1 | us-east-1 | us-east-2 | us-west-1 | us-west-2`  
+*Allowed values*: `af-south-1 | ap-east-1 | ap-northeast-1 | ap-northeast-2 | ap-northeast-3 | ap-south-1 | ap-southeast-1 | ap-southeast-2 | ca-central-1 | cn-north-1 | cn-northwest-1 | eu-central-1 | eu-north-1 | eu-south-1 | eu-west-1 | eu-west-2 | eu-west-3 | me-south-1 | sa-east-1 | us-east-1 | us-east-2 | us-west-1 | us-west-2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceRecords`  <a name="cfn-route53-recordset-resourcerecords"></a>
@@ -263,7 +263,7 @@ Values for alias resource record sets:
 If you're creating an alias record that has the same name as the hosted zone \(known as the zone apex\), you can't route traffic to a record for which the value of `Type` is `CNAME`\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `A | AAAA | CAA | CNAME | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT`  
+*Allowed values*: `A | AAAA | CAA | CNAME | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Weight`  <a name="cfn-route53-recordset-weight"></a>
@@ -279,7 +279,7 @@ If you're creating an alias record that has the same name as the hosted zone \(k
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-route53-recordset-return-values"></a>
+## Return values<a name="aws-properties-route53-recordset-return-values"></a>
 
 ### Ref<a name="aws-properties-route53-recordset-return-values-ref"></a>
 
@@ -415,5 +415,5 @@ Resources:
       - !GetAtt Ec2Instance.PublicIp
 ```
 
-## See Also<a name="aws-properties-route53-recordset--seealso"></a>
+## See also<a name="aws-properties-route53-recordset--seealso"></a>
 +  [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference* 

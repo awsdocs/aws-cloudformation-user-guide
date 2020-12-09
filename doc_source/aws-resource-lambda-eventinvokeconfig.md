@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::EventInvokeConfig",
   "Properties" : {
-      "[DestinationConfig](#cfn-lambda-eventinvokeconfig-destinationconfig)" : [DestinationConfig](aws-properties-lambda-eventinvokeconfig-destinationconfig.md),
+      "[DestinationConfig](#cfn-lambda-eventinvokeconfig-destinationconfig)" : DestinationConfig,
       "[FunctionName](#cfn-lambda-eventinvokeconfig-functionname)" : String,
       "[MaximumEventAgeInSeconds](#cfn-lambda-eventinvokeconfig-maximumeventageinseconds)" : Integer,
       "[MaximumRetryAttempts](#cfn-lambda-eventinvokeconfig-maximumretryattempts)" : Integer,
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Lambda::EventInvokeConfig
 Properties: 
   [DestinationConfig](#cfn-lambda-eventinvokeconfig-destinationconfig): 
-    [DestinationConfig](aws-properties-lambda-eventinvokeconfig-destinationconfig.md)
+    DestinationConfig
   [FunctionName](#cfn-lambda-eventinvokeconfig-functionname): String
   [MaximumEventAgeInSeconds](#cfn-lambda-eventinvokeconfig-maximumeventageinseconds): Integer
   [MaximumRetryAttempts](#cfn-lambda-eventinvokeconfig-maximumretryattempts): Integer
@@ -87,7 +87,7 @@ The identifier of a version or alias\.
 *Pattern*: `(|[a-zA-Z0-9$_-]+)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-lambda-eventinvokeconfig-return-values"></a>
+## Return values<a name="aws-resource-lambda-eventinvokeconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-eventinvokeconfig-return-values-ref"></a>
 

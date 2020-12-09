@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Statement](#cfn-wafv2-rulegroup-notstatementone-statement)" : [StatementTwo](aws-properties-wafv2-rulegroup-statementtwo.md)
+  "[Statement](#cfn-wafv2-rulegroup-notstatementone-statement)" : StatementTwo
 }
 ```
 
@@ -18,13 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Statement](#cfn-wafv2-rulegroup-notstatementone-statement): 
-    [StatementTwo](aws-properties-wafv2-rulegroup-statementtwo.md)
+    StatementTwo
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-notstatementone-properties"></a>
 
 `Statement`  <a name="cfn-wafv2-rulegroup-notstatementone-statement"></a>
 Logical NOT statement used to negate the match results of a nested statement\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [StatementTwo](aws-properties-wafv2-rulegroup-statementtwo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

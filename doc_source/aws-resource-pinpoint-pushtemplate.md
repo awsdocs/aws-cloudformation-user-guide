@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate<a name="aws-resource-pinpoint-pushtemplate"></a>
 
-Creates a message template that you can use in messages that are sent through a push notification channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
+The AWS::Pinpoint::PushTemplate resource is a message template that you can use in messages that are sent through a push notification channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for one or more Amazon Pinpoint applications\.
 
 ## Syntax<a name="aws-resource-pinpoint-pushtemplate-syntax"></a>
 
@@ -12,12 +12,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Pinpoint::PushTemplate",
   "Properties" : {
-      "[ADM](#cfn-pinpoint-pushtemplate-adm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
-      "[APNS](#cfn-pinpoint-pushtemplate-apns)" : [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md),
-      "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
-      "[Default](#cfn-pinpoint-pushtemplate-default)" : [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md),
+      "[ADM](#cfn-pinpoint-pushtemplate-adm)" : AndroidPushNotificationTemplate,
+      "[APNS](#cfn-pinpoint-pushtemplate-apns)" : APNSPushNotificationTemplate,
+      "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : AndroidPushNotificationTemplate,
+      "[Default](#cfn-pinpoint-pushtemplate-default)" : DefaultPushNotificationTemplate,
       "[DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions)" : String,
-      "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
+      "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : AndroidPushNotificationTemplate,
       "[Tags](#cfn-pinpoint-pushtemplate-tags)" : Json,
       "[TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription)" : String,
       "[TemplateName](#cfn-pinpoint-pushtemplate-templatename)" : String
@@ -31,16 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Pinpoint::PushTemplate
 Properties: 
   [ADM](#cfn-pinpoint-pushtemplate-adm): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [APNS](#cfn-pinpoint-pushtemplate-apns): 
-    [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md)
+    APNSPushNotificationTemplate
   [Baidu](#cfn-pinpoint-pushtemplate-baidu): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [Default](#cfn-pinpoint-pushtemplate-default): 
-    [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md)
+    DefaultPushNotificationTemplate
   [DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions): String
   [GCM](#cfn-pinpoint-pushtemplate-gcm): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [Tags](#cfn-pinpoint-pushtemplate-tags): Json
   [TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription): String
   [TemplateName](#cfn-pinpoint-pushtemplate-templatename): String
@@ -102,7 +102,7 @@ The name of the message template\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-pinpoint-pushtemplate-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-pushtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-pushtemplate-return-values-ref"></a>
 

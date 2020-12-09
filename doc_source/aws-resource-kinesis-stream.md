@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-kinesis-stream-name)" : String,
       "[RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours)" : Integer,
       "[ShardCount](#cfn-kinesis-stream-shardcount)" : Integer,
-      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md),
+      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : StreamEncryption,
       "[Tags](#cfn-kinesis-stream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,7 +30,7 @@ Properties:
   [RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours): Integer
   [ShardCount](#cfn-kinesis-stream-shardcount): Integer
   [StreamEncryption](#cfn-kinesis-stream-streamencryption): 
-    [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)
+    StreamEncryption
   [Tags](#cfn-kinesis-stream-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -61,7 +61,7 @@ The number of shards that the stream uses\. For greater provisioned throughput, 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamEncryption`  <a name="cfn-kinesis-stream-streamencryption"></a>
-Enables or updates server\-side encryption using an AWS KMS key for a specified stream\.   
+When specified, enables or updates server\-side encryption using an AWS KMS key for a specified stream\. Removing this property from your stack template and updating your stack disables encryption\.  
 *Required*: No  
 *Type*: [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,7 +72,7 @@ An arbitrary set of tags \(key–value pairs\) to associate with the Kinesis str
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kinesis-stream-return-values"></a>
+## Return values<a name="aws-resource-kinesis-stream-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesis-stream-return-values-ref"></a>
 

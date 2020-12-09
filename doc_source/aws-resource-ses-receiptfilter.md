@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SES::ReceiptFilter",
   "Properties" : {
-      "[Filter](#cfn-ses-receiptfilter-filter)" : [Filter](aws-properties-ses-receiptfilter-filter.md)
+      "[Filter](#cfn-ses-receiptfilter-filter)" : Filter
     }
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SES::ReceiptFilter
 Properties: 
   [Filter](#cfn-ses-receiptfilter-filter): 
-    [Filter](aws-properties-ses-receiptfilter-filter.md)
+    Filter
 ```
 
 ## Properties<a name="aws-resource-ses-receiptfilter-properties"></a>
@@ -84,7 +84,7 @@ Specifies an IP address filter for incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptFilter Sample Template'
+Description: AWS SES ReceiptFilter Sample Template
 Parameters:
   FilterName:
     Type: String
@@ -94,7 +94,7 @@ Parameters:
     Type: String
 Resources:
   ReceiptFilter:
-    Type: AWS::SES::ReceiptFilter
+    Type: 'AWS::SES::ReceiptFilter'
     Properties:
       Filter:
         Name: !Ref FilterName

@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid)" : [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md),
+  "[ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid)" : ActionTypeId,
   "[Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration)" : Json,
-  "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md), ... ],
+  "[InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts)" : [ InputArtifact, ... ],
   "[Name](#cfn-codepipeline-pipeline-stages-actions-name)" : String,
   "[Namespace](#cfn-codepipeline-pipeline-actiondeclaration-namespace)" : String,
-  "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md), ... ],
+  "[OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts)" : [ OutputArtifact, ... ],
   "[Region](#cfn-codepipeline-pipeline-stages-actions-region)" : String,
   "[RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn)" : String,
   "[RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder)" : Integer
@@ -26,14 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ActionTypeId](#cfn-codepipeline-pipeline-stages-actions-actiontypeid): 
-    [ActionTypeId](aws-properties-codepipeline-pipeline-stages-actions-actiontypeid.md)
+    ActionTypeId
   [Configuration](#cfn-codepipeline-pipeline-stages-actions-configuration): Json
   [InputArtifacts](#cfn-codepipeline-pipeline-stages-actions-inputartifacts): 
-    - [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)
+    - InputArtifact
   [Name](#cfn-codepipeline-pipeline-stages-actions-name): String
   [Namespace](#cfn-codepipeline-pipeline-actiondeclaration-namespace): String
   [OutputArtifacts](#cfn-codepipeline-pipeline-stages-actions-outputartifacts): 
-    - [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)
+    - OutputArtifact
   [Region](#cfn-codepipeline-pipeline-stages-actions-region): String
   [RoleArn](#cfn-codepipeline-pipeline-stages-actions-rolearn): String
   [RunOrder](#cfn-codepipeline-pipeline-stages-actions-runorder): Integer
@@ -58,6 +58,7 @@ The values can be represented in either JSON or YAML format\. For example, the J
 
 `InputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-inputartifacts"></a>
 The name or ID of the artifact consumed by the action, such as a test or build artifact\.  
+For a CodeBuild action with multiple input artifacts, one of your input sources must be designated the PrimarySource\. For more information, see the [CodeBuild action reference page](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CodeBuild.html) in the *AWS CodePipeline User Guide*\.
 *Required*: No  
 *Type*: List of [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

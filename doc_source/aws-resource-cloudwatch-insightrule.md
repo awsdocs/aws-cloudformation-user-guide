@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[RuleBody](#cfn-cloudwatch-insightrule-rulebody)" : String,
       "[RuleName](#cfn-cloudwatch-insightrule-rulename)" : String,
-      "[RuleState](#cfn-cloudwatch-insightrule-rulestate)" : String
+      "[RuleState](#cfn-cloudwatch-insightrule-rulestate)" : String,
+      "[Tags](#cfn-cloudwatch-insightrule-tags)" : Tags
     }
 }
 ```
@@ -27,6 +28,8 @@ Properties:
   [RuleBody](#cfn-cloudwatch-insightrule-rulebody): String
   [RuleName](#cfn-cloudwatch-insightrule-rulename): String
   [RuleState](#cfn-cloudwatch-insightrule-rulestate): String
+  [Tags](#cfn-cloudwatch-insightrule-tags): 
+    Tags
 ```
 
 ## Properties<a name="aws-resource-cloudwatch-insightrule-properties"></a>
@@ -44,12 +47,20 @@ The name of the rule\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuleState`  <a name="cfn-cloudwatch-insightrule-rulestate"></a>
-The current state of the rule\.  
+The current state of the rule\. Valid values are `ENABLED` and `DISABLED`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudwatch-insightrule-return-values"></a>
+`Tags`  <a name="cfn-cloudwatch-insightrule-tags"></a>
+A list of key\-value pairs to associate with the Contributor Insights rule\. You can associate as many as 50 tags with a rule\.  
+Tags can help you organize and categorize your resources\. For more information, see [ Tagging Your Amazon CloudWatch Resources](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Tagging.html)\.  
+To be able to associate tags with a rule, you must have the `cloudwatch:TagResource` permission in addition to the `cloudwatch:PutInsightRule` permission\.  
+*Required*: No  
+*Type*: [Tags](aws-properties-cloudwatch-insightrule-tags.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-cloudwatch-insightrule-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudwatch-insightrule-return-values-ref"></a>
 

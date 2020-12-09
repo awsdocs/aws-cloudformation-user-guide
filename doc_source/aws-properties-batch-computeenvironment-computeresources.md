@@ -13,11 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AllocationStrategy](#cfn-batch-computeenvironment-computeresources-allocationstrategy)" : String,
   "[BidPercentage](#cfn-batch-computeenvironment-computeresources-bidpercentage)" : Integer,
   "[DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus)" : Integer,
+  "[Ec2Configuration](#cfn-batch-computeenvironment-computeresources-ec2configuration)" : [ Ec2ConfigurationObject, ... ],
   "[Ec2KeyPair](#cfn-batch-computeenvironment-computeresources-ec2keypair)" : String,
   "[ImageId](#cfn-batch-computeenvironment-computeresources-imageid)" : String,
   "[InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole)" : String,
   "[InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes)" : [ String, ... ],
-  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md),
+  "[LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate)" : LaunchTemplateSpecification,
   "[MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus)" : Integer,
   "[MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus)" : Integer,
   "[PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup)" : String,
@@ -35,13 +36,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AllocationStrategy](#cfn-batch-computeenvironment-computeresources-allocationstrategy): String
   [BidPercentage](#cfn-batch-computeenvironment-computeresources-bidpercentage): Integer
   [DesiredvCpus](#cfn-batch-computeenvironment-computeresources-desiredvcpus): Integer
+  [Ec2Configuration](#cfn-batch-computeenvironment-computeresources-ec2configuration): 
+    - Ec2ConfigurationObject
   [Ec2KeyPair](#cfn-batch-computeenvironment-computeresources-ec2keypair): String
   [ImageId](#cfn-batch-computeenvironment-computeresources-imageid): String
   [InstanceRole](#cfn-batch-computeenvironment-computeresources-instancerole): String
   [InstanceTypes](#cfn-batch-computeenvironment-computeresources-instancetypes): 
     - String
   [LaunchTemplate](#cfn-batch-computeenvironment-computeresources-launchtemplate): 
-    [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)
+    LaunchTemplateSpecification
   [MaxvCpus](#cfn-batch-computeenvironment-computeresources-maxvcpus): Integer
   [MinvCpus](#cfn-batch-computeenvironment-computeresources-minvcpus): Integer
   [PlacementGroup](#cfn-batch-computeenvironment-computeresources-placementgroup): String
@@ -57,10 +60,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-computeenvironment-computeresources-properties"></a>
 
 `AllocationStrategy`  <a name="cfn-batch-computeenvironment-computeresources-allocationstrategy"></a>
-The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated\. This could be due to availability of the instance type in the region or [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)\. If this is not specified, the default is `BEST_FIT`, which will use only the best fitting instance type, waiting for additional capacity if it's not available\. This allocation strategy keeps costs lower but can limit scaling\. If you are using Spot Fleets with `BEST_FIT` then the Spot Fleet IAM Role must be specified\. `BEST_FIT_PROGRESSIVE` will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types with a lower cost per vCPU\. `SPOT_CAPACITY_OPTIMIZED` is only available for Spot Instance compute resources and will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types that are less likely to be interrupted\. For more information, see [Allocation Strategies](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html ) in the *AWS Batch User Guide*\.  
+The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated\. This could be due to availability of the instance type in the region or [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)\. If this is not specified, the default is `BEST_FIT`, which will use only the best fitting instance type, waiting for additional capacity if it's not available\. This allocation strategy keeps costs lower but can limit scaling\. If you are using Spot Fleets with `BEST_FIT` then the Spot Fleet IAM Role must be specified\. `BEST_FIT_PROGRESSIVE` will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types with a lower cost per vCPU\. `SPOT_CAPACITY_OPTIMIZED` is only available for Spot Instance compute resources and will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types that are less likely to be interrupted\. For more information, see [Allocation Strategies](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) in the *AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `BEST_FIT | BEST_FIT_PROGRESSIVE | SPOT_CAPACITY_OPTIMIZED`  
+*Allowed values*: `BEST_FIT | BEST_FIT_PROGRESSIVE | SPOT_CAPACITY_OPTIMIZED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BidPercentage`  <a name="cfn-batch-computeenvironment-computeresources-bidpercentage"></a>
@@ -75,6 +78,12 @@ The desired number of Amazon EC2 vCPUS in the compute environment\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Ec2Configuration`  <a name="cfn-batch-computeenvironment-computeresources-ec2configuration"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Ec2ConfigurationObject](aws-properties-batch-computeenvironment-ec2configurationobject.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Ec2KeyPair`  <a name="cfn-batch-computeenvironment-computeresources-ec2keypair"></a>
 The Amazon EC2 key pair that is used for instances launched in the compute environment\.  
 *Required*: No  
@@ -82,7 +91,7 @@ The Amazon EC2 key pair that is used for instances launched in the compute envir
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageId`  <a name="cfn-batch-computeenvironment-computeresources-imageid"></a>
-The Amazon Machine Image \(AMI\) ID used for instances launched in the compute environment\.  
+The Amazon Machine Image \(AMI\) ID used for instances launched in the compute environment\. This parameter is overridden by the `imageIdOverride` member of the `Ec2Configuration` structure\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -94,7 +103,7 @@ The Amazon ECS instance profile applied to Amazon EC2 instances in a compute env
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypes`  <a name="cfn-batch-computeenvironment-computeresources-instancetypes"></a>
-The instances types that may be launched\. You can specify instance families to launch any instance type within those families \(for example, `c5` or `p3`\), or you can specify specific sizes within a family \(such as `c5.8xlarge`\)\. You can also choose `optimal` to pick instance types \(from the C, M, and R instance families\) on the fly that match the demand of your job queues\.  
+The instances types that may be launched\. You can specify instance families to launch any instance type within those families \(for example, `c5` or `p3`\), or you can specify specific sizes within a family \(such as `c5.8xlarge`\)\. You can also choose `optimal` to select instance types \(from the C, M, and R instance families\) on the fly that match the demand of your job queues\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -142,7 +151,7 @@ The VPC subnets into which the compute resources are launched\. For more informa
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>
-Key\-value pair tags to be applied to resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value—for example, \{ "Name": "AWS Batch Instance \- C4OnDemand" \}\.  
+Key\-value pair tags to be applied to resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value—for example, \{ "Name": "AWS Batch Instance \- C4OnDemand" \}\. These tags can not be updated or removed after the compute environment has been created; any changes require creating a new compute environment and removing the old compute environment\. These tags are not seen when using the AWS Batch ListTagsForResource API operation\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -151,8 +160,8 @@ Key\-value pair tags to be applied to resources that are launched in the compute
 The type of compute environment: `EC2` or `SPOT`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EC2 | SPOT`  
+*Allowed values*: `EC2 | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-batch-computeenvironment-computeresources--seealso"></a>
+## See also<a name="aws-properties-batch-computeenvironment-computeresources--seealso"></a>
 +  [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.

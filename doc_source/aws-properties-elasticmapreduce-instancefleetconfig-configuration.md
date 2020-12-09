@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Classification](#cfn-elasticmapreduce-instancefleetconfig-configuration-classification)" : String,
   "[ConfigurationProperties](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties)" : {Key : Value, ...},
-  "[Configurations](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations)" : [ [Configuration](#aws-properties-elasticmapreduce-instancefleetconfig-configuration), ... ]
+  "[Configurations](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations)" : [ Configuration, ... ]
 }
 ```
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ConfigurationProperties](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties): 
     Key : Value
   [Configurations](#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations): 
-    - [Configuration](#aws-properties-elasticmapreduce-instancefleetconfig-configuration)
+    - Configuration
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-configuration-properties"></a>

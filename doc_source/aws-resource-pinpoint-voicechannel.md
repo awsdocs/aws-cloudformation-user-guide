@@ -2,7 +2,7 @@
 
 A *channel* is a type of platform that you can deliver messages to\. To send a voice message, you send the message through the voice channel\. Before you can use Amazon Pinpoint to send voice messages, you have to enable the voice channel for an Amazon Pinpoint application\.
 
-The VoiceChannel resource represents the status and other information about the voice channel for an application\. 
+The AWS::Pinpoint::VoiceChannel resource defines the status and other settings of the voice channel for an application\. 
 
 ## Syntax<a name="aws-resource-pinpoint-voicechannel-syntax"></a>
 
@@ -43,7 +43,7 @@ Specifies whether to enable the voice channel for the application\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-voicechannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-voicechannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-voicechannel-return-values-ref"></a>
 

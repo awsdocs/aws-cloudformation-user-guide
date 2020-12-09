@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Comment](#cfn-route53-recordsetgroup-comment)" : String,
       "[HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid)" : String,
       "[HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename)" : String,
-      "[RecordSets](#cfn-route53-recordsetgroup-recordsets)" : [ [RecordSet](aws-properties-route53-recordset-1.md), ... ]
+      "[RecordSets](#cfn-route53-recordsetgroup-recordsets)" : [ RecordSet, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename): String
   [RecordSets](#cfn-route53-recordsetgroup-recordsets): 
-    - [RecordSet](aws-properties-route53-recordset-1.md)
+    - RecordSet
 ```
 
 ## Properties<a name="aws-resource-route53-recordsetgroup-properties"></a>
@@ -42,7 +42,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostedZoneId`  <a name="cfn-route53-recordsetgroup-hostedzoneid"></a>
-The ID of the hosted zone that you want to create the record in\.  
+The ID of the hosted zone that you want to create records in\.  
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.   
 *Required*: No  
 *Type*: String  
@@ -64,7 +64,7 @@ A complex type that contains one `RecordSet` element for each record that you wa
 *Type*: List of [RecordSet](aws-properties-route53-recordset-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53-recordsetgroup-return-values"></a>
+## Return values<a name="aws-resource-route53-recordsetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-route53-recordsetgroup-return-values-ref"></a>
 
@@ -127,7 +127,7 @@ The following example shows how to create three records for a mail server:
 
 ```
 myExampleDotComEmailServer:
-  Type: AWS::Route53::RecordSetGroup,
+  Type: AWS::Route53::RecordSetGroup
   Properties:
     Comment: Creating records for mail server
     HostedZoneId: Z1PA6795UKMFR9
@@ -149,5 +149,5 @@ myExampleDotComEmailServer:
       Type: TXT
 ```
 
-## See Also<a name="aws-resource-route53-recordsetgroup--seealso"></a>
+## See also<a name="aws-resource-route53-recordsetgroup--seealso"></a>
 + For `AWS::Route53::RecordSetGroup` examples, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*

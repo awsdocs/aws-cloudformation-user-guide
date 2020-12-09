@@ -2,7 +2,7 @@
 
 Specifies an IPv6 address in an Amazon EC2 launch template\.
 
- `Ipv6Add` is a property of the [Amazon EC2 LaunchTemplate NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html) property type\.
+`Ipv6Add` is a property of [AWS::EC2::LaunchTemplate NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-ipv6add-syntax"></a>
 
@@ -30,5 +30,5 @@ One or more specific IPv6 addresses from the IPv6 CIDR block range of your subne
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-ipv6add--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-ipv6add--seealso"></a>
 +  [ InstanceIpv6AddressRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceIpv6AddressRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 

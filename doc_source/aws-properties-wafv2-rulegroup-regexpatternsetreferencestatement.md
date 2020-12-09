@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Arn](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-arn)" : String,
-  "[FieldToMatch](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch)" : [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md),
-  "[TextTransformations](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations)" : [TextTransformations](aws-properties-wafv2-rulegroup-texttransformations.md)
+  "[FieldToMatch](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch)" : FieldToMatch,
+  "[TextTransformations](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
 
@@ -26,16 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Arn](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-arn): String
   [FieldToMatch](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)
+    FieldToMatch
   [TextTransformations](#cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations): 
-    [TextTransformations](aws-properties-wafv2-rulegroup-texttransformations.md)
+    - TextTransformation
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement-properties"></a>
 
 `Arn`  <a name="cfn-wafv2-rulegroup-regexpatternsetreferencestatement-arn"></a>
 The Amazon Resource Name \(ARN\) of the RegexPatternSet that this statement references\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
@@ -44,12 +44,12 @@ The Amazon Resource Name \(ARN\) of the RegexPatternSet that this statement refe
 
 `FieldToMatch`  <a name="cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch"></a>
 The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformations`  <a name="cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations"></a>
 Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection\. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content identified by `FieldToMatch`, starting from the lowest priority setting, before inspecting the content for a match\.  
-*Required*: No  
-*Type*: [TextTransformations](aws-properties-wafv2-rulegroup-texttransformations.md)  
+*Required*: Yes  
+*Type*: List of [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

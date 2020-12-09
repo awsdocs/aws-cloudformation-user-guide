@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HealthCheck",
   "Properties" : {
-      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md),
-      "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md), ... ]
+      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : Json,
+      "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTag, ... ]
     }
 }
 ```
@@ -36,10 +36,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Route53::HealthCheck
 Properties: 
-  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
-    [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): Json
   [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
-    - [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)
+    - HealthCheckTag
 ```
 
 ## Properties<a name="aws-resource-route53-healthcheck-properties"></a>
@@ -47,7 +46,7 @@ Properties:
 `HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
 A complex type that contains detailed information about one health check\.  
 *Required*: Yes  
-*Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>
@@ -56,13 +55,20 @@ The `HealthCheckTags` property describes key\-value pairs that are associated wi
 *Type*: List of [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53-healthcheck-return-values"></a>
+## Return values<a name="aws-resource-route53-healthcheck-return-values"></a>
 
 ### Ref<a name="aws-resource-route53-healthcheck-return-values-ref"></a>
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the health check ID, such as `e0a123b4-4dba-4650-935e-example`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-route53-healthcheck-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-route53-healthcheck-return-values-fn--getatt-fn--getatt"></a>
+
+`HealthCheckId`  <a name="HealthCheckId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-route53-healthcheck--examples"></a>
 
@@ -124,5 +130,5 @@ myHealthCheck:
         Value: SampleValue2
 ```
 
-## See Also<a name="aws-resource-route53-healthcheck--seealso"></a>
+## See also<a name="aws-resource-route53-healthcheck--seealso"></a>
 +  [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*

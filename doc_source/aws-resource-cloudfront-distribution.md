@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::Distribution",
   "Properties" : {
-      "[DistributionConfig](#cfn-cloudfront-distribution-distributionconfig)" : [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md),
+      "[DistributionConfig](#cfn-cloudfront-distribution-distributionconfig)" : DistributionConfig,
       "[Tags](#cfn-cloudfront-distribution-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::Distribution
 Properties: 
   [DistributionConfig](#cfn-cloudfront-distribution-distributionconfig): 
-    [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)
+    DistributionConfig
   [Tags](#cfn-cloudfront-distribution-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -43,7 +43,7 @@ A complex type that contains zero or more `Tag` elements\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-distribution-return-values"></a>
+## Return values<a name="aws-resource-cloudfront-distribution-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudfront-distribution-return-values-ref"></a>
 
@@ -60,7 +60,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-cloudfront-distribution-return-values-fn--getatt-fn--getatt"></a>
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-The domain name of the resource, such as `sct27g85mgx04.cloudfront.net`\. 
+The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 ## Examples<a name="aws-resource-cloudfront-distribution--examples"></a>
 
@@ -145,5 +145,5 @@ Resources:
           Value: string-value
 ```
 
-## See Also<a name="aws-resource-cloudfront-distribution--seealso"></a>
+## See also<a name="aws-resource-cloudfront-distribution--seealso"></a>
 +  [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference* 

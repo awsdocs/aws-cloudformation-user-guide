@@ -12,12 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
-      "[Containers](#cfn-sagemaker-model-containers)" : [ [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md), ... ],
+      "[Containers](#cfn-sagemaker-model-containers)" : [ ContainerDefinition, ... ],
+      "[EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation)" : Boolean,
       "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
       "[ModelName](#cfn-sagemaker-model-modelname)" : String,
-      "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md),
+      "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : ContainerDefinition,
       "[Tags](#cfn-sagemaker-model-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+      "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -28,15 +29,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SageMaker::Model
 Properties: 
   [Containers](#cfn-sagemaker-model-containers): 
-    - [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+    - ContainerDefinition
+  [EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation): Boolean
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
   [ModelName](#cfn-sagemaker-model-modelname): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): 
-    [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+    ContainerDefinition
   [Tags](#cfn-sagemaker-model-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-sagemaker-model-vpcconfig): 
-    [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
@@ -46,6 +48,12 @@ Specifies the containers in the inference pipeline\.
 *Required*: No  
 *Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
 *Maximum*: `5`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>
+Isolates the model container\. No inbound or outbound network calls can be made to or from the model container\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
@@ -86,11 +94,13 @@ A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html
 *Type*: [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-sagemaker-model-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-model-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-model-return-values-ref"></a>
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the model, such as `arn:aws:sagemaker:us-west-2:012345678901:model/mymodel`\.
+
+When you pass the logical ID of an `AWS::SageMaker::Model` resource to the intrinsic `Ref` function, the function returns the Amazon Resource Name \(ARN\) of the model, such as `arn:aws:sagemaker:us-west-2:012345678901:model/mymodel`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -100,6 +110,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+
 #### <a name="aws-resource-sagemaker-model-return-values-fn--getatt-fn--getatt"></a>
 
 `ModelName`  <a name="ModelName-fn::getatt"></a>
@@ -107,11 +119,11 @@ The name of the model, such as `MyModel`\.
 
 ## Examples<a name="aws-resource-sagemaker-model--examples"></a>
 
-### SageMaker Model Endpoint Examples<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Examples"></a>
+### SageMaker Model Endpoint Example<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Example"></a>
 
 The following example creates an endpoint configuration from a trained model, and then creates an endpoint\.
 
-#### JSON<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Examples--json"></a>
+#### JSON<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Example--json"></a>
 
 ```
 {
@@ -225,7 +237,7 @@ The following example creates an endpoint configuration from a trained model, an
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Examples--yaml"></a>
+#### YAML<a name="aws-resource-sagemaker-model--examples--SageMaker_Model_Endpoint_Example--yaml"></a>
 
 ```
 Description: "Basic Hosting entities test.  We need models to create endpoint configs."

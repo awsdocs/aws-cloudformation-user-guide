@@ -1,5 +1,5 @@
-# AWS Directory Service Resource Type Reference<a name="AWS_DirectoryService"></a>
+# AWS Directory Service resource type reference<a name="AWS_DirectoryService"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::DirectoryService::MicrosoftAD](aws-resource-directoryservice-microsoftad.md)
 + [AWS::DirectoryService::SimpleAD](aws-resource-directoryservice-simplead.md)

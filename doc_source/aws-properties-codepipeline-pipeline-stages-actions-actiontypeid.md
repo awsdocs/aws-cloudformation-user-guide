@@ -30,18 +30,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Category`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-category"></a>
 A category defines what kind of action can be taken in the stage, and constrains the provider type for the action\. Valid categories are limited to one of the values below\.  
-+ Source
-+ Build
-+ Test
-+ Deploy
-+ Invoke
-+ Approval
++ `Source`
++ `Build`
++ `Test`
++ `Deploy`
++ `Invoke`
++ `Approval`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Owner`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-owner"></a>
-The creator of the action being called\.  
+The creator of the action being called\. There are three valid values for the `Owner` field in the action category section within your pipeline structure: `AWS`, `ThirdParty`, and `Custom`\. For more information, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

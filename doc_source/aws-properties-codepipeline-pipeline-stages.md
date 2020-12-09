@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-codepipeline-pipeline-stages-actions)" : [ [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md), ... ],
-  "[Blockers](#cfn-codepipeline-pipeline-stages-blockers)" : [ [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md), ... ],
+  "[Actions](#cfn-codepipeline-pipeline-stages-actions)" : [ ActionDeclaration, ... ],
+  "[Blockers](#cfn-codepipeline-pipeline-stages-blockers)" : [ BlockerDeclaration, ... ],
   "[Name](#cfn-codepipeline-pipeline-stages-name)" : String
 }
 ```
@@ -20,9 +20,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-codepipeline-pipeline-stages-actions): 
-    - [ActionDeclaration](aws-properties-codepipeline-pipeline-stages-actions.md)
+    - ActionDeclaration
   [Blockers](#cfn-codepipeline-pipeline-stages-blockers): 
-    - [BlockerDeclaration](aws-properties-codepipeline-pipeline-stages-blockers.md)
+    - BlockerDeclaration
   [Name](#cfn-codepipeline-pipeline-stages-name): String
 ```
 

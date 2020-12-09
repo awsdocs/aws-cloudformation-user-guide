@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate<a name="aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate"></a>
 
-Specifies channel\-specific content and settings for a message template that can be used in push notifications that are sent through the ADM \(Amazon Device Messaging\), Baidu \(Baidu Cloud Push\), or GCM \(Firebase Cloud Messaging, formerly Google Cloud Messaging\) channel\.
+The AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate resource defines channel\-specific content and settings for a message template that can be used in push notifications that are sent through the following channels: ADM \(Amazon Device Messaging\), Baidu \(Baidu Cloud Push\), or GCM \(Firebase Cloud Messaging, formerly Google Cloud Messaging\)\.
 
 ## Syntax<a name="aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate-syntax"></a>
 
@@ -82,7 +82,7 @@ The title to use in a push notification that's based on the message template\. T
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-pinpoint-pushtemplate-androidpushnotificationtemplate-url"></a>
-The URL to open in a recipient's default mobile browser, if a recipient taps a a push notification that's based on the message template and the value of the `Action` property is `URL`\.  
+The URL to open in a recipient's default mobile browser, if a recipient taps a push notification that's based on the message template and the value of the `Action` property is `URL`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

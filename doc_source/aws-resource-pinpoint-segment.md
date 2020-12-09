@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment<a name="aws-resource-pinpoint-segment"></a>
 
-Creates a new segment for an application or updates the configuration, dimension, and other settings for an existing segment that's associated with an application\.
+A *segment* designates which users receive messages from a campaign or journey, typically a group of customers that share certain attributes\. The AWS::Pinpoint::Segment resource defines the configuration, dimension, and other settings for a segment\.
 
 ## Syntax<a name="aws-resource-pinpoint-segment-syntax"></a>
 
@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Pinpoint::Segment",
   "Properties" : {
       "[ApplicationId](#cfn-pinpoint-segment-applicationid)" : String,
-      "[Dimensions](#cfn-pinpoint-segment-dimensions)" : [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md),
+      "[Dimensions](#cfn-pinpoint-segment-dimensions)" : SegmentDimensions,
       "[Name](#cfn-pinpoint-segment-name)" : String,
-      "[SegmentGroups](#cfn-pinpoint-segment-segmentgroups)" : [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md),
+      "[SegmentGroups](#cfn-pinpoint-segment-segmentgroups)" : SegmentGroups,
       "[Tags](#cfn-pinpoint-segment-tags)" : Json
     }
 }
@@ -28,10 +28,10 @@ Type: AWS::Pinpoint::Segment
 Properties: 
   [ApplicationId](#cfn-pinpoint-segment-applicationid): String
   [Dimensions](#cfn-pinpoint-segment-dimensions): 
-    [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md)
+    SegmentDimensions
   [Name](#cfn-pinpoint-segment-name): String
   [SegmentGroups](#cfn-pinpoint-segment-segmentgroups): 
-    [SegmentGroups](aws-properties-pinpoint-segment-segmentgroups.md)
+    SegmentGroups
   [Tags](#cfn-pinpoint-segment-tags): Json
 ```
 
@@ -67,7 +67,7 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-segment-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-segment-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-segment-return-values-ref"></a>
 

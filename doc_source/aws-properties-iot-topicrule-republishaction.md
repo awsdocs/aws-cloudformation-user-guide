@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Qos](#cfn-iot-topicrule-republishaction-qos)" : Integer,
   "[RoleArn](#cfn-iot-topicrule-republishaction-rolearn)" : String,
   "[Topic](#cfn-iot-topicrule-republishaction-topic)" : String
 }
@@ -18,11 +19,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-republishaction-syntax.yaml"></a>
 
 ```
+  [Qos](#cfn-iot-topicrule-republishaction-qos): Integer
   [RoleArn](#cfn-iot-topicrule-republishaction-rolearn): String
   [Topic](#cfn-iot-topicrule-republishaction-topic): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-republishaction-properties"></a>
+
+`Qos`  <a name="cfn-iot-topicrule-republishaction-qos"></a>
+The Quality of Service \(QoS\) level to use when republishing messages\. The default value is 0\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-republishaction-rolearn"></a>
 The ARN of the IAM role that grants access\.  

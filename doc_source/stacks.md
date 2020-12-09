@@ -1,4 +1,4 @@
-# Working with Stacks<a name="stacks"></a>
+# Working with stacks<a name="stacks"></a>
 
 A stack is a collection of AWS resources that you can manage as a single unit\. In other words, you can create, update, or delete a collection of resources by creating, updating, or deleting stacks\. All the resources in a stack are defined by the stack's AWS CloudFormation template\. A stack, for instance, can include all the resources required to run a web application, such as a web server, a database, and networking rules\. If you no longer require that web application, you can simply delete the stack, and all of its related resources are deleted\.
 
@@ -10,12 +10,14 @@ You can work with stacks by using the AWS CloudFormation [console](https://conso
 You are charged for the stack resources for the time they were operating \(even if you deleted the stack right away\)\.
 
 **Topics**
-+ [Using the AWS CloudFormation Console](cfn-using-console.md)
++ [Using the AWS CloudFormation console](cfn-using-console.md)
 + [Using the AWS Command Line Interface](cfn-using-cli.md)
-+ [AWS CloudFormation Stack Updates](using-cfn-updating-stacks.md)
-+ [Detecting Unmanaged Configuration Changes to Stacks and Resources](using-cfn-stack-drift.md)
-+ [Moving Resources Between Stacks](refactor-stacks.md)
-+ [Exporting Stack Output Values](using-cfn-stack-exports.md)
-+ [Listing Stacks That Import an Exported Output Value](using-cfn-stack-imports.md)
-+ [Working with Nested Stacks](using-cfn-nested-stacks.md)
-+ [Working with Microsoft Windows Stacks on AWS CloudFormation](cfn-windows-stacks.md)
++ [AWS CloudFormation stack updates](using-cfn-updating-stacks.md)
++ [Detecting unmanaged configuration changes to stacks and resources](using-cfn-stack-drift.md)
++ [Bringing existing resources into CloudFormation management](resource-import.md)
++ [Moving resources between stacks](refactor-stacks.md)
++ [Resources that support import and drift detection operations](resource-import-supported-resources.md)
++ [Exporting stack output values](using-cfn-stack-exports.md)
++ [Listing stacks that import an exported output value](using-cfn-stack-imports.md)
++ [Working with nested stacks](using-cfn-nested-stacks.md)
++ [Working with Microsoft Windows stacks on AWS CloudFormation](cfn-windows-stacks.md)

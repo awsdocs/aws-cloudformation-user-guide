@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxSessionDuration](#cfn-iam-role-maxsessionduration)" : Integer,
       "[Path](#cfn-iam-role-path)" : String,
       "[PermissionsBoundary](#cfn-iam-role-permissionsboundary)" : String,
-      "[Policies](#cfn-iam-role-policies)" : [ [Policy](aws-properties-iam-policy.md), ... ],
+      "[Policies](#cfn-iam-role-policies)" : [ Policy, ... ],
       "[RoleName](#cfn-iam-role-rolename)" : String,
       "[Tags](#cfn-iam-role-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -38,7 +38,7 @@ Properties:
   [Path](#cfn-iam-role-path): String
   [PermissionsBoundary](#cfn-iam-role-permissionsboundary): String
   [Policies](#cfn-iam-role-policies): 
-    - [Policy](aws-properties-iam-policy.md)
+    - Policy
   [RoleName](#cfn-iam-role-rolename): String
   [Tags](#cfn-iam-role-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -79,7 +79,7 @@ Anyone who assumes the role from the AWS CLI or API can use the `DurationSeconds
 `Path`  <a name="cfn-iam-role-path"></a>
  The path to the role\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
-This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(\\u0021\) through the DEL character \(\\u007F\), including most punctuation characters, digits, and upper and lowercased letters\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -121,7 +121,7 @@ A list of tags that are attached to the specified role\. For more information ab
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-role-return-values"></a>
+## Return values<a name="aws-resource-iam-role-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-role-return-values-ref"></a>
 
@@ -348,7 +348,7 @@ Resources:
           Ref: "RootRole"
 ```
 
-## See Also<a name="aws-resource-iam-role--seealso"></a>
+## See also<a name="aws-resource-iam-role--seealso"></a>
 +  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
 +  [AWS Identity and Access Management Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html) 
 +  [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) 

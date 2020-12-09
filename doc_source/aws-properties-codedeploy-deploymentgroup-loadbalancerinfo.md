@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ [ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md), ... ],
-  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md), ... ]
+  "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ ELBInfo, ... ],
+  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ]
 }
 ```
 
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist): 
-    - [ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)
+    - ELBInfo
   [TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
-    - [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)
+    - TargetGroupInfo
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-properties"></a>

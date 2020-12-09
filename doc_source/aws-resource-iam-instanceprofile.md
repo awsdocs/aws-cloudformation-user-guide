@@ -47,7 +47,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 `Path`  <a name="cfn-iam-instanceprofile-path"></a>
  The path to the instance profile\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
-This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(\\u0021\) through the DEL character \(\\u007F\), including most punctuation characters, digits, and upper and lowercased letters\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -61,7 +61,7 @@ The name of the role to associate with the instance profile\. Only one role can 
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-instanceprofile-return-values"></a>
+## Return values<a name="aws-resource-iam-instanceprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-instanceprofile-return-values-ref"></a>
 
@@ -125,5 +125,5 @@ Resources:
           Ref: "MyRole"
 ```
 
-## See Also<a name="aws-resource-iam-instanceprofile--seealso"></a>
+## See also<a name="aws-resource-iam-instanceprofile--seealso"></a>
 +  [CreateInstanceProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html) in the *AWS Identity and Access Management API Reference* 

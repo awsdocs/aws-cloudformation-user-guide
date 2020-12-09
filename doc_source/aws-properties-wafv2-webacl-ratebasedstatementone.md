@@ -15,8 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AggregateKeyType](#cfn-wafv2-webacl-ratebasedstatementone-aggregatekeytype)" : String,
+  "[ForwardedIPConfig](#cfn-wafv2-webacl-ratebasedstatementone-forwardedipconfig)" : ForwardedIPConfiguration,
   "[Limit](#cfn-wafv2-webacl-ratebasedstatementone-limit)" : Integer,
-  "[ScopeDownStatement](#cfn-wafv2-webacl-ratebasedstatementone-scopedownstatement)" : [StatementTwo](aws-properties-wafv2-webacl-statementtwo.md)
+  "[ScopeDownStatement](#cfn-wafv2-webacl-ratebasedstatementone-scopedownstatement)" : StatementTwo
 }
 ```
 
@@ -24,22 +25,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AggregateKeyType](#cfn-wafv2-webacl-ratebasedstatementone-aggregatekeytype): String
+  [ForwardedIPConfig](#cfn-wafv2-webacl-ratebasedstatementone-forwardedipconfig): 
+    ForwardedIPConfiguration
   [Limit](#cfn-wafv2-webacl-ratebasedstatementone-limit): Integer
   [ScopeDownStatement](#cfn-wafv2-webacl-ratebasedstatementone-scopedownstatement): 
-    [StatementTwo](aws-properties-wafv2-webacl-statementtwo.md)
+    StatementTwo
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-ratebasedstatementone-properties"></a>
 
 `AggregateKeyType`  <a name="cfn-wafv2-webacl-ratebasedstatementone-aggregatekeytype"></a>
-Setting that indicates how to aggregate the request counts\. Currently, you must set this to IP\. The request counts are aggregated on IP addresses\.  
-*Required*: No  
+Setting that indicates how to aggregate the request counts\. The options are the following:  
++ IP \- Aggregate the request counts on the IP address from the web request origin\.
++ FORWARDED\_IP \- Aggregate the request counts on the first IP address in an HTTP header\. If you use this, configure the `ForwardedIPConfig`, to specify the header to use\. 
+*Required*: Yes  
 *Type*: String  
+*Allowed values*: `FORWARDED_IP | IP`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ForwardedIPConfig`  <a name="cfn-wafv2-webacl-ratebasedstatementone-forwardedipconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [ForwardedIPConfiguration](aws-properties-wafv2-webacl-forwardedipconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Limit`  <a name="cfn-wafv2-webacl-ratebasedstatementone-limit"></a>
 Limit on the web request that match any nested statement criteria in any 5 minute period\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

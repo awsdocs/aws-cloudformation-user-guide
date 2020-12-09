@@ -11,10 +11,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EndTime](#cfn-pinpoint-campaign-schedule-endtime)" : String,
-  "[EventFilter](#cfn-pinpoint-campaign-schedule-eventfilter)" : [CampaignEventFilter](aws-properties-pinpoint-campaign-campaigneventfilter.md),
+  "[EventFilter](#cfn-pinpoint-campaign-schedule-eventfilter)" : CampaignEventFilter,
   "[Frequency](#cfn-pinpoint-campaign-schedule-frequency)" : String,
   "[IsLocalTime](#cfn-pinpoint-campaign-schedule-islocaltime)" : Boolean,
-  "[QuietTime](#cfn-pinpoint-campaign-schedule-quiettime)" : [QuietTime](aws-properties-pinpoint-campaign-schedule-quiettime.md),
+  "[QuietTime](#cfn-pinpoint-campaign-schedule-quiettime)" : QuietTime,
   "[StartTime](#cfn-pinpoint-campaign-schedule-starttime)" : String,
   "[TimeZone](#cfn-pinpoint-campaign-schedule-timezone)" : String
 }
@@ -25,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EndTime](#cfn-pinpoint-campaign-schedule-endtime): String
   [EventFilter](#cfn-pinpoint-campaign-schedule-eventfilter): 
-    [CampaignEventFilter](aws-properties-pinpoint-campaign-campaigneventfilter.md)
+    CampaignEventFilter
   [Frequency](#cfn-pinpoint-campaign-schedule-frequency): String
   [IsLocalTime](#cfn-pinpoint-campaign-schedule-islocaltime): Boolean
   [QuietTime](#cfn-pinpoint-campaign-schedule-quiettime): 
-    [QuietTime](aws-properties-pinpoint-campaign-schedule-quiettime.md)
+    QuietTime
   [StartTime](#cfn-pinpoint-campaign-schedule-starttime): String
   [TimeZone](#cfn-pinpoint-campaign-schedule-timezone): String
 ```

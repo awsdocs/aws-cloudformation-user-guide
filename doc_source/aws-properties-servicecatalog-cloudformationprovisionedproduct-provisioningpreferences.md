@@ -1,6 +1,14 @@
 # AWS::ServiceCatalog::CloudFormationProvisionedProduct ProvisioningPreferences<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences"></a>
 
-The user\-defined preferences that will be applied when updating a provisioned product\. Not all preferences are applicable to all provisioned product types\.
+The user\-defined preferences that will be applied when updating a provisioned product\. Not all preferences are applicable to all provisioned product type
+
+One or more AWS accounts that will have access to the provisioned product\.
+
+Applicable only to a `CFN_STACKSET` provisioned product type\.
+
+The AWS accounts specified should be within the list of accounts in the `STACKSET` constraint\. To get the list of accounts in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.
+
+If no values are specified, the default value is all accounts from the `STACKSET` constraint\.
 
 ## Syntax<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-syntax"></a>
 
@@ -37,10 +45,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-properties"></a>
 
 `StackSetAccounts`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetaccounts"></a>
-One or more AWS accounts that will have access to the provisioned product\.  
+One or more AWS accounts where the provisioned product will be available\.  
 Applicable only to a `CFN_STACKSET` provisioned product type\.  
-The AWS accounts specified should be within the list of accounts in the `STACKSET` constraint\. To get the list of accounts in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.  
-If no values are specified, the default value is all accounts from the `STACKSET` constraint\.  
+The specified accounts should be within the list of accounts from the `STACKSET` constraint\. To get the list of accounts in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.  
+If no values are specified, the default value is all acounts from the `STACKSET` constraint\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,7 +107,7 @@ DELETE
 Deletes a stack instance in the stack set represented by the provisioned product\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CREATE | DELETE | UPDATE`  
+*Allowed values*: `CREATE | DELETE | UPDATE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StackSetRegions`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetregions"></a>

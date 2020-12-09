@@ -1,25 +1,36 @@
-# Delete Stack Instances<a name="stackinstances-delete"></a>
+# Delete stack instances from your stack set<a name="stackinstances-delete"></a>
 
 You can delete stack instances from a stack set in either the AWS Management Console, or by using AWS CloudFormation commands in the AWS CLI\. In this procedure, we will delete all stacks\.
 
-**To delete stack instances by using the AWS Management Console**
+For a stack set with service\-managed permissions, if you delete stack instances from a top\-level organizational unit \(OU\), the OU is removed as a target of the stack set\.
+
+**Topics**
++ [Delete stack instances using the AWS Management Console](#stackinstances-delete-console)
++ [Delete stack instances using the AWS CLI](#stackinstances-delete-cli)
+
+## Delete stack instances using the AWS Management Console<a name="stackinstances-delete-console"></a>
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Choose **StackSets** from the navigation pane\. On the StackSets page, select the stack set that you created in [Create a New Stack Set](stacksets-getting-started-create.md)\. In this walkthrough, we created a stack set named `my-awsconfig-stackset`\.
+1. Choose **StackSets** from the navigation pane\. On the StackSets page, select the stack set that you created in [Create a stack set](stacksets-getting-started-create.md)\.
 
 1. With the stack set selected, choose **Delete stacks from StackSet** from the **Actions** menu\.  
-![\[Select stack set and choose Delete stacks from stack set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-action-delete-stacks.png)
+![\[Choose Delete stacks from StackSet from the Actions menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacksets-action-delete-stacks.png)
 
-1. On the **Set deployment options** page: 
+1. On the **Set deployment options** page, choose the accounts from which to delete stack instances\.
 
-   1. For **Accounts**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
+   1. \[Self\-managed permissions\] For **Accounts**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
 
-   1. For **Specify regions**, choose the regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
+      \[Service\-managed permissions\] For **Accounts**, choose **Deploy stacks in organizational units**\. Paste the IDs of the OUs that your stack set targets\.
+**Note**  
+StackSets also deletes stack instances from any child OUs of the specified target OUs\.  
+![\[Select the organizational units from which to delete stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-delete-stack-instances-in-ous.png)
+
+   1. For **Deployment regions**, choose the Regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
 
    1. For **Deployment options**: 
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
-      + For **Failure tolerance**, keep the defauls of **Number** and **0**\.
+      + For **Failure tolerance**, keep the defaults of **Number** and **0**\.
 
       In the **Retain stacks** area, keep the default setting of disabled\.
 
@@ -32,21 +43,33 @@ You can delete stack instances from a stack set in either the AWS Management Con
 1. After stack deletion is finished, you can verify that stack instances were deleted from your stack set in the StackSet detail page, on the **Stack instances** tab\.  
 ![\[Use the Stack instances tab of the stack set details page to view information on your stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-stack-instances.png)
 
-**To delete stack instances by using the AWS CLI**
+## Delete stack instances using the AWS CLI<a name="stackinstances-delete-cli"></a>
 
-When you are ready to delete stack instances, run the `delete-stack-instances` AWS CLI command\.
-+ Run the following command, and replace *account\_ID* with the accounts you used to create your stack set in [Create a New Stack Set](stacksets-getting-started-create.md)\. For *stack set name*, specify the stack set name `my-awsconfig-stackset`\.
+1. Run the `delete-stack-instances` command\. For `--stack-set-name`, specify the stack set name `my-awsconfig-stackset`\.
 
-  Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
+   Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
 
-  Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you do not want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we are not retaining any stacks\.
+   **Note**
+   The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`.
+   
+   Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you do not want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we are not retaining any stacks\.
 
-  ```
-  aws cloudformation delete-stack-instances --stack-set-name my-awsconfig-stackset --accounts '["account_ID_1","account_ID_2"]' --regions '["region_1","region_2"]' --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --no-retain-stacks
-  ```
+   \[Self\-managed permissions\] Replace *account\_ID* with the accounts you used to create your stack set in [Create a stack set](stacksets-getting-started-create.md)\.
 
-  After stack deletion is finished, you can verify that stack instances were deleted from your stack set by running the `describe-stack-set-operation` command to show the status and results of the delete stacks operation\. For `--operation-id`, use the operation ID that was returned by your `delete-stack-instances` command\.
+   ```
+   aws cloudformation delete-stack-instances --stack-set-name my-awsconfig-stackset --accounts '["0123456789012"]' --regions '["eu-west-1"]' --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --no-retain-stacks
+   ```
 
-  ```
-  aws cloudformation describe-stack-set-operation --operation-id operation_ID
-  ```
+   \[Service\-managed permissions\] For `--deployment-targets`, specify the organization \(root\) ID or OU IDs in which you created stack instances\.
+**Note**  
+StackSets also deletes stack instances from any child OUs of the specified target OUs\.
+
+   ```
+   aws cloudformation delete-stack-instances --stack-set-name my-awsconfig-stackset --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5jlwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]' --no-retain-stacks
+   ```
+
+1. Optionally, after stack deletion is finished, verify that stack instances were deleted from your stack set by running the `describe-stack-set-operation` command to show the status and results of the delete stacks operation\. For `--operation-id`, use the operation ID that was returned by your `delete-stack-instances` command\.
+
+   ```
+   aws cloudformation describe-stack-set-operation --stack-set-name stackSetName --operation-id ddf16f54-ad62-4d9b-b0ab-3ed8e9example
+   ```

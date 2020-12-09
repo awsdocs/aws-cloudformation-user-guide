@@ -1,10 +1,10 @@
-# Macro Example: Creating and Using a Macro<a name="macros-example"></a>
+# Macro example: Creating and using a macro<a name="macros-example"></a>
 
 The following example walks through the process of using macros, from defining the macro in a template, to creating a Lamdba function for the macro, and then to using the macro in a template\.
 
 In this example, we create a simple macro that inserts the specified string in place of the specified target content in the processed template\. And then we'll use it to insert a blank `WaitHandleCondition` in the specified location in the processed template\. 
 
-## Macro Example: Macro Definition Template<a name="macros-example-definiton"></a>
+## Macro example: Macro definition template<a name="macros-example-definiton"></a>
 
 Before using a macro, we first have to do two things: create the Lambda function that performs the desired template processing, and then make that Lambda function available to CloudFormation by creating a macro definition\. 
 
@@ -26,7 +26,7 @@ AWSTemplateFormatVersion: 2010-09-09
         FunctionName: "arn:aws:lambda:us-east-1:012345678910:function:JavaMacroFunc"
 ```
 
-## Macro Example: Macro Usage Template<a name="macros-example-usage"></a>
+## Macro example: Macro usage template<a name="macros-example-usage"></a>
 
 To use our macro in this case, we're going to include it in a template using the [`Fn::Transform`](intrinsic-function-reference-transform.md) intrinsic function\.
 
@@ -55,7 +55,7 @@ Resources:
     Type: '$$REPLACEMENT$$'
 ```
 
-## Macro Example: Request Event Mapping<a name="macros-example-request"></a>
+## Macro example: Request event mapping<a name="macros-example-request"></a>
 
 When CloudFormation processes our example template during stack creation, it passes the following event mapping to the Lambda function referenced in the **JavaMacroFunc** macro definition\.
 
@@ -95,7 +95,7 @@ Note that `fragment` contains JSON representing the template fragment that the m
   }
   ```
 
-## Macro Example: Lambda Function Code<a name="macros-example-function"></a>
+## Macro example: Lambda function code<a name="macros-example-function"></a>
 
 Following is the actual code for the Lambda function underlying the **JavaMacroFunc** example macro\. It iterates over the template fragment included in the response \(be it in string, list, or map format\), looking for the specified target string\. If it finds the specified target string, the Lambda function replaces the target string with the specified replacement string\. If not, the function leaves the template fragment unchanged\. Then, the function returns a map of the expected properties, discussed in detail below, to CloudFormation\.
 
@@ -201,7 +201,7 @@ public class LambdaFunctionHandler implements RequestHandler<Map<String, Object>
 }
 ```
 
-## Macro Example: Lambda Function Response<a name="macros-example-response"></a>
+## Macro example: Lambda function response<a name="macros-example-response"></a>
 
 Following is the mapping that the Lambda function returns to AWS CloudFormation for processing\. The `requestId` matches that sent from CloudFormation, and a `status` value of `SUCCESS` denotes that the Lambda function successfully processed the template fragment included in the request\. In this response, `fragment` contains JSON representing the content to insert into the processed template in place of the original template snippet\.
 + requestId
@@ -218,7 +218,7 @@ Following is the mapping that the Lambda function returns to AWS CloudFormation 
   }
   ```
 
-## Macro Example: Resulting Processed Template<a name="macros-example-processed"></a>
+## Macro example: Resulting processed template<a name="macros-example-processed"></a>
 
 After CloudFormation receives a successful response from the Lambda function, it inserts the returned template fragment into the processed template\.
 
@@ -240,6 +240,6 @@ Below is the resulting processed template for our example\. The `Fn::Transform` 
 }
 ```
 
-## Additional Macro Examples<a name="template-macros-examples-awslabs"></a>
+## Additional macro examples<a name="template-macros-examples-awslabs"></a>
 
-In addition to this walkthrough in this guide, you can find example macros, including source code and templates, in the [Macros Examples](https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/) section of the [Amazon Web Services \- Labs](https://github.com/awslabs) repo on GitHub\. These examples are provided 'as\-is' for instructional purposes\. 
+In addition to this walkthrough in this guide, you can find example macros, including source code and templates, in the [Macros examples](https://github.com/awslabs/aws-cloudformation-templates/tree/master/aws/services/CloudFormation/MacrosExamples/) section of the [Amazon Web Services \- Labs](https://github.com/awslabs) repo on GitHub\. These examples are provided 'as\-is' for instructional purposes\. 

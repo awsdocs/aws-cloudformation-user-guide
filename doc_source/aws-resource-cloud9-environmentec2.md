@@ -13,11 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Cloud9::EnvironmentEC2",
   "Properties" : {
       "[AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes)" : Integer,
+      "[ConnectionType](#cfn-cloud9-environmentec2-connectiontype)" : String,
       "[Description](#cfn-cloud9-environmentec2-description)" : String,
       "[InstanceType](#cfn-cloud9-environmentec2-instancetype)" : String,
       "[Name](#cfn-cloud9-environmentec2-name)" : String,
       "[OwnerArn](#cfn-cloud9-environmentec2-ownerarn)" : String,
-      "[Repositories](#cfn-cloud9-environmentec2-repositories)" : [ [Repository](aws-properties-cloud9-environmentec2-repository.md), ... ],
+      "[Repositories](#cfn-cloud9-environmentec2-repositories)" : [ Repository, ... ],
       "[SubnetId](#cfn-cloud9-environmentec2-subnetid)" : String,
       "[Tags](#cfn-cloud9-environmentec2-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -30,12 +31,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cloud9::EnvironmentEC2
 Properties: 
   [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes): Integer
+  [ConnectionType](#cfn-cloud9-environmentec2-connectiontype): String
   [Description](#cfn-cloud9-environmentec2-description): String
   [InstanceType](#cfn-cloud9-environmentec2-instancetype): String
   [Name](#cfn-cloud9-environmentec2-name): String
   [OwnerArn](#cfn-cloud9-environmentec2-ownerarn): String
   [Repositories](#cfn-cloud9-environmentec2-repositories): 
-    - [Repository](aws-properties-cloud9-environmentec2-repository.md)
+    - Repository
   [SubnetId](#cfn-cloud9-environmentec2-subnetid): String
   [Tags](#cfn-cloud9-environmentec2-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -48,6 +50,13 @@ The number of minutes until the running instance is shut down after the environm
 *Required*: No  
 *Type*: Integer  
 *Maximum*: `20160`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ConnectionType`  <a name="cfn-cloud9-environmentec2-connectiontype"></a>
+The connection type used for connecting to an Amazon EC2 environment\. Valid values are `CONNECT_SSH` \(default\) and `CONNECT_SSM` \(connected through AWS Systems Manager\)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CONNECT_SSH | CONNECT_SSM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-cloud9-environmentec2-description"></a>
@@ -76,7 +85,7 @@ The name of the environment\.
 The Amazon Resource Name \(ARN\) of the environment owner\. This ARN can be the ARN of any AWS Identity and Access Management \(IAM\) principal\. If this value is not specified, the ARN defaults to this environment's creator\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws:(iam|sts)::\d+:(root|(user\/[\w+=/:,.@-]{1,64}|federated-user\/[\w+=/:,.@-]{2,32}|assumed-role\/[\w+=/:,.@-]{1,64}\/[\w+=/:,.@-]{1,64}))$`  
+*Pattern*: `^arn:aws:(iam|sts)::\d+:(root|(user\/[\w+=/:,.@-]{1,64}|federated-user\/[\w+=/:,.@-]{2,32}|assumed-role\/[\w+=:,.@-]{1,64}\/[\w+=,.@-]{1,64}))$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Repositories`  <a name="cfn-cloud9-environmentec2-repositories"></a>
@@ -94,12 +103,13 @@ The ID of the subnet in Amazon Virtual Private Cloud \(Amazon VPC\) that AWS Clo
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-cloud9-environmentec2-tags"></a>
-Currently not supported by CloudFormation\.  
+An array of key\-value pairs that will be associated with the new AWS Cloud9 development environment\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloud9-environmentec2-return-values"></a>
+## Return values<a name="aws-resource-cloud9-environmentec2-return-values"></a>
 
 ### Ref<a name="aws-resource-cloud9-environmentec2-return-values-ref"></a>
 

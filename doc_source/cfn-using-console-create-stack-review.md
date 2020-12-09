@@ -1,4 +1,4 @@
-# Reviewing Your Stack and Estimating Stack Cost on the AWS CloudFormation Console<a name="cfn-using-console-create-stack-review"></a>
+# Reviewing your stack and estimating stack cost on the AWS CloudFormation console<a name="cfn-using-console-create-stack-review"></a>
 
 The final step before your stack is launched is to review the values entered while creating the stack\. You can also estimate the cost of your stack\.
 
@@ -10,7 +10,7 @@ The final step before your stack is launched is to review the values entered whi
 
 1. After you review the stack creation settings and the estimated cost of your stack, click **Create stack** to launch your stack\.
 **Note**  
-As this point, you can also choose to create a new change set rather than a new stack\. To do so, click **Create change set** instead of **Create stack**\. For more information, see [Creating Stacks Using Change Sets](cfn-console-create-stacks-changesets.md)
+As this point, you can also choose to create a new change set rather than a new stack\. To do so, click **Create change set** instead of **Create stack**\. For more information, see [Creating stacks using change sets](cfn-console-create-stacks-changesets.md)
 
    CloudFormation displays the **Events** pane of the **Stack details** page for your new stack\. From here, you can [view your stack's events, data, or resources](cfn-console-view-stack-data-resources.md)\. AWS CloudFormation automatically refreshes the stack events every minute\. Additionally, CloudFormation displays the **New events available** badge when new stack events occur; click the refresh icon to load these events into the list\. By viewing stack creation events, you can understand the sequence of events that lead to your stack's creation \(or failure, if you are debugging your stack\)\.
 

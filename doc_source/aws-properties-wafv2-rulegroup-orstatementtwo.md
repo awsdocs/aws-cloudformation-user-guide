@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Statements](#cfn-wafv2-rulegroup-orstatementtwo-statements)" : [StatementThrees](aws-properties-wafv2-rulegroup-statementthrees.md)
+  "[Statements](#cfn-wafv2-rulegroup-orstatementtwo-statements)" : [ StatementThree, ... ]
 }
 ```
 
@@ -18,13 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Statements](#cfn-wafv2-rulegroup-orstatementtwo-statements): 
-    [StatementThrees](aws-properties-wafv2-rulegroup-statementthrees.md)
+    - StatementThree
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-orstatementtwo-properties"></a>
 
 `Statements`  <a name="cfn-wafv2-rulegroup-orstatementtwo-statements"></a>
 Logical OR statements used in statement nesting\.  
-*Required*: No  
-*Type*: [StatementThrees](aws-properties-wafv2-rulegroup-statementthrees.md)  
+*Required*: Yes  
+*Type*: List of [StatementThree](aws-properties-wafv2-rulegroup-statementthree.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

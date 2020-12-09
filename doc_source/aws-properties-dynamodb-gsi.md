@@ -11,9 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IndexName](#cfn-dynamodb-gsi-indexname)" : String,
-  "[KeySchema](#cfn-dynamodb-gsi-keyschema)" : [ [KeySchema](aws-properties-dynamodb-keyschema.md), ... ],
-  "[Projection](#cfn-dynamodb-gsi-projection)" : [Projection](aws-properties-dynamodb-projectionobject.md),
-  "[ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput)" : [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
+  "[KeySchema](#cfn-dynamodb-gsi-keyschema)" : [ KeySchema, ... ],
+  "[Projection](#cfn-dynamodb-gsi-projection)" : Projection,
+  "[ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput)" : ProvisionedThroughput
 }
 ```
 
@@ -22,11 +22,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IndexName](#cfn-dynamodb-gsi-indexname): String
   [KeySchema](#cfn-dynamodb-gsi-keyschema): 
-    - [KeySchema](aws-properties-dynamodb-keyschema.md)
+    - KeySchema
   [Projection](#cfn-dynamodb-gsi-projection): 
-    [Projection](aws-properties-dynamodb-projectionobject.md)
+    Projection
   [ProvisionedThroughput](#cfn-dynamodb-gsi-provisionedthroughput): 
-    [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
+    ProvisionedThroughput
 ```
 
 ## Properties<a name="aws-properties-dynamodb-gsi-properties"></a>
@@ -55,7 +55,7 @@ Represents attributes that are copied \(projected\) from the table into the glob
 
 `ProvisionedThroughput`  <a name="cfn-dynamodb-gsi-provisionedthroughput"></a>
 Represents the provisioned throughput settings for the specified global secondary index\.  
-For current minimum and maximum provisioned throughput values, see [Limits](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.  
+For current minimum and maximum provisioned throughput values, see [Service, Account, and Table Quotas](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the *Amazon DynamoDB Developer Guide*\.  
 *Required*: No  
 *Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

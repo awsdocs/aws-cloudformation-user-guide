@@ -41,7 +41,7 @@ The name of the CloudWatch metric\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricNamespace`  <a name="cfn-cwl-metricfilter-metrictransformation-metricnamespace"></a>
-The namespace of the CloudWatch metric\.  
+A custom namespace to contain your metric in CloudWatch\. Use namespaces to group together metrics that are similar\. For more information, see [Namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Namespace)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `255`  

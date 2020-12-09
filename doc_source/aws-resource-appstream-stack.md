@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppStream::Stack",
   "Properties" : {
-      "[AccessEndpoints](#cfn-appstream-stack-accessendpoints)" : [ [AccessEndpoint](aws-properties-appstream-stack-accessendpoint.md), ... ],
-      "[ApplicationSettings](#cfn-appstream-stack-applicationsettings)" : [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md),
+      "[AccessEndpoints](#cfn-appstream-stack-accessendpoints)" : [ AccessEndpoint, ... ],
+      "[ApplicationSettings](#cfn-appstream-stack-applicationsettings)" : ApplicationSettings,
       "[AttributesToDelete](#cfn-appstream-stack-attributestodelete)" : [ String, ... ],
       "[DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors)" : Boolean,
       "[Description](#cfn-appstream-stack-description)" : String,
@@ -22,9 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FeedbackURL](#cfn-appstream-stack-feedbackurl)" : String,
       "[Name](#cfn-appstream-stack-name)" : String,
       "[RedirectURL](#cfn-appstream-stack-redirecturl)" : String,
-      "[StorageConnectors](#cfn-appstream-stack-storageconnectors)" : [ [StorageConnector](aws-properties-appstream-stack-storageconnector.md), ... ],
+      "[StorageConnectors](#cfn-appstream-stack-storageconnectors)" : [ StorageConnector, ... ],
       "[Tags](#cfn-appstream-stack-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[UserSettings](#cfn-appstream-stack-usersettings)" : [ [UserSetting](aws-properties-appstream-stack-usersetting.md), ... ]
+      "[UserSettings](#cfn-appstream-stack-usersettings)" : [ UserSetting, ... ]
     }
 }
 ```
@@ -35,9 +35,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppStream::Stack
 Properties: 
   [AccessEndpoints](#cfn-appstream-stack-accessendpoints): 
-    - [AccessEndpoint](aws-properties-appstream-stack-accessendpoint.md)
+    - AccessEndpoint
   [ApplicationSettings](#cfn-appstream-stack-applicationsettings): 
-    [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md)
+    ApplicationSettings
   [AttributesToDelete](#cfn-appstream-stack-attributestodelete): 
     - String
   [DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors): Boolean
@@ -49,11 +49,11 @@ Properties:
   [Name](#cfn-appstream-stack-name): String
   [RedirectURL](#cfn-appstream-stack-redirecturl): String
   [StorageConnectors](#cfn-appstream-stack-storageconnectors): 
-    - [StorageConnector](aws-properties-appstream-stack-storageconnector.md)
+    - StorageConnector
   [Tags](#cfn-appstream-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserSettings](#cfn-appstream-stack-usersettings): 
-    - [UserSetting](aws-properties-appstream-stack-usersetting.md)
+    - UserSetting
 ```
 
 ## Properties<a name="aws-resource-appstream-stack-properties"></a>
@@ -144,5 +144,5 @@ The actions that are enabled or disabled for users during their streaming sessio
 *Type*: List of [UserSetting](aws-properties-appstream-stack-usersetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-stack--seealso"></a>
+## See also<a name="aws-resource-appstream-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateStack.html) in the *Amazon AppStream 2\.0 API Reference* 

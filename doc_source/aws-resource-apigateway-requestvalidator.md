@@ -57,7 +57,7 @@ Indicates whether to validate request parameters\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-requestvalidator-return-values"></a>
+## Return values<a name="aws-resource-apigateway-requestvalidator-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-requestvalidator-return-values-ref"></a>
 
@@ -145,5 +145,5 @@ Resources:
       ValidateRequestParameters: !Ref validateRequestParameters
 ```
 
-## See Also<a name="aws-resource-apigateway-requestvalidator--seealso"></a>
+## See also<a name="aws-resource-apigateway-requestvalidator--seealso"></a>
 + [requestvalidator:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/requestvalidator-create/) in the *Amazon API Gateway REST API Reference*

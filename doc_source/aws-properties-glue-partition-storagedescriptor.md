@@ -11,16 +11,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns)" : [ String, ... ],
-  "[Columns](#cfn-glue-partition-storagedescriptor-columns)" : [ [Column](aws-properties-glue-partition-column.md), ... ],
+  "[Columns](#cfn-glue-partition-storagedescriptor-columns)" : [ Column, ... ],
   "[Compressed](#cfn-glue-partition-storagedescriptor-compressed)" : Boolean,
   "[InputFormat](#cfn-glue-partition-storagedescriptor-inputformat)" : String,
   "[Location](#cfn-glue-partition-storagedescriptor-location)" : String,
   "[NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets)" : Integer,
   "[OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat)" : String,
   "[Parameters](#cfn-glue-partition-storagedescriptor-parameters)" : Json,
-  "[SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo)" : [SerdeInfo](aws-properties-glue-partition-serdeinfo.md),
-  "[SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo)" : [SkewedInfo](aws-properties-glue-partition-skewedinfo.md),
-  "[SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns)" : [ [Order](aws-properties-glue-partition-order.md), ... ],
+  "[SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo)" : SerdeInfo,
+  "[SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo)" : SkewedInfo,
+  "[SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns)" : [ Order, ... ],
   "[StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories)" : Boolean
 }
 ```
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns): 
     - String
   [Columns](#cfn-glue-partition-storagedescriptor-columns): 
-    - [Column](aws-properties-glue-partition-column.md)
+    - Column
   [Compressed](#cfn-glue-partition-storagedescriptor-compressed): Boolean
   [InputFormat](#cfn-glue-partition-storagedescriptor-inputformat): String
   [Location](#cfn-glue-partition-storagedescriptor-location): String
@@ -39,11 +39,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat): String
   [Parameters](#cfn-glue-partition-storagedescriptor-parameters): Json
   [SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo): 
-    [SerdeInfo](aws-properties-glue-partition-serdeinfo.md)
+    SerdeInfo
   [SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo): 
-    [SkewedInfo](aws-properties-glue-partition-skewedinfo.md)
+    SkewedInfo
   [SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns): 
-    - [Order](aws-properties-glue-partition-order.md)
+    - Order
   [StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories): Boolean
 ```
 

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)" : String,
   "[IdentityProvider](#cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider)" : String,
-  "[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)" : [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md),
+  "[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)" : RulesConfigurationType,
   "[Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution): String
   [IdentityProvider](#cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider): String
   [RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration): 
-    [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md)
+    RulesConfigurationType
   [Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type): String
 ```
 

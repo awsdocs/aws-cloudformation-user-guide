@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)" : [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md),
+  "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore)" : ArtifactStore,
   "[Region](#cfn-codepipeline-pipeline-artifactstoremap-region)" : String
 }
 ```
@@ -22,14 +22,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ArtifactStore](#cfn-codepipeline-pipeline-artifactstoremap-artifactstore): 
-    [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
+    ArtifactStore
   [Region](#cfn-codepipeline-pipeline-artifactstoremap-region): String
 ```
 
 ## Properties<a name="aws-properties-codepipeline-pipeline-artifactstoremap-properties"></a>
 
 `ArtifactStore`  <a name="cfn-codepipeline-pipeline-artifactstoremap-artifactstore"></a>
-Represents information about the Amazon S3 bucket where artifacts are stored for the pipeline\.  
+Represents information about the S3 bucket where artifacts are stored for the pipeline\.  
 You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot use both\. If you create a cross\-region action in your pipeline, you must use `artifactStores`\.
 *Required*: Conditional  
 *Type*: [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)  

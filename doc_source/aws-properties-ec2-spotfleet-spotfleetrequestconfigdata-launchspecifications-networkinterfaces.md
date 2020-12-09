@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DeviceIndex](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-deviceindex)" : Integer,
   "[Groups](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-groups)" : [ String, ... ],
   "[Ipv6AddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount)" : Integer,
-  "[Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)" : [ [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md), ... ],
+  "[Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses)" : [ InstanceIpv6Address, ... ],
   "[NetworkInterfaceId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid)" : String,
-  "[PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)" : [ [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md), ... ],
+  "[PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses)" : [ PrivateIpAddressSpecification, ... ],
   "[SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount)" : Integer,
   "[SubnetId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)" : String
 }
@@ -35,10 +35,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [Ipv6AddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses): 
-    - [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md)
+    - InstanceIpv6Address
   [NetworkInterfaceId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid): String
   [PrivateIpAddresses](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses): 
-    - [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-networkinterfaces-privateipaddresses.md)
+    - PrivateIpAddressSpecification
   [SecondaryPrivateIpAddressCount](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-secondaryprivateipaddresscount): Integer
   [SubnetId](#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid): String
 ```
@@ -90,6 +90,7 @@ One or more IPv6 addresses to assign to the network interface\. You cannot speci
 
 `NetworkInterfaceId`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-networkinterfaceid"></a>
 The ID of the network interface\.  
+If you are creating a Spot Fleet, omit this parameter because you can’t specify a network interface ID in a launch specification\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

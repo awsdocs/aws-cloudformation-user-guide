@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy)" : [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
+  "[PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy)" : PasswordPolicy
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy): 
-    [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
+    PasswordPolicy
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-policies-properties"></a>

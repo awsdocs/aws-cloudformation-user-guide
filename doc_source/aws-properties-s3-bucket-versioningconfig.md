@@ -26,5 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The versioning state of the bucket\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Enabled | Suspended`  
+*Allowed values*: `Enabled | Suspended`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-versioningconfig--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)

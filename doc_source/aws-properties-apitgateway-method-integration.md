@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ContentHandling](#cfn-apigateway-method-integration-contenthandling)" : String,
   "[Credentials](#cfn-apigateway-method-integration-credentials)" : String,
   "[IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod)" : String,
-  "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md), ... ],
+  "[IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses)" : [ IntegrationResponse, ... ],
   "[PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior)" : String,
   "[RequestParameters](#cfn-apigateway-method-integration-requestparameters)" : {Key : Value, ...},
   "[RequestTemplates](#cfn-apigateway-method-integration-requesttemplates)" : {Key : Value, ...},
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Credentials](#cfn-apigateway-method-integration-credentials): String
   [IntegrationHttpMethod](#cfn-apigateway-method-integration-integrationhttpmethod): String
   [IntegrationResponses](#cfn-apigateway-method-integration-integrationresponses): 
-    - [IntegrationResponse](aws-properties-apitgateway-method-integration-integrationresponse.md)
+    - IntegrationResponse
   [PassthroughBehavior](#cfn-apigateway-method-integration-passthroughbehavior): String
   [RequestParameters](#cfn-apigateway-method-integration-requestparameters): 
     Key : Value
@@ -144,11 +144,11 @@ The type of backend that your method is running, such as `HTTP` or `MOCK`\. For 
 The Uniform Resource Identifier \(URI\) for the integration\.  
 If you specify `HTTP` for the `Type` property, specify the API endpoint URL\.  
 If you specify `MOCK` for the `Type` property, don't specify this property\.  
-If you specify AWS for the Type property, specify an AWS service that follows this form: arn:aws:apigateway:*region*:*subdomain*\.*service\|service*:*path\|action*/*service\_api*\. For example, a Lambda function URI follows this form: arn:aws:apigateway:*region*:lambda:path/*path*\. The path is usually in the form /2015\-03\-31/functions/*LambdaFunctionARN*/invocations\. For more information, see the `uri` property of the [Integration](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/) resource in the Amazon API Gateway REST API Reference\.  
+If you specify `AWS` for the `Type` property, specify an AWS service that follows this form: arn:aws:apigateway:*region*:*subdomain*\.*service\|service*:*path\|action*/*service\_api*\. For example, a Lambda function URI follows this form: arn:aws:apigateway:*region*:lambda:path/*path*\. The path is usually in the form /2015\-03\-31/functions/*LambdaFunctionARN*/invocations\. For more information, see the `uri` property of the [Integration](https://docs.aws.amazon.com/apigateway/api-reference/resource/integration/) resource in the Amazon API Gateway REST API Reference\.  
 If you specified `HTTP` or `AWS` for the `Type` property, you must specify this property\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
+## See also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*

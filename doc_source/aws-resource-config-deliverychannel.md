@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::DeliveryChannel",
   "Properties" : {
-      "[ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties)" : [ConfigSnapshotDeliveryProperties](aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.md),
+      "[ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties)" : ConfigSnapshotDeliveryProperties,
       "[Name](#cfn-config-deliverychannel-name)" : String,
       "[S3BucketName](#cfn-config-deliverychannel-s3bucketname)" : String,
       "[S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix)" : String,
@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::DeliveryChannel
 Properties: 
   [ConfigSnapshotDeliveryProperties](#cfn-config-deliverychannel-configsnapshotdeliveryproperties): 
-    [ConfigSnapshotDeliveryProperties](aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.md)
+    ConfigSnapshotDeliveryProperties
   [Name](#cfn-config-deliverychannel-name): String
   [S3BucketName](#cfn-config-deliverychannel-s3bucketname): String
   [S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix): String
@@ -85,7 +85,7 @@ If you choose a topic from another account, the topic must have policies that gr
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-deliverychannel-return-values"></a>
+## Return values<a name="aws-resource-config-deliverychannel-return-values"></a>
 
 ### Ref<a name="aws-resource-config-deliverychannel-return-values-ref"></a>
 

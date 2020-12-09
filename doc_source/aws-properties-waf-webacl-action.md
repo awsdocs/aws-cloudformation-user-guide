@@ -33,5 +33,5 @@ Specifies how you want AWS WAF to respond to requests that match the settings in
 +  `COUNT`: AWS WAF increments a counter of the requests that match all of the conditions in the rule\. AWS WAF then continues to inspect the web request based on the remaining rules in the web ACL\. You can't specify `COUNT` for the default action for a `WebACL`\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ALLOW | BLOCK | COUNT`  
+*Allowed values*: `ALLOW | BLOCK | COUNT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

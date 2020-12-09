@@ -1,4 +1,4 @@
-# Continue Rolling Back an Update<a name="using-cfn-updating-stacks-continueupdaterollback"></a>
+# Continue rolling back an update<a name="using-cfn-updating-stacks-continueupdaterollback"></a>
 
 A stack goes into the `UPDATE_ROLLBACK_FAILED` state when AWS CloudFormation cannot roll back all changes during an update\. For example, you might have a stack that begins to roll back to an old database instance that was deleted outside of AWS CloudFormation\. Because AWS CloudFormation doesn't know that the database was deleted, it assumes that the database instance still exists and attempts to roll back to it, causing the update rollback to fail\.
 

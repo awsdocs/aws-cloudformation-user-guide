@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The edition of Amazon Managed Blockchain that the network uses\. Valid values are `standard` and `starter`\. For more information, see   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `STANDARD | STARTER`  
+*Allowed values*: `STANDARD | STARTER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

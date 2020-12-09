@@ -1,4 +1,4 @@
-# Uploading Local Artifacts to an S3 Bucket<a name="using-cfn-cli-package"></a>
+# Uploading local artifacts to an S3 bucket<a name="using-cfn-cli-package"></a>
 
 For some resource properties that require an Amazon S3 location \(a bucket name and filename\), you can specify local references instead\. For example, you might specify the S3 location of your AWS Lambda function's source code or an Amazon API Gateway REST API's OpenAPI \(formerly Swagger\) file\. Instead of manually uploading the files to an S3 bucket and then adding the location to your template, you can specify local references, called local artifacts, in your template and then use the `package` command to quickly upload them\. A local artifact is a path to a file or folder that the `package` command uploads to Amazon S3\. For example, an artifact can be a local path to your AWS Lambda function's source code or an Amazon API Gateway REST API's OpenAPI file\.
 
@@ -10,7 +10,7 @@ You can use local artifacts only for resource properties that the `package` comm
 
 The following template specifies the local artifact for a Lambda function's source code\. The source code is stored in the user's `/home/user/code/lambdafunction` folder\.
 
-**Original Template**
+**Original template**
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -26,7 +26,7 @@ Resources:
 
 The following command creates a \.zip file containing the function's source code folder, and then uploads the \.zip file to the root folder of the `my-bucket` bucket\.
 
-**Package Command**
+**Package command**
 
 ```
 aws cloudformation package --template /path_to_template/template.json --s3-bucket mybucket --output json > packaged-template.json
@@ -34,7 +34,7 @@ aws cloudformation package --template /path_to_template/template.json --s3-bucke
 
 The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the S3 location, as shown in the following example:
 
-**Resulting Template**
+**Resulting template**
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'

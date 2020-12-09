@@ -34,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-basepathmapping-properties"></a>
 
 `BasePath`  <a name="cfn-apigateway-basepathmapping-basepath"></a>
-The base path name that callers of the API must provide in the URL after the domain name\. If you specify this property, it can't be an empty string\.  
+The base path name that callers of the API must provide in the URL after the domain name\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -46,7 +46,7 @@ The `DomainName` of an [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-basepathmapping-restapiid"></a>
-The name of the API\.  
+The ID of the API\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,5 +57,5 @@ The name of the API's stage\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-apigateway-basepathmapping--seealso"></a>
+## See also<a name="aws-resource-apigateway-basepathmapping--seealso"></a>
 + [basepathmapping:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/basepathmapping-create/) in the *Amazon API Gateway REST API Reference*

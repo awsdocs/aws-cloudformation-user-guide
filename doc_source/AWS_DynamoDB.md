@@ -1,4 +1,4 @@
-# DynamoDB Resource Type Reference<a name="AWS_DynamoDB"></a>
+# DynamoDB resource type reference<a name="AWS_DynamoDB"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)

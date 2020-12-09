@@ -37,7 +37,7 @@ The name of the receipt rule set that you want to reorder\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ses-receiptruleset-return-values"></a>
+## Return values<a name="aws-resource-ses-receiptruleset-return-values"></a>
 
 ### Ref<a name="aws-resource-ses-receiptruleset-return-values-ref"></a>
 
@@ -79,13 +79,13 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRuleSet Sample Template'
+Description: AWS SES ReceiptRuleSet Sample Template
 Parameters:
   ReceiptRuleSetName:
     Type: String
 Resources:
   ReceiptRuleSet:
-    Type: AWS::SES::ReceiptRuleSet
+    Type: 'AWS::SES::ReceiptRuleSet'
     Properties:
       RuleSetName: !Ref ReceiptRuleSetName
 ```

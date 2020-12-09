@@ -69,7 +69,7 @@ This parameter must be set to `true` when specifying a value for the `EngineVers
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-dms-replicationinstance-autominorversionupgrade"></a>
-Indicates whether minor engine upgrades will be applied automatically to the replication instance during the maintenance window\. This parameter defaults to `true`\.  
+A value that indicates whether minor engine upgrades are applied automatically to the replication instance during the maintenance window\. This parameter defaults to `true`\.  
 Default: `true`   
 *Required*: No  
 *Type*: Boolean  
@@ -80,10 +80,11 @@ The Availability Zone that the replication instance will be created in\.
 The default value is a random, system\-chosen Availability Zone in the endpoint's AWS Region, for example: `us-east-1d`   
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-dms-replicationinstance-engineversion"></a>
 The engine version number of the replication instance\.  
+If an engine version number is not specified when a replication instance is created, the default is the latest engine version available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,7 +98,7 @@ AWS KMS creates the default encryption key for your AWS account\. Your AWS accou
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MultiAZ`  <a name="cfn-dms-replicationinstance-multiaz"></a>
- Specifies whether the replication instance is a Multi\-AZ deployment\. You cannot set the `AvailabilityZone` parameter if the Multi\-AZ parameter is set to `true`\.   
+ Specifies whether the replication instance is a Multi\-AZ deployment\. You can't set the `AvailabilityZone` parameter if the Multi\-AZ parameter is set to `true`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,8 +120,8 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReplicationInstanceClass`  <a name="cfn-dms-replicationinstance-replicationinstanceclass"></a>
-The compute and memory capacity of the replication instance as specified by the replication instance class\.  
- Valid Values: `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge `   
+The compute and memory capacity of the replication instance as defined for the specified replication instance class\. For example to specify the instance class dms\.c4\.large, set this parameter to `"dms.c4.large"`\.  
+For more information on the settings and capacities for the available replication instance classes, see [ Selecting the right AWS DMS replication instance for your migration](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.InDepth)\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -128,9 +129,9 @@ The compute and memory capacity of the replication instance as specified by the 
 `ReplicationInstanceIdentifier`  <a name="cfn-dms-replicationinstance-replicationinstanceidentifier"></a>
 The replication instance identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ Must contain from 1 to 63 alphanumeric characters or hyphens\.
++ Must contain 1\-63 alphanumeric characters or hyphens\.
 + First character must be a letter\.
-+ Cannot end with a hyphen or contain two consecutive hyphens\.
++ Can't end with a hyphen or contain two consecutive hyphens\.
 Example: `myrepinstance`   
 *Required*: No  
 *Type*: String  
@@ -154,7 +155,7 @@ One or more tags to be assigned to the replication instance\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dms-replicationinstance-return-values"></a>
+## Return values<a name="aws-resource-dms-replicationinstance-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationinstance-return-values-ref"></a>
 
@@ -207,6 +208,6 @@ Resources:
     Type: "AWS::DMS::ReplicationInstance"
 ```
 
-## See Also<a name="aws-resource-dms-replicationinstance--seealso"></a>
+## See also<a name="aws-resource-dms-replicationinstance--seealso"></a>
 +  [CreateReplicationInstance](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 

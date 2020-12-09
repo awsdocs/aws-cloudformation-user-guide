@@ -11,19 +11,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Aliases](#cfn-cloudfront-distribution-distributionconfig-aliases)" : [ String, ... ],
-  "[CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors)" : [ [CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md), ... ],
+  "[CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors)" : [ CacheBehavior, ... ],
   "[Comment](#cfn-cloudfront-distribution-distributionconfig-comment)" : String,
-  "[CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses)" : [ [CustomErrorResponse](aws-properties-cloudfront-distribution-customerrorresponse.md), ... ],
-  "[DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior)" : [DefaultCacheBehavior](aws-properties-cloudfront-distribution-defaultcachebehavior.md),
+  "[CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses)" : [ CustomErrorResponse, ... ],
+  "[DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior)" : DefaultCacheBehavior,
   "[DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject)" : String,
   "[Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled)" : Boolean,
   "[HttpVersion](#cfn-cloudfront-distribution-distributionconfig-httpversion)" : String,
   "[IPV6Enabled](#cfn-cloudfront-distribution-distributionconfig-ipv6enabled)" : Boolean,
-  "[Logging](#cfn-cloudfront-distribution-distributionconfig-logging)" : [Logging](aws-properties-cloudfront-distribution-logging.md),
-  "[Origins](#cfn-cloudfront-distribution-distributionconfig-origins)" : [ [Origin](aws-properties-cloudfront-distribution-origin.md), ... ],
+  "[Logging](#cfn-cloudfront-distribution-distributionconfig-logging)" : Logging,
+  "[OriginGroups](#cfn-cloudfront-distribution-distributionconfig-origingroups)" : OriginGroups,
+  "[Origins](#cfn-cloudfront-distribution-distributionconfig-origins)" : [ Origin, ... ],
   "[PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass)" : String,
-  "[Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions)" : [Restrictions](aws-properties-cloudfront-distribution-restrictions.md),
-  "[ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate)" : [ViewerCertificate](aws-properties-cloudfront-distribution-viewercertificate.md),
+  "[Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions)" : Restrictions,
+  "[ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate)" : ViewerCertificate,
   "[WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid)" : String
 }
 ```
@@ -34,25 +35,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Aliases](#cfn-cloudfront-distribution-distributionconfig-aliases): 
     - String
   [CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors): 
-    - [CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md)
+    - CacheBehavior
   [Comment](#cfn-cloudfront-distribution-distributionconfig-comment): String
   [CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses): 
-    - [CustomErrorResponse](aws-properties-cloudfront-distribution-customerrorresponse.md)
+    - CustomErrorResponse
   [DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior): 
-    [DefaultCacheBehavior](aws-properties-cloudfront-distribution-defaultcachebehavior.md)
+    DefaultCacheBehavior
   [DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject): String
   [Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled): Boolean
   [HttpVersion](#cfn-cloudfront-distribution-distributionconfig-httpversion): String
   [IPV6Enabled](#cfn-cloudfront-distribution-distributionconfig-ipv6enabled): Boolean
   [Logging](#cfn-cloudfront-distribution-distributionconfig-logging): 
-    [Logging](aws-properties-cloudfront-distribution-logging.md)
+    Logging
+  [OriginGroups](#cfn-cloudfront-distribution-distributionconfig-origingroups): 
+    OriginGroups
   [Origins](#cfn-cloudfront-distribution-distributionconfig-origins): 
-    - [Origin](aws-properties-cloudfront-distribution-origin.md)
+    - Origin
   [PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass): String
   [Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions): 
-    [Restrictions](aws-properties-cloudfront-distribution-restrictions.md)
+    Restrictions
   [ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate): 
-    [ViewerCertificate](aws-properties-cloudfront-distribution-viewercertificate.md)
+    ViewerCertificate
   [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid): String
 ```
 
@@ -112,12 +115,12 @@ From this field, you can enable or disable the selected distribution\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpVersion`  <a name="cfn-cloudfront-distribution-distributionconfig-httpversion"></a>
-\(Optional\) Specify the maximum HTTP version that you want viewers to use to communicate with CloudFront\. The default value for new web distributions is http2\. Viewers that don't support HTTP/2 automatically use an earlier HTTP version\.  
-For viewers and CloudFront to use HTTP/2, viewers must support TLS 1\.2 or later, and must support Server Name Identification \(SNI\)\.  
-In general, configuring CloudFront to communicate with viewers using HTTP/2 reduces latency\. You can improve performance by optimizing for HTTP/2\. For more information, do an Internet search for "http/2 optimization\."   
+\(Optional\) Specify the maximum HTTP version that you want viewers to use to communicate with CloudFront\. The default value for new web distributions is `http1.1`\.  
+For viewers and CloudFront to use HTTP/2, viewers must support TLS 1\.2 or later, and must support server name identification \(SNI\)\.  
+In general, configuring CloudFront to communicate with viewers using HTTP/2 reduces latency\. You can improve performance by optimizing for HTTP/2\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `http1.1 | http2`  
+*Allowed values*: `http1.1 | http2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IPV6Enabled`  <a name="cfn-cloudfront-distribution-distributionconfig-ipv6enabled"></a>
@@ -139,6 +142,12 @@ For more information about logging, see [Access Logs](https://docs.aws.amazon.co
 *Type*: [Logging](aws-properties-cloudfront-distribution-logging.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OriginGroups`  <a name="cfn-cloudfront-distribution-distributionconfig-origingroups"></a>
+ A complex type that contains information about origin groups for this distribution\.  
+*Required*: No  
+*Type*: [OriginGroups](aws-properties-cloudfront-distribution-origingroups.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Origins`  <a name="cfn-cloudfront-distribution-distributionconfig-origins"></a>
 A complex type that contains information about origins for this distribution\.   
 *Required*: No  
@@ -148,10 +157,10 @@ A complex type that contains information about origins for this distribution\.
 `PriceClass`  <a name="cfn-cloudfront-distribution-distributionconfig-priceclass"></a>
 The price class that corresponds with the maximum price that you want to pay for CloudFront service\. If you specify `PriceClass_All`, CloudFront responds to requests for your objects from all CloudFront edge locations\.  
 If you specify a price class other than `PriceClass_All`, CloudFront serves your objects from the CloudFront edge location that has the lowest latency among the edge locations in your price class\. Viewers who are in or near regions that are excluded from your specified price class may encounter slower performance\.  
-For more information about price classes, see [Choosing the Price Class for a CloudFront Distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PriceClass.html) in the *Amazon CloudFront Developer Guide*\. For information about CloudFront pricing, including how price classes \(such as Price Class 100\) map to CloudFront regions, see [Amazon CloudFront Pricing](http://aws.amazon.com/cloudfront/pricing/)\. For price class information, scroll down to see the table at the bottom of the page\.  
+For more information about price classes, see [Choosing the Price Class for a CloudFront Distribution](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PriceClass.html) in the *Amazon CloudFront Developer Guide*\. For information about CloudFront pricing, including how price classes \(such as Price Class 100\) map to CloudFront regions, see [Amazon CloudFront Pricing](http://aws.amazon.com/cloudfront/pricing/)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  
+*Allowed values*: `PriceClass_100 | PriceClass_200 | PriceClass_All`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Restrictions`  <a name="cfn-cloudfront-distribution-distributionconfig-restrictions"></a>
@@ -161,7 +170,7 @@ A complex type that identifies ways in which you want to restrict distribution o
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewerCertificate`  <a name="cfn-cloudfront-distribution-distributionconfig-viewercertificate"></a>
-A complex type that specifies whether you want viewers to use HTTP or HTTPS to request your objects, whether you're using an alternate domain name with HTTPS, and if so, if you're using AWS Certificate Manager \(ACM\) or a third\-party certificate authority\.  
+A complex type that determines the distribution’s SSL/TLS configuration for communicating with viewers\.  
 *Required*: No  
 *Type*: [ViewerCertificate](aws-properties-cloudfront-distribution-viewercertificate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,5 +182,5 @@ AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS r
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
 +  [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DistributionConfig.html) in the *Amazon CloudFront API Reference* 

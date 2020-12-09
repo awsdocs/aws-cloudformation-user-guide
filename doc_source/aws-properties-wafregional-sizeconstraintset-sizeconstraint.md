@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)" : String,
-  "[FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)" : [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)" : FieldToMatch,
   "[Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size)" : Integer,
   "[TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)" : String
 }
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator): String
   [FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)
+    FieldToMatch
   [Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size): Integer
   [TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation): String
 ```
@@ -43,7 +43,7 @@ The type of comparison you want AWS WAF to perform\. AWS WAF uses this in combin
  **GT**: Used to test if the `Size` is strictly greater than the size of the `FieldToMatch`   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EQ | GE | GT | LE | LT | NE`  
+*Allowed values*: `EQ | GE | GT | LE | LT | NE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch"></a>
@@ -61,9 +61,9 @@ If you specify `URI` for the value of `Type`, the / in the URI counts as one cha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformation`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation"></a>
-Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `FieldToMatch` before inspecting it for a match\.  
+Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `FieldToMatch` before inspecting a request for a match\.  
 You can only specify a single type of TextTransformation\.  
-Note that if you choose `BODY` for the value of `Type`, you must choose `NONE` for `TextTransformation` because CloudFront forwards only the first 8192 bytes for inspection\.   
+Note that if you choose `BODY` for the value of `Type`, you must choose `NONE` for `TextTransformation` because the API Gateway API or Application Load Balancer forward only the first 8192 bytes for inspection\.   
  **NONE**   
 Specify `NONE` if you don't want to perform any text transformations\.  
  **CMD\_LINE**   
@@ -96,5 +96,5 @@ Use this option to convert uppercase letters \(A\-Z\) to lowercase \(a\-z\)\.
 Use this option to decode a URL\-encoded value\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

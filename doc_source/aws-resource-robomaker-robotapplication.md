@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid)" : String,
       "[Name](#cfn-robomaker-robotapplication-name)" : String,
-      "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md),
-      "[Sources](#cfn-robomaker-robotapplication-sources)" : [ [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md), ... ],
+      "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
+      "[Sources](#cfn-robomaker-robotapplication-sources)" : [ SourceConfig, ... ],
       "[Tags](#cfn-robomaker-robotapplication-tags)" : Json
     }
 }
@@ -29,9 +29,9 @@ Properties:
   [CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid): String
   [Name](#cfn-robomaker-robotapplication-name): String
   [RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite): 
-    [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)
+    RobotSoftwareSuite
   [Sources](#cfn-robomaker-robotapplication-sources): 
-    - [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)
+    - SourceConfig
   [Tags](#cfn-robomaker-robotapplication-tags): Json
 ```
 
@@ -70,7 +70,7 @@ A map that contains tag keys and tag values that are attached to the robot appli
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
+## Return values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robotapplication-return-values-ref"></a>
 

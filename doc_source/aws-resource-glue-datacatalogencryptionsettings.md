@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::DataCatalogEncryptionSettings",
   "Properties" : {
       "[CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid)" : String,
-      "[DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)" : [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)
+      "[DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings)" : DataCatalogEncryptionSettings
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::Glue::DataCatalogEncryptionSettings
 Properties: 
   [CatalogId](#cfn-glue-datacatalogencryptionsettings-catalogid): String
   [DataCatalogEncryptionSettings](#cfn-glue-datacatalogencryptionsettings-datacatalogencryptionsettings): 
-    [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)
+    DataCatalogEncryptionSettings
 ```
 
 ## Properties<a name="aws-resource-glue-datacatalogencryptionsettings-properties"></a>
@@ -42,6 +42,6 @@ Contains configuration information for maintaining Data Catalog security\.
 *Type*: [DataCatalogEncryptionSettings](aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-datacatalogencryptionsettings-return-values"></a>
+## Return values<a name="aws-resource-glue-datacatalogencryptionsettings-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-datacatalogencryptionsettings-return-values-ref"></a>

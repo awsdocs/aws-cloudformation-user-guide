@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActionName](#cfn-iotanalytics-dataset-action-actionname)" : String,
-  "[ContainerAction](#cfn-iotanalytics-dataset-action-containeraction)" : [ContainerAction](aws-properties-iotanalytics-dataset-containeraction.md),
-  "[QueryAction](#cfn-iotanalytics-dataset-action-queryaction)" : [QueryAction](aws-properties-iotanalytics-dataset-queryaction.md)
+  "[ContainerAction](#cfn-iotanalytics-dataset-action-containeraction)" : ContainerAction,
+  "[QueryAction](#cfn-iotanalytics-dataset-action-queryaction)" : QueryAction
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ActionName](#cfn-iotanalytics-dataset-action-actionname): String
   [ContainerAction](#cfn-iotanalytics-dataset-action-containeraction): 
-    [ContainerAction](aws-properties-iotanalytics-dataset-containeraction.md)
+    ContainerAction
   [QueryAction](#cfn-iotanalytics-dataset-action-queryaction): 
-    [QueryAction](aws-properties-iotanalytics-dataset-queryaction.md)
+    QueryAction
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-action-properties"></a>
