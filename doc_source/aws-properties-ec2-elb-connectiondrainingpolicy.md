@@ -1,35 +1,41 @@
-# Elastic Load Balancing ConnectionDrainingPolicy<a name="aws-properties-ec2-elb-connectiondrainingpolicy"></a>
+# AWS::ElasticLoadBalancing::LoadBalancer ConnectionDrainingPolicy<a name="aws-properties-ec2-elb-connectiondrainingpolicy"></a>
 
-The `ConnectionDrainingPolicy` property describes how deregistered or unhealthy instances handle in\-flight requests for the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\. Connection draining ensures that the load balancer completes serving all in\-flight requests made to a registered instance when the instance is deregistered or becomes unhealthy\. Without connection draining, the load balancer closes connections to deregistered or unhealthy instances, and any in\-flight requests are not completed\.
+Specifies the connection draining settings for your Classic Load Balancer\.
 
-For more information about connection draining and default values, see [Enable or Disable Connection Draining for Your Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/config-conn-drain.html) in the *Elastic Load Balancing User Guide*\.
+## Syntax<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax"></a>
 
-## Syntax<a name="w4ab1c21c10d126c14c25b7"></a>
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax.json"></a>
 
 ```
 {
-   "[Enabled](#cfn-elb-connectiondrainingpolicy-enabled)" : Boolean,
-   "[Timeout](#cfn-elb-connectiondrainingpolicy-timeout)" : Integer
+  "[Enabled](#cfn-elb-connectiondrainingpolicy-enabled)" : Boolean,
+  "[Timeout](#cfn-elb-connectiondrainingpolicy-timeout)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-ec2-elb-connectiondrainingpolicy-syntax.yaml"></a>
 
 ```
-[Enabled](#cfn-elb-connectiondrainingpolicy-enabled): Boolean
-[Timeout](#cfn-elb-connectiondrainingpolicy-timeout): Integer
+  [Enabled](#cfn-elb-connectiondrainingpolicy-enabled): Boolean
+  [Timeout](#cfn-elb-connectiondrainingpolicy-timeout): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d126c14c25b9"></a>
+## Properties<a name="aws-properties-ec2-elb-connectiondrainingpolicy-properties"></a>
 
 `Enabled`  <a name="cfn-elb-connectiondrainingpolicy-enabled"></a>
-Whether or not connection draining is enabled for the load balancer\.  
+Specifies whether connection draining is enabled for the load balancer\.  
 *Required*: Yes  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-elb-connectiondrainingpolicy-timeout"></a>
-The time in seconds after the load balancer closes all connections to a deregistered or unhealthy instance\.  
+The maximum time, in seconds, to keep the existing connections open before deregistering the instances\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-ec2-elb-connectiondrainingpolicy--seealso"></a>
++  [ModifyLoadBalancerAttributes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ModifyLoadBalancerAttributes.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
++  [Connection Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html) in the *User Guide for Classic Load Balancers* 

@@ -1,8 +1,10 @@
-# AWS OpsWorks Layer LifeCycleConfiguration ShutdownEventConfiguration<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration"></a>
+# AWS::OpsWorks::Layer ShutdownEventConfiguration<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration"></a>
 
-`ShutdownEventConfiguration` is a property of the [AWS OpsWorks Layer LifeCycleConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration.md) property that specifies the shutdown event configuration for a lifecycle event\.
+The Shutdown event configuration\.
 
-## Syntax<a name="w4ab1c21c10d168c29c33b5"></a>
+## Syntax<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-syntax.json"></a>
 
@@ -16,18 +18,20 @@
 ### YAML<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-syntax.yaml"></a>
 
 ```
-[DelayUntilElbConnectionsDrained](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained): Boolean
-[ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout): Integer
+  [DelayUntilElbConnectionsDrained](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained): Boolean
+  [ExecutionTimeout](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout): Integer
 ```
 
-## Properties<a name="w4ab1c21c10d168c29c33b7"></a>
+## Properties<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration-properties"></a>
 
 `DelayUntilElbConnectionsDrained`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-delayuntilelbconnectionsdrained"></a>
-Indicates whether to wait for connections to drain from the Elastic Load Balancing load balancers\.  
+Whether to enable Elastic Load Balancing connection draining\. For more information, see [Connection Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)   
 *Required*: No  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionTimeout`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout"></a>
-The time, in seconds, that AWS OpsWorks waits after a shutdown event has been triggered before shutting down an instance\.  
+The time, in seconds, that AWS OpsWorks Stacks will wait after triggering a Shutdown event before shutting down an instance\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

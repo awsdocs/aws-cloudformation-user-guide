@@ -1,41 +1,51 @@
-# Amazon DynamoDB Table KeySchema<a name="aws-properties-dynamodb-keyschema"></a>
+# AWS::DynamoDB::Table KeySchema<a name="aws-properties-dynamodb-keyschema"></a>
 
-Describes a primary key for the [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md) resource or a key schema for an index\. Each element is composed of an `AttributeName` and `KeyType`\.
+Represents *a single element* of a key schema\. A key schema specifies the attributes that make up the primary key of a table, or the key attributes of an index\.
 
-For the primary key of an Amazon DynamoDB table that consists of only a hash attribute, specify one element with a `KeyType` of `HASH`\. For the primary key of an Amazon DynamoDB table that consists of a hash and range attributes, specify two elements: one with a `KeyType` of `HASH` and one with a `KeyType` of `RANGE`\.
+A `KeySchemaElement` represents exactly one attribute of the primary key\. For example, a simple primary key would be represented by one `KeySchemaElement` \(for the partition key\)\. A composite primary key would require one `KeySchemaElement` for the partition key, and another `KeySchemaElement` for the sort key\.
 
-For a complete discussion of DynamoDB primary keys, see [Primary Key](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DataModel.html#DataModelPrimaryKey) in the *Amazon DynamoDB Developer Guide*\.
+A `KeySchemaElement` must be a scalar, top\-level attribute \(not a nested attribute\)\. The data type must be one of String, Number, or Binary\. The attribute cannot be nested within a List or a Map\.
 
-## Syntax<a name="w4ab1c21c10c99c14c32b9"></a>
+## Syntax<a name="aws-properties-dynamodb-keyschema-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-dynamodb-keyschema-syntax.json"></a>
 
 ```
 {
-  "[AttributeName](#cfn-dynamodb-keyschema-attributename)" : String,
-  "[KeyType](#cfn-dynamodb-keyschema-keytype)" : "HASH or RANGE"
+  "[AttributeName](#aws-properties-dynamodb-keyschema-attributename)" : String,
+  "[KeyType](#aws-properties-dynamodb-keyschema-keytype)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-dynamodb-keyschema-syntax.yaml"></a>
 
 ```
-[AttributeName](#cfn-dynamodb-keyschema-attributename): String
-[KeyType](#cfn-dynamodb-keyschema-keytype): HASH or RANGE
+  [AttributeName](#aws-properties-dynamodb-keyschema-attributename): String
+  [KeyType](#aws-properties-dynamodb-keyschema-keytype): String
 ```
 
-## Properties<a name="w4ab1c21c10c99c14c32c11"></a>
+## Properties<a name="aws-properties-dynamodb-keyschema-properties"></a>
 
-`AttributeName`  <a name="cfn-dynamodb-keyschema-attributename"></a>
-The attribute name that is used as the primary key for this table\. Primary key element names can be 1 – 255 characters long and have no character restrictions\.  
+`AttributeName`  <a name="aws-properties-dynamodb-keyschema-attributename"></a>
+The name of a key attribute\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`KeyType`  <a name="cfn-dynamodb-keyschema-keytype"></a>
-Represents the attribute data, consisting of the data type and the attribute value itself\. You can specify `HASH` or `RANGE`\.  
+`KeyType`  <a name="aws-properties-dynamodb-keyschema-keytype"></a>
+The role that this key attribute will assume:  
++  `HASH` \- partition key
++  `RANGE` \- sort key
+The partition key of an item is also known as its *hash attribute*\. The term "hash attribute" derives from DynamoDB's usage of an internal hash function to evenly distribute data items across partitions, based on their partition key values\.  
+The sort key of an item is also known as its *range attribute*\. The term "range attribute" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value\.
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="w4ab1c21c10c99c14c32c13"></a>
+## See also<a name="aws-properties-dynamodb-keyschema--seealso"></a>
 
-For an example of a declared key schema, see [AWS::DynamoDB::Table](aws-resource-dynamodb-table.md)\.
+For an example of a declared key schema, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\. 

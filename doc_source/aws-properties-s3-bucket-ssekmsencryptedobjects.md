@@ -1,8 +1,6 @@
-# Amazon S3 Bucket SseKmsEncryptedObjects<a name="aws-properties-s3-bucket-ssekmsencryptedobjects"></a>
+# AWS::S3::Bucket SseKmsEncryptedObjects<a name="aws-properties-s3-bucket-ssekmsencryptedobjects"></a>
 
-<a name="aws-properties-s3-bucket-ssekmsencryptedobjects-description"></a>The `SseKmsEncryptedObjects` property type specifies the status of whether Amazon S3 replicates objects created with server\-side encryption using an AWS KMS\-managed key\.
-
-<a name="aws-properties-s3-bucket-ssekmsencryptedobjects-inheritance"></a>`SseKmsEncryptedObjects` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
+A container for filter information for the selection of S3 objects encrypted with AWS KMS\.
 
 ## Syntax<a name="aws-properties-s3-bucket-ssekmsencryptedobjects-syntax"></a>
 
@@ -19,13 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-ssekmsencryptedobjects-syntax.yaml"></a>
 
 ```
-[Status](#cfn-s3-bucket-ssekmsencryptedobjects-status): String
+  [Status](#cfn-s3-bucket-ssekmsencryptedobjects-status): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-ssekmsencryptedobjects-properties"></a>
 
 `Status`  <a name="cfn-s3-bucket-ssekmsencryptedobjects-status"></a>
-Specifies whether Amazon S3 replicates objects created with server\-side encryption using an AWS KMS\-managed key\. Valid values include `Enabled` and `Disabled`\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies whether Amazon S3 replicates objects created with server\-side encryption using a customer master key \(CMK\) stored in AWS Key Management Service\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed values*: `Disabled | Enabled`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

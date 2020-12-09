@@ -1,14 +1,9 @@
 # AWS::AmazonMQ::Configuration<a name="aws-resource-amazonmq-configuration"></a>
 
-A *configuration* contains all of the settings for your ActiveMQ broker, in XML format\.
+Creates a new configuration for the specified configuration name\. Amazon MQ uses the default configuration \(the engine type and version\)\.
 
-The `AWS::AmazonMQ::Configuration` resource lets you create Amazon MQ configurations, add configuration changes or modify users, and return information about the specified configuration\. For more information, see [Configuration](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/configuration.html) and [Amazon MQ Broker Configuration Parameters](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-broker-configuration-parameters.html) in the *Amazon MQ Developer Guide*\.
-
-**Topics**
-+ [Syntax](#aws-resource-amazonmq-configuration-syntax)
-+ [Properties](#aws-resource-amazonmq-configuration-properties)
-+ [Return Values](#aws-resource-amazonmq-configuration-returnvalues)
-+ [Examples](#aws-resource-amazonmq-configuration-examples)
+**Note**  
+Does not apply to RabbitMQ brokers\.
 
 ## Syntax<a name="aws-resource-amazonmq-configuration-syntax"></a>
 
@@ -20,25 +15,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Configuration",
   "Properties" : {
-    "[Data](#cfn-amazonmq-configuration-data)" : String,
-    "[Description](#cfn-amazonmq-configuration-description)" : String,
-    "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
-    "[EngineVersion](#cfn-amazonmq-configuration-engineversion)" : String,
-    "[Name](#cfn-amazonmq-configuration-name)" : String
-  }
+      "[Data](#cfn-amazonmq-configuration-data)" : String,
+      "[Description](#cfn-amazonmq-configuration-description)" : String,
+      "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
+      "[EngineVersion](#cfn-amazonmq-configuration-engineversion)" : String,
+      "[Name](#cfn-amazonmq-configuration-name)" : String,
+      "[Tags](#cfn-amazonmq-configuration-tags)" : [ TagsEntry, ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-amazonmq-configuration-syntax.yaml"></a>
 
 ```
-Type: "AWS::AmazonMQ::Configuration"
-Properties:
+Type: AWS::AmazonMQ::Configuration
+Properties: 
   [Data](#cfn-amazonmq-configuration-data): String
   [Description](#cfn-amazonmq-configuration-description): String
   [EngineType](#cfn-amazonmq-configuration-enginetype): String
   [EngineVersion](#cfn-amazonmq-configuration-engineversion): String
   [Name](#cfn-amazonmq-configuration-name): String
+  [Tags](#cfn-amazonmq-configuration-tags): 
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>
@@ -47,77 +45,75 @@ Properties:
 The base64\-encoded XML configuration\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-amazonmq-configuration-description"></a>
 The description of the configuration\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineType`  <a name="cfn-amazonmq-configuration-enginetype"></a>
-The type of broker engine\.  
-Currently, Amazon MQ supports only `ACTIVEMQ`\.
+The type of broker engine\. Note: Currently, Amazon MQ only supports ACTIVEMQ for creating and editing broker configurations\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-amazonmq-configuration-engineversion"></a>
-The version of the broker engine\.  
-For a list of supported engine versions, see: [Broker Engine](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)\.
+The version of the broker engine\. For a list of supported engine versions, see https://docs\.aws\.amazon\.com/amazon\-mq/latest/developer\-guide/broker\-engine\.html  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-amazonmq-configuration-name"></a>
-The name of the configuration\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(`- . _ ~`\)\. This value must be 1\-150 characters long\.  
+The name of the configuration\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 1\-150 characters long\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-amazonmq-configuration-returnvalues"></a>
+`Tags`  <a name="cfn-amazonmq-configuration-tags"></a>
+Create tags when creating the configuration\.  
+*Required*: No  
+*Type*: List of [TagsEntry](aws-properties-amazonmq-configuration-tagsentry.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-amazonmq-configuration-ref"></a>
+## Return values<a name="aws-resource-amazonmq-configuration-return-values"></a>
 
-When you pass the logical ID of an `AWS::AmazonMQ::Configuration` resource to the intrinsic `Ref` function, the function returns the Amazon MQ configuration ID\. For example: 
+### Ref<a name="aws-resource-amazonmq-configuration-return-values-ref"></a>
 
-```
-c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
-```
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon MQ configuration ID\. For example: 
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+ `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-### Fn::GetAtt<a name="aws-resource-amazonmq-configuration-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-amazonmq-configuration-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`Arn`  
-The Amazon Resource Name \(ARN\) of the Amazon MQ configuration\.   
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-```
-arn:aws:mq:us-east-2:123456789012:configuration:MyConfigurationDevelopment:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9
-```
+#### <a name="aws-resource-amazonmq-configuration-return-values-fn--getatt-fn--getatt"></a>
 
-`Revision`  
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the Amazon MQ configuration\.  
+ `arn:aws:mq:us-east-2:123456789012:configuration:MyConfigurationDevelopment:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the Amazon MQ configuration\.  
+ `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
+
+`Revision`  <a name="Revision-fn::getatt"></a>
 The revision number of the configuration\.  
+ `1` 
 
-```
-1
-```
+## Examples<a name="aws-resource-amazonmq-configuration--examples"></a>
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+### Amazon MQ Configuration<a name="aws-resource-amazonmq-configuration--examples--Amazon_MQ_Configuration"></a>
 
-## Examples<a name="aws-resource-amazonmq-configuration-examples"></a>
-
-### Amazon MQ Configuration<a name="aws-resource-amazonmq-configuration-example1"></a>
-
-The following example creates an Amazon MQ configuration in XML format\.
-
-#### JSON<a name="aws-resource-amazonmq-configuration-example1.json"></a>
+#### JSON<a name="aws-resource-amazonmq-configuration--examples--Amazon_MQ_Configuration--json"></a>
 
 ```
 {
-  "Description": "Create an Amazon MQ configuration",
+  "Description": "Create an Amazon MQ ActiveMQ configuration",
     "Configuration1": {
       "Type": "AWS::AmazonMQ::Configuration",
       "Properties": {
@@ -132,11 +128,11 @@ The following example creates an Amazon MQ configuration in XML format\.
 }
 ```
 
-#### YAML<a name="aws-resource-amazonmq-configuration-example1.yaml"></a>
+#### YAML<a name="aws-resource-amazonmq-configuration--examples--Amazon_MQ_Configuration--yaml"></a>
 
 ```
 --- 
-Description: "Create an Amazon MQ configuration"
+Description: "Create an Amazon MQ ActiveMQ configuration"
 Resources: 
   Configuration: 
     Type: "AWS::AmazonMQ::Configuration"

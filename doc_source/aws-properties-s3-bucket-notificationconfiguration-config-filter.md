@@ -1,27 +1,30 @@
-# Amazon S3 Bucket NotificationFilter<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter"></a>
+# AWS::S3::Bucket NotificationFilter<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter"></a>
 
-`Filter` is a property of the `[LambdaConfigurations](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md)`, `[QueueConfigurations](aws-properties-s3-bucket-notificationconfig-queueconfig.md)`, and `[TopicConfigurations](aws-properties-s3-bucket-notificationconfig-topicconfig.md)` properties that describes the filtering rules that determine the Amazon Simple Storage Service \(Amazon S3\) objects for which to send notifications\.
+Specifies object key name filtering rules\. For information about key name filtering, see [Configuring Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
-## Syntax<a name="w4ab1c21c10d180c13c94b5"></a>
+## Syntax<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-syntax.json"></a>
 
 ```
 {
-  "[S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key)" : S3 Key
+  "[S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key)" : S3KeyFilter
 }
 ```
 
 ### YAML<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-syntax.yaml"></a>
 
 ```
-[S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key):
-  S3 Key
+  [S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key): 
+    S3KeyFilter
 ```
 
-## Properties<a name="w4ab1c21c10d180c13c94b7"></a>
+## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-properties"></a>
 
 `S3Key`  <a name="cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key"></a>
-Amazon S3 filtering rules that describe for which object key names to send notifications\.  
+A container for object key name prefix and suffix filtering rules\.  
 *Required*: Yes  
-*Type*: [Amazon S3 Bucket S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)
+*Type*: [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

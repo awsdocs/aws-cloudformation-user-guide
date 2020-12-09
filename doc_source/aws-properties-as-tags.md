@@ -1,107 +1,58 @@
-# Amazon EC2 Auto Scaling AutoScalingGroup TagProperty<a name="aws-properties-as-tags"></a>
+# AWS::AutoScaling::AutoScalingGroup TagProperty<a name="aws-properties-as-tags"></a>
 
-The `TagProperty` property type adds tags to all associated instances in an Amazon EC2 Auto Scaling group\.
+ `TagProperty` specifies a list of tags for the `Tag` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `TagProperty` adds tags to all associated instances in an Auto Scaling group\. 
 
-The `Tags` property of the [AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md) resource contains a list of `TagProperty` property types\. For more information, see [Tagging Auto Scaling Groups and Instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+For more information, see [Tagging Auto Scaling groups and instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the *Amazon EC2 Auto Scaling User Guide*\. You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\.
 
-AWS CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
+AWS CloudFormation adds the following tags to all Auto Scaling groups and associated instances: 
 + aws:cloudformation:stack\-name
 + aws:cloudformation:stack\-id
-+ aws:cloudformation:logical\-id
++ aws:cloudformation:logical\-id 
 
-## Syntax<a name="w4ab1c21c10c36c13c55c11"></a>
+## Syntax<a name="aws-properties-as-tags-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-as-tags-syntax.json"></a>
 
 ```
 {
-   "[Key](#cfn-as-tags-Key)" : String,
-   "[Value](#cfn-as-tags-Value)" : String,
-   "[PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch)" : Boolean
+  "[Key](#cfn-as-tags-Key)" : String,
+  "[PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch)" : Boolean,
+  "[Value](#cfn-as-tags-Value)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-as-tags-syntax.yaml"></a>
 
 ```
-[Key](#cfn-as-tags-Key): String
-[Value](#cfn-as-tags-Value): String
-[PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch): Boolean
+  [Key](#cfn-as-tags-Key): String
+  [PropagateAtLaunch](#cfn-as-tags-PropagateAtLaunch): Boolean
+  [Value](#cfn-as-tags-Value): String
 ```
 
-## Properties<a name="w4ab1c21c10c36c13c55c13"></a>
+## Properties<a name="aws-properties-as-tags-properties"></a>
 
 `Key`  <a name="cfn-as-tags-Key"></a>
-The key name of the tag\.  
+The tag key\.  
 *Required*: Yes  
-*Type*: String
-
-`Value`  <a name="cfn-as-tags-Value"></a>
-The value for the tag\.  
-*Required*: Yes  
-*Type*: String
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateAtLaunch`  <a name="cfn-as-tags-PropagateAtLaunch"></a>
-Set to `true` if you want AWS CloudFormation to copy the tag to EC2 instances that are launched as part of the Auto Scaling group\. Set to `false` if you want the tag attached only to the Auto Scaling group and not copied to any instances launched as part of the Auto Scaling group\.  
+Set to `true` if you want AWS CloudFormation to copy the tag to EC2 instances that are launched as part of the Auto Scaling group\. Set to `false` if you want the tag attached only to the Auto Scaling group and not copied to any instances launched as part of the Auto Scaling group\.   
 *Required*: Yes  
-*Type*: Boolean
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Example<a name="aws-properties-as-tags-examples"></a>
-
-The following example template snippet creates two tags\. The first tag, `MyTag1`, is attached to an Auto Scaling group named `WebServerGroup` and is copied to any EC2 instances launched as part of the Auto Scaling group\. The second tag, `MyTag2`, is attached only to the Auto Scaling group named `WebServerGroup`\.
-
-### JSON<a name="aws-properties-as-tags-example.json"></a>
-
-```
- 1. "WebServerGroup" : {
- 2.    "Type" : "AWS::AutoScaling::AutoScalingGroup",
- 3.    "Properties" : {
- 4.       "AvailabilityZones" : { 
- 5.          "Fn::GetAZs" : "" 
- 6.       },
- 7.       "LaunchConfigurationName" : { 
- 8.          "Ref" : "LaunchConfig" 
- 9.       },
-10.       "MinSize" : "1",
-11.       "MaxSize" : "2",
-12.       "LoadBalancerNames" : [ 
-13.          { 
-14.             "Ref" : "ElasticLoadBalancer" 
-15.          } 
-16.       ],
-17.       "Tags" : [ 
-18.          {
-19.             "Key" : "MyTag1",
-20.             "Value" : "Hello World 1",
-21.             "PropagateAtLaunch" : "true"
-22.          }, 
-23.          {
-24.             "Key" : "MyTag2",
-25.             "Value" : "Hello World 2",
-26.             "PropagateAtLaunch" : "false"
-27.          } 
-28.       ]
-29.    }
-30. }
-```
-
-### YAML<a name="aws-properties-as-tags-example.yaml"></a>
-
-```
- 1. WebServerGroup:
- 2.   Type: 'AWS::AutoScaling::AutoScalingGroup'
- 3.   Properties:
- 4.     AvailabilityZones: !GetAZs ''
- 5.     LaunchConfigurationName: !Ref LaunchConfig
- 6.     MinSize: '1'
- 7.     MaxSize: '2'
- 8.     LoadBalancerNames:
- 9.       - !Ref ElasticLoadBalancer
-10.     Tags:
-11.       - Key: MyTag1
-12.         Value: Hello World 1
-13.         PropagateAtLaunch: 'true'
-14.       - Key: MyTag2
-15.         Value: Hello World 2
-16.         PropagateAtLaunch: 'false'
-```
+`Value`  <a name="cfn-as-tags-Value"></a>
+The tag value\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

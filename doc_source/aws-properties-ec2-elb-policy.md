@@ -1,14 +1,18 @@
-# ElasticLoadBalancing Policy<a name="aws-properties-ec2-elb-policy"></a>
+# AWS::ElasticLoadBalancing::LoadBalancer Policies<a name="aws-properties-ec2-elb-policy"></a>
 
-The ElasticLoadBalancing policy type is an embedded property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\. You associate policies with a [listener](aws-properties-ec2-elb-listener.md) by referencing a policy's name in the listener's `PolicyNames` property\.
+Specifies policies for your Classic Load Balancer\.
 
-## Syntax<a name="w4ab1c21c10d126c14c47b5"></a>
+To associate policies with a listener, use the [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames) property for the listener\.
+
+## Syntax<a name="aws-properties-ec2-elb-policy-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-elb-policy-syntax.json"></a>
 
 ```
 {
-  "[Attributes](#cfn-ec2-elb-policy-attributes)" : [ { "Name" : String, "Value" : String }, ... ],
+  "[Attributes](#cfn-ec2-elb-policy-attributes)" : [ Json, ... ],
   "[InstancePorts](#cfn-ec2-elb-policy-instanceports)" : [ String, ... ],
   "[LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports)" : [ String, ... ],
   "[PolicyName](#cfn-ec2-elb-policy-policyname)" : String,
@@ -19,114 +23,75 @@ The ElasticLoadBalancing policy type is an embedded property of the [AWS::Elasti
 ### YAML<a name="aws-properties-ec2-elb-policy-syntax.yaml"></a>
 
 ```
-[Attributes](#cfn-ec2-elb-policy-attributes):
-  -
-    "Name" : String
-    "Value" : String
-[InstancePorts](#cfn-ec2-elb-policy-instanceports):
-  - String
-[LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports):
-  - String
-[PolicyName](#cfn-ec2-elb-policy-policyname): String
-[PolicyType](#cfn-ec2-elb-policy-policytype): String
+  [Attributes](#cfn-ec2-elb-policy-attributes): 
+    - Json
+  [InstancePorts](#cfn-ec2-elb-policy-instanceports): 
+    - String
+  [LoadBalancerPorts](#cfn-ec2-elb-policy-loadbalancerports): 
+    - String
+  [PolicyName](#cfn-ec2-elb-policy-policyname): String
+  [PolicyType](#cfn-ec2-elb-policy-policytype): String
 ```
 
-## Properties<a name="w4ab1c21c10d126c14c47b7"></a>
+## Properties<a name="aws-properties-ec2-elb-policy-properties"></a>
 
 `Attributes`  <a name="cfn-ec2-elb-policy-attributes"></a>
-A list of arbitrary attributes for this policy\. If you don't need to specify any policy attributes, specify an empty list \(`[]`\)\.  
+The policy attributes\.  
 *Required*: Yes  
-*Type*: List of JSON name\-value pairs\.
+*Type*: List of Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstancePorts`  <a name="cfn-ec2-elb-policy-instanceports"></a>
-A list of instance ports for the policy\. These are the ports associated with the back\-end server\.  
+The instance ports for the policy\. Required only for some policy types\.  
 *Required*: No  
-*Type*: List of String values
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerPorts`  <a name="cfn-ec2-elb-policy-loadbalancerports"></a>
-A list of external load balancer ports for the policy\.  
-*Required*: Only for some policies\. For more information, see the *[Elastic Load Balancing Developer Guide](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/Welcome.html)*\.  
-*Type*: List of String values
+The load balancer ports for the policy\. Required only for some policy types\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-ec2-elb-policy-policyname"></a>
-A name for this policy that is unique to the load balancer\.  
+The name of the policy\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyType`  <a name="cfn-ec2-elb-policy-policytype"></a>
-The name of the policy type for this policy\. This must be one of the types reported by the Elastic Load Balancing [DescribeLoadBalancerPolicyTypes](http://docs.aws.amazon.com/ElasticLoadBalancing/latest/APIReference/API_DescribeLoadBalancerPolicyTypes.html) action\.  
+The name of the policy type\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="w4ab1c21c10d126c14c47b9"></a>
+## Examples<a name="aws-properties-ec2-elb-policy--examples"></a>
 
-This example shows a snippet of the policies section of an elastic load balancer listener\.
+### <a name="aws-properties-ec2-elb-policy--examples--"></a>
 
-```
-"Policies" : [
-   {
-      "PolicyName" : "MySSLNegotiationPolicy",
-      "PolicyType" : "SSLNegotiationPolicyType",
-      "Attributes" : [
-         { "Name" : "Protocol-TLSv1", "Value" : "true" },
-         { "Name" : "Protocol-SSLv3", "Value" : "false" },
-         { "Name" : "DHE-RSA-AES256-SHA", "Value" : "true" } ]
-   }, {
-      "PolicyName" : "MyAppCookieStickinessPolicy",
-      "PolicyType" : "AppCookieStickinessPolicyType",
-      "Attributes" : [
-         { "Name" : "CookieName", "Value" : "MyCookie"} ]
-   }, {
-      "PolicyName" : "MyPublicKeyPolicy",
-      "PolicyType" : "PublicKeyPolicyType",
-      "Attributes" : [ {
-         "Name" : "PublicKey",
-         "Value" : { "Fn::Join" : [
-            "\n", [
-               "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDh/51Aohx5VrpmlfGHZCzciMBa",
-               "fkHve+MQYYJcxmNUKMdsWnz9WtVfKxxWUU7Cfor4lorYmENGCG8FWqCoLDMFs7pN",
-               "yGEtpsrlKhzZWtgY1d7eGrUrBil03bI90E2KW0j4qAwGYAC8xixOkNClicojeEz4",
-               "f4rr3sUf+ZBSsuMEuwIDAQAB" ]
-         ] }
-      } ]
-   }, {
-      "PolicyName" : "MyBackendServerAuthenticationPolicy",
-      "PolicyType" : "BackendServerAuthenticationPolicyType",
-      "Attributes" : [
-         { "Name" : "PublicKeyPolicyName", "Value" : "MyPublicKeyPolicy" } ],
-      "InstancePorts" : [ "8443" ]
-   }
-]
-```
-
-This example shows a snippet of the policies section of an elastic load balancer using proxy protocol\.
+#### JSON<a name="aws-properties-ec2-elb-policy--examples----json"></a>
 
 ```
-"Policies" : [{
-   "PolicyName" : "EnableProxyProtocol",
-   "PolicyType" : "ProxyProtocolPolicyType",
-   "Attributes" : [{
-      "Name"  : "ProxyProtocol",
-      "Value" : "true"
-   }],
-   "InstancePorts" : [{"Ref" : "WebServerPort"}]
+"Policies": [{
+    "PolicyName": "My-SSLNegotiation-Policy",
+    "PolicyType": "SSLNegotiationPolicyType",
+    "Attributes": [{
+        "Name": "Reference-Security-Policy",
+        "Value": "ELBSecurityPolicy-TLS-1-2-2017-01"
+    }]
 }]
 ```
 
-In the following snippet, the load balancer uses a predefined security policy\. These predefined policies are provided by Elastic Load Balancing\. For more information, see [SSL Security Policies](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-security-policy-table.html) in the *User Guide for Classic Load Balancers*\.
+#### YAML<a name="aws-properties-ec2-elb-policy--examples----yaml"></a>
 
 ```
-"Policies" : [{
-   "PolicyName" : "ELBSecurityPolicyName",
-   "PolicyType" : "SSLNegotiationPolicyType",
-   "Attributes" : [{
-      "Name"  : "Reference-Security-Policy",
-      "Value" : "ELBSecurityPolicy-2014-10"
-   }]
-}]
+Policies:
+    - PolicyName: My-SSLNegotiation-Policy
+      PolicyType: SSLNegotiationPolicyType
+      Attributes:
+      - Name: Reference-Security-Policy
+        Value: ELBSecurityPolicy-TLS-1-2-2017-01
 ```
 
-## See Also<a name="w4ab1c21c10d126c14c47c11"></a>
-+ [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)
-+ [ElasticLoadBalancing AppCookieStickinessPolicy](aws-properties-ec2-elb-AppCookieStickinessPolicy.md)
-+ [ElasticLoadBalancing LBCookieStickinessPolicy](aws-properties-ec2-elb-LBCookieStickinessPolicy.md)
+## See also<a name="aws-properties-ec2-elb-policy--seealso"></a>
++  [CreateLoadBalancerPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 

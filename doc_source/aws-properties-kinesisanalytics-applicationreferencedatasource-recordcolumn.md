@@ -1,8 +1,8 @@
-# Amazon Kinesis Data Analytics ApplicationReferenceDataSource RecordColumn<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn"></a>
+# AWS::KinesisAnalytics::ApplicationReferenceDataSource RecordColumn<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn"></a>
 
-The `RecordColumn` property type specifies the mapping of each data element in the streaming source to the corresponding column in the in\-application stream\. 
+Describes the mapping of each data element in the streaming source to the corresponding column in the in\-application stream\.
 
- `RecordColumn` is a property of the [ReferenceSchema](aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.md) resource\. 
+Also used to describe the format of the reference data source\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn-syntax"></a>
 
@@ -29,19 +29,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-applicationreferencedatasource-recordcolumn-properties"></a>
 
 `Mapping`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordcolumn-mapping"></a>
-The reference to the data element in the streaming input of the reference data source\.  
- *Required*: No  
- *Type*: String;  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Reference to the data element in the streaming input or the reference data source\. This element is required if the [RecordFormatType](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/API_RecordFormat.html#analytics-Type-RecordFormat-RecordFormatTypel) is `JSON`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordcolumn-name"></a>
-The name of the column created in the in\-application input stream or reference table\.  
- *Required*: Yes  
- *Type*: String;  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Name of the column created in the in\-application input stream or reference table\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlType`  <a name="cfn-kinesisanalytics-applicationreferencedatasource-recordcolumn-sqltype"></a>
-The SQL data type of the column created in the in\-application input stream or reference table\.  
- *Required*: Yes  
- *Type*: String;  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Type of column created in the in\-application input stream or reference table\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

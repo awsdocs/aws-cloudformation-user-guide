@@ -1,6 +1,8 @@
 # AWS::WAFRegional::WebACL<a name="aws-resource-wafregional-webacl"></a>
 
-The `AWS::WAFRegional::WebACL` resource creates an AWS WAF Regional web access control group \(ACL\) containing the rules that identify the Amazon CloudFront \(CloudFront\) web requests that you want to allow, block, or count\. For more information, see [CreateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateWebACL.html) in the *AWS WAF Regional API Reference*\.
+Contains the `Rules` that identify the requests that you want to allow, block, or count\. In a `WebACL`, you also specify a default action \(`ALLOW` or `BLOCK`\), and the action for each `Rule` that you add to a `WebACL`, for example, block requests from specified IP addresses or block requests from specified referrers\. If you add more than one `Rule` to a `WebACL`, a request needs to match only one of the specifications to be allowed, blocked, or counted\.
+
+To identify the requests that you want AWS WAF to filter, you associate the `WebACL` with an API Gateway API or an Application Load Balancer\. 
 
 ## Syntax<a name="aws-resource-wafregional-webacl-syntax"></a>
 
@@ -12,68 +14,74 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::WebACL",
   "Properties" : {
-    "[DefaultAction](#cfn-wafregional-webacl-defaultaction)" : Action,
-    "[MetricName](#cfn-wafregional-webacl-metricname)" : String,
-    "[Name](#cfn-wafregional-webacl-name)" : String,
-    "[Rules](#cfn-wafregional-webacl-rules)" : [ Rule, ... ]
-  }
+      "[DefaultAction](#cfn-wafregional-webacl-defaultaction)" : Action,
+      "[MetricName](#cfn-wafregional-webacl-metricname)" : String,
+      "[Name](#cfn-wafregional-webacl-name)" : String,
+      "[Rules](#cfn-wafregional-webacl-rules)" : [ Rule, ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-wafregional-webacl-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAFRegional::WebACL"
+Type: AWS::WAFRegional::WebACL
 Properties: 
-  [DefaultAction](#cfn-wafregional-webacl-defaultaction):
+  [DefaultAction](#cfn-wafregional-webacl-defaultaction): 
     Action
   [MetricName](#cfn-wafregional-webacl-metricname): String
   [Name](#cfn-wafregional-webacl-name): String
-  [Rules](#cfn-wafregional-webacl-rules):
+  [Rules](#cfn-wafregional-webacl-rules): 
     - Rule
 ```
 
-## Properties<a name="w4ab1c21c10d213c33b7"></a>
+## Properties<a name="aws-resource-wafregional-webacl-properties"></a>
 
 `DefaultAction`  <a name="cfn-wafregional-webacl-defaultaction"></a>
-The action that you want AWS WAF to take when a request doesn't match the criteria in any of the rules that are associated with the web ACL\.  
+The action to perform if none of the `Rules` contained in the `WebACL` match\. The action is specified by the `WafAction` object\.  
 *Required*: Yes  
-*Type*: [AWS WAF Regional WebACL Action](aws-properties-wafregional-webacl-action.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [Action](aws-properties-wafregional-webacl-action.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-wafregional-webacl-metricname"></a>
-A friendly name or description for the Amazon CloudWatch metric of this web ACL\. For valid values, see the `MetricName` parameter of the [CreateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_CreateWebACL.html) action in the *AWS WAF Regional API Reference*\.  
+A friendly name or description for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-wafregional-webacl-name"></a>
-A friendly name or description of the web ACL\.  
+A friendly name or description of the `WebACL`\. You can't change the name of a `WebACL` after you create it\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rules`  <a name="cfn-wafregional-webacl-rules"></a>
-The rules to associate with the web ACL and the settings for each rule\.  
+An array that contains the action for each `Rule` in a `WebACL`, the priority of the `Rule`, and the ID of the `Rule`\.  
 *Required*: No  
-*Type*: List of [AWS WAF Regional WebACL Rules](aws-properties-wafregional-webacl-rules.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of [Rule](aws-properties-wafregional-webacl-rule.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w4ab1c21c10d213c33b9"></a>
+## Return values<a name="aws-resource-wafregional-webacl-return-values"></a>
 
-### Ref<a name="w4ab1c21c10d213c33b9b2"></a>
+### Ref<a name="aws-resource-wafregional-webacl-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="w4ab1c21c10d213c33c11"></a>
+## Examples<a name="aws-resource-wafregional-webacl--examples"></a>
 
-### Create a Web ACL<a name="w4ab1c21c10d213c33c11b2"></a>
+### Create a Web ACL<a name="aws-resource-wafregional-webacl--examples--Create_a_Web_ACL"></a>
 
 The following example defines a web ACL that allows, by default, any web request\. However, if the request matches any rule, AWS WAF blocks the request\. AWS WAF evaluates each rule in priority order, starting with the lowest value\.
 
-#### JSON<a name="aws-resource-wafregional-webacl-example1.json"></a>
+#### JSON<a name="aws-resource-wafregional-webacl--examples--Create_a_Web_ACL--json"></a>
 
 ```
 "MyWebACL": {
@@ -111,7 +119,7 @@ The following example defines a web ACL that allows, by default, any web request
 }
 ```
 
-#### YAML<a name="aws-resource-wafregional-webacl-example1.yaml"></a>
+#### YAML<a name="aws-resource-wafregional-webacl--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
 MyWebACL: 
@@ -140,105 +148,4 @@ MyWebACL:
         Priority: 3
         RuleId: 
           Ref: "SqlInjRule"
-```
-
-### Associate a Web ACL with a CloudFront Distribution<a name="w4ab1c21c10d213c33c11b4"></a>
-
-The follow example associates the `MyWebACL` web ACL with a CloudFront distribution\. The web ACL restricts which requests can access content served by CloudFront\.
-
-#### JSON<a name="aws-resource-wafregional-webacl-example2.json"></a>
-
-```
-"myDistribution": {
-  "Type": "AWS::CloudFront::Distribution",
-  "Properties": {
-    "DistributionConfig": {    
-      "WebACLId": { "Ref" : "MyWebACL" },
-      "Origins": [
-        {
-          "DomainName": "test.example.com",
-          "Id": "myCustomOrigin",
-          "CustomOriginConfig": {
-            "HTTPPort": "80",
-            "HTTPSPort": "443",
-            "OriginProtocolPolicy": "http-only"
-          }
-        }
-      ],
-      "Enabled": "true",
-      "Comment": "TestDistribution",
-      "DefaultRootObject": "index.html",
-      "DefaultCacheBehavior": {
-        "TargetOriginId": "myCustomOrigin",
-        "SmoothStreaming" : "false",
-        "ForwardedValues": {
-          "QueryString": "false",
-          "Cookies" : { "Forward" : "all" }
-        },
-        "ViewerProtocolPolicy": "allow-all"
-      },
-      "CustomErrorResponses" : [
-        {
-          "ErrorCode" : "404",
-          "ResponsePagePath" : "/error-pages/404.html",
-          "ResponseCode" : "200",
-          "ErrorCachingMinTTL" : "30"
-        }
-      ],
-      "PriceClass" : "PriceClass_200",
-      "Restrictions" : {
-        "GeoRestriction" : {
-          "RestrictionType" : "whitelist",
-          "Locations" : [ "AQ", "CV" ]
-        }
-      },
-      "ViewerCertificate" : { "CloudFrontDefaultCertificate" : "true" }
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-resource-wafregional-webacl-example2.yaml"></a>
-
-```
-myDistribution: 
-  Type: "AWS::CloudFront::Distribution"
-  Properties: 
-    DistributionConfig: 
-      WebACLId: 
-        Ref: "MyWebACL"
-      Origins: 
-        - 
-          DomainName: "test.example.com"
-          Id: "myCustomOrigin"
-          CustomOriginConfig: 
-            HTTPPort: "80"
-            HTTPSPort: "443"
-            OriginProtocolPolicy: "http-only"
-      Enabled: "true"
-      Comment: "TestDistribution"
-      DefaultRootObject: "index.html"
-      DefaultCacheBehavior: 
-        TargetOriginId: "myCustomOrigin"
-        SmoothStreaming: "false"
-        ForwardedValues: 
-          QueryString: "false"
-          Cookies: 
-            Forward: "all"
-        ViewerProtocolPolicy: "allow-all"
-      CustomErrorResponses: 
-        - 
-          ErrorCode: "404"
-          ResponsePagePath: "/error-pages/404.html"
-          ResponseCode: "200"
-          ErrorCachingMinTTL: "30"
-      PriceClass: "PriceClass_200"
-      Restrictions: 
-        GeoRestriction: 
-          RestrictionType: "whitelist"
-          Locations: 
-            - "AQ"
-            - "CV"
-      ViewerCertificate: 
-        CloudFrontDefaultCertificate: "true"
 ```

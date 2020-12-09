@@ -1,8 +1,10 @@
-# CloudFront Distribution CustomOriginConfig<a name="aws-properties-cloudfront-distribution-customoriginconfig"></a>
+# AWS::CloudFront::Distribution CustomOriginConfig<a name="aws-properties-cloudfront-distribution-customoriginconfig"></a>
 
-`CustomOriginConfig` is a property of the [Amazon CloudFront Origin](aws-properties-cloudfront-distribution-origin.md) property that describes an HTTP server\.
+A custom origin\. A custom origin is any origin that is *not* an Amazon S3 bucket, with one exception\. An Amazon S3 bucket that is [configured with static website hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) *is* a custom origin\.
 
-## Syntax<a name="w4ab1c21c10c54c14c33b5"></a>
+## Syntax<a name="aws-properties-cloudfront-distribution-customoriginconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-cloudfront-distribution-customoriginconfig-syntax.json"></a>
 
@@ -20,49 +22,59 @@
 ### YAML<a name="aws-properties-cloudfront-distribution-customoriginconfig-syntax.yaml"></a>
 
 ```
-[HTTPPort](#cfn-cloudfront-distribution-customoriginconfig-httpport): Integer
-[HTTPSPort](#cfn-cloudfront-distribution-customoriginconfig-httpsport): Integer
-[OriginKeepaliveTimeout](#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout): Integer
-[OriginProtocolPolicy](#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy): String
-[OriginReadTimeout](#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout): Integer
-[OriginSSLProtocols](#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols):
-  - String
+  [HTTPPort](#cfn-cloudfront-distribution-customoriginconfig-httpport): Integer
+  [HTTPSPort](#cfn-cloudfront-distribution-customoriginconfig-httpsport): Integer
+  [OriginKeepaliveTimeout](#cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout): Integer
+  [OriginProtocolPolicy](#cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy): String
+  [OriginReadTimeout](#cfn-cloudfront-distribution-customoriginconfig-originreadtimeout): Integer
+  [OriginSSLProtocols](#cfn-cloudfront-distribution-customoriginconfig-originsslprotocols): 
+    - String
 ```
 
-## Properties<a name="w4ab1c21c10c54c14c33b7"></a>
-
-**Note**  
-For more information about the constraints and valid values of each property, see the [CustomOriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomOriginConfig.html) data type in the *Amazon CloudFront API Reference*\.
+## Properties<a name="aws-properties-cloudfront-distribution-customoriginconfig-properties"></a>
 
 `HTTPPort`  <a name="cfn-cloudfront-distribution-customoriginconfig-httpport"></a>
-The HTTP port the custom origin listens on\.  
+The HTTP port that CloudFront uses to connect to the origin\. Specify the HTTP port that the origin listens on\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HTTPSPort`  <a name="cfn-cloudfront-distribution-customoriginconfig-httpsport"></a>
-The HTTPS port the custom origin listens on\.  
+The HTTPS port that CloudFront uses to connect to the origin\. Specify the HTTPS port that the origin listens on\.  
 *Required*: No  
-*Type*: Integer
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginKeepaliveTimeout`  <a name="cfn-cloudfront-distribution-customoriginconfig-originkeepalivetimeout"></a>
-You can create a custom keep\-alive timeout\. All timeout units are in seconds\. The default keep\-alive timeout is 5 seconds, but you can configure custom timeout lengths\. The minimum timeout length is 1 second; the maximum is 60 seconds\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies how long, in seconds, CloudFront persists its connection to the origin\. The minimum timeout is 1 second, the maximum is 60 seconds, and the default \(if you don’t specify otherwise\) is 5 seconds\.  
+For more information, see [Origin Keep\-alive Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginKeepaliveTimeout) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginProtocolPolicy`  <a name="cfn-cloudfront-distribution-customoriginconfig-originprotocolpolicy"></a>
-The origin protocol policy to apply to your origin\.  
+Specifies the protocol \(HTTP or HTTPS\) that CloudFront uses to connect to the origin\. Valid values are:  
++  `http-only` – CloudFront always uses HTTP to connect to the origin\.
++  `match-viewer` – CloudFront connects to the origin using the same protocol that the viewer used to connect to CloudFront\.
++  `https-only` – CloudFront always uses HTTPS to connect to the origin\.
 *Required*: Yes  
 *Type*: String  
-*Valid Values*: `http-only`, ` match-viewer`, `https-only`
+*Allowed values*: `http-only | https-only | match-viewer`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginReadTimeout`  <a name="cfn-cloudfront-distribution-customoriginconfig-originreadtimeout"></a>
-You can create a custom origin read timeout\. All timeout units are in seconds\. The default origin read timeout is 30 seconds, but you can configure custom timeout lengths\. The minimum timeout length is 4 seconds; the maximum is 60 seconds\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies how long, in seconds, CloudFront waits for a response from the origin\. This is also known as the *origin response timeout*\. The minimum timeout is 1 second, the maximum is 60 seconds, and the default \(if you don’t specify otherwise\) is 30 seconds\.  
+For more information, see [Origin Response Timeout](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginResponseTimeout) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginSSLProtocols`  <a name="cfn-cloudfront-distribution-customoriginconfig-originsslprotocols"></a>
-The SSL protocols that CloudFront can use when establishing an HTTPS connection with your origin\. By default, AWS CloudFormation specifies the `TLSv1` and `SSLv3` protocols\.  
+Specifies the minimum SSL/TLS protocol that CloudFront uses when connecting to your origin over HTTPS\. Valid values include `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`\.  
+For more information, see [Minimum Origin SSL Protocol](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesOriginSSLProtocols) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
-*Type*: List of String values
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-cloudfront-distribution-customoriginconfig--seealso"></a>
++  [CustomOriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomOriginConfig.html) in the *Amazon CloudFront API Reference* 

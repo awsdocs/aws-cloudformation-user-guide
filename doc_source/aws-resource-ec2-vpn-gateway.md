@@ -1,107 +1,95 @@
 # AWS::EC2::VPNGateway<a name="aws-resource-ec2-vpn-gateway"></a>
 
-Creates a virtual private gateway\. A virtual private gateway is the VPC\-side endpoint for your VPN connection\.
+Specifies a virtual private gateway\. A virtual private gateway is the endpoint on the VPC side of your VPN connection\. You can create a virtual private gateway before creating the VPC itself\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-vpcgateway-syntax)
-+ [Properties](#w4ab1c21c10d102d217b9)
-+ [Return Value](#w4ab1c21c10d102d217c11)
-+ [Example](#w4ab1c21c10d102d217c13)
-+ [See Also](#w4ab1c21c10d102d217c15)
+For more information, see [AWS Site\-to\-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) in the *AWS Site\-to\-Site VPN User Guide*\.
 
-## Syntax<a name="aws-resource-ec2-vpcgateway-syntax"></a>
+## Syntax<a name="aws-resource-ec2-vpn-gateway-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-vpcgateway-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-vpn-gateway-syntax.json"></a>
 
 ```
 {
-   "Type" : "AWS::EC2::VPNGateway",
-   "Properties" : {
+  "Type" : "AWS::EC2::VPNGateway",
+  "Properties" : {
       "[AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn)" : Long,
-      "[Type](#cfn-ec2-vpngateway-type)" : String,
-      "[Tags](#cfn-ec2-vpngateway-tags)" : [ Resource Tag, ... ]
-   }
+      "[Tags](#cfn-ec2-vpngateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Type](#cfn-ec2-vpngateway-type)" : String
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpcgateway-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-vpn-gateway-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::VPNGateway
 Properties: 
   [AmazonSideAsn](#cfn-ec2-vpngateway-amazonsideasn): Long
+  [Tags](#cfn-ec2-vpngateway-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-ec2-vpngateway-type): String
-  [Tags](#cfn-ec2-vpngateway-tags):
-    Resource Tag
 ```
 
-## Properties<a name="w4ab1c21c10d102d217b9"></a>
+## Properties<a name="aws-resource-ec2-vpn-gateway-properties"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-vpngateway-amazonsideasn"></a>
 The private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\.  
 *Required*: No  
 *Type*: Long  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
-
-`Type`  <a name="cfn-ec2-vpngateway-type"></a>
-The type of VPN connection this virtual private gateway supports\. The only valid value is `"ipsec.1"`\.  
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-vpngateway-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this resource\.  
+Any tags assigned to the virtual private gateway\.  
 *Required*: No  
-*Type*: [Resource Tag](aws-properties-resource-tags.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)\.
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w4ab1c21c10d102d217c11"></a>
+`Type`  <a name="cfn-ec2-vpngateway-type"></a>
+The type of VPN connection the virtual private gateway supports\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed values*: `ipsec.1`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example:
+## Return values<a name="aws-resource-ec2-vpn-gateway-return-values"></a>
+
+### Ref<a name="aws-resource-ec2-vpn-gateway-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN gateway\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Examples<a name="aws-resource-ec2-vpn-gateway--examples"></a>
+
+### VPN Gateway<a name="aws-resource-ec2-vpn-gateway--examples--VPN_Gateway"></a>
+
+The following example declares a VPN gateway that uses IPSec 1\.
+
+#### JSON<a name="aws-resource-ec2-vpn-gateway--examples--VPN_Gateway--json"></a>
 
 ```
-{ "Ref": "MyVPNGateway" }
-```
-
-For the VPN gateway with the logical ID "MyVPNGateway", `Ref` will return the gateway's resource name\.
-
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
-
-## Example<a name="w4ab1c21c10d102d217c13"></a>
-
-### JSON<a name="aws-resource-ec2-vpcgateway-example.json"></a>
-
-```
-{
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Resources" : {
-      "myVPNGateway" : {
-         "Type" : "AWS::EC2::VPNGateway",
-         "Properties" : {
-            "Type" : "ipsec.1",
-            "Tags" : [ { "Key" : "Use", "Value" : "Test" } ]
-         }
-      }
-   }
+"myVPNGateway" : {
+   "Type" : "AWS::EC2::VPNGateway",
+   "Properties" : {
+      "Type" : "ipsec.1",
+      "Tags" : [ { "Key" : "Use", "Value" : "Test" } ]
+  }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpcgateway-example.yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpn-gateway--examples--VPN_Gateway--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
   myVPNGateway: 
-    Type: AWS::EC2::VPNGateway
-    Properties: 
+   Type: AWS::EC2::VPNGateway
+   Properties: 
       Type: ipsec.1
       Tags: 
-        - 
-          Key: Use
-          Value: Test
+      - Key: Use
+        Value: Test
 ```
 
-## See Also<a name="w4ab1c21c10d102d217c15"></a>
-+ [CreateVpnGateway](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpnGateway.html) in the *Amazon EC2 API Reference*\.
+## See also<a name="aws-resource-ec2-vpn-gateway--seealso"></a>
++  [CreateVPNGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVPNGateway.html) in the *Amazon EC2 API Reference*

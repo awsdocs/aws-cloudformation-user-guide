@@ -1,8 +1,10 @@
-# AWS CodeDeploy DeploymentGroup Deployment Revision S3Location<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
+# AWS::CodeDeploy::DeploymentGroup S3Location<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
 
-`S3Location` is a property of the [AWS CodeDeploy DeploymentGroup Revision](aws-properties-codedeploy-deploymentgroup-deployment-revision.md) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\.
+ `S3Location` is a property of the [ CodeDeploy DeploymentGroup Revision ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(S3\)\. 
 
-## Syntax<a name="w4ab1c21c10c72c21c65b5"></a>
+## Syntax<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax.json"></a>
 
@@ -19,36 +21,49 @@
 ### YAML<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax.yaml"></a>
 
 ```
-[Bucket](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket): String
-[BundleType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype): String
-[ETag](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag): String
-[Key](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-key): String
-[Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value): String
+  [Bucket](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket): String
+  [BundleType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype): String
+  [ETag](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag): String
+  [Key](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-key): String
+  [Version](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value): String
 ```
 
-## Properties<a name="w4ab1c21c10c72c21c65b7"></a>
+## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-properties"></a>
 
 `Bucket`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket"></a>
-The name of the S3 bucket where the application revision is stored\.  
+The name of the Amazon S3 bucket where the application revision is stored\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BundleType`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype"></a>
-The file type of the application revision, such as `tar`, `tgz`, or `zip`\. For valid values, see [S3Location](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_S3Location.html) in the *AWS CodeDeploy API Reference*\.  
-*Required*: Yes  
-*Type*: String
+The file type of the application revision\. Must be one of the following:  
++ JSON
++ tar: A tar archive file\.
++ tgz: A compressed tar archive file\.
++ YAML
++ zip: A zip archive file\.
+*Required*: No  
+*Type*: String  
+*Allowed values*: `JSON | tar | tgz | YAML | zip`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ETag`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag"></a>
-The Amazon S3 ETag \(a file checksum\) of the application revision\. If you don't specify a value, AWS CodeDeploy skips the ETag validation of your application revision\.  
+The ETag of the Amazon S3 object that represents the bundled artifacts for the application revision\.  
+If the ETag is not specified as an input parameter, ETag validation of the object is skipped\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-key"></a>
-The file name of the application revision \(Amazon S3 object name\)\.  
+The name of the Amazon S3 object that represents the bundled artifacts for the application revision\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value"></a>
-For versioning\-enabled buckets, a specific version of the application revision\.  
+A specific version of the Amazon S3 object that represents the bundled artifacts for the application revision\.  
+If the version is not specified, the system uses the most recent version by default\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

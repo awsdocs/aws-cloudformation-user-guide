@@ -53,11 +53,11 @@ cfn-init --stack|-s stack.name.or.id \
 
 ## Example<a name="cfn-init-Examples"></a>
 
-### Amazon Linux Example<a name="w4ab1c21c34c29b9b2"></a>
+### Amazon Linux example<a name="w7423ab1c33c42c29b9b2"></a>
 
 The following snippet shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that is associated with the `WebServerInstance` resource\.
 
-For a complete example template, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+For a complete example template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 #### JSON<a name="cfn-init-example.json"></a>
 
