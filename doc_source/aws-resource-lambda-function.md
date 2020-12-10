@@ -316,3 +316,44 @@ Resources:
           - subnet-071f712345678e7c8
           - subnet-07fd123456788a036
 ```
+
+### Container Image Function<a name="aws-resource-lambda-function--examples--ContainerImage_Function"></a>
+
+Container Image deployed as a Lambda function\.
+
+#### YAML<a name="aws-resource-lambda-function--examples--ContainerImage_Function--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: Container Image deployed as Lambda function
+Resources:
+  Function:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        ImageUri: --- Enter your ImageUri here ---
+      PackageType: Image
+      Role: !GetAtt
+        - FunctionRole
+        - Arn
+      Tags:
+        - Key: 'lambda:createdBy'
+          Value: CloudFormation
+  FunctionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+        Version: 2012-10-17
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: 'lambda:createdBy'
+          Value: CloudFormation
+```
