@@ -105,3 +105,43 @@ Inline Node\.js function that uses the cfn\-response library\.
               })
           }
 ```
+
+### Container Image Function<a name="aws-properties-lambda-function-code--examples--ContainerImage_Function"></a>
+
+Sample template for deploying a Container Image as a Lambda function\.
+
+#### YAML<a name="aws-properties-lambda-function-code--examples--ContainerImage_Function--yaml"></a>
+
+```
+        Description: Container Image deployed as Lambda function
+        Resources:
+          Function:
+            Properties:
+              Code:
+                ImageUri: --- Enter your ImageUri here ---
+              PackageType: Image
+              Role: !GetAtt
+                - FunctionRole
+                - Arn
+              Tags:
+                - Key: 'lambda:createdBy'
+                  Value: CloudFormation
+            Type: 'AWS::Lambda::Function'
+          FunctionRole:
+            Properties:
+              AssumeRolePolicyDocument:
+                Statement:
+                  - Action:
+                      - 'sts:AssumeRole'
+                    Effect: Allow
+                    Principal:
+                      Service:
+                        - lambda.amazonaws.com
+                Version: 2012-10-17
+              ManagedPolicyArns:
+                - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+              Tags:
+                - Key: 'lambda:createdBy'
+                  Value: CloudFormation
+            Type: 'AWS::IAM::Role'
+```
