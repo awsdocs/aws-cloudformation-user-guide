@@ -113,6 +113,7 @@ Sample template for deploying a Container Image as a Lambda function\.
 #### YAML<a name="aws-properties-lambda-function-code--examples--ContainerImage_Function--yaml"></a>
 
 ```
+        AWSTemplateFormatVersion: 2010-09-09
         Description: Container Image deployed as Lambda function
         Resources:
           Function:
