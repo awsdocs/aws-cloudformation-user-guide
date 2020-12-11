@@ -45,7 +45,7 @@ Properties:
 ## Properties<a name="aws-properties-rds-dbparametergroup-properties"></a>
 
 `Description`  <a name="cfn-rds-dbparametergroup-description"></a>
-Provides the customer\-specified description for this DB Parameter Group\.  
+Provides the customer\-specified description for this DB parameter group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -85,6 +85,8 @@ Tags to assign to the DB parameter group\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-properties-rds-dbparametergroup--examples"></a>
+
+
 
 ### <a name="aws-properties-rds-dbparametergroup--examples--"></a>
 

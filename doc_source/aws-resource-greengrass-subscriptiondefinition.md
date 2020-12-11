@@ -96,6 +96,8 @@ The name of the `SubscriptionDefinition`, such as `MySubscriptionDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-subscriptiondefinition--examples"></a>
 
+
+
 ### Subscription Definition Snippet<a name="aws-resource-greengrass-subscriptiondefinition--examples--Subscription_Definition_Snippet"></a>
 
 The following snippet defines a subscription definition subscription with an initial version that contains a subscription\. In this example, the subscription source is an existing device in the group\. The target is a function in the group that was created in another stack and is referenced using the `ImportValue` function\.

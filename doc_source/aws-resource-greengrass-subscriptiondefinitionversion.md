@@ -56,6 +56,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-subscriptiondefinitionversion--examples"></a>
 
+
+
 ### Subscription Definition Version Snippet<a name="aws-resource-greengrass-subscriptiondefinitionversion--examples--Subscription_Definition_Version_Snippet"></a>
 
 The following snippet defines subscription definition and subscription definition version subscriptions\. The subscription definition version references the subscription definition and contains a subscription\. In this example, the subscription source is an existing device in the group\. The target is a function in the group that was created in another stack and is referenced using the `ImportValue` function\.

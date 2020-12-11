@@ -235,6 +235,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-gamelift-fleet--examples"></a>
 
+
+
 ### Create GameLift fleet with a Build<a name="aws-resource-gamelift-fleet--examples--Create_GameLift_fleet_with_a_Build"></a>
 
 The following example creates and configures a GameLift fleet for a custom game build\. The fleet uses a `Ref` intrinsic function to specify a build, which can be declared elsewhere in the same template\. The example syntax for log path and server launch path uses values for a Windows build\.
@@ -456,3 +458,4 @@ Resources:
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Setting Up GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html) in the *Amazon GameLift Developer Guide* 
 + [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) in the *Amazon GameLift API Reference* 
+

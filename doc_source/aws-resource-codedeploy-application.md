@@ -55,6 +55,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-codedeploy-application--examples"></a>
 
+
+
 ### Specify an application with a Lambda compute platform<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a_Lambda_compute_platform"></a>
 
 The following example specifies a CodeDeploy application with a Lambda compute platform\.
@@ -105,3 +107,4 @@ CodeDeployApplication:
 
 ## See also<a name="aws-resource-codedeploy-application--seealso"></a>
 + For configuring your deployment and specifying your application revisions, see [ AWS::CodeDeploy::DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html) and [ AWS::CodeDeploy::DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)\.
+

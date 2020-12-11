@@ -130,6 +130,8 @@ The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example
 
 ## Examples<a name="aws-resource-events-rule--examples"></a>
 
+
+
 ### Create a rule that includes a dead\-letter queue for a target<a name="aws-resource-events-rule--examples--Create_a_rule_that_includes_a_dead-letter_queue_for_a_target"></a>
 
 The following example demonstrates how to send all EC2 events to an SQS queue, and include a dead\-letter queue and retry policy settings for the target of the rule\.

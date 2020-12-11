@@ -59,3 +59,4 @@ The name of the provisioning artifact \(for example, v1 v2beta\)\. No spaces are
 
 ## See also<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties--seealso"></a>
 + [ProvisioningArtifactProperties](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisioningArtifactProperties.html) in the *AWS Service Catalog API Reference*
+

@@ -38,7 +38,7 @@ Properties:
 ## Properties<a name="aws-resource-rds-dbsubnet-group-properties"></a>
 
 `DBSubnetGroupDescription`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupdescription"></a>
-The description for the DB Subnet Group\.  
+The description for the DB subnet group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,7 +52,7 @@ Example: `mysubnetgroup`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-rds-dbsubnetgroup-subnetids"></a>
-The EC2 Subnet IDs for the DB Subnet Group\.  
+The EC2 Subnet IDs for the DB subnet group\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,6 +72,8 @@ Tags to assign to the DB subnet group\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-rds-dbsubnet-group--examples"></a>
+
+
 
 ### <a name="aws-resource-rds-dbsubnet-group--examples--"></a>
 

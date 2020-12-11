@@ -133,6 +133,8 @@ Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `a
 
 ## Examples<a name="aws-resource-imagebuilder-imagepipeline--examples"></a>
 
+
+
 ### Create an image pipeline<a name="aws-resource-imagebuilder-imagepipeline--examples--Create_an_image_pipeline"></a>
 
 The following example shows the schema for all of the parameters of the ImagePipeline resource document in both YAML and JSON format \.

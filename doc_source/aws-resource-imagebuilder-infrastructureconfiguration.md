@@ -158,6 +158,8 @@ Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. T
 
 ## Examples<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples"></a>
 
+
+
 ### Create an infrastructure configuration<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration"></a>
 
 The following example shows the schema for all of the parameters of the InfrastructureConfiguration resource document in both YAML and JSON format \.

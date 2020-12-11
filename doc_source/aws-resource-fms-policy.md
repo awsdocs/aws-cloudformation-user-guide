@@ -201,6 +201,8 @@ The ID of the policy\.
 
 ## Examples<a name="aws-resource-fms-policy--examples"></a>
 
+
+
 ### Create a Firewall Manager AWS WAF Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy"></a>
 
 The following shows an example Firewall Manager WAF policy for the latest version of AWS WAF\. 

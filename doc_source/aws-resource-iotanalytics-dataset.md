@@ -97,6 +97,8 @@ Optional\. How many versions of dataset contents are kept\. If not specified or 
 
 ## Examples<a name="aws-resource-iotanalytics-dataset--examples"></a>
 
+
+
 ### Simple SQL Dataset<a name="aws-resource-iotanalytics-dataset--examples--Simple_SQL_Dataset"></a>
 
 The following example creates a simple SQL dataset\.

@@ -168,6 +168,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 ## Examples<a name="aws-resource-cloudtrail-trail--examples"></a>
 
+
+
 ### Example<a name="aws-resource-cloudtrail-trail--examples--Example"></a>
 
 The following example creates a trail that logs events in all regions, an Amazon S3 bucket where logs are published, and an SNS topic where notifications are sent\. The bucket and topic policies allow CloudTrail \(from the specified regions\) to publish logs to the S3 bucket and to send notifications to an email that you specify\. For information about CloudTrail bucket policies, see [Amazon S3 Bucket Policy](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_bucket_policy.html) in the *AWS CloudTrail User Guide*\.

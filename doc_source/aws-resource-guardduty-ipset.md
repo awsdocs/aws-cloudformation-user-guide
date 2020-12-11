@@ -83,6 +83,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-guardduty-ipset--examples"></a>
 
+
+
 ### Declare an IPSet Resource<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource"></a>
 
 The following example shows how to declare a GuardDuty `IPSet` resource:

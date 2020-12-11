@@ -52,3 +52,4 @@ Not currently supported by AWS CloudFormation\.
 
 ## See also<a name="aws-properties-appflow-flow-s3destinationproperties--seealso"></a>
 + [S3DestinationProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_S3DestinationProperties.html) in the *Amazon AppFlow API Reference*\.
+

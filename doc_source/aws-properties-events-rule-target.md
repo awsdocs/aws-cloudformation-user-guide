@@ -170,6 +170,8 @@ If you specify an SQS FIFO queue as a target, the queue must have content\-based
 
 ## Examples<a name="aws-properties-events-rule-target--examples"></a>
 
+
+
 ### Target with KinesisParameters<a name="aws-properties-events-rule-target--examples--Target_with_KinesisParameters"></a>
 
 The following snippet creates a Kinesis data stream target\.

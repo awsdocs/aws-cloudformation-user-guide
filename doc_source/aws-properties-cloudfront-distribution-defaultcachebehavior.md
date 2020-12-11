@@ -187,3 +187,4 @@ The only way to guarantee that viewers retrieve an object that was fetched from 
 
 ## See also<a name="aws-properties-cloudfront-distribution-defaultcachebehavior--seealso"></a>
 +  [DefaultCacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DefaultCacheBehavior.html) in the *Amazon CloudFront API Reference* 
+

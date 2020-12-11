@@ -213,6 +213,8 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-lambda-eventsourcemapping--examples"></a>
 
+
+
 ### Event Source Mapping<a name="aws-resource-lambda-eventsourcemapping--examples--Event_Source_Mapping"></a>
 
 Create an event source mapping that reads events from Amazon Kinesis and invokes a Lambda function in the same template\.

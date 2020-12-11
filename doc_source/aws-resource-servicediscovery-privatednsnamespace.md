@@ -86,6 +86,8 @@ The ID of the private namespace\.
 
 ## Examples<a name="aws-resource-servicediscovery-privatednsnamespace--examples"></a>
 
+
+
 ### Create a private DNS namespace<a name="aws-resource-servicediscovery-privatednsnamespace--examples--Create_a_private_DNS_namespace"></a>
 
 The following example creates a private DNS namespace named `private-example.com`\.
@@ -115,3 +117,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
 +  [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference* 
+

@@ -291,6 +291,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+
+
 #### <a name="aws-properties-elasticache-cache-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `ConfigurationEndpoint.Address`  <a name="ConfigurationEndpoint.Address-fn::getatt"></a>
@@ -307,6 +309,8 @@ The DNS address of the configuration endpoint for the Redis cache cluster\.
 The port number of the configuration endpoint for the Redis cache cluster\.
 
 ## Examples<a name="aws-properties-elasticache-cache-cluster--examples"></a>
+
+
 
 ### Cluster in a Default VPC<a name="aws-properties-elasticache-cache-cluster--examples--Cluster_in_a_Default_VPC"></a>
 

@@ -113,6 +113,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-codepipeline-customactiontype--examples"></a>
 
+
+
 ### Custom Action Type Resource Configuration<a name="aws-resource-codepipeline-customactiontype--examples--Custom_Action_Type_Resource_Configuration"></a>
 
 The following example is a custom build action that requires users to specify one property: a project name\.

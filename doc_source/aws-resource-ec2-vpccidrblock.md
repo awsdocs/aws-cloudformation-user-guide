@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-vpccidrblock--examples"></a>
 
+
+
 ### Associate an Amazon\-provided IPv6 CIDR block<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_Amazon-provided_IPv6_CIDR_block"></a>
 
 The following example associates an Amazon\-provided IPv6 CIDR block \(with a prefix length of /56\) with the TestVPCIpv6 VPC\. 

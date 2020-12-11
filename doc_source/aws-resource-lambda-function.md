@@ -212,6 +212,8 @@ The Amazon Resource Name \(ARN\) of the function\.
 
 ## Examples<a name="aws-resource-lambda-function--examples"></a>
 
+
+
 ### Function<a name="aws-resource-lambda-function--examples--Function"></a>
 
 Create a Node\.js function\.

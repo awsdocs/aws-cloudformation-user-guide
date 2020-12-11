@@ -88,3 +88,4 @@ The single tag that identifies targeted resources for this policy\.
 
 ## See also<a name="aws-properties-dlm-lifecyclepolicy-policydetails--seealso"></a>
 +  [PolicyDetails](https://docs.aws.amazon.com/dlm/latest/APIReference/API_PolicyDetails.html) in the *Amazon Data Lifecycle Manager API Reference* 
+

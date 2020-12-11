@@ -121,6 +121,8 @@ Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn
 
 ## Examples<a name="aws-resource-imagebuilder-imagerecipe--examples"></a>
 
+
+
 ### Create an image recipe<a name="aws-resource-imagebuilder-imagerecipe--examples--Create_an_image_recipe"></a>
 
 The following example shows the schema for all of the parameters of the ImageRecipe resource document in both YAML and JSON format \.
@@ -210,3 +212,4 @@ Resources:
 
 ## See also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
 + [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *EC2 Image Builder User Guide*\.
+

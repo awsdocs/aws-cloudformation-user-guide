@@ -96,6 +96,8 @@ The name of the `CoreDefinition`, such as `MyCoreDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-coredefinition--examples"></a>
 
+
+
 ### Create a Core Definition<a name="aws-resource-greengrass-coredefinition--examples--Create_a_Core_Definition"></a>
 
 The following example creates a core definition that specifies an initial version that contains a core\.

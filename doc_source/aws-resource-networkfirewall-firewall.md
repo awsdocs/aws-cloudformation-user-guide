@@ -143,6 +143,8 @@ The name of the [AWS::NetworkFirewall::Firewall](#aws-resource-networkfirewall-f
 
 ## Examples<a name="aws-resource-networkfirewall-firewall--examples"></a>
 
+
+
 ### Create a firewall<a name="aws-resource-networkfirewall-firewall--examples--Create_a_firewall"></a>
 
 The following shows example firewall specifications\. 

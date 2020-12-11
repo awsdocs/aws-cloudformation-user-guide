@@ -334,6 +334,20 @@ The `ScalingConfiguration` property type specifies the scaling configuration of 
 The identifier for the DB snapshot or DB cluster snapshot to restore from\.  
 You can use either the name or the Amazon Resource Name \(ARN\) to specify a DB cluster snapshot\. However, you can use only the ARN to specify a DB snapshot\.  
 After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same `SnapshotIdentifier` property for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the snapshot again, and the data in the database is not changed\. However, if you don't specify the `SnapshotIdentifier` property, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB cluster is restored from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted\.  
+If you specify the `SnapshotIdentifier` property to restore a DB cluster \(as opposed to specifying it for DB cluster updates\), then don't specify the following properties:  
++ `BackupRetentionPeriod`
++ `EnableHttpEndpoint`
++ `GlobalClusterIdentifier`
++ `MasterUsername`
++ `MasterUserPassword`
++ `PreferredBackupWindow`
++ `PreferredMaintenanceWindow`
++ `ReplicationSourceIdentifier`
++ `RestoreType`
++ `SourceDBClusterIdentifier`
++ `SourceRegion`
++ `StorageEncrypted`
++ `UseLatestRestorableTime`
 Constraints:  
 + Must match the identifier of an existing Snapshot\.
 *Required*: No  

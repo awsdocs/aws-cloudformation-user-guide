@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-publishmetricaction-properties"></a>
 
 `Dimensions`  <a name="cfn-networkfirewall-rulegroup-publishmetricaction-dimensions"></a>
+  
 *Required*: Yes  
 *Type*: [Dimensions](aws-properties-networkfirewall-rulegroup-dimensions.md)  
 *Maximum*: `1`  

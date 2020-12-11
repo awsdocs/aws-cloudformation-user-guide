@@ -79,6 +79,8 @@ The ARN of the archive created\.
 
 ## Examples<a name="aws-resource-events-archive--examples"></a>
 
+
+
 ### Create an archive<a name="aws-resource-events-archive--examples--Create_an_archive"></a>
 
 The following example creates an archive for all EC2 events sent from the default event bus that retains events in the archive for 10 days\.

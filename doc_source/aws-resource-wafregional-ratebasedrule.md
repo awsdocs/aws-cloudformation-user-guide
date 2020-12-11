@@ -91,6 +91,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-ratebasedrule--examples"></a>
 
+
+
 ### Associate an IPSet with a Rate\-Based Rule<a name="aws-resource-wafregional-ratebasedrule--examples--Associate_an_IPSet_with_a_Rate-Based_Rule"></a>
 
 The following example associates the `MyIPSetBlacklist` `IPSet` object with a rate\-based rule\.

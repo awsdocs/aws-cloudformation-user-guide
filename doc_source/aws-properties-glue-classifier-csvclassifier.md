@@ -79,6 +79,8 @@ A custom symbol to denote what combines content into a single column value\. It 
 
 ## Examples<a name="aws-properties-glue-classifier-csvclassifier--examples"></a>
 
+
+
 ### Create a custom classifier test<a name="aws-properties-glue-classifier-csvclassifier--examples--Create_a_custom_classifier_test"></a>
 
 With `AWS::Glue::Classifier` you can create a custom classifier test\.

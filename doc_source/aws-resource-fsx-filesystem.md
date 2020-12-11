@@ -154,6 +154,8 @@ Use the LustreMountName value when mounting an Amazon FSx for Lustre file system
 
 ## Examples<a name="aws-resource-fsx-filesystem--examples"></a>
 
+
+
 ### Create an Amazon FSx for Lustre File System<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Lustre_File_System"></a>
 
 The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file system, with a `PerUnitStorageThroughput` of 200 MB/s/TiB\.

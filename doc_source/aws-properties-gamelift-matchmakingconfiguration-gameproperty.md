@@ -42,3 +42,4 @@ The game property value\.
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Design a FlexMatch Matchmaker](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html) in the *Amazon GameLift Developer Guide* 
 +  [GameProperty](https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameProperty.html) in the *Amazon GameLift API Reference* 
+

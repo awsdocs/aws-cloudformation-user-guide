@@ -216,6 +216,8 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-taskdefinition--examples"></a>
 
+
+
 ### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
 The following example defines an Amazon ECS task definition, which includes two container definitions and one volume definition\.

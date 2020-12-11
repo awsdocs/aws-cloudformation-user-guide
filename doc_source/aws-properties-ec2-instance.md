@@ -150,7 +150,7 @@ The CPU options for the instance\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CreditSpecification`  <a name="cfn-ec2-instance-creditspecification"></a>
-The credit option for CPU usage of the burstable performance instance\. Valid values are `standard` and `unlimited`\. To change this attribute after launch, use [ ModifyInstanceCreditSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html)\. For more information, see [Burstable performance instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The credit option for CPU usage of the burstable performance instance\. Valid values are `standard` and `unlimited`\. To change this attribute after launch, use [ ModifyInstanceCreditSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceCreditSpecification.html)\. For more information, see [Burstable performance instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-performance-instances.html) in the *Amazon EC2 User Guide*\.  
 Default: `standard` \(T2 instances\) or `unlimited` \(T3/T3a instances\)  
 *Required*: No  
 *Type*: [CreditSpecification](aws-properties-ec2-instance-creditspecification.md)  
@@ -171,7 +171,7 @@ Default: `false`
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `ElasticGpuSpecifications`  <a name="cfn-ec2-instance-elasticgpuspecifications"></a>
-An elastic GPU to associate with the instance\. An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate the graphics performance of your applications\. For more information, see [ Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+An elastic GPU to associate with the instance\. An Elastic GPU is a GPU resource that you can attach to your Windows instance to accelerate the graphics performance of your applications\. For more information, see [Amazon EC2 Elastic GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: List of [ElasticGpuSpecification](aws-properties-ec2-instance-elasticgpuspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -184,7 +184,7 @@ You cannot specify accelerators from different generations in the same request\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HibernationOptions`  <a name="cfn-ec2-instance-hibernationoptions"></a>
-Indicates whether an instance is enabled for hibernation\. For more information, see [Hibernate your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Indicates whether an instance is enabled for hibernation\. For more information, see [Hibernate your instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2 User Guide*\.  
 You can't enable hibernation and AWS Nitro Enclaves on the same instance\.  
 *Required*: No  
 *Type*: [HibernationOptions](aws-properties-ec2-instance-hibernationoptions.md)  
@@ -223,7 +223,7 @@ Default: `stop`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-instance-instancetype"></a>
-The instance type\. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The instance type\. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon EC2 User Guide*\.  
 Default: `m1.small`   
 *Required*: No  
 *Type*: String  
@@ -246,7 +246,7 @@ You cannot specify this option and the network interfaces option in the same req
 
 `KernelId`  <a name="cfn-ec2-instance-kernelid"></a>
 The ID of the kernel\.  
-We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon EC2 User Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -301,7 +301,7 @@ If you make an update to an instance that requires replacement, you must assign 
 
 `RamdiskId`  <a name="cfn-ec2-instance-ramdiskid"></a>
 The ID of the RAM disk to select\. Some kernels require additional drivers at launch\. Check the kernel requirements for information about whether you need to specify a RAM disk\. To find kernel requirements, go to the AWS Resource Center and search for the kernel ID\.  
-We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon EC2 User Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -322,7 +322,7 @@ Default: Amazon EC2 uses the default security group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDestCheck`  <a name="cfn-ec2-instance-sourcedestcheck"></a>
-Specifies whether to enable an instance launched in a VPC to perform NAT\. This controls whether source/destination checking is enabled on the instance\. A value of `true` means that checking is enabled, and `false` means that checking is disabled\. The value must be `false` for the instance to perform NAT\. For more information, see [NAT Instances](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html) in the *Amazon Virtual Private Cloud User Guide*\.  
+Specifies whether to enable an instance launched in a VPC to perform NAT\. This controls whether source/destination checking is enabled on the instance\. A value of `true` means that checking is enabled, and `false` means that checking is disabled\. The value must be `false` for the instance to perform NAT\. For more information, see [NAT instances](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html) in the *Amazon VPC User Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

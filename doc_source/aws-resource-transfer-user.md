@@ -153,6 +153,8 @@ An example `UserName` is `transfer-user-1`\.
 
 ## Examples<a name="aws-resource-transfer-user--examples"></a>
 
+
+
 ### Associate a user with a server<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server"></a>
 
 The following example associates a user with a server\.
@@ -182,9 +184,7 @@ The following example associates a user with a server\.
       },
       "Role": "arn:aws:iam::176354371281:role/Transfer_role",
       "ServerId": "s-01234567890abcdef",
-      "SshPublicKeys": [
-        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6"
-      ],
+      "SshPublicKeys": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6",
       "Tags": [
         {
           "Key": "KeyName",
@@ -218,8 +218,7 @@ transfer_user:
           arn:aws:s3:::bucket_name/*
     Role: arn:aws:iam::176354371281:role/Transfer_role
     ServerId: s-01234567890abcdef
-    SshPublicKeys: 
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
+    SshPublicKeys: AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
     Tags:
       - Key: KeyName
         Value: ValueName

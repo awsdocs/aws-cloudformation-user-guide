@@ -119,6 +119,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-secretsmanager-secret--examples"></a>
 
+
+
 ### Creating a Secret with a Dynamically Generated Password<a name="aws-resource-secretsmanager-secret--examples--Creating_a_Secret_with_a_Dynamically_Generated_Password"></a>
 
 The following example creates a secret, constructing the secret value from a string template combined with a dynamically generated random password\. The result of this example is a `SecretString` value that looks like the following:

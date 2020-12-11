@@ -95,6 +95,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-servicediscovery-instance--examples"></a>
 
+
+
 ### Provide IP addresses for an instance<a name="aws-resource-servicediscovery-instance--examples--Provide_IP_addresses_for_an_instance"></a>
 
 The following example provides IPv4 and IPV6 IP addresses for the instance that has an ID of `i-abcd1234`\. The instance was registered using the service that has an ID of `srv-e4anhexample0004`\.
@@ -129,3 +131,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-instance--seealso"></a>
 +  [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) in the *AWS Cloud Map API Reference* 
+

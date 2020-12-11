@@ -113,6 +113,8 @@ Channel playback URL\. For example: `https://a1b2c3d4e5f6.us-west-2.playback.liv
 
 ## Examples<a name="aws-resource-ivs-channel--examples"></a>
 
+
+
 ### Channel and Stream Key Template Examples<a name="aws-resource-ivs-channel--examples--Channel_and_Stream_Key_Template_Examples"></a>
 
 The following examples create an Amazon IVS channel and stream key\.

@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-sizeconstraintset--examples"></a>
 
+
+
 ### Define a Size Constraint<a name="aws-resource-wafregional-sizeconstraintset--examples--Define_a_Size_Constraint"></a>
 
 The following example checks that the body of an HTTP request equals `4096` bytes\.

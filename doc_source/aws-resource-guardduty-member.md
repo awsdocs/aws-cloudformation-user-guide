@@ -83,6 +83,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-guardduty-member--examples"></a>
 
+
+
 ### Declare a Member Resource<a name="aws-resource-guardduty-member--examples--Declare_a_Member_Resource"></a>
 
 The following example shows how to declare a GuardDuty `Member` resource:

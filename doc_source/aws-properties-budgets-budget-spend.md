@@ -42,3 +42,4 @@ The unit of measurement that is used for the budget forecast, actual spend, or b
 
 ## See also<a name="aws-properties-budgets-budget-spend--seealso"></a>
 +  [Spend](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Spend.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

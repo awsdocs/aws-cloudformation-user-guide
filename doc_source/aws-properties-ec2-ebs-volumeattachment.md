@@ -57,6 +57,8 @@ The ID of the Amazon EBS volume\. The volume and instance must be within the sam
 
 ## Examples<a name="aws-properties-ec2-ebs-volumeattachment--examples"></a>
 
+
+
 ### Attach an EBS Volume to a Running Instance<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance"></a>
 
 This example attaches an EC2 EBS volume to the EC2 instance with the logical name "Ec2Instance"\.

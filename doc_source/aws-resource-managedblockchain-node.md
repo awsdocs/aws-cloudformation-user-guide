@@ -80,7 +80,11 @@ The unique identifier of the node\.
 
 ## Examples<a name="aws-resource-managedblockchain-node--examples"></a>
 
+
+
 ### Create a Peer Node in a Member<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member"></a>
+
+
 
 #### YAML<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member--yaml"></a>
 

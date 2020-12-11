@@ -177,6 +177,8 @@ The state of the canary\. For example, `RUNNING`\.
 
 ## Examples<a name="aws-resource-synthetics-canary--examples"></a>
 
+
+
 ### Canary with script stored in an Amazon S3 bucket<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket"></a>
 
 This example creates a canary that uses an existing script stored in an S3 bucket\. The canary is started as soon as it is created\.

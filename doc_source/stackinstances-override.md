@@ -69,9 +69,8 @@ In the example command shown here, we change the default snapshot delivery frequ
 1. Run the following command\. For `--stack-set-name`, specify the stack set name *my\-awsconfig\-stackset*\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For this walkthrough, we are using count, not percentage\.
-   
-      **Note**
-   The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`.
+**Note**  
+The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
    \[Self\-managed permissions\] Provide the account IDs for which you want to override parameter values on stack instances\.
 

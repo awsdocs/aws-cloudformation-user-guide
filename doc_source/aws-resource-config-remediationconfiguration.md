@@ -128,6 +128,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-remediationconfiguration--examples"></a>
 
+
+
 ### Remeditation Configuration<a name="aws-resource-config-remediationconfiguration--examples--Remeditation_Configuration"></a>
 
 The following example creates a remediation configuration using AWS Systems Manager document\.

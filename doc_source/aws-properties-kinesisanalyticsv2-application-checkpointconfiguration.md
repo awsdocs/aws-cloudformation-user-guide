@@ -62,3 +62,4 @@ If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application wil
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration--seealso"></a>
 +  [CheckpointConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CheckpointConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

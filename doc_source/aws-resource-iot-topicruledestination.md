@@ -38,8 +38,7 @@ Properties of the HTTP URL\.
 *Type*: [HttpUrlDestinationSummary](aws-properties-iot-topicruledestination-httpurldestinationsummary.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Status`  <a name="cfn-iot-topicruledestination-status"></a>
-     
+`Status`  <a name="cfn-iot-topicruledestination-status"></a>  
 IN\_PROGRESS  
 A topic rule destination was created but has not been confirmed\. You can set status to `IN_PROGRESS` by calling `UpdateTopicRuleDestination`\. Calling `UpdateTopicRuleDestination` causes a new confirmation challenge to be sent to your confirmation endpoint\.  
 ENABLED  
@@ -73,6 +72,8 @@ A value similar to the following is returned:
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-iot-topicruledestination-return-values-fn--getatt"></a>
+
+
 
 #### <a name="aws-resource-iot-topicruledestination-return-values-fn--getatt-fn--getatt"></a>
 

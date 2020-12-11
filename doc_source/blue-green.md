@@ -216,6 +216,7 @@ The execution role for CloudFormation to use to perform the blue\-green deployme
 Specifies properties of the Amazon ECS application\.  
 *Required*: Yes    
 `Target`  
+  
 *Required*: Yes    
 `Type`  
 The type of the resource\.  

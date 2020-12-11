@@ -38,3 +38,4 @@ Specifies whether the user is required to set a new password on next sign\-in\.
 
 ## See also<a name="aws-properties-iam-user-loginprofile--seealso"></a>
 +  [LoginProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_LoginProfile.html) in the *AWS Identity and Access Management API Reference* 
+

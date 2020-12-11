@@ -53,3 +53,4 @@ The credentials for the service account used by the streaming instance to connec
 
 ## See also<a name="aws-resource-appstream-directoryconfig--seealso"></a>
 +  [CreateDirectoryConfig](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateDirectoryConfig.html) in the *Amazon AppStream 2\.0 API Reference* 
+

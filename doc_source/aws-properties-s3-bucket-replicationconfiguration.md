@@ -39,3 +39,4 @@ A container for one or more replication rules\. A replication configuration must
 
 ## See also<a name="aws-properties-s3-bucket-replicationconfiguration--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

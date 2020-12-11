@@ -67,6 +67,8 @@ The ID of the global network\. For example, `global-network-01231231231231231`\.
 
 ## Examples<a name="aws-resource-networkmanager-globalnetwork--examples"></a>
 
+
+
 ### Global Network<a name="aws-resource-networkmanager-globalnetwork--examples--Global_Network"></a>
 
 The following example creates a global network\.

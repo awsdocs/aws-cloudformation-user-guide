@@ -262,3 +262,4 @@ The Base64\-encoded user data to make available to the instance\. For more infor
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata--seealso"></a>
 +  [RequestLaunchTemplateData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RequestLaunchTemplateData.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

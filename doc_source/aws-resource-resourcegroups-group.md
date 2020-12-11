@@ -91,6 +91,8 @@ The ARN of a resource group\.
 
 ## Examples<a name="aws-resource-resourcegroups-group--examples"></a>
 
+
+
 ### Creating a CloudFormation Stack\-Based Group Using Defaults<a name="aws-resource-resourcegroups-group--examples--Creating_a_CloudFormation_Stack-Based_Group_Using_Defaults"></a>
 
 This example creates a CloudFormation stack\-based group using defaults\. It includes all supported resource types and uses the same `StackIdentifier` as the CloudFormation stack that defines the group\.

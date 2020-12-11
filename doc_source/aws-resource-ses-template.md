@@ -42,6 +42,8 @@ Specifies an email template, which is used when sending templated email messages
 
 ### <a name="aws-resource-ses-template--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-template--examples----json"></a>
 
 ```

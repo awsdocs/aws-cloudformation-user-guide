@@ -42,3 +42,4 @@ The AWS account ID associated with the registry that contains the repository\. I
 ## See also<a name="aws-properties-ecr-repository-lifecyclepolicy--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 
+

@@ -39,3 +39,4 @@ The maximum time, in seconds, to keep the existing connections open before dereg
 ## See also<a name="aws-properties-ec2-elb-connectiondrainingpolicy--seealso"></a>
 +  [ModifyLoadBalancerAttributes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ModifyLoadBalancerAttributes.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Connection Draining](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/config-conn-drain.html) in the *User Guide for Classic Load Balancers* 
+

@@ -94,6 +94,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-vpcpeeringconnection--examples"></a>
 
+
+
 ### VPC Peering Connection<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection"></a>
 
 The following example creates two VPCs \(`myVPC` and `myPrivateVPC`\) and a subnet in each VPC\. The subnet in `myVPC` is a public subnet\. The example then creates a VPC peering connection between the VPCs and launches an instance in each VPC\. You can test the peering connection by connecting to the instance in the public subnet and pinging the private IP address of the instance in the subnet of the private VPC\. The security group rules for the instance in the private subnet allow incoming ICMP traffic \(and therefore allow the `ping` command\)\.
@@ -547,3 +549,4 @@ Resources:
 ## See also<a name="aws-resource-ec2-vpcpeeringconnection--seealso"></a>
 + [What is VPC peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) in *AWS Outposts User Guide*
 + [CreateVpcPeeringConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcPeeringConnection.html) in the *Amazon EC2 API Reference*
+

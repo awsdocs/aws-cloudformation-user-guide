@@ -73,3 +73,4 @@ If you specify settings for an SRV record and if you specify values for `AWS_INS
 ## See also<a name="aws-properties-servicediscovery-service-dnsrecord--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [DnsRecord](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html) in the *AWS Cloud Map API Reference* 
+

@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ask-skill--examples"></a>
 
+
+
 ### Alexa Skill Resource Configuration<a name="aws-resource-ask-skill--examples--Alexa_Skill_Resource_Configuration"></a>
 
 The following example retrieves the skill package from an S3 bucket and provides credentials for authentication with the Alexa service through Login with Amazon \(LWA\)\.

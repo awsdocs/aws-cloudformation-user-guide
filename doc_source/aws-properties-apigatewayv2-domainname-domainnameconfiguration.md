@@ -56,3 +56,4 @@ The Transport Layer Security \(TLS\) version of the security policy for this dom
 
 ## See also<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration--seealso"></a>
 + [DomainNameConfiguration](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname.html#domainnames-domainname-model-domainnameconfiguration) in the *Amazon API Gateway Version 2 API Reference*
+

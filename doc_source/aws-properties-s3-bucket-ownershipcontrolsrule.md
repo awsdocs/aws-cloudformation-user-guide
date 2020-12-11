@@ -31,6 +31,8 @@ Specifies an object ownership rule\.
 
 ## Examples<a name="aws-properties-s3-bucket-ownershipcontrolsrule--examples"></a>
 
+
+
 ### Object ownership<a name="aws-properties-s3-bucket-ownershipcontrolsrule--examples--Object_ownership"></a>
 
 The following examples show object ownership set to `BucketOwnerPreferred`\.

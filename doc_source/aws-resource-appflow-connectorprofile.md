@@ -99,3 +99,4 @@ Not currently supported by AWS CloudFormation\.
 + [DescribeConnectorProfiles](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeConnectorProfiles.html) in the *Amazon AppFlow API Reference*\.
 + [DeleteConnectorProfile](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DeleteConnectorProfile.html) in the *Amazon AppFlow API Reference*\.
 + [UpdateConnectorProfile](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_UpdateConnectorProfile.html) in the *Amazon AppFlow API Reference*\.
+

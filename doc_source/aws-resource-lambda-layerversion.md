@@ -87,6 +87,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-lambda-layerversion--examples"></a>
 
+
+
 ### Layer Version<a name="aws-resource-lambda-layerversion--examples--Layer_Version"></a>
 
 Create a layer named `my-layer`\.

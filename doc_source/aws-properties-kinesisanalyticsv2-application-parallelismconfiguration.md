@@ -57,3 +57,4 @@ Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration--seealso"></a>
 +  [ParallelismConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

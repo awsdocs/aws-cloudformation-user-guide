@@ -140,6 +140,8 @@ The name of the function\.
 
 ## Examples<a name="aws-resource-appsync-functionconfiguration--examples"></a>
 
+
+
 ### Function Creation Example<a name="aws-resource-appsync-functionconfiguration--examples--Function_Creation_Example"></a>
 
 The following example creates a function and associates it with an existing GraphQL API and a data source by passing the GraphQL API ID and data source name as a parameter\.
@@ -242,3 +244,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-functionconfiguration--seealso"></a>
 +  [CreateFunction](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateFunction.html) operation in the *AWS AppSync API Reference*\.
+

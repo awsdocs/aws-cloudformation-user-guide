@@ -55,6 +55,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-fms-notificationchannel--examples"></a>
 
+
+
 ### Create a Firewall Manager notification channel<a name="aws-resource-fms-notificationchannel--examples--Create_a_Firewall_Manager_notification_channel"></a>
 
 The following shows an example SNS notification channel for Firewall Manager\. 

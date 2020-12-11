@@ -20,12 +20,12 @@ If your template includes nested stacks \(for example, stacks described in other
 
      If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing objects in a versioning\-enabled bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
-     The URL must point to a template with a maximum size of 460,800 bytes that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
+     The URL must point to a template with a maximum size of 1 MB that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
    + **Upload a template file**
 
      Select a CloudFormation template on your local computer\. 
 
-     Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 460,800 bytes\. Once you have chosen your template, CloudFormation uploads the file and displays the S3 URL\.
+     Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 1 MB\. Once you have chosen your template, CloudFormation uploads the file and displays the S3 URL\.
 
      If you use the CLI or API to create a stack, you can upload a template with a maximum size of 51,200 bytes\.
 **Note**  

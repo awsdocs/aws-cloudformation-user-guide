@@ -51,6 +51,8 @@ Specifies an event destination for a configuration set\.
 
 ### <a name="aws-resource-ses-configurationseteventdestination--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-configurationseteventdestination--examples----json"></a>
 
 ```

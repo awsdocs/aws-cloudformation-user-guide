@@ -98,6 +98,8 @@ The Domain Name System \(DNS\) name that Global Accelerator creates that points 
 
 ## Examples<a name="aws-resource-globalaccelerator-accelerator--examples"></a>
 
+
+
 ### Add an accelerator<a name="aws-resource-globalaccelerator-accelerator--examples--Add_an_accelerator"></a>
 
 These are examples to specify an accelerator\.

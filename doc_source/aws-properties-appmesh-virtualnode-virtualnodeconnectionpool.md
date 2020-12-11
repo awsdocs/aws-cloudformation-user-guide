@@ -6,6 +6,8 @@ Only one protocol is used at a time and should be the same protocol as the one c
 
 If not present the default value for `maxPendingRequests` is `2147483647`\.
 
+
+
 ## Syntax<a name="aws-properties-appmesh-virtualnode-virtualnodeconnectionpool-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

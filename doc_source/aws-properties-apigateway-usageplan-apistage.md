@@ -48,3 +48,4 @@ Duplicates are not allowed\.
 
 ## See also<a name="aws-properties-apigateway-usageplan-apistage--seealso"></a>
 + [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan/) in the *Amazon API Gateway REST API Reference*
+

@@ -39,3 +39,4 @@ This field is `true` if any of the AWS accounts have public keys that CloudFront
 
 ## See also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners--seealso"></a>
 +  [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference* 
+

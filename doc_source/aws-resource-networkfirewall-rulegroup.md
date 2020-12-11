@@ -110,6 +110,8 @@ The unique ID of the [AWS::NetworkFirewall::RuleGroup](#aws-resource-networkfire
 
 ## Examples<a name="aws-resource-networkfirewall-rulegroup--examples"></a>
 
+
+
 ### Create a stateful rule group<a name="aws-resource-networkfirewall-rulegroup--examples--Create_a_stateful_rule_group"></a>
 
 The following shows example stateful rule group specifications\. 

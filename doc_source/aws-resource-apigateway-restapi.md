@@ -160,6 +160,8 @@ The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.
 
 ## Examples<a name="aws-resource-apigateway-restapi--examples"></a>
 
+
+
 ### Based on OpenAPI specification<a name="aws-resource-apigateway-restapi--examples--Based_on_OpenAPI_specification"></a>
 
 The following example creates an API Gateway RestApi resource based on an OpenAPI specification\.
@@ -388,3 +390,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-restapi--seealso"></a>
 + [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*
+

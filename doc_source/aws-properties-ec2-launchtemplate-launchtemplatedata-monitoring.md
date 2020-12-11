@@ -32,3 +32,4 @@ Specify `true` to enable detailed monitoring\. Otherwise, basic monitoring is en
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring--seealso"></a>
 +  [ LaunchTemplatesMonitoringRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatesMonitoringRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

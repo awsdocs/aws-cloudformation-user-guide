@@ -123,3 +123,4 @@ The name of the virtual gateway that the gateway route is associated with\.
 ## See also<a name="aws-resource-appmesh-gatewayroute--seealso"></a>
 +  [Gateway routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/gateway-routes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateGatewayRoute](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateGatewayRoute.html) in the * AWS App Mesh API Reference *\.
+

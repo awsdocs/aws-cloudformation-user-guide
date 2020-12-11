@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-deployment--examples"></a>
 
+
+
 ### Deployment creation example<a name="aws-resource-apigatewayv2-deployment--examples--Deployment_creation_example"></a>
 
 The following example creates a `deployment` resource for the `MyApi` API, which has the `MyRoute` route defined\.
@@ -98,3 +100,4 @@ Deployment:
 
 ## See also<a name="aws-resource-apigatewayv2-deployment--seealso"></a>
 + [CreateDeployment](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-deployments.html#CreateDeployment) in the *Amazon API Gateway Version 2 API Reference*
+

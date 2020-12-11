@@ -19,6 +19,10 @@ The following example shows a JSON\-formatted template fragment\.
   "Parameters" : {
     set of parameters
   },
+  
+  "Rules" : {
+    set of rules
+  },
 
   "Mappings" : {
     set of mappings
@@ -35,7 +39,7 @@ The following example shows a JSON\-formatted template fragment\.
   "Resources" : {
     set of resources
   },
-
+  
   "Outputs" : {
     set of outputs
   }
@@ -58,6 +62,9 @@ Metadata:
 
 Parameters:
   set of parameters
+
+Rules:
+  set of rules
 
 Mappings:
   set of mappings
@@ -90,6 +97,9 @@ Objects that provide additional information about the template\.
 
 **[Parameters \(optional\)](parameters-section-structure.md)**  
 Values to pass to your template at runtime \(when you create or update a stack\)\. You can refer to parameters from the `Resources` and `Outputs` sections of the template\.
+
+**[Rules \(optional\)](rules-section-structure.md)**  
+Validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\.
 
 **[Mappings \(optional\)](mappings-section-structure.md)**  
 A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table\. You can match a key to a corresponding value by using the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) intrinsic function in the `Resources` and `Outputs` sections\.

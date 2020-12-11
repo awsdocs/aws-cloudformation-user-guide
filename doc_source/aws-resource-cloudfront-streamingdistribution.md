@@ -64,6 +64,8 @@ The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 ## Examples<a name="aws-resource-cloudfront-streamingdistribution--examples"></a>
 
+
+
 ### Create a streaming distribution<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution"></a>
 
 The following example specifies a streaming distribution and assigns it a single tag\.

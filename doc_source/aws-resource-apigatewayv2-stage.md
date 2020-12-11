@@ -125,6 +125,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-stage--examples"></a>
 
+
+
 ### Stage creation example<a name="aws-resource-apigatewayv2-stage--examples--Stage_creation_example"></a>
 
 The following example creates a `stage` resource called `MyStage` and associates it with an existing `deployment` called `MyDeployment`\.
@@ -188,3 +190,4 @@ MyStage:
 
 ## See also<a name="aws-resource-apigatewayv2-stage--seealso"></a>
 + [CreateStage](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html#CreateStage) in the *Amazon API Gateway Version 2 API Reference*
+

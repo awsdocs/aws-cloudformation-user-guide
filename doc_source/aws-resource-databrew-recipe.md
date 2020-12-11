@@ -74,6 +74,8 @@ For an AWS Glue DataBrew recipe named `myRecipe`, `Ref` returns the name of t
 
 ## Examples<a name="aws-resource-databrew-recipe--examples"></a>
 
+
+
 ### Creating recipes<a name="aws-resource-databrew-recipe--examples--Creating_recipes"></a>
 
 The following examples create new DataBrew recipes\.

@@ -150,3 +150,4 @@ The ID of the subnet for the network interface\.
 
 ## See also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
 +  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

@@ -256,6 +256,8 @@ Example \(IPv6\): `http://DOC-EXAMPLE-BUCKET.s3.dualstack.us-east-2.amazonaws.co
 
 ## Examples<a name="aws-properties-s3-bucket--examples"></a>
 
+
+
 ### Create an S3 bucket<a name="aws-properties-s3-bucket--examples--Create_an_S3_bucket"></a>
 
 The following example creates an S3 bucket with a `Retain` deletion policy\.
@@ -1124,3 +1126,4 @@ Resources:
 
 ## See also<a name="aws-properties-s3-bucket--seealso"></a>
 + [Amazon S3 Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-s3.html)
+

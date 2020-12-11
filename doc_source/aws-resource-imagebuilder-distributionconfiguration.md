@@ -83,6 +83,8 @@ Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. Th
 
 ## Examples<a name="aws-resource-imagebuilder-distributionconfiguration--examples"></a>
 
+
+
 ### Create a distribution configuration<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration"></a>
 
 The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format \.
@@ -175,3 +177,4 @@ Resources:
 
 ## See also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
 + [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *EC2 Image Builder User Guide*\.
+

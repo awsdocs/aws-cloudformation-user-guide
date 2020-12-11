@@ -250,6 +250,8 @@ The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:12345
 
 ## Examples<a name="aws-resource-codebuild-project--examples"></a>
 
+
+
 ### Create a project<a name="aws-resource-codebuild-project--examples--Create_a_project"></a>
 
 The following example creates an AWS CodeBuild project\.

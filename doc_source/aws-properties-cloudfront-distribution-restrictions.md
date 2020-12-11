@@ -31,3 +31,4 @@ A complex type that controls the countries in which your content is distributed\
 
 ## See also<a name="aws-properties-cloudfront-distribution-restrictions--seealso"></a>
 +  [Restrictions](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Restrictions.html) in the *Amazon CloudFront API Reference* 
+

@@ -64,3 +64,4 @@ You can specify either `VirtualName` or `Ebs`, but not both\.
 ## See also<a name="aws-properties-as-launchconfig-blockdev-mapping--seealso"></a>
 + [Amazon EC2 instance store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon EC2 User Guide for Linux Instances*
 + [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon EC2 User Guide for Linux Instances*
+

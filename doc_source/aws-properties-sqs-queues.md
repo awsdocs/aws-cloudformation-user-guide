@@ -174,6 +174,8 @@ Returns the queue name\. For example: `mystack-myqueue-1VF9BKQH5BJVI`\.
 
 ## Examples<a name="aws-properties-sqs-queues--examples"></a>
 
+
+
 ### Amazon SQS Queue with CloudWatch Alarms<a name="aws-properties-sqs-queues--examples--Amazon_SQS_Queue_with_CloudWatch_Alarms"></a>
 
 #### JSON<a name="aws-properties-sqs-queues--examples--Amazon_SQS_Queue_with_CloudWatch_Alarms--json"></a>

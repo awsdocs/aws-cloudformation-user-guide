@@ -95,6 +95,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-lambda-eventinvokeconfig--examples"></a>
 
+
+
 ### Asynchronous Invocation Configuration<a name="aws-resource-lambda-eventinvokeconfig--examples--Asynchronous_Invocation_Configuration"></a>
 
 Error handling and destination configuration for a version of a function\. Node\.js function and version are included\.

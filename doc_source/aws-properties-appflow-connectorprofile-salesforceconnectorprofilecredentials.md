@@ -62,3 +62,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials--seealso"></a>
 + [SalesforceConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_SalesforceConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

@@ -196,6 +196,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-glue-job--examples"></a>
 
+
+
 ### <a name="aws-resource-glue-job--examples--"></a>
 
 The following example creates a job with an associated role\. 

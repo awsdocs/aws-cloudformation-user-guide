@@ -100,6 +100,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-events-eventbuspolicy--examples"></a>
 
+
+
 ### Grant Permission to One Account<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_One_Account"></a>
 
 The following example grants permission to one AWS account with an account ID of `111122223333`\. 

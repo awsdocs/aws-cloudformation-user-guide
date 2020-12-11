@@ -105,6 +105,8 @@ Returns the name of the image\.
 
 ## Examples<a name="aws-resource-imagebuilder-image--examples"></a>
 
+
+
 ### Create an image<a name="aws-resource-imagebuilder-image--examples--Create_an_image"></a>
 
 The following example shows the schema for all of the parameters of the Image resource document in both YAML and JSON format \.

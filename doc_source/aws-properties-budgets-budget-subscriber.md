@@ -44,3 +44,4 @@ The type of notification that AWS sends to a subscriber\.
 
 ## See also<a name="aws-properties-budgets-budget-subscriber--seealso"></a>
 +  [Subscriber](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Subscriber.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

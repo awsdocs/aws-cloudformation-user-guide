@@ -104,6 +104,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-organizationconformancepack--examples"></a>
 
+
+
 ### Organization Conformance Pack<a name="aws-resource-config-organizationconformancepack--examples--Organization_Conformance_Pack"></a>
 
 The following example creates an organization conformance pack\.

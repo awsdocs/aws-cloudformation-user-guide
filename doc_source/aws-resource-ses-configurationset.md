@@ -45,6 +45,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ses-configurationset--examples"></a>
 
+
+
 ### <a name="aws-resource-ses-configurationset--examples--"></a>
 
 Specifies a configuration set\.

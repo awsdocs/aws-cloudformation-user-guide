@@ -31,3 +31,4 @@ A lifecycle rule for individual objects in an Amazon S3 bucket\.
 
 ## See also<a name="aws-properties-s3-bucket-lifecycleconfig--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

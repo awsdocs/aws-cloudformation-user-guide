@@ -92,3 +92,4 @@ The volume type\. The default is `gp2`\. For more information, see [Amazon EBS v
 
 ## See also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-ebs--seealso"></a>
 +  [ LaunchTemplateEbsBlockDeviceRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateEbsBlockDeviceRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

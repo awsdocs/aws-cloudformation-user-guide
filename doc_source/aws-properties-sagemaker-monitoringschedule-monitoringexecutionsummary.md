@@ -43,7 +43,7 @@ The time at which the monitoring job was created\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointName`  <a name="cfn-sagemaker-monitoringschedule-monitoringexecutionsummary-endpointname"></a>
-The name of teh endpoint used to run the monitoring job\.  
+The name of the endpoint used to run the monitoring job\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  

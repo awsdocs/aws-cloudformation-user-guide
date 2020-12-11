@@ -86,6 +86,8 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-application--examples"></a>
 
+
+
 ### Create an application<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application"></a>
 
 #### JSON<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application--json"></a>
@@ -429,3 +431,4 @@ Outputs:
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
 +  [CreateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplication.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

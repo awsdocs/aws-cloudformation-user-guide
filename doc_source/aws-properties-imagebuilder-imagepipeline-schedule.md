@@ -42,3 +42,4 @@ For information on how to format a cron expression in Image Builder, see [Use cr
 
 ## See also<a name="aws-properties-imagebuilder-imagepipeline-schedule--seealso"></a>
 + [Create an image pipeline](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-image-pipeline) in the *EC2 Image Builder User Guide*\.
+

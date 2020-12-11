@@ -51,6 +51,8 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ### <a name="aws-resource-ses-receiptruleset--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-receiptruleset--examples----json"></a>
 
 ```

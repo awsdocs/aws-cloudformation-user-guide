@@ -235,7 +235,11 @@ The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-co
 
 ## Examples<a name="aws-resource-docdb-dbcluster--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbcluster--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbcluster--examples----json"></a>
 
@@ -297,3 +301,4 @@ Resources:
 +  [DeleteDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBCluster.html) 
 +  [DescribeDBClusters](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusters.html) 
 +  [ModifyDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBCluster.html) 
+

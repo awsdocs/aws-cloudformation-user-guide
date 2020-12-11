@@ -72,6 +72,8 @@ The latest version of the launch template, such as `5`\.
 
 ### Launch Template with an IAM Instance Profile<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile"></a>
 
+
+
 #### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile--yaml"></a>
 
 ```
@@ -102,6 +104,8 @@ Resources:
 ```
 
 ### <a name="aws-resource-ec2-launchtemplate--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ec2-launchtemplate--examples----json"></a>
 

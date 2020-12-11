@@ -31,6 +31,8 @@ Specifies the container element for object ownership rules\.
 
 ## Examples<a name="aws-properties-s3-bucket-ownershipcontrols--examples"></a>
 
+
+
 ### Object ownership<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_ownership"></a>
 
 The following examples show object ownership set to `BucketOwnerPreferred`\.

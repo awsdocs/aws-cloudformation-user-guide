@@ -43,3 +43,4 @@ The tags to apply to the resource\.
 
 ## See also<a name="aws-properties-ec2-launchtemplate-tagspecification--seealso"></a>
 +  [ LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

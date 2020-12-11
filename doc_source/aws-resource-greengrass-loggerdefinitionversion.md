@@ -56,6 +56,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-loggerdefinitionversion--examples"></a>
 
+
+
 ### Logger Definition Version Snippet<a name="aws-resource-greengrass-loggerdefinitionversion--examples--Logger_Definition_Version_Snippet"></a>
 
 The following snippet defines logger definition and logger definition version resources\. The logger definition version references the logger definition and contains a logger\.

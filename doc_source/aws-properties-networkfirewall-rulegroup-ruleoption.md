@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-ruleoption-properties"></a>
 
 `Keyword`  <a name="cfn-networkfirewall-rulegroup-ruleoption-keyword"></a>
+  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -34,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Settings`  <a name="cfn-networkfirewall-rulegroup-ruleoption-settings"></a>
+  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

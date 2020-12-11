@@ -103,6 +103,8 @@ Returns the Amazon Resource Name \(ARN\) for the specified `AWS::ECR::Repository
 
 ## Examples<a name="aws-resource-ecr-repository--examples"></a>
 
+
+
 ### Specify a repository<a name="aws-resource-ecr-repository--examples--Specify_a_repository"></a>
 
 The following example specifies a repository named `test-repository`\. Its policy permits the users `Bob` and `Alice` to push and pull images\. Note that the IAM users actually need to exist, or stack creation will fail\.
@@ -274,3 +276,4 @@ MyRepository:
 ## See also<a name="aws-resource-ecr-repository--seealso"></a>
 +  [Creating a Lifecycle Policy](https://docs.aws.amazon.com/AmazonECR/latest/userguide/lp_creation.html) in the *Amazon Elastic Container Registry User Guide* 
 +  [PutLifecyclePolicy](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_PutLifecyclePolicy.html) in the *Amazon Elastic Container Registry API Reference* 
+

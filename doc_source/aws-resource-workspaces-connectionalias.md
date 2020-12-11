@@ -74,3 +74,4 @@ The current state of the connection alias, returned as a string\.
 ## See also<a name="aws-resource-workspaces-connectionalias--seealso"></a>
 + [ConnectionAlias](https://docs.aws.amazon.com/workspaces/latest/api/API_ConnectionAlias.html) in the *Amazon WorkSpaces API Reference*
 + [Cross\-Region Redirection for Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html) in the *Amazon WorkSpaces Administration Guide*
+

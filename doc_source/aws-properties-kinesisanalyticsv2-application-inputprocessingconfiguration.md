@@ -31,3 +31,4 @@ The [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/a
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration--seealso"></a>
 +  [InputProcessingConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputProcessingConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

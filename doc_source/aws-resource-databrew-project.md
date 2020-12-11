@@ -94,6 +94,8 @@ For an AWS Glue DataBrew project named `myProject`,  `Ref` returns the name o
 
 ## Examples<a name="aws-resource-databrew-project--examples"></a>
 
+
+
 ### Creating projects<a name="aws-resource-databrew-project--examples--Creating_projects"></a>
 
 The following examples create new DataBrew projects\.

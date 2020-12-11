@@ -123,3 +123,4 @@ Resources:
 ## See also<a name="aws-properties-iam-group--seealso"></a>
 + To view `AWS::IAM::Group` template example snippets, see [Declaring an IAM Group Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-group)\. 
 +  [CreateGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateGroup.html) in the *AWS Identity and Access Management API Reference* 
+

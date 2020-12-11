@@ -76,6 +76,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-model--examples"></a>
 
+
+
 ### Create model<a name="aws-resource-apigateway-model--examples--Create_model"></a>
 
 The following example creates a model that transforms input data into the described schema\.
@@ -144,3 +146,4 @@ PetsModelNoFlatten:
 
 ## See also<a name="aws-resource-apigateway-model--seealso"></a>
 + [model:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/model-create/) in the *Amazon API Gateway REST API Reference*
+

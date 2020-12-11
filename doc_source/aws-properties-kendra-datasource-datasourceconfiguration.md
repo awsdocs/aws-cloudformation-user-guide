@@ -45,7 +45,7 @@ Provides information necessary to create a data source connector for a database\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OneDriveConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-onedriveconfiguration"></a>
-Provided configuration for data sources that connect to Microsoft OneDrive\.  
+Provides configuration for data sources that connect to Microsoft OneDrive\.  
 *Required*: No  
 *Type*: [OneDriveConfiguration](aws-properties-kendra-datasource-onedriveconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

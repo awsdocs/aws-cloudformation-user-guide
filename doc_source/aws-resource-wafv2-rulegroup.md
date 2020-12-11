@@ -122,6 +122,8 @@ The ID of the rule group\.
 
 ## Examples<a name="aws-resource-wafv2-rulegroup--examples"></a>
 
+
+
 ### Create a rule group<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group"></a>
 
 The following shows an example rule group specification\. 

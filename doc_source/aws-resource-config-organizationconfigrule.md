@@ -76,6 +76,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-organizationconfigrule--examples"></a>
 
+
+
 ### Managed Rule<a name="aws-resource-config-organizationconfigrule--examples--Managed_Rule"></a>
 
 The following example creates a managed organization config rule\.

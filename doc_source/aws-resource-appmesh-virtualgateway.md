@@ -112,3 +112,4 @@ The name of the virtual gateway\.
 ## See also<a name="aws-resource-appmesh-virtualgateway--seealso"></a>
 +  [Virtual gateways](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualGateway](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualGateway.html) in the * AWS App Mesh API Reference *\.
+

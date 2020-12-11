@@ -38,3 +38,4 @@ The name of the classifier\.
 
 ## See also<a name="aws-properties-glue-classifier-jsonclassifier--seealso"></a>
 +  [JsonClassifier Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-JsonClassifier) in the *AWS Glue Developer Guide* 
+

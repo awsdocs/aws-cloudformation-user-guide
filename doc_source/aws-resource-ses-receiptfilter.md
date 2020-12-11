@@ -40,6 +40,8 @@ Specifies an IP address filter for incoming email\.
 
 ### <a name="aws-resource-ses-receiptfilter--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-receiptfilter--examples----json"></a>
 
 ```

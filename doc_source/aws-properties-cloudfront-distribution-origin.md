@@ -117,3 +117,4 @@ Use this type to specify an origin that is an Amazon S3 bucket that is not confi
 
 ## See also<a name="aws-properties-cloudfront-distribution-origin--seealso"></a>
 +  [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html) in the *Amazon CloudFront API Reference* 
+

@@ -140,6 +140,8 @@ Use this for ICMP and any protocol that uses ports\.
 
 ## Examples<a name="aws-properties-ec2-security-group-ingress--examples"></a>
 
+
+
 ### EC2 Security Group and Ingress Rule<a name="aws-properties-ec2-security-group-ingress--examples--EC2_Security_Group_and_Ingress_Rule"></a>
 
 To declare an Amazon EC2 \(non\-VPC\) security group and an ingress rule, use the `SourceSecurityGroupName ` property in the ingress rule\.

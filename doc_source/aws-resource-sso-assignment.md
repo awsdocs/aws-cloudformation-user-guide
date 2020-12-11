@@ -98,6 +98,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-sso-assignment--examples"></a>
 
+
+
 ### Creating a new assignment for AWS SSO<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO"></a>
 
 The following example creates a custom assignment, assigning the user `"user_id"` access to account `"arn:aws:organizations::org_master_id:account/org_id/accountId"` with the permissions `"PermissionSet"`\. 

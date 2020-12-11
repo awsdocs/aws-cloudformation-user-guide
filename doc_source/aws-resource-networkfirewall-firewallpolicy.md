@@ -92,6 +92,8 @@ The unique ID of the [AWS::NetworkFirewall::FirewallPolicy](#aws-resource-networ
 
 ## Examples<a name="aws-resource-networkfirewall-firewallpolicy--examples"></a>
 
+
+
 ### Create a firewall policy<a name="aws-resource-networkfirewall-firewallpolicy--examples--Create_a_firewall_policy"></a>
 
 The following shows example firewall policy specifications\. 

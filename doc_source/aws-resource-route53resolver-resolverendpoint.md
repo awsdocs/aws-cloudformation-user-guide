@@ -113,6 +113,8 @@ The ID of the resolver endpoint\.
 
 ## Examples<a name="aws-resource-route53resolver-resolverendpoint--examples"></a>
 
+
+
 ### Create Resolver endpoint<a name="aws-resource-route53resolver-resolverendpoint--examples--Create_Resolver_endpoint"></a>
 
 The following example creates an Amazon Route 53 outbound resolver endpoint\. The `IpAddresses` object includes values for `SubnetId` but not for `Ip`\. This causes Route 53 Resolver to automatically choose an IP address from among the available IP addresses in the specified subnet\.
@@ -164,3 +166,4 @@ Properties :
 
 ## See also<a name="aws-resource-route53resolver-resolverendpoint--seealso"></a>
 +  [ResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverEndpoint.html) in the *Amazon Route 53 API Reference* 
+

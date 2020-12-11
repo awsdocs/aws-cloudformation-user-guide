@@ -182,6 +182,8 @@ The domain\-specific endpoint that's used for requests to the Elasticsearch APIs
 
 ## Examples<a name="aws-resource-elasticsearch-domain--examples"></a>
 
+
+
 ### Create an Amazon ES domain that contains two data nodes and three master nodes<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes"></a>
 
 The following example creates an Amazon ES domain running Elasticsearch 7\.4 that contains two data nodes and three dedicated master nodes\. The domain has 40 GiB of storage and enables log publishing for application logs, search slow logs, and index slow logs\. The access policy permits the root user for the AWS account to make all HTTP requests to the domain, such as indexing documents or searching indices\.

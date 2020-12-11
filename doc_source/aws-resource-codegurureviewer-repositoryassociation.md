@@ -96,6 +96,8 @@ The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/la
 
 ## Examples<a name="aws-resource-codegurureviewer-repositoryassociation--examples"></a>
 
+
+
 ### Create an AWS CodeCommit repository association using an existing CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository"></a>
 
 The following example creates an Amazon CodeGuru Reviewer repository association using an existing AWS CodeCommit repository named `MyRepository`\.

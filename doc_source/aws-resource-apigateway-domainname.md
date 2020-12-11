@@ -118,6 +118,8 @@ The region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\.
 
 ## Examples<a name="aws-resource-apigateway-domainname--examples"></a>
 
+
+
 ### Create Custom Domain<a name="aws-resource-apigateway-domainname--examples--Create_Custom_Domain"></a>
 
 The following example creates a custom domain name of `api.mydomain.com`\.
@@ -444,3 +446,4 @@ Outputs:
 
 ## See also<a name="aws-resource-apigateway-domainname--seealso"></a>
 + [domainname:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) in the *Amazon API Gateway REST API Reference*
+

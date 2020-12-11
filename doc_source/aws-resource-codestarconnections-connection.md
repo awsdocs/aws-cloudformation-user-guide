@@ -97,6 +97,8 @@ The AWS account ID of the owner of the connection\. For Bitbucket, this is the a
 
 ## Examples<a name="aws-resource-codestarconnections-connection--examples"></a>
 
+
+
 ### Bitbucket Connection Configuration<a name="aws-resource-codestarconnections-connection--examples--Bitbucket_Connection_Configuration"></a>
 
 The following example creates a connection with Bitbucket\.

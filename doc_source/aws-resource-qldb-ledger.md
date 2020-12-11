@@ -81,6 +81,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-qldb-ledger--examples"></a>
 
+
+
 ### Amazon QLDB Ledger<a name="aws-resource-qldb-ledger--examples--Amazon_QLDB_Ledger"></a>
 
 The following example describes an Amazon QLDB ledger with a `PermissionsMode` of `ALLOW_ALL`\. The only permissions mode currently supported for a QLDB ledger is `ALLOW_ALL`\.
@@ -127,3 +129,4 @@ Resources:
 
 ## See also<a name="aws-resource-qldb-ledger--seealso"></a>
 +  [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*
+

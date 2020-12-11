@@ -38,3 +38,4 @@ A single line format of the access logs of data, as specified by selected $conte
 
 ## See also<a name="aws-properties-apigatewayv2-stage-accesslogsettings--seealso"></a>
 + [Stages](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html) in the *Amazon API Gateway Version 2 API Reference*
+

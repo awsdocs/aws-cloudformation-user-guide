@@ -76,6 +76,8 @@ For an AWS Glue DataBrew schedule named `mySchedule`,  `Ref` returns the name
 
 ## Examples<a name="aws-resource-databrew-schedule--examples"></a>
 
+
+
 ### Creating schedules<a name="aws-resource-databrew-schedule--examples--Creating_schedules"></a>
 
 The following examples create new DataBrew schedules\.

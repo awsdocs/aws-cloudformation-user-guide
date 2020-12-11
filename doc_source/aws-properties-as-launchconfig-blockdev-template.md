@@ -82,3 +82,4 @@ Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`
 ## See also<a name="aws-properties-as-launchconfig-blockdev-template--seealso"></a>
 + [Required CMK key policy for use with encrypted volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*
 + [Using encryption with EBS\-backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*
+

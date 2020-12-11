@@ -68,6 +68,8 @@ Specifies a receipt rule for incoming email\.
 
 ### <a name="aws-resource-ses-receiptrule--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-receiptrule--examples----json"></a>
 
 ```

@@ -79,6 +79,8 @@ The ID of the namespace\.
 
 ## Examples<a name="aws-resource-servicediscovery-httpnamespace--examples"></a>
 
+
+
 ### Create an HTTP namespace<a name="aws-resource-servicediscovery-httpnamespace--examples--Create_an_HTTP_namespace"></a>
 
 The following example creates an HTTP namespace named `example-namespace`\.
@@ -106,3 +108,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-httpnamespace--seealso"></a>
 +  [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) in the *AWS Cloud Map API Reference* 
+

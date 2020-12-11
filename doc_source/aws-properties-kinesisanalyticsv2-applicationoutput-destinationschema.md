@@ -31,3 +31,4 @@ Specifies the format of the records on the output stream\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema--seealso"></a>
 +  [DestinationSchema](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DestinationSchema.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

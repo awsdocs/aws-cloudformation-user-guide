@@ -420,6 +420,8 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-elasticache-replicationgroup--examples"></a>
 
+
+
 ### Declare a Replication Group with Two Nodes<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Nodes"></a>
 
 The following example declares a replication group with two nodes and automatic failover enabled\. 

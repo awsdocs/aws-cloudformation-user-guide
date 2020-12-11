@@ -146,3 +146,4 @@ The actions that are enabled or disabled for users during their streaming sessio
 
 ## See also<a name="aws-resource-appstream-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateStack.html) in the *Amazon AppStream 2\.0 API Reference* 
+

@@ -100,6 +100,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-codestar-githubrepository--examples"></a>
 
+
+
 ### GitHub Repository Resource Configuration<a name="aws-resource-codestar-githubrepository--examples--GitHub_Repository_Resource_Configuration"></a>
 
 The following example for the `AWS::CodeStar::GitHubRepository` resource creates a private GitHub repository with issues enabled\.

@@ -145,6 +145,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-method--examples"></a>
 
+
+
 ### Mock Method<a name="aws-resource-apigateway-method--examples--Mock_Method"></a>
 
 The following example creates a mock GET method for the `MyApi` API\.
@@ -429,3 +431,4 @@ Outputs:
 
 ## See also<a name="aws-resource-apigateway-method--seealso"></a>
 + [method:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/method-put/) in the *Amazon API Gateway REST API Reference*
+

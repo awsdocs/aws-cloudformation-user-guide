@@ -48,3 +48,4 @@ The friendly name \(not ARN\) identifying the policy\.
 
 ## See also<a name="aws-properties-iam-policy--seealso"></a>
 +  [PolicyDetail](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PolicyDetail.html) in the *AWS Identity and Access Management API Reference* 
+

@@ -86,6 +86,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-conformancepack--examples"></a>
 
+
+
 ### Conformance Pack<a name="aws-resource-config-conformancepack--examples--Conformance_Pack"></a>
 
 The following example creates a conformance pack\.

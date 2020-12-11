@@ -89,3 +89,4 @@ For more information, see [How Route 53 Determines Whether an Endpoint Is Healt
 ## See also<a name="aws-properties-servicediscovery-service-healthcheckconfig--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [HealthCheckConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckConfig.html) in the *AWS Cloud Map API Reference* 
+

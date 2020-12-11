@@ -90,6 +90,8 @@ The version number\.
 
 ## Examples<a name="aws-resource-lambda-version--examples"></a>
 
+
+
 ### Function Version<a name="aws-resource-lambda-version--examples--Function_Version"></a>
 
 Publish a version with provisioned concurrency\.

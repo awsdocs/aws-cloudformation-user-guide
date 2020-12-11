@@ -179,6 +179,8 @@ One or more public IP addresses for the replication instance\.
 
 ## Examples<a name="aws-resource-dms-replicationinstance--examples"></a>
 
+
+
 ### <a name="aws-resource-dms-replicationinstance--examples--"></a>
 
 #### JSON<a name="aws-resource-dms-replicationinstance--examples----json"></a>
@@ -211,3 +213,4 @@ Resources:
 ## See also<a name="aws-resource-dms-replicationinstance--seealso"></a>
 +  [CreateReplicationInstance](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

@@ -74,6 +74,7 @@ If the protocol is HTTP/S, then this value provides the ping path that Global Ac
 *Required*: No  
 *Type*: String  
 *Maximum*: `255`  
+*Pattern*: `^/[-a-zA-Z0-9@:%_\\+.~#?&/=]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckPort`  <a name="cfn-globalaccelerator-endpointgroup-healthcheckport"></a>
@@ -142,6 +143,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the endpoint group, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu`\.
 
 ## Examples<a name="aws-resource-globalaccelerator-endpointgroup--examples"></a>
+
+
 
 ### Add an endpoint group<a name="aws-resource-globalaccelerator-endpointgroup--examples--Add_an_endpoint_group"></a>
 

@@ -73,6 +73,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-lambda-layerversionpermission--examples"></a>
 
+
+
 ### Layer Version Permission<a name="aws-resource-lambda-layerversionpermission--examples--Layer_Version_Permission"></a>
 
 Grant layer use permission to accounts in organization `o-t194hfs8cz`\.

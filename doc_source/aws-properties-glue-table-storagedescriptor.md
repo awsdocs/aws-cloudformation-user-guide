@@ -123,3 +123,4 @@ A list specifying the sort order of each bucket in the table\.
 
 ## See also<a name="aws-properties-glue-table-storagedescriptor--seealso"></a>
 +  [StorageDescriptor Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide* 
+

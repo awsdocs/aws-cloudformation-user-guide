@@ -113,6 +113,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-network-acl-entry--examples"></a>
 
+
+
 ### Network ACL entries for inbound and outbound traffic<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic"></a>
 
 The following example creates a network ACL, and creates two entries in the NACL\. The first entry allows inbound SSH traffic from the specified network\. The second entry allows all outbound IPv4 traffic\.
@@ -205,3 +207,4 @@ Resources:
 ## See also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
 + [NetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*
+

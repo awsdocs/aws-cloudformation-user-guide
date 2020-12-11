@@ -92,13 +92,14 @@ When you create stack sets by using AWS CLI commands, you run two separate comma
 1. Run the `create-stack-instances` AWS CLI command to add stack instances to your stack set\. In this walkthrough, we use `us-west-2` and `us-east-1` as the values of the `--regions` parameter\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0` and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
-   
-   **Note**
-   The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`.
+**Note**  
+The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
    ```
    aws cloudformation create-stack-instances --stack-set-name my-awsconfig-stackset --accounts '["account_ID_1","account_ID_2"]' --regions '["region_1","region_2"]' --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1
    ```
+**Note**  
+The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`\.
 **Important**  
 Wait until an operation is complete before starting another one\. You can run only one operation at a time\.
 

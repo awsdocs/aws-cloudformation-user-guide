@@ -134,6 +134,8 @@ If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries
 
 ## Examples<a name="aws-resource-ec2-vpcendpoint--examples"></a>
 
+
+
 ### VPC Endpoint<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint"></a>
 
 The following example specifies a VPC endpoint that allows only the s3:GetObject action on the examplebucket bucket\. Traffic to S3 within subnets that are associated with the routetableA and routetableB route tables is automatically routed through the VPC endpoint\. 

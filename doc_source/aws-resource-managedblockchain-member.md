@@ -85,6 +85,8 @@ The unique identifier of the network to which the member belongs\.
 
 ## Examples<a name="aws-resource-managedblockchain-member--examples"></a>
 
+
+
 ### Create a New Managed Blockchain Network and the First Member<a name="aws-resource-managedblockchain-member--examples--Create_a_New_Managed_Blockchain_Network_and_the_First_Member"></a>
 
 When you create the first member in a Managed Blockchain network, you also specify parameters to create the network\.
@@ -217,6 +219,8 @@ Resources:
 ```
 
 ### Create an Additional Member in an Existing Network<a name="aws-resource-managedblockchain-member--examples--Create_an_Additional_Member_in_an_Existing_Network"></a>
+
+
 
 #### YAML<a name="aws-resource-managedblockchain-member--examples--Create_an_Additional_Member_in_an_Existing_Network--yaml"></a>
 

@@ -128,6 +128,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-appconfig-deploymentstrategy--examples"></a>
 
+
+
 ### AWS AppConfig Deployment Strategy Example<a name="aws-resource-appconfig-deploymentstrategy--examples--AWS_AppConfig_Deployment_Strategy_Example"></a>
 
 The following example creates an AWS AppConfig deployment strategy called MyTestDeploymentStrategy\. A deployment strategy defines how a configuration is deployed\.

@@ -6,7 +6,7 @@ You might use conditions when you want to reuse a template that can create resou
 
 Conditions are evaluated based on predefined pseudo parameters or input parameter values that you specify when you create or update a stack\. Within each condition, you can reference another condition, a parameter value, or a mapping\. After you define all your conditions, you can associate them with resources and resource properties in the `Resources` and `Outputs` sections of a template\.
 
-At stack creation or stack update, AWS CloudFormation evaluates all the conditions in your template before creating any resources\. Resources that are associated with a true condition are created\. Resources that are associated with a false condition are ignored\. AWS CloudFormation also re\-evaluates these conditions at each stack update before updating any resources\. Resources that are still associated with a true condition are updated\. Resources that are now associated with a false condition are deleted\. For more information about the intinstic function
+At stack creation or stack update, AWS CloudFormation evaluates all the conditions in your template before creating any resources\. Resources that are associated with a true condition are created\. Resources that are associated with a false condition are ignored\. AWS CloudFormation also re\-evaluates these conditions at each stack update before updating any resources\. Resources that are still associated with a true condition are updated\. Resources that are now associated with a false condition are deleted\.
 
 **Important**  
 During a stack update, you cannot update conditions by themselves\. You can update conditions only when you include changes that add, modify, or delete resources\.

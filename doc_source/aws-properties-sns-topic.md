@@ -115,6 +115,8 @@ Returns the name of an Amazon SNS topic\.
 
 ## Examples<a name="aws-properties-sns-topic--examples"></a>
 
+
+
 ### An Amazon SNS topic with two Amazon SQS queue subscriptions<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions"></a>
 
 #### JSON<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions--json"></a>

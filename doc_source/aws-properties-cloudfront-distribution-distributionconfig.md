@@ -184,3 +184,4 @@ AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS r
 
 ## See also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
 +  [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DistributionConfig.html) in the *Amazon CloudFront API Reference* 
+

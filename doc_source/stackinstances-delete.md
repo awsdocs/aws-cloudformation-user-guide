@@ -48,10 +48,9 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 1. Run the `delete-stack-instances` command\. For `--stack-set-name`, specify the stack set name `my-awsconfig-stackset`\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
+**Note**  
+The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
-   **Note**
-   The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`.
-   
    Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you do not want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we are not retaining any stacks\.
 
    \[Self\-managed permissions\] Replace *account\_ID* with the accounts you used to create your stack set in [Create a stack set](stacksets-getting-started-create.md)\.

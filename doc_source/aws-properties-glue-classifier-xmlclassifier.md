@@ -46,3 +46,4 @@ The XML tag designating the element that contains each record in an XML document
 
 ## See also<a name="aws-properties-glue-classifier-xmlclassifier--seealso"></a>
 +  [XMLClassifier Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-XMLClassifier) in the *AWS Glue Developer Guide* 
+

@@ -76,6 +76,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ecs-capacityprovider--examples"></a>
 
+
+
 ### Creating an Amazon ECS capacity provider<a name="aws-resource-ecs-capacityprovider--examples--Creating_an_Amazon_ECS_capacity_provider"></a>
 
 The following example creates a capacity provider that uses the Auto Scaling group `MyAutoScalingGroup`, has managed scaling and managed termination protection enabled\. This configuration is used for Amazon ECS cluster auto scaling\.
