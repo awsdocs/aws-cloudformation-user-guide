@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
       "[Layers](#cfn-lambda-function-layers)" : [ String, ... ],
       "[MemorySize](#cfn-lambda-function-memorysize)" : Integer,
+      "[PackageType](#cfn-lambda-function-packagetype)" : String,
       "[ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions)" : Integer,
       "[Role](#cfn-lambda-function-role)" : String,
       "[Runtime](#cfn-lambda-function-runtime)" : String,
@@ -55,6 +56,7 @@ Properties:
   [Layers](#cfn-lambda-function-layers):
     - String
   [MemorySize](#cfn-lambda-function-memorysize): Integer
+  [PackageType](#cfn-lambda-function-packagetype): String
   [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions): Integer
   [Role](#cfn-lambda-function-role): String
   [Runtime](#cfn-lambda-function-runtime): String
@@ -144,6 +146,12 @@ The amount of memory available to the function at runtime\. Increasing the funct
 *Minimum*: `128`  
 *Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PackageType`   <a name="cfn-lambda-function-packagetype"></a>
+The deployment package type of the Lambda function\. For more information, see [Lambda deployment packages](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) in the *AWS Lambda Developer Guide*\.  
+*Valid values*: `Zip` or `Image`  
+*Type*: String  
+*Required*: No  
 
 `ReservedConcurrentExecutions`  <a name="cfn-lambda-function-reservedconcurrentexecutions"></a>
 The number of simultaneous executions to reserve for the function\.  
