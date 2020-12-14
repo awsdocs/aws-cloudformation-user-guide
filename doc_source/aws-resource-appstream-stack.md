@@ -12,17 +12,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppStream::Stack",
   "Properties" : {
-      "[ApplicationSettings](#cfn-appstream-stack-applicationsettings)" : [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md),
+      "[AccessEndpoints](#cfn-appstream-stack-accessendpoints)" : [ AccessEndpoint, ... ],
+      "[ApplicationSettings](#cfn-appstream-stack-applicationsettings)" : ApplicationSettings,
       "[AttributesToDelete](#cfn-appstream-stack-attributestodelete)" : [ String, ... ],
       "[DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors)" : Boolean,
       "[Description](#cfn-appstream-stack-description)" : String,
       "[DisplayName](#cfn-appstream-stack-displayname)" : String,
+      "[EmbedHostDomains](#cfn-appstream-stack-embedhostdomains)" : [ String, ... ],
       "[FeedbackURL](#cfn-appstream-stack-feedbackurl)" : String,
       "[Name](#cfn-appstream-stack-name)" : String,
       "[RedirectURL](#cfn-appstream-stack-redirecturl)" : String,
-      "[StorageConnectors](#cfn-appstream-stack-storageconnectors)" : [ [StorageConnector](aws-properties-appstream-stack-storageconnector.md), ... ],
+      "[StorageConnectors](#cfn-appstream-stack-storageconnectors)" : [ StorageConnector, ... ],
       "[Tags](#cfn-appstream-stack-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[UserSettings](#cfn-appstream-stack-usersettings)" : [ [UserSetting](aws-properties-appstream-stack-usersetting.md), ... ]
+      "[UserSettings](#cfn-appstream-stack-usersettings)" : [ UserSetting, ... ]
     }
 }
 ```
@@ -32,25 +34,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AppStream::Stack
 Properties: 
+  [AccessEndpoints](#cfn-appstream-stack-accessendpoints): 
+    - AccessEndpoint
   [ApplicationSettings](#cfn-appstream-stack-applicationsettings): 
-    [ApplicationSettings](aws-properties-appstream-stack-applicationsettings.md)
+    ApplicationSettings
   [AttributesToDelete](#cfn-appstream-stack-attributestodelete): 
     - String
   [DeleteStorageConnectors](#cfn-appstream-stack-deletestorageconnectors): Boolean
   [Description](#cfn-appstream-stack-description): String
   [DisplayName](#cfn-appstream-stack-displayname): String
+  [EmbedHostDomains](#cfn-appstream-stack-embedhostdomains): 
+    - String
   [FeedbackURL](#cfn-appstream-stack-feedbackurl): String
   [Name](#cfn-appstream-stack-name): String
   [RedirectURL](#cfn-appstream-stack-redirecturl): String
   [StorageConnectors](#cfn-appstream-stack-storageconnectors): 
-    - [StorageConnector](aws-properties-appstream-stack-storageconnector.md)
+    - StorageConnector
   [Tags](#cfn-appstream-stack-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserSettings](#cfn-appstream-stack-usersettings): 
-    - [UserSetting](aws-properties-appstream-stack-usersetting.md)
+    - UserSetting
 ```
 
 ## Properties<a name="aws-resource-appstream-stack-properties"></a>
+
+`AccessEndpoints`  <a name="cfn-appstream-stack-accessendpoints"></a>
+The list of virtual private cloud \(VPC\) interface endpoint objects\. Users of the stack can connect to AppStream 2\.0 only through the specified endpoints\.   
+*Required*: No  
+*Type*: List of [AccessEndpoint](aws-properties-appstream-stack-accessendpoint.md)  
+*Maximum*: `4`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationSettings`  <a name="cfn-appstream-stack-applicationsettings"></a>
 The persistent application settings for users of the stack\. When these settings are enabled, changes that users make to applications and Windows settings are automatically saved after each session and applied to the next session\.   
@@ -83,6 +96,13 @@ The stack name to display\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EmbedHostDomains`  <a name="cfn-appstream-stack-embedhostdomains"></a>
+The domains where AppStream 2\.0 streaming sessions can be embedded in an iframe\. You must approve the domains that you want to host embedded AppStream 2\.0 streaming sessions\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FeedbackURL`  <a name="cfn-appstream-stack-feedbackurl"></a>
@@ -124,5 +144,6 @@ The actions that are enabled or disabled for users during their streaming sessio
 *Type*: List of [UserSetting](aws-properties-appstream-stack-usersetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-resource-appstream-stack--seealso"></a>
+## See also<a name="aws-resource-appstream-stack--seealso"></a>
 +  [CreateStack](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateStack.html) in the *Amazon AppStream 2\.0 API Reference* 
+

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure)" : String,
-  "[HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep)" : [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md),
+  "[HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep)" : HadoopJarStepConfig,
   "[Name](#cfn-elasticmapreduce-cluster-stepconfig-name)" : String
 }
 ```
@@ -21,17 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ActionOnFailure](#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure): String
   [HadoopJarStep](#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep): 
-    [HadoopJarStepConfig](aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.md)
+    HadoopJarStepConfig
   [Name](#cfn-elasticmapreduce-cluster-stepconfig-name): String
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-stepconfig-properties"></a>
 
 `ActionOnFailure`  <a name="cfn-elasticmapreduce-cluster-stepconfig-actiononfailure"></a>
-The action to take when the cluster step fails\. Possible values are TERMINATE\_CLUSTER, CANCEL\_AND\_WAIT, and CONTINUE\. TERMINATE\_JOB\_FLOW is provided for backward compatibility\. We recommend using TERMINATE\_CLUSTER instead\.  
+The action to take when the cluster step fails\. Possible values are `CANCEL_AND_WAIT` and `CONTINUE`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CANCEL_AND_WAIT | CONTINUE | TERMINATE_CLUSTER | TERMINATE_JOB_FLOW`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HadoopJarStep`  <a name="cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep"></a>

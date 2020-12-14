@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig)" : [DefaultConfig](aws-properties-greengrass-functiondefinition-defaultconfig.md),
-  "[Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions)" : [ [Function](aws-properties-greengrass-functiondefinition-function.md), ... ]
+  "[DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig)" : DefaultConfig,
+  "[Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions)" : [ Function, ... ]
 }
 ```
 
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig): 
-    [DefaultConfig](aws-properties-greengrass-functiondefinition-defaultconfig.md)
+    DefaultConfig
   [Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions): 
-    - [Function](aws-properties-greengrass-functiondefinition-function.md)
+    - Function
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-properties"></a>
@@ -43,6 +43,6 @@ The functions in this version\.
 *Type*: List of [Function](aws-properties-greengrass-functiondefinition-function.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion--seealso"></a>
+## See also<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion--seealso"></a>
 +  [FunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -1,4 +1,4 @@
-# MSK Resource Type Reference<a name="AWS_MSK"></a>
+# MSK resource type reference<a name="AWS_MSK"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::MSK::Cluster](aws-resource-msk-cluster.md)

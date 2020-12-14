@@ -1,5 +1,9 @@
 # AWS::WAFRegional::ByteMatchSet ByteMatchTuple<a name="aws-properties-wafregional-bytematchset-bytematchtuple"></a>
 
+**Note**  
+This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 The bytes \(typically a string that corresponds with ASCII characters\) that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings\.
 
 ## Syntax<a name="aws-properties-wafregional-bytematchset-bytematchtuple-syntax"></a>
@@ -10,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch)" : [FieldToMatch](aws-properties-wafregional-bytematchset-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch)" : FieldToMatch,
   "[PositionalConstraint](#cfn-wafregional-bytematchset-bytematchtuple-positionalconstraint)" : String,
   "[TargetString](#cfn-wafregional-bytematchset-bytematchtuple-targetstring)" : String,
   "[TargetStringBase64](#cfn-wafregional-bytematchset-bytematchtuple-targetstringbase64)" : String,
@@ -22,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafregional-bytematchset-fieldtomatch.md)
+    FieldToMatch
   [PositionalConstraint](#cfn-wafregional-bytematchset-bytematchtuple-positionalconstraint): String
   [TargetString](#cfn-wafregional-bytematchset-bytematchtuple-targetstring): 
     String
@@ -57,7 +61,7 @@ The value of `TargetString` must appear at the beginning of the specified part o
 The value of `TargetString` must appear at the end of the specified part of the web request\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
+*Allowed values*: `CONTAINS | CONTAINS_WORD | ENDS_WITH | EXACTLY | STARTS_WITH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetString`  <a name="cfn-wafregional-bytematchset-bytematchtuple-targetstring"></a>
@@ -65,7 +69,7 @@ The value that you want AWS WAF to search for\. AWS WAF searches for the specifi
 You must specify this property or the `TargetStringBase64` property\.   
 Valid values depend on the values that you specified for `FieldToMatch`:  
 +  `HEADER`: The value that you want AWS WAF to search for in the request header that you specified in `FieldToMatch`, for example, the value of the `User-Agent` or `Referer` header\.
-+  `METHOD`: The HTTP method, which indicates the type of operation specified in the request\. CloudFront supports the following methods: `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, and `PUT`\.
++  `METHOD`: The HTTP method, which indicates the type of operation specified in the request\. 
 +  `QUERY_STRING`: The value that you want AWS WAF to search for in the query string, which is the part of a URL that appears after a `?` character\.
 +  `URI`: The value that you want AWS WAF to search for in the part of a URL that identifies a resource, for example, `/images/daily-ad.jpg`\.
 +  `BODY`: The part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form\. The request body immediately follows the request headers\. Note that only the first `8192` bytes of the request body are forwarded to AWS WAF for inspection\. To allow or block requests based on the length of the body, you can create a size constraint set\. 
@@ -86,7 +90,7 @@ Valid values depend on the Type value in the `FieldToMatch` property\. For examp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformation`  <a name="cfn-wafregional-bytematchset-bytematchtuple-texttransformation"></a>
-Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `TargetString` before inspecting a request for a match\.  
+Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `FieldToMatch` before inspecting it for a match\.  
 You can only specify a single type of TextTransformation\.  
  **CMD\_LINE**   
 When you're concerned that attackers are injecting an operating system command line command and using unusual formatting to disguise some or all of the command, use this option to perform the following transformations:  
@@ -120,5 +124,5 @@ Use this option to decode a URL\-encoded value\.
 Specify `NONE` if you don't want to perform any text transformations\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

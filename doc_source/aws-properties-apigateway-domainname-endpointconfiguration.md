@@ -31,5 +31,6 @@ A list of endpoint types of an API or its custom domain name\. For an edge\-opti
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-domainname-endpointconfiguration--seealso"></a>
+## See also<a name="aws-properties-apigateway-domainname-endpointconfiguration--seealso"></a>
 + [DomainName](https://docs.aws.amazon.com/apigateway/api-reference/resource/domain-name/) in the *Amazon API Gateway REST API Reference*
+

@@ -1,6 +1,6 @@
-# Amazon API Gateway Resource Type Reference<a name="AWS_ApiGateway"></a>
+# Amazon API Gateway resource type reference<a name="AWS_ApiGateway"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ApiGateway::Account](aws-resource-apigateway-account.md)
 + [AWS::ApiGateway::ApiKey](aws-resource-apigateway-apikey.md)
 + [AWS::ApiGateway::Authorizer](aws-resource-apigateway-authorizer.md)

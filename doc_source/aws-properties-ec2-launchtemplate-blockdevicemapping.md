@@ -2,7 +2,7 @@
 
 Information about a block device mapping for an Amazon EC2 launch template\.
 
- `BlockDeviceMapping` is a property of the [ Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+ `BlockDeviceMapping` is a property of [ AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-blockdevicemapping-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-ec2-launchtemplate-blockdevicemapping-devicename)" : String,
-  "[Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs)" : [Ebs](aws-properties-ec2-launchtemplate-blockdevicemapping-ebs.md),
+  "[Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs)" : Ebs,
   "[NoDevice](#cfn-ec2-launchtemplate-blockdevicemapping-nodevice)" : String,
   "[VirtualName](#cfn-ec2-launchtemplate-blockdevicemapping-virtualname)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-ec2-launchtemplate-blockdevicemapping-devicename): String
   [Ebs](#cfn-ec2-launchtemplate-blockdevicemapping-ebs): 
-    [Ebs](aws-properties-ec2-launchtemplate-blockdevicemapping-ebs.md)
+    Ebs
   [NoDevice](#cfn-ec2-launchtemplate-blockdevicemapping-nodevice): String
   [VirtualName](#cfn-ec2-launchtemplate-blockdevicemapping-virtualname): String
 ```
@@ -55,5 +55,6 @@ The virtual device name \(ephemeralN\)\. Instance store volumes are numbered sta
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping--seealso"></a>
 +  [ LaunchTemplateBlockDeviceMappingRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateBlockDeviceMappingRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

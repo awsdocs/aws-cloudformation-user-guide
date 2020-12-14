@@ -28,6 +28,6 @@ Indicates whether point in time recovery is enabled \(true\) or disabled \(false
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification--seealso"></a>
+## See also<a name="aws-properties-dynamodb-table-pointintimerecoveryspecification--seealso"></a>
 
  [PointInTimeRecoverySpecification](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PointInTimeRecoverySpecification.html) in the Amazon DynamoDB API Reference\. 

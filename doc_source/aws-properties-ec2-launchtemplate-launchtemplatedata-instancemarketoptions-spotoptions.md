@@ -1,8 +1,8 @@
 # AWS::EC2::LaunchTemplate SpotOptions<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions"></a>
 
-Specifies options for Spot instances\.
+Specifies options for Spot Instances\.
 
- `SpotOptions` is a property of the [Amazon EC2 LaunchTemplate InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancemarketoptions.html) property type\.
+`SpotOptions` is a property of [AWS::EC2::LaunchTemplate InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-syntax"></a>
 
@@ -42,7 +42,7 @@ The required duration for the Spot Instances \(also known as Spot blocks\), in m
 The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `hibernate | stop | terminate`  
+*Allowed values*: `hibernate | stop | terminate`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxPrice`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice"></a>
@@ -53,9 +53,10 @@ The maximum hourly price you're willing to pay for the Spot Instances\.
 
 `SpotInstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype"></a>
 The Spot Instance request type\.  
+If you are using Spot Instances with an Auto Scaling group, use `one-time` requests, as the Amazon EC2 Auto Scaling service handles requesting new Spot Instances whenever the group is below its desired capacity\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `one-time | persistent`  
+*Allowed values*: `one-time | persistent`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidUntil`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil"></a>
@@ -64,5 +65,6 @@ The end date of the request\. For a one\-time request, the request remains activ
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions--seealso"></a>
 +  [ LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

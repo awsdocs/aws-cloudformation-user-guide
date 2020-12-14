@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::ResourceDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-resourcedefinition-initialversion)" : [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-resourcedefinition-initialversion)" : ResourceDefinitionVersion,
       "[Name](#cfn-greengrass-resourcedefinition-name)" : String,
       "[Tags](#cfn-greengrass-resourcedefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::ResourceDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-resourcedefinition-initialversion): 
-    [ResourceDefinitionVersion](aws-properties-greengrass-resourcedefinition-resourcedefinitionversion.md)
+    ResourceDefinitionVersion
   [Name](#cfn-greengrass-resourcedefinition-name): String
   [Tags](#cfn-greengrass-resourcedefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-resourcedefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-resourcedefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-resourcedefinition-return-values-ref"></a>
 
@@ -95,6 +95,8 @@ The ARN of the last `ResourceDefinitionVersion` that was added to the `ResourceD
 The name of the `ResourceDefinition`, such as `MyResourceDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-resourcedefinition--examples"></a>
+
+
 
 ### Resource Definition Snippet<a name="aws-resource-greengrass-resourcedefinition--examples--Resource_Definition_Snippet"></a>
 
@@ -266,6 +268,6 @@ TestResourceDefinitionVersion:
               - label2
 ```
 
-## See Also<a name="aws-resource-greengrass-resourcedefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-resourcedefinition--seealso"></a>
 +  [CreateResourceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createresourcedefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

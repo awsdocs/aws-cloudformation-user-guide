@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode FileAccessLog<a name="aws-properties-appmesh-virtualnode-fileaccesslog"></a>
 
-An object representing an access log file\.
+An object that represents an access log file\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-fileaccesslog-syntax"></a>
 

@@ -44,7 +44,7 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-route-table-return-values"></a>
+## Return values<a name="aws-resource-ec2-route-table-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-route-table-return-values-ref"></a>
 
@@ -53,6 +53,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-route-table--examples"></a>
+
+
 
 ### Route Table<a name="aws-resource-ec2-route-table--examples--Route_Table"></a>
 
@@ -83,8 +85,9 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
         Value: bar
 ```
 
-## See Also<a name="aws-resource-ec2-route-table--seealso"></a>
+## See also<a name="aws-resource-ec2-route-table--seealso"></a>
 +  [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)
 +  [CreateRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRouteTable.html) in the *Amazon EC2 API Reference*
 +  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
 +  [Using Tags](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html) in the *Amazon Elastic Compute Cloud User Guide*
+

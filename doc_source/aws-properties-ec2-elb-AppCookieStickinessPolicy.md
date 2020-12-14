@@ -38,6 +38,7 @@ The mnemonic name for the policy being created\. The name must be unique within 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy--seealso"></a>
+## See also<a name="aws-properties-ec2-elb-AppCookieStickinessPolicy--seealso"></a>
 +  [CreateAppCookieStickinessPolicy](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateAppCookieStickinessPolicy.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Sticky Sessions](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-sticky-sessions.html) in the *User Guide for Classic Load Balancers* 
+

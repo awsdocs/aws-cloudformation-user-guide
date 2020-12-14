@@ -4,6 +4,6 @@ A list of `WebhookFilter` objects used to determine which webhook events are tri
 
 *Required:* No
 
-*Type:* A list of of [WebhookFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html) objects
+*Type:* A list of [WebhookFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html) objects
 
 *Update requires:* No interruption

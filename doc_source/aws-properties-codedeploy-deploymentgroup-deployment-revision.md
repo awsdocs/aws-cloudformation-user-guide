@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation)" : [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md),
+  "[GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation)" : GitHubLocation,
   "[RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype)" : String,
-  "[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location)" : [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
+  "[S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location)" : S3Location
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GitHubLocation](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation): 
-    [GitHubLocation](aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.md)
+    GitHubLocation
   [RevisionType](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype): String
   [S3Location](#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location): 
-    [S3Location](aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.md)
+    S3Location
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-properties"></a>
@@ -39,9 +39,10 @@ The type of application revision:
 + S3: An application revision stored in Amazon S3\.
 + GitHub: An application revision stored in GitHub \(EC2/On\-premises deployments only\)\.
 + String: A YAML\-formatted or JSON\-formatted string \(AWS Lambda deployments only\)\.
++ AppSpecContent: An `AppSpecContent` object that contains the contents of an AppSpec file for an AWS Lambda or Amazon ECS deployment\. The content is formatted as JSON or YAML stored as a RawString\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AppSpecContent | GitHub | S3 | String`  
+*Allowed values*: `AppSpecContent | GitHub | S3 | String`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Location`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>

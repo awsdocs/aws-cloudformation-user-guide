@@ -1,6 +1,6 @@
 # AWS::CloudFront::CloudFrontOriginAccessIdentity<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity"></a>
 
-The request to create a new origin access identity\.
+The request to create a new origin access identity \(OAI\)\. An origin access identity is a special CloudFront user that you can associate with Amazon S3 origins, so that you can secure all or just some of your Amazon S3 content\. For more information, see [ Restricting Access to Amazon S3 Content by Using an Origin Access Identity](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html) in the *Amazon CloudFront Developer Guide*\. 
 
 ## Syntax<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::CloudFrontOriginAccessIdentity",
   "Properties" : {
-      "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
+      "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : CloudFrontOriginAccessIdentityConfig
     }
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
 Properties: 
   [CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): 
-    [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
+    CloudFrontOriginAccessIdentityConfig
 ```
 
 ## Properties<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-properties"></a>
@@ -34,7 +34,7 @@ The current configuration information for the identity\.
 *Type*: [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values"></a>
+## Return values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values-ref"></a>
 
@@ -55,7 +55,11 @@ The Amazon S3 canonical user ID for the origin access identity, used when giving
 
 ## Examples<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples"></a>
 
+
+
 ### Specify the comment for an origin access identity<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples--Specify_the_comment_for_an_origin_access_identity"></a>
+
+
 
 #### JSON<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples--Specify_the_comment_for_an_origin_access_identity--json"></a>
 
@@ -87,5 +91,6 @@ Resources:
         Comment: string-value
 ```
 
-## See Also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
+## See also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
 +  [OriginAccessIdentity](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference* 
+

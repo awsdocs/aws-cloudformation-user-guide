@@ -34,5 +34,5 @@ Name of the host where requests are redirected\.
 Protocol to use when redirecting requests\. The default is the protocol that is used in the original request\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `http | https`  
+*Allowed values*: `http | https`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

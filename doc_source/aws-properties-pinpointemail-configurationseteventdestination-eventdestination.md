@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-cloudwatchdestination)" : [CloudWatchDestination](aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.md),
+  "[CloudWatchDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-cloudwatchdestination)" : CloudWatchDestination,
   "[Enabled](#cfn-pinpointemail-configurationseteventdestination-eventdestination-enabled)" : Boolean,
-  "[KinesisFirehoseDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-kinesisfirehosedestination)" : [KinesisFirehoseDestination](aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.md),
+  "[KinesisFirehoseDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-kinesisfirehosedestination)" : KinesisFirehoseDestination,
   "[MatchingEventTypes](#cfn-pinpointemail-configurationseteventdestination-eventdestination-matchingeventtypes)" : [ String, ... ],
-  "[PinpointDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-pinpointdestination)" : [PinpointDestination](aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.md),
-  "[SnsDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-snsdestination)" : [SnsDestination](aws-properties-pinpointemail-configurationseteventdestination-snsdestination.md)
+  "[PinpointDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-pinpointdestination)" : PinpointDestination,
+  "[SnsDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-snsdestination)" : SnsDestination
 }
 ```
 
@@ -23,16 +23,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-cloudwatchdestination): 
-    [CloudWatchDestination](aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.md)
+    CloudWatchDestination
   [Enabled](#cfn-pinpointemail-configurationseteventdestination-eventdestination-enabled): Boolean
   [KinesisFirehoseDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-kinesisfirehosedestination): 
-    [KinesisFirehoseDestination](aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.md)
+    KinesisFirehoseDestination
   [MatchingEventTypes](#cfn-pinpointemail-configurationseteventdestination-eventdestination-matchingeventtypes): 
     - String
   [PinpointDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-pinpointdestination): 
-    [PinpointDestination](aws-properties-pinpointemail-configurationseteventdestination-pinpointdestination.md)
+    PinpointDestination
   [SnsDestination](#cfn-pinpointemail-configurationseteventdestination-eventdestination-snsdestination): 
-    [SnsDestination](aws-properties-pinpointemail-configurationseteventdestination-snsdestination.md)
+    SnsDestination
 ```
 
 ## Properties<a name="aws-properties-pinpointemail-configurationseteventdestination-eventdestination-properties"></a>

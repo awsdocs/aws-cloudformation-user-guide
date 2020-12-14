@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualService VirtualNodeServiceProvider<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider"></a>
 
-An object representing a virtual node service provider\.
+An object that represents a virtual node service provider\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider-syntax"></a>
 

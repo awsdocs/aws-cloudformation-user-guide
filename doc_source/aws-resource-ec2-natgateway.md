@@ -47,12 +47,12 @@ The public subnet in which to create the NAT gateway\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-natgateway-tags"></a>
-The tags \(key–value pairs\) to associate with this resource\.  
+The tags \(key\-value pairs\) to associate with this resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-natgateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-natgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-natgateway-return-values-ref"></a>
 
@@ -61,6 +61,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-natgateway--examples"></a>
+
+
 
 ### NAT Gateway<a name="aws-resource-ec2-natgateway--examples--NAT_Gateway"></a>
 

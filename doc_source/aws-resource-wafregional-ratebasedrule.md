@@ -8,6 +8,8 @@ In the rule, you also define the rate limit as 15,000\.
 
 Requests that meet both of these conditions and exceed 15,000 requests every five minutes trigger the rule's action \(block or count\), which is defined in the web ACL\.
 
+Note you can only create rate\-based rules using a CloudFormation template\. To add the rate\-based rules created through CloudFormation to a web ACL, use the AWS WAF console, API, or command line interface \(CLI\)\. For more information, see [UpdateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateWebACL.html)\.
+
 ## Syntax<a name="aws-resource-wafregional-ratebasedrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -18,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::RateBasedRule",
   "Properties" : {
-      "[MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates)" : [ [Predicate](aws-properties-wafregional-ratebasedrule-predicate.md), ... ],
+      "[MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates)" : [ Predicate, ... ],
       "[MetricName](#cfn-wafregional-ratebasedrule-metricname)" : String,
       "[Name](#cfn-wafregional-ratebasedrule-name)" : String,
       "[RateKey](#cfn-wafregional-ratebasedrule-ratekey)" : String,
@@ -33,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::RateBasedRule
 Properties: 
   [MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates): 
-    - [Predicate](aws-properties-wafregional-ratebasedrule-predicate.md)
+    - Predicate
   [MetricName](#cfn-wafregional-ratebasedrule-metricname): String
   [Name](#cfn-wafregional-ratebasedrule-name): String
   [RateKey](#cfn-wafregional-ratebasedrule-ratekey): String
@@ -52,6 +54,9 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 A friendly name or description for the metrics for a `RateBasedRule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change the name of the metric after you create the `RateBasedRule`\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-wafregional-ratebasedrule-name"></a>
@@ -60,13 +65,14 @@ A friendly name or description for a `RateBasedRule`\. You can't change the name
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RateKey`  <a name="cfn-wafregional-ratebasedrule-ratekey"></a>
 The field that AWS WAF uses to determine if requests are likely arriving from single source and thus subject to rate monitoring\. The only valid value for `RateKey` is `IP`\. `IP` indicates that requests arriving from the same IP address are subject to the `RateLimit` that is specified in the `RateBasedRule`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IP`  
+*Allowed values*: `IP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RateLimit`  <a name="cfn-wafregional-ratebasedrule-ratelimit"></a>
@@ -75,7 +81,7 @@ The maximum number of requests, which have an identical value in the field speci
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-ratebasedrule-return-values"></a>
+## Return values<a name="aws-resource-wafregional-ratebasedrule-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-ratebasedrule-return-values-ref"></a>
 
@@ -84,6 +90,8 @@ The maximum number of requests, which have an identical value in the field speci
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-ratebasedrule--examples"></a>
+
+
 
 ### Associate an IPSet with a Rate\-Based Rule<a name="aws-resource-wafregional-ratebasedrule--examples--Associate_an_IPSet_with_a_Rate-Based_Rule"></a>
 
@@ -120,10 +128,10 @@ MyIPSetRateBasedRule:
     MetricName: "MyIPSetRateBasedRule"
     RateKey : "IP"
     RateLimit : 8000
-    Predicates: 
+    MatchPredicates: 
       - 
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-    Type: "IPMatch"
+        Type: "IPMatch"
 ```

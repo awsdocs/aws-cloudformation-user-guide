@@ -43,6 +43,8 @@ A unique identifier \(ID\) for the web ACL\.
 
 ## Examples<a name="aws-resource-wafregional-webaclassociation--examples"></a>
 
+
+
 ### Associate an Application Load Balancer resource with a web ACL<a name="aws-resource-wafregional-webaclassociation--examples--Associate_an_Application_Load_Balancer_resource_with_a_web_ACL"></a>
 
 The following example associates an Application Load Balancer resource with a web ACL\.
@@ -68,5 +70,5 @@ MyWebACLAssociation:
     ResourceArn:
       Ref: MyLoadBalancer
     WebACLId:
-Ref: MyWebACL
+      Ref: MyWebACL
 ```

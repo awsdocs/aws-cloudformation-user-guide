@@ -68,7 +68,7 @@ One or more tags\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ram-resourceshare-return-values"></a>
+## Return values<a name="aws-resource-ram-resourceshare-return-values"></a>
 
 ### Ref<a name="aws-resource-ram-resourceshare-return-values-ref"></a>
 
@@ -145,6 +145,7 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-ram-resourceshare--seealso"></a>
+## See also<a name="aws-resource-ram-resourceshare--seealso"></a>
 +  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
 +  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 
+

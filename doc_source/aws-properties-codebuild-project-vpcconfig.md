@@ -49,5 +49,5 @@ The ID of the Amazon VPC\.
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-vpcconfig--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-vpcconfig--seealso"></a>
 +  [ VpcConfig](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_VpcConfig.html) in the *AWS CodeBuild API Reference* 

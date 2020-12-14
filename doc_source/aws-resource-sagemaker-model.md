@@ -12,12 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
-      "[Containers](#cfn-sagemaker-model-containers)" : [ [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md), ... ],
+      "[Containers](#cfn-sagemaker-model-containers)" : [ ContainerDefinition, ... ],
+      "[EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation)" : Boolean,
       "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
       "[ModelName](#cfn-sagemaker-model-modelname)" : String,
-      "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md),
+      "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : ContainerDefinition,
       "[Tags](#cfn-sagemaker-model-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+      "[VpcConfig](#cfn-sagemaker-model-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -28,15 +29,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SageMaker::Model
 Properties: 
   [Containers](#cfn-sagemaker-model-containers): 
-    - [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+    - ContainerDefinition
+  [EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation): Boolean
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
   [ModelName](#cfn-sagemaker-model-modelname): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): 
-    [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)
+    ContainerDefinition
   [Tags](#cfn-sagemaker-model-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-sagemaker-model-vpcconfig): 
-    [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-sagemaker-model-properties"></a>
@@ -46,6 +48,12 @@ Specifies the containers in the inference pipeline\.
 *Required*: No  
 *Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
 *Maximum*: `5`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>
+Isolates the model container\. No inbound or outbound network calls can be made to or from the model container\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
@@ -86,7 +94,7 @@ A [VpcConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_VpcConfig.html
 *Type*: [VpcConfig](aws-properties-sagemaker-model-vpcconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-sagemaker-model-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-model-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-model-return-values-ref"></a>
 

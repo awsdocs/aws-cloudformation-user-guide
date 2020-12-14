@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment GPSPoint<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint"></a>
 
-The GPS coordinates of the endpoint location\.
+Specifies GPS\-based criteria for including or excluding endpoints from a segment\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Coordinates](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates)" : [Coordinates](aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates.md),
+  "[Coordinates](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates)" : Coordinates,
   "[RangeInKilometers](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-rangeinkilometers)" : Double
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Coordinates](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates): 
-    [Coordinates](aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates.md)
+    Coordinates
   [RangeInKilometers](#cfn-pinpoint-segment-segmentdimensions-location-gpspoint-rangeinkilometers): Double
 ```
 

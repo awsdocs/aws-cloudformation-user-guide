@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode HealthCheck<a name="aws-properties-appmesh-virtualnode-healthcheck"></a>
 
-An object representing the health check policy for a virtual node's listener\.
+An object that represents the health check policy for a virtual node's listener\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-healthcheck-syntax"></a>
 
@@ -47,19 +47,19 @@ The time period in milliseconds between each health check execution\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-appmesh-virtualnode-healthcheck-path"></a>
-The destination path for the health check request\. This is required only if the specified protocol is HTTP\. If the protocol is TCP, this parameter is ignored\.  
+The destination path for the health check request\. This value is only used if the specified protocol is HTTP or HTTP/2\. For any other protocol, this value is ignored\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-appmesh-virtualnode-healthcheck-port"></a>
-The destination port for the health check request\. This port must match the port defined in the [PortMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping) for the listener\.  
+The destination port for the health check request\. This port must match the port defined in the [PortMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-portmapping) for the listener\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-appmesh-virtualnode-healthcheck-protocol"></a>
-The protocol for the health check request\.  
+The protocol for the health check request\. If you specify `grpc`, then your service must conform to the [GRPC Health Checking Protocol](https://github.com/grpc/grpc/blob/master/doc/health-checking.md)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

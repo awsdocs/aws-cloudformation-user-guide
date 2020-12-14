@@ -44,7 +44,7 @@ The list of all tags added to the fleet\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-fleet-return-values"></a>
+## Return values<a name="aws-resource-robomaker-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-fleet-return-values-ref"></a>
 
@@ -64,6 +64,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-west-2:123456789012:deployment-fleet/MyFleet/1539894765711`\.
 
 ## Examples<a name="aws-resource-robomaker-fleet--examples"></a>
+
+
 
 ### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet"></a>
 

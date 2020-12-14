@@ -61,7 +61,8 @@ Default: The Region in which you make the request\.
 
 `PeerRoleArn`  <a name="cfn-ec2-vpcpeeringconnection-peerrolearn"></a>
 The Amazon Resource Name \(ARN\) of the VPC peer role for the peering connection in another AWS account\.  
-*Required*: No  
+This is required when you are peering a VPC in a different AWS account\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -83,51 +84,34 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcpeeringconnection-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcpeeringconnection-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPC peering connection\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPC peering connection\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-vpcpeeringconnection--examples"></a>
 
+
+
 ### VPC Peering Connection<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection"></a>
 
-The following example specifies a VPC, and then creates a peering connection with an existing VPC that you specify\.
+The following example creates two VPCs \(`myVPC` and `myPrivateVPC`\) and a subnet in each VPC\. The subnet in `myVPC` is a public subnet\. The example then creates a VPC peering connection between the VPCs and launches an instance in each VPC\. You can test the peering connection by connecting to the instance in the public subnet and pinging the private IP address of the instance in the subnet of the private VPC\. The security group rules for the instance in the private subnet allow incoming ICMP traffic \(and therefore allow the `ping` command\)\.
 
 #### JSON<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection--json"></a>
 
 ```
 {
    "AWSTemplateFormatVersion": "2010-09-09",
-   "Description": "Creates a VPC that and then creates a peering connection with an existing VPC that you specify.",
+   "Description": "Creates two VPCs, peers the VPCs, and launches an instance in each VPC.",
    "Parameters": {
       "EC2KeyPairName": {
          "Description": "Name of an existing EC2 KeyPair to enable SSH access to the instances",
          "Type": "AWS::EC2::KeyPair::KeyName",
          "ConstraintDescription" : "must be the name of an existing EC2 KeyPair."
        },
-       "InstanceType": {
-            "Description": "EC2 instance type",
-            "Type": "String",
-            "Default": "t1.micro",
-            "AllowedValues": [
-            "t1.micro",
-            "m1.small",
-            "m3.medium",
-            "m3.large",
-            "m3.xlarge",
-            "m3.2xlarge",
-            "c3.large",
-            "c3.xlarge",
-            "c3.2xlarge",
-            "c3.4xlarge",
-            "c3.8xlarge"
-         ],
-        "ConstraintDescription": "must be a valid EC2 instance type."
-   },
    "myVPCIDCIDRRange": {
         "Description": "The IP address range for your new VPC.",
         "Type": "String",
@@ -185,6 +169,9 @@ The following example specifies a VPC, and then creates a peering connection wit
           "ap-southeast-2": {
               "64": "ami-09b42976632b27e9b"
           },
+          "ap-northeast-2": {
+              "64": "ami-0d097db2fb6e0f05e"
+          },
           "ap-northeast-1": {
               "64": "ami-06cd52961ce9f0d85"
           },
@@ -193,7 +180,7 @@ The following example specifies a VPC, and then creates a peering connection wit
           }
       }
    },
-   Resources": {
+   "Resources": {
       "myPrivateVPC": {
         "Type": "AWS::EC2::VPC",
         "Properties": {
@@ -202,7 +189,7 @@ The following example specifies a VPC, and then creates a peering connection wit
            "EnableDnsHostnames": false,
            "InstanceTenancy": "default"
         }
-     },        
+     },
      "myPrivateEC2Subnet" : {
         "Type" : "AWS::EC2::Subnet",
         "Properties" : {
@@ -213,9 +200,9 @@ The following example specifies a VPC, and then creates a peering connection wit
      "RouteTable" : {
            "Type" : "AWS::EC2::RouteTable",
            "Properties" : {
-               "VpcId" : {"Ref" : "myPrivateVPC"}            
+               "VpcId" : {"Ref" : "myPrivateVPC"}
            }
-     },        
+     },
      "PeeringRoute1" : {
          "Type" : "AWS::EC2::Route",
           "Properties" : {
@@ -239,7 +226,7 @@ The following example specifies a VPC, and then creates a peering connection wit
              "EnableDnsHostnames": true,
              "InstanceTenancy": "default"
          }
-     },        
+     },
      "PublicSubnet": {
           "Type": "AWS::EC2::Subnet",
           "Properties": {
@@ -309,7 +296,7 @@ The following example specifies a VPC, and then creates a peering connection wit
              "GroupDescription": "Private instance security group",
              "VpcId" : { "Ref" : "myPrivateVPC" },
              "SecurityGroupIngress" : [
-                 {"IpProtocol" : "-1", "FromPort" : "0", "ToPort" : "65535", "CidrIp" : "0.0.0.0/0"}
+                 {"IpProtocol" : "icmp", "FromPort" : "-1", "ToPort" : "-1", "CidrIp" : "0.0.0.0/0"}
               ]
          }
      },
@@ -319,7 +306,6 @@ The following example specifies a VPC, and then creates a peering connection wit
             "GroupDescription": "Public instance security group",
             "VpcId" : { "Ref" : "myVPC" },
             "SecurityGroupIngress" : [
-                {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
                 {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0"}
             ]
         }
@@ -328,6 +314,7 @@ The following example specifies a VPC, and then creates a peering connection wit
          "Type" : "AWS::EC2::Instance",
          "Properties" : {
             "SecurityGroupIds" : [{ "Ref" : "myPrivateVPCEC2SecurityGroup" }],
+            "InstanceType" : "t2.micro",
             "SubnetId" : { "Ref" : "myPrivateEC2Subnet" },
             "KeyName": {
                  "Ref": "EC2KeyPairName"
@@ -350,6 +337,7 @@ The following example specifies a VPC, and then creates a peering connection wit
                  "GroupSet": [{ "Ref" : "myVPCEC2SecurityGroup" }],
                  "SubnetId": { "Ref" : "PublicSubnet" }
              } ],
+            "InstanceType" : "t2.micro",
             "KeyName": {
                 "Ref": "EC2KeyPairName"
             },
@@ -376,38 +364,20 @@ The following example specifies a VPC, and then creates a peering connection wit
 #### YAML<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Description: Creates a VPC that and then creates a peering connection with an existing
-  VPC that you specify.
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'Creates two VPCs, peers the VPCs, and launches an instance in each VPC.'
 Parameters:
   EC2KeyPairName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instances
-    Type: AWS::EC2::KeyPair::KeyName
+    Type: 'AWS::EC2::KeyPair::KeyName'
     ConstraintDescription: must be the name of an existing EC2 KeyPair.
-    InstanceType:
-    Description: EC2 instance type
-    Type: String
-    Default: t1.micro
-    AllowedValues:
-    - t1.micro
-    - m1.small
-    - m3.medium
-    - m3.large
-    - m3.xlarge
-    - m3.2xlarge
-    - c3.large
-    - c3.xlarge
-    - c3.2xlarge
-    - c3.4xlarge
-    - c3.8xlarge
-     ConstraintDescription: must be a valid EC2 instance type.
   myVPCIDCIDRRange:
     Description: The IP address range for your new VPC.
     Type: String
     MinLength: '9'
     MaxLength: '18'
     Default: 10.1.0.0/16
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
   myPrivateVPCIDCIDRRange:
     Description: The IP address range for your new Private VPC.
@@ -415,7 +385,7 @@ Parameters:
     MinLength: '9'
     MaxLength: '18'
     Default: 10.0.0.0/16
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
   EC2SubnetCIDRRange:
     Description: The IP address range for a subnet in myPrivateVPC.
@@ -423,15 +393,15 @@ Parameters:
     MinLength: '9'
     MaxLength: '18'
     Default: 10.0.0.0/24
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
   EC2PublicSubnetCIDRRange:
-     Description: The IP address range for a subnet in myVPC.
-      Type: String
-      MinLength: '9'
-      MaxLength: '18'
-     Default: 10.1.0.0/24
-    AllowedPattern: "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})"
+    Description: The IP address range for a subnet in myVPC.
+    Type: String
+    MinLength: '9'
+    MaxLength: '18'
+    Default: 10.1.0.0/24
+    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
 Mappings:
   AWSRegionToAMI:
@@ -447,162 +417,136 @@ Mappings:
       '64': ami-08569b978cc4dfa10
     ap-southeast-2:
       '64': ami-09b42976632b27e9b
+    ap-northeast-2:
+      '64': ami-0d097db2fb6e0f05e
     ap-northeast-1:
       '64': ami-06cd52961ce9f0d85
-     sa-east-1:
-       '64': ami-07b14488da8ea02a0
+    sa-east-1:
+      '64': ami-07b14488da8ea02a0
 Resources:
-   myPrivateVPC:
-     Type: AWS::EC2::VPC
-     Properties:
-        CidrBlock:
-          Ref: myPrivateVPCIDCIDRRange
-        EnableDnsSupport: false
-        EnableDnsHostnames: false
-        InstanceTenancy: default
-    myPrivateEC2Subnet:
-       Type: AWS::EC2::Subnet
-       Properties:
-         VpcId:
-           Ref: myPrivateVPC
-         CidrBlock:
-           Ref: EC2SubnetCIDRRange
-         RouteTable:
-           Type: AWS::EC2::RouteTable
-           Properties:
-             VpcId:
-               Ref: myPrivateVPC
-         PeeringRoute1:
-           Type: AWS::EC2::Route
-           Properties:
-             DestinationCidrBlock: 0.0.0.0/0
-             RouteTableId:
-               Ref: RouteTable
-             VpcPeeringConnectionId:
-               Ref: myVPCPeeringConnection
-         SubnetRouteTableAssociation:
-          Type: AWS::EC2::SubnetRouteTableAssociation
-          Properties:
-            SubnetId:
-              Ref: myPrivateEC2Subnet
-            RouteTableId:
-              Ref: RouteTable
-         myVPC:
-           Type: AWS::EC2::VPC
-           Properties:
-             CidrBlock:
-               Ref: myVPCIDCIDRRange
-             EnableDnsSupport: true
-             EnableDnsHostnames: true
-             InstanceTenancy: default
-         PublicSubnet:
-           Type: AWS::EC2::Subnet
-           Properties:
-           CidrBlock:
-             Ref: EC2PublicSubnetCIDRRange
-           VpcId:
-             Ref: myVPC
-       myInternetGateway:     
-         Type: AWS::EC2::InternetGateway
-       AttachGateway:
-         Type: AWS::EC2::VPCGatewayAttachment
-         Properties:
-           VpcId:
-             Ref: myVPC
-           InternetGatewayId:
-             Ref: myInternetGateway
-       PublicRouteTable:
-         Type: AWS::EC2::RouteTable
-         Properties:
-            VpcId:
-               Ref: myVPC
-       PeeringRoute2:
-         Type: AWS::EC2::Route
-         Properties:
-           DestinationCidrBlock:
-             Ref: myPrivateVPCIDCIDRRange
-           RouteTableId:
-             Ref: PublicRouteTable
-           VpcPeeringConnectionId:
-             Ref: myVPCPeeringConnection
-       PublicRoute:
-         Type: AWS::EC2::Route
-         DependsOn: AttachGateway
-         Properties:
-           RouteTableId:
-             Ref: PublicRouteTable
-           DestinationCidrBlock: 0.0.0.0/0
-           GatewayId:
-             Ref: myInternetGateway
-       PublicSubnetRouteTableAssociation:
-         Type: AWS::EC2::SubnetRouteTableAssociation
-         Properties:
-           SubnetId:
-             Ref: PublicSubnet
-           RouteTableId:
-             Ref: PublicRouteTable
-       myPrivateVPCEC2SecurityGroup:
-         Type: AWS::EC2::SecurityGroup
-         Properties:
-           GroupDescription: Private instance security group
-           VpcId:
-              Ref: myPrivateVPC
-           SecurityGroupIngress:
-           - IpProtocol: "-1"
-             FromPort: '0'
-             ToPort: '65535'
-             CidrIp: 0.0.0.0/0
-       myVPCEC2SecurityGroup:
-          Type: AWS::EC2::SecurityGroup
-          Properties:
-            GroupDescription: Public instance security group
-            VpcId:
-               Ref: myVPC
-            SecurityGroupIngress:
-            - IpProtocol: tcp
-              FromPort: '80'
-              ToPort: '80'
-              CidrIp: 0.0.0.0/0
-              - IpProtocol: tcp
-                FromPort: '22'
-                ToPort: '22'
-                CidrIp: 0.0.0.0/0
-        myPrivateInstance:
-          Type: AWS::EC2::Instance
-          Properties:
-          SecurityGroupIds:
-          - Ref: myPrivateVPCEC2SecurityGroup
-          SubnetId:
-            Ref: myPrivateEC2Subnet
-          KeyName:
-            Ref: EC2KeyPairName
-          ImageId:
-            Fn::FindInMap:
-            - AWSRegionToAMI
-            - Ref: AWS::Region
-            - '64'
-        myInstance:
-          Type: AWS::EC2::Instance
-          Properties:
-            NetworkInterfaces:
-            - AssociatePublicIpAddress: 'true'
-              DeviceIndex: '0'
-              GroupSet:
-              - Ref: myVPCEC2SecurityGroup
-              SubnetId:
-                Ref: PublicSubnet
-            KeyName:
-               Ref: EC2KeyPairName
-            ImageId:
-              Fn::FindInMap:
-              - AWSRegionToAMI
-              - Ref: AWS::Region
-              - '64'
-        myVPCPeeringConnection:
-          Type: AWS::EC2::VPCPeeringConnection
-          Properties:
-             VpcId:
-               Ref: myVPC
-             PeerVpcId:
-               Ref: myPrivateVPC
+  myPrivateVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !Ref myPrivateVPCIDCIDRRange
+      EnableDnsSupport: false
+      EnableDnsHostnames: false
+      InstanceTenancy: default
+  myPrivateEC2Subnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref myPrivateVPC
+      CidrBlock: !Ref EC2SubnetCIDRRange
+  RouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref myPrivateVPC
+  PeeringRoute1:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      RouteTableId: !Ref RouteTable
+      VpcPeeringConnectionId: !Ref myVPCPeeringConnection
+  SubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref myPrivateEC2Subnet
+      RouteTableId: !Ref RouteTable
+  myVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: !Ref myVPCIDCIDRRange
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      InstanceTenancy: default
+  PublicSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      CidrBlock: !Ref EC2PublicSubnetCIDRRange
+      VpcId: !Ref myVPC
+  myInternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+  AttachGateway:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref myVPC
+      InternetGatewayId: !Ref myInternetGateway
+  PublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref myVPC
+  PeeringRoute2:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      DestinationCidrBlock: !Ref myPrivateVPCIDCIDRRange
+      RouteTableId: !Ref PublicRouteTable
+      VpcPeeringConnectionId: !Ref myVPCPeeringConnection
+  PublicRoute:
+    Type: 'AWS::EC2::Route'
+    DependsOn: AttachGateway
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref myInternetGateway
+  PublicSubnetRouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref PublicSubnet
+      RouteTableId: !Ref PublicRouteTable
+  myPrivateVPCEC2SecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Private instance security group
+      VpcId: !Ref myPrivateVPC
+      SecurityGroupIngress:
+        - IpProtocol: icmp
+          FromPort: '-1'
+          ToPort: '-1'
+          CidrIp: 0.0.0.0/0
+  myVPCEC2SecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Public instance security group
+      VpcId: !Ref myVPC
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+  myPrivateInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SecurityGroupIds:
+        - !Ref myPrivateVPCEC2SecurityGroup
+      InstanceType: t2.micro
+      SubnetId: !Ref myPrivateEC2Subnet
+      KeyName: !Ref EC2KeyPairName
+      ImageId: !FindInMap 
+        - AWSRegionToAMI
+        - !Ref 'AWS::Region'
+        - '64'
+  myInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          GroupSet:
+            - !Ref myVPCEC2SecurityGroup
+          SubnetId: !Ref PublicSubnet
+      InstanceType: t2.micro
+      KeyName: !Ref EC2KeyPairName
+      ImageId: !FindInMap 
+        - AWSRegionToAMI
+        - !Ref 'AWS::Region'
+        - '64'
+  myVPCPeeringConnection:
+    Type: 'AWS::EC2::VPCPeeringConnection'
+    Properties:
+      VpcId: !Ref myVPC
+      PeerVpcId: !Ref myPrivateVPC
 ```
+
+## See also<a name="aws-resource-ec2-vpcpeeringconnection--seealso"></a>
++ [What is VPC peering](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) in *AWS Outposts User Guide*
++ [CreateVpcPeeringConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcPeeringConnection.html) in the *Amazon EC2 API Reference*
+

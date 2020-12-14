@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::LoggerDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-loggerdefinition-initialversion)" : [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-loggerdefinition-initialversion)" : LoggerDefinitionVersion,
       "[Name](#cfn-greengrass-loggerdefinition-name)" : String,
       "[Tags](#cfn-greengrass-loggerdefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::LoggerDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-loggerdefinition-initialversion): 
-    [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)
+    LoggerDefinitionVersion
   [Name](#cfn-greengrass-loggerdefinition-name): String
   [Tags](#cfn-greengrass-loggerdefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-loggerdefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-loggerdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-loggerdefinition-return-values-ref"></a>
 
@@ -95,6 +95,8 @@ The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefin
 The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-loggerdefinition--examples"></a>
+
+
 
 ### Logger Definition Snippet<a name="aws-resource-greengrass-loggerdefinition--examples--Logger_Definition_Snippet"></a>
 
@@ -140,6 +142,6 @@ TestLoggerDefinition:
           Space: '128'
 ```
 
-## See Also<a name="aws-resource-greengrass-loggerdefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-loggerdefinition--seealso"></a>
 +  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
