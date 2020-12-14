@@ -27,7 +27,7 @@ You can use the following rule\-specific intrinsic functions to define rule cond
 + `[Fn::ValueOf](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-valueof)`
 + `[Fn::ValueOfAll](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-valueofall)`
 
-Rule\-specific intrinsic functions are used in the condition or assertions of a rule\. The condition property determines if AWS CloudFormation applies the assertions\. If the condition evaluates to `true`, AWS CloudFormation evaluates the assertions to verify whether a parameter value is valid when a provisioned product is created or updated\. If a parameter values is invalid, AWS CloudFormation does not create or update the stack\. If the condition evaluates to `false`, AWS CloudFormation doesn't check the parameter value and proceeds with the stack operation\.
+Rule\-specific intrinsic functions are used in the condition or assertions of a rule\. The condition property determines if AWS CloudFormation applies the assertions\. If the condition evaluates to `true`, AWS CloudFormation evaluates the assertions to verify whether a parameter value is valid when a provisioned product is created or updated\. If a parameter value is invalid, AWS CloudFormation does not create or update the stack\. If the condition evaluates to `false`, AWS CloudFormation doesn't check the parameter value and proceeds with the stack operation\.
 
 ## Syntax<a name="template-constraint-rules-syntax"></a>
 
