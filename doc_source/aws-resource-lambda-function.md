@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
       "[Layers](#cfn-lambda-function-layers)" : [ String, ... ],
       "[MemorySize](#cfn-lambda-function-memorysize)" : Integer,
+      "[PackageType](#cfn-lambda-function-packagetype)" : String,
       "[ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions)" : Integer,
       "[Role](#cfn-lambda-function-role)" : String,
       "[Runtime](#cfn-lambda-function-runtime)" : String,
@@ -38,32 +39,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Lambda::Function
-Properties: 
-  [Code](#cfn-lambda-function-code): 
+Properties:
+  [Code](#cfn-lambda-function-code):
     Code
   [CodeSigningConfigArn](#cfn-lambda-function-codesigningconfigarn): String
-  [DeadLetterConfig](#cfn-lambda-function-deadletterconfig): 
+  [DeadLetterConfig](#cfn-lambda-function-deadletterconfig):
     DeadLetterConfig
   [Description](#cfn-lambda-function-description): String
-  [Environment](#cfn-lambda-function-environment): 
+  [Environment](#cfn-lambda-function-environment):
     Environment
-  [FileSystemConfigs](#cfn-lambda-function-filesystemconfigs): 
+  [FileSystemConfigs](#cfn-lambda-function-filesystemconfigs):
     - FileSystemConfig
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
-  [Layers](#cfn-lambda-function-layers): 
+  [Layers](#cfn-lambda-function-layers):
     - String
   [MemorySize](#cfn-lambda-function-memorysize): Integer
+  [PackageType](#cfn-lambda-function-packagetype): String
   [ReservedConcurrentExecutions](#cfn-lambda-function-reservedconcurrentexecutions): Integer
   [Role](#cfn-lambda-function-role): String
   [Runtime](#cfn-lambda-function-runtime): String
-  [Tags](#cfn-lambda-function-tags): 
+  [Tags](#cfn-lambda-function-tags):
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Timeout](#cfn-lambda-function-timeout): Integer
-  [TracingConfig](#cfn-lambda-function-tracingconfig): 
+  [TracingConfig](#cfn-lambda-function-tracingconfig):
     TracingConfig
-  [VpcConfig](#cfn-lambda-function-vpcconfig): 
+  [VpcConfig](#cfn-lambda-function-vpcconfig):
     VpcConfig
 ```
 
@@ -144,6 +146,12 @@ The amount of memory available to the function at runtime\. Increasing the funct
 *Minimum*: `128`  
 *Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PackageType`   <a name="cfn-lambda-function-packagetype"></a>
+The deployment package type of the Lambda function\. For more information, see [Lambda deployment packages](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) in the *AWS Lambda Developer Guide*\.  
+*Valid values*: `Zip` or `Image`  
+*Type*: String  
+*Required*: No  
 
 `ReservedConcurrentExecutions`  <a name="cfn-lambda-function-reservedconcurrentexecutions"></a>
 The number of simultaneous executions to reserve for the function\.  
@@ -299,22 +307,63 @@ Function connected to a VPC\.
 AWSTemplateFormatVersion: '2010-09-09'
 Description: VPC function.
 Resources:
-  Function: 
+  Function:
     Type: AWS::Lambda::Function
-    Properties: 
+    Properties:
       Handler: index.handler
       Role: arn:aws:iam::123456789012:role/lambda-role
-      Code: 
+      Code:
         S3Bucket: my-bucket
         S3Key: function.zip
       Runtime: nodejs12.x
       Timeout: 5
       TracingConfig:
         Mode: Active
-      VpcConfig: 
-        SecurityGroupIds: 
+      VpcConfig:
+        SecurityGroupIds:
           - sg-085912345678492fb
-        SubnetIds: 
+        SubnetIds:
           - subnet-071f712345678e7c8
           - subnet-07fd123456788a036
+```
+
+### Container Image Function<a name="aws-resource-lambda-function--examples--ContainerImage_Function"></a>
+
+Container Image deployed as a Lambda function\.
+
+#### YAML<a name="aws-resource-lambda-function--examples--ContainerImage_Function--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: Container Image deployed as Lambda function
+Resources:
+  Function:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        ImageUri: --- Enter your ImageUri here ---
+      PackageType: Image
+      Role: !GetAtt
+        - FunctionRole
+        - Arn
+      Tags:
+        - Key: 'lambda:createdBy'
+          Value: CloudFormation
+  FunctionRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - 'sts:AssumeRole'
+            Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+        Version: 2012-10-17
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+      Tags:
+        - Key: 'lambda:createdBy'
+          Value: CloudFormation
 ```
