@@ -61,29 +61,18 @@ For the syntax and information about each function, see [Condition functions](in
 
 ## Examples<a name="conditions-section-structure-examples"></a>
 
+### Simple Condition
+
 The following sample template includes an `EnvType` input parameter, where you can specify `prod` to create a stack for production or `test` to create a stack for testing\. For a production environment, AWS CloudFormation creates an Amazon EC2 instance and attaches a volume to the instance\. For a test environment, AWS CloudFormation creates only the Amazon EC2 instance\.
 
 The `CreateProdResources` condition evaluates to `true` if the `EnvType` parameter is equal to `prod`\. In the sample template, the `NewVolume` and `MountPoint` resources are associated with the `CreateProdResources` condition\. Therefore, the resources are created only if the `EnvType` parameter is equal to `prod`\.
 
-### JSON<a name="conditions-section-structure-example.json"></a>
+#### JSON<a name="conditions-section-structure-example.json"></a>
 
 ```
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Mappings" : {
-    "RegionMap" : {
-      "us-east-1"      : { "AMI" : "ami-0ff8a91507f77f867", "TestAz" : "us-east-1a" },
-      "us-west-1"      : { "AMI" : "ami-0bdb828fd58c52235", "TestAz" : "us-west-1a" },
-      "us-west-2"      : { "AMI" : "ami-a0cfeed8", "TestAz" : "us-west-2a" },
-      "eu-west-1"      : { "AMI" : "ami-047bb4163c506cd98", "TestAz" : "eu-west-1a" },
-      "sa-east-1"      : { "AMI" : "ami-07b14488da8ea02a0", "TestAz" : "sa-east-1a" },
-      "ap-southeast-1" : { "AMI" : "ami-08569b978cc4dfa10", "TestAz" : "ap-southeast-1a" },
-      "ap-southeast-2" : { "AMI" : "ami-09b42976632b27e9b", "TestAz" : "ap-southeast-2a" },
-      "ap-northeast-1" : { "AMI" : "ami-06cd52961ce9f0d85", "TestAz" : "ap-northeast-1a" }
-    }
-  },
-    
   "Parameters" : {
     "EnvType" : {
       "Description" : "Environment type.",
@@ -102,7 +91,7 @@ The `CreateProdResources` condition evaluates to `true` if the `EnvType` paramet
     "EC2Instance" : {
       "Type" : "AWS::EC2::Instance",
       "Properties" : {
-        "ImageId" : { "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, "AMI" ]}
+        "ImageId" : "ami-0ff8a91507f77f867"
       }
     },
     
@@ -124,47 +113,14 @@ The `CreateProdResources` condition evaluates to `true` if the `EnvType` paramet
         "AvailabilityZone" : { "Fn::GetAtt" : [ "EC2Instance", "AvailabilityZone" ]}
       }
     }
-  },
-  
-  "Outputs" : {
-    "VolumeId" : {
-      "Value" : { "Ref" : "NewVolume" }, 
-      "Condition" : "CreateProdResources"
-    }
-  }  
+  }
 }
 ```
 
-### YAML<a name="conditions-section-structure-example.yaml"></a>
+#### YAML<a name="conditions-section-structure-example.yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
-Mappings: 
-  RegionMap: 
-    us-east-1: 
-      AMI: "ami-0ff8a91507f77f867"
-      TestAz: "us-east-1a"
-    us-west-1: 
-      AMI: "ami-0bdb828fd58c52235"
-      TestAz: "us-west-1a"
-    us-west-2: 
-      AMI: "ami-a0cfeed8"
-      TestAz: "us-west-2a"
-    eu-west-1: 
-      AMI: "ami-047bb4163c506cd98"
-      TestAz: "eu-west-1a"
-    sa-east-1: 
-      AMI: "ami-07b14488da8ea02a0"
-      TestAz: "sa-east-1a"
-    ap-southeast-1: 
-      AMI: "ami-08569b978cc4dfa10"
-      TestAz: "ap-southeast-1a"
-    ap-southeast-2: 
-      AMI: "ami-09b42976632b27e9b"
-      TestAz: "ap-southeast-2a"
-    ap-northeast-1: 
-      AMI: "ami-06cd52961ce9f0d85"
-      TestAz: "ap-northeast-1a"
 Parameters: 
   EnvType: 
     Description: Environment type.
@@ -180,7 +136,7 @@ Resources:
   EC2Instance: 
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMI]
+      ImageId: ami-0ff8a91507f77f867
   MountPoint: 
     Type: "AWS::EC2::VolumeAttachment"
     Condition: CreateProdResources
@@ -197,9 +153,89 @@ Resources:
       Size: 100
       AvailabilityZone: 
         !GetAtt EC2Instance.AvailabilityZone
-Outputs: 
-  VolumeId: 
-    Condition: CreateProdResources
-    Value: 
-      !Ref NewVolume
+```
+
+### Nested Conditions
+
+Sometimes you may want to make up one condition from several sub conditions. While you can simply duplicate the sub condition logic into the parent condition, it is also possible to reference conditions within another condition.
+
+In this example, we have a stack that optionally creates a S3 bucket. A policy for the bucket is created, but only when the bucket exists *and* the stack is deployed in production.
+
+#### JSON<a name="nested-conditions-example.json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+
+  "Parameters" : {
+    "EnvType" : {
+      "Type" : "String",
+      "AllowedValues" : ["prod", "test"],
+    },
+    "BucketName" : {
+      "Type" : "String",
+      "Default": ""
+    }
+  },
+  
+  "Conditions" : {
+    "IsProduction" : {"Fn::Equals" : [{"Ref" : "EnvType"}, "prod"]},
+    "CreateBucket" : {"Fn::Not" : [{"Fn::Equals" : [{"Ref" : "BucketName"}, ""]}]},
+    "CreateBucketPolicy" : {"Fn::And" : [
+      {"Condition" : "IsProduction"},
+      {"Condition" : "CreateBucket"}
+    ]
+  },
+  
+  "Resources" : {
+    "Bucket" : {
+      "Type" : "AWS::S3::Bucket",
+      "Condition" : "CreateBucket",
+      "Properties" : {
+        "ImageId" : "ami-0ff8a91507f77f867"
+      }
+    },
+    "Policy" : {
+      "Type" : "AWS::S3::BucketPolicy",
+      "Condition" : "CreateBucketPolicy",
+      "Properties" : {
+        "Bucket" : {"Ref": "Bucket"},
+        "PolicyDocument" : "..."
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="nested-conditions-example.yaml"></a>
+
+```
+Parameters:
+  EnvType:
+    Type: String
+    AllowedValues: 
+      - prod
+      - test
+  BucketName:
+    Default: ""
+    Type: String
+
+Conditions:
+  IsProduction: !Equals [ !Ref EnvType, prod ]
+  CreateBucket: !Not [ !Equals [ !Ref BucketName, "" ] ]
+  CreateBucketPolicy: !And
+    - Condition: IsProduction
+    - Condition: CreateBucket
+    
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Condition: CreateBucket
+    
+  Policy:
+    Type: AWS::S3::BucketPolicy
+    Condition: CreateBucketAlarm
+    Properties:
+      Bucket: !Ref Bucket
+      PolicyDocument: ...
 ```
