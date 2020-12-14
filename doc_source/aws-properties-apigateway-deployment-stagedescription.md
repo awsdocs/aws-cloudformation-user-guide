@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting)" : [AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md),
+  "[AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting)" : AccessLogSetting,
   "[CacheClusterEnabled](#cfn-apigateway-deployment-stagedescription-cacheclusterenabled)" : Boolean,
   "[CacheClusterSize](#cfn-apigateway-deployment-stagedescription-cacheclustersize)" : String,
   "[CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-cachedataencrypted)" : Boolean,
   "[CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-cachettlinseconds)" : Integer,
   "[CachingEnabled](#cfn-apigateway-deployment-stagedescription-cachingenabled)" : Boolean,
-  "[CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting)" : [CanarySetting](aws-properties-apigateway-deployment-canarysetting.md),
+  "[CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting)" : CanarySetting,
   "[ClientCertificateId](#cfn-apigateway-deployment-stagedescription-clientcertificateid)" : String,
   "[DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-datatraceenabled)" : Boolean,
   "[Description](#cfn-apigateway-deployment-stagedescription-description)" : String,
   "[DocumentationVersion](#cfn-apigateway-deployment-stagedescription-documentationversion)" : String,
   "[LoggingLevel](#cfn-apigateway-deployment-stagedescription-logginglevel)" : String,
-  "[MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings)" : [ [MethodSetting](aws-properties-apigateway-deployment-stagedescription-methodsetting.md), ... ],
+  "[MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings)" : [ MethodSetting, ... ],
   "[MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled)" : Boolean,
   "[Tags](#cfn-apigateway-deployment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit)" : Integer,
@@ -36,21 +36,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessLogSetting](#cfn-apigateway-deployment-stagedescription-accesslogsetting): 
-    [AccessLogSetting](aws-properties-apigateway-deployment-accesslogsetting.md)
+    AccessLogSetting
   [CacheClusterEnabled](#cfn-apigateway-deployment-stagedescription-cacheclusterenabled): Boolean
   [CacheClusterSize](#cfn-apigateway-deployment-stagedescription-cacheclustersize): String
   [CacheDataEncrypted](#cfn-apigateway-deployment-stagedescription-cachedataencrypted): Boolean
   [CacheTtlInSeconds](#cfn-apigateway-deployment-stagedescription-cachettlinseconds): Integer
   [CachingEnabled](#cfn-apigateway-deployment-stagedescription-cachingenabled): Boolean
   [CanarySetting](#cfn-apigateway-deployment-stagedescription-canarysetting): 
-    [CanarySetting](aws-properties-apigateway-deployment-canarysetting.md)
+    CanarySetting
   [ClientCertificateId](#cfn-apigateway-deployment-stagedescription-clientcertificateid): String
   [DataTraceEnabled](#cfn-apigateway-deployment-stagedescription-datatraceenabled): Boolean
   [Description](#cfn-apigateway-deployment-stagedescription-description): String
   [DocumentationVersion](#cfn-apigateway-deployment-stagedescription-documentationversion): String
   [LoggingLevel](#cfn-apigateway-deployment-stagedescription-logginglevel): String
   [MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings): 
-    - [MethodSetting](aws-properties-apigateway-deployment-stagedescription-methodsetting.md)
+    - MethodSetting
   [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled): Boolean
   [Tags](#cfn-apigateway-deployment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -178,5 +178,6 @@ A map that defines the stage variables\. Variable names must consist of alphanum
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
+## See also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
+

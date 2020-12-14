@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplify-domain-subdomainsetting-properties"></a>
 
 `BranchName`  <a name="cfn-amplify-domain-subdomainsetting-branchname"></a>
- Branch name setting for the Subdomain\.   
+ The branch name setting for the subdomain\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-amplify-domain-subdomainsetting-prefix"></a>
- Prefix setting for the Subdomain\.   
+ The prefix setting for the subdomain\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

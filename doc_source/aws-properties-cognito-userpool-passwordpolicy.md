@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool PasswordPolicy<a name="aws-properties-cognito-userpool-passwordpolicy"></a>
 
-`PasswordPolicy` is a subproperty of the [Policies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html) property that defines the password policy of an Amazon Cognito User Pool\.
+The password policy type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-passwordpolicy-syntax"></a>
 
@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers)" : Boolean,
   "[RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols)" : Boolean,
   "[RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase)" : Boolean,
-  "[TemporaryPasswordValidityDays](#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)" : Double
+  "[TemporaryPasswordValidityDays](#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)" : Integer
 }
 ```
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers): Boolean
   [RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols): Boolean
   [RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase): Boolean
-  [TemporaryPasswordValidityDays](#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays): Double
+  [TemporaryPasswordValidityDays](#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays): Integer
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-passwordpolicy-properties"></a>
@@ -68,7 +68,7 @@ In the password policy that you have set, refers to whether you have required us
 In the password policy you have set, refers to the number of days a temporary password is valid\. If the user does not sign\-in during this time, their password will need to be reset by an administrator\.  
 When you set `TemporaryPasswordValidityDays` for a user pool, you will no longer be able to set the deprecated `UnusedAccountValidityDays` value for that user pool\.
 *Required*: No  
-*Type*: Double  
+*Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `365`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

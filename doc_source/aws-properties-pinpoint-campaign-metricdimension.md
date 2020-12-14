@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign MetricDimension<a name="aws-properties-pinpoint-campaign-metricdimension"></a>
 
-Specifies the dimension settings for custom metrics that your app reports to Amazon Pinpoint\.
+Specifies metric\-based criteria for including or excluding endpoints from a segment\. These criteria derive from custom metrics that you define for endpoints\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-metricdimension-syntax"></a>
 

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GlueTables](#cfn-glue-mltransform-inputrecordtables-gluetables)" : [ [GlueTables](aws-properties-glue-mltransform-inputrecordtables-gluetables.md), ... ]
+  "[GlueTables](#cfn-glue-mltransform-inputrecordtables-gluetables)" : [ GlueTables, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GlueTables](#cfn-glue-mltransform-inputrecordtables-gluetables): 
-    - [GlueTables](aws-properties-glue-mltransform-inputrecordtables-gluetables.md)
+    - GlueTables
 ```
 
 ## Properties<a name="aws-properties-glue-mltransform-inputrecordtables-properties"></a>

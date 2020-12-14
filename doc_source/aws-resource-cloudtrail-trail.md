@@ -1,6 +1,6 @@
 # AWS::CloudTrail::Trail<a name="aws-resource-cloudtrail-trail"></a>
 
-Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket\. A maximum of five trails can exist in a region, irrespective of the region in which they were created\.
+Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket\. 
 
 ## Syntax<a name="aws-resource-cloudtrail-trail-syntax"></a>
 
@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CloudWatchLogsLogGroupArn](#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn)" : String,
       "[CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn)" : String,
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
-      "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ [EventSelector](aws-properties-cloudtrail-trail-eventselector.md), ... ],
+      "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ EventSelector, ... ],
       "[IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents)" : Boolean,
       "[IsLogging](#cfn-cloudtrail-trail-islogging)" : Boolean,
       "[IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail)" : Boolean,
@@ -38,7 +38,7 @@ Properties:
   [CloudWatchLogsRoleArn](#cfn-cloudtrail-trail-cloudwatchlogsrolearn): String
   [EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation): Boolean
   [EventSelectors](#cfn-cloudtrail-trail-eventselectors): 
-    - [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)
+    - EventSelector
   [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents): Boolean
   [IsLogging](#cfn-cloudtrail-trail-islogging): Boolean
   [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail): Boolean
@@ -75,6 +75,7 @@ When you disable log file integrity validation, the chain of digest files is bro
 `EventSelectors`  <a name="cfn-cloudtrail-trail-eventselectors"></a>
 Use event selectors to further specify the management and data event settings for your trail\. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events\. When an event occurs in your account, CloudTrail evaluates the event selector for all trails\. For each trail, if the event matches any event selector, the trail processes and logs the event\. If the event doesn't match any event selector, the trail doesn't log the event\.  
 You can configure up to five event selectors for a trail\.  
+You cannot apply both event selectors and advanced event selectors to a trail\.  
 *Required*: No  
 *Type*: List of [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -133,19 +134,17 @@ An arbitrary set of tags \(key–value pairs\) for this trail\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrailName`  <a name="cfn-cloudtrail-trail-trailname"></a>
-Specifies the name of the trail or trail ARN\. If `Name` is a trail name, the string must meet the following requirements:  
+Specifies the name of the trail\. The name must meet the following requirements:  
 + Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), periods \(\.\), underscores \(\_\), or dashes \(\-\)
 + Start with a letter or number, and end with a letter or number
 + Be between 3 and 128 characters
 + Have no adjacent periods, underscores or dashes\. Names like `my-_namespace` and `my--namespace` are invalid\.
 + Not be in IP address format \(for example, 192\.168\.5\.4\)
-If `Name` is a trail ARN, it must be in the format:  
- `arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cloudtrail-trail-return-values"></a>
+## Return values<a name="aws-resource-cloudtrail-trail-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudtrail-trail-return-values-ref"></a>
 
@@ -168,6 +167,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the Amazon SNS topic that's associated with the CloudTrail trail, such as `arn:aws:sns:us-east-2:123456789012:mySNSTopic`\. 
 
 ## Examples<a name="aws-resource-cloudtrail-trail--examples"></a>
+
+
 
 ### Example<a name="aws-resource-cloudtrail-trail--examples--Example"></a>
 

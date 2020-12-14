@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-redshift-clusterparametergroup-description)" : String,
       "[ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
-      "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ [Parameter](aws-property-redshift-clusterparametergroup-parameter.md), ... ],
+      "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
       "[Tags](#cfn-redshift-clusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Description](#cfn-redshift-clusterparametergroup-description): String
   [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
   [Parameters](#cfn-redshift-clusterparametergroup-parameters): 
-    - [Parameter](aws-property-redshift-clusterparametergroup-parameter.md)
+    - Parameter
   [Tags](#cfn-redshift-clusterparametergroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -39,12 +39,14 @@ Properties:
 The description of the parameter group\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParameterGroupFamily`  <a name="cfn-redshift-clusterparametergroup-parametergroupfamily"></a>
 The name of the cluster parameter group family that this cluster parameter group is compatible with\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-redshift-clusterparametergroup-parameters"></a>
@@ -61,7 +63,7 @@ The list of tags for the cluster parameter group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-redshift-clusterparametergroup-return-values"></a>
+## Return values<a name="aws-resource-redshift-clusterparametergroup-return-values"></a>
 
 ### Ref<a name="aws-resource-redshift-clusterparametergroup-return-values-ref"></a>
 
@@ -74,6 +76,8 @@ For the Amazon Redshift cluster parameter group `myClusterParameterGroup`, `Ref`
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-redshift-clusterparametergroup--examples"></a>
+
+
 
 ### Single Parameter<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter"></a>
 

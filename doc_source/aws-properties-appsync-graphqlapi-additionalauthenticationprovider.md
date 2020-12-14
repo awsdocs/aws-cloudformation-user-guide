@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype)" : String,
-  "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig)" : [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md),
-  "[UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig)" : [CognitoUserPoolConfig](aws-properties-appsync-graphqlapi-cognitouserpoolconfig.md)
+  "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig)" : OpenIDConnectConfig,
+  "[UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig)" : CognitoUserPoolConfig
 }
 ```
 
@@ -21,15 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype): String
   [OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig): 
-    [OpenIDConnectConfig](aws-properties-appsync-graphqlapi-openidconnectconfig.md)
+    OpenIDConnectConfig
   [UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig): 
-    [CognitoUserPoolConfig](aws-properties-appsync-graphqlapi-cognitouserpoolconfig.md)
+    CognitoUserPoolConfig
 ```
 
 ## Properties<a name="aws-properties-appsync-graphqlapi-additionalauthenticationprovider-properties"></a>
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype"></a>
-The authentication type: API key, AWS IAM, OIDC, or Amazon Cognito user pools\.  
+The authentication type for API key, AWS IAM, OIDC, or Amazon Cognito user pools\.  
+Valid Values: `API_KEY` \| `AWS_IAM` \| `OPENID_CONNECT` \| `AMAZON_COGNITO_USER_POOLS`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

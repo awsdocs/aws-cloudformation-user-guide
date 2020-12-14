@@ -78,7 +78,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 The path for the policy\.  
 For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
-This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(\\u0021\) through the DEL character \(\\u007F\), including most punctuation characters, digits, and upper and lowercased letters\.  
+This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -90,9 +90,9 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 The JSON policy document that you want to use as the content for the new policy\.  
 You must provide policies in JSON format in IAM\. However, for AWS CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format\. AWS CloudFormation always converts a YAML policy to JSON format before submitting it to IAM\.  
 The [regex pattern](http://wikipedia.org/wiki/regex) used to validate this parameter is a string of characters consisting of the following:  
-+ Any printable ASCII character ranging from the space character \(\\u0020\) through the end of the ASCII character range
-+ The printable characters in the Basic Latin and Latin\-1 Supplement character set \(through \\u00FF\)
-+ The special characters tab \(\\u0009\), line feed \(\\u000A\), and carriage return \(\\u000D\)
++ Any printable ASCII character ranging from the space character \(`\u0020`\) through the end of the ASCII character range
++ The printable characters in the Basic Latin and Latin\-1 Supplement character set \(through `\u00FF`\)
++ The special characters tab \(`\u0009`\), line feed \(`\u000A`\), and carriage return \(`\u000D`\)
 *Required*: Yes  
 *Type*: Json  
 *Minimum*: `1`  
@@ -118,7 +118,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-managedpolicy-return-values"></a>
+## Return values<a name="aws-resource-iam-managedpolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-managedpolicy-return-values-ref"></a>
 
@@ -131,6 +131,8 @@ In the following sample, the `Ref` function returns the ARN of the `CreateTestDB
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
+
+
 
 ### Create managed policy<a name="aws-resource-iam-managedpolicy--examples--Create_managed_policy"></a>
 
@@ -247,5 +249,6 @@ CreateTestDBPolicy:
       - TestDBGroup
 ```
 
-## See Also<a name="aws-resource-iam-managedpolicy--seealso"></a>
+## See also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
+

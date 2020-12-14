@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application S3ContentLocation<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation"></a>
 
-For a Java\-based Amazon Kinesis Data Analytics application, provides a description of an Amazon S3 object, including the Amazon Resource Name \(ARN\) of the S3 bucket, the name of the Amazon S3 object that contains the data, and the version number of the Amazon S3 object that contains the data\. 
+For a Flink\-based Kinesis Data Analytics application, provides a description of an Amazon S3 object, including the Amazon Resource Name \(ARN\) of the S3 bucket, the name of the Amazon S3 object that contains the data, and the version number of the Amazon S3 object that contains the data\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation-syntax"></a>
 
@@ -47,7 +47,10 @@ The file key for the object containing the application code\.
 The version of the object containing the application code\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation--seealso"></a>
 +  [S3ContentLocation](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_S3ContentLocation.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

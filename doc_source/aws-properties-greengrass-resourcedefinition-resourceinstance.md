@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Id](#cfn-greengrass-resourcedefinition-resourceinstance-id)" : String,
   "[Name](#cfn-greengrass-resourcedefinition-resourceinstance-name)" : String,
-  "[ResourceDataContainer](#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer)" : [ResourceDataContainer](aws-properties-greengrass-resourcedefinition-resourcedatacontainer.md)
+  "[ResourceDataContainer](#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer)" : ResourceDataContainer
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Id](#cfn-greengrass-resourcedefinition-resourceinstance-id): String
   [Name](#cfn-greengrass-resourcedefinition-resourceinstance-name): String
   [ResourceDataContainer](#cfn-greengrass-resourcedefinition-resourceinstance-resourcedatacontainer): 
-    [ResourceDataContainer](aws-properties-greengrass-resourcedefinition-resourcedatacontainer.md)
+    ResourceDataContainer
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-resourceinstance-properties"></a>
@@ -48,6 +48,6 @@ Only one resource type can be defined for a `ResourceDataContainer` instance\.
 *Type*: [ResourceDataContainer](aws-properties-greengrass-resourcedefinition-resourcedatacontainer.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-resourceinstance--seealso"></a>
+## See also<a name="aws-properties-greengrass-resourcedefinition-resourceinstance--seealso"></a>
 +  [Resource](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resource.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

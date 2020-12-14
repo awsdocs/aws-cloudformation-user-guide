@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ [Condition](aws-properties-glue-trigger-condition.md), ... ],
+  "[Conditions](#cfn-glue-trigger-predicate-conditions)" : [ Condition, ... ],
   "[Logical](#cfn-glue-trigger-predicate-logical)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Conditions](#cfn-glue-trigger-predicate-conditions): 
-    - [Condition](aws-properties-glue-trigger-condition.md)
+    - Condition
   [Logical](#cfn-glue-trigger-predicate-logical): String
 ```
 
@@ -37,5 +37,6 @@ An optional field if only one condition is listed\. If multiple conditions are l
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-trigger-predicate--seealso"></a>
+## See also<a name="aws-properties-glue-trigger-predicate--seealso"></a>
 +  [Predicate Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Predicate) in the *AWS Glue Developer Guide* 
+

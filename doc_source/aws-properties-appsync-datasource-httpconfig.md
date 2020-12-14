@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AuthorizationConfig](#cfn-appsync-datasource-httpconfig-authorizationconfig)" : [AuthorizationConfig](aws-properties-appsync-datasource-authorizationconfig.md),
+  "[AuthorizationConfig](#cfn-appsync-datasource-httpconfig-authorizationconfig)" : AuthorizationConfig,
   "[Endpoint](#cfn-appsync-datasource-httpconfig-endpoint)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AuthorizationConfig](#cfn-appsync-datasource-httpconfig-authorizationconfig): 
-    [AuthorizationConfig](aws-properties-appsync-datasource-authorizationconfig.md)
+    AuthorizationConfig
   [Endpoint](#cfn-appsync-datasource-httpconfig-endpoint): String
 ```
 

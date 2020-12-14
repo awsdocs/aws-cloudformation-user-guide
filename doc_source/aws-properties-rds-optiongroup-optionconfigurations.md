@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DBSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships)" : [ String, ... ],
   "[OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname)" : String,
-  "[OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings)" : [ [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md), ... ],
+  "[OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings)" : [ OptionSetting, ... ],
   "[OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion)" : String,
   "[Port](#cfn-rds-optiongroup-optionconfigurations-port)" : Integer,
   "[VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships)" : [ String, ... ]
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [OptionName](#cfn-rds-optiongroup-optionconfigurations-optionname): String
   [OptionSettings](#cfn-rds-optiongroup-optionconfigurations-optionsettings): 
-    - [OptionSetting](aws-properties-rds-optiongroup-optionconfigurations-optionsettings.md)
+    - OptionSetting
   [OptionVersion](#cfn-rds-optiongroup-optionconfiguration-optionversion): String
   [Port](#cfn-rds-optiongroup-optionconfigurations-port): Integer
   [VpcSecurityGroupMemberships](#cfn-rds-optiongroup-optionconfigurations-vpcsecuritygroupmemberships): 
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-rds-optiongroup-optionconfigurations-properties"></a>
 
 `DBSecurityGroupMemberships`  <a name="cfn-rds-optiongroup-optionconfigurations-dbsecuritygroupmemberships"></a>
-A list of DBSecurityGroupMemebrship name strings used for this option\.  
+A list of DBSecurityGroupMembership name strings used for this option\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,6 +72,8 @@ A list of VpcSecurityGroupMembership name strings used for this option\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-rds-optiongroup-optionconfigurations--examples"></a>
+
+
 
 ### <a name="aws-properties-rds-optiongroup-optionconfigurations--examples--"></a>
 

@@ -1,6 +1,6 @@
 # AWS::MediaLive::Input InputDestinationRequest<a name="aws-properties-medialive-input-inputdestinationrequest"></a>
 
-The settings for a push input, to set up the destination addresses on MediaLive\.
+Endpoint settings for a PUSH type input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputdestinationrequest-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-input-inputdestinationrequest-properties"></a>
 
 `StreamName`  <a name="cfn-medialive-input-inputdestinationrequest-streamname"></a>
-The stream name \(application name/application instance\) for the location the RTMP source content will be pushed to in MediaLive\.   
+A unique name for the location the RTMP stream is being pushed to\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

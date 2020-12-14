@@ -1,6 +1,6 @@
 # AWS::EC2::SpotFleet FleetLaunchTemplateSpecification<a name="aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification"></a>
 
-Describes a launch template\.
+Describes the Amazon EC2 launch template and the launch template version that can be used by a Spot Fleet request to configure Amazon EC2 instances\. For information about launch templates, see [Launching an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 ## Syntax<a name="aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification-properties"></a>
 
 `LaunchTemplateId`  <a name="cfn-ec2-spotfleet-fleetlaunchtemplatespecification-launchtemplateid"></a>
-The ID of the launch template\. You must specify either a template ID or a template name\.  
+The ID of the launch template\. If you specify the template ID, you can't specify the template name\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

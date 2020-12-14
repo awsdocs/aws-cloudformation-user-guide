@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate<a name="aws-resource-pinpoint-pushtemplate"></a>
 
-Creates a message template that you can use in messages that are sent through a push notification channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
+The AWS::Pinpoint::PushTemplate resource is a message template that you can use in messages that are sent through a push notification channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for one or more Amazon Pinpoint applications\.
 
 ## Syntax<a name="aws-resource-pinpoint-pushtemplate-syntax"></a>
 
@@ -12,12 +12,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Pinpoint::PushTemplate",
   "Properties" : {
-      "[ADM](#cfn-pinpoint-pushtemplate-adm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
-      "[APNS](#cfn-pinpoint-pushtemplate-apns)" : [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md),
-      "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
-      "[Default](#cfn-pinpoint-pushtemplate-default)" : [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md),
-      "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md),
+      "[ADM](#cfn-pinpoint-pushtemplate-adm)" : AndroidPushNotificationTemplate,
+      "[APNS](#cfn-pinpoint-pushtemplate-apns)" : APNSPushNotificationTemplate,
+      "[Baidu](#cfn-pinpoint-pushtemplate-baidu)" : AndroidPushNotificationTemplate,
+      "[Default](#cfn-pinpoint-pushtemplate-default)" : DefaultPushNotificationTemplate,
+      "[DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions)" : String,
+      "[GCM](#cfn-pinpoint-pushtemplate-gcm)" : AndroidPushNotificationTemplate,
       "[Tags](#cfn-pinpoint-pushtemplate-tags)" : Json,
+      "[TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription)" : String,
       "[TemplateName](#cfn-pinpoint-pushtemplate-templatename)" : String
     }
 }
@@ -29,16 +31,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Pinpoint::PushTemplate
 Properties: 
   [ADM](#cfn-pinpoint-pushtemplate-adm): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [APNS](#cfn-pinpoint-pushtemplate-apns): 
-    [APNSPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.md)
+    APNSPushNotificationTemplate
   [Baidu](#cfn-pinpoint-pushtemplate-baidu): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [Default](#cfn-pinpoint-pushtemplate-default): 
-    [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md)
+    DefaultPushNotificationTemplate
+  [DefaultSubstitutions](#cfn-pinpoint-pushtemplate-defaultsubstitutions): String
   [GCM](#cfn-pinpoint-pushtemplate-gcm): 
-    [AndroidPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.md)
+    AndroidPushNotificationTemplate
   [Tags](#cfn-pinpoint-pushtemplate-tags): Json
+  [TemplateDescription](#cfn-pinpoint-pushtemplate-templatedescription): String
   [TemplateName](#cfn-pinpoint-pushtemplate-templatename): String
 ```
 
@@ -68,6 +72,12 @@ The default message template to use for push notification channels\.
 *Type*: [DefaultPushNotificationTemplate](aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DefaultSubstitutions`  <a name="cfn-pinpoint-pushtemplate-defaultsubstitutions"></a>
+A JSON object that specifies the default values to use for message variables in the message template\. This object is a set of key\-value pairs\. Each key defines a message variable in the template\. The corresponding value defines the default value for that variable\. When you create a message that's based on the template, you can override these defaults with message\-specific and address\-specific variables and values\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `GCM`  <a name="cfn-pinpoint-pushtemplate-gcm"></a>
 The message template to use for the GCM channel, which is used to send notifications through the Firebase Cloud Messaging \(FCM\), formerly Google Cloud Messaging \(GCM\), service\. This message template overrides the default template for push notification channels \(`Default`\)\.  
 *Required*: No  
@@ -80,13 +90,19 @@ A string\-to\-string map of key\-value pairs that defines the tags to associate 
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TemplateDescription`  <a name="cfn-pinpoint-pushtemplate-templatedescription"></a>
+A custom description of the message template\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TemplateName`  <a name="cfn-pinpoint-pushtemplate-templatename"></a>
 The name of the message template\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-pinpoint-pushtemplate-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-pushtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-pushtemplate-return-values-ref"></a>
 

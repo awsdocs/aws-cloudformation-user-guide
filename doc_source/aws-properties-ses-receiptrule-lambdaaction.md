@@ -41,11 +41,12 @@ The invocation type of the AWS Lambda function\. An invocation type of `RequestR
 There is a 30\-second timeout on `RequestResponse` invocations\. You should use `Event` invocation in most cases\. Use `RequestResponse` only when you want to make a mail flow decision, such as whether to stop the receipt rule or the receipt rule set\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Event | RequestResponse`  
+*Allowed values*: `Event | RequestResponse`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-lambdaaction-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the Lambda action is taken\. An example of an Amazon SNS topic ARN is `arn:aws:sns:us-west-2:123456789012:MyTopic`\. For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.  
+The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the Lambda action is executed\. You can find the ARN of a topic by using the [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in the Amazon SNS API\.  
+For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

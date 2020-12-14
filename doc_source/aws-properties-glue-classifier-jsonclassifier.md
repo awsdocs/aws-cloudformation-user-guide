@@ -36,5 +36,6 @@ The name of the classifier\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-glue-classifier-jsonclassifier--seealso"></a>
+## See also<a name="aws-properties-glue-classifier-jsonclassifier--seealso"></a>
 +  [JsonClassifier Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-classifiers.html#aws-glue-api-crawler-classifiers-JsonClassifier) in the *AWS Glue Developer Guide* 
+

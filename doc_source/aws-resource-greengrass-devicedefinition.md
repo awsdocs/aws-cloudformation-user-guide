@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::DeviceDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-devicedefinition-initialversion)" : [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-devicedefinition-initialversion)" : DeviceDefinitionVersion,
       "[Name](#cfn-greengrass-devicedefinition-name)" : String,
       "[Tags](#cfn-greengrass-devicedefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::DeviceDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-devicedefinition-initialversion): 
-    [DeviceDefinitionVersion](aws-properties-greengrass-devicedefinition-devicedefinitionversion.md)
+    DeviceDefinitionVersion
   [Name](#cfn-greengrass-devicedefinition-name): String
   [Tags](#cfn-greengrass-devicedefinition-tags): Json
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-devicedefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-devicedefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-devicedefinition-return-values-ref"></a>
 
@@ -95,6 +95,8 @@ The ARN of the last `DeviceDefinitionVersion` that was added to the `DeviceDefin
 The name of the device definition\.
 
 ## Examples<a name="aws-resource-greengrass-devicedefinition--examples"></a>
+
+
 
 ### Device Definition Snippet<a name="aws-resource-greengrass-devicedefinition--examples--Device_Definition_Snippet"></a>
 
@@ -177,6 +179,6 @@ TestDeviceDefinition:
           SyncShadow: 'true'
 ```
 
-## See Also<a name="aws-resource-greengrass-devicedefinition--seealso"></a>
+## See also<a name="aws-resource-greengrass-devicedefinition--seealso"></a>
 +  [CreateDeviceDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createdevicedefinition-post.html) in the * AWS IoT Greengrass API Reference * 
 +  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

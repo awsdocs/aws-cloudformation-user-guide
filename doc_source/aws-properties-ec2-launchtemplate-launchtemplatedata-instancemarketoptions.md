@@ -2,7 +2,7 @@
 
 Specifies the market \(purchasing\) option for an instance\.
 
- `InstanceMarketOptions` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+`InstanceMarketOptions` is a property of the [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype)" : String,
-  "[SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions)" : [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
+  "[SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions)" : SpotOptions
 }
 ```
 
@@ -22,16 +22,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [MarketType](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype): String
   [SpotOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions): 
-    [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)
+    SpotOptions
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-properties"></a>
 
 `MarketType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype"></a>
 The market type\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `spot`  
+*Allowed values*: `spot`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions"></a>
@@ -40,5 +40,6 @@ The options for Spot Instances\.
 *Type*: [SpotOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions--seealso"></a>
 +  [ LaunchTemplateInstanceMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

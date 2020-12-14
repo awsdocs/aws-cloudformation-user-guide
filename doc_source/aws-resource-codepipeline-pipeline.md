@@ -12,13 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodePipeline::Pipeline",
   "Properties" : {
-      "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstore)" : [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md),
-      "[ArtifactStores](#cfn-codepipeline-pipeline-artifactstores)" : [ [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md), ... ],
-      "[DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions)" : [ [StageTransition](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md), ... ],
+      "[ArtifactStore](#cfn-codepipeline-pipeline-artifactstore)" : ArtifactStore,
+      "[ArtifactStores](#cfn-codepipeline-pipeline-artifactstores)" : [ ArtifactStoreMap, ... ],
+      "[DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions)" : [ StageTransition, ... ],
       "[Name](#cfn-codepipeline-pipeline-name)" : String,
       "[RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate)" : Boolean,
       "[RoleArn](#cfn-codepipeline-pipeline-rolearn)" : String,
-      "[Stages](#cfn-codepipeline-pipeline-stages)" : [ [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md), ... ],
+      "[Stages](#cfn-codepipeline-pipeline-stages)" : [ StageDeclaration, ... ],
       "[Tags](#cfn-codepipeline-pipeline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,16 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodePipeline::Pipeline
 Properties: 
   [ArtifactStore](#cfn-codepipeline-pipeline-artifactstore): 
-    [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)
+    ArtifactStore
   [ArtifactStores](#cfn-codepipeline-pipeline-artifactstores): 
-    - [ArtifactStoreMap](aws-properties-codepipeline-pipeline-artifactstoremap.md)
+    - ArtifactStoreMap
   [DisableInboundStageTransitions](#cfn-codepipeline-pipeline-disableinboundstagetransitions): 
-    - [StageTransition](aws-properties-codepipeline-pipeline-disableinboundstagetransitions.md)
+    - StageTransition
   [Name](#cfn-codepipeline-pipeline-name): String
   [RestartExecutionOnUpdate](#cfn-codepipeline-pipeline-restartexecutiononupdate): Boolean
   [RoleArn](#cfn-codepipeline-pipeline-rolearn): String
   [Stages](#cfn-codepipeline-pipeline-stages): 
-    - [StageDeclaration](aws-properties-codepipeline-pipeline-stages.md)
+    - StageDeclaration
   [Tags](#cfn-codepipeline-pipeline-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -47,7 +47,7 @@ Properties:
 ## Properties<a name="aws-resource-codepipeline-pipeline-properties"></a>
 
 `ArtifactStore`  <a name="cfn-codepipeline-pipeline-artifactstore"></a>
-The Amazon S3 bucket where artifacts for the pipeline are stored\.  
+The S3 bucket where artifacts for the pipeline are stored\.  
 You must include either `artifactStore` or `artifactStores` in your pipeline, but you cannot use both\. If you create a cross\-region action in your pipeline, you must use `artifactStores`\.
 *Required*: Conditional  
 *Type*: [ArtifactStore](aws-properties-codepipeline-pipeline-artifactstore.md)  
@@ -101,7 +101,7 @@ Specifies the tags applied to the pipeline\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-codepipeline-pipeline-return-values"></a>
+## Return values<a name="aws-resource-codepipeline-pipeline-return-values"></a>
 
 ### Ref<a name="aws-resource-codepipeline-pipeline-return-values-ref"></a>
 
@@ -122,6 +122,8 @@ The version of the pipeline\.
 A new pipeline is always assigned a version number of 1\. This number increments when a pipeline is updated\.
 
 ## Examples<a name="aws-resource-codepipeline-pipeline--examples"></a>
+
+
 
 ### Pipeline Resource Configuration<a name="aws-resource-codepipeline-pipeline--examples--Pipeline_Resource_Configuration"></a>
 
@@ -209,8 +211,11 @@ The following example creates a pipeline with a source, beta, and release stage\
     ], 
     "ArtifactStore": { 
       "Type": "S3",
-      "Location": { "Ref" : "ArtifactStoreS3Location" } 
-    }, 
+      "Location": { "Ref" : "ArtifactStoreS3Location" },
+      "EncryptionKey": {
+        "Id": "arn:aws:kms:useast-1:ACCOUNT-ID:key/KEY-ID",
+        "Type": "KMS"
+      }, 
     "DisableInboundStageTransitions": [ 
       {
         "StageName": "Release", 
@@ -301,6 +306,9 @@ AppPipeline:
       Type: S3 
       Location:
         Ref: ArtifactStoreS3Location 
+      EncryptionKey:
+        Id: arn:aws:kms:useast-1:ACCOUNT-ID:key/KEY-ID
+        Type: KMS
     DisableInboundStageTransitions: 
       - 
         StageName: Release 

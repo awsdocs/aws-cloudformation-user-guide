@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SES::Template",
   "Properties" : {
-      "[Template](#cfn-ses-template-template)" : [Template](aws-properties-ses-template-template.md)
+      "[Template](#cfn-ses-template-template)" : Template
     }
 }
 ```
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SES::Template
 Properties: 
   [Template](#cfn-ses-template-template): 
-    [Template](aws-properties-ses-template-template.md)
+    Template
 ```
 
 ## Properties<a name="aws-resource-ses-template-properties"></a>
@@ -41,6 +41,8 @@ The content of the email, composed of a subject line, an HTML part, and a text\-
 Specifies an email template, which is used when sending templated email messages\.
 
 ### <a name="aws-resource-ses-template--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ses-template--examples----json"></a>
 
@@ -90,7 +92,7 @@ Specifies an email template, which is used when sending templated email messages
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES Template Sample Template'
+Description: AWS SES Template Sample Template
 Parameters:
   TemplateName:
     Type: String
@@ -102,7 +104,7 @@ Parameters:
     Type: String
 Resources:
   Template:
-    Type: AWS::SES::Template
+    Type: 'AWS::SES::Template'
     Properties:
       Template:
         TemplateName: !Ref TemplateName

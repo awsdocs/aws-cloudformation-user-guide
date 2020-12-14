@@ -44,18 +44,20 @@ The device name \(for example, `/dev/sdh` or `xvdh`\)\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceId`  <a name="cfn-ec2-ebs-volumeattachment-instanceid"></a>
-The ID of the instance to which the volume attaches\. This value can be a reference to an `AWS::EC2::Instance` resource, or it can be the physical ID of an existing EC2 instance\.  
+The ID of the instance to which the volume attaches\. This value can be a reference to an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, or it can be the physical ID of an existing EC2 instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumeId`  <a name="cfn-ec2-ebs-volumeattachment-volumeid"></a>
-The ID of the Amazon EBS volume\. The volume and instance must be within the same Availability Zone\. This value can be a reference to an `AWS::EC2::Volume` resource, or it can be the volume ID of an existing Amazon EBS volume\.  
+The ID of the Amazon EBS volume\. The volume and instance must be within the same Availability Zone\. This value can be a reference to an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html) resource, or it can be the volume ID of an existing Amazon EBS volume\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-properties-ec2-ebs-volumeattachment--examples"></a>
+
+
 
 ### Attach an EBS Volume to a Running Instance<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance"></a>
 
@@ -107,7 +109,7 @@ MountPoint:
     Device: /dev/sdh
 ```
 
-## See Also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
+## See also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
 +  [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*
 +  [Attaching a Volume to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
 +  [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 

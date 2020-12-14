@@ -1,4 +1,4 @@
-# Using Regular Expressions in AWS CloudFormation Templates<a name="cfn-regexes"></a>
+# Using regular expressions in AWS CloudFormation templates<a name="cfn-regexes"></a>
 
 Regular expressions \(commonly known as regexes\) can be specified in a number of places within an AWS CloudFormation template, such as for the `AllowedPattern` property when creating a template [parameter](parameters-section-structure.md)\.
 

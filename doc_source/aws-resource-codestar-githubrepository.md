@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeStar::GitHubRepository",
   "Properties" : {
-      "[Code](#cfn-codestar-githubrepository-code)" : [Code](aws-properties-codestar-githubrepository-code.md),
+      "[Code](#cfn-codestar-githubrepository-code)" : Code,
+      "[ConnectionArn](#cfn-codestar-githubrepository-connectionarn)" : String,
       "[EnableIssues](#cfn-codestar-githubrepository-enableissues)" : Boolean,
       "[IsPrivate](#cfn-codestar-githubrepository-isprivate)" : Boolean,
       "[RepositoryAccessToken](#cfn-codestar-githubrepository-repositoryaccesstoken)" : String,
@@ -29,7 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CodeStar::GitHubRepository
 Properties: 
   [Code](#cfn-codestar-githubrepository-code): 
-    [Code](aws-properties-codestar-githubrepository-code.md)
+    Code
+  [ConnectionArn](#cfn-codestar-githubrepository-connectionarn): String
   [EnableIssues](#cfn-codestar-githubrepository-enableissues): Boolean
   [IsPrivate](#cfn-codestar-githubrepository-isprivate): Boolean
   [RepositoryAccessToken](#cfn-codestar-githubrepository-repositoryaccesstoken): String
@@ -46,6 +48,12 @@ Information about code to be committed to a repository after it is created in an
 *Type*: [Code](aws-properties-codestar-githubrepository-code.md)  
 *Update requires*: Updates are not supported\.
 
+`ConnectionArn`  <a name="cfn-codestar-githubrepository-connectionarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EnableIssues`  <a name="cfn-codestar-githubrepository-enableissues"></a>
 Indicates whether to enable issues for the GitHub repository\. You can use GitHub issues to track information and bugs for your repository\.  
 *Required*: No  
@@ -60,7 +68,7 @@ Indicates whether the GitHub repository is a private repository\. If so, you cho
 
 `RepositoryAccessToken`  <a name="cfn-codestar-githubrepository-repositoryaccesstoken"></a>
 The GitHub user's personal access token for the GitHub repository\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
@@ -82,7 +90,7 @@ The GitHub user name for the owner of the GitHub repository to be created\. If t
 *Type*: String  
 *Update requires*: Updates are not supported\.
 
-## Return Values<a name="aws-resource-codestar-githubrepository-return-values"></a>
+## Return values<a name="aws-resource-codestar-githubrepository-return-values"></a>
 
 ### Ref<a name="aws-resource-codestar-githubrepository-return-values-ref"></a>
 
@@ -91,6 +99,8 @@ The GitHub user name for the owner of the GitHub repository to be created\. If t
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-codestar-githubrepository--examples"></a>
+
+
 
 ### GitHub Repository Resource Configuration<a name="aws-resource-codestar-githubrepository--examples--GitHub_Repository_Resource_Configuration"></a>
 
@@ -109,8 +119,8 @@ When passing secret parameters, do not enter the value directly into the templat
         "Properties": {
             "Code": {
                 "S3": {
-                    "S3Bucket": "my-bucket",
-                    "S3Key": "sourcecode.zip",
+                    "Bucket": "my-bucket",
+                    "Key": "sourcecode.zip",
                     "ObjectVersion": "1"
                 }
             },
@@ -133,8 +143,8 @@ MyRepo:
   Properties:
     Code:
       S3:
-        S3Bucket: "my-bucket" 
-        S3Key: "sourcecode.zip" 
+        Bucket: "my-bucket" 
+        Key: "sourcecode.zip" 
         ObjectVersion: "1"
     EnableIssues: true
     IsPrivate: true

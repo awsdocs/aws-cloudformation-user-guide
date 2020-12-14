@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudWatch::AnomalyDetector",
   "Properties" : {
-      "[Configuration](#cfn-cloudwatch-anomalydetector-configuration)" : [Configuration](aws-properties-cloudwatch-anomalydetector-configuration.md),
-      "[Dimensions](#cfn-cloudwatch-anomalydetector-dimensions)" : [ [Dimension](aws-properties-cloudwatch-anomalydetector-dimension.md), ... ],
+      "[Configuration](#cfn-cloudwatch-anomalydetector-configuration)" : Configuration,
+      "[Dimensions](#cfn-cloudwatch-anomalydetector-dimensions)" : [ Dimension, ... ],
       "[MetricName](#cfn-cloudwatch-anomalydetector-metricname)" : String,
       "[Namespace](#cfn-cloudwatch-anomalydetector-namespace)" : String,
       "[Stat](#cfn-cloudwatch-anomalydetector-stat)" : String
@@ -27,9 +27,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudWatch::AnomalyDetector
 Properties: 
   [Configuration](#cfn-cloudwatch-anomalydetector-configuration): 
-    [Configuration](aws-properties-cloudwatch-anomalydetector-configuration.md)
+    Configuration
   [Dimensions](#cfn-cloudwatch-anomalydetector-dimensions): 
-    - [Dimension](aws-properties-cloudwatch-anomalydetector-dimension.md)
+    - Dimension
   [MetricName](#cfn-cloudwatch-anomalydetector-metricname): String
   [Namespace](#cfn-cloudwatch-anomalydetector-namespace): String
   [Stat](#cfn-cloudwatch-anomalydetector-stat): String
@@ -68,6 +68,8 @@ The statistic of the metric associated with the anomaly detection band\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-cloudwatch-anomalydetector--examples"></a>
+
+
 
 ### Anomaly Detector<a name="aws-resource-cloudwatch-anomalydetector--examples--Anomaly_Detector"></a>
 

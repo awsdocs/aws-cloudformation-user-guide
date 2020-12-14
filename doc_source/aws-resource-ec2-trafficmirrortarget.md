@@ -62,9 +62,9 @@ The Amazon Resource Name \(ARN\) of the Network Load Balancer that is associated
 The tags to assign to the Traffic Mirror target\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-trafficmirrortarget-return-values"></a>
+## Return values<a name="aws-resource-ec2-trafficmirrortarget-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-trafficmirrortarget-return-values-ref"></a>
 
@@ -148,6 +148,7 @@ SampleNetworkInterfaceTarget:
       Value: "SampleNetworkInterfaceTarget"
 ```
 
-## See Also<a name="aws-resource-ec2-trafficmirrortarget--seealso"></a>
+## See also<a name="aws-resource-ec2-trafficmirrortarget--seealso"></a>
 + [Traffic Mirror Targets](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-targets) in *Traffic Mirroring*
 + [CreateTrafficMirrorTarget](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorTarget.html) in the *Amazon EC2 API Reference*
+

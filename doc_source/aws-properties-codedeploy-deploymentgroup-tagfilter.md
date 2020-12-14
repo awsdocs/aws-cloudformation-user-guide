@@ -41,7 +41,7 @@ The on\-premises instance tag filter type:
 + KEY\_AND\_VALUE: Key and value\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
+*Allowed values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codedeploy-deploymentgroup-tagfilter-value"></a>

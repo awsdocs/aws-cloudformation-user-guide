@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ArrayProperties](#cfn-events-rule-batchparameters-arrayproperties)" : [BatchArrayProperties](aws-properties-events-rule-batcharrayproperties.md),
+  "[ArrayProperties](#cfn-events-rule-batchparameters-arrayproperties)" : BatchArrayProperties,
   "[JobDefinition](#cfn-events-rule-batchparameters-jobdefinition)" : String,
   "[JobName](#cfn-events-rule-batchparameters-jobname)" : String,
-  "[RetryStrategy](#cfn-events-rule-batchparameters-retrystrategy)" : [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)
+  "[RetryStrategy](#cfn-events-rule-batchparameters-retrystrategy)" : BatchRetryStrategy
 }
 ```
 
@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ArrayProperties](#cfn-events-rule-batchparameters-arrayproperties): 
-    [BatchArrayProperties](aws-properties-events-rule-batcharrayproperties.md)
+    BatchArrayProperties
   [JobDefinition](#cfn-events-rule-batchparameters-jobdefinition): String
   [JobName](#cfn-events-rule-batchparameters-jobname): String
   [RetryStrategy](#cfn-events-rule-batchparameters-retrystrategy): 
-    [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)
+    BatchRetryStrategy
 ```
 
 ## Properties<a name="aws-properties-events-rule-batchparameters-properties"></a>
@@ -49,7 +49,7 @@ The name to use for this execution of the job, if the target is an AWS Batch job
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryStrategy`  <a name="cfn-events-rule-batchparameters-retrystrategy"></a>
-The retry strategy to use for failed jobs if the target is an AWS Batch job\. The retry strategy is the number of times to retry the failed job execution\. Valid values are 1–10\. When you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.  
+The retry strategy to use for failed jobs, if the target is an AWS Batch job\. The retry strategy is the number of times to retry the failed job execution\. Valid values are 1–10\. When you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.  
 *Required*: No  
 *Type*: [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTAnalytics::Pipeline",
   "Properties" : {
-      "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ [Activity](aws-properties-iotanalytics-pipeline-activity.md), ... ],
+      "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ Activity, ... ],
       "[PipelineName](#cfn-iotanalytics-pipeline-pipelinename)" : String,
       "[Tags](#cfn-iotanalytics-pipeline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTAnalytics::Pipeline
 Properties: 
   [PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities): 
-    - [Activity](aws-properties-iotanalytics-pipeline-activity.md)
+    - Activity
   [PipelineName](#cfn-iotanalytics-pipeline-pipelinename): String
   [Tags](#cfn-iotanalytics-pipeline-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -60,6 +60,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-pipeline--examples"></a>
+
+
 
 ### Simple Pipeline<a name="aws-resource-iotanalytics-pipeline--examples--Simple_Pipeline"></a>
 
@@ -272,6 +274,6 @@ Resources:
             DatastoreName: "Datastore"
 ```
 
-## See Also<a name="aws-resource-iotanalytics-pipeline--seealso"></a>
+## See also<a name="aws-resource-iotanalytics-pipeline--seealso"></a>
 +  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide* 
 +  [CreatePipeline](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreatePipeline.html) in the *AWS IoT Analytics API Reference* 

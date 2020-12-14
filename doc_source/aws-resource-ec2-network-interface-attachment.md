@@ -57,7 +57,7 @@ The ID of the ENI that you want to attach\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-network-interface-attachment-return-values"></a>
+## Return values<a name="aws-resource-ec2-network-interface-attachment-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-network-interface-attachment-return-values-ref"></a>
 
@@ -66,6 +66,8 @@ The ID of the ENI that you want to attach\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-network-interface-attachment--examples"></a>
+
+
 
 ### Network Interface Attachment<a name="aws-resource-ec2-network-interface-attachment--examples--Network_Interface_Attachment"></a>
 

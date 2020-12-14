@@ -15,18 +15,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DynamoDB::Table",
   "Properties" : {
-      "[AttributeDefinitions](#cfn-dynamodb-table-attributedef)" : [ [AttributeDefinition](aws-properties-dynamodb-attributedef.md), ... ],
+      "[AttributeDefinitions](#cfn-dynamodb-table-attributedef)" : [ AttributeDefinition, ... ],
       "[BillingMode](#cfn-dynamodb-table-billingmode)" : String,
-      "[GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi)" : [ [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md), ... ],
-      "[KeySchema](#cfn-dynamodb-table-keyschema)" : [ [KeySchema](aws-properties-dynamodb-keyschema.md), ... ],
-      "[LocalSecondaryIndexes](#cfn-dynamodb-table-lsi)" : [ [LocalSecondaryIndex](aws-properties-dynamodb-lsi.md), ... ],
-      "[PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification)" : [PointInTimeRecoverySpecification](aws-properties-dynamodb-table-pointintimerecoveryspecification.md),
-      "[ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput)" : [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md),
-      "[SSESpecification](#cfn-dynamodb-table-ssespecification)" : [SSESpecification](aws-properties-dynamodb-table-ssespecification.md),
-      "[StreamSpecification](#cfn-dynamodb-table-streamspecification)" : [StreamSpecification](aws-properties-dynamodb-streamspecification.md),
+      "[GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi)" : [ GlobalSecondaryIndex, ... ],
+      "[KeySchema](#cfn-dynamodb-table-keyschema)" : [ KeySchema, ... ],
+      "[LocalSecondaryIndexes](#cfn-dynamodb-table-lsi)" : [ LocalSecondaryIndex, ... ],
+      "[PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification)" : PointInTimeRecoverySpecification,
+      "[ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput)" : ProvisionedThroughput,
+      "[SSESpecification](#cfn-dynamodb-table-ssespecification)" : SSESpecification,
+      "[StreamSpecification](#cfn-dynamodb-table-streamspecification)" : StreamSpecification,
       "[TableName](#cfn-dynamodb-table-tablename)" : String,
       "[Tags](#cfn-dynamodb-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification)" : [TimeToLiveSpecification](aws-properties-dynamodb-timetolivespecification.md)
+      "[TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification)" : TimeToLiveSpecification
     }
 }
 ```
@@ -37,45 +37,48 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::DynamoDB::Table
 Properties: 
   [AttributeDefinitions](#cfn-dynamodb-table-attributedef): 
-    - [AttributeDefinition](aws-properties-dynamodb-attributedef.md)
+    - AttributeDefinition
   [BillingMode](#cfn-dynamodb-table-billingmode): String
   [GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi): 
-    - [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md)
+    - GlobalSecondaryIndex
   [KeySchema](#cfn-dynamodb-table-keyschema): 
-    - [KeySchema](aws-properties-dynamodb-keyschema.md)
+    - KeySchema
   [LocalSecondaryIndexes](#cfn-dynamodb-table-lsi): 
-    - [LocalSecondaryIndex](aws-properties-dynamodb-lsi.md)
+    - LocalSecondaryIndex
   [PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification): 
-    [PointInTimeRecoverySpecification](aws-properties-dynamodb-table-pointintimerecoveryspecification.md)
+    PointInTimeRecoverySpecification
   [ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput): 
-    [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)
+    ProvisionedThroughput
   [SSESpecification](#cfn-dynamodb-table-ssespecification): 
-    [SSESpecification](aws-properties-dynamodb-table-ssespecification.md)
+    SSESpecification
   [StreamSpecification](#cfn-dynamodb-table-streamspecification): 
-    [StreamSpecification](aws-properties-dynamodb-streamspecification.md)
+    StreamSpecification
   [TableName](#cfn-dynamodb-table-tablename): String
   [Tags](#cfn-dynamodb-table-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TimeToLiveSpecification](#cfn-dynamodb-table-timetolivespecification): 
-    [TimeToLiveSpecification](aws-properties-dynamodb-timetolivespecification.md)
+    TimeToLiveSpecification
 ```
 
 ## Properties<a name="aws-resource-dynamodb-table-properties"></a>
 
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
-A list of attributes that describe the key schema for the table and indexes\. Duplicates are allowed\.   
+A list of attributes that describe the key schema for the table and indexes\.  
+This property is required to create a DynamoDB table\.  
 Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\. Replacement if you edit an existing AttributeDefinition\.   
-*Required*: No  
-*Type*: List of [AttributeDefinition](aws-properties-dynamodb-attributedef.md)
+*Required*: Conditional  
+*Type*: List of [AttributeDefinition](aws-properties-dynamodb-attributedef.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `BillingMode`  <a name="cfn-dynamodb-table-billingmode"></a>
 Specify how you are charged for read and write throughput and how you manage capacity\.  
 Valid values include:  
-+  `PROVISIONED` \- Sets the billing mode to `PROVISIONED`\. We recommend using `PROVISIONED` for predictable workloads\.
-+  `PAY_PER_REQUEST` \- Sets the billing mode to `PAY_PER_REQUEST`\. We recommend using `PAY_PER_REQUEST` for unpredictable workloads\. 
++  `PROVISIONED` \- We recommend using `PROVISIONED` for predictable workloads\. `PROVISIONED` sets the billing mode to [Provisioned Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)\.
++  `PAY_PER_REQUEST` \- We recommend using `PAY_PER_REQUEST` for unpredictable workloads\. `PAY_PER_REQUEST` sets the billing mode to [On\-Demand Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)\. 
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>
@@ -116,9 +119,9 @@ If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If y
 
 `SSESpecification`  <a name="cfn-dynamodb-table-ssespecification"></a>
 Specifies the settings to enable server\-side encryption\.  
-Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\.   
 *Required*: No  
-*Type*: [SSESpecification](aws-properties-dynamodb-table-ssespecification.md)
+*Type*: [SSESpecification](aws-properties-dynamodb-table-ssespecification.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `StreamSpecification`  <a name="cfn-dynamodb-table-streamspecification"></a>
 The settings for the DynamoDB table stream, which capture changes to items stored in the table\.  
@@ -150,13 +153,11 @@ For detailed information about the limits in DynamoDB, see [Limits in Amazon Dyn
 *Type*: [TimeToLiveSpecification](aws-properties-dynamodb-timetolivespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dynamodb-table-return-values"></a>
+## Return values<a name="aws-resource-dynamodb-table-return-values"></a>
 
 ### Ref<a name="aws-resource-dynamodb-table-return-values-ref"></a>
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
-
- 
 
 ```
 { "Ref": "MyResource" }
@@ -494,7 +495,7 @@ mySecondDDBTable:
             Ref: "WriteCapacityUnits"
     Tags:
       - Key: foo
-Value: bar
+        Value: bar
 ```
 
 ### DynamoDB Table with Application Auto Scaling<a name="aws-resource-dynamodb-table--examples--DynamoDB_Table_with_Application_Auto_Scaling"></a>

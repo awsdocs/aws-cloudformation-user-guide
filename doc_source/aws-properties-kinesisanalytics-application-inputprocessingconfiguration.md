@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor)" : [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
+  "[InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor)" : InputLambdaProcessor
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor): 
-    [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
+    InputLambdaProcessor
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-properties"></a>

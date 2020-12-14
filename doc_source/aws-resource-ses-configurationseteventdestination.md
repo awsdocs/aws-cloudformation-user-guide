@@ -1,13 +1,9 @@
 # AWS::SES::ConfigurationSetEventDestination<a name="aws-resource-ses-configurationseteventdestination"></a>
 
-Specifies a configuration set event destination\.
+Specifies a configuration set event destination\. An event destination is an AWS service that Amazon SES publishes email sending events to\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch or Amazon Kinesis Data Firehose\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
 
 **Note**  
-When you specify an event destination, you must provide one, and only one, destination\. The destination can be CloudWatch, Amazon Kinesis Data Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\.
-
-An event destination is the AWS service to which Amazon SES publishes the email sending events associated with a configuration set\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
-
-You can execute this operation no more than once per second\.
+You can't specify Amazon SNS event destinations in CloudFormation templates\.
 
 ## Syntax<a name="aws-resource-ses-configurationseteventdestination-syntax"></a>
 
@@ -20,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SES::ConfigurationSetEventDestination",
   "Properties" : {
       "[ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname)" : String,
-      "[EventDestination](#cfn-ses-configurationseteventdestination-eventdestination)" : [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
+      "[EventDestination](#cfn-ses-configurationseteventdestination-eventdestination)" : EventDestination
     }
 }
 ```
@@ -32,7 +28,7 @@ Type: AWS::SES::ConfigurationSetEventDestination
 Properties: 
   [ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname): String
   [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination): 
-    [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
+    EventDestination
 ```
 
 ## Properties<a name="aws-resource-ses-configurationseteventdestination-properties"></a>
@@ -54,6 +50,8 @@ The event destination object that you want to apply to the specified configurati
 Specifies an event destination for a configuration set\.
 
 ### <a name="aws-resource-ses-configurationseteventdestination--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ses-configurationseteventdestination--examples----json"></a>
 
@@ -164,7 +162,7 @@ Specifies an event destination for a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ConfigurationSetEventDestination Sample Template'
+Description: AWS SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String
@@ -188,15 +186,13 @@ Parameters:
     Type: String
   DefaultDimensionValue2:
     Type: String
-
 Resources:
   ConfigSet:
-    Type: AWS::SES::ConfigurationSet
+    Type: 'AWS::SES::ConfigurationSet'
     Properties:
       Name: !Ref ConfigSetName
-
   CWEventDestination:
-    Type: AWS::SES::ConfigurationSetEventDestination
+    Type: 'AWS::SES::ConfigurationSetEventDestination'
     Properties:
       ConfigurationSetName: !Ref ConfigSet
       EventDestination:

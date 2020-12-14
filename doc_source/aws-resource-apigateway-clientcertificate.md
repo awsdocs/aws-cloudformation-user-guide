@@ -42,7 +42,7 @@ An array of arbitrary tags \(key\-value pairs\) to associate with the client cer
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-clientcertificate-return-values"></a>
+## Return values<a name="aws-resource-apigateway-clientcertificate-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-clientcertificate-return-values-ref"></a>
 
@@ -51,6 +51,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-clientcertificate--examples"></a>
+
+
 
 ### Create client certificate<a name="aws-resource-apigateway-clientcertificate--examples--Create_client_certificate"></a>
 
@@ -78,5 +80,6 @@ TestClientCertificate:
     Description: A test client certificate
 ```
 
-## See Also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
+## See also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
 + [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/clientcertificate-generate/) in the *Amazon API Gateway REST API Reference*
+

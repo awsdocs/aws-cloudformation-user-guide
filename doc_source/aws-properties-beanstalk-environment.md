@@ -16,12 +16,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix)" : String,
       "[Description](#cfn-beanstalk-environment-description)" : String,
       "[EnvironmentName](#cfn-beanstalk-environment-name)" : String,
-      "[OptionSettings](#cfn-beanstalk-environment-optionsettings)" : [ [OptionSetting](aws-properties-beanstalk-option-settings.md), ... ],
+      "[OptionSettings](#cfn-beanstalk-environment-optionsettings)" : [ OptionSetting, ... ],
       "[PlatformArn](#cfn-beanstalk-environment-platformarn)" : String,
       "[SolutionStackName](#cfn-beanstalk-environment-solutionstackname)" : String,
       "[Tags](#cfn-elasticbeanstalk-environment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TemplateName](#cfn-beanstalk-environment-templatename)" : String,
-      "[Tier](#cfn-beanstalk-environment-tier)" : [Tier](aws-properties-beanstalk-environment-tier.md),
+      "[Tier](#cfn-beanstalk-environment-tier)" : Tier,
       "[VersionLabel](#cfn-beanstalk-environment-versionlabel)" : String
     }
 }
@@ -37,14 +37,14 @@ Properties:
   [Description](#cfn-beanstalk-environment-description): String
   [EnvironmentName](#cfn-beanstalk-environment-name): String
   [OptionSettings](#cfn-beanstalk-environment-optionsettings): 
-    - [OptionSetting](aws-properties-beanstalk-option-settings.md)
+    - OptionSetting
   [PlatformArn](#cfn-beanstalk-environment-platformarn): String
   [SolutionStackName](#cfn-beanstalk-environment-solutionstackname): String
   [Tags](#cfn-elasticbeanstalk-environment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TemplateName](#cfn-beanstalk-environment-templatename): String
   [Tier](#cfn-beanstalk-environment-tier): 
-    [Tier](aws-properties-beanstalk-environment-tier.md)
+    Tier
   [VersionLabel](#cfn-beanstalk-environment-versionlabel): String
 ```
 
@@ -87,13 +87,12 @@ If you specify a name, you cannot perform updates that require replacement of th
 
 `OptionSettings`  <a name="cfn-beanstalk-environment-optionsettings"></a>
 Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)\. If you remove any options during a stack update, the removed options retain their current values\.  
- *Required*: Yes\. The `IamInstanceProfile` option is required\.  
 *Required*: No  
 *Type*: List of [OptionSetting](aws-properties-beanstalk-option-settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
-The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [ Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `PlatformArn`, don't specify `SolutionStackName`\.
 *Required*: No  
 *Type*: String  
@@ -124,7 +123,8 @@ If you specify `TemplateName`, then don't specify `SolutionStackName`\.
 `Tier`  <a name="cfn-beanstalk-environment-tier"></a>
 Specifies the tier to use in creating this environment\. The environment tier that you choose determines whether Elastic Beanstalk provisions resources to support a web application that handles HTTP\(S\) requests or a web application that handles background\-processing tasks\.  
 *Required*: No  
-*Type*: [Tier](aws-properties-beanstalk-environment-tier.md)
+*Type*: [Tier](aws-properties-beanstalk-environment-tier.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `VersionLabel`  <a name="cfn-beanstalk-environment-versionlabel"></a>
 The name of the application version to deploy\.  
@@ -135,7 +135,7 @@ Default: If not specified, Elastic Beanstalk attempts to deploy the sample appli
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-beanstalk-environment-return-values"></a>
+## Return values<a name="aws-properties-beanstalk-environment-return-values"></a>
 
 ### Ref<a name="aws-properties-beanstalk-environment-return-values-ref"></a>
 
@@ -154,7 +154,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `EndpointURL`  <a name="EndpointURL-fn::getatt"></a>
 For load\-balanced, autoscaling environments, the URL to the load balancer\. For single\-instance environments, the IP address of the instance\.  
 Example load balancer URL:  
- `awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-2.elb.amazonaws.com`     
+ `awseb-myst-myen-132MQC4KRLAMD-1371280482.us-east-2.elb.amazonaws.com`   
 Example instance IP address:  
  `192.0.2.0` 
 
@@ -260,34 +260,34 @@ The following example contains parameters that enable specifying `PlatformArn` f
   },
   "Resources": {
     "Application": {
+      "Type": "AWS::ElasticBeanstalk::Application",
       "Properties": {
-        "ApplicationVersions": [
-          {
-            "Description": "Version 1.0",
-            "SourceBundle": {
-              "S3Bucket": {
-                "Fn::Join": ["", ["elasticbeanstalk-samples-", {"Ref": "AWS::Region"}]]
-              },
-              "S3Key": "python-sample-20150402.zip"
-            },
-            "VersionLabel": "Initial Version"
-          }
-        ],
+        "ApplicationName": "SampleBeanstalkApp",
         "Description": "AWS Elastic Beanstalk Python Sample Application"
-      },
-      "Type": "AWS::ElasticBeanstalk::Application"
+      }
+    },
+    "AppVersion": {
+      "Type": "AWS::ElasticBeanstalk::ApplicationVersion",
+      "Properties": {
+        "ApplicationName": {"Ref" : "Application"},
+        "Description": "Version 1.0",
+        "SourceBundle": {
+          "S3Bucket": {
+            "Fn::Join": ["-", [ "elasticbeanstalk-samples", { "Ref" : "AWS::Region" } ] ] },
+          "S3Key": "python-sample-20150402.zip"
+        }
+      }
     },
     "Environment": {
+      "Type": "AWS::ElasticBeanstalk::Environment",
       "Properties": {
-        "ApplicationName": {
-          "Ref": "Application"
-        },
+        "ApplicationName": {"Ref": "Application"},
         "Description": "AWS Elastic Beanstalk Environment running Python Sample Application",
         "PlatformArn": { "Ref" : "PlatformArn"},
         "SolutionStackName": {
           "Ref": "SolutionStackName"
         },
-        "VersionLabel": "Initial Version",
+        "VersionLabel": {"Ref": "AppVersion"},
         "OptionSettings": [
           {
             "Namespace": "aws:autoscaling:launchconfiguration",
@@ -304,8 +304,7 @@ The following example contains parameters that enable specifying `PlatformArn` f
             }
           }
         ]
-      },
-      "Type": "AWS::ElasticBeanstalk::Environment"
+      }
     },
     "ServiceRole": {
       "Type": "AWS::IAM::Role",
@@ -567,25 +566,30 @@ Parameters:
     Type: String
 Resources:
   Application:
-    Properties:
-      ApplicationVersions:
-        - Description: Version 1.0
-          SourceBundle:
-            S3Bucket: !Join 
-              - ''
-              - - elasticbeanstalk-samples-
-                - !Ref 'AWS::Region'
-            S3Key: python-sample-20150402.zip
-          VersionLabel: Initial Version
-      Description: AWS Elastic Beanstalk Python Sample Application
     Type: AWS::ElasticBeanstalk::Application
+    Properties:
+      ApplicationName: SampleBeanstalkApp
+      Description: AWS Elastic Beanstalk Python Sample Application
+  AppVersion:
+    Type: AWS::ElasticBeanstalk::ApplicationVersion
+    Properties:
+      ApplicationName: !Ref Application
+      Description: Version 1.0
+      SourceBundle:
+        S3Bucket: Fn::Join:
+          - '-'
+          - 
+          - 'elasticbeanstalk-samples'
+          - !Ref 'AWS::Region'
+        S3Key: python-sample-20150402.zip
   Environment:
+    Type: AWS::ElasticBeanstalk::Environment
     Properties:
       ApplicationName: !Ref Application
       Description: AWS Elastic Beanstalk Environment running Python Sample Application
       PlatformArn: !Ref PlatformArn
       SolutionStackName: !Ref SolutionStackName
-      VersionLabel: Initial Version
+      VersionLabel: !Ref AppVersion
       OptionSettings:
         - Namespace: 'aws:autoscaling:launchconfiguration'
           OptionName: IamInstanceProfile
@@ -593,7 +597,6 @@ Resources:
         - Namespace: 'aws:elasticbeanstalk:environment'
           OptionName: ServiceRole
           Value: !Ref ServiceRole
-    Type: AWS::ElasticBeanstalk::Environment
   ServiceRole:
     Type: AWS::IAM::Role
     Properties:
@@ -735,7 +738,7 @@ Resources:
       Path: /
 ```
 
-## See Also<a name="aws-properties-beanstalk-environment--seealso"></a>
+## See also<a name="aws-properties-beanstalk-environment--seealso"></a>
 +  [Creating an AWS Elastic Beanstalk Environment](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.environments.html) in the *AWS Elastic Beanstalk Developer Guide* 
 +  [Managing Environments](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.managing.html) in the *AWS Elastic Beanstalk Developer Guide* 
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.

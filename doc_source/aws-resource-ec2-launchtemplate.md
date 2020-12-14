@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate<a name="aws-resource-ec2-launchtemplate"></a>
 
-Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\.
+Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [Launching an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-templates.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-launchtemplate-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::LaunchTemplate",
   "Properties" : {
-      "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md),
+      "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : LaunchTemplateData,
       "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::LaunchTemplate
 Properties: 
   [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata): 
-    [LaunchTemplateData](aws-properties-ec2-launchtemplate-launchtemplatedata.md)
+    LaunchTemplateData
   [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
 ```
 
@@ -45,7 +45,7 @@ A name for the launch template\.
 *Pattern*: `[a-zA-Z0-9\(\)\.\-/_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
+## Return values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-launchtemplate-return-values-ref"></a>
 
@@ -68,5 +68,77 @@ The default version of a launch template cannot be specified in AWS CloudFormati
 `LatestVersionNumber`  <a name="LatestVersionNumber-fn::getatt"></a>
 The latest version of the launch template, such as `5`\.
 
-## See Also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
+## Examples<a name="aws-resource-ec2-launchtemplate--examples"></a>
+
+### Launch Template with an IAM Instance Profile<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile"></a>
+
+
+
+#### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile--yaml"></a>
+
+```
+Resources:
+  MyIamInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: MyIamInstanceProfile
+      Path: "/"
+      Roles:
+      - MyAdminRole
+  MyLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateData:
+        InstanceType: c4.large
+        DisableApiTermination: 'true'
+        KeyName: MyKeyPair
+        ImageId: ami-04d5cc9b88example
+        IamInstanceProfile:
+          Arn:
+            Fn::GetAtt:
+            - MyIamInstanceProfile
+            - Arn
+        SecurityGroupIds:
+        - sg-083cd3bfb8example
+      LaunchTemplateName: MyLaunchTemplate
+```
+
+### <a name="aws-resource-ec2-launchtemplate--examples--"></a>
+
+
+
+#### JSON<a name="aws-resource-ec2-launchtemplate--examples----json"></a>
+
+```
+{
+    "Resources": {
+        "MyIamInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "InstanceProfileName" : "MyIamInstanceProfile",
+                    "Path" : "/",
+                    "Roles" : ["MyAdminRole"]
+            }
+        },
+        "MyLaunchTemplate": {
+            "Type": "AWS::EC2::LaunchTemplate",
+            "Properties": {
+                "LaunchTemplateData" : {
+                    "InstanceType" : "c4.large",
+                    "DisableApiTermination" : "true",
+                    "KeyName" : "MyKeyPair",
+                    "ImageId" : "ami-04d5cc9b88example",
+                    "IamInstanceProfile" : {
+                    "Arn" : {"Fn::GetAtt": ["MyIamInstanceProfile", "Arn"]}
+                    },
+                    "SecurityGroupIds" : ["sg-083cd3bfb8example"]
+                },
+                "LaunchTemplateName" : "MyLaunchTemplate"
+            }
+        }		
+    }
+}
+```
+
+## See also<a name="aws-resource-ec2-launchtemplate--seealso"></a>
 + [ CreateLaunchTemplate](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLaunchTemplate.html) in the *Amazon EC2 API Reference* 

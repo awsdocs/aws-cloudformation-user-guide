@@ -36,36 +36,44 @@ Properties:
 ## Properties<a name="aws-resource-guardduty-ipset-properties"></a>
 
 `Activate`  <a name="cfn-guardduty-ipset-activate"></a>
-Indicated whether or not GuardDuty uses the `IPSet`\.  
+Indicates whether or not GuardDuty uses the `IPSet`\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DetectorId`  <a name="cfn-guardduty-ipset-detectorid"></a>
-The unique ID of the detector for the GuardDuty service to associate the `IPSet` with\.  
+The unique ID of the detector of the GuardDuty account that you want to create an IPSet for\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `300`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Format`  <a name="cfn-guardduty-ipset-format"></a>
-The format of the file that contains the `IPSet`\.  
+The format of the file that contains the IPSet\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `ALIEN_VAULT | FIRE_EYE | OTX_CSV | PROOF_POINT | STIX | TXT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-ipset-location"></a>
-The URI of the file that contains the `IPSet`\.  
+The URI of the file that contains the IPSet\. For example: https://s3\.us\-west\-2\.amazonaws\.com/my\-bucket/my\-object\-key\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-guardduty-ipset-name"></a>
-The name for the `IPSet`\. This name is displayed in all findings that are triggered by activity associated with the IP addresses included in this `IPSet`\.  
+The user\-friendly name to identify the IPSet\.  
+ Allowed characters are alphanumerics, spaces, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-guardduty-ipset-return-values"></a>
+## Return values<a name="aws-resource-guardduty-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-ipset-return-values-ref"></a>
 
@@ -74,6 +82,8 @@ The name for the `IPSet`\. This name is displayed in all findings that are trigg
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-ipset--examples"></a>
+
+
 
 ### Declare an IPSet Resource<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource"></a>
 

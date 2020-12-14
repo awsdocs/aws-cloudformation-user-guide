@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInterface InstanceIpv6Address<a name="aws-properties-ec2-networkinterface-instanceipv6address"></a>
 
-Describes an IPv6 address to associate with the network interface\.
+Describes a list of IPv6 addresses to associate with the network interface\.
 
 ## Syntax<a name="aws-properties-ec2-networkinterface-instanceipv6address-syntax"></a>
 

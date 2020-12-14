@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool StringAttributeConstraints<a name="aws-properties-cognito-userpool-stringattributeconstraints"></a>
 
-The `StringAttributeConstraints` property type defines the string attribute constraints of an Amazon Cognito User Pool\. `StringAttributeConstraints` is a subproperty of the [SchemaAttribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html) property type\.
+The `StringAttributeConstraints` property type defines the string attribute constraints of an Amazon Cognito user pool\. `StringAttributeConstraints` is a subproperty of the [SchemaAttribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html) property type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-stringattributeconstraints-syntax"></a>
 

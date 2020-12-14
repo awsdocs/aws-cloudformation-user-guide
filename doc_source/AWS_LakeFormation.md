@@ -1,6 +1,6 @@
-# LakeFormation Resource Type Reference<a name="AWS_LakeFormation"></a>
+# LakeFormation resource type reference<a name="AWS_LakeFormation"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::LakeFormation::DataLakeSettings](aws-resource-lakeformation-datalakesettings.md)
 + [AWS::LakeFormation::Permissions](aws-resource-lakeformation-permissions.md)
 + [AWS::LakeFormation::Resource](aws-resource-lakeformation-resource.md)

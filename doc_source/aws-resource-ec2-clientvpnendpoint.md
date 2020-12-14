@@ -12,14 +12,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::ClientVpnEndpoint",
   "Properties" : {
-      "[AuthenticationOptions](#cfn-ec2-clientvpnendpoint-authenticationoptions)" : [ [ClientAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.md), ... ],
+      "[AuthenticationOptions](#cfn-ec2-clientvpnendpoint-authenticationoptions)" : [ ClientAuthenticationRequest, ... ],
       "[ClientCidrBlock](#cfn-ec2-clientvpnendpoint-clientcidrblock)" : String,
-      "[ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions)" : [ConnectionLogOptions](aws-properties-ec2-clientvpnendpoint-connectionlogoptions.md),
+      "[ClientConnectOptions](#cfn-ec2-clientvpnendpoint-clientconnectoptions)" : ClientConnectOptions,
+      "[ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions)" : ConnectionLogOptions,
       "[Description](#cfn-ec2-clientvpnendpoint-description)" : String,
       "[DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers)" : [ String, ... ],
+      "[SecurityGroupIds](#cfn-ec2-clientvpnendpoint-securitygroupids)" : [ String, ... ],
+      "[SelfServicePortal](#cfn-ec2-clientvpnendpoint-selfserviceportal)" : String,
       "[ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn)" : String,
-      "[TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications)" : [ [TagSpecification](aws-properties-ec2-clientvpnendpoint-tagspecification.md), ... ],
-      "[TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol)" : String
+      "[SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel)" : Boolean,
+      "[TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications)" : [ TagSpecification, ... ],
+      "[TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol)" : String,
+      "[VpcId](#cfn-ec2-clientvpnendpoint-vpcid)" : String,
+      "[VpnPort](#cfn-ec2-clientvpnendpoint-vpnport)" : Integer
     }
 }
 ```
@@ -30,17 +36,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::ClientVpnEndpoint
 Properties: 
   [AuthenticationOptions](#cfn-ec2-clientvpnendpoint-authenticationoptions): 
-    - [ClientAuthenticationRequest](aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.md)
+    - ClientAuthenticationRequest
   [ClientCidrBlock](#cfn-ec2-clientvpnendpoint-clientcidrblock): String
+  [ClientConnectOptions](#cfn-ec2-clientvpnendpoint-clientconnectoptions): 
+    ClientConnectOptions
   [ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions): 
-    [ConnectionLogOptions](aws-properties-ec2-clientvpnendpoint-connectionlogoptions.md)
+    ConnectionLogOptions
   [Description](#cfn-ec2-clientvpnendpoint-description): String
   [DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers): 
     - String
+  [SecurityGroupIds](#cfn-ec2-clientvpnendpoint-securitygroupids): 
+    - String
+  [SelfServicePortal](#cfn-ec2-clientvpnendpoint-selfserviceportal): String
   [ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn): String
+  [SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel): Boolean
   [TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications): 
-    - [TagSpecification](aws-properties-ec2-clientvpnendpoint-tagspecification.md)
+    - TagSpecification
   [TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol): String
+  [VpcId](#cfn-ec2-clientvpnendpoint-vpcid): String
+  [VpnPort](#cfn-ec2-clientvpnendpoint-vpnport): Integer
 ```
 
 ## Properties<a name="aws-resource-ec2-clientvpnendpoint-properties"></a>
@@ -56,6 +70,12 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ClientConnectOptions`  <a name="cfn-ec2-clientvpnendpoint-clientconnectoptions"></a>
+The options for managing connection authorization for new client connections\.  
+*Required*: No  
+*Type*: [ClientConnectOptions](aws-properties-ec2-clientvpnendpoint-clientconnectoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionLogOptions`  <a name="cfn-ec2-clientvpnendpoint-connectionlogoptions"></a>
 Information about the client connection logging options\.  
@@ -75,15 +95,37 @@ A brief description of the Client VPN endpoint\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DnsServers`  <a name="cfn-ec2-clientvpnendpoint-dnsservers"></a>
-Information about the DNS servers to be used for DNS resolution\. A Client VPN endpoint can have up to two DNS servers\. If no DNS server is specified, the DNS address of the VPC that is to be associated with Client VPN endpoint is used as the DNS server\.  
+Information about the DNS servers to be used for DNS resolution\. A Client VPN endpoint can have up to two DNS servers\. If no DNS server is specified, the DNS address configured on the device is used for the DNS server\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityGroupIds`  <a name="cfn-ec2-clientvpnendpoint-securitygroupids"></a>
+The IDs of one or more security groups to apply to the target network\. You must also specify the ID of the VPC that contains the security groups\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SelfServicePortal`  <a name="cfn-ec2-clientvpnendpoint-selfserviceportal"></a>
+Specify whether to enable the self\-service portal for the Client VPN endpoint\.  
+Default Value: `enabled`   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disabled | enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerCertificateArn`  <a name="cfn-ec2-clientvpnendpoint-servercertificatearn"></a>
 The ARN of the server certificate\. For more information, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SplitTunnel`  <a name="cfn-ec2-clientvpnendpoint-splittunnel"></a>
+Indicates whether split\-tunnel is enabled on the AWS Client VPN endpoint\.  
+By default, split\-tunnel on a VPN endpoint is disabled\.  
+For information about split\-tunnel VPN endpoints, see [Split\-Tunnel AWS Client VPN Endpoint](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html) in the *AWS Client VPN Administrator Guide*\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagSpecifications`  <a name="cfn-ec2-clientvpnendpoint-tagspecifications"></a>
@@ -97,10 +139,24 @@ The transport protocol to be used by the VPN session\.
 Default value: `udp`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `tcp | udp`  
+*Allowed values*: `tcp | udp`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-clientvpnendpoint-return-values"></a>
+`VpcId`  <a name="cfn-ec2-clientvpnendpoint-vpcid"></a>
+The ID of the VPC to associate with the Client VPN endpoint\. If no security group IDs are specified in the request, the default security group for the VPC is applied\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VpnPort`  <a name="cfn-ec2-clientvpnendpoint-vpnport"></a>
+The port number to assign to the Client VPN endpoint for TCP and UDP traffic\.  
+Valid Values: `443` \| `1194`   
+Default Value: `443`   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-ec2-clientvpnendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-clientvpnendpoint-return-values-ref"></a>
 
@@ -178,6 +234,7 @@ myClientVpnEndpoint:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-clientvpnendpoint--seealso"></a>
+## See also<a name="aws-resource-ec2-clientvpnendpoint--seealso"></a>
 + [ Getting Started with Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html) in the *AWS Client VPN Administrator Guide*
 + [Client VPN Endpoints](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-endpoints.html) in the *AWS Client VPN Administrator Guide*
+

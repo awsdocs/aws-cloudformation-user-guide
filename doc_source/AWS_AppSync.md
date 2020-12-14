@@ -1,6 +1,7 @@
-# AppSync Resource Type Reference<a name="AWS_AppSync"></a>
+# AppSync resource type reference<a name="AWS_AppSync"></a>
 
-**Resource Types**
+**Resource types**
++ [AWS::AppSync::ApiCache](aws-resource-appsync-apicache.md)
 + [AWS::AppSync::ApiKey](aws-resource-appsync-apikey.md)
 + [AWS::AppSync::DataSource](aws-resource-appsync-datasource.md)
 + [AWS::AppSync::FunctionConfiguration](aws-resource-appsync-functionconfiguration.md)

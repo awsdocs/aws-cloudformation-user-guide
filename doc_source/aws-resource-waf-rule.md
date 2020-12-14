@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[MetricName](#cfn-waf-rule-metricname)" : String,
       "[Name](#cfn-waf-rule-name)" : String,
-      "[Predicates](#cfn-waf-rule-predicates)" : [ [Predicate](aws-properties-waf-rule-predicates.md), ... ]
+      "[Predicates](#cfn-waf-rule-predicates)" : [ Predicate, ... ]
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [MetricName](#cfn-waf-rule-metricname): String
   [Name](#cfn-waf-rule-name): String
   [Predicates](#cfn-waf-rule-predicates): 
-    - [Predicate](aws-properties-waf-rule-predicates.md)
+    - Predicate
 ```
 
 ## Properties<a name="aws-resource-waf-rule-properties"></a>
@@ -40,6 +40,9 @@ Properties:
 A friendly name or description for the metrics for this `Rule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `Rule`\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-waf-rule-name"></a>
@@ -48,6 +51,7 @@ The friendly name or description for the `Rule`\. You can't change the name of a
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Predicates`  <a name="cfn-waf-rule-predicates"></a>
@@ -56,7 +60,7 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 *Type*: List of [Predicate](aws-properties-waf-rule-predicates.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-rule-return-values"></a>
+## Return values<a name="aws-resource-waf-rule-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-rule-return-values-ref"></a>
 
@@ -65,6 +69,8 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-rule--examples"></a>
+
+
 
 ### Associate an IPSet with a Web ACL Rule<a name="aws-resource-waf-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
 
@@ -102,5 +108,5 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-Type: "IPMatch"
+        Type: "IPMatch"
 ```

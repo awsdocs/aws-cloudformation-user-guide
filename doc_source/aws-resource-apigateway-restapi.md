@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApiKeySourceType](#cfn-apigateway-restapi-apikeysourcetype)" : String,
       "[BinaryMediaTypes](#cfn-apigateway-restapi-binarymediatypes)" : [ String, ... ],
       "[Body](#cfn-apigateway-restapi-body)" : Json,
-      "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : [S3Location](aws-properties-apigateway-restapi-s3location.md),
+      "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : S3Location,
       "[CloneFrom](#cfn-apigateway-restapi-clonefrom)" : String,
       "[Description](#cfn-apigateway-restapi-description)" : String,
-      "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md),
+      "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : EndpointConfiguration,
       "[FailOnWarnings](#cfn-apigateway-restapi-failonwarnings)" : Boolean,
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
       "[Name](#cfn-apigateway-restapi-name)" : String,
@@ -42,11 +42,11 @@ Properties:
     - String
   [Body](#cfn-apigateway-restapi-body): Json
   [BodyS3Location](#cfn-apigateway-restapi-bodys3location): 
-    [S3Location](aws-properties-apigateway-restapi-s3location.md)
+    S3Location
   [CloneFrom](#cfn-apigateway-restapi-clonefrom): String
   [Description](#cfn-apigateway-restapi-description): String
   [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): 
-    [EndpointConfiguration](aws-properties-apigateway-restapi-endpointconfiguration.md)
+    EndpointConfiguration
   [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings): Boolean
   [MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize): Integer
   [Name](#cfn-apigateway-restapi-name): String
@@ -68,7 +68,7 @@ The source of the API key for metering requests according to a usage plan\. Vali
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. Slashes must be escaped with `~1`\. For example, `image/png` would be `image~1png` in the `BinaryMediaTypes` list\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
+The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -128,7 +128,7 @@ Custom header parameters for the request\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-apigateway-restapi-policy"></a>
-A policy document that contains the permissions for the `RestApi` resource, in JSON format\. To set the ARN for the policy, use the `!Join` intrinsic function with `""` as delimiter and values of `"execute-api:/"` and `"*"`\.  
+A policy document that contains the permissions for the `RestApi` resource\. To set the ARN for the policy, use the `!Join` intrinsic function with `""` as delimiter and values of `"execute-api:/"` and `"*"`\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,7 +139,7 @@ An array of arbitrary tags \(key\-value pairs\) to associate with the API\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-restapi-return-values"></a>
+## Return values<a name="aws-resource-apigateway-restapi-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-restapi-return-values-ref"></a>
 
@@ -159,6 +159,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.
 
 ## Examples<a name="aws-resource-apigateway-restapi--examples"></a>
+
+
 
 ### Based on OpenAPI specification<a name="aws-resource-apigateway-restapi--examples--Based_on_OpenAPI_specification"></a>
 
@@ -386,5 +388,6 @@ Resources:
             Name: !Ref apiName
 ```
 
-## See Also<a name="aws-resource-apigateway-restapi--seealso"></a>
+## See also<a name="aws-resource-apigateway-restapi--seealso"></a>
 + [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*
+
