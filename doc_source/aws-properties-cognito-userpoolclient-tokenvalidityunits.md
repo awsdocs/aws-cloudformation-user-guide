@@ -26,20 +26,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-cognito-userpoolclient-tokenvalidityunits-properties"></a>
 
-`AccessToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken"></a>
-Not currently supported by AWS CloudFormation\.  
+`AccessToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken"></a> 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-idtoken"></a>
-Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken"></a>
-Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
