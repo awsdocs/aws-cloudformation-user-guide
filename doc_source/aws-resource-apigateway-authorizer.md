@@ -86,7 +86,7 @@ A validation expression for the incoming identity\. If you specify `TOKEN` for t
 
 `Name`  <a name="cfn-apigateway-authorizer-name"></a>
 The name of the authorizer\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
