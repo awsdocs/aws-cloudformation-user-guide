@@ -265,8 +265,10 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NodeType`  <a name="cfn-redshift-cluster-nodetype"></a>
-The node type to be provisioned for the cluster\. For information about node types, go to [ Working with Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes) in the *Amazon Redshift Cluster Management Guide*\.   
-Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge` \| `ra3.xlplus` \| `ra3.4xlarge` \| `ra3.16xlarge`   
+
+The node type to be provisioned for the cluster\. For information about node types, go to [Working with Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-about-clusters-and-nodes) in the *Amazon Redshift Cluster Management Guide*\.   
+Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge`   
+
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  
