@@ -23,6 +23,15 @@ Fn::Transform:
           Key : value
 ```
 
+Syntax for the short form:
+
+```
+Transform:
+  Name : macro name
+  Parameters :
+          Key : value
+```
+
 ## Parameters<a name="intrinsic-function-reference-transform-parameters"></a>
 
 Name  
