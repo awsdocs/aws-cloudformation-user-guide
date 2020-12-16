@@ -1,6 +1,6 @@
-# Amazon Redshift Resource Type Reference<a name="AWS_Redshift"></a>
+# Amazon Redshift resource type reference<a name="AWS_Redshift"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)
 + [AWS::Redshift::ClusterParameterGroup](aws-resource-redshift-clusterparametergroup.md)
 + [AWS::Redshift::ClusterSecurityGroup](aws-resource-redshift-clustersecuritygroup.md)

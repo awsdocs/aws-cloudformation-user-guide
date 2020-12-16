@@ -30,9 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier)" : String,
       "[IamRoles](#cfn-redshift-cluster-iamroles)" : [ String, ... ],
       "[KmsKeyId](#cfn-redshift-cluster-kmskeyid)" : String,
-      "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md),
-      "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
+      "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : LoggingProperties,
       "[MasterUsername](#cfn-redshift-cluster-masterusername)" : String,
+      "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
       "[NodeType](#cfn-redshift-cluster-nodetype)" : String,
       "[NumberOfNodes](#cfn-redshift-cluster-nodetype)" : Integer,
       "[OwnerAccount](#cfn-redshift-cluster-owneraccount)" : String,
@@ -71,9 +71,9 @@ Properties:
     - String
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
   [LoggingProperties](#cfn-redshift-cluster-loggingproperties): 
-    [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)
-  [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
+    LoggingProperties
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
+  [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String
   [NumberOfNodes](#cfn-redshift-cluster-nodetype): Integer
   [OwnerAccount](#cfn-redshift-cluster-owneraccount): String
@@ -109,10 +109,11 @@ Constraints: Must be a value from 0 to 35\.
 `AvailabilityZone`  <a name="cfn-redshift-cluster-availabilityzone"></a>
 The EC2 Availability Zone \(AZ\) in which you want Amazon Redshift to provision the cluster\. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency\.  
 Default: A random, system\-chosen Availability Zone in the region that is specified by the endpoint\.  
-Example: `us-east-1d`   
+Example: `us-east-2d`   
 Constraint: The specified Availability Zone must be in the same region as the current endpoint\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterIdentifier`  <a name="cfn-redshift-cluster-clusteridentifier"></a>
@@ -126,6 +127,7 @@ Constraints:
 Example: `myexamplecluster`   
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterParameterGroupName`  <a name="cfn-redshift-cluster-clusterparametergroupname"></a>
@@ -137,6 +139,7 @@ Constraints:
 + Cannot end with a hyphen or contain two consecutive hyphens\.
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterSecurityGroups`  <a name="cfn-redshift-cluster-clustersecuritygroups"></a>
@@ -151,6 +154,7 @@ The name of a cluster subnet group to be associated with this cluster\.
 If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud \(VPC\)\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterType`  <a name="cfn-redshift-cluster-clustertype"></a>
@@ -161,6 +165,7 @@ Valid Values: `multi-node` \| `single-node`
 Default: `multi-node`   
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterVersion`  <a name="cfn-redshift-cluster-clusterversion"></a>
@@ -170,6 +175,7 @@ Constraints: Only version 1\.0 is currently available\.
 Example: `1.0`   
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBName`  <a name="cfn-redshift-cluster-dbname"></a>
@@ -182,6 +188,7 @@ Constraints:
 + Cannot be a word that is reserved by the service\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ElasticIp`  <a name="cfn-redshift-cluster-elasticip"></a>
@@ -189,6 +196,7 @@ The Elastic IP \(EIP\) address for the cluster\.
 Constraints: The cluster must be provisioned in EC2\-VPC and publicly\-accessible through an Internet gateway\. For more information about provisioning clusters in EC2\-VPC, go to [Supported Platforms to Launch Your Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#cluster-platforms) in the Amazon Redshift Cluster Management Guide\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Encrypted`  <a name="cfn-redshift-cluster-encrypted"></a>
@@ -202,12 +210,14 @@ Default: false
 Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HsmConfigurationIdentifier`  <a name="cfn-redshift-cluster-HsmConfigurationIdentifier"></a>
 Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamRoles`  <a name="cfn-redshift-cluster-iamroles"></a>
@@ -221,6 +231,7 @@ A cluster can have up to 10 IAM roles associated with it at any time\.
 The AWS Key Management Service \(KMS\) key ID of the encryption key that you want to use to encrypt data in the cluster\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoggingProperties`  <a name="cfn-redshift-cluster-loggingproperties"></a>
@@ -228,6 +239,17 @@ Specifies logging information, such as queries and connection attempts, for the 
 *Required*: No  
 *Type*: [LoggingProperties](aws-properties-redshift-cluster-loggingproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
+The user name associated with the master user account for the cluster that is being created\.  
+Constraints:  
++ Must be 1 \- 128 alphanumeric characters\. The user name can't be `PUBLIC`\.
++ First character must be a letter\.
++ Cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
+*Required*: Yes  
+*Type*: String  
+*Maximum*: `2147483647`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-redshift-cluster-masteruserpassword"></a>
 The password associated with the master user account for the cluster that is being created\.  
@@ -239,23 +261,17 @@ Constraints:
 + Can be any printable ASCII character \(ASCII code 33 to 126\) except ' \(single quote\), " \(double quote\), \\, /, @, or space\.
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
-The user name associated with the master user account for the cluster that is being created\.  
-Constraints:  
-+ Must be 1 \- 128 alphanumeric characters\. The user name can't be `PUBLIC`\.
-+ First character must be a letter\.
-+ Cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
-*Required*: Yes  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `NodeType`  <a name="cfn-redshift-cluster-nodetype"></a>
+
 The node type to be provisioned for the cluster\. For information about node types, go to [Working with Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-about-clusters-and-nodes) in the *Amazon Redshift Cluster Management Guide*\.   
 Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `dc2.large` \| `dc2.8xlarge`   
+
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfNodes`  <a name="cfn-redshift-cluster-nodetype"></a>
@@ -272,6 +288,7 @@ Constraints: Value must be at least 1 and no more than 100\.
 The AWS customer account used to create or copy the snapshot\. Required if you are restoring a snapshot you do not own, optional if you own the snapshot\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Port`  <a name="cfn-redshift-cluster-port"></a>
@@ -291,6 +308,7 @@ Valid Days: Mon \| Tue \| Wed \| Thu \| Fri \| Sat \| Sun
 Constraints: Minimum 30\-minute window\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PubliclyAccessible`  <a name="cfn-redshift-cluster-publiclyaccessible"></a>
@@ -303,6 +321,7 @@ If `true`, the cluster can be accessed from a public network\.
 The name of the cluster the source snapshot was created from\. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than \* for the cluster name\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SnapshotIdentifier`  <a name="cfn-redshift-cluster-snapshotidentifier"></a>
@@ -310,6 +329,7 @@ The name of the snapshot from which to create the new cluster\. This parameter i
 Example: `my-snapshot-id`   
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-redshift-cluster-tags"></a>
@@ -325,7 +345,7 @@ Default: The default VPC security group is associated with the cluster\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-redshift-cluster-return-values"></a>
+## Return values<a name="aws-resource-redshift-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-redshift-cluster-return-values-ref"></a>
 
@@ -352,6 +372,8 @@ The connection endpoint for the Amazon Redshift cluster\. For example: `examplec
 The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
 ## Examples<a name="aws-resource-redshift-cluster--examples"></a>
+
+
 
 ### Single\-Node Cluster<a name="aws-resource-redshift-cluster--examples--Single-Node_Cluster"></a>
 
@@ -394,6 +416,7 @@ myCluster:
         Value: bar
 ```
 
-## See Also<a name="aws-resource-redshift-cluster--seealso"></a>
+## See also<a name="aws-resource-redshift-cluster--seealso"></a>
 + For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html)\.
 +  [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.
+

@@ -35,7 +35,7 @@ The service role that AWS AppSync will assume to publish to Amazon CloudWatch Lo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeVerboseContent`  <a name="cfn-appsync-graphqlapi-logconfig-excludeverbosecontent"></a>
-Set to `TRUE` to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging level\.  
+Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging level\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

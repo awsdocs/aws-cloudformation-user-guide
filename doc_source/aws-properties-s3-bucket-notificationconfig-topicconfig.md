@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Event](#cfn-s3-bucket-notificationconfig-topicconfig-event)" : String,
-  "[Filter](#cfn-s3-bucket-notificationconfig-topicconfig-filter)" : [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md),
+  "[Filter](#cfn-s3-bucket-notificationconfig-topicconfig-filter)" : NotificationFilter,
   "[Topic](#cfn-s3-bucket-notificationconfig-topicconfig-topic)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Event](#cfn-s3-bucket-notificationconfig-topicconfig-event): String
   [Filter](#cfn-s3-bucket-notificationconfig-topicconfig-filter): 
-    [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
+    NotificationFilter
   [Topic](#cfn-s3-bucket-notificationconfig-topicconfig-topic): String
 ```
 
@@ -44,3 +44,7 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic to which Amazon S3 publ
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-notificationconfig-topicconfig--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

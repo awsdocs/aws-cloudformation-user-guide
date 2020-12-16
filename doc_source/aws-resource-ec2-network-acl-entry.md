@@ -2,6 +2,8 @@
 
 Specifies an entry, known as a rule, in a network ACL with a rule number you specify\. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules\.
 
+ For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority \(IANA\) website\.
+
 ## Syntax<a name="aws-resource-ec2-network-acl-entry-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -14,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CidrBlock](#cfn-ec2-networkaclentry-cidrblock)" : String,
       "[Egress](#cfn-ec2-networkaclentry-egress)" : Boolean,
-      "[Icmp](#cfn-ec2-networkaclentry-icmp)" : [Icmp](aws-properties-ec2-networkaclentry-icmp.md),
+      "[Icmp](#cfn-ec2-networkaclentry-icmp)" : Icmp,
       "[Ipv6CidrBlock](#cfn-ec2-networkaclentry-ipv6cidrblock)" : String,
       "[NetworkAclId](#cfn-ec2-networkaclentry-networkaclid)" : String,
-      "[PortRange](#cfn-ec2-networkaclentry-portrange)" : [PortRange](aws-properties-ec2-networkaclentry-portrange.md),
+      "[PortRange](#cfn-ec2-networkaclentry-portrange)" : PortRange,
       "[Protocol](#cfn-ec2-networkaclentry-protocol)" : Integer,
       "[RuleAction](#cfn-ec2-networkaclentry-ruleaction)" : String,
       "[RuleNumber](#cfn-ec2-networkaclentry-rulenumber)" : Integer
@@ -33,11 +35,11 @@ Properties:
   [CidrBlock](#cfn-ec2-networkaclentry-cidrblock): String
   [Egress](#cfn-ec2-networkaclentry-egress): Boolean
   [Icmp](#cfn-ec2-networkaclentry-icmp): 
-    [Icmp](aws-properties-ec2-networkaclentry-icmp.md)
+    Icmp
   [Ipv6CidrBlock](#cfn-ec2-networkaclentry-ipv6cidrblock): String
   [NetworkAclId](#cfn-ec2-networkaclentry-networkaclid): String
   [PortRange](#cfn-ec2-networkaclentry-portrange): 
-    [PortRange](aws-properties-ec2-networkaclentry-portrange.md)
+    PortRange
   [Protocol](#cfn-ec2-networkaclentry-protocol): Integer
   [RuleAction](#cfn-ec2-networkaclentry-ruleaction): String
   [RuleNumber](#cfn-ec2-networkaclentry-rulenumber): Integer
@@ -47,7 +49,7 @@ Properties:
 
 `CidrBlock`  <a name="cfn-ec2-networkaclentry-cidrblock"></a>
 The IPv4 CIDR range to allow or deny, in CIDR notation \(for example, 172\.16\.0\.0/24\)\. Requirement is conditional: You must specify the `CidrBlock` or `Ipv6CidrBlock` property\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -92,7 +94,7 @@ If you specify \-1, all ports are opened and the `PortRange` property is ignored
 Whether to allow or deny traffic that matches the rule; valid values are "allow" or "deny"\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `allow | deny`  
+*Allowed values*: `allow | deny`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleNumber`  <a name="cfn-ec2-networkaclentry-rulenumber"></a>
@@ -101,7 +103,7 @@ Rule number to assign to the entry, such as 100\. ACL entries are processed in a
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-network-acl-entry-return-values"></a>
+## Return values<a name="aws-resource-ec2-network-acl-entry-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-network-acl-entry-return-values-ref"></a>
 
@@ -111,49 +113,98 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-network-acl-entry--examples"></a>
 
-### Network ACL Entry<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_Entry"></a>
 
-The following example creates an entry in a network ACL with a specified rule number\.
 
-#### JSON<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_Entry--json"></a>
+### Network ACL entries for inbound and outbound traffic<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic"></a>
+
+The following example creates a network ACL, and creates two entries in the NACL\. The first entry allows inbound SSH traffic from the specified network\. The second entry allows all outbound IPv4 traffic\.
+
+#### JSON<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--json"></a>
 
 ```
-"myNetworkAclEntry" : {
-   "Type" : "AWS::EC2::NetworkAclEntry",
-   "Properties" : {
-      "NetworkAclId" : { "Ref" : "myNetworkAcl" },
-      "RuleNumber" : "100",
-      "Protocol" : "-1",
-      "RuleAction" : "allow",
-      "Egress" : "true",
-      "CidrBlock" : "172.16.0.0/24",
-      "Icmp" : { "Code" : "-1", "Type" : "-1" },
-      "PortRange" : { "From" : "53", "To" : "53" }
-   }
+{
+    "Resources": {
+        "MyNACL": {
+            "Type": "AWS::EC2::NetworkAcl",
+            "Properties": {
+                "VpcId": "vpc-1122334455aabbccd",
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "NACLforSSHTraffic"
+                    }
+                ]
+            }
+        },
+        "InboundRule": {
+            "Type": "AWS::EC2::NetworkAclEntry",
+            "Properties": {
+                "NetworkAclId": {
+                    "Ref": "MyNACL"
+                },
+                "RuleNumber": 100,
+                "Protocol": 6,
+                "RuleAction": "allow",
+                "CidrBlock": "172.16.0.0/24",
+                "PortRange": {
+                    "From": 22,
+                    "To": 22
+                }
+            }
+        },
+        "OutboundRule": {
+            "Type": "AWS::EC2::NetworkAclEntry",
+            "Properties": {
+                "NetworkAclId": {
+                    "Ref": "MyNACL"
+                },
+                "RuleNumber": 100,
+                "Protocol": -1,
+                "Egress": true,
+                "RuleAction": "allow",
+                "CidrBlock": "0.0.0.0/0"
+            }
+        }
+    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_Entry--yaml"></a>
+#### YAML<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--yaml"></a>
 
 ```
-   myNetworkAclEntry:
-      Type: AWS::EC2::NetworkAclEntry
-      Properties:
-         NetworkAclId:
-            Ref: myNetworkAcl
-         RuleNumber: '100'
-         Protocol: "-1"
-         RuleAction: allow
-         Egress: 'true'
-         CidrBlock: 172.16.0.0/24
-         Icmp:
-            Code: "-1"
-            Type: "-1"
-         PortRange:
-            From: '53'
-            To: '53'
+Resources:
+  MyNACL:
+    Type: AWS::EC2::NetworkAcl
+    Properties:
+       VpcId: vpc-1122334455aabbccd
+       Tags:
+       - Key: Name
+         Value: NACLforSSHTraffic
+  InboundRule:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+       NetworkAclId:
+         Ref: MyNACL
+       RuleNumber: 100
+       Protocol: 6
+       RuleAction: allow
+       CidrBlock: 172.16.0.0/24
+       PortRange:
+         From: 22
+         To: 22
+  OutboundRule:
+    Type: AWS::EC2::NetworkAclEntry
+    Properties:
+       NetworkAclId:
+         Ref: MyNACL
+       RuleNumber: 100
+       Protocol: -1
+       Egress: true
+       RuleAction: allow
+       CidrBlock: 0.0.0.0/0
 ```
 
-## See Also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
+## See also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
 + [NetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*
+

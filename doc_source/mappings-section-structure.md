@@ -8,7 +8,7 @@ You cannot include parameters, pseudo parameters, or intrinsic functions in the 
 
 The `Mappings` section consists of the key name `Mappings`\. The keys in mappings must be literal strings\. The values can be `String` or `List` types\.  The following example shows a `Mappings` section containing a single mapping named `Mapping01` \(the logical name\)\.
 
-Within a mapping, each map is a key followed by another mapping\. The key identifies a map of name\-value pairs and must be unique within the mapping\. The name can contain only alphanumeric characters \(A\-Za\-z0\-9\)\.
+Within a mapping, each map is a key followed by another mapping\. The key must be a map of name\-value pairs and unique within the mapping\. The name can contain only alphanumeric characters \(A\-Za\-z0\-9\)\.
 
 ### JSON<a name="mappings-section-structure-syntax.json"></a>
 
@@ -43,7 +43,7 @@ Mappings:
 
 ## Examples<a name="mappings-section-structure-examples"></a>
 
-### Basic Mapping<a name="mappings-section-structure-examples-basic"></a>
+### Basic mapping<a name="mappings-section-structure-examples-basic"></a>
 
 The following example shows a `Mappings` section with a map `RegionMap`, which contains five keys that map to name\-value pairs containing single string values\. The keys are region names\. Each name\-value pair is the AMI ID for the HVM64 AMI in the region represented by the key\.
 
@@ -80,7 +80,7 @@ Mappings:
       "HVM64": "ami-06cd52961ce9f0d85"
 ```
 
-### Mapping with Multiple Values<a name="mappings-section-structure-examples-multiple"></a>
+### Mapping with multiple values<a name="mappings-section-structure-examples-multiple"></a>
 
 The following example has region keys that are mapped to two sets of values: one named HVM64 and the other HVMG2\.
 
@@ -117,9 +117,9 @@ RegionMap:
       HVMG2: ami-0be9df32ae9f92309
 ```
 
-### Return a Value from a Mapping<a name="mappings-section-structure-examples-return-value"></a>
+### Return a value from a mapping<a name="mappings-section-structure-examples-return-value"></a>
 
-You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` function to return a named value based on a specified key\. The following example template contains an Amazon EC2 resource whose `ImageId` property is assigned by the `FindInMap` function\. The `FindInMap` function specifies key as the region where the stack is created \(using the [AWS::Region pseudo parameter](pseudo-parameter-reference.md)\) and `HVM64` as the name of the value to map to\.
+You can use the `Fn::FindInMap` function to return a named value based on a specified key\. The following example template contains an Amazon EC2 resource whose `ImageId` property is assigned by the `FindInMap` function\. The `FindInMap` function specifies key as the region where the stack is created \(using the [AWS::Region pseudo parameter](pseudo-parameter-reference.md)\) and `HVM64` as the name of the value to map to\.
 
 #### JSON<a name="mappings-section-structure-example3.json"></a>
 
@@ -178,7 +178,7 @@ Resources:
       InstanceType: m1.small
 ```
 
-### Input Parameter and FindInMap<a name="mappings-section-structure-examples-findinmap"></a>
+### Input parameter and FindInMap<a name="mappings-section-structure-examples-findinmap"></a>
 
 You can use an input parameter with the `Fn::FindInMap` function to refer to a specific value in a map\. For example, suppose you have a list of regions and environment types that map to a specific AMI ID\. You can select the AMI ID that your stack uses by using an input parameter \(`EnvironmentType`\)\. To determine the region, use the `AWS::Region` pseudo parameter, which gets the AWS region in which you create the stack\.
 

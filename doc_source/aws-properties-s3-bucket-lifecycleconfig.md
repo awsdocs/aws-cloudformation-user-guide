@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Rules](#cfn-s3-bucket-lifecycleconfig-rules)" : [ [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md), ... ]
+  "[Rules](#cfn-s3-bucket-lifecycleconfig-rules)" : [ Rule, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Rules](#cfn-s3-bucket-lifecycleconfig-rules): 
-    - [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)
+    - Rule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-properties"></a>
@@ -28,3 +28,7 @@ A lifecycle rule for individual objects in an Amazon S3 bucket\.
 *Required*: Yes  
 *Type*: List of [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-lifecycleconfig--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

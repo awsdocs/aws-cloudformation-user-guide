@@ -1,5 +1,7 @@
 # AWS::DMS::Endpoint DynamoDbSettings<a name="aws-properties-dms-endpoint-dynamodbsettings"></a>
 
+Provides the Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role used to define an Amazon DynamoDB target endpoint\.
+
 ## Syntax<a name="aws-properties-dms-endpoint-dynamodbsettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

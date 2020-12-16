@@ -7,10 +7,10 @@ You can add output values from a nested stack within the containing template\. Y
 **Important**  
 We strongly recommend that updates to nested stacks are run from the parent stack\.
 
-When you apply template changes to update a top\-level stack, CloudFormation updates the top\-level stack and initiates an update to its nested stacks\. CloudFormation updates the resources of modified nested stacks, but does not update the resources of unmodified nested stacks\. For more information, see [CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
+When you apply template changes to update a top\-level stack, CloudFormation updates the top\-level stack and initiates an update to its nested stacks\. CloudFormation updates the resources of modified nested stacks, but does not update the resources of unmodified nested stacks\. For more information, see [CloudFormation stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
 **Note**  
-You must acknowledge IAM capabilities for nested stacks that contain IAM resources\. Also, verify that you have cancel update stack permissions, which is required if an update rolls back\. For more information about IAM and CloudFormation, see [Controlling Access with AWS Identity and Access Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html)\.
+You must acknowledge IAM capabilities for nested stacks that contain IAM resources\. Also, verify that you have cancel update stack permissions, which is required if an update rolls back\. For more information about IAM and CloudFormation, see [Controlling access with AWS Identity and Access Management](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html)\.
 
 ## Syntax<a name="aws-properties-stack-syntax"></a>
 
@@ -72,7 +72,7 @@ Key\-value pairs to associate with this stack\. AWS CloudFormation also propagat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateURL`  <a name="cfn-cloudformation-stack-templateurl"></a>
-Location of file containing the template body\. The URL must point to a template \(max size: 460,800 bytes\) that is located in an Amazon S3 bucket\. For more information, see [Template Anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)\.  
+Location of file containing the template body\. The URL must point to a template \(max size: 460,800 bytes\) that is located in an Amazon S3 bucket\. For more information, see [Template anatomy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html)\.  
 Whether an update causes interruptions depends on the resources that are being updated\. An update never causes a nested stack to be replaced\.  
 *Required*: Yes  
 *Type*: String  
@@ -88,7 +88,7 @@ Updates are not supported\.
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-stack-return-values"></a>
+## Return values<a name="aws-properties-stack-return-values"></a>
 
 ### Ref<a name="aws-properties-stack-return-values-ref"></a>
 
@@ -100,11 +100,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-stack--examples"></a>
 
-### Specify Stack Parameters<a name="aws-properties-stack--examples--Specify_Stack_Parameters"></a>
+
+
+### Specify stack parameters<a name="aws-properties-stack--examples--Specify_stack_parameters"></a>
 
 The sample template EC2ChooseAMI\.template contains the following Parameters section:
 
-#### JSON<a name="aws-properties-stack--examples--Specify_Stack_Parameters--json"></a>
+#### JSON<a name="aws-properties-stack--examples--Specify_stack_parameters--json"></a>
 
 ```
 "Parameters" : {
@@ -125,7 +127,7 @@ The sample template EC2ChooseAMI\.template contains the following Parameters sec
 }
 ```
 
-#### YAML<a name="aws-properties-stack--examples--Specify_Stack_Parameters--yaml"></a>
+#### YAML<a name="aws-properties-stack--examples--Specify_stack_parameters--yaml"></a>
 
 ```
 Parameters: 
@@ -142,11 +144,11 @@ Parameters:
     Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
 ```
 
-### Nested Stack<a name="aws-properties-stack--examples--Nested_Stack"></a>
+### Nested stack<a name="aws-properties-stack--examples--Nested_stack"></a>
 
 You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName\.
 
-#### JSON<a name="aws-properties-stack--examples--Nested_Stack--json"></a>
+#### JSON<a name="aws-properties-stack--examples--Nested_stack--json"></a>
 
 ```
 {
@@ -166,7 +168,7 @@ You could use the following template to embed a stack \(myStackWithParams\) usin
 }
 ```
 
-#### YAML<a name="aws-properties-stack--examples--Nested_Stack--yaml"></a>
+#### YAML<a name="aws-properties-stack--examples--Nested_stack--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -180,6 +182,7 @@ Resources:
         KeyName: "mykey"
 ```
 
-## See Also<a name="aws-properties-stack--seealso"></a>
-+ For sample template snippets, see Nested Stacks in [CloudFormation Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudformation.html)\.
+## See also<a name="aws-properties-stack--seealso"></a>
++ For sample template snippets, see Nested Stacks in [CloudFormation template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudformation.html)\.
 + If you have nested stacks that are stuck in an in\-progress operation, see Troubleshooting Errors in [Troubleshooting AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html)\.
+

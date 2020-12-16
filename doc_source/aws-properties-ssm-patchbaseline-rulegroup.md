@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PatchRules](#cfn-ssm-patchbaseline-rulegroup-patchrules)" : [ [Rule](aws-properties-ssm-patchbaseline-rule.md), ... ]
+  "[PatchRules](#cfn-ssm-patchbaseline-rulegroup-patchrules)" : [ Rule, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PatchRules](#cfn-ssm-patchbaseline-rulegroup-patchrules): 
-    - [Rule](aws-properties-ssm-patchbaseline-rule.md)
+    - Rule
 ```
 
 ## Properties<a name="aws-properties-ssm-patchbaseline-rulegroup-properties"></a>

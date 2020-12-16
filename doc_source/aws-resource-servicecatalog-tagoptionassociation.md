@@ -41,7 +41,7 @@ The TagOption identifier\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicecatalog-tagoptionassociation-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-tagoptionassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-tagoptionassociation-return-values-ref"></a>
 
@@ -49,5 +49,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-servicecatalog-tagoptionassociation--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-tagoptionassociation--seealso"></a>
 + [AssociateTagOptionWithResource](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateTagOptionWithResource.html) in the *AWS Service Catalog API Reference*
+

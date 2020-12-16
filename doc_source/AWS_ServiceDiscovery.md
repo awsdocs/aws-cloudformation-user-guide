@@ -1,6 +1,6 @@
-# AWS Cloud Map Resource Type Reference<a name="AWS_ServiceDiscovery"></a>
+# AWS Cloud Map resource type reference<a name="AWS_ServiceDiscovery"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ServiceDiscovery::HttpNamespace](aws-resource-servicediscovery-httpnamespace.md)
 + [AWS::ServiceDiscovery::Instance](aws-resource-servicediscovery-instance.md)
 + [AWS::ServiceDiscovery::PrivateDnsNamespace](aws-resource-servicediscovery-privatednsnamespace.md)

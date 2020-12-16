@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Name](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name)" : String,
-  "[ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction)" : [ScriptBootstrapActionConfig](aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.md)
+  "[ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction)" : ScriptBootstrapActionConfig
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Name](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name): String
   [ScriptBootstrapAction](#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction): 
-    [ScriptBootstrapActionConfig](aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.md)
+    ScriptBootstrapActionConfig
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-bootstrapactionconfig-properties"></a>

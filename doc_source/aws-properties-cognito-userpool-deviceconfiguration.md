@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool DeviceConfiguration<a name="aws-properties-cognito-userpool-deviceconfiguration"></a>
 
-`DeviceConfiguration` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the device configuration of an Amazon Cognito User Pool\.
+The configuration for the user pool's device tracking\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-deviceconfiguration-syntax"></a>
 

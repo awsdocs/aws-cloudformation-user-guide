@@ -29,7 +29,7 @@ The action that Amazon Pinpoint to takes if it can't read the required MX record
 These behaviors are taken when the custom MAIL FROM domain configuration is in the `Pending`, `Failed`, and `TemporaryFailure` states\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `REJECT_MESSAGE | USE_DEFAULT_VALUE`  
+*Allowed values*: `REJECT_MESSAGE | USE_DEFAULT_VALUE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MailFromDomain`  <a name="cfn-pinpointemail-identity-mailfromattributes-mailfromdomain"></a>

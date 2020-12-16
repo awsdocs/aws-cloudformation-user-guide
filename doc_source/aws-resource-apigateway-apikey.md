@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Enabled](#cfn-apigateway-apikey-enabled)" : Boolean,
       "[GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid)" : Boolean,
       "[Name](#cfn-apigateway-apikey-name)" : String,
-      "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ [StageKey](aws-properties-apigateway-apikey-stagekey.md), ... ],
+      "[StageKeys](#cfn-apigateway-apikey-stagekeys)" : [ StageKey, ... ],
+      "[Tags](#cfn-apigateway-apikey-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Value](#cfn-apigateway-apikey-value)" : String
     }
 }
@@ -34,7 +35,9 @@ Properties:
   [GenerateDistinctId](#cfn-apigateway-apikey-generatedistinctid): Boolean
   [Name](#cfn-apigateway-apikey-name): String
   [StageKeys](#cfn-apigateway-apikey-stagekeys): 
-    - [StageKey](aws-properties-apigateway-apikey-stagekey.md)
+    - StageKey
+  [Tags](#cfn-apigateway-apikey-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Value](#cfn-apigateway-apikey-value): String
 ```
 
@@ -59,7 +62,7 @@ Indicates whether the API key can be used by clients\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateDistinctId`  <a name="cfn-apigateway-apikey-generatedistinctid"></a>
-Specifies whether the key identifier is distinct from the created API key value\.  
+Specifies whether the key identifier is distinct from the created API key value\. This parameter is deprecated and should not be used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -77,13 +80,19 @@ A list of stages to associate with this API key\.
 *Type*: List of [StageKey](aws-properties-apigateway-apikey-stagekey.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags`  <a name="cfn-apigateway-apikey-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the API key\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Value`  <a name="cfn-apigateway-apikey-value"></a>
-The value of the API key\.  
+The value of the API key\. Must be at least 20 characters long\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-apigateway-apikey-return-values"></a>
+## Return values<a name="aws-resource-apigateway-apikey-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-apikey-return-values-ref"></a>
 
@@ -92,6 +101,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-apikey--examples"></a>
+
+
 
 ### API Key<a name="aws-resource-apigateway-apikey--examples--API_Key"></a>
 
@@ -198,5 +209,6 @@ Resources:
       Name: !Ref apiKeyName
 ```
 
-## See Also<a name="aws-resource-apigateway-apikey--seealso"></a>
+## See also<a name="aws-resource-apigateway-apikey--seealso"></a>
 + [apikey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) in the *Amazon API Gateway REST API Reference*
+

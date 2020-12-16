@@ -1,4 +1,4 @@
-# Viewing Stack Event History<a name="using-cfn-listing-event-history"></a>
+# Viewing stack event history<a name="using-cfn-listing-event-history"></a>
 
 You can track the status of the resources AWS CloudFormation is creating and deleting with the `[aws cloudformation describe\-stack\-events](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html)` command\. The amount of time to create or delete a stack depends on the complexity of your stack\.
 
@@ -31,7 +31,7 @@ The following example creates a stack with the name `myteststack` using the `sam
 22. ]
 ```
 
-The following example describes the `myteststack` stack:
+The following example describes the `myteststack` stack events:
 
 ```
  1. PROMPT> aws cloudformation describe-stack-events --stack-name myteststack

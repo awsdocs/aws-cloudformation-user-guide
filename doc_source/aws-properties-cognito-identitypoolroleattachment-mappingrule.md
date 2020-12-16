@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-mappingrule-properties"></a>
 
 `Claim`  <a name="cfn-cognito-identitypoolroleattachment-mappingrule-claim"></a>
-The claim name that must be present in the token, for example, "isAdmin" or "paid\."  
+The claim name that must be present in the token\. For example: "isAdmin" or "paid"\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -48,7 +48,7 @@ The Amazon Resource Name \(ARN\) of the role\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-cognito-identitypoolroleattachment-mappingrule-value"></a>
-A brief string that the claim must match, for example, "paid" or "yes\."  
+A brief string that the claim must match\. For example, "paid" or "yes"\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

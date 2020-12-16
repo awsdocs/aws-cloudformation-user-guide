@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment Demographic<a name="aws-properties-pinpoint-segment-segmentdimensions-demographic"></a>
 
-The demographic\-based criteria, such as device platform, for the segment\.
+Specifies demographic\-based dimension settings for including or excluding endpoints from a segment\. These settings derive from characteristics of endpoint devices, such as platform, make, and model\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-demographic-syntax"></a>
 
@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AppVersion](#cfn-pinpoint-segment-segmentdimensions-demographic-appversion)" : [SetDimension](aws-properties-pinpoint-segment-setdimension.md),
-  "[Channel](#cfn-pinpoint-segment-segmentdimensions-demographic-channel)" : [SetDimension](aws-properties-pinpoint-segment-setdimension.md),
-  "[DeviceType](#cfn-pinpoint-segment-segmentdimensions-demographic-devicetype)" : [SetDimension](aws-properties-pinpoint-segment-setdimension.md),
-  "[Make](#cfn-pinpoint-segment-segmentdimensions-demographic-make)" : [SetDimension](aws-properties-pinpoint-segment-setdimension.md),
-  "[Model](#cfn-pinpoint-segment-segmentdimensions-demographic-model)" : [SetDimension](aws-properties-pinpoint-segment-setdimension.md),
-  "[Platform](#cfn-pinpoint-segment-segmentdimensions-demographic-platform)" : [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+  "[AppVersion](#cfn-pinpoint-segment-segmentdimensions-demographic-appversion)" : SetDimension,
+  "[Channel](#cfn-pinpoint-segment-segmentdimensions-demographic-channel)" : SetDimension,
+  "[DeviceType](#cfn-pinpoint-segment-segmentdimensions-demographic-devicetype)" : SetDimension,
+  "[Make](#cfn-pinpoint-segment-segmentdimensions-demographic-make)" : SetDimension,
+  "[Model](#cfn-pinpoint-segment-segmentdimensions-demographic-model)" : SetDimension,
+  "[Platform](#cfn-pinpoint-segment-segmentdimensions-demographic-platform)" : SetDimension
 }
 ```
 
@@ -23,17 +23,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AppVersion](#cfn-pinpoint-segment-segmentdimensions-demographic-appversion): 
-    [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+    SetDimension
   [Channel](#cfn-pinpoint-segment-segmentdimensions-demographic-channel): 
-    [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+    SetDimension
   [DeviceType](#cfn-pinpoint-segment-segmentdimensions-demographic-devicetype): 
-    [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+    SetDimension
   [Make](#cfn-pinpoint-segment-segmentdimensions-demographic-make): 
-    [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+    SetDimension
   [Model](#cfn-pinpoint-segment-segmentdimensions-demographic-model): 
-    [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+    SetDimension
   [Platform](#cfn-pinpoint-segment-segmentdimensions-demographic-platform): 
-    [SetDimension](aws-properties-pinpoint-segment-setdimension.md)
+    SetDimension
 ```
 
 ## Properties<a name="aws-properties-pinpoint-segment-segmentdimensions-demographic-properties"></a>

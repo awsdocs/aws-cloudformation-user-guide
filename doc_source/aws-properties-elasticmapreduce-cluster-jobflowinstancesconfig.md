@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AdditionalMasterSecurityGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalmastersecuritygroups)" : [ String, ... ],
   "[AdditionalSlaveSecurityGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalslavesecuritygroups)" : [ String, ... ],
-  "[CoreInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet)" : [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md),
-  "[CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup)" : [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md),
+  "[CoreInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet)" : InstanceFleetConfig,
+  "[CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup)" : InstanceGroupConfig,
   "[Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname)" : String,
   "[Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid)" : String,
   "[Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids)" : [ String, ... ],
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EmrManagedSlaveSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup)" : String,
   "[HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion)" : String,
   "[KeepJobFlowAliveWhenNoSteps](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps)" : Boolean,
-  "[MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet)" : [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md),
-  "[MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup)" : [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md),
-  "[Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement)" : [PlacementType](aws-properties-elasticmapreduce-cluster-placementtype.md),
+  "[MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet)" : InstanceFleetConfig,
+  "[MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup)" : InstanceGroupConfig,
+  "[Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement)" : PlacementType,
   "[ServiceAccessSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup)" : String,
   "[TerminationProtected](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected)" : Boolean
 }
@@ -37,9 +37,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AdditionalSlaveSecurityGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalslavesecuritygroups): 
     - String
   [CoreInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet): 
-    [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md)
+    InstanceFleetConfig
   [CoreInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup): 
-    [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)
+    InstanceGroupConfig
   [Ec2KeyName](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname): String
   [Ec2SubnetId](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid): String
   [Ec2SubnetIds](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetids): 
@@ -49,11 +49,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [HadoopVersion](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion): String
   [KeepJobFlowAliveWhenNoSteps](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps): Boolean
   [MasterInstanceFleet](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet): 
-    [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md)
+    InstanceFleetConfig
   [MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup): 
-    [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)
+    InstanceGroupConfig
   [Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement): 
-    [PlacementType](aws-properties-elasticmapreduce-cluster-placementtype.md)
+    PlacementType
   [ServiceAccessSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup): String
   [TerminationProtected](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected): Boolean
 ```
@@ -85,7 +85,7 @@ Describes the EC2 instances and instance configurations for core instance groups
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2KeyName`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname"></a>
-The name of the EC2 key pair that can be used to ssh to the master node as the user called "hadoop\."  
+The name of the EC2 key pair that can be used to connect to the master node using SSH as the user called "hadoop\."  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -94,8 +94,7 @@ The name of the EC2 key pair that can be used to ssh to the master node as the u
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2SubnetId`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid"></a>
-Applies to clusters that use the uniform instance group configuration\. To launch the cluster in Amazon Virtual Private Cloud \(Amazon VPC\), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch\. If you do not specify this value, the cluster launches in the normal Amazon Web Services cloud, outside of an Amazon VPC, if the account launching the cluster supports EC2 Classic networks in the region where the cluster launches\.  
-Amazon VPC currently does not support cluster compute quadruple extra large \(cc1\.4xlarge\) instances\. Thus you cannot specify the cc1\.4xlarge instance type for clusters launched in an Amazon VPC\.  
+Applies to clusters that use the uniform instance group configuration\. To launch the cluster in Amazon Virtual Private Cloud \(Amazon VPC\), set this parameter to the identifier of the Amazon VPC subnet where you want the cluster to launch\. If you do not specify this value and your account supports EC2\-Classic, the cluster launches in EC2\-Classic\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -129,7 +128,7 @@ The identifier of the Amazon EC2 security group for the core and task nodes\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HadoopVersion`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion"></a>
-Applies only to Amazon EMR release versions earlier than 4\.0\. The Hadoop version for the cluster\. Valid inputs are "0\.18" \(deprecated\), "0\.20" \(deprecated\), "0\.20\.205" \(deprecated\), "1\.0\.3", "2\.2\.0", or "2\.4\.0"\. If you do not set this value, the default of 0\.18 is used, unless the `AmiVersion` parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used\.  
+Applies only to Amazon EMR release versions earlier than 4\.0\. The Hadoop version for the cluster\. Valid inputs are "0\.18" \(no longer maintained\), "0\.20" \(no longer maintained\), "0\.20\.205" \(no longer maintained\), "1\.0\.3", "2\.2\.0", or "2\.4\.0"\. If you do not set this value, the default of 0\.18 is used, unless the `AmiVersion` parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

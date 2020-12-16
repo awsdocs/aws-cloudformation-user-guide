@@ -50,18 +50,20 @@ Any tags assigned to the virtual private gateway\.
 The type of VPN connection the virtual private gateway supports\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ipsec.1`  
+*Allowed values*: `ipsec.1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpn-gateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpn-gateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpn-gateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPN gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-vpn-gateway--examples"></a>
+
+
 
 ### VPN Gateway<a name="aws-resource-ec2-vpn-gateway--examples--VPN_Gateway"></a>
 
@@ -91,5 +93,6 @@ The following example declares a VPN gateway that uses IPSec 1\.
         Value: Test
 ```
 
-## See Also<a name="aws-resource-ec2-vpn-gateway--seealso"></a>
+## See also<a name="aws-resource-ec2-vpn-gateway--seealso"></a>
 +  [CreateVPNGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVPNGateway.html) in the *Amazon EC2 API Reference*
+

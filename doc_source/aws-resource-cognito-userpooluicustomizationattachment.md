@@ -2,10 +2,12 @@
 
 The `AWS::Cognito::UserPoolUICustomizationAttachment` resource sets the UI customization information for a user pool's built\-in app UI\.
 
-You can specify app UI customization settings for a single client \(with a specific `clientId`\) or for all clients \(by setting the `clientId` to `ALL`\)\. If you specify `ALL`, the default configuration is used for every client that has had no UI customization set previously\. If you specify UI customization settings for a particular client, it no longer falls back to the `ALL` configuration\. 
+You can specify app UI customization settings for a single client \(with a specific `clientId`\) or for all clients \(by setting the `clientId` to `ALL`\)\. If you specify `ALL`, the default configuration is used for every client that has had no UI customization set previously\. If you specify UI customization settings for a particular client, it no longer falls back to the `ALL` configuration\.
 
 **Note**  
-Before you create this resource, your user pool must have a domain associated with it\. You can create an `AWS::Cognito::UserPoolDomain` resource first in this user pool\. 
+Before you create this resource, your user pool must have a domain associated with it\. You can create an `AWS::Cognito::UserPoolDomain` resource first in this user pool\.
+
+Setting a logo image isn't supported from AWS CloudFormation\. Use the Amazon Cognito [SetUICustomization](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUICustomization.html#API_SetUICustomization_RequestSyntax) API operation to set the image\.
 
 ## Syntax<a name="aws-resource-cognito-userpooluicustomizationattachment-syntax"></a>
 
@@ -60,7 +62,7 @@ The user pool ID for the user pool\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values-ref"></a>
 
@@ -74,6 +76,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-userpooluicustomizationattachment--examples"></a>
 
+
+
 ### Creating a new UI customization attachment for a user pool<a name="aws-resource-cognito-userpooluicustomizationattachment--examples--Creating_a_new_UI_customization_attachment_for_a_user_pool"></a>
 
 The following example sets UI customization settings in the referenced user pool and client\.
@@ -82,12 +86,17 @@ The following example sets UI customization settings in the referenced user pool
 
 ```
 {
-   "UserPoolUICustomization": {
-      "Type": "AWS::Cognito::UserPoolUICustomizationAttachment",
-      "Properties": {
-         "UserPoolId": {"Ref": "UserPool"},
-         "ClientId": {"Ref": "Client"},
-         "CSS": ".banner-customizable {\nbackground: linear-gradient(#9940B8, #C27BDB)\n}"
+   "UserPoolUICustomization":{
+      "Type":"AWS::Cognito::UserPoolUICustomizationAttachment",
+      "Properties":{
+         "UserPoolId":{
+            "Ref":"UserPool"
+         },
+         "ClientId":{
+            "Ref":"Client"
+         },
+         "CSS":".banner-customizable {\nbackground:
+        linear-gradient(#9940B8, #C27BDB)\n}"
       }
    }
 }
@@ -96,12 +105,12 @@ The following example sets UI customization settings in the referenced user pool
 #### YAML<a name="aws-resource-cognito-userpooluicustomizationattachment--examples--Creating_a_new_UI_customization_attachment_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolUICustomization:
-  Type: AWS::Cognito::UserPoolUICustomizationAttachment
-  Properties:
+UserPoolUICustomization: 
+  Type: AWS::Cognito::UserPoolUICustomizationAttachment 
+  Properties: 
     UserPoolId: !Ref UserPool
-    ClientId: !Ref Client
-    CSS: ".banner-customizable {
-               background: linear-gradient(#9940B8, #C27BDB)
-          }"
+    ClientId: !Ref Client 
+    CSS: ".banner-customizable { 
+      background: linear-gradient(#9940B8, #C27BDB) 
+    }"
 ```

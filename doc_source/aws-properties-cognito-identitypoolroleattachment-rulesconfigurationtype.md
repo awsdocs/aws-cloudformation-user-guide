@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Rules](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)" : [ [MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md), ... ]
+  "[Rules](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules)" : [ MappingRule, ... ]
 }
 ```
 
@@ -18,13 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Rules](#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules): 
-    - [MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)
+    - MappingRule
 ```
 
 ## Properties<a name="aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype-properties"></a>
 
 `Rules`  <a name="cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules"></a>
-A list of rules\. You can specify up to 25 rules per identity provider\.  
+The rules\. You can specify up to 25 rules per identity provider\.  
 *Required*: Yes  
 *Type*: List of [MappingRule](aws-properties-cognito-identitypoolroleattachment-mappingrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Trigger",
   "Properties" : {
-      "[Actions](#cfn-glue-trigger-actions)" : [ [Action](aws-properties-glue-trigger-action.md), ... ],
+      "[Actions](#cfn-glue-trigger-actions)" : [ Action, ... ],
       "[Description](#cfn-glue-trigger-description)" : String,
       "[Name](#cfn-glue-trigger-name)" : String,
-      "[Predicate](#cfn-glue-trigger-predicate)" : [Predicate](aws-properties-glue-trigger-predicate.md),
+      "[Predicate](#cfn-glue-trigger-predicate)" : Predicate,
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
       "[StartOnCreation](#cfn-glue-trigger-startoncreation)" : Boolean,
       "[Tags](#cfn-glue-trigger-tags)" : Json,
@@ -31,11 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Glue::Trigger
 Properties: 
   [Actions](#cfn-glue-trigger-actions): 
-    - [Action](aws-properties-glue-trigger-action.md)
+    - Action
   [Description](#cfn-glue-trigger-description): String
   [Name](#cfn-glue-trigger-name): String
   [Predicate](#cfn-glue-trigger-predicate): 
-    [Predicate](aws-properties-glue-trigger-predicate.md)
+    Predicate
   [Schedule](#cfn-glue-trigger-schedule): String
   [StartOnCreation](#cfn-glue-trigger-startoncreation): Boolean
   [Tags](#cfn-glue-trigger-tags): Json
@@ -99,7 +99,7 @@ The name of the workflow associated with the trigger\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-glue-trigger-return-values"></a>
+## Return values<a name="aws-resource-glue-trigger-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-trigger-return-values-ref"></a>
 
@@ -108,6 +108,8 @@ The name of the workflow associated with the trigger\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-trigger--examples"></a>
+
+
 
 ### On\-Demand Trigger<a name="aws-resource-glue-trigger--examples--On-Demand_Trigger"></a>
 

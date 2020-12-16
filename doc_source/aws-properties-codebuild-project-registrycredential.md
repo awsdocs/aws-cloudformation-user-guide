@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Credential`  <a name="cfn-codebuild-project-registrycredential-credential"></a>
  The Amazon Resource Name \(ARN\) or name of credentials created using AWS Secrets Manager\.   
- The `credential` can use the name of the credentials only if they exist in your current region\. 
+ The `credential` can use the name of the credentials only if they exist in your current AWS Region\. 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -40,8 +40,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The service that created the credentials to access a private Docker registry\. The valid value, SECRETS\_MANAGER, is for AWS Secrets Manager\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SECRETS_MANAGER`  
+*Allowed values*: `SECRETS_MANAGER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-registrycredential--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-registrycredential--seealso"></a>
 +  [ RegistryCredential](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_RegistryCredential.html) in the *AWS CodeBuild API Reference* 

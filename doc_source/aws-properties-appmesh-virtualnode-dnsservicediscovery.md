@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode DnsServiceDiscovery<a name="aws-properties-appmesh-virtualnode-dnsservicediscovery"></a>
 
-An object representing the DNS service discovery information for your virtual node\.
+An object that represents the DNS service discovery information for your virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-dnsservicediscovery-syntax"></a>
 

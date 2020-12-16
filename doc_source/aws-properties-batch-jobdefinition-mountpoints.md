@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-mountpoints-properties"></a>
 
 `ContainerPath`  <a name="cfn-batch-jobdefinition-mountpoints-containerpath"></a>
-The path on the container at which to mount the host volume\.  
+The path on the container where the host volume is mounted\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReadOnly`  <a name="cfn-batch-jobdefinition-mountpoints-readonly"></a>
-If this value is `true`, the container has read\-only access to the volume; otherwise, the container can write to the volume\. The default value is `false`\.  
+If this value is `true`, the container has read\-only access to the volume\. Otherwise, the container can write to the volume\. The default value is `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

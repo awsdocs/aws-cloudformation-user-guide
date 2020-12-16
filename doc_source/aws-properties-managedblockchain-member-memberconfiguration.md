@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Description](#cfn-managedblockchain-member-memberconfiguration-description)" : String,
-  "[MemberFrameworkConfiguration](#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration)" : [MemberFrameworkConfiguration](aws-properties-managedblockchain-member-memberframeworkconfiguration.md),
+  "[MemberFrameworkConfiguration](#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration)" : MemberFrameworkConfiguration,
   "[Name](#cfn-managedblockchain-member-memberconfiguration-name)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Description](#cfn-managedblockchain-member-memberconfiguration-description): String
   [MemberFrameworkConfiguration](#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration): 
-    [MemberFrameworkConfiguration](aws-properties-managedblockchain-member-memberframeworkconfiguration.md)
+    MemberFrameworkConfiguration
   [Name](#cfn-managedblockchain-member-memberconfiguration-name): String
 ```
 

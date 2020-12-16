@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualService VirtualRouterServiceProvider<a name="aws-properties-appmesh-virtualservice-virtualrouterserviceprovider"></a>
 
-An object representing a virtual node service provider\.
+An object that represents a virtual node service provider\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualservice-virtualrouterserviceprovider-syntax"></a>
 

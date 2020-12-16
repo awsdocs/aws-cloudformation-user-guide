@@ -1,6 +1,8 @@
 # AWS::Cognito::UserPoolGroup<a name="aws-resource-cognito-userpoolgroup"></a>
 
-The `AWS::Cognito::UserPoolGroup` resource creates a user group in an Amazon Cognito user pool\.
+Specifies a new group in the identified user pool\.
+
+Calling this action requires developer credentials\.
 
 ## Syntax<a name="aws-resource-cognito-userpoolgroup-syntax"></a>
 
@@ -78,10 +80,10 @@ The user pool ID for the user pool\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpoolgroup-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpoolgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpoolgroup-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the user pool group\. For example, `Admins`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the user pool group\. For example: `Admins`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

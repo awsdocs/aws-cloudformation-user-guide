@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::CodeRepository",
   "Properties" : {
       "[CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname)" : String,
-      "[GitConfig](#cfn-sagemaker-coderepository-gitconfig)" : [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
+      "[GitConfig](#cfn-sagemaker-coderepository-gitconfig)" : GitConfig
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::SageMaker::CodeRepository
 Properties: 
   [CodeRepositoryName](#cfn-sagemaker-coderepository-coderepositoryname): String
   [GitConfig](#cfn-sagemaker-coderepository-gitconfig): 
-    [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)
+    GitConfig
 ```
 
 ## Properties<a name="aws-resource-sagemaker-coderepository-properties"></a>
@@ -38,7 +38,7 @@ The name of the Git repository\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*$`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GitConfig`  <a name="cfn-sagemaker-coderepository-gitconfig"></a>
@@ -47,11 +47,11 @@ Configuration details for the Git repository, including the URL where it is loca
 *Type*: [GitConfig](aws-properties-sagemaker-coderepository-gitconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-coderepository-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-coderepository-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-coderepository-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the new repository\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the code repository\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -61,7 +61,9 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+ `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+
 #### <a name="aws-resource-sagemaker-coderepository-return-values-fn--getatt-fn--getatt"></a>
 
 `CodeRepositoryName`  <a name="CodeRepositoryName-fn::getatt"></a>
-The name of the Git repository\.
+The name of the code repository, such as `myCodeRepo`\.

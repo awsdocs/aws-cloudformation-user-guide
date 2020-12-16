@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)" : [ [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md), ... ]
+  "[TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)" : [ TargetGroup, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups): 
-    - [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)
+    - TargetGroup
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-targetgroupsconfig-properties"></a>

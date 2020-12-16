@@ -1,6 +1,6 @@
 # AWS::Glue::Workflow<a name="aws-resource-glue-workflow"></a>
 
-The AWS::Glue::Workflow is an AWS Glue resource type that manages AWS Glue workflows\. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue\. Using a workflow, you can design a complex multi\-job extract, transform, and load \(ETL\) activity that AWS Glue can execute and track as single entity
+The AWS::Glue::Workflow is an AWS Glue resource type that manages AWS Glue workflows\. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue\. Using a workflow, you can design a complex multi\-job extract, transform, and load \(ETL\) activity that AWS Glue can execute and track as single entity\.
 
 ## Syntax<a name="aws-resource-glue-workflow-syntax"></a>
 
@@ -47,7 +47,7 @@ A description of the workflow
 
 `Name`  <a name="cfn-glue-workflow-name"></a>
 The name of the workflow representing the flow  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -57,7 +57,7 @@ The tags to use with this workflow\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-workflow-return-values"></a>
+## Return values<a name="aws-resource-glue-workflow-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-workflow-return-values-ref"></a>
 
