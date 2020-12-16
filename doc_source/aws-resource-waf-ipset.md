@@ -1,8 +1,12 @@
 # AWS::WAF::IPSet<a name="aws-resource-waf-ipset"></a>
 
+**Note**  
+This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 Contains one or more IP addresses or blocks of IP addresses specified in Classless Inter\-Domain Routing \(CIDR\) notation\. AWS WAF supports IPv4 address ranges: /8 and any range between /16 through /32\. AWS WAF supports IPv6 address ranges: /24, /32, /48, /56, /64, and /128\.
 
-To specify an individual IP address, you specify the four\-part IP address followed by a `/32`, for example, 192\.0\.2\.0/31\. To block a range of IP addresses, you can specify /8 or any range between /16 through /32 \(for IPv4\) or /24, /32, /48, /56, /64, or /128 \(for IPv6\)\. For more information about CIDR notation, see the Wikipedia entry [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)\. 
+To specify an individual IP address, you specify the four\-part IP address followed by a `/32`, for example, 192\.0\.2\.0/32\. To block a range of IP addresses, you can specify /8 or any range between /16 through /32 \(for IPv4\) or /24, /32, /48, /56, /64, or /128 \(for IPv6\)\. For more information about CIDR notation, see the Wikipedia entry [Classless Inter\-Domain Routing](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)\. 
 
 ## Syntax<a name="aws-resource-waf-ipset-syntax"></a>
 
@@ -14,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::IPSet",
   "Properties" : {
-      "[IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors)" : [ [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md), ... ],
+      "[IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors)" : [ IPSetDescriptor, ... ],
       "[Name](#cfn-waf-ipset-name)" : String
     }
 }
@@ -26,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::IPSet
 Properties: 
   [IPSetDescriptors](#cfn-waf-ipset-ipsetdescriptors): 
-    - [IPSetDescriptor](aws-properties-waf-ipset-ipsetdescriptors.md)
+    - IPSetDescriptor
   [Name](#cfn-waf-ipset-name): String
 ```
 
@@ -44,9 +48,10 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-waf-ipset-return-values"></a>
+## Return values<a name="aws-resource-waf-ipset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-ipset-return-values-ref"></a>
 
@@ -55,6 +60,8 @@ A friendly name or description of the `IPSet`\. You can't change the name of an 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-ipset--examples"></a>
+
+
 
 ### Define IP Addresses<a name="aws-resource-waf-ipset--examples--Define_IP_Addresses"></a>
 
@@ -94,7 +101,7 @@ MyIPSetBlacklist:
         Value: "192.0.2.44/32"
       - 
         Type: "IPV4"
-Value: "192.0.7.0/24"
+        Value: "192.0.7.0/24"
 ```
 
 ### Associate an IPSet with a Web ACL Rule<a name="aws-resource-waf-ipset--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
@@ -133,7 +140,7 @@ MyIPSetRule:
         DataId: 
           Ref: "MyIPSetBlacklist"
         Negated: false
-Type: "IPMatch"
+        Type: "IPMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-waf-ipset--examples--Create_a_Web_ACL"></a>
@@ -180,5 +187,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-Ref: "MyIPSetRule"
+          Ref: "MyIPSetRule"
 ```

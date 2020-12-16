@@ -1,4 +1,4 @@
-# DLM Resource Type Reference<a name="AWS_DLM"></a>
+# DLM resource type reference<a name="AWS_DLM"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)

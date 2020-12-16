@@ -1,4 +1,4 @@
-# DeletionPolicy Attribute<a name="aws-attribute-deletionpolicy"></a>
+# DeletionPolicy attribute<a name="aws-attribute-deletionpolicy"></a>
 
 With the DeletionPolicy attribute you can preserve or \(in some cases\) backup a resource when its stack is deleted\. You specify a DeletionPolicy attribute for each resource that you want to control\. If a resource has no DeletionPolicy attribute, AWS CloudFormation deletes the resource by default\.
 
@@ -40,7 +40,7 @@ Resources:
     DeletionPolicy: Retain
 ```
 
-## DeletionPolicy Options<a name="aws-attribute-deletionpolicy-options"></a>
+## DeletionPolicy options<a name="aws-attribute-deletionpolicy-options"></a>
 
 Delete  
 AWS CloudFormation deletes the resource and all its content if applicable during stack deletion\. You can add this deletion policy to any resource type\. By default, if you don't specify a DeletionPolicy, AWS CloudFormation deletes your resources\. However, be aware of the following considerations:  

@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EncryptionAtRest](#cfn-msk-cluster-encryptioninfo-encryptionatrest)" : [EncryptionAtRest](aws-properties-msk-cluster-encryptionatrest.md),
-  "[EncryptionInTransit](#cfn-msk-cluster-encryptioninfo-encryptionintransit)" : [EncryptionInTransit](aws-properties-msk-cluster-encryptionintransit.md)
+  "[EncryptionAtRest](#cfn-msk-cluster-encryptioninfo-encryptionatrest)" : EncryptionAtRest,
+  "[EncryptionInTransit](#cfn-msk-cluster-encryptioninfo-encryptionintransit)" : EncryptionInTransit
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EncryptionAtRest](#cfn-msk-cluster-encryptioninfo-encryptionatrest): 
-    [EncryptionAtRest](aws-properties-msk-cluster-encryptionatrest.md)
+    EncryptionAtRest
   [EncryptionInTransit](#cfn-msk-cluster-encryptioninfo-encryptionintransit): 
-    [EncryptionInTransit](aws-properties-msk-cluster-encryptionintransit.md)
+    EncryptionInTransit
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-encryptioninfo-properties"></a>

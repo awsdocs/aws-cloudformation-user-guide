@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application KinesisFirehoseInput<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery stream as the streaming source\. You provide the delivery stream's Amazon Resource Name \(ARN\)\.
+For a SQL\-based Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery stream as the streaming source\. You provide the delivery stream's Amazon Resource Name \(ARN\)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput-syntax"></a>
 
@@ -31,5 +31,6 @@ The Amazon Resource Name \(ARN\) of the delivery stream\.
 *Pattern*: `arn:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput--seealso"></a>
 +  [KinesisFirehoseInput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisFirehoseInput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

@@ -1,6 +1,6 @@
-# AWS Systems Manager Resource Type Reference<a name="AWS_SSM"></a>
+# AWS Systems Manager resource type reference<a name="AWS_SSM"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::SSM::Association](aws-resource-ssm-association.md)
 + [AWS::SSM::Document](aws-resource-ssm-document.md)
 + [AWS::SSM::MaintenanceWindow](aws-resource-ssm-maintenancewindow.md)

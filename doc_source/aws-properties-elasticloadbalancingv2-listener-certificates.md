@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::ListenerCertificate Certificate<a name="aws-properties-elasticloadbalancingv2-listener-certificates"></a>
 
-Specifies an SSL server certificate\.
+Specifies an SSL server certificate for the certificate list of a secure listener\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-listener-certificates-syntax"></a>
 

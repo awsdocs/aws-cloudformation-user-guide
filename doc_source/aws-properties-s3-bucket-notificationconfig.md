@@ -5,7 +5,8 @@ Describes the notification configuration for an Amazon S3 bucket\.
 **Note**  
 If you create the target resource and related permissions in the same template, you might have a circular dependency\.  
 For example, you might use the `AWS::Lambda::Permission` resource to grant the bucket permission to invoke an AWS Lambda function\. However, AWS CloudFormation can't create the bucket until the bucket has permission to invoke the function \(AWS CloudFormation checks whether the bucket can invoke the function\)\. If you're using Refs to pass the bucket name, this leads to a circular dependency\.  
-To avoid this dependency, you can create all resources without specifying the notification configuration\. Then, update the stack with a notification configuration\.
+To avoid this dependency, you can create all resources without specifying the notification configuration\. Then, update the stack with a notification configuration\.  
+For more information on permissions, see [AWS::Lambda::Permission](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html) and [Granting Permissions to Publish Event Notification Messages to a Destination](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html#grant-destinations-permissions-to-s3)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-notificationconfig-syntax"></a>
 
@@ -15,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md), ... ],
-  "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md), ... ],
-  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md), ... ]
+  "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ LambdaConfiguration, ... ],
+  "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ QueueConfiguration, ... ],
+  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ TopicConfiguration, ... ]
 }
 ```
 
@@ -25,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig): 
-    - [LambdaConfiguration](aws-properties-s3-bucket-notificationconfig-lambdaconfig.md)
+    - LambdaConfiguration
   [QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig): 
-    - [QueueConfiguration](aws-properties-s3-bucket-notificationconfig-queueconfig.md)
+    - QueueConfiguration
   [TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig): 
-    - [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)
+    - TopicConfiguration
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-properties"></a>
@@ -51,3 +52,7 @@ The topic to which notifications are sent and the events for which notifications
 *Required*: No  
 *Type*: List of [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-notificationconfig--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

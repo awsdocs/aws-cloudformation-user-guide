@@ -4,14 +4,17 @@ AWS CloudFormation StackSets extends the functionality of stacks by enabling you
 
 ![\[A stack set is a collection of resources, defined in a template and deployed into one or more accounts across one or more regions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stack_set_conceptual_sv.png)
 
+AWS CloudFormation StackSets is supported in the following AWS Regions:
+US East (N. Virginia, Ohio), US West (N. California, Oregon), South America (Sao Paulo), EU (Ireland, Frankfurt, London, Paris, Stockholm), Asia Pacific (Singapore, Tokyo, Sydney, Seoul, Mumbai, Hong Kong), Canada (Central), and both AWS GovCloud (US) Regions.
+
 This section helps you get started using StackSets, and answers common questions about how to work with and troubleshoot stack set creation, updates, and deletion\.
 
 **Topics**
-+ [StackSets Concepts](stacksets-concepts.md)
-+ [Prerequisites: Granting Permissions for Stack Set Operations](stacksets-prereqs.md)
-+ [Getting Started with AWS CloudFormation StackSets](stacksets-getting-started.md)
++ [StackSets concepts](stacksets-concepts.md)
++ [Prerequisites for stack set operations](stacksets-prereqs.md)
++ [Getting started with AWS CloudFormation StackSets](stacksets-getting-started.md)
 + [Configuring a target account gate in AWS CloudFormation StackSets](stacksets-account-gating.md)
-+ [Best Practices](stacksets-bestpractices.md)
-+ [Limitations of StackSets](stacksets-limitations.md)
-+ [AWS CloudFormation StackSets Sample Templates](stacksets-sampletemplates.md)
++ [Detecting unmanaged configuration changes in stack sets](stacksets-drift.md)
++ [Best practices](stacksets-bestpractices.md)
++ [AWS CloudFormation StackSets sample templates](stacksets-sampletemplates.md)
 + [Troubleshooting AWS CloudFormation StackSets](stacksets-troubleshooting.md)

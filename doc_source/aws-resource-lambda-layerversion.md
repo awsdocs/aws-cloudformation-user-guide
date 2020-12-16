@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Lambda::LayerVersion",
   "Properties" : {
       "[CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes)" : [ String, ... ],
-      "[Content](#cfn-lambda-layerversion-content)" : [Content](aws-properties-lambda-layerversion-content.md),
+      "[Content](#cfn-lambda-layerversion-content)" : Content,
       "[Description](#cfn-lambda-layerversion-description)" : String,
       "[LayerName](#cfn-lambda-layerversion-layername)" : String,
       "[LicenseInfo](#cfn-lambda-layerversion-licenseinfo)" : String
@@ -29,7 +29,7 @@ Properties:
   [CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes): 
     - String
   [Content](#cfn-lambda-layerversion-content): 
-    [Content](aws-properties-lambda-layerversion-content.md)
+    Content
   [Description](#cfn-lambda-layerversion-description): String
   [LayerName](#cfn-lambda-layerversion-layername): String
   [LicenseInfo](#cfn-lambda-layerversion-licenseinfo): String
@@ -41,7 +41,7 @@ Properties:
 A list of compatible [function runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\. Used for filtering with [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) and [ListLayerVersions](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayerVersions.html)\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `5`  
+*Maximum*: `15`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Content`  <a name="cfn-lambda-layerversion-content"></a>
@@ -77,7 +77,7 @@ The layer's software license\. It can be any of the following:
 *Maximum*: `512`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-lambda-layerversion-return-values"></a>
+## Return values<a name="aws-resource-lambda-layerversion-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-layerversion-return-values-ref"></a>
 
@@ -86,6 +86,8 @@ The layer's software license\. It can be any of the following:
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-lambda-layerversion--examples"></a>
+
+
 
 ### Layer Version<a name="aws-resource-lambda-layerversion--examples--Layer_Version"></a>
 
@@ -116,12 +118,12 @@ Create a layer named `my-layer`\.
 
 ```
 MyLayer:
-  Type: "AWS::Lambda::LayerVersion"
+  Type: AWS::Lambda::LayerVersion
   Properties:
-    CompatibleRuntimes: 
+    CompatibleRuntimes:
       - python3.6
       - python3.7
-    Content: 
+    Content:
       S3Bucket: my-bucket-us-west-2-123456789012
       S3Key: layer.zip
     Description: My layer

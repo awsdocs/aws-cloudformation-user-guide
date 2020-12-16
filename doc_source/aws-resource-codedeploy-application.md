@@ -42,10 +42,10 @@ Properties:
 The compute platform that CodeDeploy deploys the application to\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ECS | Lambda | Server`  
+*Allowed values*: `ECS | Lambda | Server`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-codedeploy-application-return-values"></a>
+## Return values<a name="aws-resource-codedeploy-application-return-values"></a>
 
 ### Ref<a name="aws-resource-codedeploy-application-return-values-ref"></a>
 
@@ -54,6 +54,8 @@ When you pass the logical ID of an `AWS::CodeDeploy::Application` resource to th
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-codedeploy-application--examples"></a>
+
+
 
 ### Specify an application with a Lambda compute platform<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a_Lambda_compute_platform"></a>
 
@@ -103,5 +105,6 @@ CodeDeployApplication:
     ComputePlatform: Server
 ```
 
-## See Also<a name="aws-resource-codedeploy-application--seealso"></a>
+## See also<a name="aws-resource-codedeploy-application--seealso"></a>
 + For configuring your deployment and specifying your application revisions, see [ AWS::CodeDeploy::DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html) and [ AWS::CodeDeploy::DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)\.
+

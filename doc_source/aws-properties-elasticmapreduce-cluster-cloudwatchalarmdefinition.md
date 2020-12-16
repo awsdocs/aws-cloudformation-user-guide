@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ComparisonOperator](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator)" : String,
-  "[Dimensions](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions)" : [ [MetricDimension](aws-properties-elasticmapreduce-cluster-metricdimension.md), ... ],
+  "[Dimensions](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions)" : [ MetricDimension, ... ],
   "[EvaluationPeriods](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods)" : Integer,
   "[MetricName](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname)" : String,
   "[Namespace](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace)" : String,
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ComparisonOperator](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator): String
   [Dimensions](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions): 
-    - [MetricDimension](aws-properties-elasticmapreduce-cluster-metricdimension.md)
+    - MetricDimension
   [EvaluationPeriods](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods): Integer
   [MetricName](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname): String
   [Namespace](#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace): String
@@ -43,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Determines how the metric specified by `MetricName` is compared to the value specified by `Threshold`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GREATER_THAN | GREATER_THAN_OR_EQUAL | LESS_THAN | LESS_THAN_OR_EQUAL`  
+*Allowed values*: `GREATER_THAN | GREATER_THAN_OR_EQUAL | LESS_THAN | LESS_THAN_OR_EQUAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Dimensions`  <a name="cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions"></a>
@@ -53,7 +53,7 @@ A CloudWatch metric dimension\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluationPeriods`  <a name="cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods"></a>
-The number of periods, expressed in seconds using `Period`, during which the alarm condition must exist before the alarm triggers automatic scaling activity\. The default value is `1`\.  
+The number of periods, in five\-minute increments, during which the alarm condition must exist before the alarm triggers automatic scaling activity\. The default value is `1`\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,7 +80,7 @@ The period, in seconds, over which the statistic is applied\. EMR CloudWatch met
 The statistic to apply to the metric associated with the alarm\. The default is `AVERAGE`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AVERAGE | MAXIMUM | MINIMUM | SAMPLE_COUNT | SUM`  
+*Allowed values*: `AVERAGE | MAXIMUM | MINIMUM | SAMPLE_COUNT | SUM`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Threshold`  <a name="cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-threshold"></a>
@@ -93,5 +93,5 @@ The value against which the specified statistic is compared\.
 The unit of measure associated with the CloudWatch metric being watched\. The value specified for `Unit` must correspond to the units specified in the CloudWatch metric\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `BITS | BITS_PER_SECOND | BYTES | BYTES_PER_SECOND | COUNT | COUNT_PER_SECOND | GIGA_BITS | GIGA_BITS_PER_SECOND | GIGA_BYTES | GIGA_BYTES_PER_SECOND | KILO_BITS | KILO_BITS_PER_SECOND | KILO_BYTES | KILO_BYTES_PER_SECOND | MEGA_BITS | MEGA_BITS_PER_SECOND | MEGA_BYTES | MEGA_BYTES_PER_SECOND | MICRO_SECONDS | MILLI_SECONDS | NONE | PERCENT | SECONDS | TERA_BITS | TERA_BITS_PER_SECOND | TERA_BYTES | TERA_BYTES_PER_SECOND`  
+*Allowed values*: `BITS | BITS_PER_SECOND | BYTES | BYTES_PER_SECOND | COUNT | COUNT_PER_SECOND | GIGA_BITS | GIGA_BITS_PER_SECOND | GIGA_BYTES | GIGA_BYTES_PER_SECOND | KILO_BITS | KILO_BITS_PER_SECOND | KILO_BYTES | KILO_BYTES_PER_SECOND | MEGA_BITS | MEGA_BITS_PER_SECOND | MEGA_BYTES | MEGA_BYTES_PER_SECOND | MICRO_SECONDS | MILLI_SECONDS | NONE | PERCENT | SECONDS | TERA_BITS | TERA_BITS_PER_SECOND | TERA_BYTES | TERA_BYTES_PER_SECOND`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

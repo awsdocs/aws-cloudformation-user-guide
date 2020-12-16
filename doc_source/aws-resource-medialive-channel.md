@@ -15,10 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MediaLive::Channel",
   "Properties" : {
       "[ChannelClass](#cfn-medialive-channel-channelclass)" : String,
-      "[Destinations](#cfn-medialive-channel-destinations)" : [ [OutputDestination](aws-properties-medialive-channel-outputdestination.md), ... ],
-      "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : Json,
-      "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ [InputAttachment](aws-properties-medialive-channel-inputattachment.md), ... ],
-      "[InputSpecification](#cfn-medialive-channel-inputspecification)" : [InputSpecification](aws-properties-medialive-channel-inputspecification.md),
+      "[Destinations](#cfn-medialive-channel-destinations)" : [ OutputDestination, ... ],
+      "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : EncoderSettings,
+      "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ InputAttachment, ... ],
+      "[InputSpecification](#cfn-medialive-channel-inputspecification)" : InputSpecification,
       "[LogLevel](#cfn-medialive-channel-loglevel)" : String,
       "[Name](#cfn-medialive-channel-name)" : String,
       "[RoleArn](#cfn-medialive-channel-rolearn)" : String,
@@ -34,12 +34,13 @@ Type: AWS::MediaLive::Channel
 Properties: 
   [ChannelClass](#cfn-medialive-channel-channelclass): String
   [Destinations](#cfn-medialive-channel-destinations): 
-    - [OutputDestination](aws-properties-medialive-channel-outputdestination.md)
-  [EncoderSettings](#cfn-medialive-channel-encodersettings): Json
+    - OutputDestination
+  [EncoderSettings](#cfn-medialive-channel-encodersettings): 
+    EncoderSettings
   [InputAttachments](#cfn-medialive-channel-inputattachments): 
-    - [InputAttachment](aws-properties-medialive-channel-inputattachment.md)
+    - InputAttachment
   [InputSpecification](#cfn-medialive-channel-inputspecification): 
-    [InputSpecification](aws-properties-medialive-channel-inputspecification.md)
+    InputSpecification
   [LogLevel](#cfn-medialive-channel-loglevel): String
   [Name](#cfn-medialive-channel-name): String
   [RoleArn](#cfn-medialive-channel-rolearn): String
@@ -49,60 +50,60 @@ Properties:
 ## Properties<a name="aws-resource-medialive-channel-properties"></a>
 
 `ChannelClass`  <a name="cfn-medialive-channel-channelclass"></a>
-The class for this channel\. For a channel with two pipelines, the class is STANDARD\. For a channel with one pipeline, the class is SINGLE\_PIPELINE\.  
+The class for this channel\. STANDARD for a channel with two pipelines or SINGLE\_PIPELINE for a channel with one pipeline\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Destinations`  <a name="cfn-medialive-channel-destinations"></a>
-The settings that identify the destination for the outputs in this MediaLive output package\.  
+User\-specified id\. This is used in an output group or an output\.  
 *Required*: No  
 *Type*: List of [OutputDestination](aws-properties-medialive-channel-outputdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncoderSettings`  <a name="cfn-medialive-channel-encodersettings"></a>
-The encoding configuration for the output content\.  
+Encoder Settings  
 *Required*: No  
-*Type*: Json  
+*Type*: [EncoderSettings](aws-properties-medialive-channel-encodersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputAttachments`  <a name="cfn-medialive-channel-inputattachments"></a>
-The list of input attachments for the channel\.  
+List of input attachments for channel\.  
 *Required*: No  
 *Type*: List of [InputAttachment](aws-properties-medialive-channel-inputattachment.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputSpecification`  <a name="cfn-medialive-channel-inputspecification"></a>
-The input specification for this channel\. It specifies the key characteristics of the inputs for this channel: the maximum bitrate, the resolution, and the codec\.   
+Specification of network and file inputs for this channel  
 *Required*: No  
 *Type*: [InputSpecification](aws-properties-medialive-channel-inputspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogLevel`  <a name="cfn-medialive-channel-loglevel"></a>
-The verbosity for logging activity for this channel\. Charges for logging \(which are generated through Amazon CloudWatch Logging\) are higher for higher verbosities\.   
+The log level to write to CloudWatch Logs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-medialive-channel-name"></a>
-A name for this audio selector\. The AudioDescription \(in an output\) references this name in order to identify a specific input audio to include in that output\.  
+Name of channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-medialive-channel-rolearn"></a>
-The IAM role for MediaLive to assume when running this channel\. The role is identified by its ARN\.   
+An optional Amazon Resource Name \(ARN\) of the role to assume when running the Channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-medialive-channel-tags"></a>
-A collection of tags for this channel\. Each tag is a key\-value pair\.  
+A collection of key\-value pairs\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-medialive-channel-return-values"></a>
+## Return values<a name="aws-resource-medialive-channel-return-values"></a>
 
 ### Ref<a name="aws-resource-medialive-channel-return-values-ref"></a>
 

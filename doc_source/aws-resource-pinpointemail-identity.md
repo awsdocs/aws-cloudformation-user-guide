@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DkimSigningEnabled](#cfn-pinpointemail-identity-dkimsigningenabled)" : Boolean,
       "[FeedbackForwardingEnabled](#cfn-pinpointemail-identity-feedbackforwardingenabled)" : Boolean,
-      "[MailFromAttributes](#cfn-pinpointemail-identity-mailfromattributes)" : [MailFromAttributes](aws-properties-pinpointemail-identity-mailfromattributes.md),
+      "[MailFromAttributes](#cfn-pinpointemail-identity-mailfromattributes)" : MailFromAttributes,
       "[Name](#cfn-pinpointemail-identity-name)" : String,
-      "[Tags](#cfn-pinpointemail-identity-tags)" : [ [Tags](aws-properties-pinpointemail-identity-tags.md), ... ]
+      "[Tags](#cfn-pinpointemail-identity-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -36,10 +36,10 @@ Properties:
   [DkimSigningEnabled](#cfn-pinpointemail-identity-dkimsigningenabled): Boolean
   [FeedbackForwardingEnabled](#cfn-pinpointemail-identity-feedbackforwardingenabled): Boolean
   [MailFromAttributes](#cfn-pinpointemail-identity-mailfromattributes): 
-    [MailFromAttributes](aws-properties-pinpointemail-identity-mailfromattributes.md)
+    MailFromAttributes
   [Name](#cfn-pinpointemail-identity-name): String
   [Tags](#cfn-pinpointemail-identity-tags): 
-    - [Tags](aws-properties-pinpointemail-identity-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-pinpointemail-identity-properties"></a>
@@ -77,7 +77,7 @@ An object that defines the tags \(keys and values\) that you want to associate w
 *Type*: [List](aws-properties-pinpointemail-identity-tags.md) of [Tags](aws-properties-pinpointemail-identity-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpointemail-identity-return-values"></a>
+## Return values<a name="aws-resource-pinpointemail-identity-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpointemail-identity-return-values-ref"></a>
 
@@ -116,5 +116,5 @@ The record value for the second token that you have to add to the DNS configurat
 `IdentityDNSRecordValue3`  <a name="IdentityDNSRecordValue3-fn::getatt"></a>
 The record value for the third token that you have to add to the DNS configuration for your domain\.
 
-## See Also<a name="aws-resource-pinpointemail-identity--seealso"></a>
+## See also<a name="aws-resource-pinpointemail-identity--seealso"></a>
 + [Verifying Email Identities](https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-email-manage-verify.html) in the *Amazon Pinpoint User Guide*

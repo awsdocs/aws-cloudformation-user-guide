@@ -38,7 +38,7 @@ The value of the yum repo configuration\. For example:
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `512`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-patchbaseline-patchsource-name"></a>

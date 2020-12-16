@@ -33,7 +33,7 @@ The ID of the VPC for which to create the egress\-only internet gateway\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-egressonlyinternetgateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-egressonlyinternetgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-egressonlyinternetgateway-return-values-ref"></a>
 
@@ -45,6 +45,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-ec2-egressonlyinternetgateway--examples--"></a>
 
+
+
 #### YAML<a name="aws-resource-ec2-egressonlyinternetgateway--examples----yaml"></a>
 
 ```
@@ -55,6 +57,8 @@ myEgressOnlyInternetGateway:
 ```
 
 ### <a name="aws-resource-ec2-egressonlyinternetgateway--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ec2-egressonlyinternetgateway--examples----json"></a>
 
@@ -69,5 +73,6 @@ myEgressOnlyInternetGateway:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
+## See also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
 +  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

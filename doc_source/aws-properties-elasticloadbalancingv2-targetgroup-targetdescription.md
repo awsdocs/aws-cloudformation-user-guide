@@ -43,7 +43,7 @@ The ID of the target\. If the target type of the target group is `instance`, spe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-port"></a>
-The port on which the target is listening\.  
+The port on which the target is listening\. If the target group protocol is GENEVE, the supported port is 6081\. Not used if the target is a Lambda function\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

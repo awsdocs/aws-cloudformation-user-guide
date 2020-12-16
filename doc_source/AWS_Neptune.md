@@ -1,6 +1,6 @@
-# Amazon Neptune Resource Type Reference<a name="AWS_Neptune"></a>
+# Amazon Neptune resource type reference<a name="AWS_Neptune"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)
 + [AWS::Neptune::DBClusterParameterGroup](aws-resource-neptune-dbclusterparametergroup.md)
 + [AWS::Neptune::DBInstance](aws-resource-neptune-dbinstance.md)

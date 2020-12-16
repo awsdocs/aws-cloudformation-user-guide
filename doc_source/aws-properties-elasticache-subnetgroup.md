@@ -52,7 +52,7 @@ The EC2 subnet IDs for the cache subnet group\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-subnetgroup-return-values"></a>
+## Return values<a name="aws-properties-elasticache-subnetgroup-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-subnetgroup-return-values-ref"></a>
 
@@ -62,28 +62,39 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ## Examples<a name="aws-properties-elasticache-subnetgroup--examples"></a>
 
+
+
 ### <a name="aws-properties-elasticache-subnetgroup--examples--"></a>
 
 #### JSON<a name="aws-properties-elasticache-subnetgroup--examples----json"></a>
 
 ```
-"SubnetGroup" : {
-            "Type" : "AWS::ElastiCache::SubnetGroup",
-            "Properties" : {
-            "Description" : "Cache Subnet Group",
-            "SubnetIds" : [ { "Ref" : "Subnet1" }, { "Ref" : "Subnet2" } ]
-            }
-            }
+{
+    "SubnetGroup": {
+        "Type": "AWS::ElastiCache::SubnetGroup",
+        "Properties": {
+            "Description": "Cache Subnet Group",
+            "SubnetIds": [
+                {
+                    "Ref": "Subnet1"
+                },
+                {
+                    "Ref": "Subnet2"
+                }
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-properties-elasticache-subnetgroup--examples----yaml"></a>
 
 ```
- SubnetGroup: 
-            Type: AWS::ElastiCache::SubnetGroup
-            Properties: 
-            Description: "Cache Subnet Group"
-            SubnetIds: 
-            - Ref: "Subnet1"
-            - Ref: "Subnet2"
+SubnetGroup:
+  Type: 'AWS::ElastiCache::SubnetGroup'
+  Properties:
+    Description: Cache Subnet Group
+    SubnetIds:
+      - !Ref Subnet1
+      - !Ref Subnet2
 ```

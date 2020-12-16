@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3](#cfn-codestar-githubrepository-code-s3)" : [S3](aws-properties-codestar-githubrepository-s3.md)
+  "[S3](#cfn-codestar-githubrepository-code-s3)" : S3
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3](#cfn-codestar-githubrepository-code-s3): 
-    [S3](aws-properties-codestar-githubrepository-s3.md)
+    S3
 ```
 
 ## Properties<a name="aws-properties-codestar-githubrepository-code-properties"></a>

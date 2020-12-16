@@ -1,6 +1,6 @@
-# ElastiCache Resource Type Reference<a name="AWS_ElastiCache"></a>
+# ElastiCache resource type reference<a name="AWS_ElastiCache"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)
 + [AWS::ElastiCache::ParameterGroup](aws-properties-elasticache-parameter-group.md)
 + [AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)

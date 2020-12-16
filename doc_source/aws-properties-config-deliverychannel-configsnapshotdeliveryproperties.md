@@ -47,5 +47,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The frequency with which AWS Config delivers configuration snapshots\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

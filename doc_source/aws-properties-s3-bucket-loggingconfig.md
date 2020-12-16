@@ -1,6 +1,6 @@
 # AWS::S3::Bucket LoggingConfiguration<a name="aws-properties-s3-bucket-loggingconfig"></a>
 
-Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for a bucket\. For more information, see [PUT Bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlogging.html) in the *Amazon Simple Storage Service API Reference*\.
+Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for a bucket\. For examples and more information, see [PUT Bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlogging.html) in the *Amazon Simple Storage Service API Reference*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-loggingconfig-syntax"></a>
 
@@ -35,3 +35,7 @@ A prefix for all log object keys\. If you store log files from multiple Amazon S
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-loggingconfig--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

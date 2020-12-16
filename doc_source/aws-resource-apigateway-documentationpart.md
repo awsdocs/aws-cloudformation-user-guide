@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::DocumentationPart",
   "Properties" : {
-      "[Location](#cfn-apigateway-documentationpart-location)" : [Location](aws-properties-apigateway-documentationpart-location.md),
+      "[Location](#cfn-apigateway-documentationpart-location)" : Location,
       "[Properties](#cfn-apigateway-documentationpart-properties)" : String,
       "[RestApiId](#cfn-apigateway-documentationpart-restapiid)" : String
     }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::DocumentationPart
 Properties: 
   [Location](#cfn-apigateway-documentationpart-location): 
-    [Location](aws-properties-apigateway-documentationpart-location.md)
+    Location
   [Properties](#cfn-apigateway-documentationpart-properties): String
   [RestApiId](#cfn-apigateway-documentationpart-restapiid): String
 ```
@@ -50,7 +50,7 @@ The identifier of the targeted API entity\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-apigateway-documentationpart-return-values"></a>
+## Return values<a name="aws-resource-apigateway-documentationpart-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-documentationpart-return-values-ref"></a>
 
@@ -59,6 +59,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-documentationpart--examples"></a>
+
+
 
 ### Associate documentation part with documentation version<a name="aws-resource-apigateway-documentationpart--examples--Associate_documentation_part_with_documentation_version"></a>
 
@@ -164,5 +166,6 @@ Resources:
     DependsOn: DocumentationPart
 ```
 
-## See Also<a name="aws-resource-apigateway-documentationpart--seealso"></a>
+## See also<a name="aws-resource-apigateway-documentationpart--seealso"></a>
 + [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*
+

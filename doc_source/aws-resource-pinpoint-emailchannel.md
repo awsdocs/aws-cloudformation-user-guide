@@ -1,6 +1,8 @@
 # AWS::Pinpoint::EmailChannel<a name="aws-resource-pinpoint-emailchannel"></a>
 
-Updates the status and settings of the email channel for an application\.
+A *channel* is a type of platform that you can deliver messages to\. You can use the email channel to send email to users\. Before you can use Amazon Pinpoint to send email, you must enable the email channel for an Amazon Pinpoint application\.
+
+The AWS::Pinpoint::EmailChannel resource defines the status, identity, and other settings of the email channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-emailchannel-syntax"></a>
 
@@ -38,13 +40,13 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-emailchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-emailchannel-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you're specifying the email channel for\.  
+The unique identifier for the application that the email channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationSet`  <a name="cfn-pinpoint-emailchannel-configurationset"></a>
-The configuration set that you want to apply to email that you send through the channel by using the [Amazon Pinpoint Email API](emailAPIreference.html)\.  
+The configuration set that you want to apply to email that you send through the channel by using the Amazon Pinpoint Email API\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,10 +75,10 @@ The ARN of the AWS Identity and Access Management \(IAM\) role that you want Ama
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-emailchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-emailchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-emailchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

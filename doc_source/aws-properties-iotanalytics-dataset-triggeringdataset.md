@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset TriggeringDataset<a name="aws-properties-iotanalytics-dataset-triggeringdataset"></a>
 
-Information about the data set whose content generation triggers the new data set content generation\.
+Information about the dataset whose content generation triggers the new dataset content generation\.
 
 ## Syntax<a name="aws-properties-iotanalytics-dataset-triggeringdataset-syntax"></a>
 

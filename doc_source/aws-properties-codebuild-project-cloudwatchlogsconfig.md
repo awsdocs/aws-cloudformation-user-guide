@@ -38,7 +38,7 @@ The current status of the logs in Amazon CloudWatch Logs for a build project\. V
 +  `DISABLED`: Amazon CloudWatch Logs are not enabled for this build project\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamName`  <a name="cfn-codebuild-project-cloudwatchlogsconfig-streamname"></a>
@@ -47,5 +47,5 @@ The current status of the logs in Amazon CloudWatch Logs for a build project\. V
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-cloudwatchlogsconfig--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-cloudwatchlogsconfig--seealso"></a>
 +  [ CloudWatchLogsConfig](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_CloudWatchLogsConfig.html) in the *AWS CodeBuild API Reference* 

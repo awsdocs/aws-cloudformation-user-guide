@@ -1,8 +1,8 @@
 # AWS::Pinpoint::BaiduChannel<a name="aws-resource-pinpoint-baiduchannel"></a>
 
-A *channel* is a type of platform that you can deliver messages to\. You can use the Baidu channel to send notifications to the Baidu notification service\. Before you use Amazon Pinpoint to send notifications to Baidu, you have to enable the Baidu channel for an Amazon Pinpoint app\.
+A *channel* is a type of platform that you can deliver messages to\. You can use the Baidu channel to send notifications to the Baidu Cloud Push notification service\. Before you can use Amazon Pinpoint to send notifications to the Baidu Cloud Push service, you have to enable the Baidu channel for an Amazon Pinpoint application\.
 
-The Baidu Channel resource represents the status and authentication settings of the Baidu channel for a specific application\. You can use this resource to retrieve information about, update, or disable \(delete\) the Baidu channel for an app\.
+The AWS::Pinpoint::BaiduChannel resource defines the status and authentication settings of the Baidu channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-baiduchannel-syntax"></a>
 
@@ -42,7 +42,7 @@ The API key that you received from the Baidu Cloud Push service to communicate w
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationId`  <a name="cfn-pinpoint-baiduchannel-applicationid"></a>
-The unique ID of the Amazon Pinpoint app that you're configuring the Baidu channel for\.  
+The unique identifier for the application that the Baidu channel applies to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -59,10 +59,10 @@ The secret key that you received from the Baidu Cloud Push service to communicat
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-baiduchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-baiduchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-baiduchannel-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the Amazon Pinpoint app that the channel is associated with\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application that the channel is associated with\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

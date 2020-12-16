@@ -47,7 +47,7 @@ The current revision id for the robot application\. If you provide a value and i
 *Pattern*: `[a-zA-Z0-9_.\-]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-robomaker-robotapplicationversion-return-values"></a>
+## Return values<a name="aws-resource-robomaker-robotapplicationversion-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robotapplicationversion-return-values-ref"></a>
 
@@ -56,6 +56,8 @@ When you pass the logical ID of an `AWS::RoboMaker::RobotApplicationVersion` res
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-robomaker-robotapplicationversion--examples"></a>
+
+
 
 ### Create an AWS RoboMaker Robot Application Version<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version"></a>
 

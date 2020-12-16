@@ -2,6 +2,8 @@
 
  Describes application output configuration in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be an Amazon Kinesis stream or an Amazon Kinesis Firehose delivery stream\. 
 
+
+
 For limits on how many destinations an application can write and other limitations, see [Limits](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html)\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-output-syntax"></a>
@@ -12,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DestinationSchema](#cfn-kinesisanalytics-applicationoutput-output-destinationschema)" : [DestinationSchema](aws-properties-kinesisanalytics-applicationoutput-destinationschema.md),
-  "[KinesisFirehoseOutput](#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput)" : [KinesisFirehoseOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.md),
-  "[KinesisStreamsOutput](#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput)" : [KinesisStreamsOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.md),
-  "[LambdaOutput](#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput)" : [LambdaOutput](aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.md),
+  "[DestinationSchema](#cfn-kinesisanalytics-applicationoutput-output-destinationschema)" : DestinationSchema,
+  "[KinesisFirehoseOutput](#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput)" : KinesisFirehoseOutput,
+  "[KinesisStreamsOutput](#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput)" : KinesisStreamsOutput,
+  "[LambdaOutput](#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput)" : LambdaOutput,
   "[Name](#cfn-kinesisanalytics-applicationoutput-output-name)" : String
 }
 ```
@@ -24,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DestinationSchema](#cfn-kinesisanalytics-applicationoutput-output-destinationschema): 
-    [DestinationSchema](aws-properties-kinesisanalytics-applicationoutput-destinationschema.md)
+    DestinationSchema
   [KinesisFirehoseOutput](#cfn-kinesisanalytics-applicationoutput-output-kinesisfirehoseoutput): 
-    [KinesisFirehoseOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.md)
+    KinesisFirehoseOutput
   [KinesisStreamsOutput](#cfn-kinesisanalytics-applicationoutput-output-kinesisstreamsoutput): 
-    [KinesisStreamsOutput](aws-properties-kinesisanalytics-applicationoutput-kinesisstreamsoutput.md)
+    KinesisStreamsOutput
   [LambdaOutput](#cfn-kinesisanalytics-applicationoutput-output-lambdaoutput): 
-    [LambdaOutput](aws-properties-kinesisanalytics-applicationoutput-lambdaoutput.md)
+    LambdaOutput
   [Name](#cfn-kinesisanalytics-applicationoutput-output-name): String
 ```
 

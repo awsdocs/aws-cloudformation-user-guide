@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ExcludedTimeRanges](#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)" : [ [Range](aws-properties-cloudwatch-anomalydetector-range.md), ... ],
+  "[ExcludedTimeRanges](#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges)" : [ Range, ... ],
   "[MetricTimeZone](#cfn-cloudwatch-anomalydetector-configuration-metrictimezone)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ExcludedTimeRanges](#cfn-cloudwatch-anomalydetector-configuration-excludedtimeranges): 
-    - [Range](aws-properties-cloudwatch-anomalydetector-range.md)
+    - Range
   [MetricTimeZone](#cfn-cloudwatch-anomalydetector-configuration-metrictimezone): String
 ```
 

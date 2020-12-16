@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
       "[Role](#cfn-glue-crawler-role)" : String,
-      "[Schedule](#cfn-glue-crawler-schedule)" : [Schedule](aws-properties-glue-crawler-schedule.md),
-      "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md),
+      "[Schedule](#cfn-glue-crawler-schedule)" : Schedule,
+      "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : SchemaChangePolicy,
       "[TablePrefix](#cfn-glue-crawler-tableprefix)" : String,
       "[Tags](#cfn-glue-crawler-tags)" : Json,
-      "[Targets](#cfn-glue-crawler-targets)" : [Targets](aws-properties-glue-crawler-targets.md)
+      "[Targets](#cfn-glue-crawler-targets)" : Targets
     }
 }
 ```
@@ -42,13 +42,13 @@ Properties:
   [Name](#cfn-glue-crawler-name): String
   [Role](#cfn-glue-crawler-role): String
   [Schedule](#cfn-glue-crawler-schedule): 
-    [Schedule](aws-properties-glue-crawler-schedule.md)
+    Schedule
   [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
-    [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
+    SchemaChangePolicy
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
   [Tags](#cfn-glue-crawler-tags): Json
   [Targets](#cfn-glue-crawler-targets): 
-    [Targets](aws-properties-glue-crawler-targets.md)
+    Targets
 ```
 
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
@@ -73,7 +73,7 @@ The name of the `SecurityConfiguration` structure to be used by this crawler\.
 
 `DatabaseName`  <a name="cfn-glue-crawler-databasename"></a>
 The name of the database in which the crawler's output is stored\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -114,7 +114,7 @@ The prefix added to the names of tables that are created\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-glue-crawler-tags"></a>
-The tags to use with this crawler request\. You can use tags to limit access to the crawler\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.  
+The tags to use with this crawler\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -125,7 +125,7 @@ A collection of targets to crawl\.
 *Type*: [Targets](aws-properties-glue-crawler-targets.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-crawler-return-values"></a>
+## Return values<a name="aws-resource-glue-crawler-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-crawler-return-values-ref"></a>
 
@@ -134,6 +134,8 @@ A collection of targets to crawl\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-crawler--examples"></a>
+
+
 
 ### <a name="aws-resource-glue-crawler--examples--"></a>
 
@@ -351,4 +353,23 @@ The following example specifies a configuration that controls a crawler's behavi
         "Configuration": "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
     }
 }
+```
+
+#### YAML<a name="aws-resource-glue-crawler--examples--Crawler_Configuration--yaml"></a>
+
+```
+Type: AWS::Glue::Crawler
+Properties:
+  Role: role1
+  Classifiers:
+    - ''
+  Description: example classifier
+  SchemaChangePolicy: ''
+  Schedule: Schedule
+  DatabaseName: test
+  Targets:
+    - ''
+  TablePrefix: test-
+  Name: my-crawler
+  Configuration: "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"},\"Tables\":{\"AddOrUpdateBehavior\":\"MergeNewColumns\"}}}"
 ```

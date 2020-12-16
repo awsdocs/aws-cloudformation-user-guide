@@ -1,6 +1,9 @@
 # AWS::AppMesh::VirtualNode AwsCloudMapInstanceAttribute<a name="aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute"></a>
 
-An object representing the AWS Cloud Map attribute information for your virtual node\.
+An object that represents the AWS Cloud Map attribute information for your virtual node\.
+
+**Note**  
+AWS Cloud Map is not available in the eu\-south\-1 Region\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute-syntax"></a>
 

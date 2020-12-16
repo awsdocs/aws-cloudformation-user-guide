@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KinesisAnalytics::ApplicationOutput",
   "Properties" : {
       "[ApplicationName](#cfn-kinesisanalytics-applicationoutput-applicationname)" : String,
-      "[Output](#cfn-kinesisanalytics-applicationoutput-output)" : [Output](aws-properties-kinesisanalytics-applicationoutput-output.md)
+      "[Output](#cfn-kinesisanalytics-applicationoutput-output)" : Output
     }
 }
 ```
@@ -35,7 +35,7 @@ Type: AWS::KinesisAnalytics::ApplicationOutput
 Properties: 
   [ApplicationName](#cfn-kinesisanalytics-applicationoutput-applicationname): String
   [Output](#cfn-kinesisanalytics-applicationoutput-output): 
-    [Output](aws-properties-kinesisanalytics-applicationoutput-output.md)
+    Output
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-applicationoutput-properties"></a>
@@ -56,6 +56,8 @@ An array of objects, each describing one output configuration\. In the output co
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationoutput--examples"></a>
+
+
 
 ### Adding an ApplicationOutput Resource<a name="aws-resource-kinesisanalytics-applicationoutput--examples--Adding_an_ApplicationOutput_Resource"></a>
 
