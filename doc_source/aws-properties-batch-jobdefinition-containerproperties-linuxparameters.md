@@ -63,7 +63,13 @@ This parameter isn't applicable to jobs running on Fargate resources and shouldn
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Swappiness`  <a name="cfn-batch-jobdefinition-containerproperties-linuxparameters-swappiness"></a>
-This allows you to tune a container's memory swappiness behavior\. A `swappiness` value of `0` causes swapping not to happen unless absolutely necessary\. A `swappiness` value of `100` causes pages to be swapped very aggressively\. Accepted values are whole numbers between `0` and `100`\. If the `swappiness` parameter isn't specified, a default value of `60` is used\. If a value isn't specified for `maxSwap` then this parameter is ignored\. This parameter maps to the `--memory-swappiness` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+This allows you to tune a container's memory swappiness behavior\. A `swappiness` value of `0` causes swapping not to happen unless absolutely necessary\. A `swappiness` value of `100` causes pages to be swapped very aggressively\. Accepted values are whole numbers between `0` and `100`\. If the `swappiness` parameter isn't specified, a default value of `60` is used\. If a value isn't specified for `maxSwap` then this parameter is ignored\. If `maxSwap` is set to 0, the container doesn't use swap\. This parameter maps to the `--memory-swappiness` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
+Consider the following when you use a per\-container swap configuration\.  
++ Swap space must be enabled and allocated on the container instance for the containers to use\.
+**Note**  
+The Amazon ECS optimized AMIs don't have swap enabled by default\. You must enable swap on the instance to use this feature\. For more information, see [Instance Store Swap Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-store-swap-volumes.html) in the *Amazon EC2 User Guide for Linux Instances* or [How do I allocate memory to work as swap space in an Amazon EC2 instance by using a swap file?](http://aws.amazon.com/premiumsupport/knowledge-center/ec2-memory-swap-file/) 
++ The swap space parameters are only supported for job definitions using EC2 resources\.
++ If the `maxSwap` and `swappiness` parameters are omitted from a job definition, each container will have a default `swappiness` value of 60 and the total swap usage will be limited to two times the memory reservation of the container\.
 This parameter isn't applicable to jobs running on Fargate resources and shouldn't be provided\.
 *Required*: No  
 *Type*: Integer  

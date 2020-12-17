@@ -17,6 +17,10 @@ Use the `FlexMatchMode` property to specify that the matchmaker is for a standal
  [AWS::Lambda::EventSourceMapping\.BatchSize](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize)   
 The `BatchSize` has been increased for standard SQS queues, and allows for the use of a `MaximumBatchingWindowInSeconds`\.  | November 24, 2020 | 
 | [Modules](#ReleaseHistory) | Modules are a way for you to package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way\. Modules can encapsulate common service configurations and best practices as modular, customizable building blocks for you to include in your stack templates\. For more information, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html)\. | November 24, 2020 | 
+| [New resource](AWS_Lambda.md) | The following resource was added: AWS::Lambda::CodeSigningConfig\. 
+
+ [AWS::Lambda::CodeSigningConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html)   
+Use the `CodeSigningConfig` resource to specify code\-signing capability to your Lambda functions\.  | November 23, 2020 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
 
  [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
@@ -177,10 +181,6 @@ Use the `ContactList` resource to create a list that contains contacts that have
 
  [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
 Amazon MQ now supports RabbitMQ broker engine\.  | November 4, 2020 | 
-| [Updated resource](AWS_GlobalAccelerator.md) | The following resource was updated: AWS::GlobalAccelerator::EndpointGroup\. 
-
- [ AWS::GlobalAccelerator::EndpointGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)   
-Use the `PortOverride` property to override the listener port used for routing traffic to endpoints\.  | October 29, 2020 | 
 | [New resources](AWS_IVS.md) | The following resources were added: AWS::IVS::Channel, AWS::IVS::StreamKey, and AWS::IVS::PlaybackKeyPair 
 
  [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
@@ -707,6 +707,16 @@ Use the `ReplaceProvisioningArtifacts` property to choose whether provisioning a
 
  [AWS::Synthetics::Canary](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)   
 The RunConfig parameter is required\.  | May 14, 2020 | 
+| [New resources](AWS_GlobalAccelerator.md) | The following resources were added: AWS::GlobalAccelerator::Accelerator, AWS::GlobalAccelerator::EndpointGroup, and AWS::GlobalAccelerator::Listener 
+
+ [ AWS::GlobalAccelerator::Accelerator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html)   
+Use the `AWS::GlobalAccelerator::Accelerator` resource to create or update an accelerator for AWS Global Accelerator\. 
+
+ [ AWS::GlobalAccelerator::EndpointGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)   
+Use the `AWS::GlobalAccelerator::EndpointGroup` resource to create or update an endpoint group for AWS Global Accelerator\. 
+
+ [ AWS::GlobalAccelerator::Listener](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)   
+Use the `AWS::GlobalAccelerator::Listener` resource to create or update a listener for AWS Global Accelerator\.  | May 14, 2020 | 
 | [New resources](AWS_Macie.md) | The following resources were added: AWS::Macie::CustomDataIdentifier, AWS::Macie::FindingsFilter, and AWS::Macie::Session 
 
  [AWS::Macie::CustomDataIdentifier](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html)   

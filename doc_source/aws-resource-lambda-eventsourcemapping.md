@@ -184,7 +184,7 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
- \(MSK\) The name of the Kafka topic to consume\.   
+The name of the Kafka topic\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  

@@ -89,12 +89,10 @@ Information about the policies assigned to a parameter\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ssm-parameter-tags"></a>
-
 Optional metadata that you assign to a resource in the form of an arbitrary set of tags \(key\-value pairs\)\. Tags enable you to categorize a resource in different ways, such as by purpose, owner, or environment\. For example, you might want to tag a Systems Manager parameter to identify the type of resource to which it applies, the environment, or the type of configuration data referenced by the parameter\.  
 *Required*: No  
 *Type*: Json  
 *Maximum*: `1000`  
-
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tier`  <a name="cfn-ssm-parameter-tier"></a>
@@ -223,7 +221,6 @@ Resources:
       AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
-
 ### Create an advanced tier parameter and assign a policy<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy"></a>
 
 The following example creates a Systems Manager advanced tier parameter named command with a `String` type and a parameter policy\.
@@ -275,4 +272,3 @@ Resources:
 +  [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) 
 +  [About Advanced Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html)
 +  [Working with Parameter Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) 
-

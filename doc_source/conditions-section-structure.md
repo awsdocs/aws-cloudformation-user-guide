@@ -61,7 +61,7 @@ For the syntax and information about each function, see [Condition functions](in
 
 ## Examples<a name="conditions-section-structure-examples"></a>
 
-### Simple Condition
+### Simple condition<a name="w7466ab1c27c15c23c17b3"></a>
 
 The following sample template includes an `EnvType` input parameter, where you can specify `prod` to create a stack for production or `test` to create a stack for testing\. For a production environment, AWS CloudFormation creates an Amazon EC2 instance and attaches a volume to the instance\. For a test environment, AWS CloudFormation creates only the Amazon EC2 instance\.
 
@@ -71,169 +71,206 @@ The `CreateProdResources` condition evaluates to `true` if the `EnvType` paramet
 
 ```
 {
-  "AWSTemplateFormatVersion" : "2010-09-09",
-
-  "Parameters" : {
-    "EnvType" : {
-      "Description" : "Environment type.",
-      "Default" : "test",
-      "Type" : "String",
-      "AllowedValues" : ["prod", "test"],
-      "ConstraintDescription" : "must specify prod or test."
-    }
-  },
-  
-  "Conditions" : {
-    "CreateProdResources" : {"Fn::Equals" : [{"Ref" : "EnvType"}, "prod"]}
-  },
-  
-  "Resources" : {
-    "EC2Instance" : {
-      "Type" : "AWS::EC2::Instance",
-      "Properties" : {
-        "ImageId" : "ami-0ff8a91507f77f867"
-      }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "EnvType": {
+            "Description": "Environment type.",
+            "Default": "test",
+            "Type": "String",
+            "AllowedValues": [
+                "prod",
+                "test"
+            ],
+            "ConstraintDescription": "must specify prod or test."
+        }
     },
-    
-    "MountPoint" : {
-      "Type" : "AWS::EC2::VolumeAttachment",
-      "Condition" : "CreateProdResources",
-      "Properties" : {
-        "InstanceId" : { "Ref" : "EC2Instance" },
-        "VolumeId"  : { "Ref" : "NewVolume" },
-        "Device" : "/dev/sdh"
-      }
+    "Conditions": {
+        "CreateProdResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "EnvType"
+                },
+                "prod"
+            ]
+        }
     },
-
-    "NewVolume" : {
-      "Type" : "AWS::EC2::Volume",
-      "Condition" : "CreateProdResources",
-      "Properties" : {
-        "Size" : "100",
-        "AvailabilityZone" : { "Fn::GetAtt" : [ "EC2Instance", "AvailabilityZone" ]}
-      }
+    "Resources": {
+        "EC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-0ff8a91507f77f867"
+            }
+        },
+        "MountPoint": {
+            "Type": "AWS::EC2::VolumeAttachment",
+            "Condition": "CreateProdResources",
+            "Properties": {
+                "InstanceId": {
+                    "Ref": "EC2Instance"
+                },
+                "VolumeId": {
+                    "Ref": "NewVolume"
+                },
+                "Device": "/dev/sdh"
+            }
+        },
+        "NewVolume": {
+            "Type": "AWS::EC2::Volume",
+            "Condition": "CreateProdResources",
+            "Properties": {
+                "Size": 100,
+                "AvailabilityZone": {
+                    "Fn::GetAtt": [
+                        "EC2Instance",
+                        "AvailabilityZone"
+                    ]
+                }
+            }
+        }
     }
-  }
 }
 ```
 
 #### YAML<a name="conditions-section-structure-example.yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Parameters: 
-  EnvType: 
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  EnvType:
     Description: Environment type.
     Default: test
     Type: String
-    AllowedValues: 
+    AllowedValues:
       - prod
       - test
     ConstraintDescription: must specify prod or test.
-Conditions: 
-  CreateProdResources: !Equals [ !Ref EnvType, prod ]
-Resources: 
-  EC2Instance: 
-    Type: "AWS::EC2::Instance"
-    Properties: 
+Conditions:
+  CreateProdResources: !Equals 
+    - !Ref EnvType
+    - prod
+Resources:
+  EC2Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
       ImageId: ami-0ff8a91507f77f867
-  MountPoint: 
-    Type: "AWS::EC2::VolumeAttachment"
+  MountPoint:
+    Type: 'AWS::EC2::VolumeAttachment'
     Condition: CreateProdResources
-    Properties: 
-      InstanceId: 
-        !Ref EC2Instance
-      VolumeId: 
-        !Ref NewVolume
+    Properties:
+      InstanceId: !Ref EC2Instance
+      VolumeId: !Ref NewVolume
       Device: /dev/sdh
-  NewVolume: 
-    Type: "AWS::EC2::Volume"
+  NewVolume:
+    Type: 'AWS::EC2::Volume'
     Condition: CreateProdResources
-    Properties: 
+    Properties:
       Size: 100
-      AvailabilityZone: 
-        !GetAtt EC2Instance.AvailabilityZone
+      AvailabilityZone: !GetAtt 
+        - EC2Instance
+        - AvailabilityZone
 ```
 
-### Nested Conditions
+#### Nested condition<a name="w7466ab1c27c15c23c17b3c11"></a>
 
-Sometimes you may want to make up one condition from several sub conditions. While you can simply duplicate the sub condition logic into the parent condition, it is also possible to reference conditions within another condition.
+The following sample template references a condition within another condition\. You can create a stack that creates an s3 bucket\. For a stack deployed in a production environment, AWS CloudFormation creates a policy for the S3 bucket\.
 
-In this example, we have a stack that optionally creates a S3 bucket. A policy for the bucket is created, but only when the bucket exists *and* the stack is deployed in production.
-
-#### JSON<a name="nested-conditions-example.json"></a>
+##### JSON<a name="conditions-section-structure-example-nested.json"></a>
 
 ```
 {
-  "AWSTemplateFormatVersion" : "2010-09-09",
-
-  "Parameters" : {
-    "EnvType" : {
-      "Type" : "String",
-      "AllowedValues" : ["prod", "test"],
+    "Parameters": {
+        "EnvType": {
+            "Type": "String",
+            "AllowedValues": [
+                "prod",
+                "test"
+            ]
+        },
+        "BucketName": {
+            "Default": "",
+            "Type": "String"
+        }
     },
-    "BucketName" : {
-      "Type" : "String",
-      "Default": ""
-    }
-  },
-  
-  "Conditions" : {
-    "IsProduction" : {"Fn::Equals" : [{"Ref" : "EnvType"}, "prod"]},
-    "CreateBucket" : {"Fn::Not" : [{"Fn::Equals" : [{"Ref" : "BucketName"}, ""]}]},
-    "CreateBucketPolicy" : {"Fn::And" : [
-      {"Condition" : "IsProduction"},
-      {"Condition" : "CreateBucket"}
-    ]
-  },
-  
-  "Resources" : {
-    "Bucket" : {
-      "Type" : "AWS::S3::Bucket",
-      "Condition" : "CreateBucket",
-      "Properties" : {
-        "ImageId" : "ami-0ff8a91507f77f867"
-      }
+    "Conditions": {
+        "IsProduction": {
+            "Fn::Equals": [
+                {
+                    "Ref": "EnvType"
+                },
+                "prod"
+            ]
+        },
+        "CreateBucket": {
+            "Fn::Not": [
+                {
+                    "Fn::Equals": [
+                        {
+                            "Ref": "BucketName"
+                        },
+                        ""
+                    ]
+                }
+            ]
+        },
+        "CreateBucketPolicy": {
+            "Fn::And": [
+                {
+                    "Condition": "IsProduction"
+                },
+                {
+                    "Condition": "CreateBucket"
+                }
+            ]
+        }
     },
-    "Policy" : {
-      "Type" : "AWS::S3::BucketPolicy",
-      "Condition" : "CreateBucketPolicy",
-      "Properties" : {
-        "Bucket" : {"Ref": "Bucket"},
-        "PolicyDocument" : "..."
-      }
+    "Resources": {
+        "Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Condition": "CreateBucket"
+        },
+        "Policy": {
+            "Type": "AWS::S3::BucketPolicy",
+            "Condition": "CreateBucketAlarm",
+            "Properties": {
+                "Bucket": {
+                    "Ref": "Bucket"
+                },
+                "PolicyDocument": "..."
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="nested-conditions-example.yaml"></a>
+##### YAML<a name="conditions-section-structure-example-nested.yaml"></a>
 
 ```
 Parameters:
   EnvType:
     Type: String
-    AllowedValues: 
+    AllowedValues:
       - prod
       - test
   BucketName:
-    Default: ""
+    Default: ''
     Type: String
-
 Conditions:
-  IsProduction: !Equals [ !Ref EnvType, prod ]
-  CreateBucket: !Not [ !Equals [ !Ref BucketName, "" ] ]
-  CreateBucketPolicy: !And
-    - Condition: IsProduction
-    - Condition: CreateBucket
-    
+  IsProduction: !Equals 
+    - !Ref EnvType
+    - prod
+  CreateBucket: !Not 
+    - !Equals 
+      - !Ref BucketName
+      - ''
+  CreateBucketPolicy: !And 
+    - !Condition IsProduction
+    - !Condition CreateBucket
 Resources:
   Bucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Condition: CreateBucket
-    
   Policy:
-    Type: AWS::S3::BucketPolicy
+    Type: 'AWS::S3::BucketPolicy'
     Condition: CreateBucketAlarm
     Properties:
       Bucket: !Ref Bucket

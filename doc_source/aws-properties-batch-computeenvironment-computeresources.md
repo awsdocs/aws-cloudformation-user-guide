@@ -75,7 +75,7 @@ With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` strategies, AWS B
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BidPercentage`  <a name="cfn-batch-computeenvironment-computeresources-bidpercentage"></a>
-The maximum percentage that a Spot Instance price can be when compared with the On\-Demand price for that instance type before instances are launched\. For example, if your maximum percentage is 20%, then the Spot price must be below 20% of the current On\-Demand price for that Amazon EC2 instance\. You always pay the lowest \(market\) price and never more than your maximum percentage\. If you leave this field empty, the default value is 100% of the On\-Demand price\.  
+The maximum percentage that a Spot Instance price can be when compared with the On\-Demand price for that instance type before instances are launched\. For example, if your maximum percentage is 20%, then the Spot price must be less than 20% of the current On\-Demand price for that Amazon EC2 instance\. You always pay the lowest \(market\) price and never more than your maximum percentage\. If you leave this field empty, the default value is 100% of the On\-Demand price\.  
 This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: Integer  
@@ -89,13 +89,14 @@ This parameter isn't applicable to jobs running on Fargate resources, and should
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ec2Configuration`  <a name="cfn-batch-computeenvironment-computeresources-ec2configuration"></a>
-Not currently supported by AWS CloudFormation\.  
+Provides information used to select Amazon Machine Images \(AMIs\) for EC2 instances in the compute environment\. If `Ec2Configuration` isn't specified, the default is `ECS_AL1`\.  
+This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: List of [Ec2ConfigurationObject](aws-properties-batch-computeenvironment-ec2configurationobject.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2KeyPair`  <a name="cfn-batch-computeenvironment-computeresources-ec2keypair"></a>
-The Amazon EC2 key pair that is used for instances launched in the compute environment\. You can use this key pair to log in to your instances with SSH\.  
+The Amazon EC2 key pair that's used for instances launched in the compute environment\. You can use this key pair to log in to your instances with SSH\.  
 This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: String  
@@ -117,22 +118,24 @@ This parameter isn't applicable to jobs running on Fargate resources, and should
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypes`  <a name="cfn-batch-computeenvironment-computeresources-instancetypes"></a>
-The instances types that may be launched\. You can specify instance families to launch any instance type within those families \(for example, `c5` or `p3`\), or you can specify specific sizes within a family \(such as `c5.8xlarge`\)\. You can also choose `optimal` to select instance types \(from the C, M, and R instance families\) on the fly that match the demand of your job queues\.  
+The instances types that can be launched\. You can specify instance families to launch any instance type within those families \(for example, `c5` or `p3`\), or you can specify specific sizes within a family \(such as `c5.8xlarge`\)\. You can also choose `optimal` to select instance types \(from the C4, M4, and R4 instance families\) on the fly that match the demand of your job queues\.  
 This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 When you create a compute environment, the instance types that you select for the compute environment must share the same architecture\. For example, you can't mix x86 and ARM instances in the same compute environment\.
+Currently, `optimal` uses instance types from the C4, M4, and R4 instance families\. In Regions that don't have instance types from those instance families, instance types from the C5, M5\. and R5 instance families are used\.
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchTemplate`  <a name="cfn-batch-computeenvironment-computeresources-launchtemplate"></a>
 The launch template to use for your compute resources\. Any other compute resource parameters that you specify in a [CreateComputeEnvironment](https://docs.aws.amazon.com/batch/latest/APIReference/API_CreateComputeEnvironment.html) API operation override the same parameters in the launch template\. You must specify either the launch template ID or launch template name in the request, but not both\. For more information, see [Launch Template Support](https://docs.aws.amazon.com/batch/latest/userguide/launch-templates.html) in the *AWS Batch User Guide*\.  
+This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: [LaunchTemplateSpecification](aws-properties-batch-computeenvironment-launchtemplatespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxvCpus`  <a name="cfn-batch-computeenvironment-computeresources-maxvcpus"></a>
 The maximum number of Amazon EC2 vCPUs that an environment can reach\.  
-With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies, AWS Batch may need to go above `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch will never go above `maxvCpus` by more than a single instance \(e\.g\., no more than a single instance from among those specified in your compute environment\)\.
+With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies, AWS Batch might need to go above `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch will never go above `maxvCpus` by more than a single instance \(e\.g\., no more than a single instance from among those specified in your compute environment\)\.
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -172,7 +175,8 @@ The VPC subnets into which the compute resources are launched\. These subnets mu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>
-Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value—for example, \{ "Name": "AWS Batch Instance \- C4OnDemand" \}\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags can't be updated or removed after the compute environment has been created; any changes require creating a new compute environment and removing the old compute environment\. These tags are not seen when using the AWS Batch `ListTagsForResource` API operation\.  
+Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, \{ "Name": "AWS Batch Instance \- C4OnDemand" \}\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags can't be updated or removed after the compute environment has been created; any changes require creating a new compute environment and removing the old compute environment\. These tags are not seen when using the AWS Batch `ListTagsForResource` API operation\.  
+This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

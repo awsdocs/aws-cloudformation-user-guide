@@ -27,11 +27,9 @@ Version 2\.0\-1 and above of the helper scripts support Python 3\.4 and above\. 
 
 | File format | Download URL | 
 | --- | --- | 
-
 |  TAR\.GZ  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-py3\-latest\.tar\.gz](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.tar.gz) Uses the Python easy\-install tools\. To complete the installation for Ubuntu, you must create a symlink: `ln -s /root/aws-cfn-bootstrap-latest/init/ubuntu/cfn-hup /etc/init.d/cfn-hup`  | 
 |  ZIP  |  [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-py3\-latest\.zip](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.zip)  | 
 |  EXE  |  32\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-py3\-latest\.exe](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.exe)  64\-bit Windows: [ https://s3\.amazonaws\.com/cloudformation\-examples/aws\-cfn\-bootstrap\-py3\-win64\-latest\.exe](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-win64-latest.exe)  | 
-
 
 ## Permissions for helper scripts<a name="cfn-helper-scripts-reference-permissions"></a>
 

@@ -4,8 +4,7 @@ AWS CloudFormation StackSets extends the functionality of stacks by enabling you
 
 ![\[A stack set is a collection of resources, defined in a template and deployed into one or more accounts across one or more regions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stack_set_conceptual_sv.png)
 
-AWS CloudFormation StackSets is supported in the following AWS Regions:
-US East (N. Virginia, Ohio), US West (N. California, Oregon), South America (Sao Paulo), EU (Ireland, Frankfurt, London, Paris, Stockholm), Asia Pacific (Singapore, Tokyo, Sydney, Seoul, Mumbai, Hong Kong), Canada (Central), and both AWS GovCloud (US) Regions.
+For information about StackSets region support see, [StackSets regional support](https://docs.aws.amazon.com/general/latest/gr/cfn.html#regional-support-stacksets)\.
 
 This section helps you get started using StackSets, and answers common questions about how to work with and troubleshoot stack set creation, updates, and deletion\.
 

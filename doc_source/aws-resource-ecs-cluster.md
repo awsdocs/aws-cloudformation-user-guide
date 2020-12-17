@@ -143,7 +143,7 @@ ECSCluster:
     ClusterName: MyFargateCluster
     CapacityProviders:
       - FARGATE
-        FARGATE_SPOT
+      - FARGATE_SPOT
     DefaultCapacityProviderStrategy:
       - CapacityProvider: FARGATE
         Weight: 1

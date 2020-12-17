@@ -126,7 +126,7 @@ The timeout in minutes of the machine learning transform\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransformEncryption`  <a name="cfn-glue-mltransform-transformencryption"></a>
-Not currently supported by AWS CloudFormation\.  
+The encryption\-at\-rest settings of the transform that apply to accessing user data\. Machine learning transforms can access user data encrypted in Amazon S3 using KMS\.  
 *Required*: No  
 *Type*: [TransformEncryption](aws-properties-glue-mltransform-transformencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

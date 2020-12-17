@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition ContainerProperties<a name="aws-properties-batch-jobdefinition-containerproperties"></a>
 
-Container properties are used in job definitions to describe the container that is launched as part of a job\.
+Container properties are used in job definitions to describe the container that's launched as part of a job\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-containerproperties-syntax"></a>
 
@@ -66,7 +66,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-containerproperties-properties"></a>
 
 `Command`  <a name="cfn-batch-jobdefinition-containerproperties-command"></a>
-The command that is passed to the container\. This parameter maps to `Cmd` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `COMMAND` parameter to [docker run](https://docs.docker.com/engine/reference/run/)\. For more information, see [https://docs\.docker\.com/engine/reference/builder/\#cmd](https://docs.docker.com/engine/reference/builder/#cmd)\.  
+The command that's passed to the container\. This parameter maps to `Cmd` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `COMMAND` parameter to [docker run](https://docs.docker.com/engine/reference/run/)\. For more information, see [https://docs\.docker\.com/engine/reference/builder/\#cmd](https://docs.docker.com/engine/reference/builder/#cmd)\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

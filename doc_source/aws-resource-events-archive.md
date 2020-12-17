@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Events::Archive",
   "Properties" : {
+      "[ArchiveName](#cfn-events-archive-name)" : String,
       "[Description](#cfn-events-archive-description)" : String,
       "[EventPattern](#cfn-events-archive-eventpattern)" : Json,
       "[RetentionDays](#cfn-events-archive-retentiondays)" : Integer,
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Events::Archive
 Properties: 
+  [ArchiveName](#cfn-events-archive-name): String
   [Description](#cfn-events-archive-description): String
   [EventPattern](#cfn-events-archive-eventpattern): Json
   [RetentionDays](#cfn-events-archive-retentiondays): Integer
@@ -32,6 +34,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-events-archive-properties"></a>
+
+`ArchiveName`  <a name="cfn-events-archive-name"></a>
+The name of the archive\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-events-archive-description"></a>
 A description for the archive\.  

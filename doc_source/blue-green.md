@@ -294,7 +294,7 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
     "Transform": [
         "AWS::CodeDeployBlueGreen"
     ],
-   "Hooks": {
+    "Hooks": {
         "CodeDeployBlueGreenHook": {
             "Properties": {
                 "TrafficRoutingConfig": {
@@ -638,6 +638,126 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
                         "Id"
                     ]
                 }
+            },
+            "ALBListenerProdTraffic": {
+                "Type": "AWS::ElasticLoadBalancingV2::Listener",
+                "Properties": {
+                    "DefaultActions": [
+                        {
+                            "Type": "forward",
+                            "ForwardConfig": {
+                                "TargetGroups": [
+                                    {
+                                        "TargetGroupArn": {
+                                            "Ref": "ALBTargetGroupBlue"
+                                        },
+                                        "Weight": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "LoadBalancerArn": {
+                        "Ref": "TestALB"
+                    },
+                    "Port": 80,
+                    "Protocol": "HTTP"
+                }
+            },
+            "ALBListenerProdRule": {
+                "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+                "Properties": {
+                    "Actions": [
+                        {
+                            "Type": "forward",
+                            "ForwardConfig": {
+                                "TargetGroups": [
+                                    {
+                                        "TargetGroupArn": {
+                                            "Ref": "ALBTargetGroupBlue"
+                                        },
+                                        "Weight": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "Conditions": [
+                        {
+                            "Field": "http-header",
+                            "HttpHeaderConfig": {
+                                "HttpHeaderName": "User-Agent",
+                                "Values": [
+                                    "Mozilla"
+                                ]
+                            }
+                        }
+                    ],
+                    "ListenerArn": {
+                        "Ref": "ALBListenerProdTraffic"
+                    },
+                    "Priority": 1
+                }
+            },
+            "ALBListenerTestTraffic": {
+                "Type": "AWS::ElasticLoadBalancingV2::Listener",
+                "Properties": {
+                    "DefaultActions": [
+                        {
+                            "Type": "forward",
+                            "ForwardConfig": {
+                                "TargetGroups": [
+                                    {
+                                        "TargetGroupArn": {
+                                            "Ref": "ALBTargetGroupBlue"
+                                        },
+                                        "Weight": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "LoadBalancerArn": {
+                        "Ref": "TestALB"
+                    },
+                    "Port": 8080,
+                    "Protocol": "HTTP"
+                }
+            },
+            "ALBListenerTestRule": {
+                "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+                "Properties": {
+                    "Actions": [
+                        {
+                            "Type": "forward",
+                            "ForwardConfig": {
+                                "TargetGroups": [
+                                    {
+                                        "TargetGroupArn": {
+                                            "Ref": "ALBTargetGroupBlue"
+                                        },
+                                        "Weight": 1
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "Conditions": [
+                        {
+                            "Field": "http-header",
+                            "HttpHeaderConfig": {
+                                "HttpHeaderName": "User-Agent",
+                                "Values": [
+                                    "Mozilla"
+                                ]
+                            }
+                        }
+                    ],
+                    "ListenerArn": {
+                        "Ref": "ALBListenerTestTraffic"
+                    },
+                    "Priority": 1
+                }
             }
         }
     }
@@ -662,8 +782,8 @@ Hooks:
       TrafficRoutingConfig:
         Type: TimeBasedCanary
         TimeBasedCanary:
-           StepPercentage: 15
-           BakeTimeMins: 5
+          StepPercentage: 15
+          BakeTimeMins: 5
       Applications:
         - Target:
             Type: 'AWS::ECS::Service'
@@ -857,4 +977,62 @@ Resources:
       TaskSetId: !GetAtt 
         - BlueTaskSet
         - Id
+    ALBListenerProdTraffic:
+      Type: 'AWS::ElasticLoadBalancingV2::Listener'
+      Properties:
+        DefaultActions:
+          - Type: forward
+            ForwardConfig:
+              TargetGroups:
+                - TargetGroupArn: !Ref ALBTargetGroupBlue
+                  Weight: 1
+        LoadBalancerArn: !Ref TestALB
+        Port: 80
+        Protocol: HTTP
+    ALBListenerProdRule:
+      Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
+      Properties:
+        Actions:
+          - Type: forward
+            ForwardConfig:
+              TargetGroups:
+                - TargetGroupArn: !Ref ALBTargetGroupBlue
+                  Weight: 1
+        Conditions:
+          - Field: http-header
+            HttpHeaderConfig:
+              HttpHeaderName: User-Agent
+              Values:
+                - Mozilla
+        ListenerArn: !Ref ALBListenerProdTraffic
+        Priority: 1
+    ALBListenerTestTraffic:
+      Type: 'AWS::ElasticLoadBalancingV2::Listener'
+      Properties:
+        DefaultActions:
+          - Type: forward
+            ForwardConfig:
+              TargetGroups:
+                - TargetGroupArn: !Ref ALBTargetGroupBlue
+                  Weight: 1
+        LoadBalancerArn: !Ref TestALB
+        Port: 8080
+        Protocol: HTTP
+    ALBListenerTestRule:
+      Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
+      Properties:
+        Actions:
+          - Type: forward
+            ForwardConfig:
+              TargetGroups:
+                - TargetGroupArn: !Ref ALBTargetGroupBlue
+                  Weight: 1
+        Conditions:
+          - Field: http-header
+            HttpHeaderConfig:
+              HttpHeaderName: User-Agent
+              Values:
+                - Mozilla
+        ListenerArn: !Ref ALBListenerTestTraffic
+        Priority: 1
 ```
