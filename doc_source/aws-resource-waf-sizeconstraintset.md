@@ -1,12 +1,10 @@
 # AWS::WAF::SizeConstraintSet<a name="aws-resource-waf-sizeconstraintset"></a>
 
-The `AWS::WAF::SizeConstraintSet` resource specifies a size constraint that AWS WAF uses to check the size of a web request and which parts of the request to check\. For more information, see [CreateSizeConstraintSet](http://docs.aws.amazon.com/waf/latest/APIReference/API_CreateSizeConstraintSet.html) in the *AWS WAF API Reference*\.
+**Note**  
+This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
 
-
-+ [Syntax](#aws-resource-waf-sizeconstraintset-syntax)
-+ [Properties](#w3ab2c21c10e1079b9)
-+ [Return Value](#w3ab2c21c10e1079c11)
-+ [Examples](#w3ab2c21c10e1079c13)
+A complex type that contains `SizeConstraint` objects, which specify the parts of web requests that you want AWS WAF to inspect the size of\. If a `SizeConstraintSet` contains more than one `SizeConstraint` object, a request only needs to match one constraint to be considered a match\.
 
 ## Syntax<a name="aws-resource-waf-sizeconstraintset-syntax"></a>
 
@@ -18,53 +16,56 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::SizeConstraintSet",
   "Properties" : {
-    "[Name](#cfn-waf-sizeconstraintset-name)" : String,
-    "[SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints)" : [ SizeConstraint, ... ]
-  }
+      "[Name](#cfn-waf-sizeconstraintset-name)" : String,
+      "[SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints)" : [ SizeConstraint, ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-waf-sizeconstraintset-syntax.yaml"></a>
 
 ```
-Type: "AWS::WAF::SizeConstraintSet"
+Type: AWS::WAF::SizeConstraintSet
 Properties: 
   [Name](#cfn-waf-sizeconstraintset-name): String
-  [SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints):
+  [SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints): 
     - SizeConstraint
 ```
 
-## Properties<a name="w3ab2c21c10e1079b9"></a>
+## Properties<a name="aws-resource-waf-sizeconstraintset-properties"></a>
 
 `Name`  <a name="cfn-waf-sizeconstraintset-name"></a>
-A friendly name or description for the `SizeConstraintSet`\.  
-*Required: *Yes  
+The name, if any, of the `SizeConstraintSet`\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SizeConstraints`  <a name="cfn-waf-sizeconstraintset-sizeconstraints"></a>
 The size constraint and the part of the web request to check\.  
-*Required: *Yes  
-*Type*: List of [AWS WAF SizeConstraintSet SizeConstraint](aws-properties-waf-sizeconstraintset-sizeconstraint.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Required*: Yes  
+*Type*: List of [SizeConstraint](aws-properties-waf-sizeconstraintset-sizeconstraint.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="w3ab2c21c10e1079c11"></a>
+## Return values<a name="aws-resource-waf-sizeconstraintset-return-values"></a>
 
-### Ref<a name="w3ab2c21c10e1079c11b2"></a>
+### Ref<a name="aws-resource-waf-sizeconstraintset-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource physical ID, such as `1234a1a-a1b1-12a1-abcd-a123b123456`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource physical ID, such as 1234a1a\-a1b1\-12a1\-abcd\-a123b123456\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="w3ab2c21c10e1079c13"></a>
+## Examples<a name="aws-resource-waf-sizeconstraintset--examples"></a>
 
-The following examples show you how to define a size constraint, add it to a rule, and add the rule to a web access control list \(ACL\)\.
 
-### Define a Size Constraint<a name="w3ab2c21c10e1079c13b4"></a>
+
+### Define a Size Constraint<a name="aws-resource-waf-sizeconstraintset--examples--Define_a_Size_Constraint"></a>
 
 The following example checks that the body of an HTTP request equals `4096` bytes\.
 
-#### JSON<a name="aws-resource-waf-sizeconstraintset-example1.json"></a>
+#### JSON<a name="aws-resource-waf-sizeconstraintset--examples--Define_a_Size_Constraint--json"></a>
 
 ```
 "MySizeConstraint": {
@@ -85,7 +86,7 @@ The following example checks that the body of an HTTP request equals `4096` byte
 }
 ```
 
-#### YAML<a name="aws-resource-waf-sizeconstraintset-example1.yaml"></a>
+#### YAML<a name="aws-resource-waf-sizeconstraintset--examples--Define_a_Size_Constraint--yaml"></a>
 
 ```
   MySizeConstraint: 
@@ -101,11 +102,11 @@ The following example checks that the body of an HTTP request equals `4096` byte
           TextTransformation: "NONE"
 ```
 
-### Associate a `SizeConstraintSet` with a Web ACL Rule<a name="w3ab2c21c10e1079c13b6"></a>
+### Associate a SizeConstraintSet with a Web ACL Rule<a name="aws-resource-waf-sizeconstraintset--examples--Associate_a_SizeConstraintSet_with_a_Web_ACL_Rule"></a>
 
 The following example associates the `MySizeConstraint` object with a web ACL rule\.
 
-#### JSON<a name="aws-resource-waf-sizeconstraintset-example2.json"></a>
+#### JSON<a name="aws-resource-waf-sizeconstraintset--examples--Associate_a_SizeConstraintSet_with_a_Web_ACL_Rule--json"></a>
 
 ```
 "SizeConstraintRule" : {
@@ -124,7 +125,7 @@ The following example associates the `MySizeConstraint` object with a web ACL ru
 }
 ```
 
-#### YAML<a name="aws-resource-waf-sizeconstraintset-example2.yaml"></a>
+#### YAML<a name="aws-resource-waf-sizeconstraintset--examples--Associate_a_SizeConstraintSet_with_a_Web_ACL_Rule--yaml"></a>
 
 ```
 SizeConstraintRule: 
@@ -140,11 +141,11 @@ SizeConstraintRule:
         Type: "SizeConstraint"
 ```
 
-### Create a Web ACL<a name="w3ab2c21c10e1079c13b8"></a>
+### Create a Web ACL<a name="aws-resource-waf-sizeconstraintset--examples--Create_a_Web_ACL"></a>
 
 The following example associates the `SizeConstraintRule` rule with a web ACL\. The web ACL blocks all requests except for requests with a body size equal to `4096` bytes\.
 
-#### JSON<a name="aws-resource-waf-sizeconstraintset-example3.json"></a>
+#### JSON<a name="aws-resource-waf-sizeconstraintset--examples--Create_a_Web_ACL--json"></a>
 
 ```
 "MyWebACL": {
@@ -168,7 +169,7 @@ The following example associates the `SizeConstraintRule` rule with a web ACL\. 
 }
 ```
 
-#### YAML<a name="aws-resource-waf-sizeconstraintset-example3.yaml"></a>
+#### YAML<a name="aws-resource-waf-sizeconstraintset--examples--Create_a_Web_ACL--yaml"></a>
 
 ```
 MyWebACL: 
@@ -184,5 +185,5 @@ MyWebACL:
           Type: "ALLOW"
         Priority: 1
         RuleId: 
-          Ref: "SizeConstraintRule"
+         Ref: "SizeConstraintRule"
 ```

@@ -4,11 +4,11 @@ The optional `Mappings` section matches a key to a corresponding set of named va
 
 You cannot include parameters, pseudo parameters, or intrinsic functions in the `Mappings` section\.
 
-## Syntax<a name="w3ab2c17c15c19b7"></a>
+## Syntax<a name="mappings-section-structure-syntax"></a>
 
 The `Mappings` section consists of the key name `Mappings`\. The keys in mappings must be literal strings\. The values can be `String` or `List` types\.  The following example shows a `Mappings` section containing a single mapping named `Mapping01` \(the logical name\)\.
 
-Within a mapping, each map is a key followed by another mapping\. The key identifies a map of name\-value pairs and must be unique within the mapping\. The name can contain only alphanumeric characters \(A\-Za\-z0\-9\)\.
+Within a mapping, each map is a key followed by another mapping\. The key must be a map of name\-value pairs and unique within the mapping\. The name can contain only alphanumeric characters \(A\-Za\-z0\-9\)\.
 
 ### JSON<a name="mappings-section-structure-syntax.json"></a>
 
@@ -41,24 +41,24 @@ Mappings:
       Name: Value03
 ```
 
-## Examples<a name="w3ab2c17c15c19b9"></a>
+## Examples<a name="mappings-section-structure-examples"></a>
 
-### Basic Mapping<a name="w3ab2c17c15c19b9b2"></a>
+### Basic mapping<a name="mappings-section-structure-examples-basic"></a>
 
-The following example shows a `Mappings` section with a map `RegionMap`, which contains five keys that map to name\-value pairs containing single string values\. The keys are region names\. Each name\-value pair is the AMI ID for the 32\-bit AMI in the region represented by the key\.
+The following example shows a `Mappings` section with a map `RegionMap`, which contains five keys that map to name\-value pairs containing single string values\. The keys are region names\. Each name\-value pair is the AMI ID for the HVM64 AMI in the region represented by the key\.
 
-The name\-value pairs have a name \(32 in the example\) and a value\. By naming the values, you can map more than one set of values to a key\. 
+The name\-value pairs have a name \(HVM64 in the example\) and a value\. By naming the values, you can map more than one set of values to a key\. 
 
 #### JSON<a name="mappings-section-structure-example1.json"></a>
 
 ```
 "Mappings" : {
   "RegionMap" : {
-    "us-east-1"      : { "32" : "ami-6411e20d"},
-    "us-west-1"      : { "32" : "ami-c9c7978c"},
-    "eu-west-1"      : { "32" : "ami-37c2f643"},
-    "ap-southeast-1" : { "32" : "ami-66f28c34"},
-    "ap-northeast-1" : { "32" : "ami-9c03a89d"}
+    "us-east-1"      : { "HVM64" : "ami-0ff8a91507f77f867"},
+    "us-west-1"      : { "HVM64" : "ami-0bdb828fd58c52235"},
+    "eu-west-1"      : { "HVM64" : "ami-047bb4163c506cd98"},
+    "ap-southeast-1" : { "HVM64" : "ami-08569b978cc4dfa10"},
+    "ap-northeast-1" : { "HVM64" : "ami-06cd52961ce9f0d85"}
   }
 }
 ```
@@ -69,57 +69,57 @@ The name\-value pairs have a name \(32 in the example\) and a value\. By naming 
 Mappings: 
   RegionMap: 
     us-east-1: 
-      "32": "ami-6411e20d"
+      "HVM64": "ami-0ff8a91507f77f867"
     us-west-1: 
-      "32": "ami-c9c7978c"
+      "HVM64": "ami-0bdb828fd58c52235"
     eu-west-1: 
-      "32": "ami-37c2f643"
+      "HVM64": "ami-047bb4163c506cd98"
     ap-southeast-1: 
-      "32": "ami-66f28c34"
+      "HVM64": "ami-08569b978cc4dfa10"
     ap-northeast-1: 
-      "32": "ami-9c03a89d"
+      "HVM64": "ami-06cd52961ce9f0d85"
 ```
 
-### Mapping with Multiple Values<a name="w3ab2c17c15c19b9b4"></a>
+### Mapping with multiple values<a name="mappings-section-structure-examples-multiple"></a>
 
-The following example has region keys that are mapped to two sets of values: one named 32 and the other 64\.
+The following example has region keys that are mapped to two sets of values: one named HVM64 and the other HVMG2\.
 
 #### JSON<a name="mappings-section-structure-example2.json"></a>
 
 ```
-"RegionMap" : {
-  "us-east-1"      : { "32" : "ami-6411e20d", "64" : "ami-7a11e213" },
-  "us-west-1"      : { "32" : "ami-c9c7978c", "64" : "ami-cfc7978a" },
-  "eu-west-1"      : { "32" : "ami-37c2f643", "64" : "ami-31c2f645" },
-  "ap-southeast-1" : { "32" : "ami-66f28c34", "64" : "ami-60f28c32" },
-  "ap-northeast-1" : { "32" : "ami-9c03a89d", "64" : "ami-a003a8a1" }
-}
+    "RegionMap" : {
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"}
+    }
 ```
 
 #### YAML<a name="mappings-section-structure-example2.yaml"></a>
 
 ```
 RegionMap: 
-  us-east-1: 
-    "32": "ami-6411e20d"
-    "64": "ami-7a11e213"
-  us-west-1: 
-    "32": "ami-c9c7978c"
-    "64": "ami-cfc7978a"
-  eu-west-1: 
-    "32": "ami-37c2f643"
-    "64": "ami-31c2f645"
-  ap-southeast-1: 
-    "32": "ami-66f28c34"
-    "64": "ami-60f28c32"
-  ap-northeast-1: 
-    "32": "ami-9c03a89d"
-    "64": "ami-a003a8a1"
+    us-east-1:
+      HVM64: ami-0ff8a91507f77f867
+      HVMG2: ami-0a584ac55a7631c0c
+    us-west-1:
+      HVM64: ami-0bdb828fd58c52235
+      HVMG2: ami-066ee5fd4a9ef77f1
+    eu-west-1:
+      HVM64: ami-047bb4163c506cd98
+      HVMG2: ami-0a7c483d527806435
+    ap-northeast-1:
+      HVM64: ami-06cd52961ce9f0d85
+      HVMG2: ami-053cdd503598e4a9d
+    ap-southeast-1:
+      HVM64: ami-08569b978cc4dfa10
+      HVMG2: ami-0be9df32ae9f92309
 ```
 
-### Return a Value from a Mapping<a name="w3ab2c17c15c19b9b6"></a>
+### Return a value from a mapping<a name="mappings-section-structure-examples-return-value"></a>
 
-You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` function to return a named value based on a specified key\. The following example template contains an Amazon EC2 resource whose `ImageId` property is assigned by the `FindInMap` function\. The `FindInMap` function specifies key as the region where the stack is created \(using the [AWS::Region pseudo parameter](pseudo-parameter-reference.md)\) and `32` as the name of the value to map to\.
+You can use the `Fn::FindInMap` function to return a named value based on a specified key\. The following example template contains an Amazon EC2 resource whose `ImageId` property is assigned by the `FindInMap` function\. The `FindInMap` function specifies key as the region where the stack is created \(using the [AWS::Region pseudo parameter](pseudo-parameter-reference.md)\) and `HVM64` as the name of the value to map to\.
 
 #### JSON<a name="mappings-section-structure-example3.json"></a>
 
@@ -129,11 +129,11 @@ You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` fun
 
   "Mappings" : {
     "RegionMap" : {
-      "us-east-1" : { "32" : "ami-6411e20d", "64" : "ami-7a11e213" },
-      "us-west-1" : { "32" : "ami-c9c7978c", "64" : "ami-cfc7978a" },
-      "eu-west-1" : { "32" : "ami-37c2f643", "64" : "ami-31c2f645" },
-      "ap-southeast-1" : { "32" : "ami-66f28c34", "64" : "ami-60f28c32" },
-      "ap-northeast-1" : { "32" : "ami-9c03a89d", "64" : "ami-a003a8a1" }
+      "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
+      "us-west-1"        : {"HVM64" : "ami-0bdb828fd58c52235", "HVMG2" : "ami-066ee5fd4a9ef77f1"},
+      "eu-west-1"        : {"HVM64" : "ami-047bb4163c506cd98", "HVMG2" : "ami-0a7c483d527806435"},
+      "ap-northeast-1"   : {"HVM64" : "ami-06cd52961ce9f0d85", "HVMG2" : "ami-053cdd503598e4a9d"},
+      "ap-southeast-1"   : {"HVM64" : "ami-08569b978cc4dfa10", "HVMG2" : "ami-0be9df32ae9f92309"}
     }
   },
 
@@ -141,7 +141,7 @@ You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` fun
     "myEC2Instance" : {
       "Type" : "AWS::EC2::Instance",
       "Properties" : {
-        "ImageId" : { "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, "32"]},
+        "ImageId" : { "Fn::FindInMap" : [ "RegionMap", { "Ref" : "AWS::Region" }, "HVM64"]},
         "InstanceType" : "m1.small"
       }
     }
@@ -155,30 +155,30 @@ You can use the `[Fn::FindInMap](intrinsic-function-reference-findinmap.md)` fun
 AWSTemplateFormatVersion: "2010-09-09"
 Mappings: 
   RegionMap: 
-    us-east-1: 
-      "32": "ami-6411e20d"
-      "64": "ami-7a11e213"
-    us-west-1: 
-      "32": "ami-c9c7978c"
-      "64": "ami-cfc7978a"
-    eu-west-1: 
-      "32": "ami-37c2f643"
-      "64": "ami-31c2f645"
-    ap-southeast-1: 
-      "32": "ami-66f28c34"
-      "64": "ami-60f28c32"
-    ap-northeast-1: 
-      "32": "ami-9c03a89d"
-      "64": "ami-a003a8a1"
+    us-east-1:
+      HVM64: ami-0ff8a91507f77f867
+      HVMG2: ami-0a584ac55a7631c0c
+    us-west-1:
+      HVM64: ami-0bdb828fd58c52235
+      HVMG2: ami-066ee5fd4a9ef77f1
+    eu-west-1:
+      HVM64: ami-047bb4163c506cd98
+      HVMG2: ami-0a7c483d527806435
+    ap-northeast-1:
+      HVM64: ami-06cd52961ce9f0d85
+      HVMG2: ami-053cdd503598e4a9d
+    ap-southeast-1:
+      HVM64: ami-08569b978cc4dfa10
+      HVMG2: ami-0be9df32ae9f92309
 Resources: 
   myEC2Instance: 
     Type: "AWS::EC2::Instance"
     Properties: 
-      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", 32]
+      ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", HVM64]
       InstanceType: m1.small
 ```
 
-### Input Parameter and FindInMap<a name="w3ab2c17c15c19b9b8"></a>
+### Input parameter and FindInMap<a name="mappings-section-structure-examples-findinmap"></a>
 
 You can use an input parameter with the `Fn::FindInMap` function to refer to a specific value in a map\. For example, suppose you have a list of regions and environment types that map to a specific AMI ID\. You can select the AMI ID that your stack uses by using an input parameter \(`EnvironmentType`\)\. To determine the region, use the `AWS::Region` pseudo parameter, which gets the AWS region in which you create the stack\.
 

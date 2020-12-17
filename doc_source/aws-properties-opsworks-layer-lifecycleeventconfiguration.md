@@ -1,8 +1,10 @@
-# AWS OpsWorks Layer LifeCycleConfiguration<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration"></a>
+# AWS::OpsWorks::Layer LifecycleEventConfiguration<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration"></a>
 
-`LifeCycleConfiguration` is property of the [AWS::OpsWorks::Layer](aws-resource-opsworks-layer.md) resource that specifies the lifecycle event configuration for the layer\.
+Specifies the lifecycle event configuration
 
-## Syntax<a name="w3ab2c21c14e1385b5"></a>
+## Syntax<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-syntax.json"></a>
 
@@ -15,13 +17,14 @@
 ### YAML<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-syntax.yaml"></a>
 
 ```
-[ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration):
-  ShutdownEventConfiguration
+  [ShutdownEventConfiguration](#cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration): 
+    ShutdownEventConfiguration
 ```
 
-## Properties<a name="w3ab2c21c14e1385b7"></a>
+## Properties<a name="aws-properties-opsworks-layer-lifecycleeventconfiguration-properties"></a>
 
 `ShutdownEventConfiguration`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration"></a>
-Specifies the shutdown event configuration for a layer\.  
-*Required: *No  
-*Type*: [AWS OpsWorks Layer LifeCycleConfiguration ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)
+The Shutdown event configuration\.  
+*Required*: No  
+*Type*: [ShutdownEventConfiguration](aws-properties-opsworks-layer-lifecycleeventconfiguration-shutdowneventconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

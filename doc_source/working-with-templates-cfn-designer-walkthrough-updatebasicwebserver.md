@@ -1,14 +1,16 @@
-# Walkthrough: Use AWS CloudFormation Designer to Modify a Stack's Template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver"></a>
+# Walkthrough: Use AWS CloudFormation Designer to modify a stack's template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver"></a>
 
 You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use AWS CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\. 
 
-In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
+In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. 
+
+By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-as\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-as-vpc.template&region=us-east-1)\.
 
 In this walkthrough, we will complete the following steps:
 
 1. [Get a stack's template\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-get-template)
 
-   We'll get a copy of a running stack's template; the same basic web server stack in the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to Create a Basic Web Server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)\.
+   We'll get a copy of a running stack's template; the same basic web server stack in the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to create a basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)\.
 
 1. [Modify the template\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-modify-template)
 
@@ -28,9 +30,9 @@ Prerequisites
 
 This walkthrough assumes that you have a working knowledge of Amazon Virtual Private Cloud \(Amazon VPC\), Auto Scaling, Elastic Load Balancing, and AWS CloudFormation\. For context, each procedure provides some basic information about each resource\.
 
-Additionally, the walkthrough assumes that you completed the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to Create a Basic Web Server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)\. From that walkthrough, you should have a running stack named `BasicWebServerStack`\.
+Additionally, the walkthrough assumes that you completed the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to create a basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)\. From that walkthrough, you should have a running stack named `BasicWebServerStack`\.
 
-## Step 1: Get a Stack Template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-get-template"></a>
+## Step 1: Get a stack template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-get-template"></a>
 
 In this step, we'll use AWS CloudFormation Designer to get and open a copy of a running stack's template\.
 
@@ -44,7 +46,7 @@ In this step, we'll use AWS CloudFormation Designer to get and open a copy of a 
 
 AWS CloudFormation gets a copy of the `BasicWebServerStack` stack's template and displays it in AWS CloudFormation Designer, where you can view the template resources and their relationships\. In the following step, we'll use AWS CloudFormation Designer to modify the template\.
 
-## Step 2: Modify a Template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-modify-template"></a>
+## Step 2: Modify a template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-modify-template"></a>
 
 We'll modify the basic web server template by using AWS CloudFormation Designer's drag\-and\-drop interface and integrated JSON and YAML editor to replace the single Amazon EC2 instance with an Auto Scaling group and load balancer to make the web site scalable\. If traffic to the web site suddenly increases, use Auto Scaling to quickly increase the number of web servers\. The load balancer will equally distributes the traffic among the instances\.
 
@@ -69,39 +71,28 @@ These resources do not follow the container model, so AWS CloudFormation Designe
    This security group will control the inbound and outbound traffic of the load balancer\.
 
 1. Rename the resources to make them easier to identify:
-
    + Rename **AutoScalingGroup** to `WebServerFleet`
-
    + Rename **LaunchConfiguration** to `WebServerLaunchConfig`
-
    + Rename **LoadBalancer** to `PublicElasticLoadBalancer`
-
    + Rename **SecurityGroup** to `PublicLoadBalancerSecurityGroup`
 
 1. Create associations for the resources that you added\.
 
    1. Associate the load balancer and Auto Scaling group resources with the public subnet:
-
       + From the `PublicElasticLoadBalancer` resource, drag the `AWS::EC2::Subnet (Property: Subnets)` connection to the `PublicSubnet` resource\.
-
       + From the `WebServerFleet` resource, drag the `AWS::EC2::Subnet (Property: VPCZoneIdentifier)` connection to the `PublicSubnet` resource\.
 
    1. Associate the load balancer with its security group:
-
       + From the `PublicElasticLoadBalancer` resource, drag the `AWS::EC2::SecurityGroup (Property: SecurityGroups)` connection to the `PublicLoadBalancerSecurityGroup` resource\.
 
    1. Associate the Auto Scaling group with the load balancer and launch configuration:
-
       + From the `WebServerFleet` resource, drag the `AWS::ElasticLoadBalancing::LoadBalancer (Property: LoadBalancerNames)` connection to the `PublicElasticLoadBalancer` resource\.
-
       + From the `WebServerFleet` resource, drag the `AWS::ElasticLoadBalancing::LaunchConfiguration (Property: LaunchConfigurationName)` connection to the `WebServerLaunchConfig` resource\.
 
    1. Associate the launch configuration with the security group:
-
       + From the `WebServerLaunchConfig` resource, drag the `AWS::EC2::SecurityGroup (Property: SecurityGroups)` connection to the `WebServerSecurityGroup` resource\.
 
    1. Define a dependency for the Auto Scaling group to the public route:
-
       + From the `WebServerFleet` resource, drag the `DependsOn` connection to the `PublicRoute` resource\.
 
       This dependency means that AWS CloudFormation won't create the `WebServerFleet` resource until the public route is complete\. Otherwise, if the public route isn't available when the web server instances are starting up, they won't be able to send signals \(using the cfn\-signal helper script\) to notify AWS CloudFormation when their configurations and application deployments are complete\.
@@ -542,7 +533,7 @@ YAML
 
 You now have a modified AWS CloudFormation template that you can use to update the basic web server stack\. In the next step, we'll use this template to update the basic web server stack\.
 
-## Step 3: Update the Stack<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-update-stack"></a>
+## Step 3: Update the stack<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-update-stack"></a>
 
 To implement your template changes, we need to update the basic web server stack\. You can launch the AWS CloudFormation Update Stack Wizard directly from AWS CloudFormation Designer\.
 
@@ -562,11 +553,11 @@ To implement your template changes, we need to update the basic web server stack
 
 1. Ensure that the stack name is correct, and then choose **Update**\.
 
-It can take several minutes for AWS CloudFormation to update your stack\. To monitor progress, view the stack events\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. After the stack is updated, view the stack outputs and go to the website URL to verify that the website is running\. For more information, see [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)\. You successfully updated a template and a stack using AWS CloudFormation Designer\.
+It can take several minutes for AWS CloudFormation to update your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. After the stack is updated, view the stack outputs and go to the website URL to verify that the website is running\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. You successfully updated a template and a stack using AWS CloudFormation Designer\.
 
 To ensure that you are not charged for unwanted services, you can delete this stack\.
 
-## Step 4: Clean Up Resources<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-delete-stack"></a>
+## Step 4: Clean up resources<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-delete-stack"></a>
 
 To make sure you are not charged for unwanted services, delete your stack and it's resources\.
 

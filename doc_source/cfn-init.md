@@ -3,13 +3,9 @@
 ## Description<a name="cfn-init-Description"></a>
 
 The cfn\-init helper script reads template metadata from the AWS::CloudFormation::Init key and acts accordingly to:
-
 + Fetch and parse metadata from AWS CloudFormation
-
 + Install packages
-
 + Write files to disk
-
 + Enable/disable and start/stop services
 
 **Note**  
@@ -57,11 +53,11 @@ cfn-init --stack|-s stack.name.or.id \
 
 ## Example<a name="cfn-init-Examples"></a>
 
-### Amazon Linux Example<a name="w3ab2c21c38c27b9b2"></a>
+### Amazon Linux example<a name="w7466ab1c33c42c29b9b2"></a>
 
 The following snippet shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that is associated with the `WebServerInstance` resource\.
 
-For a complete example template, see [Deploying Applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+For a complete example template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 #### JSON<a name="cfn-init-example.json"></a>
 

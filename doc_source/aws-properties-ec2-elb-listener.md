@@ -1,8 +1,10 @@
-# ElasticLoadBalancing Listener Property Type<a name="aws-properties-ec2-elb-listener"></a>
+# AWS::ElasticLoadBalancing::LoadBalancer Listeners<a name="aws-properties-ec2-elb-listener"></a>
 
-The `Listener` property is an embedded property of the `[AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)` type\.
+Specifies a listener for your Classic Load Balancer\.
 
-## Syntax<a name="w3ab2c21c14d830b5"></a>
+## Syntax<a name="aws-properties-ec2-elb-listener-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-elb-listener-syntax.json"></a>
 
@@ -11,7 +13,7 @@ The `Listener` property is an embedded property of the `[AWS::ElasticLoadBalanci
   "[InstancePort](#cfn-ec2-elb-listener-instanceport)" : String,
   "[InstanceProtocol](#cfn-ec2-elb-listener-instanceprotocol)" : String,
   "[LoadBalancerPort](#cfn-ec2-elb-listener-loadbalancerport)" : String,
-  "[PolicyNames](#cfn-ec2-elb-listener-policynames)" :  [ String, ... ],
+  "[PolicyNames](#cfn-ec2-elb-listener-policynames)" : [ String, ... ],
   "[Protocol](#cfn-ec2-elb-listener-protocol)" : String,
   "[SSLCertificateId](#cfn-ec2-elb-listener-sslcertificateid)" : String
 }
@@ -20,48 +22,60 @@ The `Listener` property is an embedded property of the `[AWS::ElasticLoadBalanci
 ### YAML<a name="aws-properties-ec2-elb-listener-syntax.yaml"></a>
 
 ```
-[InstancePort](#cfn-ec2-elb-listener-instanceport): String
-[InstanceProtocol](#cfn-ec2-elb-listener-instanceprotocol): String
-[LoadBalancerPort](#cfn-ec2-elb-listener-loadbalancerport): String
-[PolicyNames](#cfn-ec2-elb-listener-policynames):
-  - String
-[Protocol](#cfn-ec2-elb-listener-protocol): String
-[SSLCertificateId](#cfn-ec2-elb-listener-sslcertificateid): String
+  [InstancePort](#cfn-ec2-elb-listener-instanceport): String
+  [InstanceProtocol](#cfn-ec2-elb-listener-instanceprotocol): String
+  [LoadBalancerPort](#cfn-ec2-elb-listener-loadbalancerport): String
+  [PolicyNames](#cfn-ec2-elb-listener-policynames): 
+    - String
+  [Protocol](#cfn-ec2-elb-listener-protocol): String
+  [SSLCertificateId](#cfn-ec2-elb-listener-sslcertificateid): String
 ```
 
-## Properties<a name="w3ab2c21c14d830b7"></a>
+## Properties<a name="aws-properties-ec2-elb-listener-properties"></a>
 
 `InstancePort`  <a name="cfn-ec2-elb-listener-instanceport"></a>
-Specifies the TCP port on which the instance server listens\. You can't modify this property during the life of the load balancer\.  
-*Required: *Yes  
-*Type*: String
+The port on which the instance is listening\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `65535`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceProtocol`  <a name="cfn-ec2-elb-listener-instanceprotocol"></a>
-Specifies the protocol to use for routing traffic to back\-end instances: HTTP, HTTPS, TCP, or SSL\. You can't modify this property during the life of the load balancer\.  
-*Required: *No  
+The protocol to use for routing traffic to instances: HTTP, HTTPS, TCP, or SSL\.  
+If the front\-end protocol is TCP or SSL, the back\-end protocol must be TCP or SSL\. If the front\-end protocol is HTTP or HTTPS, the back\-end protocol must be HTTP or HTTPS\.  
+If there is another listener with the same `InstancePort` whose `InstanceProtocol` is secure, \(HTTPS or SSL\), the listener's `InstanceProtocol` must also be secure\.  
+If there is another listener with the same `InstancePort` whose `InstanceProtocol` is HTTP or TCP, the listener's `InstanceProtocol` must be HTTP or TCP\.  
+*Required*: No  
 *Type*: String  
-
-+ If the front\-end protocol is HTTP or HTTPS, `InstanceProtocol` must be on the same protocol layer \(HTTP or HTTPS\)\. Likewise, if the front\-end protocol is TCP or SSL, `InstanceProtocol` must be TCP or SSL\. By default, Elastic Load Balancing sets the instance protocol to HTTP or TCP\.
-
-+ If there is another `Listener` with the same `InstancePort` whose `InstanceProtocol` is secure, \(using HTTPS or SSL\), the `InstanceProtocol` of the `Listener` must be secure \(using HTTPS or SSL\)\. If there is another `Listener` with the same `InstancePort` whose `InstanceProtocol` is HTTP or TCP, the `InstanceProtocol` of the `Listener` must be either HTTP or TCP\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerPort`  <a name="cfn-ec2-elb-listener-loadbalancerport"></a>
-Specifies the external load balancer port number\. You can't modify this property during the life of the load balancer\.  
-*Required: *Yes  
-*Type*: String
+The port on which the load balancer is listening\. On EC2\-VPC, you can specify any port from the range 1\-65535\. On EC2\-Classic, you can specify any port from the following list: 25, 80, 443, 465, 587, 1024\-65535\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyNames`  <a name="cfn-ec2-elb-listener-policynames"></a>
-A list of [`ElasticLoadBalancing` policy](aws-properties-ec2-elb-policy.md) names to associate with the `Listener`\. Specify only policies that are compatible with a `Listener`\. For more information, see `[DescribeLoadBalancerPolicyTypes](http://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancerPolicyTypes.html)` in the *Elastic Load Balancing API Reference version 2012\-06\-01*\.  
-By default, Elastic Load Balancing associates the latest predefined policy with your load balancer\. When a new predefined policy is added, we recommend that you update your load balancer to use the new predefined policy\. Alternatively, you can select a different predefined security policy or create a custom policy\. To create a security policy, use the `Policies` property of the [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md) resource\.
-*Required: *No  
-*Type*: List of String values
+The names of the policies to associate with the listener\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-ec2-elb-listener-protocol"></a>
-Specifies the load balancer transport protocol to use for routing: HTTP, HTTPS, TCP or SSL\. You can't modify this property during the life of the load balancer\.  
-*Required: *Yes  
-*Type*: String
+The load balancer transport protocol to use for routing: HTTP, HTTPS, TCP, or SSL\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SSLCertificateId`  <a name="cfn-ec2-elb-listener-sslcertificateid"></a>
-The ARN of the SSL certificate to use\. For more information about SSL certificates, see [Managing Server Certificates](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingServerCerts.html) in the *AWS Identity and Access Management User Guide*\.  
-*Required: *No  
-*Type*: String
+The Amazon Resource Name \(ARN\) of the server certificate\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-ec2-elb-listener--seealso"></a>
++  [CreateLoadBalancerListeners](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancerListeners.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
++  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-listener-config.html) in the *User Guide for Classic Load Balancers* 
++  [HTTPS Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-https-load-balancers.html) in the *User Guide for Classic Load Balancers* 
+

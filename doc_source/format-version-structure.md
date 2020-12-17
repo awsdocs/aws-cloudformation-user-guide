@@ -1,4 +1,4 @@
-# Format Version<a name="format-version-structure"></a>
+# Format version<a name="format-version-structure"></a>
 
 The `AWSTemplateFormatVersion` section \(optional\) identifies the capabilities of the template\. The latest template format version is `2010-09-09` and is currently the only valid value\.
 

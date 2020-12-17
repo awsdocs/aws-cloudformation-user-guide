@@ -1,14 +1,10 @@
 # AWS::OpsWorks::UserProfile<a name="aws-resource-opsworks-userprofile"></a>
 
-The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who require access to instances in an AWS OpsWorks stack\.
-
-
-+ [Syntax](#aws-resource-opsworks-userprofile-syntax)
-+ [Properties](#aws-resource-opsworks-userprofile-properties)
-+ [Return Value](#aws-resource-opsworks-userprofile-returnvalues)
-+ [Example](#aws-resource-opsworks-userprofile-examples)
+Describes a user's SSH information\.
 
 ## Syntax<a name="aws-resource-opsworks-userprofile-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-resource-opsworks-userprofile-syntax.json"></a>
 
@@ -16,19 +12,19 @@ The `AWS::OpsWorks::UserProfile` resource configures SSH access for users who re
 {
   "Type" : "AWS::OpsWorks::UserProfile",
   "Properties" : {
-    "[AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement)" : Boolean,
-    "[IamUserArn](#cfn-opsworks-userprofile-iamuserarn)" : String,
-    "[SshPublicKey](#cfn-opsworks-userprofile-sshpublickey)" : String,
-    "[SshUsername](#cfn-opsworks-userprofile-sshusername)" : String
-  }
+      "[AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement)" : Boolean,
+      "[IamUserArn](#cfn-opsworks-userprofile-iamuserarn)" : String,
+      "[SshPublicKey](#cfn-opsworks-userprofile-sshpublickey)" : String,
+      "[SshUsername](#cfn-opsworks-userprofile-sshusername)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-opsworks-userprofile-syntax.yaml"></a>
 
 ```
-Type: "AWS::OpsWorks::UserProfile"
-Properties:
+Type: AWS::OpsWorks::UserProfile
+Properties: 
   [AllowSelfManagement](#cfn-opsworks-userprofile-allowselfmanagement): Boolean
   [IamUserArn](#cfn-opsworks-userprofile-iamuserarn): String
   [SshPublicKey](#cfn-opsworks-userprofile-sshpublickey): String
@@ -38,52 +34,55 @@ Properties:
 ## Properties<a name="aws-resource-opsworks-userprofile-properties"></a>
 
 `AllowSelfManagement`  <a name="cfn-opsworks-userprofile-allowselfmanagement"></a>
-Indicates whether users can use the AWS OpsWorks **My Settings** page to specify their own SSH public key\. For more information, see [Setting an IAM User's Public SSH Key](http://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html) in the *AWS OpsWorks User Guide*\.  
-*Required: *No  
+Whether users can specify their own SSH public key through the My Settings page\. For more information, see [Managing User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/security-settingsshkey.html)\.  
+*Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamUserArn`  <a name="cfn-opsworks-userprofile-iamuserarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) user to associate with this configuration\.  
-*Required: *Yes  
+The user's IAM ARN\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SshPublicKey`  <a name="cfn-opsworks-userprofile-sshpublickey"></a>
-The public SSH key that is associated with the IAM user\. To access instances, the IAM user must have or be given the corresponding private key\.  
-*Required: *No  
+The user's SSH public key\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SshUsername`  <a name="cfn-opsworks-userprofile-sshusername"></a>
 The user's SSH user name\.  
-*Required: *No  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Value<a name="aws-resource-opsworks-userprofile-returnvalues"></a>
+## Return values<a name="aws-resource-opsworks-userprofile-return-values"></a>
 
-### Ref<a name="w3ab2c21c10d870c11b2"></a>
+### Ref<a name="aws-resource-opsworks-userprofile-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the IAM user ARN, such as `arn:aws:iam::123456789012:user/opsworksuser`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the IAM user ARN, such as `arn:aws:iam::123456789012:user/opsworksuser`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w3ab2c21c10d870c11b4"></a>
+### Fn::GetAtt<a name="aws-resource-opsworks-userprofile-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-+ `SshUsername`
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-  The user's SSH user name, as a string\.
+#### <a name="aws-resource-opsworks-userprofile-return-values-fn--getatt-fn--getatt"></a>
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+`SshUsername`  <a name="SshUsername-fn::getatt"></a>
+The user's SSH user name, as a string\.
 
-## Example<a name="aws-resource-opsworks-userprofile-examples"></a>
+## Examples<a name="aws-resource-opsworks-userprofile--examples"></a>
 
-The following example registers a public key to the `testUser` IAM user\. The user can also use self\-management to specify his or her own public key\.
+### Template Snippet<a name="aws-resource-opsworks-userprofile--examples--Template_Snippet"></a>
 
-### JSON<a name="aws-resource-opsworks-userprofile-example.json"></a>
+The following example registers a public key to the `testUser` IAM user\. Users can also use self\-management to specify their own public keys\.
+
+#### JSON<a name="aws-resource-opsworks-userprofile--examples--Template_Snippet--json"></a>
 
 ```
 "userProfile": {
@@ -98,7 +97,7 @@ The following example registers a public key to the `testUser` IAM user\. The us
 }
 ```
 
-### YAML<a name="aws-resource-opsworks-userprofile-example.yaml"></a>
+#### YAML<a name="aws-resource-opsworks-userprofile--examples--Template_Snippet--yaml"></a>
 
 ```
 userProfile:
@@ -108,3 +107,8 @@ userProfile:
     AllowSelfManagement: 'true'
     SshPublicKey: xyz1234567890
 ```
+
+## See also<a name="aws-resource-opsworks-userprofile--seealso"></a>
++  [CreateUserProfile](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateUserProfile.html) in the *AWS OpsWorks API Reference*\.
++  [Managing AWS OpsWorks Stacks User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) in the *AWS OpsWorks User Guide*\.
+

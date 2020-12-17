@@ -1,8 +1,6 @@
-# Amazon Kinesis Data Analytics Application InputParallelism<a name="aws-properties-kinesisanalytics-application-inputparallelism"></a>
+# AWS::KinesisAnalytics::Application InputParallelism<a name="aws-properties-kinesisanalytics-application-inputparallelism"></a>
 
-The `InputParallelism` property type specifies the number of in\-application streams to create for a given streaming source in an Amazon Kinesis Data Analytics application\.
-
- `InputParallelism` is a property of the [Kinesis Data Analytics Application Input](aws-properties-kinesisanalytics-application-input.md) property type\. 
+Describes the number of in\-application streams to create for a given streaming source\. For information about parallelism, see [Configuring Application Input](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html)\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-inputparallelism-syntax"></a>
 
@@ -25,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputparallelism-properties"></a>
 
 `Count`  <a name="cfn-kinesisanalytics-application-inputparallelism-count"></a>
-The number of in\-application streams to create\.   
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Number of in\-application streams to create\. For more information, see [Limits](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html)\.   
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

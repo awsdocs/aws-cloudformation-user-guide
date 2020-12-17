@@ -1,8 +1,6 @@
-# Amazon S3 Bucket AccelerateConfiguration<a name="aws-properties-s3-bucket-accelerateconfiguration"></a>
+# AWS::S3::Bucket AccelerateConfiguration<a name="aws-properties-s3-bucket-accelerateconfiguration"></a>
 
-<a name="aws-properties-s3-bucket-accelerateconfiguration-description"></a>The `AccelerateConfiguration` property type configures the transfer acceleration state for an Amazon S3 bucket\. For more information, see [Amazon S3 Transfer Acceleration](http://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the *Amazon Simple Storage Service Developer Guide*\.
-
-<a name="aws-properties-s3-bucket-accelerateconfiguration-inheritance"></a> `AccelerateConfiguration` is a property of the [AWS::S3::Bucket](aws-properties-s3-bucket.md) resource\.
+Configures the transfer acceleration state for an Amazon S3 bucket\. For more information, see [Amazon S3 Transfer Acceleration](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-accelerateconfiguration-syntax"></a>
 
@@ -19,58 +17,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-accelerateconfiguration-syntax.yaml"></a>
 
 ```
-[AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus): String
+  [AccelerationStatus](#cfn-s3-bucket-accelerateconfiguration-accelerationstatus): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-accelerateconfiguration-properties"></a>
 
 `AccelerationStatus`  <a name="cfn-s3-bucket-accelerateconfiguration-accelerationstatus"></a>
-Sets the transfer acceleration state of the bucket\.  
- *Required*: Yes  
- *Type*: String  
-*Valid values*: `Enabled`, `Suspended`  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies the transfer acceleration status of the bucket\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed values*: `Enabled | Suspended`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Example<a name="aws-properties-s3-bucket-accelerateconfiguration-examples"></a>
+## See also<a name="aws-properties-s3-bucket-accelerateconfiguration--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
 
-### <a name="aws-properties-s3-bucket-accelerateconfiguration-example1"></a>
-
-The following example sets the transfer acceleration state of a bucket based on the `AccelerateStatus` parameter\.
-
-#### JSON<a name="aws-properties-s3-bucket-accelerateconfiguration-example1.json"></a>
-
-```
-{
-	"AWSTemplateFormatVersion":"2010-09-09",
-	"Parameters" : {
-		"AccelerateStatus" : {
-			"Type" : "String"
-		}
-	},
-	"Resources":{
-		"MyBucket":{
-			"Type":"AWS::S3::Bucket",
-			"Properties" : {
-				"AccelerateConfiguration" : {
-					"AccelerationStatus" : {"Ref" : "AccelerateStatus"}
-				}
-			}
-		}
-	}
-}
-```
-
-#### YAML<a name="aws-properties-s3-bucket-accelerateconfiguration-example1.yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Parameters:
-  AccelerateStatus:
-    Type: String
-Resources:
-  MyBucket:
-    Type: 'AWS::S3::Bucket'
-    Properties:
-      AccelerateConfiguration:
-        AccelerationStatus: !Ref AccelerateStatus
-```

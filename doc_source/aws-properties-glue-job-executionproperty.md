@@ -1,8 +1,6 @@
-# AWS Glue Job ExecutionProperty<a name="aws-properties-glue-job-executionproperty"></a>
+# AWS::Glue::Job ExecutionProperty<a name="aws-properties-glue-job-executionproperty"></a>
 
-<a name="aws-properties-glue-job-executionproperty-description"></a>The `ExecutionProperty` property type specifies the maximum number of concurrent runs allowed for an AWS Glue job\.
-
-<a name="aws-properties-glue-job-executionproperty-inheritance"></a> `ExecutionProperty` is a property of the [AWS::Glue::Job](aws-resource-glue-job.md) resource\.
+An execution property of a job\.
 
 ## Syntax<a name="aws-properties-glue-job-executionproperty-syntax"></a>
 
@@ -12,22 +10,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns)" : Integer
+  "[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns)" : Double
 }
 ```
 
 ### YAML<a name="aws-properties-glue-job-executionproperty-syntax.yaml"></a>
 
 ```
-[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns): Integer
+  [MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns): Double
 ```
 
 ## Properties<a name="aws-properties-glue-job-executionproperty-properties"></a>
 
-For more information, see [ExecutionProperty Structure](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-ExecutionProperty) in the *AWS Glue Developer Guide*\.
-
 `MaxConcurrentRuns`  <a name="cfn-glue-job-executionproperty-maxconcurrentruns"></a>
-The maximum number of concurrent runs that are allowed for the job\.  
- *Required*: No  
- *Type*: Integer  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The maximum number of concurrent runs allowed for the job\. The default is 1\. An error is returned when this threshold is reached\. The maximum value you can specify is controlled by a service limit\.  
+*Required*: No  
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

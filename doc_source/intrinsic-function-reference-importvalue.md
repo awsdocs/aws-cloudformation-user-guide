@@ -1,4 +1,4 @@
-# Fn::ImportValue<a name="intrinsic-function-reference-importvalue"></a>
+# `Fn::ImportValue`<a name="intrinsic-function-reference-importvalue"></a>
 
 The intrinsic function `Fn::ImportValue` returns the value of [an output exported](outputs-section-structure.md) by another stack\. You typically use this function to [create cross\-stack references](walkthrough-crossstackref.md)\. In the following example template snippets, Stack A exports VPC security group values and Stack B imports them\.
 
@@ -49,7 +49,7 @@ Stack B Import
 }
 ```
 
-## Declaration<a name="w3ab2c21c28c42c15"></a>
+## Declaration<a name="w7466ab1c33c28c41c15"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-syntax.json"></a>
 
@@ -85,16 +85,16 @@ Fn::ImportValue:
   !Sub "${NetworkStack}-SubnetID"
 ```
 
-## Parameters<a name="w3ab2c21c28c42c17"></a>
+## Parameters<a name="w7466ab1c33c28c41c17"></a>
 
 sharedValueToImport  
 The stack output value that you want to import\.
 
-## Return Value<a name="w3ab2c21c28c42c19"></a>
+## Return value<a name="w7466ab1c33c28c41c19"></a>
 
 The stack output value\.
 
-## Example<a name="w3ab2c21c28c42c21"></a>
+## Example<a name="w7466ab1c33c28c41c21"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-example.json"></a>
 
@@ -109,22 +109,14 @@ Fn::ImportValue:
   !Sub "${NetworkStackName}-SecurityGroupID"
 ```
 
-## Supported Functions<a name="w3ab2c21c28c42c23"></a>
+## Supported functions<a name="w7466ab1c33c28c41c23"></a>
 
 You can use the following functions in the `Fn::ImportValue` function\. The value of these functions can't depend on a resource\.
-
 + `Fn::Base64`
-
 + `Fn::FindInMap`
-
 + `Fn::If`
-
 + `Fn::Join`
-
 + `Fn::Select`
-
 + `Fn::Split`
-
 + `Fn::Sub`
-
 + `Ref`

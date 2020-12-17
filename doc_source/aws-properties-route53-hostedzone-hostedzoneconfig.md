@@ -1,8 +1,10 @@
-# Route 53 HostedZoneConfig Property<a name="aws-properties-route53-hostedzone-hostedzoneconfig"></a>
+# AWS::Route53::HostedZone HostedZoneConfig<a name="aws-properties-route53-hostedzone-hostedzoneconfig"></a>
 
-The `HostedZoneConfig` property is part of the [AWS::Route53::HostedZone](aws-resource-route53-hostedzone.md) resource that can contain a comment about the hosted zone\.
+A complex type that contains an optional comment about your hosted zone\. If you don't want to specify a comment, omit both the `HostedZoneConfig` and `Comment` elements\.
 
-## Syntax<a name="w3ab2c21c14e1485b5"></a>
+## Syntax<a name="aws-properties-route53-hostedzone-hostedzoneconfig-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-route53-hostedzone-hostedzoneconfig-syntax.json"></a>
 
@@ -15,12 +17,19 @@ The `HostedZoneConfig` property is part of the [AWS::Route53::HostedZone](aws-re
 ### YAML<a name="aws-properties-route53-hostedzone-hostedzoneconfig-syntax.yaml"></a>
 
 ```
-[Comment](#cfn-route53-hostedzone-hostedzoneconfig-comment): String
+  [Comment](#cfn-route53-hostedzone-hostedzoneconfig-comment): String
 ```
 
-## Properties<a name="w3ab2c21c14e1485b7"></a>
+## Properties<a name="aws-properties-route53-hostedzone-hostedzoneconfig-properties"></a>
 
 `Comment`  <a name="cfn-route53-hostedzone-hostedzoneconfig-comment"></a>
 Any comments that you want to include about the hosted zone\.  
+*Required*: No  
 *Type*: String  
-*Required: *No
+*Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-route53-hostedzone-hostedzoneconfig--seealso"></a>
++  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#aws-resource-route53-hostedzone-return-values) in the topic [AWS::Route53::HostedZone](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html) 
++  [HostedZoneConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HostedZoneConfig.html) in the *Amazon Route 53 API Reference*
+

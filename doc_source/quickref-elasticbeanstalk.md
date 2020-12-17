@@ -1,10 +1,12 @@
-# Elastic Beanstalk Template Snippets<a name="quickref-elasticbeanstalk"></a>
+# Elastic Beanstalk template snippets<a name="quickref-elasticbeanstalk"></a>
 
 With Elastic Beanstalk, you can quickly deploy and manage applications in AWS without worrying about the infrastructure that runs those applications\. The following sample template can help you describe Elastic Beanstalk resources in your AWS CloudFormation template\.
 
-## Elastic Beanstalk Sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
+## Elastic Beanstalk sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
 
-The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The Elastic Beanstalk environment is 64\-bit Amazon Linux running PHP 5\.3\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+
+Replace `solution-stack` with a solution stack name \(platform version\)\. For a list of available solution stacks, use the AWS CLI command `aws elasticbeanstalk list-available-solution-stacks`\.
 
 ### JSON<a name="quickref-elasticbeanstalk-example-1.json"></a>
 
@@ -25,7 +27,7 @@ The following sample template deploys a sample PHP web application that is store
         "Description": "AWS ElasticBeanstalk Sample Application Version",
         "SourceBundle": {
           "S3Bucket": { "Fn::Join": [ "-", [ "elasticbeanstalk-samples", { "Ref": "AWS::Region" } ] ] },
-          "S3Key": "php-sample.zip"
+          "S3Key": "php-newsample-app.zip"
         }
       }
     },
@@ -51,7 +53,7 @@ The following sample template deploys a sample PHP web application that is store
             "Value": "LoadBalanced"
           }
         ],
-        "SolutionStackName": "64bit Amazon Linux running PHP 5.3"
+        "SolutionStackName": "solution-stack"
       }
     },
     "sampleEnvironment": {
@@ -84,7 +86,7 @@ Resources:
       Description: AWS ElasticBeanstalk Sample Application Version
       SourceBundle:
         S3Bucket: !Sub "elasticbeanstalk-samples-${AWS::Region}"
-        S3Key: php-sample.zip
+        S3Key: php-newsample-app.zip
   sampleConfigurationTemplate:
     Type: AWS::ElasticBeanstalk::ConfigurationTemplate
     Properties:
@@ -101,7 +103,7 @@ Resources:
       - Namespace: aws:elasticbeanstalk:environment
         OptionName: EnvironmentType
         Value: LoadBalanced
-      SolutionStackName: 64bit Amazon Linux running PHP 5.3
+      SolutionStackName: solution-stack
   sampleEnvironment:
     Type: AWS::ElasticBeanstalk::Environment
     Properties:

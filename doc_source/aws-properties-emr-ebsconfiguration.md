@@ -1,8 +1,10 @@
-# Amazon EMR EbsConfiguration<a name="aws-properties-emr-ebsconfiguration"></a>
+# AWS::EMR::InstanceGroupConfig EbsConfiguration<a name="aws-properties-emr-ebsconfiguration"></a>
 
-`EbsConfiguration` is a property of the [Amazon EMR Cluster InstanceGroupConfig](aws-properties-emr-cluster-jobflowinstancesconfig-instancegroupconfig.md) property and the [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md) resource that defines Amazon Elastic Block Store \(Amazon EBS\) storage volumes to attach to your Amazon EMR \(Amazon EMR\) instances\.
+The Amazon EBS configuration of a cluster instance\.
 
-## Syntax<a name="w3ab2c21c14d979b5"></a>
+## Syntax<a name="aws-properties-emr-ebsconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-emr-ebsconfiguration-syntax.json"></a>
 
@@ -16,20 +18,21 @@
 ### YAML<a name="aws-properties-emr-ebsconfiguration-syntax.yaml"></a>
 
 ```
-[EbsBlockDeviceConfigs](#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs):
-  - EbsBlockDeviceConfig
-[EbsOptimized](#cfn-emr-ebsconfiguration-ebsoptimized): Boolean
+  [EbsBlockDeviceConfigs](#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs): 
+    - EbsBlockDeviceConfig
+  [EbsOptimized](#cfn-emr-ebsconfiguration-ebsoptimized): Boolean
 ```
 
-## Properties<a name="w3ab2c21c14d979b7"></a>
+## Properties<a name="aws-properties-emr-ebsconfiguration-properties"></a>
 
 `EbsBlockDeviceConfigs`  <a name="cfn-emr-ebsconfiguration-ebsblockdeviceconfigs"></a>
-Configures the block storage devices that are associated with your EMR instances\.  
-*Required: *No  
-*Type*: List of [Amazon EMR EbsConfiguration EbsBlockDeviceConfigs](aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.md)
+An array of Amazon EBS volume specifications attached to a cluster instance\.  
+*Required*: No  
+*Type*: List of [EbsBlockDeviceConfig](aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EbsOptimized`  <a name="cfn-emr-ebsconfiguration-ebsoptimized"></a>
-Indicates whether the instances are optimized for Amazon EBS I/O\. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance\. For more information about fees and supported instance types, see [EBS\-Optimized Instances](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-*Required: *No  
+Indicates whether an Amazon EBS volume is EBS\-optimized\.  
+*Required*: No  
 *Type*: Boolean  
-*Default value*: `false`
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

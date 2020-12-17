@@ -1,8 +1,10 @@
-# Amazon Elastic Container Service Service AwsVpcConfiguration<a name="aws-properties-ecs-service-awsvpcconfiguration"></a>
+# AWS::ECS::Service AwsVpcConfiguration<a name="aws-properties-ecs-service-awsvpcconfiguration"></a>
 
-`AwsVpcConfiguration` is a property of the [AWS::ECS::Service](aws-resource-ecs-service.md) resource that specifies the subnets and security groups for an Amazon Elastic Container Service \(Amazon ECS\) task or service\.
+An object representing the networking details for a task or service\.
 
-## Syntax<a name="w3ab2c21c14d677b5"></a>
+## Syntax<a name="aws-properties-ecs-service-awsvpcconfiguration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ecs-service-awsvpcconfiguration-syntax.json"></a>
 
@@ -17,29 +19,32 @@
 ### YAML<a name="aws-properties-ecs-service-awsvpcconfiguration-syntax.yaml"></a>
 
 ```
-[AssignPublicIp](#cfn-ecs-service-awsvpcconfiguration-assignpublicip): String
-[SecurityGroups](#cfn-ecs-service-awsvpcconfiguration-securitygroups): 
-   - String
-[Subnets](#cfn-ecs-service-awsvpcconfiguration-subnets): 
-   - String
+  [AssignPublicIp](#cfn-ecs-service-awsvpcconfiguration-assignpublicip): String
+  [SecurityGroups](#cfn-ecs-service-awsvpcconfiguration-securitygroups): 
+    - String
+  [Subnets](#cfn-ecs-service-awsvpcconfiguration-subnets): 
+    - String
 ```
 
-## Properties<a name="w3ab2c21c14d677b7"></a>
+## Properties<a name="aws-properties-ecs-service-awsvpcconfiguration-properties"></a>
 
 `AssignPublicIp`  <a name="cfn-ecs-service-awsvpcconfiguration-assignpublicip"></a>
-Valid values include `ENABLED` and `DISABLED`\.  
-*Required: *No  
+Whether the task's elastic network interface receives a public IP address\. The default value is `DISABLED`\.  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed values*: `DISABLED | ENABLED`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-ecs-service-awsvpcconfiguration-securitygroups"></a>
-The security groups associated with the task or service\. If you do not specify a security group, the default security group for the VPC is used\.  
-*Required: *No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The IDs of the security groups associated with the task or service\. If you do not specify a security group, the default security group for the VPC is used\. There is a limit of 5 security groups that can be specified per `AwsVpcConfiguration`\.  
+All specified security groups must be from the same VPC\.
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subnets`  <a name="cfn-ecs-service-awsvpcconfiguration-subnets"></a>
-The subnets associated with the Amazon ECS task or service\.  
-*Required: *Yes  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+The IDs of the subnets associated with the task or service\. There is a limit of 16 subnets that can be specified per `AwsVpcConfiguration`\.  
+All specified subnets must be from the same VPC\.
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

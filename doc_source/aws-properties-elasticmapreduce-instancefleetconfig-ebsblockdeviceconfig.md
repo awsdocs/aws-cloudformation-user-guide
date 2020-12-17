@@ -1,9 +1,6 @@
-# Amazon EMR InstanceFleetConfig EbsBlockDeviceConfig<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig"></a>
+# AWS::EMR::InstanceFleetConfig EbsBlockDeviceConfig<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig"></a>
 
-Use the `EbsBlockDeviceConfig` property to specify the settings for the Amazon EBS volumes that Amazon EMR associates with your instances\. The `EbsBlockDeviceConfigs` subproperty of the [Amazon EMR InstanceFleetConfig EbsConfiguration](aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.md) property contains a list of `EbsBlockDeviceConfig` property types\.
-
-**Note**  
-The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
+`EbsBlockDeviceConfig` is a subproperty of the `EbsConfiguration` property type\. `EbsBlockDeviceConfig` defines the number and type of EBS volumes to associate with all EC2 instances in an EMR cluster\.
 
 ## Syntax<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-syntax"></a>
 
@@ -13,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification)" : [*VolumeSpecification*](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md),
+  "[VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification)" : VolumeSpecification,
   "[VolumesPerInstance](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance)" : Integer
 }
 ```
@@ -21,21 +18,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-syntax.yaml"></a>
 
 ```
-[VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification):
-  [*VolumeSpecification*](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)
-[VolumesPerInstance](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance): Integer
+  [VolumeSpecification](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification): 
+    VolumeSpecification
+  [VolumesPerInstance](#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance): Integer
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-properties"></a>
 
 `VolumeSpecification`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification"></a>
-Amazon EBS volume specifications, such as volume type, IOPS, and size \(GiB\), for the EBS volume attached to an EC2 instance in the fleet\.  
-*Required: *Yes  
-*Type*: [Amazon EMR InstanceFleetConfig VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+EBS volume specifications such as volume type, IOPS, and size \(GiB\) that will be requested for the EBS volume attached to an EC2 instance in the cluster\.  
+*Required*: Yes  
+*Type*: [VolumeSpecification](aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumesPerInstance`  <a name="cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance"></a>
-The number of Amazon EBS volumes with a specific volume configuration that are associated with every instance in the fleet\.  
-*Required: *No  
+Number of EBS volumes with a specific volume configuration that will be associated with every instance in the instance group  
+*Required*: No  
 *Type*: Integer  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

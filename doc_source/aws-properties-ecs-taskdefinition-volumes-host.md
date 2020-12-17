@@ -1,8 +1,10 @@
-# Amazon Elastic Container Service TaskDefinition Volumes Host<a name="aws-properties-ecs-taskdefinition-volumes-host"></a>
+# AWS::ECS::TaskDefinition HostVolumeProperties<a name="aws-properties-ecs-taskdefinition-volumes-host"></a>
 
-`Host` is a property of the [Amazon Elastic Container Service TaskDefinition Volumes](aws-properties-ecs-taskdefinition-volumes.md) property that specifies the data volume path on the host container instance\.
+The `HostVolumeProperties` property specifies details on a container instance bind mount host volume\.
 
-## Syntax<a name="w3ab2c21c14d756b5"></a>
+## Syntax<a name="aws-properties-ecs-taskdefinition-volumes-host-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ecs-taskdefinition-volumes-host-syntax.json"></a>
 
@@ -15,15 +17,14 @@
 ### YAML<a name="aws-properties-ecs-taskdefinition-volumes-host-syntax.yaml"></a>
 
 ```
-[SourcePath](#cfn-ecs-taskdefinition-volumes-host-sourcepath): String
+  [SourcePath](#cfn-ecs-taskdefinition-volumes-host-sourcepath): String
 ```
 
-## Properties<a name="w3ab2c21c14d756b7"></a>
-
-For more information about each property, see [Task Definition Parameters](http://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.
+## Properties<a name="aws-properties-ecs-taskdefinition-volumes-host-properties"></a>
 
 `SourcePath`  <a name="cfn-ecs-taskdefinition-volumes-host-sourcepath"></a>
-The data volume path on the host container instance\.  
-If you don't specify this parameter, the Docker daemon assigns a path for you, but the data volume might not persist after the associated container stops running\. If you do specify a path, the data volume persists at that location on the host container instance until you manually delete it\.  
-*Required: *No  
-*Type*: String
+When the `host` parameter is used, specify a `sourcePath` to declare the path on the host container instance that is presented to the container\. If this parameter is empty, then the Docker daemon has assigned a host path for you\. If the `host` parameter contains a `sourcePath` file location, then the data volume persists at the specified location on the host container instance until you delete it manually\. If the `sourcePath` value does not exist on the host container instance, the Docker daemon creates it\. If the location does exist, the contents of the source path folder are exported\.  
+If you are using the Fargate launch type, the `sourcePath` parameter is not supported\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
