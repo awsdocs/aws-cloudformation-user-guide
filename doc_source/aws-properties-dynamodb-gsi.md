@@ -50,6 +50,7 @@ The sort key of an item is also known as its *range attribute*\. The term "range
 `Projection`  <a name="cfn-dynamodb-gsi-projection"></a>
 Represents attributes that are copied \(projected\) from the table into the global secondary index\. These are in addition to the primary key attributes and index key attributes, which are automatically projected\.   
 *Required*: Yes  
+
 *Type*: [Projection](aws-properties-dynamodb-projectionobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -59,3 +60,4 @@ For current minimum and maximum provisioned throughput values, see [Service, Acc
 *Required*: No  
 *Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
