@@ -1,13 +1,8 @@
 # AWS::WorkSpaces::Workspace<a name="aws-resource-workspaces-workspace"></a>
 
-The `AWS::WorkSpaces::Workspace` resource creates an Amazon WorkSpaces workspace, which is a cloud\-based desktop experience for end users\. Before creating a Workspace in CloudFormation, you must register a Directory Service directory with Workspaces\. This process is documented at [Register a Directory with Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/register-deregister-directory.html)\. For more information, see the [https://docs.aws.amazon.com/workspaces/latest/adminguide/](https://docs.aws.amazon.com/workspaces/latest/adminguide/)\. 
+The `AWS::WorkSpaces::Workspace` resource specifies a WorkSpace\.
 
-**Topics**
-+ [Syntax](#aws-resource-workspaces-workspace-syntax)
-+ [Properties](#w13ab1c21c10d240c13b9)
-+ [Return Values](#w13ab1c21c10d240c13c11)
-+ [Example](#w13ab1c21c10d240c13c13)
-+ [Amazon WorkSpaces Workspace WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)
+Updates are not supported for the `BundleId`, `RootVolumeEncryptionEnabled`, `UserVolumeEncryptionEnabled`, or `VolumeEncryptionKey` properties\. To update these properties, you must also update a property that triggers a replacement, such as the `UserName` property\.
 
 ## Syntax<a name="aws-resource-workspaces-workspace-syntax"></a>
 
@@ -19,121 +14,100 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WorkSpaces::Workspace",
   "Properties" : {
-    "[BundleId](#cfn-workspaces-workspace-bundleid)" : String,
-    "[DirectoryId](#cfn-workspaces-workspace-directoryid)" : String,
-    "[RootVolumeEncryptionEnabled](#cfn-workspaces-workspace-rootvolumeencryptionenabled)" : Boolean,
-    "[Tags](#cfn-workspaces-workspace-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ],
-    "[UserName](#cfn-workspaces-workspace-username)" : String,
-    "[UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled)" : Boolean,
-    "[VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey)" : String,
-    "[WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties)" : [*WorkspaceProperties*](aws-properties-workspaces-workspace-workspaceproperties.md)
-  }
+      "[BundleId](#cfn-workspaces-workspace-bundleid)" : String,
+      "[DirectoryId](#cfn-workspaces-workspace-directoryid)" : String,
+      "[RootVolumeEncryptionEnabled](#cfn-workspaces-workspace-rootvolumeencryptionenabled)" : Boolean,
+      "[Tags](#cfn-workspaces-workspace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UserName](#cfn-workspaces-workspace-username)" : String,
+      "[UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled)" : Boolean,
+      "[VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey)" : String,
+      "[WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties)" : WorkspaceProperties
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-workspaces-workspace-syntax.yaml"></a>
 
 ```
-Type: "AWS::WorkSpaces::Workspace"
+Type: AWS::WorkSpaces::Workspace
 Properties: 
   [BundleId](#cfn-workspaces-workspace-bundleid): String
   [DirectoryId](#cfn-workspaces-workspace-directoryid): String
   [RootVolumeEncryptionEnabled](#cfn-workspaces-workspace-rootvolumeencryptionenabled): Boolean
-  [Tags](#cfn-workspaces-workspace-tags):
-    - [*Tag*](aws-properties-resource-tags.md)
+  [Tags](#cfn-workspaces-workspace-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserName](#cfn-workspaces-workspace-username): String
   [UserVolumeEncryptionEnabled](#cfn-workspaces-workspace-uservolumeencryptionenabled): Boolean
   [VolumeEncryptionKey](#cfn-workspaces-workspace-volumeencryptionkey): String
   [WorkspaceProperties](#cfn-workspaces-workspace-workspaceproperties): 
-    [*WorkspaceProperties*](aws-properties-workspaces-workspace-workspaceproperties.md)
+    WorkspaceProperties
 ```
 
-## Properties<a name="w13ab1c21c10d240c13b9"></a>
+## Properties<a name="aws-resource-workspaces-workspace-properties"></a>
 
 `BundleId`  <a name="cfn-workspaces-workspace-bundleid"></a>
-The identifier of the bundle from which you want to create the workspace\. A bundle specifies the details of the workspace, such as the installed applications and the size of CPU, memory, and storage\. Use the [DescribeWorkspaceBundles](https://docs.aws.amazon.com/workspaces/latest/devguide/API_DescribeWorkspaceBundles.html) action to list the bundles that AWS offers\.  
+The identifier of the bundle for the WorkSpace\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Updates are not supported\.\. To update this property, you must also update another property that triggers a replacement, such as the `UserName` property\.
+*Pattern*: `^wsb-[0-9a-z]{8,63}$`  
+*Update requires*: Updates are not supported\.
 
 `DirectoryId`  <a name="cfn-workspaces-workspace-directoryid"></a>
-The identifier of the AWS Directory Service directory in which you want to create the workspace\. The directory must already be registered with Amazon WorkSpaces\. Use the [DescribeWorkspaceDirectories](https://docs.aws.amazon.com/workspaces/latest/devguide/API_DescribeWorkspaceDirectories.html) action to list the directories that are available\.  
+The identifier of the AWS Directory Service directory for the WorkSpace\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `10`  
+*Maximum*: `65`  
+*Pattern*: `^d-[0-9a-f]{8,63}$`  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `RootVolumeEncryptionEnabled`  <a name="cfn-workspaces-workspace-rootvolumeencryptionenabled"></a>
-Indicates whether Amazon WorkSpaces encrypts data stored on the root volume \(`C:` drive\)\.  
+Indicates whether the data stored on the root volume is encrypted\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: Updates are not supported\.\. To update this property, you must also update another property that triggers a replacement, such as the `UserName` property\.
+*Update requires*: Updates are not supported\.
 
 `Tags`  <a name="cfn-workspaces-workspace-tags"></a>
-The tags \(key\-value pairs\) for the WorkSpace\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The tags for the WorkSpace\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserName`  <a name="cfn-workspaces-workspace-username"></a>
-The name of the user to which the workspace is assigned\. This user name must exist in the specified AWS Directory Service directory\.  
+The user name of the user for the WorkSpace\. This user name must exist in the AWS Directory Service directory for the WorkSpace\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `63`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserVolumeEncryptionEnabled`  <a name="cfn-workspaces-workspace-uservolumeencryptionenabled"></a>
-Indicates whether Amazon WorkSpaces encrypts data stored on the user volume \(`D:` drive\)\.  
+Indicates whether the data stored on the user volume is encrypted\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: Updates are not supported\.\. To update this property, you must also update another property that triggers a replacement, such as the `UserName` property\.
+*Update requires*: Updates are not supported\.
 
 `VolumeEncryptionKey`  <a name="cfn-workspaces-workspace-volumeencryptionkey"></a>
-The AWS Key Management Service \(AWS KMS\) key ID that Amazon WorkSpaces uses to encrypt data stored on your workspace\.  
+The symmetric AWS KMS customer master key \(CMK\) used to encrypt data stored on your WorkSpace\. Amazon WorkSpaces does not support asymmetric CMKs\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: Updates are not supported\.\. To update this property, you must also update another property that triggers a replacement, such as the `UserName` property\.
+*Update requires*: Updates are not supported\.
 
 `WorkspaceProperties`  <a name="cfn-workspaces-workspace-workspaceproperties"></a>
 The WorkSpace properties\.  
 *Required*: No  
-*Type*: [Amazon WorkSpaces Workspace WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: [WorkspaceProperties](aws-properties-workspaces-workspace-workspaceproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="w13ab1c21c10d240c13c11"></a>
+## Return values<a name="aws-resource-workspaces-workspace-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d240c13c11b2"></a>
+### Ref<a name="aws-resource-workspaces-workspace-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10d240c13c13"></a>
+## See also<a name="aws-resource-workspaces-workspace--seealso"></a>
++  [CreateWorkspaces](https://docs.aws.amazon.com/workspaces/latest/api/API_CreateWorkspaces.html) in the *Amazon WorkSpaces API Reference* 
++  [Launch a Virtual Desktop Using Amazon WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/launch-workspaces-tutorials.html) in the *Amazon WorkSpaces Administration Guide* 
 
-### <a name="w13ab1c21c10d240c13c13b2"></a>
-
-The following example creates a workspace for user `test`\. The bundle and directory IDs are specified as parameters in the same template\.
-
-#### JSON<a name="aws-resource-workspaces-workspace-example.json"></a>
-
-```
-"workspace1" : {
-  "Type" : "AWS::WorkSpaces::Workspace",
-  "Properties" : {
-    "BundleId" : {"Ref" : "BundleId"},
-    "DirectoryId" : {"Ref" : "DirectoryId"},
-    "UserName" : "test"
-  }
-}
-```
-
-#### YAML<a name="aws-resource-workspaces-workspace-example.yaml"></a>
-
-```
-workspace1: 
-  Type: "AWS::WorkSpaces::Workspace"
-  Properties: 
-    BundleId: 
-      Ref: "BundleId"
-    DirectoryId: 
-      Ref: "DirectoryId"
-    UserName: "test"
-```

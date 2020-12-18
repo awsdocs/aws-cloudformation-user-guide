@@ -1,11 +1,10 @@
 # AWS::Lambda::Permission<a name="aws-resource-lambda-permission"></a>
 
-The `AWS::Lambda::Permission` resource associates a policy statement with a specific AWS Lambda \(Lambda\) function's access policy\. The function policy grants a specific AWS service or application permission to invoke the function\. For more information, see [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) in the *AWS Lambda Developer Guide*\.
+The `AWS::Lambda::Permission` resource grants an AWS service or another account permission to use a function\. You can apply the policy at the function level, or specify a qualifier to restrict access to a single version or alias\. If you use a qualifier, the invoker must use the full Amazon Resource Name \(ARN\) of that version or alias to invoke the function\.
 
-**Topics**
-+ [Syntax](#aws-resource-lambda-permission-syntax)
-+ [Properties](#w13ab1c21c10d177c33b9)
-+ [Example](#w13ab1c21c10d177c33c11)
+To grant permission to another account, specify the account ID as the `Principal`\. For AWS services, the principal is a domain\-style identifier defined by the service, like `s3.amazonaws.com` or `sns.amazonaws.com`\. For AWS services, you can also specify the ARN of the associated resource as the `SourceArn`\. If you grant permission to a service principal without specifying the source, other accounts could potentially configure resources in their account to invoke your Lambda function\.
+
+This resource adds a statement to a resource\-based permission policy for the function\. For more information about function policies, see [Lambda Function Policies](https://docs.aws.amazon.com/lambda/latest/dg/access-control-resource-based.html)\. 
 
 ## Syntax<a name="aws-resource-lambda-permission-syntax"></a>
 
@@ -17,13 +16,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::Permission",
   "Properties" : {
-    "[Action](#cfn-lambda-permission-action)" : String,
-    "[EventSourceToken](#cfn-lambda-permission-eventsourcetoken)" : String,
-    "[FunctionName](#cfn-lambda-permission-functionname)" : String,
-    "[Principal](#cfn-lambda-permission-principal)" : String,
-    "[SourceAccount](#cfn-lambda-permission-sourceaccount)" : String,
-    "[SourceArn](#cfn-lambda-permission-sourcearn)" : String
-  }
+      "[Action](#cfn-lambda-permission-action)" : String,
+      "[EventSourceToken](#cfn-lambda-permission-eventsourcetoken)" : String,
+      "[FunctionName](#cfn-lambda-permission-functionname)" : String,
+      "[Principal](#cfn-lambda-permission-principal)" : String,
+      "[SourceAccount](#cfn-lambda-permission-sourceaccount)" : String,
+      "[SourceArn](#cfn-lambda-permission-sourcearn)" : String
+    }
 }
 ```
 
@@ -40,92 +39,119 @@ Properties:
   [SourceArn](#cfn-lambda-permission-sourcearn): String
 ```
 
-## Properties<a name="w13ab1c21c10d177c33b9"></a>
-
-For more information and current valid values, see [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) in the *AWS Lambda Developer Guide*\.
+## Properties<a name="aws-resource-lambda-permission-properties"></a>
 
 `Action`  <a name="cfn-lambda-permission-action"></a>
-The Lambda actions that you want to allow in this statement\. For example, you can specify `lambda:CreateFunction` to specify a certain action, or use a wildcard \(`lambda:*`\) to grant permission to all Lambda actions\. For a list of actions, see [Actions and Condition Context Keys for AWS Lambda](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_lambda.html) in the *IAM User Guide*\.  
+The action that the principal can use on the function\. For example, `lambda:InvokeFunction` or `lambda:GetFunction`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Pattern*: `(lambda:[*]|lambda:[a-zA-Z]+|[*])`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EventSourceToken`  <a name="cfn-lambda-permission-eventsourcetoken"></a>
-A unique token that must be supplied by the principal invoking the function\.  
+For Alexa Smart Home functions, a token that must be supplied by the invoker\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[a-zA-Z0-9._\-]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FunctionName`  <a name="cfn-lambda-permission-functionname"></a>
-The name \(physical ID\), Amazon Resource Name \(ARN\), or alias ARN of the Lambda function that you want to associate with this statement\. Lambda adds this statement to the function's access policy\.  
+The name of the Lambda function, version, or alias\.  
+
+**Name formats**
++  **Function name** \- `my-function` \(name\-only\), `my-function:v1` \(with alias\)\.
++  **Function ARN** \- `arn:aws:lambda:us-west-2:123456789012:function:my-function`\.
++  **Partial ARN** \- `123456789012:function:my-function`\.
+You can append a version number or alias to any of the formats\. The length constraint applies only to the full ARN\. If you specify only the function name, it is limited to 64 characters in length\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Minimum*: `1`  
+*Maximum*: `140`  
+*Pattern*: `(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Principal`  <a name="cfn-lambda-permission-principal"></a>
-The entity for which you are granting permission to invoke the Lambda function\. This entity can be any valid AWS service principal, such as `s3.amazonaws.com` or `sns.amazonaws.com`, or, if you are granting cross\-account permission, an AWS account ID\. For example, you might want to allow a custom application in another AWS account to push events to Lambda by invoking your function\.  
+The AWS service or account that invokes the function\. If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the function through that service\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Pattern*: `.*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccount`  <a name="cfn-lambda-permission-sourceaccount"></a>
-The AWS account ID \(without hyphens\) of the source owner\. For example, if you specify an S3 bucket in the `SourceArn` property, this value is the bucket owner's account ID\. You can use this property to ensure that all source principals are owned by a specific account\.  
-This property is not supported by all event sources\. For more information, see the `SourceAccount` parameter for the [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) action in the *AWS Lambda Developer Guide*\.
+For Amazon S3, the ID of the account that owns the resource\. Use this together with `SourceArn` to ensure that the resource is owned by the specified account\. It is possible for an Amazon S3 bucket to be deleted by its owner and recreated by another account\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Pattern*: `\d{12}`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceArn`  <a name="cfn-lambda-permission-sourcearn"></a>
-The ARN of a resource that is invoking your function\. When granting Amazon Simple Storage Service \(Amazon S3\) permission to invoke your function, specify this property with the bucket ARN as its value\. This ensures that events generated only from the specified bucket, not just any bucket from any AWS account that creates a mapping to your function, can invoke the function\.  
-This property is not supported by all event sources\. For more information, see the `SourceArn` parameter for the [AddPermission](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html) action in the *AWS Lambda Developer Guide*\.
+For AWS services, the ARN of the AWS resource that invokes the function\. For example, an Amazon S3 bucket or Amazon SNS topic\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Example<a name="w13ab1c21c10d177c33c11"></a>
+## Examples<a name="aws-resource-lambda-permission--examples"></a>
 
-The following example grants an S3 bucket permission to invoke a Lambda function\.
 
-### JSON<a name="aws-resource-lambda-permission-example.json"></a>
+
+### Cross Account Invoke<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke"></a>
+
+Grant account 123456789012 permission to invoke a function resource named `function` created in the same template\.
+
+#### YAML<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke--yaml"></a>
 
 ```
-"LambdaInvokePermission": {
-	"Type": "AWS::Lambda::Permission",
-	"Properties": {
-		"FunctionName": {
-			"Fn::GetAtt": [
-				"MyLambdaFunction",
-				"Arn"
-			]
-		},
-		"Action": "lambda:InvokeFunction",
-		"Principal": "s3.amazonaws.com",
-		"SourceAccount": {
-			"Ref": "AWS::AccountId"
-		},
-		"SourceArn": {
-			"Fn::GetAtt": [
-				"MyBucket",
-				"Arn"
-			]
-		}
-	}
+  permission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt function.Arn
+      Action: lambda:InvokeFunction
+      Principal: 123456789012
+```
+
+### Amazon S3 Notifications<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications"></a>
+
+Grant Amazon S3 permission to invoke a function resource named `function` created in the same template, to process notifications for a bucket resource named `bucket`\.
+
+#### JSON<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--json"></a>
+
+```
+"s3Permission": {
+    "Type": "AWS::Lambda::Permission",
+    "Properties": {
+        "FunctionName": {
+            "Fn::GetAtt": [
+                "function",
+                "Arn"
+            ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "s3.amazonaws.com",
+        "SourceAccount": {
+            "Ref": "AWS::AccountId"
+        },
+        "SourceArn": {
+            "Fn::GetAtt": [
+                "bucket",
+                "Arn"
+            ]
+        }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-lambda-permission-example.yaml"></a>
+#### YAML<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--yaml"></a>
 
 ```
-LambdaInvokePermission:
+s3Permission:
   Type: AWS::Lambda::Permission
   Properties:
-    FunctionName: !GetAtt 
-      - MyLambdaFunction
-      - Arn
-    Action: 'lambda:InvokeFunction'
+    FunctionName: !GetAtt function.Arn
+    Action: lambda:InvokeFunction
     Principal: s3.amazonaws.com
     SourceAccount: !Ref 'AWS::AccountId'
-    SourceArn: !GetAtt 
-      - MyBucket
-      - Arn
+    SourceArn: !GetAtt bucket.Arn
 ```

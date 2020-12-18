@@ -1,15 +1,17 @@
-# Amazon Elastic Compute Cloud SpotFleet Placement<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement"></a>
+# AWS::EC2::SpotFleet SpotPlacement<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement"></a>
 
-`Placement` is a property of the [Amazon Elastic Compute Cloud SpotFleet LaunchSpecifications](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md) property that defines the placement group for the Spot instances\.
+Describes Spot Instance placement\.
 
-## Syntax<a name="w13ab1c21c10d111d118c65b5"></a>
+## Syntax<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-syntax.json"></a>
 
 ```
 {
-  "[AvailabilityZone](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-availabilityzone)" : String,
-  "[GroupName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-groupname)" : String,
+  "[AvailabilityZone](#cfn-ec2-spotfleet-spotplacement-availabilityzone)" : String,
+  "[GroupName](#cfn-ec2-spotfleet-spotplacement-groupname)" : String,
   "[Tenancy](#cfn-ec2-spotfleet-spotplacement-tenancy)" : String
 }
 ```
@@ -17,29 +19,29 @@
 ### YAML<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-syntax.yaml"></a>
 
 ```
-[AvailabilityZone](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-availabilityzone): String
-[GroupName](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-groupname): String
-[Tenancy](#cfn-ec2-spotfleet-spotplacement-tenancy): String
+  [AvailabilityZone](#cfn-ec2-spotfleet-spotplacement-availabilityzone): String
+  [GroupName](#cfn-ec2-spotfleet-spotplacement-groupname): String
+  [Tenancy](#cfn-ec2-spotfleet-spotplacement-tenancy): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d118c65b7"></a>
+## Properties<a name="aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-properties"></a>
 
-For more information, including defaults, valid values, and constraints, see [SpotPlacement](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotPlacement.html) in the *Amazon EC2 API Reference*
-
-`AvailabilityZone`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-availabilityzone"></a>
-The Availability Zone \(AZ\) of the placement group\.  
+`AvailabilityZone`  <a name="cfn-ec2-spotfleet-spotplacement-availabilityzone"></a>
+The Availability Zone\.  
+To specify multiple Availability Zones, separate them using commas; for example, "us\-west\-2a, us\-west\-2b"\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`GroupName`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-placement-groupname"></a>
-The name of the placement group \(for cluster instances\)\.  
+`GroupName`  <a name="cfn-ec2-spotfleet-spotplacement-groupname"></a>
+The name of the placement group\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tenancy`  <a name="cfn-ec2-spotfleet-spotplacement-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of dedicated runs on single\-tenant hardware\. The host tenancy is not supported for Spot Instances\.  
+The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for Spot Instances\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Allowed values*: `dedicated | default | host`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

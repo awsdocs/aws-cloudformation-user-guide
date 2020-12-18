@@ -1,12 +1,6 @@
 # AWS::Config::AggregationAuthorization<a name="aws-resource-config-aggregationauthorization"></a>
 
-The `AWS::Config::AggregationAuthorization` resource to grant permission to an aggregator account to collect your AWS Config data\. 
-
-**Topics**
-+ [Syntax](#aws-resource-config-aggregationauthorization-syntax)
-+ [Properties](#aws-resource-config-aggregationauthorization-properties)
-+ [Return Values](#aws-resource-config-aggregationauthorization-returnvalues)
-+ [Examples](#aws-resource-config-aggregationauthorization-examples)
+An object that represents the authorizations granted to aggregator accounts and regions\.
 
 ## Syntax<a name="aws-resource-config-aggregationauthorization-syntax"></a>
 
@@ -18,80 +12,91 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::AggregationAuthorization",
   "Properties" : {
-    "[AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid)" : String,
-    "[AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion)" : String
-  }
+      "[AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid)" : String,
+      "[AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion)" : String,
+      "[Tags](#cfn-config-aggregationauthorization-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-config-aggregationauthorization-syntax.yaml"></a>
 
 ```
-Type: "AWS::Config::AggregationAuthorization"
-Properties:
+Type: AWS::Config::AggregationAuthorization
+Properties: 
   [AuthorizedAccountId](#cfn-config-aggregationauthorization-authorizedaccountid): String
   [AuthorizedAwsRegion](#cfn-config-aggregationauthorization-authorizedawsregion): String
+  [Tags](#cfn-config-aggregationauthorization-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-config-aggregationauthorization-properties"></a>
 
 `AuthorizedAccountId`  <a name="cfn-config-aggregationauthorization-authorizedaccountid"></a>
-The 12 digit account ID of the account authorized to aggregate data\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The 12\-digit account ID of the account authorized to aggregate data\.  
+*Required*: Yes  
+*Type*: String  
+*Pattern*: `\d{12}`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AuthorizedAwsRegion`  <a name="cfn-config-aggregationauthorization-authorizedawsregion"></a>
 The region authorized to collect aggregated data\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-config-aggregationauthorization-returnvalues"></a>
+`Tags`  <a name="cfn-config-aggregationauthorization-tags"></a>
+An array of tag object\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-### Ref<a name="aws-resource-config-aggregationauthorization-ref"></a>
+## Return values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the AggregationAuthorization, for example:
+### Ref<a name="aws-resource-config-aggregationauthorization-return-values-ref"></a>
 
-```
-arn:aws:config:us-east-1:123456789012:aggregation-authorization/987654321012/us-west-2
-```
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the AggregationAuthorization, such as `arn:aws:config:us-east-1:123456789012:aggregation-authorization/987654321012/us-west-2`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-config-aggregationauthorization-examples"></a>
+## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
 
-### AggregationAuthorization<a name="aws-resource-config-aggregationauthorization-example1"></a>
 
-The following example creates an AggregationAuthorization that authorizes another account to aggregate your AWS Config data into a specific region\.
 
-#### JSON<a name="aws-resource-config-aggregationauthorization-example1.json"></a>
+### Authorize Another Account<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account"></a>
+
+The following example creates an AggregationAuthorization that authorizes another account to aggregate your AWS Config data into a specific region\. 
+
+#### JSON<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account--json"></a>
 
 ```
 "AggregationAuthorization": {
     "Type": "AWS::Config::AggregationAuthorization",
     "Properties": {
-      "AuthorizedAccountId": 123456789012,
-      "AuthorizedAwsRegion": "us-west-2"
+        "AuthorizedAccountId": 123456789012,
+        "AuthorizedAwsRegion": "us-west-2"
     }
-  }
+}
 ```
 
-#### YAML<a name="aws-resource-config-aggregationauthorization-example1.yaml"></a>
+#### YAML<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account--yaml"></a>
 
 ```
 AggregationAuthorization: 
-    Type: "AWS::Config::AggregationAuthorization"
-    Properties: 
-      AuthorizedAccountId: 123456789012
-      AuthorizedAwsRegion: us-west-2
+  Type: "AWS::Config::AggregationAuthorization"
+  Properties: 
+    AuthorizedAccountId: 123456789012
+    AuthorizedAwsRegion: us-west-2
 ```
 
-### <a name="aws-resource-config-aggregationauthorization-example2"></a>
+### Aggregation Authorization<a name="aws-resource-config-aggregationauthorization--examples--Aggregation_Authorization"></a>
 
-The following example enables AWS Config, creates an AWS Config rule, an aggregator, and an authorization\.
+The following example enables AWS Config and creates an AWS Config rule, an aggregator, and an authorization\.
 
-#### JSON<a name="aws-resource-config-aggregationauthorization-example2.json"></a>
+#### JSON<a name="aws-resource-config-aggregationauthorization--examples--Aggregation_Authorization--json"></a>
 
 ```
 {
@@ -128,7 +133,7 @@ The following example enables AWS Config, creates an AWS Config rule, an aggrega
                     "default": "Aggregator account"
                 },
                 "AggregatorRegion": {
-                    "default": "Aggregator account"
+                    "default": "Aggregator region"
                 },
                 "SourceAccounts": {
                     "default": "Source accounts"
@@ -346,7 +351,7 @@ The following example enables AWS Config, creates an AWS Config rule, an aggrega
             "Type": "AWS::Config::ConfigurationAggregator",
             "Condition": "CreateAggregator",
             "Properties": {
-                "Name": "default",
+                "Name": "name",
                 "AccountAggregationSources": [
                     {
                         "AccountIds": {
@@ -375,7 +380,7 @@ The following example enables AWS Config, creates an AWS Config rule, an aggrega
 }
 ```
 
-#### YAML<a name="aws-resource-config-aggregationauthorization-example2.yaml"></a>
+#### YAML<a name="aws-resource-config-aggregationauthorization--examples--Aggregation_Authorization--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -401,7 +406,7 @@ Metadata:
       AggregatorAccount:
         default: Aggregator account
       AggregatorRegion:
-        default: Aggregator account
+        default: Aggregator region
       SourceAccounts:
         default: Source accounts
       SourceRegions:
@@ -528,7 +533,7 @@ Resources:
     Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
-      Name: default
+    ConfigurationAggregatorName: name
       AccountAggregationSources:
         - AccountIds: !Ref SourceAccounts
           AwsRegions: !Ref SourceRegions

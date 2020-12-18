@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution<a name="aws-resource-cloudfront-streamingdistribution"></a>
 
-The `AWS::CloudFront::StreamingDistribution` resource specifies an RMTP distribution for Amazon CloudFront\. An RTMP distribution is similar to a web distribution, but an RTMP distribution streams media files using the Adobe Real\-Time Messaging Protocol \(RTMP\) instead of serving files using HTTP\. For more information, see [CreateStreamingDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*\. 
+A streaming distribution tells CloudFront where you want RTMP content to be delivered from, and the details about how to track and manage content delivery\.
 
 ## Syntax<a name="aws-resource-cloudfront-streamingdistribution-syntax"></a>
 
@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::StreamingDistribution",
   "Properties" : {
-    "[StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)" : [*StreamingDistributionConfig*](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md),
-    "[Tags](#cfn-cloudfront-streamingdistribution-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig)" : StreamingDistributionConfig,
+      "[Tags](#cfn-cloudfront-streamingdistribution-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
@@ -22,51 +22,55 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::CloudFront::StreamingDistribution
-Properties:
-  [StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig): StreamingDistributionConfig
+Properties: 
+  [StreamingDistributionConfig](#cfn-cloudfront-streamingdistribution-streamingdistributionconfig): 
+    StreamingDistributionConfig
   [Tags](#cfn-cloudfront-streamingdistribution-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-cloudfront-streamingdistribution-properties"></a>
 
 `StreamingDistributionConfig`  <a name="cfn-cloudfront-streamingdistribution-streamingdistributionconfig"></a>
-Information about the configuration of the RMTP streaming distribution\.  
- *Required*: Yes  
- *Type*: [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The current configuration information for the RTMP distribution\.  
+*Required*: Yes  
+*Type*: [StreamingDistributionConfig](aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-cloudfront-streamingdistribution-tags"></a>
-Key\-value tags to assign to this streaming distribution\.  
- *Required*: Yes  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md)  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)   
-Duplicates not allowed\.
+A complex type that contains zero or more `Tag` elements\.  
+*Required*: Yes  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-streamingdistribution-returnvalues"></a>
+## Return values<a name="aws-resource-cloudfront-streamingdistribution-return-values"></a>
 
-### Ref<a name="w13ab1c21c10c60c22c12b3"></a>
+### Ref<a name="aws-resource-cloudfront-streamingdistribution-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::CloudFront::StreamingDistribution` resource to the intrinsic `Ref` function, the function returns the streaming distribution ID, such as `E1E7FEN9T35R9W`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the streaming distribution ID, such as `E1E7FEN9T35R9W`\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="w13ab1c21c10c60c22c12b5"></a>
+### Fn::GetAtt<a name="aws-resource-cloudfront-streamingdistribution-return-values-fn--getatt"></a>
 
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`DomainName`  
-The domain name of the resource, such as `sct27g85mgx04.cloudfront.net`\. 
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\. 
+#### <a name="aws-resource-cloudfront-streamingdistribution-return-values-fn--getatt-fn--getatt"></a>
 
-## Example<a name="aws-resource-cloudfront-streamingdistribution-examples"></a>
+`DomainName`  <a name="DomainName-fn::getatt"></a>
+The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
-### <a name="aws-resource-cloudfront-streamingdistribution-example1"></a>
+## Examples<a name="aws-resource-cloudfront-streamingdistribution--examples"></a>
+
+
+
+### Create a streaming distribution<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution"></a>
 
 The following example specifies a streaming distribution and assigns it a single tag\.
 
-#### JSON<a name="aws-resource-cloudfront-streamingdistribution-example1.json"></a>
+#### JSON<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution--json"></a>
 
 ```
 {
@@ -110,7 +114,7 @@ The following example specifies a streaming distribution and assigns it a single
 }
 ```
 
-#### YAML<a name="aws-resource-cloudfront-streamingdistribution-example1.yaml"></a>
+#### YAML<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -139,6 +143,3 @@ Resources:
         - Key: string-value
           Value: string-value
 ```
-
-## See Also<a name="aws-resource-cloudfront-streamingdistribution-seealso"></a>
-+ [CreateStreamingDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateStreamingDistribution.html) in the *Amazon CloudFront API Reference*

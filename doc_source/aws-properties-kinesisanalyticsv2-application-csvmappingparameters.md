@@ -1,8 +1,10 @@
-# Amazon Kinesis Data Analytics Application CSVMappingParameters<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters"></a>
+# AWS::KinesisAnalyticsV2::Application CSVMappingParameters<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters"></a>
 
-<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters-description"></a>The `CSVMappingParameters` property type specifies additional mapping information for a SQL application when the record format uses delimiters, such as CSV\.
+For a SQL\-based Kinesis Data Analytics application, provides additional mapping information when the record format uses delimiters, such as CSV\. For example, the following sample records use CSV format, where the records use the *'\\n'* as the row delimiter and a comma \(","\) as the column delimiter: 
 
-<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters-inheritance"></a> `CSVMappingParameters` is a property of the [MappingParameters](aws-properties-kinesisanalyticsv2-application-mappingparameters.md) property\.
+ `"name1", "address1"` 
+
+ `"name2", "address2"` 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters-syntax"></a>
 
@@ -12,28 +14,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RecordRowDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter)" : String,
-  "[RecordColumnDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter)" : String
+  "[RecordColumnDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter)" : String,
+  "[RecordRowDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters-syntax.yaml"></a>
 
 ```
-[RecordRowDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter): String
-[RecordColumnDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter): String
+  [RecordColumnDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter): String
+  [RecordRowDelimiter](#cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter): String
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters-properties"></a>
 
-`RecordRowDelimiter`  <a name="cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter"></a>
-The row delimiter\. For example, in a CSV format, '\\n' is the typical row delimiter\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `RecordColumnDelimiter`  <a name="cfn-kinesisanalyticsv2-application-csvmappingparameters-recordcolumndelimiter"></a>
-The column delimiter\. For example, in a CSV format, a comma \(","\) is the typical column delimiter\.   
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The column delimiter\. For example, in a CSV format, a comma \(","\) is the typical column delimiter\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RecordRowDelimiter`  <a name="cfn-kinesisanalyticsv2-application-csvmappingparameters-recordrowdelimiter"></a>
+The row delimiter\. For example, in a CSV format, *'\\n'* is the typical row delimiter\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters--seealso"></a>
++  [CSVMappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CSVMappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

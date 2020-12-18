@@ -1,9 +1,9 @@
-# Describing and Listing Your Stacks<a name="using-cfn-describing-stacks"></a>
+# Describing and listing your stacks<a name="using-cfn-describing-stacks"></a>
 
 You can use two AWS CLI commands to get information about your AWS CloudFormation stacks: `[aws cloudformation list\-stacks](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-stacks.html)` and `[aws cloudformation describe\-stacks](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html)`\.
 
 **Note**  
-See [AWS CloudFormation Resources](using-iam-template.md#resource-level-permissions) for a discussion of how IAM policies may limit what a user can do with these two AWS CLI commands\.
+See [AWS CloudFormation resources](using-iam-template.md#resource-level-permissions) for a discussion of how IAM policies may limit what a user can do with these two AWS CLI commands\.
 
 ## aws cloudformation list\-stacks<a name="using-cfn-describing-stacks-list-stacks"></a>
 
@@ -65,11 +65,11 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 If you don't use the `--stack-name` option to limit the output to one stack, information on all your running stacks is returned\.
 
-## Stack Status Codes<a name="w13ab1c15c15c17c11"></a>
+## Stack status codes<a name="w7466ab1c23c15c17c11"></a>
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w13ab1c15c15c17c11b4"></a>
+### <a name="w7466ab1c23c15c17c11b4"></a>
 
 
 | Stack Status | Description | 
@@ -80,14 +80,20 @@ You can specify one or more stack status codes to list only stacks with the spec
 |  `DELETE_COMPLETE`  |  Successful deletion of one or more stacks\. Deleted stacks are retained and viewable for 90 days\.  | 
 |  `DELETE_FAILED`  |  Unsuccessful deletion of one or more stacks\. Because the delete failed, you might have some resources that are still running; however, you cannot work with or update the stack\. Delete the stack again or view the stack events to see any associated error messages\.  | 
 |  `DELETE_IN_PROGRESS`  |  Ongoing removal of one or more stacks\.  | 
-| REVIEW\_IN\_PROGRESS | Ongoing creation of one or more stacks with an expected StackId but without any templates or resources\. A stack with this status code counts against the [maximum possible number of stacks](cloudformation-limits.md)\.  | 
+|  `REVIEW_IN_PROGRESS` | Ongoing creation of one or more stacks with an expected StackId but without any templates or resources\. A stack with this status code counts against the [maximum possible number of stacks](cloudformation-limits.md)\.  | 
 |  `ROLLBACK_COMPLETE`  |  Successful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Any resources that were created during the create stack action are deleted\. This status exists only after a failed stack creation\. It signifies that all operations from the partially created stack have been appropriately cleaned up\. When in this state, only a delete operation can be performed\.  | 
 |  `ROLLBACK_FAILED`  |  Unsuccessful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Delete the stack or view the stack events to see any associated error messages\.  | 
 |  `ROLLBACK_IN_PROGRESS`  |  Ongoing removal of one or more stacks after a failed stack creation or after an explicitly cancelled stack creation\.  | 
 |  `UPDATE_COMPLETE`  | Successful update of one or more stacks\. | 
 |  `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of old resources for one or more stacks after a successful stack update\. For stack updates that require resources to be replaced, AWS CloudFormation creates the new resources first and then deletes the old resources to help reduce any interruptions with your stack\. In this state, the stack has been updated and is usable, but AWS CloudFormation is still deleting the old resources\.  | 
+|  `UPDATE_FAILED`  | Unsuccessful update of one or more stacks\. View the stack events to see any associated error messages\. | 
 |  `UPDATE_IN_PROGRESS`  |  Ongoing update of one or more stacks\.  | 
 |  `UPDATE_ROLLBACK_COMPLETE`  |  Successful return of one or more stacks to a previous working state after a failed stack update\.  | 
 |  `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of new resources for one or more stacks after a failed stack update\. In this state, the stack has been rolled back to its previous working state and is usable, but AWS CloudFormation is still deleting any new resources it created during the stack update\.  | 
 |  `UPDATE_ROLLBACK_FAILED`  |  Unsuccessful return of one or more stacks to a previous working state after a failed stack update\. When in this state, you can delete the stack or [continue rollback](using-cfn-updating-stacks-continueupdaterollback.md)\. You might need to fix errors before your stack can return to a working state\. Or, you can contact customer support to restore the stack to a usable state\.  | 
 |  `UPDATE_ROLLBACK_IN_PROGRESS`  |  Ongoing return of one or more stacks to the previous working state after failed stack update\.  | 
+|  `IMPORT_IN_PROGRESS`  |  The import operation is currently in progress\.  | 
+|  `IMPORT_COMPLETE`  |  The import operation successfully completed for all resources in the stack that support `resource import`\.   | 
+|  `IMPORT_ROLLBACK_IN_PROGRESS`  |  Import will roll back to the previous template configuration\.  | 
+|  `IMPORT_ROLLBACK_FAILED`  |  The import rollback operation failed for at least one resource in the stack\. Results will be available for the resources CloudFormation successfully imported\.  | 
+|  `IMPORT_ROLLBACK_COMPLETE`  |  Import successfully rolled back to the previous template configuration\.  | 

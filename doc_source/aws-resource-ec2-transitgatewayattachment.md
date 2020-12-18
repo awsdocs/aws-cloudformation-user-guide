@@ -1,12 +1,10 @@
 # AWS::EC2::TransitGatewayAttachment<a name="aws-resource-ec2-transitgatewayattachment"></a>
 
-Creates an attachment between a VPC and a transit gateway\. For more information, see [Amazon VPC Transit Gateways](https://docs.aws.amazon.com/vpc/latest/tgw/)\.
+Attaches a VPC to a transit gateway\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-transitgatewayattachment-syntax)
-+ [Properties](#aws-resource-ec2-transitgatewayattachment-properties)
-+ [Return Values](#aws-resource-ec2-transitgatewayattachment-returnvalues)
-+ [See Also](#aws-resource-ec2-transitgatewayattachment-seealso)
+If you attach a VPC with a CIDR range that overlaps the CIDR range of a VPC that is already attached, the new VPC CIDR range is not propagated to the default propagation route table\.
+
+To send VPC traffic to an attached transit gateway, add a route to the VPC route table using [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)\.
 
 ## Syntax<a name="aws-resource-ec2-transitgatewayattachment-syntax"></a>
 
@@ -18,23 +16,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::TransitGatewayAttachment",
   "Properties" : {
-    "[SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids)" : [ String, ... ],
-    "[Tags](#cfn-ec2-transitgatewayattachment-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ],
-    "[TransitGatewayId](#cfn-ec2-transitgatewayattachment-transitgatewayid)" : String,
-    "[VpcId](#cfn-ec2-transitgatewayattachment-vpcid)" : String
-  }
+      "[SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-ec2-transitgatewayattachment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TransitGatewayId](#cfn-ec2-transitgatewayattachment-transitgatewayid)" : String,
+      "[VpcId](#cfn-ec2-transitgatewayattachment-vpcid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-ec2-transitgatewayattachment-syntax.yaml"></a>
 
 ```
-Type: "AWS::EC2::TransitGatewayAttachment"
-Properties:
+Type: AWS::EC2::TransitGatewayAttachment
+Properties: 
   [SubnetIds](#cfn-ec2-transitgatewayattachment-subnetids): 
     - String
   [Tags](#cfn-ec2-transitgatewayattachment-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitGatewayId](#cfn-ec2-transitgatewayattachment-transitgatewayid): String
   [VpcId](#cfn-ec2-transitgatewayattachment-vpcid): String
 ```
@@ -43,36 +41,37 @@ Properties:
 
 `SubnetIds`  <a name="cfn-ec2-transitgatewayattachment-subnetids"></a>
 The IDs of one or more subnets\. You can specify only one subnet per Availability Zone\. You must specify at least one subnet, but we recommend that you specify two subnets for better availability\. The transit gateway uses one IP address from each specified subnet\.  
- *Required*: Yes  
- *Type*: List of String values  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-transitgatewayattachment-tags"></a>
-The tags to apply to the VPC attachment\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The tags for the attachment\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewayattachment-transitgatewayid"></a>
 The ID of the transit gateway\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-transitgatewayattachment-vpcid"></a>
 The ID of the VPC\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-transitgatewayattachment-returnvalues"></a>
+## Return values<a name="aws-resource-ec2-transitgatewayattachment-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-transitgatewayattachment-ref"></a>
+### Ref<a name="aws-resource-ec2-transitgatewayattachment-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::EC2::TransitGatewayAttachment` resource to the intrinsic `Ref` function, the function returns the ID of the attachment, such as `tgw-attach-vpc-0d39e0d39e0d39e`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the attachment\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-transitgatewayattachment-seealso"></a>
-+ [CreateTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*
-+ [ModifyTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*
+## See also<a name="aws-resource-ec2-transitgatewayattachment--seealso"></a>
++  [CreateTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*\.
++  [ModifyTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*
+

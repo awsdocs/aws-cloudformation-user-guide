@@ -1,31 +1,26 @@
 # AWS::EC2::VPCDHCPOptionsAssociation<a name="aws-resource-ec2-vpc-dhcp-options-assoc"></a>
 
-Associates a set of DHCP options \(that you've previously created\) with the specified VPC\.
+Associates a set of DHCP options with a VPC, or associates no DHCP options with the VPC\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-vpcdhcpoptionsassociation-syntax)
-+ [Properties](#w13ab1c21c10d111d182b9)
-+ [Return Values](#w13ab1c21c10d111d182c11)
-+ [Example](#w13ab1c21c10d111d182c13)
-+ [See Also](#w13ab1c21c10d111d182c15)
+After you associate the options with the VPC, any existing instances and all new instances that you launch in that VPC use the options\. You don't need to restart or relaunch the instances\. They automatically pick up the changes within a few hours, depending on how frequently the instance renews its DHCP lease\. You can explicitly renew the lease using the operating system on the instance\.
 
-## Syntax<a name="aws-resource-ec2-vpcdhcpoptionsassociation-syntax"></a>
+## Syntax<a name="aws-resource-ec2-vpc-dhcp-options-assoc-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-vpcdhcpoptionsassociation-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc-syntax.json"></a>
 
 ```
-{ 
-   "Type" : "AWS::EC2::VPCDHCPOptionsAssociation",
-   "Properties" : {
+{
+  "Type" : "AWS::EC2::VPCDHCPOptionsAssociation",
+  "Properties" : {
       "[DhcpOptionsId](#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)" : String,
       "[VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid)" : String
-   }
+    }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpcdhcpoptionsassociation-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-vpc-dhcp-options-assoc-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::VPCDHCPOptionsAssociation
@@ -34,55 +29,61 @@ Properties:
   [VpcId](#cfn-ec2-vpcdhcpoptionsassociation-vpcid): String
 ```
 
-## Properties<a name="w13ab1c21c10d111d182b9"></a>
+## Properties<a name="aws-resource-ec2-vpc-dhcp-options-assoc-properties"></a>
 
 `DhcpOptionsId`  <a name="cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid"></a>
-The ID of the DHCP options you want to associate with the VPC\. Specify `default` if you want the VPC to use no DHCP options\.  
+The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-vpcdhcpoptionsassociation-vpcid"></a>
-The ID of the VPC to associate with this DHCP options set\.  
+The ID of the VPC\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="w13ab1c21c10d111d182c11"></a>
+## Return values<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values"></a>
 
-### Ref<a name="w13ab1c21c10d111d182c11b2"></a>
+### Ref<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the DHCP options association\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Example<a name="w13ab1c21c10d111d182c13"></a>
+## Examples<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples"></a>
 
-The following snippet uses the `Ref` intrinsic function to associate the `myDHCPOptions` DHCP options with the `myVPC` VPC\. The VPC and DHCP options can be declared in the same template or added as input parameters\. For more information about the VPC or the DHCP options resources, see [AWS::EC2::VPC](aws-resource-ec2-vpc.md) or [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcp-options.md)\.
 
-### JSON<a name="aws-resource-ec2-vpcdhcpoptionsassociation-example-1.json"></a>
+
+### VPC DHCP Options Association<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association"></a>
+
+The following example uses the `Ref` intrinsic function to associate the myDHCPOptions DHCP options with the myVPC VPC\. The VPC and DHCP options can be declared in the same template or added as input parameters\. For more information about the VPC or the DHCP options resources, see AWS::EC2::VPC or AWS::EC2::DHCPOptions\. 
+
+#### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--json"></a>
 
 ```
 "myVPCDHCPOptionsAssociation" : {
-  "Type" : "AWS::EC2::VPCDHCPOptionsAssociation",
-  "Properties" : {
-    "VpcId" : {"Ref" : "myVPC"},
-    "DhcpOptionsId" : {"Ref" : "myDHCPOptions"}
-  }
+     "Type" : "AWS::EC2::VPCDHCPOptionsAssociation",
+      "Properties" : {
+         "VpcId" : {"Ref" : "myVPC"},
+         "DhcpOptionsId" : {"Ref" : "myDHCPOptions"}
+         }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpcdhcpoptionsassociation-example-1.yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--yaml"></a>
 
 ```
 myVPCDHCPOptionsAssociation:
   Type: AWS::EC2::VPCDHCPOptionsAssociation
   Properties:
     VpcId:
-      Ref: myVPC
+       Ref: myVPC
     DhcpOptionsId:
-      Ref: myDHCPOptions
+       Ref: myDHCPOptions
 ```
 
-## See Also<a name="w13ab1c21c10d111d182c15"></a>
-+ [AssociateDhcpOptions](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AssociateDhcpOptions.html) in the *Amazon EC2 API Reference*\.
+## See also<a name="aws-resource-ec2-vpc-dhcp-options-assoc--seealso"></a>
++  [AssociateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateDhcpOptions.html) in the *Amazon EC2 API Reference*
++ [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
+

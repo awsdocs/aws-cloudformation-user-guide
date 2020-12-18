@@ -1,4 +1,4 @@
-# Get Started<a name="GettingStarted.Walkthrough"></a>
+# Get started<a name="GettingStarted.Walkthrough"></a>
 
 With the right template, you can deploy at once all the AWS resources you need for an application\. In this section, you'll examine a template that declares the resources for a WordPress blog, creates a WordPress blog as a stack, monitors the stack creation process, examines the resources on the stack, and then deletes the stack\. You use the AWS Management Console to complete these tasks\. 
 
@@ -10,7 +10,7 @@ First, you'll need a template that specifies the resources that you want in your
 AWS CloudFormation is free, but the AWS resources that AWS CloudFormation creates are live \(and not running in a sandbox\)\. You will incur the standard usage fees for these resources until you terminate them in the last task in this tutorial\. The total charges will be minimal\. For information about how you might minimize any charges, go to [http://aws\.amazon\.com/free/](http://aws.amazon.com/free/)\.
 
 **To view the template**
-+ You can view the [JSON](https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template) or [YAML](https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.yaml) WordPress sample template\. You don't need to download it because you will use the template URL later in this guide\. For more information about the template formats, see [AWS CloudFormation Template Formats](template-formats.md)\.
++ You can view the [JSON](https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template) or [YAML](https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.yaml) WordPress sample template\. You don't need to download it because you will use the template URL later in this guide\. For more information about the template formats, see [AWS CloudFormation template formats](template-formats.md)\.
 
 A template is a JSON or YAML text file that contains the configuration information about the AWS resources you want to create in the stack\. For this walkthrough, the sample template includes six top\-level sections: `AWSTemplateFormatVersion`, `Description`, `Parameters`, `Mappings`, `Resources`, and `Outputs`; however, only the `Resources` section is required\.
 
@@ -259,7 +259,7 @@ The Ref function can also set a resource's property to the value of another reso
 
 The `SecurityGroups` property takes a list of EC2 security groups\. The Ref function has an input of `WebServerSecurityGroup`, which is the logical name of a security group in the template, and adds the name of `WebServerSecurityGroup` to the `SecurityGroups` property\.
 
-In the template, you'll also find a *Mappings* section\. You use mappings to declare conditional values that are evaluated in a similar manner as a lookup table statement\. The template uses mappings to select the correct Amazon machine image \(AMI\) for the region and the architecture type for the instance type\. *Outputs* define custom values that are returned by the `aws cloudformation describe-stacks` command and in the AWS CloudFormation console **Outputs** tab after the stack is created\. You can use output values to return information from the resources in the stack, such as the URL for a website that was created in the template\. We cover mappings, outputs, and other things about templates in more detail in [Learn Template Basics](gettingstarted.templatebasics.md)\.
+In the template, you'll also find a *Mappings* section\. You use mappings to declare conditional values that are evaluated in a similar manner as a lookup table statement\. The template uses mappings to select the correct Amazon machine image \(AMI\) for the region and the architecture type for the instance type\. *Outputs* define custom values that are returned by the `aws cloudformation describe-stacks` command and in the AWS CloudFormation console **Outputs** tab after the stack is created\. You can use output values to return information from the resources in the stack, such as the URL for a website that was created in the template\. We cover mappings, outputs, and other things about templates in more detail in [Learn template basics](gettingstarted.templatebasics.md)\.
 
 That's enough about templates for now\. Let's start creating a stack\.
 
@@ -274,7 +274,7 @@ Make sure you have a valid Amazon EC2 key pair and record the key pair name befo
 To see your key pairs, open the Amazon EC2 console, then click **Key Pairs** in the navigation pane\. 
 
 **Note**  
-If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH Key Pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
+If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 Now that you have a valid key pair, let's use the WordPress template to create a stack\.
 
@@ -290,19 +290,17 @@ You will create your stack based on the *WordPress\-1\.0\.0* file discussed earl
 
 1. In the **Template** section, select **Specify an Amazon S3 Template URL** to type or paste the URL for the sample WordPress template, and then click **Next**:
 
-   `https://s3-us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template`
+   `https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template`
 **Note**  
 AWS CloudFormation templates that are stored in an S3 bucket must be accessible to the user who is creating the stack, and must be located in the *same region* as the stack that is being created\. Therefore, if the S3 bucket is located in the `us-east-2` Region, the stack must also be created in `us-east-2`\.
 
 1. In the **Specify Details** section, enter a stack name in the **Name** field\. For this example, use **MyWPTestStack**\. The stack name cannot contain spaces\.
 
-1. In the **KeyName** field, enter the name of a valid Amazon EC2 key pair in the same region you are creating the stack\.
-**Note**  
-On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\.
+1. On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\. You must provide values for all parameters that do not have default values, including **DBUser**, **DBPassword**, **DBRootPassword**, and **KeyName**\. In the **KeyName** field, enter the name of a valid Amazon EC2 pair in the same region you are creating the stack\.
 
 1. Click **Next**\.
 
-1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding Tags to Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide//cfn-console-add-tags.html)\. 
+1. In this scenario, we won't add any tags\. Click **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding tags to your AWS CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html)\. 
 
 1. Review the information for the stack\. When you're satisfied with the settings, click **Create**\.
 
@@ -352,11 +350,11 @@ The sample WordPress stack creates a WordPress website\. You can continue with t
 
    The `WebsiteURL` output value is the URL of the installation script for the WordPress website that you created with the stack\.
 
-1. On the web page for the WordPress installation, follow the on\-screen instructions to complete the WordPress installation\. For more information about installing WordPress, see [http://codex\.wordpress\.org/Installing\_WordPress](http://codex.wordpress.org/Installing_WordPress)\.
+1. On the web page for the WordPress installation, follow the on\-screen instructions to complete the WordPress installation\. For more information about installing WordPress, see [https://wordpress\.org/support/article/how\-to\-install\-wordpress/](https://wordpress.org/support/article/how-to-install-wordpress/)\.
 
    After you complete the installation and log in, you are directed to the dashboard where you can set additional options for your WordPress blog\. Then, you can start writing posts for your blog that you successfully created by using a AWS CloudFormation template\.
 
-## Step 6: Clean Up<a name="GettingStarted.Walkthrough.cleanup"></a>
+## Step 6: Clean up<a name="GettingStarted.Walkthrough.cleanup"></a>
 
 You have completed the AWS CloudFormation getting started tasks\. To make sure you are not charged for any unwanted services, you can clean up by deleting the stack and its resources\.
 
@@ -370,6 +368,6 @@ You have completed the AWS CloudFormation getting started tasks\. To make sure y
 
 The status for `MyWPTestStack` changes to `DELETE_IN_PROGRESS`\. In the same way you monitored the creation of the stack, you can monitor its deletion by using the **Event** tab\. When AWS CloudFormation completes the deletion of the stack, it removes the stack from the list\.
 
-Congratulations\! You successfully picked a template, created a stack, viewed and used its resources, and deleted the stack and its resources\. Not only that, you were able to set up a WordPress blog using a AWS CloudFormation template\. You can find other templates in the [AWS CloudFormation Sample Template Library](http://aws.amazon.com/cloudformation/aws-cloudformation-templates/)\.
+Congratulations\! You successfully picked a template, created a stack, viewed and used its resources, and deleted the stack and its resources\. Not only that, you were able to set up a WordPress blog using a AWS CloudFormation template\. You can find other templates in the [AWS CloudFormation sample template library](http://aws.amazon.com/cloudformation/aws-cloudformation-templates/)\.
 
-Now it's time to learn more about templates so that you can easily modify existing templates or create your own: [Learn Template Basics](gettingstarted.templatebasics.md)\.
+Now it's time to learn more about templates so that you can easily modify existing templates or create your own: [Learn template basics](gettingstarted.templatebasics.md)\.

@@ -1,13 +1,13 @@
-# Viewing Deleted Stacks on the AWS CloudFormation Console<a name="cfn-console-view-deleted-stacks"></a>
+# Viewing deleted stacks on the AWS CloudFormation console<a name="cfn-console-view-deleted-stacks"></a>
 
-By default, the AWS CloudFormation console does not display stacks in the **DELETE\_COMPLETE** state\. To display information about deleted stacks, you must change the stack view\.
+By default, the AWS CloudFormation console does not display stacks with a status of **DELETE\_COMPLETE**\. To display information about deleted stacks, you must change the stack view\.
 
 **To view deleted stacks**
-+ In the AWS CloudFormation console, select **Deleted** from the **Filter** list\.  
-![\[The Deleted option in the Filter menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-view-deleted-stack-setting.png)
++ On the **Stacks** page of the CloudFormation console, select **Deleted** from the filter list\.  
+![\[The Deleted option in the Filter menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-filter-deleted.png)
 
-  AWS CloudFormation lists all of your deleted stacks \(stacks with **DELETE\_COMPLETE** status\)\.
+  AWS CloudFormation lists all of your deleted stacks \(stacks with a status of **DELETE\_COMPLETE**\)\.
 
-## See Also<a name="w13ab1c15c13c29b7"></a>
-+ [Deleting a Stack](cfn-console-delete-stack.md)
-+ [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)
+## See also<a name="cfn-console-view-deleted-stacks-seealso"></a>
++ [Deleting a stack on the AWS CloudFormation console](cfn-console-delete-stack.md)
++ [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)

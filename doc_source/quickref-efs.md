@@ -82,7 +82,7 @@ If you make an update to the mount target that causes it to be replaced, instanc
     },
     "KeyName": {
       "Type": "AWS::EC2::KeyPair::KeyName",
-      "Description": "Name of an existing EC2 key pair to enable SSH access to the ECS instances"
+      "Description": "Name of an existing EC2 key pair to enable SSH access to the EC2 instances"
     },
     "AsgMaxSize": {
       "Type": "Number",

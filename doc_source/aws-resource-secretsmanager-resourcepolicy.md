@@ -1,6 +1,6 @@
 # AWS::SecretsManager::ResourcePolicy<a name="aws-resource-secretsmanager-resourcepolicy"></a>
 
-The `AWS::SecretsManager::ResourcePolicy` resource lets you define a resource\-based policy and attach it to a secret that's stored in Secrets Manager\.
+Attaches the contents of the specified resource\-based permission policy to a secret\. A resource\-based policy is optional\. Alternatively, you can use IAM identity\-based policies to specify the Amazon Resource Name \(ARN\) of the secret in the policy statement `Resources` element\. You can also use a combination of both identity\-based and resource\-based policies\. The affected users and roles receive the permissions permitted by all relevant policies\. 
 
 ## Syntax<a name="aws-resource-secretsmanager-resourcepolicy-syntax"></a>
 
@@ -12,114 +12,123 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SecretsManager::ResourcePolicy",
   "Properties" : {
-    "[SecretId](#cfn-secretsmanager-resourcepolicy-secretid)" : String,
-    "[ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy)" : JSON object
-  }
+      "[BlockPublicPolicy](#cfn-secretsmanager-resourcepolicy-blockpublicpolicy)" : Boolean,
+      "[ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy)" : Json,
+      "[SecretId](#cfn-secretsmanager-resourcepolicy-secretid)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-secretsmanager-resourcepolicy-syntax.yaml"></a>
 
 ```
-Type: "AWS::SecretsManager::ResourcePolicy"
-Properties:
+Type: AWS::SecretsManager::ResourcePolicy
+Properties: 
+  [BlockPublicPolicy](#cfn-secretsmanager-resourcepolicy-blockpublicpolicy): Boolean
+  [ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy): Json
   [SecretId](#cfn-secretsmanager-resourcepolicy-secretid): String
-  [ResourcePolicy](#cfn-secretsmanager-resourcepolicy-resourcepolicy): JSON object
 ```
 
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>
 
-`SecretId`  <a name="cfn-secretsmanager-resourcepolicy-secretid"></a>
-Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret that you want to attach a resource\-based permissions policy to\. To reference a secret that's also created in this template, use the [Ref](intrinsic-function-reference-ref.md) function with the secret's logical ID\.  
-If you use this property to change the `SecretId` for an existing resource\-based policy, it removes the policy from the original secret, and then attaches the policy to the secret with the specified `SecretId`\. This results in changing the permissions for two secrets\.
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+`BlockPublicPolicy`  <a name="cfn-secretsmanager-resourcepolicy-blockpublicpolicy"></a>
+Specifies if you configuired a check for a resource policy that exposes information publicly\.  
+For more information on using this parameter, see [Managing a resource\-based policy for a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_secret-policy.html)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcePolicy`  <a name="cfn-secretsmanager-resourcepolicy-resourcepolicy"></a>
-Specifies a JSON object that's constructed according to the grammar and syntax for an AWSresource\-based policy\. The policy identifies who can access or manage this secret and its versions\. For information on how to format a JSON object as a parameter for this resource type, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html) in the *AWS Secrets Manager User Guide*\. Those same rules apply here\.  
- *Required*: Yes  
- *Type*: JSON object  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Specifies a JSON object constructed according to the grammar and syntax for a resource\-based policy\. The policy identifies who can access or manage this secret and associated versions\. For information on how to format a JSON object as a parameter for this resource type, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html) in the AWS Secrets Manager User Guide\. Those same rules apply here\.   
+*Required*: Yes  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-secretsmanager-resourcepolicy-returnvalues"></a>
+`SecretId`  <a name="cfn-secretsmanager-resourcepolicy-secretid"></a>
+Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret to attach a resource\-based permissions policy\.   
+If you use this property to change the `SecretId` for an existing resource\-based policy, Secrets Manager removes the policy from the original secret, and then attaches the policy to the secret with the specified `SecretId`\. This results in changing the permissions for two secrets\.
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-### Ref<a name="aws-resource-secretsmanager-resourcepolicy-ref"></a>
+## Return values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
 
-When you pass the logical ID of an `AWS::SecretsManager::ResourcePolicy` resource to the intrinsic `Ref` function, the function returns the ARN of the secret that's being configured, such as:
+### Ref<a name="aws-resource-secretsmanager-resourcepolicy-return-values-ref"></a>
+
+When you pass the logical ID of an `AWS::SecretsManager::ResourcePolicy` resource to the intrinsic `Ref` function, the function returns the ARN of the configured secret, such as:
 
 `arn:aws:secretsmanager:us-west-2:123456789012:secret:my-path/my-secret-name-1a2b3c`
 
-This enables you to reference a secret that you create in one part of the stack template from within the definition of another resource later, in the same template\. You would typically use this with the [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md) resource type\.
+This enables you to reference a secret you created in one part of the stack template from within the definition of another resource later, in the same template\. You would typically use this with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\. 
+For more information about using the Ref function, see [Ref](url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-secretsmanager-resourcepolicy-examples"></a>
+## Examples<a name="aws-resource-secretsmanager-resourcepolicy--examples"></a>
 
-### Attaching a Resource\-based Policy to a Secret<a name="aws-resource-secretsmanager-resourcepolicy-example1"></a>
+### Attaching a resource\-based policy to an RDS DB Instance secret<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_"></a>
 
-The following example shows how to define a resource\-based policy and attach it to a secret that you previously defined\. It defines a secret with the logical name `MySecretForAppA`, and then attaches a resource\-based permissions policy to it\.
+The following examples shows how to attach a resource\-based policy to the specified secret\. The JSON request string input and response output displays as formatted with white space and line breaks for better readability\. Submit your input as a single line JSON string\.
 
-**Note**  
-The JSON specification doesn't allow any kind of comments\. See the YAML example for comments\.
-
-#### JSON<a name="aws-resource-secretsmanager-resourcepolicy-example1.json"></a>
+#### JSON<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_--json"></a>
 
 ```
 {
-  "MySecret": {
-    "Type": "AWS::SecretsManager::Secret",
-    "Properties": {
-      "Description": "This is a secret that I want to attach a resource-based policy to"
+    "MySecret": {
+        "Type": "AWS::SecretsManager::Secret",
+        "Properties": {
+            "Description": "This is a secret that I want to attach a resource-based policy to"
+        }
+    },
+    "MySecretResourcePolicy": {
+        "Type": "AWS::SecretsManager::ResourcePolicy",
+        "Properties": {
+            "BlockPublicPolicy": {
+            "SecretId": {
+                "Ref": "MySecret"
+            },
+            "ResourcePolicy": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Resource": "*",
+                        "Action": "secretsmanager:DeleteSecret",
+                        "Effect": "Deny",
+                        "Principal": {
+                            "AWS": {
+                                "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
     }
-  },
-  "MySecretResourcePolicy": {
-    "Type": "AWS::SecretsManager::ResourcePolicy",
-    "Properties": {
-      "SecretId": {"Ref": "MySecret"},
-      "ResourcePolicy": {
-        "Version": "2012-10-17",
-        "Statement": [
-          {
-            "Effect": "Deny",
-            "Principal": {"AWS": {"Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"}},
-            "Action": "secretsmanager:DeleteSecret",
-            "Resource": "*"
-          }
-        ]
-      }
-    }
-  }
+}
 }
 ```
 
-#### YAML<a name="aws-resource-secretsmanager-resourcepolicy-example1.yaml"></a>
+#### YAML<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_--yaml"></a>
 
 ```
 MySecret:
-  Type: AWS::SecretsManager::Secret
-  Properties:
-    Description: "This is a secret that I want to attach a resource-based policy to"
-
-# This is a ResourcePolicy resource which attaches a resource policy to the referenced secret.
-# The resource policy denies the DeleteSecret action to all principals in the current account.
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+        Description: This is a secret that I want to attach a resource-based policy to
 MySecretResourcePolicy:
-  Type: AWS::SecretsManager::ResourcePolicy
-  Properties:
-    SecretId: !Ref MySecret
-    ResourcePolicy:
-      Version: "2012-10-17"
-      Statement:
-        -
-          Effect: "Deny"
-          Principal:
-            AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root"
-          Action: "secretsmanager:DeleteSecret"
-          Resource: "*"
+    Type: 'AWS::SecretsManager::ResourcePolicy'
+    Properties:
+        SecretId: !Ref MySecret
+        ResourcePolicy:
+          Version: 2012-10-17
+          Statement:
+            - Resource: '*'
+              Action: 'secretsmanager:DeleteSecret'
+              Effect: Deny
+              Principal:
+                AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
 ```
 
-## See Also<a name="aws-resource-secretsmanager-resourcepolicy-seealso"></a>
-+ For information about using resource\-based policies with Secrets Manager, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html) in the *AWS Secrets Manager User Guide*\. 
-+ [AWS::SecretsManager::Secret](aws-resource-secretsmanager-secret.md)
-+ [AWS::SecretsManager::SecretTargetAttachment](aws-resource-secretsmanager-secrettargetattachment.md)
-+ [AWS::SecretsManager::RotationSchedule](aws-resource-secretsmanager-rotationschedule.md)
+## See also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>
++  [AWS::SecretsManager::Secret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
++  [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
++  [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)

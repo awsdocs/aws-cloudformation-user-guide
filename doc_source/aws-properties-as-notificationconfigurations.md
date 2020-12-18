@@ -1,40 +1,48 @@
-# Amazon EC2 Auto Scaling AutoScalingGroup NotificationConfiguration<a name="aws-properties-as-notificationconfigurations"></a>
+# AWS::AutoScaling::AutoScalingGroup NotificationConfiguration<a name="aws-properties-as-notificationconfigurations"></a>
 
-The `NotificationConfiguration` property type specifies the events that the Amazon EC2 Auto Scaling group sends notifications for\.
+ `NotificationConfiguration` specifies a list of notification configurations for the `NotificationConfigurations` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `NotificationConfiguration` specifies the events that the Amazon EC2 Auto Scaling group sends notifications for\.
 
-The `NotificationConfigurations` property of the `[AWS::AutoScaling::AutoScalingGroup](aws-properties-as-group.md)` resource contains a list of `NotificationConfiguration` property types\.
+For example snippets, see [Declaring an Auto Scaling group with a launch template and notifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-as-notification)\.
 
-## Syntax<a name="w13ab1c21c10c42c13c50b7"></a>
+For more information, see [Getting Amazon SNS notifications when your Auto Scaling group scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+
+## Syntax<a name="aws-properties-as-notificationconfigurations-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-as-notificationconfigurations-syntax.json"></a>
 
 ```
 {
-   "[NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes)" : [ String, ... ],
-   "[TopicARN](#cfn-as-group-notificationconfigurations-topicarn)" : String
+  "[NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes)" : [ String, ... ],
+  "[TopicARN](#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-as-notificationconfigurations-syntax.yaml"></a>
 
 ```
-[NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes):
-  - String
-[TopicARN](#cfn-as-group-notificationconfigurations-topicarn): String
+  [NotificationTypes](#cfn-as-group-notificationconfigurations-notificationtypes): 
+    - String
+  [TopicARN](#cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn): String
 ```
 
-## Properties<a name="w13ab1c21c10c42c13c50b9"></a>
+## Properties<a name="aws-properties-as-notificationconfigurations-properties"></a>
 
 `NotificationTypes`  <a name="cfn-as-group-notificationconfigurations-notificationtypes"></a>
-A list of event types that trigger a notification\. Event types can include any of the following types: `autoscaling:EC2_INSTANCE_LAUNCH`, `autoscaling:EC2_INSTANCE_LAUNCH_ERROR`, `autoscaling:EC2_INSTANCE_TERMINATE`, `autoscaling:EC2_INSTANCE_TERMINATE_ERROR`, and `autoscaling:TEST_NOTIFICATION`\. For more information about event types, see [DescribeAutoScalingNotificationTypes](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_DescribeAutoScalingNotificationTypes.html) in the *Amazon EC2 Auto Scaling API Reference*\.  
+A list of event types that trigger a notification\. Event types can include any of the following types\.   
+*Allowed Values*:  
++  `autoscaling:EC2_INSTANCE_LAUNCH` 
++  `autoscaling:EC2_INSTANCE_LAUNCH_ERROR` 
++  `autoscaling:EC2_INSTANCE_TERMINATE` 
++  `autoscaling:EC2_INSTANCE_TERMINATE_ERROR` 
++  `autoscaling:TEST_NOTIFICATION` 
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TopicARN`  <a name="cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn"></a>
+The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(Amazon SNS\) topic\.  
 *Required*: Yes  
-*Type*: List of String values
-
-`TopicARN`  <a name="cfn-as-group-notificationconfigurations-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic\.  
-*Required*: Yes  
-*Type*: String
-
-## Examples<a name="w13ab1c21c10c42c13c50c11"></a>
-
-For NotificationConfigurations snippets, see [Auto Scaling Group with Notifications](quickref-autoscaling.md#scenario-as-notification)\.
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

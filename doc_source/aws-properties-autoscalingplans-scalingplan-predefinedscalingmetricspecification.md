@@ -1,8 +1,8 @@
-# AWS Auto Scaling ScalingPlan PredefinedScalingMetricSpecification<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification"></a>
+# AWS::AutoScalingPlans::ScalingPlan PredefinedScalingMetricSpecification<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification"></a>
 
-<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-description"></a>The `PredefinedScalingMetricSpecification` property type specifies a predefined metric for a target tracking policy to use with AWS Auto Scaling\.
+ `PredefinedScalingMetricSpecification` is a subproperty of [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html) that specifies a customized scaling metric for a target tracking configuration to use with AWS Auto Scaling\. 
 
-<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-inheritance"></a> `PredefinedScalingMetricSpecification` is a property of the [AWS Auto Scaling ScalingPlan TargetTrackingConfiguration](aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.md) property type\.
+
 
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-syntax"></a>
 
@@ -12,28 +12,38 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ResourceLabel](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel)" : String,
-  "[PredefinedScalingMetricType](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype)" : String
+  "[PredefinedScalingMetricType](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype)" : String,
+  "[ResourceLabel](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-syntax.yaml"></a>
 
 ```
-[ResourceLabel](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel): String
-[PredefinedScalingMetricType](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype): String
+  [PredefinedScalingMetricType](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype): String
+  [ResourceLabel](#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel): String
 ```
 
 ## Properties<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification-properties"></a>
 
 `PredefinedScalingMetricType`  <a name="cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype"></a>
-The metric type\. For more information, see [PredefinedScalingMetricSpecification](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_.html) in the *AWS Auto Scaling API Reference*\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The metric type\. The `ALBRequestCountPerTarget` metric type applies only to Auto Scaling groups, Spot Fleet requests, and ECS services\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed values*: `ALBRequestCountPerTarget | ASGAverageCPUUtilization | ASGAverageNetworkIn | ASGAverageNetworkOut | DynamoDBReadCapacityUtilization | DynamoDBWriteCapacityUtilization | EC2SpotFleetRequestAverageCPUUtilization | EC2SpotFleetRequestAverageNetworkIn | EC2SpotFleetRequestAverageNetworkOut | ECSServiceAverageCPUUtilization | ECSServiceAverageMemoryUtilization | RDSReaderAverageCPUUtilization | RDSReaderAverageDatabaseConnections`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceLabel`  <a name="cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel"></a>
-Identifies the resource associated with the metric type\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+Identifies the resource associated with the metric type\. You can't specify a resource label unless the metric type is `ALBRequestCountPerTarget` and there is a target group for an Application Load Balancer attached to the Auto Scaling group, Spot Fleet request, or ECS service\.  
+Elastic Load Balancing sends data about your load balancers to Amazon CloudWatch\. CloudWatch collects the data and specifies the format to use to access the data\. The format is app/<load\-balancer\-name>/<load\-balancer\-id>/targetgroup/<target\-group\-name>/<target\-group\-id>, where:  
++ app/<load\-balancer\-name>/<load\-balancer\-id> is the final portion of the load balancer ARN\.
++ targetgroup/<target\-group\-name>/<target\-group\-id> is the final portion of the target group ARN\.
+To find the ARN for an Application Load Balancer, use the [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html) API operation\. To find the ARN for the target group, use the [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html) API operation\.  
+*Required*: Conditional  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1023`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification--seealso"></a>
++ [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)

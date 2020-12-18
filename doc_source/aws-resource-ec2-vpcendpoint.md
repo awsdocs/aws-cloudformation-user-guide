@@ -1,12 +1,14 @@
 # AWS::EC2::VPCEndpoint<a name="aws-resource-ec2-vpcendpoint"></a>
 
-Creates a VPC endpoint that you can use to establish a private connection between your VPC and another AWS service without requiring access over the Internet, a VPN connection, or AWS Direct Connect\. For more information, see [CreateVpcEndpoint](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpoint.html)\.
+Specifies a VPC endpoint for a service\. An endpoint enables you to create a private connection between your VPC and the service\. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon Virtual Private Cloud User Guide*\.
 
-**Topics**
-+ [Syntax](#aws-resource-ec2-vpcendpoint-syntax)
-+ [Properties](#aws-resource-ec2-vpcendpoint-properties)
-+ [Return Value](#aws-resource-ec2-vpcendpoint-return-values)
-+ [Example](#aws-resource-ec2-vpcendpoint-examples)
+A `gateway` endpoint serves as a target for a route in your route table for traffic destined for the AWS service\. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC\. You can also specify the VPC route tables that use the endpoint\.
+
+For information about connectivity when you use a gateway endpoint to connect to an Amazon S3 bucket from an EC2 instance, see [Why can’t I connect to an S3 bucket using a gateway VPC endpoint](http://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)\.
+
+An `interface` endpoint is a network interface in your subnet that serves as an endpoint for communicating with the specified service\. You can specify the subnets in which to create an endpoint, and the security groups to associate with the endpoint network interface\.
+
+A `GatewayLoadBalancer` endpoint is a network interface in your subnet that serves an endpoint for communicating with a Gateway Load Balancer that you've configured as a VPC endpoint service\.
 
 ## Syntax<a name="aws-resource-ec2-vpcendpoint-syntax"></a>
 
@@ -18,15 +20,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::VPCEndpoint",
   "Properties" : {
-    "[VpcId](#cfn-ec2-vpcendpoint-vpcid)" : String,
-    "[RouteTableIds](#cfn-ec2-vpcendpoint-routetableids)" : [ String, ... ],
-    "[ServiceName](#cfn-ec2-vpcendpoint-servicename)" : String,
-    "[PolicyDocument](#cfn-ec2-vpcendpoint-policydocument)" : String,
-    "[VpcEndpointType](#cfn-ec2-vpcendpoint-vpcendpointtype)" : String,
-    "[PrivateDnsEnabled](#cfn-ec2-vpcendpoint-privatednsenabled)" : Boolean,
-    "[SubnetIds](#cfn-ec2-vpcendpoint-subnetids)" : [ String, ... ],
-    "[SecurityGroupIds](#cfn-ec2-vpcendpoint-securitygroupids)" : [ String, ... ]
-  }
+      "[PolicyDocument](#cfn-ec2-vpcendpoint-policydocument)" : Json,
+      "[PrivateDnsEnabled](#cfn-ec2-vpcendpoint-privatednsenabled)" : Boolean,
+      "[RouteTableIds](#cfn-ec2-vpcendpoint-routetableids)" : [ String, ... ],
+      "[SecurityGroupIds](#cfn-ec2-vpcendpoint-securitygroupids)" : [ String, ... ],
+      "[ServiceName](#cfn-ec2-vpcendpoint-servicename)" : String,
+      "[SubnetIds](#cfn-ec2-vpcendpoint-subnetids)" : [ String, ... ],
+      "[VpcEndpointType](#cfn-ec2-vpcendpoint-vpcendpointtype)" : String,
+      "[VpcId](#cfn-ec2-vpcendpoint-vpcid)" : String
+    }
 }
 ```
 
@@ -35,128 +37,136 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::VPCEndpoint
 Properties: 
-  [VpcId](#cfn-ec2-vpcendpoint-vpcid): String
-  [RouteTableIds](#cfn-ec2-vpcendpoint-routetableids): 
-    - String
-  [ServiceName](#cfn-ec2-vpcendpoint-servicename): String
-  [PolicyDocument](#cfn-ec2-vpcendpoint-policydocument): String
-  [VpcEndpointType](#cfn-ec2-vpcendpoint-vpcendpointtype): String
+  [PolicyDocument](#cfn-ec2-vpcendpoint-policydocument): Json
   [PrivateDnsEnabled](#cfn-ec2-vpcendpoint-privatednsenabled): Boolean
-  [SubnetIds](#cfn-ec2-vpcendpoint-subnetids): 
+  [RouteTableIds](#cfn-ec2-vpcendpoint-routetableids): 
     - String
   [SecurityGroupIds](#cfn-ec2-vpcendpoint-securitygroupids): 
     - String
+  [ServiceName](#cfn-ec2-vpcendpoint-servicename): String
+  [SubnetIds](#cfn-ec2-vpcendpoint-subnetids): 
+    - String
+  [VpcEndpointType](#cfn-ec2-vpcendpoint-vpcendpointtype): String
+  [VpcId](#cfn-ec2-vpcendpoint-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpoint-properties"></a>
 
-`PrivateDnsEnabled`  <a name="cfn-ec2-vpcendpoint-privatednsenabled"></a>
-\[Interface endpoint\] Indicates whether to associate a private hosted zone with the specified VPC\.  
- *Required*: No  
- *Type*: Boolean  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
 `PolicyDocument`  <a name="cfn-ec2-vpcendpoint-policydocument"></a>
-\[Gateway endpoint\] A policy to attach to the endpoint that controls access to the service\. The policy must be valid JSON\. The default policy allows full access to the AWS service\. For more information, see [Controlling Access to Services](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html#vpc-endpoints-access) in the *Amazon VPC User Guide*\.  
+\(Interface and gateway endpoints\) A policy to attach to the endpoint that controls access to the service\. The policy must be in valid JSON format\. If this parameter is not specified, we attach a default policy that allows full access to the service\.  
 *Required*: No  
-*Type*: JSON object  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PrivateDnsEnabled`  <a name="cfn-ec2-vpcendpoint-privatednsenabled"></a>
+\(Interface endpoint\) Indicate whether to associate a private hosted zone with the specified VPC\. The private hosted zone contains a record set for the default public DNS name for the service for the Region \(for example, `kinesis.us-east-1.amazonaws.com`\) which resolves to the private IP addresses of the endpoint network interfaces in the VPC\. This enables you to make requests to the default public DNS name for the service instead of the public DNS names that are automatically generated by the VPC endpoint service\.  
+To use a private hosted zone, you must set the following VPC attributes to `true`: `enableDnsHostnames` and `enableDnsSupport`\.  
+Default: `false`  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteTableIds`  <a name="cfn-ec2-vpcendpoint-routetableids"></a>
-\[Gateway endpoint\] One or more route table IDs that are used by the VPC to reach the endpoint\.  
+\(Gateway endpoint\) One or more route table IDs\.  
 *Required*: No  
-*Type*: List of String values  
-*Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt)
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-ec2-vpcendpoint-securitygroupids"></a>
-\[Interface endpoint\] The ID of one or more security groups to associate with the endpoint network interface\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+\(Interface endpoint\) The ID of one or more security groups to associate with the endpoint network interface\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-ec2-vpcendpoint-servicename"></a>
-The name of the service\. To get a list of available services, use [DescribeVpcEndpointServices](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcEndpointServices.html) or get the name from the service provider\.  
+The service name\. To get a list of available services, use the [DescribeVpcEndpointServices](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcEndpointServices.html) request, or get the name from the service provider\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-ec2-vpcendpoint-subnetids"></a>
-\[Interface endpoint\] The ID of one or more subnets in which to create an endpoint network interface\.  
- *Required*: No  
- *Type*: List of String values  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+\(Interface and Gateway Load Balancer endpoints\) The ID of one or more subnets in which to create an endpoint network interface\. For a Gateway Load Balancer endpoint, you can specify one subnet only\.  
+*Required*: Conditional  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcEndpointType`  <a name="cfn-ec2-vpcendpoint-vpcendpointtype"></a>
-The type of endpoint\. Valid values are `Interface` and `Gateway`\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The type of endpoint\.  
+Default: Gateway  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `Gateway | GatewayLoadBalancer | Interface`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
 The ID of the VPC in which the endpoint will be used\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Value<a name="aws-resource-ec2-vpcendpoint-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcendpoint-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-vpcendpoint-ref"></a>
+### Ref<a name="aws-resource-ec2-vpcendpoint-return-values-ref"></a>
 
-When you pass the logical ID of an `AWS::EC2::VPCEndpoint` resource to the intrinsic `Ref` function, the function returns the endpoint ID, such as `vpce-a123d0d1`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPC endpoint\.
 
-For more information about using the `Ref` function, see [Ref](intrinsic-function-reference-ref.md)\.
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-ec2-vpcendpoint-getatt"></a>
+### Fn::GetAtt<a name="aws-resource-ec2-vpcendpoint-return-values-fn--getatt"></a>
 
-`Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-`CreationTimestamp`  
-*Returns*: The date and time the VPC endpoint was created\. For example: `Fri Sep 28 23:34:36 UTC 2018`
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
-`DnsEntries`  
-*Returns*: \(Interface endpoint\) The DNS entries for the endpoint\. Each entry is a combination of the hosted zone ID and the DNS name\. The entries are ordered as follows: regional public DNS, zonal public DNS, private DNS, and wildcard DNS\. This order is not enforced for AWS Marketplace services\.  
+#### <a name="aws-resource-ec2-vpcendpoint-return-values-fn--getatt-fn--getatt"></a>
+
+`CreationTimestamp`  <a name="CreationTimestamp-fn::getatt"></a>
+The date and time the VPC endpoint was created\. For example: `Fri Sep 28 23:34:36 UTC 2018.`
+
+`DnsEntries`  <a name="DnsEntries-fn::getatt"></a>
+\(Interface endpoint\) The DNS entries for the endpoint\. Each entry is a combination of the hosted zone ID and the DNS name\. The entries are ordered as follows: regional public DNS, zonal public DNS, private DNS, and wildcard DNS\. This order is not enforced for AWS Marketplace services\.  
 The following is an example\. In the first entry, the hosted zone ID is Z1HUB23UULQXV and the DNS name is vpce\-01abc23456de78f9g\-12abccd3\.ec2\.us\-east\-1\.vpce\.amazonaws\.com\.  
 \["Z1HUB23UULQXV:vpce\-01abc23456de78f9g\-12abccd3\.ec2\.us\-east\-1\.vpce\.amazonaws\.com", "Z1HUB23UULQXV:vpce\-01abc23456de78f9g\-12abccd3\-us\-east\-1a\.ec2\.us\-east\-1\.vpce\.amazonaws\.com", "Z1C12344VYDITB0:ec2\.us\-east\-1\.amazonaws\.com"\]  
 If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries in the list will change\.
 
-`NetworkInterfaceIds`  
-*Returns*: \(Interface endpoint\) One or more network interfaces for the endpoint\. For example:  
-`["eni-12345ab6789c10d1e", "eni-012345678ab9c10d1"]`  
-If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the items in this list might change\.
+`NetworkInterfaceIds`  <a name="NetworkInterfaceIds-fn::getatt"></a>
+\(Interface endpoint\) One or more network interface IDs\. If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the items in this list might change\.
 
-For more information about using `Fn::GetAtt`, see [Fn::GetAtt](intrinsic-function-reference-getatt.md)\.
+## Examples<a name="aws-resource-ec2-vpcendpoint--examples"></a>
 
-## Example<a name="aws-resource-ec2-vpcendpoint-examples"></a>
 
-The following example creates a VPC endpoint that allows only the `s3:GetObject` action on the `examplebucket` bucket\. Traffic to S3 within subnets that are associated with the `routetableA` and `routetableB` route tables is automatically routed through the VPC endpoint\.
 
-### JSON<a name="aws-resource-ec2-vpcendpoint-example.json"></a>
+### VPC Endpoint<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint"></a>
+
+The following example specifies a VPC endpoint that allows only the s3:GetObject action on the examplebucket bucket\. Traffic to S3 within subnets that are associated with the routetableA and routetableB route tables is automatically routed through the VPC endpoint\. 
+
+#### JSON<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--json"></a>
 
 ```
 "S3Endpoint" : {
-  "Type" : "AWS::EC2::VPCEndpoint",
-  "Properties" : {
-    "PolicyDocument" : {
-      "Version":"2012-10-17",
-      "Statement":[{
-        "Effect":"Allow",
-        "Principal": "*",
-        "Action":["s3:GetObject"],
-        "Resource":["arn:aws:s3:::examplebucket/*"]
-      }]
-    },
-    "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-    "ServiceName" : { "Fn::Join": [ "", [ "com.amazonaws.", { "Ref": "AWS::Region" }, ".s3" ] ] },
-    "VpcId" : {"Ref" : "VPCID"}
-  }
+   "Type" : "AWS::EC2::VPCEndpoint",
+   "Properties" : {
+      "PolicyDocument" : {
+         "Version":"2012-10-17",
+         "Statement":[{
+            "Effect":"Allow",
+            "Principal": "*",
+            "Action":["s3:GetObject"],
+            "Resource":["arn:aws:s3:::examplebucket/*"]
+         }]
+   },
+   "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
+   "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
+   "VpcId" : {"Ref" : "VPCID"}
+ }
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpcendpoint-example.yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--yaml"></a>
 
 ```
 S3Endpoint:
-  Type: AWS::EC2::VPCEndpoint
+  Type: 'AWS::EC2::VPCEndpoint'
   Properties:
     PolicyDocument:
       Version: 2012-10-17
@@ -170,10 +180,6 @@ S3Endpoint:
     RouteTableIds:
       - !Ref routetableA
       - !Ref routetableB
-    ServiceName: !Join 
-      - ''
-      - - com.amazonaws.
-        - !Ref 'AWS::Region'
-        - .s3
+    ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
     VpcId: !Ref VPCID
 ```

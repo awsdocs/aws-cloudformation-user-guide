@@ -1,4 +1,4 @@
-# Retrieving a Template<a name="using-cfn-get-template"></a>
+# Retrieving a template<a name="using-cfn-get-template"></a>
 
 AWS CloudFormation stores the template you use to create your stack as part of the stack\. You can retrieve the template from AWS CloudFormation using the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html) command\.
 

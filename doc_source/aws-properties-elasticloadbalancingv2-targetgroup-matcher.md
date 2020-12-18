@@ -1,8 +1,10 @@
-# Elastic Load Balancing V2 Matcher<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher"></a>
+# AWS::ElasticLoadBalancingV2::TargetGroup Matcher<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher"></a>
 
-`Matcher` is a property of the [AWS::ElasticLoadBalancingV2::TargetGroup](aws-resource-elasticloadbalancingv2-targetgroup.md) resource that specifies the HTTP codes that healthy targets must use when responding to an Elastic Load Balancing health check\.
+Specifies the HTTP codes that healthy targets must use when responding to an HTTP health check\.
 
-## Syntax<a name="w13ab1c21c10d138c31c15b5"></a>
+## Syntax<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-syntax.json"></a>
 
@@ -15,13 +17,14 @@
 ### YAML<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-syntax.yaml"></a>
 
 ```
-[HttpCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode): String
+  [HttpCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode): String
 ```
 
-## Properties<a name="w13ab1c21c10d138c31c15b7"></a>
+## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-properties"></a>
 
 `HttpCode`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode"></a>
-The HTTP codes that a healthy target must use when responding to a health check, such as `200,202` or `200-399`\.   
-For valid and default values, see the `HttpCode` contents for the [Matcher](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_Matcher.html) data type in the *Elastic Load Balancing API Reference version 2015\-12\-01*\.  
+For Application Load Balancers, you can specify values between 200 and 499, and the default value is 200\. You can specify multiple values \(for example, "200,202"\) or a range of values \(for example, "200\-299"\)\.  
+For Network Load Balancers and Gateway Load Balancers, this must be "200–399"\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

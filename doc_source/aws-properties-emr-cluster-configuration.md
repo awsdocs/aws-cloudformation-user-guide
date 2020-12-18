@@ -1,15 +1,22 @@
-# Amazon EMR Cluster Configurations<a name="aws-properties-emr-cluster-configuration"></a>
+# AWS::EMR::InstanceGroupConfig Configuration<a name="aws-properties-emr-cluster-configuration"></a>
 
-`Configurations` is a property of the [AWS::EMR::Cluster](aws-resource-emr-cluster.md) resource that specifies the software configuration of an Amazon EMR \(Amazon EMR\) cluster\. For example configurations, see [Configuring Applications](https://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\.
+`Configurations` is a property of the `AWS::EMR::Cluster` resource that specifies the configuration of applications on an Amazon EMR cluster\.
 
-## Syntax<a name="w13ab1c21c10d141c13c33b5"></a>
+Configurations are optional\. You can use them to have EMR customize applications and software bundled with Amazon EMR when a cluster is created\. A configuration consists of a classification, properties, and optional nested configurations\. A classification refers to an application\-specific configuration file\. Properties are the settings you want to change in that file\. For more information, see [Configuring Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)\.
+
+**Note**  
+Applies only to Amazon EMR releases 4\.0 and later\.
+
+## Syntax<a name="aws-properties-emr-cluster-configuration-syntax"></a>
+
+To declare this entity in your AWS CloudFormation template, use the following syntax:
 
 ### JSON<a name="aws-properties-emr-cluster-configuration-syntax.json"></a>
 
 ```
 {
   "[Classification](#cfn-emr-cluster-configuration-classification)" : String,
-  "[ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties)" : { String:String, ... },
+  "[ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties)" : {Key : Value, ...},
   "[Configurations](#cfn-emr-cluster-configuration-configurations)" : [ Configuration, ... ]
 }
 ```
@@ -17,26 +24,29 @@
 ### YAML<a name="aws-properties-emr-cluster-configuration-syntax.yaml"></a>
 
 ```
-[Classification](#cfn-emr-cluster-configuration-classification): String
-[ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties):
-  String: String
-[Configurations](#cfn-emr-cluster-configuration-configurations):
-  - Configuration
+  [Classification](#cfn-emr-cluster-configuration-classification): String
+  [ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties): 
+    Key : Value
+  [Configurations](#cfn-emr-cluster-configuration-configurations): 
+    - Configuration
 ```
 
-## Properties<a name="w13ab1c21c10d141c13c33b7"></a>
+## Properties<a name="aws-properties-emr-cluster-configuration-properties"></a>
 
 `Classification`  <a name="cfn-emr-cluster-configuration-classification"></a>
-The name of an application\-specific configuration file\. For more information see, [Configuring Applications](https://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\.  
+The classification within a configuration\.  
 *Required*: No  
-*Type*: String
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationProperties`  <a name="cfn-emr-cluster-configuration-configurationproperties"></a>
-The settings that you want to change in the application\-specific configuration file\. For more information see, [Configuring Applications](https://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\.  
+Within a configuration classification, a set of properties that represent the settings that you want to change in the configuration file\. Duplicates not allowed\.  
 *Required*: No  
-*Type*: String\-to\-string map
+*Type*: Map of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configurations`  <a name="cfn-emr-cluster-configuration-configurations"></a>
-A list of configurations to apply to this configuration\. You can nest configurations so that a single configuration can have its own configurations\. In other words, you can configure a configuration\. For more information see, [Configuring Applications](https://docs.aws.amazon.com//ElasticMapReduce/latest/ReleaseGuide/emr-configure-apps.html) in the *Amazon EMR Release Guide*\.  
+A list of additional configurations to apply within a configuration object\.  
 *Required*: No  
-*Type*: List of [Amazon EMR Cluster Configurations](#aws-properties-emr-cluster-configuration)
+*Type*: List of [Configuration](#aws-properties-emr-cluster-configuration)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

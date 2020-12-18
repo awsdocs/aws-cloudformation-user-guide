@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Pipeline<a name="aws-resource-iotanalytics-pipeline"></a>
 
-The `AWS::IoTAnalytics::Pipeline` resource consumes messages from one or more channels and processes the messages before storing them in a data store\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
+The AWS::IoTAnalytics::Pipeline resource consumes messages from one or more channels and allows you to process the messages before storing them in a data store\. You must specify both a `channel` and a `datastore` activity and, optionally, as many as 23 additional activities in the `pipelineActivities` array\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
 
 ## Syntax<a name="aws-resource-iotanalytics-pipeline-syntax"></a>
 
@@ -12,52 +12,62 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTAnalytics::Pipeline",
   "Properties" : {
-    "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ [*Activity*](aws-properties-iotanalytics-pipeline-activity.md), ... ],
-    "[PipelineName](#cfn-iotanalytics-pipeline-pipelinename)" : String,
-    "[Tags](#cfn-iotanalytics-pipeline-tags)" : [ [*Tag*](aws-properties-resource-tags.md), ... ]
-  }
+      "[PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities)" : [ Activity, ... ],
+      "[PipelineName](#cfn-iotanalytics-pipeline-pipelinename)" : String,
+      "[Tags](#cfn-iotanalytics-pipeline-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-iotanalytics-pipeline-syntax.yaml"></a>
 
 ```
-Type: "AWS::IoTAnalytics::Pipeline"
-Properties:
+Type: AWS::IoTAnalytics::Pipeline
+Properties: 
   [PipelineActivities](#cfn-iotanalytics-pipeline-pipelineactivities): 
-    - [*Activity*](aws-properties-iotanalytics-pipeline-activity.md)
+    - Activity
   [PipelineName](#cfn-iotanalytics-pipeline-pipelinename): String
   [Tags](#cfn-iotanalytics-pipeline-tags): 
-    - [*Tag*](aws-properties-resource-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-iotanalytics-pipeline-properties"></a>
 
 `PipelineActivities`  <a name="cfn-iotanalytics-pipeline-pipelineactivities"></a>
-A list of pipeline activities which perform transformations on your messages, such as removing, renaming, or adding message attributes; filtering messages based on attribute value; invoking your Lambda functions on messages for advanced processing; or performing mathematical transformation to normalize device data\.  
- *Required*: Yes  
- *Type*: List of [Activity](aws-properties-iotanalytics-pipeline-activity.md) property types  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+A list of "PipelineActivity" objects\. Activities perform transformations on your messages, such as removing, renaming or adding message attributes; filtering messages based on attribute values; invoking your Lambda functions on messages for advanced processing; or performing mathematical transformations to normalize device data\.  
+The list can be 2\-25 **PipelineActivity** objects and must contain both a `channel` and a `datastore` activity\. Each entry in the list must contain only one activity, for example:  
+ `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } }, ... ]`   
+*Required*: Yes  
+*Type*: List of [Activity](aws-properties-iotanalytics-pipeline-activity.md)  
+*Maximum*: `25`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineName`  <a name="cfn-iotanalytics-pipeline-pipelinename"></a>
 The name of the pipeline\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iotanalytics-pipeline-tags"></a>
 Metadata which can be used to manage the pipeline\.  
- *Required*: No  
- *Type*: List of [Resource Tag](aws-properties-resource-tags.md) property types  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="aws-resource-iotanalytics-pipeline-examples"></a>
+## Examples<a name="aws-resource-iotanalytics-pipeline--examples"></a>
 
-### Simple Pipeline<a name="aws-resource-iotanalytics-pipeline-example1"></a>
+
+
+### Simple Pipeline<a name="aws-resource-iotanalytics-pipeline--examples--Simple_Pipeline"></a>
 
 The following example creates a simple pipeline\.
 
-#### JSON<a name="aws-resource-iotanalytics-pipeline-example1.json"></a>
+#### JSON<a name="aws-resource-iotanalytics-pipeline--examples--Simple_Pipeline--json"></a>
 
 ```
 {
@@ -86,7 +96,7 @@ The following example creates a simple pipeline\.
 }
 ```
 
-#### YAML<a name="aws-resource-iotanalytics-pipeline-example1.yaml"></a>
+#### YAML<a name="aws-resource-iotanalytics-pipeline--examples--Simple_Pipeline--yaml"></a>
 
 ```
 ---
@@ -107,11 +117,11 @@ Resources:
             DatastoreName: "SimpleDatastore"
 ```
 
-### Complex Pipeline<a name="aws-resource-iotanalytics-pipeline-example2"></a>
+### Complex Pipeline<a name="aws-resource-iotanalytics-pipeline--examples--Complex_Pipeline"></a>
 
 The following example creates a complex pipeline\.
 
-#### JSON<a name="aws-resource-iotanalytics-pipeline-example2.json"></a>
+#### JSON<a name="aws-resource-iotanalytics-pipeline--examples--Complex_Pipeline--json"></a>
 
 ```
 {
@@ -195,7 +205,7 @@ The following example creates a complex pipeline\.
 }
 ```
 
-#### YAML<a name="aws-resource-iotanalytics-pipeline-example2.yaml"></a>
+#### YAML<a name="aws-resource-iotanalytics-pipeline--examples--Complex_Pipeline--yaml"></a>
 
 ```
 ---
@@ -264,5 +274,6 @@ Resources:
             DatastoreName: "Datastore"
 ```
 
-## See Also<a name="aws-resource-iotanalytics-pipeline-seealso"></a>
-+ [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*
+## See also<a name="aws-resource-iotanalytics-pipeline--seealso"></a>
++  [How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide* 
++  [CreatePipeline](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_CreatePipeline.html) in the *AWS IoT Analytics API Reference* 

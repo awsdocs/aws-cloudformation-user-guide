@@ -1,12 +1,8 @@
 # AWS::IAM::ServiceLinkedRole<a name="aws-resource-iam-servicelinkedrole"></a>
 
-The `AWS::IAM::ServiceLinkedRole` resource creates a service\-linked role in AWS Identity and Access Management \(IAM\)\. A service\-linked role is a unique type of IAM role that is linked directly to an AWS service\. Service\-linked roles are predefined by the service and include all the permissions that the service requires to call other AWS services on your behalf\. The linked service also defines how you create, modify, and delete a service\-linked role\. For more information, see [CreateServiceLinkedRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateServiceLinkedRole.html) in the *IAM API Reference* or [Using Service\-Linked Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html) in the *IAM User Guide*\. 
+Creates an IAM role that is linked to a specific AWS service\. The service controls the attached policies and when the role can be deleted\. This helps ensure that the service is not broken by an unexpectedly changed or deleted role, which could put your AWS resources into an unknown state\. Allowing the service to control the role helps improve service stability and proper cleanup when a service and its role are no longer needed\. For more information, see [Using Service\-Linked Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html) in the *IAM User Guide*\. 
 
-**Topics**
-+ [Syntax](#aws-resource-iam-servicelinkedrole-syntax)
-+ [Properties](#aws-resource-iam-servicelinkedrole-properties)
-+ [Examples](#aws-resource-iam-servicelinkedrole-examples)
-+ [See Also](#aws-resource-iam-servicelinkedrole-seealso)
+To attach a policy to this service\-linked role, you must make the request using the AWS service that depends on this role\.
 
 ## Syntax<a name="aws-resource-iam-servicelinkedrole-syntax"></a>
 
@@ -18,19 +14,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IAM::ServiceLinkedRole",
   "Properties" : {
-    
-    "[AWSServiceName](#cfn-iam-servicelinkedrole-awsservicename)" : String,
-    "[CustomSuffix](#cfn-iam-servicelinkedrole-customsuffix)" : String,
-    "[Description](#cfn-iam-servicelinkedrole-description)" : String
-  }
+      "[AWSServiceName](#cfn-iam-servicelinkedrole-awsservicename)" : String,
+      "[CustomSuffix](#cfn-iam-servicelinkedrole-customsuffix)" : String,
+      "[Description](#cfn-iam-servicelinkedrole-description)" : String
+    }
 }
 ```
 
 ### YAML<a name="aws-resource-iam-servicelinkedrole-syntax.yaml"></a>
 
 ```
-Type: "AWS::IAM::ServiceLinkedRole"
-Properties:
+Type: AWS::IAM::ServiceLinkedRole
+Properties: 
   [AWSServiceName](#cfn-iam-servicelinkedrole-awsservicename): String
   [CustomSuffix](#cfn-iam-servicelinkedrole-customsuffix): String
   [Description](#cfn-iam-servicelinkedrole-description): String
@@ -39,48 +34,93 @@ Properties:
 ## Properties<a name="aws-resource-iam-servicelinkedrole-properties"></a>
 
 `AWSServiceName`  <a name="cfn-iam-servicelinkedrole-awsservicename"></a>
- The service principal for the AWS service to which this role is attached\. You use a string similar to a URL but without the `http://` in front\. For example: `elasticbeanstalk.amazonaws.com`\.   
-Service principals are unique and case sensitive\. To find the exact service principal for your service\-linked role, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\. Look for the services that have **Yes **in the **Service\-Linked Role** column\. Choose the **Yes** link to view the service\-linked role documentation for that service\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+The service principal for the AWS service to which this role is attached\. You use a string similar to a URL but without the http:// in front\. For example: `elasticbeanstalk.amazonaws.com`\.   
+Service principals are unique and case\-sensitive\. To find the exact service principal for your service\-linked role, see [AWS Services That Work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\. Look for the services that have **Yes **in the **Service\-Linked Role** column\. Choose the **Yes** link to view the service\-linked role documentation for that service\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `[\w+=,.@-]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CustomSuffix`  <a name="cfn-iam-servicelinkedrole-customsuffix"></a>
- A string that you provide, which is combined with the service\-provided prefix to form the complete role name\. If you make multiple requests for the same service, then you must supply a different `CustomSuffix` for each request\. Otherwise the request fails with a duplicate role name error\. For example, you could add `-1` or `-debug` to the suffix\.  
+  
+A string that you provide, which is combined with the service\-provided prefix to form the complete role name\. If you make multiple requests for the same service, then you must supply a different `CustomSuffix` for each request\. Otherwise the request fails with a duplicate role name error\. For example, you could add `-1` or `-debug` to the suffix\.  
 Some services do not support the `CustomSuffix` parameter\. If you provide an optional suffix and the operation fails, try the operation again without the suffix\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement) 
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `[\w+=,.@-]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-iam-servicelinkedrole-description"></a>
 The description of the role\.  
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+*Required*: No  
+*Type*: String  
+*Maximum*: `1000`  
+*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Examples<a name="aws-resource-iam-servicelinkedrole-examples"></a>
+## Return values<a name="aws-resource-iam-servicelinkedrole-return-values"></a>
 
-### Create an IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole-example1"></a>
+### Ref<a name="aws-resource-iam-servicelinkedrole-return-values-ref"></a>
+
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+
+For example:
+
+ `{ "Ref": "BasicSLR" }` 
+
+For the `AWS::IAM::ServiceLinkedRole` resource with the logical ID `BasicSLR`, `Ref` will return the name of the service\-linked role\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## Examples<a name="aws-resource-iam-servicelinkedrole--examples"></a>
+
+
+
+### Create an IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling"></a>
 
 The following example creates a service\-linked role that can be assumed by the Auto Scaling service\.
 
-#### YAML<a name="aws-resource-iam-servicelinkedrole-example1.yaml"></a>
+#### JSON<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--json"></a>
 
 ```
----
-Description: "SLR resource create test - Auto Scaling"
+{
+    "Description": "SLR resource create test - Auto Scaling",
+    "Resources": {
+        "BasicSLR": {
+            "Type": "AWS::IAM::ServiceLinkedRole",
+            "Properties": {
+                "AWSServiceName": "autoscaling.amazonaws.com",
+                "Description": "Test SLR description",
+                "CustomSuffix": "TestSuffix"
+            }
+        }
+    },
+    "Outputs": {
+        "SLRId": {
+            "Value": {
+                "Ref": "BasicSLR"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
+
+```
+Description: SLR resource create test - Auto Scaling
 Resources:
   BasicSLR:
-    Type: "AWS::IAM::ServiceLinkedRole"
+    Type: 'AWS::IAM::ServiceLinkedRole'
     Properties:
-      AWSServiceName: "autoscaling.amazonaws.com"
-      Description: "Test SLR description"
-      CustomSuffix: "TestSuffix"
+      AWSServiceName: autoscaling.amazonaws.com
+      Description: Test SLR description
+      CustomSuffix: TestSuffix
 Outputs:
   SLRId:
     Value: !Ref BasicSLR
 ```
-
-## See Also<a name="aws-resource-iam-servicelinkedrole-seealso"></a>
-+ [CreateServiceLinkedRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateServiceLinkedRole.html) in the *IAM API Reference*
-+ [Using Service\-Linked Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html) in the *IAM User Guide*

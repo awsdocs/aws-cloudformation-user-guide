@@ -1,4 +1,4 @@
-# DeletionPolicy Attribute<a name="aws-attribute-deletionpolicy"></a>
+# DeletionPolicy attribute<a name="aws-attribute-deletionpolicy"></a>
 
 With the DeletionPolicy attribute you can preserve or \(in some cases\) backup a resource when its stack is deleted\. You specify a DeletionPolicy attribute for each resource that you want to control\. If a resource has no DeletionPolicy attribute, AWS CloudFormation deletes the resource by default\.
 
@@ -40,7 +40,7 @@ Resources:
     DeletionPolicy: Retain
 ```
 
-## DeletionPolicy Options<a name="aws-attribute-deletionpolicy-options"></a>
+## DeletionPolicy options<a name="aws-attribute-deletionpolicy-options"></a>
 
 Delete  
 AWS CloudFormation deletes the resource and all its content if applicable during stack deletion\. You can add this deletion policy to any resource type\. By default, if you don't specify a DeletionPolicy, AWS CloudFormation deletes your resources\. However, be aware of the following considerations:  
@@ -57,10 +57,10 @@ For update operations, the following considerations apply:
 Snapshot  
 For resources that support snapshots, AWS CloudFormation creates a snapshot for the resource before deleting it\. Note that when AWS CloudFormation completes the stack deletion, the stack will be in the `Delete_Complete` state; however, the snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\.  
 Resources that support snapshots include:  
-+ `[AWS::EC2::Volume](aws-properties-ec2-ebs-volume.md)`
-+ `[AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)`
-+ `[AWS::ElastiCache::ReplicationGroup](aws-resource-elasticache-replicationgroup.md)`
-+ `[AWS::Neptune::DBCluster](aws-resource-neptune-dbcluster.md)`
-+ `[AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)`
-+ `[AWS::RDS::DBInstance](aws-properties-rds-database-instance.md)`
-+ `[AWS::Redshift::Cluster](aws-resource-redshift-cluster.md)`
++ `[AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)`
++ `[AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)`
++ `[AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)`
++ `[AWS::Neptune::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)`
++ `[AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)`
++ `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)`
++ `[AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)`

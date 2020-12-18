@@ -1,8 +1,6 @@
-# RoboMaker SimulationApplication SimulationSoftwareSuite<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite"></a>
+# AWS::RoboMaker::SimulationApplication SimulationSoftwareSuite<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite"></a>
 
-<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-description"></a>The `SimulationSoftwareSuite` property type specifies the simulation software suite for an AWS RoboMaker simulation application\.
-
-<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-inheritance"></a> `SimulationSoftwareSuite` is a property of the [AWS::RoboMaker::SimulationApplication](aws-resource-robomaker-simulationapplication.md) resource\.
+Information about a simulation software suite\.
 
 ## Syntax<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-syntax"></a>
 
@@ -20,23 +18,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-syntax.yaml"></a>
 
 ```
-[Name](#cfn-robomaker-simulationapplication-simulationsoftwaresuite-name): String
-[Version](#cfn-robomaker-simulationapplication-simulationsoftwaresuite-version): String
+  [Name](#cfn-robomaker-simulationapplication-simulationsoftwaresuite-name): String
+  [Version](#cfn-robomaker-simulationapplication-simulationsoftwaresuite-version): String
 ```
 
 ## Properties<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-properties"></a>
 
 `Name`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite-name"></a>
-The simulation software suite name\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
+The name of the simulation software suite\.  
+*Required*: Yes  
+*Type*: String  
+*Allowed values*: `Gazebo | RosbagPlay`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite-version"></a>
-The simulation software suite version\.  
- *Required*: Yes  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-## See Also<a name="aws-properties-robomaker-simulationapplication-simulationsoftwaresuite-seealso"></a>
-+ [SimulationSoftwareSuite](https://docs.aws.amazon.com/robomaker/latest/dg/API_SimulationSoftwareSuite) in the *RoboMaker Developer Guide*
+The version of the simulation software suite\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `1024`  
+*Pattern*: `7|9|Kinetic|Melodic|Dashing`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
