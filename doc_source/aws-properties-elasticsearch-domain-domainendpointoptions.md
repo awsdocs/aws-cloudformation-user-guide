@@ -37,3 +37,21 @@ The minimum TLS version required for traffic to the domain\. Valid values are TL
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomEndpointEnabled`  <a name="cfn-elasticsearch-domain-domainendpointoptions-customendpointenabled"></a>
+Whether to enable a custom endpoint for the domain\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomEndpoint`  <a name="cfn-elasticsearch-domain-domainendpointoptions-customendpoint"></a>
+The fully qualified URL for the custom endpoint\.  
+*Required*: Required if `CustomEndpointEnabled` is `true`, optional otherwise\.  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomEndpointCertificateArn`  <a name="cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn"></a>
+The ARN for your security certificate, managed in ACM\.  
+*Required*: Required if `CustomEndpointEnabled` is `true`, optional otherwise\.  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
