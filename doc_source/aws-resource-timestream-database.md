@@ -1,6 +1,6 @@
 # AWS::Timestream::Database<a name="aws-resource-timestream-database"></a>
 
-Creates a new Timestream database\. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account\. Refer to [AWS managed KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk) for more info\. Service quotas apply\. For more information, see [Access Management](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html) in the Timestream Developer Guide\. 
+Creates a new Timestream database\. If the KMS key is not specified, the database will be encrypted with a Timestream managed KMS key located in your account\. Refer to [AWS managed KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk) for more info\. [Service quotas apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html)\. See [code sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-db.html) for details\. 
 
 ## Syntax<a name="aws-resource-timestream-database-syntax"></a>
 

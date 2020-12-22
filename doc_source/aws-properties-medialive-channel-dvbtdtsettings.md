@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel DvbTdtSettings<a name="aws-properties-medialive-channel-dvbtdtsettings"></a>
 
-DVB Time and Date Table \(SDT\)
+The DVB Time and Date Table \(TDT\)\.
+
+The parent of this entity is M2tsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbtdtsettings-syntax"></a>
 

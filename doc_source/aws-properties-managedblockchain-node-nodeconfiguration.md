@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-managedblockchain-node-nodeconfiguration-properties"></a>
 
 `AvailabilityZone`  <a name="cfn-managedblockchain-node-nodeconfiguration-availabilityzone"></a>
-The Availability Zone in which the node exists\.  
+The Availability Zone in which the node exists\. Required for Ethereum nodes\. Ethereum on Managed Blockchain is in preview release and is subject to change\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -58,40 +58,8 @@ The key prefix of the Amazon S3 bucket\. The key prefix is similar to a director
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-s3action-topicarn"></a>
-
 The ARN of the Amazon SNS topic to notify when the message is saved to the Amazon S3 bucket\. You can find the ARN of a topic by using the [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in the Amazon SNS API\.  
-For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\. 
- *Required*: No  
- *Type*: String  
- *Update requires*: [No interruption](using-cfn-updating-stacks-update-behaviors.md#update-no-interrupt) 
-
-### Example
-
-### YAML
-```
-  SesRuleSet:
-    Type: "AWS::SES::ReceiptRuleSet"
-
-  SesRule:
-    Type: "AWS::SES::ReceiptRule"
-    Properties:
-      Rule:
-        Recipients:
-          - String
-        Actions:
-          - S3Action:
-              BucketName: !Ref Bucket
-        Enabled: true
-        ScanEnabled: true
-      RuleSetName: !Ref SesRuleSet
-```
-
-## See Also<a name="aws-properties-ses-receiptrule-s3action-seealso"></a>
-
-+ [Creating Receipt Rules for Amazon SES Email Receiving](url-ses-dev;receiving-email-receipt-rules.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [Giving Permissions to Amazon SES for Email Receiving](url-ses-dev;receiving-email-permissions.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [S3 Action](url-ses-dev;receiving-email-action-s3.html) in the *Amazon Simple Email Service Developer Guide*
-
-+ [S3Action](url-ses-api;API_S3Action.html) in the *Amazon Simple Email Service API Reference*
+For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

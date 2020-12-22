@@ -2,6 +2,8 @@
 
 Creates a member within a Managed Blockchain network\.
 
+Applies only to Hyperledger Fabric\.
+
 ## Syntax<a name="aws-resource-managedblockchain-member-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

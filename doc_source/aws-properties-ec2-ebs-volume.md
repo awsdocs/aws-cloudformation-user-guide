@@ -37,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Size](#cfn-ec2-ebs-volume-size)" : Integer,
       "[SnapshotId](#cfn-ec2-ebs-volume-snapshotid)" : String,
       "[Tags](#cfn-ec2-ebs-volume-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Throughput](#cfn-ec2-ebs-volume-throughput)" : Integer,
       "[VolumeType](#cfn-ec2-ebs-volume-volumetype)" : String
     }
 }
@@ -58,6 +59,7 @@ Properties:
   [SnapshotId](#cfn-ec2-ebs-volume-snapshotid): String
   [Tags](#cfn-ec2-ebs-volume-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Throughput](#cfn-ec2-ebs-volume-throughput): Integer
   [VolumeType](#cfn-ec2-ebs-volume-volumetype): String
 ```
 
@@ -140,6 +142,12 @@ The snapshot from which to create the volume\. You must specify either a snapsho
 The tags to apply to the volume during creation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Throughput`  <a name="cfn-ec2-ebs-volume-throughput"></a>
+The throughput that the volume supports, in MiB/s\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>

@@ -24,6 +24,8 @@
 + [AWS::EC2::NatGateway](aws-resource-ec2-natgateway.md)
 + [AWS::EC2::NetworkAcl](aws-resource-ec2-network-acl.md)
 + [AWS::EC2::NetworkAclEntry](aws-resource-ec2-network-acl-entry.md)
++ [AWS::EC2::NetworkInsightsAnalysis](aws-resource-ec2-networkinsightsanalysis.md)
++ [AWS::EC2::NetworkInsightsPath](aws-resource-ec2-networkinsightspath.md)
 + [AWS::EC2::NetworkInterface](aws-resource-ec2-network-interface.md)
 + [AWS::EC2::NetworkInterfaceAttachment](aws-resource-ec2-network-interface-attachment.md)
 + [AWS::EC2::NetworkInterfacePermission](aws-resource-ec2-networkinterfacepermission.md)

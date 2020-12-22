@@ -125,7 +125,7 @@ Resources:
         Mode: Active
   version:
     Type: AWS::Lambda::Version
-    Properties: 
+    Properties:
       FunctionName: !Ref function
   asyncconfig:
     Type: AWS::Lambda::EventInvokeConfig

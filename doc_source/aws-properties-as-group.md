@@ -204,7 +204,7 @@ The minimum size of the group\.
 
 `MixedInstancesPolicy`  <a name="cfn-as-group-mixedinstancespolicy"></a>
 An embedded object that specifies a mixed instances policy\.  
-The policy includes properties that not only define the distribution of On\-Demand Instances and Spot Instances, the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill On\-Demand and Spot capacities, but also the properties that specify the instance configuration information—the launch template and instance types\. The policy can also include a weight for each instance type\.  
+The policy includes properties that not only define the distribution of On\-Demand Instances and Spot Instances, the maximum price to pay for Spot Instances \(optional\), and how the Auto Scaling group allocates instance types to fulfill On\-Demand and Spot capacities, but also the properties that specify the instance configuration information—the launch template and instance types\. The policy can also include a weight for each instance type and different launch templates for individual instance types\.  
 For more information, see [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 If you specify `LaunchTemplate`, `InstanceId`, or `LaunchConfigurationName`, don't specify `MixedInstancesPolicy`\.  
 *Required*: Conditional  

@@ -141,12 +141,12 @@ MyRepo:
   Properties:
     RepositoryName: MyDemoRepo
     RepositoryDescription: This is a repository for my project with code from MySourceCodeBucket.
-      Code:
-        BranchName: development
-        S3: 
-          Bucket: MySourceCodeBucket,
-          Key: MyKey,
-          ObjectVersion: 1
+    Code:
+      BranchName: development
+      S3: 
+        Bucket: MySourceCodeBucket,
+        Key: MyKey,
+        ObjectVersion: 1
 ```
 
 ### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>

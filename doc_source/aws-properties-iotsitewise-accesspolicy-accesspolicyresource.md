@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy AccessPolicyResource<a name="aws-properties-iotsitewise-accesspolicy-accesspolicyresource"></a>
 
-<a name="aws-properties-iotsitewise-accesspolicy-accesspolicyresource-description"></a>The `AccessPolicyResource` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTSiteWise::AccessPolicy](aws-resource-iotsitewise-accesspolicy.md)\.
+The AWS IoT SiteWise Monitor resource for this access policy\. Choose either a portal or a project\.
 
 ## Syntax<a name="aws-properties-iotsitewise-accesspolicy-accesspolicyresource-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotsitewise-accesspolicy-accesspolicyresource-properties"></a>
 
 `Portal`  <a name="cfn-iotsitewise-accesspolicy-accesspolicyresource-portal"></a>
-Not currently supported by AWS CloudFormation\.  
+The AWS IoT SiteWise Monitor portal for this access policy\.  
 *Required*: No  
 *Type*: [Portal](aws-properties-iotsitewise-accesspolicy-portal.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Project`  <a name="cfn-iotsitewise-accesspolicy-accesspolicyresource-project"></a>
-Not currently supported by AWS CloudFormation\.  
+The AWS IoT SiteWise Monitor project for this access policy\.  
 *Required*: No  
 *Type*: [Project](aws-properties-iotsitewise-accesspolicy-project.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

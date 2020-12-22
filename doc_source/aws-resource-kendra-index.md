@@ -21,7 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-kendra-index-name)" : String,
       "[RoleArn](#cfn-kendra-index-rolearn)" : String,
       "[ServerSideEncryptionConfiguration](#cfn-kendra-index-serversideencryptionconfiguration)" : ServerSideEncryptionConfiguration,
-      "[Tags](#cfn-kendra-index-tags)" : TagList
+      "[Tags](#cfn-kendra-index-tags)" : TagList,
+      "[UserContextPolicy](#cfn-kendra-index-usercontextpolicy)" : String,
+      "[UserTokenConfigurations](#cfn-kendra-index-usertokenconfigurations)" : UserTokenConfigurationList
     }
 }
 ```
@@ -43,6 +45,9 @@ Properties:
     ServerSideEncryptionConfiguration
   [Tags](#cfn-kendra-index-tags): 
     TagList
+  [UserContextPolicy](#cfn-kendra-index-usercontextpolicy): String
+  [UserTokenConfigurations](#cfn-kendra-index-usertokenconfigurations): 
+    UserTokenConfigurationList
 ```
 
 ## Properties<a name="aws-resource-kendra-index-properties"></a>
@@ -98,6 +103,18 @@ An array of key\-value pairs to apply to this resource\.
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: [TagList](aws-properties-kendra-index-taglist.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UserContextPolicy`  <a name="cfn-kendra-index-usercontextpolicy"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UserTokenConfigurations`  <a name="cfn-kendra-index-usertokenconfigurations"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [UserTokenConfigurationList](aws-properties-kendra-index-usertokenconfigurationlist.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-kendra-index-return-values"></a>

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ConnectorProfileName](#cfn-appflow-flow-sourceflowconfig-connectorprofilename)" : String,
   "[ConnectorType](#cfn-appflow-flow-sourceflowconfig-connectortype)" : String,
+  "[IncrementalPullConfig](#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig)" : IncrementalPullConfig,
   "[SourceConnectorProperties](#cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties)" : SourceConnectorProperties
 }
 ```
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ConnectorProfileName](#cfn-appflow-flow-sourceflowconfig-connectorprofilename): String
   [ConnectorType](#cfn-appflow-flow-sourceflowconfig-connectortype): String
+  [IncrementalPullConfig](#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig): 
+    IncrementalPullConfig
   [SourceConnectorProperties](#cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties): 
     SourceConnectorProperties
 ```
@@ -40,6 +43,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Allowed Values*: S3 \| Amplitude \| Datadog \| Dynatrace \| Googleanalytics \| Infornexus \| Salesforce \| Servicenow \| Singular \| Slack \| Trendmicro \| Veeva \| Zendesk  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncrementalPullConfig`  <a name="cfn-appflow-flow-sourceflowconfig-incrementalpullconfig"></a>
+ Defines the configuration for a scheduled incremental data pull\. If a valid configuration is provided, the fields specified in the configuration are used when querying for the incremental data pull\.   
+*Required*: No  
+*Type*: [IncrementalPullConfig](aws-properties-appflow-flow-incrementalpullconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceConnectorProperties`  <a name="cfn-appflow-flow-sourceflowconfig-sourceconnectorproperties"></a>

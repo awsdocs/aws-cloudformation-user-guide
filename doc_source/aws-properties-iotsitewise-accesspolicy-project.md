@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy Project<a name="aws-properties-iotsitewise-accesspolicy-project"></a>
 
-<a name="aws-properties-iotsitewise-accesspolicy-project-description"></a>The `Project` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTSiteWise::AccessPolicy](aws-resource-iotsitewise-accesspolicy.md)\.
+The `Project` property type specifies the AWS IoT SiteWise Monitor project for an [AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)\.
 
 ## Syntax<a name="aws-properties-iotsitewise-accesspolicy-project-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotsitewise-accesspolicy-project-properties"></a>
 
 `id`  <a name="cfn-iotsitewise-accesspolicy-project-id"></a>
-Not currently supported by AWS CloudFormation\.  
+The ID of the project\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

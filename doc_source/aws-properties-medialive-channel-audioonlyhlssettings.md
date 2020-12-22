@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioOnlyHlsSettings<a name="aws-properties-medialive-channel-audioonlyhlssettings"></a>
 
-Audio Only Hls Settings
+The configuration of an audio\-only HLS output\.
+
+The parent of this entity is HlsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audioonlyhlssettings-syntax"></a>
 
@@ -30,19 +32,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audioonlyhlssettings-properties"></a>
 
 `AudioGroupId`  <a name="cfn-medialive-channel-audioonlyhlssettings-audiogroupid"></a>
-Specifies the group to which the audio Rendition belongs\.  
+Specifies the group that the audio rendition belongs to\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioOnlyImage`  <a name="cfn-medialive-channel-audioonlyhlssettings-audioonlyimage"></a>
-Optional\. Specifies the \.jpg or \.png image to use as the cover art for an audio\-only output\. We recommend a low bit\-size file because the image increases the output audio bandwidth\. The image is attached to the audio as an ID3 tag, frame type APIC, picture type 0x10, as per the "ID3 tag version 2\.4\.0 \- Native Frames" standard\.  
+Used with an audio\-only stream\. It must be a \.jpg or \.png file\. If given, this image is used as the cover art for the audio\-only output\. Ideally, it should be formatted for an iPhone screen for two reasons\. The iPhone does not resize the image; instead, it crops a centered image on the top/bottom and left/right\. Additionally, this image file gets saved bit\-for\-bit into every 10\-second segment file, so it increases bandwidth by \{image file size\} \* \{segment count\} \* \{user count\.\}\.  
 *Required*: No  
 *Type*: [InputLocation](aws-properties-medialive-channel-inputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioTrackType`  <a name="cfn-medialive-channel-audioonlyhlssettings-audiotracktype"></a>
-Four types of audio\-only tracks are supported: Audio\-Only Variant Stream The client can play back this audio\-only stream instead of video in low\-bandwidth scenarios\. Represented as an EXT\-X\-STREAM\-INF in the HLS manifest\. Alternate Audio, Auto Select, Default Alternate rendition that the client should try to play back by default\. Represented as an EXT\-X\-MEDIA in the HLS manifest with DEFAULT=YES, AUTOSELECT=YES Alternate Audio, Auto Select, Not Default Alternate rendition that the client may try to play back by default\. Represented as an EXT\-X\-MEDIA in the HLS manifest with DEFAULT=NO, AUTOSELECT=YES Alternate Audio, not Auto Select Alternate rendition that the client will not try to play back by default\. Represented as an EXT\-X\-MEDIA in the HLS manifest with DEFAULT=NO, AUTOSELECT=NO  
+Four types of audio\-only tracks are supported: Audio\-Only Variant Stream The client can play back this audio\-only stream instead of video in low\-bandwidth scenarios\. Represented as an EXT\-X\-STREAM\-INF in the HLS manifest\. Alternate Audio, Auto Select, Default Alternate rendition that the client should try to play back by default\. Represented as an EXT\-X\-MEDIA in the HLS manifest with DEFAULT=YES, AUTOSELECT=YES Alternate Audio, Auto Select, Not Default Alternate rendition that the client might try to play back by default\. Represented as an EXT\-X\-MEDIA in the HLS manifest with DEFAULT=NO, AUTOSELECT=YES Alternate Audio, not Auto Select Alternate rendition that the client will not try to play back by default\. Represented as an EXT\-X\-MEDIA in the HLS manifest with DEFAULT=NO, AUTOSELECT=NO\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

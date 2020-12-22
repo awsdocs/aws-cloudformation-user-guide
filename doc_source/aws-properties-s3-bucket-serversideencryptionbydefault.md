@@ -52,43 +52,42 @@ The following example creates a bucket with server\-side bucket encryption confi
 
 ```
 {
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "S3 bucket with default encryption",
-  "Resources": {
-    "EncryptedS3Bucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "BucketName": {
-          "Fn::Sub": "encryptedbucket-${AWS::Region}-${AWS::AccountId}"
-        },
-        "BucketEncryption": {
-          "ServerSideEncryptionConfiguration": [
-            {
-              "ServerSideEncryptionByDefault": {
-                "SSEAlgorithm": "aws:kms",
-                "KMSMasterKeyID": "KMS-KEY-ARN"
-              }
-            }
-          ]
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "S3 bucket with default encryption",
+    "Resources": {
+        "EncryptedS3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": {
+                    "Fn::Sub": "encryptedbucket-${AWS::Region}-${AWS::AccountId}"
+                },
+                "BucketEncryption": {
+                    "ServerSideEncryptionConfiguration": [
+                        {
+                            "ServerSideEncryptionByDefault": {
+                                "SSEAlgorithm": "aws:kms",
+                                "KMSMasterKeyID": "KMS-KEY-ARN"
+                            }
+                        }
+                    ]
+                }
+            },
+            "DeletionPolicy": "Delete"
         }
-      },
-      "DeletionPolicy": "Delete"
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-properties-s3-bucket-serversideencryptionbydefault--examples--Create_a_bucket_with_default_encryption--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: 2010-09-09
 Description: S3 bucket with default encryption
 Resources:
   EncryptedS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName:
-        'Fn::Sub': 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
+      BucketName: !Sub 'encryptedbucket-${AWS::Region}-${AWS::AccountId}'
       BucketEncryption:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:

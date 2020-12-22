@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel WebvttDestinationSettings<a name="aws-properties-medialive-channel-webvttdestinationsettings"></a>
 
-Webvtt Destination Settings
+The configuration of Web VTT captions in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-webvttdestinationsettings-syntax"></a>
 

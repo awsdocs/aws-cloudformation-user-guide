@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioPidSelection<a name="aws-properties-medialive-channel-audiopidselection"></a>
 
-Audio Pid Selection
+Used to extract audio by The PID\.
+
+The parent of this entity is AudioSelectorSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audiopidselection-syntax"></a>
 
@@ -23,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audiopidselection-properties"></a>
 
 `Pid`  <a name="cfn-medialive-channel-audiopidselection-pid"></a>
-Selects a specific PID from within a source\.  
+Select the audio by this PID\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

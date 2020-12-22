@@ -92,7 +92,7 @@ Configures Amazon ES to use Amazon Cognito authentication for Kibana\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainEndpointOptions`  <a name="cfn-elasticsearch-domain-domainendpointoptions"></a>
-Specifies additional options for the domain endpoint, such as whether to require HTTPS for all traffic\.  
+Specifies additional options for the domain endpoint, such as whether to require HTTPS for all traffic or whether to use a custom endpoint rather than the default endpoint\.  
 *Required*: No  
 *Type*: [DomainEndpointOptions](aws-properties-elasticsearch-domain-domainendpointoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

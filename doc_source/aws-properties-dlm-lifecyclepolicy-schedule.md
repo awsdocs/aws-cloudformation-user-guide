@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy Schedule<a name="aws-properties-dlm-lifecyclepolicy-schedule"></a>
 
-Specifies a backup schedule\.
+Specifies a backup schedule for a snapshot or AMI lifecycle policy\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-schedule-syntax"></a>
 
@@ -76,7 +76,7 @@ The name of the schedule\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `120`  
-*Pattern*: `[\p{all}]*`  
+*Pattern*: `[0-9A-Za-z _-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetainRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-retainrule"></a>
@@ -86,9 +86,10 @@ The retention rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShareRules`  <a name="cfn-dlm-lifecyclepolicy-schedule-sharerules"></a>
-Not currently supported by AWS CloudFormation\.  
+The rule for sharing snapshots with other AWS accounts\.  
 *Required*: No  
 *Type*: List of [ShareRule](aws-properties-dlm-lifecyclepolicy-sharerule.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagsToAdd`  <a name="cfn-dlm-lifecyclepolicy-schedule-tagstoadd"></a>

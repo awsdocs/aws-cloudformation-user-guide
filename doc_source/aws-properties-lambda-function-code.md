@@ -1,6 +1,6 @@
 # AWS::Lambda::Function Code<a name="aws-properties-lambda-function-code"></a>
 
-The deployment package for a Lambda function\. For all runtimes, you can specify the location of an object in Amazon S3\. For Node\.js and Python functions, you can specify the function code inline in the template\.
+The deployment package for a Lambda function\. To deploy a function defined as a container image, you specify the location of a container image in the Amazon ECR registry\. For a \.zip file deployment package, you can specify the location of an object in Amazon S3\. For Node\.js and Python functions, you can specify the function code inline in the template\.
 
 Changes to a deployment package in Amazon S3 are not detected automatically during stack updates\. To update the function code, change the object key or version in the template\.
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ImageUri](#cfn-lambda-function-code-imageuri)" : String,
   "[S3Bucket](#cfn-lambda-function-code-s3bucket)" : String,
   "[S3Key](#cfn-lambda-function-code-s3key)" : String,
   "[S3ObjectVersion](#cfn-lambda-function-code-s3objectversion)" : String,
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lambda-function-code-syntax.yaml"></a>
 
 ```
+  [ImageUri](#cfn-lambda-function-code-imageuri): String
   [S3Bucket](#cfn-lambda-function-code-s3bucket): String
   [S3Key](#cfn-lambda-function-code-s3key): String
   [S3ObjectVersion](#cfn-lambda-function-code-s3objectversion): String
@@ -29,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-lambda-function-code-properties"></a>
+
+`ImageUri`  <a name="cfn-lambda-function-code-imageuri"></a>
+URI of a container image in the Amazon ECR registry\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Bucket`  <a name="cfn-lambda-function-code-s3bucket"></a>
 An Amazon S3 bucket in the same AWS Region as your function\. The bucket can be in a different AWS account\.  

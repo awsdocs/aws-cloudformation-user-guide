@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioDescription<a name="aws-properties-medialive-channel-audiodescription"></a>
 
-Audio Description
+The encoding information for one output audio\.
+
+The parent of this entity is EncoderSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audiodescription-syntax"></a>
 
@@ -44,13 +46,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audiodescription-properties"></a>
 
 `AudioNormalizationSettings`  <a name="cfn-medialive-channel-audiodescription-audionormalizationsettings"></a>
-Advanced audio normalization settings\.  
+The advanced audio normalization settings\.  
 *Required*: No  
 *Type*: [AudioNormalizationSettings](aws-properties-medialive-channel-audionormalizationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioSelectorName`  <a name="cfn-medialive-channel-audiodescription-audioselectorname"></a>
-The name of the AudioSelector used as the source for this AudioDescription\.  
+The name of the AudioSelector that is used as the source for this AudioDescription\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,37 +70,37 @@ Determines how audio type is determined\. followInput: If the input contains an 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodecSettings`  <a name="cfn-medialive-channel-audiodescription-codecsettings"></a>
-Audio codec settings\.  
+The audio codec settings\.  
 *Required*: No  
 *Type*: [AudioCodecSettings](aws-properties-medialive-channel-audiocodecsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LanguageCode`  <a name="cfn-medialive-channel-audiodescription-languagecode"></a>
-RFC 5646 language code representing the language of the audio output track\. Only used if languageControlMode is useConfigured, or there is no ISO 639 language code specified in the input\.  
+Indicates the language of the audio output track\. Used only if languageControlMode is useConfigured, or there is no ISO 639 language code specified in the input\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LanguageCodeControl`  <a name="cfn-medialive-channel-audiodescription-languagecodecontrol"></a>
-Choosing followInput will cause the ISO 639 language code of the output to follow the ISO 639 language code of the input\. The languageCode will be used when useConfigured is set, or when followInput is selected but there is no ISO 639 language code specified by the input\.  
+Choosing followInput causes the ISO 639 language code of the output to follow the ISO 639 language code of the input\. The languageCode setting is used when useConfigured is set, or when followInput is selected but there is no ISO 639 language code specified by the input\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-medialive-channel-audiodescription-name"></a>
-The name of this AudioDescription\. Outputs will use this name to uniquely identify this AudioDescription\. Description names should be unique within this Live Event\.  
+The name of this AudioDescription\. Outputs use this name to uniquely identify this AudioDescription\. Description names should be unique within this channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemixSettings`  <a name="cfn-medialive-channel-audiodescription-remixsettings"></a>
-Settings that control how input audio channels are remixed into the output audio channels\.  
+The settings that control how input audio channels are remixed into the output audio channels\.  
 *Required*: No  
 *Type*: [RemixSettings](aws-properties-medialive-channel-remixsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamName`  <a name="cfn-medialive-channel-audiodescription-streamname"></a>
-Used for MS Smooth and Apple HLS outputs\. Indicates the name displayed by the player \(eg\. English, or Director Commentary\)\.  
+Used for Microsoft Smooth and Apple HLS outputs\. Indicates the name displayed by the player \(for example, English or Director Commentary\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel EncoderSettings<a name="aws-properties-medialive-channel-encodersettings"></a>
 
-Encoder Settings
+The settings for the encoding of outputs\.
+
+This entity is at the top level in the channel\.
 
 ## Syntax<a name="aws-properties-medialive-channel-encodersettings-syntax"></a>
 
@@ -54,31 +56,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-encodersettings-properties"></a>
 
 `AudioDescriptions`  <a name="cfn-medialive-channel-encodersettings-audiodescriptions"></a>
-Not currently supported by AWS CloudFormation\.  
+The encoding information for output audio\.  
 *Required*: No  
 *Type*: List of [AudioDescription](aws-properties-medialive-channel-audiodescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailBlanking`  <a name="cfn-medialive-channel-encodersettings-availblanking"></a>
-Settings for ad avail blanking\.  
+The settings for ad avail blanking\.  
 *Required*: No  
 *Type*: [AvailBlanking](aws-properties-medialive-channel-availblanking.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailConfiguration`  <a name="cfn-medialive-channel-encodersettings-availconfiguration"></a>
-Event\-wide configuration settings for ad avail insertion\.  
+The configuration settings for the ad avail handling\.  
 *Required*: No  
 *Type*: [AvailConfiguration](aws-properties-medialive-channel-availconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlackoutSlate`  <a name="cfn-medialive-channel-encodersettings-blackoutslate"></a>
-Settings for blackout slate\.  
+The settings for the blackout slate\.  
 *Required*: No  
 *Type*: [BlackoutSlate](aws-properties-medialive-channel-blackoutslate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptionDescriptions`  <a name="cfn-medialive-channel-encodersettings-captiondescriptions"></a>
-Settings for caption decriptions  
+The encoding information for output captions\.  
 *Required*: No  
 *Type*: List of [CaptionDescription](aws-properties-medialive-channel-captiondescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +92,7 @@ Feature Activations
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalConfiguration`  <a name="cfn-medialive-channel-encodersettings-globalconfiguration"></a>
-Configuration settings that apply to the event as a whole\.  
+The configuration settings that apply to the entire channel\.  
 *Required*: No  
 *Type*: [GlobalConfiguration](aws-properties-medialive-channel-globalconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,19 +104,19 @@ Nielsen configuration settings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputGroups`  <a name="cfn-medialive-channel-encodersettings-outputgroups"></a>
-Not currently supported by AWS CloudFormation\.  
+The settings for the output groups in the channel\.  
 *Required*: No  
 *Type*: List of [OutputGroup](aws-properties-medialive-channel-outputgroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeConfig`  <a name="cfn-medialive-channel-encodersettings-timecodeconfig"></a>
-Contains settings used to acquire and adjust timecode information from inputs\.  
+Contains settings used to acquire and adjust timecode information from the inputs\.  
 *Required*: No  
 *Type*: [TimecodeConfig](aws-properties-medialive-channel-timecodeconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VideoDescriptions`  <a name="cfn-medialive-channel-encodersettings-videodescriptions"></a>
-Not currently supported by AWS CloudFormation\.  
+The encoding information for output videos\.  
 *Required*: No  
 *Type*: List of [VideoDescription](aws-properties-medialive-channel-videodescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

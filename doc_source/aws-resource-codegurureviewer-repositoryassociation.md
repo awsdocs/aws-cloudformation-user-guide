@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn)" : String,
       "[Name](#cfn-codegurureviewer-repositoryassociation-name)" : String,
       "[Owner](#cfn-codegurureviewer-repositoryassociation-owner)" : String,
+      "[Tags](#cfn-codegurureviewer-repositoryassociation-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-codegurureviewer-repositoryassociation-type)" : String
     }
 }
@@ -34,6 +35,8 @@ Properties:
   [ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn): String
   [Name](#cfn-codegurureviewer-repositoryassociation-name): String
   [Owner](#cfn-codegurureviewer-repositoryassociation-owner): String
+  [Tags](#cfn-codegurureviewer-repositoryassociation-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-codegurureviewer-repositoryassociation-type): String
 ```
 
@@ -66,6 +69,12 @@ The name of the repository\.
 *Minimum*: `1`  
 *Maximum*: `100`  
 *Pattern*: `^\S(.*\S)?$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-codegurureviewer-repositoryassociation-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-codegurureviewer-repositoryassociation-type"></a>

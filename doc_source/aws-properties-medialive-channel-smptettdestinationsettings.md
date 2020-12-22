@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel SmpteTtDestinationSettings<a name="aws-properties-medialive-channel-smptettdestinationsettings"></a>
 
-Smpte Tt Destination Settings
+The setup of SMPTE\-TT captions in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-smptettdestinationsettings-syntax"></a>
 

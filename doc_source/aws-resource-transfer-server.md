@@ -13,12 +13,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Transfer::Server",
   "Properties" : {
       "[Certificate](#cfn-transfer-server-certificate)" : String,
+      "[Domain](#cfn-transfer-server-domain)" : String,
       "[EndpointDetails](#cfn-transfer-server-endpointdetails)" : EndpointDetails,
       "[EndpointType](#cfn-transfer-server-endpointtype)" : String,
       "[IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails)" : IdentityProviderDetails,
       "[IdentityProviderType](#cfn-transfer-server-identityprovidertype)" : String,
       "[LoggingRole](#cfn-transfer-server-loggingrole)" : String,
       "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
+      "[SecurityPolicyName](#cfn-transfer-server-securitypolicyname)" : String,
       "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Transfer::Server
 Properties: 
   [Certificate](#cfn-transfer-server-certificate): String
+  [Domain](#cfn-transfer-server-domain): String
   [EndpointDetails](#cfn-transfer-server-endpointdetails): 
     EndpointDetails
   [EndpointType](#cfn-transfer-server-endpointtype): String
@@ -39,6 +42,7 @@ Properties:
   [LoggingRole](#cfn-transfer-server-loggingrole): String
   [Protocols](#cfn-transfer-server-protocols): 
     - Protocol
+  [SecurityPolicyName](#cfn-transfer-server-securitypolicyname): String
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -61,6 +65,12 @@ The certificate must be a valid SSL/TLS X\.509 version 3 certificate with FQDN o
 *Type*: String  
 *Maximum*: `1600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Domain`  <a name="cfn-transfer-server-domain"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EndpointDetails`  <a name="cfn-transfer-server-endpointdetails"></a>
 The virtual private cloud \(VPC\) endpoint settings that are configured for your server\. When you host your endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic IPs and make it accessible to clients over the internet\. You VPC's default security groups are automatically assigned to your endpoint\.  
@@ -103,6 +113,14 @@ Specifies the file transfer protocol or protocols over which your file transfer 
 *Required*: No  
 *Type*: List of [Protocol](aws-properties-transfer-server-protocol.md)  
 *Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityPolicyName`  <a name="cfn-transfer-server-securitypolicyname"></a>
+Specifies the name of the security policy that is attached to the server\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `100`  
+*Pattern*: `TransferSecurityPolicy-.+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-transfer-server-tags"></a>

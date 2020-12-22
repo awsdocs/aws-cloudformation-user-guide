@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname)" : String,
       "[Engine](#cfn-elasticache-replicationgroup-engine)" : String,
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
+      "[GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid)" : String,
       "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
       "[MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled)" : Boolean,
       "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ NodeGroupConfiguration, ... ],
@@ -41,8 +42,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit)" : Integer,
       "[SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid)" : String,
       "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
-      "[Tags](#cfn-elasticache-replicationgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean
+      "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean,
+      "[UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids)" : [ String, ... ]
     }
 }
 ```
@@ -63,6 +64,7 @@ Properties:
   [CacheSubnetGroupName](#cfn-elasticache-replicationgroup-cachesubnetgroupname): String
   [Engine](#cfn-elasticache-replicationgroup-engine): String
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
+  [GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid): String
   [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
   [MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled): Boolean
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
@@ -86,9 +88,9 @@ Properties:
   [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit): Integer
   [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid): String
   [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
-  [Tags](#cfn-elasticache-replicationgroup-tags): 
-    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
+  [UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids): 
+    - String
 ```
 
 ## Properties<a name="aws-resource-elasticache-replicationgroup-properties"></a>
@@ -208,6 +210,12 @@ The version number of the cache engine to be used for the clusters in this repli
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GlobalReplicationGroupId`  <a name="cfn-elasticache-replicationgroup-globalreplicationgroupid"></a>
+The name of the Global Datastore  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-elasticache-replicationgroup-kmskeyid"></a>
 The ID of the KMS key used to encrypt the disk on the cluster\.  
@@ -353,12 +361,6 @@ If you do not specify this parameter, ElastiCache automatically chooses an appro
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Tags`  <a name="cfn-elasticache-replicationgroup-tags"></a>
-A list of cost allocation tags to be added to this resource\. Tags are comma\-separated key,value pairs \(e\.g\. Key=`myKey`, Value=`myKeyValue`\. You can include multiple tags as shown following: Key=`myKey`, Value=`myKeyValue` Key=`mySecondKey`, Value=`mySecondKeyValue`\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `TransitEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-transitencryptionenabled"></a>
 A flag that enables in\-transit encryption when set to `true`\.  
 You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created\. To enable in\-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when you create a cluster\.  
@@ -370,6 +372,12 @@ For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`UserGroupIds`  <a name="cfn-elasticache-replicationgroup-usergroupids"></a>
+The list of user groups to associate with the replication group\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-elasticache-replicationgroup-return-values"></a>
 

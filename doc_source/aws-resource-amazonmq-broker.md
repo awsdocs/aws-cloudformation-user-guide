@@ -128,7 +128,7 @@ Encryption options for the broker\. Does not apply to RabbitMQ brokers\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineType`  <a name="cfn-amazonmq-broker-enginetype"></a>
-The type of broker engine\. Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ  
+The type of broker engine\. Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -158,7 +158,7 @@ Enables Amazon CloudWatch logging for brokers\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaintenanceWindowStartTime`  <a name="cfn-amazonmq-broker-maintenancewindowstarttime"></a>
-The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker\.\.  
+The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker\.  
 *Required*: No  
 *Type*: [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -195,7 +195,7 @@ An array of key\-value pairs\. For more information, see [Using Cost Allocation 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Users`  <a name="cfn-amazonmq-broker-users"></a>
-The list of ActiveMQ users \(persons or applications\) who can access queues and topics\. For RabbitMQ brokers, one and only one administrative user is accepted and created when a broker is first provisioned\. All subsequent broker users are created by via the RabbitMQ web console or by using the RabbitMQ management API\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.  
+The list of ActiveMQ users \(persons or applications\) who can access queues and topics\. For RabbitMQ brokers, one and only one administrative user is accepted and created when a broker is first provisioned\. All subsequent RabbitMQ users are created by via the RabbitMQ web console or by using the RabbitMQ management API\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.  
 *Required*: Yes  
 *Type*: List of [User](aws-properties-amazonmq-broker-user.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -373,7 +373,7 @@ Resources:
 
 ### Complex Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker"></a>
 
-The following example creates a complex Amazon MQ broker\. The ActiveMQ example creates a broker with two users that don't belong to a group and one user that belongs in a group\. The RabbitMQ broker example creates one administrator user, which can then create and manage other users via the RabbitMQ web console or the management API\.
+The following example creates a complex Amazon MQ broker\. The ActiveMQ example creates a broker with two users that don't belong to a group and one user that belongs in a group\. The RabbitMQ example creates one administrator user, which can then create and manage other users via the RabbitMQ web console or the management API\.
 
 #### JSON<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--json"></a>
 

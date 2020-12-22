@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel OutputDestination<a name="aws-properties-medialive-channel-outputdestination"></a>
 
-<a name="aws-properties-medialive-channel-outputdestination-description"></a>The `OutputDestination` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+Configuration information for an output\.
+
+This entity is at the top level in the channel\.
 
 ## Syntax<a name="aws-properties-medialive-channel-outputdestination-syntax"></a>
 
@@ -32,13 +34,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-outputdestination-properties"></a>
 
 `Id`  <a name="cfn-medialive-channel-outputdestination-id"></a>
-User\-specified id\. This is used in an output group or an output\.  
+The ID for this destination\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MediaPackageSettings`  <a name="cfn-medialive-channel-outputdestination-mediapackagesettings"></a>
-Destination settings for a MediaPackage output; one destination for both encoders\.  
+The destination settings for a MediaPackage output\.  
 *Required*: No  
 *Type*: List of [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,7 +52,7 @@ Destination settings for a Multiplex output; one destination for both encoders\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Settings`  <a name="cfn-medialive-channel-outputdestination-settings"></a>
-Destination settings for a standard output; one destination for each redundant encoder\.  
+The destination settings for an output\.  
 *Required*: No  
 *Type*: List of [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

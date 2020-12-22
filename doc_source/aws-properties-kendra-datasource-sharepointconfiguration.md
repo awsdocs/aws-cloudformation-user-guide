@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CrawlAttachments](#cfn-kendra-datasource-sharepointconfiguration-crawlattachments)" : Boolean,
+  "[DisableLocalGroups](#cfn-kendra-datasource-sharepointconfiguration-disablelocalgroups)" : Boolean,
   "[DocumentTitleFieldName](#cfn-kendra-datasource-sharepointconfiguration-documenttitlefieldname)" : String,
   "[ExclusionPatterns](#cfn-kendra-datasource-sharepointconfiguration-exclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
   "[FieldMappings](#cfn-kendra-datasource-sharepointconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CrawlAttachments](#cfn-kendra-datasource-sharepointconfiguration-crawlattachments): Boolean
+  [DisableLocalGroups](#cfn-kendra-datasource-sharepointconfiguration-disablelocalgroups): Boolean
   [DocumentTitleFieldName](#cfn-kendra-datasource-sharepointconfiguration-documenttitlefieldname): String
   [ExclusionPatterns](#cfn-kendra-datasource-sharepointconfiguration-exclusionpatterns): 
     DataSourceInclusionsExclusionsStrings
@@ -47,6 +49,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CrawlAttachments`  <a name="cfn-kendra-datasource-sharepointconfiguration-crawlattachments"></a>
  `TRUE` to include attachments to documents stored in your Microsoft SharePoint site in the index; otherwise, `FALSE`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableLocalGroups`  <a name="cfn-kendra-datasource-sharepointconfiguration-disablelocalgroups"></a>
+A Boolean value that specifies whether local groups are disabled \(`True`\) or enabled \(`False`\)\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
