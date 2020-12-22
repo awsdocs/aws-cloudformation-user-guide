@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel M3u8Settings<a name="aws-properties-medialive-channel-m3u8settings"></a>
 
-Settings information for the \.m3u8 container
+The settings information for the M3U8 container\.
+
+The parent of this entity is StandardHlsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-m3u8settings-syntax"></a>
 
@@ -61,7 +63,7 @@ The number of audio frames to insert for each PES packet\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioPids`  <a name="cfn-medialive-channel-m3u8settings-audiopids"></a>
-Packet Identifier \(PID\) of the elementary audio stream\(s\) in the transport stream\. Multiple values are accepted, and can be entered in ranges and/or by comma separation\. Can be entered as decimal or hexadecimal values\.  
+The PID of the elementary audio streams in the transport stream\. Multiple values are accepted, and can be entered in ranges or by comma separation\. You can enter the value as a decimal or hexadecimal value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,13 +93,13 @@ When set to pcrEveryPesPacket, a Program Clock Reference value is inserted for e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PcrPeriod`  <a name="cfn-medialive-channel-m3u8settings-pcrperiod"></a>
-Maximum time in milliseconds between Program Clock References \(PCRs\) inserted into the transport stream\.  
+The maximum time, in milliseconds, between Program Clock References \(PCRs\) inserted into the transport stream\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PcrPid`  <a name="cfn-medialive-channel-m3u8settings-pcrpid"></a>
-Packet Identifier \(PID\) of the Program Clock Reference \(PCR\) in the transport stream\. When no value is given, the encoder will assign the same value as the Video PID\. Can be entered as a decimal or hexadecimal value\.  
+The PID of the Program Clock Reference \(PCR\) in the transport stream\. When no value is given, MediaLive assigns the same value as the video PID\. You can enter the value as a decimal or hexadecimal value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,13 +111,13 @@ The number of milliseconds between instances of this table in the output transpo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PmtPid`  <a name="cfn-medialive-channel-m3u8settings-pmtpid"></a>
-Packet Identifier \(PID\) for the Program Map Table \(PMT\) in the transport stream\. Can be entered as a decimal or hexadecimal value\.  
+The PID for the Program Map Table \(PMT\) in the transport stream\. You can enter the value as a decimal or hexadecimal value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProgramNum`  <a name="cfn-medialive-channel-m3u8settings-programnum"></a>
-The value of the program number field in the Program Map Table\.  
+The value of the program number field in the Program Map Table \(PMT\)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -127,7 +129,7 @@ If set to passthrough, passes any SCTE\-35 signals from the input source to this
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scte35Pid`  <a name="cfn-medialive-channel-m3u8settings-scte35pid"></a>
-Packet Identifier \(PID\) of the SCTE\-35 stream in the transport stream\. Can be entered as a decimal or hexadecimal value\.  
+The PID of the SCTE\-35 stream in the transport stream\. You can enter the value as a decimal or hexadecimal value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,19 +141,19 @@ When set to passthrough, timed metadata is passed through from input to output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimedMetadataPid`  <a name="cfn-medialive-channel-m3u8settings-timedmetadatapid"></a>
-Packet Identifier \(PID\) of the timed metadata stream in the transport stream\. Can be entered as a decimal or hexadecimal value\. Valid values are 32 \(or 0x20\)\.\.8182 \(or 0x1ff6\)\.  
+The PID of the timed metadata stream in the transport stream\. You can enter the value as a decimal or hexadecimal value\. Valid values are 32 \(or 0x20\)\.\.8182 \(or 0x1ff6\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransportStreamId`  <a name="cfn-medialive-channel-m3u8settings-transportstreamid"></a>
-The value of the transport stream ID field in the Program Map Table\.  
+The value of the transport stream ID field in the Program Map Table \(PMT\)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VideoPid`  <a name="cfn-medialive-channel-m3u8settings-videopid"></a>
-Packet Identifier \(PID\) of the elementary video stream in the transport stream\. Can be entered as a decimal or hexadecimal value\.  
+The PID of the elementary video stream in the transport stream\. You can enter the value as a decimal or hexadecimal value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

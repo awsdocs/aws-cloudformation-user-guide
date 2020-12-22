@@ -1,7 +1,5 @@
 # AWS::SageMaker::Model MultiModelConfig<a name="aws-properties-sagemaker-model-containerdefinition-multimodelconfig"></a>
 
-<a name="aws-properties-sagemaker-model-containerdefinition-multimodelconfig-description"></a>The `MultiModelConfig` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::SageMaker::Model](aws-resource-sagemaker-model.md)\.
-
 ## Syntax<a name="aws-properties-sagemaker-model-containerdefinition-multimodelconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

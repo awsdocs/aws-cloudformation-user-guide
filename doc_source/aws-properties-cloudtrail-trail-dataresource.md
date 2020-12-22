@@ -49,6 +49,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Type`  <a name="cfn-cloudtrail-trail-dataresource-type"></a>
 The resource type in which you want to log data events\. You can specify `AWS::S3::Object` or `AWS::Lambda::Function` resources\.  
+The `AWS::S3Outposts::Object` resource type is not valid in basic event selectors\. To log data events on this resource type, use advanced event selectors\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

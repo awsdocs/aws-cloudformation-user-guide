@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[DisableLocalGroups](#cfn-kendra-datasource-onedriveconfiguration-disablelocalgroups)" : Boolean,
   "[ExclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
   "[FieldMappings](#cfn-kendra-datasource-onedriveconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList,
   "[InclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-inclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kendra-datasource-onedriveconfiguration-syntax.yaml"></a>
 
 ```
+  [DisableLocalGroups](#cfn-kendra-datasource-onedriveconfiguration-disablelocalgroups): Boolean
   [ExclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns): 
     DataSourceInclusionsExclusionsStrings
   [FieldMappings](#cfn-kendra-datasource-onedriveconfiguration-fieldmappings): 
@@ -35,6 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-onedriveconfiguration-properties"></a>
+
+`DisableLocalGroups`  <a name="cfn-kendra-datasource-onedriveconfiguration-disablelocalgroups"></a>
+A Boolean value that specifies whether local groups are disabled \(`True`\) or enabled \(`False`\)\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns"></a>
 List of regular expressions applied to documents\. Items that match the exclusion pattern are not indexed\. If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't indexed\.   

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel DvbNitSettings<a name="aws-properties-medialive-channel-dvbnitsettings"></a>
 
-DVB Network Information Table \(NIT\)
+The configuration of DVB NIT\.
+
+The parent of this entity is M2tsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbnitsettings-syntax"></a>
 
@@ -33,7 +35,7 @@ The numeric value placed in the Network Information Table \(NIT\)\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkName`  <a name="cfn-medialive-channel-dvbnitsettings-networkname"></a>
-The network name text placed in the networkNameDescriptor inside the Network Information Table\. Maximum length is 256 characters\.  
+The network name text placed in the networkNameDescriptor inside the Network Information Table \(NIT\)\. The maximum length is 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

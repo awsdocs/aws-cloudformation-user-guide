@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy ShareRule<a name="aws-properties-dlm-lifecyclepolicy-sharerule"></a>
 
-<a name="aws-properties-dlm-lifecyclepolicy-sharerule-description"></a>The `ShareRule` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)\.
+Specifies a rule for sharing snapshots across AWS accounts\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-sharerule-syntax"></a>
 
@@ -28,19 +28,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-sharerule-properties"></a>
 
 `TargetAccounts`  <a name="cfn-dlm-lifecyclepolicy-sharerule-targetaccounts"></a>
-Not currently supported by AWS CloudFormation\.  
+The IDs of the AWS accounts with which to share the snapshots\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnshareInterval`  <a name="cfn-dlm-lifecyclepolicy-sharerule-unshareinterval"></a>
-Not currently supported by AWS CloudFormation\.  
+The period after which snapshots that are shared with other AWS accounts are automatically unshared\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnshareIntervalUnit`  <a name="cfn-dlm-lifecyclepolicy-sharerule-unshareintervalunit"></a>
-Not currently supported by AWS CloudFormation\.  
+The unit of time for the automatic unsharing interval\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DAYS | MONTHS | WEEKS | YEARS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

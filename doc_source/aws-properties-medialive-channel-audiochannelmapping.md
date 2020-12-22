@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioChannelMapping<a name="aws-properties-medialive-channel-audiochannelmapping"></a>
 
-Audio Channel Mapping
+The settings for remixing audio\.
+
+The parent of this entity is RemixSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audiochannelmapping-syntax"></a>
 
@@ -26,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audiochannelmapping-properties"></a>
 
 `InputChannelLevels`  <a name="cfn-medialive-channel-audiochannelmapping-inputchannellevels"></a>
-Indices and gain values for each input channel that should be remixed into this output channel\.  
+The indices and gain values for each input channel that should be remixed into this output channel\.  
 *Required*: No  
 *Type*: List of [InputChannelLevel](aws-properties-medialive-channel-inputchannellevel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputChannel`  <a name="cfn-medialive-channel-audiochannelmapping-outputchannel"></a>
-The index of the output channel being produced\.  
+The index of the output channel that is being produced\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

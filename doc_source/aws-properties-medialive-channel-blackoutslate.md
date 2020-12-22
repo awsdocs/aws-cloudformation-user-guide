@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel BlackoutSlate<a name="aws-properties-medialive-channel-blackoutslate"></a>
 
-Blackout Slate
+The settings for a blackout slate\.
+
+The parent of this entity is EncoderSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-blackoutslate-syntax"></a>
 
@@ -33,31 +35,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-blackoutslate-properties"></a>
 
 `BlackoutSlateImage`  <a name="cfn-medialive-channel-blackoutslate-blackoutslateimage"></a>
-Blackout slate image to be used\. Leave empty for solid black\. Only bmp and png images are supported\.  
+The blackout slate image to be used\. Keep empty for solid black\. Only \.bmp and \.png images are supported\.  
 *Required*: No  
 *Type*: [InputLocation](aws-properties-medialive-channel-inputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkEndBlackout`  <a name="cfn-medialive-channel-blackoutslate-networkendblackout"></a>
-Setting to enabled causes the encoder to blackout the video, audio, and captions, and raise the "Network Blackout Image" slate when an SCTE104/35 Network End Segmentation Descriptor is encountered\. The blackout will be lifted when the Network Start Segmentation Descriptor is encountered\. The Network End and Network Start descriptors must contain a network ID that matches the value entered in "Network ID"\.  
+Setting to enabled causes MediaLive to blackout the video, audio, and captions, and raise the "Network Blackout Image" slate when an SCTE104/35 Network End Segmentation Descriptor is encountered\. The blackout is lifted when the Network Start Segmentation Descriptor is encountered\. The Network End and Network Start descriptors must contain a network ID that matches the value entered in Network ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkEndBlackoutImage`  <a name="cfn-medialive-channel-blackoutslate-networkendblackoutimage"></a>
-Path to local file to use as Network End Blackout image\. Image will be scaled to fill the entire output raster\.  
+The path to the local file to use as the Network End Blackout image\. The image is scaled to fill the entire output raster\.  
 *Required*: No  
 *Type*: [InputLocation](aws-properties-medialive-channel-inputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkId`  <a name="cfn-medialive-channel-blackoutslate-networkid"></a>
-Provides Network ID that matches EIDR ID format \(e\.g\., "10\.XXXX/XXXX\-XXXX\-XXXX\-XXXX\-XXXX\-C"\)\.  
+Provides a Network ID that matches EIDR ID format \(for example, "10\.XXXX/XXXX\-XXXX\-XXXX\-XXXX\-XXXX\-C"\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-medialive-channel-blackoutslate-state"></a>
-When set to enabled, causes video, audio and captions to be blanked when indicated by program metadata\.  
+When set to enabled, this causes video, audio, and captions to be blanked when indicated by program metadata\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -120,7 +120,7 @@ Resources:
         Mode: Active
   version:
     Type: AWS::Lambda::Version
-    Properties: 
+    Properties:
       FunctionName: !Ref function
       Description: v1
       ProvisionedConcurrencyConfig:

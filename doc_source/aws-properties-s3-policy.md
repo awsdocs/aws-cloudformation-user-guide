@@ -64,45 +64,45 @@ The name of the Amazon S3 bucket to which the policy applies\.
 
 ```
 {
-  "SampleBucketPolicy": {
-    "Type": "AWS::S3::BucketPolicy",
-    "Properties": {
-      "Bucket": {
-        "Ref": "DOC-EXAMPLE-BUCKET"
-      },
-      "PolicyDocument": {
-        "Statement": [
-          {
-            "Action": [
-              "s3:GetObject"
-            ],
-            "Effect": "Allow",
-            "Resource": {
-              "Fn::Join": [
-                "",
-                [
-                  "arn:aws:s3:::",
-                  {
-                    "Ref": "DOC-EXAMPLE-BUCKET"
-                  },
-                  "/*"
-                ]
-              ]
+    "SampleBucketPolicy": {
+        "Type": "AWS::S3::BucketPolicy",
+        "Properties": {
+            "Bucket": {
+                "Ref": "DOC-EXAMPLE-BUCKET"
             },
-            "Principal": "*",
-            "Condition": {
-              "StringLike": {
-                "aws:Referer": [
-                  "http://www.example.com/*",
-                  "http://example.net/*"
+            "PolicyDocument": {
+                "Statement": [
+                    {
+                        "Action": [
+                            "s3:GetObject"
+                        ],
+                        "Effect": "Allow",
+                        "Resource": {
+                            "Fn::Join": [
+                                "",
+                                [
+                                    "arn:aws:s3:::",
+                                    {
+                                        "Ref": "DOC-EXAMPLE-BUCKET"
+                                    },
+                                    "/*"
+                                ]
+                            ]
+                        },
+                        "Principal": "*",
+                        "Condition": {
+                            "StringLike": {
+                                "aws:Referer": [
+                                    "http://www.example.com/*",
+                                    "http://example.net/*"
+                                ]
+                            }
+                        }
+                    }
                 ]
-              }
             }
-          }
-        ]
-      }
+        }
     }
-  }
 }
 ```
 
@@ -112,19 +112,17 @@ The name of the Amazon S3 bucket to which the policy applies\.
 SampleBucketPolicy:
   Type: 'AWS::S3::BucketPolicy'
   Properties:
-    Bucket:
-      Ref: DOC-EXAMPLE-BUCKET
+    Bucket: !Ref DOC-EXAMPLE-BUCKET
     PolicyDocument:
       Statement:
         - Action:
             - 's3:GetObject'
           Effect: Allow
-          Resource:
-            'Fn::Join':
-              - ''
-              - - 'arn:aws:s3:::'
-                - Ref: DOC-EXAMPLE-BUCKET
-                - /*
+          Resource: !Join
+            - ''
+            - - 'arn:aws:s3:::'
+              - !Ref DOC-EXAMPLE-BUCKET
+              - /*
           Principal: '*'
           Condition:
             StringLike:

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel FrameCaptureOutputSettings<a name="aws-properties-medialive-channel-framecaptureoutputsettings"></a>
 
-Frame Capture Output Settings
+The frame capture output settings\.
+
+The parent of this entity is OutputSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-framecaptureoutputsettings-syntax"></a>
 

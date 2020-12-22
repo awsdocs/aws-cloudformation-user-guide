@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel Mp2Settings<a name="aws-properties-medialive-channel-mp2settings"></a>
 
-Mp2 Settings
+The configuration for this MP2 audio\.
+
+The parent of this entity is AudioCodecSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-mp2settings-syntax"></a>
 
@@ -27,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-mp2settings-properties"></a>
 
 `Bitrate`  <a name="cfn-medialive-channel-mp2settings-bitrate"></a>
-Average bitrate in bits/second\.  
+The average bitrate in bits/second\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -39,7 +41,7 @@ The MPEG2 Audio coding mode\. Valid values are codingMode10 \(for mono\) or codi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SampleRate`  <a name="cfn-medialive-channel-mp2settings-samplerate"></a>
-Sample rate in Hz\.  
+The sample rate in Hz\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

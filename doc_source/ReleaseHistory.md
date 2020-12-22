@@ -4,10 +4,300 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_EC2.md) | The following resources were updated: AWS::EC2::Instance, AWS::EC2::SpotFleet, AWS::EC2::Volume\. 
+
+ [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)   
+Use the `EnclaveOptions` property to indicate whether the instance is enabled for AWS Nitro Enclaves\. 
+
+ [AWS::EC2::SpotFleet SpotCapacityRebalance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotcapacityrebalance.html)   
+Use the `SpotCapacityRebalance` property when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\. 
+
+ [AWS::EC2::SpotFleet SpotMaintenanceStrategies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html)   
+Use the `SpotMaintenanceStrategies` property to manage your Spot Instances that are at an elevated risk of being interrupted\. \. 
+
+ [AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)   
+Use the `Throughput` property to specify the throughput that the volume supports, in MiB/s\.  | December 18, 2020 | 
+| [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::PublicRepository 
+
+ [AWS::ECR::PublicRepository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-public-repository.html)   
+Use the `PublicRepository` property to create or update a public repository\.  | December 18, 2020 | 
 | [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::Service 
 
  [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
-Use the `DeploymentCircuitBreaker` property to enable the deployment circuit breaker for a service\.  | November 24, 2020 | 
+Use the `DeploymentCircuitBreaker` property to enable the deployment circuit breaker for a service\.  | December 18, 2020 | 
+| [Updated resources](AWS_ElastiCache.md) | The following resource was updated: AWS::ElastiCache::ReplicationGroup\. 
+
+ [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-usergroupids)   
+Use the `UserGroupIds` property to associate a list of user groups with the replication group\.  | December 18, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::ECR::PublicRepository 
+
+ [AWS::ECR::PublicRepository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-public-repository.html)   
+Use the `PublicRepository` property to create or update a public repository\.  | December 18, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::ECS::Service 
+
+ [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
+Use the `DeploymentCircuitBreaker` property to enable the deployment circuit breaker for a service\.  | December 18, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::ElastiCache::ReplicationGroup\. 
+
+ [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-usergroupids)   
+Use the `UserGroupIds` property to associate a list of user groups with the replication group\.  | December 18, 2020 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::EC2::Instance, AWS::EC2::SpotFleet, AWS::EC2::Volume\. 
+
+ [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)   
+Use the `EnclaveOptions` property to indicate whether the instance is enabled for AWS Nitro Enclaves\. 
+
+ [AWS::EC2::SpotFleet SpotCapacityRebalance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotcapacityrebalance.html)   
+Use the `SpotCapacityRebalance` property when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\. 
+
+ [AWS::EC2::SpotFleet SpotMaintenanceStrategies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotmaintenancestrategies.html)   
+Use the `SpotMaintenanceStrategies` property to manage your Spot Instances that are at an elevated risk of being interrupted\. \. 
+
+ [AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)   
+Use the `Throughput` property to specify the throughput that the volume supports, in MiB/s\.  | December 18, 2020 | 
+| [Updated resource](AWS_Batch.md) | The following resource was updated: [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html) 
+
+[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
+Use the `PlatformCapabilities` property to specify whether the job requires `EC2` or `FARGATE` resources\.  
+Use the `PropagateTags` property to specify whether to propagate tags from the job definition to the corresponding Amazon ECS task\.  
+In the [ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html) property type:  
++ Use the `FargatePlatformConfiguration` property to specify the Fargate platform version to use for jobs running on Fargate resources\.
++ Use the `NetworkConfiguration` property to specify the network configuration for jobs running on Fargate resources\. 
+
+[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
+In the [ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html) property type, use the [FargatePlatformConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-fargateplatformconfiguration) property to \.\.\.\.  | December 18, 2020 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+The `StorageCapacity` property was updated to `"Required": conditional`\.  
+In the [WindowsConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html) property type, the `ThroughputCapacity` property was updated to `"Required": true`\.  | December 18, 2020 | 
+| [Updated resource](AWS_S3.md) | The following resources were updated: AWS::S3::Bucket 
+
+ [SourceSelectionCriteria](https://docs.aws.amazon.com/AmazonS3/latest/API/API_SourceSelectionCriteria.html)   
+Use the `ReplicaModifications` property in `AWS::S3::Bucket SourceSelectionCriteria` to filter modifications on replicas\. 
+
+ [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html)   
+Use the `BucketKeyEnabled` property to specify an S3 Bucket Key with default encryption using AWS Key Management Service\.  | December 18, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html) 
+
+[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
+Use the `PlatformCapabilities` property to specify whether the job requires `EC2` or `FARGATE` resources\.  
+Use the `PropagateTags` property to specify whether to propagate tags from the job definition to the corresponding Amazon ECS task\.  
+In the [ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html) property type:  
++ Use the `FargatePlatformConfiguration` property to specify the Fargate platform version to use for jobs running on Fargate resources\.
++ Use the `NetworkConfiguration` property to specify the network configuration for jobs running on Fargate resources\. 
+
+[AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)  
+In the [ContainerProperties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html) property type, use the [FargatePlatformConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html#cfn-batch-jobdefinition-containerproperties-fargateplatformconfiguration) property to \.\.\.\.  | December 18, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+The `StorageCapacity` property was updated to `"Required": conditional`\.  
+In the [WindowsConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html) property type, the `ThroughputCapacity` property was updated to `"Required": true`\.  | December 18, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resources were updated: AWS::S3::Bucket 
+
+ [SourceSelectionCriteria](https://docs.aws.amazon.com/AmazonS3/latest/API/API_SourceSelectionCriteria.html)   
+Use the `ReplicaModifications` property in `AWS::S3::Bucket SourceSelectionCriteria` to filter modifications on replicas\. 
+
+ [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html)   
+Use the `BucketKeyEnabled` property to specify an S3 Bucket Key with default encryption using AWS Key Management Service\.  | December 18, 2020 | 
+| [New resources](AWS_DevOpsGuru.md) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::AWS::DevOpsGuru::ResourceCollection` 
+
+ [AWS::DevOpsGuru::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html)   
+Use the `AWS::DevOpsGuru::NotificationChannel` resource to add a notification channel to Amazon DevOps Guru\. The notification channel is used to notify you about important events\. For example, the creation of an insight or a change in an insight's severity\. 
+
+ [AWS::DevOpsGuru::ResourceCollection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html)   
+Use the `AWS::DevOpsGuru::ResourceCollection` resource to specify a collection of resources in your account that you want Amazon DevOps Guru to analyze\. The specified resources are analyzed to generate insights that contain recommendations, related metrics, and operational data to help you improve the performance of your operational solutions\.  | December 18, 2020 | 
+| [New resources](AWS_EC2.md) | The following resources were added: AWS::EC2::NetworkInsightsPath and AWS::EC2::NetworkInsightsAnalysis\. 
+
+ [AWS::EC2::NetworkInsightsPath](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html)   
+Use the `NetworkInsightsPath` property to specify a path to analyze for reachability\. 
+
+ [AWS::EC2::NetworkInsightsAnalysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html)   
+Use the `NetworkInsightsAnalysis` property to specify a network insights analysis\.  | December 18, 2020 | 
+| [New resources](AWS_ElastiCache.md) | The following resources were added: AWS::ElastiCache::User and AWS::ElastiCache::UserGroup\. 
+
+ [AWS::ElastiCache::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)   
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](red-ug/Clusters.RBAC.html)  
+
+ [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
+For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  | December 18, 2020 | 
+| [New resources](AWS_IoTWireless.md) | The following resources were added: 
+
+AWS::IoTWireless::Destination  
+ Use the `Destination` resource to specify a destination for a wireless device to use\.  
+
+AWS::IoTWireless::DeviceProfile  
+ Use the `DeviceProfile` resource to specify a device profile for a wireless device to use\.  
+
+AWS::IoTWireless::ServiceProfile  
+ Use the `ServiceProfile` resource to specify a service profile for a wireless device to use\.  
+
+AWS::IoTWireless::WirelessDevice  
+ Use the `WirelessDevice` resource to specify a wireless device in an AWS IoT Core for LoRaWAN solution\.  
+
+AWS::IoTWireless::WirelessGateway  
+ Use the `WirelessGateway` resource to specify a wireless gateway in an AWS IoT Core for LoRaWAN solution\.   | December 18, 2020 | 
+| [New resources](AWS_LicenseManager.md) | The following resources were added: AWS::LicenseManager::Grant and AWS::LicenseManager::License\. 
+
+ [AWS::LicenseManager::Grant](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)   
+Use the `AWS::LicenseManager::Grant` resource to specify a grant in the AWS License Manager service\. 
+
+ [AWS::LicenseManager::License](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html)   
+Use the `AWS::LicenseManager::License` resource to specify a granted license in the AWS License Manager service\.  | December 18, 2020 | 
+| [New resources](AWS_SageMaker.md) | The following resources were added: AWS::SageMaker::DataQualityJobDefinition, AWS::SageMaker::Device, AWS::SageMaker::DeviceFleet, AWS::SageMaker::ModelBiasJobDefinition, AWS::SageMaker::ModelExplainabilityJobDefinition, AWS::SageMaker::ModelQualityJobDefinition, AWS::SageMaker::ModelPackageGroup, and AWS::SageMaker::Pipeline\. 
+
+ [AWS::SageMaker::DataQualityJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-dataqualityjobdefinition.html)   
+Use the `AWS::SageMaker::DataQualityJobDefinition` resource to create a monitoring job that monitors drift in data quality\. 
+
+ [AWS::SageMaker::Device](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html)   
+Use the `AWS::SageMaker::Device` resource to register your Devices against an existing SageMaker Edge Manager DeviceFleet\. Each device must be listed individually in the CFN specification\. 
+
+ [AWS::SageMaker::DeviceFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html)   
+Use the `AWS::SageMaker::DeviceFleet` resource to create a DeviceFleet that manages your SageMaker Edge Manager Devices\. You must register your devices against the `DeviceFleet` separately\. 
+
+ [AWS::SageMaker::ModelBiasJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html)   
+Use the `AWS::SageMaker::ModelBiasJobDefinition` resource to create a monitoring job that monitors potential bias in your model\. 
+
+ [AWS::SageMaker::ModelExplainabilityJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelexplainabilityjobdefinition.html)   
+Use the `AWS::SageMaker::ModelExplainabilityJobDefinition` resource to create a monitoring job that monitors feature attribution drift in your model\. 
+
+ [AWS::SageMaker::ModelQualityJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelqualityjobdefinition.html)   
+Use the `AWS::SageMaker::ModelQualityJobDefinition` resource to create a monitoring job that monitors quality drift in your model\. 
+
+ [AWS::SageMaker::ModelPackageGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html)   
+Use the `AWS::SageMaker::ModelPackageGroup` resource to create a a group of related models\. 
+
+ [AWS::SageMaker::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)   
+Use the `AWS::SageMaker::Pipeline` resource to specify shell scripts that run when you create and/or start a SageMaker Pipeline\. For information about SageMaker Pipelines, see [SageMaker Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines.html) in the *Amazon SageMaker Developer Guide*\.  | December 18, 2020 | 
+| [New resources](#ReleaseHistory) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::AWS::DevOpsGuru::ResourceCollection` 
+
+ [AWS::DevOpsGuru::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html)   
+Use the `AWS::DevOpsGuru::NotificationChannel` resource to add a notification channel to Amazon DevOps Guru\. The notification channel is used to notify you about important events\. For example, the creation of an insight or a change in an insight's severity\. 
+
+ [AWS::DevOpsGuru::ResourceCollection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-resourcecollection.html)   
+Use the `AWS::DevOpsGuru::ResourceCollection` resource to specify a collection of resources in your account that you want Amazon DevOps Guru to analyze\. The specified resources are analyzed to generate insights that contain recommendations, related metrics, and operational data to help you improve the performance of your operational solutions\.  | December 18, 2020 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::SageMaker::DataQualityJobDefinition, AWS::SageMaker::Device, AWS::SageMaker::DeviceFleet, AWS::SageMaker::ModelBiasJobDefinition, AWS::SageMaker::ModelExplainabilityJobDefinition, AWS::SageMaker::ModelQualityJobDefinition, AWS::SageMaker::ModelPackageGroup, and AWS::SageMaker::Pipeline\. 
+
+ [AWS::SageMaker::DataQualityJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-dataqualityjobdefinition.html)   
+Use the `AWS::SageMaker::DataQualityJobDefinition` resource to create a monitoring job that monitors drift in data quality\. 
+
+ [AWS::SageMaker::Device](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html)   
+Use the `AWS::SageMaker::Device` resource to register your Devices against an existing SageMaker Edge Manager DeviceFleet\. Each device must be listed individually in the CFN specification\. 
+
+ [AWS::SageMaker::DeviceFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html)   
+Use the `AWS::SageMaker::DeviceFleet` resource to create a DeviceFleet that manages your SageMaker Edge Manager Devices\. You must register your devices against the `DeviceFleet` separately\. 
+
+ [AWS::SageMaker::ModelBiasJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelbiasjobdefinition.html)   
+Use the `AWS::SageMaker::ModelBiasJobDefinition` resource to create a monitoring job that monitors potential bias in your model\. 
+
+ [AWS::SageMaker::ModelExplainabilityJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelexplainabilityjobdefinition.html)   
+Use the `AWS::SageMaker::ModelExplainabilityJobDefinition` resource to create a monitoring job that monitors feature attribution drift in your model\. 
+
+ [AWS::SageMaker::ModelQualityJobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelqualityjobdefinition.html)   
+Use the `AWS::SageMaker::ModelQualityJobDefinition` resource to create a monitoring job that monitors quality drift in your model\. 
+
+ [AWS::SageMaker::ModelPackageGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html)   
+Use the `AWS::SageMaker::ModelPackageGroup` resource to create a a group of related models\. 
+
+ [AWS::SageMaker::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)   
+Use the `AWS::SageMaker::Pipeline` resource to specify shell scripts that run when you create and/or start a SageMaker Pipeline\. For information about SageMaker Pipelines, see [SageMaker Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines.html) in the *Amazon SageMaker Developer Guide*\.  | December 18, 2020 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::ElastiCache::User and AWS::ElastiCache::UserGroup\. 
+
+ [AWS::ElastiCache::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)   
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](red-ug/Clusters.RBAC.html)  
+
+ [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
+For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  | December 18, 2020 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::EC2::NetworkInsightsPath and AWS::EC2::NetworkInsightsAnalysis\. 
+
+ [AWS::EC2::NetworkInsightsPath](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html)   
+Use the `NetworkInsightsPath` property to specify a path to analyze for reachability\. 
+
+ [AWS::EC2::NetworkInsightsAnalysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html)   
+Use the `NetworkInsightsAnalysis` property to specify a network insights analysis\.  | December 18, 2020 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::CloudFormation::ModuleDefaultVersion and AWS::CloudFormation::ModuleVersion\. 
+
+ [AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)   
+Use the `AWS::CloudFormation::ModuleDefaultVersion` resource to specify the default version of a module, which will be used in CloudFormation operations for this account and region\. 
+
+ [AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)   
+Use the `AWS::CloudFormation::ModuleVersion` resource to register the specified version of the module with the CloudFormation service, making it available for use in CloudFormation templates in this account and region\.  | December 18, 2020 | 
+| [New resource](AWS_AuditManager.md) | The following resource was added: AWS::AuditManager::Assessment 
+
+ [AWS::AuditManager::Assessment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html)   
+Use the `AWS::AuditManager::Assessment` resource to specify a new assessment in AWS Audit Manager\.  | December 18, 2020 | 
+| [New resource](AWS_GreengrassV2.md) | The following resources were added: AWS::GreengrassV2::ComponentVersion\. 
+
+ [AWS::GreengrassV2::ComponentVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-componentversion.html)   
+Use the `AWS::GreengrassV2::ComponentVersion` resource to create a new component version in AWS IoT Greengrass\.  | December 18, 2020 | 
+| [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::TopicRuleDestination 
+
+ [AWS::IoT::TopicRuleDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)   
+Use the `AWS::IoT::TopicRuleDestination` to specify a topic rule destination\.  | December 18, 2020 | 
+| [New resource](AWS_IoTSiteWise.md) | The following resources were added: AWS::IoTSitewise::AccessPolicy, AWS::IoTSiteWise::Dasboard, AWS::IoTSiteWise::Portal, and AWS::IoTSiteWise::Project\. 
+
+ [AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)   
+Use the `AWS::IoTSiteWise::AccessPolicy` resource to create a new access policy in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Dasboard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html)   
+Use the `AWS::IoTSiteWise::Dasboard` resource to create a new dashboard in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Portal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html)   
+Use the `AWS::IoTSiteWise::Portal` resource to create a new portal in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-project.html)   
+Use the `AWS::IoTSiteWise::Project` resource to create a new project in AWS IoT SiteWise\.  | December 18, 2020 | 
+| [New resource](AWS_Lambda.md) | The following resources were updated: AWS::Lambda::CreateEventSourceMapping and AWS::Lambda::Function\. 
+
+ [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping)   
+Use the `TumblingWindowInSeconds` property to set the window size for SQS event sources\.  
+Lambda now supports a Self\-Managed Apache Kafka cluster as an event source\. 
+
+ [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   
+Lambda now supports functions deployed as container images\. Use the [ImageUri](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-imageuri) property to specify the container image location\.  
+In the [Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html) property type, new property `ImageUri` specifies the image to associate with your Lambda function\.  | December 18, 2020 | 
+| [New resource](AWS_SSO.md) | The following resource was added: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
+
+ [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
+Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | December 18, 2020 | 
+| [New resource](#ReleaseHistory) | The following resource is new: AWS::IoT::TopicRuleDestination 
+
+ [AWS::IoT::TopicRuleDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)   
+Use the `AWS::IoT::TopicRuleDestination` to specify a topic rule destination\.  | December 18, 2020 | 
+| [New resource](#ReleaseHistory) | The following resources were added: AWS::IoTSitewise::AccessPolicy, AWS::IoTSiteWise::Dasboard, AWS::IoTSiteWise::Portal, and AWS::IoTSiteWise::Project\. 
+
+ [AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)   
+Use the `AWS::IoTSiteWise::AccessPolicy` resource to create a new access policy in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Dasboard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html)   
+Use the `AWS::IoTSiteWise::Dasboard` resource to create a new dashboard in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Portal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html)   
+Use the `AWS::IoTSiteWise::Portal` resource to create a new portal in AWS IoT SiteWise\. 
+
+ [AWS::IoTSiteWise::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-project.html)   
+Use the `AWS::IoTSiteWise::Project` resource to create a new project in AWS IoT SiteWise\.  | December 18, 2020 | 
+| [New resource](#ReleaseHistory) | The following resources were updated: AWS::Lambda::CreateEventSourceMapping and AWS::Lambda::Function\. 
+
+ [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping)   
+Use the `TumblingWindowInSeconds` property to set the window size for SQS event sources\.  
+Lambda now supports a Self\-Managed Apache Kafka cluster as an event source\. 
+
+ [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   
+Lambda now supports functions deployed as container images\. Use the [ImageUri](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html#cfn-lambda-function-code-imageuri) property to specify the container image location\.  
+In the [Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html) property type, new property `ImageUri` specifies the image to associate with your Lambda function\.  | December 18, 2020 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
+
+ [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
+Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | December 18, 2020 | 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support specifying a capacity type for a node group: AWS::EKS::Nodegroup\. 
+
+ [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+Use the `CapacityType` property to specify whether you want to use Spot or On\-Demand instance types for your node group\.  | December 17, 2020 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated to support specifying a capacity type for a node group: AWS::EKS::Nodegroup\. 
+
+ [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+Use the `CapacityType` property to specify whether you want to use Spot or On\-Demand instance types for your node group\.  | December 17, 2020 | 
 | [Updated resource](AWS_GameLift.md) | The following resource was updated: AWS::GameLift::MatchmakingConfiguration\. 
 
  [AWS::GameLift::MatchmakingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html)   
@@ -38,10 +328,6 @@ Use the `EnclaveOptions` property to indicate whether the instance is enabled fo
 
  [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
 Use the `NetworkCardIndex` property to specify the network card index\.  | November 19, 2020 | 
-| [Updated resource](AWS_ElastiCache.md) | The following resource was updated: AWS::ElastiCache::GlobalReplicationGroup\. 
-
- [AWS::ElastiCache::GlobalReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)   
-Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.   | November 19, 2020 | 
 | [Updated resource](AWS_Events.md) | The following resource was upded: AWS::Events::EventBusPolicy\. 
 
  [AWS::Events::EventBusPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)   
@@ -80,10 +366,6 @@ Use the `AWS::Glue::SchemaVersion` resource to manage schema versions in the AWS
 
  [AWS::Glue::SchemaVersionMetadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html)   
 Use the `AWS::Glue::SchemaVersionMetadata` resource to manage schema version metadata in the AWS Glue Schema Registry\.  | November 19, 2020 | 
-| [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::TopicRuleDestination 
-
- [AWS::IoT::TopicRuleDestination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)   
-Use the `AWS::IoT::TopicRuleDestination` to specify a topic rule destination\.  | November 19, 2020 | 
 | [New resource](AWS_NetworkFirewall.md) | The following resources were added: AWS::NetworkFirewall::Firewall, AWS::NetworkFirewall::FirewallPolicy, AWS::NetworkFirewall::LoggingConfiguration, and AWS::NetworkFirewall::RuleGroup 
 
  [AWS::NetworkFirewall::Firewall](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html)   
@@ -297,11 +579,6 @@ Use the `LdapServerMetadata` property to to authenticate and authorize connectio
 
  [AWS::Backup::BackupPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html)   
 In the [BackupPlanResourceType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupplanresourcetype.html) property type, use the `AdvancedBackupSetting` property to specify a list of backup options for each resource type you want to back up\.  | October 8, 2020 | 
-| [Updated resource](AWS_EKS.md) | The following resource was: AWS::EKS::Cluster\. 
-
- [AWS::EKS::Cluster](https://docs.aws.amazon.com/aws-resource-eks-cluster.html)   
-Use the `KubernetesNetworkConfig` property to specify a Kubernetes network configuration\.  
-In the [AWS::EKS::Cluster KubernetesNetworkConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html) property type, use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kubernetes to assign service IP addresses from\.  | October 8, 2020 | 
 | [New resources](AWS_CodeArtifact.md) | The following resources were added: AWS::CodeArtifact::Domain and AWS::CodeArtifact::Repository\. 
 
  [AWS::CodeArtifact::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)   
@@ -350,6 +627,13 @@ Specifies the details of the job's `tmpfs` mount\.  | October 1, 2020 |
  [AWS::CloudFront::CachePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)   
 In the `AWS::CloudFront::CachePolicy` resource, some properties are now required that previously were not required\.  
 In the [AWS::CloudFront::CachePolicy ParametersInCacheKeyAndForwardedToOrigin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html) property type, use the `EnableAcceptEncodingBrotli` property to enable CloudFront to serve compressed objects to viewers that support the Brotli compression format\. For more information, see [Compression support](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-policy-compressed-objects) in the *Amazon CloudFront Developer Guide*\.  | October 1, 2020 | 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support specifying a custom CIDR for Kubernetes service IP address assignment: AWS::EKS::Cluster\. 
+
+ [AWS::EKS::Cluster](https://docs.aws.amazon.com/aws-resource-eks-cluster.html)   
+Use the `KubernetesNetworkConfig` property to specify a Kubernetes network configuration\. 
+
+ [AWS::EKS::Cluster KubernetesNetworkConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)   
+Use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kubernetes to assign service IP addresses from\.  | October 1, 2020 | 
 | [New resource](AWS_WorkSpaces.md) | The following resource was added: `AWS::WorkSpaces::ConnectionAlias` 
 
  [AWS::WorkSpaces::ConnectionAlias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)   
@@ -377,7 +661,7 @@ Use the `AWS::AppFlow::ConnectorProfile` describe an instance of a connector in 
 | [New resources](AWS_CloudFormation.md) | The following resource was added: AWS::CloudFormation::StackSet\. 
 
  [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)   
-Use the `AWS::CloudFormation::StackSet` to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\.  | September 17, 2020 | 
+Use the `AWS::CloudFormation::StackSet` resource to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\.  | September 17, 2020 | 
 | [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Authorizer`\. 
 
  [AWS::ApiGatewayV2::Authorizer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html)   
@@ -501,7 +785,7 @@ Use the `AWS::AppMesh::GatewayRoute` resource to create a gateway route that rou
 | [New resources](AWS_SageMaker.md) | The following resource was added: AWS::SageMaker::MonitoringSchedule 
 
  [AWS::SageMaker::MonitoringSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-monitoringschedule.html)   
-Use the `AWS::SageMaker::MonitoringSchedule` resource to create a monitoring schedule to regularly start an Amazon SageMaker processing job to monitor the data captured for a SageMaker endpoint\.\.  | July 30, 2020 | 
+Use the `AWS::SageMaker::MonitoringSchedule` resource to create a monitoring schedule to regularly start an Amazon SageMaker processing job to monitor the data captured for a SageMaker endpoint\.  | July 30, 2020 | 
 | [New property](AWS_CodeGuruProfiler.md) | The following properties were added: `AWS::CodeGuruProfiler::ProfilingGroup.AnomalyDetectionNotificationConfiguration` and `AWS::CodeGuruProfiler::ProfilingGroup.Tags`\. 
 
  [AWS::CodeGuruProfiler::ProfilingGroup\.AnomalyDetectionNotificationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)   

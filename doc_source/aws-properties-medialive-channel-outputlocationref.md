@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel OutputLocationRef<a name="aws-properties-medialive-channel-outputlocationref"></a>
 
-Reference to an OutputDestination ID defined in the channel
+A reference to an OutputDestination ID that is defined in the channel\.
+
+This entity is used by ArchiveGroupSettings, FrameCaptureGroupSettings, HlsGroupSettings, MediaPackageGroupSettings, MSSmoothGroupSettings, RtmpOutputSettings, and UdpOutputSettings\. 
 
 ## Syntax<a name="aws-properties-medialive-channel-outputlocationref-syntax"></a>
 
@@ -23,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-outputlocationref-properties"></a>
 
 `DestinationRefId`  <a name="cfn-medialive-channel-outputlocationref-destinationrefid"></a>
-Not currently supported by AWS CloudFormation\.  
+A reference ID for this destination\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

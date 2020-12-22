@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel CaptionDestinationSettings<a name="aws-properties-medialive-channel-captiondestinationsettings"></a>
 
-Caption Destination Settings
+The configuration of one captions encode in the output\.
+
+The parent of this entity is CaptionDescription\.
 
 ## Syntax<a name="aws-properties-medialive-channel-captiondestinationsettings-syntax"></a>
 
@@ -60,19 +62,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-captiondestinationsettings-properties"></a>
 
 `AribDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-aribdestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one ARIB captions encode in the output\.  
 *Required*: No  
 *Type*: [AribDestinationSettings](aws-properties-medialive-channel-aribdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BurnInDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-burnindestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one burn\-in captions encode in the output\.  
 *Required*: No  
 *Type*: [BurnInDestinationSettings](aws-properties-medialive-channel-burnindestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DvbSubDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-dvbsubdestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one DVB Sub captions encode in the output\.  
 *Required*: No  
 *Type*: [DvbSubDestinationSettings](aws-properties-medialive-channel-dvbsubdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,55 +86,55 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmbeddedDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-embeddeddestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one embedded captions encode in the output\.  
 *Required*: No  
 *Type*: [EmbeddedDestinationSettings](aws-properties-medialive-channel-embeddeddestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmbeddedPlusScte20DestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-embeddedplusscte20destinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one embedded plus SCTE\-20 captions encode in the output\.  
 *Required*: No  
 *Type*: [EmbeddedPlusScte20DestinationSettings](aws-properties-medialive-channel-embeddedplusscte20destinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RtmpCaptionInfoDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-rtmpcaptioninfodestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one RTMPCaptionInfo captions encode in the output\.  
 *Required*: No  
 *Type*: [RtmpCaptionInfoDestinationSettings](aws-properties-medialive-channel-rtmpcaptioninfodestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scte20PlusEmbeddedDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-scte20plusembeddeddestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one SCTE20 plus embedded captions encode in the output\.  
 *Required*: No  
 *Type*: [Scte20PlusEmbeddedDestinationSettings](aws-properties-medialive-channel-scte20plusembeddeddestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scte27DestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-scte27destinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one SCTE\-27 captions encode in the output\.  
 *Required*: No  
 *Type*: [Scte27DestinationSettings](aws-properties-medialive-channel-scte27destinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmpteTtDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-smptettdestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one SMPTE\-TT captions encode in the output\.  
 *Required*: No  
 *Type*: [SmpteTtDestinationSettings](aws-properties-medialive-channel-smptettdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TeletextDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-teletextdestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one Teletext captions encode in the output\.  
 *Required*: No  
 *Type*: [TeletextDestinationSettings](aws-properties-medialive-channel-teletextdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TtmlDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-ttmldestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one TTML captions encode in the output\.  
 *Required*: No  
 *Type*: [TtmlDestinationSettings](aws-properties-medialive-channel-ttmldestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebvttDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-webvttdestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of one WebVTT captions encode in the output\.  
 *Required*: No  
 *Type*: [WebvttDestinationSettings](aws-properties-medialive-channel-webvttdestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

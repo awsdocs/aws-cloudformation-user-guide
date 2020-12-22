@@ -2,6 +2,9 @@
 
  The `AWS::AppFlow::Flow` resource is an Amazon AppFlow resource type that specifies a new flow\. 
 
+**Note**  
+If you want to use AWS CloudFormation to create a connector profile for connectors that implement OAuth \(such as Salesforce, Slack, Zendesk, and Google Analytics\), you must fetch the access and refresh tokens\. You can do this by implementing your own UI for OAuth, or by retrieving the tokens from elsewhere\. Alternatively, you can use the Amazon AppFlow console to create the connector profile, and then use that connector profile in the flow creation CloudFormation template\. 
+
 ## Syntax<a name="aws-resource-appflow-flow-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

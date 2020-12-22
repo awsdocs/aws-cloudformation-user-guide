@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy CrossRegionCopyAction<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyaction"></a>
 
-<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyaction-description"></a>The `CrossRegionCopyAction` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)\.
+Specifies a rule for copying shared snapshots across Regions\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyaction-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-crossregioncopyaction-properties"></a>
 
 `EncryptionConfiguration`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyaction-encryptionconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+The encryption settings for the copied snapshot\.  
 *Required*: Yes  
 *Type*: [EncryptionConfiguration](aws-properties-dlm-lifecyclepolicy-encryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -41,7 +41,10 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Target`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyaction-target"></a>
-Not currently supported by AWS CloudFormation\.  
+The target Region\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `16`  
+*Pattern*: `^[\\w:\\-\\/\\*]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

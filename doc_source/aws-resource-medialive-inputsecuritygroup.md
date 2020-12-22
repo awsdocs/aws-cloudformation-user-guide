@@ -1,8 +1,8 @@
 # AWS::MediaLive::InputSecurityGroup<a name="aws-resource-medialive-inputsecuritygroup"></a>
 
- The AWS::MediaLive::InputSecurityGroup is a MediaLive resource type that creates an input security group\. 
+The AWS::MediaLive::InputSecurityGroup is a MediaLive resource type that creates an input security group\.
 
- A MediaLive input security group is associated with a MediaLive input\. The input security group is an "allow list" of IP addresses that controls whether an external IP address can push content to the associated MediaLive input\. 
+A MediaLive input security group is associated with a MediaLive input\. The input security group is an "allow list" of IP addresses that controls whether an external IP address can push content to the associated MediaLive input\.
 
 ## Syntax<a name="aws-resource-medialive-inputsecuritygroup-syntax"></a>
 
@@ -33,13 +33,13 @@ Properties:
 ## Properties<a name="aws-resource-medialive-inputsecuritygroup-properties"></a>
 
 `Tags`  <a name="cfn-medialive-inputsecuritygroup-tags"></a>
-A collection of key\-value pairs\.  
+A collection of tags for this input security group\. Each tag is a key\-value pair\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WhitelistRules`  <a name="cfn-medialive-inputsecuritygroup-whitelistrules"></a>
-List of IPv4 CIDR addresses to whitelist  
+The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses\.  
 *Required*: No  
 *Type*: List of [InputWhitelistRuleCidr](aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -70,44 +70,52 @@ The latest version of the launch template, such as `5`\.
 
 ## Examples<a name="aws-resource-ec2-launchtemplate--examples"></a>
 
-### Launch Template with an IAM Instance Profile<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile"></a>
+### Launch template with an IAM instance profile<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_an_IAM_instance_profile"></a>
 
-#### JSON<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile--json"></a>
+The following example creates a launch template and an instance profile\. The instance profile contains the IAM role named `MyAdminRole` and can provide the role's temporary credentials to an application that runs on the instances created by this launch template\.
+
+The launch template also prevents accidental instance termination when using the Amazon EC2 console, CLI, or API, by specifying `true` for the `DisableApiTermination` property\. If the instances created by this launch template are launched in a default VPC, they receive a public IP address by default\. If the instances are launched in a nondefault VPC, they do not receive a public IP address by default\.
+
+#### JSON<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_an_IAM_instance_profile--json"></a>
 
 ```
 {
-    "Resources": {
-        "MyIamInstanceProfile": {
-            "Type": "AWS::IAM::InstanceProfile",
-            "Properties": {
-                "InstanceProfileName" : "MyIamInstanceProfile",
-                    "Path" : "/",
-                    "Roles" : ["MyAdminRole"]
-            }
-        },
-        "MyLaunchTemplate": {
-            "Type": "AWS::EC2::LaunchTemplate",
-            "Properties": {
-                "LaunchTemplateData" : {
-                    "InstanceType" : "c4.large",
-                    "DisableApiTermination" : "true",
-                    "KeyName" : "MyKeyPair",
-                    "ImageId" : "ami-04d5cc9b88example",
-                    "IamInstanceProfile" : {
-                    "Arn" : {"Fn::GetAtt": ["MyIamInstanceProfile", "Arn"]}
-                    },
-                    "SecurityGroupIds" : ["sg-083cd3bfb8example"]
-                },
-                "LaunchTemplateName" : "MyLaunchTemplate"
-            }
-        }		
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Resources":{
+    "MyIamInstanceProfile":{
+      "Type":"AWS::IAM::InstanceProfile",
+      "Properties":{
+        "InstanceProfileName":"MyIamInstanceProfile",
+        "Path":"/",
+        "Roles":["MyAdminRole"]
+      }
+    },
+    "MyLaunchTemplate":{
+      "Type":"AWS::EC2::LaunchTemplate",
+      "Properties":{
+        "LaunchTemplateName":"MyLaunchTemplate",
+        "LaunchTemplateData":{
+          "IamInstanceProfile":{
+          "Arn":{"Fn::GetAtt": ["MyIamInstanceProfile", "Arn"]}
+          },
+          "DisableApiTermination":"true",
+          "ImageId":"ami-04d5cc9b88example",
+          "InstanceType":"t2.micro",
+          "KeyName":"MyKeyPair",
+          "SecurityGroupIds":[
+            "sg-083cd3bfb8example"
+          ]
+        }
+      }
     }
+  }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_Template_with_an_IAM_Instance_Profile--yaml"></a>
+#### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_an_IAM_instance_profile--yaml"></a>
 
 ```
+AWSTemplateFormatVersion: '2010-09-09'
 Resources:
   MyIamInstanceProfile:
     Type: AWS::IAM::InstanceProfile
@@ -119,26 +127,25 @@ Resources:
   MyLaunchTemplate:
     Type: AWS::EC2::LaunchTemplate
     Properties:
+      LaunchTemplateName: MyLaunchTemplate
       LaunchTemplateData:
-        InstanceType: c4.large
-        DisableApiTermination: 'true'
-        KeyName: MyKeyPair
-        ImageId: ami-04d5cc9b88example
         IamInstanceProfile:
-          Arn:
-            Fn::GetAtt:
+          Arn: !GetAtt
             - MyIamInstanceProfile
             - Arn
+        DisableApiTermination: true
+        ImageId: ami-04d5cc9b88example
+        InstanceType: t2.micro
+        KeyName: MyKeyPair
         SecurityGroupIds:
-        - sg-083cd3bfb8example
-      LaunchTemplateName: MyLaunchTemplate
+          - sg-083cd3bfb8example
 ```
 
 ### Launch template with defined block device mapping<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_defined_block_device_mapping"></a>
 
 The following example creates a launch template with a block device mapping: an encrypted 22 gigabyte EBS volume mapped to /dev/xvdcz\. The /dev/xvdcz volume uses the General Purpose SSD \(gp2\) volume type and is deleted when terminating the instance it is attached to\. This example uses the Fn::Sub function to customize the name of the launch template to include the stack name\.
 
-The launch template also provisions T2 instances in `unlimited` mode by specifying a value of unlimited for the `CPUCredits` property\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\.
+The launch template also provisions T2 instances in unlimited mode by specifying a value of `unlimited` for the `CPUCredits` property\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\.
 
 #### JSON<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_defined_block_device_mapping--json"></a>
 
@@ -163,10 +170,10 @@ The launch template also provisions T2 instances in `unlimited` mode by specifyi
           "CreditSpecification":{
             "CpuCredits":"unlimited"
           },
+          "Monitoring":{"Enabled":true},
           "ImageId":"ami-04d5cc9b88example",
           "InstanceType":"t2.micro",
           "KeyName":"MyKeyPair",
-          "Monitoring":{"Enabled":true},
           "SecurityGroupIds":["sg-7c2270198example", "sg-903004f88example"]
         }
       }
@@ -194,14 +201,83 @@ Resources:
             DeviceName: /dev/xvdcz
         CreditSpecification: 
           CpuCredits: Unlimited
+        Monitoring: 
+          Enabled: true
         ImageId: ami-04d5cc9b88example
         InstanceType: t2.micro
         KeyName: MyKeyPair
-        Monitoring: 
-          Enabled: true
         SecurityGroupIds: 
           - sg-7c2270198example
           - sg-903004f88example
+```
+
+### Launch template with public IP addresses for Amazon EC2 Auto Scaling<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_public_IP_addresses_for_Amazon_EC2_Auto_Scaling"></a>
+
+The following example creates and configures a launch template to assign public IP addresses to instances launched in a nondefault VPC\. Note that when you specify a network interface for Amazon EC2 Auto Scaling, specify the VPC subnets as properties of the Auto Scaling group, and not in the launch template \(because they will be ignored\)\.
+
+This example launch template also sets the instance placement tenancy to `dedicated`\.
+
+For more information about creating launch templates for Amazon EC2 Auto Scaling, see [Creating a launch template for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+
+#### JSON<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_public_IP_addresses_for_Amazon_EC2_Auto_Scaling--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Resources":{
+    "myLaunchTemplate":{
+      "Type":"AWS::EC2::LaunchTemplate",
+      "Properties":{
+        "LaunchTemplateName":{
+          "Fn::Sub":"${AWS::StackName}-launch-template-for-auto-scaling"
+        },
+        "LaunchTemplateData":{
+          "NetworkInterfaces":[
+            {
+              "DeviceIndex":0,
+              "AssociatePublicIpAddress":true,
+              "Groups":[
+                "sg-7c2270198example",
+                "sg-903004f88example"
+              ],
+              "DeleteOnTermination":true
+            }
+          ],
+          "Placement":{
+            "Tenancy": "dedicated"
+          },
+          "ImageId":"ami-04d5cc9b88example",
+          "InstanceType":"t2.micro",
+          "KeyName":"MyKeyPair"
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ec2-launchtemplate--examples--Launch_template_with_public_IP_addresses_for_Amazon_EC2_Auto_Scaling--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  myLaunchTemplate:
+    Type: 'AWS::EC2::LaunchTemplate'
+    Properties:
+      LaunchTemplateName: !Sub '${AWS::StackName}-launch-template-for-auto-scaling'
+      LaunchTemplateData:
+        NetworkInterfaces:
+          - DeviceIndex: 0
+            AssociatePublicIpAddress: true
+            Groups:
+              - sg-7c2270198example
+              - sg-903004f88example
+            DeleteOnTermination: true
+        Placement:
+          Tenancy: dedicated
+        ImageId: ami-04d5cc9b88example
+        InstanceType: t2.micro
+        KeyName: MyKeyPair
 ```
 
 ## See also<a name="aws-resource-ec2-launchtemplate--seealso"></a>

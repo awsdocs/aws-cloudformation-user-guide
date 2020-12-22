@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FirewallPolicyChangeProtection](#cfn-networkfirewall-firewall-firewallpolicychangeprotection)" : Boolean,
       "[SubnetChangeProtection](#cfn-networkfirewall-firewall-subnetchangeprotection)" : Boolean,
       "[SubnetMappings](#cfn-networkfirewall-firewall-subnetmappings)" : [ SubnetMapping, ... ],
-      "[Tags](#cfn-networkfirewall-firewall-tags)" : [ Tag, ... ],
+      "[Tags](#cfn-networkfirewall-firewall-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-networkfirewall-firewall-vpcid)" : String
     }
 }
@@ -41,7 +41,7 @@ Properties:
   [SubnetMappings](#cfn-networkfirewall-firewall-subnetmappings): 
     - SubnetMapping
   [Tags](#cfn-networkfirewall-firewall-tags): 
-    - Tag
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-networkfirewall-firewall-vpcid): String
 ```
 
@@ -102,7 +102,7 @@ The public subnets that Network Firewall is using for the firewall\. Each subnet
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [List](aws-properties-networkfirewall-firewall-tags.md) of [Tag](aws-properties-networkfirewall-firewall-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-networkfirewall-firewall-vpcid"></a>

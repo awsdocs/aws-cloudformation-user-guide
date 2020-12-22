@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AribSourceSettings<a name="aws-properties-medialive-channel-aribsourcesettings"></a>
 
-Arib Source Settings
+Information about the ARIB captions to extract from the input\.
+
+The parent of this entity is CaptionSelectorSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-aribsourcesettings-syntax"></a>
 

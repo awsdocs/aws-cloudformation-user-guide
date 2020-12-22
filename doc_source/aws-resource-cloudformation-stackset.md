@@ -2,9 +2,6 @@
 
 The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\. In the stack set, you specify the template to use, as well as any parameters and capabilities that the template requires\.
 
-**Note**  
-You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you cannot use both\.
-
 ## Syntax<a name="aws-resource-cloudformation-stackset-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -115,7 +112,8 @@ Describes how the IAM roles required for stack set operations are created\.
 + With `SELF_MANAGED` permissions, you must create the administrator and execution roles required to deploy to target accounts\. For more information, see [Grant Self\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
 + With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\. For more information, see [Grant Service\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html)\.
 *Allowed Values*: `SERVICE_MANAGED` \| `SELF_MANAGED`  
-*Required*: No  
+The `PermissionModel` property is required\.
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -129,7 +127,8 @@ A group of stack instances with parameters in some specific accounts and Regions
 The name to associate with the stack set\. The name must be unique in the Region where you create your stack set\.  
 *Maximum*: `128`  
 *Pattern*: `^[a-zA-Z][a-zA-Z0-9-]{0,127}$`  
-*Required*: No  
+The `StackSetName` property is required\.
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -141,6 +140,7 @@ The key\-value pairs to associate with this stack set and the stacks created fro
 
 `TemplateBody`  <a name="cfn-cloudformation-stackset-templatebody"></a>
 The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes\.  
+You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you cannot use both\.  
 *Minimum*: `1`  
 *Maximum*: `51200`  
 *Required*: Conditional  
@@ -149,6 +149,7 @@ The structure that contains the template body, with a minimum length of 1 byte a
 
 `TemplateURL`  <a name="cfn-cloudformation-stackset-templateurl"></a>
 Location of file containing the template body\. The URL must point to a template \(max size: 460,800 bytes\) that is located in an Amazon S3 bucket\.  
+You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you cannot use both\.  
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Required*: Conditional  

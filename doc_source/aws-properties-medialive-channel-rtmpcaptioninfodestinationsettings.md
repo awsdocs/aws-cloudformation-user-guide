@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel RtmpCaptionInfoDestinationSettings<a name="aws-properties-medialive-channel-rtmpcaptioninfodestinationsettings"></a>
 
-Rtmp Caption Info Destination Settings
+The settings for RTMPCaptionInfo captions encode in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-rtmpcaptioninfodestinationsettings-syntax"></a>
 
