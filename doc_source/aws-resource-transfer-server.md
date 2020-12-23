@@ -13,7 +13,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Transfer::Server",
   "Properties" : {
       "[Certificate](#cfn-transfer-server-certificate)" : String,
-      "[Domain](#cfn-transfer-server-domain)" : String,
       "[EndpointDetails](#cfn-transfer-server-endpointdetails)" : EndpointDetails,
       "[EndpointType](#cfn-transfer-server-endpointtype)" : String,
       "[IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails)" : IdentityProviderDetails,
@@ -32,7 +31,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Transfer::Server
 Properties: 
   [Certificate](#cfn-transfer-server-certificate): String
-  [Domain](#cfn-transfer-server-domain): String
   [EndpointDetails](#cfn-transfer-server-endpointdetails): 
     EndpointDetails
   [EndpointType](#cfn-transfer-server-endpointtype): String
@@ -65,12 +63,6 @@ The certificate must be a valid SSL/TLS X\.509 version 3 certificate with FQDN o
 *Type*: String  
 *Maximum*: `1600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Domain`  <a name="cfn-transfer-server-domain"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EndpointDetails`  <a name="cfn-transfer-server-endpointdetails"></a>
 The virtual private cloud \(VPC\) endpoint settings that are configured for your server\. When you host your endpoint within your VPC, you can make it accessible only to resources within your VPC, or you can attach Elastic IPs and make it accessible to clients over the internet\. You VPC's default security groups are automatically assigned to your endpoint\.  
