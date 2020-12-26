@@ -142,6 +142,6 @@ Resources:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: 'aws:kms'
               KMSMasterKeyID: KMS-KEY-ARN
-          - BucketKeyEnabled: true
+            BucketKeyEnabled: true
     DeletionPolicy: Delete
 ```
