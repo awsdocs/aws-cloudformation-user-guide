@@ -121,7 +121,7 @@ HTTPlistener:
        - Type: "redirect"
          RedirectConfig:
            Protocol: "HTTPS"
-           Port: "443"
+           Port: 443
            Host: "#{host}"
            Path: "/#{path}"
            Query: "#{query}"
