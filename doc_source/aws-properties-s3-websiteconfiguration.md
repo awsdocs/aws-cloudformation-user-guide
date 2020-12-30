@@ -38,7 +38,7 @@ The name of the error document for the website\.
 
 `IndexDocument`  <a name="cfn-s3-websiteconfiguration-indexdocument"></a>
 The name of the index document for the website\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
