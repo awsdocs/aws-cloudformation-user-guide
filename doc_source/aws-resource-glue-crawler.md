@@ -73,7 +73,7 @@ The name of the `SecurityConfiguration` structure to be used by this crawler\.
 
 `DatabaseName`  <a name="cfn-glue-crawler-databasename"></a>
 The name of the database in which the crawler's output is stored\.  
-*Required*: No  
+*Required*: Conditionally when "Targets" properties are not limited to "CatalogTargets"
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
