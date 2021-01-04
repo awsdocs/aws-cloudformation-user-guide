@@ -38,19 +38,19 @@ Properties:
 
 `DashboardDefinition`  <a name="cfn-iotsitewise-dashboard-dashboarddefinition"></a>
 The dashboard definition specified in a JSON literal\. For detailed information, see [Creating dashboards \(CLI\)](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-dashboards-using-aws-cli.html) in the *AWS IoT SiteWise User Guide*\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DashboardDescription`  <a name="cfn-iotsitewise-dashboard-dashboarddescription"></a>
 A description for the dashboard\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DashboardName`  <a name="cfn-iotsitewise-dashboard-dashboardname"></a>
 A friendly name for the dashboard\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

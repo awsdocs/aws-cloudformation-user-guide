@@ -93,7 +93,7 @@ The configuration that Amazon FSx uses to join the Windows File Server instance 
 
 `ThroughputCapacity`  <a name="cfn-fsx-filesystem-windowsconfiguration-throughputcapacity"></a>
 The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the *n*th increments, between 2^3 \(8\) and 2^11 \(2048\)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `8`  
 *Maximum*: `2048`  

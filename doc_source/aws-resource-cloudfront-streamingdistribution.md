@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution<a name="aws-resource-cloudfront-streamingdistribution"></a>
 
-A streaming distribution tells CloudFront where you want RTMP content to be delivered from, and the details about how to track and manage content delivery\.
+This resource is deprecated\. Amazon CloudFront is deprecating real\-time messaging protocol \(RTMP\) distributions on December 31, 2020\. For more information, [read the announcement](http://forums.aws.amazon.com/ann.jspa?annID=7356) on the Amazon CloudFront discussion forum\.
 
 ## Syntax<a name="aws-resource-cloudfront-streamingdistribution-syntax"></a>
 
@@ -61,85 +61,3 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
-
-## Examples<a name="aws-resource-cloudfront-streamingdistribution--examples"></a>
-
-
-
-### Create a streaming distribution<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution"></a>
-
-The following example specifies a streaming distribution and assigns it a single tag\.
-
-#### JSON<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution--json"></a>
-
-```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Resources": {
-        "streamingdistribution": {
-            "Type": "AWS::CloudFront::StreamingDistribution",
-            "Properties": {
-                "StreamingDistributionConfig": {
-                    "Aliases": [
-                        "string-values"
-                    ],
-                    "Comment": "string-value",
-                    "Enabled": "boolean-value",
-                    "Logging": {
-                        "Bucket": "string-value",
-                        "Enabled": "boolean-value",
-                        "Prefix": "string-value"
-                    },
-                    "PriceClass": "string-value",
-                    "S3Origin": {
-                        "DomainName": "string-value",
-                        "OriginAccessIdentity": "string-value"
-                    },
-                    "TrustedSigners": {
-                        "Enabled": "boolean-value",
-                        "AwsAccountNumbers": [
-                            "string-values"
-                        ]
-                    }
-                },
-                "Tags": [
-                    {
-                        "Key": "string-value",
-                        "Value": "string-value"
-                    }
-                ]
-            }
-        }
-    }
-}
-```
-
-#### YAML<a name="aws-resource-cloudfront-streamingdistribution--examples--Create_a_streaming_distribution--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  streamingdistribution:
-    Type: AWS::CloudFront::StreamingDistribution
-    Properties:
-      StreamingDistributionConfig:
-        Aliases:
-          - string-values
-        Comment: string-value
-        Enabled: boolean-value
-        Logging:
-          Bucket: string-value
-          Enabled: boolean-value
-          Prefix: string-value
-        PriceClass: string-value
-        S3Origin:
-          DomainName: string-value
-          OriginAccessIdentity: string-value
-        TrustedSigners:
-          Enabled: boolean-value
-          AwsAccountNumbers:
-            - string-values
-      Tags:
-        - Key: string-value
-          Value: string-value
-```

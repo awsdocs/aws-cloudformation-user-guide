@@ -63,3 +63,62 @@ For more information about Amazon SNS topics, see the [Amazon SNS Developer Guid
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-ses-receiptrule-s3action--examples"></a>
+
+### S3 Action in SES RuleSet<a name="aws-properties-ses-receiptrule-s3action--examples--S3_Action_in_SES_RuleSet"></a>
+
+The following example creates an S3 Action in a SES RuleSet\. 
+
+#### JSON<a name="aws-properties-ses-receiptrule-s3action--examples--S3_Action_in_SES_RuleSet--json"></a>
+
+```
+{
+    "SesRuleSet": {
+        "Type": "AWS::SES::ReceiptRuleSet"
+    },
+    "SesRule": {
+        "Type": "AWS::SES::ReceiptRule",
+        "Properties": {
+            "Rule": {
+                "Recipients": [
+                    "String"
+                ],
+                "Actions": [
+                    {
+                        "S3Action": {
+                            "BucketName": {
+                                "Ref": "Bucket"
+                            }
+                        }
+                    }
+                ],
+                "Enabled": true,
+                "ScanEnabled": true
+            },
+            "RuleSetName": {
+                "Ref": "SesRuleSet"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-ses-receiptrule-s3action--examples--S3_Action_in_SES_RuleSet--yaml"></a>
+
+```
+SesRuleSet:
+  Type: 'AWS::SES::ReceiptRuleSet'
+SesRule:
+  Type: 'AWS::SES::ReceiptRule'
+  Properties:
+    Rule:
+      Recipients:
+        - String
+      Actions:
+        - S3Action:
+            BucketName: !Ref Bucket
+      Enabled: true
+      ScanEnabled: true
+    RuleSetName: !Ref SesRuleSet
+```

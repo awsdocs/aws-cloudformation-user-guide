@@ -37,7 +37,7 @@ A comment to describe the key group\.
 
 `Items`  <a name="cfn-cloudfront-keygroup-keygroupconfig-items"></a>
 A list of the identifiers of the public keys in the key group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

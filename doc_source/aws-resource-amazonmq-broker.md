@@ -258,7 +258,10 @@ The WSS endpoints of each broker instance as a list of strings\.
 
 ### Basic Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker"></a>
 
-The following example creates a basic Amazon MQ broker with one user that belongs to a group\. 
+The following examples creates a basic Amazon MQ broker\. The RabbitMQ example creates a broker with one administrative user, while the ActiveMQ example creates a broker with one user that belongs to a group\.
+
+**Note**  
+We don't recommend including plaintext passwords in AWS CloudFormation templates\. To securely retrieve your user credentials, add a `Ref` to your template\.
 
 #### JSON<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--json"></a>
 
@@ -270,7 +273,7 @@ The following example creates a basic Amazon MQ broker with one user that belong
       "Type": "AWS::AmazonMQ::Broker",
       "Properties": {
         "AutoMinorVersionUpgrade": "false",
-        "BrokerName": "MyBasicBroker",
+        "BrokerName": "MyBasicActiveBroker",
         "DeploymentMode": "SINGLE_INSTANCE",
         "EngineType": "ActiveMQ",
         "EngineVersion": "5.15.0",
@@ -302,7 +305,7 @@ The following example creates a basic Amazon MQ broker with one user that belong
     "Type": "AWS::AmazonMQ::Broker",
     "Properties": {
       "AutoMinorVersionUpgrade": "false",
-      "BrokerName": "MyBasicBroker",
+      "BrokerName": "MyBasicRabbitBroker",
       "DeploymentMode": "SINGLE_INSTANCE",
       "EngineType": "RabbitMQ",
       "EngineVersion": "3.8.6",
@@ -330,7 +333,7 @@ Resources:
     Type: "AWS::AmazonMQ::Broker"
     Properties: 
       AutoMinorVersionUpgrade: "false"
-      BrokerName: MyBasicBroker
+      BrokerName: MyBasicActiveBroker
       DeploymentMode: SINGLE_INSTANCE
       EngineType: ActiveMQ
       EngineVersion: "5.15.0"
@@ -342,9 +345,9 @@ Resources:
           Groups: 
             - MyGroup
           Password: 
-            Ref: "BrokerPassword"            
+            Ref: AmazonMqPassword           
           Username: 
-            Ref: "BrokerUsername"
+            Ref: AmazonMqUsername
 ```
 
 #### YAML<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--yaml"></a>
@@ -357,7 +360,7 @@ Resources:
     Type: "AWS::AmazonMQ::Broker"
     Properties: 
       AutoMinorVersionUpgrade: "false"
-      BrokerName: MyBasicBroker
+      BrokerName: MyBasicRabbitBroker
       DeploymentMode: SINGLE_INSTANCE
       EngineType: RabbitMQ
       EngineVersion: "3.8.6"
@@ -366,9 +369,9 @@ Resources:
       Users: 
         - 
           Password: 
-            Ref: "BrokerPassword"            
+            Ref: AmazonMqPassword            
           Username: 
-            Ref: "BrokerUsername"
+            Ref: AmazonMqUsername
 ```
 
 ### Complex Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker"></a>
@@ -385,7 +388,7 @@ The following example creates a complex Amazon MQ broker\. The ActiveMQ example 
       "Type": "AWS::AmazonMQ::Broker",
       "Properties": {
         "AutoMinorVersionUpgrade": "false",
-        "BrokerName": "MyComplexBroker",
+        "BrokerName": "MyComplexActiveBroker",
         "Configuration": {
           "Id": { "Ref": "Configuration1" },
           "Revision" : { "Fn::GetAtt": ["Configuration1", "Revision"] }
@@ -414,8 +417,8 @@ The following example creates a complex Amazon MQ broker\. The ActiveMQ example 
         ],         
         "Users": [{
           "ConsoleAccess": "true",
-          "Password" : { "Ref" : "AmazonMqPassword1" },
-          "Username" : { "Ref" : "AmazonMqUsername1" }
+          "Password" : { "Ref" : "AmazonMqPassword" },
+          "Username" : { "Ref" : "AmazonMqUsername" }
         }, {
           "Password" : { "Ref" : "AmazonMqPassword2" },
           "Username" : { "Ref" : "AmazonMqUsername2" }
@@ -437,32 +440,40 @@ The following example creates a complex Amazon MQ broker\. The ActiveMQ example 
 
 ```
 {
-"Description": "Create a complex RabbitMQ broker",
-"Resources": {
-  "ComplexBroker": {
-    "Type": "AWS::AmazonMQ::Broker",
-    "Properties": {
-      "AutoMinorVersionUpgrade": "false",
-      "BrokerName": "MyComplexBroker",
-     }
-    },
-    "DeploymentMode": "SINGLE_INSTANCE",
-    "EngineType": "RabbitMQ",
-    "EngineVersion": "3.8.6",
-    "HostInstanceType": "mq.t3.micro",
-    "Logs": {
-      "General": true
-    },
-    "MaintenanceWindowStartTime": {
-      "DayOfWeek": "Monday",
-      "TimeOfDay": "22:45",
-      "TimeZone": "America/Los_Angeles"
-    },
-    "PubliclyAccessible": "true",        
-    "Users": [{
-      "Password" : { "Ref" : "AmazonMqPassword1" },
-      "Username" : { "Ref" : "AmazonMqUsername1" }]
-    }
+  "Description": "Create a single-instance RabbitMQ broker without public accessibility",
+  "Resources": {
+    "ComplexBroker": {
+      "Type": "AWS::AmazonMQ::Broker",
+      "Properties": {
+        "AutoMinorVersionUpgrade": "true",
+        "BrokerName": "MyComplexRabbitBroker",
+        "DeploymentMode": "SINGLE_INSTANCE",
+        "EngineType": "RabbitMQ",
+        "EngineVersion": "3.8.6",
+        "HostInstanceType": "mq.t3.micro",
+        "Logs": {
+          "General": true
+        },
+        "MaintenanceWindowStartTime": {
+          "DayOfWeek": "Monday",
+          "TimeOfDay": "22:45",
+          "TimeZone": "America/Los_Angeles"
+        },
+        "PubliclyAccessible": "false",
+        "SecurityGroups": [
+          "sg-1a234b5cd6efgh7i8"
+        ],
+        "SubnetIds": [
+          "subnet-123456b7891abcd1f"
+        ],
+        "Users": [
+          {
+            "Password" : { "Ref" : "AmazonMqPassword" },
+            "Username" : { "Ref" : "AmazonMqUsername" }
+          }
+        ]
+      }
+    }   
   }
 }
 ```
@@ -476,7 +487,7 @@ Resources:
     Type: 'AWS::AmazonMQ::Broker'
     Properties:
       AutoMinorVersionUpgrade: 'false'
-      BrokerName: MyComplexBroker
+      BrokerName: MyComplexActiveBroker
       Configuration:
         Id: !Ref Configuration1
         Revision: !GetAtt 
@@ -502,8 +513,8 @@ Resources:
         - subnet-67d8e90f
       Users:
         - ConsoleAccess: 'true'
-          Password: !Ref AmazonMqPassword1
-          Username: !Ref AmazonMqUsername1
+          Password: !Ref AmazonMqPassword
+          Username: !Ref AmazonMqUsername
         - Password: !Ref AmazonMqPassword2
           Username: !Ref AmazonMqUsername2
         - Groups:
@@ -516,13 +527,13 @@ Resources:
 #### YAML<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--yaml"></a>
 
 ```
-Description: Create a complex RabbitMQ broker
+Description: Create a single-instance RabbitMQ broker without public accessibility
 Resources:
   ComplexBroker:
     Type: 'AWS::AmazonMQ::Broker'
     Properties:
-      AutoMinorVersionUpgrade: 'false'
-      BrokerName: MyComplexBroker
+      AutoMinorVersionUpgrade: false
+      BrokerName: MyComplexRabbitBroker
       DeploymentMode: SINGLE_INSTANCE
       EngineType: RabbitMQ
       EngineVersion: 3.8.6
@@ -533,8 +544,12 @@ Resources:
         DayOfWeek: Monday
         TimeOfDay: '22:45'
         TimeZone: America/Los_Angeles
-      PubliclyAccessible: 'true'
+      PubliclyAccessible: false
+      SecurityGroups:
+        - 'sg-1a234b5cd6efgh7i8'
+      SubnetIds:
+        - 'subnet-123456b7891abcd1f'
       Users:
-        - Password: !Ref AmazonMqPassword1
-          Username: !Ref AmazonMqUsername1
+        - Password: !Ref AmazonMqPassword
+          Username: !Ref AmazonMqUsername
 ```

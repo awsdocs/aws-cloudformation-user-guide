@@ -1,23 +1,11 @@
 # AWS::ResourceGroups::Group<a name="aws-resource-resourcegroups-group"></a>
 
-Creates a resource group with the specified name and description\. You can optionally include a resource query, or a service configuration\.
+Creates a resource group with the specified name and description\. You can optionally include a resource query, or a service configuration\. For more information about constructing a resource query, see [Create a tag\-based group in Resource Groups](https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag)\. For more information about service configurations, see [Service configurations for resource groups](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html)\.
 
  **Minimum permissions** 
 
 To run this command, you must have the following permissions:
 +  `resource-groups:CreateGroup` 
-
- **Related operations** 
-+ To delete a group, use DeleteGroup\.
-+ To retrieve the details about a group, use GetGroup\.
-+ To retrieve the configuration attached to the group, use GetGroupConfiguration\.
-+ To add individual resources to a group, use GroupResources\.
-+ To retrieve the query associated with the group, use GetGroupQuery\.
-+ To list the resources that are members of the group, use ListGroupResources\.
-+ To list your groups, use ListGroups\.
-+ To remove an individual resource from a group, use UngroupResources\.
-+ To modify a group, use UpdateGroup\.
-+ To modify the query attached to a group, use UpdateGroupQuery\.
 
 ## Syntax<a name="aws-resource-resourcegroups-group-syntax"></a>
 

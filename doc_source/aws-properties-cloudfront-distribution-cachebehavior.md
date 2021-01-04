@@ -95,7 +95,8 @@ If you pick the second choice for your Amazon S3 Origin, you may need to forward
 
 `CachePolicyId`  <a name="cfn-cloudfront-distribution-cachebehavior-cachepolicyid"></a>
 The unique identifier of the cache policy that is attached to this cache behavior\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
-*Required*: No  
+A `CacheBehavior` must include either a `CachePolicyId` or `ForwardedValues`\. We recommend that you use a `CachePolicyId`\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -122,8 +123,9 @@ The value of `ID` for the field\-level encryption configuration that you want Cl
 This field is deprecated\. We recommend that you use a cache policy or an origin request policy instead of this field\. For more information, see [Working with policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/working-with-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 If you want to include values in the cache key, use a cache policy\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 If you want to send values to the origin but not include them in the cache key, use an origin request policy\. For more information, see [Creating origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy) or [Using the managed origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+A `CacheBehavior` must include either a `CachePolicyId` or `ForwardedValues`\. We recommend that you use a `CachePolicyId`\.  
 A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

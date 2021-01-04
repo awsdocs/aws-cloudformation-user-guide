@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[assessmentReportsDestination](#cfn-auditmanager-assessment-assessmentreportsdestination)" : AssessmentReportsDestination,
       "[awsAccount](#cfn-auditmanager-assessment-awsaccount)" : AWSAccount,
       "[description](#cfn-auditmanager-assessment-description)" : String,
+      "[frameworkId](#cfn-auditmanager-assessment-frameworkid)" : String,
       "[name](#cfn-auditmanager-assessment-name)" : String,
       "[roles](#cfn-auditmanager-assessment-roles)" : Roles,
       "[scope](#cfn-auditmanager-assessment-scope)" : Scope,
@@ -34,6 +35,7 @@ Properties:
   [awsAccount](#cfn-auditmanager-assessment-awsaccount): 
     AWSAccount
   [description](#cfn-auditmanager-assessment-description): String
+  [frameworkId](#cfn-auditmanager-assessment-frameworkid): String
   [name](#cfn-auditmanager-assessment-name): String
   [roles](#cfn-auditmanager-assessment-roles): 
     Roles
@@ -65,6 +67,12 @@ Properties:
 *Maximum*: `1000`  
 *Pattern*: `^[\w\W\s\S]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`frameworkId`  <a name="cfn-auditmanager-assessment-frameworkid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `name`  <a name="cfn-auditmanager-assessment-name"></a>
  The name of the assessment\.   

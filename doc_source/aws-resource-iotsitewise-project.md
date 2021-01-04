@@ -36,7 +36,7 @@ Properties:
 
 `PortalId`  <a name="cfn-iotsitewise-project-portalid"></a>
 The ID of the portal in which to create the project\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -48,7 +48,7 @@ A description for the project\.
 
 `ProjectName`  <a name="cfn-iotsitewise-project-projectname"></a>
 A friendly name for the project\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

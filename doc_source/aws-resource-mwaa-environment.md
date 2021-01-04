@@ -1,6 +1,6 @@
 # AWS::MWAA::Environment<a name="aws-resource-mwaa-environment"></a>
 
-The `AWS::MWAA::Environment` resource\.
+The `AWS::MWAA::Environment` resource creates an Amazon MWAA environment with Apache Airflow\.
 
 ## Syntax<a name="aws-resource-mwaa-environment-syntax"></a>
 
@@ -66,7 +66,10 @@ Properties:
 ## Properties<a name="aws-resource-mwaa-environment-properties"></a>
 
 `AirflowConfigurationOptions`  <a name="cfn-mwaa-environment-airflowconfigurationoptions"></a>
-The custom configuration options to use to override default Apache Airflow configuration options in your environment\.  
+Key/value pairs representing Apache Airflow configuration variables\. Apache Airflow configuration is divided into sections\. The keys of the key/value pairs are prefixed by their section\. For example:  
+`[webserver]`  
+`default_ui_timezone=UTC`  
+Is represented as: `"webserver.default_ui_timezone": "UTC"`  
 *Required*: No  
 *Type*: [AirflowConfigurationOptions](aws-properties-mwaa-environment-airflowconfigurationoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -96,7 +99,7 @@ The ARN of the IAM role to use as the execution role for the environment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKey`  <a name="cfn-mwaa-environment-kmskey"></a>
-  
+The AWS Key Management Service \(KMS\) key to encrypt and decrypt the data in your environment\. You can use an AWS KMS key managed by MWAA, or a custom KMS key \(advanced\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -114,7 +117,7 @@ The maximum number of workers to scale up to in the environment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkConfiguration`  <a name="cfn-mwaa-environment-networkconfiguration"></a>
-  
+The VPC networking components to use for your Amazon MWAA environment\. The VPC network must include at least two private subnets and one VPC security group\.  
 *Required*: No  
 *Type*: [NetworkConfiguration](aws-properties-mwaa-environment-networkconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -150,13 +153,13 @@ The ARN of the S3 bucket to use to store your DAGs and associated support files 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-mwaa-environment-tags"></a>
-  
+The metadata tags you want to attach to your environment\.  
 *Required*: No  
 *Type*: [TagMap](aws-properties-mwaa-environment-tagmap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebserverAccessMode`  <a name="cfn-mwaa-environment-webserveraccessmode"></a>
-  
+The mode to access the Apache Airflow web server\. Use a public network to allow access to the Apache Airflow UI in your environment over the Internet\. You can manage permissions by using an IAM policy\. Choose a private network to limits access to Apache Airflow to only users within your VPC\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -177,24 +180,30 @@ The day and time of the week to start weekly maintenance updates of your environ
 
 ### Ref<a name="aws-resource-mwaa-environment-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the environment details\.
+
 ### Fn::GetAtt<a name="aws-resource-mwaa-environment-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mwaa-environment-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARN for the environment\.
 
 `CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time and date at which that the environment was created\.
 
 `LastUpdate`  <a name="LastUpdate-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+A time stamp for time of the last update to the environment\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the environment\.
 
 `ServiceRoleArn`  <a name="ServiceRoleArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARN of the role used for the environment\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The status of the environment\.

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Lambda::Function",
   "Properties" : {
       "[Code](#cfn-lambda-function-code)" : Code,
+      "[CodeSigningConfigArn](#cfn-lambda-function-codesigningconfigarn)" : String,
       "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : DeadLetterConfig,
       "[Description](#cfn-lambda-function-description)" : String,
       "[Environment](#cfn-lambda-function-environment)" : Environment,
@@ -42,6 +43,7 @@ Type: AWS::Lambda::Function
 Properties: 
   [Code](#cfn-lambda-function-code): 
     Code
+  [CodeSigningConfigArn](#cfn-lambda-function-codesigningconfigarn): String
   [DeadLetterConfig](#cfn-lambda-function-deadletterconfig): 
     DeadLetterConfig
   [Description](#cfn-lambda-function-description): String
@@ -76,6 +78,12 @@ Properties:
 The code for the function\.  
 *Required*: Yes  
 *Type*: [Code](aws-properties-lambda-function-code.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CodeSigningConfigArn`  <a name="cfn-lambda-function-codesigningconfigarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeadLetterConfig`  <a name="cfn-lambda-function-deadletterconfig"></a>

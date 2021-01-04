@@ -42,6 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit)" : Integer,
       "[SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid)" : String,
       "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
+      "[Tags](#cfn-elasticache-replicationgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean,
       "[UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids)" : [ String, ... ]
     }
@@ -88,6 +89,8 @@ Properties:
   [SnapshotRetentionLimit](#cfn-elasticache-replicationgroup-snapshotretentionlimit): Integer
   [SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid): String
   [SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow): String
+  [Tags](#cfn-elasticache-replicationgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
   [UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids): 
     - String
@@ -359,6 +362,12 @@ Example: `05:00-09:00`
 If you do not specify this parameter, ElastiCache automatically chooses an appropriate time range\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-elasticache-replicationgroup-tags"></a>
+A list of cost allocation tags to be added to this resource\. Tags are comma\-separated key,value pairs \(e\.g\. Key=`myKey`, Value=`myKeyValue`\. You can include multiple tags as shown following: Key=`myKey`, Value=`myKeyValue` Key=`mySecondKey`, Value=`mySecondKeyValue`\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-transitencryptionenabled"></a>

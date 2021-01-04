@@ -857,8 +857,4 @@ Resources:
       TaskSetId: !GetAtt 
         - BlueTaskSet
         - Id
-
 ```
-
-```
-
