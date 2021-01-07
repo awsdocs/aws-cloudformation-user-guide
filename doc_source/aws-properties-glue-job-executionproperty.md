@@ -10,14 +10,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns)" : Double
+  "[MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-glue-job-executionproperty-syntax.yaml"></a>
 
 ```
-  [MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns): Double
+  [MaxConcurrentRuns](#cfn-glue-job-executionproperty-maxconcurrentruns): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-job-executionproperty-properties"></a>
@@ -25,5 +25,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MaxConcurrentRuns`  <a name="cfn-glue-job-executionproperty-maxconcurrentruns"></a>
 The maximum number of concurrent runs allowed for the job\. The default is 1\. An error is returned when this threshold is reached\. The maximum value you can specify is controlled by a service limit\.  
 *Required*: No  
-*Type*: Double  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
