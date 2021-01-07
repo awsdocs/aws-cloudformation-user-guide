@@ -115,6 +115,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-iotevents-detectormodel--examples"></a>
 
+
+
 ### Simple Detector Model<a name="aws-resource-iotevents-detectormodel--examples--Simple_Detector_Model"></a>
 
 The following example creates a simple detector model with only one state\.

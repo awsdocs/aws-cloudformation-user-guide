@@ -69,6 +69,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-networkmanager-customergatewayassociation--examples"></a>
 
+
+
 ### Customer Gateway Association<a name="aws-resource-networkmanager-customergatewayassociation--examples--Customer_Gateway_Association"></a>
 
 The following example template creates a global network, device, customer gateway, VPN connection, and transit gateway\. It registers the transit gateway in the global network, and creates an association between the customer gateway and device\. The creation of the customer gateway association depends on the VPN connection and transit gateway registration\.

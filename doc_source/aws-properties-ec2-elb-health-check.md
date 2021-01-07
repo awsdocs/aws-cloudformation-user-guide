@@ -76,3 +76,4 @@ The number of consecutive health check failures required before moving the insta
 ## See also<a name="aws-properties-ec2-elb-health-check--seealso"></a>
 +  [ConfigureHealthCheck](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ConfigureHealthCheck.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [Configure Health Checks](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic/elb-healthchecks.html) in the *User Guide for Classic Load Balancers* 
+

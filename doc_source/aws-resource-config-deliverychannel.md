@@ -95,6 +95,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-deliverychannel--examples"></a>
 
+
+
 ### Delivery Channel<a name="aws-resource-config-deliverychannel--examples--Delivery_Channel"></a>
 
 The following example creates a delivery channel that sends notifications to the specified Amazon SNS topic\. The delivery channel also sends configuration changes and snapshots to the specified S3 bucket\. 

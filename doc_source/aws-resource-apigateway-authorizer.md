@@ -121,6 +121,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-authorizer--examples"></a>
 
+
+
 ### Create authorizer<a name="aws-resource-apigateway-authorizer--examples--Create_authorizer"></a>
 
 The following examples create a custom authorizer that is an AWS Lambda function\.
@@ -196,3 +198,4 @@ Authorizer:
 
 ## See also<a name="aws-resource-apigateway-authorizer--seealso"></a>
 + [authorizer:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/) in the *Amazon API Gateway REST API Reference*
+

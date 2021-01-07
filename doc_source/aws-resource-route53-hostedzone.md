@@ -151,6 +151,8 @@ This attribute is not supported for private hosted zones\.
 
 ## Examples<a name="aws-resource-route53-hostedzone--examples"></a>
 
+
+
 ### Creating a private hosted zone<a name="aws-resource-route53-hostedzone--examples--Creating_a_private_hosted_zone"></a>
 
 The following template snippet creates a private hosted zone for the example\.com domain\.
@@ -218,3 +220,4 @@ DNS:
 
 ## See also<a name="aws-resource-route53-hostedzone--seealso"></a>
 +  [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*
+

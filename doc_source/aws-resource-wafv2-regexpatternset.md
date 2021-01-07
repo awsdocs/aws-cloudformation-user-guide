@@ -100,6 +100,8 @@ The ID of the regex pattern set\.
 
 ## Examples<a name="aws-resource-wafv2-regexpatternset--examples"></a>
 
+
+
 ### Create a regex pattern set<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set"></a>
 
 The following shows an example regex pattern set specification\. 

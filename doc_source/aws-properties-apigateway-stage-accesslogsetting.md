@@ -40,3 +40,4 @@ A single line format of the access logs of data, as specified by selected [$cont
 
 ## See also<a name="aws-properties-apigateway-stage-accesslogsetting--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
+

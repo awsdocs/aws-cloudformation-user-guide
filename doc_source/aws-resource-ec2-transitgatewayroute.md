@@ -67,3 +67,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See also<a name="aws-resource-ec2-transitgatewayroute--seealso"></a>
 +  [CreateTransitGatewayRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayRoute.html) in the *Amazon EC2 API Reference*
+

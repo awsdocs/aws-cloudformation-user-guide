@@ -32,7 +32,7 @@ S3 Intelligent\-Tiering access tier\. See [Storage class for automatically optim
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Days`  <a name="cfn-s3-bucket-tiering-days"></a>
-The number of days that you want your archived data to be accessible\. The minimum number of days specified in the restore request must be at least 90 days\. If a smaller value is specifed it will be ignored\.   
+The number of consecutive days of no access after which an object will be eligible to be transitioned to the corresponding tier\. The minimum number of days specified for Archive Access tier must be at least 90 days and Deep Archive Access tier must be at least 180 days\. The maximum can be up to 2 years \(730 days\)\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

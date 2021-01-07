@@ -113,5 +113,5 @@ Resources:
 
 ## See also<a name="aws-resource-gamelift-matchmakingruleset--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+ [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/developerguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
++ [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
 +  [ CreateMatchmakingRuleSet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateMatchmakingRuleSet.html) in the *Amazon GameLift API Reference* 

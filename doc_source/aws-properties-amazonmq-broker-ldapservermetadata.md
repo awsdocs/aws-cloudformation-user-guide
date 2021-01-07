@@ -1,6 +1,9 @@
 # AWS::AmazonMQ::Broker LdapServerMetadata<a name="aws-properties-amazonmq-broker-ldapservermetadata"></a>
 
-Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\. Does not apply to RabbitMQ brokers\.
+Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\.
+
+**Important**  
+Does not apply to RabbitMQ brokers\.
 
 ## Syntax<a name="aws-properties-amazonmq-broker-ldapservermetadata-syntax"></a>
 

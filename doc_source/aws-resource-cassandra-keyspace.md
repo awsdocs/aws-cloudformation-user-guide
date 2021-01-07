@@ -47,6 +47,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cassandra-keyspace--examples"></a>
 
+
+
 ### Create a New Keyspace<a name="aws-resource-cassandra-keyspace--examples--Create_a_New_Keyspace"></a>
 
 The following example creates a new keyspace named `MyNewKeyspace`:

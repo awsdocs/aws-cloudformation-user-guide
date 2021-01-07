@@ -88,6 +88,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-athena-datacatalog--examples"></a>
 
+
+
 ### Creating an Athena Data Catalog<a name="aws-resource-athena-datacatalog--examples--Creating_an_Athena_Data_Catalog"></a>
 
 The following example template creates a custom Hive data catalog in Athena\.

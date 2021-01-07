@@ -56,6 +56,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-resourcedefinitionversion--examples"></a>
 
+
+
 ### Resource Definition Version Snippet<a name="aws-resource-greengrass-resourcedefinitionversion--examples--Resource_Definition_Version_Snippet"></a>
 
 The following snippet defines resource definition and resource definition version resources\. The resource definition version references the resource definition and contains each type of resource\.

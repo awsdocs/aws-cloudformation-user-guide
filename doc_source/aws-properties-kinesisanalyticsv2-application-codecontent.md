@@ -49,3 +49,4 @@ The zip\-format code for a Flink\-based Kinesis Data Analytics application\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-codecontent--seealso"></a>
 +  [CodeContent](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CodeContent.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

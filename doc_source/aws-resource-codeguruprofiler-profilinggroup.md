@@ -90,6 +90,8 @@ The full Amazon Resource Name \(ARN\) for that profiling group\.
 
 ## Examples<a name="aws-resource-codeguruprofiler-profilinggroup--examples"></a>
 
+
+
 ### CodeGuru Profiler profiling group resource configuration<a name="aws-resource-codeguruprofiler-profilinggroup--examples--CodeGuru_Profiler_profiling_group_resource_configuration"></a>
 
 The following is an example of the profiling group resource with the profiling group name and agent permissions properties\.

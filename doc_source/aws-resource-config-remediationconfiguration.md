@@ -87,6 +87,8 @@ The type is a map of strings to RemediationParameterValue\.
 The type of a resource\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryAttemptSeconds`  <a name="cfn-config-remediationconfiguration-retryattemptseconds"></a>
@@ -116,6 +118,8 @@ Version of the target\. For example, version of the SSM document\.
 If you make backward incompatible changes to the SSM document, you must call PutRemediationConfiguration API again to ensure the remediations can run\.
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-config-remediationconfiguration-return-values"></a>
@@ -127,6 +131,8 @@ If you make backward incompatible changes to the SSM document, you must call Put
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-remediationconfiguration--examples"></a>
+
+
 
 ### Remeditation Configuration<a name="aws-resource-config-remediationconfiguration--examples--Remeditation_Configuration"></a>
 

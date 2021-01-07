@@ -40,16 +40,18 @@ Properties:
 ## Properties<a name="aws-resource-ivs-channel-properties"></a>
 
 `Authorized`  <a name="cfn-ivs-channel-authorized"></a>
-Whether the channel is authorized\. Default: `false`   
+Whether the channel is authorized\.  
+*Default*: `false`  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LatencyMode`  <a name="cfn-ivs-channel-latencymode"></a>
 Channel latency mode\. Valid values:  
-+  `NORMAL`: Use NORMAL for broadcasts that do not require viewer interaction\.
-+  `LOW`: Use LOW to minimize broadcaster\-to\-viewer latency for interactive broadcasts\.
-Default: `LOW`\.  
++  `NORMAL`: Use NORMAL to broadcast and deliver live video up to Full HD\.
++  `LOW`: Use LOW for near real\-time interactions with viewers\.
+In the Amazon IVS console, `LOW` and `NORMAL` correspond to `Ultra-low` and `Standard`, respectively\.
+*Default*: `LOW`  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `LOW | NORMAL`  
@@ -75,7 +77,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 The channel type, which determines the allowable resolution and bitrate\. *If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately\.* Valid values:  
 +  `STANDARD`: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions\. Vertical resolution can be up to 1080 and bitrate can be up to 8\.5 Mbps\.
 +  `BASIC`: delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Vertical resolution can be up to 480 and bitrate can be up to 1\.5 Mbps\.
-Default: `STANDARD`\.  
+*Default*: `STANDARD`  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `BASIC | STANDARD`  
@@ -112,6 +114,8 @@ For example: `a1b2c3d4e5f6.global-contribute.live-video.net`
 Channel playback URL\. For example: `https://a1b2c3d4e5f6.us-west-2.playback.live-video.net/api/video/v1/us-west-2.123456789012.channel.abcdEFGH.m3u8`
 
 ## Examples<a name="aws-resource-ivs-channel--examples"></a>
+
+
 
 ### Channel and Stream Key Template Examples<a name="aws-resource-ivs-channel--examples--Channel_and_Stream_Key_Template_Examples"></a>
 

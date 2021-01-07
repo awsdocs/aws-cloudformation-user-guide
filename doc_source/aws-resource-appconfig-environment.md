@@ -95,6 +95,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-appconfig-environment--examples"></a>
 
+
+
 ### AWS AppConfig Environment Example<a name="aws-resource-appconfig-environment--examples--AWS_AppConfig_Environment_Example"></a>
 
 The following example creates an AWS AppConfig environment named MyTestEnvironment\. An environment is a logical deployment group of AppConfig targets, such as applications in a Beta or Production environment\. You can also define environments for application subcomponents such as the Web, Mobile, and Back\-end components for your application\. 

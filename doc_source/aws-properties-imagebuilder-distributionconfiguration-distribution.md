@@ -50,6 +50,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Examples<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples"></a>
 
+
+
 ### Example AmiDistributionConfiguration schema<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema"></a>
 
 The following example shows the schema for the AmiDistributionConfiguration property in both YAML and JSON format\. To make an AMI public, set the launch permission authorized accounts to `all`\. See the examples for making an AMI public at [EC2 ModifyImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyImageAttribute.html)\. 

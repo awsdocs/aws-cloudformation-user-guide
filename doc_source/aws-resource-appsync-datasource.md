@@ -141,6 +141,8 @@ Friendly name for you to identify your AppSync data source after creation\.
 
 ## Examples<a name="aws-resource-appsync-datasource--examples"></a>
 
+
+
 ### Data Source Creation Example<a name="aws-resource-appsync-datasource--examples--Data_Source_Creation_Example"></a>
 
 The following example creates a data source and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\. 
@@ -228,3 +230,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-datasource--seealso"></a>
 +  [CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*\.
+

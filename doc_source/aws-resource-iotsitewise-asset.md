@@ -59,6 +59,7 @@ The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+`\
 
 `AssetProperties`  <a name="cfn-iotsitewise-asset-assetproperties"></a>
 The list of asset properties for the asset\.  
+This object doesn't include properties that you define in composite models\. You can find composite model properties in the `assetCompositeModels` object\.  
 *Required*: No  
 *Type*: List of [AssetProperty](aws-properties-iotsitewise-asset-assetproperty.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

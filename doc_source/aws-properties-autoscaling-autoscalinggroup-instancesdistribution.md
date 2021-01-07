@@ -55,7 +55,7 @@ An update to this setting means a gradual replacement of instances to adjust the
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SpotAllocationStrategy`  <a name="cfn-autoscaling-autoscalinggroup-instancesdistribution-spotallocationstrategy"></a>
-Indicates how to allocate Spot capacity across Spot Instances pools\. If the allocation strategy is `lowest-price`, the Auto Scaling group launches instances using the Spot pools with the lowest price, and evenly allocates your instances across the number of Spot pools that you specify\. If the allocation strategy is `capacity-optimized`, the Auto Scaling group launches instances using Spot pools that are optimally chosen based on the available Spot capacity\. Defaults to `lowest-price` if not specified\.  
+Indicates how to allocate Spot capacity across Spot Instances pools\. If the allocation strategy is `capacity-optimized` \(recommended\), the Auto Scaling group launches instances using Spot pools that are optimally chosen based on the available Spot capacity\. If the allocation strategy is `lowest-price`, the Auto Scaling group launches instances using the Spot pools with the lowest price, and evenly allocates your instances across the number of Spot pools that you specify\. Defaults to `lowest-price` if not specified\.  
 Valid values: `lowest-price` \| `capacity-optimized`   
 *Required*: No  
 *Type*: String  
@@ -69,7 +69,7 @@ Valid Range: Minimum value of 1\. Maximum value of 20\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotMaxPrice`  <a name="cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice"></a>
-The maximum price per unit hour that you are willing to pay for a Spot Instance\. If you leave the value of this property blank \(which is the default\), the maximum Spot price is set at the On\-Demand price\.   
+The maximum price per unit hour that you are willing to pay for a Spot Instance\. If you leave the value at its default \(empty\), Amazon EC2 Auto Scaling uses the On\-Demand price as the maximum Spot price\. To remove a value that you previously set, include the property but specify an empty string \(""\) for the value\.   
 Valid Range: Minimum value of 0\.001  
 *Required*: No  
 *Type*: String  

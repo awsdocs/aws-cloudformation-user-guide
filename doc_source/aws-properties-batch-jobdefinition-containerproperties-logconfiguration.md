@@ -29,7 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `LogDriver`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver"></a>
 The log driver to use for the container\. The valid values listed for this parameter are log drivers that the Amazon ECS container agent can communicate with by default\.  
-The supported log drivers are `awslogs`, `fluentd`, `gelf`, `json-file`, `journald`, `logentries`, `syslog`, and `splunk`\.    
+The supported log drivers are `awslogs`, `fluentd`, `gelf`, `json-file`, `journald`, `logentries`, `syslog`, and `splunk`\.  
+Jobs running on Fargate resources are restricted to the `awslogs` and `splunk` log drivers\.  
 awslogs  
 Specifies the Amazon CloudWatch Logs logging driver\. For more information, see [Using the awslogs Log Driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the *AWS Batch User Guide* and [Amazon CloudWatch Logs logging driver](https://docs.docker.com/config/containers/logging/awslogs/) in the Docker documentation\.  
 fluentd  
@@ -44,7 +45,7 @@ splunk
 Specifies the Splunk logging driver\. For more information, including usage and options, see [Splunk logging driver](https://docs.docker.com/config/containers/logging/splunk/) in the Docker documentation\.  
 syslog  
 Specifies the syslog logging driver\. For more information, including usage and options, see [Syslog logging driver](https://docs.docker.com/config/containers/logging/syslog/) in the Docker documentation\.
-If you have a custom driver that is not listed earlier that you would like to work with the Amazon ECS container agent, you can fork the Amazon ECS container agent project that is [available on GitHub](https://github.com/aws/amazon-ecs-agent) and customize it to work with that driver\. We encourage you to submit pull requests for changes that you would like to have included\. However, Amazon Web Services does not currently support running modified copies of this software\.
+If you have a custom driver that'sn't listed earlier that you want to work with the Amazon ECS container agent, you can fork the Amazon ECS container agent project that's [available on GitHub](https://github.com/aws/amazon-ecs-agent) and customize it to work with that driver\. We encourage you to submit pull requests for changes that you want to have included\. However, Amazon Web Services doesn't currently support running modified copies of this software\.
 This parameter requires version 1\.18 of the Docker Remote API or greater on your container instance\. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: `sudo docker version | grep "Server API version"`   
 *Required*: Yes  
 *Type*: String  

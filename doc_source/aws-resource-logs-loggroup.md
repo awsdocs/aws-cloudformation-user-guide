@@ -80,6 +80,8 @@ The ARN of the log group, such as `arn:aws:logs:us-west-1:123456789012:log-group
 
 ## Examples<a name="aws-resource-logs-loggroup--examples"></a>
 
+
+
 ### Create a Log Group<a name="aws-resource-logs-loggroup--examples--Create_a_Log_Group"></a>
 
 The following example creates a log group that retains events for 7 days\.

@@ -126,6 +126,8 @@ The unique ID that QLDB assigns to each QLDB journal stream\. For example: `IiPT
 
 ## Examples<a name="aws-resource-qldb-stream--examples"></a>
 
+
+
 ### Amazon QLDB Stream<a name="aws-resource-qldb-stream--examples--Amazon_QLDB_Stream"></a>
 
 The following example describes an Amazon QLDB journal stream for a ledger named `exampleLedger` and a Kinesis Data Streams destination with the ARN `arn:aws:kinesis:us-east-1:123456789012:stream/stream-for-qldb`\.
@@ -183,3 +185,4 @@ Resources:
 
 ## See also<a name="aws-resource-qldb-stream--seealso"></a>
 +  [StreamJournalToKinesis](https://docs.aws.amazon.com/qldb/latest/developerguide/API_StreamJournalToKinesis.html) in the *Amazon QLDB API Reference*
+

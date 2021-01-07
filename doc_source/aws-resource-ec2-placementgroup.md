@@ -48,6 +48,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-placementgroup--examples"></a>
 
+
+
 ### Create a Placement Group<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group"></a>
 
 The following example declares a placement group with a cluster placement strategy\. 

@@ -30,6 +30,8 @@ The Amazon Resource Name \(ARN\) of the destination resource\.
 
 ## Examples<a name="aws-properties-lambda-eventsourcemapping-onfailure--examples"></a>
 
+
+
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventsourcemapping-onfailure--examples--On-Failure_Destination_Configuration"></a>
 
 Configure a function to send a record of failed batches to an SQS queue\.

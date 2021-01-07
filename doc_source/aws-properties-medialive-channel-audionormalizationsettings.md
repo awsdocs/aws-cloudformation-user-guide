@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioNormalizationSettings<a name="aws-properties-medialive-channel-audionormalizationsettings"></a>
 
-Contains fields for implementing audio normalization in conformity with the CALM act and the EBU R\-128 specification\. This element belongs to AudioDescription\.
+The settings for normalizing video\.
+
+The parent of this entity is AudioDescription\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audionormalizationsettings-syntax"></a>
 
@@ -27,19 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audionormalizationsettings-properties"></a>
 
 `Algorithm`  <a name="cfn-medialive-channel-audionormalizationsettings-algorithm"></a>
-Audio normalization algorithm to use\. itu17701 conforms to the CALM Act specification, itu17702 conforms to the EBU R\-128 specification\.  
+The audio normalization algorithm to use\. itu17701 conforms to the CALM Act specification\. itu17702 conforms to the EBU R\-128 specification\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AlgorithmControl`  <a name="cfn-medialive-channel-audionormalizationsettings-algorithmcontrol"></a>
-When set to correctAudio the output audio is corrected using the chosen algorithm\. If set to measureOnly, the audio will be measured but not adjusted\.  
+When set to correctAudio, the output audio is corrected using the chosen algorithm\. If set to measureOnly, the audio is measured but not adjusted\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetLkfs`  <a name="cfn-medialive-channel-audionormalizationsettings-targetlkfs"></a>
-Target LKFS\(loudness\) to adjust volume to\. If no value is entered, a default value will be used according to the chosen algorithm\. The CALM Act \(1770\-1\) recommends a target of \-24 LKFS\. The EBU R\-128 specification \(1770\-2\) recommends a target of \-23 LKFS\.  
+The Target LKFS\(loudness\) to adjust volume to\. If no value is entered, a default value is used according to the chosen algorithm\. The CALM Act \(1770\-1\) recommends a target of \-24 LKFS\. The EBU R\-128 specification \(1770\-2\) recommends a target of \-23 LKFS\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

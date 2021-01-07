@@ -53,6 +53,8 @@ The reference data source can be an object in your Amazon S3 bucket\. Amazon Kin
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationreferencedatasource--examples"></a>
 
+
+
 ### Adding an ApplicationReferenceDataSource Resource<a name="aws-resource-kinesisanalytics-applicationreferencedatasource--examples--Adding_an_ApplicationReferenceDataSource_Resource"></a>
 
 The following example creates an `ApplicationReferenceDataSource` resource: 

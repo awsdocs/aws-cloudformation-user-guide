@@ -1,6 +1,6 @@
 # AWS::MediaLive::Input InputDeviceSettings<a name="aws-properties-medialive-input-inputdevicesettings"></a>
 
-Settings for an input device\. This element belongs to Input\.
+Settings for an input device\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputdevicesettings-syntax"></a>
 

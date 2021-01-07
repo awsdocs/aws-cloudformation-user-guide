@@ -33,3 +33,4 @@ The ARN of the input Kinesis data stream to read\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-kinesisstreamsinput--seealso"></a>
 +  [KinesisStreamsInput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisStreamsInput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

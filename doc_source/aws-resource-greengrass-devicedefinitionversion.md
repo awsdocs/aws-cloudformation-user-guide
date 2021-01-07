@@ -56,6 +56,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-devicedefinitionversion--examples"></a>
 
+
+
 ### Device Definition Version Snippet<a name="aws-resource-greengrass-devicedefinitionversion--examples--Device_Definition_Version_Snippet"></a>
 
 The following snippet defines device definition and device definition version resources\. The device definition version references the device definition and contains a device\. This example points to a manually generated device certificate\.

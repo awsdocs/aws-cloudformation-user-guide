@@ -85,3 +85,4 @@ The ID of the VPC that you associated the resolver rule with, such as `vpc-03cf9
 
 ## See also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
 +  [ResolverRuleAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRuleAssociation.html) in the *Amazon Route 53 API Reference* 
+

@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotsitewise-assetmodel-assetmodelproperty-properties"></a>
 
 `DataType`  <a name="cfn-iotsitewise-assetmodel-assetmodelproperty-datatype"></a>
-The data type of the asset model property\.  
+The data type of the asset model property, which can be one of `BOOLEAN`, `INTEGER`, `DOUBLE`, or `STRING`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -72,3 +72,4 @@ The type of local gateway route\.
 ## See also<a name="aws-resource-ec2-localgatewayroute--seealso"></a>
 + [Local Gateways](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
 + [CreateLocalGatewayRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLocalGatewayRoute.html) in the *Amazon EC2 API Reference*
+

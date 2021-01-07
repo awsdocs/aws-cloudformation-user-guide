@@ -40,3 +40,4 @@ Provide one subnet ID for each Availability Zone that your domain uses\. For exa
 
 ## See also<a name="aws-properties-elasticsearch-domain-vpcoptions--seealso"></a>
 + [VPC Support for Amazon Elasticsearch Service Domains](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-vpc.html) in the *Amazon Elasticsearch Service Developer Guide*\.
+

@@ -1,6 +1,6 @@
 # AWS::CloudWatch::MetricStream<a name="aws-resource-cloudwatch-metricstream"></a>
 
-<a name="aws-resource-cloudwatch-metricstream-description"></a>The `AWS::CloudWatch::MetricStream` resource Not currently supported by AWS CloudFormation\. for CloudWatch\.
+Reserved for future use\.
 
 ## Syntax<a name="aws-resource-cloudwatch-metricstream-syntax"></a>
 

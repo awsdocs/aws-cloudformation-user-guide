@@ -52,6 +52,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-clientcertificate--examples"></a>
 
+
+
 ### Create client certificate<a name="aws-resource-apigateway-clientcertificate--examples--Create_client_certificate"></a>
 
 The following example creates a client certificate that you can use with an API Gateway deployment and stage\.
@@ -80,3 +82,4 @@ TestClientCertificate:
 
 ## See also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
 + [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/clientcertificate-generate/) in the *Amazon API Gateway REST API Reference*
+

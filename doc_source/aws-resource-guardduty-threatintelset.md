@@ -82,6 +82,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-guardduty-threatintelset--examples"></a>
 
+
+
 ### Declare a ThreatIntelSet Resource<a name="aws-resource-guardduty-threatintelset--examples--Declare_a_ThreatIntelSet_Resource"></a>
 
 The following example shows how to declare a GuardDuty `ThreatIntelSet` resource:

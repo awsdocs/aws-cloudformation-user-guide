@@ -2,6 +2,8 @@
 
 Designates the IAM role and Amazon Simple Notification Service \(SNS\) topic that AWS Firewall Manager uses to record SNS logs\.
 
+To perform this action outside of the console, you must configure the SNS topic to allow the Firewall Manager role `AWSServiceRoleForFMS` to publish SNS logs\. For more information, see [Firewall Manager required permissions for API actions](https://docs.aws.amazon.com/waf/latest/developerguide/fms-api-permissions-ref.html) in the *AWS Firewall Manager Developer Guide*\.
+
 ## Syntax<a name="aws-resource-fms-notificationchannel-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -52,6 +54,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-fms-notificationchannel--examples"></a>
+
+
 
 ### Create a Firewall Manager notification channel<a name="aws-resource-fms-notificationchannel--examples--Create_a_Firewall_Manager_notification_channel"></a>
 

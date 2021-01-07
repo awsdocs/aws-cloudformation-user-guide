@@ -60,6 +60,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-networkinterfacepermission--examples"></a>
 
+
+
 ### Grant INSTANCE\-ATTACH Permission<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_Permission"></a>
 
 The following example creates a permission \(`INSTANCE-ATTACH`\) for a specified network interface and AWS account\.

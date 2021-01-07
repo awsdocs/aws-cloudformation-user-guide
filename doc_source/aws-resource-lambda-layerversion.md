@@ -41,7 +41,7 @@ Properties:
 A list of compatible [function runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\. Used for filtering with [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) and [ListLayerVersions](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayerVersions.html)\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `5`  
+*Maximum*: `15`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Content`  <a name="cfn-lambda-layerversion-content"></a>
@@ -86,6 +86,8 @@ The layer's software license\. It can be any of the following:
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-lambda-layerversion--examples"></a>
+
+
 
 ### Layer Version<a name="aws-resource-lambda-layerversion--examples--Layer_Version"></a>
 

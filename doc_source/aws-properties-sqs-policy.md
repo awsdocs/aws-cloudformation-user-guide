@@ -44,6 +44,8 @@ The URLs of the queues to which you want to add the policy\. You can use the `[R
 
 ## Examples<a name="aws-properties-sqs-policy--examples"></a>
 
+
+
 ### Amazon SQS Queue Policy<a name="aws-properties-sqs-policy--examples--Amazon_SQS_Queue_Policy"></a>
 
 The following sample is a queue policy that allows AWS account 111122223333 to send and receive messages on queue queue2\. You add the policy to the resources section of your template\.

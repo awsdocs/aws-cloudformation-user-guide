@@ -103,6 +103,8 @@ The ARN of the topic to subscribe to\.
 
 ## Examples<a name="aws-resource-sns-subscription--examples"></a>
 
+
+
 ### Create a subscription with mandatory attributes<a name="aws-resource-sns-subscription--examples--Create_a_subscription_with_mandatory_attributes"></a>
 
 The following example creates a subscription with only an endpoint, protocol, and topic ARN\.

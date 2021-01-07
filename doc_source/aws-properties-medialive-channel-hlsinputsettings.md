@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel HlsInputSettings<a name="aws-properties-medialive-channel-hlsinputsettings"></a>
 
-This element contains fields that configure the connection to the upstream system\. This element belongs to NetworkInputSettings\.
+Information about how to connect to the upstream system\.
+
+The parent of this entity is NetworkInputSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsinputsettings-syntax"></a>
 
@@ -29,13 +31,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-hlsinputsettings-properties"></a>
 
 `Bandwidth`  <a name="cfn-medialive-channel-hlsinputsettings-bandwidth"></a>
-When specified the HLS stream with the m3u8 BANDWIDTH that most closely matches this value will be chosen, otherwise the highest bandwidth stream in the m3u8 will be chosen\. The bitrate is specified in bits per second, as in an HLS manifest\.  
+When specified, the HLS stream with the m3u8 BANDWIDTH that most closely matches this value is chosen\. Otherwise, the highest bandwidth stream in the m3u8 is chosen\. The bitrate is specified in bits per second, as in an HLS manifest\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BufferSegments`  <a name="cfn-medialive-channel-hlsinputsettings-buffersegments"></a>
-When specified, reading of the HLS input will begin this many buffer segments from the end \(most recently written segment\)\. When not specified, the HLS input will begin with the first segment specified in the m3u8\.  
+When specified, reading of the HLS input begins this many buffer segments from the end \(most recently written segment\)\. When not specified, the HLS input begins with the first segment specified in the m3u8\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

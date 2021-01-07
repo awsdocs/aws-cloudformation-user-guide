@@ -25,14 +25,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
+      "[FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes)" : [ String, ... ],
       "[MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)" : Integer,
       "[MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)" : Integer,
       "[MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts)" : Integer,
       "[ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor)" : Integer,
+      "[PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse)" : Boolean,
       "[Queues](#cfn-lambda-eventsourcemapping-queues)" : [ String, ... ],
+      "[SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource)" : SelfManagedEventSource,
       "[SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)" : [ SourceAccessConfiguration, ... ],
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String,
-      "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ]
+      "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ],
+      "[TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds)" : Integer
     }
 }
 ```
@@ -49,17 +53,23 @@ Properties:
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
+  [FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes): 
+    - String
   [MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds): Integer
   [MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds): Integer
   [MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts): Integer
   [ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor): Integer
+  [PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse): Boolean
   [Queues](#cfn-lambda-eventsourcemapping-queues): 
     - String
+  [SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource): 
+    SelfManagedEventSource
   [SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations): 
     - SourceAccessConfiguration
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
   [Topics](#cfn-lambda-eventsourcemapping-topics): 
     - String
+  [TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds): Integer
 ```
 
 ## Properties<a name="aws-resource-lambda-eventsourcemapping-properties"></a>
@@ -68,7 +78,7 @@ Properties:
 The maximum number of items to retrieve in a single batch\.  
 +  **Amazon Kinesis** \- Default 100\. Max 10,000\.
 +  **Amazon DynamoDB Streams** \- Default 100\. Max 1,000\.
-+  **Amazon Simple Queue Service** \- Default 10\. Max 10\.
++  **Amazon Simple Queue Service** \- Default 10\. For standard queues the max is 10,000\. For FIFO queues the max is 10\.
 +  **Amazon Managed Streaming for Apache Kafka** \- Default 100\. Max 10,000\.
 *Required*: No  
 *Type*: Integer  
@@ -100,7 +110,7 @@ The Amazon Resource Name \(ARN\) of the event source\.
 +  **Amazon DynamoDB Streams** \- The ARN of the stream\.
 +  **Amazon Simple Queue Service** \- The ARN of the queue\.
 +  **Amazon Managed Streaming for Apache Kafka** \- The ARN of the cluster\.
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -121,8 +131,16 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Pattern*: `(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FunctionResponseTypes`  <a name="cfn-lambda-eventsourcemapping-functionresponsetypes"></a>
+\(Streams\) A list of current response type enums applied to the event source mapping\.  
+Valid Values: `ReportBatchItemFailures`  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
-\(Streams\) The maximum amount of time to gather records before invoking the function, in seconds\.  
+\(Streams and SQS standard queues\) The maximum amount of time to gather records before invoking the function, in seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -153,11 +171,23 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`PartialBatchResponse`  <a name="cfn-lambda-eventsourcemapping-partialbatchresponse"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
 \(MQ\) The name of the Amazon MQ broker destination queue to consume\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SelfManagedEventSource`  <a name="cfn-lambda-eventsourcemapping-selfmanagedeventsource"></a>
+The Self\-Managed Apache Kafka cluster for your event source\.  
+*Required*: No  
+*Type*: [SelfManagedEventSource](aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
 \(MQ\) The Secrets Manager secret that stores your broker credentials\.  
@@ -174,10 +204,16 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
- \(MSK\) The name of the Kafka topic to consume\.   
+The name of the Kafka topic\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TumblingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-tumblingwindowinseconds"></a>
+\(Streams\) The duration of a processing window in seconds\. The range is between 1 second up to 15 minutes\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lambda-eventsourcemapping-return-values"></a>
@@ -196,6 +232,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-lambda-eventsourcemapping--examples"></a>
+
+
 
 ### Event Source Mapping<a name="aws-resource-lambda-eventsourcemapping--examples--Event_Source_Mapping"></a>
 
@@ -240,24 +278,24 @@ Create an event source mapping that reads events from Amazon Kinesis and invokes
 #### YAML<a name="aws-resource-lambda-eventsourcemapping--examples--Event_Source_Mapping--yaml"></a>
 
 ```
-MyEventSourceMapping: 
+MyEventSourceMapping:
   Type: AWS::Lambda::EventSourceMapping
-  Properties: 
-    EventSourceArn: 
-      Fn::Join: 
+  Properties:
+    EventSourceArn:
+      Fn::Join:
         - ""
-        - 
+        -
           - "arn:aws:kinesis:"
-          - 
+          -
             Ref: "AWS::Region"
           - ":"
-          - 
+          -
             Ref: "AWS::AccountId"
           - ":stream/"
-          - 
+          -
             Ref: "KinesisStream"
-    FunctionName: 
-      Fn::GetAtt: 
+    FunctionName:
+      Fn::GetAtt:
         - "LambdaFunction"
         - "Arn"
     StartingPosition: "TRIM_HORIZON"

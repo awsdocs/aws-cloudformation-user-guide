@@ -65,6 +65,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-functiondefinitionversion--examples"></a>
 
+
+
 ### Function Definition Version Snippet<a name="aws-resource-greengrass-functiondefinitionversion--examples--Function_Definition_Version_Snippet"></a>
 
 The following snippet defines function definition and function definition version resources\. The function definition version references the function definition and contains a function\. In this example, the Lambda function is created in another stack and is referenced using the `ImportValue` function\.

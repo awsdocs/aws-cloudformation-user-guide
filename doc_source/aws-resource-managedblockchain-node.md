@@ -1,6 +1,10 @@
 # AWS::ManagedBlockchain::Node<a name="aws-resource-managedblockchain-node"></a>
 
-Creates a peer node in a member\.
+Creates a node on the specified blockchain network\.
+
+Applies to Hyperledger Fabric and Ethereum\.
+
+Ethereum on Managed Blockchain is in preview release and is subject to change\.
 
 ## Syntax<a name="aws-resource-managedblockchain-node-syntax"></a>
 
@@ -80,7 +84,11 @@ The unique identifier of the node\.
 
 ## Examples<a name="aws-resource-managedblockchain-node--examples"></a>
 
+
+
 ### Create a Peer Node in a Member<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member"></a>
+
+
 
 #### YAML<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member--yaml"></a>
 

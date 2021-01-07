@@ -54,6 +54,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-budgets-budget--examples"></a>
 
+
+
 ### Budget for 100 USD with two notifications<a name="aws-resource-budgets-budget--examples--Budget_for_100_USD_with_two_notifications"></a>
 
 The following example creates a budget for 100 USD amount of costs, with notifications for when you have spent over 80 USD or over 99 USD\. The notifications are sent to the subscribers `email@example.com` and `email2@example.com`\.
@@ -176,3 +178,4 @@ Outputs:
 
 ## See also<a name="aws-resource-budgets-budget--seealso"></a>
 +  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

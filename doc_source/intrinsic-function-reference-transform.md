@@ -8,8 +8,30 @@ You can also use `Fn::Transform` to call the `AWS::Include transform` transform,
 
 ### JSON<a name="intrinsic-function-reference-transform-syntax.json"></a>
 
+Syntax for the full function name:
+
 ```
-{ "Fn::Transform" : { "Name" : macro name, "Parameters" : {key : value, ... } } }
+{
+    "Fn::Transform": {
+        "Name": "macro name",
+        "Parameters": {
+            "Key": "value"
+        }
+    }
+}
+```
+
+Syntax for the short form:
+
+```
+{
+    "Transform": {
+        "Name": "macro name",
+        "Parameters": {
+            "Key": "value"
+        }
+    }
+}
 ```
 
 ### YAML<a name="intrinsic-function-reference-transform-syntax.yaml"></a>
@@ -26,7 +48,10 @@ Fn::Transform:
 Syntax for the short form:
 
 ```
-!Transform { "Name" : macro name, "Parameters" : {key : value, ... } }
+Transform:
+  Name: macro name
+  Parameters:
+    Key: value
 ```
 
 ## Parameters<a name="intrinsic-function-reference-transform-parameters"></a>

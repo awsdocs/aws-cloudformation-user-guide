@@ -96,6 +96,8 @@ The name of the `ConnectorDefinition`, such as `MyConnectorDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-connectordefinition--examples"></a>
 
+
+
 ### Connector Definition Snippet<a name="aws-resource-greengrass-connectordefinition--examples--Connector_Definition_Snippet"></a>
 
 The following snippet defines a connector definition resource with an initial version that contains a connector\.

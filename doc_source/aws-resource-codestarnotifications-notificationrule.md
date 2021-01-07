@@ -98,6 +98,8 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ## Examples<a name="aws-resource-codestarnotifications-notificationrule--examples"></a>
 
+
+
 ### Example<a name="aws-resource-codestarnotifications-notificationrule--examples--Example"></a>
 
 The following example creates a notification rule with a name of My Notification Rule for Comments on Commits\. The notification rule is tagged with a key\-value pair indicating what team owns the rule\.

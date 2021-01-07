@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-guardduty-detector--examples"></a>
 
+
+
 ### Declare a Detector Resource<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource"></a>
 
 The following example shows how to declare a GuardDuty `Detector` resource:

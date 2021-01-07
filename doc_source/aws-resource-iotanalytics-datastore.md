@@ -67,6 +67,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ## Examples<a name="aws-resource-iotanalytics-datastore--examples"></a>
 
+
+
 ### Simple Datastore<a name="aws-resource-iotanalytics-datastore--examples--Simple_Datastore"></a>
 
 The following example creates a simple datastore\.

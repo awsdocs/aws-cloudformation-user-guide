@@ -107,7 +107,7 @@ The deployment controller to use for the service\.
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
 The number of instantiations of the specified task definition to place and keep running on your cluster\.  
-This is required if `schedulingStrategy` is `REPLICA` or is not specified\. If `schedulingStrategy` is `DAEMON` then this is not required\.  
+If a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -254,6 +254,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The name of the Amazon ECS service, such as `sample-webapp`\.
 
 ## Examples<a name="aws-resource-ecs-service--examples"></a>
+
+
 
 ### Define a basic service<a name="aws-resource-ecs-service--examples--Define_a_basic_service"></a>
 

@@ -82,6 +82,8 @@ Key\-pair identifier\. For example: `98:0d:1a:a0:19:96:1e:ea:0a:0a:2c:9a:42:19:2
 
 ## Examples<a name="aws-resource-ivs-playbackkeypair--examples"></a>
 
+
+
 ### Playback Key Pair Template Examples<a name="aws-resource-ivs-playbackkeypair--examples--Playback_Key_Pair_Template_Examples"></a>
 
 The following examples create an Amazon IVS playback key pair\.

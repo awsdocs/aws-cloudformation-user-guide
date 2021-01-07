@@ -43,3 +43,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-flow-s3sourceproperties--seealso"></a>
 + [S3SourceProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_S3SourceProperties.html) in the *Amazon AppFlow API Reference*\.
+

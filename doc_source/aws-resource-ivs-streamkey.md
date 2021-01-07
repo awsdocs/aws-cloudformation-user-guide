@@ -74,6 +74,8 @@ The stream\-key value\. For example: `sk_us-west-2_abcdABCDefgh_567890abcdef`
 
 ## Examples<a name="aws-resource-ivs-streamkey--examples"></a>
 
+
+
 ### Channel and Stream Key Template Examples<a name="aws-resource-ivs-streamkey--examples--Channel_and_Stream_Key_Template_Examples"></a>
 
 The following examples create an Amazon IVS channel and stream key\.

@@ -59,7 +59,7 @@ This field is optional\.
 
 `DeliveryS3KeyPrefix`  <a name="cfn-config-organizationconformancepack-deliverys3keyprefix"></a>
 Any folder structure you want to add to an Amazon S3 bucket\.  
-This field if optional\.
+This field is optional\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -103,6 +103,8 @@ Location of file containing the template body\. The uri must point to the confor
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-organizationconformancepack--examples"></a>
+
+
 
 ### Organization Conformance Pack<a name="aws-resource-config-organizationconformancepack--examples--Organization_Conformance_Pack"></a>
 

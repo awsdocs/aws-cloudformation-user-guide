@@ -1,9 +1,14 @@
 # AWS::KMS::Key<a name="aws-resource-kms-key"></a>
 
-The `AWS::KMS::Key` resource specifies a symmetric [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\. You can use symmetric CMKs to encrypt and decrypt small amounts of data, but they are more commonly used to generate symmetric data keys and asymmetric data key pairs\. You can also use symmetric CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration)\. For more information, see [What is AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
+The `AWS::KMS::Key` resource specifies a [symmetric or asymmetric](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) [customer master key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) \(CMK\) in AWS Key Management Service \(AWS KMS\)\.
 
-**Note**  
-AWS KMS does not currently support creating asymmetric CMKs with a CloudFormation template\.
+You can use symmetric CMKs to encrypt and decrypt small amounts of data, but they are more commonly used to generate data keys and data key pairs\. You can also use symmetric CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration)\. For more information, see [What is AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
+
+You can use asymmetric CMKs to encrypt and decrypt data or sign messages and verify signatures\.
+
+**Important**  
+If you change the value of a `Replacement` property, such as `KeyUsage` or `KeySpec`, on an existing CMK, the existing CMK is [scheduled for deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) and a new CMK is created with the specified value\.  
+While scheduled for deletion, the existing CMK becomes unusable\. If you don't [cancel the scheduled deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-scheduling-key-deletion) of the existing CMK outside of CloudFormation, all data encrypted under the existing CMK becomes unrecoverable when the CMK is deleted\.
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 
@@ -18,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-kms-key-description)" : String,
       "[Enabled](#cfn-kms-key-enabled)" : Boolean,
       "[EnableKeyRotation](#cfn-kms-key-enablekeyrotation)" : Boolean,
-      "[KeyPolicy](#cfn-kms-key-keypolicy)" : ,
+      "[KeyPolicy](#cfn-kms-key-keypolicy)" : Json,
+      "[KeySpec](#cfn-kms-key-keyspec)" : String,
       "[KeyUsage](#cfn-kms-key-keyusage)" : String,
       "[PendingWindowInDays](#cfn-kms-key-pendingwindowindays)" : Integer,
       "[Tags](#cfn-kms-key-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -34,7 +40,8 @@ Properties:
   [Description](#cfn-kms-key-description): String
   [Enabled](#cfn-kms-key-enabled): Boolean
   [EnableKeyRotation](#cfn-kms-key-enablekeyrotation): Boolean
-  [KeyPolicy](#cfn-kms-key-keypolicy): 
+  [KeyPolicy](#cfn-kms-key-keypolicy): Json
+  [KeySpec](#cfn-kms-key-keyspec): String
   [KeyUsage](#cfn-kms-key-keyusage): String
   [PendingWindowInDays](#cfn-kms-key-pendingwindowindays): Integer
   [Tags](#cfn-kms-key-tags): 
@@ -77,15 +84,42 @@ If you are unsure of which policy to use, consider the *default key policy*\. Th
 *Minimum*: `1`  
 *Maximum*: `32768`  
 *Required*: Yes  
-*Type*:   
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
-Determines the cryptographic operations for which you can use the CMK\. The default value, `ENCRYPT_DECRYPT`, is the only valid value for symmetric CMKs\. You can't change the `KeyUsage` value after the CMK is created\.  
-*Allowed Values*: ENCRYPT\_DECRYPT  
+`KeySpec`  <a name="cfn-kms-key-keyspec"></a>
+Specifies the type of CMK to create\. The default value, `SYMMETRIC_DEFAULT`, creates a CMK with a 256\-bit symmetric key for encryption and decryption\. For help choosing a key spec for your CMK, see [How to Choose Your CMK Configuration](https://docs.aws.amazon.com/kms/latest/developerguide/symm-asymm-choose.html) in the *AWS Key Management Service Developer Guide*\.  
+The `KeySpec` property \(`CustomerMasterKeySpec` type\) determines whether the CMK contains a symmetric key or an asymmetric key pair\. It also determines the encryption algorithms or signing algorithms that the CMK supports\. You can't change the `KeySpec` after the CMK is created\. To further restrict the algorithms that can be used with the CMK, use a condition key in its key policy or IAM policy\. For more information, see [kms:EncryptionAlgorithm](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-algorithm) or [kms:Signing Algorithm](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-signing-algorithm) in the *AWS Key Management Service Developer Guide*\.  
+If you change the `KeySpec` of an existing CMK, the existing CMK is scheduled for deletion and a new CMK is created with the specified `KeySpec` value\. While the scheduled deletion is pending, you can't use the existing CMK\. Unless you [cancel the scheduled deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-scheduling-key-deletion) of the CMK outside of CloudFormation, all data encrypted under the existing CMK becomes unrecoverable when the CMK is deleted\.
+[AWS services that are integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration) use symmetric CMKs to protect your data\. These services do not support asymmetric CMKs\. For help determining whether a CMK is symmetric or asymmetric, see [Identifying Symmetric and Asymmetric CMKs](https://docs.aws.amazon.com/kms/latest/developerguide/find-symm-asymm.html) in the *AWS Key Management Service Developer Guide*\.
+AWS KMS supports the following key specs for CMKs:  
++ Symmetric key \(default\)
+  + `SYMMETRIC_DEFAULT` \(AES\-256\-GCM\)
++ Asymmetric RSA key pairs
+  + `RSA_2048`
+  + `RSA_3072`
+  + `RSA_4096`
++ Asymmetric NIST\-recommended elliptic curve key pairs
+  + `ECC_NIST_P256` \(secp256r1\)
+  + `ECC_NIST_P384` \(secp384r1\)
+  + `ECC_NIST_P521` \(secp521r1\)
++ Other asymmetric elliptic curve key pairs
+  + `ECC_SECG_P256K1` \(secp256k1\), commonly used for cryptocurrencies\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
+Determines the [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the CMK\. The default value is `ENCRYPT_DECRYPT`\. This property is required only for asymmetric CMKs\. You can't change the `KeyUsage` value after the CMK is created\.  
+If you change the `KeyUsage` of an existing CMK, the existing CMK is scheduled for deletion and a new CMK is created with the specified `KeyUsage` value\. While the scheduled deletion is pending, you can't use the existing CMK\. Unless you [cancel the scheduled deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-scheduling-key-deletion) of the CMK outside of CloudFormation, all data encrypted under the existing CMK becomes unrecoverable when the CMK is deleted\.
+Select only one valid value\.  
++ For symmetric CMKs, omit the property or specify `ENCRYPT_DECRYPT`\.
++ For asymmetric CMKs with RSA key material, specify `ENCRYPT_DECRYPT` or `SIGN_VERIFY`\.
++ For asymmetric CMKs with ECC key material, specify `SIGN_VERIFY`\.
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ENCRYPT_DECRYPT | SIGN_VERIFY`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
 Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  
@@ -100,7 +134,8 @@ For information about the `PendingDeletion` key state, see [Key state: Effect on
 
 `Tags`  <a name="cfn-kms-key-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+Tagging or untagging a CMK can allow or deny permission to the CMK\. For details, see [Using ABAC in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
+For information about tags in AWS KMS, see [Tagging keys](https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html) in the *AWS Key Management Service Developer Guide*\. For information about tags in CloudFormation, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -327,3 +362,4 @@ Parameters:
 +  [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
 +  [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) in the *AWS Key Management Service API Reference*\.
 +  [Customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\.
+

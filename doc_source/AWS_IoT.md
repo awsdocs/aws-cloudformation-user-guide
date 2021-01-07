@@ -10,3 +10,4 @@
 + [AWS::IoT::Thing](aws-resource-iot-thing.md)
 + [AWS::IoT::ThingPrincipalAttachment](aws-resource-iot-thingprincipalattachment.md)
 + [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)
++ [AWS::IoT::TopicRuleDestination](aws-resource-iot-topicruledestination.md)

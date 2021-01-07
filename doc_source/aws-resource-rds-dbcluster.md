@@ -244,7 +244,7 @@ To list all of the available engine versions for `aurora-postgresql`, use the fo
 `aws rds describe-db-engine-versions --engine aurora-postgresql --query "DBEngineVersions[].EngineVersion"`  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-dbcluster-globalclusteridentifier"></a>
  If you are configuring an Aurora global database cluster and want your Aurora DB cluster to be a member in the global database cluster, specify the global cluster ID of the global database cluster\.   
@@ -334,6 +334,20 @@ The `ScalingConfiguration` property type specifies the scaling configuration of 
 The identifier for the DB snapshot or DB cluster snapshot to restore from\.  
 You can use either the name or the Amazon Resource Name \(ARN\) to specify a DB cluster snapshot\. However, you can use only the ARN to specify a DB snapshot\.  
 After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same `SnapshotIdentifier` property for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the snapshot again, and the data in the database is not changed\. However, if you don't specify the `SnapshotIdentifier` property, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB cluster is restored from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted\.  
+If you specify the `SnapshotIdentifier` property to restore a DB cluster \(as opposed to specifying it for DB cluster updates\), then don't specify the following properties:  
++ `BackupRetentionPeriod`
++ `EnableHttpEndpoint`
++ `GlobalClusterIdentifier`
++ `MasterUsername`
++ `MasterUserPassword`
++ `PreferredBackupWindow`
++ `PreferredMaintenanceWindow`
++ `ReplicationSourceIdentifier`
++ `RestoreType`
++ `SourceDBClusterIdentifier`
++ `SourceRegion`
++ `StorageEncrypted`
++ `UseLatestRestorableTime`
 Constraints:  
 + Must match the identifier of an existing Snapshot\.
 *Required*: No  

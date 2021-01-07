@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IdentityProviderType](#cfn-transfer-server-identityprovidertype)" : String,
       "[LoggingRole](#cfn-transfer-server-loggingrole)" : String,
       "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
+      "[SecurityPolicyName](#cfn-transfer-server-securitypolicyname)" : String,
       "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -39,6 +40,7 @@ Properties:
   [LoggingRole](#cfn-transfer-server-loggingrole): String
   [Protocols](#cfn-transfer-server-protocols): 
     - Protocol
+  [SecurityPolicyName](#cfn-transfer-server-securitypolicyname): String
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -105,6 +107,14 @@ Specifies the file transfer protocol or protocols over which your file transfer 
 *Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SecurityPolicyName`  <a name="cfn-transfer-server-securitypolicyname"></a>
+Specifies the name of the security policy that is attached to the server\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `100`  
+*Pattern*: `TransferSecurityPolicy-.+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-transfer-server-tags"></a>
 Key\-value pairs that can be used to group and search for servers\.  
 *Required*: No  
@@ -137,6 +147,8 @@ The service\-assigned ID of the server that is created\.
 An example `ServerId` is `s-01234567890abcdef`\.
 
 ## Examples<a name="aws-resource-transfer-server--examples"></a>
+
+
 
 ### Create a server with VPC hosted endpoint type<a name="aws-resource-transfer-server--examples--Create_a_server_with_VPC_hosted_endpoint_type"></a>
 

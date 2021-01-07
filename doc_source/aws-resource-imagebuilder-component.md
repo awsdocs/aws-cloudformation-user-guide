@@ -144,6 +144,8 @@ Returns the component type\. For example, `BUILD` or `TEST`\.
 
 ## Examples<a name="aws-resource-imagebuilder-component--examples"></a>
 
+
+
 ### Create a component using Data<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_"></a>
 
 The following example shows the schema for the Component resource document in both YAML and JSON format\. This example includes details for the `Data` field \. You can use either the `Data` or `Uri` fields to reference the component document\.

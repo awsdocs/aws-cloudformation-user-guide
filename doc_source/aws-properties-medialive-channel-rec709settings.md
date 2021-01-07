@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Rec709Settings<a name="aws-properties-medialive-channel-rec709settings"></a>
 
-Configures the output video with the Rec 709 color space\. This element belongs to H264ColorSpaceSettings and H265ColorSpaceSettings\.
+Rec709 Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-rec709settings-syntax"></a>
 

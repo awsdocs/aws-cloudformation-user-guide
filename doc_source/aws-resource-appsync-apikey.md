@@ -81,6 +81,8 @@ The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-eas
 
 ## Examples<a name="aws-resource-appsync-apikey--examples"></a>
 
+
+
 ### API Key Creation Example<a name="aws-resource-appsync-apikey--examples--API_Key_Creation_Example"></a>
 
 The following example creates an API key and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\. 
@@ -143,3 +145,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-apikey--seealso"></a>
 +  [CreateApiKey](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateApiKey.html) operation in the *AWS AppSync API Reference*\.
+

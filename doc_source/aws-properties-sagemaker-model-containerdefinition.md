@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ImageConfig](#cfn-sagemaker-model-containerdefinition-imageconfig)" : ImageConfig,
   "[Mode](#cfn-sagemaker-model-containerdefinition-mode)" : String,
   "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String,
-  "[ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename)" : String
+  "[ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename)" : String,
+  "[MultiModelConfig](#cfn-sagemaker-model-containerdefinition-multimodelconfig)" : MultiModelConfig
 }
 ```
 
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Mode](#cfn-sagemaker-model-containerdefinition-mode): String
   [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
   [ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename): String
+  [MultiModelConfig](#cfn-sagemaker-model-containerdefinition-multimodelconfig): 
+    MultiModelConfig
 ```
 
 ## Properties<a name="aws-properties-sagemaker-model-containerdefinition-properties"></a>
@@ -41,7 +44,7 @@ When a `ContainerDefinition` is part of an inference pipeline, the value of the 
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Environment`  <a name="cfn-sagemaker-model-containerdefinition-environment"></a>
@@ -89,4 +92,10 @@ The name or Amazon Resource Name \(ARN\) of the model package to use to create t
 *Minimum*: `1`  
 *Maximum*: `176`  
 *Pattern*: `(arn:aws[a-z\-]*:sagemaker:[a-z0-9\-]*:[0-9]{12}:[a-z\-]*\/)?([a-zA-Z0-9]([a-zA-Z0-9-]){0,62})(?<!-)(\/[0-9]{1,5})?$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MultiModelConfig`  <a name="cfn-sagemaker-model-containerdefinition-multimodelconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [MultiModelConfig](aws-properties-sagemaker-model-containerdefinition-multimodelconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

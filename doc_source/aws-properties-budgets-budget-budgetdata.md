@@ -113,3 +113,4 @@ The length of time until a budget resets the actual and forecasted spend\. `DAIL
 
 ## See also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
 +  [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_budget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

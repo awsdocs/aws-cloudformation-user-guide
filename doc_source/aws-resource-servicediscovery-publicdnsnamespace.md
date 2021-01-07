@@ -77,6 +77,8 @@ The ID of the public namespace\.
 
 ## Examples<a name="aws-resource-servicediscovery-publicdnsnamespace--examples"></a>
 
+
+
 ### Create a public DNS namespace<a name="aws-resource-servicediscovery-publicdnsnamespace--examples--Create_a_public_DNS_namespace"></a>
 
 The following example creates a public DNS namespace named `example.com`\.
@@ -104,3 +106,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-publicdnsnamespace--seealso"></a>
 +  [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html) in the *AWS Cloud Map API Reference* 
+

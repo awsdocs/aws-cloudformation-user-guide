@@ -24,11 +24,11 @@ Note that `InstanceTypeParameter` has a default value of `t2.micro`\. This is th
 ### YAML<a name="parameters-section-structure-example.yaml"></a>
 
 ```
-Parameters: 
-  InstanceTypeParameter: 
+Parameters:
+  InstanceTypeParameter:
     Type: String
     Default: t2.micro
-    AllowedValues: 
+    AllowedValues:
       - t2.micro
       - m1.small
       - m1.large
@@ -96,7 +96,7 @@ Parameters:
 ## Properties<a name="parameters-section-structure-properties"></a>
 
 `AllowedPattern`  
-A regular expression that represents the patterns to allow for `String` types\.  
+A regular expression that represents the patterns to allow for `String` types\. The pattern must match the entire parameter value provided\.  
 *Required*: No
 
 `AllowedValues`  
@@ -467,6 +467,8 @@ DbSubnet3:
 ```
 
 ### SSM parameter types<a name="parameters-section-ssm-examples"></a>
+
+
 
 #### AWS::SSM::Parameter::Value<String> type<a name="parameters-section-ssm-examples-example1"></a>
 

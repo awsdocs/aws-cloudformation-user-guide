@@ -1,6 +1,8 @@
 # AWS::GameLift::GameServerGroup InstanceDefinition<a name="aws-properties-gamelift-gameservergroup-instancedefinition"></a>
 
-An allowed instance type for your game server group\. GameLift FleetIQ periodically evaluates each defined instance type for viability\. It then updates the Auto Scaling group with the list of viable instance types\.
+ **This data type is used with the Amazon GameLift FleetIQ and game server groups\.** 
+
+An allowed instance type for a `GameServerGroup`\. All game server groups must have at least two instance types defined for it\. GameLift FleetIQ periodically evaluates each defined instance type for viability\. It then updates the Auto Scaling group with the list of viable instance types\.
 
 ## Syntax<a name="aws-properties-gamelift-gameservergroup-instancedefinition-syntax"></a>
 
@@ -39,6 +41,3 @@ Instance weighting that indicates how much this instance type contributes to the
 *Maximum*: `3`  
 *Pattern*: `^[\u0031-\u0039][\u0030-\u0039]{0,2}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## See also<a name="aws-properties-gamelift-gameservergroup-instancedefinition--seealso"></a>
-+  [GameLift FleetIQ Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/gsg-intro.html) 

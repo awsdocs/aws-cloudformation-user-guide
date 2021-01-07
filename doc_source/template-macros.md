@@ -96,6 +96,11 @@ AWS CloudFormation expects the underlying function to return a response in the f
   The processed template content must be valid JSON, and its inclusion in the processed template must result in a valid template\.
 
   If your function doesn't actually change the template content that AWS CloudFormation passes to it, but you still need to include that content in the processed template, your function needs to return that template content to AWS CloudFormation in its response\.
++ **errorMessage**
+
+  The error message that explains why the transform failed\. CloudFormation displays this error message in the **Events** pane of the **Stack details** page for your stack\. 
+
+  For example, "Error creating change set: Transform *AWS account number*::*macro name* failed with: *error message string*"\.
 
 For information about additional considerations when creating macros, see [Considerations when creating AWS CloudFormation macro definitions](#template-macros-considerations)\.
 
@@ -130,6 +135,7 @@ When creating macro definitions, keep the following in mind:
 + Any processed template snippets must be valid JSON\.
 + Any processed template snippets must pass validation checks for a create stack or update stack operation\.
 + AWS CloudFormation resolves macros first, and then processes the template\. The resulting template must be valid JSON and must not exceed the template size limit\.
++ Because of the order in which CloudFormation processes elements in a template, a macro cannot include modules in the processed template content it returns to CloudFormation\. For more information on modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\.
 + When using the update rollback feature, AWS CloudFormation uses a copy of the original template\. It rolls back to the original template even if the included snippet was changed\.
 + Including macros within macros does not work because we do not process macros iteratively\.
 + The `Fn::ImportValue` intrinsic function isn't currently supported in macros\.

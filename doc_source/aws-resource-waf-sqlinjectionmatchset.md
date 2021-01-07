@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-waf-sqlinjectionmatchset--examples"></a>
 
+
+
 ### Find SQL Injections<a name="aws-resource-waf-sqlinjectionmatchset--examples--Find_SQL_Injections"></a>
 
 The following example looks for snippets of SQL code in the query string of an HTTP request\.

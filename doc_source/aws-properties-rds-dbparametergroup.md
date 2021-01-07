@@ -86,6 +86,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-rds-dbparametergroup--examples"></a>
 
+
+
 ### <a name="aws-properties-rds-dbparametergroup--examples--"></a>
 
 The following example creates a parameter group for a MySQL DB instance and sets the `sql_mode`, `max_allowed_packet`, and `innodb_buffer_pool_size` parameters\. 

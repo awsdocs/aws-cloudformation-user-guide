@@ -100,3 +100,4 @@ If the distribution uses the CloudFront domain name such as `d111111abcdef8.clou
 
 ## See also<a name="aws-properties-cloudfront-distribution-viewercertificate--seealso"></a>
 +  [ViewerCertificate](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ViewerCertificate.html) in the *Amazon CloudFront API Reference* 
+

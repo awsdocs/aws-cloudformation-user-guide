@@ -63,10 +63,10 @@ The name of the application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuntimeEnvironment`  <a name="cfn-kinesisanalyticsv2-application-runtimeenvironment"></a>
-The runtime environment for the application \(`SQL-1.0`, `FLINK-1_6`, or `FLINK-1_8`\)\.  
+The runtime environment for the application \(`SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, or `FLINK-1_11`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -85,6 +85,8 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-application--examples"></a>
+
+
 
 ### Create an application<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application"></a>
 
@@ -429,3 +431,4 @@ Outputs:
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
 +  [CreateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplication.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

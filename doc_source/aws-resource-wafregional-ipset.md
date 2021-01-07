@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-ipset--examples"></a>
 
+
+
 ### Define IP Addresses<a name="aws-resource-wafregional-ipset--examples--Define_IP_Addresses"></a>
 
 The following example defines a set of IP addresses for a web access control list \(ACL\) rule\.

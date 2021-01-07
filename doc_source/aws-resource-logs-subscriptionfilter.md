@@ -78,6 +78,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-logs-subscriptionfilter--examples"></a>
 
+
+
 ### Create a Subscription Filter<a name="aws-resource-logs-subscriptionfilter--examples--Create_a_Subscription_Filter"></a>
 
 The following example sends log events that are associated with the `Root` user to a Kinesis data stream\.

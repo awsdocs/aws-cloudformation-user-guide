@@ -122,6 +122,8 @@ When the value of `RuleType` is `FORWARD`, the IP addresses that the outbound en
 
 ## Examples<a name="aws-resource-route53resolver-resolverrule--examples"></a>
 
+
+
 ### Create Resolver rule<a name="aws-resource-route53resolver-resolverrule--examples--Create_Resolver_rule"></a>
 
 The following example creates an Amazon Route 53 outbound resolver rule\.
@@ -180,3 +182,4 @@ Properties :
 
 ## See also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
 +  [ResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRule.html) in the *Amazon Route 53 API Reference* 
+

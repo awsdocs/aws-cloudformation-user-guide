@@ -84,6 +84,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-rds-eventsubscription--examples"></a>
 
+
+
 ### <a name="aws-resource-rds-eventsubscription--examples--"></a>
 
 The following example creates an event subscription for an existing database instance `db-instance-1` and a database with the logical ID `myDBInstance`, which is declared elsewhere in the same template\. 

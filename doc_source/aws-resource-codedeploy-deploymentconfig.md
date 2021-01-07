@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-codedeploy-deploymentconfig--examples"></a>
 
+
+
 ### Specifying minimum healthy hosts<a name="aws-resource-codedeploy-deploymentconfig--examples--Specifying_minimum_healthy_hosts"></a>
 
 The following example requires at least 75% of the fleet to be healthy\. For example, if you had a fleet of four instances, the deployment proceeds one instance at a time\.

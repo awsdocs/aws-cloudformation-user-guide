@@ -57,3 +57,4 @@ Rules that define when a redirect is applied and the redirect behavior\.
 
 ## See also<a name="aws-properties-s3-websiteconfiguration--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

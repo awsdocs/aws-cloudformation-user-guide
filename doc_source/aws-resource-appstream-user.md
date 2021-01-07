@@ -78,3 +78,4 @@ Users' email addresses are case\-sensitive\. During login, if they specify an em
 
 ## See also<a name="aws-resource-appstream-user--seealso"></a>
 +  [CreateUser](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateUser.html) in the *Amazon AppStream 2\.0 API Reference* 
+

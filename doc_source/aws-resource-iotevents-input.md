@@ -78,6 +78,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-iotevents-input--examples"></a>
 
+
+
 ### Input<a name="aws-resource-iotevents-input--examples--Input"></a>
 
 The following example creates an input\.

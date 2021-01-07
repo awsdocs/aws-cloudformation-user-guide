@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Description](#cfn-glue-database-databaseinput-description)" : String,
   "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
   "[Name](#cfn-glue-database-databaseinput-name)" : String,
-  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json
+  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json,
+  "[TargetDatabase](#cfn-glue-database-databaseinput-targetdatabase)" : DatabaseIdentifier
 }
 ```
 
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [LocationUri](#cfn-glue-database-databaseinput-locationuri): String
   [Name](#cfn-glue-database-databaseinput-name): String
   [Parameters](#cfn-glue-database-databaseinput-parameters): Json
+  [TargetDatabase](#cfn-glue-database-databaseinput-targetdatabase): 
+    DatabaseIdentifier
 ```
 
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>
@@ -50,4 +53,10 @@ The name of the database\. For Hive compatibility, this is folded to lowercase w
 These key\-value pairs define parameters and properties of the database\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetDatabase`  <a name="cfn-glue-database-databaseinput-targetdatabase"></a>
+A `DatabaseIdentifier` structure that describes a target database for resource linking\.  
+*Required*: No  
+*Type*: [DatabaseIdentifier](aws-properties-glue-database-databaseidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

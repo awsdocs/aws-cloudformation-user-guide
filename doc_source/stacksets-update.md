@@ -59,6 +59,8 @@ In the example command shown here, we are updating the stack set by using `--par
 1. Run the following command\. For *stack set name*, specify the stack set name `my-awsconfig-stackset`\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
+**Note**  
+The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
    \[Self\-managed permissions\] Provide the account IDs you want your update to target\.
 

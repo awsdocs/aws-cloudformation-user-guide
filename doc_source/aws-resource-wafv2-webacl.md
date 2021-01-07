@@ -122,6 +122,8 @@ The ID of the web ACL\.
 
 ## Examples<a name="aws-resource-wafv2-webacl--examples"></a>
 
+
+
 ### Create a web ACL<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL"></a>
 
 The following shows an example web ACL specification\. 

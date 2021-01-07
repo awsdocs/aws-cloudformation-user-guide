@@ -93,6 +93,8 @@ The Amazon resource name \(ARN\) of the Kinesis stream, such as `arn:aws:kinesis
 
 ## Examples<a name="aws-resource-kinesis-stream--examples"></a>
 
+
+
 ### Create a Stream<a name="aws-resource-kinesis-stream--examples--Create_a_Stream"></a>
 
 The following example creates a `Stream` resource that uses three shards, sets a seven\-day retention period, and specifies the KMS key for server\-side encryption\.

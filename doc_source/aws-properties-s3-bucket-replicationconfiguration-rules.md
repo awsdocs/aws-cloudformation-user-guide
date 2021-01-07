@@ -41,8 +41,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-rules-properties"></a>
 
 `DeleteMarkerReplication`  <a name="cfn-s3-bucket-replicationrule-deletemarkerreplication"></a>
-Specifies whether Amazon S3 replicates delete markers\. If you specify a `Filter` in your replication configuration, you must also include a `DeleteMarkerReplication` element\. If your `Filter` includes a `Tag` element, the `DeleteMarkerReplication` `Status` must be set to Disabled, because Amazon S3 does not support replicating delete markers for tag\-based rules\. For an example configuration, see [Basic Rule Configuration](https://docs.aws.amazon.com/https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-config-min-rule-config)\.   
-For more information about delete marker replication, see [Basic Rule Configuration](https://docs.aws.amazon.com/https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html)\.   
+Specifies whether Amazon S3 replicates delete markers\. If you specify a `Filter` in your replication configuration, you must also include a `DeleteMarkerReplication` element\. If your `Filter` includes a `Tag` element, the `DeleteMarkerReplication` `Status` must be set to Disabled, because Amazon S3 does not support replicating delete markers for tag\-based rules\. For an example configuration, see [Basic Rule Configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-config-min-rule-config)\.   
+For more information about delete marker replication, see [Basic Rule Configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/delete-marker-replication.html)\.   
 If you are using an earlier version of the replication configuration, Amazon S3 handles replication of delete markers differently\. For more information, see [Backward Compatibility](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-add-config.html#replication-backward-compat-considerations)\.
 *Required*: No  
 *Type*: [DeleteMarkerReplication](aws-properties-s3-bucket-deletemarkerreplication.md)  
@@ -73,16 +73,14 @@ An object key name prefix that identifies the object or objects to which the rul
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-s3-bucket-replicationrule-priority"></a>
-The priority associated with the rule\. If you specify multiple rules in a replication configuration, Amazon S3 prioritizes the rules to prevent conflicts when filtering\. If two or more rules identify the same object based on a specified filter, the rule with higher priority takes precedence\. For example:  
-+ Same object quality prefix\-based filter criteria if prefixes you specified in multiple rules overlap 
-+ Same object qualify tag\-based filter criteria specified in multiple rules
+The priority indicates which rule has precedence whenever two or more replication rules conflict\. Amazon S3 will attempt to replicate objects according to all replication rules\. However, if there are two or more rules with the same destination bucket, then objects will be replicated according to the rule with the highest priority\. The higher the number, the higher the priority\.   
 For more information, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceSelectionCriteria`  <a name="cfn-s3-bucket-replicationrule-sourceselectioncriteria"></a>
-A container that describes additional filters for identifying the source objects that you want to replicate\. You can choose to enable or disable the replication of these objects\. Currently, Amazon S3 supports only the filter that you can specify for objects created with server\-side encryption using a customer master key \(CMK\) stored in AWS Key Management Service \(SSE\-KMS\)\.  
+A container that describes additional filters for identifying the source objects that you want to replicate\. You can choose to enable or disable the replication of these objects\.  
 *Required*: No  
 *Type*: [SourceSelectionCriteria](aws-properties-s3-bucket-sourceselectioncriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

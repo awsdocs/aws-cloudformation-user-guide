@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-guardduty-master--examples"></a>
 
+
+
 ### Declare a Master Resource<a name="aws-resource-guardduty-master--examples--Declare_a_Master_Resource"></a>
 
 To declare a GuardDuty `Master` resource:

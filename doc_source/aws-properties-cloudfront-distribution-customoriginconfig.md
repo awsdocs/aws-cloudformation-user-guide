@@ -78,3 +78,4 @@ For more information, see [Minimum Origin SSL Protocol](https://docs.aws.amazon.
 
 ## See also<a name="aws-properties-cloudfront-distribution-customoriginconfig--seealso"></a>
 +  [CustomOriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomOriginConfig.html) in the *Amazon CloudFront API Reference* 
+

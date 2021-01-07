@@ -118,7 +118,11 @@ The port number on which the database accepts connections, such as `27017`\.
 
 ## Examples<a name="aws-resource-docdb-dbinstance--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbinstance--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbinstance--examples----json"></a>
 
@@ -160,3 +164,4 @@ Properties:
 +  [DeleteDBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBInstance.html) 
 +  [DescribeDBInstances](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBInstances.html) 
 +  [ModifyDBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBInstance.html) 
+

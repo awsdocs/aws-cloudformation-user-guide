@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AuthenticationOptions](#cfn-ec2-clientvpnendpoint-authenticationoptions)" : [ ClientAuthenticationRequest, ... ],
       "[ClientCidrBlock](#cfn-ec2-clientvpnendpoint-clientcidrblock)" : String,
+      "[ClientConnectOptions](#cfn-ec2-clientvpnendpoint-clientconnectoptions)" : ClientConnectOptions,
       "[ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions)" : ConnectionLogOptions,
       "[Description](#cfn-ec2-clientvpnendpoint-description)" : String,
       "[DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers)" : [ String, ... ],
@@ -37,6 +38,8 @@ Properties:
   [AuthenticationOptions](#cfn-ec2-clientvpnendpoint-authenticationoptions): 
     - ClientAuthenticationRequest
   [ClientCidrBlock](#cfn-ec2-clientvpnendpoint-clientcidrblock): String
+  [ClientConnectOptions](#cfn-ec2-clientvpnendpoint-clientconnectoptions): 
+    ClientConnectOptions
   [ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions): 
     ConnectionLogOptions
   [Description](#cfn-ec2-clientvpnendpoint-description): String
@@ -67,6 +70,12 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ClientConnectOptions`  <a name="cfn-ec2-clientvpnendpoint-clientconnectoptions"></a>
+The options for managing connection authorization for new client connections\.  
+*Required*: No  
+*Type*: [ClientConnectOptions](aws-properties-ec2-clientvpnendpoint-clientconnectoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionLogOptions`  <a name="cfn-ec2-clientvpnendpoint-connectionlogoptions"></a>
 Information about the client connection logging options\.  
@@ -228,3 +237,4 @@ myClientVpnEndpoint:
 ## See also<a name="aws-resource-ec2-clientvpnendpoint--seealso"></a>
 + [ Getting Started with Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-getting-started.html) in the *AWS Client VPN Administrator Guide*
 + [Client VPN Endpoints](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/cvpn-working-endpoints.html) in the *AWS Client VPN Administrator Guide*
+

@@ -90,6 +90,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples"></a>
 
+
+
 ### Creating a new risk configuration attachment for a user pool<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples--Creating_a_new_risk_configuration_attachment_for_a_user_pool"></a>
 
 The following example sets risk configurations in the referenced user pool and client\.

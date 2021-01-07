@@ -96,6 +96,8 @@ The name of the `FunctionDefinition`, such as `MyFunctionDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-functiondefinition--examples"></a>
 
+
+
 ### Function Definition Snippet<a name="aws-resource-greengrass-functiondefinition--examples--Function_Definition_Snippet"></a>
 
 The following snippet defines a function definition resource with an initial version that contains a function\. In this example, the Lambda function is created in another stack and is referenced using the `ImportValue` function\.

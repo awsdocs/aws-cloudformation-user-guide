@@ -124,6 +124,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-userpoolidentityprovider--examples"></a>
 
+
+
 ### Creating a new Login with Amazon identity provider<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Login_with_Amazon_identity_provider"></a>
 
 The following example creates a Login with Amazon identity provider in the referenced user pool\.

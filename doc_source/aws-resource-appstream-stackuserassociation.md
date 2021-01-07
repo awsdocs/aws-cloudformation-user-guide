@@ -65,3 +65,4 @@ Users' email addresses are case\-sensitive\.
 
 ## See also<a name="aws-resource-appstream-stackuserassociation--seealso"></a>
 +  [BatchAssociateUserStack](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_BatchAssociateUserStack.html) in the *Amazon AppStream 2\.0 API Reference* 
+

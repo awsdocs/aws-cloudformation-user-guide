@@ -74,3 +74,4 @@ The state of the association\.
 ## See also<a name="aws-resource-ec2-localgatewayroutetablevpcassociation--seealso"></a>
 + [Local Gateways](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
 + [CreateLocalGatewayRouteTableVpcAssociation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLocalGatewayRouteTableVpcAssociation.html) in the *Amazon EC2 API Reference*
+

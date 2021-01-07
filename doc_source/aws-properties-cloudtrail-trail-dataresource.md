@@ -3,7 +3,8 @@
 The Amazon S3 buckets or AWS Lambda functions that you specify in your event selectors for your trail to log data events\. Data events provide information about the resource operations performed on or within a resource itself\. These are also known as data plane operations\. You can specify up to 250 data resources for a trail\.
 
 **Note**  
-The total number of allowed data resources is 250\. This number can be distributed between 1 and 5 event selectors, but the total cannot exceed 250 across all selectors\.
+The total number of allowed data resources is 250\. This number can be distributed between 1 and 5 event selectors, but the total cannot exceed 250 across all selectors\.  
+If you are using advanced event selectors, the maximum total number of values for all conditions, across all advanced event selectors for the trail, is 500\.
 
 The following example demonstrates how logging works when you configure logging of all data events for an S3 bucket named `bucket-1`\. In this example, the CloudTrail user specified an empty prefix, and the option to log both `Read` and `Write` data events\.
 
@@ -48,6 +49,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Type`  <a name="cfn-cloudtrail-trail-dataresource-type"></a>
 The resource type in which you want to log data events\. You can specify `AWS::S3::Object` or `AWS::Lambda::Function` resources\.  
+The `AWS::S3Outposts::Object` resource type is not valid in basic event selectors\. To log data events on this resource type, use advanced event selectors\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

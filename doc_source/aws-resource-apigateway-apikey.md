@@ -102,6 +102,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-apikey--examples"></a>
 
+
+
 ### API Key<a name="aws-resource-apigateway-apikey--examples--API_Key"></a>
 
 The following example creates an API key and associates it with the `Test` stage of the `TestAPIDeployment` deployment\. To ensure that AWS CloudFormation creates the stage and deployment \(which are declared elsewhere in the same template\) before the API key, the example adds an explicit dependency on the deployment and stage\. Without this dependency, AWS CloudFormation might create the API key first, which would cause the association to fail because the deployment and stage wouldn't exist\.
@@ -209,3 +211,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-apikey--seealso"></a>
 + [apikey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) in the *Amazon API Gateway REST API Reference*
+

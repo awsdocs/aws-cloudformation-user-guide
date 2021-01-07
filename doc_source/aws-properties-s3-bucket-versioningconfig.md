@@ -31,3 +31,4 @@ The versioning state of the bucket\.
 
 ## See also<a name="aws-properties-s3-bucket-versioningconfig--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

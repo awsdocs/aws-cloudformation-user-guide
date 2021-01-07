@@ -219,6 +219,8 @@ A value that can be used for cross\-account validation\.
 
 ## Examples<a name="aws-resource-dms-endpoint--examples"></a>
 
+
+
 ### <a name="aws-resource-dms-endpoint--examples--"></a>
 
 #### JSON<a name="aws-resource-dms-endpoint--examples----json"></a>
@@ -270,3 +272,4 @@ Resources:
 ## See also<a name="aws-resource-dms-endpoint--seealso"></a>
 +  [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

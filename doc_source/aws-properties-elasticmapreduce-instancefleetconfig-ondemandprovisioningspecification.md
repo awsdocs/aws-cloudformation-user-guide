@@ -1,9 +1,9 @@
 # AWS::EMR::InstanceFleetConfig OnDemandProvisioningSpecification<a name="aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification"></a>
 
- The launch specification for On\-Demand instances in the instance fleet, which determines the allocation strategy\. 
+ The launch specification for On\-Demand Instances in the instance fleet, which determines the allocation strategy\. 
 
 **Note**  
-The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\. On\-Demand instances allocation strategy is available in Amazon EMR version 5\.12\.1 and later\.
+The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\. On\-Demand Instances allocation strategy is available in Amazon EMR version 5\.12\.1 and later\.
 
 ## Syntax<a name="aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification-properties"></a>
 
 `AllocationStrategy`  <a name="cfn-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy"></a>
- Specifies the strategy to use in launching On\-Demand instance fleets\. Currently, the only option is lowest\-price \(the default\), which launches the lowest price first\.   
+ Specifies the strategy to use in launching On\-Demand Instance fleets\. Currently, the only option is lowest\-price \(the default\), which launches the lowest price first\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `lowest-price`  

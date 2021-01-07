@@ -96,6 +96,8 @@ The name of the device definition\.
 
 ## Examples<a name="aws-resource-greengrass-devicedefinition--examples"></a>
 
+
+
 ### Device Definition Snippet<a name="aws-resource-greengrass-devicedefinition--examples--Device_Definition_Snippet"></a>
 
 The following snippet defines a device definition resource with an initial version that contains a device\. This example points to a manually generated device certificate\.

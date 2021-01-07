@@ -86,7 +86,11 @@ Example return value for a wait condition with 2 signals:
 
 ## Examples<a name="aws-properties-waitcondition--examples"></a>
 
+
+
 ### WaitCondition that waits for the desired number of instances in a web server group<a name="aws-properties-waitcondition--examples--WaitCondition_that_waits_for_the_desired_number_of_instances_in_a_web_server_group"></a>
+
+
 
 #### JSON<a name="aws-properties-waitcondition--examples--WaitCondition_that_waits_for_the_desired_number_of_instances_in_a_web_server_group--json"></a>
 
@@ -151,3 +155,4 @@ WaitCondition:
 ## See also<a name="aws-properties-waitcondition--seealso"></a>
 +  [Creating wait conditions in a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html) 
 +  [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) 
+

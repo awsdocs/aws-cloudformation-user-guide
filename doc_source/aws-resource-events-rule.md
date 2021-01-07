@@ -54,7 +54,7 @@ The description of the rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventBusName`  <a name="cfn-events-rule-eventbusname"></a>
-The event bus to associate with this rule\. If you omit this, the default event bus is used\.  
+The event bus name or ARN to associate with this rule\. If you omit this, the default event bus is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -129,6 +129,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example`\.
 
 ## Examples<a name="aws-resource-events-rule--examples"></a>
+
+
 
 ### Create a rule that includes a dead\-letter queue for a target<a name="aws-resource-events-rule--examples--Create_a_rule_that_includes_a_dead-letter_queue_for_a_target"></a>
 

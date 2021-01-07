@@ -152,3 +152,4 @@ If you specified `HTTP` or `AWS` for the `Type` property, you must specify this 
 
 ## See also<a name="aws-properties-apitgateway-method-integration--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*
+

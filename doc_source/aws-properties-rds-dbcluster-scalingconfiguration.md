@@ -63,6 +63,8 @@ The time, in seconds, before an Aurora DB cluster in `serverless` mode is paused
 
 ## Examples<a name="aws-properties-rds-dbcluster-scalingconfiguration--examples"></a>
 
+
+
 ### <a name="aws-properties-rds-dbcluster-scalingconfiguration--examples--"></a>
 
 The following specifies a scaling configuration\.

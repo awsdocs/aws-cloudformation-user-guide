@@ -2,6 +2,8 @@
 
  Describes a SQL\-based Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\. 
 
+
+
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -69,3 +71,4 @@ The name of the in\-application stream\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>
 +  [Output](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Output.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

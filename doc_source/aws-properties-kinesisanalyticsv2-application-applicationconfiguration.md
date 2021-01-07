@@ -67,3 +67,4 @@ The creation and update parameters for a SQL\-based Kinesis Data Analytics appli
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-applicationconfiguration--seealso"></a>
 +  [ApplicationConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ApplicationConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

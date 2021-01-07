@@ -87,7 +87,7 @@ To be able to tag a topic on creation, you must have the `sns:CreateTopic` and `
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicName`  <a name="cfn-sns-topic-topicname"></a>
-The name of the topic you want to create\. Topic names must include only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 256 characters long\.  
+The name of the topic you want to create\. Topic names must include only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 256 characters long\. FIFO topic names must end with `.fifo`\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the topic name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you can't perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
@@ -114,6 +114,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the name of an Amazon SNS topic\.
 
 ## Examples<a name="aws-properties-sns-topic--examples"></a>
+
+
 
 ### An Amazon SNS topic with two Amazon SQS queue subscriptions<a name="aws-properties-sns-topic--examples--An_Amazon_SNS_topic_with_two_Amazon_SQS_queue_subscriptions"></a>
 

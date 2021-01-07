@@ -95,6 +95,8 @@ The following legacy instance types are available, but their use is discouraged:
 
 ## Examples<a name="aws-resource-appsync-apicache--examples"></a>
 
+
+
 ### ApiCache Creation Example<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example"></a>
 
 The following example creates an ApiCache for your GraphQL API\.

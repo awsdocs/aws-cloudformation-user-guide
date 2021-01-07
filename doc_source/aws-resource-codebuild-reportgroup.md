@@ -48,13 +48,13 @@ You must delete any reports in the report group\. This is the default value\. If
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExportConfig`  <a name="cfn-codebuild-reportgroup-exportconfig"></a>
- Information about the destination where the raw data of this `ReportGroup` is exported\.   
+Information about the destination where the raw data of this `ReportGroup` is exported\.   
 *Required*: Yes  
 *Type*: [ReportExportConfig](aws-properties-codebuild-reportgroup-reportexportconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codebuild-reportgroup-name"></a>
- The name of a `ReportGroup`\.   
+The name of the `ReportGroup`\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `2`  
@@ -62,7 +62,7 @@ You must delete any reports in the report group\. This is the default value\. If
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codebuild-reportgroup-tags"></a>
- A list of tag key and value pairs associated with this report group\.   
+A list of tag key and value pairs associated with this report group\.   
 These tags are available for use by AWS services that support AWS CodeBuild report group tags\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
@@ -70,7 +70,11 @@ These tags are available for use by AWS services that support AWS CodeBuild repo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codebuild-reportgroup-type"></a>
- The type of the `ReportGroup`\. The one valid value is `TEST`\.   
+The type of the `ReportGroup`\. This can be one of the following values:    
+CODE\_COVERAGE  
+The report group contains code coverage reports\.  
+TEST  
+The report group contains test reports\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CODE_COVERAGE | TEST`  

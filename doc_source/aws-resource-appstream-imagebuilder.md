@@ -196,3 +196,4 @@ The URL to start an image builder streaming session, returned as a string\.
 
 ## See also<a name="aws-resource-appstream-imagebuilder--seealso"></a>
 +  [CreateImageBuilder](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateImageBuilder.html) in the *Amazon AppStream 2\.0 API Reference* 
+

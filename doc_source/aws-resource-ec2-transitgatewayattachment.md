@@ -74,3 +74,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## See also<a name="aws-resource-ec2-transitgatewayattachment--seealso"></a>
 +  [CreateTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*\.
 +  [ModifyTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*
+

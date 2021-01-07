@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Events::Archive",
   "Properties" : {
+      "[ArchiveName](#cfn-events-archive-name)" : String,
       "[Description](#cfn-events-archive-description)" : String,
       "[EventPattern](#cfn-events-archive-eventpattern)" : Json,
       "[RetentionDays](#cfn-events-archive-retentiondays)" : Integer,
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Events::Archive
 Properties: 
+  [ArchiveName](#cfn-events-archive-name): String
   [Description](#cfn-events-archive-description): String
   [EventPattern](#cfn-events-archive-eventpattern): Json
   [RetentionDays](#cfn-events-archive-retentiondays): Integer
@@ -32,6 +34,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-events-archive-properties"></a>
+
+`ArchiveName`  <a name="cfn-events-archive-name"></a>
+The name of the archive\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-events-archive-description"></a>
 A description for the archive\.  
@@ -61,6 +69,8 @@ The ARN of the event source associated with the archive\.
 
 ### Ref<a name="aws-resource-events-archive-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the archive name\.
+
 ### Fn::GetAtt<a name="aws-resource-events-archive-return-values-fn--getatt"></a>
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
@@ -70,12 +80,14 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-events-archive-return-values-fn--getatt-fn--getatt"></a>
 
 `ArchiveName`  <a name="ArchiveName-fn::getatt"></a>
-The name of the archive\.
+The archive name\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the archive created\.
 
 ## Examples<a name="aws-resource-events-archive--examples"></a>
+
+
 
 ### Create an archive<a name="aws-resource-events-archive--examples--Create_an_archive"></a>
 

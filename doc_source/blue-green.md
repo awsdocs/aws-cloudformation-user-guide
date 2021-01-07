@@ -32,7 +32,7 @@ In order to perform ECS blue/green deployment using CodeDeploy through CloudForm
 | --- | --- | --- | --- | 
 | Amazon ECS cluster | [AWS::ECS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html) | Optional\. The default cluster can be used\. | No | 
 | Amazon ECS service | [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) | Required\. | No | 
-| Application or Network Load Balancer | [AWS::ECS::Service LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancers.html) | Required\. | No | 
+| Application or Network Load Balancer | [AWS::ECS::Service LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html) | Required\. | No | 
 | Production listener | [AWS::ElasticLoadBalancingV2::Listener](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html) | Required\. | No | 
 | Test listener  | [AWS::ElasticLoadBalancingV2::Listener](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html) | Optional\. | No | 
 | Two target groups | [AWS::ElasticLoadBalancingV2::TargetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html) | Required\. | No | 
@@ -216,6 +216,7 @@ The execution role for CloudFormation to use to perform the blue\-green deployme
 Specifies properties of the Amazon ECS application\.  
 *Required*: Yes    
 `Target`  
+  
 *Required*: Yes    
 `Type`  
 The type of the resource\.  
@@ -293,7 +294,7 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
     "Transform": [
         "AWS::CodeDeployBlueGreen"
     ],
-   "Hooks": {
+    "Hooks": {
         "CodeDeployBlueGreenHook": {
             "Properties": {
                 "TrafficRoutingConfig": {
@@ -661,8 +662,8 @@ Hooks:
       TrafficRoutingConfig:
         Type: TimeBasedCanary
         TimeBasedCanary:
-           StepPercentage: 15
-           BakeTimeMins: 5
+          StepPercentage: 15
+          BakeTimeMins: 5
       Applications:
         - Target:
             Type: 'AWS::ECS::Service'

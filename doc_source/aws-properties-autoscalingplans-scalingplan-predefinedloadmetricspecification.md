@@ -4,6 +4,8 @@
 
 After creating your scaling plan, you can use the AWS Auto Scaling console to visualize forecasts for the specified metric\. For more information, see [View Scaling Information for a Resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource) in the *AWS Auto Scaling User Guide*\.
 
+
+
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

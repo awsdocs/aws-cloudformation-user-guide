@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel AutomaticInputFailoverSettings<a name="aws-properties-medialive-channel-automaticinputfailoversettings"></a>
 
-This element configures the input for the automatic input failover feature\. This element belongs to InputAttachment\.
+The settings for Automatic Input Failover\.
 
 ## Syntax<a name="aws-properties-medialive-channel-automaticinputfailoversettings-syntax"></a>
 

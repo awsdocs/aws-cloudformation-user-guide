@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel Fmp4HlsSettings<a name="aws-properties-medialive-channel-fmp4hlssettings"></a>
 
-Configures the HLS output as an fMP4 container\. This element belongs to HlsSetting\.
+Fmp4 Hls Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-fmp4hlssettings-syntax"></a>
 

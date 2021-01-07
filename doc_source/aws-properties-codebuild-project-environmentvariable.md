@@ -52,6 +52,8 @@ We strongly discourage the use of `PLAINTEXT` environment variables to store sen
 
 ## Examples<a name="aws-properties-codebuild-project-environmentvariable--examples"></a>
 
+
+
 ### <a name="aws-properties-codebuild-project-environmentvariable--examples--"></a>
 
 #### JSON<a name="aws-properties-codebuild-project-environmentvariable--examples----json"></a>

@@ -65,3 +65,4 @@ The type of API entity that the documentation content applies to\.
 
 ## See also<a name="aws-properties-apigateway-documentationpart-location--seealso"></a>
 + [DocumentationPart](https://docs.aws.amazon.com/apigateway/api-reference/resource/documentation-part/) in the *Amazon API Gateway REST API Reference*
+

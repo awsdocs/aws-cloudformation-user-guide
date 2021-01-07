@@ -121,6 +121,8 @@ The time \(in milliseconds since the epoch\) when the group role was attached to
 
 ## Examples<a name="aws-resource-greengrass-group--examples"></a>
 
+
+
 ### Create a Group<a name="aws-resource-greengrass-group--examples--Create_a_Group"></a>
 
 The following template defines a core, device, function, logger, subscription, and two resources, and then references them from the group version\.

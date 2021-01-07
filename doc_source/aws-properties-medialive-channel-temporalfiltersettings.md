@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel TemporalFilterSettings<a name="aws-properties-medialive-channel-temporalfiltersettings"></a>
 
-Configure the temporal filter\. This element belongs to H264FilterSettings and H265FilterSettings\.
+Temporal Filter Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-temporalfiltersettings-syntax"></a>
 

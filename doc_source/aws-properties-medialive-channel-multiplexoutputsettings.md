@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel MultiplexOutputSettings<a name="aws-properties-medialive-channel-multiplexoutputsettings"></a>
 
-Multiplex Output Settings\.
+Multiplex Output Settings
 
 ## Syntax<a name="aws-properties-medialive-channel-multiplexoutputsettings-syntax"></a>
 

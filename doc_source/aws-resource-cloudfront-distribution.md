@@ -64,6 +64,8 @@ The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
 ## Examples<a name="aws-resource-cloudfront-distribution--examples"></a>
 
+
+
 ### Create a distribution<a name="aws-resource-cloudfront-distribution--examples--Create_a_distribution"></a>
 
 The following example specifies a distribution and assigns it a single tag\.
@@ -147,3 +149,4 @@ Resources:
 
 ## See also<a name="aws-resource-cloudfront-distribution--seealso"></a>
 +  [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference* 
+

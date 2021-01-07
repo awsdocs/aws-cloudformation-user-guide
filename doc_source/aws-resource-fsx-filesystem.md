@@ -83,7 +83,7 @@ A list of IDs specifying the security groups to apply to all network interfaces 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
-Sets the storage capacity of the file system that you're creating\.  
+Sets the storage capacity of the file system that you're creating\. `StorageCapacity` is required if you are creating a new file system\. Do not include `StorageCapacity` if you are creating a file system from a backup\.  
 For Lustre file systems:  
 + For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid values are 1200 GiB, 2400 GiB, and increments of 2400 GiB\.
 + For `PERSISTENT HDD` file systems, valid values are increments of 6000 GiB for 12 MB/s/TiB file systems and increments of 1800 GiB for 40 MB/s/TiB file systems\.
@@ -91,7 +91,7 @@ For Lustre file systems:
 For Windows file systems:  
 + If `StorageType=SSD`, valid values are 32 GiB \- 65,536 GiB \(64 TiB\)\.
 + If `StorageType=HDD`, valid values are 2000 GiB \- 65,536 GiB \(64 TiB\)\.
-*Required*: No  
+*Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `2147483647`  
@@ -153,6 +153,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
 
 ## Examples<a name="aws-resource-fsx-filesystem--examples"></a>
+
+
 
 ### Create an Amazon FSx for Lustre File System<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Lustre_File_System"></a>
 

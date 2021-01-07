@@ -112,3 +112,4 @@ The name of the virtual service\.
 ## See also<a name="aws-resource-appmesh-virtualservice--seealso"></a>
 +  [Virtual Services](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualService](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualService.html) in the * AWS App Mesh API Reference *\.
+

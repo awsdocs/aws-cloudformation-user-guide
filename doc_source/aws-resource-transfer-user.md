@@ -153,6 +153,8 @@ An example `UserName` is `transfer-user-1`\.
 
 ## Examples<a name="aws-resource-transfer-user--examples"></a>
 
+
+
 ### Associate a user with a server<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server"></a>
 
 The following example associates a user with a server\.
@@ -161,66 +163,71 @@ The following example associates a user with a server\.
 
 ```
 {
-  "transfer_user": {
-    "Type": "AWS::Transfer::User",
-    "Properties": {
-      "HomeDirectoryMappings": [
-        {
-          "Entry": "/our-personal-report.pdf",
-          "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf"
+    "Resources": {
+        "transferUser": {
+            "Type": "AWS::Transfer::User",
+            "Properties": {
+                "HomeDirectoryMappings": [
+                    {
+                        "Entry": "/our-personal-report.pdf",
+                        "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf"
+                    }
+                ],
+                "HomeDirectoryType": "LOGICAL",
+                "Policy": {
+                    "Version": "2012-10-17T00:00:00.000Z",
+                    "Statement": {
+                        "Sid": "AllowFullAccessToBucket",
+                        "Action": "s3:*",
+                        "Effect": "Allow",
+                        "Resource": "arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*"
+                    }
+                },
+                "Role": "arn:aws:iam::176354371281:role/Transfer_role",
+                "ServerId": "s-01234567890abcdef",
+                "SshPublicKeys": [
+                    "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6"
+                ],
+                "Tags": [
+                    {
+                        "Key": "KeyName",
+                        "Value": "ValueName"
+                    }
+                ],
+                "UserName": "username"
+            }
         }
-      ],
-      "HomeDirectoryType": "LOGICAL",
-      "Policy": {
-        "Version": "2012-10-17T00:00:00.000Z",
-        "Statement": {
-          "Sid": "AllowFullAccessToBucket",
-          "Action": "s3:*",
-          "Effect": "Allow",
-          "Resource": "arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*"
-        }
-      },
-      "Role": "arn:aws:iam::176354371281:role/Transfer_role",
-      "ServerId": "s-01234567890abcdef",
-      "SshPublicKeys": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6",
-      "Tags": [
-        {
-          "Key": "KeyName",
-          "Value": "ValueName"
-        }
-      ],
-      "UserName": "username"
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server--yaml"></a>
 
 ```
-transfer_user:
-  Type : AWS::Transfer::User
-  Properties :
-    HomeDirectoryMappings: 
-      - Entry: /our-personal-report.pdf
-        Target: /bucket3/customized-reports/${transfer:UserName}.pdf
-    HomeDirectoryType: LOGICAL
-    Policy:
-      Version: 2012-10-17
-      Statement:
-        Sid: AllowFullAccessToBucket
-        Action: s3:*
-        Effect: Allow
-        Resource:
-          arn:aws:s3:::bucket_name
-          arn:aws:s3:::bucket_name/*
-    Role: arn:aws:iam::176354371281:role/Transfer_role
-    ServerId: s-01234567890abcdef
-    SshPublicKeys: AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
-    Tags:
-      - Key: KeyName
-        Value: ValueName
-    UserName: username
+Resources:
+  transferUser:
+    Type: 'AWS::Transfer::User'
+    Properties:
+      HomeDirectoryMappings:
+        - Entry: /our-personal-report.pdf
+          Target: '/bucket3/customized-reports/${transfer:UserName}.pdf'
+      HomeDirectoryType: LOGICAL
+      Policy:
+        Version: '2012-10-17T00:00:00.000Z'
+        Statement:
+          Sid: AllowFullAccessToBucket
+          Action: 's3:*'
+          Effect: Allow
+          Resource: 'arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*'
+      Role: 'arn:aws:iam::176354371281:role/Transfer_role'
+      ServerId: s-01234567890abcdef
+      SshPublicKeys:
+        - >-
+          AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
+      Tags:
+        - Key: KeyName
+          Value: ValueName
+      UserName: username
 ```
 
 ## See also<a name="aws-resource-transfer-user--seealso"></a>

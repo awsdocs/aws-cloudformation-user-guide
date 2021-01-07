@@ -109,6 +109,61 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`\.
 
+## Examples<a name="aws-resource-eks-fargateprofile--examples"></a>
+
+### Create a Fargate profile<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile"></a>
+
+The following example creates a Fargate profile for pods deployed to a namespace with the name `my-namespace` that have a label with a key value pair assigned to them\.
+
+#### JSON<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile--json"></a>
+
+```
+{
+   "Resources" : {
+      "EKSFargateProfile" : {
+         "Type" : "AWS::EKS::FargateProfile",
+         "Properties" : {
+            "FargateProfileName" : "my-fargate-profile",
+            "ClusterName" : "my-cluster",
+            "PodExecutionRoleArn" : "arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole",
+            "Subnets" : [ "subnet-6782e71e", "subnet-e7e761ac" ],
+            "Selectors" : [
+               {
+                  "Namespace" : "my-namespace",
+                  "Labels" : [
+                     {
+                        "Key" : "my-key",
+                        "Value" : "my-value"
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile--yaml"></a>
+
+```
+Resources:
+  EKSFargateProfile:
+    Type: 'AWS::EKS::FargateProfile'
+    Properties:
+      FargateProfileName: my-fargate-profile
+      ClusterName: my-cluster
+      PodExecutionRoleArn: 'arn:aws:iam::012345678910:role/AmazonEKSFargatePodExecutionRole'
+      Subnets:
+        - subnet-6782e71e
+        - subnet-e7e761ac
+      Selectors:
+        - Namespace: my-namespace
+          Labels:
+            - Key: my-key
+              Value: my-value
+```
+
 ## See also<a name="aws-resource-eks-fargateprofile--seealso"></a>
 +  [AWS Fargate profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide *\.
 +  [CreateFargateProfile](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html) in the *Amazon EKS API Reference *\.

@@ -53,3 +53,4 @@ The version of the object containing the application code\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-s3contentlocation--seealso"></a>
 +  [S3ContentLocation](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_S3ContentLocation.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

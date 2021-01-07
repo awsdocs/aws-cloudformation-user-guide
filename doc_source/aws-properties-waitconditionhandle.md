@@ -35,3 +35,4 @@ Properties:
 
 ## See also<a name="aws-properties-waitconditionhandle--seealso"></a>
 + For information about how to use wait conditions, see [Creating wait conditions in a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)\.
+

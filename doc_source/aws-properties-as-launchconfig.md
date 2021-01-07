@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KernelId](#cfn-as-launchconfig-kernelid)" : String,
       "[KeyName](#cfn-as-launchconfig-keyname)" : String,
       "[LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname)" : String,
-      "[MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions)" : MetadataOption,
+      "[MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions)" : MetadataOptions,
       "[PlacementTenancy](#cfn-as-launchconfig-placementtenancy)" : String,
       "[RamDiskId](#cfn-as-launchconfig-ramdiskid)" : String,
       "[SecurityGroups](#cfn-as-launchconfig-securitygroups)" : [ String, ... ],
@@ -63,7 +63,7 @@ Properties:
   [KeyName](#cfn-as-launchconfig-keyname): String
   [LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname): String
   [MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions): 
-    MetadataOption
+    MetadataOptions
   [PlacementTenancy](#cfn-as-launchconfig-placementtenancy): String
   [RamDiskId](#cfn-as-launchconfig-ramdiskid): String
   [SecurityGroups](#cfn-as-launchconfig-securitygroups): 
@@ -125,6 +125,7 @@ Provides the unique ID of the Amazon Machine Image \(AMI\) that was assigned dur
 
 `InstanceId`  <a name="cfn-as-launchconfig-instanceid"></a>
 The ID of the Amazon EC2 instance you want to use to create the launch configuration\. Use this property if you want the launch configuration to use settings from an existing Amazon EC2 instance\. When you use an instance to create a launch configuration, all properties are derived from the instance with the exception of `BlockDeviceMapping` and `AssociatePublicIpAddress`\. You can override any properties from the instance by specifying them in the launch configuration\.   
+  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -168,7 +169,7 @@ The name of the launch configuration\. This name must be unique per Region per a
 `MetadataOptions`  <a name="cfn-autoscaling-launchconfig-metadataoptions"></a>
 The metadata options for the instances\. For more information, see [Configuring the Instance Metadata Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
-*Type*: [MetadataOption](aws-properties-autoscaling-launchconfig-metadataoption.md)  
+*Type*: [MetadataOptions](aws-properties-autoscaling-launchconfig-metadataoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
@@ -398,6 +399,8 @@ When you use a launch configuration such as this one, your `m1.large` instances 
 For more information about IOPS performance with provisioned IOPS volumes, see [Provisioned IOPS SSD \(`io1` and `io2`\) volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html#EBSVolumeTypes_piops) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 For more performance tips, see [Amazon EBS volume performance on Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.html) in the *Amazon Elastic Compute Cloud User Guide*\. 
+
+
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data--json"></a>
 

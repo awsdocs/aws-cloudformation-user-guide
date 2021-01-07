@@ -43,7 +43,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshottingClusterId](#cfn-elasticache-replicationgroup-snapshottingclusterid)" : String,
       "[SnapshotWindow](#cfn-elasticache-replicationgroup-snapshotwindow)" : String,
       "[Tags](#cfn-elasticache-replicationgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean
+      "[TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled)" : Boolean,
+      "[UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids)" : [ String, ... ]
     }
 }
 ```
@@ -91,6 +92,8 @@ Properties:
   [Tags](#cfn-elasticache-replicationgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitEncryptionEnabled](#cfn-elasticache-replicationgroup-transitencryptionenabled): Boolean
+  [UserGroupIds](#cfn-elasticache-replicationgroup-usergroupids): 
+    - String
 ```
 
 ## Properties<a name="aws-resource-elasticache-replicationgroup-properties"></a>
@@ -379,6 +382,12 @@ For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an 
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`UserGroupIds`  <a name="cfn-elasticache-replicationgroup-usergroupids"></a>
+The list of user groups to associate with the replication group\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-elasticache-replicationgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticache-replicationgroup-return-values-ref"></a>
@@ -427,6 +436,8 @@ Not currently supported by AWS CloudFormation\.
 Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-elasticache-replicationgroup--examples"></a>
+
+
 
 ### Declare a Replication Group with Two Nodes<a name="aws-resource-elasticache-replicationgroup--examples--Declare_a_Replication_Group_with_Two_Nodes"></a>
 

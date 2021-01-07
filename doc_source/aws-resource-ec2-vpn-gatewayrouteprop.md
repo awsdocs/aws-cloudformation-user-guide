@@ -54,6 +54,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples"></a>
 
+
+
 ### VPN Gateway Route Propagation<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_Gateway_Route_Propagation"></a>
 
 The following example enables route propagation for the private route table named PrivateRouteTable \.
@@ -82,3 +84,4 @@ Type: AWS::EC2::VPNGatewayRoutePropagation
 
 ## See also<a name="aws-resource-ec2-vpn-gatewayrouteprop--seealso"></a>
 +  [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*
+

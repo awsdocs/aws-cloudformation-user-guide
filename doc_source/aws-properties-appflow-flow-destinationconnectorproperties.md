@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Redshift](#cfn-appflow-flow-destinationconnectorproperties-redshift)" : RedshiftDestinationProperties,
   "[S3](#cfn-appflow-flow-destinationconnectorproperties-s3)" : S3DestinationProperties,
   "[Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce)" : SalesforceDestinationProperties,
-  "[Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake)" : SnowflakeDestinationProperties
+  "[Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake)" : SnowflakeDestinationProperties,
+  "[Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver)" : UpsolverDestinationProperties
 }
 ```
 
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     SalesforceDestinationProperties
   [Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake): 
     SnowflakeDestinationProperties
+  [Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver): 
+    UpsolverDestinationProperties
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-destinationconnectorproperties-properties"></a>
@@ -65,5 +68,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [SnowflakeDestinationProperties](aws-properties-appflow-flow-snowflakedestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Upsolver`  <a name="cfn-appflow-flow-destinationconnectorproperties-upsolver"></a>
+ The properties required to query Upsolver\.   
+*Required*: No  
+*Type*: [UpsolverDestinationProperties](aws-properties-appflow-flow-upsolverdestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## See also<a name="aws-properties-appflow-flow-destinationconnectorproperties--seealso"></a>
 + [DestinationConnectorProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DestinationConnectorProperties.html) in the *Amazon AppFlow API Reference*\.
+

@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression"></a>
- The scheduling expression that determines when and how often the rule runs\.   
+ The scheduling expression that determines the rate at which the scheduled flow will run, for example: `rate(5minutes)`\.   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `256`  
@@ -67,3 +67,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-flow-scheduledtriggerproperties--seealso"></a>
 + [ScheduledTriggerProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ScheduledTriggerProperties.html) in the *Amazon AppFlow API Reference*\.
+
