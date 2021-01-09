@@ -32,3 +32,4 @@ The number of in\-application streams to create\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-inputparallelism--seealso"></a>
 +  [InputParallelism](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputParallelism.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

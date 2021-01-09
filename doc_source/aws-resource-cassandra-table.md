@@ -95,6 +95,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cassandra-table--examples"></a>
 
+
+
 ### Create a Table with Minimal Options<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Minimal_Options"></a>
 
 The following example creates a new table\. The table will have a system\-generated name, and will use on\-demand billing\.

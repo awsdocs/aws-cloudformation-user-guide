@@ -51,6 +51,8 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ### <a name="aws-resource-ses-receiptruleset--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-receiptruleset--examples----json"></a>
 
 ```
@@ -79,13 +81,13 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRuleSet Sample Template'
+Description: AWS SES ReceiptRuleSet Sample Template
 Parameters:
   ReceiptRuleSetName:
     Type: String
 Resources:
   ReceiptRuleSet:
-    Type: AWS::SES::ReceiptRuleSet
+    Type: 'AWS::SES::ReceiptRuleSet'
     Properties:
       RuleSetName: !Ref ReceiptRuleSetName
 ```

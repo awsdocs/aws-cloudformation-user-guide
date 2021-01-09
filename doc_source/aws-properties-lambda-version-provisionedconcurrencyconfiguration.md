@@ -30,6 +30,8 @@ The amount of provisioned concurrency to allocate for the version\.
 
 ## Examples<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples"></a>
 
+
+
 ### Provisioned Concurrency Configuration<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency_Configuration"></a>
 
 Allocate 20 provisioned concurrency for a version\.

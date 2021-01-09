@@ -69,6 +69,8 @@ The HTTP status code for the response\.
 
 ## Examples<a name="aws-resource-apigateway-gatewayresponse--examples"></a>
 
+
+
 ### 404 Response<a name="aws-resource-apigateway-gatewayresponse--examples--404_Response"></a>
 
 The following example returns a 404 status code for resource not found instead of missing authentication token for a CORS request \(applicable to unsecured/unrestricted APIs\)\.
@@ -215,3 +217,4 @@ Resources :
 
 ## See also<a name="aws-resource-apigateway-gatewayresponse--seealso"></a>
 + [gatewayresponse:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/gatewayresponse-put/) in the *Amazon API Gateway REST API Reference*
+

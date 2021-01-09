@@ -4,9 +4,9 @@ Creates an Amazon EKS control plane\.
 
 The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, such as `etcd` and the API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed via the Amazon EKS API server endpoint\. Each Amazon EKS cluster control plane is single\-tenant and unique and runs on its own set of Amazon EC2 instances\.
 
-The cluster control plane is provisioned across multiple Availability Zones and fronted by an Elastic Load Balancing Network Load Balancer\. Amazon EKS also provisions elastic network interfaces in your VPC subnets to provide connectivity from the control plane instances to the worker nodes \(for example, to support `kubectl exec`, `logs`, and `proxy` data flows\)\.
+The cluster control plane is provisioned across multiple Availability Zones and fronted by an Elastic Load Balancing Network Load Balancer\. Amazon EKS also provisions elastic network interfaces in your VPC subnets to provide connectivity from the control plane instances to the nodes \(for example, to support `kubectl exec`, `logs`, and `proxy` data flows\)\.
 
-Amazon EKS worker nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API server endpoint and a certificate file that is created for your cluster\.
+Amazon EKS nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API server endpoint and a certificate file that is created for your cluster\.
 
 You can use the `endpointPublicAccess` and `endpointPrivateAccess` parameters to enable or disable public and private access to your cluster's Kubernetes API server endpoint\. By default, public access is enabled, and private access is disabled\. For more information, see [Amazon EKS Cluster Endpoint Access Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the * *Amazon EKS User Guide* *\. 
 
@@ -15,7 +15,7 @@ You can use the `logging` parameter to enable or disable exporting the Kubernete
 **Note**  
 CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs\. For more information, see [Amazon CloudWatch Pricing](http://aws.amazon.com/cloudwatch/pricing/)\.
 
-Cluster creation typically takes between 10 and 15 minutes\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch worker nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS Worker Nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
+Cluster creation typically takes between 10 and 15 minutes\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-cluster-syntax"></a>
 
@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EKS::Cluster",
   "Properties" : {
       "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ EncryptionConfig, ... ],
+      "[KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig)" : KubernetesNetworkConfig,
       "[Name](#cfn-eks-cluster-name)" : String,
       "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : ResourcesVpcConfig,
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
@@ -43,6 +44,8 @@ Type: AWS::EKS::Cluster
 Properties: 
   [EncryptionConfig](#cfn-eks-cluster-encryptionconfig): 
     - EncryptionConfig
+  [KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig): 
+    KubernetesNetworkConfig
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
     ResourcesVpcConfig
@@ -57,6 +60,12 @@ The encryption configuration for the cluster\.
 *Required*: No  
 *Type*: [List](aws-properties-eks-cluster-encryptionconfig.md) of [EncryptionConfig](aws-properties-eks-cluster-encryptionconfig.md)  
 *Maximum*: `1`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`KubernetesNetworkConfig`  <a name="cfn-eks-cluster-kubernetesnetworkconfig"></a>
+The Kubernetes network configuration for the cluster\.  
+*Required*: No  
+*Type*: [KubernetesNetworkConfig](aws-properties-eks-cluster-kubernetesnetworkconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-eks-cluster-name"></a>

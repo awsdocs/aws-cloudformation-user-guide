@@ -38,3 +38,4 @@ The KMS key ID\. Takes the form `1a2a3a4-1a2a-3a4a-5a6a-1a2a3a4a5a6a`\.
 
 ## See also<a name="aws-properties-elasticsearch-domain-encryptionatrestoptions--seealso"></a>
 + [CreateElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-createelasticsearchdomain) in the *Amazon Elasticsearch Service Developer Guide*\.
+

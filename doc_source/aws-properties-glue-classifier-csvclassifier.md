@@ -76,3 +76,56 @@ A custom symbol to denote what combines content into a single column value\. It 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-glue-classifier-csvclassifier--examples"></a>
+
+
+
+### Create a custom classifier test<a name="aws-properties-glue-classifier-csvclassifier--examples--Create_a_custom_classifier_test"></a>
+
+With `AWS::Glue::Classifier` you can create a custom classifier test\.
+
+#### JSON<a name="aws-properties-glue-classifier-csvclassifier--examples--Create_a_custom_classifier_test--json"></a>
+
+```
+{
+    "Description": "AWS Glue Custom Classifier Test",
+    "Resources": {
+        "MyCSVclassifier": {
+            "Type": "AWS::Glue::Classifier",
+            "Properties": {
+                "CsvClassifier": {
+                    "AllowSingleColumn": true,
+                    "ContainsHeader": "PRESENT",
+                    "Delimiter": ",",
+                    "Header": [
+                        "id",
+                        "name"
+                    ],
+                    "Name": "csvclassify",
+                    "QuoteSymbol": "\""
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-glue-classifier-csvclassifier--examples--Create_a_custom_classifier_test--yaml"></a>
+
+```
+Description: AWS Glue Custom Classifier Test
+Resources:
+  MyCSVclassifier:
+    Type: 'AWS::Glue::Classifier'
+    Properties:
+      CsvClassifier:
+        AllowSingleColumn: true
+        ContainsHeader: PRESENT
+        Delimiter: ','
+        Header:
+          - id
+          - name
+        Name: csvclassify
+        QuoteSymbol: '"'
+```

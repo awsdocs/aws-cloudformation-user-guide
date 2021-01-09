@@ -55,7 +55,11 @@ The Amazon S3 canonical user ID for the origin access identity, used when giving
 
 ## Examples<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples"></a>
 
+
+
 ### Specify the comment for an origin access identity<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples--Specify_the_comment_for_an_origin_access_identity"></a>
+
+
 
 #### JSON<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples--Specify_the_comment_for_an_origin_access_identity--json"></a>
 
@@ -89,3 +93,4 @@ Resources:
 
 ## See also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
 +  [OriginAccessIdentity](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference* 
+

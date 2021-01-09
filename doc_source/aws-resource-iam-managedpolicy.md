@@ -132,6 +132,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
 
+
+
 ### Create managed policy<a name="aws-resource-iam-managedpolicy--examples--Create_managed_policy"></a>
 
 The following example creates a managed policy and associates it with the `TestDBGroup` group\. The managed policy grants users permission to create t2\.micro database instances\. The database must use the MySQL database engine and the instance name must include the prefix `test`\.
@@ -249,3 +251,4 @@ CreateTestDBPolicy:
 
 ## See also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
+

@@ -58,6 +58,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-regexpatternset--examples"></a>
 
+
+
 ### Define Regular Expression Pattern<a name="aws-resource-wafregional-regexpatternset--examples--Define_Regular_Expression_Pattern"></a>
 
 The following example defines a regular expression \(regex\) pattern for a web access control list \(ACL\) rule\.

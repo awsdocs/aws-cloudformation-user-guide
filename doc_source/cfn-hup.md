@@ -64,7 +64,7 @@ The hooks configuration file is loaded at cfn\-hup daemon startup only, so new h
 | --- | --- | --- | 
 |   `hookname`   |  A unique name for this hook *Type*: String  |  Yes  | 
 |   `triggers`   |  A comma\-delimited list of conditions to detect\. *Valid values*: `post.add`, `post.update`, or `post.remove` *Example*: `post.add, post.update`  |  Yes  | 
-|   `path`   |  The path to the metadata object\. Supports an arbitrarily deep path within the Metadata block\. [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html)  |  Yes  | 
+|   `path`   |  The path to the metadata object\. Supports an arbitrarily deep path within the Metadata block\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html)  |  Yes  | 
 |   `action`   |  An arbitrary shell command that is run as given\.  |  Yes  | 
 |   `runas`   |  A user to run the commands as\. Cfn\-hup uses the su command to switch to the user\.  |  Yes  | 
 
@@ -130,6 +130,6 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
 ...
 ```
 
-### Additional example<a name="w6948ab1c34c42c35c15b8"></a>
+### Additional example<a name="w7739ab1c33c42c35c15b8"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

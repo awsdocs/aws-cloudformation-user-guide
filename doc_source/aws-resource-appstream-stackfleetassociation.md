@@ -47,3 +47,4 @@ To associate a fleet with a stack, you must specify a dependency on the stack re
 
 ## See also<a name="aws-resource-appstream-stackfleetassociation--seealso"></a>
 +  [AssociateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_AssociateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 
+

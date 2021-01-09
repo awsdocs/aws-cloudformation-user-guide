@@ -1,6 +1,6 @@
 # AWS::ECS::Service AwsVpcConfiguration<a name="aws-properties-ecs-service-awsvpcconfiguration"></a>
 
-The `AwsVpcConfiguration` property specifies an object representing the networking details for a task or service\.
+An object representing the networking details for a task or service\.
 
 ## Syntax<a name="aws-properties-ecs-service-awsvpcconfiguration-syntax"></a>
 
@@ -45,6 +45,6 @@ All specified security groups must be from the same VPC\.
 `Subnets`  <a name="cfn-ecs-service-awsvpcconfiguration-subnets"></a>
 The IDs of the subnets associated with the task or service\. There is a limit of 16 subnets that can be specified per `AwsVpcConfiguration`\.  
 All specified subnets must be from the same VPC\.
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -64,6 +64,8 @@ For a custom resource, return values are defined by the custom resource provider
 
 ## Examples<a name="aws-resource-cfn-customresource--examples"></a>
 
+
+
 ### Creating a custom resource definition in a template<a name="aws-resource-cfn-customresource--examples--Creating_a_custom_resource_definition_in_a_template"></a>
 
 The following example demonstrates how to create a custom resource definition in a template\.

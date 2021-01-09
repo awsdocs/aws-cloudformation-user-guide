@@ -45,6 +45,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ses-configurationset--examples"></a>
 
+
+
 ### <a name="aws-resource-ses-configurationset--examples--"></a>
 
 Specifies a configuration set\.
@@ -77,13 +79,13 @@ Specifies a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: "AWS SES ConfigurationSet Sample Template"
+Description: AWS SES ConfigurationSet Sample Template
 Parameters:
   ConfigSetName:
     Type: String
 Resources:
   ConfigSet:
-    Type: AWS::SES::ConfigurationSet
+    Type: 'AWS::SES::ConfigurationSet'
     Properties:
       Name: !Ref ConfigSetName
 ```

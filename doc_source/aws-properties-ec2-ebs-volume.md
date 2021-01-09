@@ -4,8 +4,6 @@ Specifies an Amazon Elastic Block Store \(Amazon EBS\) volume\.
 
 When you use AWS CloudFormation to update an Amazon EBS volume that modifies `Iops`, `Size`, or `VolumeType`, there is a cooldown period before another operation can occur\. This can cause your stack to report being in `UPDATE_IN_PROGRESS` or `UPDATE_ROLLBACK_IN_PROGRESS` for long periods of time\.
 
-Amazon EBS does not support modifying a Magnetic volume\. For more information, see [Requirements for Modifying EBS Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/modify-volume-requirements.html)\.
-
 Amazon EBS does not support sizing down an Amazon EBS volume\. AWS CloudFormation will not attempt to modify an Amazon EBS volume to a smaller size on rollback\.
 
 Some common scenarios when you might encounter a cooldown period for Amazon EBS include:
@@ -39,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Size](#cfn-ec2-ebs-volume-size)" : Integer,
       "[SnapshotId](#cfn-ec2-ebs-volume-snapshotid)" : String,
       "[Tags](#cfn-ec2-ebs-volume-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Throughput](#cfn-ec2-ebs-volume-throughput)" : Integer,
       "[VolumeType](#cfn-ec2-ebs-volume-volumetype)" : String
     }
 }
@@ -60,6 +59,7 @@ Properties:
   [SnapshotId](#cfn-ec2-ebs-volume-snapshotid): String
   [Tags](#cfn-ec2-ebs-volume-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Throughput](#cfn-ec2-ebs-volume-throughput): Integer
   [VolumeType](#cfn-ec2-ebs-volume-volumetype): String
 ```
 
@@ -78,24 +78,30 @@ The Availability Zone in which to create the volume\.
 *Update requires*: Updates are not supported\.
 
 `Encrypted`  <a name="cfn-ec2-ebs-volume-encrypted"></a>
-Specifies whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Indicates whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
 Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption\. For more information, see [Supported instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: Updates are not supported\.
 
 `Iops`  <a name="cfn-ec2-ebs-volume-iops"></a>
-The number of I/O operations per second \(IOPS\) to provision for an `io1` or `io2` volume, with a maximum ratio of 50 IOPS/GiB for `io1`, and 500 IOPS/GiB for `io2`\. Range is 100 to 64,000 IOPS for volumes in most Regions\. Maximum IOPS of 64,000 is guaranteed only on [Nitro\-based instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
-This parameter is valid only for Provisioned IOPS SSD \(`io1` and `io2`\) volumes\.  
+The number of I/O operations per second \(IOPS\)\. For `gp3`, `io1`, and `io2` volumes, this represents the number of IOPS that are provisioned for the volume\. For `gp2` volumes, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\.  
+The following are the supported values for each volume type:  
++  `gp3`: 3,000\-16,000 IOPS
++  `io1`: 100\-64,000 IOPS
++  `io2`: 100\-64,000 IOPS
+For `io1` and `io2` volumes, we guarantee 64,000 IOPS only for [Instances built on the Nitro System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\.  
+This parameter is required for `io1` and `io2` volumes\. The default for `gp3` volumes is 3,000 IOPS\. This parameter is not supported for `gp2`, `st1`, `sc1`, or `standard` volumes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If this property is not specified, your AWS managed CMK for EBS is used\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
-You can specify the CMK using any of the following:  
+The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
+If you omit this property and your account is enabled for encryption by default, or **Encrypted** is set to `true`, then the volume is encrypted using the default CMK specified for your account\. If your account does not have a default CMK, then the volume is encrypted using the AWS managed CMK\.  
+Alternatively, if you want to specify a different CMK, you can specify one of the following:  
 + Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
-+ Key alias\. For example, alias/ExampleAlias\.
++ Key alias\. Specify the alias for the CMK, prefixed with `alias/`\. For example, for a CMK with the alias `my_cmk`, use `alias/my_cmk`\. Or to specify the AWS managed CMK, use `alias/aws/ebs`\.
 + Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
 *Required*: No  
@@ -116,9 +122,12 @@ The Amazon Resource Name \(ARN\) of the Outpost\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-ec2-ebs-volume-size"></a>
-The size of the volume, in GiBs\. You must specify either a snapshot ID or a volume size\.  
-Constraints: 1\-16,384 for `gp2`, 4\-16,384 for `io1` and `io2`, 500\-16,384 for `st1`, 500\-16,384 for `sc1`, and 1\-1,024 for `standard`\. If you specify a snapshot, the volume size must be equal to or larger than the snapshot size\.  
-Default: If you're creating the volume from a snapshot and don't specify a volume size, the default is the snapshot size\.  
+The size of the volume, in GiBs\. You must specify either a snapshot ID or a volume size\. If you specify a snapshot, the default is the snapshot size\. You can specify a volume size that is equal to or larger than the snapshot size\.  
+The following are the supported volumes sizes for each volume type:  
++  `gp2` and `gp3`: 1\-16,384
++  `io1` and `io2`: 4\-16,384
++  `st1` and `sc1`: 125\-16,384
++  `standard`: 1\-1,024
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -135,12 +144,24 @@ The tags to apply to the volume during creation\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Throughput`  <a name="cfn-ec2-ebs-volume-throughput"></a>
+The throughput that the volume supports, in MiB/s\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VolumeType`  <a name="cfn-ec2-ebs-volume-volumetype"></a>
-The volume type\. This can be `gp2` for General Purpose SSD, `io1` or `io2` for Provisioned IOPS SSD, `st1` for Throughput Optimized HDD, `sc1` for Cold HDD, or `standard` for Magnetic volumes\.  
+The volume type\. This parameter can be one of the following values:  
++ General Purpose SSD: `gp2` \| `gp3` 
++ Provisioned IOPS SSD: `io1` \| `io2` 
++ Throughput Optimized HDD: `st1` 
++ Cold HDD: `sc1` 
++ Magnetic: `standard` 
+For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 Default: `gp2`   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `gp2 | io1 | io2 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | gp3 | io1 | io2 | sc1 | st1 | standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-properties-ec2-ebs-volume-return-values"></a>
@@ -152,6 +173,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-properties-ec2-ebs-volume--examples"></a>
+
+
 
 ### Encrypted Amazon EBS Volume with DeletionPolicy to Make a Snapshot on Delete<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_Volume_with_DeletionPolicy_to_Make_a_Snapshot_on_Delete"></a>
 

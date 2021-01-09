@@ -30,6 +30,8 @@ The amount of provisioned concurrency to allocate for the alias\.
 
 ## Examples<a name="aws-properties-lambda-alias-provisionedconcurrencyconfiguration--examples"></a>
 
+
+
 ### Provisioned Concurrency<a name="aws-properties-lambda-alias-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency"></a>
 
 An alias with 20 provisioned concurrency\.

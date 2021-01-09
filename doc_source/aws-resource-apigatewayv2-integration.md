@@ -186,6 +186,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-integration--examples"></a>
 
+
+
 ### Integration creation example<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example"></a>
 
 The following example creates an `integration` resource named `MyIntegration` for the `MyApi` API, whose credentials are specified by `MyCredentialsArn`\.
@@ -255,3 +257,4 @@ MyIntegration:
 
 ## See also<a name="aws-resource-apigatewayv2-integration--seealso"></a>
 + [CreateIntegration](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-integrations.html#CreateIntegration) in the *Amazon API Gateway Version 2 API Reference*
+

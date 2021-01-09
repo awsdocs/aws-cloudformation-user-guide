@@ -87,6 +87,8 @@ The ID of the site\. For example, `site-444555aaabbb11223`\.
 
 ## Examples<a name="aws-resource-networkmanager-site--examples"></a>
 
+
+
 ### Site<a name="aws-resource-networkmanager-site--examples--Site"></a>
 
 The following example creates a site in a global network\.

@@ -30,3 +30,4 @@ Any comments you want to include about the origin access identity\.
 
 ## See also<a name="aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig--seealso"></a>
 +  [CloudFrontOriginAccessIdentityConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CloudFrontOriginAccessIdentityConfig.html) in the *Amazon CloudFront API Reference* 
+

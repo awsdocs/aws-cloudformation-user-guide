@@ -62,6 +62,7 @@ The ARN of the function definition version that contains the functions you want 
 
 `LoggerDefinitionVersionArn`  <a name="cfn-greengrass-group-groupversion-loggerdefinitionversionarn"></a>
 The ARN of the logger definition version that contains the loggers you want to deploy with the group version\.  
+  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

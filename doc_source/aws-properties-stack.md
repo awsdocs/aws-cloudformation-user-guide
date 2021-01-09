@@ -100,6 +100,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-stack--examples"></a>
 
+
+
 ### Specify stack parameters<a name="aws-properties-stack--examples--Specify_stack_parameters"></a>
 
 The sample template EC2ChooseAMI\.template contains the following Parameters section:
@@ -183,3 +185,4 @@ Resources:
 ## See also<a name="aws-properties-stack--seealso"></a>
 + For sample template snippets, see Nested Stacks in [CloudFormation template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudformation.html)\.
 + If you have nested stacks that are stuck in an in\-progress operation, see Troubleshooting Errors in [Troubleshooting AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/troubleshooting.html)\.
+

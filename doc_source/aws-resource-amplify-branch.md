@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BuildSpec](#cfn-amplify-branch-buildspec)" : String,
       "[Description](#cfn-amplify-branch-description)" : String,
       "[EnableAutoBuild](#cfn-amplify-branch-enableautobuild)" : Boolean,
+      "[EnablePerformanceMode](#cfn-amplify-branch-enableperformancemode)" : Boolean,
       "[EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview)" : Boolean,
       "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ EnvironmentVariable, ... ],
       "[PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname)" : String,
@@ -39,6 +40,7 @@ Properties:
   [BuildSpec](#cfn-amplify-branch-buildspec): String
   [Description](#cfn-amplify-branch-description): String
   [EnableAutoBuild](#cfn-amplify-branch-enableautobuild): Boolean
+  [EnablePerformanceMode](#cfn-amplify-branch-enableperformancemode): Boolean
   [EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-branch-environmentvariables): 
     - EnvironmentVariable
@@ -82,6 +84,13 @@ Properties:
 
 `EnableAutoBuild`  <a name="cfn-amplify-branch-enableautobuild"></a>
  Enables auto building for the branch\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnablePerformanceMode`  <a name="cfn-amplify-branch-enableperformancemode"></a>
+Enables performance mode for the branch\.  
+Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval\. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

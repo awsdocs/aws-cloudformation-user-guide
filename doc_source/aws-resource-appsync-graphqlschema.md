@@ -62,6 +62,8 @@ When you pass the logical ID of an `AWS::AppSync::GraphQLSchema` resource to the
 
 ## Examples<a name="aws-resource-appsync-graphqlschema--examples"></a>
 
+
+
 ### GraphQL Schema Creation Example<a name="aws-resource-appsync-graphqlschema--examples--GraphQL_Schema_Creation_Example"></a>
 
 The following example creates a GraphQL Schema and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\.
@@ -114,3 +116,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-graphqlschema--seealso"></a>
 +  [StartSchemaCreation](https://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html) operation in the *AWS AppSync API Reference*\.
+

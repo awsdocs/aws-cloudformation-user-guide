@@ -42,6 +42,7 @@ The name of the connection\. Connection names must be unique in an AWS user acco
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostArn`  <a name="cfn-codestarconnections-connection-hostarn"></a>
@@ -57,7 +58,7 @@ The Amazon Resource Name \(ARN\) of the host associated with the connection\.
 The name of the external provider where your third\-party code repository is configured\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Bitbucket | GitHubEnterpriseServer`  
+*Allowed values*: `Bitbucket | GitHub | GitHubEnterpriseServer`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codestarconnections-connection-tags"></a>
@@ -95,6 +96,8 @@ The current status of the connection\. For example: `PENDING`, `AVAILABLE`, or `
 The AWS account ID of the owner of the connection\. For Bitbucket, this is the account ID of the owner of the Bitbucket repository\. For example: `123456789012`\.
 
 ## Examples<a name="aws-resource-codestarconnections-connection--examples"></a>
+
+
 
 ### Bitbucket Connection Configuration<a name="aws-resource-codestarconnections-connection--examples--Bitbucket_Connection_Configuration"></a>
 

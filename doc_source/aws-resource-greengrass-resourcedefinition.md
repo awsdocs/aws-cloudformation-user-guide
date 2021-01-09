@@ -96,6 +96,8 @@ The name of the `ResourceDefinition`, such as `MyResourceDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-resourcedefinition--examples"></a>
 
+
+
 ### Resource Definition Snippet<a name="aws-resource-greengrass-resourcedefinition--examples--Resource_Definition_Snippet"></a>
 
 The following snippet defines a resource definition resource with an initial version that contains each type of resource\.

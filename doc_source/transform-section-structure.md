@@ -12,20 +12,21 @@ For example, in the template sample below, AWS CloudFormation evaluates `MyMacro
 
 ```
 // Start of processable content for MyMacro and AWS::Serverless
-AWSTemplateFormatVersion: 2010-09-09 
- Transform: [MyMacro, AWS::Serverless]
- Resources:
-    WaitCondition:
-      Type: AWS::CloudFormation::WaitCondition
-    MyBucket:
-      Type: 'AWS::S3::Bucket'  
-      Properties:
+Transform:
+  - MyMacro
+  - 'AWS::Serverless'
+Resources:
+  WaitCondition:
+    Type: 'AWS::CloudFormation::WaitCondition'
+  MyBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties: 
         BucketName: MyBucket 
         Tags: [{"key":"value"}] 
-        CorsConfiguration:[]   
-    MyEc2Instance:
-      Type: 'AWS::EC2::Instance' 
-      Properties:
+        CorsConfiguration:[] 
+  MyEc2Instance:
+    Type: 'AWS::EC2::Instance' 
+    Properties:
         ImageID: "ami-123"
 // End of processable content for MyMacro and AWS::Serverless
 ```

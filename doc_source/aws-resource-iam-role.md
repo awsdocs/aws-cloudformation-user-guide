@@ -154,6 +154,8 @@ For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.co
 
 ## Examples<a name="aws-resource-iam-role--examples"></a>
 
+
+
 ### IAM Role with Embedded Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles"></a>
 
 This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is specified inline in the `Policies` property of the `AWS::IAM::Role`\.
@@ -352,3 +354,4 @@ Resources:
 +  [CreateRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) in the *AWS Identity and Access Management API Reference* 
 +  [AWS Identity and Access Management Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html) 
 +  [AWS::IAM::InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) 
+

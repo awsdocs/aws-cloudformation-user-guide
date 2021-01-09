@@ -74,11 +74,9 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolclient-properties"></a>
 
 `AccessTokenValidity`  <a name="cfn-cognito-userpoolclient-accesstokenvalidity"></a>
-The time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used\. This value will be overridden if you have entered a value in TokenValidityUnits\.  
+The time limit, after which the access token is no longer valid and cannot be used\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `86400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
@@ -169,11 +167,9 @@ Boolean to specify whether you want to generate a secret for the user pool clien
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IdTokenValidity`  <a name="cfn-cognito-userpoolclient-idtokenvalidity"></a>
-The time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used\. This value will be overridden if you have entered a value in TokenValidityUnits\.  
+The time limit, after which the ID token is no longer valid and cannot be used\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
-*Maximum*: `86400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogoutURLs`  <a name="cfn-cognito-userpoolclient-logouturls"></a>
@@ -205,7 +201,7 @@ The time limit, in days, after which the refresh token is no longer valid and ca
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportedIdentityProviders`  <a name="cfn-cognito-userpoolclient-supportedidentityproviders"></a>
-A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `Google` and `LoginWithAmazon`\.  
+A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `SignInWithApple`, `Google` and `LoginWithAmazon`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

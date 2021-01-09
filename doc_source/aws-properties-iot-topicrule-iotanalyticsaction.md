@@ -38,3 +38,4 @@ The ARN of the role which has a policy that grants IoT Analytics permission to s
 
 ## See also<a name="aws-properties-iot-topicrule-iotanalyticsaction--seealso"></a>
 +  [IotAnalyticsAction](https://docs.aws.amazon.com/iot/latest/apireference/API_IotAnalyticsAction.html) in the *AWS IoT API Reference*\.
+

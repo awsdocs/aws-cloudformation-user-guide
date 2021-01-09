@@ -85,7 +85,7 @@ Required when `IdentityProviderType` is set to `API_GATEWAY`\. Accepts an array 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityProviderType`  <a name="cfn-transfer-server-identityprovidertype"></a>
-Specifies the mode of authentication for a file transfer protocol\-enabled server\. The default value is `SERVICE_MANAGED`, which allows you to store and access user credentials within the AWS Transfer Family service\. Use the `API_GATEWAY` value to integrate with an identity provider of your choosing\. The `API_GATEWAY` setting requires you to provide an API Gateway endpoint URL to call for authentication using the `IdentityProviderDetails` parameter\.  
+Specifies the mode of authentication for a server\. The default value is `SERVICE_MANAGED`, which allows you to store and access user credentials within the AWS Transfer Family service\. Use the `API_GATEWAY` value to integrate with an identity provider of your choosing\. The `API_GATEWAY` setting requires you to provide an API Gateway endpoint URL to call for authentication using the `IdentityProviderDetails` parameter\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `API_GATEWAY | SERVICE_MANAGED`  
@@ -116,7 +116,7 @@ Specifies the name of the security policy that is attached to the server\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-transfer-server-tags"></a>
-Key\-value pairs that can be used to group and search for file transfer protocol\-enabled servers\.  
+Key\-value pairs that can be used to group and search for servers\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
@@ -148,6 +148,8 @@ An example `ServerId` is `s-01234567890abcdef`\.
 
 ## Examples<a name="aws-resource-transfer-server--examples"></a>
 
+
+
 ### Create a server with VPC hosted endpoint type<a name="aws-resource-transfer-server--examples--Create_a_server_with_VPC_hosted_endpoint_type"></a>
 
 The following example creates a Secure Shell \(SSH\) File Transfer Protocol \(SFTP\)\-enabled server using a VPC hosted endpoint type with a custom identity provider, a CloudWatch logging role, security policy, and tags\.
@@ -156,50 +158,41 @@ The following example creates a Secure Shell \(SSH\) File Transfer Protocol \(SF
 
 ```
 {
-    "MyTransferServer": {
-        "Type": "AWS::Transfer::Server",
-        "Properties": {
-            "EndpointDetails": {
-                "AddressAllocationIds": [
-                    {
-                        "Ref": "MyTransferServerAddressAllocationId01"
-                    },
-                    {
-                        "Ref": "MyTransferServerAddressAllocationId02"
-                    }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "creates SFTP Server",
+    "Resources": {
+        "MyTransferServer": {
+            "Type": "AWS::Transfer::Server",
+            "Properties": {
+                "EndpointDetails": {
+                    "AddressAllocationIds": [
+                        "AddressAllocationId-1",
+                        "AddressAllocationId-2"
+                    ],
+                    "SubnetIds": [
+                        "SubnetId-1",
+                        "SubnetId-2"
+                    ],
+                    "VpcId": "VpcId"
+                },
+                "EndpointType": "VPC",
+                "LoggingRole": "Logging-Role-ARN",
+                "Protocols": [
+                    "SFTP"
                 ],
-                "SubnetIds": [
+                "SecurityPolicyName": "Security-Policy-Name",
+                "IdentityProviderDetails": {
+                    "InvocationRole": "Invocation-Role-ARN",
+                    "Url": "API_GATEWAY-Invocation-URL"
+                },
+                "IdentityProviderType": "API_GATEWAY",
+                "Tags": [
                     {
-                        "Ref": "MyTransferServerSubnet01"
-                    },
-                    {
-                        "Ref": "MyTransferServerSubnet02"
+                        "Key": "KeyName",
+                        "Value": "ValueName"
                     }
                 ]
-            },
-            "EndpointType": "VPC",
-            "IdentityProviderDetails": {
-                "InvocationRole": {
-                    "Ref": "MyTransferServerIdentityProviderInvocationRole"
-                },
-                "Url": {
-                    "Ref": "MyTransferServerIdentityProviderUrl"
-                }
-            },
-            "IdentityProviderType": "API_GATEWAY",
-            "LoggingRole": {
-                "Ref": "AWSTransferLoggingAccess"
-            },
-            "Protocols": "SFTP",
-            "SecurityPolicy": {
-                "Ref": "TransferSecurityPolicy-2020-06"
-            },
-            "Tags": [
-                {
-                    "Key": "KeyName",
-                    "Value": "ValueName"
-                }
-            ]
+            }
         }
     }
 }
@@ -208,31 +201,32 @@ The following example creates a Secure Shell \(SSH\) File Transfer Protocol \(SF
 #### YAML<a name="aws-resource-transfer-server--examples--Create_a_server_with_VPC_hosted_endpoint_type--yaml"></a>
 
 ```
-MyTransferServer:
-  Type : AWS::Transfer::Server
-  Properties :
-    EndpointDetails:
-      AddressAllocationIds:
-        - Ref: MyTransferServerAddressAllocationId01
-        - Ref: MyTransferServerAddressAllocationId02
-      SubnetIds:
-        - Ref: MyTransferServerSubnet01
-        - Ref: MyTransferServerSubnet02
-    EndpointType: VPC
-    IdentityProviderDetails: 
-      InvocationRole:
-        Ref: MyTransferServerIdentityProviderInvocationRole
-      Url:
-        Ref: MyTransferServerIdentityProviderUrl
-    IdentityProviderType: API_GATEWAY
-    LoggingRole:
-      Ref: AWSTransferLoggingAccess
-    Protocols: SFTP
-    SecurityPolicy:
-      Ref: TransferSecurityPolicy-2020-06
-    Tags: 
-      - Key: KeyName
-        Value: ValueName
+AWSTemplateFormatVersion: '2010-09-09'
+Description: creates SFTP Server
+Resources:
+    MyTransferServer:
+      Type : AWS::Transfer::Server
+      Properties :
+        EndpointDetails:
+          AddressAllocationIds:
+            - AddressAllocationId-1
+            - AddressAllocationId-2
+          SubnetIds:
+            - SubnetId-1
+            - SubnetId-2
+          VpcId: VpcId
+        EndpointType: VPC
+        LoggingRole: Logging-Role-ARN
+        Protocols: 
+            - SFTP
+        SecurityPolicyName: Security-Policy-Name
+        IdentityProviderDetails: 
+            InvocationRole: Invocation-Role-ARN
+            Url: API_GATEWAY-Invocation-URL
+        IdentityProviderType: API_GATEWAY
+        Tags: 
+          - Key: KeyName
+            Value: ValueName
 ```
 
 ## See also<a name="aws-resource-transfer-server--seealso"></a>

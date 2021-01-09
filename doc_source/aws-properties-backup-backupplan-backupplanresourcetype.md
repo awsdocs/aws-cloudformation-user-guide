@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AdvancedBackupSettings](#cfn-backup-backupplan-backupplanresourcetype-advancedbackupsettings)" : [ AdvancedBackupSettingResourceType, ... ],
   "[BackupPlanName](#cfn-backup-backupplan-backupplanresourcetype-backupplanname)" : String,
   "[BackupPlanRule](#cfn-backup-backupplan-backupplanresourcetype-backupplanrule)" : [ BackupRuleResourceType, ... ]
 }
@@ -18,12 +19,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-backup-backupplan-backupplanresourcetype-syntax.yaml"></a>
 
 ```
+  [AdvancedBackupSettings](#cfn-backup-backupplan-backupplanresourcetype-advancedbackupsettings): 
+    - AdvancedBackupSettingResourceType
   [BackupPlanName](#cfn-backup-backupplan-backupplanresourcetype-backupplanname): String
   [BackupPlanRule](#cfn-backup-backupplan-backupplanresourcetype-backupplanrule): 
     - BackupRuleResourceType
 ```
 
 ## Properties<a name="aws-properties-backup-backupplan-backupplanresourcetype-properties"></a>
+
+`AdvancedBackupSettings`  <a name="cfn-backup-backupplan-backupplanresourcetype-advancedbackupsettings"></a>
+A list of backup options for each resource type\.  
+*Required*: No  
+*Type*: List of [AdvancedBackupSettingResourceType](aws-properties-backup-backupplan-advancedbackupsettingresourcetype.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BackupPlanName`  <a name="cfn-backup-backupplan-backupplanresourcetype-backupplanname"></a>
 The display name of a backup plan\.  

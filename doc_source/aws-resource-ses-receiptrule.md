@@ -68,6 +68,8 @@ Specifies a receipt rule for incoming email\.
 
 ### <a name="aws-resource-ses-receiptrule--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-receiptrule--examples----json"></a>
 
 ```
@@ -149,7 +151,7 @@ Specifies a receipt rule for incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRule Sample Template'
+Description: AWS SES ReceiptRule Sample Template
 Parameters:
   RuleSetName:
     Type: String
@@ -163,10 +165,9 @@ Parameters:
     Type: String
   HeaderValue:
     Type: String
-
 Resources:
   ReceiptRule1:
-    Type: AWS::SES::ReceiptRule
+    Type: 'AWS::SES::ReceiptRule'
     Properties:
       RuleSetName: !Ref RuleSetName
       Rule:
@@ -178,9 +179,8 @@ Resources:
           - AddHeaderAction:
               HeaderName: !Ref HeaderName
               HeaderValue: !Ref HeaderValue
-
   ReceiptRule2:
-    Type: AWS::SES::ReceiptRule
+    Type: 'AWS::SES::ReceiptRule'
     Properties:
       RuleSetName: !Ref RuleSetName
       After: !Ref ReceiptRule1

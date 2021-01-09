@@ -64,3 +64,4 @@ The size of the user storage\. For important information about how to modify the
 
 ## See also<a name="aws-properties-workspaces-workspace-workspaceproperties--seealso"></a>
 +  [WorkspaceProperties](https://docs.aws.amazon.com/workspaces/latest/api/API_WorkspaceProperties.html) in the *Amazon WorkSpaces API Reference* 
+

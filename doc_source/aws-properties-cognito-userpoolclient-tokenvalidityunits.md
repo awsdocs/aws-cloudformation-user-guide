@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPoolClient TokenValidityUnits<a name="aws-properties-cognito-userpoolclient-tokenvalidityunits"></a>
 
-<a name="aws-properties-cognito-userpoolclient-tokenvalidityunits-description"></a>The `TokenValidityUnits` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Cognito::UserPoolClient](aws-resource-cognito-userpoolclient.md)\.
+The units in which the validity times are represented in\. Default for RefreshToken is days, and default for ID and access tokens are hours\.
 
 ## Syntax<a name="aws-properties-cognito-userpoolclient-tokenvalidityunits-syntax"></a>
 
@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpoolclient-tokenvalidityunits-properties"></a>
 
 `AccessToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-accesstoken"></a>
-Not currently supported by AWS CloudFormation\.  
+A time unit in “seconds”, “minutes”, “hours” or “days” for the value in AccessTokenValidity, defaults to hours\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-idtoken"></a>
-Not currently supported by AWS CloudFormation\.  
+A time unit in “seconds”, “minutes”, “hours” or “days” for the value in IdTokenValidity, defaults to hours\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshToken`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits-refreshtoken"></a>
-Not currently supported by AWS CloudFormation\.  
+A time unit in “seconds”, “minutes”, “hours” or “days” for the value in RefreshTokenValidity, defaults to days\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -104,6 +104,8 @@ A list of IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8
 
 ## Examples<a name="aws-resource-ec2-vpc--examples"></a>
 
+
+
 ### VPC<a name="aws-resource-ec2-vpc--examples--VPC"></a>
 
 The following example specifies a VPC\.
@@ -141,3 +143,4 @@ myVPC:
 ## See also<a name="aws-resource-ec2-vpc--seealso"></a>
 +  [CreateVpc](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpc.html) in the *Amazon EC2 API Reference*
 +  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
+

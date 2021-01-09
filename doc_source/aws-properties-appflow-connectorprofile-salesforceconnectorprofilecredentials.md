@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AccessToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken)" : String,
+  "[ClientCredentialsArn](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn)" : String,
   "[ConnectorOAuthRequest](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest)" : ConnectorOAuthRequest,
   "[RefreshToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken)" : String
 }
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-accesstoken): String
+  [ClientCredentialsArn](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn): String
   [ConnectorOAuthRequest](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest): 
     ConnectorOAuthRequest
   [RefreshToken](#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-refreshtoken): String
@@ -33,6 +35,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: String  
 *Maximum*: `512`  
 *Pattern*: `\S+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ClientCredentialsArn`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-clientcredentialsarn"></a>
+ The secret manager ARN, which contains the client ID and client secret of the connected app\.   
+*Required*: No  
+*Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `arn:aws:secretsmanager:.*:[0-9]+:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectorOAuthRequest`  <a name="cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-connectoroauthrequest"></a>
@@ -51,3 +62,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials--seealso"></a>
 + [SalesforceConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_SalesforceConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

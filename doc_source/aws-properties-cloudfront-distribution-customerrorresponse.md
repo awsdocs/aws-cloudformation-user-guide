@@ -67,3 +67,4 @@ We recommend that you store custom error pages in an Amazon S3 bucket\. If you s
 
 ## See also<a name="aws-properties-cloudfront-distribution-customerrorresponse--seealso"></a>
 +  [CustomErrorResponse](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomErrorResponse.html) in the *Amazon CloudFront API Reference* 
+

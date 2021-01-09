@@ -112,6 +112,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-certificatemanager-certificate--examples"></a>
 
+
+
 ### Declaring an Amazon Certificate Manager Certificate Resource<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource"></a>
 
 The following example shows how to declare an `AWS::CertificateManager::Certificate` resource to create an ACM certificate\.

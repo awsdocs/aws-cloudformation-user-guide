@@ -2,6 +2,9 @@
 
 A list of information about the configuration\.
 
+**Important**  
+Does not apply to RabbitMQ brokers\.
+
 ## Syntax<a name="aws-properties-amazonmq-broker-configurationid-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

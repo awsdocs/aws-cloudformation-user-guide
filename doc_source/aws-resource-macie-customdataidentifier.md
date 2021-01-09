@@ -115,18 +115,40 @@ This example creates a custom data identifier that detects 6\-digit employee IDs
 #### JSON<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier--json"></a>
 
 ```
-{ "Type": "AWS::Macie::CustomDataIdentifier", "DependsOn":
-                "Session", "Properties": { "Description": "My custom data identifier",
-                "IgnoreWords": ["000000", "123456"], "Keywords": ["employeeID", "employee ID"],
-                "MaximumMatchDistance": 20, "Name": "EmployeeIDCustomDataIdentifier", "Regex":
-                "\\d{6}" } }
+{
+    "Type": "AWS::Macie::CustomDataIdentifier",
+    "DependsOn": "Session",
+    "Properties": {
+        "Description": "My custom data identifier",
+        "IgnoreWords": [
+            "000000",
+            "123456"
+        ],
+        "Keywords": [
+            "employeeID",
+            "employee ID"
+        ],
+        "MaximumMatchDistance": 20,
+        "Name": "EmployeeIDCustomDataIdentifier",
+        "Regex": "\\d{6}"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-macie-customdataidentifier--examples--Creating_a_Macie_CustomDataIdentifier--yaml"></a>
 
 ```
-Type: AWS::Macie::CustomDataIdentifier DependsOn: "Session"
-                Properties: Description: "My custom data identifier" IgnoreWords: - 000000 - 123456
-                Keywords: - "employeeID" - "Employee ID" MaximumMatchDistance: 20 Name:
-                EmployeeIDCustomDataIdentifier Regex: \d{6}
+Type: AWS::Macie::CustomDataIdentifier
+DependsOn: "Session"
+Properties:
+    Description: "My custom data identifier"
+    IgnoreWords: 
+        - "000000" 
+        - "123456"
+    Keywords: 
+        - "employeeID" 
+        - "Employee ID"
+    MaximumMatchDistance: 20
+    Name: EmployeeIDCustomDataIdentifier
+    Regex: \d{6}
 ```

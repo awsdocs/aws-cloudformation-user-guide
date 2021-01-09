@@ -51,6 +51,8 @@ The identifier of the API\.
 
 ## Examples<a name="aws-resource-apigateway-documentationversion--examples"></a>
 
+
+
 ### Associate documentation version with stage<a name="aws-resource-apigateway-documentationversion--examples--Associate_documentation_version_with_stage"></a>
 
 The following example associates a documentation version with an API stage\.
@@ -235,3 +237,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-documentationversion--seealso"></a>
 + [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*
+

@@ -14,7 +14,7 @@ The `aws:` prefix is reserved for AWS use\. This prefix is case\-insensitive\. I
 
 All stack\-level tags, including automatically created tags, are propagated to resources that AWS CloudFormation supports\. Currently, tags are not propagated to Amazon EBS volumes that are created from block device mappings\.
 
-## Syntax<a name="w6948ab1c34c10d264c13c15"></a>
+## Syntax<a name="w7739ab1c33c10d292c13c15"></a>
 
 ### JSON<a name="aws-properties-resource-tags-syntax.json"></a>
 
@@ -32,7 +32,7 @@ Key: String
 Value: String
 ```
 
-## Properties<a name="w6948ab1c34c10d264c13c17"></a>
+## Properties<a name="w7739ab1c33c10d292c13c17"></a>
 
 `Key`  <a name="cfn-resource-tags-key"></a>
 The key name of the tag\. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
@@ -40,7 +40,7 @@ The key name of the tag\. You can specify a value that is 1 to 128 Unicode chara
 *Type*: String
 
 `Value`  <a name="cfn-resource-tags-value"></a>
-The value for the tag\. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with `aws:`\. You can use any of the following characters: the set of Unicode letters, digits, whitespace, `_`, `.`, `/`, `=`, `+`, and `-`\.  
+The value for the tag\. You can specify a value that is 0 to 256 characters in length\.  
 *Required*: Yes  
 *Type*: String
 
@@ -73,6 +73,6 @@ This example shows a `Tags` property\. You specify this property within the `Pro
 5.     Value: "value2"
 ```
 
-## See also<a name="w6948ab1c34c10d264c13c21"></a>
+## See also<a name="w7739ab1c33c10d292c13c21"></a>
 + [Setting AWS CloudFormation stack options](cfn-console-add-tags.md)
 + [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)

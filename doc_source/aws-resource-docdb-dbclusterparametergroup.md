@@ -86,7 +86,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-docdb-dbclusterparametergroup--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbclusterparametergroup--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbclusterparametergroup--examples----json"></a>
 
@@ -131,3 +135,4 @@ Properties:
 +  [DeleteDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBClusterParameterGroup.html) 
 +  [DescribeDBClusterParameterGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusterParameterGroups.html) 
 +  [ModifyDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBClusterParameterGroup.html) 
+

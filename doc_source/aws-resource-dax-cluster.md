@@ -142,15 +142,11 @@ A set of tags to associate with the DAX cluster\.
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created DAX cluster\. For example:
 
- 
-
 ```
 { "Ref": "MyResource" }
 ```
 
  Returns a value similar to the following: 
-
- 
 
 ```
 MyDAXCluster

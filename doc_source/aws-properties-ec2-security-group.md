@@ -111,6 +111,8 @@ The physical ID of the VPC\. You can obtain the physical ID by using a reference
 
 ## Examples<a name="aws-properties-ec2-security-group--examples"></a>
 
+
+
 ### Define Basic Ingress and Egress Rules<a name="aws-properties-ec2-security-group--examples--Define_Basic_Ingress_and_Egress_Rules"></a>
 
 The following example specifies a security group with an ingress and egress rule\. 
@@ -200,3 +202,4 @@ sgwithoutegress:
 +  [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
 +  [EC2\-Classic](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html) in the *Amazon EC2 User Guide for Linux Instances* for information about accounts that support EC2\-Classic security groups
 +  [Amazon EC2 Security Groups for Linux Instances ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*
+

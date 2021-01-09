@@ -89,3 +89,4 @@ The tenancy of the instance \(if the instance is running in a VPC\)\. An instanc
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement--seealso"></a>
 +  [ LaunchTemplatePlacementRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatePlacementRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

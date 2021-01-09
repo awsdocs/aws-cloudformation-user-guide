@@ -104,6 +104,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-lambda-alias--examples"></a>
 
+
+
 ### Alias<a name="aws-resource-lambda-alias--examples--Alias"></a>
 
 A Node\.js function with a version and alias\.

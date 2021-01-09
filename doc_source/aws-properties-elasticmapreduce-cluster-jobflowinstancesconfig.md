@@ -85,7 +85,7 @@ Describes the EC2 instances and instance configurations for core instance groups
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ec2KeyName`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname"></a>
-The name of the EC2 key pair that can be used to ssh to the master node as the user called "hadoop\."  
+The name of the EC2 key pair that can be used to connect to the master node using SSH as the user called "hadoop\."  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -128,7 +128,7 @@ The identifier of the Amazon EC2 security group for the core and task nodes\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HadoopVersion`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion"></a>
-Applies only to Amazon EMR release versions earlier than 4\.0\. The Hadoop version for the cluster\. Valid inputs are "0\.18" \(deprecated\), "0\.20" \(deprecated\), "0\.20\.205" \(deprecated\), "1\.0\.3", "2\.2\.0", or "2\.4\.0"\. If you do not set this value, the default of 0\.18 is used, unless the `AmiVersion` parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used\.  
+Applies only to Amazon EMR release versions earlier than 4\.0\. The Hadoop version for the cluster\. Valid inputs are "0\.18" \(no longer maintained\), "0\.20" \(no longer maintained\), "0\.20\.205" \(no longer maintained\), "1\.0\.3", "2\.2\.0", or "2\.4\.0"\. If you do not set this value, the default of 0\.18 is used, unless the `AmiVersion` parameter is set in the RunJobFlow call, in which case the default version of Hadoop for that AMI version is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

@@ -45,6 +45,8 @@ The principal, which can be a certificate ARN \(as returned from the `CreateCert
 
 ## Examples<a name="aws-resource-iot-policyprincipalattachment--examples"></a>
 
+
+
 ### <a name="aws-resource-iot-policyprincipalattachment--examples--"></a>
 
 The following example attaches a policy to a principal\.

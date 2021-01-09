@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[BuildSpec](#cfn-amplify-app-autobranchcreationconfig-buildspec)" : String,
   "[EnableAutoBranchCreation](#cfn-amplify-app-autobranchcreationconfig-enableautobranchcreation)" : Boolean,
   "[EnableAutoBuild](#cfn-amplify-app-autobranchcreationconfig-enableautobuild)" : Boolean,
+  "[EnablePerformanceMode](#cfn-amplify-app-autobranchcreationconfig-enableperformancemode)" : Boolean,
   "[EnablePullRequestPreview](#cfn-amplify-app-autobranchcreationconfig-enablepullrequestpreview)" : Boolean,
   "[EnvironmentVariables](#cfn-amplify-app-autobranchcreationconfig-environmentvariables)" : [ EnvironmentVariable, ... ],
   "[PullRequestEnvironmentName](#cfn-amplify-app-autobranchcreationconfig-pullrequestenvironmentname)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BuildSpec](#cfn-amplify-app-autobranchcreationconfig-buildspec): String
   [EnableAutoBranchCreation](#cfn-amplify-app-autobranchcreationconfig-enableautobranchcreation): Boolean
   [EnableAutoBuild](#cfn-amplify-app-autobranchcreationconfig-enableautobuild): Boolean
+  [EnablePerformanceMode](#cfn-amplify-app-autobranchcreationconfig-enableperformancemode): Boolean
   [EnablePullRequestPreview](#cfn-amplify-app-autobranchcreationconfig-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-app-autobranchcreationconfig-environmentvariables): 
     - EnvironmentVariable
@@ -67,6 +69,13 @@ Enables automated branch creation for the Amplify app\.
 
 `EnableAutoBuild`  <a name="cfn-amplify-app-autobranchcreationconfig-enableautobuild"></a>
 Enables auto building for the auto created branch\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnablePerformanceMode`  <a name="cfn-amplify-app-autobranchcreationconfig-enableperformancemode"></a>
+Enables performance mode for the branch\.  
+Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval\. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

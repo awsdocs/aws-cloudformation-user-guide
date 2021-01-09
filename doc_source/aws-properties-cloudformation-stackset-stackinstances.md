@@ -30,8 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudformation-stackset-stackinstances-properties"></a>
 
 `DeploymentTargets`  <a name="cfn-cloudformation-stackset-stackinstances-deploymenttargets"></a>
-The AWS OrganizationalUnitIds or Accounts for which to create stack instances in the specified Regions\.  
-You can specify `Accounts` or `DeploymentTargets`, but not both\.  
+The AWS `OrganizationalUnitIds` or `Accounts` for which to create stack instances in the specified Regions\.  
 *Required*: Yes  
 *Type*: [DeploymentTargets](aws-properties-cloudformation-stackset-deploymenttargets.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

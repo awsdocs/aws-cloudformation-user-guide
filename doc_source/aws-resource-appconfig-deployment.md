@@ -112,6 +112,8 @@ Metadata to assign to the deployment\. Tags help organize and categorize your AW
 
 ## Examples<a name="aws-resource-appconfig-deployment--examples"></a>
 
+
+
 ### AWS AppConfig Deployment Example<a name="aws-resource-appconfig-deployment--examples--AWS_AppConfig_Deployment_Example"></a>
 
 The following example creates an AWS AppConfig deployment\. Starting a deployment in AWS AppConfig calls the StartDeployment API action\. This call includes the IDs of the AppConfig application, the environment, the configuration profile, and \(optionally\) the configuration data version to deploy\. The call also includes the ID of the deployment strategy to use, which determines how the configuration data is deployed\.

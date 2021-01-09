@@ -61,6 +61,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-identitypoolroleattachment--examples"></a>
 
+
+
 ### Setting the roles for an identity pool<a name="aws-resource-cognito-identitypoolroleattachment--examples--Setting_the_roles_for_an_identity_pool"></a>
 
 The following example sets roles for an identity pool\. It sets “authenticated” and “unauthenticated” roles and maps two identity providers to them\. The first identity provider is “graph\.facebook\.com”\. The second is using a reference to set the identity provider name\.

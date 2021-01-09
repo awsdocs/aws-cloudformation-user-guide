@@ -35,10 +35,11 @@ The cost or usage amount that is associated with a budget forecast, actual spend
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-budgets-budget-spend-unit"></a>
-The unit of measurement that is used for the budget forecast, actual spend, or budget threshold, such as dollars or GB\.  
+The unit of measurement that is used for the budget forecast, actual spend, or budget threshold, such as USD or GB\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-budgets-budget-spend--seealso"></a>
 +  [Spend](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Spend.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

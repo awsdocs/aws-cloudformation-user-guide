@@ -148,3 +148,4 @@ Resources:
 ## See also<a name="aws-resource-ram-resourceshare--seealso"></a>
 +  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
 +  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 
+

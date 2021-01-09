@@ -6,6 +6,8 @@ When this operation creates an alarm, the alarm state is immediately set to `INS
 
 When you update an existing alarm, its state is left unchanged, but the update completely overwrites the previous configuration of the alarm\.
 
+
+
 ## Syntax<a name="aws-properties-cw-alarm-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -262,6 +264,8 @@ The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789
 
 ## Examples<a name="aws-properties-cw-alarm--examples"></a>
 
+
+
 ### Alarm Based on an Anomaly Detector<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector"></a>
 
 This example creates an alarm that is based on an anomaly detector\.
@@ -343,3 +347,4 @@ Resources:
 
 ## See also<a name="aws-properties-cw-alarm--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 
+

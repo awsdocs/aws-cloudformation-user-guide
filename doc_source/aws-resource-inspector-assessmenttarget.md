@@ -66,6 +66,8 @@ The Amazon Resource Name \(ARN\) that specifies the assessment target that is cr
 
 ## Examples<a name="aws-resource-inspector-assessmenttarget--examples"></a>
 
+
+
 ### Declaring an Amazon Inspector Assessment Target Resource<a name="aws-resource-inspector-assessmenttarget--examples--Declaring_an_Amazon_Inspector_Assessment_Target_Resource"></a>
 
 The following examples show how to declare an `AWS::Inspector::AssessmentTarget` resource to create an Amazon Inspector assessment target\.

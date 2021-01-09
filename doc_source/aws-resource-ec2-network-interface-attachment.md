@@ -67,6 +67,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-network-interface-attachment--examples"></a>
 
+
+
 ### Network Interface Attachment<a name="aws-resource-ec2-network-interface-attachment--examples--Network_Interface_Attachment"></a>
 
 The following example attaches `MyNetworkInterface` to `MyInstance`\.

@@ -49,3 +49,4 @@ The values for the keys for the new partition must be passed as an array of Stri
 
 ## See also<a name="aws-properties-glue-partition-partitioninput--seealso"></a>
 +  [PartitionInput](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-PartitionInput) in the *AWS Glue Developer Guide* 
+

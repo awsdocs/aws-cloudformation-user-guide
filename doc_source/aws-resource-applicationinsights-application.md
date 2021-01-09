@@ -128,6 +128,8 @@ Returns the Amazon Resource Name \(ARN\) of the application, such as ` arn:aws:a
 
 ## Examples<a name="aws-resource-applicationinsights-application--examples"></a>
 
+
+
 ### The following example template creates an Application Insights application with all components configured with recommended monitoring settings<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_all_components_configured_with_recommended_monitoring_settings"></a>
 
 The following example template performs the following actions:

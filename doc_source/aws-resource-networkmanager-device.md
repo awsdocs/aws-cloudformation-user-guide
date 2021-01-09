@@ -127,6 +127,8 @@ The ID of the device\. For example, `device-07f6fd08867abc123`\.
 
 ## Examples<a name="aws-resource-networkmanager-device--examples"></a>
 
+
+
 ### Device<a name="aws-resource-networkmanager-device--examples--Device"></a>
 
 The following example creates a device in a global network\.

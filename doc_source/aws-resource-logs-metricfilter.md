@@ -58,6 +58,8 @@ The metric transformations\.
 
 ## Examples<a name="aws-resource-logs-metricfilter--examples"></a>
 
+
+
 ### Create a Metric Filter<a name="aws-resource-logs-metricfilter--examples--Create_a_Metric_Filter"></a>
 
 The following example sends a value of `1` to the `404Count` metric whenever the status code field includes a `404` value\.

@@ -116,6 +116,7 @@ The contact email for product support\.
 
 `SupportUrl`  <a name="cfn-servicecatalog-cloudformationproduct-supporturl"></a>
 The contact URL for product support\.  
+ `^https?:\/\// `/ is the pattern used to validate SupportUrl\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2083`  
@@ -155,3 +156,4 @@ The names of the provisioning artifacts\.
 
 ## See also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
 + [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog API Reference*
+

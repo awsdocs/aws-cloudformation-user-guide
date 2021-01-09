@@ -123,6 +123,8 @@ A new pipeline is always assigned a version number of 1\. This number increments
 
 ## Examples<a name="aws-resource-codepipeline-pipeline--examples"></a>
 
+
+
 ### Pipeline Resource Configuration<a name="aws-resource-codepipeline-pipeline--examples--Pipeline_Resource_Configuration"></a>
 
 The following example creates a pipeline with a source, beta, and release stage\. For the source stage, CodePipeline detects changes to the application that is stored in the S3 bucket and pulls them into the pipeline\. The beta stage deploys those changes to EC2 instances by using CodeDeploy\. For the release stage, inbound transitions are disabled, which enables you to control when the changes are ready to be deployed to release\.

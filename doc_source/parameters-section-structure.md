@@ -24,11 +24,11 @@ Note that `InstanceTypeParameter` has a default value of `t2.micro`\. This is th
 ### YAML<a name="parameters-section-structure-example.yaml"></a>
 
 ```
-Parameters: 
-  InstanceTypeParameter: 
+Parameters:
+  InstanceTypeParameter:
     Type: String
     Default: t2.micro
-    AllowedValues: 
+    AllowedValues:
       - t2.micro
       - m1.small
       - m1.large
@@ -67,7 +67,7 @@ Ec2Instance:
 ## General requirements for parameters<a name="parameters-section-structure-requirements"></a>
 
 The following requirements apply when using parameters:
-+ You can have a maximum of 60 parameters in an AWS CloudFormation template\.
++ You can have a maximum of 200 parameters in an AWS CloudFormation template\.
 + Each parameter must be given a logical name \(also called logical ID\), which must be alphanumeric and unique among all logical names within the template\.
 + Each parameter must be assigned a parameter type that is supported by AWS CloudFormation\. For more information, see [Type](#parameters-section-structure-properties-type)\.
 + Each parameter must be assigned a value at runtime for AWS CloudFormation to successfully provision the stack\. You can optionally specify a default value for AWS CloudFormation to use unless another value is provided\.
@@ -96,7 +96,7 @@ Parameters:
 ## Properties<a name="parameters-section-structure-properties"></a>
 
 `AllowedPattern`  
-A regular expression that represents the patterns to allow for `String` types\.  
+A regular expression that represents the patterns to allow for `String` types\. The pattern must match the entire parameter value provided\.  
 *Required*: No
 
 `AllowedValues`  
@@ -467,6 +467,8 @@ DbSubnet3:
 ```
 
 ### SSM parameter types<a name="parameters-section-ssm-examples"></a>
+
+
 
 #### AWS::SSM::Parameter::Value<String> type<a name="parameters-section-ssm-examples-example1"></a>
 

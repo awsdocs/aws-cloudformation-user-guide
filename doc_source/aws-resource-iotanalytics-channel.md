@@ -67,6 +67,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ## Examples<a name="aws-resource-iotanalytics-channel--examples"></a>
 
+
+
 ### Simple Channel<a name="aws-resource-iotanalytics-channel--examples--Simple_Channel"></a>
 
 The following example creates a simple channel that uses service\-managed channel storage\.

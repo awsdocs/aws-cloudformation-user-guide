@@ -137,6 +137,8 @@ The ID of the EFS file system\. For example: `fs-0123456`
 
 ## Examples<a name="aws-resource-efs-filesystem--examples"></a>
 
+
+
 ### Create an Encrypted File System<a name="aws-resource-efs-filesystem--examples--Create_an_Encrypted_File_System"></a>
 
 The following example declares an encrypted Amazon EFS file system\.
@@ -459,3 +461,4 @@ Resources:
 ## See also<a name="aws-resource-efs-filesystem--seealso"></a>
 +  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
 +  [Creating an Amazon Elastic File System](https://docs.aws.amazon.com/efs/latest/ug/creating-using-fs.html) 
+

@@ -43,6 +43,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-securityhub-hub--examples"></a>
 
+
+
 ### Declare a Hub Resource<a name="aws-resource-securityhub-hub--examples--Declare_a_Hub_Resource"></a>
 
 The following example shows how to declare a Security Hub `Hub` resource:

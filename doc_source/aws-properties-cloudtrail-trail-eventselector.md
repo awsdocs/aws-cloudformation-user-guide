@@ -4,6 +4,8 @@ Use event selectors to further specify the management and data event settings fo
 
 You can configure up to five event selectors for a trail\.
 
+You cannot apply both event selectors and advanced event selectors to a trail\.
+
 ## Syntax<a name="aws-properties-cloudtrail-trail-eventselector-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

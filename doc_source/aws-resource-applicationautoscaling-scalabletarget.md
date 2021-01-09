@@ -70,8 +70,10 @@ The identifier of the resource associated with the scalable target\. This string
 + Amazon SageMaker endpoint variant \- The resource type is `variant` and the unique identifier is the resource ID\. Example: `endpoint/my-end-point/variant/KMeansClustering`\.
 + Custom resources are not supported with a resource type\. This parameter must specify the `OutputValue` from the CloudFormation template stack used to access the resources\. The unique identifier is defined by the service provider\. More information is available in our [GitHub repository](https://github.com/aws/aws-auto-scaling-custom-resource)\.
 + Amazon Comprehend document classification endpoint \- The resource type and unique identifier are specified using the endpoint ARN\. Example: `arn:aws:comprehend:us-west-2:123456789012:document-classifier-endpoint/EXAMPLE`\.
++ Amazon Comprehend entity recognizer endpoint \- The resource type and unique identifier are specified using the endpoint ARN\. Example: `arn:aws:comprehend:us-west-2:123456789012:entity-recognizer-endpoint/EXAMPLE`\.
 + Lambda provisioned concurrency \- The resource type is `function` and the unique identifier is the function name with a function version or alias name suffix that is not `$LATEST`\. Example: `function:my-function:prod` or `function:my-function:1`\.
 + Amazon Keyspaces table \- The resource type is `table` and the unique identifier is the table name\. Example: `keyspace/mykeyspace/table/mytable`\.
++ Amazon MSK cluster \- The resource type and unique identifier are specified using the cluster ARN\. Example: `arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5`\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -100,12 +102,14 @@ The scalable dimension associated with the scalable target\. This string consist
 +  `sagemaker:variant:DesiredInstanceCount` \- The number of EC2 instances for an Amazon SageMaker model endpoint variant\.
 +  `custom-resource:ResourceType:Property` \- The scalable dimension for a custom resource provided by your own application or service\.
 +  `comprehend:document-classifier-endpoint:DesiredInferenceUnits` \- The number of inference units for an Amazon Comprehend document classification endpoint\.
++  `comprehend:entity-recognizer-endpoint:DesiredInferenceUnits` \- The number of inference units for an Amazon Comprehend entity recognizer endpoint\.
 +  `lambda:function:ProvisionedConcurrency` \- The provisioned concurrency for a Lambda function\.
 +  `cassandra:table:ReadCapacityUnits` \- The provisioned read capacity for an Amazon Keyspaces table\.
 +  `cassandra:table:WriteCapacityUnits` \- The provisioned write capacity for an Amazon Keyspaces table\.
++  `kafka:broker-storage:VolumeSize` \- The provisioned volume size \(in GiB\) for brokers in an Amazon MSK cluster\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticmapreduce:instancegroup:InstanceCount | lambda:function:ProvisionedConcurrency | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
+*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScheduledActions`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledactions"></a>
@@ -119,7 +123,7 @@ For more information about using scheduled scaling, see [Scheduled scaling](http
 The namespace of the AWS service that provides the resource, or a `custom-resource`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `appstream | cassandra | comprehend | custom-resource | dynamodb | ec2 | ecs | elasticmapreduce | lambda | rds | sagemaker`  
+*Allowed values*: `appstream | cassandra | comprehend | custom-resource | dynamodb | ec2 | ecs | elasticmapreduce | kafka | lambda | rds | sagemaker`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SuspendedState`  <a name="cfn-applicationautoscaling-scalabletarget-suspendedstate"></a>
@@ -196,3 +200,4 @@ ScalableTarget:
 + [Getting started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*
 + [How to use AWS CloudFormation to configure auto scaling for Amazon DynamoDB tables and indexes](http://aws.amazon.com/blogs/database/how-to-use-aws-cloudformation-to-configure-auto-scaling-for-amazon-dynamodb-tables-and-indexes/)
 + [Scheduling AWS Lambda Provisioned Concurrency for recurring peak usage](http://aws.amazon.com/blogs/compute/scheduling-aws-lambda-provisioned-concurrency-for-recurring-peak-usage/)
+

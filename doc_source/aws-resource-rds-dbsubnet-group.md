@@ -73,6 +73,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-rds-dbsubnet-group--examples"></a>
 
+
+
 ### <a name="aws-resource-rds-dbsubnet-group--examples--"></a>
 
 #### JSON<a name="aws-resource-rds-dbsubnet-group--examples----json"></a>

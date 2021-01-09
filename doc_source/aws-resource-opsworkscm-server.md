@@ -280,6 +280,8 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
 
+
+
 ### Create an AWS OpsWorks for Chef Automate server<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server"></a>
 
 The following example creates an AWS OpsWorks for Chef Automate server\.
@@ -494,3 +496,4 @@ Outputs:
 +  [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [ `CreateServer` ](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference* 
+

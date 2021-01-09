@@ -36,6 +36,7 @@ Properties:
 A description for the security group\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-redshift-clustersecuritygroup-tags"></a>
@@ -57,6 +58,8 @@ For the Amazon Redshift cluster security group `myClusterSecurityGroup`, Ref ret
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-redshift-clustersecuritygroup--examples"></a>
+
+
 
 ### Specify a Cluster Security Group<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group"></a>
 

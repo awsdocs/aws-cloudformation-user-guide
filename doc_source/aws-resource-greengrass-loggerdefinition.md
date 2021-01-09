@@ -96,6 +96,8 @@ The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\.
 
 ## Examples<a name="aws-resource-greengrass-loggerdefinition--examples"></a>
 
+
+
 ### Logger Definition Snippet<a name="aws-resource-greengrass-loggerdefinition--examples--Logger_Definition_Snippet"></a>
 
 The following snippet defines a logger definition resource with an initial version that contains a logger\.

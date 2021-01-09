@@ -20,12 +20,12 @@ If your template includes nested stacks \(for example, stacks described in other
 
      If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing objects in a versioning\-enabled bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
-     The URL must point to a template with a maximum size of 460,800 bytes that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
+     The URL must point to a template with a maximum size of 1 MB that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
    + **Upload a template file**
 
      Select a CloudFormation template on your local computer\. 
 
-     Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 460,800 bytes\. Once you have chosen your template, CloudFormation uploads the file and displays the S3 URL\.
+     Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 1 MB\. Once you have chosen your template, CloudFormation uploads the file and displays the S3 URL\.
 
      If you use the CLI or API to create a stack, you can upload a template with a maximum size of 51,200 bytes\.
 **Note**  
@@ -37,8 +37,6 @@ You can directly manage encryption options for buckets that AWS CloudFormation h
 You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. When you create or update a stack, specify the Amazon S3 URL of a template file\.  
 **Use a sample template**  
    + Select a sample template from a collection of templates provided by CloudFormation to get you started\. For descriptions of the templates, see [Sample templates](cfn-sample-templates.md)\.
-
-     To create a stack from existing AWS resources by using the CloudFormer tool, select **CloudFormer**, located in the **Tools** section, from the list\. For more information, see [Using CloudFormer \(beta\) to create templates](cfn-using-cloudformer.md)\.
 
      To view more templates samples and snippets, organized by AWS service, click **View more sample templates**\.   
 **Create template in Designer**  

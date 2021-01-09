@@ -51,6 +51,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-networkmanager-transitgatewayregistration--examples"></a>
 
+
+
 ### Transit Gateway Registration<a name="aws-resource-networkmanager-transitgatewayregistration--examples--Transit_Gateway_Registration"></a>
 
 The following example registers a transit gateway in a global network\.

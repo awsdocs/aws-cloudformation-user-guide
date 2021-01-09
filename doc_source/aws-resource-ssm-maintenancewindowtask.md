@@ -487,6 +487,38 @@ Resources:
     DependsOn: MaintenanceWindowTarget
 ```
 
+### Create a maintenance window with run command task\.<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_maintenance_window_with_run_command_task."></a>
+
+The following examples are for the `Parameters` property of the `MaintenanceWindowRunCommandParameters` property type\.
+
+#### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_maintenance_window_with_run_command_task.--json"></a>
+
+```
+{
+    "Parameters": {
+        "executionTimeout": [
+            "3600"
+        ],
+        "commands": [
+            "Get-Service myImportantService | Restart-Service\nGet-ExecutionPolicy -List\nSet-ExecutionPolicy -Scope Process AllSigned\n"
+        ]
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_maintenance_window_with_run_command_task.--yaml"></a>
+
+```
+Parameters:
+  executionTimeout:
+    - '3600'
+  commands:
+    - |
+      Get-Service myImportantService | Restart-Service
+      Get-ExecutionPolicy -List
+      Set-ExecutionPolicy -Scope Process AllSigned
+```
+
 ## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
 +  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 

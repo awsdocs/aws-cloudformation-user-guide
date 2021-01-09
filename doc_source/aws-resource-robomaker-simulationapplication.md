@@ -112,6 +112,8 @@ The current revision id\.
 
 ## Examples<a name="aws-resource-robomaker-simulationapplication--examples"></a>
 
+
+
 ### Create an AWS RoboMaker Simulation Application<a name="aws-resource-robomaker-simulationapplication--examples--Create_an_AWS_RoboMaker_Simulation_Application"></a>
 
 The following example creates a simulation application\.

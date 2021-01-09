@@ -172,7 +172,7 @@ MyRoute:
     Target: !Join
       - /
       - - integrations
-      - !Ref MyIntegration
+        - !Ref MyIntegration
 ```
 
 ### WebSocket API route creation example<a name="aws-resource-apigatewayv2-route--examples--WebSocket_API_route_creation_example"></a>
@@ -229,3 +229,4 @@ MyRoute:
 
 ## See also<a name="aws-resource-apigatewayv2-route--seealso"></a>
 + [CreateRoute](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes.html#CreateRoute) in the *Amazon API Gateway Version 2 API Reference*
+

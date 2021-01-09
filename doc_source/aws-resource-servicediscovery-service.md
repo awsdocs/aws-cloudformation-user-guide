@@ -126,6 +126,8 @@ The name that you assigned to the service\.
 
 ## Examples<a name="aws-resource-servicediscovery-service--examples"></a>
 
+
+
 ### Create a service<a name="aws-resource-servicediscovery-service--examples--Create_a_service"></a>
 
 The following example creates a service based on a public DNS namespace\. The service includes settings for Amazon Route 53 A and AAAA records that have a routing policy of `WEIGHTED`\. It also includes a Route 53 health check\.
@@ -184,3 +186,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-service--seealso"></a>
 +  [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference* 
+

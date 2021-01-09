@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn)" : String,
       "[Name](#cfn-codegurureviewer-repositoryassociation-name)" : String,
       "[Owner](#cfn-codegurureviewer-repositoryassociation-owner)" : String,
+      "[Tags](#cfn-codegurureviewer-repositoryassociation-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-codegurureviewer-repositoryassociation-type)" : String
     }
 }
@@ -34,6 +35,8 @@ Properties:
   [ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn): String
   [Name](#cfn-codegurureviewer-repositoryassociation-name): String
   [Owner](#cfn-codegurureviewer-repositoryassociation-owner): String
+  [Tags](#cfn-codegurureviewer-repositoryassociation-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-codegurureviewer-repositoryassociation-type): String
 ```
 
@@ -68,6 +71,12 @@ The name of the repository\.
 *Pattern*: `^\S(.*\S)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Tags`  <a name="cfn-codegurureviewer-repositoryassociation-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Type`  <a name="cfn-codegurureviewer-repositoryassociation-type"></a>
  The type of repository that contains the source code to be reviewed\. The valid values are:   
 + `CodeCommit`
@@ -95,6 +104,8 @@ The name of the repository\.
 The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) object\. You can retrieve this ARN by calling `ListRepositories`\.
 
 ## Examples<a name="aws-resource-codegurureviewer-repositoryassociation--examples"></a>
+
+
 
 ### Create an AWS CodeCommit repository association using an existing CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository"></a>
 

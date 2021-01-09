@@ -72,6 +72,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
 
+
+
 #### YAML<a name="aws-resource-ec2-customer-gateway--examples----yaml"></a>
 
 ```
@@ -84,6 +86,8 @@ myCustomerGateway:
 ```
 
 ### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ec2-customer-gateway--examples----json"></a>
 
@@ -102,3 +106,4 @@ myCustomerGateway:
 
 ## See also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
 +  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

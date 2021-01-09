@@ -68,3 +68,4 @@ The state of the carrier gateway\.
 ## See also<a name="aws-resource-ec2-carriergateway--seealso"></a>
 + [Carrier gateways](https://docs.aws.amazon.com/vpc/latest/userguide/Carrier_Gateway.html) in *Amazon Virtual Private Cloud User Guide*
 + [CreateCarrierGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCarrierGateway.html) in the *Amazon EC2 API Reference*
+

@@ -74,3 +74,4 @@ ELBAttachment:
 ## See also<a name="aws-resource-opsworks-elbattachment--seealso"></a>
 +  [AttachElasticLoadBalancer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_AttachElasticLoadBalancer.html) in the *AWS OpsWorks API Reference*\.
 +  [Elastic Load Balancing Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/layers-elb.html) in the *AWS OpsWorks User Guide*\.
+

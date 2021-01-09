@@ -95,6 +95,8 @@ For AWS services, the ARN of the AWS resource that invokes the function\. For ex
 
 ## Examples<a name="aws-resource-lambda-permission--examples"></a>
 
+
+
 ### Cross Account Invoke<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke"></a>
 
 Grant account 123456789012 permission to invoke a function resource named `function` created in the same template\.

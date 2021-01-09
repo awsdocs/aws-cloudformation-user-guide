@@ -53,3 +53,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See also<a name="aws-resource-ec2-transitgatewayroutetablepropagation--seealso"></a>
 +  [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

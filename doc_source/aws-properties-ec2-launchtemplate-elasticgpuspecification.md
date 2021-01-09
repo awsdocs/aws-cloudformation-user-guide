@@ -32,3 +32,4 @@ The type of Elastic Graphics accelerator\. For more information about the values
 
 ## See also<a name="aws-properties-ec2-launchtemplate-elasticgpuspecification--seealso"></a>
 +  [ ElasticGpuSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ElasticGpuSpecification.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

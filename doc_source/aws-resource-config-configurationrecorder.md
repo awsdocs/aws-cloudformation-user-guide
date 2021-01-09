@@ -69,6 +69,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-configurationrecorder--examples"></a>
 
+
+
 ### Configuration Recorder<a name="aws-resource-config-configurationrecorder--examples--Configuration_Recorder"></a>
 
 The following example creates a configuration recorder for EC2 volumes\.

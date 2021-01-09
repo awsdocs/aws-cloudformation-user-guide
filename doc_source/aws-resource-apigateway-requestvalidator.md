@@ -67,6 +67,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-requestvalidator--examples"></a>
 
+
+
 ### Create request validator<a name="aws-resource-apigateway-requestvalidator--examples--Create_request_validator"></a>
 
 The following example creates an API Gateway API with an associated request validator, based on the supplied parameters\.
@@ -147,3 +149,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-requestvalidator--seealso"></a>
 + [requestvalidator:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/requestvalidator-create/) in the *Amazon API Gateway REST API Reference*
+

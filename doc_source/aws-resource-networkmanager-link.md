@@ -112,6 +112,8 @@ The ID of the link\. For example, `link-11112222aaaabbbb1`\.
 
 ## Examples<a name="aws-resource-networkmanager-link--examples"></a>
 
+
+
 ### Link<a name="aws-resource-networkmanager-link--examples--Link"></a>
 
 The following example creates a link in a global network\.

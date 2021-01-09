@@ -77,6 +77,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-webacl--examples"></a>
 
+
+
 ### Create a Web ACL<a name="aws-resource-wafregional-webacl--examples--Create_a_Web_ACL"></a>
 
 The following example defines a web ACL that allows, by default, any web request\. However, if the request matches any rule, AWS WAF blocks the request\. AWS WAF evaluates each rule in priority order, starting with the lowest value\.

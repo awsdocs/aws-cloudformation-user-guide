@@ -47,6 +47,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-account--examples"></a>
 
+
+
 ### Associate account with IAM role<a name="aws-resource-apigateway-account--examples--Associate_account_with_IAM_role"></a>
 
 The following example creates an IAM role that API Gateway can assume to push logs to CloudWatch Logs\. The example associates the role with the `AWS::ApiGateway::Account resource`\.
@@ -120,3 +122,4 @@ Account:
 
 ## See also<a name="aws-resource-apigateway-account--seealso"></a>
 + [account:update](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/) in the *Amazon API Gateway REST API Reference*
+

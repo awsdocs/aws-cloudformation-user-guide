@@ -180,6 +180,7 @@ The name of the server where the endpoint database resides\.
 
 `SslMode`  <a name="cfn-dms-endpoint-sslmode"></a>
 The Secure Sockets Layer \(SSL\) mode to use for the SSL connection\. The default is `none`   
+When `engine_name` is set to S3 then the only alowed value is `none`
 *Required*: No  
 *Type*: String  
 *Allowed values*: `none | require | verify-ca | verify-full`  
@@ -217,6 +218,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 A value that can be used for cross\-account validation\.
 
 ## Examples<a name="aws-resource-dms-endpoint--examples"></a>
+
+
 
 ### <a name="aws-resource-dms-endpoint--examples--"></a>
 
@@ -269,3 +272,4 @@ Resources:
 ## See also<a name="aws-resource-dms-endpoint--seealso"></a>
 +  [CreateEndpoint](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEndpoint.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

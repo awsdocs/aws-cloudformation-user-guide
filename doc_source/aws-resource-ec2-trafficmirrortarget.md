@@ -151,3 +151,4 @@ SampleNetworkInterfaceTarget:
 ## See also<a name="aws-resource-ec2-trafficmirrortarget--seealso"></a>
 + [Traffic Mirror Targets](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-targets) in *Traffic Mirroring*
 + [CreateTrafficMirrorTarget](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorTarget.html) in the *Amazon EC2 API Reference*
+

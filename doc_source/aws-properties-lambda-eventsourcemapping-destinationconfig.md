@@ -31,6 +31,8 @@ The destination configuration for failed invocations\.
 
 ## Examples<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples"></a>
 
+
+
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples--On-Failure_Destination_Configuration"></a>
 
 Configure a function to send a record of failed batches to an SQS queue\.

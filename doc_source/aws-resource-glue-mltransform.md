@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Role](#cfn-glue-mltransform-role)" : String,
       "[Tags](#cfn-glue-mltransform-tags)" : Json,
       "[Timeout](#cfn-glue-mltransform-timeout)" : Integer,
+      "[TransformEncryption](#cfn-glue-mltransform-transformencryption)" : TransformEncryption,
       "[TransformParameters](#cfn-glue-mltransform-transformparameters)" : TransformParameters,
       "[WorkerType](#cfn-glue-mltransform-workertype)" : String
     }
@@ -44,6 +45,8 @@ Properties:
   [Role](#cfn-glue-mltransform-role): String
   [Tags](#cfn-glue-mltransform-tags): Json
   [Timeout](#cfn-glue-mltransform-timeout): Integer
+  [TransformEncryption](#cfn-glue-mltransform-transformencryption): 
+    TransformEncryption
   [TransformParameters](#cfn-glue-mltransform-transformparameters): 
     TransformParameters
   [WorkerType](#cfn-glue-mltransform-workertype): String
@@ -120,6 +123,12 @@ The tags to use with this machine learning transform\. You may use tags to limit
 The timeout in minutes of the machine learning transform\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransformEncryption`  <a name="cfn-glue-mltransform-transformencryption"></a>
+The encryption\-at\-rest settings of the transform that apply to accessing user data\. Machine learning transforms can access user data encrypted in Amazon S3 using KMS\.  
+*Required*: No  
+*Type*: [TransformEncryption](aws-properties-glue-mltransform-transformencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransformParameters`  <a name="cfn-glue-mltransform-transformparameters"></a>

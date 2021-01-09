@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Database](#cfn-athena-namedquery-database)" : String,
       "[Description](#cfn-athena-namedquery-description)" : String,
       "[Name](#cfn-athena-namedquery-name)" : String,
-      "[QueryString](#cfn-athena-namedquery-querystring)" : String
+      "[QueryString](#cfn-athena-namedquery-querystring)" : String,
+      "[WorkGroup](#cfn-athena-namedquery-workgroup)" : String
     }
 }
 ```
@@ -33,6 +34,7 @@ Properties:
   [Name](#cfn-athena-namedquery-name): String
   [QueryString](#cfn-athena-namedquery-querystring): 
     String
+  [WorkGroup](#cfn-athena-namedquery-workgroup): String
 ```
 
 ## Properties<a name="aws-resource-athena-namedquery-properties"></a>
@@ -67,6 +69,13 @@ The SQL query statements that comprise the query\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `262144`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`WorkGroup`  <a name="cfn-athena-namedquery-workgroup"></a>
+The name of the workgroup that contains the named query\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `[a-zA-Z0-9._-]{1,128}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-athena-namedquery-return-values"></a>

@@ -3,8 +3,8 @@
 Macros enable you to perform custom processing on templates, from simple actions like find\-and\-replace operations to extensive transformations of entire templates\. 
 
 To get an idea of the breadth of possibilities, consider the `AWS::Include` and `AWS::Serverless` transforms, which are macros hosted by AWS CloudFormation:
-+ `` enables you to insert boilerplate template snippets into your templates\.
-+ `` takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. \(For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.\)
++ `AWS::Include transform` enables you to insert boilerplate template snippets into your templates\.
++ `AWS::Serverless transform` takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. \(For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.\)
 
 ## How AWS CloudFormation macros work<a name="template-macros-overview"></a>
 
@@ -15,7 +15,7 @@ To create a macro definition, you need to create the following:
 + A resource of type `[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)`, which enables users to call the Lambda function from within AWS CloudFormation templates\. This resource specifies the ARN of the Lambda function to invoke for this macro, and additional optional properties to assist with debugging\. To create this resource within an account, author a stack template that includes a `[AWS::CloudFormation::Macro](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)` resource, and then create a stack from the template\.
 
 To use a macro, reference the macro in your template:
-+ To process a section, or *snippet*, of a template, reference the macro in a `` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
++ To process a section, or *snippet*, of a template, reference the macro in a ``Fn::Transform`` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
 + To process an entire template, reference the macro in the [Transform](transform-section-structure.md) section of the template\.
 
 Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advise that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\. 
@@ -96,6 +96,11 @@ AWS CloudFormation expects the underlying function to return a response in the f
   The processed template content must be valid JSON, and its inclusion in the processed template must result in a valid template\.
 
   If your function doesn't actually change the template content that AWS CloudFormation passes to it, but you still need to include that content in the processed template, your function needs to return that template content to AWS CloudFormation in its response\.
++ **errorMessage**
+
+  The error message that explains why the transform failed\. CloudFormation displays this error message in the **Events** pane of the **Stack details** page for your stack\. 
+
+  For example, "Error creating change set: Transform *AWS account number*::*macro name* failed with: *error message string*"\.
 
 For information about additional considerations when creating macros, see [Considerations when creating AWS CloudFormation macro definitions](#template-macros-considerations)\.
 
@@ -130,6 +135,7 @@ When creating macro definitions, keep the following in mind:
 + Any processed template snippets must be valid JSON\.
 + Any processed template snippets must pass validation checks for a create stack or update stack operation\.
 + AWS CloudFormation resolves macros first, and then processes the template\. The resulting template must be valid JSON and must not exceed the template size limit\.
++ Because of the order in which CloudFormation processes elements in a template, a macro cannot include modules in the processed template content it returns to CloudFormation\. For more information on modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\.
 + When using the update rollback feature, AWS CloudFormation uses a copy of the original template\. It rolls back to the original template even if the included snippet was changed\.
 + Including macros within macros does not work because we do not process macros iteratively\.
 + The `Fn::ImportValue` intrinsic function isn't currently supported in macros\.
@@ -254,7 +260,7 @@ Reduce the size of template fragment returned by a given macro\. CloudFormation 
 In order for AWS CloudFormation to successfully run a macro referenced in a template, the user must have `Invoke` permissions for the underlying Lambda function\. For more information, see [Overview of managing access permissions to your AWS Lambda resources](https://docs.aws.amazon.com/lambda/latest/dg/access-control-overview.html) in the *AWS Lambda Developer Guide*\.
 
 1. Include a reference to the macro in the template\.
-   + To process a template snippet, reference the macro in a `` function located relative to the template content you want to process\.
+   + To process a template snippet, reference the macro in a ``Fn::Transform`` function located relative to the template content you want to process\.
    + To process the entire template, reference the macro in the [Transform](transform-section-structure.md) section of the template\.
 
 1. [Create a change set](using-cfn-updating-stacks-changesets-create.md) using the template\.

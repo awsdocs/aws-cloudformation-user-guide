@@ -51,6 +51,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-subnetcidrblock--examples"></a>
 
+
+
 ### Subnet CIDR Block Association<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association"></a>
 
 The following example associates an IPv6 CIDR block by using the Ref function to specify the IPv6 of the Ipv6SubnetCidrBlock resource \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\.

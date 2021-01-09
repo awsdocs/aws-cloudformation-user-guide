@@ -98,6 +98,8 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ## Examples<a name="aws-resource-codestarnotifications-notificationrule--examples"></a>
 
+
+
 ### Example<a name="aws-resource-codestarnotifications-notificationrule--examples--Example"></a>
 
 The following example creates a notification rule with a name of My Notification Rule for Comments on Commits\. The notification rule is tagged with a key\-value pair indicating what team owns the rule\.
@@ -117,9 +119,7 @@ The following example creates a notification rule with a name of My Notification
         "Targets": [
             {
                 "TargetType": "SNS",
-                "TargetAddress": {
-                    "Fn::Sub": "arn:aws:sns:us-east-2:123456789012:MyNotificationTopic"
-                }
+                "TargetAddress": "arn:aws:sns:us-east-2:123456789012:MyNotificationTopic"
             }
         ],
         "Tags": {
@@ -141,7 +141,7 @@ Properties:
             - codecommit-repository-comments-on-commits
         Targets: 
             - TargetType: SNS 
-              TargetAddress: 'Fn::Sub': 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
+              TargetAddress: 'arn:aws:sns:us-east-2:123456789012:MyNotificationTopic'
         Tags: 
              Team: Saanvi
 ```

@@ -184,6 +184,8 @@ The default endpoint for an API\. For example: `https://abcdef.execute-api.us-we
 
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
 
+
+
 ### API creation example<a name="aws-resource-apigatewayv2-api--examples--API_creation_example"></a>
 
 The following example creates a WebSocket `Api` resource called `MyApi`\.
@@ -251,3 +253,4 @@ HttpApi:
 
 ## See also<a name="aws-resource-apigatewayv2-api--seealso"></a>
 + [CreateApi](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis.html#CreateApi) in the *Amazon API Gateway Version 2 API Reference*
+

@@ -55,3 +55,4 @@ The topic to which notifications are sent and the events for which notifications
 
 ## See also<a name="aws-properties-s3-bucket-notificationconfig--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

@@ -45,6 +45,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-ec2-egressonlyinternetgateway--examples--"></a>
 
+
+
 #### YAML<a name="aws-resource-ec2-egressonlyinternetgateway--examples----yaml"></a>
 
 ```
@@ -55,6 +57,8 @@ myEgressOnlyInternetGateway:
 ```
 
 ### <a name="aws-resource-ec2-egressonlyinternetgateway--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ec2-egressonlyinternetgateway--examples----json"></a>
 
@@ -71,3 +75,4 @@ myEgressOnlyInternetGateway:
 
 ## See also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
 +  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

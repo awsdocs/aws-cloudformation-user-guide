@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Kendra::Faq",
   "Properties" : {
       "[Description](#cfn-kendra-faq-description)" : String,
+      "[FileFormat](#cfn-kendra-faq-fileformat)" : String,
       "[IndexId](#cfn-kendra-faq-indexid)" : String,
       "[Name](#cfn-kendra-faq-name)" : String,
       "[RoleArn](#cfn-kendra-faq-rolearn)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Kendra::Faq
 Properties: 
   [Description](#cfn-kendra-faq-description): String
+  [FileFormat](#cfn-kendra-faq-fileformat): String
   [IndexId](#cfn-kendra-faq-indexid): String
   [Name](#cfn-kendra-faq-name): String
   [RoleArn](#cfn-kendra-faq-rolearn): String
@@ -41,6 +43,17 @@ Properties:
 
 `Description`  <a name="cfn-kendra-faq-description"></a>
 A description of the FAQ\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FileFormat`  <a name="cfn-kendra-faq-fileformat"></a>
+The format of the input file\. You can choose between a basic CSV format, a CSV format that includes customs attributes in a header, and a JSON format that includes custom attributes\.   
+ The format must match the format of the file stored in the S3 bucket identified in the S3Path parameter\.   
+Valid values are:  
++ `CSV`
++ `CSV_WITH_HEADER`
++ `JSON`
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

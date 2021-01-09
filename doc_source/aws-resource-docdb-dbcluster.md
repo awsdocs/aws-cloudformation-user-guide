@@ -127,10 +127,8 @@ The version number of the database engine to use\. The \-\-engine\-version will 
 The AWS KMS key identifier for an encrypted cluster\.  
 The AWS KMS key identifier is the Amazon Resource Name \(ARN\) for the AWS KMS encryption key\. If you are creating a cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key\.  
 If an encryption key is not specified in `KmsKeyId`:   
-+ If `ReplicationSourceIdentifier` identifies an encrypted source, then Amazon DocumentDB uses the encryption key that is used to encrypt the source\. Otherwise, Amazon DocumentDB uses your default encryption key\. 
-+ If the `StorageEncrypted` parameter is `true` and `ReplicationSourceIdentifier` is not specified, Amazon DocumentDB uses your default encryption key\. 
++ If the `StorageEncrypted` parameter is `true`, Amazon DocumentDB uses your default encryption key\. 
 AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
-If you create a replica of an encrypted cluster in another AWS Region, you must set `KmsKeyId` to a KMS key ID that is valid in the destination AWS Region\. This key is used to encrypt the replica in that AWS Region\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -237,7 +235,11 @@ The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-co
 
 ## Examples<a name="aws-resource-docdb-dbcluster--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbcluster--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbcluster--examples----json"></a>
 
@@ -299,3 +301,4 @@ Resources:
 +  [DeleteDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBCluster.html) 
 +  [DescribeDBClusters](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusters.html) 
 +  [ModifyDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBCluster.html) 
+

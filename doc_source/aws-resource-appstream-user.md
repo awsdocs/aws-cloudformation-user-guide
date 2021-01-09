@@ -39,6 +39,7 @@ Properties:
 The authentication type for the user\. You must specify USERPOOL\.   
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `API | SAML | USERPOOL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FirstName`  <a name="cfn-appstream-user-firstname"></a>
@@ -77,3 +78,4 @@ Users' email addresses are case\-sensitive\. During login, if they specify an em
 
 ## See also<a name="aws-resource-appstream-user--seealso"></a>
 +  [CreateUser](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateUser.html) in the *Amazon AppStream 2\.0 API Reference* 
+

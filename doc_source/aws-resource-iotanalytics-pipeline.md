@@ -61,6 +61,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ## Examples<a name="aws-resource-iotanalytics-pipeline--examples"></a>
 
+
+
 ### Simple Pipeline<a name="aws-resource-iotanalytics-pipeline--examples--Simple_Pipeline"></a>
 
 The following example creates a simple pipeline\.

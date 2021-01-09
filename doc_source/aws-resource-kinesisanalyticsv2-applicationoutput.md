@@ -47,11 +47,14 @@ The name of the application\.
 
 `Output`  <a name="cfn-kinesisanalyticsv2-applicationoutput-output"></a>
  Describes a SQL\-based Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\.   
+  
 *Required*: Yes  
 *Type*: [Output](aws-properties-kinesisanalyticsv2-applicationoutput-output.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationoutput--examples"></a>
+
+
 
 ### Create an ApplicationOutput object<a name="aws-resource-kinesisanalyticsv2-applicationoutput--examples--Create_an_ApplicationOutput_object"></a>
 
@@ -100,3 +103,4 @@ Properties:
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationoutput--seealso"></a>
 +  [AddApplicationOutput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationOutput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

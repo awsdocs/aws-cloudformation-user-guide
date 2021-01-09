@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
 
 `DataCaptureConfig`  <a name="cfn-sagemaker-endpointconfig-datacaptureconfig"></a>
-Specifies how to capture endpoint data for model monitor\. The data capture configuration applies to all prodcution variants hosted at the endpoint\.  
+Specifies how to capture endpoint data for model monitor\. The data capture configuration applies to all production variants hosted at the endpoint\.  
 *Required*: No  
 *Type*: [DataCaptureConfig](aws-properties-sagemaker-endpointconfig-datacaptureconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -49,7 +49,7 @@ The name of the endpoint configuration\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>

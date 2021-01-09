@@ -72,6 +72,8 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-route53-healthcheck--examples"></a>
 
+
+
 ### Create health check<a name="aws-resource-route53-healthcheck--examples--Create_health_check"></a>
 
 The following example creates an Amazon Route 53 health check that sends HTTP requests to the specified endpoint\.
@@ -132,3 +134,4 @@ myHealthCheck:
 
 ## See also<a name="aws-resource-route53-healthcheck--seealso"></a>
 +  [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*
+

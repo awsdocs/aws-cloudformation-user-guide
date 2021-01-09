@@ -53,3 +53,4 @@ The ARN of the Lambda function\. You must specify the ARN of a function version;
 
 ## See also<a name="aws-properties-cloudfront-distribution-lambdafunctionassociation--seealso"></a>
 +  [LambdaFunctionAssociation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LambdaFunctionAssociation.html) in the *Amazon CloudFront API Reference* 
+

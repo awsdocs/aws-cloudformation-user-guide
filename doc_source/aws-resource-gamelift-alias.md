@@ -72,6 +72,8 @@ Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-gamelift-alias--examples"></a>
 
+
+
 ### Create a Simple Alias<a name="aws-resource-gamelift-alias--examples--Create_a_Simple_Alias"></a>
 
 The following example creates a simple alias for a fleet\. The template uses `!Ref` to reference a fleet resource, which can be declared elsewhere in the same template\.

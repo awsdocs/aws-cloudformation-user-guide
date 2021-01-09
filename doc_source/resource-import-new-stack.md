@@ -130,7 +130,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    The AWS CLI also supports text files as input for the `--resources-to-import` parameter, as shown in the following example\.
 
    ```
-   --resources-to-import: file://resourcesToImport.txt
+   --resources-to-import file://resourcesToImport.txt
    ```
 
    In this walkthrough, *file://resourcesToImport\.txt* contains the following\.

@@ -40,3 +40,4 @@ The private IPv4 addresses\.
 
 ## See also<a name="aws-properties-ec2-launchtemplate-privateipadd--seealso"></a>
 +  [ PrivateIpAddressSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_PrivateIpAddressSpecification.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

@@ -64,6 +64,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
 
+
+
 ### Authorize Another Account<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account"></a>
 
 The following example creates an AggregationAuthorization that authorizes another account to aggregate your AWS Config data into a specific region\. 

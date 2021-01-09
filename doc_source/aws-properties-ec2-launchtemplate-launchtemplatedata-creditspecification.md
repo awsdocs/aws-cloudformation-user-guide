@@ -32,3 +32,4 @@ The credit option for CPU usage of a T2, T3, or T3a instance\. Valid values are 
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification--seealso"></a>
 +  [ CreditSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreditSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

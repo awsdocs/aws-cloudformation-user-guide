@@ -92,7 +92,7 @@ Configures Amazon ES to use Amazon Cognito authentication for Kibana\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainEndpointOptions`  <a name="cfn-elasticsearch-domain-domainendpointoptions"></a>
-Specifies additional options for the domain endpoint, such as whether to require HTTPS for all traffic\.  
+Specifies additional options for the domain endpoint, such as whether to require HTTPS for all traffic or whether to use a custom endpoint rather than the default endpoint\.  
 *Required*: No  
 *Type*: [DomainEndpointOptions](aws-properties-elasticsearch-domain-domainendpointoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -181,6 +181,8 @@ The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:12
 The domain\-specific endpoint that's used for requests to the Elasticsearch APIs, such as `search-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-1.es.amazonaws.com`\.
 
 ## Examples<a name="aws-resource-elasticsearch-domain--examples"></a>
+
+
 
 ### Create an Amazon ES domain that contains two data nodes and three master nodes<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes"></a>
 

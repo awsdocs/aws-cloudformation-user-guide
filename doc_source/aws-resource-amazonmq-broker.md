@@ -2,7 +2,7 @@
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\.
 
-The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ brokers, add configuration changes or modify users for the specified broker, return information about the specified broker, and delete the specified broker\. For more information, see [Amazon MQ Basic Elements](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-basic-elements.html) in the *Amazon MQ Developer Guide*\.
+The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ brokers, add configuration changes or modify users for a speified ActiveMQ broker, return information about the specified broker, and delete the broker\. For more information, see [How Amazon MQ works](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-how-it-works.html) in the *Amazon MQ Developer Guide*\.
 + `ec2:CreateNetworkInterface`
 
   This permission is required to allow Amazon MQ to create an elastic network interface \(ENI\) on behalf of your account\.
@@ -39,7 +39,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineType](#cfn-amazonmq-broker-enginetype)" : String,
       "[EngineVersion](#cfn-amazonmq-broker-engineversion)" : String,
       "[HostInstanceType](#cfn-amazonmq-broker-hostinstancetype)" : String,
-      "[LdapMetadata](#cfn-amazonmq-broker-ldapmetadata)" : LdapMetadata,
       "[LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata)" : LdapServerMetadata,
       "[Logs](#cfn-amazonmq-broker-logs)" : LogList,
       "[MaintenanceWindowStartTime](#cfn-amazonmq-broker-maintenancewindowstarttime)" : MaintenanceWindow,
@@ -69,8 +68,6 @@ Properties:
   [EngineType](#cfn-amazonmq-broker-enginetype): String
   [EngineVersion](#cfn-amazonmq-broker-engineversion): String
   [HostInstanceType](#cfn-amazonmq-broker-hostinstancetype): String
-  [LdapMetadata](#cfn-amazonmq-broker-ldapmetadata): 
-    LdapMetadata
   [LdapServerMetadata](#cfn-amazonmq-broker-ldapservermetadata): 
     LdapServerMetadata
   [Logs](#cfn-amazonmq-broker-logs): 
@@ -98,7 +95,7 @@ Optional\. The authentication strategy used to secure the broker\. The default i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AutoMinorVersionUpgrade`  <a name="cfn-amazonmq-broker-autominorversionupgrade"></a>
-Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions\. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot\.  
+Enables automatic upgrades to new minor versions for brokers, as new engine versions are released\. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -110,7 +107,7 @@ The name of the broker\. This value must be unique in your AWS account, 1\-50 ch
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Configuration`  <a name="cfn-amazonmq-broker-configuration"></a>
-A list of information about the configuration\.  
+A list of information about the configuration\. Does not apply to RabbitMQ brokers\.  
 *Required*: No  
 *Type*: [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,18 +116,19 @@ A list of information about the configuration\.
 The deployment mode of the broker\. Available values:  
 + `SINGLE_INSTANCE`
 + `ACTIVE_STANDBY_MULTI_AZ`
++ `CLUSTER_MULTI_AZ`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EncryptionOptions`  <a name="cfn-amazonmq-broker-encryptionoptions"></a>
-Encryption options for the broker\.  
+Encryption options for the broker\. Does not apply to RabbitMQ brokers\.  
 *Required*: No  
 *Type*: [EncryptionOptions](aws-properties-amazonmq-broker-encryptionoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineType`  <a name="cfn-amazonmq-broker-enginetype"></a>
-The type of broker engine\. Note: Currently, Amazon MQ supports only ACTIVEMQ\.  
+The type of broker engine\. Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -147,14 +145,8 @@ The broker's instance type\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LdapMetadata`  <a name="cfn-amazonmq-broker-ldapmetadata"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: [LdapMetadata](aws-properties-amazonmq-broker-ldapmetadata.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `LdapServerMetadata`  <a name="cfn-amazonmq-broker-ldapservermetadata"></a>
-Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\.  
+Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\. Does not apply to RabbitMQ brokers\.  
 *Required*: No  
 *Type*: [LdapServerMetadata](aws-properties-amazonmq-broker-ldapservermetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -166,7 +158,7 @@ Enables Amazon CloudWatch logging for brokers\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaintenanceWindowStartTime`  <a name="cfn-amazonmq-broker-maintenancewindowstarttime"></a>
-The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker\.\.  
+The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker\.  
 *Required*: No  
 *Type*: [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -190,7 +182,8 @@ The broker's storage type\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-amazonmq-broker-subnetids"></a>
-The list of groups \(2 maximum\) that define which subnets and IP ranges the broker can use from different Availability Zones\. A SINGLE\_INSTANCE deployment requires one subnet \(for example, the default subnet\)\. An ACTIVE\_STANDBY\_MULTI\_AZ deployment requires two subnets\.  
+The list of groups that define which subnets and IP ranges the broker can use from different Availability Zones\. If you specify more than one subnet, the subnets must be in different Availability Zones\. Amazon MQ will not be able to create VPC endpoints for your broker with multiple subnets in the same Availability Zone\. A SINGLE\_INSTANCE deployment requires one subnet \(for example, the default subnet\)\. An ACTIVE\_STANDBY\_MULTI\_AZ deployment \(ACTIVEMQ\) requires two subnets\. A CLUSTER\_MULTI\_AZ deployment \(RABBITMQ\) has no subnet requirements when deployed with public accessibility, deployment without public accessibility requires at least one subnet\.  
+ If you specify subnets in a shared VPC for a RabbitMQ broker, the associated VPC to which the specified subnets belong must be owned by your AWS account\. Amazon MQ will not be able to create VPC enpoints in VPCs that are not owned by your AWS account\. 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -202,7 +195,7 @@ An array of key\-value pairs\. For more information, see [Using Cost Allocation 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Users`  <a name="cfn-amazonmq-broker-users"></a>
-The list of ActiveMQ users \(persons or applications\) who can access queues and topics\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.  
+The list of ActiveMQ users \(persons or applications\) who can access queues and topics\. For RabbitMQ brokers, one and only one administrative user is accepted and created when a broker is first provisioned\. All subsequent RabbitMQ users are created by via the RabbitMQ web console or by using the RabbitMQ management API\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.  
 *Required*: Yes  
 *Type*: List of [User](aws-properties-amazonmq-broker-user.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -242,7 +235,7 @@ The revision number of the configuration\.
  `1` 
 
 `IpAddresses`  <a name="IpAddresses-fn::getatt"></a>
-The IP addresses of each broker instance as a list of strings\.  
+The IP addresses of each broker instance as a list of strings\. Does not apply to RabbitMQ brokers\.  
  `['198.51.100.2', '203.0.113.9']` 
 
 `MqttEndpoints`  <a name="MqttEndpoints-fn::getatt"></a>
@@ -265,19 +258,22 @@ The WSS endpoints of each broker instance as a list of strings\.
 
 ### Basic Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker"></a>
 
-The following example creates a basic Amazon MQ broker with one user that belongs to a group\. 
+The following examples creates a basic Amazon MQ broker\. The RabbitMQ example creates a broker with one administrative user, while the ActiveMQ example creates a broker with one user that belongs to a group\.
+
+**Note**  
+We don't recommend including plaintext passwords in AWS CloudFormation templates\. To securely retrieve your user credentials, add a `Ref` to your template\.
 
 #### JSON<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--json"></a>
 
 ```
 {
-  "Description": "Create a basic AmazonMQ broker",
+  "Description": "Create a basic ActiveMQ broker",
   "Resources": {
     "BasicBroker": {
       "Type": "AWS::AmazonMQ::Broker",
       "Properties": {
         "AutoMinorVersionUpgrade": "false",
-        "BrokerName": "MyBasicBroker",
+        "BrokerName": "MyBasicActiveBroker",
         "DeploymentMode": "SINGLE_INSTANCE",
         "EngineType": "ActiveMQ",
         "EngineVersion": "5.15.0",
@@ -299,17 +295,45 @@ The following example creates a basic Amazon MQ broker with one user that belong
 }
 ```
 
+#### JSON<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--json"></a>
+
+```
+{
+"Description": "Create a basic RabbitMQ broker",
+"Resources": {
+  "BasicBroker": {
+    "Type": "AWS::AmazonMQ::Broker",
+    "Properties": {
+      "AutoMinorVersionUpgrade": "false",
+      "BrokerName": "MyBasicRabbitBroker",
+      "DeploymentMode": "SINGLE_INSTANCE",
+      "EngineType": "RabbitMQ",
+      "EngineVersion": "3.8.6",
+      "HostInstanceType": "mq.t3.micro",
+      "PubliclyAccessible": "true",
+      "Users": [
+          {
+            "Password" : { "Ref" : "AmazonMqPassword" },
+            "Username" : { "Ref" : "AmazonMqUsername" }
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
 #### YAML<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--yaml"></a>
 
 ```
 --- 
-Description: "Create a basic AmazonMQ broker"
+Description: "Create a basic ActiveMQ broker"
 Resources: 
   BasicBroker:
     Type: "AWS::AmazonMQ::Broker"
     Properties: 
       AutoMinorVersionUpgrade: "false"
-      BrokerName: MyBasicBroker
+      BrokerName: MyBasicActiveBroker
       DeploymentMode: SINGLE_INSTANCE
       EngineType: ActiveMQ
       EngineVersion: "5.15.0"
@@ -321,26 +345,50 @@ Resources:
           Groups: 
             - MyGroup
           Password: 
-            Ref: "BrokerPassword"            
+            Ref: AmazonMqPassword           
           Username: 
-            Ref: "BrokerUsername"
+            Ref: AmazonMqUsername
+```
+
+#### YAML<a name="aws-resource-amazonmq-broker--examples--Basic_Amazon_MQ_Broker--yaml"></a>
+
+```
+--- 
+Description: "Create a basic RabbitMQ broker"
+Resources: 
+  BasicBroker:
+    Type: "AWS::AmazonMQ::Broker"
+    Properties: 
+      AutoMinorVersionUpgrade: "false"
+      BrokerName: MyBasicRabbitBroker
+      DeploymentMode: SINGLE_INSTANCE
+      EngineType: RabbitMQ
+      EngineVersion: "3.8.6"
+      HostInstanceType: mq.t3.micro
+      PubliclyAccessible: "true"
+      Users: 
+        - 
+          Password: 
+            Ref: AmazonMqPassword            
+          Username: 
+            Ref: AmazonMqUsername
 ```
 
 ### Complex Amazon MQ Broker<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker"></a>
 
-The following example creates a complex Amazon MQ broker with two users that don't belong to a group and one user that belongs in a group\. 
+The following example creates a complex Amazon MQ broker\. The ActiveMQ example creates a broker with two users that don't belong to a group and one user that belongs in a group\. The RabbitMQ example creates one administrator user, which can then create and manage other users via the RabbitMQ web console or the management API\.
 
 #### JSON<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--json"></a>
 
 ```
 {
-  "Description": "Create a complex AmazonMQ broker",
+  "Description": "Create a complex ActiveMQ broker",
   "Resources": {
     "ComplexBroker": {
       "Type": "AWS::AmazonMQ::Broker",
       "Properties": {
         "AutoMinorVersionUpgrade": "false",
-        "BrokerName": "MyComplexBroker",
+        "BrokerName": "MyComplexActiveBroker",
         "Configuration": {
           "Id": { "Ref": "Configuration1" },
           "Revision" : { "Fn::GetAtt": ["Configuration1", "Revision"] }
@@ -369,8 +417,8 @@ The following example creates a complex Amazon MQ broker with two users that don
         ],         
         "Users": [{
           "ConsoleAccess": "true",
-          "Password" : { "Ref" : "AmazonMqPassword1" },
-          "Username" : { "Ref" : "AmazonMqUsername1" }
+          "Password" : { "Ref" : "AmazonMqPassword" },
+          "Username" : { "Ref" : "AmazonMqUsername" }
         }, {
           "Password" : { "Ref" : "AmazonMqPassword2" },
           "Username" : { "Ref" : "AmazonMqUsername2" }
@@ -388,16 +436,58 @@ The following example creates a complex Amazon MQ broker with two users that don
 }
 ```
 
+#### JSON<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--json"></a>
+
+```
+{
+  "Description": "Create a single-instance RabbitMQ broker without public accessibility",
+  "Resources": {
+    "ComplexBroker": {
+      "Type": "AWS::AmazonMQ::Broker",
+      "Properties": {
+        "AutoMinorVersionUpgrade": "true",
+        "BrokerName": "MyComplexRabbitBroker",
+        "DeploymentMode": "SINGLE_INSTANCE",
+        "EngineType": "RabbitMQ",
+        "EngineVersion": "3.8.6",
+        "HostInstanceType": "mq.t3.micro",
+        "Logs": {
+          "General": true
+        },
+        "MaintenanceWindowStartTime": {
+          "DayOfWeek": "Monday",
+          "TimeOfDay": "22:45",
+          "TimeZone": "America/Los_Angeles"
+        },
+        "PubliclyAccessible": "false",
+        "SecurityGroups": [
+          "sg-1a234b5cd6efgh7i8"
+        ],
+        "SubnetIds": [
+          "subnet-123456b7891abcd1f"
+        ],
+        "Users": [
+          {
+            "Password" : { "Ref" : "AmazonMqPassword" },
+            "Username" : { "Ref" : "AmazonMqUsername" }
+          }
+        ]
+      }
+    }   
+  }
+}
+```
+
 #### YAML<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--yaml"></a>
 
 ```
-Description: Create a complex AmazonMQ broker
+Description: Create a complex ActiveMQ broker
 Resources:
   ComplexBroker:
     Type: 'AWS::AmazonMQ::Broker'
     Properties:
       AutoMinorVersionUpgrade: 'false'
-      BrokerName: MyComplexBroker
+      BrokerName: MyComplexActiveBroker
       Configuration:
         Id: !Ref Configuration1
         Revision: !GetAtt 
@@ -423,8 +513,8 @@ Resources:
         - subnet-67d8e90f
       Users:
         - ConsoleAccess: 'true'
-          Password: !Ref AmazonMqPassword1
-          Username: !Ref AmazonMqUsername1
+          Password: !Ref AmazonMqPassword
+          Username: !Ref AmazonMqUsername
         - Password: !Ref AmazonMqPassword2
           Username: !Ref AmazonMqUsername2
         - Groups:
@@ -432,4 +522,34 @@ Resources:
             - MyGroup2
           Password: !Ref AmazonMqPassword3
           Username: !Ref AmazonMqUsername3
+```
+
+#### YAML<a name="aws-resource-amazonmq-broker--examples--Complex_Amazon_MQ_Broker--yaml"></a>
+
+```
+Description: Create a single-instance RabbitMQ broker without public accessibility
+Resources:
+  ComplexBroker:
+    Type: 'AWS::AmazonMQ::Broker'
+    Properties:
+      AutoMinorVersionUpgrade: false
+      BrokerName: MyComplexRabbitBroker
+      DeploymentMode: SINGLE_INSTANCE
+      EngineType: RabbitMQ
+      EngineVersion: 3.8.6
+      HostInstanceType: mq.t3.micro
+      Logs:
+        General: true
+      MaintenanceWindowStartTime:
+        DayOfWeek: Monday
+        TimeOfDay: '22:45'
+        TimeZone: America/Los_Angeles
+      PubliclyAccessible: false
+      SecurityGroups:
+        - 'sg-1a234b5cd6efgh7i8'
+      SubnetIds:
+        - 'subnet-123456b7891abcd1f'
+      Users:
+        - Password: !Ref AmazonMqPassword
+          Username: !Ref AmazonMqUsername
 ```

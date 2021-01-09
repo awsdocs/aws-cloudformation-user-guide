@@ -1,6 +1,8 @@
 # AWS::GameLift::GameServerGroup TargetTrackingConfiguration<a name="aws-properties-gamelift-gameservergroup-targettrackingconfiguration"></a>
 
-Settings for a target\-based scaling policy applied to Auto Scaling group\. These settings are used to create a target\-based policy that tracks the GameLift FleetIQ metric `"PercentUtilizedGameServers"` and specifies a target value for the metric\. As player usage changes, the policy triggers to adjust the game server group capacity so that the metric returns to the target value\. 
+ **This data type is used with the Amazon GameLift FleetIQ and game server groups\.** 
+
+Settings for a target\-based scaling policy as part of a `GameServerGroupAutoScalingPolicy`\. These settings are used to create a target\-based policy that tracks the GameLift FleetIQ metric `"PercentUtilizedGameServers"` and specifies a target value for the metric\. As player usage changes, the policy triggers to adjust the game server group capacity so that the metric returns to the target value\. 
 
 ## Syntax<a name="aws-properties-gamelift-gameservergroup-targettrackingconfiguration-syntax"></a>
 
@@ -27,6 +29,3 @@ Desired value to use with a game server group target\-based scaling policy\.
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## See also<a name="aws-properties-gamelift-gameservergroup-targettrackingconfiguration--seealso"></a>
-+  [GameLift FleetIQ Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/gsg-intro.html) 

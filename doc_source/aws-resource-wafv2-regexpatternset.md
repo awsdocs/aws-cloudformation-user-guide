@@ -67,7 +67,7 @@ The regular expression patterns in the set\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-regexpatternset-scope"></a>
-Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\) or an API Gateway stage\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -99,6 +99,8 @@ The Amazon Resource Name \(ARN\) of the regex pattern set\.
 The ID of the regex pattern set\.
 
 ## Examples<a name="aws-resource-wafv2-regexpatternset--examples"></a>
+
+
 
 ### Create a regex pattern set<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set"></a>
 

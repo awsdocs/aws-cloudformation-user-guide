@@ -62,6 +62,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-natgateway--examples"></a>
 
+
+
 ### NAT Gateway<a name="aws-resource-ec2-natgateway--examples--NAT_Gateway"></a>
 
 The following example creates a NAT gateway and a route that associates the NAT gateway with a route table\. The route table must be associated with an Internet gateway so that the NAT gateway can connect to the Internet\.

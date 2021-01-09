@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-dms-certificate--examples"></a>
 
+
+
 ### <a name="aws-resource-dms-certificate--examples--"></a>
 
 #### JSON<a name="aws-resource-dms-certificate--examples----json"></a>
@@ -96,3 +98,4 @@ Resources:
 ## See also<a name="aws-resource-dms-certificate--seealso"></a>
 +  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

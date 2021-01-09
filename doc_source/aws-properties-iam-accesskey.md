@@ -117,3 +117,4 @@ Resources:
 ## See also<a name="aws-properties-iam-accesskey--seealso"></a>
 + To view `AWS::IAM::AccessKey` template example snippets, see [Declaring an IAM Access Key Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-accesskey)\. 
 +  [CreateAccessKey](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccessKey.html) in the *AWS Identity and Access Management API Reference* 
+

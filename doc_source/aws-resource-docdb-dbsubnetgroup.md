@@ -71,7 +71,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-docdb-dbsubnetgroup--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbsubnetgroup--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbsubnetgroup--examples----json"></a>
 
@@ -116,3 +120,4 @@ Resources:
 +  [DeleteDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBSubnetGroup.html) 
 +  [DescribeDBSubnetGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBSubnetGroups.html) 
 +  [ModifyDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBSubnetGroup.html) 
+
