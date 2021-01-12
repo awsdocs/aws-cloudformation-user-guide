@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-iotwireless-wirelessgateway-description)" : String,
       "[LoRaWANGateway](#cfn-iotwireless-wirelessgateway-lorawangateway)" : LoRaWANGateway,
       "[Name](#cfn-iotwireless-wirelessgateway-name)" : String,
-      "[NextToken](#cfn-iotwireless-wirelessgateway-nexttoken)" : String,
       "[Tags](#cfn-iotwireless-wirelessgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[ThingArn](#cfn-iotwireless-wirelessgateway-thingarn)" : String,
       "[ThingName](#cfn-iotwireless-wirelessgateway-thingname)" : String
     }
 }
@@ -31,9 +31,9 @@ Properties:
   [LoRaWANGateway](#cfn-iotwireless-wirelessgateway-lorawangateway): 
     LoRaWANGateway
   [Name](#cfn-iotwireless-wirelessgateway-name): String
-  [NextToken](#cfn-iotwireless-wirelessgateway-nexttoken): String
   [Tags](#cfn-iotwireless-wirelessgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [ThingArn](#cfn-iotwireless-wirelessgateway-thingarn): String
   [ThingName](#cfn-iotwireless-wirelessgateway-thingname): String
 ```
 
@@ -57,17 +57,17 @@ The name of the new resource\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`NextToken`  <a name="cfn-iotwireless-wirelessgateway-nexttoken"></a>
-This parameter isn't needed to create this resource\. Do not include it in your template\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `Tags`  <a name="cfn-iotwireless-wirelessgateway-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ThingArn`  <a name="cfn-iotwireless-wirelessgateway-thingarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThingName`  <a name="cfn-iotwireless-wirelessgateway-thingname"></a>
@@ -89,8 +89,20 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the wireless gateway created\.
 
+`Description`  <a name="Description-fn::getatt"></a>
+The description of the resource\.
+
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the wireless gateway created\.
 
+`LoRaWANGateway`  <a name="LoRaWANGateway-fn::getatt"></a>
+Information about the wireless gateway\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+The name of the resource\.
+
 `ThingArn`  <a name="ThingArn-fn::getatt"></a>
 The ARN of the thing associated with the device\. The parameter is empty if a thing was not associated with the device\.
+
+`ThingName`  <a name="ThingName-fn::getatt"></a>
+The name of the thing associated with the wireless gateway\. The value is empty if a thing isn't associated with the gateway\.

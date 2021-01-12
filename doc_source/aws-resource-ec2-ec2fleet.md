@@ -104,7 +104,7 @@ Indicates whether running instances should be terminated when the EC2 Fleet expi
 
 `Type`  <a name="cfn-ec2-ec2fleet-type"></a>
 The type of request\. The default value is `maintain`\.  
-+  `maintain` \- The EC2 Fleet plaees an asynchronous request for your desired capacity, and continues to maintain your desired Spot capacity by replenishing interrupted Spot Instances\.
++  `maintain` \- The EC2 Fleet places an asynchronous request for your desired capacity, and continues to maintain your desired Spot capacity by replenishing interrupted Spot Instances\.
 +  `request` \- The EC2 Fleet places an asynchronous one\-time request for your desired capacity, but does submit Spot requests in alternative capacity pools if Spot capacity is unavailable, and does not maintain Spot capacity if Spot Instances are interrupted\.
 +  `instant` \- The EC2 Fleet places a synchronous one\-time request for your desired capacity, and returns errors for any instances that could not be launched\.
 For more information, see [EC2 Fleet request types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-configuration-strategies.html#ec2-fleet-request-type) in the *Amazon EC2 User Guide*\.  

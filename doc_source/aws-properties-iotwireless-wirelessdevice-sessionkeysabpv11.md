@@ -30,24 +30,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AppSKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv11-appskey"></a>
 The AppSKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FNwkSIntKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey"></a>
 The FNwkSIntKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NwkSEncKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv11-nwksenckey"></a>
 The NwkSEncKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SNwkSIntKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv11-snwksintkey"></a>
 The SNwkSIntKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

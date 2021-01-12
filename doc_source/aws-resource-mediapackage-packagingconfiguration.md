@@ -2,7 +2,7 @@
 
 Creates a packaging configuration in a packaging group\.
 
-The packaging configuration represents a single delivery point for an asset\. It determines how the output from this endpoint is formatted\.
+The packaging configuration represents a single delivery point for an asset\. It determines the format and setting for the egressing content\. Specify only one package format per configuration, such as `HlsPackage`\.
 
 ## Syntax<a name="aws-resource-mediapackage-packagingconfiguration-syntax"></a>
 

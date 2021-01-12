@@ -4,6 +4,141 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updates to resource](AWS_SSO.md) | The following resource was updated: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
+
+ [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
+Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | January 7, 2021 | 
+| [Updates to resource](#ReleaseHistory) | The following resource was updated: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
+
+ [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
+Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | January 7, 2021 | 
+| [Updated resources](AWS_IoTWireless.md) | The following resources were updated: AWS::IoTWireless::Destination, AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
+
+ [AWS::IoTWireless::Destination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)   
+ Use the `Destination` resource to specify a destination for a wireless device to use\.  
+
+ [AWS::IoTWireless::DeviceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)   
+ Use the `DeviceProfile` resource to specify a device profile for a wireless device to use\.  
+
+ [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
+ Use the `ServiceProfile` resource to specify a service profile for a wireless device to use\.  
+
+ [AWS::IoTWireless::WirelessDevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)   
+ Use the `WirelessDevice` resource to specify a wireless device in an AWS IoT Core for LoRaWAN solution\.  
+
+ [AWS::IoTWireless::WirelessGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)   
+ Use the `WirelessGateway` resource to specify a wireless gateway in an AWS IoT Core for LoRaWAN solution\.   | January 7, 2021 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::IoTWireless::Destination, AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
+
+ [AWS::IoTWireless::Destination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)   
+ Use the `Destination` resource to specify a destination for a wireless device to use\.  
+
+ [AWS::IoTWireless::DeviceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)   
+ Use the `DeviceProfile` resource to specify a device profile for a wireless device to use\.  
+
+ [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
+ Use the `ServiceProfile` resource to specify a service profile for a wireless device to use\.  
+
+ [AWS::IoTWireless::WirelessDevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)   
+ Use the `WirelessDevice` resource to specify a wireless device in an AWS IoT Core for LoRaWAN solution\.  
+
+ [AWS::IoTWireless::WirelessGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)   
+ Use the `WirelessGateway` resource to specify a wireless gateway in an AWS IoT Core for LoRaWAN solution\.   | January 7, 2021 | 
+| [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Integration`\. 
+
+ [AWS::ApiGatewayV2::Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)   
+Use the `AWS::ApiGatewayV2::Integration` resource to configure request and response parameter mapping for an HTTP API\.  | January 7, 2021 | 
+| [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::LaunchTemplate 
+
+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
+Use the `Throughput` property to specify the throughput to provision for gp3 volumes\.  | January 7, 2021 | 
+| [Updated resource](AWS_FMS.md) | The following resources were updated: AWS::FMS::Policy 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
+The `AWS::FMS::Policy` resource now allows you to manage AWS Network Firewall policies\.   | January 7, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resources were updated: AWS::FMS::Policy 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy.html)   
+The `AWS::FMS::Policy` resource now allows you to manage AWS Network Firewall policies\.   | January 7, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EC2::LaunchTemplate 
+
+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
+Use the `Throughput` property to specify the throughput to provision for gp3 volumes\.  | January 7, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: `AWS::ApiGatewayV2::Integration`\. 
+
+ [AWS::ApiGatewayV2::Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)   
+Use the `AWS::ApiGatewayV2::Integration` resource to configure request and response parameter mapping for an HTTP API\.  | January 7, 2021 | 
+| [New resources](AWS_MediaConnect.md) | The following resources were added: `AWS::MediaConnect::Flow`, `AWS::MediaConnect::FlowEntitlement`, `AWS::MediaConnect::FlowOutput`, `AWS::MediaConnect::FlowSource`, and `AWS::MediaConnect::FlowVpcInterface`\. 
+
+ [AWS::MediaConnect::Flow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html)   
+Use the `AWS::MediaConnect::Flow` resource to create a connection between one or more video sources and one or more outputs\. 
+
+ [AWS::MediaConnect::FlowEntitlement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html)   
+Use the `AWS::MediaConnect::FlowEntitlement` resource to grant permission to another AWS account to allow access to the content in a specific AWS Elemental MediaConnect flow\. 
+
+ [AWS::MediaConnect::FlowOutput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html)   
+Use the `AWS::MediaConnect::FlowOutput` resource to define the destination address, protocol, and port that you want MediaConnect to send the ingested video to\. 
+
+ [AWS::MediaConnect::FlowSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html)   
+Use the `AWS::MediaConnect::FlowSource` resource to define where the external video content comes from\. 
+
+ [AWS::MediaConnect::FlowVpcInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html)   
+Use the `AWS::MediaConnect::FlowVpcInterface` resource to create a connection between your MediaConnect flow and a virtual private cloud \(VPC\) that you created using the Amazon Virtual Private Cloud service\.  | January 7, 2021 | 
+| [New resources](AWS_Route53.md) | The following resources were added: AWS::Route53::DNSSEC and AWS::Route53::KeySigningKey\. 
+
+ [AWS::Route53::DNSSEC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)   
+Use the `AWS::Route53::DNSSEC` resource to enable DNSSEC signing for a hosted zone\.  
+
+ [AWS::Route53::KeySigningKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html)   
+Use the `AWS::Route53::KeySigningKey` resource to specify configuration settings for a key\-signing key \(KSK\) that's associated with a hosted zone\.  | January 7, 2021 | 
+| [New resources](#ReleaseHistory) | The following resources were added: AWS::Route53::DNSSEC and AWS::Route53::KeySigningKey\. 
+
+ [AWS::Route53::DNSSEC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)   
+Use the `AWS::Route53::DNSSEC` resource to enable DNSSEC signing for a hosted zone\.  
+
+ [AWS::Route53::KeySigningKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html)   
+Use the `AWS::Route53::KeySigningKey` resource to specify configuration settings for a key\-signing key \(KSK\) that's associated with a hosted zone\.  | January 7, 2021 | 
+| [New resource ](AWS_Config.md) | The following resources was added: AWS::Config::StoredQuery 
+
+ [ AWS::Config::StoredQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)   
+Use the `AWS::Config::StoredQuery` resource to save a new query or update an existing saved query\.  | January 7, 2021 | 
+| [New resource ](#ReleaseHistory) | The following resources was added: AWS::Config::StoredQuery 
+
+ [ AWS::Config::StoredQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)   
+Use the `AWS::Config::StoredQuery` resource to save a new query or update an existing saved query\.  | January 7, 2021 | 
+| [New resource](AWS_Route53Resolver.md) | The following resource was added: AWS::Route53Resolver::ResolverDNSSECConfig\. 
+
+ [AWS::Route53Resolver::ResolverDNSSECConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)   
+Use the `AWS::Route53Resolver::ResolverDNSSECConfig` resource to specify configuration for DNSSEC validation\.  | January 7, 2021 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::Route53Resolver::ResolverDNSSECConfig\. 
+
+ [AWS::Route53Resolver::ResolverDNSSECConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)   
+Use the `AWS::Route53Resolver::ResolverDNSSECConfig` resource to specify configuration for DNSSEC validation\.  | January 7, 2021 | 
+| [New Resources](AWS_DataSync.md) | The following resources were added: AWS::DataSync::Agent, AWS::DataSync::LocationEFS, AWS::DataSync::LocationFSxWindows, AWS::DataSync::LocationNFS, AWS::DataSync::LocationObjectStorage, AWS::DataSync::LocationS3, AWS::DataSync::LocationSMB, and AWS::DataSync::Task\.  
+
+ [AWS::DataSync::Agent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html)   
+Use the `AWS::DataSync::Agent` resource to specify an AWS DataSync agent\. 
+
+ [AWS::DataSync::LocationEFS](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html)   
+Use the `AWS::DataSync::LocationEFS` resource to specify an Amazon EFS location\. 
+
+ [AWS::DataSync::LocationFSxWindows](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html)   
+Use the `AWS::DataSync::LocationFSxWindows` resource to specify an Amazon FSx for Windows file system\. 
+
+ [AWS::DataSync::LocationNFS](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html)   
+Use the `AWS::DataSync::LocationNFS` resource to specify a file system on a Network File System \(NFS\) server\. 
+
+ [AWS::DataSync::LocationObjectStorage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html)   
+Use the `AWS::DataSync::LocationObjectStorage` resource to specify an endpoint for a self\-managed object storage bucket\. 
+
+ [AWS::DataSync::LocationS3](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html)   
+Use the `AWS::DataSync::LocationS3` resource to specify an endpoint for an Amazon S3 bucket\. 
+
+ [AWS::DataSync::LocationSMB](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html)   
+Use the `AWS::DataSync::LocationSMB` resource to specify an SMB location\. 
+
+ [AWS::DataSync::Task](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)   
+Use the `AWS::DataSync::Taks` resource to specify a task\.  | January 7, 2021 | 
 | [AWS::ServiceCatalog transform added](#ReleaseHistory) | The AWS::ServiceCatalog transform enables Service Catalog users to reference outputs from an existing Service Catalog provisioned product in their CloudFormation template\.For more details, see [AWS::ServiceCatalog transform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-servicecatalog.html)\. | December 23, 2020 | 
 | [New resource](AWS_MWAA.md) | The following resource was added AWS::MWAA::Environment 
 
@@ -57,7 +192,7 @@ Use the `ReplicaModifications` property in `AWS::S3::Bucket SourceSelectionCrite
 
  [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html)   
 Use the `BucketKeyEnabled` property to specify an S3 Bucket Key with default encryption using AWS Key Management Service\.  | December 18, 2020 | 
-| [New resources](AWS_DevOpsGuru.md) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::AWS::DevOpsGuru::ResourceCollection` 
+| [New resources](AWS_DevOpsGuru.md) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::ResourceCollection` 
 
  [AWS::DevOpsGuru::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html)   
 Use the `AWS::DevOpsGuru::NotificationChannel` resource to add a notification channel to Amazon DevOps Guru\. The notification channel is used to notify you about important events\. For example, the creation of an insight or a change in an insight's severity\. 
@@ -78,22 +213,6 @@ For Redis engine version 6\.x onwards: Creates a Redis user\. For more informati
 
  [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
 For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  | December 18, 2020 | 
-| [New resources](AWS_IoTWireless.md) | The following resources were added: 
-
-AWS::IoTWireless::Destination  
- Use the `Destination` resource to specify a destination for a wireless device to use\.  
-
-AWS::IoTWireless::DeviceProfile  
- Use the `DeviceProfile` resource to specify a device profile for a wireless device to use\.  
-
-AWS::IoTWireless::ServiceProfile  
- Use the `ServiceProfile` resource to specify a service profile for a wireless device to use\.  
-
-AWS::IoTWireless::WirelessDevice  
- Use the `WirelessDevice` resource to specify a wireless device in an AWS IoT Core for LoRaWAN solution\.  
-
-AWS::IoTWireless::WirelessGateway  
- Use the `WirelessGateway` resource to specify a wireless gateway in an AWS IoT Core for LoRaWAN solution\.   | December 18, 2020 | 
 | [New resources](AWS_LicenseManager.md) | The following resources were added: AWS::LicenseManager::Grant and AWS::LicenseManager::License\. 
 
  [AWS::LicenseManager::Grant](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)   
@@ -819,7 +938,7 @@ Use the `MultiAZEnabled` attribute to indicate if you have Multi\-AZ enabled\.  
 | [Updated resource](AWS_ElasticLoadBalancingV2.md) | The following resource was updated: AWS::ElasticLoadBalancingV2::LoadBalancer\. 
 
  [AWS::ElasticLoadBalancingV2::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)   
-Use the `SubnetMapping` attribute to specify a subnet to attach to an Application Load Balancer or a Network Load Balancer\.  | June 11, 2020 | 
+Use the `SubnetMapping` attribute to specify a subnet to attach to a load balancer\.  | June 11, 2020 | 
 | [New resource](AWS_RDS.md) | The following resources were added: AWS::RDS::DBProxy and AWS::RDS::DBProxyTargetGroup\. 
 
  [AWS::RDS::DBProxy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html)   

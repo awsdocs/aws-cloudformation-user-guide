@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AppSKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-appskey"></a>
 The AppSKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NwkSKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv10x-nwkskey"></a>
 The NwkSKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -57,16 +57,16 @@ The flags on SCTE\-35 segmentation descriptors that have to be present for Media
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdTriggers`  <a name="cfn-mediapackage-originendpoint-dashpackage-adtriggers"></a>
-The SCTE\-35 message types that MediaPackage treats as ad markers in the output manifest\. For information about SCTE\-35 in MediaPackage\.   
+Specifies the SCTE\-35 message types that MediaPackage treats as ad markers in the output manifest\.   
  Valid values:   
 +  **BREAK**
 +  **DISTRIBUTOR\_ADVERTISEMENT**
-+  **DISTRIBUTOR\_OVERLAY\_PLACEMENT\_OPPORTUNITY**
-+  **DISTRIBUTOR\_PLACEMENT\_OPPORTUNITY**
-+  **PROVIDER\_ADVERTISEMENT**
-+  **PROVIDER\_OVERLAY\_PLACEMENT\_OPPORTUNITY**
-+  **PROVIDER\_PLACEMENT\_OPPORTUNITY**
-+  **SPLICE\_INSERT**
++  **DISTRIBUTOR\_OVERLAY\_PLACEMENT\_OPPORTUNITY**\.
++  **DISTRIBUTOR\_PLACEMENT\_OPPORTUNITY**\.
++  **PROVIDER\_ADVERTISEMENT**\.
++  **PROVIDER\_OVERLAY\_PLACEMENT\_OPPORTUNITY**\.
++  **PROVIDER\_PLACEMENT\_OPPORTUNITY**\.
++  **SPLICE\_INSERT**\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -105,7 +105,10 @@ Minimum amount of time \(in seconds\) that the player should wait before request
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeriodTriggers`  <a name="cfn-mediapackage-originendpoint-dashpackage-periodtriggers"></a>
-A list of triggers that controls when AWS Elemental MediaPackage separates the MPEG\-DASH manifest into multiple periods\. Type **ADS** to indicate that AWS Elemental MediaPackage must create periods in the output manifest that correspond to SCTE\-35 ad markers in the input source\. Leave this value empty to indicate that the manifest is contained all in one period\. For more information about periods in the DASH manifest, see [Multi\-period DASH in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/multi-period.html)\.   
+Controls whether MediaPackage produces single\-period or multi\-period DASH manifests\. For more information about periods, see [Multi\-period DASH in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/multi-period.html)\.  
+Valid values:  
++  **ADS** \- MediaPackage will produce multi\-period DASH manifests\. Periods are created based on the SCTE\-35 ad markers present in the input manifest\.
++  *No value* \- MediaPackage will produce single\-period DASH manifests\. This is the default setting\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

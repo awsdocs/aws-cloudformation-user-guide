@@ -1,6 +1,6 @@
 # AWS::IVS::Channel<a name="aws-resource-ivs-channel"></a>
 
-The `AWS::IVS::Channel` resource creates a new channel\. An Amazon IVS channel stores configuration information related to your live stream\. For more information see [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html) in the *Amazon Interactive Video Service API Reference*\.
+The `AWS::IVS::Channel` resource specifies an Amazon IVS channel\. A channel stores configuration information related to your live stream\. For more information see [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html) in the *Amazon Interactive Video Service API Reference*\.
 
 **Note**  
  By default, the IVS API CreateChannel endpoint creates a stream key in addition to a channel\. The Amazon IVS Channel resource *does not* create a stream key; to create a stream key, use the StreamKey resource instead\.
@@ -91,7 +91,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myChannel" }` 
 
-For the Amazon IVS channel `myChannel`, Ref returns the channel ARN\.
+For the Amazon IVS channel `myChannel`, `Ref` returns the channel ARN\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

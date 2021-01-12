@@ -1,6 +1,6 @@
 # AWS::IVS::StreamKey<a name="aws-resource-ivs-streamkey"></a>
 
-The `AWS::IVS::StreamKey` resource creates a stream key for the specified channel\. Use a stream key to initiate a live stream\.
+The `AWS::IVS::StreamKey` resource specifies an Amazon IVS stream key associated with the referenced channel\. Use a stream key to initiate a live stream\.
 
 ## Syntax<a name="aws-resource-ivs-streamkey-syntax"></a>
 
@@ -54,7 +54,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myStreamKey" }` 
 
-For the Amazon IVS stream key `myStreamKey`, Ref returns the stream key ARN\.
+For the Amazon IVS stream key `myStreamKey`, `Ref` returns the stream key ARN\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

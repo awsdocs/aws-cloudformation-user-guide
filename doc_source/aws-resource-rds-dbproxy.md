@@ -217,8 +217,8 @@ The following example creates a DB proxy and registers a DB instance\.
                 ],
                 "TargetGroupName": "default",
                 "ConnectionPoolConfigurationInfo": {
-                    "MaxConnectionsPercent": 12,
-                    "MaxIdleConnectionsPercent": 11,
+                    "MaxConnectionsPercent": 100,
+                    "MaxIdleConnectionsPercent": 50,
                     "ConnectionBorrowTimeout": 120
                 }
             }
@@ -269,7 +269,7 @@ Resources:
       DBInstanceIdentifiers: [!Ref InstanceName]
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
-          MaxConnectionsPercent: 12
-          MaxIdleConnectionsPercent: 11
+          MaxConnectionsPercent: 100
+          MaxIdleConnectionsPercent: 50
           ConnectionBorrowTimeout: 120
 ```

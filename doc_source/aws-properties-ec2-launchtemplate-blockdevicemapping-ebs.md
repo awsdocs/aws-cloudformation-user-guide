@@ -55,7 +55,7 @@ The following are the supported values for each volume type:
 +  `io1`: 100\-64,000 IOPS
 +  `io2`: 100\-64,000 IOPS
 For `io1` and `io2` volumes, we guarantee 64,000 IOPS only for [Instances built on the Nitro System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\.  
-This parameter is required for `io1` and `io2` volumes\. The default for `gp3` volumes is 3,000 IOPS\. This parameter is not supported for `gp2`, `st1`, `sc1`, or `standard` volumes\.  
+This parameter is supported for `io1`, `io2`, and `gp3` volumes only\. This parameter is not supported for `gp2`, `st1`, `sc1`, or `standard` volumes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,8 +73,7 @@ The ID of the snapshot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSize`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumesize"></a>
-The size of the volume, in GiBs\. You must specify either a snapshot ID or a volume size\. If you specify a snapshot, the default is the snapshot size\. You can specify a volume size that is equal to or larger than the snapshot size\.  
-The following are the supported volumes sizes for each volume type:  
+The size of the volume, in GiBs\. You must specify either a snapshot ID or a volume size\. The following are the supported volumes sizes for each volume type:  
 +  `gp2` and `gp3`: 1\-16,384
 +  `io1` and `io2`: 4\-16,384
 +  `st1` and `sc1`: 125\-16,384
@@ -84,7 +83,7 @@ The following are the supported volumes sizes for each volume type:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumetype"></a>
-The volume type\. The default is `gp2`\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The volume type\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `gp2 | gp3 | io1 | io2 | sc1 | st1 | standard`  

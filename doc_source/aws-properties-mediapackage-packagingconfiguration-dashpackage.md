@@ -46,7 +46,10 @@ Parameters for encrypting content\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeriodTriggers`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers"></a>
-A list of triggers that controls when the outgoing Dynamic Adaptive Streaming over HTTP \(DASH\) Media Presentation Description \(MPD\) is partitioned into multiple periods\. If empty, the content isl not partitioned into more than one period\. If the list contains "ADS", new periods are created where the Asset contains SCTE\-35 ad markers\.   
+Controls whether MediaPackage produces single\-period or multi\-period DASH manifests\. For more information about periods, see [Multi\-period DASH in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/multi-period.html)\.  
+Valid values:  
++  **ADS** \- MediaPackage will produce multi\-period DASH manifests\. Periods are created based on the SCTE\-35 ad markers present in the input manifest\.
++  *No value* \- MediaPackage will produce single\-period DASH manifests\. This is the default setting\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

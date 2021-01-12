@@ -62,8 +62,7 @@ Valid values: `lowest-price` \| `capacity-optimized`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotInstancePools`  <a name="cfn-autoscaling-autoscalinggroup-instancesdistribution-spotinstancepools"></a>
-The number of Spot Instance pools to use to allocate your Spot capacity\. The Spot pools are determined from the different instance types in the overrides\. Defaults to 2 if not specified\. Valid only when the Spot allocation strategy is `lowest-price`\.  
-Valid Range: Minimum value of 1\. Maximum value of 20\.  
+The number of Spot Instance pools to use to allocate your Spot capacity\. The Spot pools are determined from the different instance types in the overrides\. Valid only when the Spot allocation strategy is `lowest-price`\. Value must be in the range of 1 to 20\. Defaults to 2 if not specified\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

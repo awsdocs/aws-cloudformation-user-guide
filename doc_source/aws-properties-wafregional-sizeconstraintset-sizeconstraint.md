@@ -55,7 +55,7 @@ Specifies where in a web request to look for the size constraint\.
 `Size`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-size"></a>
 The size in bytes that you want AWS WAF to compare against the size of the specified `FieldToMatch`\. AWS WAF uses this in combination with `ComparisonOperator` and `FieldToMatch` to build an expression in the form of "`Size` `ComparisonOperator` size in bytes of `FieldToMatch`"\. If that expression is true, the `SizeConstraint` is considered to match\.  
 Valid values for size are 0 \- 21474836480 bytes \(0 \- 20 GB\)\.  
-If you specify `URI` for the value of `Type`, the / in the URI counts as one character\. For example, the URI `/logo.jpg` is nine characters long\.  
+If you specify `URI` for the value of `Type`, the / in the URI path that you specify counts as one character\. For example, the URI `/logo.jpg` is nine characters long\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

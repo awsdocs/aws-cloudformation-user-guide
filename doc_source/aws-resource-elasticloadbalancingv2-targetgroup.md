@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::TargetGroup<a name="aws-resource-elasticloadbalancingv2-targetgroup"></a>
 
-Specifies a target group for an Application Load Balancer or Network Load Balancer\.
+Specifies a target group for a load balancer\.
 
 Before you register a Lambda function as a target, you must create a `AWS::Lambda::Permission` resource that grants the Elastic Load Balancing service principal permission to invoke the Lambda function\.
 
@@ -293,6 +293,7 @@ Resources:
 
 ## See also<a name="aws-resource-elasticloadbalancingv2-targetgroup--seealso"></a>
 +  [CreateTargetGroup](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
-+  [Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html) in the *User Guide for Application Load Balancers* 
-+  [Target Groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) in the *User Guide for Network Load Balancers* 
++  [Target groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html) in the *User Guide for Application Load Balancers* 
++  [Target groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html) in the *User Guide for Network Load Balancers* 
++  [Target groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/target-groups.html) in the *User Guide for Gateway Load Balancers* 
 

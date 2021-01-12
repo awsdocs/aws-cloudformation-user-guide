@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AppEui`  <a name="cfn-iotwireless-wirelessdevice-otaav10x-appeui"></a>
 The AppEUI value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AppKey`  <a name="cfn-iotwireless-wirelessdevice-otaav10x-appkey"></a>
 The AppKey value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

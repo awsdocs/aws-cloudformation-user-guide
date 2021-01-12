@@ -83,7 +83,7 @@ For more information, see [AssumeRole](https://docs.aws.amazon.com/STS/latest/AP
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-transfer-user-role"></a>
-The IAM role that controls your users' access to your Amazon S3 bucket\. The policies attached to this role will determine the level of access you want to provide your users when transferring files into and out of your Amazon S3 bucket or buckets\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
+Specifies the IAM role that controls your users' access to your Amazon S3 bucket or EFS file system\. The policies attached to this role will determine the level of access you want to provide your users when transferring files into and out of your Amazon S3 bucket or EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

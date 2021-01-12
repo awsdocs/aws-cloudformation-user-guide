@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[FilterInArns](#cfn-ec2-networkinsightsanalysis-filterinarns)" : [ String, ... ],
       "[NetworkInsightsPathId](#cfn-ec2-networkinsightsanalysis-networkinsightspathid)" : String,
-      "[StatusMessage](#cfn-ec2-networkinsightsanalysis-statusmessage)" : String,
       "[Tags](#cfn-ec2-networkinsightsanalysis-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +27,6 @@ Properties:
   [FilterInArns](#cfn-ec2-networkinsightsanalysis-filterinarns): 
     - String
   [NetworkInsightsPathId](#cfn-ec2-networkinsightsanalysis-networkinsightspathid): String
-  [StatusMessage](#cfn-ec2-networkinsightsanalysis-statusmessage): String
   [Tags](#cfn-ec2-networkinsightsanalysis-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -46,12 +44,6 @@ The ID of the path\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`StatusMessage`  <a name="cfn-ec2-networkinsightsanalysis-statusmessage"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-networkinsightsanalysis-tags"></a>
 The tags to apply\.  
@@ -101,3 +93,6 @@ The time the analysis started\.
 
 `Status`  <a name="Status-fn::getatt"></a>
 The status of the network insights analysis\.
+
+`StatusMessage`  <a name="StatusMessage-fn::getatt"></a>
+The status message, if the status is `failed`\.

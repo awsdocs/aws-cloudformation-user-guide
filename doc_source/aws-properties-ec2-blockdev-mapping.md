@@ -46,7 +46,7 @@ You can specify either `VirtualName` or `Ebs`, but not both\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-ec2-blockdev-mapping-nodevice"></a>
-Suppresses the specified device included in the block device mapping of the AMI\.  
+To omit the device from the block device mapping, specify an empty string\.  
 *Required*: No  
 *Type*: [NoDevice](aws-properties-ec2-instance-nodevice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

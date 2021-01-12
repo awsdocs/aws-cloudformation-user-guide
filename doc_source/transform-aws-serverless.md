@@ -1,6 +1,6 @@
 # AWS::Serverless transform<a name="transform-aws-serverless"></a>
 
-The `AWS::Serverless` transform, which is a macro hosted by AWS CloudFormation, takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide*\.
+The `AWS::Serverless` transform, which is a macro hosted by AWS CloudFormation, takes an entire template written in the AWS Serverless Application Model \(AWS SAM\) syntax and transforms and expands it into a compliant AWS CloudFormation template\. For more information about serverless applications and AWS SAM, see [Deploying Lambda\-based applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) in the *AWS Lambda Developer Guide* and [AWS SAM resource and property reference](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-resources-and-properties.html) in the AWS Serverless Application Model Developer Guide\.
 
 In the following example, the template uses AWS SAM syntax to simplify the declaration of a Lambda function and its execution role\.
 

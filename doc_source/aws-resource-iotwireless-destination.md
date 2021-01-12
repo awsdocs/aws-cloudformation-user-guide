@@ -16,7 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Expression](#cfn-iotwireless-destination-expression)" : String,
       "[ExpressionType](#cfn-iotwireless-destination-expressiontype)" : String,
       "[Name](#cfn-iotwireless-destination-name)" : String,
-      "[NextToken](#cfn-iotwireless-destination-nexttoken)" : String,
       "[RoleArn](#cfn-iotwireless-destination-rolearn)" : String,
       "[Tags](#cfn-iotwireless-destination-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -32,7 +31,6 @@ Properties:
   [Expression](#cfn-iotwireless-destination-expression): String
   [ExpressionType](#cfn-iotwireless-destination-expressiontype): String
   [Name](#cfn-iotwireless-destination-name): String
-  [NextToken](#cfn-iotwireless-destination-nexttoken): String
   [RoleArn](#cfn-iotwireless-destination-rolearn): String
   [Tags](#cfn-iotwireless-destination-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -64,12 +62,6 @@ The name of the new resource\. Can have only have alphanumeric, \- \(hyphen\) an
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`NextToken`  <a name="cfn-iotwireless-destination-nexttoken"></a>
-This parameter isn't needed to create this resource\. Do not include it in your template\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `RoleArn`  <a name="cfn-iotwireless-destination-rolearn"></a>
 The ARN of the IAM Role that authorizes the destination\.  
 *Required*: Yes  
@@ -95,3 +87,18 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the destination created\.
+
+`Description`  <a name="Description-fn::getatt"></a>
+The description of the resource\.
+
+`Expression`  <a name="Expression-fn::getatt"></a>
+The rule name or topic rule to send messages to\.
+
+`ExpressionType`  <a name="ExpressionType-fn::getatt"></a>
+The type of value in `Expression`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+The name of the resource\.
+
+`RoleArn`  <a name="RoleArn-fn::getatt"></a>
+The ARN of the IAM Role that authorizes the destination\.

@@ -115,10 +115,10 @@ CloudFront distribution
 Specify `Z2FDTNDATAQYW2`\. This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution\.  
 Alias records for CloudFront can't be created in a private zone\.  
 Elastic Beanstalk environment  
-Specify the hosted zone ID for the region that you created the environment in\. The environment must have a regionalized subdomain\. For a list of regions and the corresponding hosted zone IDs, see [AWS Elastic Beanstalk](https://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region) in the "AWS Regions and Endpoints" chapter of the *Amazon Web Services General Reference*\.  
+Specify the hosted zone ID for the region that you created the environment in\. The environment must have a regionalized subdomain\. For a list of regions and the corresponding hosted zone IDs, see [AWS Elastic Beanstalk endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elasticbeanstalk.html) in the *Amazon Web Services General Reference*\.  
 ELB load balancer  
 Specify the value of the hosted zone ID for the load balancer\. Use the following methods to get the hosted zone ID:  
-+ [Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/elb.html) table in the "Elastic Load Balancing Endpoints and Quotas" topic in the *Amazon Web Services General Reference*: Use the value that corresponds with the region that you created your load balancer in\. Note that there are separate columns for Application and Classic Load Balancers and for Network Load Balancers\.
++ [Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/elb.html) table in the "Elastic Load Balancing endpoints and quotas" topic in the *Amazon Web Services General Reference*: Use the value that corresponds with the region that you created your load balancer in\. Note that there are separate columns for Application and Classic Load Balancers and for Network Load Balancers\.
 + **AWS Management Console**: Go to the Amazon EC2 page, choose **Load Balancers** in the navigation pane, select the load balancer, and get the value of the **Hosted zone** field on the **Description** tab\.
 + **Elastic Load Balancing API**: Use `DescribeLoadBalancers` to get the applicable value\. For more information, see the applicable guide:
   + Classic Load Balancers: Use [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancers.html) to get the value of `CanonicalHostedZoneNameId`\.

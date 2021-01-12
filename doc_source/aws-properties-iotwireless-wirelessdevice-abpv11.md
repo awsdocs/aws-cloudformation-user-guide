@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DevAddr`  <a name="cfn-iotwireless-wirelessdevice-abpv11-devaddr"></a>
 The DevAddr value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionKeys`  <a name="cfn-iotwireless-wirelessdevice-abpv11-sessionkeys"></a>
 Session keys for ABP v1\.1  
-*Required*: No  
+*Required*: Yes  
 *Type*: [SessionKeysAbpV11](aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

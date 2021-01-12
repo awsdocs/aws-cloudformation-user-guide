@@ -74,7 +74,7 @@ Currently, only Resolver can create rules that have a value of `RECURSIVE` for `
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
-A list of the tag keys and values that you want to associate with the endpoint\.  
+Route 53 Resolver doesn't support updating tags through CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  

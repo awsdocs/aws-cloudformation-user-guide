@@ -169,7 +169,7 @@ To tag your Spot Instances on creation, the Spot Fleet IAM role specified here m
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subnets`  <a name="cfn-batch-computeenvironment-computeresources-subnets"></a>
-The VPC subnets into which the compute resources are launched\. These subnets must be within the same VPC\. This parameter is required for jobs running on Fargate resources, where it can contain up to 16 subnets\. For more information, see [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.  
+The VPC subnets into which the compute resources are launched\. These subnets must be within the same VPC\. Fargate compute resources can contain up to 16 subnets\. For more information, see [VPCs and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

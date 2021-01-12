@@ -62,7 +62,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myPlaybackKeyPair" }` 
 
-For the Amazon IVS playback key pair `myPlaybackKeyPair`, Ref returns the playback key pair ARN\.
+For the Amazon IVS playback key pair `myPlaybackKeyPair`, `Ref` returns the playback key pair ARN\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

@@ -2,6 +2,9 @@
 
 Enables the attribute\-based access control \(ABAC\) feature for the specified AWS SSO instance\. You can also specify new attributes to add to your ABAC configuration during the enabling process\. For more information about ABAC, see [Attribute\-Based Access Control](https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html) in the *AWS SSO User Guide*\.
 
+**Note**  
+The `InstanceAccessControlAttributeConfiguration` property has been deprecated but is still supported for backwards compatibility purposes\. We recommend that you use the `AccessControlAttributes` property instead\.
+
 ## Syntax<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -12,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSO::InstanceAccessControlAttributeConfiguration",
   "Properties" : {
+      "[AccessControlAttributes](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributes)" : [ AccessControlAttribute, ... ],
       "[InstanceAccessControlAttributeConfiguration](#cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration)" : Json,
       "[InstanceArn](#cfn-sso-instanceaccesscontrolattributeconfiguration-instancearn)" : String
     }
@@ -23,15 +27,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SSO::InstanceAccessControlAttributeConfiguration
 Properties: 
+  [AccessControlAttributes](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributes): 
+    - AccessControlAttribute
   [InstanceAccessControlAttributeConfiguration](#cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration): Json
   [InstanceArn](#cfn-sso-instanceaccesscontrolattributeconfiguration-instancearn): String
 ```
 
 ## Properties<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-properties"></a>
 
+`AccessControlAttributes`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributes"></a>
+Lists the attributes that are configured for ABAC in the specified AWS SSO instance\.  
+*Required*: No  
+*Type*: List of [AccessControlAttribute](aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute.md)  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `InstanceAccessControlAttributeConfiguration`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration"></a>
-Specifies the attributes to add to your ABAC configuration\.  
-*Required*: Yes  
+The `InstanceAccessControlAttributeConfiguration` property has been deprecated but is still supported for backwards compatibility purposes\. We recommend that you use the `AccessControlAttributes` property instead\.  
+*Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -42,7 +55,7 @@ The ARN of the AWS SSO instance under which the operation will be executed\.
 *Minimum*: `10`  
 *Maximum*: `1224`  
 *Pattern*: `arn:aws:sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-return-values"></a>
 
@@ -67,18 +80,16 @@ The following example enables ABAC in AWS SSO and creates a new attribute key `C
             "Type": "AWS::SSO::InstanceAccessControlAttributeConfiguration",
             "Properties": {
                 "InstanceArn": "arn:aws:sso:::instance/ssoins-instanceId",
-                "InstanceAccessControlAttributeConfiguration": {
-                    "AccessControlAttributes": [
-                        {
-                            "Key": "CostCenter",
-                            "Value": {
-                                "Source": [
-                                    "${path:enterprise.costCenter}"
-                                ]
-                            }
+                "AccessControlAttributes": [
+                    {
+                        "Key": "CostCenter",
+                        "Value": {
+                            "Source": [
+                                "${path:enterprise.costCenter}"
+                            ]
                         }
-                    ]
-                }
+                    }
+                ]
             }
         }
     }
@@ -90,13 +101,12 @@ The following example enables ABAC in AWS SSO and creates a new attribute key `C
 ```
 Resources:
   ABAC:
-    Type: AWS::SSO::InstanceAccessControlAttributeConfiguration
+    Type: 'AWS::SSO::InstanceAccessControlAttributeConfiguration'
     Properties:
       InstanceArn: 'arn:aws:sso:::instance/ssoins-instanceId'
-      InstanceAccessControlAttributeConfiguration:
-        AccessControlAttributes:
-          - Key: 'CostCenter'
-            Value:
-              Source:
-                - '${path:enterprise.costCenter}'
+      AccessControlAttributes:
+        - Key: CostCenter
+          Value:
+            Source:
+              - '${path:enterprise.costCenter}'
 ```

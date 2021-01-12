@@ -14,7 +14,8 @@ Version 2\.0\-1 and above of the helper scripts support Python 3\.4 and above\. 
 
 | Version | Release Date | Change Description | Download Packages | 
 | --- | --- | --- | --- | 
-|  2\.0\-2 \(Latest; recommended\)  |  9/14/2020  |  The default and user specified interval for `cfn-hup` has an accuracy of plus or minus 30 seconds\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-3 \(Latest; recommended\)  |  1/8/2021  |  Windows installer succeeds even if a newer C\+\+ Redistributable is already installed\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-2  |  9/14/2020  |  The default and user specified interval for `cfn-hup` has an accuracy of plus or minus 30 seconds\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 |  2\.0\-1  |  6/24/2020  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 
 ## Release History for CloudFormation Helper Scripts 1\.4<a name="releasehistory-aws-cfn-bootstrap-v1"></a>

@@ -1,6 +1,6 @@
 # AWS::SageMaker::DeviceFleet<a name="aws-resource-sagemaker-devicefleet"></a>
 
-The `AWS::SageMaker::DeviceFleet` resource is an Amazon SageMaker resource type that allows you  to create a DeviceFleet that manages your SageMaker  Edge Manager Devices\. You must register your devices against the `DeviceFleet` separately\.
+The `AWS::SageMaker::DeviceFleet` resource is an Amazon SageMaker resource type that allows you to create a DeviceFleet that manages your SageMaker Edge Manager Devices\. You must register your devices against the `DeviceFleet` separately\.
 
 ## Syntax<a name="aws-resource-sagemaker-devicefleet-syntax"></a>
 

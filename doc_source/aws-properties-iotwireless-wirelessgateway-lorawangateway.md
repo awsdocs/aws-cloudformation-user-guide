@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `GatewayEui`  <a name="cfn-iotwireless-wirelessgateway-lorawangateway-gatewayeui"></a>
 The gateway's EUI value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RfRegion`  <a name="cfn-iotwireless-wirelessgateway-lorawangateway-rfregion"></a>
 The frequency band \(RFRegion\) value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

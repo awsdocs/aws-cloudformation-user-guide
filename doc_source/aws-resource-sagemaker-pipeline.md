@@ -103,79 +103,79 @@ The following example creates a Pipeline with an associated lifecycle configurat
 
 ```
 # Pipeline definition given as a JSON string
-                {
-                "Resources": {
-                "MyPipeline": {
-                "Type": "AWS::SageMaker::Pipeline",
-                "Properties": {
-                "PipelineName": "my-pipeline",
-                "PipelineDisplayName": "my-pipeline-display-name",
-                "PipelineDescription": "Basic test pipeline",
-                "PipelineDefinition": {
-                "PipelineDefinitionBody": "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}"
-                },
-                "RoleArn": "arn:aws:iam::{account-id}:root"
-                }
-                }
-                }
-                }
+{
+   "Resources": {
+      "MyPipeline": {
+         "Type": "AWS::SageMaker::Pipeline",
+         "Properties": {
+            "PipelineName": "my-pipeline",
+            "PipelineDisplayName": "my-pipeline-display-name",
+            "PipelineDescription": "Basic test pipeline",
+            "PipelineDefinition": {
+               "PipelineDefinitionBody": "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}"
+            },
+            "RoleArn": "arn:aws:iam::{account-id}:root"
+         }
+      }
+   }
+}
 ```
 
 #### JSON<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--json"></a>
 
 ```
 # Pipeline definition given as an S3 string
-                {
-                "Resources": {
-                "MyPipeline": {
-                "Type": "AWS::SageMaker::Pipeline",
-                "Properties": {
-                "PipelineName": "my-pipeline",
-                "PipelineDisplayName": "my-pipeline-display-name",
-                "PipelineDescription": "Basic test pipeline",
-                "PipelineDefinition": {
-                "PipelineDefinitionS3Location": {
-                "Bucket": "my-bucket",
-                "Key": "my-pipeline.json"
-                }
-                },
-                "RoleArn": "arn:aws:iam::{account-id}:root"
-                }
-                }
-                }
-                }
+{
+   "Resources": {
+      "MyAwesomePipeline": {
+         "Type": "AWS::SageMaker::Pipeline",
+         "Properties": {
+            "PipelineName": "my-pipeline",
+            "PipelineDisplayName": "my-pipeline-display-name",
+            "PipelineDescription": "Basic test pipeline",
+            "PipelineDefinition": {
+               "PipelineDefinitionS3Location": {
+                  "Bucket": "my-bucket",
+                  "Key": "my-pipeline.json"
+               }
+            },
+            "RoleArn": "arn:aws:iam::{account-id}:root"
+         }
+      }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--yaml"></a>
 
 ```
 # Pipeline definition given as a JSON string
-                Resources:
-                MyPipeline:
-                Type: AWS::SageMaker::Pipeline
-                Properties:
-                PipelineName: "my-pipeline"
-                PipelineDisplayName: "my-pipeline-display-name"
-                PipelineDescription: "Basic test pipeline"
-                PipelineDefinition:
-                PipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}"
-                RoleArn: "arn:aws:iam::{account-id}:root"
+Resources:
+  MyPipeline:
+    Type: AWS::SageMaker::Pipeline
+    Properties:
+      PipelineName: "my-pipeline"
+      PipelineDisplayName: "my-pipeline-display-name"
+      PipelineDescription: "Basic test pipeline"
+      PipelineDefinition:
+        PipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}"
+      RoleArn: "arn:aws:iam::{account-id}:root"
 ```
 
 #### YAML<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--yaml"></a>
 
 ```
 # Pipeline definition given as an S3 location
-                Resources:
-                MyAwesomePipeline:
-                Type: AWS::SageMaker::Pipeline
-                Properties:
-                PipelineName: "my-pipeline"
-                PipelineDisplayName: "my-pipeline-display-name"
-                PipelineDescription: "Basic test pipeline"
-                PipelineDefinition:
-                PipelineDefinitionS3Location:
-                Bucket: "my-bucket"
-                Key: "my-pipeline.json"
-                RoleArn: "arn:aws:iam::{account-id}:root"
+Resources:
+  MyPipeline:
+    Type: AWS::SageMaker::Pipeline
+    Properties:
+      PipelineName: "my-pipeline"
+      PipelineDisplayName: "my-pipeline-display-name"
+      PipelineDescription: "Basic test pipeline"
+      PipelineDefinition:
+        PipelineDefinitionS3Location:
+          Bucket: "my-bucket"
+          devKey: "my-pipeline.json"
+      RoleArn: "arn:aws:iam::{account-id}:root"
 ```

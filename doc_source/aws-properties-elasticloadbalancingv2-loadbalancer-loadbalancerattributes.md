@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::LoadBalancer LoadBalancerAttribute<a name="aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes"></a>
 
-Specifies an attribute for an Application Load Balancer or a Network Load Balancer\.
+Specifies an attribute for an Application Load Balancer, a Network Load Balancer, or a Gateway Load Balancer\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes-syntax"></a>
 
@@ -55,6 +55,7 @@ The value of the attribute\.
 
 ## See also<a name="aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattributes--seealso"></a>
 +  [ModifyLoadBalancerAttributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_ModifyLoadBalancerAttributes.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
-+  [Load Balancer Attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes) in the *User Guide for Application Load Balancers* 
-+  [Load Balancer Attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#load-balancer-attributes) in the *User Guide for Network Load Balancers* 
++  [Load balancer attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes) in the *User Guide for Application Load Balancers* 
++  [Load balancer attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#load-balancer-attributes) in the *User Guide for Network Load Balancers* 
++  [Load balancer attributes](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/gateway-load-balancers.html#load-balancer-attributes) in the *User Guide for Gateway Load Balancers* 
 

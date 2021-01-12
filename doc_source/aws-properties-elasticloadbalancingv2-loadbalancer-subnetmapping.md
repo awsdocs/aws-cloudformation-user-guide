@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::LoadBalancer SubnetMapping<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping"></a>
 
-Specifies a subnet to attach to an Application Load Balancer or a Network Load Balancer\.
+Specifies a subnet to attach to a load balancer\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-syntax"></a>
 

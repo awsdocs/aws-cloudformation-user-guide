@@ -2,6 +2,10 @@
 
 Stateful inspection criteria for a domain list rule group\. 
 
+For HTTPS traffic, domain filtering is SNI\-based\. It uses the server name indicator extension of the TLS handshake\.
+
+By default, Network Firewall domain list inspection only includes traffic coming from the VPC where you deploy the firewall\. To inspect traffic from IP addresses outside of the deployment VPC, you set the `HOME_NET` rule variable to include the CIDR range of the deployment VPC plus the other CIDR ranges\. For more information, see [RuleVariables](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulegroup.html#cfn-networkfirewall-rulegroup-rulegroup-rulevariables) in this guide and [Stateful domain list rule groups in AWS Network Firewall](https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html) in the *Network Firewall Developer Guide* 
+
 ## Syntax<a name="aws-properties-networkfirewall-rulegroup-rulessourcelist-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

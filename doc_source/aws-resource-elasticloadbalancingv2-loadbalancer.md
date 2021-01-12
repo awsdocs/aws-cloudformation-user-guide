@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::LoadBalancer<a name="aws-resource-elasticloadbalancingv2-loadbalancer"></a>
 
-Specifies an Application Load Balancer or a Network Load Balancer\.
+Specifies an Application Load Balancer, a Network Load Balancer, or a Gateway Load Balancer\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-loadbalancer-syntax"></a>
 
@@ -152,4 +152,5 @@ The IDs of the security groups for the load balancer\.
 +  [CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [User Guide for Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application) 
 +  [User Guide for Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network) 
++  [User Guide for Gateway Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway) 
 

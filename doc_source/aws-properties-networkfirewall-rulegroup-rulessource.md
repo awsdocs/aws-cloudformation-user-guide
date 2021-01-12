@@ -41,7 +41,6 @@ Stateful inspection criteria for a domain list rule group\.
 `RulesString`  <a name="cfn-networkfirewall-rulegroup-rulessource-rulesstring"></a>
 Stateful inspection criteria, provided in Suricata compatible intrusion prevention system \(IPS\) rules\. Suricata is an open\-source network IPS that includes a standard rule\-based language for network traffic inspection\.  
 These rules contain the inspection criteria and the action to take for traffic that matches the criteria, so this type of rule group doesn't have a separate action setting\.  
-You can provide the rules from a file that you've stored in an Amazon S3 bucket, or by providing the rules in a Suricata rules string\. To import from Amazon S3, provide the fully qualified name of the file that contains the rules definitions\. To provide a Suricata rule string, provide the complete, Suricata compatible rule\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

@@ -1,6 +1,6 @@
 # AWS::SageMaker::Device<a name="aws-resource-sagemaker-device"></a>
 
-The `AWS::SageMaker::Device` resource is an Amazon SageMaker resource type that allows you  to register your Devices against an existing SageMaker Edge Manager DeviceFleet\. Each device must be listed   individually in the CFN specification\.
+The `AWS::SageMaker::Device` resource is an Amazon SageMaker resource type that allows you to register your Devices against an existing SageMaker Edge Manager DeviceFleet\. Each device must be listed individually in the CFN specification\.
 
 ## Syntax<a name="aws-resource-sagemaker-device-syntax"></a>
 

@@ -61,7 +61,7 @@ The flags on SCTE\-35 segmentation descriptors that have to be present for Media
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdTriggers`  <a name="cfn-mediapackage-originendpoint-hlspackage-adtriggers"></a>
-The SCTE\-35 message types that MediaPackage treats as ad markers in the output manifest\.   
+Specifies the SCTE\-35 message types that MediaPackage treats as ad markers in the output manifest\.   
  Valid values:   
 +  **BREAK**
 +  **DISTRIBUTOR\_ADVERTISEMENT**
