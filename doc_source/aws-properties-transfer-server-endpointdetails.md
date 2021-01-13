@@ -45,7 +45,7 @@ This property can only be set when `EndpointType` is set to `VPC`\.
 
 `SecurityGroupIds`  <a name="cfn-transfer-server-endpointdetails-securitygroupids"></a>
 A list of security groups IDs that are available to attach to your server's endpoint\.  
-This property can only be set when `EndpointType` is set to `VPC`\.
+This property can only be set when `EndpointType` is set to `VPC`\. Maximum number of security groups that can be set is 5.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
