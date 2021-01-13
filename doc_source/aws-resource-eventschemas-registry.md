@@ -89,6 +89,6 @@ Resources:
   StatesSchemasRegistry:
     Type: AWS::EventSchemas::Registry
     Properties:
-      Name: 'aws.states'
+      RegistryName: 'aws.states'
       Description: 'Contains the schemas of events emitted by AWS Step Functions'
 ```
