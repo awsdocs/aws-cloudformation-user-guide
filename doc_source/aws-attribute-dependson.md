@@ -3,7 +3,7 @@
 With the `DependsOn` attribute you can specify that the creation of a specific resource follows another\. When you add a `DependsOn` attribute to a resource, that resource is created only after the creation of the resource specified in the `DependsOn` attribute\.
 
 **Important**  
-Dependent stacks also have implicit dependencies in the form of target properties `!Ref` and `!GetAtt`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rule apply:  
+Dependent stacks also have implicit dependencies in the form of target properties `!Ref` and `!GetAtt`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rules apply:  
 Resource B is created before resource A\.
 Resource A is deleted before resource B\.
 Resource B is updated before resource A\.
