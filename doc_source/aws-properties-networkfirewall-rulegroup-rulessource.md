@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[RulesSourceList](#cfn-networkfirewall-rulegroup-rulessource-rulessourcelist)" : RulesSourceList,
   "[RulesString](#cfn-networkfirewall-rulegroup-rulessource-rulesstring)" : String,
-  "[StatefulRules](#cfn-networkfirewall-rulegroup-rulessource-statefulrules)" : StatefulRules,
+  "[StatefulRules](#cfn-networkfirewall-rulegroup-rulessource-statefulrules)" : [ StatefulRule, ... ],
   "[StatelessRulesAndCustomActions](#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions)" : StatelessRulesAndCustomActions
 }
 ```
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RulesString](#cfn-networkfirewall-rulegroup-rulessource-rulesstring): 
     String
   [StatefulRules](#cfn-networkfirewall-rulegroup-rulessource-statefulrules): 
-    StatefulRules
+    - StatefulRule
   [StatelessRulesAndCustomActions](#cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions): 
     StatelessRulesAndCustomActions
 ```
@@ -50,7 +50,7 @@ These rules contain the inspection criteria and the action to take for traffic t
 `StatefulRules`  <a name="cfn-networkfirewall-rulegroup-rulessource-statefulrules"></a>
 The 5\-tuple stateful inspection criteria\. This contains an array of individual 5\-tuple stateful rules to be used together in a stateful rule group\.   
 *Required*: No  
-*Type*: [StatefulRules](aws-properties-networkfirewall-rulegroup-statefulrules.md)  
+*Type*: List of [StatefulRule](aws-properties-networkfirewall-rulegroup-statefulrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatelessRulesAndCustomActions`  <a name="cfn-networkfirewall-rulegroup-rulessource-statelessrulesandcustomactions"></a>

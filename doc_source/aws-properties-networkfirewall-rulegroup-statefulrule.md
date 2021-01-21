@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Action](#cfn-networkfirewall-rulegroup-statefulrule-action)" : String,
   "[Header](#cfn-networkfirewall-rulegroup-statefulrule-header)" : Header,
-  "[RuleOptions](#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions)" : RuleOptions
+  "[RuleOptions](#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions)" : [ RuleOption, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Header](#cfn-networkfirewall-rulegroup-statefulrule-header): 
     Header
   [RuleOptions](#cfn-networkfirewall-rulegroup-statefulrule-ruleoptions): 
-    RuleOptions
+    - RuleOption
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-statefulrule-properties"></a>
@@ -50,5 +50,5 @@ The stateful 5\-tuple inspection criteria for this rule, used to inspect traffic
 `RuleOptions`  <a name="cfn-networkfirewall-rulegroup-statefulrule-ruleoptions"></a>
 Additional settings for a stateful rule, provided as keywords and settings\.   
 *Required*: Yes  
-*Type*: [RuleOptions](aws-properties-networkfirewall-rulegroup-ruleoptions.md)  
+*Type*: List of [RuleOption](aws-properties-networkfirewall-rulegroup-ruleoption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

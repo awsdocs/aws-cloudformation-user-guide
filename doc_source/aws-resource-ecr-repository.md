@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ImageTagMutability](#cfn-ecr-repository-imagetagmutability)" : String,
       "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
-      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : ,
+      "[RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext)" : Json,
       "[Tags](#cfn-ecr-repository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -32,7 +32,7 @@ Properties:
   [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
     LifecyclePolicy
   [RepositoryName](#cfn-ecr-repository-repositoryname): String
-  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): 
+  [RepositoryPolicyText](#cfn-ecr-repository-repositorypolicytext): Json
   [Tags](#cfn-ecr-repository-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -71,7 +71,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
 The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
-*Type*:   
+*Type*: Json  
 *Minimum*: `0`  
 *Maximum*: `10240`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::CarrierGateway",
   "Properties" : {
-      "[Tags](#cfn-ec2-carriergateway-tags)" : Tags,
+      "[Tags](#cfn-ec2-carriergateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-ec2-carriergateway-vpcid)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::CarrierGateway
 Properties: 
   [Tags](#cfn-ec2-carriergateway-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-carriergateway-vpcid): String
 ```
 
@@ -33,7 +33,7 @@ Properties:
 `Tags`  <a name="cfn-ec2-carriergateway-tags"></a>
 The tags assigned to the carrier gateway\.  
 *Required*: No  
-*Type*: [Tags](aws-properties-ec2-carriergateway-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-carriergateway-vpcid"></a>

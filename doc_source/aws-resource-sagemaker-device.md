@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Device",
   "Properties" : {
       "[Device](#cfn-sagemaker-device-device)" : Device,
+      "[DeviceFleetName](#cfn-sagemaker-device-devicefleetname)" : String,
       "[Tags](#cfn-sagemaker-device-tags)" : [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
     }
 }
@@ -25,6 +26,7 @@ Type: AWS::SageMaker::Device
 Properties: 
   [Device](#cfn-sagemaker-device-device): 
     Device
+  [DeviceFleetName](#cfn-sagemaker-device-devicefleetname): String
   [Tags](#cfn-sagemaker-device-tags): 
     [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -37,6 +39,15 @@ Not currently supported by AWS CloudFormation\.
 *Type*: [Device](aws-properties-sagemaker-device-device.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DeviceFleetName`  <a name="cfn-sagemaker-device-devicefleetname"></a>
+The name of the fleet the device belongs to\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-sagemaker-device-tags"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
@@ -46,10 +57,3 @@ Not currently supported by AWS CloudFormation\.
 ## Return values<a name="aws-resource-sagemaker-device-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-device-return-values-ref"></a>
-
-### Fn::GetAtt<a name="aws-resource-sagemaker-device-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-sagemaker-device-return-values-fn--getatt-fn--getatt"></a>
-
-`DeviceFleetName`  <a name="DeviceFleetName-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.

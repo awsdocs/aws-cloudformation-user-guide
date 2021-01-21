@@ -12,15 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AuditManager::Assessment",
   "Properties" : {
-      "[assessmentReportsDestination](#cfn-auditmanager-assessment-assessmentreportsdestination)" : AssessmentReportsDestination,
-      "[awsAccount](#cfn-auditmanager-assessment-awsaccount)" : AWSAccount,
-      "[description](#cfn-auditmanager-assessment-description)" : String,
-      "[frameworkId](#cfn-auditmanager-assessment-frameworkid)" : String,
-      "[name](#cfn-auditmanager-assessment-name)" : String,
-      "[roles](#cfn-auditmanager-assessment-roles)" : Roles,
-      "[scope](#cfn-auditmanager-assessment-scope)" : Scope,
-      "[status](#cfn-auditmanager-assessment-status)" : String,
-      "[tags](#cfn-auditmanager-assessment-tags)" : Tags
+      "[AssessmentReportsDestination](#cfn-auditmanager-assessment-assessmentreportsdestination)" : AssessmentReportsDestination,
+      "[AwsAccount](#cfn-auditmanager-assessment-awsaccount)" : AWSAccount,
+      "[Description](#cfn-auditmanager-assessment-description)" : String,
+      "[FrameworkId](#cfn-auditmanager-assessment-frameworkid)" : String,
+      "[Name](#cfn-auditmanager-assessment-name)" : String,
+      "[Roles](#cfn-auditmanager-assessment-roles)" : [ Role, ... ],
+      "[Scope](#cfn-auditmanager-assessment-scope)" : Scope,
+      "[Status](#cfn-auditmanager-assessment-status)" : String,
+      "[Tags](#cfn-auditmanager-assessment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -30,37 +30,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AuditManager::Assessment
 Properties: 
-  [assessmentReportsDestination](#cfn-auditmanager-assessment-assessmentreportsdestination): 
+  [AssessmentReportsDestination](#cfn-auditmanager-assessment-assessmentreportsdestination): 
     AssessmentReportsDestination
-  [awsAccount](#cfn-auditmanager-assessment-awsaccount): 
+  [AwsAccount](#cfn-auditmanager-assessment-awsaccount): 
     AWSAccount
-  [description](#cfn-auditmanager-assessment-description): String
-  [frameworkId](#cfn-auditmanager-assessment-frameworkid): String
-  [name](#cfn-auditmanager-assessment-name): String
-  [roles](#cfn-auditmanager-assessment-roles): 
-    Roles
-  [scope](#cfn-auditmanager-assessment-scope): 
+  [Description](#cfn-auditmanager-assessment-description): String
+  [FrameworkId](#cfn-auditmanager-assessment-frameworkid): String
+  [Name](#cfn-auditmanager-assessment-name): String
+  [Roles](#cfn-auditmanager-assessment-roles): 
+    - Role
+  [Scope](#cfn-auditmanager-assessment-scope): 
     Scope
-  [status](#cfn-auditmanager-assessment-status): String
-  [tags](#cfn-auditmanager-assessment-tags): 
-    Tags
+  [Status](#cfn-auditmanager-assessment-status): String
+  [Tags](#cfn-auditmanager-assessment-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-auditmanager-assessment-properties"></a>
 
-`assessmentReportsDestination`  <a name="cfn-auditmanager-assessment-assessmentreportsdestination"></a>
+`AssessmentReportsDestination`  <a name="cfn-auditmanager-assessment-assessmentreportsdestination"></a>
  The destination in which evidence reports are stored for the specified assessment\.   
 *Required*: No  
 *Type*: [AssessmentReportsDestination](aws-properties-auditmanager-assessment-assessmentreportsdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`awsAccount`  <a name="cfn-auditmanager-assessment-awsaccount"></a>
+`AwsAccount`  <a name="cfn-auditmanager-assessment-awsaccount"></a>
  The AWS account associated with the assessment\.   
 *Required*: No  
 *Type*: [AWSAccount](aws-properties-auditmanager-assessment-awsaccount.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`description`  <a name="cfn-auditmanager-assessment-description"></a>
+`Description`  <a name="cfn-auditmanager-assessment-description"></a>
  The description of the assessment\.   
 *Required*: No  
 *Type*: String  
@@ -68,13 +68,13 @@ Properties:
 *Pattern*: `^[\w\W\s\S]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`frameworkId`  <a name="cfn-auditmanager-assessment-frameworkid"></a>
+`FrameworkId`  <a name="cfn-auditmanager-assessment-frameworkid"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`name`  <a name="cfn-auditmanager-assessment-name"></a>
+`Name`  <a name="cfn-auditmanager-assessment-name"></a>
  The name of the assessment\.   
 *Required*: No  
 *Type*: String  
@@ -83,29 +83,29 @@ Not currently supported by AWS CloudFormation\.
 *Pattern*: `^[\w\W\s\S]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`roles`  <a name="cfn-auditmanager-assessment-roles"></a>
+`Roles`  <a name="cfn-auditmanager-assessment-roles"></a>
  The roles associated with the assessment\.   
 *Required*: No  
-*Type*: [Roles](aws-properties-auditmanager-assessment-roles.md)  
+*Type*: List of [Role](aws-properties-auditmanager-assessment-role.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`scope`  <a name="cfn-auditmanager-assessment-scope"></a>
+`Scope`  <a name="cfn-auditmanager-assessment-scope"></a>
  The wrapper of AWS accounts and services in scope for the assessment\.   
 *Required*: No  
 *Type*: [Scope](aws-properties-auditmanager-assessment-scope.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`status`  <a name="cfn-auditmanager-assessment-status"></a>
+`Status`  <a name="cfn-auditmanager-assessment-status"></a>
  The overall status of the assessment\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ACTIVE | INACTIVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`tags`  <a name="cfn-auditmanager-assessment-tags"></a>
+`Tags`  <a name="cfn-auditmanager-assessment-tags"></a>
  The tags associated with the assessment\.   
 *Required*: No  
-*Type*: [Tags](aws-properties-auditmanager-assessment-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-auditmanager-assessment-return-values"></a>
@@ -126,35 +126,19 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-auditmanager-assessment-return-values-fn--getatt-fn--getatt"></a>
 
-`arn`  <a name="arn-fn::getatt"></a>
+`Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the assessment\. For example, `arn:aws:auditmanager:us-east-1:123456789012:assessment/111A1A1A-22B2-33C3-DDD4-55E5E5E555E5`\. 
 
-`assessmentId`  <a name="assessmentId-fn::getatt"></a>
+`AssessmentId`  <a name="AssessmentId-fn::getatt"></a>
 The unique identifier for the assessment\. For example, `111A1A1A-22B2-33C3-DDD4-55E5E5E555E5`\.
 
-`creationTime`  <a name="creationTime-fn::getatt"></a>
+`CreationTime`  <a name="CreationTime-fn::getatt"></a>
 The time when the assessment was created\. For example, `1607582033.373`\.
 
-`delegations`  <a name="delegations-fn::getatt"></a>
-The delegations associated with the assessment\. For example:  
+`Delegations`  <a name="Delegations-fn::getatt"></a>
+The delegations associated with the assessment\. 
 
-```
-[ {
-"assessmentId" : null,
-"assessmentName" : null,
-"comment" : null,
-"controlSetId" : "CloudTrail Checks",
-"createdBy" : "arn:aws:sts::123456789012:assumed-role/Admin/JohnDoe",
-"creationTime" : 1.607671498292E9,
-"id" : "aaaa1111-bb22-cc33-dd44-eeeeee555555",
-"lastUpdated" : 1.607671498292E9,
-"roleArn" : "arn:aws:iam::123456789012:user/JohnDoe",
-"roleType" : "RESOURCE_OWNER",
-"status" : "IN_PROGRESS"
-} ]
-```
-
-`frameworkId`  <a name="frameworkId-fn::getatt"></a>
+`FrameworkId`  <a name="FrameworkId-fn::getatt"></a>
 The unique identifier for the framework\. For example, `1aaa1111-22b2-33c3-3333-d44dd4d444dd`\.
 
 ## See also<a name="aws-resource-auditmanager-assessment--seealso"></a>

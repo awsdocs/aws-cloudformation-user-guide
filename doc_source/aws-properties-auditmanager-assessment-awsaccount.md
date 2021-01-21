@@ -10,23 +10,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[emailAddress](#cfn-auditmanager-assessment-awsaccount-emailaddress)" : String,
-  "[id](#cfn-auditmanager-assessment-awsaccount-id)" : String,
-  "[name](#cfn-auditmanager-assessment-awsaccount-name)" : String
+  "[EmailAddress](#cfn-auditmanager-assessment-awsaccount-emailaddress)" : String,
+  "[Id](#cfn-auditmanager-assessment-awsaccount-id)" : String,
+  "[Name](#cfn-auditmanager-assessment-awsaccount-name)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-auditmanager-assessment-awsaccount-syntax.yaml"></a>
 
 ```
-  [emailAddress](#cfn-auditmanager-assessment-awsaccount-emailaddress): String
-  [id](#cfn-auditmanager-assessment-awsaccount-id): String
-  [name](#cfn-auditmanager-assessment-awsaccount-name): String
+  [EmailAddress](#cfn-auditmanager-assessment-awsaccount-emailaddress): String
+  [Id](#cfn-auditmanager-assessment-awsaccount-id): String
+  [Name](#cfn-auditmanager-assessment-awsaccount-name): String
 ```
 
 ## Properties<a name="aws-properties-auditmanager-assessment-awsaccount-properties"></a>
 
-`emailAddress`  <a name="cfn-auditmanager-assessment-awsaccount-emailaddress"></a>
+`EmailAddress`  <a name="cfn-auditmanager-assessment-awsaccount-emailaddress"></a>
  The email address associated with the specified AWS account\.   
 *Required*: No  
 *Type*: String  
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `^.*@.*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`id`  <a name="cfn-auditmanager-assessment-awsaccount-id"></a>
+`Id`  <a name="cfn-auditmanager-assessment-awsaccount-id"></a>
  The identifier for the specified AWS account\.   
 *Required*: No  
 *Type*: String  
@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`name`  <a name="cfn-auditmanager-assessment-awsaccount-name"></a>
+`Name`  <a name="cfn-auditmanager-assessment-awsaccount-name"></a>
  The name of the specified AWS account\.   
 *Required*: No  
 *Type*: String  

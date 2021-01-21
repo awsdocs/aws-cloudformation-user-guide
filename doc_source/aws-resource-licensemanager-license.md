@@ -15,24 +15,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::LicenseManager::License",
   "Properties" : {
       "[Beneficiary](#cfn-licensemanager-license-beneficiary)" : String,
-      "[ClientToken](#cfn-licensemanager-license-clienttoken)" : String,
       "[ConsumptionConfiguration](#cfn-licensemanager-license-consumptionconfiguration)" : ConsumptionConfiguration,
-      "[Entitlements](#cfn-licensemanager-license-entitlements)" : EntitlementList,
-      "[Filters](#cfn-licensemanager-license-filters)" : FilterList,
+      "[Entitlements](#cfn-licensemanager-license-entitlements)" : [ Entitlement, ... ],
       "[HomeRegion](#cfn-licensemanager-license-homeregion)" : String,
       "[Issuer](#cfn-licensemanager-license-issuer)" : IssuerData,
-      "[LicenseArns](#cfn-licensemanager-license-licensearns)" : ArnList,
-      "[LicenseMetadata](#cfn-licensemanager-license-licensemetadata)" : MetadataList,
+      "[LicenseMetadata](#cfn-licensemanager-license-licensemetadata)" : [ Metadata, ... ],
       "[LicenseName](#cfn-licensemanager-license-licensename)" : String,
-      "[MaxResults](#cfn-licensemanager-license-maxresults)" : Integer,
-      "[NextToken](#cfn-licensemanager-license-nexttoken)" : String,
       "[ProductName](#cfn-licensemanager-license-productname)" : String,
       "[ProductSKU](#cfn-licensemanager-license-productsku)" : String,
-      "[SourceVersion](#cfn-licensemanager-license-sourceversion)" : String,
       "[Status](#cfn-licensemanager-license-status)" : String,
-      "[Tags](#cfn-licensemanager-license-tags)" : TagList,
-      "[Validity](#cfn-licensemanager-license-validity)" : ValidityDateFormat,
-      "[Version](#cfn-licensemanager-license-version)" : String
+      "[Validity](#cfn-licensemanager-license-validity)" : ValidityDateFormat
     }
 }
 ```
@@ -43,44 +35,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LicenseManager::License
 Properties: 
   [Beneficiary](#cfn-licensemanager-license-beneficiary): String
-  [ClientToken](#cfn-licensemanager-license-clienttoken): String
   [ConsumptionConfiguration](#cfn-licensemanager-license-consumptionconfiguration): 
     ConsumptionConfiguration
   [Entitlements](#cfn-licensemanager-license-entitlements): 
-    EntitlementList
-  [Filters](#cfn-licensemanager-license-filters): 
-    FilterList
+    - Entitlement
   [HomeRegion](#cfn-licensemanager-license-homeregion): String
   [Issuer](#cfn-licensemanager-license-issuer): 
     IssuerData
-  [LicenseArns](#cfn-licensemanager-license-licensearns): 
-    ArnList
   [LicenseMetadata](#cfn-licensemanager-license-licensemetadata): 
-    MetadataList
+    - Metadata
   [LicenseName](#cfn-licensemanager-license-licensename): String
-  [MaxResults](#cfn-licensemanager-license-maxresults): Integer
-  [NextToken](#cfn-licensemanager-license-nexttoken): String
   [ProductName](#cfn-licensemanager-license-productname): String
   [ProductSKU](#cfn-licensemanager-license-productsku): String
-  [SourceVersion](#cfn-licensemanager-license-sourceversion): String
   [Status](#cfn-licensemanager-license-status): String
-  [Tags](#cfn-licensemanager-license-tags): 
-    TagList
   [Validity](#cfn-licensemanager-license-validity): 
     ValidityDateFormat
-  [Version](#cfn-licensemanager-license-version): String
 ```
 
 ## Properties<a name="aws-resource-licensemanager-license-properties"></a>
 
 `Beneficiary`  <a name="cfn-licensemanager-license-beneficiary"></a>
 License beneficiary\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ClientToken`  <a name="cfn-licensemanager-license-clienttoken"></a>
-Unique, case\-sensitive identifier that you provide to ensure the idempotency of the request\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,17 +69,7 @@ Configuration for consumption of the license\.
 `Entitlements`  <a name="cfn-licensemanager-license-entitlements"></a>
 License entitlements\.  
 *Required*: Yes  
-*Type*: [EntitlementList](aws-properties-licensemanager-license-entitlementlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Filters`  <a name="cfn-licensemanager-license-filters"></a>
-Filters to scope the results\. The following filters are supported:  
-+  `Beneficiary` 
-+  `ProductSKU` 
-+  `KeyFingerprint` 
-+  `Status` 
-*Required*: No  
-*Type*: [FilterList](aws-properties-licensemanager-license-filterlist.md)  
+*Type*: List of [Entitlement](aws-properties-licensemanager-license-entitlement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeRegion`  <a name="cfn-licensemanager-license-homeregion"></a>
@@ -119,50 +84,26 @@ License issuer\.
 *Type*: [IssuerData](aws-properties-licensemanager-license-issuerdata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LicenseArns`  <a name="cfn-licensemanager-license-licensearns"></a>
-Amazon Resource Names \(ARNs\) of the licenses\.  
-*Required*: No  
-*Type*: [ArnList](aws-properties-licensemanager-license-arnlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `LicenseMetadata`  <a name="cfn-licensemanager-license-licensemetadata"></a>
 License metadata\.  
 *Required*: No  
-*Type*: [MetadataList](aws-properties-licensemanager-license-metadatalist.md)  
+*Type*: List of [Metadata](aws-properties-licensemanager-license-metadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LicenseName`  <a name="cfn-licensemanager-license-licensename"></a>
 License name\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`MaxResults`  <a name="cfn-licensemanager-license-maxresults"></a>
-Maximum number of results to return in a single call\.  
-*Required*: No  
-*Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`NextToken`  <a name="cfn-licensemanager-license-nexttoken"></a>
-Token for the next set of results\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProductName`  <a name="cfn-licensemanager-license-productname"></a>
 Product name\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProductSKU`  <a name="cfn-licensemanager-license-productsku"></a>
 Product SKU\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`SourceVersion`  <a name="cfn-licensemanager-license-sourceversion"></a>
-License version\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,22 +114,10 @@ License status\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Tags`  <a name="cfn-licensemanager-license-tags"></a>
-One or more tags\.  
-*Required*: No  
-*Type*: [TagList](aws-properties-licensemanager-license-taglist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `Validity`  <a name="cfn-licensemanager-license-validity"></a>
 Date and time range during which the license is valid, in ISO8601\-UTC format\.  
 *Required*: Yes  
 *Type*: [ValidityDateFormat](aws-properties-licensemanager-license-validitydateformat.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Version`  <a name="cfn-licensemanager-license-version"></a>
-License version\.  
-*Required*: No  
-*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-licensemanager-license-return-values"></a>
@@ -209,3 +138,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `LicenseArn`  <a name="LicenseArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the license\.
+
+`Version`  <a name="Version-fn::getatt"></a>
+The license version\.

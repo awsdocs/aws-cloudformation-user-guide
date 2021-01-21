@@ -57,7 +57,7 @@ Properties:
 The setup to be used for brokers in the cluster\.  
 *Required*: Yes  
 *Type*: [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientAuthentication`  <a name="cfn-msk-cluster-clientauthentication"></a>
 Includes information related to client authentication\.  

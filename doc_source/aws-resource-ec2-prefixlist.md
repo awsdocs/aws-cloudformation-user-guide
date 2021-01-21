@@ -50,7 +50,7 @@ Valid Values: `IPv4` \| `IPv6`
 One or more entries for the prefix list\.  
 *Required*: No  
 *Type*: List of [Entry](aws-properties-ec2-prefixlist-entry.md)  
-*Maximum*: `1000`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxEntries`  <a name="cfn-ec2-prefixlist-maxentries"></a>

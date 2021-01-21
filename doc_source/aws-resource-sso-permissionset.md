@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SSO::PermissionSet",
   "Properties" : {
       "[Description](#cfn-sso-permissionset-description)" : String,
-      "[InlinePolicy](#cfn-sso-permissionset-inlinepolicy)" : String,
+      "[InlinePolicy](#cfn-sso-permissionset-inlinepolicy)" : Json,
       "[InstanceArn](#cfn-sso-permissionset-instancearn)" : String,
       "[ManagedPolicies](#cfn-sso-permissionset-managedpolicies)" : [ String, ... ],
       "[Name](#cfn-sso-permissionset-name)" : String,
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SSO::PermissionSet
 Properties: 
   [Description](#cfn-sso-permissionset-description): String
-  [InlinePolicy](#cfn-sso-permissionset-inlinepolicy): String
+  [InlinePolicy](#cfn-sso-permissionset-inlinepolicy): Json
   [InstanceArn](#cfn-sso-permissionset-instancearn): String
   [ManagedPolicies](#cfn-sso-permissionset-managedpolicies): 
     - String
@@ -55,7 +55,7 @@ The description of the [AWS::SSO::PermissionSet](#aws-resource-sso-permissionset
 `InlinePolicy`  <a name="cfn-sso-permissionset-inlinepolicy"></a>
 The IAM inline policy that is attached to the permission set\.  
 *Required*: No  
-*Type*: String  
+*Type*: Json  
 *Minimum*: `1`  
 *Maximum*: `10240`  
 *Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  

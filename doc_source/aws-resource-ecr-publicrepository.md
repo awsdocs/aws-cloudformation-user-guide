@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata)" : Json,
       "[RepositoryName](#cfn-ecr-publicrepository-repositoryname)" : String,
-      "[RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext)" : 
+      "[RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext)" : Json
     }
 }
 ```
@@ -26,7 +26,7 @@ Type: AWS::ECR::PublicRepository
 Properties: 
   [RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata): Json
   [RepositoryName](#cfn-ecr-publicrepository-repositoryname): String
-  [RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext):
+  [RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext): Json
 ```
 
 ## Properties<a name="aws-resource-ecr-publicrepository-properties"></a>
@@ -47,7 +47,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 `RepositoryPolicyText`  <a name="cfn-ecr-publicrepository-repositorypolicytext"></a>
 The JSON repository policy text to apply to the public repository\. For more information, see [Amazon ECR Public repository policies](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-policies.html) in the *Amazon ECR Public User Guide*\.  
 *Required*: No  
-*Type*:   
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ecr-publicrepository-return-values"></a>

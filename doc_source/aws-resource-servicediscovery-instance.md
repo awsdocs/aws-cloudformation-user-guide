@@ -35,9 +35,9 @@ Properties:
 A string map that contains the following information for the service that you specify in `ServiceId`:  
 + The attributes that apply to the records that are defined in the service\. 
 + For each attribute, the applicable value\.
-Supported attribute keys include the following:  
-**AWS\_ALIAS\_DNS\_NAME**  
-If you want AWS Cloud Map to create a Route 53 alias record that routes traffic to an Elastic Load Balancing load balancer, specify the DNS name that is associated with the load balancer\. For information about how to get the DNS name, see "DNSName" in the topic [AliasTarget](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html)\.  
+Supported attribute keys include the following:    
+AWS\_ALIAS\_DNS\_NAME  
+If you want AWS Cloud Map to create a Route 53 alias record that routes traffic to an Elastic Load Balancing load balancer, specify the DNS name that is associated with the load balancer\. For information about how to get the DNS name, see [AliasTarget\->DNSName](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-DNSName) in the *Route 53 API Reference*\.  
 Note the following:  
 + The configuration for the service that is specified by `ServiceId` must include settings for an `A` record, an `AAAA` record, or both\.
 + In the service that is specified by `ServiceId`, the value of `RoutingPolicy` must be `WEIGHTED`\.
@@ -45,7 +45,7 @@ Note the following:
 + Auto naming currently doesn't support creating alias records that route traffic to AWS resources other than ELB load balancers\.
 + If you specify a value for `AWS_ALIAS_DNS_NAME`, don't specify values for any of the `AWS_INSTANCE` attributes\.  
 AWS\_EC2\_INSTANCE\_ID  
- *HTTP namespaces only\.* The Amazon EC2 instance ID for the instance\. When creating resources with a type of [AWS::ServiceDiscovery::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html), if the `AWS_EC2_INSTANCE_ID` attribute is specified, the only other attribute that can be specified is `AWS_INIT_HEALTH_STATUS`\. After the resource has been created, the `AWS_INSTANCE_IPV4` attribute contains the primary private IPv4 address\.  
+*HTTP namespaces only\.* The Amazon EC2 instance ID for the instance\. The `AWS_INSTANCE_IPV4` attribute contains the primary private IPv4 address\. When creating resources with a type of [AWS::ServiceDiscovery::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html), if the `AWS_EC2_INSTANCE_ID` attribute is specified, the only other attribute that can be specified is `AWS_INIT_HEALTH_STATUS`\. After the resource has been created, the `AWS_INSTANCE_IPV4` attribute contains the primary private IPv4 address\.  
 AWS\_INIT\_HEALTH\_STATUS  
 If the service configuration includes `HealthCheckCustomConfig`, when creating resources with a type of [AWS::ServiceDiscovery::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html) you can optionally use `AWS_INIT_HEALTH_STATUS` to specify the initial status of the custom health check, `HEALTHY` or `UNHEALTHY`\. If you don't specify a value for `AWS_INIT_HEALTH_STATUS`, the initial status is `HEALTHY`\. This attribute can only be used when creating resources and will not be seen on existing resources\.  
 AWS\_INSTANCE\_CNAME  
@@ -59,7 +59,7 @@ If the service configuration includes an `AAAA` record, the IPv6 address that yo
 This value is required if the service specified by `ServiceId` includes settings for an `AAAA` record\. If the service includes settings for an `SRV` record, you must specify a value for `AWS_INSTANCE_IPV4`, `AWS_INSTANCE_IPV6`, or both\.  
 AWS\_INSTANCE\_PORT  
 If the service includes an `SRV` record, the value that you want Route 53 to return for the port\.  
-If the service includes `HealthCheckConfig`, the port on the endpoint that you want Route 53 to send requests to\.  
+If the service includes `HealthCheckConfig`, the port on the endpoint that you want Route 53 to send requests to\.   
 This value is required if you specified settings for an `SRV` record or a Route 53 health check when you created the service\.
 *Required*: Yes  
 *Type*: Json  

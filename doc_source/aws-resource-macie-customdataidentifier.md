@@ -1,6 +1,6 @@
 # AWS::Macie::CustomDataIdentifier<a name="aws-resource-macie-customdataidentifier"></a>
 
-The `AWS::Macie::CustomDataIdentifier` resource is a set of criteria that you define to detect sensitive data in one or more data sources\. Each identifier specifies a regular expression \(regex\) that defines a text pattern to match in the data\. It can also specify character sequences, such as words and phrases, and a proximity rule that refine the analysis of a data source\. By using custom data identifiers, you can tailor your analysis to meet your organization's specific needs, and supplement the built\-in data identifiers that Amazon Macie provides\.
+The `AWS::Macie::CustomDataIdentifier` resource is a set of criteria that you define to detect sensitive data in one or more data sources\. Each identifier specifies a regular expression \(*regex*\) that defines a text pattern to match in the data\. It can also specify character sequences, such as words and phrases, and a proximity rule that refine the analysis of a data source\. By using custom data identifiers, you can tailor your analysis to meet your organization's specific needs, and supplement the built\-in, managed data identifiers that Amazon Macie provides\.
 
 A `Session` must exist for the account before you can create a `CustomDataIdentifier`\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
 
@@ -73,7 +73,7 @@ We strongly recommend that you avoid including any sensitive data in the name of
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Regex`  <a name="cfn-macie-customdataidentifier-regex"></a>
-The regular expression \(regex\) that defines the pattern to match\. The expression can contain as many as 500 characters\.  
+The regular expression \(*regex*\) that defines the pattern to match\. The expression can contain as many as 500 characters\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -150,5 +150,5 @@ Properties:
         - "Employee ID"
     MaximumMatchDistance: 20
     Name: EmployeeIDCustomDataIdentifier
-    Regex: \d{6}
+    Regex: "\\d{6}"
 ```

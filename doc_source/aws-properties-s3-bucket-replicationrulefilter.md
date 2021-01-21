@@ -38,6 +38,7 @@ A container for specifying rule filters\. The filters determine the subset of ob
 
 `Prefix`  <a name="cfn-s3-bucket-replicationrulefilter-prefix"></a>
 An object key name prefix that identifies the subset of objects to which the rule applies\.  
+Replacement must be made for object keys containing special characters \(such as carriage returns\) when using XML requests\. For more information, see [ XML related object key constraints](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

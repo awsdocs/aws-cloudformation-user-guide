@@ -4,31 +4,70 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
+
+ [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
+You can now change the broker type for an existing cluster\.  | January 15, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::MSK::Cluster 
+
+ [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
+You can now change the broker type for an existing cluster\.  | January 15, 2021 | 
+| [Updated resource](AWS_ServiceCatalog.md) | The following resource was updated: AWS::ServiceCatalog::PortfolioShare\. 
+
+ [The following resource was updated: AWS::ServiceCatalog::PortfolioShare\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)   
+The `ShareTagOptions` property is now available for `AWS::ServiceCatalog::PortfolioShare`\.  | January 14, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ServiceCatalog::PortfolioShare\. 
+
+ [The following resource was updated: AWS::ServiceCatalog::PortfolioShare\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)   
+The `ShareTagOptions` property is now available for `AWS::ServiceCatalog::PortfolioShare`\.  | January 14, 2021 | 
+| [New resource](AWS_EMRContainers.md) | The AWS::EMRContainers::VirtualCluster resource was added\. 
+
+ [AWS::EMRContainers::VirtualCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)   
+The `AWS::EMRContainers::VirtualCluster` resource specifies a virtual cluster\.  | January 14, 2021 | 
+| [New resource](AWS_QuickSight.md) | The following resource was added: AWS::QuickSight::Analysis, AWS::QuickSight::Dashboard, AWS::QuickSight::Template, and AWS::QuickSight::Theme\. 
+
+ [ AWS::QuickSight::Analysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html)   
+Use the `AWS::QuickSight::Analysis` resource to create an analysis in Amazon QuickSight\. 
+
+ [ AWS::QuickSight::Dashboard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html)   
+Use the `AWS::QuickSight::Dashboard` resource to create a dashboard from a template in Amazon QuickSight\. 
+
+ [ AWS::QuickSight::Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html)   
+Use the `AWS::QuickSight::Template` resource to create a template from an existing Amazon QuickSight analysis or template\. 
+
+ [ AWS::QuickSight::Theme](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html)   
+Use the `AWS::QuickSight::Theme` resource to create a theme in Amazon QuickSight\.   | January 14, 2021 | 
+| [New resource](AWS_ServiceCatalogAppRegistry.md) | The following new resources were added: AWS::ServiceCatalogAppRegistry::Application, AWS::ServiceCatalogAppRegistry::AttributeGroup, AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation, AWS::ServiceCatalogAppRegistry::ResourceAssociation 
+
+ [AWS::ServiceCatalogAppRegistry::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html)   
+Use the `AWS::ServiceCatalogAppRegistry::Application` resource to represent a Service Catalog AppRegistry application at the top\-level node in a hierarchy of related cloud resource abstractions\. 
+
+ [AWS::ServiceCatalogAppRegistry::AttributeGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html)   
+Use the `AWS::ServiceCatalogAppRegistry::AttributeGroup` resource to create a new attribute group as a container for user\-defined attributes\. 
+
+ [AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html)   
+Use the `AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation` as the attribute group to associate ServiceCatalogAppRegistry\. 
+
+ [AWS::ServiceCatalogAppRegistry::ResourceAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-resourceassociation.html)   
+Use the `AWS::ServiceCatalogAppRegistry::ResourceAssociation` as the resource association for ServiceCatalogAppRegistry\.  | January 14, 2021 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::QuickSight::Analysis, AWS::QuickSight::Dashboard, AWS::QuickSight::Template, and AWS::QuickSight::Theme\. 
+
+ [ AWS::QuickSight::Analysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html)   
+Use the `AWS::QuickSight::Analysis` resource to create an analysis in Amazon QuickSight\. 
+
+ [ AWS::QuickSight::Dashboard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html)   
+Use the `AWS::QuickSight::Dashboard` resource to create a dashboard from a template in Amazon QuickSight\. 
+
+ [ AWS::QuickSight::Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html)   
+Use the `AWS::QuickSight::Template` resource to create a template from an existing Amazon QuickSight analysis or template\. 
+
+ [ AWS::QuickSight::Theme](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html)   
+Use the `AWS::QuickSight::Theme` resource to create a theme in Amazon QuickSight\.   | January 14, 2021 | 
 | [Updates to resource](AWS_SSO.md) | The following resource was updated: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
 
  [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
 Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | January 7, 2021 | 
-| [Updates to resource](#ReleaseHistory) | The following resource was updated: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
-
- [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
-Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | January 7, 2021 | 
 | [Updated resources](AWS_IoTWireless.md) | The following resources were updated: AWS::IoTWireless::Destination, AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
-
- [AWS::IoTWireless::Destination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)   
- Use the `Destination` resource to specify a destination for a wireless device to use\.  
-
- [AWS::IoTWireless::DeviceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)   
- Use the `DeviceProfile` resource to specify a device profile for a wireless device to use\.  
-
- [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
- Use the `ServiceProfile` resource to specify a service profile for a wireless device to use\.  
-
- [AWS::IoTWireless::WirelessDevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)   
- Use the `WirelessDevice` resource to specify a wireless device in an AWS IoT Core for LoRaWAN solution\.  
-
- [AWS::IoTWireless::WirelessGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)   
- Use the `WirelessGateway` resource to specify a wireless gateway in an AWS IoT Core for LoRaWAN solution\.   | January 7, 2021 | 
-| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::IoTWireless::Destination, AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
 
  [AWS::IoTWireless::Destination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)   
  Use the `Destination` resource to specify a destination for a wireless device to use\.  
@@ -56,18 +95,6 @@ Use the `Throughput` property to specify the throughput to provision for gp3 vol
 
  [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
 The `AWS::FMS::Policy` resource now allows you to manage AWS Network Firewall policies\.   | January 7, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resources were updated: AWS::FMS::Policy 
-
- [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy.html)   
-The `AWS::FMS::Policy` resource now allows you to manage AWS Network Firewall policies\.   | January 7, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::EC2::LaunchTemplate 
-
- [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)   
-Use the `Throughput` property to specify the throughput to provision for gp3 volumes\.  | January 7, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: `AWS::ApiGatewayV2::Integration`\. 
-
- [AWS::ApiGatewayV2::Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)   
-Use the `AWS::ApiGatewayV2::Integration` resource to configure request and response parameter mapping for an HTTP API\.  | January 7, 2021 | 
 | [New resources](AWS_MediaConnect.md) | The following resources were added: `AWS::MediaConnect::Flow`, `AWS::MediaConnect::FlowEntitlement`, `AWS::MediaConnect::FlowOutput`, `AWS::MediaConnect::FlowSource`, and `AWS::MediaConnect::FlowVpcInterface`\. 
 
  [AWS::MediaConnect::Flow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flow.html)   
@@ -91,26 +118,11 @@ Use the `AWS::Route53::DNSSEC` resource to enable DNSSEC signing for a hosted zo
 
  [AWS::Route53::KeySigningKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html)   
 Use the `AWS::Route53::KeySigningKey` resource to specify configuration settings for a key\-signing key \(KSK\) that's associated with a hosted zone\.  | January 7, 2021 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::Route53::DNSSEC and AWS::Route53::KeySigningKey\. 
-
- [AWS::Route53::DNSSEC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)   
-Use the `AWS::Route53::DNSSEC` resource to enable DNSSEC signing for a hosted zone\.  
-
- [AWS::Route53::KeySigningKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html)   
-Use the `AWS::Route53::KeySigningKey` resource to specify configuration settings for a key\-signing key \(KSK\) that's associated with a hosted zone\.  | January 7, 2021 | 
 | [New resource ](AWS_Config.md) | The following resources was added: AWS::Config::StoredQuery 
 
  [ AWS::Config::StoredQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)   
 Use the `AWS::Config::StoredQuery` resource to save a new query or update an existing saved query\.  | January 7, 2021 | 
-| [New resource ](#ReleaseHistory) | The following resources was added: AWS::Config::StoredQuery 
-
- [ AWS::Config::StoredQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)   
-Use the `AWS::Config::StoredQuery` resource to save a new query or update an existing saved query\.  | January 7, 2021 | 
 | [New resource](AWS_Route53Resolver.md) | The following resource was added: AWS::Route53Resolver::ResolverDNSSECConfig\. 
-
- [AWS::Route53Resolver::ResolverDNSSECConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)   
-Use the `AWS::Route53Resolver::ResolverDNSSECConfig` resource to specify configuration for DNSSEC validation\.  | January 7, 2021 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::Route53Resolver::ResolverDNSSECConfig\. 
 
  [AWS::Route53Resolver::ResolverDNSSECConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)   
 Use the `AWS::Route53Resolver::ResolverDNSSECConfig` resource to specify configuration for DNSSEC validation\.  | January 7, 2021 | 
@@ -138,7 +150,7 @@ Use the `AWS::DataSync::LocationS3` resource to specify an endpoint for an Amazo
 Use the `AWS::DataSync::LocationSMB` resource to specify an SMB location\. 
 
  [AWS::DataSync::Task](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)   
-Use the `AWS::DataSync::Taks` resource to specify a task\.  | January 7, 2021 | 
+Use the `AWS::DataSync::Task` resource to specify a task\.  | January 7, 2021 | 
 | [AWS::ServiceCatalog transform added](#ReleaseHistory) | The AWS::ServiceCatalog transform enables Service Catalog users to reference outputs from an existing Service Catalog provisioned product in their CloudFormation template\.For more details, see [AWS::ServiceCatalog transform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-servicecatalog.html)\. | December 23, 2020 | 
 | [New resource](AWS_MWAA.md) | The following resource was added AWS::MWAA::Environment 
 
@@ -165,7 +177,13 @@ Use the `PublicRepository` property to create or update a public repository\.  |
 
  [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
 Use the `DeploymentCircuitBreaker` property to enable the deployment circuit breaker for a service\.  | December 18, 2020 | 
-| [Updated resources](AWS_ElastiCache.md) | The following resource was updated: AWS::ElastiCache::ReplicationGroup\. 
+| [Updated resources](AWS_ElastiCache.md) | The following resources were updated: AWS::ElastiCache::User AWS::ElastiCache::UserGroup and AWS::ElastiCache::ReplicationGroup\. 
+
+ [AWS::ElastiCache::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)   
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  
+
+ [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
+For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
 
  [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-usergroupids)   
 Use the `UserGroupIds` property to associate a list of user groups with the replication group\.  | December 18, 2020 | 
@@ -206,13 +224,6 @@ Use the `NetworkInsightsPath` property to specify a path to analyze for reachabi
 
  [AWS::EC2::NetworkInsightsAnalysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html)   
 Use the `NetworkInsightsAnalysis` property to specify a network insights analysis\.  | December 18, 2020 | 
-| [New resources](AWS_ElastiCache.md) | The following resources were added: AWS::ElastiCache::User and AWS::ElastiCache::UserGroup\. 
-
- [AWS::ElastiCache::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)   
-For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](red-ug/Clusters.RBAC.html)  
-
- [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
-For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  | December 18, 2020 | 
 | [New resources](AWS_LicenseManager.md) | The following resources were added: AWS::LicenseManager::Grant and AWS::LicenseManager::License\. 
 
  [AWS::LicenseManager::Grant](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)   
@@ -635,6 +646,10 @@ Use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kuber
  [AWS::WorkSpaces::ConnectionAlias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)   
 Use the `AWS::WorkSpaces::ConnectionAlias` resource to specify a connection alias\. Connection aliases are used for cross\-Region redirection\.   | October 1, 2020 | 
 | [Drift detection for private resources](#ReleaseHistory) | CloudFormation supports drift detection operations on an expanded list of AWS resources, as well as private resources that are defined as provisonable\.In addition to the resources that previously supported drift detection, CloudFormation now supports drift detection on all resources defined as provisionable in the CloudFormation registry\. For more information, see [Resources that support import and drift detection operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\. | October 1, 2020 | 
+| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
+
+ [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
+Adding support for SASL/Scram \(Username/ Password access to clusters\.\)  | September 24, 2020 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: `AWS::ApiGateway::DomainName`\. 
 
  [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   

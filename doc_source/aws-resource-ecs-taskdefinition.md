@@ -105,7 +105,7 @@ If the `host` IPC mode is used, be aware that there is a heightened risk of unde
 If you are setting namespaced kernel parameters using `systemControls` for the containers in the task, the following will apply to your IPC resource namespace\. For more information, see [System Controls](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 + For tasks that use the `host` IPC mode, IPC namespace related `systemControls` are not supported\.
 + For tasks that use the `task` IPC mode, IPC namespace related `systemControls` will apply to all containers within a task\.
-This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
+This parameter is not supported for Windows containers or tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `host | none | task`  
@@ -113,8 +113,8 @@ This parameter is not supported for Windows containers or tasks using the Fargat
 
 `Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
 The amount \(in MiB\) of memory used by the task\.  
-If using the EC2 launch type, you must specify either a task\-level memory value or a container\-level memory value\. This field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\. For more information regarding container\-level memory and memory reservation, see [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)\.  
-If using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
+If your tasks will be run on Amazon EC2 instances, you must specify either a task\-level memory value or a container\-level memory value\. This field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\. For more information regarding container\-level memory and memory reservation, see [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)\.  
+If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
 + 512 \(0\.5 GB\), 1024 \(1 GB\), 2048 \(2 GB\) \- Available `cpu` values: 256 \(\.25 vCPU\)
 + 1024 \(1 GB\), 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\) \- Available `cpu` values: 512 \(\.5 vCPU\)
 + 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\), 5120 \(5 GB\), 6144 \(6 GB\), 7168 \(7 GB\), 8192 \(8 GB\) \- Available `cpu` values: 1024 \(1 vCPU\)
@@ -140,14 +140,15 @@ For more information, see [Network settings](https://docs.docker.com/engine/refe
 `PidMode`  <a name="cfn-ecs-taskdefinition-pidmode"></a>
 The process namespace to use for the containers in the task\. The valid values are `host` or `task`\. If `host` is specified, then all containers within the tasks that specified the `host` PID mode on the same container instance share the same process namespace with the host Amazon EC2 instance\. If `task` is specified, all containers within the specified task share the same process namespace\. If no value is specified, the default is a private namespace\. For more information, see [PID settings](https://docs.docker.com/engine/reference/run/#pid-settings---pid) in the *Docker run reference*\.  
 If the `host` PID mode is used, be aware that there is a heightened risk of undesired process namespace expose\. For more information, see [Docker security](https://docs.docker.com/engine/security/security/)\.  
-This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
+This parameter is not supported for Windows containers or tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `host | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementConstraints`  <a name="cfn-ecs-taskdefinition-placementconstraints"></a>
-An array of placement constraint objects to use for tasks\. This field is not valid if you are using the Fargate launch type for your task\.  
+An array of placement constraint objects to use for tasks\.  
+This parameter is not supported for tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: List of [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -160,7 +161,7 @@ Your Amazon ECS container instances require at least version 1\.26\.0 of the con
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>
-The launch type the task requires\. If no value is specified, it will default to `EC2`\. Valid values include `EC2` and `FARGATE`\.  
+The task launch types the task definition was validated against\. To determine which task launch types the task definition is validated for, see the TaskDefinition$compatibilities parameter\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -182,15 +183,14 @@ The following basic restrictions apply to tags:
 
 `TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
 The short name or full Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [Amazon ECS Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM Roles for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM roles for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Volumes`  <a name="cfn-ecs-taskdefinition-volumes"></a>
-The list of volume definitions for the task\.  
-If your tasks are using the Fargate launch type, the `host` and `sourcePath` parameters are not supported\.  
-For more information about volume definition parameters and defaults, see [Amazon ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The list of data volume definitions for the task\. For more information, see [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The `host` and `sourcePath` parameters are not supported for tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: List of [Volume](aws-properties-ecs-taskdefinition-volumes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Iops](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-iops)" : Integer,
   "[KmsKeyId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-kmskeyid)" : String,
   "[SnapshotId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-snapshotid)" : String,
+  "[Throughput](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-throughput)" : Integer,
   "[VolumeSize](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumesize)" : Integer,
   "[VolumeType](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumetype)" : String
 }
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Iops](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-iops): Integer
   [KmsKeyId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-kmskeyid): String
   [SnapshotId](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-snapshotid): String
+  [Throughput](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-throughput): Integer
   [VolumeSize](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumesize): Integer
   [VolumeType](#cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumetype): String
 ```
@@ -70,6 +72,13 @@ The ARN of the symmetric AWS Key Management Service \(AWS KMS\) CMK used for enc
 The ID of the snapshot\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Throughput`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs-throughput"></a>
+The throughput to provision for a `gp3` volume, with a maximum of 1,000 MiB/s\.  
+Valid Range: Minimum value of 125\. Maximum value of 1000\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSize`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-ebs-volumesize"></a>

@@ -16,14 +16,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CapacityUnits](#cfn-kendra-index-capacityunits)" : CapacityUnitsConfiguration,
       "[Description](#cfn-kendra-index-description)" : String,
-      "[DocumentMetadataConfigurations](#cfn-kendra-index-documentmetadataconfigurations)" : DocumentMetadataConfigurationList,
+      "[DocumentMetadataConfigurations](#cfn-kendra-index-documentmetadataconfigurations)" : [ DocumentMetadataConfiguration, ... ],
       "[Edition](#cfn-kendra-index-edition)" : String,
       "[Name](#cfn-kendra-index-name)" : String,
       "[RoleArn](#cfn-kendra-index-rolearn)" : String,
       "[ServerSideEncryptionConfiguration](#cfn-kendra-index-serversideencryptionconfiguration)" : ServerSideEncryptionConfiguration,
-      "[Tags](#cfn-kendra-index-tags)" : TagList,
+      "[Tags](#cfn-kendra-index-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserContextPolicy](#cfn-kendra-index-usercontextpolicy)" : String,
-      "[UserTokenConfigurations](#cfn-kendra-index-usertokenconfigurations)" : UserTokenConfigurationList
+      "[UserTokenConfigurations](#cfn-kendra-index-usertokenconfigurations)" : [ UserTokenConfiguration, ... ]
     }
 }
 ```
@@ -37,17 +37,17 @@ Properties:
     CapacityUnitsConfiguration
   [Description](#cfn-kendra-index-description): String
   [DocumentMetadataConfigurations](#cfn-kendra-index-documentmetadataconfigurations): 
-    DocumentMetadataConfigurationList
+    - DocumentMetadataConfiguration
   [Edition](#cfn-kendra-index-edition): String
   [Name](#cfn-kendra-index-name): String
   [RoleArn](#cfn-kendra-index-rolearn): String
   [ServerSideEncryptionConfiguration](#cfn-kendra-index-serversideencryptionconfiguration): 
     ServerSideEncryptionConfiguration
   [Tags](#cfn-kendra-index-tags): 
-    TagList
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserContextPolicy](#cfn-kendra-index-usercontextpolicy): String
   [UserTokenConfigurations](#cfn-kendra-index-usertokenconfigurations): 
-    UserTokenConfigurationList
+    - UserTokenConfiguration
 ```
 
 ## Properties<a name="aws-resource-kendra-index-properties"></a>
@@ -67,7 +67,7 @@ A description of the index\.
 `DocumentMetadataConfigurations`  <a name="cfn-kendra-index-documentmetadataconfigurations"></a>
 Specifies the properties of an index field\. You can add either a custom or a built\-in field\. You can add and remove built\-in fields at any time\. When a built\-in field is removed it's configuration reverts to the default for the field\. Custom fields can't be removed from an index after they are added\.  
 *Required*: No  
-*Type*: [DocumentMetadataConfigurationList](aws-properties-kendra-index-documentmetadataconfigurationlist.md)  
+*Type*: List of [DocumentMetadataConfiguration](aws-properties-kendra-index-documentmetadataconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Edition`  <a name="cfn-kendra-index-edition"></a>
@@ -102,7 +102,7 @@ The identifier of the AWS KMS customer managed key \(CMK\) to use to encrypt dat
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-kendra-index-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserContextPolicy`  <a name="cfn-kendra-index-usercontextpolicy"></a>
@@ -114,7 +114,7 @@ Not currently supported by AWS CloudFormation\.
 `UserTokenConfigurations`  <a name="cfn-kendra-index-usertokenconfigurations"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
-*Type*: [UserTokenConfigurationList](aws-properties-kendra-index-usertokenconfigurationlist.md)  
+*Type*: List of [UserTokenConfiguration](aws-properties-kendra-index-usertokenconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-kendra-index-return-values"></a>

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AdMarkers](#cfn-medialive-channel-rtmpgroupsettings-admarkers)" : [ String, ... ],
   "[AuthenticationScheme](#cfn-medialive-channel-rtmpgroupsettings-authenticationscheme)" : String,
   "[CacheFullBehavior](#cfn-medialive-channel-rtmpgroupsettings-cachefullbehavior)" : String,
   "[CacheLength](#cfn-medialive-channel-rtmpgroupsettings-cachelength)" : Integer,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-rtmpgroupsettings-syntax.yaml"></a>
 
 ```
+  [AdMarkers](#cfn-medialive-channel-rtmpgroupsettings-admarkers): 
+    - String
   [AuthenticationScheme](#cfn-medialive-channel-rtmpgroupsettings-authenticationscheme): String
   [CacheFullBehavior](#cfn-medialive-channel-rtmpgroupsettings-cachefullbehavior): String
   [CacheLength](#cfn-medialive-channel-rtmpgroupsettings-cachelength): Integer
@@ -33,6 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-rtmpgroupsettings-properties"></a>
+
+`AdMarkers`  <a name="cfn-medialive-channel-rtmpgroupsettings-admarkers"></a>
+Choose the ad marker type for this output group\. MediaLive will create a message based on the content of each SCTE\-35 message, format it for that marker type, and insert it in the datastream\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationScheme`  <a name="cfn-medialive-channel-rtmpgroupsettings-authenticationscheme"></a>
 An authentication scheme to use when connecting with a CDN\.  

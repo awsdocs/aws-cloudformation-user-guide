@@ -24,10 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ConstantIv](#cfn-medialive-channel-hlsgroupsettings-constantiv)" : String,
   "[Destination](#cfn-medialive-channel-hlsgroupsettings-destination)" : OutputLocationRef,
   "[DirectoryStructure](#cfn-medialive-channel-hlsgroupsettings-directorystructure)" : String,
+  "[DiscontinuityTags](#cfn-medialive-channel-hlsgroupsettings-discontinuitytags)" : String,
   "[EncryptionType](#cfn-medialive-channel-hlsgroupsettings-encryptiontype)" : String,
   "[HlsCdnSettings](#cfn-medialive-channel-hlsgroupsettings-hlscdnsettings)" : HlsCdnSettings,
   "[HlsId3SegmentTagging](#cfn-medialive-channel-hlsgroupsettings-hlsid3segmenttagging)" : String,
   "[IFrameOnlyPlaylists](#cfn-medialive-channel-hlsgroupsettings-iframeonlyplaylists)" : String,
+  "[IncompleteSegmentBehavior](#cfn-medialive-channel-hlsgroupsettings-incompletesegmentbehavior)" : String,
   "[IndexNSegments](#cfn-medialive-channel-hlsgroupsettings-indexnsegments)" : Integer,
   "[InputLossAction](#cfn-medialive-channel-hlsgroupsettings-inputlossaction)" : String,
   "[IvInManifest](#cfn-medialive-channel-hlsgroupsettings-ivinmanifest)" : String,
@@ -73,11 +75,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Destination](#cfn-medialive-channel-hlsgroupsettings-destination): 
     OutputLocationRef
   [DirectoryStructure](#cfn-medialive-channel-hlsgroupsettings-directorystructure): String
+  [DiscontinuityTags](#cfn-medialive-channel-hlsgroupsettings-discontinuitytags): String
   [EncryptionType](#cfn-medialive-channel-hlsgroupsettings-encryptiontype): String
   [HlsCdnSettings](#cfn-medialive-channel-hlsgroupsettings-hlscdnsettings): 
     HlsCdnSettings
   [HlsId3SegmentTagging](#cfn-medialive-channel-hlsgroupsettings-hlsid3segmenttagging): String
   [IFrameOnlyPlaylists](#cfn-medialive-channel-hlsgroupsettings-iframeonlyplaylists): String
+  [IncompleteSegmentBehavior](#cfn-medialive-channel-hlsgroupsettings-incompletesegmentbehavior): String
   [IndexNSegments](#cfn-medialive-channel-hlsgroupsettings-indexnsegments): Integer
   [InputLossAction](#cfn-medialive-channel-hlsgroupsettings-inputlossaction): String
   [IvInManifest](#cfn-medialive-channel-hlsgroupsettings-ivinmanifest): String
@@ -179,6 +183,12 @@ Places segments in subdirectories\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DiscontinuityTags`  <a name="cfn-medialive-channel-hlsgroupsettings-discontinuitytags"></a>
+Specifies whether to insert EXT\-X\-DISCONTINUITY tags in the HLS child manifests for this output group\. Typically, choose Insert because these tags are required in the manifest \(according to the HLS specification\) and serve an important purpose\. Choose Never Insert only if the downstream system is doing real\-time failover \(without using the MediaLive automatic failover feature\) and only if that downstream system has advised you to exclude the tags\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EncryptionType`  <a name="cfn-medialive-channel-hlsgroupsettings-encryptiontype"></a>
 Encrypts the segments with the specified encryption scheme\. Exclude this parameter if you don't want encryption\.  
 *Required*: No  
@@ -199,6 +209,12 @@ State of HLS ID3 Segment Tagging
 
 `IFrameOnlyPlaylists`  <a name="cfn-medialive-channel-hlsgroupsettings-iframeonlyplaylists"></a>
 DISABLED: Don't create an I\-frame\-only manifest, but do create the master and media manifests \(according to the Output Selection field\)\. STANDARD: Create an I\-frame\-only manifest for each output that contains video, as well as the other manifests \(according to the Output Selection field\)\. The I\-frame manifest contains a \#EXT\-X\-I\-FRAMES\-ONLY tag to indicate it is I\-frame only, and one or more \#EXT\-X\-BYTERANGE entries identifying the I\-frame position\. For example, \#EXT\-X\-BYTERANGE:160364@1461888"\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncompleteSegmentBehavior`  <a name="cfn-medialive-channel-hlsgroupsettings-incompletesegmentbehavior"></a>
+Specifies whether to include the final \(incomplete\) segment in the media output when the pipeline stops producing output because of a channel stop, a channel pause or a loss of input to the pipeline\. Auto means that MediaLive decides whether to include the final segment, depending on the channel class and the types of output groups\. Suppress means to never include the incomplete segment\. We recommend you choose Auto and let MediaLive control the behavior\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

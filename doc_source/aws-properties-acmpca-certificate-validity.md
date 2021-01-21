@@ -1,8 +1,8 @@
 # AWS::ACMPCA::Certificate Validity<a name="aws-properties-acmpca-certificate-validity"></a>
 
-Validity specifies the period of time during which a certificate is valid\. Validity can be expressed as an explicit date and time when the certificate expires, or as a span of time after issuance, stated in days, months, or years\. For more information, see [Validity](https://tools.ietf.org/html/rfc5280#section-4.1.2.5) in RFC 5280\.
+Validity specifies the period of time during which a certificate is valid\. Validity can be expressed as an explicit date and time when the validity of a certificate starts or expires, or as a span of time after issuance, stated in days, months, or years\. For more information, see [Validity](https://tools.ietf.org/html/rfc5280#section-4.1.2.5) in RFC 5280\.
 
-You can issue a certificate by calling the [IssueCertificate](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_IssueCertificate.html) action\.
+ACM Private CA API consumes the `Validity` data type differently in two distinct parameters of the `IssueCertificate` action\. The required parameter `IssueCertificate`:`Validity` specifies the end of a certificate's validity period\. The optional parameter `IssueCertificate`:`ValidityNotBefore` specifies a customized starting time for the validity period\.
 
 ## Syntax<a name="aws-properties-acmpca-certificate-validity-syntax"></a>
 
@@ -31,7 +31,7 @@ Determines how *ACM Private CA* interprets the `Value` parameter, an integer\. S
  `END_DATE`: The specific date and time when the certificate will expire, expressed using UTCTime \(YYMMDDHHMMSS\) or GeneralizedTime \(YYYYMMDDHHMMSS\) format\. When UTCTime is used, if the year field \(YY\) is greater than or equal to 50, the year is interpreted as 19YY\. If the year field is less than 50, the year is interpreted as 20YY\.  
 + Sample input value: 491231235959 \(UTCTime format\)
 + Output expiration date/time: 12/31/2049 23:59:59
- `ABSOLUTE`: The specific date and time when the certificate will expire, expressed in seconds since the Unix Epoch\.   
+ `ABSOLUTE`: The specific date and time when the validity of a certificate will start or expire, expressed in seconds since the Unix Epoch\.   
 + Sample input value: 2524608000
 + Output expiration date/time: 01/01/2050 00:00:00
  `DAYS`, `MONTHS`, `YEARS`: The relative time from the moment of issuance until the certificate will expire, expressed in days, months, or years\.   

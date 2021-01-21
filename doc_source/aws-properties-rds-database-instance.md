@@ -304,7 +304,7 @@ Constraints:
 + Must contain 1 to 64 letters or numbers\.
 + Can't be a word reserved by the specified database engine
  **PostgreSQL**   
-The name of the database to create when the DB instance is created\. If this parameter is not specified, the default "postgres" database is created in the DB instance\.  
+The name of the database to create when the DB instance is created\. If this parameter is not specified, the default `postgres` database is created in the DB instance\.  
 Constraints:  
 + Must contain 1 to 63 letters, numbers, or underscores\.
 + Must begin with a letter or an underscore\. Subsequent characters can be letters, underscores, or digits \(0\-9\)\.
@@ -316,11 +316,17 @@ Constraints:
 + Can't be longer than 8 characters
  **SQL Server**   
 Not applicable\. Must be null\.  
- **Amazon Aurora**   
-The name of the database to create when the primary instance of the DB cluster is created\. If this parameter is not specified, no database is created in the DB instance\.  
+ **Amazon Aurora MySQL**   
+The name of the database to create when the primary DB instance of the Aurora MySQL DB cluster is created\. If this parameter isn't specified for an Aurora MySQL DB cluster, no database is created in the DB cluster\.  
 Constraints:  
-+ Must contain 1 to 64 letters or numbers\.
-+ Can't be a word reserved by the specified database engine
++ It must contain 1 to 64 alphanumeric characters\.
++ It can't be a word reserved by the database engine\.
+ **Amazon Aurora PostgreSQL**   
+The name of the database to create when the primary DB instance of the Aurora PostgreSQL DB cluster is created\. If this parameter isn't specified for an Aurora PostgreSQL DB cluster, a database named `postgres` is created in the DB cluster\.  
+Constraints:  
++ It must contain 1 to 63 alphanumeric characters\.
++ It must begin with a letter or an underscore\. Subsequent characters can be letters, underscores, or digits \(0 to 9\)\.
++ It can't be a word reserved by the database engine\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -483,7 +489,7 @@ Valid Values:
 + `sqlserver-se`
 + `sqlserver-ex`
 + `sqlserver-web`
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
@@ -563,6 +569,7 @@ Constraints: Must contain from 8 to 128 characters\.
 
 `MaxAllocatedStorage`  <a name="cfn-rds-dbinstance-maxallocatedstorage"></a>
 The upper limit to which Amazon RDS can automatically scale the storage of the DB instance\.  
+For more information about this setting, including limitations that apply to it, see [ Managing capacity automatically with Amazon RDS storage autoscaling](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -668,7 +675,7 @@ If you want to create a Read Replica DB instance, specify the ID of the source D
 + If you specify a source DB instance that uses VPC security groups, we recommend that you specify the `VPCSecurityGroups` property\. If you don't specify the property, the Read Replica inherits the value of the `VPCSecurityGroups` property from the source DB when you create the replica\. However, if you update the stack, AWS CloudFormation reverts the replica's `VPCSecurityGroups` property to the default value because it's not defined in the stack's template\. This change might cause unexpected issues\.
 + Read Replicas don't support deletion policies\. AWS CloudFormation ignores any deletion policy that's associated with a Read Replica\.
 + If you specify `SourceDBInstanceIdentifier`, don't specify the `DBSnapshotIdentifier` property\. You can't create a Read Replica from a snapshot\.
-+  Don't set the `BackupRetentionPeriod`, `DBName`, `MasterUsername`, `MasterUserPassword`, and `PreferredBackupWindow` properties\. The database attributes are inherited from the source DB instance, and backups are disabled for Read Replicas\.
++ Don't set the `BackupRetentionPeriod`, `DBName`, `MasterUsername`, `MasterUserPassword`, and `PreferredBackupWindow` properties\. The database attributes are inherited from the source DB instance, and backups are disabled for Read Replicas\.
 + If the source DB instance is in a different region than the Read Replica, specify the source region in `SourceRegion`, and specify an ARN for a valid DB instance in `SourceDBInstanceIdentifier`\. For more information, see [Constructing a Amazon RDS Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN) in the *Amazon RDS User Guide*\.
 + For DB instances in Amazon Aurora clusters, don't specify this property\. Amazon RDS automatically assigns writer and reader DB instances\.
 *Required*: No  

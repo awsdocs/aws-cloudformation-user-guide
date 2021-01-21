@@ -252,10 +252,10 @@ SampleStatelessRulegroup:
                       - AddressDefinition: 10.0.0.0/8
                     SourcePorts:
                       - FromPort: 15000
-                      - ToPort: 30000
+                        ToPort: 30000
                     DestinationPorts:
                       - FromPort: 443
-                      - ToPort: 443
+                        ToPort: 443
                     Protocols:
                       - 6
                   Actions:

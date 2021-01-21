@@ -193,7 +193,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
     "Description": "Create a Resource Data Sync for Systems Manager Explorer",
     "Resources": {
         "BasicResourceDataSync": {
-            "Type": "Dev::SSM::ResourceDataSync",
+            "Type": "AWS::SSM::ResourceDataSync",
             "Properties": {
                 "SyncName": "test-sync",
                 "SyncType": "SyncFromSource",
@@ -219,7 +219,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 Description: Create a Resource Data Sync for Systems Manager Explorer
 Resources:
   BasicResourceDataSync:
-    Type: Dev::SSM::ResourceDataSync
+    Type: AWS::SSM::ResourceDataSync
     Properties:
       SyncName: test-sync
       SyncType: SyncFromSource
@@ -243,7 +243,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
     "Description": "Create a Resource Data Sync for Systems Manager Explorer",
     "Resources": {
         "BasicResourceDataSync": {
-            "Type": "Dev::SSM::ResourceDataSync",
+            "Type": "AWS::SSM::ResourceDataSync",
             "Properties": {
                 "SyncName": "test-sync",
                 "SyncType": "SyncFromSource",
@@ -270,7 +270,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 Description: Create a Resource Data Sync for Systems Manager Explorer
 Resources:
   BasicResourceDataSync:
-    Type: Dev::SSM::ResourceDataSync
+    Type: AWS::SSM::ResourceDataSync
     Properties:
       SyncName: test-sync
       SyncType: SyncFromSource

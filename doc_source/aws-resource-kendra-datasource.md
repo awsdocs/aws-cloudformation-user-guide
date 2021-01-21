@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-kendra-datasource-name)" : String,
       "[RoleArn](#cfn-kendra-datasource-rolearn)" : String,
       "[Schedule](#cfn-kendra-datasource-schedule)" : String,
-      "[Tags](#cfn-kendra-datasource-tags)" : TagList,
+      "[Tags](#cfn-kendra-datasource-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-kendra-datasource-type)" : String
     }
 }
@@ -39,7 +39,7 @@ Properties:
   [RoleArn](#cfn-kendra-datasource-rolearn): String
   [Schedule](#cfn-kendra-datasource-schedule): String
   [Tags](#cfn-kendra-datasource-tags): 
-    TagList
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-kendra-datasource-type): String
 ```
 
@@ -100,7 +100,7 @@ Sets the frequency that Amazon Kendra checks the documents in your data source a
 An array of key\-value pairs to apply to this resource  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-kendra-datasource-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-kendra-datasource-type"></a>

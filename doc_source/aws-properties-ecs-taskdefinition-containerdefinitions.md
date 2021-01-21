@@ -327,7 +327,7 @@ After a task reaches the `RUNNING` status, manual and automatic host and contain
 
 `Privileged`  <a name="cfn-ecs-taskdefinition-containerdefinition-privileged"></a>
 When this parameter is true, the container is given elevated privileges on the host container instance \(similar to the `root` user\)\. This parameter maps to `Privileged` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--privileged` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
+This parameter is not supported for Windows containers or tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

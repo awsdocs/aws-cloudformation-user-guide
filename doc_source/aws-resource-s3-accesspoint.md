@@ -13,7 +13,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::S3::AccessPoint",
   "Properties" : {
       "[Bucket](#cfn-s3-accesspoint-bucket)" : String,
-      "[CreationDate](#cfn-s3-accesspoint-creationdate)" : String,
       "[Name](#cfn-s3-accesspoint-name)" : String,
       "[NetworkOrigin](#cfn-s3-accesspoint-networkorigin)" : String,
       "[Policy](#cfn-s3-accesspoint-policy)" : Json,
@@ -30,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::S3::AccessPoint
 Properties: 
   [Bucket](#cfn-s3-accesspoint-bucket): String
-  [CreationDate](#cfn-s3-accesspoint-creationdate): String
   [Name](#cfn-s3-accesspoint-name): String
   [NetworkOrigin](#cfn-s3-accesspoint-networkorigin): String
   [Policy](#cfn-s3-accesspoint-policy): Json
@@ -48,12 +46,6 @@ The name of the bucket associated with this access point\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`CreationDate`  <a name="cfn-s3-accesspoint-creationdate"></a>
-The date and time when this access point was created\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-s3-accesspoint-name"></a>
 The name of this access point\.  

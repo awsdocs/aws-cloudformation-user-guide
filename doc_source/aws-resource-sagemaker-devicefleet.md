@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::DeviceFleet",
   "Properties" : {
       "[Description](#cfn-sagemaker-devicefleet-description)" : String,
+      "[DeviceFleetName](#cfn-sagemaker-devicefleet-devicefleetname)" : String,
       "[OutputConfig](#cfn-sagemaker-devicefleet-outputconfig)" : EdgeOutputConfig,
       "[RoleArn](#cfn-sagemaker-devicefleet-rolearn)" : String,
       "[Tags](#cfn-sagemaker-devicefleet-tags)" : [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SageMaker::DeviceFleet
 Properties: 
   [Description](#cfn-sagemaker-devicefleet-description): String
+  [DeviceFleetName](#cfn-sagemaker-devicefleet-devicefleetname): String
   [OutputConfig](#cfn-sagemaker-devicefleet-outputconfig): 
     EdgeOutputConfig
   [RoleArn](#cfn-sagemaker-devicefleet-rolearn): String
@@ -40,6 +42,15 @@ Not currently supported by AWS CloudFormation\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeviceFleetName`  <a name="cfn-sagemaker-devicefleet-devicefleetname"></a>
+Name of the device fleet\.  
+*Required*: Yes  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OutputConfig`  <a name="cfn-sagemaker-devicefleet-outputconfig"></a>
 Not currently supported by AWS CloudFormation\.  
@@ -62,10 +73,3 @@ Not currently supported by AWS CloudFormation\.
 ## Return values<a name="aws-resource-sagemaker-devicefleet-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-devicefleet-return-values-ref"></a>
-
-### Fn::GetAtt<a name="aws-resource-sagemaker-devicefleet-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-sagemaker-devicefleet-return-values-fn--getatt-fn--getatt"></a>
-
-`DeviceFleetName`  <a name="DeviceFleetName-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.

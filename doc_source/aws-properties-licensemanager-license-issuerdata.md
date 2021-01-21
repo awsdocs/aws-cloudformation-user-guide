@@ -1,6 +1,6 @@
 # AWS::LicenseManager::License IssuerData<a name="aws-properties-licensemanager-license-issuerdata"></a>
 
-Details about the issuer of a license\.
+Details associated with the issuer of a license\.
 
 ## Syntax<a name="aws-properties-licensemanager-license-issuerdata-syntax"></a>
 

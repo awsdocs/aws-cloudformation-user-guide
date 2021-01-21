@@ -39,6 +39,18 @@ Properties:
 
 `EngineName`  <a name="cfn-rds-optiongroup-enginename"></a>
 Specifies the name of the engine that this option group should be associated with\.  
+Valid Values:   
++ `mariadb`
++ `mysql`
++ `oracle-ee`
++ `oracle-se2`
++ `oracle-se1`
++ `oracle-se`
++ `postgres`
++ `sqlserver-ee`
++ `sqlserver-se`
++ `sqlserver-ex`
++ `sqlserver-web`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -39,14 +39,14 @@ Properties:
 The actions\.  
 The rule must include exactly one of the following types of actions: `forward`, `fixed-response`, or `redirect`, and it must be the last action to be performed\. If the rule is for an HTTPS listener, it can also optionally include an authentication action\.  
 *Required*: Yes  
-*Type*: List of [Action](aws-properties-elasticloadbalancingv2-listenerrule-actions.md)  
+*Type*: List of [Action](aws-properties-elasticloadbalancingv2-listenerrule-action.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Conditions`  <a name="cfn-elasticloadbalancingv2-listenerrule-conditions"></a>
 The conditions\.  
 The rule can optionally include up to one of each of the following conditions: `http-request-method`, `host-header`, `path-pattern`, and `source-ip`\. A rule can also optionally include one or more of each of the following conditions: `http-header` and `query-string`\.  
 *Required*: Yes  
-*Type*: List of [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-conditions.md)  
+*Type*: List of [RuleCondition](aws-properties-elasticloadbalancingv2-listenerrule-rulecondition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
@@ -71,6 +71,16 @@ If you try to reorder rules by updating their priorities, do not specify a new p
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the listener rule\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-fn--getatt-fn--getatt"></a>
+
+`IsDefault`  <a name="IsDefault-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`RuleArn`  <a name="RuleArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-elasticloadbalancingv2-listenerrule--examples"></a>
 

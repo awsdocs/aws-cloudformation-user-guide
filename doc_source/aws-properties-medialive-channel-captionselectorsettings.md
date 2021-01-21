@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AncillarySourceSettings](#cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings)" : AncillarySourceSettings,
   "[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings)" : AribSourceSettings,
   "[DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings)" : DvbSubSourceSettings,
   "[EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings)" : EmbeddedSourceSettings,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-captionselectorsettings-syntax.yaml"></a>
 
 ```
+  [AncillarySourceSettings](#cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings): 
+    AncillarySourceSettings
   [AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings): 
     AribSourceSettings
   [DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings): 
@@ -39,6 +42,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-captionselectorsettings-properties"></a>
+
+`AncillarySourceSettings`  <a name="cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [AncillarySourceSettings](aws-properties-medialive-channel-ancillarysourcesettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AribSourceSettings`  <a name="cfn-medialive-channel-captionselectorsettings-aribsourcesettings"></a>
 Information about the ARIB captions to extract from the input\.  

@@ -124,6 +124,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-datasync-task-return-values-fn--getatt-fn--getatt"></a>
 
+`DestinationNetworkInterfaceArns`  <a name="DestinationNetworkInterfaceArns-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `ErrorCode`  <a name="ErrorCode-fn::getatt"></a>
 Errors that AWS DataSync encountered during execution of the task\. You can use this error code to help troubleshoot issues\.
 

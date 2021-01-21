@@ -100,6 +100,7 @@ You must specify at least one of the following properties: `AbortIncompleteMulti
 
 `Prefix`  <a name="cfn-s3-bucket-lifecycleconfig-rule-prefix"></a>
 Object key prefix that identifies one or more objects to which this rule applies\.  
+Replacement must be made for object keys containing special characters \(such as carriage returns\) when using XML requests\. For more information, see [ XML related object key constraints](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

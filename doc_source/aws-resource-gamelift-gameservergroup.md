@@ -31,13 +31,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeleteOption](#cfn-gamelift-gameservergroup-deleteoption)" : String,
       "[GameServerGroupName](#cfn-gamelift-gameservergroup-gameservergroupname)" : String,
       "[GameServerProtectionPolicy](#cfn-gamelift-gameservergroup-gameserverprotectionpolicy)" : String,
-      "[InstanceDefinitions](#cfn-gamelift-gameservergroup-instancedefinitions)" : InstanceDefinitions,
+      "[InstanceDefinitions](#cfn-gamelift-gameservergroup-instancedefinitions)" : [ InstanceDefinition, ... ],
       "[LaunchTemplate](#cfn-gamelift-gameservergroup-launchtemplate)" : LaunchTemplate,
       "[MaxSize](#cfn-gamelift-gameservergroup-maxsize)" : Double,
       "[MinSize](#cfn-gamelift-gameservergroup-minsize)" : Double,
       "[RoleArn](#cfn-gamelift-gameservergroup-rolearn)" : String,
-      "[Tags](#cfn-gamelift-gameservergroup-tags)" : Tags,
-      "[VpcSubnets](#cfn-gamelift-gameservergroup-vpcsubnets)" : VpcSubnets
+      "[Tags](#cfn-gamelift-gameservergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VpcSubnets](#cfn-gamelift-gameservergroup-vpcsubnets)" : [ String, ... ]
     }
 }
 ```
@@ -54,16 +54,16 @@ Properties:
   [GameServerGroupName](#cfn-gamelift-gameservergroup-gameservergroupname): String
   [GameServerProtectionPolicy](#cfn-gamelift-gameservergroup-gameserverprotectionpolicy): String
   [InstanceDefinitions](#cfn-gamelift-gameservergroup-instancedefinitions): 
-    InstanceDefinitions
+    - InstanceDefinition
   [LaunchTemplate](#cfn-gamelift-gameservergroup-launchtemplate): 
     LaunchTemplate
   [MaxSize](#cfn-gamelift-gameservergroup-maxsize): Double
   [MinSize](#cfn-gamelift-gameservergroup-minsize): Double
   [RoleArn](#cfn-gamelift-gameservergroup-rolearn): String
   [Tags](#cfn-gamelift-gameservergroup-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcSubnets](#cfn-gamelift-gameservergroup-vpcsubnets): 
-    VpcSubnets
+    - String
 ```
 
 ## Properties<a name="aws-resource-gamelift-gameservergroup-properties"></a>
@@ -109,7 +109,7 @@ A flag that indicates whether instances in the game server group are protected f
 `InstanceDefinitions`  <a name="cfn-gamelift-gameservergroup-instancedefinitions"></a>
 The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in the corresponding Auto Scaling group\.   
 *Required*: Yes  
-*Type*: [InstanceDefinitions](aws-properties-gamelift-gameservergroup-instancedefinitions.md)  
+*Type*: List of [InstanceDefinition](aws-properties-gamelift-gameservergroup-instancedefinition.md)  
 *Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -143,13 +143,13 @@ The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev
 `Tags`  <a name="cfn-gamelift-gameservergroup-tags"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
-*Type*: [Tags](aws-properties-gamelift-gameservergroup-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSubnets`  <a name="cfn-gamelift-gameservergroup-vpcsubnets"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
-*Type*: [VpcSubnets](aws-properties-gamelift-gameservergroup-vpcsubnets.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-gamelift-gameservergroup-return-values"></a>

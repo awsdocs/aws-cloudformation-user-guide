@@ -14,25 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LicenseManager::Grant",
   "Properties" : {
-      "[AllowedOperations](#cfn-licensemanager-grant-allowedoperations)" : AllowedOperationList,
-      "[ClientToken](#cfn-licensemanager-grant-clienttoken)" : String,
-      "[Filters](#cfn-licensemanager-grant-filters)" : FilterList,
-      "[GrantArns](#cfn-licensemanager-grant-grantarns)" : ArnList,
-      "[GrantedOperations](#cfn-licensemanager-grant-grantedoperations)" : AllowedOperationList,
-      "[GranteePrincipalArn](#cfn-licensemanager-grant-granteeprincipalarn)" : String,
+      "[AllowedOperations](#cfn-licensemanager-grant-allowedoperations)" : [ String, ... ],
       "[GrantName](#cfn-licensemanager-grant-grantname)" : String,
-      "[GrantStatus](#cfn-licensemanager-grant-grantstatus)" : String,
       "[HomeRegion](#cfn-licensemanager-grant-homeregion)" : String,
       "[LicenseArn](#cfn-licensemanager-grant-licensearn)" : String,
-      "[MaxResults](#cfn-licensemanager-grant-maxresults)" : Integer,
-      "[NextToken](#cfn-licensemanager-grant-nexttoken)" : String,
-      "[ParentArn](#cfn-licensemanager-grant-parentarn)" : String,
-      "[Principals](#cfn-licensemanager-grant-principals)" : ArnList,
-      "[SourceVersion](#cfn-licensemanager-grant-sourceversion)" : String,
-      "[Status](#cfn-licensemanager-grant-status)" : String,
-      "[StatusReason](#cfn-licensemanager-grant-statusreason)" : String,
-      "[Tags](#cfn-licensemanager-grant-tags)" : TagList,
-      "[Version](#cfn-licensemanager-grant-version)" : String
+      "[Principals](#cfn-licensemanager-grant-principals)" : [ String, ... ],
+      "[Status](#cfn-licensemanager-grant-status)" : String
     }
 }
 ```
@@ -43,30 +30,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LicenseManager::Grant
 Properties: 
   [AllowedOperations](#cfn-licensemanager-grant-allowedoperations): 
-    AllowedOperationList
-  [ClientToken](#cfn-licensemanager-grant-clienttoken): String
-  [Filters](#cfn-licensemanager-grant-filters): 
-    FilterList
-  [GrantArns](#cfn-licensemanager-grant-grantarns): 
-    ArnList
-  [GrantedOperations](#cfn-licensemanager-grant-grantedoperations): 
-    AllowedOperationList
-  [GranteePrincipalArn](#cfn-licensemanager-grant-granteeprincipalarn): String
+    - String
   [GrantName](#cfn-licensemanager-grant-grantname): String
-  [GrantStatus](#cfn-licensemanager-grant-grantstatus): String
   [HomeRegion](#cfn-licensemanager-grant-homeregion): String
   [LicenseArn](#cfn-licensemanager-grant-licensearn): String
-  [MaxResults](#cfn-licensemanager-grant-maxresults): Integer
-  [NextToken](#cfn-licensemanager-grant-nexttoken): String
-  [ParentArn](#cfn-licensemanager-grant-parentarn): String
   [Principals](#cfn-licensemanager-grant-principals): 
-    ArnList
-  [SourceVersion](#cfn-licensemanager-grant-sourceversion): String
+    - String
   [Status](#cfn-licensemanager-grant-status): String
-  [StatusReason](#cfn-licensemanager-grant-statusreason): String
-  [Tags](#cfn-licensemanager-grant-tags): 
-    TagList
-  [Version](#cfn-licensemanager-grant-version): String
 ```
 
 ## Properties<a name="aws-resource-licensemanager-grant-properties"></a>
@@ -74,49 +44,11 @@ Properties:
 `AllowedOperations`  <a name="cfn-licensemanager-grant-allowedoperations"></a>
 Allowed operations for the grant\.  
 *Required*: No  
-*Type*: [AllowedOperationList](aws-properties-licensemanager-grant-allowedoperationlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ClientToken`  <a name="cfn-licensemanager-grant-clienttoken"></a>
-Unique, case\-sensitive identifier that you provide to ensure the idempotency of the request\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Filters`  <a name="cfn-licensemanager-grant-filters"></a>
-Filters to scope the results\. The following filters are supported:  
-+  `LicenseARN` 
-+  `Status` 
-*Required*: No  
-*Type*: [FilterList](aws-properties-licensemanager-grant-filterlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`GrantArns`  <a name="cfn-licensemanager-grant-grantarns"></a>
-Amazon Resource Names \(ARNs\) of the grants\.  
-*Required*: No  
-*Type*: [ArnList](aws-properties-licensemanager-grant-arnlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`GrantedOperations`  <a name="cfn-licensemanager-grant-grantedoperations"></a>
-Granted operations\.  
-*Required*: No  
-*Type*: [AllowedOperationList](aws-properties-licensemanager-grant-allowedoperationlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`GranteePrincipalArn`  <a name="cfn-licensemanager-grant-granteeprincipalarn"></a>
-The grantee principal ARN\.  
-*Required*: No  
-*Type*: String  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GrantName`  <a name="cfn-licensemanager-grant-grantname"></a>
 Grant name\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`GrantStatus`  <a name="cfn-licensemanager-grant-grantstatus"></a>
-Grant status\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -133,56 +65,14 @@ License ARN\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`MaxResults`  <a name="cfn-licensemanager-grant-maxresults"></a>
-Maximum number of results to return in a single call\.  
-*Required*: No  
-*Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`NextToken`  <a name="cfn-licensemanager-grant-nexttoken"></a>
-Token for the next set of results\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ParentArn`  <a name="cfn-licensemanager-grant-parentarn"></a>
-Parent ARN\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `Principals`  <a name="cfn-licensemanager-grant-principals"></a>
 The grant principals\.  
 *Required*: No  
-*Type*: [ArnList](aws-properties-licensemanager-grant-arnlist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`SourceVersion`  <a name="cfn-licensemanager-grant-sourceversion"></a>
-Current version of the grant\.  
-*Required*: No  
-*Type*: String  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-licensemanager-grant-status"></a>
 Granted license status\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`StatusReason`  <a name="cfn-licensemanager-grant-statusreason"></a>
-Grant status reason\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Tags`  <a name="cfn-licensemanager-grant-tags"></a>
-One or more tags\.  
-*Required*: No  
-*Type*: [TagList](aws-properties-licensemanager-grant-taglist.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Version`  <a name="cfn-licensemanager-grant-version"></a>
-Grant version\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -205,3 +95,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `GrantArn`  <a name="GrantArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the grant\.
+
+`Version`  <a name="Version-fn::getatt"></a>
+The grant version\.

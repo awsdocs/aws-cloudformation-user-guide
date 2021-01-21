@@ -219,6 +219,12 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
+## Remarks<a name="aws-properties-as-launchconfig--remarks"></a>
+
+CloudFormation marks the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) when its desired capacity is reached\. However, if `SpotPrice` is set in the launch configuration, then desired capacity is not used as a criteria for success\. Whether your request is fulfilled depends on Spot Instance capacity and your maximum price\. If the current Spot price is less than your specified maximum price, Amazon EC2 Auto Scaling uses the desired capacity as the target capacity for the group\. If the request for Spot Instances is unsuccessful, it keeps trying\. 
+
+You cannot define a duration for the Spot Instances as you can with a [Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#fixed-duration-spot-instances)\.
+
 ## Examples<a name="aws-properties-as-launchconfig--examples"></a>
 
 The following examples create launch configurations that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 

@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DatastoreName](#cfn-iotanalytics-datastore-datastorename)" : String,
       "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : DatastoreStorage,
+      "[FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration)" : FileFormatConfiguration,
       "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : RetentionPeriod,
       "[Tags](#cfn-iotanalytics-datastore-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -28,6 +29,8 @@ Properties:
   [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
   [DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage): 
     DatastoreStorage
+  [FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration): 
+    FileFormatConfiguration
   [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod): 
     RetentionPeriod
   [Tags](#cfn-iotanalytics-datastore-tags): 
@@ -49,6 +52,12 @@ The name of the data store\.
 Where data store data is stored\.  
 *Required*: No  
 *Type*: [DatastoreStorage](aws-properties-iotanalytics-datastore-datastorestorage.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FileFormatConfiguration`  <a name="cfn-iotanalytics-datastore-fileformatconfiguration"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [FileFormatConfiguration](aws-properties-iotanalytics-datastore-fileformatconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionPeriod`  <a name="cfn-iotanalytics-datastore-retentionperiod"></a>

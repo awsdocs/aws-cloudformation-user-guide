@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
-      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : DefinitionSubstitutions,
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : {Key : Value, ...},
       "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : LoggingConfiguration,
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
@@ -35,7 +35,7 @@ Properties:
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
   [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
-    DefinitionSubstitutions
+    Key : Value
   [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
     LoggingConfiguration
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
@@ -64,7 +64,7 @@ The Amazon States Language definition of the state machine\. See [Amazon States 
 `DefinitionSubstitutions`  <a name="cfn-stepfunctions-statemachine-definitionsubstitutions"></a>
 A map \(string to string\) that specifies the mappings for placeholder variables in the state machine definition\. This enables the customer to inject values obtained at runtime, for example from intrinsic functions, in the state machine definition\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\.   
 *Required*: No  
-*Type*: [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingConfiguration`  <a name="cfn-stepfunctions-statemachine-loggingconfiguration"></a>

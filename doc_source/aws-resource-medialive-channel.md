@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaLive::Channel",
   "Properties" : {
+      "[CdiInputSpecification](#cfn-medialive-channel-cdiinputspecification)" : CdiInputSpecification,
       "[ChannelClass](#cfn-medialive-channel-channelclass)" : String,
       "[Destinations](#cfn-medialive-channel-destinations)" : [ OutputDestination, ... ],
       "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : EncoderSettings,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::MediaLive::Channel
 Properties: 
+  [CdiInputSpecification](#cfn-medialive-channel-cdiinputspecification): 
+    CdiInputSpecification
   [ChannelClass](#cfn-medialive-channel-channelclass): String
   [Destinations](#cfn-medialive-channel-destinations): 
     - OutputDestination
@@ -48,6 +51,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-medialive-channel-properties"></a>
+
+`CdiInputSpecification`  <a name="cfn-medialive-channel-cdiinputspecification"></a>
+Specification of CDI inputs for this channel  
+*Required*: No  
+*Type*: [CdiInputSpecification](aws-properties-medialive-channel-cdiinputspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChannelClass`  <a name="cfn-medialive-channel-channelclass"></a>
 The class for this channel\. For a channel with two pipelines, the class is STANDARD\. For a channel with one pipeline, the class is SINGLE\_PIPELINE\.  

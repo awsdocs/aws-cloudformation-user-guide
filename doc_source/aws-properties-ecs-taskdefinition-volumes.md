@@ -32,7 +32,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-volumes-properties"></a>
 
 `DockerVolumeConfiguration`  <a name="cfn-ecs-taskdefinition-volume-dockervolumeconfiguration"></a>
-This parameter is specified when you are using Docker volumes\. Docker volumes are only supported when you are using the EC2 launch type\. Windows containers only support the use of the `local` driver\. To use bind mounts, specify the `host` parameter instead\.  
+This parameter is specified when you are using Docker volumes\.  
+Windows containers only support the use of the `local` driver\. To use bind mounts, specify the `host` parameter instead\.  
+Docker volumes are not supported by tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

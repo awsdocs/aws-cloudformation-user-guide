@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthorizerName](#cfn-iot-authorizer-authorizername)" : String,
       "[SigningDisabled](#cfn-iot-authorizer-signingdisabled)" : Boolean,
       "[Status](#cfn-iot-authorizer-status)" : String,
-      "[Tags](#cfn-iot-authorizer-tags)" : Tags,
+      "[Tags](#cfn-iot-authorizer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TokenKeyName](#cfn-iot-authorizer-tokenkeyname)" : String,
-      "[TokenSigningPublicKeys](#cfn-iot-authorizer-tokensigningpublickeys)" : TokenSigningPublicKeys
+      "[TokenSigningPublicKeys](#cfn-iot-authorizer-tokensigningpublickeys)" : {Key : Value, ...}
     }
 }
 ```
@@ -33,10 +33,10 @@ Properties:
   [SigningDisabled](#cfn-iot-authorizer-signingdisabled): Boolean
   [Status](#cfn-iot-authorizer-status): String
   [Tags](#cfn-iot-authorizer-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TokenKeyName](#cfn-iot-authorizer-tokenkeyname): String
   [TokenSigningPublicKeys](#cfn-iot-authorizer-tokensigningpublickeys): 
-    TokenSigningPublicKeys
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-iot-authorizer-properties"></a>
@@ -71,7 +71,7 @@ For URI Request parameters use format: \.\.\.key1=value1&key2=value2\.\.\.
 For the CLI command\-line parameter use format: &&tags "key1=value1&key2=value2\.\.\."  
 For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\."
 *Required*: No  
-*Type*: [Tags](aws-properties-iot-authorizer-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenKeyName`  <a name="cfn-iot-authorizer-tokenkeyname"></a>
@@ -83,7 +83,7 @@ The key used to extract the token from the HTTP headers\.
 `TokenSigningPublicKeys`  <a name="cfn-iot-authorizer-tokensigningpublickeys"></a>
 The public keys used to validate the token signature returned by your custom authentication service\.  
 *Required*: No  
-*Type*: [TokenSigningPublicKeys](aws-properties-iot-authorizer-tokensigningpublickeys.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-iot-authorizer-return-values"></a>

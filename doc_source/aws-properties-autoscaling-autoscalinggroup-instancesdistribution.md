@@ -69,6 +69,7 @@ The number of Spot Instance pools to use to allocate your Spot capacity\. The Sp
 
 `SpotMaxPrice`  <a name="cfn-autoscaling-autoscalinggroup-instancesdistribution-spotmaxprice"></a>
 The maximum price per unit hour that you are willing to pay for a Spot Instance\. If you leave the value at its default \(empty\), Amazon EC2 Auto Scaling uses the On\-Demand price as the maximum Spot price\. To remove a value that you previously set, include the property but specify an empty string \(""\) for the value\.   
+If your maximum price is lower than the Spot price for the instance types that you selected, your Spot Instances are not launched\.
 Valid Range: Minimum value of 0\.001  
 *Required*: No  
 *Type*: String  

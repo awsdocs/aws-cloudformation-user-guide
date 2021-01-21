@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HomeDirectoryMappings](#cfn-transfer-user-homedirectorymappings)" : [ HomeDirectoryMapEntry, ... ],
       "[HomeDirectoryType](#cfn-transfer-user-homedirectorytype)" : String,
       "[Policy](#cfn-transfer-user-policy)" : String,
+      "[PosixProfile](#cfn-transfer-user-posixprofile)" : PosixProfile,
       "[Role](#cfn-transfer-user-role)" : String,
       "[ServerId](#cfn-transfer-user-serverid)" : String,
       "[SshPublicKeys](#cfn-transfer-user-sshpublickeys)" : [ SshPublicKey, ... ],
@@ -35,6 +36,8 @@ Properties:
     - HomeDirectoryMapEntry
   [HomeDirectoryType](#cfn-transfer-user-homedirectorytype): String
   [Policy](#cfn-transfer-user-policy): String
+  [PosixProfile](#cfn-transfer-user-posixprofile): 
+    PosixProfile
   [Role](#cfn-transfer-user-role): String
   [ServerId](#cfn-transfer-user-serverid): String
   [SshPublicKeys](#cfn-transfer-user-sshpublickeys): 
@@ -80,6 +83,12 @@ For more information, see [AssumeRole](https://docs.aws.amazon.com/STS/latest/AP
 *Required*: No  
 *Type*: String  
 *Maximum*: `2048`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PosixProfile`  <a name="cfn-transfer-user-posixprofile"></a>
+Specifies the full POSIX identity, including user ID \(`Uid`\), group ID \(`Gid`\), and any secondary groups IDs \(`SecondaryGids`\), that controls your users' access to your Amazon Elastic File System \(Amazon EFS\) file systems\. The POSIX permissions that are set on files and directories in your file system determine the level of access your users get when transferring files into and out of your Amazon EFS file systems\.  
+*Required*: No  
+*Type*: [PosixProfile](aws-properties-transfer-user-posixprofile.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-transfer-user-role"></a>

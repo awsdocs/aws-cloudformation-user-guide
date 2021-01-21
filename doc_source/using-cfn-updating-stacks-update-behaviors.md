@@ -1,6 +1,6 @@
 # Update behaviors of stack resources<a name="using-cfn-updating-stacks-update-behaviors"></a>
 
-When you submit an update, AWS CloudFormation updates resources based on differences between what you submit and the stack's current template\. Resources that have not changed run without disruption during the update process\. For updated resources, AWS CloudFormation uses one of the following update behaviors:
+When you submit an update, AWS CloudFormation updates resources based on differences between what you submit and the stack's current template\. Resources that haven't changed run without disruption during the update process\. For updated resources, AWS CloudFormation uses one of the following update behaviors:
 
 Update with No Interruption  <a name="update-no-interrupt"></a>
 AWS CloudFormation updates the resource without disrupting operation of that resource and without changing the resource's physical ID\. For example, if you update certain properties on an [AWS::CloudTrail::Trail](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html) resource, AWS CloudFormation updates the trail without disruption\.
@@ -19,7 +19,7 @@ Depending on the update behavior, you can decide when to modify resources to red
 + Ensure that the applications that use that DB instance take into account the updated port setting and any other updates you have made\.
 + Use the DB snapshot to restore the databases on the new DB instance\.
 
-This example is not exhaustive; it's meant to give you an idea of the things to plan for when a resource is replaced during an update\.
+This example isn't exhaustive, but it's meant to give you an idea of the things to plan for when a resource is replaced during an update\.
 
 **Note**  
 If the template includes one or more [nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html), AWS CloudFormation also initiates an update for every nested stack\. This is necessary to determine whether the nested stacks have been modified\. AWS CloudFormation updates only those resources in the nested stacks that have changes specified in corresponding templates\.
