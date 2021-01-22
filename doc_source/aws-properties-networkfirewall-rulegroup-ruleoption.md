@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `.*`  
+*Pattern*: `sid:*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Settings`  <a name="cfn-networkfirewall-rulegroup-ruleoption-settings"></a>
