@@ -392,7 +392,8 @@ Resources:
           - Effect: "Allow"
             Action:
               - "elasticfilesystem:ClientMount"
-            Principal:'arn:aws:iam::111122223333:root'
+            Principal: 
+              AWS: 'arn:aws:iam::111122223333:root'
       KmsKeyId: !GetAtt 
         - key
         - Arn
