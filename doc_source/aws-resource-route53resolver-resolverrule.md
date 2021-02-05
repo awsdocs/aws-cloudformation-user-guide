@@ -161,23 +161,23 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
 #### YAML<a name="aws-resource-route53resolver-resolverrule--examples--Create_Resolver_rule--yaml"></a>
 
 ```
-Type : AWS::Route53Resolver::ResolverRule
-Properties : 
-  DomainName : example.com
-  Name : MyRule
-  ResolverEndpointId : rslvr-out-fdc049932dexample
-  RuleType : FORWARD 
-  Tags : 
+Type: AWS::Route53Resolver::ResolverRule
+Properties: 
+  DomainName: example.com
+  Name: MyRule
+  ResolverEndpointId: rslvr-out-fdc049932dexample
+  RuleType: FORWARD 
+  Tags: 
     - 
-      Key : LineOfBusiness
-      Value : Engineering
-  TargetIps :
+      Key: LineOfBusiness
+      Value: Engineering
+  TargetIps:
     - 
-      Ip : 192.0.2.6
-      Port : 53
+      Ip: 192.0.2.6
+      Port: 53
     -  
-      Ip : 192.0.2.99
-      Port : 53
+      Ip: 192.0.2.99
+      Port: 53
 ```
 
 ## See also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>
