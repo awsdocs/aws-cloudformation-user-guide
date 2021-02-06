@@ -192,17 +192,13 @@ The following shows example stateless rule group specifications\.
                                     ],
                                     "SourcePorts": [
                                         {
-                                            "FromPort": 15000
-                                        },
-                                        {
+                                            "FromPort": 15000,
                                             "ToPort": 30000
                                         }
                                     ],
                                     "DestinationPorts": [
                                         {
-                                            "FromPort": 443
-                                        },
-                                        {
+                                            "FromPort": 443,
                                             "ToPort": 443
                                         }
                                     ],
