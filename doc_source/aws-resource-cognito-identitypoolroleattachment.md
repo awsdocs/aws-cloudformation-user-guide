@@ -51,7 +51,7 @@ The map of the roles associated with this pool\. For a given role, the key is ei
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-identitypoolroleattachment-return-values-ref"></a>
 
@@ -60,6 +60,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-identitypoolroleattachment--examples"></a>
+
+
 
 ### Setting the roles for an identity pool<a name="aws-resource-cognito-identitypoolroleattachment--examples--Setting_the_roles_for_an_identity_pool"></a>
 

@@ -2,6 +2,9 @@
 
 Encryption options for the broker\.
 
+**Important**  
+Does not apply to RabbitMQ brokers\.
+
 ## Syntax<a name="aws-properties-amazonmq-broker-encryptionoptions-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -31,7 +34,7 @@ The customer master key \(CMK\) to use for the AWS Key Management Service \(KMS\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseAwsOwnedKey`  <a name="cfn-amazonmq-broker-encryptionoptions-useawsownedkey"></a>
-Enables the use of an AWS owned CMK using AWS Key Management Service \(KMS\)\.  
+Enables the use of an AWS owned CMK using AWS Key Management Service \(KMS\)\. Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

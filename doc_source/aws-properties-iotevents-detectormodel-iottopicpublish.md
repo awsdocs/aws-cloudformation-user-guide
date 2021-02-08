@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[MqttTopic](#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic)" : String,
-  "[Payload](#cfn-iotevents-detectormodel-iottopicpublish-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md)
+  "[Payload](#cfn-iotevents-detectormodel-iottopicpublish-payload)" : Payload
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [MqttTopic](#cfn-iotevents-detectormodel-iottopicpublish-mqtttopic): String
   [Payload](#cfn-iotevents-detectormodel-iottopicpublish-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-iottopicpublish-properties"></a>

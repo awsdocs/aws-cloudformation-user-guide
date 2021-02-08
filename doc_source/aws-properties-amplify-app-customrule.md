@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplify-app-customrule-properties"></a>
 
 `Condition`  <a name="cfn-amplify-app-customrule-condition"></a>
- The condition for a URL rewrite or redirect rule, e\.g\. country code\.   
+ The condition for a URL rewrite or redirect rule, such as a country code\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -41,7 +41,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-amplify-app-customrule-status"></a>
- The status code for a URL rewrite or redirect rule\.   
+ The status code for a URL rewrite or redirect rule\.     
+200  
+Represents a 200 rewrite rule\.  
+301  
+Represents a 301 \(moved pemanently\) redirect rule\. This and all future requests should be directed to the target URL\.   
+302  
+Represents a 302 temporary redirect rule\.  
+404  
+Represents a 404 redirect rule\.  
+404\-200  
+Represents a 404 rewrite rule\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

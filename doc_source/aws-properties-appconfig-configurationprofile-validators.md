@@ -33,8 +33,8 @@ Either the JSON Schema content or the Amazon Resource Name \(ARN\) of an AWS Lam
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-appconfig-configurationprofile-validators-type"></a>
-AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`   
+AWS AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `JSON_SCHEMA | LAMBDA`  
+*Allowed values*: `JSON_SCHEMA | LAMBDA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

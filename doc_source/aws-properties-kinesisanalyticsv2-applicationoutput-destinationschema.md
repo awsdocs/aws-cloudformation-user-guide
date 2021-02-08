@@ -26,8 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies the format of the records on the output stream\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CSV | JSON`  
+*Allowed values*: `CSV | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-destinationschema--seealso"></a>
 +  [DestinationSchema](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DestinationSchema.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

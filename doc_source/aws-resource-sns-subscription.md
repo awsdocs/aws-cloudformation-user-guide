@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery)" : Boolean,
       "[RedrivePolicy](#cfn-sns-subscription-redrivepolicy)" : Json,
       "[Region](#cfn-sns-subscription-region)" : String,
+      "[SubscriptionRoleArn](#cfn-sns-subscription-subscriptionrolearn)" : String,
       "[TopicArn](#topicarn)" : String
     }
 }
@@ -36,6 +37,7 @@ Properties:
   [RawMessageDelivery](#cfn-sns-subscription-rawmessagedelivery): Boolean
   [RedrivePolicy](#cfn-sns-subscription-redrivepolicy): Json
   [Region](#cfn-sns-subscription-region): String
+  [SubscriptionRoleArn](#cfn-sns-subscription-subscriptionrolearn): String
   [TopicArn](#topicarn): String
 ```
 
@@ -87,6 +89,15 @@ If you perform an update operation that only updates the `Region` property of a 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SubscriptionRoleArn`  <a name="cfn-sns-subscription-subscriptionrolearn"></a>
+This property applies only to Amazon Kinesis Data Firehose delivery stream subscriptions\. Specify the ARN of the IAM role that has the following:  
++ Permission to write to the Amazon Kinesis Data Firehose delivery stream
++ Amazon SNS listed as a trusted entity
+Specifying a valid ARN for this attribute is required for Kinesis Data Firehose delivery stream subscriptions\. For more information, see [Fanout to Amazon Kinesis Data Firehose delivery streams](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html) in the *Amazon SNS Developer Guide\.*  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TopicArn`  <a name="topicarn"></a>
 The ARN of the topic to subscribe to\.  
 *Required*: Yes  
@@ -94,6 +105,8 @@ The ARN of the topic to subscribe to\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-sns-subscription--examples"></a>
+
+
 
 ### Create a subscription with mandatory attributes<a name="aws-resource-sns-subscription--examples--Create_a_subscription_with_mandatory_attributes"></a>
 

@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[JmxExporter](#cfn-msk-cluster-prometheus-jmxexporter)" : [JmxExporter](aws-properties-msk-cluster-jmxexporter.md),
-  "[NodeExporter](#cfn-msk-cluster-prometheus-nodeexporter)" : [NodeExporter](aws-properties-msk-cluster-nodeexporter.md)
+  "[JmxExporter](#cfn-msk-cluster-prometheus-jmxexporter)" : JmxExporter,
+  "[NodeExporter](#cfn-msk-cluster-prometheus-nodeexporter)" : NodeExporter
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [JmxExporter](#cfn-msk-cluster-prometheus-jmxexporter): 
-    [JmxExporter](aws-properties-msk-cluster-jmxexporter.md)
+    JmxExporter
   [NodeExporter](#cfn-msk-cluster-prometheus-nodeexporter): 
-    [NodeExporter](aws-properties-msk-cluster-nodeexporter.md)
+    NodeExporter
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-prometheus-properties"></a>

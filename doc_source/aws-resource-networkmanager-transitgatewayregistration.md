@@ -41,7 +41,7 @@ The Amazon Resource Name \(ARN\) of the transit gateway\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-networkmanager-transitgatewayregistration-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-transitgatewayregistration-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-transitgatewayregistration-return-values-ref"></a>
 
@@ -50,6 +50,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-transitgatewayregistration--examples"></a>
+
+
 
 ### Transit Gateway Registration<a name="aws-resource-networkmanager-transitgatewayregistration--examples--Transit_Gateway_Registration"></a>
 

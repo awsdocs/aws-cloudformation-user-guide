@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource",
   "Properties" : {
       "[ApplicationName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-applicationname)" : String,
-      "[ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource)" : [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)
+      "[ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource)" : ReferenceDataSource
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
 Properties: 
   [ApplicationName](#cfn-kinesisanalyticsv2-applicationreferencedatasource-applicationname): String
   [ReferenceDataSource](#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource): 
-    [ReferenceDataSource](aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource.md)
+    ReferenceDataSource
 ```
 
 ## Properties<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource-properties"></a>
@@ -48,6 +48,8 @@ For a SQL\-based Kinesis Data Analytics application, describes the reference dat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples"></a>
+
+
 
 ### Create an ApplicationReferenceDataSource resource<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource"></a>
 
@@ -121,5 +123,6 @@ ApplicationReferenceDataSource:
         FileKey: fakeKey
 ```
 
-## See Also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
+## See also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
 +  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

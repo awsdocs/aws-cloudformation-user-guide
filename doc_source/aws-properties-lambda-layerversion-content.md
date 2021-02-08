@@ -53,6 +53,8 @@ For versioned objects, the version of the layer archive object to use\.
 
 ## Examples<a name="aws-properties-lambda-layerversion-content--examples"></a>
 
+
+
 ### Layer Content<a name="aws-properties-lambda-layerversion-content--examples--Layer_Content"></a>
 
 The location of a layer archive in Amazon S3\.

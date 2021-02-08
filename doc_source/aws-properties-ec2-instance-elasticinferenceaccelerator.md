@@ -33,7 +33,7 @@ The number of elastic inference accelerators to attach to the instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ec2-instance-elasticinferenceaccelerator-type"></a>
- The type of elastic inference accelerator\. The possible values are `eia1.medium`, `eia1.large`, and `eia1.xlarge`\.   
+ The type of elastic inference accelerator\. The possible values are `eia1.medium`, `eia1.large`, `eia1.xlarge`, `eia2.medium`, `eia2.large`, and `eia2.xlarge`\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

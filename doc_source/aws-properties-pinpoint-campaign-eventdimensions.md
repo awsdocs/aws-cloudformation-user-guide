@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Attributes](#cfn-pinpoint-campaign-eventdimensions-attributes)" : Json,
-  "[EventType](#cfn-pinpoint-campaign-eventdimensions-eventtype)" : [SetDimension](aws-properties-pinpoint-campaign-setdimension.md),
+  "[EventType](#cfn-pinpoint-campaign-eventdimensions-eventtype)" : SetDimension,
   "[Metrics](#cfn-pinpoint-campaign-eventdimensions-metrics)" : Json
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Attributes](#cfn-pinpoint-campaign-eventdimensions-attributes): Json
   [EventType](#cfn-pinpoint-campaign-eventdimensions-eventtype): 
-    [SetDimension](aws-properties-pinpoint-campaign-setdimension.md)
+    SetDimension
   [Metrics](#cfn-pinpoint-campaign-eventdimensions-metrics): Json
 ```
 

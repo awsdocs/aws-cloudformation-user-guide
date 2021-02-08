@@ -1,4 +1,4 @@
-# Deploying Applications on Amazon EC2 with AWS CloudFormation<a name="deploying.applications"></a>
+# Deploying applications on Amazon EC2 with AWS CloudFormation<a name="deploying.applications"></a>
 
 You can use AWS CloudFormation to automatically install, configure, and start applications on Amazon EC2 instances\. Doing so enables you to easily duplicate deployments and update existing installations without connecting directly to the instance, which can save you a lot of time and effort\.
 
@@ -6,15 +6,15 @@ AWS CloudFormation includes a set of helper scripts \(cfn\-init, cfn\-signal, cf
 
 The following walkthrough describes how to create a template that launches a LAMP stack by using cfn helper scripts to install, configure and start Apache, MySQL, and PHP\. You'll start with a simple template that sets up a basic Amazon EC2 instance running Amazon Linux, and then continue adding to the template until it describes a full LAMP stack\.
 
-For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping Applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
+For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
 
 **Topics**
-+ [Basic Amazon EC2 Instance](#deployment-walkthrough-basic-server)
-+ [LAMP Installation](#deployment-walkthrough-lamp-install)
-+ [LAMP Configuration](#deployment-walkthrough-config)
-+ [CreationPolicy Attribute](#deployment-walkthrough-cfn-signal)
++ [Basic Amazon EC2 instance](#deployment-walkthrough-basic-server)
++ [LAMP installation](#deployment-walkthrough-lamp-install)
++ [LAMP configuration](#deployment-walkthrough-config)
++ [CreationPolicy attribute](#deployment-walkthrough-cfn-signal)
 
-## Basic Amazon EC2 Instance<a name="deployment-walkthrough-basic-server"></a>
+## Basic Amazon EC2 instance<a name="deployment-walkthrough-basic-server"></a>
 
 You start with a basic template that defines a single Amazon EC2 instance with a security group that allows SSH traffic on port 22 and HTTP traffic on port 80, as shown in the following example:
 
@@ -22,10 +22,7 @@ You start with a basic template that defines a single Amazon EC2 instance with a
 {
   "AWSTemplateFormatVersion" : "2010-09-09",
 
-  "Description" : "AWS CloudFormation sample template LAMP_Single_Instance: Create a LAMP stack using a single EC2
-instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap
-scripts to install the packages and files necessary to deploy the Apache web server, PHP, and MySQL at instance launch time.
-**WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
+  "Description" : "AWS CloudFormation sample template LAMP_Single_Instance: Create a LAMP stack using a single EC2 instance and a local MySQL database for storage. This template demonstrates using the AWS CloudFormation bootstrap scripts to install the packages and files necessary to deploy the Apache web server, PHP, and MySQL at instance launch time. **WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
 
   "Parameters" : {
     "KeyName": {
@@ -161,7 +158,8 @@ scripts to install the packages and files necessary to deploy the Apache web ser
       "hi1.4xlarge" : { "Arch" : "HVM64"  },
       "hs1.8xlarge" : { "Arch" : "HVM64"  },
       "cr1.8xlarge" : { "Arch" : "HVM64"  },
-      "cc2.8xlarge" : { "Arch" : "HVM64"  },
+      "cc2.8xlarge" : { "Arch" : "HVM64"  }
+    },
 
     "AWSRegionArch2AMI" : {
       "us-east-1"        : {"HVM64" : "ami-0ff8a91507f77f867", "HVMG2" : "ami-0a584ac55a7631c0c"},
@@ -220,7 +218,7 @@ scripts to install the packages and files necessary to deploy the Apache web ser
 
 In addition to the Amazon EC2 instance and security group, we create three input parameters that specify the instance type, an Amazon EC2 key pair to use for SSH access, and an IP address range that can be used to SSH to the instance\. The mapping section ensures that AWS CloudFormation uses the correct AMI ID for the stack's region and the Amazon EC2 instance type\. Finally, the output section outputs the public URL of the web server\.
 
-## LAMP Installation<a name="deployment-walkthrough-lamp-install"></a>
+## LAMP installation<a name="deployment-walkthrough-lamp-install"></a>
 
 You'll build on the previous basic Amazon EC2 template to automatically install Apache, MySQL, and PHP\. To install the applications, you'll add a `UserData` property and `Metadata` property\. However, the template won't configure and start the applications until the next section\.
 
@@ -312,7 +310,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
                   "      $DBUser     = \"", {"Ref" : "DBUsername"}, "\";\n",
                   "      $DBPassword = \"", {"Ref" : "DBPassword"}, "\";\n",
                   "      print \"Database = \" . $Database . \"<br />\";\n",
-                  "      $dbconnection = mysql_connect($Database, $DBUser, $DBPassword)\n",
+                  "      $dbconnection = mysql_connect('localhost', $DBUser, $DBPassword, $Database)\n",
                   "                      or die(\"Could not connect: \" . mysql_error());\n",
                   "      print (\"Connected to $Database successfully\");\n",
                   "      mysql_close($dbconnection);\n",
@@ -367,15 +365,22 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
 
 The `UserData` property runs two shell commands: install the AWS CloudFormation helper scripts and then run the [cfn\-init](cfn-init.md) helper script\. Because the helper scripts are updated periodically, running the `yum install -y aws-cfn-bootstrap` command ensures that you get the latest helper scripts\. When you run cfn\-init, it reads metadata from the [AWS::CloudFormation::Init](aws-resource-init.md) resource, which describes the actions to be carried out by cfn\-init\. For example, you can use cfn\-init and AWS::CloudFormation::Init to install packages, write files to disk, or start a service\. In our case, cfn\-init installs the listed packages \(httpd, mysql, and php\) and creates the `/var/www/html/index.php` file \(a sample PHP application\)\.
 
-## LAMP Configuration<a name="deployment-walkthrough-config"></a>
+## LAMP configuration<a name="deployment-walkthrough-config"></a>
 
 Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll need to expand the template so that it automatically configures and runs Apache, MySQL, and PHP\. In the following example, we expand on the `Parameters` section, `AWS::CloudFormation::Init` resource, and `UserData` property to complete the configuration\. As with the previous template, sections marked with an ellipsis \(\.\.\.\) are omitted for brevity\. Additions to the template are shown in red italic text\.
 
-Note that the example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events\.
+Note that the example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
+
+**Important**  
+Using the `NoEcho` attribute does not mask any information stored in the following:  
+The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
+The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
+The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
+We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
 
 **Important**  
 Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
-For more information, see the [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ```
 {
@@ -558,7 +563,7 @@ In the `AWS::CloudFormation::Init` resource, we added a MySQL setup file, contai
 
 In order to run the MySQL commands after the installation is complete, the example adds another configuration set to run the commands\. Configuration sets are useful when you have a series of tasks that must be completed in a specific order\. The example first runs the `Install` configuration set and then the `Configure` configuration set\. The `Configure` configuration set specifies the database root password and then creates a database\. In the commands section, the commands are processed in alphabetical order by name, so the example adds a number before each command name to indicate its desired run order\.
 
-## CreationPolicy Attribute<a name="deployment-walkthrough-cfn-signal"></a>
+## CreationPolicy attribute<a name="deployment-walkthrough-cfn-signal"></a>
 
 Finally, you need a way to instruct AWS CloudFormation to complete stack creation only after all the services \(such as Apache and MySQL\) are running and not after all the stack resources are created\. In other words, if you use the template from the previous section to launch a stack, AWS CloudFormation sets the status of the stack as `CREATE_COMPLETE` after it successfully creates all the resources\. However, if one or more services failed to start, AWS CloudFormation still sets the stack status as `CREATE_COMPLETE`\. To prevent the status from changing to `CREATE_COMPLETE` until all the services have successfully started, you can add a [CreationPolicy](aws-attribute-creationpolicy.md) attribute to the instance\. This attribute puts the instance's status in `CREATE_IN_PROGRESS` until AWS CloudFormation receives the required number of success signals or the timeout period is exceeded, so you can control when the instance has been successfully created\.
 
@@ -906,7 +911,7 @@ You can also view the template at the following location:
                   "      $DBUser     = \"", {"Ref" : "DBUsername"}, "\";\n",
                   "      $DBPassword = \"", {"Ref" : "DBPassword"}, "\";\n",
                   "      print \"Database = \" . $Database . \"<br />\";\n",
-                  "      $dbconnection = mysql_connect($Database, $DBUser, $DBPassword)\n",
+                  "      $dbconnection = mysql_connect('localhost', $DBUser, $DBPassword, $Database)\n",
                   "                      or die(\"Could not connect: \" . mysql_error());\n",
                   "      print (\"Connected to $Database successfully\");\n",
                   "      mysql_close($dbconnection);\n",

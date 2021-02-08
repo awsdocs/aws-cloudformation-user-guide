@@ -48,7 +48,7 @@ Specifies the regular expression \(regex\) patterns that you want AWS WAF to sea
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-regexpatternset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-regexpatternset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-regexpatternset-return-values-ref"></a>
 
@@ -57,6 +57,8 @@ Specifies the regular expression \(regex\) patterns that you want AWS WAF to sea
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-regexpatternset--examples"></a>
+
+
 
 ### Define Regular Expression Pattern<a name="aws-resource-wafregional-regexpatternset--examples--Define_Regular_Expression_Pattern"></a>
 

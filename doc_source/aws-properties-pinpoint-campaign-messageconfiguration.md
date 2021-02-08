@@ -10,13 +10,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage)" : [CampaignEmailMessage](aws-properties-pinpoint-campaign-campaignemailmessage.md),
-  "[GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage)" : [CampaignSmsMessage](aws-properties-pinpoint-campaign-campaignsmsmessage.md)
+  "[ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage)" : Message,
+  "[APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage)" : Message,
+  "[BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage)" : Message,
+  "[DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage)" : Message,
+  "[EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage)" : CampaignEmailMessage,
+  "[GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage)" : Message,
+  "[SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage)" : CampaignSmsMessage
 }
 ```
 
@@ -24,19 +24,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage): 
-    [CampaignEmailMessage](aws-properties-pinpoint-campaign-campaignemailmessage.md)
+    CampaignEmailMessage
   [GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage): 
-    [CampaignSmsMessage](aws-properties-pinpoint-campaign-campaignsmsmessage.md)
+    CampaignSmsMessage
 ```
 
 ## Properties<a name="aws-properties-pinpoint-campaign-messageconfiguration-properties"></a>

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[InputName](#cfn-iotevents-detectormodel-iotevents-inputname)" : String,
-  "[Payload](#cfn-iotevents-detectormodel-iotevents-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md)
+  "[Payload](#cfn-iotevents-detectormodel-iotevents-payload)" : Payload
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [InputName](#cfn-iotevents-detectormodel-iotevents-inputname): String
   [Payload](#cfn-iotevents-detectormodel-iotevents-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-iotevents-properties"></a>

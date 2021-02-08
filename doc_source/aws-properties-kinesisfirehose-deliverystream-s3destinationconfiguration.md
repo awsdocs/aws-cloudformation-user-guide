@@ -11,10 +11,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn)" : String,
-  "[BufferingHints](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints)" : [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md),
-  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions)" : [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md),
+  "[BufferingHints](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints)" : BufferingHints,
+  "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[CompressionFormat](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat)" : String,
-  "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md),
+  "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
   "[ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-erroroutputprefix)" : String,
   "[Prefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix)" : String,
   "[RoleARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn)" : String
@@ -26,12 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BucketARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn): String
   [BufferingHints](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints): 
-    [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)
+    BufferingHints
   [CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions): 
-    [CloudWatchLoggingOptions](aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.md)
+    CloudWatchLoggingOptions
   [CompressionFormat](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat): String
   [EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)
+    EncryptionConfiguration
   [ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-erroroutputprefix): String
   [Prefix](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix): String
   [RoleARN](#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn): String
@@ -50,7 +50,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket to send data to\.
 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints"></a>
 Configures how Kinesis Data Firehose buffers incoming data while delivering it to the Amazon S3 bucket\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -62,9 +62,9 @@ The CloudWatch logging options for your delivery stream\.
 
 `CompressionFormat`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat"></a>
 The type of compression that Kinesis Data Firehose uses to compress the data that it delivers to the Amazon S3 bucket\. For valid values, see the `CompressionFormat` content for the [S3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_S3DestinationConfiguration.html) data type in the *Amazon Kinesis Data Firehose API Reference*\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Allowed Values*: `GZIP | HADOOP_SNAPPY | Snappy | UNCOMPRESSED | ZIP`  
+*Allowed values*: `GZIP | HADOOP_SNAPPY | Snappy | UNCOMPRESSED | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration"></a>

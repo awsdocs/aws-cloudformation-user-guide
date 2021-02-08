@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage)" : String,
       "[AccountId](#cfn-servicecatalog-portfolioshare-accountid)" : String,
-      "[PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid)" : String
+      "[PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid)" : String,
+      "[ShareTagOptions](#cfn-servicecatalog-portfolioshare-sharetagoptions)" : Boolean
     }
 }
 ```
@@ -27,6 +28,7 @@ Properties:
   [AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage): String
   [AccountId](#cfn-servicecatalog-portfolioshare-accountid): String
   [PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid): String
+  [ShareTagOptions](#cfn-servicecatalog-portfolioshare-sharetagoptions): Boolean
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-portfolioshare-properties"></a>
@@ -57,7 +59,13 @@ The portfolio identifier\.
 *Pattern*: `^[a-zA-Z0-9_\-]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicecatalog-portfolioshare-return-values"></a>
+`ShareTagOptions`  <a name="cfn-servicecatalog-portfolioshare-sharetagoptions"></a>
+Enables or disables TagOptions sharing when creating the portfolio share\. If this flag is not provided, TagOptions sharing is disabled\.   
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-servicecatalog-portfolioshare-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-portfolioshare-return-values-ref"></a>
 
@@ -65,5 +73,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-servicecatalog-portfolioshare--seealso"></a>
+## See also<a name="aws-resource-servicecatalog-portfolioshare--seealso"></a>
 + [CreatePortfolioShare](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolioShare.html) in the *AWS Service Catalog API Reference*
+

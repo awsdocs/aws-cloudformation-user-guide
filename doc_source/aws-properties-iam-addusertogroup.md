@@ -46,7 +46,7 @@ A list of the names of the users that you want to add to the group\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-iam-addusertogroup-return-values"></a>
+## Return values<a name="aws-properties-iam-addusertogroup-return-values"></a>
 
 ### Ref<a name="aws-properties-iam-addusertogroup-return-values-ref"></a>
 
@@ -97,6 +97,7 @@ Resources:
       - Ref: MyUser
 ```
 
-## See Also<a name="aws-properties-iam-addusertogroup--seealso"></a>
+## See also<a name="aws-properties-iam-addusertogroup--seealso"></a>
 + To view `AWS::IAM::UserToGroupAddition` template example snippets, see [Add Users to a Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-addusertogroup)\. 
 +  [AddUserToGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddUserToGroup.html) in the *AWS Identity and Access Management API Reference* 
+

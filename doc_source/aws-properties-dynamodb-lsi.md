@@ -11,8 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[IndexName](#cfn-dynamodb-lsi-indexname)" : String,
-  "[KeySchema](#cfn-dynamodb-lsi-keyschema)" : [ [KeySchema](aws-properties-dynamodb-keyschema.md), ... ],
-  "[Projection](#cfn-dynamodb-lsi-projection)" : [Projection](aws-properties-dynamodb-projectionobject.md)
+  "[KeySchema](#cfn-dynamodb-lsi-keyschema)" : [ KeySchema, ... ],
+  "[Projection](#cfn-dynamodb-lsi-projection)" : Projection
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IndexName](#cfn-dynamodb-lsi-indexname): String
   [KeySchema](#cfn-dynamodb-lsi-keyschema): 
-    - [KeySchema](aws-properties-dynamodb-keyschema.md)
+    - KeySchema
   [Projection](#cfn-dynamodb-lsi-projection): 
-    [Projection](aws-properties-dynamodb-projectionobject.md)
+    Projection
 ```
 
 ## Properties<a name="aws-properties-dynamodb-lsi-properties"></a>
@@ -32,9 +32,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the local secondary index\. The name must be unique among all other indexes on this table\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeySchema`  <a name="cfn-dynamodb-lsi-keyschema"></a>
@@ -45,7 +42,6 @@ The partition key of an item is also known as its *hash attribute*\. The term "h
 The sort key of an item is also known as its *range attribute*\. The term "range attribute" derives from the way DynamoDB stores items with the same partition key physically close together, in sorted order by the sort key value\.
 *Required*: Yes  
 *Type*: [List](aws-properties-dynamodb-keyschema.md) of [KeySchema](aws-properties-dynamodb-keyschema.md)  
-*Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Projection`  <a name="cfn-dynamodb-lsi-projection"></a>
@@ -54,6 +50,6 @@ Represents attributes that are copied \(projected\) from the table into the loca
 *Type*: [Projection](aws-properties-dynamodb-projectionobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-dynamodb-lsi--seealso"></a>
+## See also<a name="aws-properties-dynamodb-lsi--seealso"></a>
 
 For an example of a declared local secondary index, see [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)\. 

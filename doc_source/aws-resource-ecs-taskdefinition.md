@@ -12,21 +12,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECS::TaskDefinition",
   "Properties" : {
-      "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md), ... ],
+      "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ ContainerDefinition, ... ],
       "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
       "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
       "[Family](#cfn-ecs-taskdefinition-family)" : String,
-      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md), ... ],
+      "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ InferenceAccelerator, ... ],
       "[IpcMode](#cfn-ecs-taskdefinition-ipcmode)" : String,
       "[Memory](#cfn-ecs-taskdefinition-memory)" : String,
       "[NetworkMode](#cfn-ecs-taskdefinition-networkmode)" : String,
       "[PidMode](#cfn-ecs-taskdefinition-pidmode)" : String,
-      "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md), ... ],
-      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md),
+      "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ TaskDefinitionPlacementConstraint, ... ],
+      "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration,
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
       "[Tags](#cfn-ecs-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
-      "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ [Volume](aws-properties-ecs-taskdefinition-volumes.md), ... ]
+      "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume, ... ]
     }
 }
 ```
@@ -37,27 +37,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ECS::TaskDefinition
 Properties: 
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions): 
-    - [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)
+    - ContainerDefinition
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
   [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
   [InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators): 
-    - [InferenceAccelerator](aws-properties-ecs-taskdefinition-inferenceaccelerator.md)
+    - InferenceAccelerator
   [IpcMode](#cfn-ecs-taskdefinition-ipcmode): String
   [Memory](#cfn-ecs-taskdefinition-memory): String
   [NetworkMode](#cfn-ecs-taskdefinition-networkmode): String
   [PidMode](#cfn-ecs-taskdefinition-pidmode): String
   [PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints): 
-    - [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)
+    - TaskDefinitionPlacementConstraint
   [ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration): 
-    [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)
+    ProxyConfiguration
   [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities): 
     - String
   [Tags](#cfn-ecs-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
   [Volumes](#cfn-ecs-taskdefinition-volumes): 
-    - [Volume](aws-properties-ecs-taskdefinition-volumes.md)
+    - Volume
 ```
 
 ## Properties<a name="aws-resource-ecs-taskdefinition-properties"></a>
@@ -80,7 +80,7 @@ The number of `cpu` units used by the task\. If you are using the EC2 launch typ
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the task execution role that grants the container agent permission to make AWS API calls on your behalf\. For more information, see [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the task execution role that grants the Amazon ECS container agent permission to make AWS API calls on your behalf\. The task execution IAM role is required depending on the requirements of your task\. For more information, see [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -105,16 +105,16 @@ If the `host` IPC mode is used, be aware that there is a heightened risk of unde
 If you are setting namespaced kernel parameters using `systemControls` for the containers in the task, the following will apply to your IPC resource namespace\. For more information, see [System Controls](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 + For tasks that use the `host` IPC mode, IPC namespace related `systemControls` are not supported\.
 + For tasks that use the `task` IPC mode, IPC namespace related `systemControls` will apply to all containers within a task\.
-This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
+This parameter is not supported for Windows containers or tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `host | none | task`  
+*Allowed values*: `host | none | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
 The amount \(in MiB\) of memory used by the task\.  
-If using the EC2 launch type, this field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\.  
-If using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
+If your tasks will be run on Amazon EC2 instances, you must specify either a task\-level memory value or a container\-level memory value\. This field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\. For more information regarding container\-level memory and memory reservation, see [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)\.  
+If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
 + 512 \(0\.5 GB\), 1024 \(1 GB\), 2048 \(2 GB\) \- Available `cpu` values: 256 \(\.25 vCPU\)
 + 1024 \(1 GB\), 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\) \- Available `cpu` values: 512 \(\.5 vCPU\)
 + 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\), 5120 \(5 GB\), 6144 \(6 GB\), 7168 \(7 GB\), 8192 \(8 GB\) \- Available `cpu` values: 1024 \(1 vCPU\)
@@ -134,20 +134,21 @@ Docker for Windows uses different network modes than Docker for Linux\. When you
 For more information, see [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) in the *Docker run reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `awsvpc | bridge | host | none`  
+*Allowed values*: `awsvpc | bridge | host | none`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PidMode`  <a name="cfn-ecs-taskdefinition-pidmode"></a>
 The process namespace to use for the containers in the task\. The valid values are `host` or `task`\. If `host` is specified, then all containers within the tasks that specified the `host` PID mode on the same container instance share the same process namespace with the host Amazon EC2 instance\. If `task` is specified, all containers within the specified task share the same process namespace\. If no value is specified, the default is a private namespace\. For more information, see [PID settings](https://docs.docker.com/engine/reference/run/#pid-settings---pid) in the *Docker run reference*\.  
 If the `host` PID mode is used, be aware that there is a heightened risk of undesired process namespace expose\. For more information, see [Docker security](https://docs.docker.com/engine/security/security/)\.  
-This parameter is not supported for Windows containers or tasks using the Fargate launch type\.
+This parameter is not supported for Windows containers or tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `host | task`  
+*Allowed values*: `host | task`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementConstraints`  <a name="cfn-ecs-taskdefinition-placementconstraints"></a>
-An array of placement constraint objects to use for tasks\. This field is not valid if you are using the Fargate launch type for your task\.  
+An array of placement constraint objects to use for tasks\.  
+This parameter is not supported for tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: List of [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -160,7 +161,7 @@ Your Amazon ECS container instances require at least version 1\.26\.0 of the con
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>
-The launch type the task requires\. If no value is specified, it will default to `EC2`\. Valid values include `EC2` and `FARGATE`\.  
+The task launch types the task definition was validated against\. To determine which task launch types the task definition is validated for, see the TaskDefinition$compatibilities parameter\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -182,20 +183,19 @@ The following basic restrictions apply to tags:
 
 `TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
 The short name or full Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [Amazon ECS Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM Roles for Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM roles for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Volumes`  <a name="cfn-ecs-taskdefinition-volumes"></a>
-The list of volume definitions for the task\.  
-If your tasks are using the Fargate launch type, the `host` and `sourcePath` parameters are not supported\.  
-For more information about volume definition parameters and defaults, see [Amazon ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The list of data volume definitions for the task\. For more information, see [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The `host` and `sourcePath` parameters are not supported for tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: List of [Volume](aws-properties-ecs-taskdefinition-volumes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
+## Return values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-ecs-taskdefinition-return-values-ref"></a>
 
@@ -207,13 +207,22 @@ In the following example, the `Ref` function returns the ARN of the `MyTaskDefin
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt-fn--getatt"></a>
+
+`TaskDefinitionArn`  <a name="TaskDefinitionArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-ecs-taskdefinition--examples"></a>
 
-### Creating an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition"></a>
+
+
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
 The following example defines an Amazon ECS task definition, which includes two container definitions and one volume definition\.
 
-#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--json"></a>
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
 ```
 "taskdefinition": {
@@ -229,7 +238,7 @@ The following example defines an Amazon ECS task definition, which includes two 
         }
       ],
       "Image":"amazon/amazon-ecs-sample",
-      "Cpu": "10",
+      "Cpu": 256,
       "PortMappings":[
         {
           "ContainerPort": {"Ref":"AppContainerPort"},
@@ -241,22 +250,22 @@ The following example defines an Amazon ECS task definition, which includes two 
         "-D",
         "FOREGROUND"
       ],
-      "Memory":"0.5GB",
-      "Essential": "true"
+      "Memory": 512,
+      "Essential": true
     },
     {
       "Name": "busybox",
       "Image": "busybox",
-      "Cpu": "10",
+      "Cpu": 256,
       "EntryPoint": [
         "sh",
         "-c"
       ],
-      "Memory": "0.5GB",
+      "Memory": 512,
       "Command": [
         "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
       ],
-      "Essential" : "false",
+      "Essential" : false,
       "VolumesFrom": [
         {
           "SourceContainer": {"Ref":"AppName"}
@@ -274,7 +283,7 @@ The following example defines an Amazon ECS task definition, which includes two 
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--yaml"></a>
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--yaml"></a>
 
 ```
 taskdefinition: 
@@ -289,7 +298,7 @@ taskdefinition:
             SourceVolume: "my-vol"
             ContainerPath: "/var/www/my-vol"
         Image: "amazon/amazon-ecs-sample"
-        Cpu: "10"
+        Cpu: 256
         PortMappings: 
           - 
             ContainerPort: 
@@ -300,16 +309,16 @@ taskdefinition:
           - "/usr/sbin/apache2"
           - "-D"
           - "FOREGROUND"
-        Memory: "0.5GB"
+        Memory: 512
         Essential: true
       - 
         Name: "busybox"
         Image: "busybox"
-        Cpu: "10"
+        Cpu: 256
         EntryPoint: 
           - "sh"
           - "-c"
-        Memory: "0.5GB"
+        Memory: 512
         Command: 
           - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
         Essential: false
@@ -324,81 +333,83 @@ taskdefinition:
         Name: "my-vol"
 ```
 
-### Creating an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition"></a>
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
 The following example defines an Amazon ECS task definition that specifies EC2 and FARGATE as required compatibilities\.
 
-#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--json"></a>
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
 ```
 {
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Resources": {
-    "taskdefinition": {
-      "Type": "AWS::ECS::TaskDefinition",
-      "Properties": {
-        "RequiresCompatibilities": [
-          "EC2",
-          "FARGATE"
-        ],
-        "ContainerDefinitions": [
-          {
-            "Name": "my-app",
-            "MountPoints": [
-              {
-                "SourceVolume": "my-vol",
-                "ContainerPath": "/var/www/my-vol"
-              }
-            ],
-            "Image": "amazon/amazon-ecs-sample",
-            "Cpu": "10",
-            "EntryPoint": [
-              "/usr/sbin/apache2",
-              "-D",
-              "FOREGROUND"
-            ],
-            "Memory": "0.5GB",
-            "Essential": "true"
-          },
-          {
-            "Name": "busybox",
-            "Image": "busybox",
-            "Cpu": "10",
-            "EntryPoint": [
-              "sh",
-              "-c"
-            ],
-            "Memory": "0.5GB",
-            "Command": [
-              "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
-            ],
-            "Essential": "false",
-            "DependsOn": [
-              "ContainerName": "my-app",
-              "Condition": "START"
-            ],
-            "VolumesFrom": [
-              {
-                "SourceContainer": "my-app"
-              }
-            ]
-          }
-        ],
-        "Volumes": [
-          {
-            "Host": {
-              "SourcePath": "/var/lib/docker/vfs/dir/"
-            },
-            "Name": "my-vol"
-          }
-        ]
-      }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "taskdefinition": {
+            "Type": "AWS::ECS::TaskDefinition",
+            "Properties": {
+                "RequiresCompatibilities": [
+                    "EC2",
+                    "FARGATE"
+                ],
+                "ContainerDefinitions": [
+                    {
+                        "Name": "my-app",
+                        "MountPoints": [
+                            {
+                                "SourceVolume": "my-vol",
+                                "ContainerPath": "/var/www/my-vol"
+                            }
+                        ],
+                        "Image": "amazon/amazon-ecs-sample",
+                        "Cpu": 256,
+                        "EntryPoint": [
+                            "/usr/sbin/apache2",
+                            "-D",
+                            "FOREGROUND"
+                        ],
+                        "Memory": 512,
+                        "Essential": true
+                    },
+                    {
+                        "Name": "busybox",
+                        "Image": "busybox",
+                        "Cpu": 256,
+                        "EntryPoint": [
+                            "sh",
+                            "-c"
+                        ],
+                        "Memory": 512,
+                        "Command": [
+                            "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
+                        ],
+                        "Essential": false,
+                        "DependsOn": [
+                            {
+                                "ContainerName": "my-app",
+                                "Condition": "START"
+                            }
+                        ],
+                        "VolumesFrom": [
+                            {
+                                "SourceContainer": "my-app"
+                            }
+                        ]
+                    }
+                ],
+                "Volumes": [
+                    {
+                        "Host": {
+                            "SourcePath": "/var/lib/docker/vfs/dir/"
+                        },
+                        "Name": "my-vol"
+                    }
+                ]
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Creating_an_Amazon_ECS_task_definition--yaml"></a>
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -417,21 +428,21 @@ Resources:
               SourceVolume: "my-vol"
               ContainerPath: "/var/www/my-vol"
           Image: "amazon/amazon-ecs-sample"
-          Cpu: "10"
+          Cpu: 256
           EntryPoint: 
             - "/usr/sbin/apache2"
             - "-D"
             - "FOREGROUND"
-          Memory: "0.5GB"
+          Memory: 512
           Essential: true
         - 
           Name: "busybox"
           Image: "busybox"
-          Cpu: "10"
+          Cpu: 256
           EntryPoint: 
             - "sh"
             - "-c"
-          Memory: "0.5GB"
+          Memory: 512
           Command: 
             - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
           Essential: false

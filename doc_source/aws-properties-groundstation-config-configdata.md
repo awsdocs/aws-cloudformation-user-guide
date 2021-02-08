@@ -10,12 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AntennaDownlinkConfig](#cfn-groundstation-config-configdata-antennadownlinkconfig)" : [AntennaDownlinkConfig](aws-properties-groundstation-config-antennadownlinkconfig.md),
-  "[AntennaDownlinkDemodDecodeConfig](#cfn-groundstation-config-configdata-antennadownlinkdemoddecodeconfig)" : [AntennaDownlinkDemodDecodeConfig](aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.md),
-  "[AntennaUplinkConfig](#cfn-groundstation-config-configdata-antennauplinkconfig)" : [AntennaUplinkConfig](aws-properties-groundstation-config-antennauplinkconfig.md),
-  "[DataflowEndpointConfig](#cfn-groundstation-config-configdata-dataflowendpointconfig)" : [DataflowEndpointConfig](aws-properties-groundstation-config-dataflowendpointconfig.md),
-  "[TrackingConfig](#cfn-groundstation-config-configdata-trackingconfig)" : [TrackingConfig](aws-properties-groundstation-config-trackingconfig.md),
-  "[UplinkEchoConfig](#cfn-groundstation-config-configdata-uplinkechoconfig)" : [UplinkEchoConfig](aws-properties-groundstation-config-uplinkechoconfig.md)
+  "[AntennaDownlinkConfig](#cfn-groundstation-config-configdata-antennadownlinkconfig)" : AntennaDownlinkConfig,
+  "[AntennaDownlinkDemodDecodeConfig](#cfn-groundstation-config-configdata-antennadownlinkdemoddecodeconfig)" : AntennaDownlinkDemodDecodeConfig,
+  "[AntennaUplinkConfig](#cfn-groundstation-config-configdata-antennauplinkconfig)" : AntennaUplinkConfig,
+  "[DataflowEndpointConfig](#cfn-groundstation-config-configdata-dataflowendpointconfig)" : DataflowEndpointConfig,
+  "[TrackingConfig](#cfn-groundstation-config-configdata-trackingconfig)" : TrackingConfig,
+  "[UplinkEchoConfig](#cfn-groundstation-config-configdata-uplinkechoconfig)" : UplinkEchoConfig
 }
 ```
 
@@ -23,17 +23,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AntennaDownlinkConfig](#cfn-groundstation-config-configdata-antennadownlinkconfig): 
-    [AntennaDownlinkConfig](aws-properties-groundstation-config-antennadownlinkconfig.md)
+    AntennaDownlinkConfig
   [AntennaDownlinkDemodDecodeConfig](#cfn-groundstation-config-configdata-antennadownlinkdemoddecodeconfig): 
-    [AntennaDownlinkDemodDecodeConfig](aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.md)
+    AntennaDownlinkDemodDecodeConfig
   [AntennaUplinkConfig](#cfn-groundstation-config-configdata-antennauplinkconfig): 
-    [AntennaUplinkConfig](aws-properties-groundstation-config-antennauplinkconfig.md)
+    AntennaUplinkConfig
   [DataflowEndpointConfig](#cfn-groundstation-config-configdata-dataflowendpointconfig): 
-    [DataflowEndpointConfig](aws-properties-groundstation-config-dataflowendpointconfig.md)
+    DataflowEndpointConfig
   [TrackingConfig](#cfn-groundstation-config-configdata-trackingconfig): 
-    [TrackingConfig](aws-properties-groundstation-config-trackingconfig.md)
+    TrackingConfig
   [UplinkEchoConfig](#cfn-groundstation-config-configdata-uplinkechoconfig): 
-    [UplinkEchoConfig](aws-properties-groundstation-config-uplinkechoconfig.md)
+    UplinkEchoConfig
 ```
 
 ## Properties<a name="aws-properties-groundstation-config-configdata-properties"></a>

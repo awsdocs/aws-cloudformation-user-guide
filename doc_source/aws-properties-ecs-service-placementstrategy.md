@@ -34,5 +34,5 @@ The field to apply the placement strategy against\. For the `spread` placement s
 The type of placement strategy\. The `random` placement strategy randomly places tasks on available candidates\. The `spread` placement strategy spreads placement across available candidates evenly based on the `field` parameter\. The `binpack` strategy places tasks on available candidates that have the least available amount of the resource that is specified with the `field` parameter\. For example, if you binpack on memory, a task is placed on the instance with the least amount of remaining memory \(but still enough to run the task\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `binpack | random | spread`  
+*Allowed values*: `binpack | random | spread`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

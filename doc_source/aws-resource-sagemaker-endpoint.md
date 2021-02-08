@@ -12,9 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Endpoint",
   "Properties" : {
+      "[DeploymentConfig](#cfn-sagemaker-endpoint-deploymentconfig)" : DeploymentConfig,
       "[EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname)" : String,
       "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
-      "[ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties)" : [ [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md), ... ],
+      "[ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties)" : [ VariantProperty, ... ],
       "[RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties)" : Boolean,
       "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -26,10 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::Endpoint
 Properties: 
+  [DeploymentConfig](#cfn-sagemaker-endpoint-deploymentconfig): 
+    DeploymentConfig
   [EndpointConfigName](#cfn-sagemaker-endpoint-endpointconfigname): String
   [EndpointName](#cfn-sagemaker-endpoint-endpointname): String
   [ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties): 
-    - [VariantProperty](aws-properties-sagemaker-endpoint-variantproperty.md)
+    - VariantProperty
   [RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties): Boolean
   [Tags](#cfn-sagemaker-endpoint-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -37,20 +40,26 @@ Properties:
 
 ## Properties<a name="aws-resource-sagemaker-endpoint-properties"></a>
 
+`DeploymentConfig`  <a name="cfn-sagemaker-endpoint-deploymentconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [DeploymentConfig](aws-properties-sagemaker-endpoint-deploymentconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EndpointConfigName`  <a name="cfn-sagemaker-endpoint-endpointconfigname"></a>
 The name of the [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html) resource that specifies the configuration for the endpoint\. For more information, see [CreateEndpointConfig](https://docs.aws.amazon.com/sagemaker/latest/dg/API_CreateEndpointConfig.html)\.   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointName`  <a name="cfn-sagemaker-endpoint-endpointname"></a>
-The name of the endpoint\. The name must be unique within an AWS Region in your AWS account\.  
+The name of the endpoint\.The name must be unique within an AWS Region in your AWS account\. The name is case\-insensitive in `CreateEndpoint`, but the case is preserved and must be matched in [https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpoint.html)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExcludeRetainedVariantProperties`  <a name="cfn-sagemaker-endpoint-excluderetainedvariantproperties"></a>
@@ -74,7 +83,7 @@ For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFor
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-sagemaker-endpoint-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-endpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-endpoint-return-values-ref"></a>
 

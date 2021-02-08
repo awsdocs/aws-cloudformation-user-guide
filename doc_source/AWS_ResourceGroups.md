@@ -1,4 +1,4 @@
-# ResourceGroups Resource Type Reference<a name="AWS_ResourceGroups"></a>
+# ResourceGroups resource type reference<a name="AWS_ResourceGroups"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ResourceGroups::Group](aws-resource-resourcegroups-group.md)

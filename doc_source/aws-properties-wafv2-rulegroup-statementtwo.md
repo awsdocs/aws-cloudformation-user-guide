@@ -10,17 +10,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AndStatement](#cfn-wafv2-rulegroup-statementtwo-andstatement)" : [AndStatementTwo](aws-properties-wafv2-rulegroup-andstatementtwo.md),
-  "[ByteMatchStatement](#cfn-wafv2-rulegroup-statementtwo-bytematchstatement)" : [ByteMatchStatement](aws-properties-wafv2-rulegroup-bytematchstatement.md),
-  "[GeoMatchStatement](#cfn-wafv2-rulegroup-statementtwo-geomatchstatement)" : [GeoMatchStatement](aws-properties-wafv2-rulegroup-geomatchstatement.md),
-  "[IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementtwo-ipsetreferencestatement)" : [IPSetReferenceStatement](aws-properties-wafv2-rulegroup-ipsetreferencestatement.md),
-  "[NotStatement](#cfn-wafv2-rulegroup-statementtwo-notstatement)" : [NotStatementTwo](aws-properties-wafv2-rulegroup-notstatementtwo.md),
-  "[OrStatement](#cfn-wafv2-rulegroup-statementtwo-orstatement)" : [OrStatementTwo](aws-properties-wafv2-rulegroup-orstatementtwo.md),
-  "[RateBasedStatement](#cfn-wafv2-rulegroup-statementtwo-ratebasedstatement)" : [RateBasedStatementTwo](aws-properties-wafv2-rulegroup-ratebasedstatementtwo.md),
-  "[RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementtwo-regexpatternsetreferencestatement)" : [RegexPatternSetReferenceStatement](aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement.md),
-  "[SizeConstraintStatement](#cfn-wafv2-rulegroup-statementtwo-sizeconstraintstatement)" : [SizeConstraintStatement](aws-properties-wafv2-rulegroup-sizeconstraintstatement.md),
-  "[SqliMatchStatement](#cfn-wafv2-rulegroup-statementtwo-sqlimatchstatement)" : [SqliMatchStatement](aws-properties-wafv2-rulegroup-sqlimatchstatement.md),
-  "[XssMatchStatement](#cfn-wafv2-rulegroup-statementtwo-xssmatchstatement)" : [XssMatchStatement](aws-properties-wafv2-rulegroup-xssmatchstatement.md)
+  "[AndStatement](#cfn-wafv2-rulegroup-statementtwo-andstatement)" : AndStatementTwo,
+  "[ByteMatchStatement](#cfn-wafv2-rulegroup-statementtwo-bytematchstatement)" : ByteMatchStatement,
+  "[GeoMatchStatement](#cfn-wafv2-rulegroup-statementtwo-geomatchstatement)" : GeoMatchStatement,
+  "[IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementtwo-ipsetreferencestatement)" : IPSetReferenceStatement,
+  "[NotStatement](#cfn-wafv2-rulegroup-statementtwo-notstatement)" : NotStatementTwo,
+  "[OrStatement](#cfn-wafv2-rulegroup-statementtwo-orstatement)" : OrStatementTwo,
+  "[RateBasedStatement](#cfn-wafv2-rulegroup-statementtwo-ratebasedstatement)" : RateBasedStatementTwo,
+  "[RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementtwo-regexpatternsetreferencestatement)" : RegexPatternSetReferenceStatement,
+  "[SizeConstraintStatement](#cfn-wafv2-rulegroup-statementtwo-sizeconstraintstatement)" : SizeConstraintStatement,
+  "[SqliMatchStatement](#cfn-wafv2-rulegroup-statementtwo-sqlimatchstatement)" : SqliMatchStatement,
+  "[XssMatchStatement](#cfn-wafv2-rulegroup-statementtwo-xssmatchstatement)" : XssMatchStatement
 }
 ```
 
@@ -28,27 +28,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AndStatement](#cfn-wafv2-rulegroup-statementtwo-andstatement): 
-    [AndStatementTwo](aws-properties-wafv2-rulegroup-andstatementtwo.md)
+    AndStatementTwo
   [ByteMatchStatement](#cfn-wafv2-rulegroup-statementtwo-bytematchstatement): 
-    [ByteMatchStatement](aws-properties-wafv2-rulegroup-bytematchstatement.md)
+    ByteMatchStatement
   [GeoMatchStatement](#cfn-wafv2-rulegroup-statementtwo-geomatchstatement): 
-    [GeoMatchStatement](aws-properties-wafv2-rulegroup-geomatchstatement.md)
+    GeoMatchStatement
   [IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementtwo-ipsetreferencestatement): 
-    [IPSetReferenceStatement](aws-properties-wafv2-rulegroup-ipsetreferencestatement.md)
+    IPSetReferenceStatement
   [NotStatement](#cfn-wafv2-rulegroup-statementtwo-notstatement): 
-    [NotStatementTwo](aws-properties-wafv2-rulegroup-notstatementtwo.md)
+    NotStatementTwo
   [OrStatement](#cfn-wafv2-rulegroup-statementtwo-orstatement): 
-    [OrStatementTwo](aws-properties-wafv2-rulegroup-orstatementtwo.md)
+    OrStatementTwo
   [RateBasedStatement](#cfn-wafv2-rulegroup-statementtwo-ratebasedstatement): 
-    [RateBasedStatementTwo](aws-properties-wafv2-rulegroup-ratebasedstatementtwo.md)
+    RateBasedStatementTwo
   [RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementtwo-regexpatternsetreferencestatement): 
-    [RegexPatternSetReferenceStatement](aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement.md)
+    RegexPatternSetReferenceStatement
   [SizeConstraintStatement](#cfn-wafv2-rulegroup-statementtwo-sizeconstraintstatement): 
-    [SizeConstraintStatement](aws-properties-wafv2-rulegroup-sizeconstraintstatement.md)
+    SizeConstraintStatement
   [SqliMatchStatement](#cfn-wafv2-rulegroup-statementtwo-sqlimatchstatement): 
-    [SqliMatchStatement](aws-properties-wafv2-rulegroup-sqlimatchstatement.md)
+    SqliMatchStatement
   [XssMatchStatement](#cfn-wafv2-rulegroup-statementtwo-xssmatchstatement): 
-    [XssMatchStatement](aws-properties-wafv2-rulegroup-xssmatchstatement.md)
+    XssMatchStatement
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-statementtwo-properties"></a>

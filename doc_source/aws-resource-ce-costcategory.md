@@ -51,7 +51,7 @@ The rule schema version in this particular Cost Category\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ce-costcategory-return-values"></a>
+## Return values<a name="aws-resource-ce-costcategory-return-values"></a>
 
 ### Ref<a name="aws-resource-ce-costcategory-return-values-ref"></a>
 
@@ -74,6 +74,8 @@ The unique identifier for your Cost Category\.
 The Cost Category's effective start date\.
 
 ## Examples<a name="aws-resource-ce-costcategory--examples"></a>
+
+
 
 ### Cost Category Department with two rules<a name="aws-resource-ce-costcategory--examples--Cost_Category_Department_with_two_rules"></a>
 
@@ -144,5 +146,6 @@ The following example creates a Cost Category "Department" with two rules\.
     ]'
 ```
 
-## See Also<a name="aws-resource-ce-costcategory--seealso"></a>
+## See also<a name="aws-resource-ce-costcategory--seealso"></a>
 +  [CostCategory](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html) in the *AWS Billing and Cost Management API Reference*\. 
+

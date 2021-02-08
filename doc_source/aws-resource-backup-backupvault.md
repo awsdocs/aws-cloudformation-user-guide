@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackupVaultName](#cfn-backup-backupvault-backupvaultname)" : String,
       "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : Json,
       "[EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn)" : String,
-      "[Notifications](#cfn-backup-backupvault-notifications)" : [NotificationObjectType](aws-properties-backup-backupvault-notificationobjecttype.md)
+      "[Notifications](#cfn-backup-backupvault-notifications)" : NotificationObjectType
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [BackupVaultTags](#cfn-backup-backupvault-backupvaulttags): Json
   [EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn): String
   [Notifications](#cfn-backup-backupvault-notifications): 
-    [NotificationObjectType](aws-properties-backup-backupvault-notificationobjecttype.md)
+    NotificationObjectType
 ```
 
 ## Properties<a name="aws-resource-backup-backupvault-properties"></a>
@@ -49,7 +49,7 @@ A resource\-based policy that is used to manage access permissions on the target
 The name of a logical container where backups are stored\. Backup vaults are identified by names that are unique to the account used to create them and the AWS Region where they are created\. They consist of lowercase letters, numbers, and hyphens\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^[a-zA-Z0-9\-\_\.]{1,50}$`  
+*Pattern*: `^[a-zA-Z0-9\-\_]{2,50}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BackupVaultTags`  <a name="cfn-backup-backupvault-backupvaulttags"></a>
@@ -70,7 +70,7 @@ The SNS event notifications for the specified backup vault\.
 *Type*: [NotificationObjectType](aws-properties-backup-backupvault-notificationobjecttype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-backup-backupvault-return-values"></a>
+## Return values<a name="aws-resource-backup-backupvault-return-values"></a>
 
 ### Ref<a name="aws-resource-backup-backupvault-return-values-ref"></a>
 

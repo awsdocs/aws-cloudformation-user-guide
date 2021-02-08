@@ -44,5 +44,6 @@ The name of the Step Functions state machine whose execution will be started\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-iot-topicrule-stepfunctionsaction--seealso"></a>
+## See also<a name="aws-properties-iot-topicrule-stepfunctionsaction--seealso"></a>
 +  [StepFunctionsAction](https://docs.aws.amazon.com/iot/latest/apireference/API_StepFunctionsAction.html) in the *AWS IoT API Reference*\.
+

@@ -57,7 +57,7 @@ The user's SSH user name\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-opsworks-userprofile-return-values"></a>
+## Return values<a name="aws-resource-opsworks-userprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworks-userprofile-return-values-ref"></a>
 
@@ -108,6 +108,7 @@ userProfile:
     SshPublicKey: xyz1234567890
 ```
 
-## See Also<a name="aws-resource-opsworks-userprofile--seealso"></a>
+## See also<a name="aws-resource-opsworks-userprofile--seealso"></a>
 +  [CreateUserProfile](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateUserProfile.html) in the *AWS OpsWorks API Reference*\.
 +  [Managing AWS OpsWorks Stacks User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) in the *AWS OpsWorks User Guide*\.
+

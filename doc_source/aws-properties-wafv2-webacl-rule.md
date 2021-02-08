@@ -13,12 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-wafv2-webacl-rule-action)" : [RuleAction](aws-properties-wafv2-webacl-ruleaction.md),
+  "[Action](#cfn-wafv2-webacl-rule-action)" : RuleAction,
   "[Name](#cfn-wafv2-webacl-rule-name)" : String,
-  "[OverrideAction](#cfn-wafv2-webacl-rule-overrideaction)" : [OverrideAction](aws-properties-wafv2-webacl-overrideaction.md),
+  "[OverrideAction](#cfn-wafv2-webacl-rule-overrideaction)" : OverrideAction,
   "[Priority](#cfn-wafv2-webacl-rule-priority)" : Integer,
-  "[Statement](#cfn-wafv2-webacl-rule-statement)" : [StatementOne](aws-properties-wafv2-webacl-statementone.md),
-  "[VisibilityConfig](#cfn-wafv2-webacl-rule-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
+  "[Statement](#cfn-wafv2-webacl-rule-statement)" : StatementOne,
+  "[VisibilityConfig](#cfn-wafv2-webacl-rule-visibilityconfig)" : VisibilityConfig
 }
 ```
 
@@ -26,15 +26,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-wafv2-webacl-rule-action): 
-    [RuleAction](aws-properties-wafv2-webacl-ruleaction.md)
+    RuleAction
   [Name](#cfn-wafv2-webacl-rule-name): String
   [OverrideAction](#cfn-wafv2-webacl-rule-overrideaction): 
-    [OverrideAction](aws-properties-wafv2-webacl-overrideaction.md)
+    OverrideAction
   [Priority](#cfn-wafv2-webacl-rule-priority): Integer
   [Statement](#cfn-wafv2-webacl-rule-statement): 
-    [StatementOne](aws-properties-wafv2-webacl-statementone.md)
+    StatementOne
   [VisibilityConfig](#cfn-wafv2-webacl-rule-visibilityconfig): 
-    [VisibilityConfig](aws-properties-wafv2-webacl-visibilityconfig.md)
+    VisibilityConfig
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-rule-properties"></a>

@@ -46,5 +46,5 @@ Set `Negated` to `True` if you want AWS WAF to allow or block a request based on
 The type of predicate in a `Rule`, such as `ByteMatch` or `IPSet`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ByteMatch | GeoMatch | IPMatch | RegexMatch | SizeConstraint | SqlInjectionMatch | XssMatch`  
+*Allowed values*: `ByteMatch | GeoMatch | IPMatch | RegexMatch | SizeConstraint | SqlInjectionMatch | XssMatch`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

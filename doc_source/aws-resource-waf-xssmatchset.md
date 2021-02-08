@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAF::XssMatchSet",
   "Properties" : {
       "[Name](#cfn-waf-xssmatchset-name)" : String,
-      "[XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples)" : [ [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md), ... ]
+      "[XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples)" : [ XssMatchTuple, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::WAF::XssMatchSet
 Properties: 
   [Name](#cfn-waf-xssmatchset-name): String
   [XssMatchTuples](#cfn-waf-xssmatchset-xssmatchtuples): 
-    - [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)
+    - XssMatchTuple
 ```
 
 ## Properties<a name="aws-resource-waf-xssmatchset-properties"></a>
@@ -49,7 +49,7 @@ Specifies the parts of web requests that you want to inspect for cross\-site scr
 *Type*: List of [XssMatchTuple](aws-properties-waf-xssmatchset-xssmatchtuple.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-xssmatchset-return-values"></a>
+## Return values<a name="aws-resource-waf-xssmatchset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-xssmatchset-return-values-ref"></a>
 
@@ -58,6 +58,8 @@ Specifies the parts of web requests that you want to inspect for cross\-site scr
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-xssmatchset--examples"></a>
+
+
 
 ### Define Which Part of a Request to Check for Cross\-site Scripting<a name="aws-resource-waf-xssmatchset--examples--Define_Which_Part_of_a_Request_to_Check_for_Cross-site_Scripting"></a>
 

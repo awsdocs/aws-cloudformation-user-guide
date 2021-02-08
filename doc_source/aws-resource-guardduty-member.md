@@ -62,18 +62,18 @@ The AWS account ID of the account to designate as a member\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Message`  <a name="cfn-guardduty-member-message"></a>
-The message to include with the invitation sent to the member accounts\.  
+The invitation message that you want to send to the accounts that you're inviting to GuardDuty as members\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-guardduty-member-status"></a>
-You can use the `Status` property to update the status of the relationship between the member account and its master account\. Valid values are `Created` and `Invited` when using a `AWS::GuardDuty::Member` resource\. If the value for this property is not provided or set to `Created`, a member account is created but not invited\. If the value of this property is set to `Invited`, a member account is created and invited\.  
+You can use the `Status` property to update the status of the relationship between the member account and its master account\. Valid values are `Created` and `Invited` when using an `AWS::GuardDuty::Member` resource\. If the value for this property is not provided or set to `Created`, a member account is created but not invited\. If the value of this property is set to `Invited`, a member account is created and invited\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-guardduty-member-return-values"></a>
+## Return values<a name="aws-resource-guardduty-member-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-member-return-values-ref"></a>
 
@@ -82,6 +82,8 @@ You can use the `Status` property to update the status of the relationship betwe
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-member--examples"></a>
+
+
 
 ### Declare a Member Resource<a name="aws-resource-guardduty-member--examples--Declare_a_Member_Resource"></a>
 
@@ -108,10 +110,10 @@ The following example shows how to declare a GuardDuty `Member` resource:
 ```
 Type: AWS::GuardDuty::Member
 Properties:
-    Status: String
-    MemberId: String
-    Email: String
-    Message: String
-    DetectorId: String
-    DisableEmailNotification: Boolean
+Status: Invited
+MemberId: 012345678901
+Email: guarddutymember@amazon.com
+Message: You are invited to enable Amazon Guardduty.
+DetectorId: a12abc34d567e8fa901bc2d34e56789f0
+    DisableEmailNotification: true
 ```

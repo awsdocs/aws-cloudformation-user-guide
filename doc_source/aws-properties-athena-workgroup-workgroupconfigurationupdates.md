@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled)" : Boolean,
   "[RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery)" : Boolean,
   "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled)" : Boolean,
-  "[ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates)" : [ResultConfigurationUpdates](aws-properties-athena-workgroup-resultconfigurationupdates.md)
+  "[ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates)" : ResultConfigurationUpdates
 }
 ```
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery): Boolean
   [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled): Boolean
   [ResultConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates-resultconfigurationupdates): 
-    [ResultConfigurationUpdates](aws-properties-athena-workgroup-resultconfigurationupdates.md)
+    ResultConfigurationUpdates
 ```
 
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfigurationupdates-properties"></a>

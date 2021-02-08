@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Expression](#cfn-cloudwatch-alarm-metricdataquery-expression)" : String,
   "[Id](#cfn-cloudwatch-alarm-metricdataquery-id)" : String,
   "[Label](#cfn-cloudwatch-alarm-metricdataquery-label)" : String,
-  "[MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat)" : [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md),
+  "[MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat)" : MetricStat,
+  "[Period](#cfn-cloudwatch-alarm-metricdataquery-period)" : Integer,
   "[ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata)" : Boolean
 }
 ```
@@ -27,7 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Id](#cfn-cloudwatch-alarm-metricdataquery-id): String
   [Label](#cfn-cloudwatch-alarm-metricdataquery-label): String
   [MetricStat](#cfn-cloudwatch-alarm-metricdataquery-metricstat): 
-    [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)
+    MetricStat
+  [Period](#cfn-cloudwatch-alarm-metricdataquery-period): Integer
   [ReturnData](#cfn-cloudwatch-alarm-metricdataquery-returndata): Boolean
 ```
 
@@ -63,10 +65,17 @@ Within one MetricDataQuery object, you must specify either `Expression` or `Metr
 *Type*: [MetricStat](aws-properties-cloudwatch-alarm-metricstat.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Period`  <a name="cfn-cloudwatch-alarm-metricdataquery-period"></a>
+The granularity, in seconds, of the returned data points\. For metrics with regular resolution, a period can be as short as one minute \(60 seconds\) and must be a multiple of 60\. For high\-resolution metrics that are collected at intervals of less than one minute, the period can be 1, 5, 10, 30, 60, or any multiple of 60\. High\-resolution metrics are those metrics stored by a `PutMetricData` operation that includes a `StorageResolution of 1 second`\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ReturnData`  <a name="cfn-cloudwatch-alarm-metricdataquery-returndata"></a>
 This option indicates whether to return the timestamps and raw data values of this metric\.  
 When you create an alarm based on a metric math expression, specify `True` for this value for only the one math expression that the alarm is based on\. You must specify `False` for `ReturnData` for all the other metrics and expressions used in the alarm\.  
-If you omit this field, the default of `True` is used\.  
+This field is required\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

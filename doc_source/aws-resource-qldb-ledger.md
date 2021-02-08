@@ -1,6 +1,6 @@
 # AWS::QLDB::Ledger<a name="aws-resource-qldb-ledger"></a>
 
-The `AWS::QLDB::Ledger` resource creates a new Amazon Quantum Ledger Database \(Amazon QLDB\) ledger in your AWS account\. Amazon QLDB is a fully managed ledger database owned by a central trusted authority that provides a transparent, immutable, and cryptographically verifiable transaction log of all of your application changes\.
+The `AWS::QLDB::Ledger` resource creates a new Amazon Quantum Ledger Database \(Amazon QLDB\) ledger in your AWS account\. Amazon QLDB is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log owned by a central trusted authority\. You can use QLDB to track all application data changes, and maintain a complete and verifiable history of changes over time\.
 
 For more information, see [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*\.
 
@@ -45,6 +45,7 @@ If deletion protection is enabled, you must first disable it before you can dele
 
 `Name`  <a name="cfn-qldb-ledger-name"></a>
 The name of the ledger that you want to create\. The name must be unique among all of your ledgers in the current AWS Region\.  
+Naming constraints for ledger names are defined in [Quotas in Amazon QLDB](https://docs.aws.amazon.com/qldb/latest/developerguide/limits.html#limits.naming) in the *Amazon QLDB Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -56,7 +57,7 @@ The name of the ledger that you want to create\. The name must be unique among a
 The permissions mode to assign to the ledger that you want to create\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ALLOW_ALL`  
+*Allowed values*: `ALLOW_ALL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-qldb-ledger-tags"></a>
@@ -66,7 +67,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-qldb-ledger-return-values"></a>
+## Return values<a name="aws-resource-qldb-ledger-return-values"></a>
 
 ### Ref<a name="aws-resource-qldb-ledger-return-values-ref"></a>
 
@@ -74,11 +75,13 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
  `{ "Ref": "myQLDBLedger" }` 
 
-For the resource with the logical ID `myQLDBLedger`, `Ref` will return the Amazon QLDB ledger name\.
+For the resource with the logical ID `myQLDBLedger`, `Ref` returns the Amazon QLDB ledger name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-qldb-ledger--examples"></a>
+
+
 
 ### Amazon QLDB Ledger<a name="aws-resource-qldb-ledger--examples--Amazon_QLDB_Ledger"></a>
 
@@ -98,8 +101,8 @@ The following example describes an Amazon QLDB ledger with a `PermissionsMode` o
         "PermissionsMode": "ALLOW_ALL",
         "Tags": [
           {
-            "Key": "foo",
-            "Value": "bar"
+            "Key": "Domain",
+            "Value": "Test"
           }
         ]
       }
@@ -120,9 +123,10 @@ Resources:
       Name: "exampleLedger"
       PermissionsMode: "ALLOW_ALL"
       Tags:
-        - Key: foo
-          Value: bar
+        - Key: Domain
+          Value: Test
 ```
 
-## See Also<a name="aws-resource-qldb-ledger--seealso"></a>
-+  [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*\.
+## See also<a name="aws-resource-qldb-ledger--seealso"></a>
++  [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*
+

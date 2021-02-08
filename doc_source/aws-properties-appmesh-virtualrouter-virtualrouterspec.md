@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)" : [ [VirtualRouterListener](aws-properties-appmesh-virtualrouter-virtualrouterlistener.md), ... ]
+  "[Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)" : [ VirtualRouterListener, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners): 
-    - [VirtualRouterListener](aws-properties-appmesh-virtualrouter-virtualrouterlistener.md)
+    - VirtualRouterListener
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualrouter-virtualrouterspec-properties"></a>

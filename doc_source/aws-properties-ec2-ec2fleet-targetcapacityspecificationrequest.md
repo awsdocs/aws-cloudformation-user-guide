@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The default `TotalTargetCapacity`, which is either `Spot` or `On-Demand`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `on-demand | spot`  
+*Allowed values*: `on-demand | spot`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnDemandTargetCapacity`  <a name="cfn-ec2-ec2fleet-targetcapacityspecificationrequest-ondemandtargetcapacity"></a>
@@ -55,5 +55,5 @@ The number of units to request, filled using `DefaultTargetCapacityType`\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest--seealso"></a>
+## See also<a name="aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest--seealso"></a>
 +  [ TargetCapacitySpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_TargetCapacitySpecificationRequest.html) in the *Amazon EC2 API Reference* 

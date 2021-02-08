@@ -103,7 +103,7 @@ The actions to execute when this alarm transitions to the OK state from any othe
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudwatch-compositealarm-return-values"></a>
+## Return values<a name="aws-resource-cloudwatch-compositealarm-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudwatch-compositealarm-return-values-ref"></a>
 
@@ -123,6 +123,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the composite alarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm/CompositeAlarmName`\.
 
 ## Examples<a name="aws-resource-cloudwatch-compositealarm--examples"></a>
+
+
 
 ### Composite alarm based on two metric alarms and another composite alarm<a name="aws-resource-cloudwatch-compositealarm--examples--Composite_alarm_based_on_two_metric_alarms_and_another_composite_alarm"></a>
 
@@ -182,7 +184,7 @@ This example creates composite alarms named "HighResourceUsage" and "DeploymentI
             "Period": 60,
             "Statistic": "Average",
             "Threshold": 65,
-            "TreatMissingData": "Breaching"
+            "TreatMissingData": "breaching"
         }
     }
 }
@@ -207,7 +209,7 @@ Resources:
     Type: AWS::CloudWatch::CompositeAlarm
     Properties:
       AlarmName: DeploymentInProgress
-      AlarmRule: FALSE
+      AlarmRule: 
       AlarmDescription: Manually updated to TRUE/FALSE to disable other alarms
   HighCPUUsage: 
     Type: AWS::CloudWatch::Alarm

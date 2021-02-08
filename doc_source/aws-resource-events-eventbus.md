@@ -46,7 +46,7 @@ If you are creating a partner event bus, this name must exactly match the name o
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-events-eventbus-return-values"></a>
+## Return values<a name="aws-resource-events-eventbus-return-values"></a>
 
 ### Ref<a name="aws-resource-events-eventbus-return-values-ref"></a>
 
@@ -68,6 +68,8 @@ The name of the event bus, such as `PartnerName/acct1/repo1`\.
 The policy for the event bus in JSON form\.
 
 ## Examples<a name="aws-resource-events-eventbus--examples"></a>
+
+
 
 ### Create a partner event bus<a name="aws-resource-events-eventbus--examples--Create_a_partner_event_bus"></a>
 

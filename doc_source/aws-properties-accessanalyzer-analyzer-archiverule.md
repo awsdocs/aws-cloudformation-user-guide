@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Filter](#cfn-accessanalyzer-analyzer-archiverule-filter)" : [ [Filter](aws-properties-accessanalyzer-analyzer-filter.md), ... ],
+  "[Filter](#cfn-accessanalyzer-analyzer-archiverule-filter)" : [ Filter, ... ],
   "[RuleName](#cfn-accessanalyzer-analyzer-archiverule-rulename)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Filter](#cfn-accessanalyzer-analyzer-archiverule-filter): 
-    - [Filter](aws-properties-accessanalyzer-analyzer-filter.md)
+    - Filter
   [RuleName](#cfn-accessanalyzer-analyzer-archiverule-rulename): String
 ```
 

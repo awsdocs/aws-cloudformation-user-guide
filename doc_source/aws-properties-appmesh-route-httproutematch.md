@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Headers](#cfn-appmesh-route-httproutematch-headers)" : [ [HttpRouteHeader](aws-properties-appmesh-route-httprouteheader.md), ... ],
+  "[Headers](#cfn-appmesh-route-httproutematch-headers)" : [ HttpRouteHeader, ... ],
   "[Method](#cfn-appmesh-route-httproutematch-method)" : String,
   "[Prefix](#cfn-appmesh-route-httproutematch-prefix)" : String,
   "[Scheme](#cfn-appmesh-route-httproutematch-scheme)" : String
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Headers](#cfn-appmesh-route-httproutematch-headers): 
-    - [HttpRouteHeader](aws-properties-appmesh-route-httprouteheader.md)
+    - HttpRouteHeader
   [Method](#cfn-appmesh-route-httproutematch-method): String
   [Prefix](#cfn-appmesh-route-httproutematch-prefix): String
   [Scheme](#cfn-appmesh-route-httproutematch-scheme): String

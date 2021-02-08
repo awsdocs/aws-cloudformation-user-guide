@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The encoding to use for the email within the Amazon SNS notification\. UTF\-8 is easier to use, but may not preserve all special characters when a message was encoded with a different encoding format\. Base64 preserves all special characters\. The default value is UTF\-8\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Base64 | UTF-8`  
+*Allowed values*: `Base64 | UTF-8`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-snsaction-topicarn"></a>

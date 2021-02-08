@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Recency](#cfn-pinpoint-segment-segmentdimensions-behavior-recency)" : [Recency](aws-properties-pinpoint-segment-segmentdimensions-behavior-recency.md)
+  "[Recency](#cfn-pinpoint-segment-segmentdimensions-behavior-recency)" : Recency
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Recency](#cfn-pinpoint-segment-segmentdimensions-behavior-recency): 
-    [Recency](aws-properties-pinpoint-segment-segmentdimensions-behavior-recency.md)
+    Recency
 ```
 
 ## Properties<a name="aws-properties-pinpoint-segment-segmentdimensions-behavior-properties"></a>

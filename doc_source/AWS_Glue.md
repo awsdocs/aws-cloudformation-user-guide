@@ -1,6 +1,6 @@
-# AWS Glue Resource Type Reference<a name="AWS_Glue"></a>
+# AWS Glue resource type reference<a name="AWS_Glue"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Glue::Classifier](aws-resource-glue-classifier.md)
 + [AWS::Glue::Connection](aws-resource-glue-connection.md)
 + [AWS::Glue::Crawler](aws-resource-glue-crawler.md)
@@ -10,6 +10,10 @@
 + [AWS::Glue::Job](aws-resource-glue-job.md)
 + [AWS::Glue::MLTransform](aws-resource-glue-mltransform.md)
 + [AWS::Glue::Partition](aws-resource-glue-partition.md)
++ [AWS::Glue::Registry](aws-resource-glue-registry.md)
++ [AWS::Glue::Schema](aws-resource-glue-schema.md)
++ [AWS::Glue::SchemaVersion](aws-resource-glue-schemaversion.md)
++ [AWS::Glue::SchemaVersionMetadata](aws-resource-glue-schemaversionmetadata.md)
 + [AWS::Glue::SecurityConfiguration](aws-resource-glue-securityconfiguration.md)
 + [AWS::Glue::Table](aws-resource-glue-table.md)
 + [AWS::Glue::Trigger](aws-resource-glue-trigger.md)

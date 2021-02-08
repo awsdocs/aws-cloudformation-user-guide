@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::ConformancePack",
   "Properties" : {
-      "[ConformancePackInputParameters](#cfn-config-conformancepack-conformancepackinputparameters)" : [ [ConformancePackInputParameter](aws-properties-config-conformancepack-conformancepackinputparameter.md), ... ],
+      "[ConformancePackInputParameters](#cfn-config-conformancepack-conformancepackinputparameters)" : [ ConformancePackInputParameter, ... ],
       "[ConformancePackName](#cfn-config-conformancepack-conformancepackname)" : String,
       "[DeliveryS3Bucket](#cfn-config-conformancepack-deliverys3bucket)" : String,
       "[DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::ConformancePack
 Properties: 
   [ConformancePackInputParameters](#cfn-config-conformancepack-conformancepackinputparameters): 
-    - [ConformancePackInputParameter](aws-properties-config-conformancepack-conformancepackinputparameter.md)
+    - ConformancePackInputParameter
   [ConformancePackName](#cfn-config-conformancepack-conformancepackname): String
   [DeliveryS3Bucket](#cfn-config-conformancepack-deliverys3bucket): String
   [DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix): String
@@ -52,7 +52,7 @@ Name of the conformance pack you want to create\.
 
 `DeliveryS3Bucket`  <a name="cfn-config-conformancepack-deliverys3bucket"></a>
 AWS Config stores intermediate files while processing conformance pack template\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -76,7 +76,7 @@ You must have access to read Amazon S3 bucket\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-conformancepack-return-values"></a>
+## Return values<a name="aws-resource-config-conformancepack-return-values"></a>
 
 ### Ref<a name="aws-resource-config-conformancepack-return-values-ref"></a>
 
@@ -85,6 +85,8 @@ You must have access to read Amazon S3 bucket\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-conformancepack--examples"></a>
+
+
 
 ### Conformance Pack<a name="aws-resource-config-conformancepack--examples--Conformance_Pack"></a>
 

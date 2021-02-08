@@ -13,8 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-ec2-blockdev-mapping-devicename)" : String,
-  "[Ebs](#cfn-ec2-blockdev-mapping-ebs)" : [Ebs](aws-properties-ec2-blockdev-template.md),
-  "[NoDevice](#cfn-ec2-blockdev-mapping-nodevice)" : [NoDevice](aws-properties-ec2-instance-nodevice.md),
+  "[Ebs](#cfn-ec2-blockdev-mapping-ebs)" : Ebs,
+  "[NoDevice](#cfn-ec2-blockdev-mapping-nodevice)" : NoDevice,
   "[VirtualName](#cfn-ec2-blockdev-mapping-virtualname)" : String
 }
 ```
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-ec2-blockdev-mapping-devicename): String
   [Ebs](#cfn-ec2-blockdev-mapping-ebs): 
-    [Ebs](aws-properties-ec2-blockdev-template.md)
+    Ebs
   [NoDevice](#cfn-ec2-blockdev-mapping-nodevice): 
-    [NoDevice](aws-properties-ec2-instance-nodevice.md)
+    NoDevice
   [VirtualName](#cfn-ec2-blockdev-mapping-virtualname): String
 ```
 
@@ -46,7 +46,7 @@ You can specify either `VirtualName` or `Ebs`, but not both\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-ec2-blockdev-mapping-nodevice"></a>
-Suppresses the specified device included in the block device mapping of the AMI\.  
+To omit the device from the block device mapping, specify an empty string\.  
 *Required*: No  
 *Type*: [NoDevice](aws-properties-ec2-instance-nodevice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,5 +139,5 @@ BlockDeviceMappings:
     NoDevice: {}
 ```
 
-## See Also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>
+## See also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>
 +  [ Amazon EC2 Instance Store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon Elastic Compute Cloud User Guide*\.

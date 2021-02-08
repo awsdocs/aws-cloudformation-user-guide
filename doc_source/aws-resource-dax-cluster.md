@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredMaintenanceWindow](#cfn-dax-cluster-preferredmaintenancewindow)" : String,
       "[ReplicationFactor](#cfn-dax-cluster-replicationfactor)" : Integer,
       "[SecurityGroupIds](#cfn-dax-cluster-securitygroupids)" : [ String, ... ],
-      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : [SSESpecification](aws-properties-dax-cluster-ssespecification.md),
+      "[SSESpecification](#cfn-dax-cluster-ssespecification)" : SSESpecification,
       "[SubnetGroupName](#cfn-dax-cluster-subnetgroupname)" : String,
       "[Tags](#cfn-dax-cluster-tags)" : Json
     }
@@ -47,7 +47,7 @@ Properties:
   [SecurityGroupIds](#cfn-dax-cluster-securitygroupids): 
     - String
   [SSESpecification](#cfn-dax-cluster-ssespecification): 
-    [SSESpecification](aws-properties-dax-cluster-ssespecification.md)
+    SSESpecification
   [SubnetGroupName](#cfn-dax-cluster-subnetgroupname): String
   [Tags](#cfn-dax-cluster-tags): Json
 ```
@@ -136,21 +136,17 @@ A set of tags to associate with the DAX cluster\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dax-cluster-return-values"></a>
+## Return values<a name="aws-resource-dax-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-dax-cluster-return-values-ref"></a>
 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created DAX cluster\. For example:
-
- 
 
 ```
 { "Ref": "MyResource" }
 ```
 
  Returns a value similar to the following: 
-
- 
 
 ```
 MyDAXCluster

@@ -1,6 +1,11 @@
 # AWS::ResourceGroups::Group<a name="aws-resource-resourcegroups-group"></a>
 
-Creates a group with a specified name, description, and resource query\.
+Creates a resource group with the specified name and description\. You can optionally include a resource query, or a service configuration\. For more information about constructing a resource query, see [Create a tag\-based group in Resource Groups](https://docs.aws.amazon.com/ARG/latest/userguide/gettingstarted-query.html#gettingstarted-query-cli-tag)\. For more information about service configurations, see [Service configurations for resource groups](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html)\.
+
+ **Minimum permissions** 
+
+To run this command, you must have the following permissions:
++  `resource-groups:CreateGroup` 
 
 ## Syntax<a name="aws-resource-resourcegroups-group-syntax"></a>
 
@@ -14,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-resourcegroups-group-description)" : String,
       "[Name](#cfn-resourcegroups-group-name)" : String,
-      "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md),
+      "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : ResourceQuery,
       "[Tags](#cfn-resourcegroups-group-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -28,7 +33,7 @@ Properties:
   [Description](#cfn-resourcegroups-group-description): String
   [Name](#cfn-resourcegroups-group-name): String
   [ResourceQuery](#cfn-resourcegroups-group-resourcequery): 
-    [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md)
+    ResourceQuery
   [Tags](#cfn-resourcegroups-group-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -59,7 +64,7 @@ The tags associated with the specified resource group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-resourcegroups-group-return-values"></a>
+## Return values<a name="aws-resource-resourcegroups-group-return-values"></a>
 
 ### Ref<a name="aws-resource-resourcegroups-group-return-values-ref"></a>
 
@@ -73,6 +78,8 @@ The name of a resource group\.
 The ARN of a resource group\.
 
 ## Examples<a name="aws-resource-resourcegroups-group--examples"></a>
+
+
 
 ### Creating a CloudFormation Stack\-Based Group Using Defaults<a name="aws-resource-resourcegroups-group--examples--Creating_a_CloudFormation_Stack-Based_Group_Using_Defaults"></a>
 
@@ -237,12 +244,12 @@ TagBasedGroup:
     ResourceQuery:
       Type:
         "TAG_FILTERS_1_0" 
-        Query:
-          ResourceTypeFilters: 
-            - "AWS::AllSupported" 
-          TagFilters:
-            - 
-              Key: "Usage" 
-              Values: 
-                - "Integration Tests"
+      Query:
+        ResourceTypeFilters: 
+          - "AWS::AllSupported" 
+        TagFilters:
+          - 
+            Key: "Usage" 
+            Values: 
+              - "Integration Tests"
 ```

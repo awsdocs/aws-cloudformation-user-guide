@@ -46,5 +46,6 @@ Duplicates are not allowed\.
 *Type*: Map of [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-usageplan-apistage--seealso"></a>
+## See also<a name="aws-properties-apigateway-usageplan-apistage--seealso"></a>
 + [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan/) in the *Amazon API Gateway REST API Reference*
+

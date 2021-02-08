@@ -32,5 +32,6 @@ To specify an earlier version of the Lambda function than the latest, include th
 *Pattern*: `arn:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor--seealso"></a>
 +  [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputLambdaProcessor.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

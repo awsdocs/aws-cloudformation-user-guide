@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DecodeConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig)" : [DecodeConfig](aws-properties-groundstation-config-decodeconfig.md),
-  "[DemodulationConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig)" : [DemodulationConfig](aws-properties-groundstation-config-demodulationconfig.md),
-  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)" : [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)
+  "[DecodeConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig)" : DecodeConfig,
+  "[DemodulationConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig)" : DemodulationConfig,
+  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)" : SpectrumConfig
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DecodeConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig): 
-    [DecodeConfig](aws-properties-groundstation-config-decodeconfig.md)
+    DecodeConfig
   [DemodulationConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig): 
-    [DemodulationConfig](aws-properties-groundstation-config-demodulationconfig.md)
+    DemodulationConfig
   [SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig): 
-    [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)
+    SpectrumConfig
 ```
 
 ## Properties<a name="aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig-properties"></a>

@@ -114,7 +114,7 @@ The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code\. A 
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-security-group-egress-return-values"></a>
+## Return values<a name="aws-resource-ec2-security-group-egress-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-security-group-egress-return-values-ref"></a>
 
@@ -123,6 +123,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-security-group-egress--examples"></a>
+
+
 
 ### VPC Security Groups Example<a name="aws-resource-ec2-security-group-egress--examples--VPC_Security_Groups_Example"></a>
 

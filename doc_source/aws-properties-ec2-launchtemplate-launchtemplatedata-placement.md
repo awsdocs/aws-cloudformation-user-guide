@@ -2,7 +2,7 @@
 
 Specifies the placement of an instance\.
 
- `Placement` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+`Placement` is a property of [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement-syntax"></a>
 
@@ -84,8 +84,9 @@ Reserved for future use\.
 The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of dedicated runs on single\-tenant hardware\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default | host`  
+*Allowed values*: `dedicated | default | host`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement--seealso"></a>
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement--seealso"></a>
 +  [ LaunchTemplatePlacementRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatePlacementRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

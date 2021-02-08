@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Payload](#cfn-iotevents-detectormodel-sqs-payload)" : [Payload](aws-properties-iotevents-detectormodel-payload.md),
+  "[Payload](#cfn-iotevents-detectormodel-sqs-payload)" : Payload,
   "[QueueUrl](#cfn-iotevents-detectormodel-sqs-queueurl)" : String,
   "[UseBase64](#cfn-iotevents-detectormodel-sqs-usebase64)" : Boolean
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Payload](#cfn-iotevents-detectormodel-sqs-payload): 
-    [Payload](aws-properties-iotevents-detectormodel-payload.md)
+    Payload
   [QueueUrl](#cfn-iotevents-detectormodel-sqs-queueurl): String
   [UseBase64](#cfn-iotevents-detectormodel-sqs-usebase64): Boolean
 ```

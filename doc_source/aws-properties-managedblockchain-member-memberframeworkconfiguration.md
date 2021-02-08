@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MemberFabricConfiguration](#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration)" : [MemberFabricConfiguration](aws-properties-managedblockchain-member-memberfabricconfiguration.md)
+  "[MemberFabricConfiguration](#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration)" : MemberFabricConfiguration
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MemberFabricConfiguration](#cfn-managedblockchain-member-memberframeworkconfiguration-memberfabricconfiguration): 
-    [MemberFabricConfiguration](aws-properties-managedblockchain-member-memberfabricconfiguration.md)
+    MemberFabricConfiguration
 ```
 
 ## Properties<a name="aws-properties-managedblockchain-member-memberframeworkconfiguration-properties"></a>

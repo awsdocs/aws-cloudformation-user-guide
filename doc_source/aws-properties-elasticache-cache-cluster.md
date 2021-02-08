@@ -84,7 +84,7 @@ This parameter is only supported for Memcached clusters\.
 If the `AZMode` and `PreferredAvailabilityZones` are not specified, ElastiCache assumes `single-az` mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cross-az | single-az`  
+*Allowed values*: `cross-az | single-az`  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CacheNodeType`  <a name="cfn-elasticache-cachecluster-cachenodetype"></a>
@@ -92,6 +92,8 @@ The compute and memory capacity of the nodes in the node group \(shard\)\.
 The following node types are supported by ElastiCache\. Generally speaking, the current generation types provide more memory and computational power at lower cost when compared to their equivalent previous generation counterparts\. Changing the CacheNodeType of a Memcached instance is currently not supported\. If you need to scale using Memcached, we recommend forcing a replacement update by changing the `LogicalResourceId` of the resource\.  
 + General purpose:
   + Current generation: 
+
+    **M6g node types:** `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`, `cache.m6g.4xlarge`, `cache.m6g.12xlarge`, `cache.m6g.24xlarge` 
 
     **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
@@ -114,6 +116,8 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + Memory optimized:
   + Current generation: 
 
+    **R6g node types:** `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`, `cache.r6g.4xlarge`, `cache.r6g.12xlarge`, `cache.r6g.24xlarge`
+
     **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
     **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge`
@@ -122,6 +126,7 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
 
     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
+For region availability, see [Supported Node Types by AWS Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)  
 **Additional node type info**  
 + All current generation instance types are created in Amazon VPC by default\.
 + Redis append\-only files \(AOF\) are not supported for T1 or T2 instances\.
@@ -147,7 +152,7 @@ Use this parameter only when you are creating a cluster outside of an Amazon Vir
 `CacheSubnetGroupName`  <a name="cfn-elasticache-cachecluster-cachesubnetgroupname"></a>
 The name of the subnet group to be used for the cluster\.  
 Use this parameter only when you are creating a cluster in an Amazon Virtual Private Cloud \(Amazon VPC\)\.  
-If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [Subnets and Subnet Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.html)\.
+If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -195,7 +200,7 @@ The port number on which each of the cache nodes accepts connections\.
 
 `PreferredAvailabilityZone`  <a name="cfn-elasticache-cachecluster-preferredavailabilityzone"></a>
 The EC2 Availability Zone in which the cluster is created\.  
-All nodes belonging to this Memcached cluster are placed in the preferred Availability Zone\. If you want to create your nodes across multiple Availability Zones, use `PreferredAvailabilityZones`\.  
+All nodes belonging to this cluster are placed in the preferred Availability Zone\. If you want to create your nodes across multiple Availability Zones, use `PreferredAvailabilityZones`\.  
 Default: System chosen Availability Zone\.  
 *Required*: No  
 *Type*: String  
@@ -273,7 +278,7 @@ Use this parameter only when you are creating a cluster in an Amazon Virtual Pri
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-cache-cluster-return-values"></a>
+## Return values<a name="aws-properties-elasticache-cache-cluster-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-cache-cluster-return-values-ref"></a>
 
@@ -287,6 +292,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+
+
 #### <a name="aws-properties-elasticache-cache-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `ConfigurationEndpoint.Address`  <a name="ConfigurationEndpoint.Address-fn::getatt"></a>
@@ -294,7 +301,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `ConfigurationEndpoint.Port`  <a name="ConfigurationEndpoint.Port-fn::getatt"></a>
-The port number of the configuration endpoint for the Memcached cache cluster\.
+The port number of the configuration endpoint for the Memcached cache cluster\.  
+Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `RedisEndpoint.Address`  <a name="RedisEndpoint.Address-fn::getatt"></a>
 The DNS address of the configuration endpoint for the Redis cache cluster\.
@@ -303,6 +311,8 @@ The DNS address of the configuration endpoint for the Redis cache cluster\.
 The port number of the configuration endpoint for the Redis cache cluster\.
 
 ## Examples<a name="aws-properties-elasticache-cache-cluster--examples"></a>
+
+
 
 ### Cluster in a Default VPC<a name="aws-properties-elasticache-cache-cluster--examples--Cluster_in_a_Default_VPC"></a>
 
@@ -418,6 +428,6 @@ myCacheCluster:
       - us-west-2b
 ```
 
-## See Also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
+## See also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
 + [CreateCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 
 + [ModifyCacheParameterGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_ModifyCacheParameterGroup.html) in the * Amazon ElastiCache API Reference Guide* 

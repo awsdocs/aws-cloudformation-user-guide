@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnEnter](#cfn-iotevents-detectormodel-state-onenter)" : [OnEnter](aws-properties-iotevents-detectormodel-onenter.md),
-  "[OnExit](#cfn-iotevents-detectormodel-state-onexit)" : [OnExit](aws-properties-iotevents-detectormodel-onexit.md),
-  "[OnInput](#cfn-iotevents-detectormodel-state-oninput)" : [OnInput](aws-properties-iotevents-detectormodel-oninput.md),
+  "[OnEnter](#cfn-iotevents-detectormodel-state-onenter)" : OnEnter,
+  "[OnExit](#cfn-iotevents-detectormodel-state-onexit)" : OnExit,
+  "[OnInput](#cfn-iotevents-detectormodel-state-oninput)" : OnInput,
   "[StateName](#cfn-iotevents-detectormodel-state-statename)" : String
 }
 ```
@@ -21,11 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnEnter](#cfn-iotevents-detectormodel-state-onenter): 
-    [OnEnter](aws-properties-iotevents-detectormodel-onenter.md)
+    OnEnter
   [OnExit](#cfn-iotevents-detectormodel-state-onexit): 
-    [OnExit](aws-properties-iotevents-detectormodel-onexit.md)
+    OnExit
   [OnInput](#cfn-iotevents-detectormodel-state-oninput): 
-    [OnInput](aws-properties-iotevents-detectormodel-oninput.md)
+    OnInput
   [StateName](#cfn-iotevents-detectormodel-state-statename): String
 ```
 

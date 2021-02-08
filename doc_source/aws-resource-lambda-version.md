@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CodeSha256](#cfn-lambda-version-codesha256)" : String,
       "[Description](#cfn-lambda-version-description)" : String,
       "[FunctionName](#cfn-lambda-version-functionname)" : String,
-      "[ProvisionedConcurrencyConfig](#cfn-lambda-version-provisionedconcurrencyconfig)" : [ProvisionedConcurrencyConfiguration](aws-properties-lambda-version-provisionedconcurrencyconfiguration.md)
+      "[ProvisionedConcurrencyConfig](#cfn-lambda-version-provisionedconcurrencyconfig)" : ProvisionedConcurrencyConfiguration
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [Description](#cfn-lambda-version-description): String
   [FunctionName](#cfn-lambda-version-functionname): String
   [ProvisionedConcurrencyConfig](#cfn-lambda-version-provisionedconcurrencyconfig): 
-    [ProvisionedConcurrencyConfiguration](aws-properties-lambda-version-provisionedconcurrencyconfiguration.md)
+    ProvisionedConcurrencyConfiguration
 ```
 
 ## Properties<a name="aws-resource-lambda-version-properties"></a>
@@ -69,7 +69,7 @@ Specifies a provisioned concurrency configuration for a function's version\. Upd
 *Type*: [ProvisionedConcurrencyConfiguration](aws-properties-lambda-version-provisionedconcurrencyconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-lambda-version-return-values"></a>
+## Return values<a name="aws-resource-lambda-version-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-version-return-values-ref"></a>
 
@@ -89,6 +89,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The version number\.
 
 ## Examples<a name="aws-resource-lambda-version--examples"></a>
+
+
 
 ### Function Version<a name="aws-resource-lambda-version--examples--Function_Version"></a>
 
@@ -118,7 +120,7 @@ Resources:
         Mode: Active
   version:
     Type: AWS::Lambda::Version
-    Properties: 
+    Properties:
       FunctionName: !Ref function
       Description: v1
       ProvisionedConcurrencyConfig:

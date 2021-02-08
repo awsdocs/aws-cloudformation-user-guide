@@ -1,4 +1,4 @@
-# Amazon SQS Template Snippets<a name="scenario-sqs-queue"></a>
+# Amazon SQS template snippets<a name="scenario-sqs-queue"></a>
 
 This example shows an Amazon SQS queue\.
 

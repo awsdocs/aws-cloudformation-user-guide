@@ -23,7 +23,7 @@ Type: AWS::Detective::Graph
 Properties:
 ```
 
-## Return Values<a name="aws-resource-detective-graph-return-values"></a>
+## Return values<a name="aws-resource-detective-graph-return-values"></a>
 
 ### Ref<a name="aws-resource-detective-graph-return-values-ref"></a>
 

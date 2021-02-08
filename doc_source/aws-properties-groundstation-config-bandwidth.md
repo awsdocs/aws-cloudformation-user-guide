@@ -31,7 +31,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-groundstation-config-frequency-value"></a>
- The value of the bandwidth\.   
+ The value of the bandwidth\. AWS Ground Station currently has the following bandwidth limitations:   
++ For `AntennaDownlinkDemodDecodeconfig`, valid values are between 125 kHz to 650 MHz\.
++ For `AntennaDownlinkconfig`, valid values are between 10 kHz to 54 MHz\.
++ For `AntennaUplinkConfig`, valid values are between 10 kHz to 54 MHz\.
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

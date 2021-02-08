@@ -75,7 +75,7 @@ The user\-defined attributes that are assigned to every finding that is generate
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-inspector-assessmenttemplate-return-values"></a>
+## Return values<a name="aws-resource-inspector-assessmenttemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-assessmenttemplate-return-values-ref"></a>
 
@@ -95,6 +95,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) that specifies the assessment template that is created\.
 
 ## Examples<a name="aws-resource-inspector-assessmenttemplate--examples"></a>
+
+
 
 ### Declaring an Amazon Inspector Assessment Template Resource<a name="aws-resource-inspector-assessmenttemplate--examples--Declaring_an_Amazon_Inspector_Assessment_Template_Resource"></a>
 

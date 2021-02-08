@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateSigningRequest](#cfn-acmpca-certificate-certificatesigningrequest)" : String,
       "[SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm)" : String,
       "[TemplateArn](#cfn-acmpca-certificate-templatearn)" : String,
-      "[Validity](#cfn-acmpca-certificate-validity)" : [Validity](aws-properties-acmpca-certificate-validity.md)
+      "[Validity](#cfn-acmpca-certificate-validity)" : Validity
     }
 }
 ```
@@ -31,7 +31,7 @@ Properties:
   [SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm): String
   [TemplateArn](#cfn-acmpca-certificate-templatearn): String
   [Validity](#cfn-acmpca-certificate-validity): 
-    [Validity](aws-properties-acmpca-certificate-validity.md)
+    Validity
 ```
 
 ## Properties<a name="aws-resource-acmpca-certificate-properties"></a>
@@ -50,10 +50,10 @@ The certificate signing request \(CSR\) for the certificate\.
 
 `SigningAlgorithm`  <a name="cfn-acmpca-certificate-signingalgorithm"></a>
 The name of the algorithm that will be used to sign the certificate to be issued\.   
-This parameter should not be confused with the `SigningAlgorithm` parameter used to sign a CSR\.  
+This parameter should not be confused with the `SigningAlgorithm` parameter used to sign a CSR in the `CreateCertificateAuthority` action\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
+*Allowed values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TemplateArn`  <a name="cfn-acmpca-certificate-templatearn"></a>
@@ -68,7 +68,7 @@ The period of time during which the certificate will be valid\.
 *Type*: [Validity](aws-properties-acmpca-certificate-validity.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-acmpca-certificate-return-values"></a>
+## Return values<a name="aws-resource-acmpca-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-acmpca-certificate-return-values-ref"></a>
 

@@ -33,7 +33,9 @@ The name of the AWS IoT Events input\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageId`  <a name="cfn-iot-topicrule-ioteventsaction-messageid"></a>
-\[Optional\] Use this to ensure that only one input \(message\) with a given messageId will be processed by an AWS IoT Events detector\.  
+The ID of the message\. The default `messageId` is a new UUID value\.  
+When `batchMode` is `true`, you can't specify a `messageId`\-\-a new UUID value will be assigned\.  
+Assign a value to this property to ensure that only one input \(message\) with a given `messageId` will be processed by an AWS IoT Events detector\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

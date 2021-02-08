@@ -1,4 +1,4 @@
-# Working with Nested Stacks<a name="using-cfn-nested-stacks"></a>
+# Working with nested stacks<a name="using-cfn-nested-stacks"></a>
 
 *Nested stacks* are stacks created as part of other stacks\. You create a nested stack within another stack by using the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource\.
 
@@ -16,12 +16,12 @@ Nested stacks can themselves contain other nested stacks, resulting in a hierarc
 Using nested stacks to declare common components is considered a [best practice](best-practices.md#nested)\. 
 
 Certain stack operations, such as stack updates, should be initiated from the root stack rather than performed directly on nested stacks themselves\. Also, in some cases, nested stacks affect how stack operations are performed\. For more information, refer to the following topics: 
-+ [Use Nested Stacks to Reuse Common Template Patterns](best-practices.md#nested)
-+ [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)
-+ [Update Behaviors of Stack Resources](using-cfn-updating-stacks-update-behaviors.md)
-+ [Exporting Stack Output Values vs\. Using Nested Stacks](using-cfn-stack-exports.md#output-vs-nested)
++ [Use nested stacks to reuse common template patterns](best-practices.md#nested)
++ [Protecting a stack from being deleted](using-cfn-protect-stacks.md)
++ [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)
++ [Exporting stack output values vs\. using nested stacks](using-cfn-stack-exports.md#output-vs-nested)
 + [Using `ResourcesToSkip` to recover a nested stacks hierarchy](using-cfn-updating-stacks-continueupdaterollback.md#nested-stacks)
-+ [Nested Stacks are Stuck in `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`, `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`, or `UPDATE_ROLLBACK_IN_PROGRESS`](troubleshooting.md#troubleshooting-errors-nested-stacks-are-stuck)
++ [Nested stacks are stuck in `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`, `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`, or `UPDATE_ROLLBACK_IN_PROGRESS`](troubleshooting.md#troubleshooting-errors-nested-stacks-are-stuck)
 
 **To view the root stack of a nested stack**
 
@@ -40,4 +40,5 @@ Certain stack operations, such as stack updates, should be initiated from the ro
    Look for resources of type **AWS::CloudFormation::Stack**\.
 
 **Topics**
-+ [Nesting an Existing Stack](resource-import-nested-stacks.md)
++ [Change sets for nested stacks](change-sets-for-nested-stacks.md)
++ [Nesting an existing stack](resource-import-nested-stacks.md)

@@ -36,7 +36,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
+## Return values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-resourcegroup-return-values-ref"></a>
 
@@ -56,6 +56,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) that specifies the resource group that is created\.
 
 ## Examples<a name="aws-resource-inspector-resourcegroup--examples"></a>
+
+
 
 ### Declaring an Amazon Inspector Resource Group Resource<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource"></a>
 

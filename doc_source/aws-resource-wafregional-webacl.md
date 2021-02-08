@@ -14,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::WebACL",
   "Properties" : {
-      "[DefaultAction](#cfn-wafregional-webacl-defaultaction)" : [Action](aws-properties-wafregional-webacl-action.md),
+      "[DefaultAction](#cfn-wafregional-webacl-defaultaction)" : Action,
       "[MetricName](#cfn-wafregional-webacl-metricname)" : String,
       "[Name](#cfn-wafregional-webacl-name)" : String,
-      "[Rules](#cfn-wafregional-webacl-rules)" : [ [Rule](aws-properties-wafregional-webacl-rule.md), ... ]
+      "[Rules](#cfn-wafregional-webacl-rules)" : [ Rule, ... ]
     }
 }
 ```
@@ -28,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::WebACL
 Properties: 
   [DefaultAction](#cfn-wafregional-webacl-defaultaction): 
-    [Action](aws-properties-wafregional-webacl-action.md)
+    Action
   [MetricName](#cfn-wafregional-webacl-metricname): String
   [Name](#cfn-wafregional-webacl-name): String
   [Rules](#cfn-wafregional-webacl-rules): 
-    - [Rule](aws-properties-wafregional-webacl-rule.md)
+    - Rule
 ```
 
 ## Properties<a name="aws-resource-wafregional-webacl-properties"></a>
@@ -67,7 +67,7 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 *Type*: List of [Rule](aws-properties-wafregional-webacl-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-webacl-return-values"></a>
+## Return values<a name="aws-resource-wafregional-webacl-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-webacl-return-values-ref"></a>
 
@@ -76,6 +76,8 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-webacl--examples"></a>
+
+
 
 ### Create a Web ACL<a name="aws-resource-wafregional-webacl--examples--Create_a_Web_ACL"></a>
 

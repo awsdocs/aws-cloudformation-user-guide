@@ -11,16 +11,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns)" : [ String, ... ],
-  "[Columns](#cfn-glue-partition-storagedescriptor-columns)" : [ [Column](aws-properties-glue-partition-column.md), ... ],
+  "[Columns](#cfn-glue-partition-storagedescriptor-columns)" : [ Column, ... ],
   "[Compressed](#cfn-glue-partition-storagedescriptor-compressed)" : Boolean,
   "[InputFormat](#cfn-glue-partition-storagedescriptor-inputformat)" : String,
   "[Location](#cfn-glue-partition-storagedescriptor-location)" : String,
   "[NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets)" : Integer,
   "[OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat)" : String,
   "[Parameters](#cfn-glue-partition-storagedescriptor-parameters)" : Json,
-  "[SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo)" : [SerdeInfo](aws-properties-glue-partition-serdeinfo.md),
-  "[SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo)" : [SkewedInfo](aws-properties-glue-partition-skewedinfo.md),
-  "[SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns)" : [ [Order](aws-properties-glue-partition-order.md), ... ],
+  "[SchemaReference](#cfn-glue-partition-storagedescriptor-schemareference)" : SchemaReference,
+  "[SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo)" : SerdeInfo,
+  "[SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo)" : SkewedInfo,
+  "[SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns)" : [ Order, ... ],
   "[StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories)" : Boolean
 }
 ```
@@ -31,19 +32,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BucketColumns](#cfn-glue-partition-storagedescriptor-bucketcolumns): 
     - String
   [Columns](#cfn-glue-partition-storagedescriptor-columns): 
-    - [Column](aws-properties-glue-partition-column.md)
+    - Column
   [Compressed](#cfn-glue-partition-storagedescriptor-compressed): Boolean
   [InputFormat](#cfn-glue-partition-storagedescriptor-inputformat): String
   [Location](#cfn-glue-partition-storagedescriptor-location): String
   [NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets): Integer
   [OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat): String
   [Parameters](#cfn-glue-partition-storagedescriptor-parameters): Json
+  [SchemaReference](#cfn-glue-partition-storagedescriptor-schemareference): 
+    SchemaReference
   [SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo): 
-    [SerdeInfo](aws-properties-glue-partition-serdeinfo.md)
+    SerdeInfo
   [SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo): 
-    [SkewedInfo](aws-properties-glue-partition-skewedinfo.md)
+    SkewedInfo
   [SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns): 
-    - [Order](aws-properties-glue-partition-order.md)
+    - Order
   [StoredAsSubDirectories](#cfn-glue-partition-storagedescriptor-storedassubdirectories): Boolean
 ```
 
@@ -96,6 +99,13 @@ The output format: `SequenceFileOutputFormat` \(binary\), or `IgnoreKeyTextOutpu
 The user\-supplied properties in key\-value form\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SchemaReference`  <a name="cfn-glue-partition-storagedescriptor-schemareference"></a>
+An object that references a schema stored in the AWS Glue Schema Registry\.  
+When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference\.  
+*Required*: No  
+*Type*: [SchemaReference](aws-properties-glue-partition-schemareference.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SerdeInfo`  <a name="cfn-glue-partition-storagedescriptor-serdeinfo"></a>

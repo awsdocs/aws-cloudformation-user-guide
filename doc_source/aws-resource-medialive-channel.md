@@ -14,11 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaLive::Channel",
   "Properties" : {
+      "[CdiInputSpecification](#cfn-medialive-channel-cdiinputspecification)" : CdiInputSpecification,
       "[ChannelClass](#cfn-medialive-channel-channelclass)" : String,
-      "[Destinations](#cfn-medialive-channel-destinations)" : [ [OutputDestination](aws-properties-medialive-channel-outputdestination.md), ... ],
-      "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : Json,
-      "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ [InputAttachment](aws-properties-medialive-channel-inputattachment.md), ... ],
-      "[InputSpecification](#cfn-medialive-channel-inputspecification)" : [InputSpecification](aws-properties-medialive-channel-inputspecification.md),
+      "[Destinations](#cfn-medialive-channel-destinations)" : [ OutputDestination, ... ],
+      "[EncoderSettings](#cfn-medialive-channel-encodersettings)" : EncoderSettings,
+      "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ InputAttachment, ... ],
+      "[InputSpecification](#cfn-medialive-channel-inputspecification)" : InputSpecification,
       "[LogLevel](#cfn-medialive-channel-loglevel)" : String,
       "[Name](#cfn-medialive-channel-name)" : String,
       "[RoleArn](#cfn-medialive-channel-rolearn)" : String,
@@ -32,14 +33,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::MediaLive::Channel
 Properties: 
+  [CdiInputSpecification](#cfn-medialive-channel-cdiinputspecification): 
+    CdiInputSpecification
   [ChannelClass](#cfn-medialive-channel-channelclass): String
   [Destinations](#cfn-medialive-channel-destinations): 
-    - [OutputDestination](aws-properties-medialive-channel-outputdestination.md)
-  [EncoderSettings](#cfn-medialive-channel-encodersettings): Json
+    - OutputDestination
+  [EncoderSettings](#cfn-medialive-channel-encodersettings): 
+    EncoderSettings
   [InputAttachments](#cfn-medialive-channel-inputattachments): 
-    - [InputAttachment](aws-properties-medialive-channel-inputattachment.md)
+    - InputAttachment
   [InputSpecification](#cfn-medialive-channel-inputspecification): 
-    [InputSpecification](aws-properties-medialive-channel-inputspecification.md)
+    InputSpecification
   [LogLevel](#cfn-medialive-channel-loglevel): String
   [Name](#cfn-medialive-channel-name): String
   [RoleArn](#cfn-medialive-channel-rolearn): String
@@ -47,6 +51,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-medialive-channel-properties"></a>
+
+`CdiInputSpecification`  <a name="cfn-medialive-channel-cdiinputspecification"></a>
+Specification of CDI inputs for this channel  
+*Required*: No  
+*Type*: [CdiInputSpecification](aws-properties-medialive-channel-cdiinputspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChannelClass`  <a name="cfn-medialive-channel-channelclass"></a>
 The class for this channel\. For a channel with two pipelines, the class is STANDARD\. For a channel with one pipeline, the class is SINGLE\_PIPELINE\.  
@@ -63,7 +73,7 @@ The settings that identify the destination for the outputs in this MediaLive out
 `EncoderSettings`  <a name="cfn-medialive-channel-encodersettings"></a>
 The encoding configuration for the output content\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [EncoderSettings](aws-properties-medialive-channel-encodersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputAttachments`  <a name="cfn-medialive-channel-inputattachments"></a>
@@ -102,7 +112,7 @@ A collection of tags for this channel\. Each tag is a key\-value pair\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-medialive-channel-return-values"></a>
+## Return values<a name="aws-resource-medialive-channel-return-values"></a>
 
 ### Ref<a name="aws-resource-medialive-channel-return-values-ref"></a>
 

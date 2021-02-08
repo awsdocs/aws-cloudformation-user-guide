@@ -63,7 +63,7 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-transitgatewayattachment-return-values"></a>
+## Return values<a name="aws-resource-ec2-transitgatewayattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-transitgatewayattachment-return-values-ref"></a>
 
@@ -71,6 +71,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-ec2-transitgatewayattachment--seealso"></a>
+## See also<a name="aws-resource-ec2-transitgatewayattachment--seealso"></a>
 +  [CreateTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*\.
 +  [ModifyTransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGatewayVpcAttachment.html) in the *Amazon EC2 API Reference*
+

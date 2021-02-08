@@ -43,7 +43,7 @@ The ID of the subnet\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values"></a>
+## Return values<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values-ref"></a>
 
@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 Returns the value of this object's [SubnetId](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet-network-acl-assoc.html) property\.
 
 ## Examples<a name="aws-resource-ec2-subnet-network-acl-assoc--examples"></a>
+
+
 
 ### Subnet Network ACL Association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association"></a>
 

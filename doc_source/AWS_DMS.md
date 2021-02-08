@@ -1,6 +1,6 @@
-# DMS Resource Type Reference<a name="AWS_DMS"></a>
+# DMS resource type reference<a name="AWS_DMS"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::DMS::Certificate](aws-resource-dms-certificate.md)
 + [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)
 + [AWS::DMS::EventSubscription](aws-resource-dms-eventsubscription.md)

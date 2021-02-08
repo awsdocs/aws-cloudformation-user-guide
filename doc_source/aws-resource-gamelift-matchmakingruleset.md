@@ -45,7 +45,7 @@ A collection of matchmaking rules, formatted as a JSON string\. Comments are not
 *Maximum*: `65535`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-gamelift-matchmakingruleset-return-values"></a>
+## Return values<a name="aws-resource-gamelift-matchmakingruleset-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-matchmakingruleset-return-values-ref"></a>
 
@@ -111,7 +111,7 @@ Resources:
         }
 ```
 
-## See Also<a name="aws-resource-gamelift-matchmakingruleset--seealso"></a>
+## See also<a name="aws-resource-gamelift-matchmakingruleset--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+ [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/developerguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
++ [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
 +  [ CreateMatchmakingRuleSet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateMatchmakingRuleSet.html) in the *Amazon GameLift API Reference* 

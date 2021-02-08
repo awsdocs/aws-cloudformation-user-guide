@@ -13,17 +13,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::Job",
   "Properties" : {
       "[AllocatedCapacity](#cfn-glue-job-allocatedcapacity)" : Double,
-      "[Command](#cfn-glue-job-command)" : [JobCommand](aws-properties-glue-job-jobcommand.md),
-      "[Connections](#cfn-glue-job-connections)" : [ConnectionsList](aws-properties-glue-job-connectionslist.md),
+      "[Command](#cfn-glue-job-command)" : JobCommand,
+      "[Connections](#cfn-glue-job-connections)" : ConnectionsList,
       "[DefaultArguments](#cfn-glue-job-defaultarguments)" : Json,
       "[Description](#cfn-glue-job-description)" : String,
-      "[ExecutionProperty](#cfn-glue-job-executionproperty)" : [ExecutionProperty](aws-properties-glue-job-executionproperty.md),
+      "[ExecutionProperty](#cfn-glue-job-executionproperty)" : ExecutionProperty,
       "[GlueVersion](#cfn-glue-job-glueversion)" : String,
       "[LogUri](#cfn-glue-job-loguri)" : String,
       "[MaxCapacity](#cfn-glue-job-maxcapacity)" : Double,
       "[MaxRetries](#cfn-glue-job-maxretries)" : Double,
       "[Name](#cfn-glue-job-name)" : String,
-      "[NotificationProperty](#cfn-glue-job-notificationproperty)" : [NotificationProperty](aws-properties-glue-job-notificationproperty.md),
+      "[NotificationProperty](#cfn-glue-job-notificationproperty)" : NotificationProperty,
       "[NumberOfWorkers](#cfn-glue-job-numberofworkers)" : Integer,
       "[Role](#cfn-glue-job-role)" : String,
       "[SecurityConfiguration](#cfn-glue-job-securityconfiguration)" : String,
@@ -41,20 +41,20 @@ Type: AWS::Glue::Job
 Properties: 
   [AllocatedCapacity](#cfn-glue-job-allocatedcapacity): Double
   [Command](#cfn-glue-job-command): 
-    [JobCommand](aws-properties-glue-job-jobcommand.md)
+    JobCommand
   [Connections](#cfn-glue-job-connections): 
-    [ConnectionsList](aws-properties-glue-job-connectionslist.md)
+    ConnectionsList
   [DefaultArguments](#cfn-glue-job-defaultarguments): Json
   [Description](#cfn-glue-job-description): String
   [ExecutionProperty](#cfn-glue-job-executionproperty): 
-    [ExecutionProperty](aws-properties-glue-job-executionproperty.md)
+    ExecutionProperty
   [GlueVersion](#cfn-glue-job-glueversion): String
   [LogUri](#cfn-glue-job-loguri): String
   [MaxCapacity](#cfn-glue-job-maxcapacity): Double
   [MaxRetries](#cfn-glue-job-maxretries): Double
   [Name](#cfn-glue-job-name): String
   [NotificationProperty](#cfn-glue-job-notificationproperty): 
-    [NotificationProperty](aws-properties-glue-job-notificationproperty.md)
+    NotificationProperty
   [NumberOfWorkers](#cfn-glue-job-numberofworkers): Integer
   [Role](#cfn-glue-job-role): String
   [SecurityConfiguration](#cfn-glue-job-securityconfiguration): String
@@ -186,7 +186,7 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-job-return-values"></a>
+## Return values<a name="aws-resource-glue-job-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-job-return-values-ref"></a>
 
@@ -195,6 +195,8 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-job--examples"></a>
+
+
 
 ### <a name="aws-resource-glue-job--examples--"></a>
 

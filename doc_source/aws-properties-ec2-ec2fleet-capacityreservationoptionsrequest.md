@@ -5,7 +5,7 @@ Describes the strategy for using unused Capacity Reservations for fulfilling On\
 **Note**  
 This strategy can only be used if the EC2 Fleet is of type `instant`\.
 
-For more information about Capacity Reservations, see [On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon Elastic Compute Cloud User Guide*\. For examples of using Capacity Reservations in an EC2 Fleet, see [EC2 Fleet Example Configurations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-examples.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+For more information about Capacity Reservations, see [On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon EC2 User Guide*\. For examples of using Capacity Reservations in an EC2 Fleet, see [EC2 Fleet example configurations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-examples.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest-syntax"></a>
 
@@ -33,5 +33,5 @@ If you specify `use-capacity-reservations-first`, the fleet uses unused Capacity
 If you do not specify a value, the fleet fulfils the On\-Demand capacity according to the chosen On\-Demand allocation strategy\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `use-capacity-reservations-first`  
+*Allowed values*: `use-capacity-reservations-first`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

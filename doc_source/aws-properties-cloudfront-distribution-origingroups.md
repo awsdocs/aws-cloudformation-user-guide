@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Items](#cfn-cloudfront-distribution-origingroups-items)" : [ [OriginGroup](aws-properties-cloudfront-distribution-origingroup.md), ... ],
+  "[Items](#cfn-cloudfront-distribution-origingroups-items)" : [ OriginGroup, ... ],
   "[Quantity](#cfn-cloudfront-distribution-origingroups-quantity)" : Integer
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Items](#cfn-cloudfront-distribution-origingroups-items): 
-    - [OriginGroup](aws-properties-cloudfront-distribution-origingroup.md)
+    - OriginGroup
   [Quantity](#cfn-cloudfront-distribution-origingroups-quantity): Integer
 ```
 

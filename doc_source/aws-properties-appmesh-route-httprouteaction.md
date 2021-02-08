@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets)" : [ [WeightedTarget](aws-properties-appmesh-route-weightedtarget.md), ... ]
+  "[WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets)" : [ WeightedTarget, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets): 
-    - [WeightedTarget](aws-properties-appmesh-route-weightedtarget.md)
+    - WeightedTarget
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-httprouteaction-properties"></a>

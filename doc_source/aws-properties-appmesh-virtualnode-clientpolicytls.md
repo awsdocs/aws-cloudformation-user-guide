@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Enforce](#cfn-appmesh-virtualnode-clientpolicytls-enforce)" : Boolean,
   "[Ports](#cfn-appmesh-virtualnode-clientpolicytls-ports)" : [ Integer, ... ],
-  "[Validation](#cfn-appmesh-virtualnode-clientpolicytls-validation)" : [TlsValidationContext](aws-properties-appmesh-virtualnode-tlsvalidationcontext.md)
+  "[Validation](#cfn-appmesh-virtualnode-clientpolicytls-validation)" : TlsValidationContext
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Ports](#cfn-appmesh-virtualnode-clientpolicytls-ports): 
     - Integer
   [Validation](#cfn-appmesh-virtualnode-clientpolicytls-validation): 
-    [TlsValidationContext](aws-properties-appmesh-virtualnode-tlsvalidationcontext.md)
+    TlsValidationContext
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-clientpolicytls-properties"></a>

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::GeoMatchSet",
   "Properties" : {
-      "[GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints)" : [ [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md), ... ],
+      "[GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints)" : [ GeoMatchConstraint, ... ],
       "[Name](#cfn-wafregional-geomatchset-name)" : String
     }
 }
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::GeoMatchSet
 Properties: 
   [GeoMatchConstraints](#cfn-wafregional-geomatchset-geomatchconstraints): 
-    - [GeoMatchConstraint](aws-properties-wafregional-geomatchset-geomatchconstraint.md)
+    - GeoMatchConstraint
   [Name](#cfn-wafregional-geomatchset-name): String
 ```
 
@@ -49,7 +49,7 @@ A friendly name or description of the [AWS::WAFRegional::GeoMatchSet](#aws-resou
 *Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafregional-geomatchset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-geomatchset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-geomatchset-return-values-ref"></a>
 
@@ -58,6 +58,8 @@ A friendly name or description of the [AWS::WAFRegional::GeoMatchSet](#aws-resou
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-geomatchset--examples"></a>
+
+
 
 ### Define Geographic Constraints<a name="aws-resource-wafregional-geomatchset--examples--Define_Geographic_Constraints"></a>
 

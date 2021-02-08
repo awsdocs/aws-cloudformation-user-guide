@@ -14,11 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-imagebuilder-imagepipeline-description)" : String,
       "[DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn)" : String,
+      "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn)" : String,
-      "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : [ImageTestsConfiguration](aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.md),
+      "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn)" : String,
       "[Name](#cfn-imagebuilder-imagepipeline-name)" : String,
-      "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : [Schedule](aws-properties-imagebuilder-imagepipeline-schedule.md),
+      "[Schedule](#cfn-imagebuilder-imagepipeline-schedule)" : Schedule,
       "[Status](#cfn-imagebuilder-imagepipeline-status)" : String,
       "[Tags](#cfn-imagebuilder-imagepipeline-tags)" : {Key : Value, ...}
     }
@@ -32,13 +33,14 @@ Type: AWS::ImageBuilder::ImagePipeline
 Properties: 
   [Description](#cfn-imagebuilder-imagepipeline-description): String
   [DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn): String
+  [EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn): String
   [ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration): 
-    [ImageTestsConfiguration](aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.md)
+    ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn): String
   [Name](#cfn-imagebuilder-imagepipeline-name): String
   [Schedule](#cfn-imagebuilder-imagepipeline-schedule): 
-    [Schedule](aws-properties-imagebuilder-imagepipeline-schedule.md)
+    Schedule
   [Status](#cfn-imagebuilder-imagepipeline-status): String
   [Tags](#cfn-imagebuilder-imagepipeline-tags): 
     Key : Value
@@ -58,6 +60,12 @@ The description of this image pipeline\.
 The Amazon Resource Name \(ARN\) of the distribution configuration associated with this image pipeline\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled"></a>
+ Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageRecipeArn`  <a name="cfn-imagebuilder-imagepipeline-imagerecipearn"></a>
@@ -95,7 +103,7 @@ The schedule of the image pipeline\. A schedule configures how often and when a 
 The status of the image pipeline\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-imagebuilder-imagepipeline-tags"></a>
@@ -104,7 +112,7 @@ The tags of this image pipeline\.
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-imagebuilder-imagepipeline-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-imagepipeline-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-imagepipeline-return-values-ref"></a>
 
@@ -124,6 +132,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
 
 ## Examples<a name="aws-resource-imagebuilder-imagepipeline--examples"></a>
+
+
 
 ### Create an image pipeline<a name="aws-resource-imagebuilder-imagepipeline--examples--Create_an_image_pipeline"></a>
 

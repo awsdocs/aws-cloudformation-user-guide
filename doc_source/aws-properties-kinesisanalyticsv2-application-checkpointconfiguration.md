@@ -50,7 +50,7 @@ If this value is set to `DEFAULT`, the application will use the following values
 +  **MinPauseBetweenCheckpoints:** 5000
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CUSTOM | DEFAULT`  
+*Allowed values*: `CUSTOM | DEFAULT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinPauseBetweenCheckpoints`  <a name="cfn-kinesisanalyticsv2-application-checkpointconfiguration-minpausebetweencheckpoints"></a>
@@ -60,5 +60,6 @@ If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application wil
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration--seealso"></a>
 +  [CheckpointConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CheckpointConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

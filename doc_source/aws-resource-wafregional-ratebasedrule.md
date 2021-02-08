@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::RateBasedRule",
   "Properties" : {
-      "[MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates)" : [ [Predicate](aws-properties-wafregional-ratebasedrule-predicate.md), ... ],
+      "[MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates)" : [ Predicate, ... ],
       "[MetricName](#cfn-wafregional-ratebasedrule-metricname)" : String,
       "[Name](#cfn-wafregional-ratebasedrule-name)" : String,
       "[RateKey](#cfn-wafregional-ratebasedrule-ratekey)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::RateBasedRule
 Properties: 
   [MatchPredicates](#cfn-wafregional-ratebasedrule-matchpredicates): 
-    - [Predicate](aws-properties-wafregional-ratebasedrule-predicate.md)
+    - Predicate
   [MetricName](#cfn-wafregional-ratebasedrule-metricname): String
   [Name](#cfn-wafregional-ratebasedrule-name): String
   [RateKey](#cfn-wafregional-ratebasedrule-ratekey): String
@@ -72,7 +72,7 @@ A friendly name or description for a `RateBasedRule`\. You can't change the name
 The field that AWS WAF uses to determine if requests are likely arriving from single source and thus subject to rate monitoring\. The only valid value for `RateKey` is `IP`\. `IP` indicates that requests arriving from the same IP address are subject to the `RateLimit` that is specified in the `RateBasedRule`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `IP`  
+*Allowed values*: `IP`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RateLimit`  <a name="cfn-wafregional-ratebasedrule-ratelimit"></a>
@@ -81,7 +81,7 @@ The maximum number of requests, which have an identical value in the field speci
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-ratebasedrule-return-values"></a>
+## Return values<a name="aws-resource-wafregional-ratebasedrule-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-ratebasedrule-return-values-ref"></a>
 
@@ -90,6 +90,8 @@ The maximum number of requests, which have an identical value in the field speci
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-ratebasedrule--examples"></a>
+
+
 
 ### Associate an IPSet with a Rate\-Based Rule<a name="aws-resource-wafregional-ratebasedrule--examples--Associate_an_IPSet_with_a_Rate-Based_Rule"></a>
 

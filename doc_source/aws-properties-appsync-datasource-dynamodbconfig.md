@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AwsRegion](#cfn-appsync-datasource-dynamodbconfig-awsregion)" : String,
-  "[DeltaSyncConfig](#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig)" : [DeltaSyncConfig](aws-properties-appsync-datasource-deltasyncconfig.md),
+  "[DeltaSyncConfig](#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig)" : DeltaSyncConfig,
   "[TableName](#cfn-appsync-datasource-dynamodbconfig-tablename)" : String,
   "[UseCallerCredentials](#cfn-appsync-datasource-dynamodbconfig-usecallercredentials)" : Boolean,
   "[Versioned](#cfn-appsync-datasource-dynamodbconfig-versioned)" : Boolean
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AwsRegion](#cfn-appsync-datasource-dynamodbconfig-awsregion): String
   [DeltaSyncConfig](#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig): 
-    [DeltaSyncConfig](aws-properties-appsync-datasource-deltasyncconfig.md)
+    DeltaSyncConfig
   [TableName](#cfn-appsync-datasource-dynamodbconfig-tablename): String
   [UseCallerCredentials](#cfn-appsync-datasource-dynamodbconfig-usecallercredentials): Boolean
   [Versioned](#cfn-appsync-datasource-dynamodbconfig-versioned): Boolean

@@ -11,16 +11,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketColumns](#cfn-glue-table-storagedescriptor-bucketcolumns)" : [ String, ... ],
-  "[Columns](#cfn-glue-table-storagedescriptor-columns)" : [ [Column](aws-properties-glue-table-column.md), ... ],
+  "[Columns](#cfn-glue-table-storagedescriptor-columns)" : [ Column, ... ],
   "[Compressed](#cfn-glue-table-storagedescriptor-compressed)" : Boolean,
   "[InputFormat](#cfn-glue-table-storagedescriptor-inputformat)" : String,
   "[Location](#cfn-glue-table-storagedescriptor-location)" : String,
   "[NumberOfBuckets](#cfn-glue-table-storagedescriptor-numberofbuckets)" : Integer,
   "[OutputFormat](#cfn-glue-table-storagedescriptor-outputformat)" : String,
   "[Parameters](#cfn-glue-table-storagedescriptor-parameters)" : Json,
-  "[SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo)" : [SerdeInfo](aws-properties-glue-table-serdeinfo.md),
-  "[SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo)" : [SkewedInfo](aws-properties-glue-table-skewedinfo.md),
-  "[SortColumns](#cfn-glue-table-storagedescriptor-sortcolumns)" : [ [Order](aws-properties-glue-table-order.md), ... ],
+  "[SchemaReference](#cfn-glue-table-storagedescriptor-schemareference)" : SchemaReference,
+  "[SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo)" : SerdeInfo,
+  "[SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo)" : SkewedInfo,
+  "[SortColumns](#cfn-glue-table-storagedescriptor-sortcolumns)" : [ Order, ... ],
   "[StoredAsSubDirectories](#cfn-glue-table-storagedescriptor-storedassubdirectories)" : Boolean
 }
 ```
@@ -31,19 +32,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BucketColumns](#cfn-glue-table-storagedescriptor-bucketcolumns): 
     - String
   [Columns](#cfn-glue-table-storagedescriptor-columns): 
-    - [Column](aws-properties-glue-table-column.md)
+    - Column
   [Compressed](#cfn-glue-table-storagedescriptor-compressed): Boolean
   [InputFormat](#cfn-glue-table-storagedescriptor-inputformat): String
   [Location](#cfn-glue-table-storagedescriptor-location): String
   [NumberOfBuckets](#cfn-glue-table-storagedescriptor-numberofbuckets): Integer
   [OutputFormat](#cfn-glue-table-storagedescriptor-outputformat): String
   [Parameters](#cfn-glue-table-storagedescriptor-parameters): Json
+  [SchemaReference](#cfn-glue-table-storagedescriptor-schemareference): 
+    SchemaReference
   [SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo): 
-    [SerdeInfo](aws-properties-glue-table-serdeinfo.md)
+    SerdeInfo
   [SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo): 
-    [SkewedInfo](aws-properties-glue-table-skewedinfo.md)
+    SkewedInfo
   [SortColumns](#cfn-glue-table-storagedescriptor-sortcolumns): 
-    - [Order](aws-properties-glue-table-order.md)
+    - Order
   [StoredAsSubDirectories](#cfn-glue-table-storagedescriptor-storedassubdirectories): Boolean
 ```
 
@@ -97,6 +100,13 @@ The user\-supplied properties in key\-value form\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SchemaReference`  <a name="cfn-glue-table-storagedescriptor-schemareference"></a>
+An object that references a schema stored in the AWS Glue Schema Registry\.  
+When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference\.  
+*Required*: No  
+*Type*: [SchemaReference](aws-properties-glue-table-schemareference.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SerdeInfo`  <a name="cfn-glue-table-storagedescriptor-serdeinfo"></a>
 The serialization/deserialization \(SerDe\) information\.  
 *Required*: No  
@@ -121,5 +131,6 @@ A list specifying the sort order of each bucket in the table\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-table-storagedescriptor--seealso"></a>
+## See also<a name="aws-properties-glue-table-storagedescriptor--seealso"></a>
 +  [StorageDescriptor Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide* 
+

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SES::ConfigurationSetEventDestination",
   "Properties" : {
       "[ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname)" : String,
-      "[EventDestination](#cfn-ses-configurationseteventdestination-eventdestination)" : [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
+      "[EventDestination](#cfn-ses-configurationseteventdestination-eventdestination)" : EventDestination
     }
 }
 ```
@@ -28,7 +28,7 @@ Type: AWS::SES::ConfigurationSetEventDestination
 Properties: 
   [ConfigurationSetName](#cfn-ses-configurationseteventdestination-configurationsetname): String
   [EventDestination](#cfn-ses-configurationseteventdestination-eventdestination): 
-    [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)
+    EventDestination
 ```
 
 ## Properties<a name="aws-resource-ses-configurationseteventdestination-properties"></a>
@@ -50,6 +50,8 @@ The event destination object that you want to apply to the specified configurati
 Specifies an event destination for a configuration set\.
 
 ### <a name="aws-resource-ses-configurationseteventdestination--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ses-configurationseteventdestination--examples----json"></a>
 
@@ -160,7 +162,7 @@ Specifies an event destination for a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ConfigurationSetEventDestination Sample Template'
+Description: AWS SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String
@@ -184,15 +186,13 @@ Parameters:
     Type: String
   DefaultDimensionValue2:
     Type: String
-
 Resources:
   ConfigSet:
-    Type: AWS::SES::ConfigurationSet
+    Type: 'AWS::SES::ConfigurationSet'
     Properties:
       Name: !Ref ConfigSetName
-
   CWEventDestination:
-    Type: AWS::SES::ConfigurationSetEventDestination
+    Type: 'AWS::SES::ConfigurationSetEventDestination'
     Properties:
       ConfigurationSetName: !Ref ConfigSet
       EventDestination:

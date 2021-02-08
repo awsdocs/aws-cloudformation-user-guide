@@ -10,15 +10,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ByteMatchStatement](#cfn-wafv2-webacl-statementthree-bytematchstatement)" : [ByteMatchStatement](aws-properties-wafv2-webacl-bytematchstatement.md),
-  "[GeoMatchStatement](#cfn-wafv2-webacl-statementthree-geomatchstatement)" : [GeoMatchStatement](aws-properties-wafv2-webacl-geomatchstatement.md),
-  "[IPSetReferenceStatement](#cfn-wafv2-webacl-statementthree-ipsetreferencestatement)" : [IPSetReferenceStatement](aws-properties-wafv2-webacl-ipsetreferencestatement.md),
-  "[ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementthree-managedrulegroupstatement)" : [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md),
-  "[RegexPatternSetReferenceStatement](#cfn-wafv2-webacl-statementthree-regexpatternsetreferencestatement)" : [RegexPatternSetReferenceStatement](aws-properties-wafv2-webacl-regexpatternsetreferencestatement.md),
-  "[RuleGroupReferenceStatement](#cfn-wafv2-webacl-statementthree-rulegroupreferencestatement)" : [RuleGroupReferenceStatement](aws-properties-wafv2-webacl-rulegroupreferencestatement.md),
-  "[SizeConstraintStatement](#cfn-wafv2-webacl-statementthree-sizeconstraintstatement)" : [SizeConstraintStatement](aws-properties-wafv2-webacl-sizeconstraintstatement.md),
-  "[SqliMatchStatement](#cfn-wafv2-webacl-statementthree-sqlimatchstatement)" : [SqliMatchStatement](aws-properties-wafv2-webacl-sqlimatchstatement.md),
-  "[XssMatchStatement](#cfn-wafv2-webacl-statementthree-xssmatchstatement)" : [XssMatchStatement](aws-properties-wafv2-webacl-xssmatchstatement.md)
+  "[ByteMatchStatement](#cfn-wafv2-webacl-statementthree-bytematchstatement)" : ByteMatchStatement,
+  "[GeoMatchStatement](#cfn-wafv2-webacl-statementthree-geomatchstatement)" : GeoMatchStatement,
+  "[IPSetReferenceStatement](#cfn-wafv2-webacl-statementthree-ipsetreferencestatement)" : IPSetReferenceStatement,
+  "[ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementthree-managedrulegroupstatement)" : ManagedRuleGroupStatement,
+  "[RegexPatternSetReferenceStatement](#cfn-wafv2-webacl-statementthree-regexpatternsetreferencestatement)" : RegexPatternSetReferenceStatement,
+  "[RuleGroupReferenceStatement](#cfn-wafv2-webacl-statementthree-rulegroupreferencestatement)" : RuleGroupReferenceStatement,
+  "[SizeConstraintStatement](#cfn-wafv2-webacl-statementthree-sizeconstraintstatement)" : SizeConstraintStatement,
+  "[SqliMatchStatement](#cfn-wafv2-webacl-statementthree-sqlimatchstatement)" : SqliMatchStatement,
+  "[XssMatchStatement](#cfn-wafv2-webacl-statementthree-xssmatchstatement)" : XssMatchStatement
 }
 ```
 
@@ -26,23 +26,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ByteMatchStatement](#cfn-wafv2-webacl-statementthree-bytematchstatement): 
-    [ByteMatchStatement](aws-properties-wafv2-webacl-bytematchstatement.md)
+    ByteMatchStatement
   [GeoMatchStatement](#cfn-wafv2-webacl-statementthree-geomatchstatement): 
-    [GeoMatchStatement](aws-properties-wafv2-webacl-geomatchstatement.md)
+    GeoMatchStatement
   [IPSetReferenceStatement](#cfn-wafv2-webacl-statementthree-ipsetreferencestatement): 
-    [IPSetReferenceStatement](aws-properties-wafv2-webacl-ipsetreferencestatement.md)
+    IPSetReferenceStatement
   [ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementthree-managedrulegroupstatement): 
-    [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md)
+    ManagedRuleGroupStatement
   [RegexPatternSetReferenceStatement](#cfn-wafv2-webacl-statementthree-regexpatternsetreferencestatement): 
-    [RegexPatternSetReferenceStatement](aws-properties-wafv2-webacl-regexpatternsetreferencestatement.md)
+    RegexPatternSetReferenceStatement
   [RuleGroupReferenceStatement](#cfn-wafv2-webacl-statementthree-rulegroupreferencestatement): 
-    [RuleGroupReferenceStatement](aws-properties-wafv2-webacl-rulegroupreferencestatement.md)
+    RuleGroupReferenceStatement
   [SizeConstraintStatement](#cfn-wafv2-webacl-statementthree-sizeconstraintstatement): 
-    [SizeConstraintStatement](aws-properties-wafv2-webacl-sizeconstraintstatement.md)
+    SizeConstraintStatement
   [SqliMatchStatement](#cfn-wafv2-webacl-statementthree-sqlimatchstatement): 
-    [SqliMatchStatement](aws-properties-wafv2-webacl-sqlimatchstatement.md)
+    SqliMatchStatement
   [XssMatchStatement](#cfn-wafv2-webacl-statementthree-xssmatchstatement): 
-    [XssMatchStatement](aws-properties-wafv2-webacl-xssmatchstatement.md)
+    XssMatchStatement
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-statementthree-properties"></a>

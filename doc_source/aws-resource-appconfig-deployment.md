@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentStrategyId](#cfn-appconfig-deployment-deploymentstrategyid)" : String,
       "[Description](#cfn-appconfig-deployment-description)" : String,
       "[EnvironmentId](#cfn-appconfig-deployment-environmentid)" : String,
-      "[Tags](#cfn-appconfig-deployment-tags)" : [ [Tags](aws-properties-appconfig-deployment-tags.md), ... ]
+      "[Tags](#cfn-appconfig-deployment-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -51,7 +51,7 @@ Properties:
   [Description](#cfn-appconfig-deployment-description): String
   [EnvironmentId](#cfn-appconfig-deployment-environmentid): String
   [Tags](#cfn-appconfig-deployment-tags): 
-    - [Tags](aws-properties-appconfig-deployment-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-deployment-properties"></a>
@@ -101,16 +101,18 @@ The environment ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-appconfig-deployment-tags"></a>
-Metadata to assign to the deployment\. Tags help organize and categorize your AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
+Metadata to assign to the deployment\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-deployment-tags.md) of [Tags](aws-properties-appconfig-deployment-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-deployment-return-values"></a>
+## Return values<a name="aws-resource-appconfig-deployment-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-deployment-return-values-ref"></a>
 
 ## Examples<a name="aws-resource-appconfig-deployment--examples"></a>
+
+
 
 ### AWS AppConfig Deployment Example<a name="aws-resource-appconfig-deployment--examples--AWS_AppConfig_Deployment_Example"></a>
 
@@ -155,11 +157,6 @@ Resources": {
 Resources:
   BasicDeployment:
     Type: AWS::AppConfig::Deployment
-    DependsOn:
-      - MyTestApplication
-      - MyTestConfigurationProfile
-      - MyTestEnvironment
-      - MyTestDeploymentStrategy
     Properties:
       ApplicationId: !Ref MyTestApplication
       EnvironmentId: !Ref MyTestEnvironment
@@ -171,3 +168,7 @@ Resources:
         - Key: Env
           Value: test
 ```
+
+## See also<a name="aws-resource-appconfig-deployment--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Deploying a configuration](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-deploying.html)

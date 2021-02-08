@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application ParallelismConfiguration<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration"></a>
 
-Describes parameters for how a Flink\-based Kinesis Data Analytics application application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
+Describes parameters for how a Flink\-based Kinesis Data Analytics application executes multiple tasks simultaneously\. For more information about parallelism, see [Parallel Execution](https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html) in the [Apache Flink Documentation](https://ci.apache.org/projects/flink/flink-docs-release-1.8/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration-syntax"></a>
 
@@ -38,7 +38,7 @@ Describes whether the Kinesis Data Analytics service can increase the parallelis
 Describes whether the application uses the default parallelism for the Kinesis Data Analytics service\. You must set this property to `CUSTOM` in order to change your application's `AutoScalingEnabled`, `Parallelism`, or `ParallelismPerKPU` properties\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CUSTOM | DEFAULT`  
+*Allowed values*: `CUSTOM | DEFAULT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parallelism`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelism"></a>
@@ -55,5 +55,6 @@ Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-parallelismconfiguration--seealso"></a>
 +  [ParallelismConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ParallelismConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

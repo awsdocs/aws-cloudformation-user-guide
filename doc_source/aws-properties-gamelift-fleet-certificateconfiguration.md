@@ -26,11 +26,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Indicates whether a TLS/SSL certificate is generated for the fleet\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DISABLED | GENERATED`  
+*Allowed values*: `DISABLED | GENERATED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-gamelift-fleet-certificateconfiguration--seealso"></a>
+## See also<a name="aws-properties-gamelift-fleet-certificateconfiguration--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Deploy a GameLift Fleet for a Custom Game Build](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [Deploy a Realtime Servers Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-fleets-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [CertificateConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CertificateConfiguration.html) in the *Amazon GameLift API Reference* 
+

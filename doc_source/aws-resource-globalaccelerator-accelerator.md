@@ -57,7 +57,7 @@ For more information, see [Bring Your Own IP Addresses \(BYOIP\)](https://docs.a
 The value for the address type must be IPv4\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `IPV4`  
+*Allowed values*: `IPV4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-globalaccelerator-accelerator-name"></a>
@@ -74,7 +74,7 @@ For more information, see [Tagging in AWS Global Accelerator](https://docs.aws.a
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-globalaccelerator-accelerator-return-values"></a>
+## Return values<a name="aws-resource-globalaccelerator-accelerator-return-values"></a>
 
 ### Ref<a name="aws-resource-globalaccelerator-accelerator-return-values-ref"></a>
 
@@ -97,6 +97,8 @@ The ARN of the accelerator, such as `arn:aws:globalaccelerator::012345678901:acc
 The Domain Name System \(DNS\) name that Global Accelerator creates that points to your accelerator's static IP addresses\.
 
 ## Examples<a name="aws-resource-globalaccelerator-accelerator--examples"></a>
+
+
 
 ### Add an accelerator<a name="aws-resource-globalaccelerator-accelerator--examples--Add_an_accelerator"></a>
 

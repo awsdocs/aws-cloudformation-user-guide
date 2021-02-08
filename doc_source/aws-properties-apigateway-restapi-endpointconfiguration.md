@@ -43,5 +43,6 @@ A list of VPC endpoint IDs of an API \([AWS::ApiGateway::RestApi](https://docs.a
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-restapi-endpointconfiguration--seealso"></a>
+## See also<a name="aws-properties-apigateway-restapi-endpointconfiguration--seealso"></a>
 + [RestApi](https://docs.aws.amazon.com/apigateway/api-reference/resource/rest-api/) in the *Amazon API Gateway REST API Reference*
+

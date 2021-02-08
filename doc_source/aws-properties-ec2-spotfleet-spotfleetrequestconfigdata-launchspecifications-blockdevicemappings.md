@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-ec2-spotfleet-blockdevicemapping-devicename)" : String,
-  "[Ebs](#cfn-ec2-spotfleet-blockdevicemapping-ebs)" : [EbsBlockDevice](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.md),
+  "[Ebs](#cfn-ec2-spotfleet-blockdevicemapping-ebs)" : EbsBlockDevice,
   "[NoDevice](#cfn-ec2-spotfleet-blockdevicemapping-nodevice)" : String,
   "[VirtualName](#cfn-ec2-spotfleet-blockdevicemapping-virtualname)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-ec2-spotfleet-blockdevicemapping-devicename): String
   [Ebs](#cfn-ec2-spotfleet-blockdevicemapping-ebs): 
-    [EbsBlockDevice](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings-ebs.md)
+    EbsBlockDevice
   [NoDevice](#cfn-ec2-spotfleet-blockdevicemapping-nodevice): String
   [VirtualName](#cfn-ec2-spotfleet-blockdevicemapping-virtualname): String
 ```
@@ -44,7 +44,7 @@ Parameters used to automatically set up EBS volumes when the instance is launche
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-ec2-spotfleet-blockdevicemapping-nodevice"></a>
-Suppresses the specified device included in the block device mapping of the AMI\.  
+To omit the device from the block device mapping, specify an empty string\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

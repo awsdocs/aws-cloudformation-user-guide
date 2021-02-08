@@ -121,5 +121,6 @@ The default value is `false`\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-costtypes--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-costtypes--seealso"></a>
 +  [CostTypes](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CostTypes.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

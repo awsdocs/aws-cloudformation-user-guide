@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Auth](#cfn-iot-topicrule-httpaction-auth)" : [HttpAuthorization](aws-properties-iot-topicrule-httpauthorization.md),
+  "[Auth](#cfn-iot-topicrule-httpaction-auth)" : HttpAuthorization,
   "[ConfirmationUrl](#cfn-iot-topicrule-httpaction-confirmationurl)" : String,
-  "[Headers](#cfn-iot-topicrule-httpaction-headers)" : [ [HttpActionHeader](aws-properties-iot-topicrule-httpactionheader.md), ... ],
+  "[Headers](#cfn-iot-topicrule-httpaction-headers)" : [ HttpActionHeader, ... ],
   "[Url](#cfn-iot-topicrule-httpaction-url)" : String
 }
 ```
@@ -21,10 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Auth](#cfn-iot-topicrule-httpaction-auth): 
-    [HttpAuthorization](aws-properties-iot-topicrule-httpauthorization.md)
+    HttpAuthorization
   [ConfirmationUrl](#cfn-iot-topicrule-httpaction-confirmationurl): String
   [Headers](#cfn-iot-topicrule-httpaction-headers): 
-    - [HttpActionHeader](aws-properties-iot-topicrule-httpactionheader.md)
+    - HttpActionHeader
   [Url](#cfn-iot-topicrule-httpaction-url): String
 ```
 

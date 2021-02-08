@@ -1,7 +1,8 @@
-# EC2 Resource Type Reference<a name="AWS_EC2"></a>
+# EC2 resource type reference<a name="AWS_EC2"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
++ [AWS::EC2::CarrierGateway](aws-resource-ec2-carriergateway.md)
 + [AWS::EC2::ClientVpnAuthorizationRule](aws-resource-ec2-clientvpnauthorizationrule.md)
 + [AWS::EC2::ClientVpnEndpoint](aws-resource-ec2-clientvpnendpoint.md)
 + [AWS::EC2::ClientVpnRoute](aws-resource-ec2-clientvpnroute.md)
@@ -23,10 +24,13 @@
 + [AWS::EC2::NatGateway](aws-resource-ec2-natgateway.md)
 + [AWS::EC2::NetworkAcl](aws-resource-ec2-network-acl.md)
 + [AWS::EC2::NetworkAclEntry](aws-resource-ec2-network-acl-entry.md)
++ [AWS::EC2::NetworkInsightsAnalysis](aws-resource-ec2-networkinsightsanalysis.md)
++ [AWS::EC2::NetworkInsightsPath](aws-resource-ec2-networkinsightspath.md)
 + [AWS::EC2::NetworkInterface](aws-resource-ec2-network-interface.md)
 + [AWS::EC2::NetworkInterfaceAttachment](aws-resource-ec2-network-interface-attachment.md)
 + [AWS::EC2::NetworkInterfacePermission](aws-resource-ec2-networkinterfacepermission.md)
 + [AWS::EC2::PlacementGroup](aws-resource-ec2-placementgroup.md)
++ [AWS::EC2::PrefixList](aws-resource-ec2-prefixlist.md)
 + [AWS::EC2::Route](aws-resource-ec2-route.md)
 + [AWS::EC2::RouteTable](aws-resource-ec2-route-table.md)
 + [AWS::EC2::SecurityGroup](aws-properties-ec2-security-group.md)

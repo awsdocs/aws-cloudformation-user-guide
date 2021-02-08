@@ -14,13 +14,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : [Spend](aws-properties-budgets-budget-spend.md),
+  "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : Spend,
   "[BudgetName](#cfn-budgets-budget-budgetdata-budgetname)" : String,
   "[BudgetType](#cfn-budgets-budget-budgetdata-budgettype)" : String,
   "[CostFilters](#cfn-budgets-budget-budgetdata-costfilters)" : Json,
-  "[CostTypes](#cfn-budgets-budget-budgetdata-costtypes)" : [CostTypes](aws-properties-budgets-budget-costtypes.md),
+  "[CostTypes](#cfn-budgets-budget-budgetdata-costtypes)" : CostTypes,
   "[PlannedBudgetLimits](#cfn-budgets-budget-budgetdata-plannedbudgetlimits)" : Json,
-  "[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod)" : [TimePeriod](aws-properties-budgets-budget-timeperiod.md),
+  "[TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod)" : TimePeriod,
   "[TimeUnit](#cfn-budgets-budget-budgetdata-timeunit)" : String
 }
 ```
@@ -29,15 +29,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit): 
-    [Spend](aws-properties-budgets-budget-spend.md)
+    Spend
   [BudgetName](#cfn-budgets-budget-budgetdata-budgetname): String
   [BudgetType](#cfn-budgets-budget-budgetdata-budgettype): String
   [CostFilters](#cfn-budgets-budget-budgetdata-costfilters): Json
   [CostTypes](#cfn-budgets-budget-budgetdata-costtypes): 
-    [CostTypes](aws-properties-budgets-budget-costtypes.md)
+    CostTypes
   [PlannedBudgetLimits](#cfn-budgets-budget-budgetdata-plannedbudgetlimits): Json
   [TimePeriod](#cfn-budgets-budget-budgetdata-timeperiod): 
-    [TimePeriod](aws-properties-budgets-budget-timeperiod.md)
+    TimePeriod
   [TimeUnit](#cfn-budgets-budget-budgetdata-timeunit): String
 ```
 
@@ -60,7 +60,7 @@ The name of a budget\. The value must be unique within an account\. `BudgetName`
 Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `COST | RI_COVERAGE | RI_UTILIZATION | SAVINGS_PLANS_COVERAGE | SAVINGS_PLANS_UTILIZATION | USAGE`  
+*Allowed values*: `COST | RI_COVERAGE | RI_UTILIZATION | SAVINGS_PLANS_COVERAGE | SAVINGS_PLANS_UTILIZATION | USAGE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
@@ -108,8 +108,9 @@ After the end date, AWS deletes the budget and all associated notifications and 
 The length of time until a budget resets the actual and forecasted spend\. `DAILY` is available only for `RI_UTILIZATION` and `RI_COVERAGE` budgets\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ANNUALLY | DAILY | MONTHLY | QUARTERLY`  
+*Allowed values*: `ANNUALLY | DAILY | MONTHLY | QUARTERLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
 +  [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_budget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

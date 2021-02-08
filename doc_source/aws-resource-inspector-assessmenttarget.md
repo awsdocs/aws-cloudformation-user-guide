@@ -45,7 +45,7 @@ The ARN that specifies the resource group that is used to create the assessment 
 *Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-inspector-assessmenttarget-return-values"></a>
+## Return values<a name="aws-resource-inspector-assessmenttarget-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-assessmenttarget-return-values-ref"></a>
 
@@ -65,6 +65,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) that specifies the assessment target that is created\.
 
 ## Examples<a name="aws-resource-inspector-assessmenttarget--examples"></a>
+
+
 
 ### Declaring an Amazon Inspector Assessment Target Resource<a name="aws-resource-inspector-assessmenttarget--examples--Declaring_an_Amazon_Inspector_Assessment_Target_Resource"></a>
 

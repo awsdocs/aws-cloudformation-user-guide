@@ -12,15 +12,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AudioSelectors](#cfn-medialive-channel-inputsettings-audioselectors)" : [ [AudioSelector](aws-properties-medialive-channel-audioselector.md), ... ],
-  "[CaptionSelectors](#cfn-medialive-channel-inputsettings-captionselectors)" : [ [CaptionSelector](aws-properties-medialive-channel-captionselector.md), ... ],
+  "[AudioSelectors](#cfn-medialive-channel-inputsettings-audioselectors)" : [ AudioSelector, ... ],
+  "[CaptionSelectors](#cfn-medialive-channel-inputsettings-captionselectors)" : [ CaptionSelector, ... ],
   "[DeblockFilter](#cfn-medialive-channel-inputsettings-deblockfilter)" : String,
   "[DenoiseFilter](#cfn-medialive-channel-inputsettings-denoisefilter)" : String,
   "[FilterStrength](#cfn-medialive-channel-inputsettings-filterstrength)" : Integer,
   "[InputFilter](#cfn-medialive-channel-inputsettings-inputfilter)" : String,
-  "[NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings)" : [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md),
+  "[NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings)" : NetworkInputSettings,
+  "[Smpte2038DataPreference](#cfn-medialive-channel-inputsettings-smpte2038datapreference)" : String,
   "[SourceEndBehavior](#cfn-medialive-channel-inputsettings-sourceendbehavior)" : String,
-  "[VideoSelector](#cfn-medialive-channel-inputsettings-videoselector)" : [VideoSelector](aws-properties-medialive-channel-videoselector.md)
+  "[VideoSelector](#cfn-medialive-channel-inputsettings-videoselector)" : VideoSelector
 }
 ```
 
@@ -28,18 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AudioSelectors](#cfn-medialive-channel-inputsettings-audioselectors): 
-    - [AudioSelector](aws-properties-medialive-channel-audioselector.md)
+    - AudioSelector
   [CaptionSelectors](#cfn-medialive-channel-inputsettings-captionselectors): 
-    - [CaptionSelector](aws-properties-medialive-channel-captionselector.md)
+    - CaptionSelector
   [DeblockFilter](#cfn-medialive-channel-inputsettings-deblockfilter): String
   [DenoiseFilter](#cfn-medialive-channel-inputsettings-denoisefilter): String
   [FilterStrength](#cfn-medialive-channel-inputsettings-filterstrength): Integer
   [InputFilter](#cfn-medialive-channel-inputsettings-inputfilter): String
   [NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings): 
-    [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md)
+    NetworkInputSettings
+  [Smpte2038DataPreference](#cfn-medialive-channel-inputsettings-smpte2038datapreference): String
   [SourceEndBehavior](#cfn-medialive-channel-inputsettings-sourceendbehavior): String
   [VideoSelector](#cfn-medialive-channel-inputsettings-videoselector): 
-    [VideoSelector](aws-properties-medialive-channel-videoselector.md)
+    VideoSelector
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-inputsettings-properties"></a>
@@ -84,6 +86,12 @@ Turns on the filter for this input\. MPEG\-2 inputs have the deblocking filter e
 Information about how to connect to the upstream system\.  
 *Required*: No  
 *Type*: [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Smpte2038DataPreference`  <a name="cfn-medialive-channel-inputsettings-smpte2038datapreference"></a>
+Specifies whether to extract applicable ancillary data from a SMPTE\-2038 source in this input\. Applicable data types are captions, timecode, AFD, and SCTE\-104 messages\. \- PREFER: Extract from SMPTE\-2038 if present in this input, otherwise extract from another source \(if any\)\. \- IGNORE: Never extract any ancillary data from SMPTE\-2038\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceEndBehavior`  <a name="cfn-medialive-channel-inputsettings-sourceendbehavior"></a>

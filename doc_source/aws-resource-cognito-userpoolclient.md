@@ -12,20 +12,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolClient",
   "Properties" : {
+      "[AccessTokenValidity](#cfn-cognito-userpoolclient-accesstokenvalidity)" : Integer,
       "[AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows)" : [ String, ... ],
       "[AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient)" : Boolean,
       "[AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes)" : [ String, ... ],
-      "[AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration)" : [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md),
+      "[AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration)" : AnalyticsConfiguration,
       "[CallbackURLs](#cfn-cognito-userpoolclient-callbackurls)" : [ String, ... ],
       "[ClientName](#cfn-cognito-userpoolclient-clientname)" : String,
       "[DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi)" : String,
       "[ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows)" : [ String, ... ],
       "[GenerateSecret](#cfn-cognito-userpoolclient-generatesecret)" : Boolean,
+      "[IdTokenValidity](#cfn-cognito-userpoolclient-idtokenvalidity)" : Integer,
       "[LogoutURLs](#cfn-cognito-userpoolclient-logouturls)" : [ String, ... ],
       "[PreventUserExistenceErrors](#cfn-cognito-userpoolclient-preventuserexistenceerrors)" : String,
       "[ReadAttributes](#cfn-cognito-userpoolclient-readattributes)" : [ String, ... ],
       "[RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity)" : Integer,
       "[SupportedIdentityProviders](#cfn-cognito-userpoolclient-supportedidentityproviders)" : [ String, ... ],
+      "[TokenValidityUnits](#cfn-cognito-userpoolclient-tokenvalidityunits)" : TokenValidityUnits,
       "[UserPoolId](#cfn-cognito-userpoolclient-userpoolid)" : String,
       "[WriteAttributes](#cfn-cognito-userpoolclient-writeattributes)" : [ String, ... ]
     }
@@ -37,13 +40,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Cognito::UserPoolClient
 Properties: 
+  [AccessTokenValidity](#cfn-cognito-userpoolclient-accesstokenvalidity): Integer
   [AllowedOAuthFlows](#cfn-cognito-userpoolclient-allowedoauthflows): 
     - String
   [AllowedOAuthFlowsUserPoolClient](#cfn-cognito-userpoolclient-allowedoauthflowsuserpoolclient): Boolean
   [AllowedOAuthScopes](#cfn-cognito-userpoolclient-allowedoauthscopes): 
     - String
   [AnalyticsConfiguration](#cfn-cognito-userpoolclient-analyticsconfiguration): 
-    [AnalyticsConfiguration](aws-properties-cognito-userpoolclient-analyticsconfiguration.md)
+    AnalyticsConfiguration
   [CallbackURLs](#cfn-cognito-userpoolclient-callbackurls): 
     - String
   [ClientName](#cfn-cognito-userpoolclient-clientname): String
@@ -51,6 +55,7 @@ Properties:
   [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
     - String
   [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret): Boolean
+  [IdTokenValidity](#cfn-cognito-userpoolclient-idtokenvalidity): Integer
   [LogoutURLs](#cfn-cognito-userpoolclient-logouturls): 
     - String
   [PreventUserExistenceErrors](#cfn-cognito-userpoolclient-preventuserexistenceerrors): String
@@ -59,12 +64,20 @@ Properties:
   [RefreshTokenValidity](#cfn-cognito-userpoolclient-refreshtokenvalidity): Integer
   [SupportedIdentityProviders](#cfn-cognito-userpoolclient-supportedidentityproviders): 
     - String
+  [TokenValidityUnits](#cfn-cognito-userpoolclient-tokenvalidityunits): 
+    TokenValidityUnits
   [UserPoolId](#cfn-cognito-userpoolclient-userpoolid): String
   [WriteAttributes](#cfn-cognito-userpoolclient-writeattributes): 
     - String
 ```
 
 ## Properties<a name="aws-resource-cognito-userpoolclient-properties"></a>
+
+`AccessTokenValidity`  <a name="cfn-cognito-userpoolclient-accesstokenvalidity"></a>
+The time limit, after which the access token is no longer valid and cannot be used\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedOAuthFlows`  <a name="cfn-cognito-userpoolclient-allowedoauthflows"></a>
 The allowed OAuth flows\.  
@@ -153,6 +166,12 @@ Boolean to specify whether you want to generate a secret for the user pool clien
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`IdTokenValidity`  <a name="cfn-cognito-userpoolclient-idtokenvalidity"></a>
+The time limit, after which the ID token is no longer valid and cannot be used\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LogoutURLs`  <a name="cfn-cognito-userpoolclient-logouturls"></a>
 A list of allowed logout URLs for the identity providers\.  
 *Required*: No  
@@ -164,7 +183,7 @@ A list of allowed logout URLs for the identity providers\.
  Use this setting to choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool\. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination\. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ENABLED | LEGACY`  
+*Allowed values*: `ENABLED | LEGACY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReadAttributes`  <a name="cfn-cognito-userpoolclient-readattributes"></a>
@@ -178,13 +197,19 @@ The time limit, in days, after which the refresh token is no longer valid and ca
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
-*Maximum*: `3650`  
+*Maximum*: `315360000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportedIdentityProviders`  <a name="cfn-cognito-userpoolclient-supportedidentityproviders"></a>
-A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `Google` and `LoginWithAmazon`\.  
+A list of provider names for the identity providers that are supported on this client\. The following are supported: `COGNITO`, `Facebook`, `SignInWithApple`, `Google` and `LoginWithAmazon`\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TokenValidityUnits`  <a name="cfn-cognito-userpoolclient-tokenvalidityunits"></a>
+The units in which the validity times are represented in\. Default for RefreshToken is days, and default for ID and access tokens are hours\.  
+*Required*: No  
+*Type*: [TokenValidityUnits](aws-properties-cognito-userpoolclient-tokenvalidityunits.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolId`  <a name="cfn-cognito-userpoolclient-userpoolid"></a>
@@ -203,7 +228,7 @@ If your app client allows users to sign in through an identity provider, this ar
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cognito-userpoolclient-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpoolclient-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpoolclient-return-values-ref"></a>
 

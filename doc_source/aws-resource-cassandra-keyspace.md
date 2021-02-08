@@ -35,7 +35,7 @@ The name of the keyspace to be created\. If you don't specify a name, AWS CloudF
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cassandra-keyspace-return-values"></a>
+## Return values<a name="aws-resource-cassandra-keyspace-return-values"></a>
 
 ### Ref<a name="aws-resource-cassandra-keyspace-return-values-ref"></a>
 
@@ -46,6 +46,8 @@ The name of the keyspace to be created\. If you don't specify a name, AWS CloudF
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cassandra-keyspace--examples"></a>
+
+
 
 ### Create a New Keyspace<a name="aws-resource-cassandra-keyspace--examples--Create_a_New_Keyspace"></a>
 

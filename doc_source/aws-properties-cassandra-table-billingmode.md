@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Mode](#cfn-cassandra-table-billingmode-mode)" : String,
-  "[ProvisionedThroughput](#cfn-cassandra-table-billingmode-provisionedthroughput)" : [ProvisionedThroughput](aws-properties-cassandra-table-provisionedthroughput.md)
+  "[ProvisionedThroughput](#cfn-cassandra-table-billingmode-provisionedthroughput)" : ProvisionedThroughput
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Mode](#cfn-cassandra-table-billingmode-mode): String
   [ProvisionedThroughput](#cfn-cassandra-table-billingmode-provisionedthroughput): 
-    [ProvisionedThroughput](aws-properties-cassandra-table-provisionedthroughput.md)
+    ProvisionedThroughput
 ```
 
 ## Properties<a name="aws-properties-cassandra-table-billingmode-properties"></a>

@@ -1,12 +1,10 @@
 # AWS::AutoScaling::ScheduledAction<a name="aws-resource-as-scheduledaction"></a>
 
-Specifies an Amazon EC2 Auto Scaling scheduled action so that the Auto Scaling group can change the number of instances available for your application in response to predictable load changes\. 
+The AWS::AutoScaling::ScheduledAction resource specifies an Amazon EC2 Auto Scaling scheduled action so that the Auto Scaling group can change the number of instances available for your application in response to predictable load changes\. 
 
-**Important**  
-When you update a stack with an Auto Scaling group and scheduled action, AWS CloudFormation always sets the min size, max size, and desired capacity properties of your group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template\. However, you might not want CloudFormation to do that when you have a scheduled action in effect\. You can use an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to prevent CloudFormation from changing the min size, max size, or desired capacity property values during a stack update unless you modified the individual values in your template\.   
-If you have rolling updates enabled, before you can update the Auto Scaling group, you must suspend scheduled actions by specifying an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\. 
+When you update a stack with an Auto Scaling group and scheduled action, AWS CloudFormation always sets the min size, max size, and desired capacity properties of your group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template\. However, you might not want CloudFormation to do that when you have a scheduled action in effect\. You can use an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to prevent CloudFormation from changing the min size, max size, or desired capacity property values during a stack update unless you modified the individual values in your template\. If you have rolling updates enabled, before you can update the Auto Scaling group, you must suspend scheduled actions by specifying an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
 
-For more information, see [Scheduled Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html) and [Suspending and Resuming Scaling Processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+For more information, see [Scheduled scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html) and [Suspending and resuming scaling processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-resource-as-scheduledaction-syntax"></a>
 
@@ -91,7 +89,7 @@ The date and time in UTC for this action to start\. For example, `"2019-06-01T00
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-as-scheduledaction-return-values"></a>
+## Return values<a name="aws-resource-as-scheduledaction-return-values"></a>
 
 ### Ref<a name="aws-resource-as-scheduledaction-return-values-ref"></a>
 
@@ -103,11 +101,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 The following example schedule scaling actions for an Auto Scaling group\.
 
-### Scheduled Scaling Action<a name="aws-resource-as-scheduledaction--examples--Scheduled_Scaling_Action"></a>
+### Scheduled scaling action<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action"></a>
 
 The following template snippet includes two scheduled actions that scale the number of instances in an Auto Scaling group\. The `ScheduledActionOut` action starts at 7 AM every day and sets the Auto Scaling group to a minimum of five Amazon EC2 instances with a maximum of 10\. The `ScheduledActionIn` action starts at 7 PM every day and sets the Auto Scaling group to a minimum and maximum of one Amazon EC2 instance\. 
 
-#### JSON<a name="aws-resource-as-scheduledaction--examples--Scheduled_Scaling_Action--json"></a>
+#### JSON<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action--json"></a>
 
 ```
 {
@@ -138,7 +136,7 @@ The following template snippet includes two scheduled actions that scale the num
 }
 ```
 
-#### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_Scaling_Action--yaml"></a>
+#### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action--yaml"></a>
 
 ```
 ---

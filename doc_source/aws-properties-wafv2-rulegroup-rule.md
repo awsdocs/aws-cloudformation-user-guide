@@ -13,11 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-wafv2-rulegroup-rule-action)" : [RuleAction](aws-properties-wafv2-rulegroup-ruleaction.md),
+  "[Action](#cfn-wafv2-rulegroup-rule-action)" : RuleAction,
   "[Name](#cfn-wafv2-rulegroup-rule-name)" : String,
   "[Priority](#cfn-wafv2-rulegroup-rule-priority)" : Integer,
-  "[Statement](#cfn-wafv2-rulegroup-rule-statement)" : [StatementOne](aws-properties-wafv2-rulegroup-statementone.md),
-  "[VisibilityConfig](#cfn-wafv2-rulegroup-rule-visibilityconfig)" : [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+  "[Statement](#cfn-wafv2-rulegroup-rule-statement)" : StatementOne,
+  "[VisibilityConfig](#cfn-wafv2-rulegroup-rule-visibilityconfig)" : VisibilityConfig
 }
 ```
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-wafv2-rulegroup-rule-action): 
-    [RuleAction](aws-properties-wafv2-rulegroup-ruleaction.md)
+    RuleAction
   [Name](#cfn-wafv2-rulegroup-rule-name): String
   [Priority](#cfn-wafv2-rulegroup-rule-priority): Integer
   [Statement](#cfn-wafv2-rulegroup-rule-statement): 
-    [StatementOne](aws-properties-wafv2-rulegroup-statementone.md)
+    StatementOne
   [VisibilityConfig](#cfn-wafv2-rulegroup-rule-visibilityconfig): 
-    [VisibilityConfig](aws-properties-wafv2-rulegroup-visibilityconfig.md)
+    VisibilityConfig
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-rule-properties"></a>

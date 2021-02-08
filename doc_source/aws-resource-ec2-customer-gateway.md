@@ -57,10 +57,10 @@ One or more tags for the customer gateway\.
 The type of VPN connection that this customer gateway supports \(`ipsec.1`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ipsec.1`  
+*Allowed values*: `ipsec.1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-customer-gateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-customer-gateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-customer-gateway-return-values-ref"></a>
 
@@ -71,6 +71,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## Examples<a name="aws-resource-ec2-customer-gateway--examples"></a>
 
 ### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
+
+
 
 #### YAML<a name="aws-resource-ec2-customer-gateway--examples----yaml"></a>
 
@@ -84,6 +86,8 @@ myCustomerGateway:
 ```
 
 ### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ec2-customer-gateway--examples----json"></a>
 
@@ -100,5 +104,6 @@ myCustomerGateway:
 }
 ```
 
-## See Also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
+## See also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
 +  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

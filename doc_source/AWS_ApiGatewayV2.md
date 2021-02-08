@@ -1,6 +1,6 @@
-# Amazon API Gateway V2 Resource Type Reference<a name="AWS_ApiGatewayV2"></a>
+# Amazon API Gateway V2 resource type reference<a name="AWS_ApiGatewayV2"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ApiGatewayV2::Api](aws-resource-apigatewayv2-api.md)
 + [AWS::ApiGatewayV2::ApiGatewayManagedOverrides](aws-resource-apigatewayv2-apigatewaymanagedoverrides.md)
 + [AWS::ApiGatewayV2::ApiMapping](aws-resource-apigatewayv2-apimapping.md)

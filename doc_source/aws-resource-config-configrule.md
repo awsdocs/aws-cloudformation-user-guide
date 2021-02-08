@@ -32,8 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-config-configrule-description)" : String,
       "[InputParameters](#cfn-config-configrule-inputparameters)" : Json,
       "[MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency)" : String,
-      "[Scope](#cfn-config-configrule-scope)" : [Scope](aws-properties-config-configrule-scope.md),
-      "[Source](#cfn-config-configrule-source)" : [Source](aws-properties-config-configrule-source.md)
+      "[Scope](#cfn-config-configrule-scope)" : Scope,
+      "[Source](#cfn-config-configrule-source)" : Source
     }
 }
 ```
@@ -48,9 +48,9 @@ Properties:
   [InputParameters](#cfn-config-configrule-inputparameters): Json
   [MaximumExecutionFrequency](#cfn-config-configrule-maximumexecutionfrequency): String
   [Scope](#cfn-config-configrule-scope): 
-    [Scope](aws-properties-config-configrule-scope.md)
+    Scope
   [Source](#cfn-config-configrule-source): 
-    [Source](aws-properties-config-configrule-source.md)
+    Source
 ```
 
 ## Properties<a name="aws-resource-config-configrule-properties"></a>
@@ -87,7 +87,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule\. You ca
 By default, rules with a periodic trigger are evaluated every 24 hours\. To change the frequency, specify a valid value for the `MaximumExecutionFrequency` parameter\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-config-configrule-scope"></a>
@@ -103,7 +103,7 @@ Provides the rule owner \(AWS or customer\), the rule identifier, and the notifi
 *Type*: [Source](aws-properties-config-configrule-source.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-configrule-return-values"></a>
+## Return values<a name="aws-resource-config-configrule-return-values"></a>
 
 ### Ref<a name="aws-resource-config-configrule-return-values-ref"></a>
 
@@ -129,6 +129,8 @@ The compliance status of an AWS Config rule, such as `COMPLIANT` or `NON_COMPLIA
 The ID of the AWS Config rule, such as `config-rule-a1bzhi`\.
 
 ## Examples<a name="aws-resource-config-configrule--examples"></a>
+
+
 
 ### Config Rule<a name="aws-resource-config-configrule--examples--Config_Rule"></a>
 

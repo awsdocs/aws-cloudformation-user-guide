@@ -13,8 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ImageBuilder::Image",
   "Properties" : {
       "[DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn)" : String,
+      "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
-      "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md),
+      "[ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn)" : String,
       "[Tags](#cfn-imagebuilder-image-tags)" : {Key : Value, ...}
     }
@@ -27,9 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ImageBuilder::Image
 Properties: 
   [DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn): String
+  [EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn): String
   [ImageTestsConfiguration](#cfn-imagebuilder-image-imagetestsconfiguration): 
-    [ImageTestsConfiguration](aws-properties-imagebuilder-image-imagetestsconfiguration.md)
+    ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-image-infrastructureconfigurationarn): String
   [Tags](#cfn-imagebuilder-image-tags): 
     Key : Value
@@ -41,14 +43,20 @@ Properties:
 The Amazon Resource Name \(ARN\) of the distribution configuration\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
+*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-image-enhancedimagemetadataenabled"></a>
+ Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageRecipeArn`  <a name="cfn-imagebuilder-image-imagerecipearn"></a>
 The Amazon Resource Name \(ARN\) of the image recipe\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
+*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageTestsConfiguration`  <a name="cfn-imagebuilder-image-imagetestsconfiguration"></a>
@@ -61,7 +69,7 @@ The configuration of the image tests used when creating this image\.
 The Amazon Resource Name \(ARN\) of the infrastructure configuration used to create this image\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
+*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-imagebuilder-image-tags"></a>
@@ -70,7 +78,7 @@ The tags of the image\.
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-imagebuilder-image-return-values"></a>
+## Return values<a name="aws-resource-imagebuilder-image-return-values"></a>
 
 ### Ref<a name="aws-resource-imagebuilder-image-return-values-ref"></a>
 
@@ -89,10 +97,15 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
 
-`OutputResources`  <a name="OutputResources-fn::getatt"></a>
-Returns the output resources produced when creating this image, formatted as an array of AMIs\.
+`ImageId`  <a name="ImageId-fn::getatt"></a>
+Returns the AMI ID of the EC2 AMI in the Region in which you are using Image Builder\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Returns the name of the image\.
 
 ## Examples<a name="aws-resource-imagebuilder-image--examples"></a>
+
+
 
 ### Create an image<a name="aws-resource-imagebuilder-image--examples--Create_an_image"></a>
 

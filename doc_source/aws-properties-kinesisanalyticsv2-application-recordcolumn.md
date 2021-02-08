@@ -32,12 +32,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A reference to the data element in the streaming input or the reference data source\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-kinesisanalyticsv2-application-recordcolumn-name"></a>
 The name of the column that is created in the in\-application input stream or reference table\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `[^-\s<>&]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlType`  <a name="cfn-kinesisanalyticsv2-application-recordcolumn-sqltype"></a>
@@ -45,7 +50,9 @@ The type of column created in the in\-application input stream or reference tabl
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-recordcolumn--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-recordcolumn--seealso"></a>
 +  [RecordColumn](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordColumn.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

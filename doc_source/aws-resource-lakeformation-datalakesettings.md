@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LakeFormation::DataLakeSettings",
   "Properties" : {
-      "[Admins](#cfn-lakeformation-datalakesettings-admins)" : [Admins](aws-properties-lakeformation-datalakesettings-admins.md)
+      "[Admins](#cfn-lakeformation-datalakesettings-admins)" : Admins,
+      "[TrustedResourceOwners](#cfn-lakeformation-datalakesettings-trustedresourceowners)" : [ String, ... ]
     }
 }
 ```
@@ -23,7 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LakeFormation::DataLakeSettings
 Properties: 
   [Admins](#cfn-lakeformation-datalakesettings-admins): 
-    [Admins](aws-properties-lakeformation-datalakesettings-admins.md)
+    Admins
+  [TrustedResourceOwners](#cfn-lakeformation-datalakesettings-trustedresourceowners): 
+    - String
 ```
 
 ## Properties<a name="aws-resource-lakeformation-datalakesettings-properties"></a>
@@ -32,4 +35,10 @@ Properties:
 A list of AWS Lake Formation principals\.  
 *Required*: No  
 *Type*: [Admins](aws-properties-lakeformation-datalakesettings-admins.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TrustedResourceOwners`  <a name="cfn-lakeformation-datalakesettings-trustedresourceowners"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

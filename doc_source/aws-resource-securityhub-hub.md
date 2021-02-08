@@ -33,7 +33,7 @@ The tags to add to the hub resource\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-securityhub-hub-return-values"></a>
+## Return values<a name="aws-resource-securityhub-hub-return-values"></a>
 
 ### Ref<a name="aws-resource-securityhub-hub-return-values-ref"></a>
 
@@ -42,6 +42,8 @@ The tags to add to the hub resource\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-securityhub-hub--examples"></a>
+
+
 
 ### Declare a Hub Resource<a name="aws-resource-securityhub-hub--examples--Declare_a_Hub_Resource"></a>
 

@@ -19,11 +19,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
       "[Role](#cfn-glue-crawler-role)" : String,
-      "[Schedule](#cfn-glue-crawler-schedule)" : [Schedule](aws-properties-glue-crawler-schedule.md),
-      "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md),
+      "[Schedule](#cfn-glue-crawler-schedule)" : Schedule,
+      "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : SchemaChangePolicy,
       "[TablePrefix](#cfn-glue-crawler-tableprefix)" : String,
       "[Tags](#cfn-glue-crawler-tags)" : Json,
-      "[Targets](#cfn-glue-crawler-targets)" : [Targets](aws-properties-glue-crawler-targets.md)
+      "[Targets](#cfn-glue-crawler-targets)" : Targets
     }
 }
 ```
@@ -42,13 +42,13 @@ Properties:
   [Name](#cfn-glue-crawler-name): String
   [Role](#cfn-glue-crawler-role): String
   [Schedule](#cfn-glue-crawler-schedule): 
-    [Schedule](aws-properties-glue-crawler-schedule.md)
+    Schedule
   [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
-    [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
+    SchemaChangePolicy
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
   [Tags](#cfn-glue-crawler-tags): Json
   [Targets](#cfn-glue-crawler-targets): 
-    [Targets](aws-properties-glue-crawler-targets.md)
+    Targets
 ```
 
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
@@ -125,7 +125,7 @@ A collection of targets to crawl\.
 *Type*: [Targets](aws-properties-glue-crawler-targets.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-crawler-return-values"></a>
+## Return values<a name="aws-resource-glue-crawler-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-crawler-return-values-ref"></a>
 
@@ -134,6 +134,8 @@ A collection of targets to crawl\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-crawler--examples"></a>
+
+
 
 ### <a name="aws-resource-glue-crawler--examples--"></a>
 

@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CustomPrivateKey](#cfn-opsworkscm-server-customprivatekey)" : String,
       "[DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup)" : Boolean,
       "[Engine](#cfn-opsworkscm-server-engine)" : String,
-      "[EngineAttributes](#cfn-opsworkscm-server-engineattributes)" : [ [EngineAttribute](aws-properties-opsworkscm-server-engineattribute.md), ... ],
+      "[EngineAttributes](#cfn-opsworkscm-server-engineattributes)" : [ EngineAttribute, ... ],
       "[EngineModel](#cfn-opsworkscm-server-enginemodel)" : String,
       "[EngineVersion](#cfn-opsworkscm-server-engineversion)" : String,
       "[InstanceProfileArn](#cfn-opsworkscm-server-instanceprofilearn)" : String,
@@ -51,7 +51,7 @@ Properties:
   [DisableAutomatedBackup](#cfn-opsworkscm-server-disableautomatedbackup): Boolean
   [Engine](#cfn-opsworkscm-server-engine): String
   [EngineAttributes](#cfn-opsworkscm-server-engineattributes): 
-    - [EngineAttribute](aws-properties-opsworkscm-server-engineattribute.md)
+    - EngineAttribute
   [EngineModel](#cfn-opsworkscm-server-enginemodel): String
   [EngineVersion](#cfn-opsworkscm-server-engineversion): String
   [InstanceProfileArn](#cfn-opsworkscm-server-instanceprofilearn): String
@@ -253,7 +253,7 @@ A map that contains tag keys and tag values to attach to an AWS OpsWorks for Che
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-opsworkscm-server-return-values"></a>
+## Return values<a name="aws-resource-opsworkscm-server-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworkscm-server-return-values-ref"></a>
 
@@ -275,7 +275,12 @@ The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-e
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
+
+
 
 ### Create an AWS OpsWorks for Chef Automate server<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server"></a>
 
@@ -487,7 +492,8 @@ Outputs:
       Value: !GetAtt [MyPuppetServer, Endpoint]
 ```
 
-## See Also<a name="aws-resource-opsworkscm-server--seealso"></a>
+## See also<a name="aws-resource-opsworkscm-server--seealso"></a>
 +  [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [ `CreateServer` ](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference* 
+

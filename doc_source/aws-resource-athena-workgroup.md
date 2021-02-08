@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-athena-workgroup-name)" : String,
       "[RecursiveDeleteOption](#cfn-athena-workgroup-recursivedeleteoption)" : Boolean,
       "[State](#cfn-athena-workgroup-state)" : String,
-      "[Tags](#cfn-athena-workgroup-tags)" : [Tags](aws-properties-athena-workgroup-tags.md),
-      "[WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration)" : [WorkGroupConfiguration](aws-properties-athena-workgroup-workgroupconfiguration.md),
-      "[WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates)" : [WorkGroupConfigurationUpdates](aws-properties-athena-workgroup-workgroupconfigurationupdates.md)
+      "[Tags](#cfn-athena-workgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration)" : WorkGroupConfiguration,
+      "[WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates)" : WorkGroupConfigurationUpdates
     }
 }
 ```
@@ -33,11 +33,11 @@ Properties:
   [RecursiveDeleteOption](#cfn-athena-workgroup-recursivedeleteoption): Boolean
   [State](#cfn-athena-workgroup-state): String
   [Tags](#cfn-athena-workgroup-tags): 
-    [Tags](aws-properties-athena-workgroup-tags.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration): 
-    [WorkGroupConfiguration](aws-properties-athena-workgroup-workgroupconfiguration.md)
+    WorkGroupConfiguration
   [WorkGroupConfigurationUpdates](#cfn-athena-workgroup-workgroupconfigurationupdates): 
-    [WorkGroupConfigurationUpdates](aws-properties-athena-workgroup-workgroupconfigurationupdates.md)
+    WorkGroupConfigurationUpdates
 ```
 
 ## Properties<a name="aws-resource-athena-workgroup-properties"></a>
@@ -58,7 +58,7 @@ The workgroup name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecursiveDeleteOption`  <a name="cfn-athena-workgroup-recursivedeleteoption"></a>
-The option to delete the workgroup and its contents even if the workgroup contains any named queries\.  
+The option to delete the workgroup and its contents even if the workgroup contains any named queries or query executions\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,14 +67,14 @@ The option to delete the workgroup and its contents even if the workgroup contai
 The state of the workgroup: ENABLED or DISABLED\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-athena-workgroup-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [Tags](aws-properties-athena-workgroup-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkGroupConfiguration`  <a name="cfn-athena-workgroup-workgroupconfiguration"></a>
@@ -89,7 +89,7 @@ The configuration information that will be updated for this workgroup, which inc
 *Type*: [WorkGroupConfigurationUpdates](aws-properties-athena-workgroup-workgroupconfigurationupdates.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-athena-workgroup-return-values"></a>
+## Return values<a name="aws-resource-athena-workgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-athena-workgroup-return-values-ref"></a>
 
@@ -112,11 +112,11 @@ The date and time the workgroup was created, as a UNIX timestamp in seconds\. Fo
 
 ## Examples<a name="aws-resource-athena-workgroup--examples"></a>
 
-### Creating an Athena WorkGroup \- YAML<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup_-_YAML"></a>
+### Creating an Athena WorkGroup<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup"></a>
 
-The following example template uses YAML to create the Athena WorkGroup `MyCustomWorkGroup`\. Note the use of `WorkGroupConfiguration` to specify the configuration for the WorkGroup\.
+The following example template creates the Athena WorkGroup `MyCustomWorkGroup`\. Note the use of `WorkGroupConfiguration` to specify the configuration for the WorkGroup\.
 
-#### YAML<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup_-_YAML--yaml"></a>
+#### YAML<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup--yaml"></a>
 
 ```
 Resources:
@@ -140,11 +140,7 @@ Resources:
           OutputLocation: s3://path/to/my/bucket/
 ```
 
-### Creating an Athena WorkGroup \- JSON<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup_-_JSON"></a>
-
-The following example template uses JSON to create the Athena WorkGroup `MyCustomWorkGroup`\. Note the use of `WorkGroupConfiguration` to specify the configuration for the WorkGroup\.
-
-#### JSON<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup_-_JSON--json"></a>
+#### JSON<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup--json"></a>
 
 ```
 {
@@ -180,11 +176,11 @@ The following example template uses JSON to create the Athena WorkGroup `MyCusto
 }
 ```
 
-### Updating an Athena WorkGroup \- YAML<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup_-_YAML"></a>
+### Updating an Athena WorkGroup<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup"></a>
 
-The following example template uses YAML to update the Athena WorkGroup `MyCustomWorkGroup`\. Note the use of `WorkGroupConfigurationUpdates` instead of `WorkGroupConfiguration`\.
+The following example template updates the Athena WorkGroup `MyCustomWorkGroup`\. Note the use of `WorkGroupConfigurationUpdates` instead of `WorkGroupConfiguration`\.
 
-#### YAML<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup_-_YAML--yaml"></a>
+#### YAML<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup--yaml"></a>
 
 ```
 Resources:
@@ -210,11 +206,7 @@ Resources:
           OutputLocation: s3://path/to/my/bucket/updated/
 ```
 
-### Updating an Athena WorkGroup \- JSON<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup_-_JSON"></a>
-
-The following example template uses JSON to update the Athena WorkGroup `MyCustomWorkGroup`\. Note the use of `WorkGroupConfigurationUpdates` instead of `WorkGroupConfiguration`\.
-
-#### JSON<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup_-_JSON--json"></a>
+#### JSON<a name="aws-resource-athena-workgroup--examples--Updating_an_Athena_WorkGroup--json"></a>
 
 ```
 {

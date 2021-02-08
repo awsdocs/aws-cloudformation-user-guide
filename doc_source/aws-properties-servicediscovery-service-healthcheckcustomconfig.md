@@ -50,14 +50,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig-properties"></a>
 
 `FailureThreshold`  <a name="cfn-servicediscovery-service-healthcheckcustomconfig-failurethreshold"></a>
-The number of 30\-second intervals that you want AWS Cloud Map to wait after receiving an `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service instance\. For example, suppose you specify a value of `2` for `FailureTheshold`, and then your application sends an `UpdateInstanceCustomHealthStatus` request\. AWS Cloud Map waits for approximately 60 seconds \(2 x 30\) before changing the status of the service instance based on that request\.  
-Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same value before `FailureThreshold x 30` seconds has passed doesn't accelerate the change\. AWS Cloud Map still waits `FailureThreshold x 30` seconds after the first request to make the change\.  
+This parameter has been deprecated and is always set to 1\. AWS Cloud Map waits for approximately 30 seconds after receiving an `UpdateInstanceCustomHealthStatus` request before changing the status of the service instance\.
+The number of 30\-second intervals that you want AWS Cloud Map to wait after receiving an `UpdateInstanceCustomHealthStatus` request before it changes the health status of a service instance\.  
+Sending a second or subsequent `UpdateInstanceCustomHealthStatus` request with the same value before 30 seconds has passed doesn't accelerate the change\. AWS Cloud Map still waits `30` seconds after the first request to make the change\.  
 *Required*: No  
 *Type*: Double  
 *Minimum*: `1`  
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig--seealso"></a>
+## See also<a name="aws-properties-servicediscovery-service-healthcheckcustomconfig--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
 +  [HealthCheckCustomConfig](https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html) in the *AWS Cloud Map API Reference* 
+

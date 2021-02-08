@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::ByteMatchSet",
   "Properties" : {
-      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md), ... ],
+      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ ByteMatchTuple, ... ],
       "[Name](#cfn-waf-bytematchset-name)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::ByteMatchSet
 Properties: 
   [ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples): 
-    - [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md)
+    - ByteMatchTuple
   [Name](#cfn-waf-bytematchset-name): String
 ```
 
@@ -45,7 +45,7 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 *Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-waf-bytematchset-return-values"></a>
+## Return values<a name="aws-resource-waf-bytematchset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-bytematchset-return-values-ref"></a>
 
@@ -54,6 +54,8 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-bytematchset--examples"></a>
+
+
 
 ### HTTP Referers<a name="aws-resource-waf-bytematchset--examples--HTTP_Referers"></a>
 

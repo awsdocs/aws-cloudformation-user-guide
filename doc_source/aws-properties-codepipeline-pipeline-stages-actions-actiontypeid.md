@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Category`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-category"></a>
 A category defines what kind of action can be taken in the stage, and constrains the provider type for the action\. Valid categories are limited to one of the values below\.  
-+ Source
-+ Build
-+ Test
-+ Deploy
-+ Invoke
-+ Approval
++ `Source`
++ `Build`
++ `Test`
++ `Deploy`
++ `Invoke`
++ `Approval`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

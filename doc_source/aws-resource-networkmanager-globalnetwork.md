@@ -43,7 +43,7 @@ The tags for the global network\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-networkmanager-globalnetwork-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-globalnetwork-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-globalnetwork-return-values-ref"></a>
 
@@ -66,6 +66,8 @@ The ARN of the global network\. For example, `arn:aws:networkmanager::1234567890
 The ID of the global network\. For example, `global-network-01231231231231231`\.
 
 ## Examples<a name="aws-resource-networkmanager-globalnetwork--examples"></a>
+
+
 
 ### Global Network<a name="aws-resource-networkmanager-globalnetwork--examples--Global_Network"></a>
 

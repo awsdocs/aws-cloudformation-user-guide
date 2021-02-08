@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AccessAnalyzer::Analyzer",
   "Properties" : {
       "[AnalyzerName](#cfn-accessanalyzer-analyzer-analyzername)" : String,
-      "[ArchiveRules](#cfn-accessanalyzer-analyzer-archiverules)" : [ [ArchiveRule](aws-properties-accessanalyzer-analyzer-archiverule.md), ... ],
+      "[ArchiveRules](#cfn-accessanalyzer-analyzer-archiverules)" : [ ArchiveRule, ... ],
       "[Tags](#cfn-accessanalyzer-analyzer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-accessanalyzer-analyzer-type)" : String
     }
@@ -27,7 +27,7 @@ Type: AWS::AccessAnalyzer::Analyzer
 Properties: 
   [AnalyzerName](#cfn-accessanalyzer-analyzer-analyzername): String
   [ArchiveRules](#cfn-accessanalyzer-analyzer-archiverules): 
-    - [ArchiveRule](aws-properties-accessanalyzer-analyzer-archiverule.md)
+    - ArchiveRule
   [Tags](#cfn-accessanalyzer-analyzer-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-accessanalyzer-analyzer-type): String
@@ -55,11 +55,12 @@ The tags to apply to the analyzer\.
 
 `Type`  <a name="cfn-accessanalyzer-analyzer-type"></a>
 The type represents the zone of trust for the analyzer\.  
+*Allowed Values*: ACCOUNT \| ORGANIZATION   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-accessanalyzer-analyzer-return-values"></a>
+## Return values<a name="aws-resource-accessanalyzer-analyzer-return-values"></a>
 
 ### Ref<a name="aws-resource-accessanalyzer-analyzer-return-values-ref"></a>
 
@@ -68,6 +69,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-accessanalyzer-analyzer--examples"></a>
+
+
 
 ### Declare an Analyzer Resource<a name="aws-resource-accessanalyzer-analyzer--examples--Declare_an_Analyzer_Resource"></a>
 

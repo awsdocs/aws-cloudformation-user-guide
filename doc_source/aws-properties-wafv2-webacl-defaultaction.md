@@ -41,6 +41,8 @@ Specifies that AWS WAF should block requests by default\.
 
 ## Examples<a name="aws-properties-wafv2-webacl-defaultaction--examples"></a>
 
+
+
 ### Set a web ACL default action<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_web_ACL_default_action"></a>
 
 The following shows an example web ACL default action specification, that sets the default action to "Block"\. 

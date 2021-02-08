@@ -37,7 +37,7 @@ The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWa
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-account-return-values"></a>
+## Return values<a name="aws-resource-apigateway-account-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-account-return-values-ref"></a>
 
@@ -46,6 +46,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-account--examples"></a>
+
+
 
 ### Associate account with IAM role<a name="aws-resource-apigateway-account--examples--Associate_account_with_IAM_role"></a>
 
@@ -118,5 +120,6 @@ Account:
       - Arn
 ```
 
-## See Also<a name="aws-resource-apigateway-account--seealso"></a>
+## See also<a name="aws-resource-apigateway-account--seealso"></a>
 + [account:update](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/) in the *Amazon API Gateway REST API Reference*
+

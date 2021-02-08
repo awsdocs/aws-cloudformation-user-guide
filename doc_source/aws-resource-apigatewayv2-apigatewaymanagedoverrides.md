@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::ApiGatewayManagedOverrides",
   "Properties" : {
       "[ApiId](#cfn-apigatewayv2-apigatewaymanagedoverrides-apiid)" : String,
-      "[Integration](#cfn-apigatewayv2-apigatewaymanagedoverrides-integration)" : [IntegrationOverrides](aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.md),
-      "[Route](#cfn-apigatewayv2-apigatewaymanagedoverrides-route)" : [RouteOverrides](aws-properties-apigatewayv2-apigatewaymanagedoverrides-routeoverrides.md),
-      "[Stage](#cfn-apigatewayv2-apigatewaymanagedoverrides-stage)" : [StageOverrides](aws-properties-apigatewayv2-apigatewaymanagedoverrides-stageoverrides.md)
+      "[Integration](#cfn-apigatewayv2-apigatewaymanagedoverrides-integration)" : IntegrationOverrides,
+      "[Route](#cfn-apigatewayv2-apigatewaymanagedoverrides-route)" : RouteOverrides,
+      "[Stage](#cfn-apigatewayv2-apigatewaymanagedoverrides-stage)" : StageOverrides
     }
 }
 ```
@@ -27,11 +27,11 @@ Type: AWS::ApiGatewayV2::ApiGatewayManagedOverrides
 Properties: 
   [ApiId](#cfn-apigatewayv2-apigatewaymanagedoverrides-apiid): String
   [Integration](#cfn-apigatewayv2-apigatewaymanagedoverrides-integration): 
-    [IntegrationOverrides](aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.md)
+    IntegrationOverrides
   [Route](#cfn-apigatewayv2-apigatewaymanagedoverrides-route): 
-    [RouteOverrides](aws-properties-apigatewayv2-apigatewaymanagedoverrides-routeoverrides.md)
+    RouteOverrides
   [Stage](#cfn-apigatewayv2-apigatewaymanagedoverrides-stage): 
-    [StageOverrides](aws-properties-apigatewayv2-apigatewaymanagedoverrides-stageoverrides.md)
+    StageOverrides
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-apigatewaymanagedoverrides-properties"></a>

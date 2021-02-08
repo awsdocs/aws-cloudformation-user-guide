@@ -49,7 +49,7 @@ The ID of the link\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-networkmanager-linkassociation-return-values"></a>
+## Return values<a name="aws-resource-networkmanager-linkassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-networkmanager-linkassociation-return-values-ref"></a>
 
@@ -58,6 +58,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-linkassociation--examples"></a>
+
+
 
 ### Link Association<a name="aws-resource-networkmanager-linkassociation--examples--Link_Association"></a>
 

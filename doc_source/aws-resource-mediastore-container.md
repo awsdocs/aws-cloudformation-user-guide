@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessLoggingEnabled](#cfn-mediastore-container-accessloggingenabled)" : Boolean,
       "[ContainerName](#cfn-mediastore-container-containername)" : String,
-      "[CorsPolicy](#cfn-mediastore-container-corspolicy)" : [ [CorsRule](aws-properties-mediastore-container-corsrule.md), ... ],
+      "[CorsPolicy](#cfn-mediastore-container-corspolicy)" : [ CorsRule, ... ],
       "[LifecyclePolicy](#cfn-mediastore-container-lifecyclepolicy)" : String,
-      "[MetricPolicy](#cfn-mediastore-container-metricpolicy)" : [MetricPolicy](aws-properties-mediastore-container-metricpolicy.md),
+      "[MetricPolicy](#cfn-mediastore-container-metricpolicy)" : MetricPolicy,
       "[Policy](#cfn-mediastore-container-policy)" : String,
       "[Tags](#cfn-mediastore-container-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -33,10 +33,10 @@ Properties:
   [AccessLoggingEnabled](#cfn-mediastore-container-accessloggingenabled): Boolean
   [ContainerName](#cfn-mediastore-container-containername): String
   [CorsPolicy](#cfn-mediastore-container-corspolicy): 
-    - [CorsRule](aws-properties-mediastore-container-corsrule.md)
+    - CorsRule
   [LifecyclePolicy](#cfn-mediastore-container-lifecyclepolicy): String
   [MetricPolicy](#cfn-mediastore-container-metricpolicy): 
-    [MetricPolicy](aws-properties-mediastore-container-metricpolicy.md)
+    MetricPolicy
   [Policy](#cfn-mediastore-container-policy): String
   [Tags](#cfn-mediastore-container-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -94,7 +94,7 @@ A collection of tags associated with a container\. Each tag consists of a key:va
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-mediastore-container-return-values"></a>
+## Return values<a name="aws-resource-mediastore-container-return-values"></a>
 
 ### Ref<a name="aws-resource-mediastore-container-return-values-ref"></a>
 

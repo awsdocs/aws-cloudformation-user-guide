@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Invert](#cfn-appmesh-route-grpcroutemetadata-invert)" : Boolean,
-  "[Match](#cfn-appmesh-route-grpcroutemetadata-match)" : [GrpcRouteMetadataMatchMethod](aws-properties-appmesh-route-grpcroutemetadatamatchmethod.md),
+  "[Match](#cfn-appmesh-route-grpcroutemetadata-match)" : GrpcRouteMetadataMatchMethod,
   "[Name](#cfn-appmesh-route-grpcroutemetadata-name)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Invert](#cfn-appmesh-route-grpcroutemetadata-invert): Boolean
   [Match](#cfn-appmesh-route-grpcroutemetadata-match): 
-    [GrpcRouteMetadataMatchMethod](aws-properties-appmesh-route-grpcroutemetadatamatchmethod.md)
+    GrpcRouteMetadataMatchMethod
   [Name](#cfn-appmesh-route-grpcroutemetadata-name): String
 ```
 

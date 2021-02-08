@@ -13,10 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::GameLift::Fleet",
   "Properties" : {
       "[BuildId](#cfn-gamelift-fleet-buildid)" : String,
-      "[CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration)" : [CertificateConfiguration](aws-properties-gamelift-fleet-certificateconfiguration.md),
+      "[CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration)" : CertificateConfiguration,
       "[Description](#cfn-gamelift-fleet-description)" : String,
       "[DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances)" : Integer,
-      "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md), ... ],
+      "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ IpPermission, ... ],
       "[EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype)" : String,
       "[FleetType](#cfn-gamelift-fleet-fleettype)" : String,
       "[InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn)" : String,
@@ -28,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NewGameSessionProtectionPolicy](#cfn-gamelift-fleet-newgamesessionprotectionpolicy)" : String,
       "[PeerVpcAwsAccountId](#cfn-gamelift-fleet-peervpcawsaccountid)" : String,
       "[PeerVpcId](#cfn-gamelift-fleet-peervpcid)" : String,
-      "[ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy)" : [ResourceCreationLimitPolicy](aws-properties-gamelift-fleet-resourcecreationlimitpolicy.md),
-      "[RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration)" : [RuntimeConfiguration](aws-properties-gamelift-fleet-runtimeconfiguration.md),
+      "[ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy)" : ResourceCreationLimitPolicy,
+      "[RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration)" : RuntimeConfiguration,
       "[ScriptId](#cfn-gamelift-fleet-scriptid)" : String,
       "[ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters)" : String,
       "[ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath)" : String
@@ -44,11 +44,11 @@ Type: AWS::GameLift::Fleet
 Properties: 
   [BuildId](#cfn-gamelift-fleet-buildid): String
   [CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration): 
-    [CertificateConfiguration](aws-properties-gamelift-fleet-certificateconfiguration.md)
+    CertificateConfiguration
   [Description](#cfn-gamelift-fleet-description): String
   [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances): Integer
   [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions): 
-    - [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)
+    - IpPermission
   [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype): String
   [FleetType](#cfn-gamelift-fleet-fleettype): String
   [InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn): String
@@ -63,9 +63,9 @@ Properties:
   [PeerVpcAwsAccountId](#cfn-gamelift-fleet-peervpcawsaccountid): String
   [PeerVpcId](#cfn-gamelift-fleet-peervpcid): String
   [ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy): 
-    [ResourceCreationLimitPolicy](aws-properties-gamelift-fleet-resourcecreationlimitpolicy.md)
+    ResourceCreationLimitPolicy
   [RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration): 
-    [RuntimeConfiguration](aws-properties-gamelift-fleet-runtimeconfiguration.md)
+    RuntimeConfiguration
   [ScriptId](#cfn-gamelift-fleet-scriptid): String
   [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters): String
   [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String
@@ -113,14 +113,14 @@ A range of IP addresses and port settings that allow inbound traffic to connect 
 The name of an EC2 instance type that is supported in Amazon GameLift\. A fleet instance type determines the computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity\. Amazon GameLift supports the following EC2 instance types\. See [Amazon EC2 Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
+*Allowed values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5a.12xlarge | c5a.16xlarge | c5a.24xlarge | c5a.2xlarge | c5a.4xlarge | c5a.8xlarge | c5a.large | c5a.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FleetType`  <a name="cfn-gamelift-fleet-fleettype"></a>
 Indicates whether to use On\-Demand instances or Spot instances for this fleet\. If empty, the default is `ON_DEMAND`\. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet\. Learn more about [ On\-Demand versus Spot Instances](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html#gamelift-ec2-instances-spot)\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceRoleARN`  <a name="cfn-gamelift-fleet-instancerolearn"></a>
@@ -169,7 +169,7 @@ A descriptive label that is associated with a fleet\. Fleet names do not need to
 A game session protection policy to apply to all game sessions hosted on instances in this fleet\. When protected, active game sessions cannot be terminated during a scale\-down event\. If this parameter is not set, instances in this fleet default to no protection\. You can change a fleet's protection policy to affect future game sessions on the fleet\. You can also set protection for individual game sessions\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `FullProtection | NoProtection`  
+*Allowed values*: `FullProtection | NoProtection`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeerVpcAwsAccountId`  <a name="cfn-gamelift-fleet-peervpcawsaccountid"></a>
@@ -225,7 +225,7 @@ This parameter is no longer used\. Instead, specify a server launch path using t
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-gamelift-fleet-return-values"></a>
+## Return values<a name="aws-resource-gamelift-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-fleet-return-values-ref"></a>
 
@@ -234,6 +234,8 @@ This parameter is no longer used\. Instead, specify a server launch path using t
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-gamelift-fleet--examples"></a>
+
+
 
 ### Create GameLift fleet with a Build<a name="aws-resource-gamelift-fleet--examples--Create_GameLift_fleet_with_a_Build"></a>
 
@@ -452,7 +454,8 @@ Resources:
       ScriptId: !GetAtt ScriptResource.Id
 ```
 
-## See Also<a name="aws-resource-gamelift-fleet--seealso"></a>
+## See also<a name="aws-resource-gamelift-fleet--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Setting Up GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html) in the *Amazon GameLift Developer Guide* 
 + [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) in the *Amazon GameLift API Reference* 
+

@@ -40,6 +40,6 @@ Represents the map target that is used in a `HomeDirectorymapEntry`\.
 *Pattern*: `^/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-transfer-user-homedirectorymapentry--seealso"></a>
+## See also<a name="aws-properties-transfer-user-homedirectorymapentry--seealso"></a>
 
 [HomeDirectoryMapEntry](https://docs.aws.amazon.com/transfer/latest/userguide/API_HomeDirectoryMapEntry.html) in the *AWS Transfer Family User Guide*\.

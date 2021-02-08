@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Architecture](#cfn-opsworks-instance-architecture)" : String,
       "[AutoScalingType](#cfn-opsworks-instance-autoscalingtype)" : String,
       "[AvailabilityZone](#cfn-opsworks-instance-availabilityzone)" : String,
-      "[BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings)" : [ [BlockDeviceMapping](aws-properties-opsworks-instance-blockdevicemapping.md), ... ],
+      "[BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
       "[EbsOptimized](#cfn-opsworks-instance-ebsoptimized)" : Boolean,
       "[ElasticIps](#cfn-opsworks-instance-elasticips)" : [ String, ... ],
       "[Hostname](#cfn-opsworks-instance-hostname)" : String,
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StackId](#cfn-opsworks-instance-stackid)" : String,
       "[SubnetId](#cfn-opsworks-instance-subnetid)" : String,
       "[Tenancy](#cfn-opsworks-instance-tenancy)" : String,
-      "[TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling)" : [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md),
+      "[TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling)" : TimeBasedAutoScaling,
       "[VirtualizationType](#cfn-opsworks-instance-virtualizationtype)" : String,
       "[Volumes](#cfn-opsworks-instance-volumes)" : [ String, ... ]
     }
@@ -50,7 +50,7 @@ Properties:
   [AutoScalingType](#cfn-opsworks-instance-autoscalingtype): String
   [AvailabilityZone](#cfn-opsworks-instance-availabilityzone): String
   [BlockDeviceMappings](#cfn-opsworks-instance-blockdevicemappings): 
-    - [BlockDeviceMapping](aws-properties-opsworks-instance-blockdevicemapping.md)
+    - BlockDeviceMapping
   [EbsOptimized](#cfn-opsworks-instance-ebsoptimized): Boolean
   [ElasticIps](#cfn-opsworks-instance-elasticips): 
     - String
@@ -66,7 +66,7 @@ Properties:
   [SubnetId](#cfn-opsworks-instance-subnetid): String
   [Tenancy](#cfn-opsworks-instance-tenancy): String
   [TimeBasedAutoScaling](#cfn-opsworks-instance-timebasedautoscaling): 
-    [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md)
+    TimeBasedAutoScaling
   [VirtualizationType](#cfn-opsworks-instance-virtualizationtype): String
   [Volumes](#cfn-opsworks-instance-volumes): 
     - String
@@ -94,14 +94,14 @@ If you specify a custom AMI, you must set `Os` to `Custom`\.
 The instance architecture\. The default option is `x86_64`\. Instance types do not necessarily support both architectures\. For a list of the architectures that are supported by the different instance types, see [Instance Families and Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `i386 | x86_64`  
+*Allowed values*: `i386 | x86_64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoScalingType`  <a name="cfn-opsworks-instance-autoscalingtype"></a>
 For load\-based or time\-based instances, the type\. Windows stacks can use only time\-based instances\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `load | timer`  
+*Allowed values*: `load | timer`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AvailabilityZone`  <a name="cfn-opsworks-instance-availabilityzone"></a>
@@ -171,7 +171,7 @@ The default option is the current Amazon Linux version\. If you set this paramet
 The instance root device type\. For more information, see [Storage for the Root Device](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device)\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ebs | instance-store`  
+*Allowed values*: `ebs | instance-store`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SshKeyName`  <a name="cfn-opsworks-instance-sshkeyname"></a>
@@ -202,7 +202,7 @@ The instance's tenancy option\. The default option is no tenancy, or if the inst
 The time\-based scaling configuration for the instance\.  
 *Required*: No  
 *Type*: [TimeBasedAutoScaling](aws-properties-opsworks-instance-timebasedautoscaling.md)  
-*Allowed Values*: `load | timer`  
+*Allowed values*: `load | timer`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VirtualizationType`  <a name="cfn-opsworks-instance-virtualizationtype"></a>
@@ -217,7 +217,7 @@ A list of AWS OpsWorks volume IDs to associate with the instance\. For more info
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-opsworks-instance-return-values"></a>
+## Return values<a name="aws-resource-opsworks-instance-return-values"></a>
 
 ### Ref<a name="aws-resource-opsworks-instance-return-values-ref"></a>
 
@@ -357,6 +357,7 @@ DBInstance:
         "15": "on"
 ```
 
-## See Also<a name="aws-resource-opsworks-instance--seealso"></a>
+## See also<a name="aws-resource-opsworks-instance--seealso"></a>
 +  [CreateInstance](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateInstance.html) in the *AWS OpsWorks API Reference*\.
 +  [Adding an Instance to a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html) in the *AWS OpsWorks User Guide*\.
+

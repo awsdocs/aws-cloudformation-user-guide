@@ -13,13 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::S3::AccessPoint",
   "Properties" : {
       "[Bucket](#cfn-s3-accesspoint-bucket)" : String,
-      "[CreationDate](#cfn-s3-accesspoint-creationdate)" : String,
       "[Name](#cfn-s3-accesspoint-name)" : String,
       "[NetworkOrigin](#cfn-s3-accesspoint-networkorigin)" : String,
       "[Policy](#cfn-s3-accesspoint-policy)" : Json,
       "[PolicyStatus](#cfn-s3-accesspoint-policystatus)" : Json,
-      "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : [PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md),
-      "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : [VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)
+      "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
+      "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : VpcConfiguration
     }
 }
 ```
@@ -30,15 +29,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::S3::AccessPoint
 Properties: 
   [Bucket](#cfn-s3-accesspoint-bucket): String
-  [CreationDate](#cfn-s3-accesspoint-creationdate): String
   [Name](#cfn-s3-accesspoint-name): String
   [NetworkOrigin](#cfn-s3-accesspoint-networkorigin): String
   [Policy](#cfn-s3-accesspoint-policy): Json
   [PolicyStatus](#cfn-s3-accesspoint-policystatus): Json
   [PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration): 
-    [PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md)
+    PublicAccessBlockConfiguration
   [VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration): 
-    [VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)
+    VpcConfiguration
 ```
 
 ## Properties<a name="aws-resource-s3-accesspoint-properties"></a>
@@ -48,12 +46,6 @@ The name of the bucket associated with this access point\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`CreationDate`  <a name="cfn-s3-accesspoint-creationdate"></a>
-The date and time when this access point was created\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-s3-accesspoint-name"></a>
 The name of this access point\.  
@@ -91,7 +83,7 @@ The Virtual Private Cloud \(VPC\) configuration for this access point, if one ex
 *Type*: [VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-s3-accesspoint-return-values"></a>
+## Return values<a name="aws-resource-s3-accesspoint-return-values"></a>
 
 ### Ref<a name="aws-resource-s3-accesspoint-return-values-ref"></a>
 

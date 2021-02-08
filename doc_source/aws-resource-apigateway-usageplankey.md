@@ -49,7 +49,7 @@ The ID of the usage plan\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-apigateway-usageplankey-return-values"></a>
+## Return values<a name="aws-resource-apigateway-usageplankey-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-usageplankey-return-values-ref"></a>
 
@@ -59,7 +59,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-usageplankey--examples"></a>
 
+
+
 ### Create usage plan key<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key"></a>
+
+
 
 #### JSON<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key--json"></a>
 
@@ -91,5 +95,6 @@ usagePlanKey:
     UsagePlanId: !Ref myUsagePlan
 ```
 
-## See Also<a name="aws-resource-apigateway-usageplankey--seealso"></a>
+## See also<a name="aws-resource-apigateway-usageplankey--seealso"></a>
 + [usageplankey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplankey-create/) in the *Amazon API Gateway REST API Reference*
+

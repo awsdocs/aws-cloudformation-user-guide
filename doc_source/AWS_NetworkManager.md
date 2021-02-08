@@ -1,6 +1,6 @@
-# NetworkManager Resource Type Reference<a name="AWS_NetworkManager"></a>
+# NetworkManager resource type reference<a name="AWS_NetworkManager"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::NetworkManager::CustomerGatewayAssociation](aws-resource-networkmanager-customergatewayassociation.md)
 + [AWS::NetworkManager::Device](aws-resource-networkmanager-device.md)
 + [AWS::NetworkManager::GlobalNetwork](aws-resource-networkmanager-globalnetwork.md)

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-glue-mltransform-description)" : String,
       "[GlueVersion](#cfn-glue-mltransform-glueversion)" : String,
-      "[InputRecordTables](#cfn-glue-mltransform-inputrecordtables)" : [InputRecordTables](aws-properties-glue-mltransform-inputrecordtables.md),
+      "[InputRecordTables](#cfn-glue-mltransform-inputrecordtables)" : InputRecordTables,
       "[MaxCapacity](#cfn-glue-mltransform-maxcapacity)" : Double,
       "[MaxRetries](#cfn-glue-mltransform-maxretries)" : Integer,
       "[Name](#cfn-glue-mltransform-name)" : String,
@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Role](#cfn-glue-mltransform-role)" : String,
       "[Tags](#cfn-glue-mltransform-tags)" : Json,
       "[Timeout](#cfn-glue-mltransform-timeout)" : Integer,
-      "[TransformParameters](#cfn-glue-mltransform-transformparameters)" : [TransformParameters](aws-properties-glue-mltransform-transformparameters.md),
+      "[TransformEncryption](#cfn-glue-mltransform-transformencryption)" : TransformEncryption,
+      "[TransformParameters](#cfn-glue-mltransform-transformparameters)" : TransformParameters,
       "[WorkerType](#cfn-glue-mltransform-workertype)" : String
     }
 }
@@ -36,7 +37,7 @@ Properties:
   [Description](#cfn-glue-mltransform-description): String
   [GlueVersion](#cfn-glue-mltransform-glueversion): String
   [InputRecordTables](#cfn-glue-mltransform-inputrecordtables): 
-    [InputRecordTables](aws-properties-glue-mltransform-inputrecordtables.md)
+    InputRecordTables
   [MaxCapacity](#cfn-glue-mltransform-maxcapacity): Double
   [MaxRetries](#cfn-glue-mltransform-maxretries): Integer
   [Name](#cfn-glue-mltransform-name): String
@@ -44,8 +45,10 @@ Properties:
   [Role](#cfn-glue-mltransform-role): String
   [Tags](#cfn-glue-mltransform-tags): Json
   [Timeout](#cfn-glue-mltransform-timeout): Integer
+  [TransformEncryption](#cfn-glue-mltransform-transformencryption): 
+    TransformEncryption
   [TransformParameters](#cfn-glue-mltransform-transformparameters): 
-    [TransformParameters](aws-properties-glue-mltransform-transformparameters.md)
+    TransformParameters
   [WorkerType](#cfn-glue-mltransform-workertype): String
 ```
 
@@ -122,6 +125,12 @@ The timeout in minutes of the machine learning transform\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TransformEncryption`  <a name="cfn-glue-mltransform-transformencryption"></a>
+The encryption\-at\-rest settings of the transform that apply to accessing user data\. Machine learning transforms can access user data encrypted in Amazon S3 using KMS\.  
+*Required*: No  
+*Type*: [TransformEncryption](aws-properties-glue-mltransform-transformencryption.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TransformParameters`  <a name="cfn-glue-mltransform-transformparameters"></a>
 The algorithm\-specific parameters that are associated with the machine learning transform\.  
 *Required*: Yes  
@@ -142,7 +151,7 @@ The type of predefined worker that is allocated when a task of this transform ru
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-mltransform-return-values"></a>
+## Return values<a name="aws-resource-glue-mltransform-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-mltransform-return-values-ref"></a>
 

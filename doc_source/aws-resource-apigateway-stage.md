@@ -12,15 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Stage",
   "Properties" : {
-      "[AccessLogSetting](#cfn-apigateway-stage-accesslogsetting)" : [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md),
+      "[AccessLogSetting](#cfn-apigateway-stage-accesslogsetting)" : AccessLogSetting,
       "[CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled)" : Boolean,
       "[CacheClusterSize](#cfn-apigateway-stage-cacheclustersize)" : String,
-      "[CanarySetting](#cfn-apigateway-stage-canarysetting)" : [CanarySetting](aws-properties-apigateway-stage-canarysetting.md),
+      "[CanarySetting](#cfn-apigateway-stage-canarysetting)" : CanarySetting,
       "[ClientCertificateId](#cfn-apigateway-stage-clientcertificateid)" : String,
       "[DeploymentId](#cfn-apigateway-stage-deploymentid)" : String,
       "[Description](#cfn-apigateway-stage-description)" : String,
       "[DocumentationVersion](#cfn-apigateway-stage-documentationversion)" : String,
-      "[MethodSettings](#cfn-apigateway-stage-methodsettings)" : [ [MethodSetting](aws-properties-apitgateway-stage-methodsetting.md), ... ],
+      "[MethodSettings](#cfn-apigateway-stage-methodsettings)" : [ MethodSetting, ... ],
       "[RestApiId](#cfn-apigateway-stage-restapiid)" : String,
       "[StageName](#cfn-apigateway-stage-stagename)" : String,
       "[Tags](#cfn-apigateway-stage-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -36,17 +36,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::Stage
 Properties: 
   [AccessLogSetting](#cfn-apigateway-stage-accesslogsetting): 
-    [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)
+    AccessLogSetting
   [CacheClusterEnabled](#cfn-apigateway-stage-cacheclusterenabled): Boolean
   [CacheClusterSize](#cfn-apigateway-stage-cacheclustersize): String
   [CanarySetting](#cfn-apigateway-stage-canarysetting): 
-    [CanarySetting](aws-properties-apigateway-stage-canarysetting.md)
+    CanarySetting
   [ClientCertificateId](#cfn-apigateway-stage-clientcertificateid): String
   [DeploymentId](#cfn-apigateway-stage-deploymentid): String
   [Description](#cfn-apigateway-stage-description): String
   [DocumentationVersion](#cfn-apigateway-stage-documentationversion): String
   [MethodSettings](#cfn-apigateway-stage-methodsettings): 
-    - [MethodSetting](aws-properties-apitgateway-stage-methodsetting.md)
+    - MethodSetting
   [RestApiId](#cfn-apigateway-stage-restapiid): String
   [StageName](#cfn-apigateway-stage-stagename): String
   [Tags](#cfn-apigateway-stage-tags): 
@@ -143,7 +143,7 @@ A map \(string\-to\-string map\) that defines the stage variables, where the var
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-stage-return-values"></a>
+## Return values<a name="aws-resource-apigateway-stage-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-stage-return-values-ref"></a>
 
@@ -152,6 +152,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-stage--examples"></a>
+
+
 
 ### Create stage<a name="aws-resource-apigateway-stage--examples--Create_stage"></a>
 
@@ -242,5 +244,6 @@ Resources:
           ThrottlingBurstLimit: '555'
 ```
 
-## See Also<a name="aws-resource-apigateway-stage--seealso"></a>
+## See also<a name="aws-resource-apigateway-stage--seealso"></a>
 + [stage:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/stage-create/) in the *Amazon API Gateway REST API Reference*
+

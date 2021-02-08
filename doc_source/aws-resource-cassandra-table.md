@@ -12,11 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cassandra::Table",
   "Properties" : {
-      "[BillingMode](#cfn-cassandra-table-billingmode)" : [BillingMode](aws-properties-cassandra-table-billingmode.md),
-      "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ [ClusteringKeyColumn](aws-properties-cassandra-table-clusteringkeycolumn.md), ... ],
+      "[BillingMode](#cfn-cassandra-table-billingmode)" : BillingMode,
+      "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ ClusteringKeyColumn, ... ],
       "[KeyspaceName](#cfn-cassandra-table-keyspacename)" : String,
-      "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ [Column](aws-properties-cassandra-table-column.md), ... ],
-      "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ [Column](aws-properties-cassandra-table-column.md), ... ],
+      "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ Column, ... ],
+      "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ Column, ... ],
       "[TableName](#cfn-cassandra-table-tablename)" : String
     }
 }
@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cassandra::Table
 Properties: 
   [BillingMode](#cfn-cassandra-table-billingmode): 
-    [BillingMode](aws-properties-cassandra-table-billingmode.md)
+    BillingMode
   [ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns): 
-    - [ClusteringKeyColumn](aws-properties-cassandra-table-clusteringkeycolumn.md)
+    - ClusteringKeyColumn
   [KeyspaceName](#cfn-cassandra-table-keyspacename): String
   [PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns): 
-    - [Column](aws-properties-cassandra-table-column.md)
+    - Column
   [RegularColumns](#cfn-cassandra-table-regularcolumns): 
-    - [Column](aws-properties-cassandra-table-column.md)
+    - Column
   [TableName](#cfn-cassandra-table-tablename): String
 ```
 
@@ -83,7 +83,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cassandra-table-return-values"></a>
+## Return values<a name="aws-resource-cassandra-table-return-values"></a>
 
 ### Ref<a name="aws-resource-cassandra-table-return-values-ref"></a>
 
@@ -94,6 +94,8 @@ If you specify a name, you cannot perform updates that require replacement of th
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cassandra-table--examples"></a>
+
+
 
 ### Create a Table with Minimal Options<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Minimal_Options"></a>
 

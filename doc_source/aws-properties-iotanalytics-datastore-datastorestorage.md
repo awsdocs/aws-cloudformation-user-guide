@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3)" : [CustomerManagedS3](aws-properties-iotanalytics-datastore-customermanageds3.md),
-  "[ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3)" : [ServiceManagedS3](aws-properties-iotanalytics-datastore-servicemanageds3.md)
+  "[CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3)" : CustomerManagedS3,
+  "[ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3)" : ServiceManagedS3
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3): 
-    [CustomerManagedS3](aws-properties-iotanalytics-datastore-customermanageds3.md)
+    CustomerManagedS3
   [ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3): 
-    [ServiceManagedS3](aws-properties-iotanalytics-datastore-servicemanageds3.md)
+    ServiceManagedS3
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-datastore-datastorestorage-properties"></a>

@@ -51,7 +51,7 @@ You must specify either `InternetGatewayId` or `VpnGatewayId`, but not both\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-vpc-gateway-attachment-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpc-gateway-attachment-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpc-gateway-attachment-return-values-ref"></a>
 
@@ -60,6 +60,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-vpc-gateway-attachment--examples"></a>
+
+
 
 ### VPN Gateway Attachment<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment"></a>
 
@@ -104,6 +106,7 @@ AttachVpnGateway:
        Ref: myVPNGateway
 ```
 
-## See Also<a name="aws-resource-ec2-vpc-gateway-attachment--seealso"></a>
+## See also<a name="aws-resource-ec2-vpc-gateway-attachment--seealso"></a>
 +  [AttachVpnGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AttachVpnGateway.html) in the *Amazon EC2 API Reference*
 + [InternetGateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon Virtual Private Cloud User Guide*
+

@@ -2,6 +2,9 @@
 
 An object that represents the AWS Cloud Map service discovery information for your virtual node\.
 
+**Note**  
+AWS Cloud Map is not available in the eu\-south\-1 Region\.
+
 ## Syntax<a name="aws-properties-appmesh-virtualnode-awscloudmapservicediscovery-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -10,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes)" : [ [AwsCloudMapInstanceAttribute](aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.md), ... ],
+  "[Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes)" : [ AwsCloudMapInstanceAttribute, ... ],
   "[NamespaceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename)" : String,
   "[ServiceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename)" : String
 }
@@ -20,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-attributes): 
-    - [AwsCloudMapInstanceAttribute](aws-properties-appmesh-virtualnode-awscloudmapinstanceattribute.md)
+    - AwsCloudMapInstanceAttribute
   [NamespaceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename): String
   [ServiceName](#cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename): String
 ```

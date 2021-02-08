@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-kinesis-stream-name)" : String,
       "[RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours)" : Integer,
       "[ShardCount](#cfn-kinesis-stream-shardcount)" : Integer,
-      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md),
+      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : StreamEncryption,
       "[Tags](#cfn-kinesis-stream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,7 +30,7 @@ Properties:
   [RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours): Integer
   [ShardCount](#cfn-kinesis-stream-shardcount): Integer
   [StreamEncryption](#cfn-kinesis-stream-streamencryption): 
-    [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)
+    StreamEncryption
   [Tags](#cfn-kinesis-stream-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -72,7 +72,7 @@ An arbitrary set of tags \(key–value pairs\) to associate with the Kinesis str
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kinesis-stream-return-values"></a>
+## Return values<a name="aws-resource-kinesis-stream-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesis-stream-return-values-ref"></a>
 
@@ -92,6 +92,8 @@ For more information about using Fn::GetAtt, see [Fn::GetAtt](https://docs.aws.a
 The Amazon resource name \(ARN\) of the Kinesis stream, such as `arn:aws:kinesis:us-east-2:123456789012:stream/mystream`\.
 
 ## Examples<a name="aws-resource-kinesis-stream--examples"></a>
+
+
 
 ### Create a Stream<a name="aws-resource-kinesis-stream--examples--Create_a_Stream"></a>
 

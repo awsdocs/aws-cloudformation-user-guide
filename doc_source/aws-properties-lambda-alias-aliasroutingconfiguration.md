@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ [VersionWeight](aws-properties-lambda-alias-versionweight.md), ... ]
+  "[AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights)" : [ VersionWeight, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AdditionalVersionWeights](#cfn-lambda-alias-aliasroutingconfiguration-additionalversionweights): 
-    - [VersionWeight](aws-properties-lambda-alias-versionweight.md)
+    - VersionWeight
 ```
 
 ## Properties<a name="aws-properties-lambda-alias-aliasroutingconfiguration-properties"></a>
@@ -30,6 +30,8 @@ The second version, and the percentage of traffic that's routed to it\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples"></a>
+
+
 
 ### Routing Configuration<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples--Routing_Configuration"></a>
 

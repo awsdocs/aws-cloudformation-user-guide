@@ -14,15 +14,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaLive::Input",
   "Properties" : {
-      "[Destinations](#cfn-medialive-input-destinations)" : [ [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md), ... ],
+      "[Destinations](#cfn-medialive-input-destinations)" : [ InputDestinationRequest, ... ],
+      "[InputDevices](#cfn-medialive-input-inputdevices)" : [ InputDeviceSettings, ... ],
       "[InputSecurityGroups](#cfn-medialive-input-inputsecuritygroups)" : [ String, ... ],
-      "[MediaConnectFlows](#cfn-medialive-input-mediaconnectflows)" : [ [MediaConnectFlowRequest](aws-properties-medialive-input-mediaconnectflowrequest.md), ... ],
+      "[MediaConnectFlows](#cfn-medialive-input-mediaconnectflows)" : [ MediaConnectFlowRequest, ... ],
       "[Name](#cfn-medialive-input-name)" : String,
       "[RoleArn](#cfn-medialive-input-rolearn)" : String,
-      "[Sources](#cfn-medialive-input-sources)" : [ [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md), ... ],
+      "[Sources](#cfn-medialive-input-sources)" : [ InputSourceRequest, ... ],
       "[Tags](#cfn-medialive-input-tags)" : Json,
       "[Type](#cfn-medialive-input-type)" : String,
-      "[Vpc](#cfn-medialive-input-vpc)" : [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)
+      "[Vpc](#cfn-medialive-input-vpc)" : InputVpcRequest
     }
 }
 ```
@@ -33,19 +34,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MediaLive::Input
 Properties: 
   [Destinations](#cfn-medialive-input-destinations): 
-    - [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)
+    - InputDestinationRequest
+  [InputDevices](#cfn-medialive-input-inputdevices): 
+    - InputDeviceSettings
   [InputSecurityGroups](#cfn-medialive-input-inputsecuritygroups): 
     - String
   [MediaConnectFlows](#cfn-medialive-input-mediaconnectflows): 
-    - [MediaConnectFlowRequest](aws-properties-medialive-input-mediaconnectflowrequest.md)
+    - MediaConnectFlowRequest
   [Name](#cfn-medialive-input-name): String
   [RoleArn](#cfn-medialive-input-rolearn): String
   [Sources](#cfn-medialive-input-sources): 
-    - [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md)
+    - InputSourceRequest
   [Tags](#cfn-medialive-input-tags): Json
   [Type](#cfn-medialive-input-type): String
   [Vpc](#cfn-medialive-input-vpc): 
-    [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)
+    InputVpcRequest
 ```
 
 ## Properties<a name="aws-resource-medialive-input-properties"></a>
@@ -54,6 +57,12 @@ Properties:
 The destination settings for push types of inputs\. If the input is a pull type, these settings don't apply\.   
 *Required*: No  
 *Type*: List of [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InputDevices`  <a name="cfn-medialive-input-inputdevices"></a>
+Settings for the devices\.  
+*Required*: No  
+*Type*: List of [InputDeviceSettings](aws-properties-medialive-input-inputdevicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputSecurityGroups`  <a name="cfn-medialive-input-inputsecuritygroups"></a>
@@ -104,7 +113,7 @@ Settings that apply only if the input is an Amazon VPC input\.
 *Type*: [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-medialive-input-return-values"></a>
+## Return values<a name="aws-resource-medialive-input-return-values"></a>
 
 ### Ref<a name="aws-resource-medialive-input-return-values-ref"></a>
 

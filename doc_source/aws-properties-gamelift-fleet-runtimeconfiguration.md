@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[GameSessionActivationTimeoutSeconds](#cfn-gamelift-fleet-runtimeconfiguration-gamesessionactivationtimeoutseconds)" : Integer,
   "[MaxConcurrentGameSessionActivations](#cfn-gamelift-fleet-runtimeconfiguration-maxconcurrentgamesessionactivations)" : Integer,
-  "[ServerProcesses](#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses)" : [ [ServerProcess](aws-properties-gamelift-fleet-serverprocess.md), ... ]
+  "[ServerProcesses](#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses)" : [ ServerProcess, ... ]
 }
 ```
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [GameSessionActivationTimeoutSeconds](#cfn-gamelift-fleet-runtimeconfiguration-gamesessionactivationtimeoutseconds): Integer
   [MaxConcurrentGameSessionActivations](#cfn-gamelift-fleet-runtimeconfiguration-maxconcurrentgamesessionactivations): Integer
   [ServerProcesses](#cfn-gamelift-fleet-runtimeconfiguration-serverprocesses): 
-    - [ServerProcess](aws-properties-gamelift-fleet-serverprocess.md)
+    - ServerProcess
 ```
 
 ## Properties<a name="aws-properties-gamelift-fleet-runtimeconfiguration-properties"></a>
@@ -54,9 +54,10 @@ A collection of server process configurations that describe which server process
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-gamelift-fleet-runtimeconfiguration--seealso"></a>
+## See also<a name="aws-properties-gamelift-fleet-runtimeconfiguration--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Deploy a GameLift Fleet for a Custom Game Build](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [Deploy a Realtime Servers Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-fleets-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [Run Multiple Processes on a Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html) in the *Amazon GameLift Developer Guide* 
 +  [RuntimeConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_RuntimeConfiguration.html) in the *Amazon GameLift API Reference* 
+

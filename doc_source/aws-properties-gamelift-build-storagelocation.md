@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Bucket`  <a name="cfn-gamelift-build-storage-bucket"></a>
 An S3 bucket identifier\. This is the name of the S3 bucket\.  
+GameLift currently does not support uploading from S3 buckets with names that contain a dot \(\.\)\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -56,8 +57,9 @@ The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-gamelift-build-storagelocation--seealso"></a>
+## See also<a name="aws-properties-gamelift-build-storagelocation--seealso"></a>
 + [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Create a Build with Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
 + [ Upload Script Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [S3Location](https://docs.aws.amazon.com/gamelift/latest/apireference/API_S3Location.html) in the *Amazon GameLift API Reference* 
+

@@ -12,7 +12,7 @@ There are a few rules for the step adjustments for your step policy:
 + At most one step adjustment can have a null upper bound\. If one step adjustment has a positive upper bound, then there must be a step adjustment with a null upper bound\. 
 + The upper and lower bound can't be null in the same step adjustment\.
 
-For more information, see [Step Adjustments](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-steps) in the *Amazon EC2 Auto Scaling User Guide*\. 
+For more information, see [Step adjustments](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-steps) in the *Amazon EC2 Auto Scaling User Guide*\. 
 
 You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#aws-properties-as-policy--examples) section of the `AWS::AutoScaling::ScalingPolicy` documentation\.
 

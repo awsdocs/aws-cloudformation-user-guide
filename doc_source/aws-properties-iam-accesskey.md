@@ -48,7 +48,7 @@ This value is specific to CloudFormation and can only be *incremented*\. Increme
 The status of the access key\. `Active` means that the key is valid for API calls, while `Inactive` means it is not\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Active | Inactive`  
+*Allowed values*: `Active | Inactive`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserName`  <a name="cfn-iam-accesskey-username"></a>
@@ -61,7 +61,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-properties-iam-accesskey-return-values"></a>
+## Return values<a name="aws-properties-iam-accesskey-return-values"></a>
 
 ### Ref<a name="aws-properties-iam-accesskey-return-values-ref"></a>
 
@@ -114,6 +114,7 @@ Resources:
         Ref: MyUser
 ```
 
-## See Also<a name="aws-properties-iam-accesskey--seealso"></a>
+## See also<a name="aws-properties-iam-accesskey--seealso"></a>
 + To view `AWS::IAM::AccessKey` template example snippets, see [Declaring an IAM Access Key Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-accesskey)\. 
 +  [CreateAccessKey](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccessKey.html) in the *AWS Identity and Access Management API Reference* 
+

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DeviceName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename)" : String,
-  "[Ebs](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)" : [EbsInstanceBlockDeviceSpecification](aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.md),
+  "[Ebs](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs)" : EbsInstanceBlockDeviceSpecification,
   "[NoDevice](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice)" : String,
   "[VirtualName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DeviceName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-devicename): String
   [Ebs](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs): 
-    [EbsInstanceBlockDeviceSpecification](aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.md)
+    EbsInstanceBlockDeviceSpecification
   [NoDevice](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice): String
   [VirtualName](#cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-virtualname): String
 ```

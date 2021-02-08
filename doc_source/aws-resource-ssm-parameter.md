@@ -99,7 +99,7 @@ Optional metadata that you assign to a resource in the form of an arbitrary set 
 The parameter tier\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Advanced | Intelligent-Tiering | Standard`  
+*Allowed values*: `Advanced | Intelligent-Tiering | Standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssm-parameter-type"></a>
@@ -116,7 +116,7 @@ The parameter value\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-parameter-return-values"></a>
+## Return values<a name="aws-resource-ssm-parameter-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-parameter-return-values-ref"></a>
 
@@ -140,11 +140,11 @@ Returns the value of the parameter\.
 
 ## Examples<a name="aws-resource-ssm-parameter--examples"></a>
 
-### AWS Systems Manager Parameter String Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example"></a>
+### Create a String\-type parameter<a name="aws-resource-ssm-parameter--examples--Create_a_String-type_parameter"></a>
 
 The following example creates a Systems Manager parameter named command with a `String` type and adds the tag key\-value pair `"Environment":"Dev"`\.
 
-#### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--json"></a>
+#### JSON<a name="aws-resource-ssm-parameter--examples--Create_a_String-type_parameter--json"></a>
 
 ```
 {
@@ -166,7 +166,7 @@ The following example creates a Systems Manager parameter named command with a `
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_String_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-parameter--examples--Create_a_String-type_parameter--yaml"></a>
 
 ```
 ---
@@ -183,11 +183,11 @@ Resources:
         Environment: DEV
 ```
 
-### AWS Systems Manager Parameter StringList Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example"></a>
+### Create a StringList\-type parameter<a name="aws-resource-ssm-parameter--examples--Create_a_StringList-type_parameter"></a>
 
 The following example creates a Systems Manager parameter named commands with a `StringList` type\.
 
-#### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example--json"></a>
+#### JSON<a name="aws-resource-ssm-parameter--examples--Create_a_StringList-type_parameter--json"></a>
 
 ```
 {
@@ -206,7 +206,7 @@ The following example creates a Systems Manager parameter named commands with a 
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_StringList_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-parameter--examples--Create_a_StringList-type_parameter--yaml"></a>
 
 ```
 ---
@@ -221,11 +221,11 @@ Resources:
       AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
-### AWS Systems Manager Parameter Advanced Tier and Policies Example<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_Advanced_Tier_and_Policies_Example"></a>
+### Create an advanced tier parameter and assign a policy<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy"></a>
 
 The following example creates a Systems Manager advanced tier parameter named command with a `String` type and a parameter policy\.
 
-#### JSON<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_Advanced_Tier_and_Policies_Example--json"></a>
+#### JSON<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy--json"></a>
 
 ```
 {
@@ -249,7 +249,7 @@ The following example creates a Systems Manager advanced tier parameter named co
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-parameter--examples--AWS_Systems_Manager_Parameter_Advanced_Tier_and_Policies_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy--yaml"></a>
 
 ```
 ---
@@ -268,7 +268,7 @@ Resources:
         Environment: DEV
 ```
 
-## See Also<a name="aws-resource-ssm-parameter--seealso"></a>
+## See also<a name="aws-resource-ssm-parameter--seealso"></a>
 +  [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) 
 +  [About Advanced Parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html)
 +  [Working with Parameter Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) 

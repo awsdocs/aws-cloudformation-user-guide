@@ -14,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid)" : String,
       "[Name](#cfn-robomaker-simulationapplication-name)" : String,
-      "[RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine)" : [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md),
-      "[RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite)" : [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md),
-      "[SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite)" : [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md),
-      "[Sources](#cfn-robomaker-simulationapplication-sources)" : [ [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md), ... ],
+      "[RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine)" : RenderingEngine,
+      "[RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
+      "[SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite)" : SimulationSoftwareSuite,
+      "[Sources](#cfn-robomaker-simulationapplication-sources)" : [ SourceConfig, ... ],
       "[Tags](#cfn-robomaker-simulationapplication-tags)" : Json
     }
 }
@@ -31,13 +31,13 @@ Properties:
   [CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid): String
   [Name](#cfn-robomaker-simulationapplication-name): String
   [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine): 
-    [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)
+    RenderingEngine
   [RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite): 
-    [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)
+    RobotSoftwareSuite
   [SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite): 
-    [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md)
+    SimulationSoftwareSuite
   [Sources](#cfn-robomaker-simulationapplication-sources): 
-    - [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md)
+    - SourceConfig
   [Tags](#cfn-robomaker-simulationapplication-tags): Json
 ```
 
@@ -88,7 +88,7 @@ A map that contains tag keys and tag values that are attached to the simulation 
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-simulationapplication-return-values"></a>
+## Return values<a name="aws-resource-robomaker-simulationapplication-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-simulationapplication-return-values-ref"></a>
 
@@ -111,6 +111,8 @@ The Amazon Resource Name \(ARN\) of the simulation application\.
 The current revision id\.
 
 ## Examples<a name="aws-resource-robomaker-simulationapplication--examples"></a>
+
+
 
 ### Create an AWS RoboMaker Simulation Application<a name="aws-resource-robomaker-simulationapplication--examples--Create_an_AWS_RoboMaker_Simulation_Application"></a>
 

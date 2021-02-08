@@ -15,7 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype)" : String,
   "[InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount)" : Integer,
   "[InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype)" : String,
-  "[ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig)" : [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md),
+  "[WarmCount](#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmcount)" : Integer,
+  "[WarmEnabled](#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmenabled)" : Boolean,
+  "[WarmType](#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmtype)" : String,
+  "[ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig)" : ZoneAwarenessConfig,
   "[ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled)" : Boolean
 }
 ```
@@ -28,8 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype): String
   [InstanceCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount): Integer
   [InstanceType](#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype): String
+  [WarmCount](#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmcount): Integer
+  [WarmEnabled](#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmenabled): Boolean
+  [WarmType](#cfn-elasticsearch-domain-elasticsearchclusterconfig-warmtype): String
   [ZoneAwarenessConfig](#cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig): 
-    [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)
+    ZoneAwarenessConfig
   [ZoneAwarenessEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled): Boolean
 ```
 
@@ -61,6 +67,24 @@ The number of data nodes \(instances\) to use in the Amazon ES domain\.
 
 `InstanceType`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype"></a>
 The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For valid values, see [Supported Instance Types](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-supported-instance-types.html) in the *Amazon Elasticsearch Service Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WarmCount`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-warmcount"></a>
+The number of warm nodes in the cluster\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WarmEnabled`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-warmenabled"></a>
+Whether to enable warm storage for the cluster\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WarmType`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-warmtype"></a>
+The instance type for the cluster's warm nodes\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

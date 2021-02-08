@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[FilterPattern](#cfn-cwl-metricfilter-filterpattern)" : String,
       "[LogGroupName](#cfn-cwl-metricfilter-loggroupname)" : String,
-      "[MetricTransformations](#cfn-cwl-metricfilter-metrictransformations)" : [ [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md), ... ]
+      "[MetricTransformations](#cfn-cwl-metricfilter-metrictransformations)" : [ MetricTransformation, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [FilterPattern](#cfn-cwl-metricfilter-filterpattern): String
   [LogGroupName](#cfn-cwl-metricfilter-loggroupname): String
   [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations): 
-    - [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)
+    - MetricTransformation
 ```
 
 ## Properties<a name="aws-resource-logs-metricfilter-properties"></a>
@@ -57,6 +57,8 @@ The metric transformations\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-logs-metricfilter--examples"></a>
+
+
 
 ### Create a Metric Filter<a name="aws-resource-logs-metricfilter--examples--Create_a_Metric_Filter"></a>
 

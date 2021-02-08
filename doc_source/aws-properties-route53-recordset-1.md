@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AliasTarget](#cfn-route53-recordset-aliastarget)" : [AliasTarget](aws-properties-route53-aliastarget.md),
+  "[AliasTarget](#cfn-route53-recordset-aliastarget)" : AliasTarget,
   "[Comment](#cfn-route53-recordset-comment)" : String,
   "[Failover](#cfn-route53-recordset-failover)" : String,
-  "[GeoLocation](#cfn-route53-recordset-geolocation)" : [GeoLocation](aws-properties-route53-recordset-geolocation-1.md),
+  "[GeoLocation](#cfn-route53-recordset-geolocation)" : GeoLocation,
   "[HealthCheckId](#cfn-route53-recordset-healthcheckid)" : String,
   "[HostedZoneId](#cfn-route53-recordset-hostedzoneid)" : String,
   "[HostedZoneName](#cfn-route53-recordset-hostedzonename)" : String,
@@ -32,11 +32,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
-    [AliasTarget](aws-properties-route53-aliastarget.md)
+    AliasTarget
   [Comment](#cfn-route53-recordset-comment): String
   [Failover](#cfn-route53-recordset-failover): String
   [GeoLocation](#cfn-route53-recordset-geolocation): 
-    [GeoLocation](aws-properties-route53-recordset-geolocation-1.md)
+    GeoLocation
   [HealthCheckId](#cfn-route53-recordset-healthcheckid): String
   [HostedZoneId](#cfn-route53-recordset-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordset-hostedzonename): String
@@ -84,7 +84,7 @@ For more information about configuring failover for Route 53, see the following 
 +  [Configuring Failover in a Private Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html) 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `PRIMARY | SECONDARY`  
+*Allowed values*: `PRIMARY | SECONDARY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GeoLocation`  <a name="cfn-route53-recordset-geolocation"></a>
@@ -96,7 +96,7 @@ The value `*` in the `CountryCode` element matches all geographic locations that
 Geolocation works by mapping IP addresses to locations\. However, some IP addresses aren't mapped to geographic locations, so even if you create geolocation resource record sets that cover all seven continents, Route 53 will receive some DNS queries from locations that it can't identify\. We recommend that you create a resource record set for which the value of `CountryCode` is `*`\. Two groups of queries are routed to the resource that you specify in this record: queries that come from locations for which you haven't created geolocation resource record sets and queries from IP addresses that aren't mapped to a location\. If you don't create a `*` resource record set, Route 53 returns a "no answer" response for queries from those locations\.
 You can't create non\-geolocation resource record sets that have the same values for the `Name` and `Type` elements as geolocation resource record sets\.  
 *Required*: No  
-*Type*: [GeoLocation](aws-properties-route53-recordset-geolocation-1.md)  
+*Type*: [GeoLocation](aws-properties-route53-recordset-geolocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckId`  <a name="cfn-route53-recordset-healthcheckid"></a>
@@ -202,7 +202,7 @@ Note the following:
 + You can't create non\-latency resource record sets that have the same values for the `Name` and `Type` elements as latency resource record sets\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `af-south-1 | ap-east-1 | ap-northeast-1 | ap-northeast-2 | ap-northeast-3 | ap-south-1 | ap-southeast-1 | ap-southeast-2 | ca-central-1 | cn-north-1 | cn-northwest-1 | eu-central-1 | eu-north-1 | eu-south-1 | eu-west-1 | eu-west-2 | eu-west-3 | me-south-1 | sa-east-1 | us-east-1 | us-east-2 | us-west-1 | us-west-2`  
+*Allowed values*: `af-south-1 | ap-east-1 | ap-northeast-1 | ap-northeast-2 | ap-northeast-3 | ap-south-1 | ap-southeast-1 | ap-southeast-2 | ca-central-1 | cn-north-1 | cn-northwest-1 | eu-central-1 | eu-north-1 | eu-south-1 | eu-west-1 | eu-west-2 | eu-west-3 | me-south-1 | sa-east-1 | us-east-1 | us-east-2 | us-west-1 | us-west-2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceRecords`  <a name="cfn-route53-recordset-resourcerecords"></a>
@@ -232,7 +232,7 @@ The resource record cache time to live \(TTL\), in seconds\. Note the following:
 
 `Type`  <a name="cfn-route53-recordset-type"></a>
 The DNS record type\. For information about different record types and how data is encoded for them, see [Supported DNS Resource Record Types](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html) in the *Amazon Route 53 Developer Guide*\.  
-Valid values for basic resource record sets: `A` \| `AAAA` \| `CAA` \| `CNAME` \| `MX` \| `NAPTR` \| `NS` \| `PTR` \| `SOA` \| `SPF` \| `SRV` \| `TXT`   
+Valid values for basic resource record sets: `A` \| `AAAA` \| `CAA` \| `CNAME` \| `DS` \|`MX` \| `NAPTR` \| `NS` \| `PTR` \| `SOA` \| `SPF` \| `SRV` \| `TXT`   
 Values for weighted, latency, geolocation, and failover resource record sets: `A` \| `AAAA` \| `CAA` \| `CNAME` \| `MX` \| `NAPTR` \| `PTR` \| `SPF` \| `SRV` \| `TXT`\. When creating a group of weighted, latency, geolocation, or failover resource record sets, specify the same value for all of the resource record sets in the group\.  
 Valid values for multivalue answer resource record sets: `A` \| `AAAA` \| `MX` \| `NAPTR` \| `PTR` \| `SPF` \| `SRV` \| `TXT`   
 SPF records were formerly used to verify the identity of the sender of email messages\. However, we no longer recommend that you create resource record sets for which the value of `Type` is `SPF`\. RFC 7208, *Sender Policy Framework \(SPF\) for Authorizing Use of Domains in Email, Version 1*, has been updated to say, "\.\.\.\[I\]ts existence and mechanism defined in \[RFC4408\] have led to some interoperability issues\. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it\." In RFC 7208, see section 14\.1, [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)\.
@@ -250,7 +250,7 @@ Values for alias resource record sets:
 If you're creating an alias record that has the same name as the hosted zone \(known as the zone apex\), you can't route traffic to a record for which the value of `Type` is `CNAME`\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `A | AAAA | CAA | CNAME | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT`  
+*Allowed values*: `A | AAAA | CAA | CNAME | DS | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Weight`  <a name="cfn-route53-recordset-weight"></a>
@@ -266,6 +266,7 @@ If you're creating an alias record that has the same name as the hosted zone \(k
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-route53-recordset-1--seealso"></a>
+## See also<a name="aws-properties-route53-recordset-1--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#aws-resource-route53-recordsetgroup-return-values) in the topic [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) 
 +  [ResourceRecordSet](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html) in the *Amazon Route 53 API Reference*
+

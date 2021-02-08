@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-eventschemas-registry-description)" : String,
       "[RegistryName](#cfn-eventschemas-registry-registryname)" : String,
-      "[Tags](#cfn-eventschemas-registry-tags)" : [ [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md), ... ]
+      "[Tags](#cfn-eventschemas-registry-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [Description](#cfn-eventschemas-registry-description): String
   [RegistryName](#cfn-eventschemas-registry-registryname): String
   [Tags](#cfn-eventschemas-registry-tags): 
-    - [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-eventschemas-registry-properties"></a>
@@ -39,7 +39,7 @@ A description of the registry to be created\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryName`  <a name="cfn-eventschemas-registry-registryname"></a>
-The name of the registry\.  
+The name of the schema registry\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -50,7 +50,7 @@ Tags to associate with the registry\.
 *Type*: List of [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eventschemas-registry-return-values"></a>
+## Return values<a name="aws-resource-eventschemas-registry-return-values"></a>
 
 ### Ref<a name="aws-resource-eventschemas-registry-return-values-ref"></a>
 

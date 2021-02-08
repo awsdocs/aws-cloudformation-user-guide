@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Events](#cfn-iotevents-detectormodel-oninput-events)" : [ [Event](aws-properties-iotevents-detectormodel-event.md), ... ],
-  "[TransitionEvents](#cfn-iotevents-detectormodel-oninput-transitionevents)" : [ [TransitionEvent](aws-properties-iotevents-detectormodel-transitionevent.md), ... ]
+  "[Events](#cfn-iotevents-detectormodel-oninput-events)" : [ Event, ... ],
+  "[TransitionEvents](#cfn-iotevents-detectormodel-oninput-transitionevents)" : [ TransitionEvent, ... ]
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Events](#cfn-iotevents-detectormodel-oninput-events): 
-    - [Event](aws-properties-iotevents-detectormodel-event.md)
+    - Event
   [TransitionEvents](#cfn-iotevents-detectormodel-oninput-transitionevents): 
-    - [TransitionEvent](aws-properties-iotevents-detectormodel-transitionevent.md)
+    - TransitionEvent
 ```
 
 ## Properties<a name="aws-properties-iotevents-detectormodel-oninput-properties"></a>

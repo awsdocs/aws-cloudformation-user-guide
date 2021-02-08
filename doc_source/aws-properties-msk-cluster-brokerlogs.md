@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLogs](#cfn-msk-cluster-brokerlogs-cloudwatchlogs)" : [CloudWatchLogs](aws-properties-msk-cluster-cloudwatchlogs.md),
-  "[Firehose](#cfn-msk-cluster-brokerlogs-firehose)" : [Firehose](aws-properties-msk-cluster-firehose.md),
-  "[S3](#cfn-msk-cluster-brokerlogs-s3)" : [S3](aws-properties-msk-cluster-s3.md)
+  "[CloudWatchLogs](#cfn-msk-cluster-brokerlogs-cloudwatchlogs)" : CloudWatchLogs,
+  "[Firehose](#cfn-msk-cluster-brokerlogs-firehose)" : Firehose,
+  "[S3](#cfn-msk-cluster-brokerlogs-s3)" : S3
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchLogs](#cfn-msk-cluster-brokerlogs-cloudwatchlogs): 
-    [CloudWatchLogs](aws-properties-msk-cluster-cloudwatchlogs.md)
+    CloudWatchLogs
   [Firehose](#cfn-msk-cluster-brokerlogs-firehose): 
-    [Firehose](aws-properties-msk-cluster-firehose.md)
+    Firehose
   [S3](#cfn-msk-cluster-brokerlogs-s3): 
-    [S3](aws-properties-msk-cluster-s3.md)
+    S3
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-brokerlogs-properties"></a>

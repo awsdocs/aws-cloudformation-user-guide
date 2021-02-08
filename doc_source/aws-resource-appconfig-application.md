@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-appconfig-application-description)" : String,
       "[Name](#cfn-appconfig-application-name)" : String,
-      "[Tags](#cfn-appconfig-application-tags)" : [ [Tags](aws-properties-appconfig-application-tags.md), ... ]
+      "[Tags](#cfn-appconfig-application-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [Description](#cfn-appconfig-application-description): String
   [Name](#cfn-appconfig-application-name): String
   [Tags](#cfn-appconfig-application-tags): 
-    - [Tags](aws-properties-appconfig-application-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-application-properties"></a>
@@ -63,18 +63,20 @@ A name for the application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appconfig-application-tags"></a>
-Metadata to assign to the application\. Tags help organize and categorize your AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
+Metadata to assign to the application\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-application-tags.md) of [Tags](aws-properties-appconfig-application-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-application-return-values"></a>
+## Return values<a name="aws-resource-appconfig-application-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-application-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the application ID\.
 
 ## Examples<a name="aws-resource-appconfig-application--examples"></a>
+
+
 
 ### AWS AppConfig Application Example<a name="aws-resource-appconfig-application--examples--AWS_AppConfig_Application_Example"></a>
 
@@ -111,3 +113,7 @@ BasicApplication:
         - Key: Env
           Value: test
 ```
+
+## See also<a name="aws-resource-appconfig-application--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [Creating an Application](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-application.html)

@@ -57,6 +57,8 @@ The ID of the Amazon EBS volume\. The volume and instance must be within the sam
 
 ## Examples<a name="aws-properties-ec2-ebs-volumeattachment--examples"></a>
 
+
+
 ### Attach an EBS Volume to a Running Instance<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance"></a>
 
 This example attaches an EC2 EBS volume to the EC2 instance with the logical name "Ec2Instance"\.
@@ -107,7 +109,7 @@ MountPoint:
     Device: /dev/sdh
 ```
 
-## See Also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
+## See also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
 +  [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*
 +  [Attaching a Volume to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
 +  [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 

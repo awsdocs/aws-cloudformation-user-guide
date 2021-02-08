@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)" : [CodeContent](aws-properties-kinesisanalyticsv2-application-codecontent.md),
+  "[CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent)" : CodeContent,
   "[CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CodeContent](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontent): 
-    [CodeContent](aws-properties-kinesisanalyticsv2-application-codecontent.md)
+    CodeContent
   [CodeContentType](#cfn-kinesisanalyticsv2-application-applicationcodeconfiguration-codecontenttype): String
 ```
 
@@ -35,8 +35,9 @@ The location and type of the application code\.
 Specifies whether the code content is in text or zip format\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `PLAINTEXT | ZIPFILE`  
+*Allowed values*: `PLAINTEXT | ZIPFILE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration--seealso"></a>
 +  [ApplicationCodeConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ApplicationCodeConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

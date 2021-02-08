@@ -114,5 +114,5 @@ A properly structured JSON string that the generated password can be added to\. 
 *Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-secretsmanager-secret-generatesecretstring--seealso"></a>
+## See also<a name="aws-properties-secretsmanager-secret-generatesecretstring--seealso"></a>
 +  [GetRandomPassword](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetRandomPassword.html) API in the AWS Secrets Manager API Reference

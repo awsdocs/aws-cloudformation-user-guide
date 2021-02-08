@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FunctionName](#cfn-lambda-alias-functionname)" : String,
       "[FunctionVersion](#cfn-lambda-alias-functionversion)" : String,
       "[Name](#cfn-lambda-alias-name)" : String,
-      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md),
-      "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
+      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : ProvisionedConcurrencyConfiguration,
+      "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : AliasRoutingConfiguration
     }
 }
 ```
@@ -34,9 +34,9 @@ Properties:
   [FunctionVersion](#cfn-lambda-alias-functionversion): String
   [Name](#cfn-lambda-alias-name): String
   [ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig): 
-    [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)
+    ProvisionedConcurrencyConfiguration
   [RoutingConfig](#cfn-lambda-alias-routingconfig): 
-    [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
+    AliasRoutingConfiguration
 ```
 
 ## Properties<a name="aws-resource-lambda-alias-properties"></a>
@@ -94,7 +94,7 @@ The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-
 *Type*: [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-lambda-alias-return-values"></a>
+## Return values<a name="aws-resource-lambda-alias-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-alias-return-values-ref"></a>
 
@@ -103,6 +103,8 @@ The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-lambda-alias--examples"></a>
+
+
 
 ### Alias<a name="aws-resource-lambda-alias--examples--Alias"></a>
 

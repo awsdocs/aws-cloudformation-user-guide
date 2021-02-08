@@ -14,10 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolRiskConfigurationAttachment",
   "Properties" : {
-      "[AccountTakeoverRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)" : [AccountTakeoverRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.md),
+      "[AccountTakeoverRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration)" : AccountTakeoverRiskConfigurationType,
       "[ClientId](#cfn-cognito-userpoolriskconfigurationattachment-clientid)" : String,
-      "[CompromisedCredentialsRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)" : [CompromisedCredentialsRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.md),
-      "[RiskExceptionConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration)" : [RiskExceptionConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype.md),
+      "[CompromisedCredentialsRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration)" : CompromisedCredentialsRiskConfigurationType,
+      "[RiskExceptionConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration)" : RiskExceptionConfigurationType,
       "[UserPoolId](#cfn-cognito-userpoolriskconfigurationattachment-userpoolid)" : String
     }
 }
@@ -29,12 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPoolRiskConfigurationAttachment
 Properties: 
   [AccountTakeoverRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration): 
-    [AccountTakeoverRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.md)
+    AccountTakeoverRiskConfigurationType
   [ClientId](#cfn-cognito-userpoolriskconfigurationattachment-clientid): String
   [CompromisedCredentialsRiskConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration): 
-    [CompromisedCredentialsRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.md)
+    CompromisedCredentialsRiskConfigurationType
   [RiskExceptionConfiguration](#cfn-cognito-userpoolriskconfigurationattachment-riskexceptionconfiguration): 
-    [RiskExceptionConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype.md)
+    RiskExceptionConfigurationType
   [UserPoolId](#cfn-cognito-userpoolriskconfigurationattachment-userpoolid): String
 ```
 
@@ -76,7 +76,7 @@ The user pool ID\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpoolriskconfigurationattachment-return-values-ref"></a>
 
@@ -89,6 +89,8 @@ For the Amazon Cognito risk configuration attachment `UserPoolRiskConfigurationA
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples"></a>
+
+
 
 ### Creating a new risk configuration attachment for a user pool<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples--Creating_a_new_risk_configuration_attachment_for_a_user_pool"></a>
 

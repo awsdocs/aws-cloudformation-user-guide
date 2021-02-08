@@ -1,4 +1,4 @@
-# SecurityHub Resource Type Reference<a name="AWS_SecurityHub"></a>
+# SecurityHub resource type reference<a name="AWS_SecurityHub"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::SecurityHub::Hub](aws-resource-securityhub-hub.md)

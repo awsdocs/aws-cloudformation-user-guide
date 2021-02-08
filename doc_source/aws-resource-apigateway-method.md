@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthorizationType](#cfn-apigateway-method-authorizationtype)" : String,
       "[AuthorizerId](#cfn-apigateway-method-authorizerid)" : String,
       "[HttpMethod](#cfn-apigateway-method-httpmethod)" : String,
-      "[Integration](#cfn-apigateway-method-integration)" : [Integration](aws-properties-apitgateway-method-integration.md),
-      "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ [MethodResponse](aws-properties-apitgateway-method-methodresponse.md), ... ],
+      "[Integration](#cfn-apigateway-method-integration)" : Integration,
+      "[MethodResponses](#cfn-apigateway-method-methodresponses)" : [ MethodResponse, ... ],
       "[OperationName](#cfn-apigateway-method-operationname)" : String,
       "[RequestModels](#cfn-apigateway-method-requestmodels)" : {Key : Value, ...},
       "[RequestParameters](#cfn-apigateway-method-requestparameters)" : {Key : Value, ...},
@@ -41,9 +41,9 @@ Properties:
   [AuthorizerId](#cfn-apigateway-method-authorizerid): String
   [HttpMethod](#cfn-apigateway-method-httpmethod): String
   [Integration](#cfn-apigateway-method-integration): 
-    [Integration](aws-properties-apitgateway-method-integration.md)
+    Integration
   [MethodResponses](#cfn-apigateway-method-methodresponses): 
-    - [MethodResponse](aws-properties-apitgateway-method-methodresponse.md)
+    - MethodResponse
   [OperationName](#cfn-apigateway-method-operationname): String
   [RequestModels](#cfn-apigateway-method-requestmodels): 
     Key : Value
@@ -70,13 +70,13 @@ A list of authorization scopes configured on the method\. The scopes are used wi
 
 `AuthorizationType`  <a name="cfn-apigateway-method-authorizationtype"></a>
 The method's authorization type\. This parameter is required\. For valid values, see [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *API Gateway API Reference*\.  
-If you specify the `AuthorizerId` property, specify `CUSTOM` for this property\.
+If you specify the `AuthorizerId` property, specify `CUSTOM` or `COGNITO_USER_POOLS` for this property\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizerId`  <a name="cfn-apigateway-method-authorizerid"></a>
-The identifier of the [authorizer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html) to use on this method\. If you specify this property, specify `CUSTOM` for the `AuthorizationType` property\.   
+The identifier of the [authorizer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html) to use on this method\. If you specify this property, specify `CUSTOM` or `COGNITO_USER_POOLS` for the `AuthorizationType` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -106,7 +106,7 @@ A friendly operation name for the method\. For example, you can assign the `Oper
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestModels`  <a name="cfn-apigateway-method-requestmodels"></a>
-The resources that are used for the request's content type\. Specify request models as key\-value pairs \(string\-to\-string mapping\), with a content type as the key and a `Model` resource name as the value\.   
+The resources that are used for the request's content type\. Specify request models as key\-value pairs \(string\-to\-string mapping\), with a content type as the key and a `Model` resource name as the value\. To use the same model regardless of the content type, specify `$default` as the key\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -135,7 +135,7 @@ The ID of the [RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/Use
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-method-return-values"></a>
+## Return values<a name="aws-resource-apigateway-method-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-method-return-values-ref"></a>
 
@@ -144,6 +144,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-method--examples"></a>
+
+
 
 ### Mock Method<a name="aws-resource-apigateway-method--examples--Mock_Method"></a>
 
@@ -427,5 +429,6 @@ Outputs:
     Value: !GetAtt RestApi.RootResourceId
 ```
 
-## See Also<a name="aws-resource-apigateway-method--seealso"></a>
+## See also<a name="aws-resource-apigateway-method--seealso"></a>
 + [method:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/method-put/) in the *Amazon API Gateway REST API Reference*
+

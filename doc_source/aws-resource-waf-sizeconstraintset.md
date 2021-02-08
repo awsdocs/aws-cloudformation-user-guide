@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAF::SizeConstraintSet",
   "Properties" : {
       "[Name](#cfn-waf-sizeconstraintset-name)" : String,
-      "[SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints)" : [ [SizeConstraint](aws-properties-waf-sizeconstraintset-sizeconstraint.md), ... ]
+      "[SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints)" : [ SizeConstraint, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::WAF::SizeConstraintSet
 Properties: 
   [Name](#cfn-waf-sizeconstraintset-name): String
   [SizeConstraints](#cfn-waf-sizeconstraintset-sizeconstraints): 
-    - [SizeConstraint](aws-properties-waf-sizeconstraintset-sizeconstraint.md)
+    - SizeConstraint
 ```
 
 ## Properties<a name="aws-resource-waf-sizeconstraintset-properties"></a>
@@ -49,7 +49,7 @@ The size constraint and the part of the web request to check\.
 *Type*: List of [SizeConstraint](aws-properties-waf-sizeconstraintset-sizeconstraint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-sizeconstraintset-return-values"></a>
+## Return values<a name="aws-resource-waf-sizeconstraintset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-sizeconstraintset-return-values-ref"></a>
 
@@ -58,6 +58,8 @@ The size constraint and the part of the web request to check\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-sizeconstraintset--examples"></a>
+
+
 
 ### Define a Size Constraint<a name="aws-resource-waf-sizeconstraintset--examples--Define_a_Size_Constraint"></a>
 

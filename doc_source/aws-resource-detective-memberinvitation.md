@@ -57,7 +57,7 @@ Customized text to include in the invitation email message\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-detective-memberinvitation-return-values"></a>
+## Return values<a name="aws-resource-detective-memberinvitation-return-values"></a>
 
 ### Ref<a name="aws-resource-detective-memberinvitation-return-values-ref"></a>
 

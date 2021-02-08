@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::StepFunctions::Activity",
   "Properties" : {
       "[Name](#cfn-stepfunctions-activity-name)" : String,
-      "[Tags](#cfn-stepfunctions-activity-tags)" : [ [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md), ... ]
+      "[Tags](#cfn-stepfunctions-activity-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Type: AWS::StepFunctions::Activity
 Properties: 
   [Name](#cfn-stepfunctions-activity-name): String
   [Tags](#cfn-stepfunctions-activity-tags): 
-    - [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-activity-properties"></a>
@@ -52,7 +52,7 @@ Tags may only contain Unicode letters, digits, white space, or these symbols: `_
 *Type*: List of [TagsEntry](aws-properties-stepfunctions-activity-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-stepfunctions-activity-return-values"></a>
+## Return values<a name="aws-resource-stepfunctions-activity-return-values"></a>
 
 ### Ref<a name="aws-resource-stepfunctions-activity-return-values-ref"></a>
 

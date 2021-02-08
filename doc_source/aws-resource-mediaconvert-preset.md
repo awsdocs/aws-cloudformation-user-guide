@@ -72,7 +72,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-mediaconvert-preset-return-values"></a>
+## Return values<a name="aws-resource-mediaconvert-preset-return-values"></a>
 
 ### Ref<a name="aws-resource-mediaconvert-preset-return-values-ref"></a>
 
@@ -111,6 +111,8 @@ The following procedure is for generating the specification in JSON\. If you nee
 For an example output preset model in JSON and YAML, see the Examples section of this topic\.
 
 ## Examples<a name="aws-resource-mediaconvert-preset--examples"></a>
+
+
 
 ### Output Preset Model for SettingsJson<a name="aws-resource-mediaconvert-preset--examples--Output_Preset_Model_for_SettingsJson"></a>
 

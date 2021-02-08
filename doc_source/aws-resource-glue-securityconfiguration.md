@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::SecurityConfiguration",
   "Properties" : {
-      "[EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md),
+      "[EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
       "[Name](#cfn-glue-securityconfiguration-name)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Glue::SecurityConfiguration
 Properties: 
   [EncryptionConfiguration](#cfn-glue-securityconfiguration-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-glue-securityconfiguration-encryptionconfiguration.md)
+    EncryptionConfiguration
   [Name](#cfn-glue-securityconfiguration-name): String
 ```
 
@@ -42,6 +42,6 @@ The name of the security configuration\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-glue-securityconfiguration-return-values"></a>
+## Return values<a name="aws-resource-glue-securityconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-securityconfiguration-return-values-ref"></a>

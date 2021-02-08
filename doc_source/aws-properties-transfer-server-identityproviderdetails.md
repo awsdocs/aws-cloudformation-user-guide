@@ -34,12 +34,12 @@ Provides the type of `InvocationRole` used to authenticate the user account\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-transfer-server-identityproviderdetails-url"></a>
-Contains the location of the service endpoint used to authenticate users\.  
+Provides the location of the service endpoint used to authenticate users\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
+## See also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
 
 [IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer Family User Guide*\.

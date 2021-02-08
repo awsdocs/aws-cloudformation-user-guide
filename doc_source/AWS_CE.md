@@ -1,4 +1,4 @@
-# CE Resource Type Reference<a name="AWS_CE"></a>
+# CE resource type reference<a name="AWS_CE"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::CE::CostCategory](aws-resource-ce-costcategory.md)

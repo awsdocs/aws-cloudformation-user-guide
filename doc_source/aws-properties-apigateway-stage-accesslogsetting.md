@@ -27,16 +27,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-stage-accesslogsetting-properties"></a>
 
 `DestinationArn`  <a name="cfn-apigateway-stage-accesslogsetting-destinationarn"></a>
-The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs\. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with `amazon-apigateway-`\.  
-*Required*: No  
+The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs\. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with `amazon-apigateway-`\. This parameter is required to enable access logging\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Format`  <a name="cfn-apigateway-stage-accesslogsetting-format"></a>
-A single line format of the access logs of data, as specified by selected [$context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference)\. The format must include at least `$context.requestId`\.  
-*Required*: No  
+A single line format of the access logs of data, as specified by selected [$context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference)\. The format must include at least `$context.requestId`\. This parameter is required to enable access logging\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigateway-stage-accesslogsetting--seealso"></a>
+## See also<a name="aws-properties-apigateway-stage-accesslogsetting--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
+

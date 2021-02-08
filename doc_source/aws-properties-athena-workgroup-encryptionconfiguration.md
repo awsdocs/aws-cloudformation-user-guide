@@ -29,7 +29,7 @@ Indicates whether Amazon S3 server\-side encryption with Amazon S3\-managed keys
 If a query runs in a workgroup and the workgroup overrides client\-side settings, then the workgroup's setting for encryption is used\. It specifies whether query results must be encrypted, for all queries that run in this workgroup\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CSE_KMS | SSE_KMS | SSE_S3`  
+*Allowed values*: `CSE_KMS | SSE_KMS | SSE_S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKey`  <a name="cfn-athena-workgroup-encryptionconfiguration-kmskey"></a>

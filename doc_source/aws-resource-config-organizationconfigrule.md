@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ExcludedAccounts](#cfn-config-organizationconfigrule-excludedaccounts)" : [ String, ... ],
       "[OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename)" : String,
-      "[OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata)" : [OrganizationCustomRuleMetadata](aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.md),
-      "[OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata)" : [OrganizationManagedRuleMetadata](aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.md)
+      "[OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata)" : OrganizationCustomRuleMetadata,
+      "[OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata)" : OrganizationManagedRuleMetadata
     }
 }
 ```
@@ -31,9 +31,9 @@ Properties:
     - String
   [OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename): String
   [OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata): 
-    [OrganizationCustomRuleMetadata](aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.md)
+    OrganizationCustomRuleMetadata
   [OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata): 
-    [OrganizationManagedRuleMetadata](aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.md)
+    OrganizationManagedRuleMetadata
 ```
 
 ## Properties<a name="aws-resource-config-organizationconfigrule-properties"></a>
@@ -66,7 +66,7 @@ An `OrganizationManagedRuleMetadata` object\.
 *Type*: [OrganizationManagedRuleMetadata](aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-organizationconfigrule-return-values"></a>
+## Return values<a name="aws-resource-config-organizationconfigrule-return-values"></a>
 
 ### Ref<a name="aws-resource-config-organizationconfigrule-return-values-ref"></a>
 
@@ -75,6 +75,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-organizationconfigrule--examples"></a>
+
+
 
 ### Managed Rule<a name="aws-resource-config-organizationconfigrule--examples--Managed_Rule"></a>
 

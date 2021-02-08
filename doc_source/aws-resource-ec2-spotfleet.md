@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::SpotFleet",
   "Properties" : {
-      "[SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata)" : [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)
+      "[SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata)" : SpotFleetRequestConfigData
     }
 }
 ```
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::SpotFleet
 Properties: 
   [SpotFleetRequestConfigData](#cfn-ec2-spotfleet-spotfleetrequestconfigdata): 
-    [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)
+    SpotFleetRequestConfigData
 ```
 
 ## Properties<a name="aws-resource-ec2-spotfleet-properties"></a>
@@ -46,7 +46,7 @@ Describes the configuration of a Spot Fleet request\.
 *Type*: [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
-## Return Values<a name="aws-resource-ec2-spotfleet-return-values"></a>
+## Return values<a name="aws-resource-ec2-spotfleet-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-spotfleet-return-values-ref"></a>
 
@@ -55,6 +55,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-spotfleet--examples"></a>
+
+
 
 ### Spot Fleet<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet"></a>
 
@@ -152,6 +154,7 @@ SpotFleet:
        WeightedCapacity: '8'
 ```
 
-## See Also<a name="aws-resource-ec2-spotfleet--seealso"></a>
+## See also<a name="aws-resource-ec2-spotfleet--seealso"></a>
 +  [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
 +  [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
+

@@ -87,7 +87,7 @@ One or more tags to be assigned to the event subscription\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-eventsubscription-return-values"></a>
+## Return values<a name="aws-resource-dms-eventsubscription-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-eventsubscription-return-values-ref"></a>
 
@@ -101,6 +101,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-dms-eventsubscription--examples"></a>
 
+
+
 ### <a name="aws-resource-dms-eventsubscription--examples--"></a>
 
 The following snippet creates an event subscription for an existing replication instance `rep-instance-1`, which is declared elsewhere in the same template\.
@@ -108,23 +110,49 @@ The following snippet creates an event subscription for an existing replication 
 #### JSON<a name="aws-resource-dms-eventsubscription--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Resources": {
-                "myEventSubscription": { "Type": "AWS::DMS::EventSubscription", "Properties": {
-                "EventCategories": [ "configuration change", "failure", "deletion" ], "SnsTopicArn":
-                "arn:aws:sns:us-west-2:123456789012:example-topic", "SourceIds": [ "rep-instance-1"
-                ], "SourceType": "replication-instance", "Enabled": false } } } }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "myEventSubscription": {
+            "Type": "AWS::DMS::EventSubscription",
+            "Properties": {
+                "EventCategories": [
+                    "configuration change",
+                    "failure",
+                    "deletion"
+                ],
+                "SnsTopicArn": "arn:aws:sns:us-west-2:123456789012:example-topic",
+                "SourceIds": [
+                    "rep-instance-1"
+                ],
+                "SourceType": "replication-instance",
+                "Enabled": false
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-dms-eventsubscription--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Resources:
-                myEventSubscription: Properties: Enabled: false EventCategories: - "configuration
-                change" - failure - deletion SnsTopicArn:
-                "arn:aws:sns:us-west-2:123456789012:example-topic" SourceIds: - rep-instance-1
-                SourceType: replication-instance Type: "AWS::DMS::EventSubscription"
+AWSTemplateFormatVersion: 2010-09-09
+Resources: 
+  myEventSubscription: 
+    Properties: 
+      Enabled: false
+      EventCategories: 
+        - "configuration change"
+        - failure
+        - deletion
+      SnsTopicArn: "arn:aws:sns:us-west-2:123456789012:example-topic"
+      SourceIds: 
+        - rep-instance-1
+      SourceType: replication-instance
+    Type: "AWS::DMS::EventSubscription"
 ```
 
-## See Also<a name="aws-resource-dms-eventsubscription--seealso"></a>
+## See also<a name="aws-resource-dms-eventsubscription--seealso"></a>
 +  [CreateEventSubscription](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEventSubscription.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

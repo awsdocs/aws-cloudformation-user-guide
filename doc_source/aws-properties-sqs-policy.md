@@ -44,21 +44,23 @@ The URLs of the queues to which you want to add the policy\. You can use the `[R
 
 ## Examples<a name="aws-properties-sqs-policy--examples"></a>
 
+
+
 ### Amazon SQS Queue Policy<a name="aws-properties-sqs-policy--examples--Amazon_SQS_Queue_Policy"></a>
 
-The following sample is a queue policy that allows AWS account 111122223333 to send and receive messages on queue queue2\.
+The following sample is a queue policy that allows AWS account 111122223333 to send and receive messages on queue queue2\. You add the policy to the resources section of your template\.
 
 #### JSON<a name="aws-properties-sqs-policy--examples--Amazon_SQS_Queue_Policy--json"></a>
 
 ```
  
 "SampleSQSPolicy" : {
-  "Type" : "AWS::S3::QueuePolicy",
+  "Type" : "AWS::SQS::QueuePolicy",
   "Properties" : {
-    "Queues" :  "arn:aws:sqs:us-east-2:444455556666:queue2",
+    "Queues" :  ["https://sqs:us-east-2.amazonaws.com/444455556666/queue2"],
     "PolicyDocument": {
       "Statement":[{
-        "Action":["sqs:SendMessage", "sqs:ReceiveMessage"],
+        "Action":["SQS:SendMessage", "SQS:ReceiveMessage"],
         "Effect":"Allow",
         "Resource": "arn:aws:sqs:us-east-2:444455556666:queue2",
         "Principal": {
@@ -75,20 +77,20 @@ The following sample is a queue policy that allows AWS account 111122223333 to s
 
 ```
  
-SampleBucketPolicy: 
-  Type: AWS::S3::QueuePolicy
+SampleSQSPolicy: 
+  Type: AWS::SQS::QueuePolicy
   Properties: 
     Queues: 
-      Ref: "arn:aws:sqs:us-east-2:444455556666:queue2"
+      - "https://sqs:us-east-2.amazonaws.com/444455556666/queue2"
     PolicyDocument: 
       Statement: 
         - 
           Action: 
-            - "sqs:SendMessage" 
-            - "sqs:ReceiveMessage"
+            - "SQS:SendMessage" 
+            - "SQS:ReceiveMessage"
           Effect: "Allow"
-          Resource: 
-            Ref: "arn:aws:sqs:us-east-2:444455556666:queue2"
+          Resource: "arn:aws:sqs:us-east-2:444455556666:queue2"
           Principal:  
-            - AWS: "111122223333"
+            AWS: 
+              - "111122223333"
 ```
