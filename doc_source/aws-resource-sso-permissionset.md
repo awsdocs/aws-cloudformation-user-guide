@@ -147,6 +147,7 @@ The following example creates a custom permission set `“PermissionSet”` with
          "InstanceArn": "arn:aws:sso:::instance/ssoins-instanceId",
          "Name": "PermissionSet",
          "Description": "This is a sample permission set.",
+         "SessionDuration": "PT8H",
          "ManagedPolicies": [
             "arn:aws:iam::aws:policy/AdministratorAccess"
          ],
@@ -171,6 +172,7 @@ PermissionSet:
       InstanceArn: 'arn:aws:sso:::instance/ssoins-instanceId'
       Name: 'PermissionSet'
       Description: 'This is a sample permission set.'
+      SessionDuration: 'PT8H'
       ManagedPolicies:
         - 'arn:aws:iam::aws:policy/AdministratorAccess'
       InlinePolicy: 'Inline policy json string'
