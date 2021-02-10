@@ -41,4 +41,4 @@ AWS CloudFormation supports the YAML Version 1\.1 specification with a few excep
 + The `binary`, `omap`, `pairs`, `set`, and `timestamp` tags
 + Aliases
 + Hash merges
-For more information about YAML, see [http://www\.yaml\.org](http://www.yaml.org)\.
+For more information about YAML, see [https://yaml\.org](https://yaml.org)\.
