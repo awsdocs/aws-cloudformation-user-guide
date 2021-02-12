@@ -213,7 +213,7 @@ The following example creates a pipeline with a source, beta, and release stage\
       "Type": "S3",
       "Location": { "Ref" : "ArtifactStoreS3Location" },
       "EncryptionKey": {
-        "Id": "arn:aws:kms:useast-1:ACCOUNT-ID:key/KEY-ID",
+        "Id": "arn:aws:kms:us-east-1:ACCOUNT-ID:key/KEY-ID",
         "Type": "KMS"
       }, 
     "DisableInboundStageTransitions": [ 
@@ -307,7 +307,7 @@ AppPipeline:
       Location:
         Ref: ArtifactStoreS3Location 
       EncryptionKey:
-        Id: arn:aws:kms:useast-1:ACCOUNT-ID:key/KEY-ID
+        Id: arn:aws:kms:us-east-1:ACCOUNT-ID:key/KEY-ID
         Type: KMS
     DisableInboundStageTransitions: 
       - 
