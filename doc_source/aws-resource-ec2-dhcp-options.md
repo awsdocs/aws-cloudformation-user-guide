@@ -108,7 +108,7 @@ myDhcpOptions:
           - 10.2.5.1
         NetbiosNodeType: 2
         Tags: 
-          - Key: project
+        - Key: project
           Value: 123
 ```
 

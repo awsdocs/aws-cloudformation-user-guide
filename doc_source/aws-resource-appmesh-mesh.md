@@ -39,7 +39,7 @@ Properties:
 
 `MeshName`  <a name="cfn-appmesh-mesh-meshname"></a>
 The name to use for the service mesh\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

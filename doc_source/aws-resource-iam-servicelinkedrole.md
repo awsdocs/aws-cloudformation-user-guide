@@ -62,20 +62,6 @@ The description of the role\.
 *Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return values<a name="aws-resource-iam-servicelinkedrole-return-values"></a>
-
-### Ref<a name="aws-resource-iam-servicelinkedrole-return-values-ref"></a>
-
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
-
-For example:
-
- `{ "Ref": "BasicSLR" }` 
-
-For the `AWS::IAM::ServiceLinkedRole` resource with the logical ID `BasicSLR`, `Ref` will return the name of the service\-linked role\.
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
 ## Examples<a name="aws-resource-iam-servicelinkedrole--examples"></a>
 
 
@@ -124,3 +110,8 @@ Outputs:
   SLRId:
     Value: !Ref BasicSLR
 ```
+
+## See also<a name="aws-resource-iam-servicelinkedrole--seealso"></a>
++  [CreateServiceLinkedRole](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateServiceLinkedRole.html) in the *AWS Identity and Access Management API Reference* 
++  [Using Service\-Linked Roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html) in the *AWS Identity and Access Management User Guide* 
+

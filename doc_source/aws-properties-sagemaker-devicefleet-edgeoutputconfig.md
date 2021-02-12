@@ -1,6 +1,6 @@
 # AWS::SageMaker::DeviceFleet EdgeOutputConfig<a name="aws-properties-sagemaker-devicefleet-edgeoutputconfig"></a>
 
-The output configuration\.
+The output configuration for storing sample data collected by the fleet\.
 
 ## Syntax<a name="aws-properties-sagemaker-devicefleet-edgeoutputconfig-syntax"></a>
 
@@ -33,7 +33,7 @@ The AWS Key Management Service \(AWS KMS\) key that Amazon SageMaker uses to enc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3OutputLocation`  <a name="cfn-sagemaker-devicefleet-edgeoutputconfig-s3outputlocation"></a>
-The Amazon Simple Storage \(S3\) bucker URI\.  
+The Amazon Simple Storage \(S3\) bucket URI\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

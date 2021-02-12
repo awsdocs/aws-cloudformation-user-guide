@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-properties"></a>
 
 `ACM`  <a name="cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-acm"></a>
-A reference to an object that represents a TLS validation context trust for an AWS Certicate Manager \(ACM\) certificate\.  
+A reference to an object that represents a Transport Layer Security \(TLS\) validation context trust for an AWS Certicate Manager \(ACM\) certificate\.  
 *Required*: No  
 *Type*: [VirtualGatewayTlsValidationContextAcmTrust](aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `File`  <a name="cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-file"></a>
-An object that represents a TLS validation context trust for a local file\.  
+An object that represents a Transport Layer Security \(TLS\) validation context trust for a local file\.  
 *Required*: No  
 *Type*: [VirtualGatewayTlsValidationContextFileTrust](aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

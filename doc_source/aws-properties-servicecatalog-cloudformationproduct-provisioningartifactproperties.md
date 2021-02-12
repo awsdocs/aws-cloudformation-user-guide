@@ -43,7 +43,7 @@ If set to true, AWS Service Catalog stops validating the specified provisioning 
 
 `Info`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactproperties-info"></a>
 Specify the template source with one of the following options, but not both\. Keys accepted: \[ `LoadTemplateFromURL`, `ImportFromPhysicalId` \]  
-The URL of the CloudFormation template in Amazon S3\. Specify the URL in JSON format as follows:  
+The URL of the CloudFormation template in Amazon S3, AWS CodeCommit, or GitHub in JSON format\. Specify the URL in JSON format as follows:  
  `"LoadTemplateFromURL": "https://s3.amazonaws.com/cf-templates-ozkq9d3hgiq2-us-east-1/..."`   
  `ImportFromPhysicalId`: The physical id of the resource that contains the template\. Currently only supports CloudFormation stack arn\. Specify the physical id in JSON format as follows: `ImportFromPhysicalId: “arn:aws:cloudformation:[us-east-1]:[accountId]:stack/[StackName]/[resourceId]`   
 *Required*: Yes  

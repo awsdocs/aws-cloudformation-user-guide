@@ -35,7 +35,7 @@ The AppSKey value\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FNwkSIntKey`  <a name="cfn-iotwireless-wirelessdevice-sessionkeysabpv11-fnwksintkey"></a>
-The FNwkSIntKey value\.  
+The FNwkSIntKey value, with pattern of `[a-fA-F0-9]{32}`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

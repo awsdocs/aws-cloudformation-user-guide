@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FirehoseArn](#cfn-cloudwatch-metricstream-firehosearn)" : String,
       "[IncludeFilters](#cfn-cloudwatch-metricstream-includefilters)" : [ MetricStreamFilter, ... ],
       "[Name](#cfn-cloudwatch-metricstream-name)" : String,
+      "[OutputFormat](#cfn-cloudwatch-metricstream-outputformat)" : String,
       "[RoleArn](#cfn-cloudwatch-metricstream-rolearn)" : String,
       "[Tags](#cfn-cloudwatch-metricstream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -33,6 +34,7 @@ Properties:
   [IncludeFilters](#cfn-cloudwatch-metricstream-includefilters): 
     - MetricStreamFilter
   [Name](#cfn-cloudwatch-metricstream-name): String
+  [OutputFormat](#cfn-cloudwatch-metricstream-outputformat): String
   [RoleArn](#cfn-cloudwatch-metricstream-rolearn): String
   [Tags](#cfn-cloudwatch-metricstream-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -63,6 +65,12 @@ Not currently supported by AWS CloudFormation\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OutputFormat`  <a name="cfn-cloudwatch-metricstream-outputformat"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cloudwatch-metricstream-rolearn"></a>
 Not currently supported by AWS CloudFormation\.  

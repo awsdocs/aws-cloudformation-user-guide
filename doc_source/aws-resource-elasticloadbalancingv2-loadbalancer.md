@@ -99,7 +99,7 @@ The IDs of the public subnets\. You can specify only one subnet per Availability
 `Subnets`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnets"></a>
 The IDs of the subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. When you specify subnets for an existing Application Load Balancer, they replace the previously enabled subnets\.  
-\[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\. You can't change the subnets for an existing Network Load Balancer\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\.   
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

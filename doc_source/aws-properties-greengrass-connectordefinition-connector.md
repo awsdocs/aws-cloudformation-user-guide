@@ -1,6 +1,6 @@
 # AWS::Greengrass::ConnectorDefinition Connector<a name="aws-properties-greengrass-connectordefinition-connector"></a>
 
-<a name="aws-properties-greengrass-connectordefinition-connector-description"></a>Connectors are modules that provide built\-in integration with local infrastructure, device protocols, AWS, and other cloud services\. For more information, see [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors.html) in the *AWS IoT Greengrass Developer Guide*\.
+<a name="aws-properties-greengrass-connectordefinition-connector-description"></a>Connectors are modules that provide built\-in integration with local infrastructure, device protocols, AWS, and other cloud services\. For more information, see [Integrate with Services and Protocols Using Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 <a name="aws-properties-greengrass-connectordefinitionversion-connector-inheritance"></a> In an AWS CloudFormation template, the `Connectors` property of the [ `ConnectorDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinition-connectordefinitionversion.html) property type contains a list of `Connector` property types\.
 
@@ -49,5 +49,5 @@ For more information about AWS\-provided connectors, see [AWS\-Provided Greengra
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-connectordefinition-connector--seealso"></a>
-+  [Connector](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connector.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Connector](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connector.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

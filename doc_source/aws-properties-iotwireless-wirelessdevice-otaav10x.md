@@ -1,4 +1,4 @@
-# AWS::IoTWireless::WirelessDevice OtaaV10X<a name="aws-properties-iotwireless-wirelessdevice-otaav10x"></a>
+# AWS::IoTWireless::WirelessDevice OtaaV10x<a name="aws-properties-iotwireless-wirelessdevice-otaav10x"></a>
 
 OTAA device object for create APIs for v1\.0\.x
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-wirelessdevice-otaav10x-properties"></a>
 
 `AppEui`  <a name="cfn-iotwireless-wirelessdevice-otaav10x-appeui"></a>
-The AppEUI value\.  
+The AppEUI value, with pattern of `[a-fA-F0-9]{16}`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

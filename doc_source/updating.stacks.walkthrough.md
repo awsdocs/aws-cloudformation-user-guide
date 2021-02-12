@@ -452,7 +452,7 @@ Now that we have deployed the stack, let's update the application\. We'll make a
                 "content" : { "Fn::Join" : ["", [
                   "<?php\n",
                   "echo '<h1>AWS CloudFormation sample PHP application</h1>';\n",
-                  "echo 'Updated version via UpdateStack';\n ",
+                  "echo '<p>Updated version via UpdateStack</p>';\n ",
                   "?>\n"
                 ]]},
                 "mode"    : "000644",

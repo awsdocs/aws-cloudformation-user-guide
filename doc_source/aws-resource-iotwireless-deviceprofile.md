@@ -12,9 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTWireless::DeviceProfile",
   "Properties" : {
-      "[LoRaWANDeviceProfile](#cfn-iotwireless-deviceprofile-lorawandeviceprofile)" : LoRaWANDeviceProfile,
+      "[LoRaWAN](#cfn-iotwireless-deviceprofile-lorawan)" : LoRaWANDeviceProfile,
       "[Name](#cfn-iotwireless-deviceprofile-name)" : String,
-      "[NextToken](#cfn-iotwireless-deviceprofile-nexttoken)" : String,
       "[Tags](#cfn-iotwireless-deviceprofile-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -25,36 +24,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTWireless::DeviceProfile
 Properties: 
-  [LoRaWANDeviceProfile](#cfn-iotwireless-deviceprofile-lorawandeviceprofile): 
+  [LoRaWAN](#cfn-iotwireless-deviceprofile-lorawan): 
     LoRaWANDeviceProfile
   [Name](#cfn-iotwireless-deviceprofile-name): String
-  [NextToken](#cfn-iotwireless-deviceprofile-nexttoken): String
   [Tags](#cfn-iotwireless-deviceprofile-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-iotwireless-deviceprofile-properties"></a>
 
-`LoRaWANDeviceProfile`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile"></a>
-LoRaWANDeviceProfile object\.  
+`LoRaWAN`  <a name="cfn-iotwireless-deviceprofile-lorawan"></a>
+LoRaWAN device profile object\.  
 *Required*: No  
 *Type*: [LoRaWANDeviceProfile](aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotwireless-deviceprofile-name"></a>
-The name of the new resource\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`NextToken`  <a name="cfn-iotwireless-deviceprofile-nexttoken"></a>
-This parameter isn't needed to create this resource\. Do not include it in your template\.  
+The name of the new resource\. Maximum length is 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotwireless-deviceprofile-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
+An array of key\-value pairs to apply to this resource\. Tags can have a minimum of 0 and a maximum of 50 items\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  

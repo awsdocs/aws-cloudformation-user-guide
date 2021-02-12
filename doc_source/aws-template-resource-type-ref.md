@@ -107,6 +107,7 @@ service-provider::service-name::data-type-name
 + [LakeFormation](AWS_LakeFormation.md)
 + [Lambda](AWS_Lambda.md)
 + [LicenseManager](AWS_LicenseManager.md)
++ [Lookout for Vision](AWS_LookoutVision.md)
 + [Macie](AWS_Macie.md)
 + [ManagedBlockchain](AWS_ManagedBlockchain.md)
 + [MediaConnect](AWS_MediaConnect.md)

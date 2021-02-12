@@ -87,7 +87,7 @@ Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. Th
 
 ### Create a distribution configuration<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration"></a>
 
-The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format \.
+The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format\.
 
 #### YAML<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--yaml"></a>
 

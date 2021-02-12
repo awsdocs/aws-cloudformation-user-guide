@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Datastore ParquetConfiguration<a name="aws-properties-iotanalytics-datastore-parquetconfiguration"></a>
 
-<a name="aws-properties-iotanalytics-datastore-parquetconfiguration-description"></a>The `ParquetConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTAnalytics::Datastore](aws-resource-iotanalytics-datastore.md)\.
+Contains the configuration information of the Parquet format\.
 
 ## Syntax<a name="aws-properties-iotanalytics-datastore-parquetconfiguration-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-datastore-parquetconfiguration-properties"></a>
 
 `SchemaDefinition`  <a name="cfn-iotanalytics-datastore-parquetconfiguration-schemadefinition"></a>
-Not currently supported by AWS CloudFormation\.  
+Information needed to define a schema\.  
 *Required*: No  
 *Type*: [SchemaDefinition](aws-properties-iotanalytics-datastore-schemadefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,10 +1,10 @@
 # AWS::ECS::Service CapacityProviderStrategyItem<a name="aws-properties-ecs-service-capacityproviderstrategyitem"></a>
 
-The details of a capacity provider strategy\. A capacity provider strategy can be set when using the RunTask or CreateCluster APIs or as the default capacity provider strategy for a cluster with the CreateCluster API\.
+The details of a capacity provider strategy\. A capacity provider strategy can be set when using the `RunTask` or `CreateService` APIs or as the default capacity provider strategy for a cluster with the `CreateCluster` API\.
 
-Only capacity providers that are already associated with a cluster and have an `ACTIVE` or `UPDATING` status can be used in a capacity provider strategy\. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster\.
+Only capacity providers that are already associated with a cluster and have an `ACTIVE` or `UPDATING` status can be used in a capacity provider strategy\. The `PutClusterCapacityProviders` API is used to associate a capacity provider with a cluster\.
 
-If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New Auto Scaling group capacity providers can be created with the CreateCapacityProvider API operation\.
+If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New Auto Scaling group capacity providers can be created with the `CreateCapacityProvider` API operation\.
 
 To use a AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used in a capacity provider strategy\.
 

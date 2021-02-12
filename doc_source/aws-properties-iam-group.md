@@ -92,34 +92,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::Group` resource\. For example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`\.
 
-## Examples<a name="aws-properties-iam-group--examples"></a>
-
-### Group<a name="aws-properties-iam-group--examples--Group"></a>
-
-In this example, create a group named "MyGroup"\.
-
-#### JSON<a name="aws-properties-iam-group--examples--Group--json"></a>
-
-```
-{
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources": {
-      "MyGroup" : {
-         "Type" : "AWS::IAM::Group"
-      }      
-   }            
-}
-```
-
-#### YAML<a name="aws-properties-iam-group--examples--Group--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyGroup:
-    Type: AWS::IAM::Group
-```
-
 ## See also<a name="aws-properties-iam-group--seealso"></a>
 + To view `AWS::IAM::Group` template example snippets, see [Declaring an IAM Group Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-group)\. 
 +  [CreateGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateGroup.html) in the *AWS Identity and Access Management API Reference* 

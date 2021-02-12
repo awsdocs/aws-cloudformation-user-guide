@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualnode-listenertls-properties"></a>
 
 `Certificate`  <a name="cfn-appmesh-virtualnode-listenertls-certificate"></a>
-A reference to an object that represents a listener's TLS certificate\.  
+A reference to an object that represents a listener's Transport Layer Security \(TLS\) certificate\.  
 *Required*: Yes  
 *Type*: [ListenerTlsCertificate](aws-properties-appmesh-virtualnode-listenertlscertificate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -143,7 +143,7 @@ An SNS topic ARN that is set up to receive matchmaking notifications\. See [ Set
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `300`  
-*Pattern*: `[a-zA-Z0-9:_/-]*`  
+*Pattern*: `[a-zA-Z0-9:_/-]*(.fifo)?`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestTimeoutSeconds`  <a name="cfn-gamelift-matchmakingconfiguration-requesttimeoutseconds"></a>

@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Datastore Column<a name="aws-properties-iotanalytics-datastore-column"></a>
 
-<a name="aws-properties-iotanalytics-datastore-column-description"></a>The `Column` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTAnalytics::Datastore](aws-resource-iotanalytics-datastore.md)\.
+Contains information about a column that stores your data\.
 
 ## Syntax<a name="aws-properties-iotanalytics-datastore-column-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-datastore-column-properties"></a>
 
 `Name`  <a name="cfn-iotanalytics-datastore-column-name"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the column\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iotanalytics-datastore-column-type"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of data\. For more information about the supported data types, see [Common data types](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-common.html) in the *AWS Glue Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

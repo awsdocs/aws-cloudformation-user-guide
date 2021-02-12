@@ -60,7 +60,8 @@ The name of the ServiceNow field that is mapped to the index document title fiel
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeAttachmentFilePatterns`  <a name="cfn-kendra-datasource-servicenowservicecatalogconfiguration-excludeattachmentfilepatterns"></a>
-Determines the types of file attachments that are excluded from the index\.  
+A list of regular expression patterns\. Documents that match the patterns are excluded from the index\. Documents that don't match the patterns are included in the index\. If a document matches both an exclusion pattern and an inclusion pattern, the document is not included in the index\.  
+The regex is applied to the file name of the attachment\.  
 *Required*: No  
 *Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
 *Maximum*: `100`  
@@ -74,7 +75,8 @@ Mapping between ServiceNow fields and Amazon Kendra index fields\. You must crea
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeAttachmentFilePatterns`  <a name="cfn-kendra-datasource-servicenowservicecatalogconfiguration-includeattachmentfilepatterns"></a>
-Determines the types of file attachments that are included in the index\.   
+A list of regular expression patterns\. Documents that match the patterns are included in the index\. Documents that don't match the patterns are excluded from the index\. If a document matches both an exclusion pattern and an inclusion pattern, the document is not included in the index\.  
+The regex is applied to the file name of the attachment\.  
 *Required*: No  
 *Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
 *Maximum*: `100`  

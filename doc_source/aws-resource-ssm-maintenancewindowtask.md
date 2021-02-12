@@ -71,7 +71,7 @@ Information about an Amazon S3 bucket to write task\-level logs to\.
 
 `MaxConcurrency`  <a name="cfn-ssm-maintenancewindowtask-maxconcurrency"></a>
 The maximum number of targets this task can be run for, in parallel\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `7`  
@@ -80,7 +80,7 @@ The maximum number of targets this task can be run for, in parallel\.
 
 `MaxErrors`  <a name="cfn-ssm-maintenancewindowtask-maxerrors"></a>
 The maximum number of errors allowed before this task stops being scheduled\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `7`  
@@ -113,7 +113,7 @@ The ARN of the IAM service role to use to publish Amazon Simple Notification Ser
 The targets, either instances or window target IDs\.  
 + Specify instances using `Key=InstanceIds,Values=instanceid1,instanceid2 `\.
 + Specify window target IDs using `Key=WindowTargetIds,Values=window-target-id-1,window-target-id-2`\.
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [Target](aws-properties-ssm-maintenancewindowtask-target.md)  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -415,19 +415,18 @@ Resources:
       TaskInvocationParameters:
         MaintenanceWindowRunCommandParameters:
           Comment: This is a comment.
-		  Parameters:
-        executionTimeout:
-        - '3600'
-        commands:
-        - |
-        Get-Service myImportantService | Restart-Service
-        Get-ExecutionPolicy -List
-        Set-ExecutionPolicy -Scope Process AllSigned
-	  Priority: 1
+          Parameters:
+            executionTimeout:
+            - '3600'
+            commands: |- 
+              Get-Service myImportantService | Restart-Service
+              Get-ExecutionPolicy -List
+              Set-ExecutionPolicy -Scope Process AllSigned
+      Priority: 1
       MaxConcurrency: 5
       MaxErrors: 5
       Name: StepFunctionsTask
-    DependsOn: MaintenanceWindowTarget
+      DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a task that runs an Automation runbook<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook"></a>

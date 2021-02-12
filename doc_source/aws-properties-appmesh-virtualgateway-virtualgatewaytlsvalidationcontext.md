@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-properties"></a>
 
 `Trust`  <a name="cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext-trust"></a>
-A reference to an object that represents a TLS validation context trust\.  
+A reference to where to retrieve the trust chain when validating a peer’s Transport Layer Security \(TLS\) certificate\.  
 *Required*: Yes  
 *Type*: [VirtualGatewayTlsValidationContextTrust](aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

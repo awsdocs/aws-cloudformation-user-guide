@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CronExpression](#cfn-dlm-lifecyclepolicy-createrule-cronexpression)" : String,
   "[Interval](#cfn-dlm-lifecyclepolicy-createrule-interval)" : Integer,
   "[IntervalUnit](#cfn-dlm-lifecyclepolicy-createrule-intervalunit)" : String,
+  "[Location](#cfn-dlm-lifecyclepolicy-createrule-location)" : String,
   "[Times](#cfn-dlm-lifecyclepolicy-createrule-times)" : [ String, ... ]
 }
 ```
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CronExpression](#cfn-dlm-lifecyclepolicy-createrule-cronexpression): String
   [Interval](#cfn-dlm-lifecyclepolicy-createrule-interval): Integer
   [IntervalUnit](#cfn-dlm-lifecyclepolicy-createrule-intervalunit): String
+  [Location](#cfn-dlm-lifecyclepolicy-createrule-location): String
   [Times](#cfn-dlm-lifecyclepolicy-createrule-times): 
     - String
 ```
@@ -52,6 +54,15 @@ The interval unit\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HOURS`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Location`  <a name="cfn-dlm-lifecyclepolicy-createrule-location"></a>
+Specifies the destination for snapshots created by the policy\. To create snapshots in the same Region as the source resource, specify `CLOUD`\. To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL`\. If you omit this parameter, `CLOUD` is used by default\.  
+If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source resource\.   
+If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source resource, or in the Region of that Outpost\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CLOUD | OUTPOST_LOCAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Times`  <a name="cfn-dlm-lifecyclepolicy-createrule-times"></a>

@@ -129,43 +129,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::User` resource\. For example: `arn:aws:iam::123456789012:user/mystack-myuser-1CCXAFG2H2U4D`\.
 
-## Examples<a name="aws-properties-iam-user--examples"></a>
-
-### User<a name="aws-properties-iam-user--examples--User"></a>
-
-In this example, create a user named "MyUser"\.
-
-#### JSON<a name="aws-properties-iam-user--examples--User--json"></a>
-
-```
-{
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources" : {
-     "MyUser" : {
-       "Type" : "AWS::IAM::User",
-       "Properties" : {
-         "LoginProfile": {
-           "Password": { "Ref" : "MyPassword" }
-         }
-       }
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-properties-iam-user--examples--User--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyUser:
-    Type: AWS::IAM::User
-    Properties:
-      LoginProfile:
-        Password:
-          Ref: MyPassword
-```
-
 ## See also<a name="aws-properties-iam-user--seealso"></a>
 + To view `AWS::IAM::User` template example snippets, see [Declaring an IAM User Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-user)\. 
 +  [CreateUser](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html) in the *AWS Identity and Access Management API Reference* 

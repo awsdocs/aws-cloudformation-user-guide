@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Configuration",
   "Properties" : {
+      "[AuthenticationStrategy](#cfn-amazonmq-configuration-authenticationstrategy)" : String,
       "[Data](#cfn-amazonmq-configuration-data)" : String,
       "[Description](#cfn-amazonmq-configuration-description)" : String,
       "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AmazonMQ::Configuration
 Properties: 
+  [AuthenticationStrategy](#cfn-amazonmq-configuration-authenticationstrategy): String
   [Data](#cfn-amazonmq-configuration-data): String
   [Description](#cfn-amazonmq-configuration-description): String
   [EngineType](#cfn-amazonmq-configuration-enginetype): String
@@ -40,6 +42,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>
+
+`AuthenticationStrategy`  <a name="cfn-amazonmq-configuration-authenticationstrategy"></a>
+Optional\. The authentication strategy associated with the configuration\. The default is `SIMPLE`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Data`  <a name="cfn-amazonmq-configuration-data"></a>
 The base64\-encoded XML configuration\.  

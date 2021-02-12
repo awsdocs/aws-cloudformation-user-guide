@@ -7,6 +7,7 @@
 + [AWS::SageMaker::DeviceFleet](aws-resource-sagemaker-devicefleet.md)
 + [AWS::SageMaker::Endpoint](aws-resource-sagemaker-endpoint.md)
 + [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md)
++ [AWS::SageMaker::FeatureGroup](aws-resource-sagemaker-featuregroup.md)
 + [AWS::SageMaker::Model](aws-resource-sagemaker-model.md)
 + [AWS::SageMaker::ModelBiasJobDefinition](aws-resource-sagemaker-modelbiasjobdefinition.md)
 + [AWS::SageMaker::ModelExplainabilityJobDefinition](aws-resource-sagemaker-modelexplainabilityjobdefinition.md)

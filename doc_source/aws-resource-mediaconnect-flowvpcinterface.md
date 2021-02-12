@@ -14,6 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaConnect::FlowVpcInterface",
   "Properties" : {
+      "[FlowArn](#cfn-mediaconnect-flowvpcinterface-flowarn)" : String,
+      "[Name](#cfn-mediaconnect-flowvpcinterface-name)" : String,
       "[RoleArn](#cfn-mediaconnect-flowvpcinterface-rolearn)" : String,
       "[SecurityGroupIds](#cfn-mediaconnect-flowvpcinterface-securitygroupids)" : [ String, ... ],
       "[SubnetId](#cfn-mediaconnect-flowvpcinterface-subnetid)" : String
@@ -26,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::MediaConnect::FlowVpcInterface
 Properties: 
+  [FlowArn](#cfn-mediaconnect-flowvpcinterface-flowarn): String
+  [Name](#cfn-mediaconnect-flowvpcinterface-name): String
   [RoleArn](#cfn-mediaconnect-flowvpcinterface-rolearn): String
   [SecurityGroupIds](#cfn-mediaconnect-flowvpcinterface-securitygroupids): 
     - String
@@ -33,6 +37,18 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-mediaconnect-flowvpcinterface-properties"></a>
+
+`FlowArn`  <a name="cfn-mediaconnect-flowvpcinterface-flowarn"></a>
+The Amazon Resource Name \(ARN\) of the flow\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Name`  <a name="cfn-mediaconnect-flowvpcinterface-name"></a>
+The name of the VPC Interface\. This value must be unique within the current flow\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-mediaconnect-flowvpcinterface-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the role that you created when you set up MediaConnect as a trusted service\.  
@@ -71,12 +87,6 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mediaconnect-flowvpcinterface-return-values-fn--getatt-fn--getatt"></a>
-
-`FlowArn`  <a name="FlowArn-fn::getatt"></a>
-The ARN of the flow that is associated with the VPC interface\.
-
-`Name`  <a name="Name-fn::getatt"></a>
-The name of the VPC interface\.
 
 `NetworkInterfaceIds`  <a name="NetworkInterfaceIds-fn::getatt"></a>
 The IDs of the network interfaces that MediaConnect created in your account\.

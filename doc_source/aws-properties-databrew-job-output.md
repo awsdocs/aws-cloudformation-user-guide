@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CompressionFormat](#cfn-databrew-job-output-compressionformat)" : String,
   "[Format](#cfn-databrew-job-output-format)" : String,
+  "[FormatOptions](#cfn-databrew-job-output-formatoptions)" : OutputFormatOptions,
   "[Location](#cfn-databrew-job-output-location)" : S3Location,
   "[Overwrite](#cfn-databrew-job-output-overwrite)" : Boolean,
   "[PartitionColumns](#cfn-databrew-job-output-partitioncolumns)" : [ String, ... ]
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CompressionFormat](#cfn-databrew-job-output-compressionformat): String
   [Format](#cfn-databrew-job-output-format): String
+  [FormatOptions](#cfn-databrew-job-output-formatoptions): 
+    OutputFormatOptions
   [Location](#cfn-databrew-job-output-location): 
     S3Location
   [Overwrite](#cfn-databrew-job-output-overwrite): Boolean
@@ -44,6 +47,12 @@ The data format of the output of the job\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AVRO | CSV | GLUEPARQUET | JSON | ORC | PARQUET | XML`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FormatOptions`  <a name="cfn-databrew-job-output-formatoptions"></a>
+Options that define how DataBrew formats job output files\.  
+*Required*: No  
+*Type*: [OutputFormatOptions](aws-properties-databrew-job-outputformatoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Location`  <a name="cfn-databrew-job-output-location"></a>

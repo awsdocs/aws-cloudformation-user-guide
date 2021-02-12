@@ -12,11 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ACMPCA::Certificate",
   "Properties" : {
+      "[ApiPassthrough](#cfn-acmpca-certificate-apipassthrough)" : ApiPassthrough,
       "[CertificateAuthorityArn](#cfn-acmpca-certificate-certificateauthorityarn)" : String,
       "[CertificateSigningRequest](#cfn-acmpca-certificate-certificatesigningrequest)" : String,
       "[SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm)" : String,
       "[TemplateArn](#cfn-acmpca-certificate-templatearn)" : String,
-      "[Validity](#cfn-acmpca-certificate-validity)" : Validity
+      "[Validity](#cfn-acmpca-certificate-validity)" : Validity,
+      "[ValidityNotBefore](#cfn-acmpca-certificate-validitynotbefore)" : Validity
     }
 }
 ```
@@ -26,15 +28,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ACMPCA::Certificate
 Properties: 
+  [ApiPassthrough](#cfn-acmpca-certificate-apipassthrough): 
+    ApiPassthrough
   [CertificateAuthorityArn](#cfn-acmpca-certificate-certificateauthorityarn): String
   [CertificateSigningRequest](#cfn-acmpca-certificate-certificatesigningrequest): String
   [SigningAlgorithm](#cfn-acmpca-certificate-signingalgorithm): String
   [TemplateArn](#cfn-acmpca-certificate-templatearn): String
   [Validity](#cfn-acmpca-certificate-validity): 
     Validity
+  [ValidityNotBefore](#cfn-acmpca-certificate-validitynotbefore): 
+    Validity
 ```
 
 ## Properties<a name="aws-resource-acmpca-certificate-properties"></a>
+
+`ApiPassthrough`  <a name="cfn-acmpca-certificate-apipassthrough"></a>
+Specifies X\.509 certificate information to be included in the issued certificate\. An `APIPassthrough` or `APICSRPassthrough` template variant must be selected, or else this parameter is ignored\.  
+*Required*: No  
+*Type*: [ApiPassthrough](aws-properties-acmpca-certificate-apipassthrough.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateAuthorityArn`  <a name="cfn-acmpca-certificate-certificateauthorityarn"></a>
 The Amazon Resource Name \(ARN\) for the private CA used to issue the certificate\.  
@@ -65,6 +77,15 @@ Specifies a custom configuration template to use when issuing a certificate\. If
 `Validity`  <a name="cfn-acmpca-certificate-validity"></a>
 The period of time during which the certificate will be valid\.  
 *Required*: Yes  
+*Type*: [Validity](aws-properties-acmpca-certificate-validity.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ValidityNotBefore`  <a name="cfn-acmpca-certificate-validitynotbefore"></a>
+Information describing the start of the validity period of the certificate\. This parameter sets the “Not Before" date for the certificate\.  
+By default, when issuing a certificate, ACM Private CA sets the "Not Before" date to the issuance time minus 60 minutes\. This compensates for clock inconsistencies across computer systems\. The `ValidityNotBefore` parameter can be used to customize the “Not Before” value\.   
+Unlike the `Validity` parameter, the `ValidityNotBefore` parameter is optional\.  
+The `ValidityNotBefore` value is expressed as an explicit date and time, using the `Validity` type value `ABSOLUTE`\.  
+*Required*: No  
 *Type*: [Validity](aws-properties-acmpca-certificate-validity.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

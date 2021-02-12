@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Datastore JsonConfiguration<a name="aws-properties-iotanalytics-datastore-jsonconfiguration"></a>
 
-<a name="aws-properties-iotanalytics-datastore-jsonconfiguration-description"></a>The `JsonConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTAnalytics::Datastore](aws-resource-iotanalytics-datastore.md)\.
+Contains the configuration information of the JSON format\.
 
 ## Syntax<a name="aws-properties-iotanalytics-datastore-jsonconfiguration-syntax"></a>
 

@@ -42,7 +42,7 @@ The list of groups \(20 maximum\) to which the ActiveMQ user belongs\. This valu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-amazonmq-broker-user-password"></a>
-The password of the user\. This value must be at least 12 characters long, must contain at least 4 unique characters, and must not contain commas\.  
+The password of the user\. This value must be at least 12 characters long, must contain at least 4 unique characters, and must not contain commas, colons, or equal signs \(,:=\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

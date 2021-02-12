@@ -75,7 +75,7 @@ Optional metadata that you can apply to the virtual node to assist with categori
 
 `VirtualNodeName`  <a name="cfn-appmesh-virtualnode-virtualnodename"></a>
 The name to use for the virtual node\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

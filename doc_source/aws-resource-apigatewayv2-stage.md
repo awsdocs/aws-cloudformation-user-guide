@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::Stage",
   "Properties" : {
       "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : AccessLogSettings,
+      "[AccessPolicyId](#cfn-apigatewayv2-stage-accesspolicyid)" : String,
       "[ApiId](#cfn-apigatewayv2-stage-apiid)" : String,
       "[AutoDeploy](#cfn-apigatewayv2-stage-autodeploy)" : Boolean,
       "[ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid)" : String,
@@ -34,6 +35,7 @@ Type: AWS::ApiGatewayV2::Stage
 Properties: 
   [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
     AccessLogSettings
+  [AccessPolicyId](#cfn-apigatewayv2-stage-accesspolicyid): String
   [ApiId](#cfn-apigatewayv2-stage-apiid): String
   [AutoDeploy](#cfn-apigatewayv2-stage-autodeploy): Boolean
   [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
@@ -53,6 +55,12 @@ Properties:
 Settings for logging access in this stage\.  
 *Required*: No  
 *Type*: [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AccessPolicyId`  <a name="cfn-apigatewayv2-stage-accesspolicyid"></a>
+This parameter is not currently supported\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiId`  <a name="cfn-apigatewayv2-stage-apiid"></a>

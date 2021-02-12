@@ -46,7 +46,7 @@ The Amazon resource name \(ARN\) for a customer managed customer master key \(CM
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-route53-keysigningkey-name"></a>
-A string used to identify a key\-signing key \(KSK\)\. `Name` can include numbers, letters, periods \(\.\), hyphens \(\-\), or underscores \(\_\)\. `Name` must be unique for each key\-signing key in the same hosted zone\.  
+A string used to identify a key\-signing key \(KSK\)\. `Name` can include numbers, letters, and underscores \(\_\)\. `Name` must be unique for each key\-signing key in the same hosted zone\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  

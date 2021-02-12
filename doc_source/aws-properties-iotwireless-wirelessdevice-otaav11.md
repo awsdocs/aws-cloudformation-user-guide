@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-wirelessdevice-otaav11-properties"></a>
 
 `AppKey`  <a name="cfn-iotwireless-wirelessdevice-otaav11-appkey"></a>
-The AppKey value\.  
+The AppKey value, with pattern of `[a-fA-F0-9]{32}`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JoinEui`  <a name="cfn-iotwireless-wirelessdevice-otaav11-joineui"></a>
-The JoinEUI value\.  
+The JoinEUI value , with pattern of `[a-fA-F0-9]{16}`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

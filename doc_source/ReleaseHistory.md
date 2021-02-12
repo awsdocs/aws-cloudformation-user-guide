@@ -4,19 +4,102 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_IoTAnalytics.md) | The following resource was updated: AWS::IoTAnalytics::Datastore\. 
+
+ [ AWS::IoTAnalytics::Datastore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)   
+Added the following properties: `Column`, `FileFormatConfiguration`, `JsonConfiguration`, `ParquetConfiguration`, and `SchemaDefinition`\.  | February 5, 2021 | 
+| [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::ReplicationConfiguration 
+
+ [AWS::ECR::ReplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replication-configuration.html)   
+Use the `ReplicationConfiguration` property to create or update the replication configuration for a private repository\.  | February 4, 2021 | 
+| [Updated resources](AWS_IoTWireless.md) | The following resources were updated: AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
+
+ [AWS::IoTWireless::DeviceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)   
+ Use the `DeviceProfile` resource to specify a device profile for a wireless device to use\.  
+
+ [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
+ Use the `ServiceProfile` resource to specify a service profile for a wireless device to use\.  
+
+ [AWS::IoTWireless::WirelessDevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)   
+ Use the `WirelessDevice` resource to specify a wireless device in an AWS IoT Core for LoRaWAN solution\.  
+
+ [AWS::IoTWireless::WirelessGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)   
+ Use the `WirelessGateway` resource to specify a wireless gateway in an AWS IoT Core for LoRaWAN solution\.   | February 4, 2021 | 
+| [Updated resources](AWS_Cassandra.md) | The following resources were updated: `AWS::Cassandra::Keyspace` and `AWS::Cassandra::Table`\. 
+
+ [AWS::Cassandra::Keyspace\.Tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html)   
+Use the `AWS::Cassandra::Keyspace.Tags` property to add tags to new or existing keyspaces in Amazon Keyspaces \(for Apache Cassandra\)\. 
+
+ [AWS::Cassandra::Table\.Tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)   
+Use the `AWS::Cassandra::Table.Tags` property to create add tags to new or existing tables in Amazon Keyspaces \(for Apache Cassandra\)\. 
+
+ [AWS::Cassandra::Table\.PointInTimeRecoveryEnabled](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)   
+Use the `AWS::Cassandra::Table.PointInTimeRecoveryEnabled` property to enable Point\-in\-Time Recovery in Amazon Keyspaces \(for Apache Cassandra\)\.  | February 4, 2021 | 
+| [Updated resource](AWS_DataBrew.md) | The following resource was updated: AWS::DataBrew::Job\. 
+
+ [AWS::DataBrew::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html)   
+Use the `CsvOutputOptions` property to define how DataBrew will write a CSV file\.  
+Use the `OutputFormatOptions` property to define the structure of CSV job output\.  | February 4, 2021 | 
+| [Updated resource](AWS_ElastiCache.md) | The following resource was updated: AWS::ElastiCache::GlobalReplicationGroup\. 
+
+ [AWS::ElastiCache::GlobalReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)   
+Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.   | February 4, 2021 | 
+| [New resource](AWS_ImageBuilder.md) | Added the following resource: AWS::ImageBuilder::ContainerRecipe\. 
+
+ [AWS::ImageBuilder::ContainerRecipe](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html)   
+Use the `AWS::ImageBuilder::ContainerRecipe` resource to create a container recipe in the EC2 Image Builder service\.  | February 4, 2021 | 
+| [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Stage`\. 
+
+ [AWS::ApiGatewayV2::Stage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html)   
+Use the `AWS::ApiGatewayV2::Stage` resource to configure a stage for an API\.  | January 28, 2021 | 
+| [New resource](AWS_LookoutVision.md) | The following resource was added: AWS::LookoutVision:Project\. 
+
+ [AWS::LookoutVision:Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_LookoutVision.html)   
+Use the `Project` resource to create an Amazon Lookout for Vision project\.  | January 28, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::Certificate\. 
+
+ [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
+Use the `ApiPassthrough` property to include parameters in certificates during issuance\.  
+Use the `ValidityNotBefore` property to customize the start of certificate validity\.  | January 21, 2021 | 
+| [Updated resource](AWS_MediaConnect.md) | The following resource was updated: `AWS::MediaConnect::FlowVpcInterface`\. 
+
+ [AWS::MediaConnect::FlowVpcInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowvpcinterface.html)   
+Use the `FlowArn` property to specify the ARN of the flow\.  
+Use the `Name` property to specify the name of the VPC Interface\.  | January 21, 2021 | 
+| [Updated resource](AWS_SageMaker.md) | The following resources were updated: AWS::SageMaker::Device, AWS::SageMaker::DeviceFleet, and AWS::SageMaker::Model\. 
+
+ [AWS::SageMaker::Device](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html)   
+Use the `DeviceFleetName` property to get the name of the fleet the device belongs to\.  
+Use the `Device` property to make the edge device you want to create\.  
+Use the `Tags` property to get the tags registered to a specific device\.  
+Use the `Device.Device` property/resource to get information about a particular device\.  
+Use the `Device.Device.Description` property/resource to get a description of the device\.  
+Use the `Device.Device.DeviceName` property/resource to get the device name\.  
+Use the `Device.Device.IotThingName` property/resource to get the IoT object name\. 
+
+ [AWS::SageMaker::DeviceFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html)   
+Use the `DeviceFleet.Description` property to get information about a fleet\.  
+Use the `OutputConfig` property to get the output configuration for the fleet\.  
+Use the `RoleArn` property to get the ARN of the IoT thing\.  
+Use the `Tags` property to get the tags registered to a specific fleet\.  
+Use the `EdgeOutputConfig.KmsKeyId` property/resource to set the KMS key ID\.  
+Use the `EdgeOutputConfig.S3OutputLocation` property/resource to set the S3 bucket URI\. 
+
+ [AWS::SageMaker::Model](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html)   
+Use the `MultiModelConfiguration` property to specify configuration details for a multi\-model endpoint\.  | January 21, 2021 | 
+| [New resources](AWS_SageMaker.md) | The following resource was added: AWS::SageMaker::Project\. 
+
+ [AWS::SageMaker::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html)   
+Use the `AWS::SageMaker::Project` resource to create a new project in Amazon SageMaker\.  | January 21, 2021 | 
+| [Updated resource](AWS_S3.md) | The following resource was updated with examples: AWS::S3::AccessPoint 
+
+ [Access Points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html)   
+Use the `AWS::S3::AccessPoint` resource to specify an S3 access point\.  | January 20, 2021 | 
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
 You can now change the broker type for an existing cluster\.  | January 15, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-You can now change the broker type for an existing cluster\.  | January 15, 2021 | 
 | [Updated resource](AWS_ServiceCatalog.md) | The following resource was updated: AWS::ServiceCatalog::PortfolioShare\. 
-
- [The following resource was updated: AWS::ServiceCatalog::PortfolioShare\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)   
-The `ShareTagOptions` property is now available for `AWS::ServiceCatalog::PortfolioShare`\.  | January 14, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ServiceCatalog::PortfolioShare\. 
 
  [The following resource was updated: AWS::ServiceCatalog::PortfolioShare\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)   
 The `ShareTagOptions` property is now available for `AWS::ServiceCatalog::PortfolioShare`\.  | January 14, 2021 | 
@@ -50,19 +133,6 @@ Use the `AWS::ServiceCatalogAppRegistry::AttributeGroupAssociation` as the attri
 
  [AWS::ServiceCatalogAppRegistry::ResourceAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-resourceassociation.html)   
 Use the `AWS::ServiceCatalogAppRegistry::ResourceAssociation` as the resource association for ServiceCatalogAppRegistry\.  | January 14, 2021 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::QuickSight::Analysis, AWS::QuickSight::Dashboard, AWS::QuickSight::Template, and AWS::QuickSight::Theme\. 
-
- [ AWS::QuickSight::Analysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html)   
-Use the `AWS::QuickSight::Analysis` resource to create an analysis in Amazon QuickSight\. 
-
- [ AWS::QuickSight::Dashboard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html)   
-Use the `AWS::QuickSight::Dashboard` resource to create a dashboard from a template in Amazon QuickSight\. 
-
- [ AWS::QuickSight::Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html)   
-Use the `AWS::QuickSight::Template` resource to create a template from an existing Amazon QuickSight analysis or template\. 
-
- [ AWS::QuickSight::Theme](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html)   
-Use the `AWS::QuickSight::Theme` resource to create a theme in Amazon QuickSight\.   | January 14, 2021 | 
 | [Updates to resource](AWS_SSO.md) | The following resource was updated: AWS::SSO::InstanceAccessControlAttributeConfiguration\.  
 
  [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
@@ -151,7 +221,6 @@ Use the `AWS::DataSync::LocationSMB` resource to specify an SMB location\.
 
  [AWS::DataSync::Task](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)   
 Use the `AWS::DataSync::Task` resource to specify a task\.  | January 7, 2021 | 
-| [AWS::ServiceCatalog transform added](#ReleaseHistory) | The AWS::ServiceCatalog transform enables Service Catalog users to reference outputs from an existing Service Catalog provisioned product in their CloudFormation template\.For more details, see [AWS::ServiceCatalog transform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-servicecatalog.html)\. | December 23, 2020 | 
 | [New resource](AWS_MWAA.md) | The following resource was added AWS::MWAA::Environment 
 
  [AWS::MWAA::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html)   
@@ -256,13 +325,6 @@ Use the `AWS::SageMaker::ModelPackageGroup` resource to create a a group of rela
 
  [AWS::SageMaker::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)   
 Use the `AWS::SageMaker::Pipeline` resource to specify shell scripts that run when you create and/or start a SageMaker Pipeline\. For information about SageMaker Pipelines, see [SageMaker Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines.html) in the *Amazon SageMaker Developer Guide*\.  | December 18, 2020 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::CloudFormation::ModuleDefaultVersion and AWS::CloudFormation::ModuleVersion\. 
-
- [AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)   
-Use the `AWS::CloudFormation::ModuleDefaultVersion` resource to specify the default version of a module, which will be used in CloudFormation operations for this account and region\. 
-
- [AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)   
-Use the `AWS::CloudFormation::ModuleVersion` resource to register the specified version of the module with the CloudFormation service, making it available for use in CloudFormation templates in this account and region\.  | December 18, 2020 | 
 | [New resource](AWS_AuditManager.md) | The following resource was added: AWS::AuditManager::Assessment 
 
  [AWS::AuditManager::Assessment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html)   
@@ -1330,7 +1392,7 @@ Use the `DefaultSubstitutions` property to specify the default values to use for
 
  [AWS::Pinpoint::SmsTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html)   
 Use the `DefaultSubstitutions` property to specify the default values to use for message variables in a message template\. Use the `TemplateDescription` property to specify a custom description of a message template\.  | January 23, 2020 | 
-| [New resources](AWS_ACMPCA.md) | The following resources were added: AWS::ACMPCA::Certificate, AWS::ACMPCA::CertificateAuthority, and AWS::ACMPCA::CertificateAuthorityActivation\. 
+| [New resources](AWS_ACMPCA.md) | The following resources were added: AWS::ACMPCA::Certificate, AWS::ACMPCA::CertificateAuthority, AWS::ACMPCA::CertificateAuthorityActivation\. 
 
  [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
 The `AWS::ACMPCA::Certificate` resource is used to issue a certificate using your private certificate authority\. 

@@ -1,4 +1,4 @@
-# AWS::IoTWireless::WirelessDevice AbpV10X<a name="aws-properties-iotwireless-wirelessdevice-abpv10x"></a>
+# AWS::IoTWireless::WirelessDevice AbpV10x<a name="aws-properties-iotwireless-wirelessdevice-abpv10x"></a>
 
 ABP device object for LoRaWAN specification v1\.0\.x
 
@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DevAddr](#cfn-iotwireless-wirelessdevice-abpv10x-devaddr)" : String,
-  "[SessionKeys](#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys)" : SessionKeysAbpV10X
+  "[SessionKeys](#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys)" : SessionKeysAbpV10x
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DevAddr](#cfn-iotwireless-wirelessdevice-abpv10x-devaddr): String
   [SessionKeys](#cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys): 
-    SessionKeysAbpV10X
+    SessionKeysAbpV10x
 ```
 
 ## Properties<a name="aws-properties-iotwireless-wirelessdevice-abpv10x-properties"></a>
@@ -34,5 +34,5 @@ The DevAddr value\.
 `SessionKeys`  <a name="cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys"></a>
 Session keys for ABP v1\.0\.x  
 *Required*: Yes  
-*Type*: [SessionKeysAbpV10X](aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.md)  
+*Type*: [SessionKeysAbpV10x](aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

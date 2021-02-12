@@ -162,8 +162,8 @@ Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have mu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordset-hostedzonename"></a>
-The name of the hosted zone that you want to create records in\.  
-When you create a stack using an AWS::Route53::RecordSet that specifies HostedZoneName, AWS CloudFormation attempts to find a hosted zone whose name matches the HostedZoneName\. If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
+The name of the hosted zone that you want to create records in\. You must include a trailing dot \(for example, `www.example.com.`\) as part of the `HostedZoneName`\.  
+When you create a stack using an AWS::Route53::RecordSet that specifies `HostedZoneName`, AWS CloudFormation attempts to find a hosted zone whose name matches the HostedZoneName\. If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.  
 *Required*: No  
 *Type*: String  

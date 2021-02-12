@@ -5,7 +5,7 @@ To create a stack you run the `[aws cloudformation create\-stack](https://docs.a
 Parameters are separated with a space and the key names are case sensitive\. If you mistype a parameter key name when you run `aws cloudformation create-stack`, AWS CloudFormation doesn't create the stack and reports that the template doesn't contain that parameter\.
 
 **Note**  
-You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. Then whenever you create or update a stack, specify the Amazon S3 URL of a template file\.
+You can use your own bucket and manage its permissions by manually uploading templates to either Amazon S3 or AWS Systems Manager\. Then whenever you create or update a stack, specify the Amazon S3 or AWS Systems Manager of a template file\.
 
 By default, `aws cloudformation describe-stacks` returns parameter values\. To prevent sensitive parameter values such as passwords from being returned, include a `NoEcho` property set to `TRUE` in your AWS CloudFormation template\.
 
@@ -20,11 +20,22 @@ We strongly recommend you do not use these mechanisms to include sensitive infor
 Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
-The following example creates the `myteststack` stack:
+The following example creates the `myteststack` stack in an Amazon S3 bucket:
 
 ```
-1. PROMPT> aws cloudformation create-stack --stack-name myteststack --template-body file:///home/testuser/mytemplate.json --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
-2. {
-3.   "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
-4. }
+1. PROMPT> aws cloudformation create-stack \
+2. --stack-name myteststack \
+3. --template-body file://home/testuser/mytemplate.json \
+4. --parameters ParameterKey=Parm1, ParameterValue=test1 ParameterKey=Parm2, ParameterValue=test2 \
+5. {
+6.   "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
+7. }
+```
+
+The following example creates the `myteststack` stack in an AWS Systems Manager document:
+
+```
+1. PROMPT> aws cloudformation create-stack \
+2.  --stack-name myteststack \
+3.  --template-url "ssm-doc://arn:aws:ssm:us-east-1:12345678912:document/documentName"
 ```

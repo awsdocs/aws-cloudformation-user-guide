@@ -130,10 +130,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-efs-filesystem-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the EFS file system\. For example: `arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system/fs-12345678`
 
 `FileSystemId`  <a name="FileSystemId-fn::getatt"></a>
-The ID of the EFS file system\. For example: `fs-0123456`
+The ID of the EFS file system\. For example: `fs-12345678`
 
 ## Examples<a name="aws-resource-efs-filesystem--examples"></a>
 
@@ -392,8 +392,8 @@ Resources:
           - Effect: "Allow"
             Action:
               - "elasticfilesystem:ClientMount"
-            Principal: 
-              AWS: 'arn:aws:iam::111122223333:root'
+            Principal:
+                AWS: 'arn:aws:iam::111122223333:root'
       KmsKeyId: !GetAtt 
         - key
         - Arn

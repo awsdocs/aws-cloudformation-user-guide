@@ -45,6 +45,6 @@ The target Region\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `16`  
-*Pattern*: `^[\\w:\\-\\/\\*]+$`  
+*Maximum*: `2048`  
+*Pattern*: `^[\w:\-\/\*]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

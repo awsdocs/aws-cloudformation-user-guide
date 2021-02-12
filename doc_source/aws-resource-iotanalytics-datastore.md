@@ -55,7 +55,9 @@ Where data store data is stored\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FileFormatConfiguration`  <a name="cfn-iotanalytics-datastore-fileformatconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Contains the configuration information of file formats\. AWS IoT Analytics data stores support JSON and [Parquet](https://parquet.apache.org/)\.  
+The default file format is JSON\. You can specify only one format\.  
+You can't change the file format after you create the data store\.  
 *Required*: No  
 *Type*: [FileFormatConfiguration](aws-properties-iotanalytics-datastore-fileformatconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -58,7 +58,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeZone`  <a name="cfn-appflow-flow-scheduledtriggerproperties-timezone"></a>
- Specifies the time zone used when referring to the date and time of a scheduled\-triggered flow\.   
+ Specifies the time zone used when referring to the date and time of a scheduled\-triggered flow, such as `America/New_York`\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  

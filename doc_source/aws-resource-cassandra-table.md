@@ -16,8 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ ClusteringKeyColumn, ... ],
       "[KeyspaceName](#cfn-cassandra-table-keyspacename)" : String,
       "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ Column, ... ],
+      "[PointInTimeRecoveryEnabled](#cfn-cassandra-table-pointintimerecoveryenabled)" : Boolean,
       "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ Column, ... ],
-      "[TableName](#cfn-cassandra-table-tablename)" : String
+      "[TableName](#cfn-cassandra-table-tablename)" : String,
+      "[Tags](#cfn-cassandra-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -34,9 +36,12 @@ Properties:
   [KeyspaceName](#cfn-cassandra-table-keyspacename): String
   [PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns): 
     - Column
+  [PointInTimeRecoveryEnabled](#cfn-cassandra-table-pointintimerecoveryenabled): Boolean
   [RegularColumns](#cfn-cassandra-table-regularcolumns): 
     - Column
   [TableName](#cfn-cassandra-table-tablename): String
+  [Tags](#cfn-cassandra-table-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-cassandra-table-properties"></a>
@@ -68,6 +73,12 @@ One or more columns that uniquely identify every row in the table\. Every table 
 *Type*: List of [Column](aws-properties-cassandra-table-column.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`PointInTimeRecoveryEnabled`  <a name="cfn-cassandra-table-pointintimerecoveryenabled"></a>
+Specifies if point\-in\-time recovery is enabled or disabled for the table\. The options are `PointInTimeRecoveryEnabled=true` and `PointInTimeRecoveryEnabled=false`\. If not specified, the default is `PointInTimeRecoveryEnabled=false`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RegularColumns`  <a name="cfn-cassandra-table-regularcolumns"></a>
 One or more columns that are not part of the primary key \- that is, columns that are *not* defined as partition key columns or clustering key columns\.  
 *Required*: No  
@@ -75,13 +86,19 @@ One or more columns that are not part of the primary key \- that is, columns tha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-cassandra-table-tablename"></a>
-The name of the table to be created\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the table name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+The name of the table to be created\. The table name is case sensitive\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the table name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Length Constraints:* Minimum length of 3\. Maximum length of 255\.  
 *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-cassandra-table-tags"></a>
+A list of key\-value pair tags to be attached to the resource\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-cassandra-table-return-values"></a>
 
@@ -254,4 +271,133 @@ Resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 5
           WriteCapacityUnits: 5
+```
+
+### Create a Table with Point\-in\-time Recovery enabled and with tags\.<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Point-in-time_Recovery_enabled_and_with_tags."></a>
+
+The following example creates a table with point\-in\-time enabled and with tags\.
+
+#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Point-in-time_Recovery_enabled_and_with_tags.--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources": {
+      "mySecondTable": {
+         "Type": "AWS::Cassandra::Table",
+         "Properties": {
+            "KeyspaceName": "MyNewKeyspace",
+            "TableName": "Employees",
+            "PartitionKeyColumns": [
+               {
+                  "ColumnName": "id",
+                  "ColumnType": "ASCII"
+               }
+            ],
+            "ClusteringKeyColumns": [
+               {
+                  "Column": {
+                     "ColumnName": "division",
+                     "ColumnType": "ASCII"
+                  },
+                  "OrderBy": "ASC"
+               }
+            ],
+            "RegularColumns": [
+               {
+                  "ColumnName": "name",
+                  "ColumnType": "TEXT"
+               },
+               {
+                  "ColumnName": "region",
+                  "ColumnType": "TEXT"
+               },
+               {
+                  "ColumnName": "division",
+                  "ColumnType": "TEXT"
+               },
+               {
+                  "ColumnName": "project",
+                  "ColumnType": "TEXT"
+               },
+               {
+                  "ColumnName": "role",
+                  "ColumnType": "TEXT"
+               },
+               {
+                  "ColumnName": "pay_scale",
+                  "ColumnType": "TEXT"
+               },
+               {
+                  "ColumnName": "vacation_hrs",
+                  "ColumnType": "FLOAT"
+               },
+               {
+                  "ColumnName": "manager_id",
+                  "ColumnType": "TEXT"
+               }
+            ],
+            "PointInTimeRecoveryEnabled": true,
+            "Tags": [
+               {
+                  "Key": "tag1",
+                  "Value": "val1"
+               },
+               {
+                  "Key": "tag2",
+                  "Value": "val2"
+               }
+            ]
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Point-in-time_Recovery_enabled_and_with_tags.--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  mySecondTable:
+    Type: AWS::Cassandra::Table
+    Properties:
+      KeyspaceName: MyNewKeyspace
+      TableName: Employees
+      PartitionKeyColumns:
+      - ColumnName: id
+        ColumnType: ASCII
+      ClusteringKeyColumns:
+      - Column:
+          ColumnName: division
+          ColumnType: ASCII
+        OrderBy: ASC
+      RegularColumns:
+      - ColumnName: name
+        ColumnType: TEXT
+      - ColumnName: region
+        ColumnType: TEXT
+      - ColumnName: division
+        ColumnType: TEXT
+      - ColumnName: project
+        ColumnType: TEXT
+      - ColumnName: role
+        ColumnType: TEXT
+      - ColumnName: pay_scale
+        ColumnType: TEXT
+      - ColumnName: vacation_hrs
+        ColumnType: FLOAT
+      - ColumnName: manager_id
+        ColumnType: TEXT
+      BillingMode:
+        Mode: PROVISIONED
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+      PointInTimeRecoveryEnabled: true
+      Tags:
+        - Key: tag1
+          Value: val1
+        - Key: tag2
+          Value: val2
 ```

@@ -1,6 +1,6 @@
 # AWS::Lambda::Function ImageConfig<a name="aws-properties-lambda-function-imageconfig"></a>
 
-Configuration values that override the container image Dockerfile settings\. See [Container settings](https://docs.aws.amazon.com/lambda/latest/dg/images-parms.html)\. 
+Configuration values that override the container image Dockerfile settings\. See [Container settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms)\. 
 
 ## Syntax<a name="aws-properties-lambda-function-imageconfig-syntax"></a>
 

@@ -143,7 +143,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53-hostedzone-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID that Amazon Route 53 assigned to the hosted zone when you created it\.
 
 `NameServers`  <a name="NameServers-fn::getatt"></a>
 Returns the set of name servers for the specific hosted zone\. For example: `ns1.example.com`\.  

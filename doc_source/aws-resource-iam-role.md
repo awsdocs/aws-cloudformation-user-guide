@@ -61,7 +61,7 @@ A description of the role that you provide\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-iam-role-managepolicyarns"></a>
-A list of Amazon Resource Names \(ARNs\) of the IAM managed policies that you want to attach to the user\.  
+A list of Amazon Resource Names \(ARNs\) of the IAM managed policies that you want to attach to the role\.  
 For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
 *Required*: No  
 *Type*: List of String  
@@ -221,25 +221,25 @@ This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is sp
 #### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: "2010-09-09",
 Resources:
   RootRole:
     Type: 'AWS::IAM::Role'
     Properties:
       AssumeRolePolicyDocument:
-        Version: 2012-10-17
+        Version: "2012-10-17"
         Statement:
           - Effect: Allow
             Principal:
               Service:
-              - ec2.amazonaws.com
+                - ec2.amazonaws.com
             Action:
               - 'sts:AssumeRole'
       Path: /
       Policies:
         - PolicyName: root
           PolicyDocument:
-            Version: 2012-10-17
+            Version: "2012-10-17"
             Statement:
               - Effect: Allow
                 Action: '*'
@@ -334,20 +334,17 @@ Resources:
       PolicyDocument: 
         Version: "2012-10-17"
         Statement: 
-          - 
-            Effect: "Allow"
+          - Effect: "Allow"
             Action: "*"
             Resource: "*"
       Roles: 
-        - 
-          Ref: "RootRole"
+        - Ref: "RootRole"
   RootInstanceProfile: 
     Type: "AWS::IAM::InstanceProfile"
     Properties: 
       Path: "/"
       Roles: 
-        - 
-          Ref: "RootRole"
+        - Ref: "RootRole"
 ```
 
 ## See also<a name="aws-resource-iam-role--seealso"></a>

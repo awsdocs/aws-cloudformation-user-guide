@@ -41,7 +41,7 @@ One or more ports that the policy is enforced for\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Validation`  <a name="cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation"></a>
-A reference to an object that represents a TLS validation context\.  
+A reference to an object that represents a Transport Layer Security \(TLS\) validation context\.  
 *Required*: Yes  
 *Type*: [VirtualGatewayTlsValidationContext](aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontext.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTWireless::WirelessGateway",
   "Properties" : {
       "[Description](#cfn-iotwireless-wirelessgateway-description)" : String,
-      "[LoRaWANGateway](#cfn-iotwireless-wirelessgateway-lorawangateway)" : LoRaWANGateway,
+      "[LastUplinkReceivedAt](#cfn-iotwireless-wirelessgateway-lastuplinkreceivedat)" : String,
+      "[LoRaWAN](#cfn-iotwireless-wirelessgateway-lorawan)" : LoRaWANGateway,
       "[Name](#cfn-iotwireless-wirelessgateway-name)" : String,
-      "[NextToken](#cfn-iotwireless-wirelessgateway-nexttoken)" : String,
       "[Tags](#cfn-iotwireless-wirelessgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ThingName](#cfn-iotwireless-wirelessgateway-thingname)" : String
     }
@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTWireless::WirelessGateway
 Properties: 
   [Description](#cfn-iotwireless-wirelessgateway-description): String
-  [LoRaWANGateway](#cfn-iotwireless-wirelessgateway-lorawangateway): 
+  [LastUplinkReceivedAt](#cfn-iotwireless-wirelessgateway-lastuplinkreceivedat): String
+  [LoRaWAN](#cfn-iotwireless-wirelessgateway-lorawan): 
     LoRaWANGateway
   [Name](#cfn-iotwireless-wirelessgateway-name): String
-  [NextToken](#cfn-iotwireless-wirelessgateway-nexttoken): String
   [Tags](#cfn-iotwireless-wirelessgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ThingName](#cfn-iotwireless-wirelessgateway-thingname): String
@@ -40,31 +40,31 @@ Properties:
 ## Properties<a name="aws-resource-iotwireless-wirelessgateway-properties"></a>
 
 `Description`  <a name="cfn-iotwireless-wirelessgateway-description"></a>
-The description of the new resource\.  
+The description of the new resource\. The maximum length is 2048 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LoRaWANGateway`  <a name="cfn-iotwireless-wirelessgateway-lorawangateway"></a>
+`LastUplinkReceivedAt`  <a name="cfn-iotwireless-wirelessgateway-lastuplinkreceivedat"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LoRaWAN`  <a name="cfn-iotwireless-wirelessgateway-lorawan"></a>
 The gateway configuration information to use to create the wireless gateway\.  
 *Required*: Yes  
 *Type*: [LoRaWANGateway](aws-properties-iotwireless-wirelessgateway-lorawangateway.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotwireless-wirelessgateway-name"></a>
-The name of the new resource\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`NextToken`  <a name="cfn-iotwireless-wirelessgateway-nexttoken"></a>
-This parameter isn't needed to create this resource\. Do not include it in your template\.  
+The name of the new resource\. The maximum length is 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotwireless-wirelessgateway-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
+An array of key\-value pairs to apply to this resource\. Tags can have a minimum of 0 and a maximum of 50 items\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  

@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentController](#cfn-ecs-service-deploymentcontroller)" : DeploymentController,
       "[DesiredCount](#cfn-ecs-service-desiredcount)" : Integer,
       "[EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags)" : Boolean,
+      "[EnableExecuteCommand](#cfn-ecs-service-enableexecutecommand)" : Boolean,
       "[HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds)" : Integer,
       "[LaunchType](#cfn-ecs-service-launchtype)" : String,
       "[LoadBalancers](#cfn-ecs-service-loadbalancers)" : [ LoadBalancer, ... ],
@@ -51,6 +52,7 @@ Properties:
     DeploymentController
   [DesiredCount](#cfn-ecs-service-desiredcount): Integer
   [EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags): Boolean
+  [EnableExecuteCommand](#cfn-ecs-service-enableexecutecommand): Boolean
   [HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds): Integer
   [LaunchType](#cfn-ecs-service-launchtype): String
   [LoadBalancers](#cfn-ecs-service-loadbalancers): 
@@ -118,6 +120,12 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HealthCheckGracePeriodSeconds`  <a name="cfn-ecs-service-healthcheckgraceperiodseconds"></a>
 The period of time, in seconds, that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\. This is only used when your service is configured to use a load balancer\. If your service has a load balancer defined and you don't specify a health check grace period value, the default value of `0` is used\.  
 If your service's tasks take a while to start and respond to Elastic Load Balancing health checks, you can specify a health check grace period of up to 2,147,483,647 seconds\. During that time, the Amazon ECS service scheduler ignores health check status\. This grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them before they have time to come up\.  
@@ -160,7 +168,7 @@ The placement strategy objects to use for tasks in your service\. You can specif
 The platform version that your tasks in the service are running on\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used by default\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateTags`  <a name="cfn-ecs-service-propagatetags"></a>
 Specifies whether to propagate the tags from the task definition or the service to the tasks in the service\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the tasks within the service during service creation\. To add tags to a task after service creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  

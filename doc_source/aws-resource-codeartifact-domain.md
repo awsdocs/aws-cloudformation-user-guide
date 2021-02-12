@@ -197,3 +197,47 @@ Resources:
   }
 }
 ```
+
+### Create a domain with tags<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_tags"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain* with two tags\. One tag consists of a key named `keyname1` and a value of `value1`\. The other consists of a key named `keyname2` and a value of `value2`\.
+
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_tags--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+      Tags:
+        - Key: "keyname1"
+          Value: "value1"
+        - Key: "keyname2"
+          Value: "value2"
+```
+
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_tags--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain",
+        "Tags" : [
+          {
+            "Key" : "keyname1",
+            "Value" : "value1"
+          },
+          {
+            "Key" : "keyname2",
+            "Value" : "value2"
+          }
+        ]
+      }
+    }
+  }
+}
+```

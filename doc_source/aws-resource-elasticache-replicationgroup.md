@@ -186,7 +186,6 @@ For region availability, see [Supported Node Types by AWS Region](https://docs.a
 
 `CacheParameterGroupName`  <a name="cfn-elasticache-replicationgroup-cacheparametergroupname"></a>
 The name of the parameter group to associate with this replication group\. If this argument is omitted, the default cache parameter group for the specified engine is used\.  
-If you are restoring to an engine version that is different than the original, you must specify the default version of that version\. For example, `CacheParameterGroupName=default.redis4.0`\.
 If you are running Redis version 3\.2\.4 or later, only one node group \(shard\), and want to use a default parameter group, we recommend that you specify the parameter group by name\.   
 + To create a Redis \(cluster mode disabled\) replication group, use `CacheParameterGroupName=default.redis3.2`\.
 + To create a Redis \(cluster mode enabled\) replication group, use `CacheParameterGroupName=default.redis3.2.cluster.on`\.
@@ -208,7 +207,7 @@ If you're going to launch your cluster in an Amazon VPC, you need to create a su
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Engine`  <a name="cfn-elasticache-replicationgroup-engine"></a>
-The name of the cache engine to be used for the clusters in this replication group\.  
+The name of the cache engine to be used for the clusters in this replication group\. Must be Redis\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::IoTWireless::DeviceProfile LoRaWANDeviceProfile<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile"></a>
 
-LoRaWANDeviceProfile object\.
+<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-description"></a>The `LoRaWANDeviceProfile` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTWireless::DeviceProfile](aws-resource-iotwireless-deviceprofile.md)\.
 
 ## Syntax<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-syntax"></a>
 
@@ -49,85 +49,85 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-properties"></a>
 
 `ClassBTimeout`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-classbtimeout"></a>
-The ClassBTimeout value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClassCTimeout`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-classctimeout"></a>
-The ClassCTimeout value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MacVersion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion"></a>
-The MAC version \(such as OTAA 1\.1 or OTAA 1\.0\.3\) to use with this device profile\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxDutyCycle`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxdutycycle"></a>
-The MaxDutyCycle value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxEirp`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxeirp"></a>
-The MaxEIRP value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotDr`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotdr"></a>
-The PingSlotDR value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotFreq`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotfreq"></a>
-The PingSlotFreq value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotPeriod`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotperiod"></a>
-The PingSlotPeriod value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegParamsRevision`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-regparamsrevision"></a>
-The version of regional parameters\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RfRegion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rfregion"></a>
-The frequency band \(RFRegion\) value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Supports32BitFCnt`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supports32bitfcnt"></a>
-The Supports32BitFCnt value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportsClassB`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassb"></a>
-The SupportsClassB value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportsClassC`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassc"></a>
-The SupportsClassC value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportsJoin`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsjoin"></a>
-The SupportsJoin value\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

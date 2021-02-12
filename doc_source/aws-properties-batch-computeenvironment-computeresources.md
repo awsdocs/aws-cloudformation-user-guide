@@ -63,7 +63,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The allocation strategy to use for the compute resource if not enough instances of the best fitting instance type can be allocated\. This might be because of availability of the instance type in the Region or [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html)\. For more information, see [Allocation Strategies](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) in the *AWS Batch User Guide*\.  
 This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.  
 BEST\_FIT \(default\)  
-AWS Batch selects an instance type that best fits the needs of the jobs with a preference for the lowest\-cost instance type\. If additional instances of the selected instance type aren't available, AWS Batch will wait for the additional instances to be available\. If there are not enough instances available, or if the user is hitting [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) then additional jobs aren't run until currently running jobs have completed\. This allocation strategy keeps costs lower but can limit scaling\. If you are using Spot Fleets with `BEST_FIT` then the Spot Fleet IAM Role must be specified\.  
+AWS Batch selects an instance type that best fits the needs of the jobs with a preference for the lowest\-cost instance type\. If additional instances of the selected instance type aren't available, AWS Batch waits for the additional instances to be available\. If there aren't enough instances available, or if the user is hitting [Amazon EC2 service limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html) then additional jobs aren't run until the currently running jobs have completed\. This allocation strategy keeps costs lower but can limit scaling\. If you are using Spot Fleets with `BEST_FIT` then the Spot Fleet IAM Role must be specified\.  
 BEST\_FIT\_PROGRESSIVE  
 AWS Batch will select additional instance types that are large enough to meet the requirements of the jobs in the queue, with a preference for instance types with a lower cost per unit vCPU\. If additional instances of the previously selected instance types aren't available, AWS Batch will select new instance types\.  
 SPOT\_CAPACITY\_OPTIMIZED  
@@ -118,7 +118,7 @@ This parameter isn't applicable to jobs running on Fargate resources, and should
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypes`  <a name="cfn-batch-computeenvironment-computeresources-instancetypes"></a>
-The instances types that can be launched\. You can specify instance families to launch any instance type within those families \(for example, `c5` or `p3`\), or you can specify specific sizes within a family \(such as `c5.8xlarge`\)\. You can also choose `optimal` to select instance types \(from the C4, M4, and R4 instance families\) on the fly that match the demand of your job queues\.  
+The instances types that can be launched\. You can specify instance families to launch any instance type within those families \(for example, `c5` or `p3`\), or you can specify specific sizes within a family \(such as `c5.8xlarge`\)\. You can also choose `optimal` to select instance types \(from the C4, M4, and R4 instance families\) that match the demand of your job queues\.  
 This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 When you create a compute environment, the instance types that you select for the compute environment must share the same architecture\. For example, you can't mix x86 and ARM instances in the same compute environment\.
 Currently, `optimal` uses instance types from the C4, M4, and R4 instance families\. In Regions that don't have instance types from those instance families, instance types from the C5, M5\. and R5 instance families are used\.
@@ -135,7 +135,7 @@ This parameter isn't applicable to jobs running on Fargate resources, and should
 
 `MaxvCpus`  <a name="cfn-batch-computeenvironment-computeresources-maxvcpus"></a>
 The maximum number of Amazon EC2 vCPUs that an environment can reach\.  
-With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies, AWS Batch might need to go above `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch will never go above `maxvCpus` by more than a single instance \(e\.g\., no more than a single instance from among those specified in your compute environment\)\.
+With both `BEST_FIT_PROGRESSIVE` and `SPOT_CAPACITY_OPTIMIZED` allocation strategies, AWS Batch might need to exceed `maxvCpus` to meet your capacity requirements\. In this event, AWS Batch never exceeds `maxvCpus` by more than a single instance\. That is, no more than a single instance from among those specified in your compute environment\.
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -155,7 +155,7 @@ This parameter isn't applicable to jobs running on Fargate resources, and should
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroupIds`  <a name="cfn-batch-computeenvironment-computeresources-securitygroupids"></a>
-The Amazon EC2 security groups associated with instances launched in the compute environment\. One or more security groups must be specified, either in `securityGroupIds` or using a launch template referenced in `launchTemplate`\. This parameter is required for jobs running on Fargate resources and must contain at least one security group\. \(Fargate does not support launch templates\.\) If security groups are specified using both `securityGroupIds` and `launchTemplate`, the values in `securityGroupIds` will be used\.  
+The Amazon EC2 security groups associated with instances launched in the compute environment\. One or more security groups must be specified, either in `securityGroupIds` or using a launch template referenced in `launchTemplate`\. This parameter is required for jobs running on Fargate resources and must contain at least one security group\. Fargate doesn't support launch templates\. If security groups are specified using both `securityGroupIds` and `launchTemplate`, the values in `securityGroupIds` is used\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -175,7 +175,7 @@ The VPC subnets into which the compute resources are launched\. These subnets mu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>
-Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, \{ "Name": "AWS Batch Instance \- C4OnDemand" \}\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags can't be updated or removed after the compute environment has been created; any changes require creating a new compute environment and removing the old compute environment\. These tags are not seen when using the AWS Batch `ListTagsForResource` API operation\.  
+Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, \{ "Name": "AWS Batch Instance \- C4OnDemand" \}\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags can't be updated or removed after the compute environment has been created; any changes require creating a new compute environment and removing the old compute environment\. These tags aren't seen when using the AWS Batch `ListTagsForResource` API operation\.  
 This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: Json  

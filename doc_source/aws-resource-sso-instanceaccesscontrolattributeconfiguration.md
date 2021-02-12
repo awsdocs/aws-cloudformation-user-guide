@@ -16,7 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SSO::InstanceAccessControlAttributeConfiguration",
   "Properties" : {
       "[AccessControlAttributes](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributes)" : [ AccessControlAttribute, ... ],
-      "[InstanceAccessControlAttributeConfiguration](#cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration)" : Json,
       "[InstanceArn](#cfn-sso-instanceaccesscontrolattributeconfiguration-instancearn)" : String
     }
 }
@@ -29,7 +28,6 @@ Type: AWS::SSO::InstanceAccessControlAttributeConfiguration
 Properties: 
   [AccessControlAttributes](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributes): 
     - AccessControlAttribute
-  [InstanceAccessControlAttributeConfiguration](#cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration): Json
   [InstanceArn](#cfn-sso-instanceaccesscontrolattributeconfiguration-instancearn): String
 ```
 
@@ -40,12 +38,6 @@ Lists the attributes that are configured for ABAC in the specified AWS SSO insta
 *Required*: No  
 *Type*: List of [AccessControlAttribute](aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute.md)  
 *Maximum*: `50`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`InstanceAccessControlAttributeConfiguration`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration"></a>
-The `InstanceAccessControlAttributeConfiguration` property has been deprecated but is still supported for backwards compatibility purposes\. We recommend that you use the `AccessControlAttributes` property instead\.  
-*Required*: No  
-*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceArn`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-instancearn"></a>

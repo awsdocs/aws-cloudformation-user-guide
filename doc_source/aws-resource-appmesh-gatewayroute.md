@@ -45,7 +45,7 @@ Properties:
 
 `GatewayRouteName`  <a name="cfn-appmesh-gatewayroute-gatewayroutename"></a>
 The name of the gateway route\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

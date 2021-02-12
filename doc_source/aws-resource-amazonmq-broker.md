@@ -110,7 +110,7 @@ The name of the broker\. This value must be unique in your AWS account, 1\-50 ch
 A list of information about the configuration\. Does not apply to RabbitMQ brokers\.  
 *Required*: No  
 *Type*: [ConfigurationId](aws-properties-amazonmq-broker-configurationid.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DeploymentMode`  <a name="cfn-amazonmq-broker-deploymentmode"></a>
 The deployment mode of the broker\. Available values:  
@@ -143,7 +143,7 @@ The version of the broker engine\. For a list of supported engine versions, see 
 The broker's instance type\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `LdapServerMetadata`  <a name="cfn-amazonmq-broker-ldapservermetadata"></a>
 Optional\. The metadata of the LDAP server used to authenticate and authorize connections to the broker\. Does not apply to RabbitMQ brokers\.  

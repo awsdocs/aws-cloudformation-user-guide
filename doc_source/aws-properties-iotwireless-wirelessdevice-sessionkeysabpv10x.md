@@ -1,4 +1,4 @@
-# AWS::IoTWireless::WirelessDevice SessionKeysAbpV10X<a name="aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x"></a>
+# AWS::IoTWireless::WirelessDevice SessionKeysAbpV10x<a name="aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x"></a>
 
 LoRaWAN object for create APIs
 

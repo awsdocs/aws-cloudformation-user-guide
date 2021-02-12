@@ -59,6 +59,7 @@ The creation rule\.
 
 `CrossRegionCopyRules`  <a name="cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules"></a>
 The rule for cross\-Region snapshot copies\.  
+You can only specify cross\-Region copy rules for policies that create snapshots in a Region\. If the policy creates snapshots on an Outpost, then you cannot copy the snapshots to a Region or to an Outpost\. If the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or Outposts\.  
 *Required*: No  
 *Type*: List of [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)  
 *Maximum*: `3`  
