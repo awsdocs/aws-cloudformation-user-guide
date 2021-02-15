@@ -1,6 +1,6 @@
 # AWS::Glue::Job JobCommand<a name="aws-properties-glue-job-jobcommand"></a>
 
-Specifies code executed when a job is run\.
+Specifies code executed when a job is run\. For more information, see [Job Command Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-JobCommand) in the AWS Glue Developer Guide.
 
 ## Syntax<a name="aws-properties-glue-job-jobcommand-syntax"></a>
 
@@ -39,7 +39,7 @@ The Python version being used to execute a Python shell job\. Allowed values are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>
-Specifies the Amazon Simple Storage Service \(Amazon S3\) path to a script that executes a job \(required\)\.  
+Specifies the Amazon Simple Storage Service \(Amazon S3\) path to a script that executes a job \(required when `Name` is `glueetl`\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
