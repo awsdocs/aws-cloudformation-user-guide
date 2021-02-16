@@ -47,7 +47,7 @@ Access permissions string used for this user\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-elasticache-user-engine"></a>
-The current supported value is '`redis`'\.
+The current supported value is `redis`\.
 *Required*: Yes
 *Type*: String
 *Pattern*: `[a-zA-Z]*`
