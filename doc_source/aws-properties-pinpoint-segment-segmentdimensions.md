@@ -62,7 +62,7 @@ The location\-based criteria, such as region or GPS coordinates, for the segment
 `Metrics`  <a name="cfn-pinpoint-segment-segmentdimensions-metrics"></a>
 One or more custom metrics to use as criteria for the segment\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Json in the type of {"string": {"ComparisonOperator": "string", "Value": double}} 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserAttributes`  <a name="cfn-pinpoint-segment-segmentdimensions-userattributes"></a>
