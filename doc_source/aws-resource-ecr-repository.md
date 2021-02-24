@@ -270,7 +270,7 @@ MyRepository:
   Properties: 
     RepositoryName: "test-repository"
     ImageScanningConfiguration: 
-      scanOnPush: "true"
+      ScanOnPush: "true"
 ```
 
 ## See also<a name="aws-resource-ecr-repository--seealso"></a>
