@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codecommit-repository-code-properties"></a>
 
 `BranchName`  <a name="cfn-codecommit-repository-code-branchname"></a>
-Optional\. Specifies a branch name to be used as the default branch when importing code into a repository\. If this property is not set, the name *master* will be used for the default branch for the repository\. We recommend using this parameter to set the name to *main* to align with the default behavior of CodeCommit unless another name is needed\.  
+Optional\. Specifies a branch name to be used as the default branch when importing code into a repository\. If this property is not set, the name *main* will be used for the default branch for the repository\. We recommend using this parameter to set the name to *main* to align with the default behavior of CodeCommit unless another name is needed\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
