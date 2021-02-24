@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-iotwireless-wirelessdevice-description)" : String,
       "[DestinationName](#cfn-iotwireless-wirelessdevice-destinationname)" : String,
-      "[LastUplinkReceivedAt](#cfn-iotwireless-wirelessdevice-lastuplinkreceivedat)" : String,
       "[LoRaWAN](#cfn-iotwireless-wirelessdevice-lorawan)" : LoRaWANDevice,
       "[Name](#cfn-iotwireless-wirelessdevice-name)" : String,
       "[Tags](#cfn-iotwireless-wirelessdevice-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -30,7 +29,6 @@ Type: AWS::IoTWireless::WirelessDevice
 Properties: 
   [Description](#cfn-iotwireless-wirelessdevice-description): String
   [DestinationName](#cfn-iotwireless-wirelessdevice-destinationname): String
-  [LastUplinkReceivedAt](#cfn-iotwireless-wirelessdevice-lastuplinkreceivedat): String
   [LoRaWAN](#cfn-iotwireless-wirelessdevice-lorawan): 
     LoRaWANDevice
   [Name](#cfn-iotwireless-wirelessdevice-name): String
@@ -53,14 +51,8 @@ The name of the destination to assign to the new wireless device\. Can have only
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LastUplinkReceivedAt`  <a name="cfn-iotwireless-wirelessdevice-lastuplinkreceivedat"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `LoRaWAN`  <a name="cfn-iotwireless-wirelessdevice-lorawan"></a>
-The device configuration information to use to create the wireless device\.  
+The device configuration information to use to create the wireless device\. Must be at least one of OtaaV10x, OtaaV11, AbpV11, or AbpV10x\.  
 *Required*: No  
 *Type*: [LoRaWANDevice](aws-properties-iotwireless-wirelessdevice-lorawandevice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,9 +91,6 @@ The ARN of the wireless device created\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the wireless device created\.
-
-`ThingArn`  <a name="ThingArn-fn::getatt"></a>
-The ARN of the thing associated with the device\. The parameter is empty if a thing was not associated with the device\.
 
 `ThingName`  <a name="ThingName-fn::getatt"></a>
 The name of the thing associated with the wireless device\. The value is empty if a thing isn't associated with the device\.

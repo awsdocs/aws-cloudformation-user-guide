@@ -109,39 +109,41 @@ The sample template EC2ChooseAMI\.template contains the following Parameters sec
 #### JSON<a name="aws-properties-stack--examples--Specify_stack_parameters--json"></a>
 
 ```
-"Parameters" : {
-  "InstanceType" : {
-    "Type" : "String",
-    "Default" : "m1.small",
-    "Description" : "EC2 instance type, e.g. m1.small, m1.large, etc."
-  },
-    "WebServerPort" : {
-    "Type" : "String",
-    "Default" : "80",
-    "Description" : "TCP/IP port of the web server"
-  },
-  "KeyName" : {
-    "Type" : "String",
-    "Description" : "Name of an existing EC2 KeyPair to enable SSH access to the web server"
-  }
+{
+    "Parameters": {
+        "InstanceType": {
+            "Type": "String",
+            "Default": "m1.small",
+            "Description": "EC2 instance type, e.g. m1.small, m1.large, etc.",
+            "WebServerPort": {
+                "Type": "String",
+                "Default": "80",
+                "Description": "TCP/IP port of the web server"
+            },
+            "KeyName": {
+                "Type": "String",
+                "Description": "Name of an existing EC2 KeyPair to enable SSH access to the web server"
+            }
+        }
+    }
 }
 ```
 
 #### YAML<a name="aws-properties-stack--examples--Specify_stack_parameters--yaml"></a>
 
 ```
-Parameters: 
-  InstanceType: 
-    Type: "String"
-    Default: "m1.small"
-    Description: "EC2 instance type, e.g. m1.small, m1.large, etc."
-  WebServerPort: 
-    Type: "String"
-    Default: "80"
-    Description: "TCP/IP port of the web server"
-  KeyName: 
-    Type: "String"
-    Description: "Name of an existing EC2 KeyPair to enable SSH access to the web server"
+Parameters:
+  InstanceType:
+    Type: String
+    Default: m1.small
+    Description: 'EC2 instance type, e.g. m1.small, m1.large, etc.'
+    WebServerPort:
+      Type: String
+      Default: '80'
+      Description: TCP/IP port of the web server
+    KeyName:
+      Type: String
+      Description: Name of an existing EC2 KeyPair to enable SSH access to the web server
 ```
 
 ### Nested stack<a name="aws-properties-stack--examples--Nested_stack"></a>
@@ -171,15 +173,15 @@ You could use the following template to embed a stack \(myStackWithParams\) usin
 #### YAML<a name="aws-properties-stack--examples--Nested_stack--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  myStackWithParams: 
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  myStackWithParams:
     Type: AWS::CloudFormation::Stack
-    Properties: 
-      TemplateURL: "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template"
-      Parameters: 
-        InstanceType: "t1.micro"
-        KeyName: "mykey"
+    Properties:
+      TemplateURL: https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template
+      Parameters:
+        InstanceType: t1.micro
+        KeyName: mykey
 ```
 
 ## See also<a name="aws-properties-stack--seealso"></a>

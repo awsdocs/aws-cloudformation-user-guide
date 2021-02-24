@@ -15,7 +15,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CapacityProviders](#cfn-ecs-cluster-capacityproviders)" : [ String, ... ],
       "[ClusterName](#cfn-ecs-cluster-clustername)" : String,
       "[ClusterSettings](#cfn-ecs-cluster-clustersettings)" : [ ClusterSettings, ... ],
-      "[Configuration](#cfn-ecs-cluster-configuration)" : ClusterConfiguration,
       "[DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy)" : [ CapacityProviderStrategyItem, ... ],
       "[Tags](#cfn-ecs-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -32,8 +31,6 @@ Properties:
   [ClusterName](#cfn-ecs-cluster-clustername): String
   [ClusterSettings](#cfn-ecs-cluster-clustersettings): 
     - ClusterSettings
-  [Configuration](#cfn-ecs-cluster-configuration): 
-    ClusterConfiguration
   [DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy): 
     - CapacityProviderStrategyItem
   [Tags](#cfn-ecs-cluster-tags): 
@@ -58,12 +55,6 @@ A user\-generated string that you use to identify your cluster\. If you don't sp
 The setting to use when creating a cluster\. This parameter is used to enable CloudWatch Container Insights for a cluster\. If this value is specified, it will override the `containerInsights` value set with [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html) or [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)\.  
 *Required*: No  
 *Type*: [List](aws-properties-ecs-cluster-clustersettings.md) of [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Configuration`  <a name="cfn-ecs-cluster-configuration"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: [ClusterConfiguration](aws-properties-ecs-cluster-clusterconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultCapacityProviderStrategy`  <a name="cfn-ecs-cluster-defaultcapacityproviderstrategy"></a>

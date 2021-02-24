@@ -113,18 +113,6 @@ Considerations when managing module versions:
 
 The following example registers a module version\. If this is the only version of the module registered in this account and region, CloudFormation sets this version as the default version\.
 
-#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  ModuleVersion:
-    Type: AWS::CloudFormation::ModuleVersion
-    Properties:
-      ModuleName: My::Sample::Test::MODULE
-      ModulePackage: s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip
-```
-
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--json"></a>
 
 ```
@@ -142,29 +130,23 @@ Resources:
 }
 ```
 
+#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ModuleVersion:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
+```
+
 ### Registering multiple module versions<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions"></a>
 
 The following example registers two versions of a module\. Note the following: 
 + The example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
 + CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and region\.\)
-
-#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  ModuleVersion1:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
-  ModuleVersion2:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
-    DependsOn: ModuleVersion1
-```
 
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--json"></a>
 
@@ -189,4 +171,22 @@ Resources:
         }
     }
 }
+```
+
+#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ModuleVersion1:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
+  ModuleVersion2:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
+    DependsOn: ModuleVersion1
 ```

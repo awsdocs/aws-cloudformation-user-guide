@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Certificate](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate)" : VirtualGatewayClientTlsCertificate,
   "[Enforce](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce)" : Boolean,
   "[Ports](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports)" : [ Integer, ... ],
   "[Validation](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-validation)" : VirtualGatewayTlsValidationContext
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls-syntax.yaml"></a>
 
 ```
+  [Certificate](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate): 
+    VirtualGatewayClientTlsCertificate
   [Enforce](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce): Boolean
   [Ports](#cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-ports): 
     - Integer
@@ -27,6 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewayclientpolicytls-properties"></a>
+
+`Certificate`  <a name="cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-certificate"></a>
+A reference to an object that represents a virtual gateway's client's Transport Layer Security \(TLS\) certificate\.  
+*Required*: No  
+*Type*: [VirtualGatewayClientTlsCertificate](aws-properties-appmesh-virtualgateway-virtualgatewayclienttlscertificate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enforce`  <a name="cfn-appmesh-virtualgateway-virtualgatewayclientpolicytls-enforce"></a>
 Whether the policy is enforced\. The default is `True`, if a value isn't specified\.  

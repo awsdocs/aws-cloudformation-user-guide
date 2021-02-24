@@ -4,10 +4,153 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_DynamoDB.md) | The following resource was updated: AWS::DynamoDB::Table 
+
+ [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)   
+Use the `ContributorInsightsSpecification` property to enable or disable CloudWatch Contributon Insights on a table or global secondary index\.  | February 22, 2021 | 
+| [Updated resources](AWS_AppMesh.md) | The following resources were updated: AWS::AppMesh::VirtualNode and AWS::AppMesh::VirtualGateway 
+
+ [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
+Use the `ClientTlsCertificate` property represents the client's certificate\.  
+Use the `SubjectAlternativeNames` property represents the subject alternative names secured by the certificate\.  
+Use the `TlsValidationContextSdsTrust` property represents a Transport Layer Security \(TLS\) Secret Discovery Service validation context trust\.  
+Use the `ListenerTlsValidationContextTrust` property represents a listener's Transport Layer Security \(TLS\) validation context trust\.  
+Use the `SubjectAlternativeNameMatchers` represents the methods by which a subject alternative name on a peer Transport Layer Security \(TLS\) certificate can be matched\.  
+Use the `ListenerTlsSdsCertificate` property represents the listener's Secret Discovery Service certificate\.  
+Use the `ListenerTlsValidationContext` property represents a listener's Transport Layer Security \(TLS\) validation context\. 
+
+ [AWS::AppMesh::VirtualGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html)   
+Use the `VirtualGatewayListenerTlsValidationContextTrust` property to specify validation context trust\.  
+Use the `VirtualGatewayTlsValidationContextSdsTrust ` property to represent a virtual gateway's listener's Transport Layer Security \(TLS\) Secret Discovery Service validation context trust\.  
+Use the `SubjectAlternativeNames` property represents the subject alternative names secured by the certificate\.  
+Use the `VirtualGatewayListenerTlsSdsCertificate` property represents the virtual gateway's listener's Secret Discovery Service certificate\.  
+Use the `VirtualGatewayClientTlsCertificate` property represents the virtual gateway's client's Transport Layer Security \(TLS\) certificate\.  
+Use the `VirtualGatewayListenerTlsValidationContext` property represents a virtual gateway's listener's Transport Layer Security \(TLS\) validation context\.  
+Use the `SubjectAlternativeNameMatchers` property represents the methods by which a subject alternative name on a peer Transport Layer Security \(TLS\) certificate can be matched\.  | February 18, 2021 | 
+| [Updated resources](AWS_IoTWireless.md) | The following resource was updated: AWS::IoTWireless::ServiceProfile 
+
+ [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
+ Use the attributes of `LoRaWANGetServiceProfileInfo` with `LoRaWANServiceProfile` instead as `ReadOnly` properties that you can return using `Fn::GetAtt`\.   | February 18, 2021 | 
+| [Updated resources](AWS_Kendra.md) | The following resources were updated: AWS::Kendra::DataSource, AWS::Kendra::Index\. 
+
+[AWS::Kendra::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)  
+Use the `ConfluenceConfiguration` property of the resource to specify configuration information for indexing a Confluence data source\. 
+
+[AWS::Kendra::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)  
+Use the `GoogleDriveConfiguration` property of the resource to specify configuration information for indexing a Google Drive data source\. 
+
+[AWS::Kendra::Index](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html)  
+Use the `UserContextPolicy` and `UserTokenConfiguration` properties of the resource to specify how Amazon Kendra uses user tokens for access to the index\.  | February 18, 2021 | 
+| [Updated resource](AWS_CodeCommit.md) | The following resource was updated: AWS::CodeCommit::Repository Code 
+
+ [AWS::CodeCommit::Repository Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-code.html)   
+The behavior of the `BranchName` property on update has changed to be consistent with all other aspects of `AWS:CodeCommit:Repository Code`\. All properties of `AWS:CodeCommit:Repository Code` are ignored on update, as they only apply to initial resource creation\.  | February 18, 2021 | 
+| [Updated resource](AWS_DataBrew.md) | The following resource was updated: AWS::DataBrew::Job JobSample\. 
+
+ [AWS::DataBrew::Job JobSample](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html##cfn-databrew-job-jobsample)   
+Use the `JobSample` property to define the sample configuration for profile jobs\.  | February 18, 2021 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+In the [WindowsConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html) property type, use `Aliases` to specify one or more DNS alias names that you want to associate with the Amazon FSx file system\.  | February 18, 2021 | 
+| [Updated resource](AWS_IoTAnalytics.md) | The following resource was updated: AWS::IoTAnalytics::Dataset\. 
+
+ [ AWS::IoTAnalytics::Dataset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html)   
+Added the following properties: `LateDataRule` and `LateDataRuleConfiguration`\.  
+You can use these properties to specify a late data rule for your dataset\. The late data rule enables AWS IoT Analytics to send notifications through Amazon CloudWatch when late data arrives\.  
+For more information, see [Getting late data notifications](https://docs.aws.amazon.com/iotanalytics/latest/userguide/late-data-notification.html) in the *AWS IoT Analytics User Guide*\.  | February 18, 2021 | 
+| [AWS CloudFormation StackSets now supports delegated administrator with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html) | In addition to the organization's management account, delegated administrator accounts can create and manage stack sets with service\-managed permissions for their organization\. For more information, see [Register a delegated administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin) and [Create a stack set with service\-managed permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html#stacksets-orgs-associate-stackset-with-org)\. | February 18, 2021 | 
+| [New resources](AWS_EC2.md) | The following resources were added: AWS::EC2::TransitGatewayMulticastDomain, AWS::EC2::TransitGatewayMulticastDomainAssociation, AWS::EC2::TransitGatewayMulticastGroupMembers and AWS::EC2::TransitGatewayMulticastGroupSource\. 
+
+ [AWS::EC2::TransitGatewayMulticastDomain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html)   
+Use the `TransitGatewayMulticastDomain` resource to create a transit gateway multicast domain\. 
+
+ [AWS::EC2::TransitGatewayMulticastDomainAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html)   
+Use the `TransitGatewayMulticastDomainAssociation` resource to associate the specified subnets and transit gateway attachments with the specified transit gateway multicast domain\. 
+
+ [AWS::EC2::TransitGatewayMulticastGroupMember](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupmember.html)   
+Use the `TransitGatewayMulticastGroupMembers` resource to register members \(network interfaces\) with the transit gateway multicast group\. 
+
+ [AWS::EC2::TransitGatewayMulticastGroupSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html)   
+Use the `TransitGatewayMulticastGroupSource` resource to register sources \(network interfaces\) with the specified transit gateway multicast group\.  | February 12, 2021 | 
+| [Updated resources](AWS_IoTWireless.md) | The following resources were updated: AWS::IoTWireless::Destination, AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
+
+ [AWS::IoTWireless::Destination](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)   
+ Use the `ExpressionType` property of the resource to specify whether to use a new value `MqttTopic` or to use `RuleName`\. In addition, the property descriptions now list any maximum values, minimum values, and patterns\.  
+
+ [AWS::IoTWireless::DeviceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)   
+ Use the new `LoRaWAN` property which is a renaming of the `LoRaWANDeviceProfile` property\. The property type has not changed from `LoRaWANDeviceProfile`\. In addition, the property descriptions now list any maximum values, minimum values, and patterns\.  
+
+ [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
+ Use the new `LoRaWAN` property which is a renaming of the `LoRaWANServiceProfile` property\. The property type has not changed from `LoRaWANServiceProfile`\. In addition, the property descriptions now list any maximum values, minimum values, and patterns\.  
+
+ [AWS::IoTWireless::WirelessDevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)   
+ Use the new `LoRaWAN` property which is a renaming of the `LoRaWANDevice` property\. The property type has not changed from `LoRaWANDevice`\. In addition, the property descriptions now list any maximum values, minimum values, and patterns\.  
+
+ [AWS::IoTWireless::WirelessGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)   
+ Use the new `LoRaWAN` property which is a renaming of the `LoRaWANGateway` property\. The property type has not changed from `LoRaWANGateway`\. In addition, the property descriptions now list any maximum values, minimum values, and patterns\.   | February 11, 2021 | 
+| [Updated resource](AWS_DMS.md) | The following resource was updated: `AWS::DMS::Endpoint`\. 
+
+ [AWS::DMS::Endpoint\.MongoDbSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-mongodbsettings.html)   
+Added `SecretsManager` attributes to `MongoDbSettings`\. 
+
+ [AWS::DMS::Endpoint\.MySqlSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-mysqlsettings.html)   
+Added `SecretsManager` attributes to `MySqlSettings`\. 
+
+ [AWS::DMS::Endpoint\.RedshiftSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-redshiftsettings.html)   
+Added `SecretsManager` attributes to `RedshiftSettings`\. 
+
+ [AWS::DMS::Endpoint\.SybaseSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-sybasesettings.html)   
+Added `SecretsManager` attributes to `SybaseSettings`\. 
+
+ [AWS::DMS::Endpoint\.PostgreSqlSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-postgresqlsettings.html)   
+Added `SecretsManager` attributes to `PostgreSqlSettings`\. 
+
+ [AWS::DMS::Endpoint\.MicrosoftSqlServerSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-microsoftsqlserversettings.html)   
+Added `SecretsManager` attributes to `MicorsoftSqlServerSettings`\. 
+
+ [AWS::DMS::Endpoint\.IbmDb2Settings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-ibmdb2settings.html)   
+Added `SecretsManager` attributes to `IbmDb2Settings`\. 
+
+ [AWS::DMS::Endpoint\.DocDbSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-docdbsettings.html)   
+Added `SecretsManager` attributes to `DocDbSettings`\. 
+
+ [AWS::DMS::Endpoint\.OracleSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint-oraclesettings.html)   
+Added `SecretsManager` attributes to `OracleSettings`\.  | February 11, 2021 | 
+| [New resources](AWS_CloudFormation.md) | The following resources were added: AWS::CloudFormation::ResourceDefaultVersion and AWS::CloudFormation::ResourceVersion\. 
+
+ [AWS::CloudFormation::ResourceDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html)  
+Use the `AWS::CloudFormation::ResourceDefaultVersion` resource to specify the default resource version to be used in CloudFormation operations\. 
+
+ [AWS::CloudFormation::ResourceVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html)   
+Use the `AWS::CloudFormation::ResourceVersion` resource to specify a resource version with the CloudFormation service, making it available for use in CloudFormation operations\.  | February 11, 2021 | 
+| [New resources](AWS_SageMaker.md) | The following resources were added: AWS::SageMaker::App, AWS::SageMaker::AppImageConfig, AWS::SageMaker::Domain, AWS::SageMaker::UserProfile\. 
+
+ [AWS::SageMaker::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html)   
+Use the `AWS::SageMaker::App` resource to create a running app for a user profile in SageMaker Studio\. 
+
+ [AWS::SageMaker::AppImageConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html)   
+Use the `AWS::SageMaker::AppImageConfig` resource to create a configuration for running a SageMaker image as a KernelGateway app in SageMaker Studio\. 
+
+ [AWS::SageMaker::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html)   
+Use the `AWS::SageMaker::Domain` resource to create a domain used by SageMaker Studio\. 
+
+ [AWS::SageMaker::UserProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html)   
+Use the `AWS::SageMaker::UserProfile` resource to create a user profile used by SageMaker Studio\.  | February 11, 2021 | 
+| [New resources](AWS_ServiceCatalog.md) | The following resources were added: AWS::ServiceCatalog::ServiceAction and AWS::ServiceCatalog::ServiceActionAssociation\. 
+
+ [ AWS::ServiceCatalog::ServiceAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html)   
+Use this self\-service action feature to create CloudFormation templates that create Service Actions\.  
+
+ [ AWS::ServiceCatalog::ServiceActionAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html)   
+Use this self\-service action association feature to create CloudFormation templates that create Service Actions\.  | February 11, 2021 | 
+| [AWS CloudFormation StackSets Region availability](#ReleaseHistory) | AWS CloudFormation StackSets is now available in the Asia Pacific \(Osaka\-Local\) Region\.For more information, see [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\. | February 10, 2021 | 
 | [Updated resource](AWS_IoTAnalytics.md) | The following resource was updated: AWS::IoTAnalytics::Datastore\. 
 
  [ AWS::IoTAnalytics::Datastore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)   
-Added the following properties: `Column`, `FileFormatConfiguration`, `JsonConfiguration`, `ParquetConfiguration`, and `SchemaDefinition`\.  | February 5, 2021 | 
+Added the following properties: `Column`, `FileFormatConfiguration`, `JsonConfiguration`, `ParquetConfiguration`, and `SchemaDefinition`\.  
+You can use these properties to specify JSON or Parquet file format for your data store\.  
+For more information, see [File formats](https://docs.aws.amazon.com/iotanalytics/latest/userguide/iotanalytics-schema.html) in the *AWS IoT Analytics User Guide*\.  | February 5, 2021 | 
 | [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::ReplicationConfiguration 
 
  [AWS::ECR::ReplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replication-configuration.html)   
@@ -99,10 +242,6 @@ Use the `AWS::S3::AccessPoint` resource to specify an S3 access point\.  | Janua
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
 You can now change the broker type for an existing cluster\.  | January 15, 2021 | 
-| [Updated resource](AWS_ServiceCatalog.md) | The following resource was updated: AWS::ServiceCatalog::PortfolioShare\. 
-
- [The following resource was updated: AWS::ServiceCatalog::PortfolioShare\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)   
-The `ShareTagOptions` property is now available for `AWS::ServiceCatalog::PortfolioShare`\.  | January 14, 2021 | 
 | [New resource](AWS_EMRContainers.md) | The AWS::EMRContainers::VirtualCluster resource was added\. 
 
  [AWS::EMRContainers::VirtualCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)   
@@ -279,6 +418,13 @@ Use the `ReplicaModifications` property in `AWS::S3::Bucket SourceSelectionCrite
 
  [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html)   
 Use the `BucketKeyEnabled` property to specify an S3 Bucket Key with default encryption using AWS Key Management Service\.  | December 18, 2020 | 
+| [New resources](AWS_CloudFormation.md) | The following resources were added: AWS::CloudFormation::ModuleDefaultVersion and AWS::CloudFormation::ModuleVersion\. 
+
+ [AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)   
+Use the `AWS::CloudFormation::ModuleDefaultVersion` resource to specify the default version of a module, which will be used in CloudFormation operations for this account and region\. 
+
+ [AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)   
+Use the `AWS::CloudFormation::ModuleVersion` resource to register the specified version of the module with the CloudFormation service, making it available for use in CloudFormation templates in this account and region\.  | December 18, 2020 | 
 | [New resources](AWS_DevOpsGuru.md) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::ResourceCollection` 
 
  [AWS::DevOpsGuru::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html)   
@@ -453,19 +599,7 @@ Use the `AWS::NetworkFirewall::RuleGroup` resource to specify a reusable collect
  [S3 Storage Lens](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage_lens.html)   
 Use the `AWS::S3::StorageLens` resource to create a S3 Storage Lens configuration in the *Amazon Simple Storage Service*\.  | November 19, 2020 | 
 | [Change sets for nested stacks](#ReleaseHistory) | With change sets for nested stacks you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you’ve confirmed that all the changes are as intended\. For more information, see [Change sets for nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/change-sets-for-nested-stacks.html)\. | November 18, 2020 | 
-| [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::Route and AWS::EC2::VPCEndpointService\. 
-
- [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)   
-Use the `VpcEndpointId` property to create a route to a Gateway Load Balancer endpoint\. 
-
- [AWS::EC2::VPCEndpointService](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html)   
-Use the `GatewayLoadBalancerArns` property to specify a Gateway Load Balancer for your VPC endpoint service\.  | November 12, 2020 | 
-| [Updated resource](AWS_Kendra.md) | The following resource was updated: AWS::Kendra::DataSource\. 
-
- [AWS::Kendra::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)   
-Use the new `CUSTOM` value to specify the custom data sources\.  | November 12, 2020 | 
-| [New resources: AWS Glue DataBrew](AWS_DataBrew.md) | This is the first release of [AWS Glue DataBrew](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_DataBrew.html)\. | November 12, 2020 | 
-| [New resource](AWS_AppMesh.md) | The following resource was updated: AWS::AppMesh::VirtualNode and AWS::AppMesh::VirtualGateway 
+| [Updated resources](AWS_AppMesh.md) | The following resources were updated: AWS::AppMesh::VirtualNode and AWS::AppMesh::VirtualGateway 
 
  [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
 Use the `ConnectionPool` property to specify the type of connection pool for the listener\.  
@@ -482,6 +616,18 @@ Use the `VirtualGatewayHttpConnectionPool` property to specify an http type of c
 Use the `VirtualGatewayHttp2ConnectionPool` property to specify an http2 type of connection pool\.  
 Use the `VirtualGatewayConnectionPool` property to specify the type of virtual gateway connection pool\.  
 Use the `VirtualGatewayGrpcConnectionPool` property to specify a grpc type of connection pool\.  | November 12, 2020 | 
+| [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::Route and AWS::EC2::VPCEndpointService\. 
+
+ [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)   
+Use the `VpcEndpointId` property to create a route to a Gateway Load Balancer endpoint\. 
+
+ [AWS::EC2::VPCEndpointService](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html)   
+Use the `GatewayLoadBalancerArns` property to specify a Gateway Load Balancer for your VPC endpoint service\.  | November 12, 2020 | 
+| [Updated resource](AWS_Kendra.md) | The following resource was updated: AWS::Kendra::DataSource\. 
+
+ [AWS::Kendra::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-datasource.html)   
+Use the new `CUSTOM` value to specify the custom data sources\.  | November 12, 2020 | 
+| [New resources: AWS Glue DataBrew](AWS_DataBrew.md) | This is the first release of [AWS Glue DataBrew](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_DataBrew.html)\. | November 12, 2020 | 
 | [Updated resource](AWS_S3.md) | The following resources were updated: AWS::S3::Bucket 
 
  [IntelligentTieringConfiguration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access)   
@@ -731,7 +877,7 @@ Use the `AWS::AppFlow::Flow` resource to specify a new flow in Amazon AppFlow\.
 
  [AWS::AppFlow::ConnectorProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connectorprofile.html)   
 Use the `AWS::AppFlow::ConnectorProfile` describe an instance of a connector in Amazon AppFlow\.  | September 17, 2020 | 
-| [New resources](AWS_CloudFormation.md) | The following resource was added: AWS::CloudFormation::StackSet\. 
+| [New resource](AWS_CloudFormation.md) | The following resource was added: AWS::CloudFormation::StackSet\. 
 
  [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)   
 Use the `AWS::CloudFormation::StackSet` resource to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\.  | September 17, 2020 | 
@@ -891,7 +1037,7 @@ Use the `BackupPolicy` property to turn automatic backups on or off for your Ama
 | [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
 
 [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
-In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicy` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
+In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `AutoImportPolicyType` to configure how FSx imports new files and file changes in the linked data repository into the file system\.  | July 23, 2020 | 
 | [Updated resource](AWS_SageMaker.md) | The following resource was updated: EndpointConfig 
 
  [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)   

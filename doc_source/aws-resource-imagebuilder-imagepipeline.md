@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ImageBuilder::ImagePipeline",
   "Properties" : {
+      "[ContainerRecipeArn](#cfn-imagebuilder-imagepipeline-containerrecipearn)" : String,
       "[Description](#cfn-imagebuilder-imagepipeline-description)" : String,
       "[DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn)" : String,
       "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled)" : Boolean,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ImageBuilder::ImagePipeline
 Properties: 
+  [ContainerRecipeArn](#cfn-imagebuilder-imagepipeline-containerrecipearn): String
   [Description](#cfn-imagebuilder-imagepipeline-description): String
   [DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn): String
   [EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled): Boolean
@@ -47,6 +49,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-imagepipeline-properties"></a>
+
+`ContainerRecipeArn`  <a name="cfn-imagebuilder-imagepipeline-containerrecipearn"></a>
+The Amazon Resource Name \(ARN\) of the container recipe that is used for this pipeline\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-imagebuilder-imagepipeline-description"></a>
 The description of this image pipeline\.  
@@ -70,7 +78,7 @@ The Amazon Resource Name \(ARN\) of the distribution configuration associated wi
 
 `ImageRecipeArn`  <a name="cfn-imagebuilder-imagepipeline-imagerecipearn"></a>
 The Amazon Resource Name \(ARN\) of the image recipe associated with this image pipeline\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -155,7 +163,7 @@ Resources:
         ImageTestsEnabled: false
         TimeoutMinutes: 90
       Schedule:
-        ScheduleExpression: 'cron(0 0 * * 0)'
+      ScheduleExpression: 'cron(0 0 * * ? *)'
         PipelineExecutionStartCondition: 'EXPRESSION_MATCH_ONLY'
       Status: 'DISABLED'
       Tags:
@@ -187,7 +195,7 @@ Resources:
                     "TimeoutMinutes": 90
                 },
                 "Schedule": {
-                    "ScheduleExpression": "cron(0 0 * * 0)",
+                "ScheduleExpression": "cron(0 0 * * ? *)",
                     "PipelineExecutionStartCondition": "EXPRESSION_MATCH_ONLY"
                 },
                 "Status": "DISABLED",

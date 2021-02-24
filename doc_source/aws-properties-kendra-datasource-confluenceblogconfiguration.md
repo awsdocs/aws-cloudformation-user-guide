@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceBlogConfiguration<a name="aws-properties-kendra-datasource-confluenceblogconfiguration"></a>
 
-Specifies the blog settings for the Confluence data source\. Blogs are always indexed unless filtered from the index by the `ExclusionPatterns` or `InclusionPatterns` fields in the API\_ConfluenceConfiguration data type\.
+Specifies the blog settings for the Confluence data source\. Blogs are always indexed unless filtered from the index by the `ExclusionPatterns` or `InclusionPatterns` fields in the `ConfluenceConfiguration` type\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceblogconfiguration-syntax"></a>
 

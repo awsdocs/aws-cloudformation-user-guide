@@ -78,7 +78,7 @@ The provider of the service used in the custom action, such as AWS CodeDeploy\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `25`  
+*Maximum*: `35`  
 *Pattern*: `[0-9A-Za-z_-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

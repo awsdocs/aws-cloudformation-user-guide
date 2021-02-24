@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ImageBuilder::Image",
   "Properties" : {
+      "[ContainerRecipeArn](#cfn-imagebuilder-image-containerrecipearn)" : String,
       "[DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn)" : String,
       "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn)" : String,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ImageBuilder::Image
 Properties: 
+  [ContainerRecipeArn](#cfn-imagebuilder-image-containerrecipearn): String
   [DistributionConfigurationArn](#cfn-imagebuilder-image-distributionconfigurationarn): String
   [EnhancedImageMetadataEnabled](#cfn-imagebuilder-image-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-image-imagerecipearn): String
@@ -38,6 +40,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-image-properties"></a>
+
+`ContainerRecipeArn`  <a name="cfn-imagebuilder-image-containerrecipearn"></a>
+The Amazon Resource Name \(ARN\) of the container recipe that is used for this pipeline\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DistributionConfigurationArn`  <a name="cfn-imagebuilder-image-distributionconfigurationarn"></a>
 The Amazon Resource Name \(ARN\) of the distribution configuration\.  
@@ -54,7 +62,7 @@ The Amazon Resource Name \(ARN\) of the distribution configuration\.
 
 `ImageRecipeArn`  <a name="cfn-imagebuilder-image-imagerecipearn"></a>
 The Amazon Resource Name \(ARN\) of the image recipe\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

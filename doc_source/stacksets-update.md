@@ -52,6 +52,12 @@ You cannot change accounts and Regions here; that is, you cannot deploy stack se
 
 ## Update your stack set using the AWS CLI<a name="stacksets-update-cli"></a>
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
 Run the `update-stack-set` AWS CLI command to make changes to your stack set\. In this walkthrough, we are updating the value of the `MaximumExecutionFrequency` parameter\. For more information about the parameter names and values for creating or updating an AWS Config rule, see [put\-config\-rule](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-config-rule.html) in the AWS CLI reference\. To change template parameter values, add the `--parameters` parameter\. For more information about what you can specify as a value for `--parameters`, see [Parameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) in the AWS CloudFormation API Reference, and [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) in the *AWS CLI Command Reference*\.
 
 In the example command shown here, we are updating the stack set by using `--parameters`; specifically, we change the default snapshot delivery frequency for delivery channel configuration from **TwentyFour\_Hours** to **Twelve\_Hours**\. Because we are still using the current template, we add the `--use-previous-template` parameter\.

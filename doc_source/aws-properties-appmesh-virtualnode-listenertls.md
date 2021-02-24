@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Certificate](#cfn-appmesh-virtualnode-listenertls-certificate)" : ListenerTlsCertificate,
-  "[Mode](#cfn-appmesh-virtualnode-listenertls-mode)" : String
+  "[Mode](#cfn-appmesh-virtualnode-listenertls-mode)" : String,
+  "[Validation](#cfn-appmesh-virtualnode-listenertls-validation)" : ListenerTlsValidationContext
 }
 ```
 
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Certificate](#cfn-appmesh-virtualnode-listenertls-certificate): 
     ListenerTlsCertificate
   [Mode](#cfn-appmesh-virtualnode-listenertls-mode): String
+  [Validation](#cfn-appmesh-virtualnode-listenertls-validation): 
+    ListenerTlsValidationContext
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-listenertls-properties"></a>
@@ -38,4 +41,10 @@ Specify one of the following modes\.
 + ****DISABLED – Listener only accepts connections without TLS\. 
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Validation`  <a name="cfn-appmesh-virtualnode-listenertls-validation"></a>
+A reference to an object that represents a listener's Transport Layer Security \(TLS\) validation context\.  
+*Required*: No  
+*Type*: [ListenerTlsValidationContext](aws-properties-appmesh-virtualnode-listenertlsvalidationcontext.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

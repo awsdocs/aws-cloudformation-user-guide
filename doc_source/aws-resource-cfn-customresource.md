@@ -76,56 +76,68 @@ All properties other than `ServiceToken`, and all `Fn::GetAtt` resource attribut
 
 ```
 {
-  "AWSTemplateFormatVersion" : "2010-09-09",
-  "Resources" : {
-    "MyFrontEndTest" : {
-      "Type": "Custom::PingTester",
-      "Version" : "1.0",
-      "Properties" : {
-        "ServiceToken": "arn:aws:sns:us-east-1:84969EXAMPLE:CRTest",
-        "key1" : "string",
-        "key2" : [ "list" ],
-        "key3" : { "key4" : "map" }
-      }
-    }
-  },
-  "Outputs" : {
-    "CustomResourceAttribute1" : {
-      "Value" : { "Fn::GetAtt" : ["MyFrontEndTest", "responseKey1"] }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MyFrontEndTest": {
+            "Type": "Custom::PingTester",
+            "Version": "1.0",
+            "Properties": {
+                "ServiceToken": "arn:aws:sns:us-east-1:84969EXAMPLE:CRTest",
+                "key1": "string",
+                "key2": [
+                    "list"
+                ],
+                "key3": {
+                    "key4": "map"
+                }
+            }
+        }
     },
-    "CustomResourceAttribute2" : {
-      "Value" : { "Fn::GetAtt" : ["MyFrontEndTest", "responseKey2"] }
+    "Outputs": {
+        "CustomResourceAttribute1": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "MyFrontEndTest",
+                    "responseKey1"
+                ]
+            }
+        },
+        "CustomResourceAttribute2": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "MyFrontEndTest",
+                    "responseKey2"
+                ]
+            }
+        }
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-resource-cfn-customresource--examples--Creating_a_custom_resource_definition_in_a_template--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  MyFrontEndTest: 
-    Type: "Custom::PingTester"
-    Version: "1.0"
-    Properties: 
-      ServiceToken: "arn:aws:sns:us-east-1:84969EXAMPLE:CRTest"
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyFrontEndTest:
+    Type: 'Custom::PingTester'
+    Version: '1.0'
+    Properties:
+      ServiceToken: 'arn:aws:sns:us-east-1:84969EXAMPLE:CRTest'
       key1: string
-      key2: 
+      key2:
         - list
-      key3: 
+      key3:
         key4: map
-Outputs: 
-  CustomResourceAttribute1: 
-    Value: 
-      Fn::GetAtt: 
-        - MyFrontEndTest
-        - responseKey1
-  CustomResourceAttribute2: 
-    Value: 
-      Fn::GetAtt: 
-        - MyFrontEndTest
-        - responseKey2
+Outputs:
+  CustomResourceAttribute1:
+    Value: !GetAtt 
+      - MyFrontEndTest
+      - responseKey1
+  CustomResourceAttribute2:
+    Value: !GetAtt 
+      - MyFrontEndTest
+      - responseKey2
 ```
 
 ### Using an AWS Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource"></a>
@@ -135,25 +147,50 @@ With Lambda functions and custom resources, you can run custom code in response 
 #### JSON<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource--json"></a>
 
 ```
-"MyCustomResource" : {
-  "Type" : "Custom::TestLambdaCrossStackRef",
-  "Properties" : {
-    "ServiceToken": { "Fn::Join": [ "", [ "arn:aws:lambda:", { "Ref": "AWS::Region" }, ":", { "Ref": "AWS::AccountId" }, ":function:", {"Ref" : "LambdaFunctionName"} ] ] },
-    "StackName": {
-      "Ref": "NetworkStackName"
+{
+    "MyCustomResource": {
+        "Type": "Custom::TestLambdaCrossStackRef",
+        "Properties": {
+            "ServiceToken": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "arn:aws:lambda:",
+                        {
+                            "Ref": "AWS::Region"
+                        },
+                        ":",
+                        {
+                            "Ref": "AWS::AccountId"
+                        },
+                        ":function:",
+                        {
+                            "Ref": "LambdaFunctionName"
+                        }
+                    ]
+                ]
+            },
+            "StackName": {
+                "Ref": "NetworkStackName"
+            }
+        }
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource--yaml"></a>
 
 ```
-MyCustomResource: 
-  Type: "Custom::TestLambdaCrossStackRef"
-  Properties: 
-    ServiceToken:
-      !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunctionName}
-    StackName: 
-      Ref: "NetworkStackName"
+MyCustomResource:
+      Type: 'Custom::TestLambdaCrossStackRef'
+      Properties:
+      ServiceToken: !Join 
+      - ''
+      - - 'arn:aws:lambda:'
+      - !Ref 'AWS::Region'
+      - ':'
+      - !Ref 'AWS::AccountId'
+      - ':function:'
+      - !Ref LambdaFunctionName
+      StackName: !Ref NetworkStackName
 ```

@@ -115,7 +115,7 @@ The type of repository that contains the source code to be built\. Valid values 
 +  `GITHUB`: The source code is in a GitHub or GitHub Enterprise Cloud repository\.
 +  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise Server repository\.
 +  `NO_SOURCE`: The project does not have input source code\.
-+  `S3`: The source code is in an Amazon Simple Storage Service \(Amazon S3\) input bucket\.
++  `S3`: The source code is in an Amazon S3 input bucket\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `BITBUCKET | CODECOMMIT | CODEPIPELINE | GITHUB | GITHUB_ENTERPRISE | NO_SOURCE | S3`  

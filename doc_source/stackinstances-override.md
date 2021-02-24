@@ -62,6 +62,12 @@ To set any overridden parameters back to using the value specified in the stack 
 
 ## Override parameters on stack instances using the AWS CLI<a name="stackinstances-override-cli"></a>
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
 Run the `update-stack-instances` AWS CLI command, specifying `--parameter-overrides`\. For more information about specifying `--parameter-overrides`, see [Parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) in the AWS CloudFormation API Reference, and [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack-instances.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack-instances.html) in the *AWS CLI Command Reference*\.
 
 In the example command shown here, we change the default snapshot delivery frequency for delivery channel configuration from **TwentyFour\_Hours** to **Twelve\_Hours** for the specified stack instances\.

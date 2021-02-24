@@ -172,3 +172,7 @@ For more information about using the `Fn::GetAtt` instrinsic function, see [http
 
 `StackSetId`  <a name="StackSetId-fn::getatt"></a>
 The ID of the stack that you're creating\.
+
+## See also<a name="aws-resource-cloudformation-stackset--seealso"></a>
++ [AWS CloudFormation StackSets sample templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-sampletemplates.html)
+

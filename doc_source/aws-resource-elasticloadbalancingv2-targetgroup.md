@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-elasticloadbalancingv2-targetgroup-name)" : String,
       "[Port](#cfn-elasticloadbalancingv2-targetgroup-port)" : Integer,
       "[Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol)" : String,
+      "[ProtocolVersion](#cfn-elasticloadbalancingv2-targetgroup-protocolversion)" : String,
       "[Tags](#cfn-elasticloadbalancingv2-targetgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes)" : [ TargetGroupAttribute, ... ],
       "[Targets](#cfn-elasticloadbalancingv2-targetgroup-targets)" : [ TargetDescription, ... ],
@@ -52,6 +53,7 @@ Properties:
   [Name](#cfn-elasticloadbalancingv2-targetgroup-name): String
   [Port](#cfn-elasticloadbalancingv2-targetgroup-port): Integer
   [Protocol](#cfn-elasticloadbalancingv2-targetgroup-protocol): String
+  [ProtocolVersion](#cfn-elasticloadbalancingv2-targetgroup-protocolversion): String
   [Tags](#cfn-elasticloadbalancingv2-targetgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TargetGroupAttributes](#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes): 
@@ -144,6 +146,12 @@ The protocol to use for routing traffic to the targets\. For Application Load Ba
 *Required*: Conditional  
 *Type*: String  
 *Allowed values*: `GENEVE | HTTP | HTTPS | TCP | TCP_UDP | TLS | UDP`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ProtocolVersion`  <a name="cfn-elasticloadbalancingv2-targetgroup-protocolversion"></a>
+\[HTTP/HTTPS protocol\] The protocol version\. The possible values are `GRPC`, `HTTP1`, and `HTTP2`\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-elasticloadbalancingv2-targetgroup-tags"></a>

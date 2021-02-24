@@ -106,13 +106,17 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserContextPolicy`  <a name="cfn-kendra-index-usercontextpolicy"></a>
-Not currently supported by AWS CloudFormation\.  
+The user context policy\.  
+ATTRIBUTE\_FILTER  
++ All indexed content is searchable and displayable for all users\. If there is an access control list, it is ignored\. You can filter on user and group attributes\.
+USER\_TOKEN  
++ Enables SSO and token\-based user access control\. All documents with no access control and all documents accessible to the user will be searchable and displayable\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserTokenConfigurations`  <a name="cfn-kendra-index-usertokenconfigurations"></a>
-Not currently supported by AWS CloudFormation\.  
+Defines the type of user token used for the index\.  
 *Required*: No  
 *Type*: List of [UserTokenConfiguration](aws-properties-kendra-index-usertokenconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

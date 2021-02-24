@@ -2,7 +2,7 @@
 
 Defines the mapping between a field in the Confluence data source to a Amazon Kendra index field\.
 
-You must first create the index field using the API\_UpdateIndex operation\. 
+You must first create the index field using the `UpdateIndex` operation\. 
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping-syntax"></a>
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DataSourceFieldName`  <a name="cfn-kendra-datasource-confluenceattachmenttoindexfieldmapping-datasourcefieldname"></a>
 The name of the field in the data source\.   
-You must first create the index field using the API\_UpdateIndex operation\.   
+You must first create the index field using the `UpdateIndex` operation\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `AUTHOR | CONTENT_TYPE | CREATED_DATE | DISPLAY_URL | FILE_SIZE | ITEM_TYPE | PARENT_ID | SPACE_KEY | SPACE_NAME | URL | VERSION`  

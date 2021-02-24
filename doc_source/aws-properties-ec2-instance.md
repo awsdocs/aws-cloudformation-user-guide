@@ -294,7 +294,7 @@ If this resource has a public IP address and is also in a VPC that is defined in
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlacementGroupName`  <a name="cfn-ec2-instance-placementgroupname"></a>
-The name of an existing placement group that you want to launch the instance into \(cluster \| partition \| spread\)\.  
+The name of an existing placement group that you want to launch the instance into \(for cluster instances\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

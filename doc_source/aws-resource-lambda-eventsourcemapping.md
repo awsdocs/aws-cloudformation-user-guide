@@ -80,6 +80,7 @@ The maximum number of items to retrieve in a single batch\.
 +  **Amazon DynamoDB Streams** \- Default 100\. Max 1,000\.
 +  **Amazon Simple Queue Service** \- Default 10\. For standard queues the max is 10,000\. For FIFO queues the max is 10\.
 +  **Amazon Managed Streaming for Apache Kafka** \- Default 100\. Max 10,000\.
++  **Self\-Managed Apache Kafka** \- Default 100\. Max 10,000\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -178,9 +179,10 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
-\(MQ\) The name of the Amazon MQ broker destination queue to consume\.  
+ \(MQ\) The name of the Amazon MQ broker destination queue to consume\.   
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelfManagedEventSource`  <a name="cfn-lambda-eventsourcemapping-selfmanagedeventsource"></a>
@@ -190,9 +192,10 @@ The Self\-Managed Apache Kafka cluster for your event source\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
-\(MQ\) The Secrets Manager secret that stores your broker credentials\.  
+An array of the authentication protocol, or the VPC components to secure your event source\.  
 *Required*: No  
 *Type*: List of [SourceAccessConfiguration](aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md)  
+*Maximum*: `22`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartingPosition`  <a name="cfn-lambda-eventsourcemapping-startingposition"></a>
@@ -211,9 +214,11 @@ The name of the Kafka topic\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TumblingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-tumblingwindowinseconds"></a>
-\(Streams\) The duration of a processing window in seconds\. The range is between 1 second up to 15 minutes\.  
+\(Streams\) The duration in seconds of a processing window\. The range is between 1 second up to 900 seconds\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `900`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lambda-eventsourcemapping-return-values"></a>

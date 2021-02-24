@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceBlogFieldMappingsList<a name="aws-properties-kendra-datasource-confluenceblogfieldmappingslist"></a>
 
-<a name="aws-properties-kendra-datasource-confluenceblogfieldmappingslist-description"></a>The `ConfluenceBlogFieldMappingsList` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Kendra::DataSource](aws-resource-kendra-datasource.md)\.
+Specifies one or more `ConfluenceBlogToIndexFieldMapping` objects\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceblogfieldmappingslist-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-confluenceblogfieldmappingslist-properties"></a>
 
 `ConfluenceBlogFieldMappingsList`  <a name="cfn-kendra-datasource-confluenceblogfieldmappingslist-confluenceblogfieldmappingslist"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of mappings between Confluence and Amazon Kendra index fields\.  
 *Required*: No  
 *Type*: [List](#aws-properties-kendra-datasource-confluenceblogfieldmappingslist) of [ConfluenceBlogToIndexFieldMapping](aws-properties-kendra-datasource-confluenceblogtoindexfieldmapping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

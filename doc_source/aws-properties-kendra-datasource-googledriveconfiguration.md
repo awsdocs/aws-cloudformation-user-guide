@@ -71,7 +71,7 @@ A list of regular expression patterns that apply to the path on Google Drive\. I
 
 `FieldMappings`  <a name="cfn-kendra-datasource-googledriveconfiguration-fieldmappings"></a>
 Defines mapping between a field in the Google Drive and a Amazon Kendra index field\.  
-If you are using the console, you can define index fields when creating the mapping\. If you are using the API, you must first create the field using the UpdateIndex operation\.  
+If you are using the console, you can define index fields when creating the mapping\. If you are using the API, you must first create the field using the `UpdateIndex` operation\.  
 *Required*: No  
 *Type*: [DataSourceToIndexFieldMappingList](aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.md)  
 *Maximum*: `100`  

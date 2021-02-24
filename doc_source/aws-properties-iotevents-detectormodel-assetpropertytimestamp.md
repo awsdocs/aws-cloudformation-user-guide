@@ -13,7 +13,7 @@ You must use expressions for all parameters in `AssetPropertyTimestamp`\. The ex
 
    `'${$input.TemperatureInput.sensorData.timestamp / 1000}'` 
 
-For more information, see [Syntax](https://docs.aws.amazon.com/iotevents/latest/developerguide/expression-syntax.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-assetpropertytimestamp-syntax"></a>
 

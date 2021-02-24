@@ -1,10 +1,13 @@
 # Amazon SageMaker resource type reference<a name="AWS_SageMaker"></a>
 
 **Resource types**
++ [AWS::SageMaker::App](aws-resource-sagemaker-app.md)
++ [AWS::SageMaker::AppImageConfig](aws-resource-sagemaker-appimageconfig.md)
 + [AWS::SageMaker::CodeRepository](aws-resource-sagemaker-coderepository.md)
 + [AWS::SageMaker::DataQualityJobDefinition](aws-resource-sagemaker-dataqualityjobdefinition.md)
 + [AWS::SageMaker::Device](aws-resource-sagemaker-device.md)
 + [AWS::SageMaker::DeviceFleet](aws-resource-sagemaker-devicefleet.md)
++ [AWS::SageMaker::Domain](aws-resource-sagemaker-domain.md)
 + [AWS::SageMaker::Endpoint](aws-resource-sagemaker-endpoint.md)
 + [AWS::SageMaker::EndpointConfig](aws-resource-sagemaker-endpointconfig.md)
 + [AWS::SageMaker::FeatureGroup](aws-resource-sagemaker-featuregroup.md)
@@ -18,4 +21,5 @@
 + [AWS::SageMaker::NotebookInstanceLifecycleConfig](aws-resource-sagemaker-notebookinstancelifecycleconfig.md)
 + [AWS::SageMaker::Pipeline](aws-resource-sagemaker-pipeline.md)
 + [AWS::SageMaker::Project](aws-resource-sagemaker-project.md)
++ [AWS::SageMaker::UserProfile](aws-resource-sagemaker-userprofile.md)
 + [AWS::SageMaker::Workteam](aws-resource-sagemaker-workteam.md)

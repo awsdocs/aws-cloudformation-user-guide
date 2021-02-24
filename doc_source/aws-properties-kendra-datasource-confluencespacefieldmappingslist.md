@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceSpaceFieldMappingsList<a name="aws-properties-kendra-datasource-confluencespacefieldmappingslist"></a>
 
-<a name="aws-properties-kendra-datasource-confluencespacefieldmappingslist-description"></a>The `ConfluenceSpaceFieldMappingsList` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Kendra::DataSource](aws-resource-kendra-datasource.md)\.
+Specifies one or more `ConfluenceSpaceToIndexFieldMapping` objects\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluencespacefieldmappingslist-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-confluencespacefieldmappingslist-properties"></a>
 
 `ConfluenceSpaceFieldMappingsList`  <a name="cfn-kendra-datasource-confluencespacefieldmappingslist-confluencespacefieldmappingslist"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of mappings between Confluence and Amazon Kendra index fields\.  
 *Required*: No  
 *Type*: [List](#aws-properties-kendra-datasource-confluencespacefieldmappingslist) of [ConfluenceSpaceToIndexFieldMapping](aws-properties-kendra-datasource-confluencespacetoindexfieldmapping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

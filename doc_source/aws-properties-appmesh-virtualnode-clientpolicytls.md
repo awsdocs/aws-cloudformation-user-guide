@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Certificate](#cfn-appmesh-virtualnode-clientpolicytls-certificate)" : ClientTlsCertificate,
   "[Enforce](#cfn-appmesh-virtualnode-clientpolicytls-enforce)" : Boolean,
   "[Ports](#cfn-appmesh-virtualnode-clientpolicytls-ports)" : [ Integer, ... ],
   "[Validation](#cfn-appmesh-virtualnode-clientpolicytls-validation)" : TlsValidationContext
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-virtualnode-clientpolicytls-syntax.yaml"></a>
 
 ```
+  [Certificate](#cfn-appmesh-virtualnode-clientpolicytls-certificate): 
+    ClientTlsCertificate
   [Enforce](#cfn-appmesh-virtualnode-clientpolicytls-enforce): Boolean
   [Ports](#cfn-appmesh-virtualnode-clientpolicytls-ports): 
     - Integer
@@ -27,6 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-clientpolicytls-properties"></a>
+
+`Certificate`  <a name="cfn-appmesh-virtualnode-clientpolicytls-certificate"></a>
+A reference to an object that represents a client's TLS certificate\.  
+*Required*: No  
+*Type*: [ClientTlsCertificate](aws-properties-appmesh-virtualnode-clienttlscertificate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enforce`  <a name="cfn-appmesh-virtualnode-clientpolicytls-enforce"></a>
 Whether the policy is enforced\. The default is `True`, if a value isn't specified\.  

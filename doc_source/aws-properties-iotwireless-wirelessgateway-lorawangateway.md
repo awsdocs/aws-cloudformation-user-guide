@@ -1,6 +1,6 @@
 # AWS::IoTWireless::WirelessGateway LoRaWANGateway<a name="aws-properties-iotwireless-wirelessgateway-lorawangateway"></a>
 
-<a name="aws-properties-iotwireless-wirelessgateway-lorawangateway-description"></a>The `LoRaWANGateway` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTWireless::WirelessGateway](aws-resource-iotwireless-wirelessgateway.md)\.
+LoRaWAN wireless gateway object\.
 
 ## Syntax<a name="aws-properties-iotwireless-wirelessgateway-lorawangateway-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-wirelessgateway-lorawangateway-properties"></a>
 
 `GatewayEui`  <a name="cfn-iotwireless-wirelessgateway-lorawangateway-gatewayeui"></a>
-Not currently supported by AWS CloudFormation\.  
+The gateway's EUI value, with the pattern `^(([0-9A-Fa-f]{2}-){7}|([0-9A-Fa-f]{2}:){7}|([0-9A-Fa-f]{2}\s){7}|([0-9A-Fa-f]{2}){7})([0-9A-Fa-f]{2})$`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RfRegion`  <a name="cfn-iotwireless-wirelessgateway-lorawangateway-rfregion"></a>
-Not currently supported by AWS CloudFormation\.  
+The frequency band \(RFRegion\) value\. Maximum length is 64\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

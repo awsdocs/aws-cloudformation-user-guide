@@ -14,22 +14,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CertificateArn](#cfn-dms-endpoint-certificatearn)" : String,
       "[DatabaseName](#cfn-dms-endpoint-databasename)" : String,
+      "[DocDbSettings](#cfn-dms-endpoint-docdbsettings)" : DocDbSettings,
       "[DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings)" : DynamoDbSettings,
       "[ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings)" : ElasticsearchSettings,
       "[EndpointIdentifier](#cfn-dms-endpoint-endpointidentifier)" : String,
       "[EndpointType](#cfn-dms-endpoint-endpointtype)" : String,
       "[EngineName](#cfn-dms-endpoint-enginename)" : String,
       "[ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes)" : String,
+      "[IbmDb2Settings](#cfn-dms-endpoint-ibmdb2settings)" : IbmDb2Settings,
       "[KafkaSettings](#cfn-dms-endpoint-kafkasettings)" : KafkaSettings,
       "[KinesisSettings](#cfn-dms-endpoint-kinesissettings)" : KinesisSettings,
       "[KmsKeyId](#cfn-dms-endpoint-kmskeyid)" : String,
+      "[MicrosoftSqlServerSettings](#cfn-dms-endpoint-microsoftsqlserversettings)" : MicrosoftSqlServerSettings,
       "[MongoDbSettings](#cfn-dms-endpoint-mongodbsettings)" : MongoDbSettings,
+      "[MySqlSettings](#cfn-dms-endpoint-mysqlsettings)" : MySqlSettings,
       "[NeptuneSettings](#cfn-dms-endpoint-neptunesettings)" : NeptuneSettings,
+      "[OracleSettings](#cfn-dms-endpoint-oraclesettings)" : OracleSettings,
       "[Password](#cfn-dms-endpoint-password)" : String,
       "[Port](#cfn-dms-endpoint-port)" : Integer,
+      "[PostgreSqlSettings](#cfn-dms-endpoint-postgresqlsettings)" : PostgreSqlSettings,
+      "[RedshiftSettings](#cfn-dms-endpoint-redshiftsettings)" : RedshiftSettings,
       "[S3Settings](#cfn-dms-endpoint-s3settings)" : S3Settings,
       "[ServerName](#cfn-dms-endpoint-servername)" : String,
       "[SslMode](#cfn-dms-endpoint-sslmode)" : String,
+      "[SybaseSettings](#cfn-dms-endpoint-sybasesettings)" : SybaseSettings,
       "[Tags](#cfn-dms-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Username](#cfn-dms-endpoint-username)" : String
     }
@@ -43,6 +51,8 @@ Type: AWS::DMS::Endpoint
 Properties: 
   [CertificateArn](#cfn-dms-endpoint-certificatearn): String
   [DatabaseName](#cfn-dms-endpoint-databasename): String
+  [DocDbSettings](#cfn-dms-endpoint-docdbsettings): 
+    DocDbSettings
   [DynamoDbSettings](#cfn-dms-endpoint-dynamodbsettings): 
     DynamoDbSettings
   [ElasticsearchSettings](#cfn-dms-endpoint-elasticsearchsettings): 
@@ -51,21 +61,35 @@ Properties:
   [EndpointType](#cfn-dms-endpoint-endpointtype): String
   [EngineName](#cfn-dms-endpoint-enginename): String
   [ExtraConnectionAttributes](#cfn-dms-endpoint-extraconnectionattributes): String
+  [IbmDb2Settings](#cfn-dms-endpoint-ibmdb2settings): 
+    IbmDb2Settings
   [KafkaSettings](#cfn-dms-endpoint-kafkasettings): 
     KafkaSettings
   [KinesisSettings](#cfn-dms-endpoint-kinesissettings): 
     KinesisSettings
   [KmsKeyId](#cfn-dms-endpoint-kmskeyid): String
+  [MicrosoftSqlServerSettings](#cfn-dms-endpoint-microsoftsqlserversettings): 
+    MicrosoftSqlServerSettings
   [MongoDbSettings](#cfn-dms-endpoint-mongodbsettings): 
     MongoDbSettings
+  [MySqlSettings](#cfn-dms-endpoint-mysqlsettings): 
+    MySqlSettings
   [NeptuneSettings](#cfn-dms-endpoint-neptunesettings): 
     NeptuneSettings
+  [OracleSettings](#cfn-dms-endpoint-oraclesettings): 
+    OracleSettings
   [Password](#cfn-dms-endpoint-password): String
   [Port](#cfn-dms-endpoint-port): Integer
+  [PostgreSqlSettings](#cfn-dms-endpoint-postgresqlsettings): 
+    PostgreSqlSettings
+  [RedshiftSettings](#cfn-dms-endpoint-redshiftsettings): 
+    RedshiftSettings
   [S3Settings](#cfn-dms-endpoint-s3settings): 
     S3Settings
   [ServerName](#cfn-dms-endpoint-servername): String
   [SslMode](#cfn-dms-endpoint-sslmode): String
+  [SybaseSettings](#cfn-dms-endpoint-sybasesettings): 
+    SybaseSettings
   [Tags](#cfn-dms-endpoint-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Username](#cfn-dms-endpoint-username): String
@@ -83,6 +107,12 @@ The Amazon Resource Name \(ARN\) for the certificate\.
 The name of the endpoint database\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DocDbSettings`  <a name="cfn-dms-endpoint-docdbsettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [DocDbSettings](aws-properties-dms-endpoint-docdbsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DynamoDbSettings`  <a name="cfn-dms-endpoint-dynamodbsettings"></a>
@@ -122,6 +152,12 @@ Additional attributes associated with the connection\. Each attribute is specifi
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IbmDb2Settings`  <a name="cfn-dms-endpoint-ibmdb2settings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [IbmDb2Settings](aws-properties-dms-endpoint-ibmdb2settings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KafkaSettings`  <a name="cfn-dms-endpoint-kafkasettings"></a>
 Settings in JSON format for the target Apache Kafka endpoint\. For more information about the available settings, see [Using Apache Kafka as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
@@ -142,16 +178,34 @@ AWS KMS creates the default encryption key for your AWS account\. Your AWS accou
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`MicrosoftSqlServerSettings`  <a name="cfn-dms-endpoint-microsoftsqlserversettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [MicrosoftSqlServerSettings](aws-properties-dms-endpoint-microsoftsqlserversettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `MongoDbSettings`  <a name="cfn-dms-endpoint-mongodbsettings"></a>
 Settings in JSON format for the source MongoDB endpoint\. For more information about the available settings, see [Using MongoDB as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html#CHAP_Source.MongoDB.Configuration) in the *AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: [MongoDbSettings](aws-properties-dms-endpoint-mongodbsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MySqlSettings`  <a name="cfn-dms-endpoint-mysqlsettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [MySqlSettings](aws-properties-dms-endpoint-mysqlsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NeptuneSettings`  <a name="cfn-dms-endpoint-neptunesettings"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [NeptuneSettings](aws-properties-dms-endpoint-neptunesettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OracleSettings`  <a name="cfn-dms-endpoint-oraclesettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [OracleSettings](aws-properties-dms-endpoint-oraclesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-dms-endpoint-password"></a>
@@ -164,6 +218,18 @@ The password to be used to log in to the endpoint database\.
 The port used by the endpoint database\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PostgreSqlSettings`  <a name="cfn-dms-endpoint-postgresqlsettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [PostgreSqlSettings](aws-properties-dms-endpoint-postgresqlsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RedshiftSettings`  <a name="cfn-dms-endpoint-redshiftsettings"></a>
+Settings for the Amazon Redshift endpoint\.  
+*Required*: No  
+*Type*: [RedshiftSettings](aws-properties-dms-endpoint-redshiftsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Settings`  <a name="cfn-dms-endpoint-s3settings"></a>
@@ -184,6 +250,12 @@ When `engine_name` is set to S3 then the only alowed value is `none`
 *Required*: No  
 *Type*: String  
 *Allowed values*: `none | require | verify-ca | verify-full`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SybaseSettings`  <a name="cfn-dms-endpoint-sybasesettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SybaseSettings](aws-properties-dms-endpoint-sybasesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dms-endpoint-tags"></a>

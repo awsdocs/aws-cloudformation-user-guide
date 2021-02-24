@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ExcludeSharedDrivesList<a name="aws-properties-kendra-datasource-excludeshareddriveslist"></a>
 
-<a name="aws-properties-kendra-datasource-excludeshareddriveslist-description"></a>The `ExcludeSharedDrivesList` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Kendra::DataSource](aws-resource-kendra-datasource.md)\.
+A list of shared Google drives to exclude from an Amazon Kendra index\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-excludeshareddriveslist-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-excludeshareddriveslist-properties"></a>
 
 `ExcludeSharedDrivesList`  <a name="cfn-kendra-datasource-excludeshareddriveslist-excludeshareddriveslist"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of strings that define the shared Google drives to exclude from an Amazon Kendra index\.  
 *Required*: No  
 *Type*: [List](#aws-properties-kendra-datasource-excludeshareddriveslist) of [String](#aws-properties-kendra-datasource-excludeshareddriveslist)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

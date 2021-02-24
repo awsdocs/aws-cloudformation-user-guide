@@ -195,6 +195,9 @@ Resources:
       Name: job-name
       DatasetName: dataset-name
       RoleArn: arn:aws:iam::12345678910:role/PassRoleAdmin
+      JobSample: 
+        Mode: 'CUSTOM_ROWS'
+        Size: 50000 
       OutputLocation:
         Bucket: !Join [ '', ['databrew-cfn-integration-tests-', !Ref 'AWS::Region', '-', !Ref 'AWS::AccountId' ] ]
       Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
@@ -214,6 +217,9 @@ Resources:
                 "Name": "job-test",
                 "DatasetName": "dataset-test",
                 "RoleArn": "arn:aws:iam::1234567891011:role/PassRoleAdmin",
+                "JobSample": {
+                    "Mode": "FULL_DATASET"
+                },
                 "OutputLocation": {
                     "Bucket": "test-output",
                     "Key": "job-output.json"

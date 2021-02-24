@@ -117,6 +117,9 @@ Wait until an operation is complete before starting another one\. You can run on
 + [Create a stack set with service\-managed permissions using the AWS CLI](#stacksets-orgs-associate-stackset-with-org-cli)
 
 ### Considerations when creating a stack set with service\-managed permissions<a name="stacksets-orgs-considerations"></a>
+
+Before you create a stack set with service\-managed permissions, consider the following:
++ Stack sets with service\-managed permissions are created in the management account, including stack sets that are created by delegated administrators\.
 + Your stack set can target your entire organization or specified organizational units \(OUs\)\. If your stack set targets your organization, it also targets all accounts in all OUs in the organization\. If your stack set targets specified OUs, it also targets all accounts in those OUs\.
 + If your stack set targets a parent OU, the stack set also targets any child OUs\.
 + Multiple stack sets can target the same organization or OU\.
@@ -125,6 +128,7 @@ Wait until an operation is complete before starting another one\. You can run on
 + StackSets does not deploy stack instances to the organization's management account, even if the management account is in your organization or in an OU in your organization\.
 + Automatic deployment is set at the stack set level\. You cannot adjust automatic deployments selectively for OUs, accounts, or Regions\.
 + The permissions of the IAM principal entity \(user, role, or group\) that you use to sign in to the management account determine whether you are authorized to deploy with StackSets\. For an example IAM policy that grants permissions to deploy to an organization, see [Sample policy that grants service\-managed stack set permissions](using-iam-template.md#resource-level-permissions-service-managed-stack-set)\.
++ Delegated administrators have full permissions to deploy to accounts in your organization\. The management account cannot limit delegated administrator permissions to deploy to specific OUs or to perform specific stack set operations\.
 
 ### Create a stack set with service\-managed permissions using the AWS CloudFormation console<a name="stacksets-orgs-associate-stackset-with-org-console"></a>
 
@@ -144,7 +148,7 @@ Wait until an operation is complete before starting another one\. You can run on
 
 1. Under **Permissions**, choose **Service\-managed permissions**\.
 
-   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the organization's management account has permissions to [enable trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
+   If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the organization's management account has permissions to [manage trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
 ![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
 
 1. Choose **Next** to proceed and to enable trusted access if not already enabled\.
@@ -173,6 +177,14 @@ The **StackSet details** page opens\. You can view the progress and status of th
 
 When you create stack sets using the AWS CLI, you run two separate commands\. During `create-stack-set`, you upload your template, create the stack set container, and manage automatic deployments\. During `create-stack-instances`, you create stack instances in specific target accounts\.
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
+Stack sets created by a delegated administrator are created in the organization's management account\.
+
 1. Open the AWS CLI\.
 
 1. Run the `create-stack-set` command\. In the following example, we enable automatic deployments to allow StackSets to automatically deploy to accounts that are added to the target organization or OUs in the future\. We also retain stack resources when an account is removed from a target organization or OU\.
@@ -186,6 +198,9 @@ When you create stack sets using the AWS CLI, you run two separate commands\. Du
    ```
    aws cloudformation list-stack-sets
    ```
+   + If you set the `--call-as` parameter to `DELEGATED_ADMIN` while signed in to your member account, `list-stack-sets` returns all stack sets with service\-managed permissions in the organization's management account\.
+   + If you set the `--call-as` parameter to `SELF` while signed in to your AWS account, `list-stack-sets` returns all self\-managed stack sets in your AWS account\.
+   + If you set the `--call-as` parameter to `SELF` while signed in to the organization's management account, `list-stack-sets` returns all stack sets in the organization's management account\.
 
 1. Run the `create-stack-instances` command to add stack instances to your stack set\. For the `--deployment-targets` parameter, specify the organization root ID to deploy to all accounts in your organization, or specify OU IDs to deploy to all accounts in those OUs\. In this example, we specify OUs with `ou-rcuk-1x5j1lwo` and `ou-rcuk-slr5lh0a` IDs\.
 

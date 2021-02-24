@@ -89,28 +89,6 @@ Considerations when managing the default module version:
 
 The following example registers two versions of a module, and then sets the second version as the default version for CloudFormation to use\. Note that the example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\. 
 
-#### YAML<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  ModuleVersion1:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
-  ModuleVersion2:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
-    DependsOn: ModuleVersion1
-  ModuleDefaultVersion:
-    Type: 'AWS::CloudFormation::ModuleDefaultVersion'
-    Properties:
-      Arn: !Ref ModuleVersion2
-```
-
 #### JSON<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--json"></a>
 
 ```
@@ -142,4 +120,26 @@ Resources:
         }
     }
 }
+```
+
+#### YAML<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ModuleVersion1:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
+  ModuleVersion2:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
+    DependsOn: ModuleVersion1
+  ModuleDefaultVersion:
+    Type: 'AWS::CloudFormation::ModuleDefaultVersion'
+    Properties:
+      Arn: !Ref ModuleVersion2
 ```

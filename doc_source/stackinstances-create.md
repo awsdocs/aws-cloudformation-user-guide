@@ -53,6 +53,12 @@ If you add an OU that your stack set already targets, StackSets creates new stac
 
 ## Add stack instances to your stack set using the AWS CLI<a name="stackinstances-create-cli"></a>
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
 1. Open the AWS CLI\.
 
 1. Run the `create-stack-instances` command\.

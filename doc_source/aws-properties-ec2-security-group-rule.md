@@ -1,6 +1,6 @@
 # AWS::EC2::SecurityGroup Egress<a name="aws-properties-ec2-security-group-rule"></a>
 
-Specifies an outbound rule for a security group\. An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 address range, or to the instances associated with the specified destination security groups\.
+Specifies an outbound rule for a security group\. An outbound rule permits instances to send traffic to the specified IPv4 or IPv6 CIDR address ranges, or to the instances associated with the specified destination security groups\.
 
 You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, or `DestinationSecurityGroupId`\.
 
@@ -41,13 +41,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-security-group-rule-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-rule-cidrip"></a>
-The IPv4 address range, in CIDR format\.  
+The destination IPv4 address range, in CIDR format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CidrIpv6`  <a name="cfn-ec2-security-group-rule-cidripv6"></a>
-The IPv6 address range, in CIDR format\.  
+\[EC2\-VPC only\] The IPv6 ranges\.  
+The destination IPv6 address range, in CIDR format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

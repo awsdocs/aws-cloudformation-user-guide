@@ -34,10 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-brokernodegroupinfo-properties"></a>
 
 `BrokerAZDistribution`  <a name="cfn-msk-cluster-brokernodegroupinfo-brokerazdistribution"></a>
-The distribution of broker nodes across Availability Zones\. This is an optional parameter\. If you don't specify it, Amazon MSK gives it the value `DEFAULT`\. You can also explicitly set this parameter to the value `DEFAULT`\. No other values are currently allowed\.  
-Amazon MSK distributes the broker nodes evenly across the Availability Zones that correspond to the subnets that you provide when you create the cluster\.  
-To create a cluster, specify exactly two subnets if you are using one of the following Regions: South America \(São Paulo\), Canada \(Central\), or US West \(N\. California\)\. For other Regions where Amazon MSK is available, you can specify either two or three subnets\. The subnets that you specify must be in distinct Availability Zones\.  
-Client subnets can't be in Availability Zone us\-east\-1e\.  
+This parameter is currently not in use\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

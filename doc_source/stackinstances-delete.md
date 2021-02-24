@@ -45,6 +45,12 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 
 ## Delete stack instances using the AWS CLI<a name="stackinstances-delete-cli"></a>
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
 1. Run the `delete-stack-instances` command\. For `--stack-set-name`, specify the stack set name `my-awsconfig-stackset`\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.

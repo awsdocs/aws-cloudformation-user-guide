@@ -191,7 +191,7 @@ Configuration that defines how Amazon S3 handles public access\.
 
 `ReplicationConfiguration`  <a name="cfn-s3-bucket-replicationconfiguration"></a>
 Configuration for replicating objects in an S3 bucket\. To enable replication, you must also enable versioning by using the `VersioningConfiguration` property\.  
-Amazon S3 can store replicated objects in only one destination bucket\. The destination bucket must already exist\.  
+Amazon S3 can store replicated objects in a single destination bucket or multiple destination buckets\. The destination bucket or buckets must already exist\.  
 *Required*: No  
 *Type*: [ReplicationConfiguration](aws-properties-s3-bucket-replicationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

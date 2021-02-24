@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ActiveDirectoryId`  <a name="cfn-fsx-filesystem-windowsconfiguration-activedirectoryid"></a>
 The ID for an existing AWS Managed Microsoft Active Directory \(AD\) instance that the file system should join when it's created\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `12`  
 *Maximum*: `12`  
@@ -86,14 +86,14 @@ Required when `DeploymentType` is set to `MULTI_AZ_1`\. This specifies the subne
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SelfManagedActiveDirectoryConfiguration`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration"></a>
-The configuration that Amazon FSx uses to join the Windows File Server instance to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\.  
+The configuration that Amazon FSx uses to join the Windows File Server instance to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html)\.  
 *Required*: No  
 *Type*: [SelfManagedActiveDirectoryConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThroughputCapacity`  <a name="cfn-fsx-filesystem-windowsconfiguration-throughputcapacity"></a>
 The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the *n*th increments, between 2^3 \(8\) and 2^11 \(2048\)\.  
-*Required*: Yes  
+*Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `8`  
 *Maximum*: `2048`  

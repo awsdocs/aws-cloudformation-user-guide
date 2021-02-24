@@ -1,6 +1,6 @@
 # AWS::Lambda::EventSourceMapping DestinationConfig<a name="aws-properties-lambda-eventsourcemapping-destinationconfig"></a>
 
-\(Streams\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.
+A configuration object that specifies the destination of an event after Lambda processes it\.
 
 ## Syntax<a name="aws-properties-lambda-eventsourcemapping-destinationconfig-syntax"></a>
 

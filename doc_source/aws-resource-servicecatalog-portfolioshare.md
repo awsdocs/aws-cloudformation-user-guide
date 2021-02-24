@@ -60,7 +60,7 @@ The portfolio identifier\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ShareTagOptions`  <a name="cfn-servicecatalog-portfolioshare-sharetagoptions"></a>
-Enables or disables TagOptions sharing when creating the portfolio share\. If this flag is not provided, TagOptions sharing is disabled\.   
+Indicates whether TagOptions sharing is enabled or disabled for the portfolio share\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

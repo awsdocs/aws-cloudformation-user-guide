@@ -56,14 +56,14 @@ Properties:
 ## Properties<a name="aws-resource-ec2-security-group-egress-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-securitygroupegress-cidrip"></a>
-The IPv4 address range, in CIDR format\.  
+The IPv4 ranges\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CidrIpv6`  <a name="cfn-ec2-securitygroupegress-cidripv6"></a>
-The IPv6 address range, in CIDR format\.  
+The IPv6 ranges\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Required*: No  
 *Type*: String  

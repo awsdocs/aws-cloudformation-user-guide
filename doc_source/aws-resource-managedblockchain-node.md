@@ -38,7 +38,7 @@ Properties:
 
 `MemberId`  <a name="cfn-managedblockchain-node-memberid"></a>
 The unique identifier of the member to which the node belongs\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -24,3 +24,4 @@ For more information about enabling and disabling regions, see [Managing AWS Reg
 + [Performing stack set operations involving regions that are disabled by default](#stacksets-opt-in-regions)
 + [Grant self\-managed permissions](stacksets-prereqs-self-managed.md)
 + [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)
++ [Register a delegated administrator](stacksets-orgs-delegated-admin.md)

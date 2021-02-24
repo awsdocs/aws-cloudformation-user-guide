@@ -108,7 +108,7 @@ Sets the storage type for the file system you're creating\. Valid values are `SS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\.  
+Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html)\.  
 For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  
@@ -257,7 +257,7 @@ Outputs:
 
 ### Create an Amazon FSx for Windows File Server File System in a Self\-managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory"></a>
 
-The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a Self\-managed active directory\.
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a self\-managed active directory\.
 
 #### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory--json"></a>
 
@@ -291,6 +291,9 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                 ],
                 "WindowsConfiguration": {
                     "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 30,
@@ -368,6 +371,8 @@ Resources:
           Value: windows
       WindowsConfiguration:
         ThroughputCapacity: 8
+        Aliases: 
+            - financials.corp.example.com         
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 30
@@ -435,6 +440,9 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                         "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
                     },
                     "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 90,
@@ -478,6 +486,8 @@ Resources:
       WindowsConfiguration:
         ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
         ThroughputCapacity: 8
+        Aliases: 
+            - financials.corp.example.com
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 90

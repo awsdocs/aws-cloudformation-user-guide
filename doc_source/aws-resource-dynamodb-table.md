@@ -15,11 +15,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DynamoDB::Table",
   "Properties" : {
-      "[AttributeDefinitions](#cfn-dynamodb-table-attributedef)" : [ AttributeDefinition, ... ],
+      "[AttributeDefinitions](#cfn-dynamodb-table-attributedefinitions)" : [ AttributeDefinition, ... ],
       "[BillingMode](#cfn-dynamodb-table-billingmode)" : String,
-      "[GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi)" : [ GlobalSecondaryIndex, ... ],
+      "[ContributorInsightsSpecification](#cfn-dynamodb-table-contributorinsightsspecification)" : ContributorInsightsSpecification,
+      "[GlobalSecondaryIndexes](#cfn-dynamodb-table-globalsecondaryindexes)" : [ GlobalSecondaryIndex, ... ],
       "[KeySchema](#cfn-dynamodb-table-keyschema)" : [ KeySchema, ... ],
-      "[LocalSecondaryIndexes](#cfn-dynamodb-table-lsi)" : [ LocalSecondaryIndex, ... ],
+      "[LocalSecondaryIndexes](#cfn-dynamodb-table-localsecondaryindexes)" : [ LocalSecondaryIndex, ... ],
       "[PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification)" : PointInTimeRecoverySpecification,
       "[ProvisionedThroughput](#cfn-dynamodb-table-provisionedthroughput)" : ProvisionedThroughput,
       "[SSESpecification](#cfn-dynamodb-table-ssespecification)" : SSESpecification,
@@ -36,14 +37,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DynamoDB::Table
 Properties: 
-  [AttributeDefinitions](#cfn-dynamodb-table-attributedef): 
+  [AttributeDefinitions](#cfn-dynamodb-table-attributedefinitions): 
     - AttributeDefinition
   [BillingMode](#cfn-dynamodb-table-billingmode): String
-  [GlobalSecondaryIndexes](#cfn-dynamodb-table-gsi): 
+  [ContributorInsightsSpecification](#cfn-dynamodb-table-contributorinsightsspecification): 
+    ContributorInsightsSpecification
+  [GlobalSecondaryIndexes](#cfn-dynamodb-table-globalsecondaryindexes): 
     - GlobalSecondaryIndex
   [KeySchema](#cfn-dynamodb-table-keyschema): 
     - KeySchema
-  [LocalSecondaryIndexes](#cfn-dynamodb-table-lsi): 
+  [LocalSecondaryIndexes](#cfn-dynamodb-table-localsecondaryindexes): 
     - LocalSecondaryIndex
   [PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification): 
     PointInTimeRecoverySpecification
@@ -62,13 +65,13 @@ Properties:
 
 ## Properties<a name="aws-resource-dynamodb-table-properties"></a>
 
-`AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
+`AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedefinitions"></a>
 A list of attributes that describe the key schema for the table and indexes\.  
 This property is required to create a DynamoDB table\.  
 Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\. Replacement if you edit an existing AttributeDefinition\.   
 *Required*: Conditional  
-*Type*: List of [AttributeDefinition](aws-properties-dynamodb-attributedef.md)  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Type*: List of [AttributeDefinition](aws-properties-dynamodb-table-attributedefinition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BillingMode`  <a name="cfn-dynamodb-table-billingmode"></a>
 Specify how you are charged for read and write throughput and how you manage capacity\.  
@@ -78,9 +81,16 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-gsi"></a>
+`ContributorInsightsSpecification`  <a name="cfn-dynamodb-table-contributorinsightsspecification"></a>
+The settings used to enable or disable CloudWatch Contributor Insights for the specified table\.  
+*Required*: No  
+*Type*: [ContributorInsightsSpecification](aws-properties-dynamodb-table-contributorinsightsspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-globalsecondaryindexes"></a>
 Global secondary indexes to be created on the table\. You can create up to 20 global secondary indexes\.  
 If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [DescribeTable](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.   
@@ -88,23 +98,23 @@ If you add or delete an index during an update, we recommend that you don't upda
 + If you update only the provisioned throughput values of global secondary indexes, you can update the table without interruption\.
 + You can delete or add one global secondary index without interruption\. If you do both in the same update \(for example, by changing the index's logical ID\), the update fails\.
 *Required*: No  
-*Type*: List of [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md)  
+*Type*: List of [GlobalSecondaryIndex](aws-properties-dynamodb-table-globalsecondaryindex.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeySchema`  <a name="cfn-dynamodb-table-keyschema"></a>
 Specifies the attributes that make up the primary key for the table\. The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions` property\.  
 *Required*: Yes  
-*Type*: [List](aws-properties-dynamodb-keyschema.md) of [KeySchema](aws-properties-dynamodb-keyschema.md)  
+*Type*: [List](aws-properties-dynamodb-table-keyschema.md) of [KeySchema](aws-properties-dynamodb-table-keyschema.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`LocalSecondaryIndexes`  <a name="cfn-dynamodb-table-lsi"></a>
+`LocalSecondaryIndexes`  <a name="cfn-dynamodb-table-localsecondaryindexes"></a>
 Local secondary indexes to be created on the table\. You can create up to 5 local secondary indexes\. Each index is scoped to a given hash key value\. The size of each hash key can be up to 10 gigabytes\.  
 *Required*: No  
-*Type*: List of [LocalSecondaryIndex](aws-properties-dynamodb-lsi.md)  
+*Type*: List of [LocalSecondaryIndex](aws-properties-dynamodb-table-localsecondaryindex.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PointInTimeRecoverySpecification`  <a name="cfn-dynamodb-table-pointintimerecoveryspecification"></a>
-The settings used to enable point in time recover\.  
+The settings used to enable point in time recovery\.  
 *Required*: No  
 *Type*: [PointInTimeRecoverySpecification](aws-properties-dynamodb-table-pointintimerecoveryspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -113,7 +123,7 @@ The settings used to enable point in time recover\.
 Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)\.   
 If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
 *Required*: Conditional  
-*Type*: [ProvisionedThroughput](aws-properties-dynamodb-provisionedthroughput.md)  
+*Type*: [ProvisionedThroughput](aws-properties-dynamodb-table-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SSESpecification`  <a name="cfn-dynamodb-table-ssespecification"></a>
@@ -125,7 +135,7 @@ Specifies the settings to enable server\-side encryption\.
 `StreamSpecification`  <a name="cfn-dynamodb-table-streamspecification"></a>
 The settings for the DynamoDB table stream, which capture changes to items stored in the table\.  
 *Required*: No  
-*Type*: [StreamSpecification](aws-properties-dynamodb-streamspecification.md)  
+*Type*: [StreamSpecification](aws-properties-dynamodb-table-streamspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-dynamodb-table-tablename"></a>
@@ -149,7 +159,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 Specifies the Time to Live \(TTL\) settings for the table\.  
 For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the Amazon DynamoDB Developer Guide\. 
 *Required*: No  
-*Type*: [TimeToLiveSpecification](aws-properties-dynamodb-timetolivespecification.md)  
+*Type*: [TimeToLiveSpecification](aws-properties-dynamodb-table-timetolivespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-dynamodb-table-return-values"></a>
@@ -180,6 +190,9 @@ The Amazon Resource Name \(ARN\) of the DynamoDB table, such as `arn:aws:dynamod
 `StreamArn`  <a name="StreamArn-fn::getatt"></a>
 The ARN of the DynamoDB stream, such as `arn:aws:dynamodb:us-east-1:123456789012:table/testddbstack-myDynamoDBTable-012A1SL7SMP5Q/stream/2015-11-30T20:10:00.000`\.   
 You must specify the `StreamSpecification` property to use this attribute\.
+
+`TableId`  <a name="TableId-fn::getatt"></a>
+Unique identifier for the table, such as `a123b456-01ab-23cd-123a-111222aaabbb`\.
 
 ## Examples<a name="aws-resource-dynamodb-table--examples"></a>
 

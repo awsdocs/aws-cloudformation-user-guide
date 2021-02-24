@@ -5,6 +5,7 @@ When you use StackSets, you work with *stack sets*, *stack instances*, and *stac
 **Topics**
 + [Administrator and target accounts](#stacksets-concepts-accts)
 + [Stack sets](#stacksets-concepts-stackset)
++ [Permission models for stack sets](#stacksets-concepts-stackset-permission-models)
 + [Stack instances](#stacksets-concepts-stackinstances)
 + [Stack set operations](#stacksets-concepts-ops)
 + [Stack set operation options](#stackset-ops-options)
@@ -13,7 +14,7 @@ When you use StackSets, you work with *stack sets*, *stack instances*, and *stac
 
 ## Administrator and target accounts<a name="stacksets-concepts-accts"></a>
 
-An *administrator account* is the AWS account in which you create stack sets\. A stack set is managed by signing in to the AWS administrator account in which it was created\. A *target account* is the account into which you create, update, or delete one or more stacks in your stack set\. Before you can use a stack set to create stacks in a target account, you must set up a trust relationship between the administrator and target accounts\.
+An *administrator account* is the AWS account in which you create stack sets\. For stack sets with service\-managed permissions, the administrator account is either the organization's management account or a delegated administrator account\. A stack set is managed by signing in to the AWS administrator account in which it was created\. A *target account* is the account into which you create, update, or delete one or more stacks in your stack set\. Before you can use a stack set to create stacks in a target account, you must set up a trust relationship between the administrator and target accounts\.
 
 ## Stack sets<a name="stacksets-concepts-stackset"></a>
 
@@ -23,13 +24,16 @@ After you've defined a stack set, you can create, update, or delete stacks in th
 
 A stack set is a regional resource\. If you create a stack set in one Region, you cannot see it or change it in other Regions\.
 
-**Permissions models for stack sets**
+## Permission models for stack sets<a name="stacksets-concepts-stackset-permission-models"></a>
 
 Stack sets can be created using either *self\-managed* permissions or *service\-managed* permissions\.
 
 With *self\-managed* permissions, you create the IAM roles required by StackSets to deploy across accounts and Regions\. These roles are necessary to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\. Using this permissions model, StackSets can deploy to any AWS account in which you have permissions to create an IAM role\.
 
-With *service\-managed* permissions, you can deploy stack instances to accounts managed by AWS Organizations\. Using this permissions model, you don't have to create the necessary IAM roles; StackSets creates the IAM roles on your behalf\. With this model, you can also enable automatic deployments to accounts that are added to your organization in the future\.
+With *service\-managed* permissions, you can deploy stack instances to accounts managed by AWS Organizations\. Using this permissions model, you don't have to create the necessary IAM roles; StackSets creates the IAM roles on your behalf\. With this model, you can also enable automatic deployments to accounts that are added to your organization in the future\. For more information about creating and managing stack sets with service\-managed permissions, see the following topics:
++ [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)
++ [Register a delegated administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin)
++ [Create a stack set with service\-managed permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-getting-started-create.html#stacksets-orgs-associate-stackset-with-org)
 
 ## Stack instances<a name="stacksets-concepts-stackinstances"></a>
 
