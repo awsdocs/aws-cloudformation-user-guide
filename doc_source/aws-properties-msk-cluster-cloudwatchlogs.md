@@ -32,6 +32,6 @@ Specifies whether broker logs get sent to the specified CloudWatch Logs destinat
 
 `LogGroup`  <a name="cfn-msk-cluster-cloudwatchlogs-loggroup"></a>
 The CloudWatch log group that is the destination for broker logs\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
