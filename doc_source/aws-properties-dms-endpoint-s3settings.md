@@ -73,7 +73,7 @@ Conditional: If `S3` is used as a source then `ExternalTableDefinition` is requi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-s3settings-serviceaccessrolearn"></a>
- The Amazon Resource Name \(ARN\) used by the service access IAM role\. It is a required parameter that enables DMS to write and read objects from an 3S bucket\.  
+ The Amazon Resource Name \(ARN\) used by the service access IAM role\. It is a required parameter that enables DMS to write and read objects from an S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
