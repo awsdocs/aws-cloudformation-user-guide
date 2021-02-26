@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SchameVersionId](#cfn-glue-table-schemareference-schameversionid)" : String,
+  "[SchemaVersionId](#cfn-glue-table-schemareference-schameversionid)" : String,
   "[SchemaId](#cfn-glue-table-schemareference-schemaid)" : SchemaId,
   "[SchemaVersionNumber](#cfn-glue-table-schemareference-schemaversionnumber)" : Integer
 }
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-table-schemareference-syntax.yaml"></a>
 
 ```
-  [SchameVersionId](#cfn-glue-table-schemareference-schameversionid): String
+  [SchemaVersionId](#cfn-glue-table-schemareference-schameversionid): String
   [SchemaId](#cfn-glue-table-schemareference-schemaid): 
     SchemaId
   [SchemaVersionNumber](#cfn-glue-table-schemareference-schemaversionnumber): Integer
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-glue-table-schemareference-properties"></a>
 
-`SchameVersionId`  <a name="cfn-glue-table-schemareference-schameversionid"></a>
+`SchemaVersionId`  <a name="cfn-glue-table-schemareference-schameversionid"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
