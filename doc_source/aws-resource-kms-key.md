@@ -107,7 +107,7 @@ AWS KMS supports the following key specs for CMKs:
   + `ECC_SECG_P256K1` \(secp256k1\), commonly used for cryptocurrencies\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
 Determines the [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the CMK\. The default value is `ENCRYPT_DECRYPT`\. This property is required only for asymmetric CMKs\. You can't change the `KeyUsage` value after the CMK is created\.  
@@ -119,7 +119,7 @@ Select only one valid value\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ENCRYPT_DECRYPT | SIGN_VERIFY`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
 Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  

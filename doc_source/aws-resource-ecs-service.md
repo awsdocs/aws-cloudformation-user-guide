@@ -202,8 +202,8 @@ The name of your service\. Up to 255 letters \(uppercase and lowercase\), number
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRegistries`  <a name="cfn-ecs-service-serviceregistries"></a>
-The details of the service discovery registries to assign to this service\. For more information, see [Service discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
-Service discovery is supported for Fargate tasks if you are using platform version v1\.1\.0 or later\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)\.
+The details of the service discovery registry to associate with this service\. For more information, see [Service discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
+Each service may be associated with one service registry\. Multiple service registries per service isn't supported\.
 *Required*: No  
 *Type*: List of [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

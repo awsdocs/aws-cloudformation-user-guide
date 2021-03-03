@@ -62,9 +62,6 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 #### <a name="aws-resource-iotwireless-serviceprofile-return-values-fn--getatt-fn--getatt"></a>
 
-`AddGwMetadata`  <a name="AddGwMetadata-fn::getatt"></a>
-The AddGWMetaData value\.
-
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the service profile created\.
 

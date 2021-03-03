@@ -55,7 +55,7 @@ The maximum amount of memory that the canary can use while running\. This value 
 `TimeoutInSeconds`  <a name="cfn-synthetics-canary-runconfig-timeoutinseconds"></a>
 How long the canary is allowed to run before it must stop\. You can't set this time to be longer than the frequency of the runs of this canary\.  
 If you omit this field, the frequency of the canary is used as this value, up to a maximum of 900 seconds\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `3`  
 *Maximum*: `840`  

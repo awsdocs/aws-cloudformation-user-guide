@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AncillarySourceSettings<a name="aws-properties-medialive-channel-ancillarysourcesettings"></a>
 
-Ancillary Source Settings
+Information about the ancillary captions to extract from the input\.
+
+The parent of this entity is CaptionSelectorSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-ancillarysourcesettings-syntax"></a>
 

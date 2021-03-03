@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotsitewise-assetmodel-propertytype-properties"></a>
 
 `Attribute`  <a name="cfn-iotsitewise-assetmodel-propertytype-attribute"></a>
-Specifies an asset attribute property\. An attribute generally contains static information, such as the serial number of an [IIoT](https://en.wikipedia.org/wiki/Internet_of_things#Industrial_applications) wind turbine\.  
+Specifies an asset attribute property\. An attribute generally contains static information, such as the serial number of an [industrial IoT](https://en.wikipedia.org/wiki/Internet_of_things#Industrial_applications) wind turbine\.  
 This is required if the `TypeName` is `Attribute` and has a `DefaultValue`\.  
 *Required*: No  
 *Type*: [Attribute](aws-properties-iotsitewise-assetmodel-attribute.md)  

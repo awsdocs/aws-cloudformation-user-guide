@@ -4,6 +4,62 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_IoTSiteWise.md) | The following resources were updated: AWS::IoTSiteWise::AccessPolicy and AWS::IoTSiteWise::Portal\. 
+
+ [ AWS::IoTSiteWise::AccessPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)   
+Added the following properties: `IamRole` and `IamUser`\. 
+
+ [AWS::IoTSiteWise::Portal](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html)   
+Added the following property: `PortalAuthMode`\.  | March 2, 2021 | 
+| [Updated resource](AWS_IoTSiteWise.md) | The following resource was updated: AWS::IoTSiteWise::AssetModel\. 
+
+ [ AWS::IoTSiteWise::AssetModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html)   
+Added the following property: `AssetModelCompositeModel`\.  
+You can use this property to define an alarm in AWS IoT SiteWise\.  
+For more information, see [Monitoring data with alarms](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/industrial-alarms.html) in the *AWS IoT SiteWise User Guide*\.  | March 1, 2021 | 
+| [Updated resource](AWS_SageMaker.md) | The following resource was updated: AWS::SageMaker::Model 
+
+ [AWS::SageMaker::Model](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html)   
+Use the `InferenceExecutionConfig` property to specify details of how containers in a multi\-container endpoint are called\.  | February 25, 2021 | 
+| [New resources](AWS_EC2.md) | The following resource was added: AWS::EC2::TransitGatewayConnect\. 
+
+ [AWS::EC2::TransitGatewayConnect](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html)   
+Use the `TransitGatewayConnect` resource to create a Connect attachment from a specified transit gateway attachment\.  | February 25, 2021 | 
+| [New resources](AWS_EMR.md) | The following resources were added: AWS::EMR::Studio and AWS::EMR::StudioSessionMapping 
+
+ [Amazon EMR Studio](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html)   
+Use the `AWS::EMR::Studio` resource to create a new Amazon EMR Studio\. 
+
+ [Assign a user or group to your EMR Studio](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-assign-users-groups.html)   
+Use the `AWS::EMR::StudioSessionMapping` resource to assign a user or group to an Amazon EMR Studio, and apply an IAM session policy to refine Studio permissions for that user or group\.  | February 25, 2021 | 
+| [New resources](AWS_SageMaker.md) | The following resources was added: AWS::SageMaker::Image, AWS::SageMaker::ImageVersion\. 
+
+ [AWS::SageMaker::Image](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html)   
+Use the `AWS::SageMaker::Image` resource to create a new Image in Amazon SageMaker\. 
+
+ [AWS::SageMaker::ImageVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)   
+Use the `AWS::SageMaker::Image` resource to create a new ImageVersion in Amazon SageMaker\.  | February 25, 2021 | 
+| [New resource](AWS_EKS.md) | The following resource was added: AWS::EKS::Addon\. 
+
+ [AWS::EKS::Addon](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)   
+Use the `AWS::EKS::Addon` resource to create an Amazon EKS add\-on\.  | February 25, 2021 | 
+| [New resource](AWS_IAM.md) | The following resources were added: AWS::IAM::OIDCProvider, AWS::IAM::SAMLProvider, AWS::IAM::ServerCertificate, and AWS::IAM::VirtualMFADevice\. 
+
+ [AWS::IAM::OIDCProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html)   
+Use the `AWS::IAM::OIDCProvider` resource to create an IAM entity to describe an identity provider \(IdP\) that supports OpenID Connect \(OIDC\)\. 
+
+ [AWS::IAM::SAMLProvider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html)   
+Use the `AWS::IAM::SAMLProvider` resource to create an IAM resource that describes an identity provider \(IdP\) that supports SAML 2\.0\. 
+
+ [AWS::IAM::ServerCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html)   
+Use the `AWS::IAM::ServerCertificate` resource to retrieve information about the specified server certificate stored in IAM\. 
+
+ [AWS::IAM::VirtualMFADevice](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html)   
+Use the `AWS::IAM::VirtualMFADevice` resource to create a new virtual MFA device for the AWS account\.  | February 25, 2021 | 
+| [New attributes](AWS_Pinpoint.md) | The following paramters were added for 10DLC support: EntityId, TemplateId, OriginationNumber\. 
+
+ [AWS::Pinpoint::Campaign CampaignSmsMessage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignsmsmessage.html)   
+Specifies the content and settings for an SMS message that's sent to recipients of a campaign\.   | February 24, 2021 | 
 | [Updated resource](AWS_DynamoDB.md) | The following resource was updated: AWS::DynamoDB::Table 
 
  [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)   
@@ -144,7 +200,7 @@ Use this self\-service action feature to create CloudFormation templates that cr
 
  [ AWS::ServiceCatalog::ServiceActionAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html)   
 Use this self\-service action association feature to create CloudFormation templates that create Service Actions\.  | February 11, 2021 | 
-| [AWS CloudFormation StackSets Region availability](#ReleaseHistory) | AWS CloudFormation StackSets is now available in the Asia Pacific \(Osaka\-Local\) Region\.For more information, see [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\. | February 10, 2021 | 
+| [AWS CloudFormation StackSets Region availability](#ReleaseHistory) | AWS CloudFormation StackSets is now available in the Asia Pacific \(Osaka\) Region\.For more information, see [Working with AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\. | February 10, 2021 | 
 | [Updated resource](AWS_IoTAnalytics.md) | The following resource was updated: AWS::IoTAnalytics::Datastore\. 
 
  [ AWS::IoTAnalytics::Datastore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)   
@@ -153,7 +209,7 @@ You can use these properties to specify JSON or Parquet file format for your dat
 For more information, see [File formats](https://docs.aws.amazon.com/iotanalytics/latest/userguide/iotanalytics-schema.html) in the *AWS IoT Analytics User Guide*\.  | February 5, 2021 | 
 | [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::ReplicationConfiguration 
 
- [AWS::ECR::ReplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replication-configuration.html)   
+ [AWS::ECR::ReplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html)   
 Use the `ReplicationConfiguration` property to create or update the replication configuration for a private repository\.  | February 4, 2021 | 
 | [Updated resources](AWS_IoTWireless.md) | The following resources were updated: AWS::IoTWireless::DeviceProfile, AWS::IoTWireless::ServiceProfile, AWS::IoTWireless::WirelessDevice, and AWS::IoTWireless::WirelessGateway\. 
 
@@ -377,10 +433,6 @@ Use the `SpotMaintenanceStrategies` property to manage your Spot Instances that 
 
  [AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)   
 Use the `Throughput` property to specify the throughput that the volume supports, in MiB/s\.  | December 18, 2020 | 
-| [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::PublicRepository 
-
- [AWS::ECR::PublicRepository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-public-repository.html)   
-Use the `PublicRepository` property to create or update a public repository\.  | December 18, 2020 | 
 | [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::Service 
 
  [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)   
@@ -439,6 +491,10 @@ Use the `NetworkInsightsPath` property to specify a path to analyze for reachabi
 
  [AWS::EC2::NetworkInsightsAnalysis](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html)   
 Use the `NetworkInsightsAnalysis` property to specify a network insights analysis\.  | December 18, 2020 | 
+| [New resources](AWS_ECR.md) | The following resources were added: AWS::ECR::PublicRepository 
+
+ [AWS::ECR::PublicRepository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html)   
+Use the `PublicRepository` property to create or update a public repository\.  | December 18, 2020 | 
 | [New resources](AWS_LicenseManager.md) | The following resources were added: AWS::LicenseManager::Grant and AWS::LicenseManager::License\. 
 
  [AWS::LicenseManager::Grant](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)   
@@ -1463,6 +1519,10 @@ Use the `AWS::GroundStation::DataflowEndpointGroup` resource to specify a Datafl
 
  [AWS::GroundStation::MissionProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)   
 Use the `AWS::GroundStation::MissionProfile` resource to specify parameters and provide references to config objects to define how Ground Station lists and executes contacts\.  | February 27, 2020 | 
+| [Updated resource](AWS_ManagedBlockchain.md) | The following resource was updated: AWS::ManagedBlockchain::Node 
+
+ [AWS::ManagedBlockchain::Node](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ResourceName.html)   
+Use the `NodeConfiguration` property to create a node on an Ethereum network\.  | February 25, 2020 | 
 | [Updated resource](AWS_CodeBuild.md) | The following resources was updated: AWS::CodeBuild::Project 
 
  [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)   
@@ -1528,16 +1588,6 @@ Use the `Tags` property to add tag keys and values to an AWS OpsWorks for Chef A
 
  [AWS WAFv2](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_WAFv2.html)   
 Use the web ACL association to define an association between a Web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. For CloudFront distributions, you use AWS::CloudFront::Distribution to manage the association\.   | February 6, 2020 | 
-| [Updated resources](AWS_Pinpoint.md) | The following resources were updated: AWS::Pinpoint::EmailTemplate, AWS::Pinpoint::PushTemplate, and AWS::Pinpoint::SmsTemplate 
-
- [AWS::Pinpoint::EmailTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html)   
-Use the `DefaultSubstitutions` property to specify the default values to use for message variables in a message template\. Use the `TemplateDescription` property to specify a custom description of a message template\. 
-
- [AWS::Pinpoint::PushTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html)   
-Use the `DefaultSubstitutions` property to specify the default values to use for message variables in a message template\. Use the `TemplateDescription` property to specify a custom description of a message template\. 
-
- [AWS::Pinpoint::SmsTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html)   
-Use the `DefaultSubstitutions` property to specify the default values to use for message variables in a message template\. Use the `TemplateDescription` property to specify a custom description of a message template\.  | January 23, 2020 | 
 | [New resources](AWS_ACMPCA.md) | The following resources were added: AWS::ACMPCA::Certificate, AWS::ACMPCA::CertificateAuthority, AWS::ACMPCA::CertificateAuthorityActivation\. 
 
  [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
@@ -1932,7 +1982,7 @@ Use the `LogPublishingOptions` property to configure slow log publishing\.  | Oc
 
  [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
 In the [Target](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html) property type, use the `BatchParameters` property to specify the job definition, job name, and other parameters, if the event target is an AWS Batch job\.  | October 31, 2019 | 
-| [New resources](AWS_Pinpoint.md) | The following resources were added: AWS::Pinpoint::EmailTemplate, AWS::Pinpoint::PushTemplate, and AWS::Pinpoint::SmsTemplate 
+| [New resources](AWS_Pinpoint.md) | The following resources were added: AWS::Pinpoint::EmailTemplate, AWS::Pinpoint::PushTemplate, and AWS::Pinpoint::SmsTemplate\. 
 
  [AWS::Pinpoint::EmailTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html)   
 Use the `AWS::Pinpoint::EmailTemplate` resource to create a message template that you can use in messages that are sent through the email channel\. 
@@ -1980,7 +2030,7 @@ Use the `EventBusName` property to specify the name of the event bus to associat
 
  [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
 Use the `EventBusName` property to specify the name of the event bus to associate with this rule\.  | October 3, 2019 | 
-| [Updated resources](AWS_Pinpoint.md) | The following resources were updated: AWS::Pinpoint::App, AWS::Pinpoint::Campaign, and AWS::Pinpoint::Segment 
+| [Updated resources](AWS_Pinpoint.md) | The following resource was updated: AWS::Pinpoint::App, AWS::Pinpoint::Campaign, and AWS::Pinpoint::Segment\. 
 
  [AWS::Pinpoint::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html)   
 The `ARN` attribute returns the Amazon Resource Name \(ARN\) of the application\.  

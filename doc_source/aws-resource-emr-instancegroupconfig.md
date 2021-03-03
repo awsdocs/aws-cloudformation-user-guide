@@ -55,7 +55,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BidPrice`  <a name="cfn-emr-instancegroupconfig-bidprice"></a>
-The bid price for each EC2 Spot Instance type as defined by `InstanceType`\. Expressed in USD\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.  
+The bid price for each EC2 Spot Instance type as defined by `InstanceType`\. Expressed in USD\. If `BidPrice` is not provided, Amazon EMR assumes the On\-Demand purchasing option\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -84,9 +84,9 @@ Target number of instances for the instance group\.
 
 `InstanceRole`  <a name="cfn-emr-instancegroupconfig-instancerole"></a>
 The role of the instance group in the cluster\.  
+*Allowed Values*: TASK  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-emr-instancegroupconfig-instancetype"></a>

@@ -2,6 +2,8 @@
 
 The settings for the CDN of an HLS output\.
 
+The parent of this entity is HlsGroupSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-hlscdnsettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

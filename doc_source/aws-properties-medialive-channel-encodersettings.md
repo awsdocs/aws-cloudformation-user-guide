@@ -86,7 +86,7 @@ The encoding information for output captions\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FeatureActivations`  <a name="cfn-medialive-channel-encodersettings-featureactivations"></a>
-Feature Activations  
+Settings to enable specific features\.   
 *Required*: No  
 *Type*: [FeatureActivations](aws-properties-medialive-channel-featureactivations.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,7 +98,7 @@ The configuration settings that apply to the entire channel\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NielsenConfiguration`  <a name="cfn-medialive-channel-encodersettings-nielsenconfiguration"></a>
-Nielsen configuration settings\.  
+The settings to configure Nielsen watermarks\.  
 *Required*: No  
 *Type*: [NielsenConfiguration](aws-properties-medialive-channel-nielsenconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

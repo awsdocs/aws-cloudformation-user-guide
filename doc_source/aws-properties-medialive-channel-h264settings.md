@@ -143,7 +143,7 @@ Includes color space metadata in the output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColorSpaceSettings`  <a name="cfn-medialive-channel-h264settings-colorspacesettings"></a>
-Color Space settings  
+Settings to configure the color space handling for the video\.  
 *Required*: No  
 *Type*: [H264ColorSpaceSettings](aws-properties-medialive-channel-h264colorspacesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

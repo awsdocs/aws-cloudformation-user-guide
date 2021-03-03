@@ -1,6 +1,6 @@
 # AWS::DataBrew::Job CsvOutputOptions<a name="aws-properties-databrew-job-csvoutputoptions"></a>
 
-Options that define how DataBrew will write a Csv file\.
+Represents a set of options that define how DataBrew will write a comma\-separated value \(CSV\) file\.
 
 ## Syntax<a name="aws-properties-databrew-job-csvoutputoptions-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-databrew-job-csvoutputoptions-properties"></a>
 
 `Delimiter`  <a name="cfn-databrew-job-csvoutputoptions-delimiter"></a>
-A single character that specifies the delimiter used to create Csv job output\.  
+A single character that specifies the delimiter used to create CSV job output\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

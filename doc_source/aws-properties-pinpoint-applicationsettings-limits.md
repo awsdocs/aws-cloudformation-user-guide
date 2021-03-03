@@ -1,6 +1,6 @@
 # AWS::Pinpoint::ApplicationSettings Limits<a name="aws-properties-pinpoint-applicationsettings-limits"></a>
 
-Specifies the default sending limits for campaigns in the application\. You can override these limits for a specific campaign\.
+Specifies the default sending limits for campaigns in the application\.
 
 ## Syntax<a name="aws-properties-pinpoint-applicationsettings-limits-syntax"></a>
 

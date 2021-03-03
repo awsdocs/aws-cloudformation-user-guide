@@ -84,9 +84,6 @@ The ID of the project\. This ID is prepended to all entities associated with thi
 `ProjectStatus`  <a name="ProjectStatus-fn::getatt"></a>
 The status of the project\.
 
-`ServiceCatalogProvisionedProductDetails`  <a name="ServiceCatalogProvisionedProductDetails-fn::getatt"></a>
-The product ID and status message of the projet as a service catalog provisioned product\. For information, see [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)\.
-
 ## Examples<a name="aws-resource-sagemaker-project--examples"></a>
 
 ### SageMaker Project Example<a name="aws-resource-sagemaker-project--examples--SageMaker_Project_Example"></a>

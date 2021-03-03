@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-projectsourceversion-properties"></a>
 
 `SourceIdentifier`  <a name="cfn-codebuild-project-projectsourceversion-sourceidentifier"></a>
-An identifier for a source in the build project\.  
+An identifier for a source in the build project\. The identifier can only contain alphanumeric characters and underscores, and must be less than 128 characters in length\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

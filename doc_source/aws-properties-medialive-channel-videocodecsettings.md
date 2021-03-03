@@ -47,13 +47,13 @@ The settings for the H\.264 codec in the output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `H265Settings`  <a name="cfn-medialive-channel-videocodecsettings-h265settings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for video encoded with the H265 codec\.  
 *Required*: No  
 *Type*: [H265Settings](aws-properties-medialive-channel-h265settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mpeg2Settings`  <a name="cfn-medialive-channel-videocodecsettings-mpeg2settings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for video encoded with the MPEG\-2 codec\.  
 *Required*: No  
 *Type*: [Mpeg2Settings](aws-properties-medialive-channel-mpeg2settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

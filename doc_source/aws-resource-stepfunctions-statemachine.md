@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::StateMachine",
   "Properties" : {
+      "[Definition](#cfn-stepfunctions-statemachine-definition)" : Definition,
       "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
       "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : {Key : Value, ...},
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::StepFunctions::StateMachine
 Properties: 
+  [Definition](#cfn-stepfunctions-statemachine-definition): 
+    Definition
   [DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location): 
     S3Location
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
@@ -48,6 +51,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
+
+`Definition`  <a name="cfn-stepfunctions-statemachine-definition"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [Definition](aws-properties-stepfunctions-statemachine-definition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefinitionS3Location`  <a name="cfn-stepfunctions-statemachine-definitions3location"></a>
 The name of the S3 bucket where the state machine definition is stored\. The state machine definition must be a JSON file\.  

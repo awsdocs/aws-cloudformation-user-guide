@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DatasetName](#cfn-databrew-job-datasetname)" : String,
       "[EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn)" : String,
       "[EncryptionMode](#cfn-databrew-job-encryptionmode)" : String,
+      "[JobSample](#cfn-databrew-job-jobsample)" : Json,
       "[LogSubscription](#cfn-databrew-job-logsubscription)" : String,
       "[MaxCapacity](#cfn-databrew-job-maxcapacity)" : Integer,
       "[MaxRetries](#cfn-databrew-job-maxretries)" : Integer,
@@ -39,6 +40,7 @@ Properties:
   [DatasetName](#cfn-databrew-job-datasetname): String
   [EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn): String
   [EncryptionMode](#cfn-databrew-job-encryptionmode): String
+  [JobSample](#cfn-databrew-job-jobsample): Json
   [LogSubscription](#cfn-databrew-job-logsubscription): String
   [MaxCapacity](#cfn-databrew-job-maxcapacity): Integer
   [MaxRetries](#cfn-databrew-job-maxretries): Integer
@@ -75,11 +77,17 @@ The Amazon Resource Name \(ARN\) of an encryption key that is used to protect th
 
 `EncryptionMode`  <a name="cfn-databrew-job-encryptionmode"></a>
 The encryption mode for the job, which can be one of the following:  
-+  `SSE-KMS` \- Server\-side encryption with AWS KMS\-managed keys\.
++  `SSE-KMS` \- Server\-side encryption with keys managed by AWS KMS\.
 +  `SSE-S3` \- Server\-side encryption with keys managed by Amazon S3\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `SSE-KMS | SSE-S3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`JobSample`  <a name="cfn-databrew-job-jobsample"></a>
+A sample configuration for profile jobs only, which determines the number of rows on which the profile job is run\. If a `JobSample` value isn't provided, the default value is used\. The default value is CUSTOM\_ROWS for the mode parameter and 20,000 for the size parameter\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogSubscription`  <a name="cfn-databrew-job-logsubscription"></a>
@@ -137,7 +145,7 @@ A series of data transformation steps that the job runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-databrew-job-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the role that will be assumed for this job\.  
+The Amazon Resource Name \(ARN\) of the role to be assumed for this job\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

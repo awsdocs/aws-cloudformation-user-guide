@@ -222,12 +222,10 @@ A value that indicates whether minor engine upgrades are applied automatically t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-rds-dbinstance-availabilityzone"></a>
- The Availability Zone \(AZ\) where the database will be created\. For information on AWS Regions and Availability Zones, see [Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\.   
-Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
+The Availability Zone that the database instance will be created in\.  
+Default: A random, system\-chosen Availability Zone in the endpoint's region\.  
  Example: `us-east-1d`   
- Constraint: The `AvailabilityZone` parameter can't be specified if the DB instance is a Multi\-AZ deployment\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.   
-If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom Availability Zone to create the DB instance in\.  
-For more information about RDS on VMware, see the [ RDS on VMware User Guide\.](https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html) 
+ Constraint: The AvailabilityZone parameter cannot be specified if the MultiAZ parameter is set to `true`\. The specified Availability Zone must be in the same region as the current endpoint\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -342,7 +340,7 @@ If any of the data members of the referenced parameter group are changed during 
 
 `DBSecurityGroups`  <a name="cfn-rds-dbinstance-dbsecuritygroups"></a>
 A list of the DB security groups to assign to the DB instance\. The list can include both the name of existing DB security groups or references to AWS::RDS::DBSecurityGroup resources created in the template\.  
- If you set DBSecurityGroups, you must not set VPCSecurityGroups, and vice versa\. Also, note that the EC2VpcId property exists only for backwards compatibility with older regions and is no longer recommended for providing security information to an RDS DB instance\. Instead, use VPCSecurityGroups\.  
+ If you set DBSecurityGroups, you must not set VPCSecurityGroups, and vice versa\. Also, note that the DBSecurityGroups property exists only for backwards compatibility with older regions and is no longer recommended for providing security information to an RDS DB instance\. Instead, use VPCSecurityGroups\.  
 If you specify this property, AWS CloudFormation sends only the following properties \(if specified\) to Amazon RDS during create operations:  
 + `AllocatedStorage`
 + `AutoMinorVersionUpgrade`

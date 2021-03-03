@@ -51,10 +51,10 @@ The unique identifier of the EMR cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceFleetType`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleettype"></a>
-The node type that the instance fleet hosts\. Valid values are MASTER,CORE,and TASK\.  
+The node type that the instance fleet hosts\.  
+*Allowed Values*: TASK  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs"></a>

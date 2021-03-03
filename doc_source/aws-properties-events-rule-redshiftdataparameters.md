@@ -38,7 +38,7 @@ The name of the database\. Required when authenticating using temporary credenti
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Pattern*: `([a-zA-Z0-9]+)|(\$(\.[\w_-]+(\[(\d+|\*)\])*)*)`  
+*Pattern*: `([a-zA-Z0-9_+.-@]+)|(\$(\.[\w_-]+(\[(\d+|\*)\])*)*)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DbUser`  <a name="cfn-events-rule-redshiftdataparameters-dbuser"></a>
@@ -47,7 +47,7 @@ The database user name\. Required when authenticating using temporary credential
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `([a-zA-Z0-9]+)|(\$(\.[\w_-]+(\[(\d+|\*)\])*)*)`  
+*Pattern*: `([a-zA-Z0-9_+.-@]+)|(\$(\.[\w_-]+(\[(\d+|\*)\])*)*)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretManagerArn`  <a name="cfn-events-rule-redshiftdataparameters-secretmanagerarn"></a>

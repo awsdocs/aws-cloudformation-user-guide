@@ -2,6 +2,14 @@
 
 The details of the sources of the flow\.
 
+If you are creating a flow with a VPC source, you must first create the flow with a temporary standard source by doing the following:
+
+1. Use CloudFormation to create a flow with a standard source that uses the flow’s public IP address\.
+
+1. Use CloudFormation to create the VPC interface to add to this flow\. This can also be done as part of the previous step\.
+
+1. After CloudFormation has created the flow and the VPC interface, update the source to point to the VPC interface that you created\.
+
 ## Syntax<a name="aws-properties-mediaconnect-flow-source-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AutomaticFailoverEnabled](#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)" : Boolean,
       "[CacheNodeType](#cfn-elasticache-globalreplicationgroup-cachenodetype)" : String,
+      "[CacheParameterGroupName](#cfn-elasticache-globalreplicationgroup-cacheparametergroupname)" : String,
       "[EngineVersion](#cfn-elasticache-globalreplicationgroup-engineversion)" : String,
       "[GlobalNodeGroupCount](#cfn-elasticache-globalreplicationgroup-globalnodegroupcount)" : Integer,
       "[GlobalReplicationGroupDescription](#cfn-elasticache-globalreplicationgroup-globalreplicationgroupdescription)" : String,
@@ -32,6 +33,7 @@ Type: AWS::ElastiCache::GlobalReplicationGroup
 Properties: 
   [AutomaticFailoverEnabled](#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled): Boolean
   [CacheNodeType](#cfn-elasticache-globalreplicationgroup-cachenodetype): String
+  [CacheParameterGroupName](#cfn-elasticache-globalreplicationgroup-cacheparametergroupname): String
   [EngineVersion](#cfn-elasticache-globalreplicationgroup-engineversion): String
   [GlobalNodeGroupCount](#cfn-elasticache-globalreplicationgroup-globalnodegroupcount): Integer
   [GlobalReplicationGroupDescription](#cfn-elasticache-globalreplicationgroup-globalreplicationgroupdescription): String
@@ -53,6 +55,12 @@ Specifies whether a read\-only replica is automatically promoted to read/write p
 
 `CacheNodeType`  <a name="cfn-elasticache-globalreplicationgroup-cachenodetype"></a>
 The cache node type of the Global Datastore  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CacheParameterGroupName`  <a name="cfn-elasticache-globalreplicationgroup-cacheparametergroupname"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

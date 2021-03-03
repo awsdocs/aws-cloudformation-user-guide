@@ -58,13 +58,13 @@ Properties:
 ## Properties<a name="aws-properties-ec2-security-group-ingress-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-ingress-cidrip"></a>
-The IPv4 ranges\.  
+The IPv4 address range, in CIDR format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CidrIpv6`  <a name="cfn-ec2-security-group-ingress-cidripv6"></a>
-\[VPC only\] The IPv6 ranges\.  
+The IPv6 address range, in CIDR format\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

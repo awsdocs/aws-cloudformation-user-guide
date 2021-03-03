@@ -67,7 +67,8 @@ The instance profile of the infrastructure configuration\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `256`  
+*Pattern*: `^[\w+=,.@-]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceTypes`  <a name="cfn-imagebuilder-infrastructureconfiguration-instancetypes"></a>

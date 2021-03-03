@@ -38,7 +38,7 @@ The settings for an audio\-only output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Fmp4HlsSettings`  <a name="cfn-medialive-channel-hlssettings-fmp4hlssettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The settings for an fMP4 container\.  
 *Required*: No  
 *Type*: [Fmp4HlsSettings](aws-properties-medialive-channel-fmp4hlssettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

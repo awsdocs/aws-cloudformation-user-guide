@@ -2,6 +2,8 @@
 
 Settings for one failover condition\.
 
+The parent of this entity is FailoverCondition\.
+
 ## Syntax<a name="aws-properties-medialive-channel-failoverconditionsettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

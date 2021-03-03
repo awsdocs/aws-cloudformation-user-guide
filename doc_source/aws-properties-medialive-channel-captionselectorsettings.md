@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-captionselectorsettings-properties"></a>
 
 `AncillarySourceSettings`  <a name="cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings"></a>
-Not currently supported by AWS CloudFormation\.  
+ Information about the ancillary captions to extract from the input\.   
 *Required*: No  
 *Type*: [AncillarySourceSettings](aws-properties-medialive-channel-ancillarysourcesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

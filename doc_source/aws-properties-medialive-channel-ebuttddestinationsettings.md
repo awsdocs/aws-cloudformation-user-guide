@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel EbuTtDDestinationSettings<a name="aws-properties-medialive-channel-ebuttddestinationsettings"></a>
 
-Ebu Tt DDestination Settings
+Settings for EBU\-TT captions in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-ebuttddestinationsettings-syntax"></a>
 

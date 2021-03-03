@@ -180,9 +180,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `CloudformationStackArn`  <a name="CloudformationStackArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\.
 
-`Outputs`  <a name="Outputs-fn::getatt"></a>
-The output of the product you are provisioning\. For example, the DNS of an EC2 instance\.
-
 `ProvisionedProductId`  <a name="ProvisionedProductId-fn::getatt"></a>
 The ID of the provisioned product\.
 

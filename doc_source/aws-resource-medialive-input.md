@@ -54,13 +54,13 @@ Properties:
 ## Properties<a name="aws-resource-medialive-input-properties"></a>
 
 `Destinations`  <a name="cfn-medialive-input-destinations"></a>
-The destination settings for push types of inputs\. If the input is a pull type, these settings don't apply\.   
+Settings that apply only if the input is a push type of input\.  
 *Required*: No  
 *Type*: List of [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputDevices`  <a name="cfn-medialive-input-inputdevices"></a>
-Settings for the devices\.  
+Settings that apply only if the input is an Elemental Link input\.  
 *Required*: No  
 *Type*: List of [InputDeviceSettings](aws-properties-medialive-input-inputdevicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,7 @@ The IAM role for MediaLive to assume when creating a MediaConnect input or Amazo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-medialive-input-sources"></a>
-The source settings for a pull type of input\. These settings don't apply if the input is a push type\.   
+Settings that apply only if the input is a pull type of input\.   
 *Required*: No  
 *Type*: List of [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -108,7 +108,7 @@ The type for this input\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Vpc`  <a name="cfn-medialive-input-vpc"></a>
-Settings that apply only if the input is an Amazon VPC input\.   
+Settings that apply only if the input is an push input where the source is on Amazon VPC\.   
 *Required*: No  
 *Type*: [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

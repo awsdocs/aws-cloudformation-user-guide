@@ -4,6 +4,14 @@ The AWS::MediaConnect::FlowVpcInterface resource is a connection between your AW
 
 To avoid streaming your content over the public internet, you can add up to two VPC interfaces to your flow and use those connections to transfer content between your VPC and MediaConnect\.
 
+You can update an existing flow to add a VPC interface\. If you haven’t created the flow yet, you must create the flow with a temporary standard source by doing the following:
+
+1. Use CloudFormation to create a flow with a standard source that uses to the flow’s public IP address\.
+
+1. Use CloudFormation to create a VPC interface to add to this flow\. This can also be done as part of the previous step\.
+
+1. After CloudFormation has created the flow and the VPC interface, update the source to point to the VPC interface that you created\.
+
 ## Syntax<a name="aws-resource-mediaconnect-flowvpcinterface-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

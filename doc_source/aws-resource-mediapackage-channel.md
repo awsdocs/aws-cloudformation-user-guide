@@ -62,6 +62,3 @@ The tags to assign to the channel\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The channel's unique system\-generated resource name, based on the AWS record\.
-
-`HlsIngest`  <a name="HlsIngest-fn::getatt"></a>
-System\-generated information about the channel\.

@@ -2,7 +2,7 @@
 
 Specifies a route in a route table within a VPC\.
 
-You must specify one of the following targets: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, `TransitGatewayId`, or `VpcPeeringConnectionId`\.
+You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock`, plus the ID of one of the target resources\.
 
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
@@ -61,14 +61,12 @@ The ID of the carrier gateway\.
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

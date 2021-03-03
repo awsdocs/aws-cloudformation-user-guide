@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel VideoBlackFailoverSettings<a name="aws-properties-medialive-channel-videoblackfailoversettings"></a>
 
-<a name="aws-properties-medialive-channel-videoblackfailoversettings-description"></a>The `VideoBlackFailoverSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+MediaLive will perform a failover if content is considered black for the specified period\.
+
+The parent of this entity is FailoverConditionSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-videoblackfailoversettings-syntax"></a>
 

@@ -94,7 +94,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53resolver-resolverendpoint-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
 
 `Direction`  <a name="Direction-fn::getatt"></a>
 Indicates whether the resolver endpoint allows inbound or outbound DNS queries\.

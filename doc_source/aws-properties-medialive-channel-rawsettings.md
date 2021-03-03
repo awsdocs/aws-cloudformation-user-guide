@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel RawSettings<a name="aws-properties-medialive-channel-rawsettings"></a>
 
-Raw Settings
+The container for WAV audio in the output group\.
+
+The parent of this entity is ArchiveContainerSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-rawsettings-syntax"></a>
 

@@ -4,8 +4,6 @@ Creates a node on the specified blockchain network\.
 
 Applies to Hyperledger Fabric and Ethereum\.
 
-Ethereum on Managed Blockchain is in preview release and is subject to change\.
-
 ## Syntax<a name="aws-resource-managedblockchain-node-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -37,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-managedblockchain-node-properties"></a>
 
 `MemberId`  <a name="cfn-managedblockchain-node-memberid"></a>
-The unique identifier of the member to which the node belongs\.  
+The unique identifier of the member to which the node belongs\. Applies only to Hyperledger Fabric\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -74,7 +72,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the node\.
 
 `MemberId`  <a name="MemberId-fn::getatt"></a>
-The unique identifier of the member in which the node is created\.
+The unique identifier of the member in which the node is created\. Applies only to Hyperledger Fabric\.
 
 `NetworkId`  <a name="NetworkId-fn::getatt"></a>
 The unique identifier of the network that the node is in\.
@@ -86,14 +84,70 @@ The unique identifier of the node\.
 
 
 
-### Create a Peer Node in a Member<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member"></a>
+### Create a node on an Ethereum network<a name="aws-resource-managedblockchain-node--examples--Create_a_node_on_an_Ethereum_network"></a>
 
 
 
-#### YAML<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member--yaml"></a>
+#### YAML<a name="aws-resource-managedblockchain-node--examples--Create_a_node_on_an_Ethereum_network--yaml"></a>
 
 ```
-Description: "Basic Node template"
+Description: "Basic Ethereum node template"
+Parameters:
+  NetworkId:
+    Type: String
+  InstanceType:
+    Type: String
+  AvailabilityZone: 
+    Type: String
+Resources:
+  Node:
+    Type: "AWS::ManagedBlockchain::Node"
+    Properties:
+      NetworkId: !Ref NetworkId
+      NodeConfiguration:
+        InstanceType: !Ref InstanceType
+        AvailabilityZone: !Ref AvailabilityZone
+```
+
+#### JSON<a name="aws-resource-managedblockchain-node--examples--Create_a_node_on_an_Ethereum_network--json"></a>
+
+```
+{
+    "Description": "Basic Ethereum node template",
+    "Parameters": {
+        "NetworkId": {
+            "Type": "String"
+        },
+        "InstanceType": {
+            "Type": "String"
+        },
+        "AvailabilityZone": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "Node": {
+            "Type": "AWS::ManagedBlockchain::Node",
+            "Properties": {
+                "NetworkId": "NetworkId",
+                "NodeConfiguration": {
+                    "InstanceType": "InstanceType",
+                    "AvailabilityZone": "AvailabilityZone"
+                }
+            }
+        }
+    }
+}
+```
+
+### Create a node in a Hyperledger Fabric network member<a name="aws-resource-managedblockchain-node--examples--Create_a_node_in_a_Hyperledger_Fabric_network_member"></a>
+
+
+
+#### YAML<a name="aws-resource-managedblockchain-node--examples--Create_a_node_in_a_Hyperledger_Fabric_network_member--yaml"></a>
+
+```
+Description: "Basic Hyperledger Fabric node template"
 Parameters:
   NetworkId:
     Type: String
@@ -115,11 +169,11 @@ Resources:
         AvailabilityZone: !Ref AvailabilityZone
 ```
 
-#### JSON<a name="aws-resource-managedblockchain-node--examples--Create_a_Peer_Node_in_a_Member--json"></a>
+#### JSON<a name="aws-resource-managedblockchain-node--examples--Create_a_node_in_a_Hyperledger_Fabric_network_member--json"></a>
 
 ```
 {
-  "Description": "Basic Node template",
+  "Description": "Basic Hyperledger Fabric node template",
   "Parameters": {
     "NetworkId": {
       "Type": "String"

@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-databrew-dataset-properties"></a>
 
 `FormatOptions`  <a name="cfn-databrew-dataset-formatoptions"></a>
-Options that define how DataBrew interprets the data in the dataset\.  
+A set of options that define how DataBrew interprets the data in the dataset\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

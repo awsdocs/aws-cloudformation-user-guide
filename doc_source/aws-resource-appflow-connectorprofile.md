@@ -64,7 +64,7 @@ Properties:
  The type of connector, such as Salesforce, Amplitude, and so on\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Amplitude | Datadog | Dynatrace | EventBridge | Googleanalytics | Infornexus | Marketo | Redshift | S3 | Salesforce | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
+*Allowed values*: `Amplitude | CustomerProfiles | Datadog | Dynatrace | EventBridge | Googleanalytics | Honeycode | Infornexus | LookoutMetrics | Marketo | Redshift | S3 | Salesforce | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KMSArn`  <a name="cfn-appflow-connectorprofile-kmsarn"></a>

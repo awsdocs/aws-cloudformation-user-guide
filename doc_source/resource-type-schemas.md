@@ -20,7 +20,7 @@ To learn more about resource provider schemas, including schema format and defin
 |  Africa \(Cape Town\)  |  [af\-south\-1](https://schema.cloudformation.af-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Hong Kong\)  |  [ap\-east\-1](https://schema.cloudformation.ap-east-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Mumbai\)  |  [ap\-south\-1](https://schema.cloudformation.ap-south-1.amazonaws.com/CloudformationSchema.zip)  | 
-|  Asia Pacific \(Osaka\-Local\)  |  [ap\-northeast\-3](https://schema.cloudformation.ap-northeast-3.amazonaws.com/CloudformationSchema.zip)  | 
+|  Asia Pacific \(Osaka\)  |  [ap\-northeast\-3](https://schema.cloudformation.ap-northeast-3.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Seoul\)  |  [ap\-northeast\-2](https://schema.cloudformation.ap-northeast-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Singapore\)  |  [ap\-southeast\-1](https://schema.cloudformation.ap-southeast-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Sydney\)  |  [ap\-southeast\-2](https://schema.cloudformation.ap-southeast-2.amazonaws.com/CloudformationSchema.zip)  | 

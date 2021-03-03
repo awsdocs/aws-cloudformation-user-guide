@@ -56,7 +56,7 @@ Properties:
 ## Properties<a name="aws-resource-medialive-channel-properties"></a>
 
 `CdiInputSpecification`  <a name="cfn-medialive-channel-cdiinputspecification"></a>
-Specification of CDI inputs for this channel  
+Specification of CDI inputs for this channel\.  
 *Required*: No  
 *Type*: [CdiInputSpecification](aws-properties-medialive-channel-cdiinputspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

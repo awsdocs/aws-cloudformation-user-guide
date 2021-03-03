@@ -137,6 +137,3 @@ Not currently supported by AWS CloudFormation\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.
-
-`Version`  <a name="Version-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.

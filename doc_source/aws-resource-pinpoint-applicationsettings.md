@@ -1,6 +1,6 @@
 # AWS::Pinpoint::ApplicationSettings<a name="aws-resource-pinpoint-applicationsettings"></a>
 
-The AWS::Pinpoint::ApplicationSettings resource defines the default settings for an Amazon Pinpoint application\. In Amazon Pinpoint, an *application* \(also referred to as an *app* or *project*\) is a collection of related settings, customer information, segments, and campaigns, and other types of Amazon Pinpoint resources\.
+Specifies the settings for an Amazon Pinpoint application\. In Amazon Pinpoint, an *application* \(also referred to as an *app* or *project*\) is a collection of related settings, customer information, segments, and campaigns, and other types of Amazon Pinpoint resources\.
 
 ## Syntax<a name="aws-resource-pinpoint-applicationsettings-syntax"></a>
 
@@ -45,7 +45,7 @@ The unique identifier for the Amazon Pinpoint application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CampaignHook`  <a name="cfn-pinpoint-applicationsettings-campaignhook"></a>
-The settings for the AWS Lambda function to use by default as a code hook for campaigns in the application\. You can override these settings for a specific campaign\.  
+The settings for the AWS Lambda function to use by default as a code hook for campaigns in the application\. To override these settings for a specific campaign, use the Campaign resource to define custom Lambda function settings for the campaign\.  
 *Required*: No  
 *Type*: [CampaignHook](aws-properties-pinpoint-applicationsettings-campaignhook.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,18 +57,18 @@ Specifies whether to enable application\-related alarms in Amazon CloudWatch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Limits`  <a name="cfn-pinpoint-applicationsettings-limits"></a>
-The default sending limits for campaigns in the application\. You can override these limits for a specific campaign\.  
+The default sending limits for campaigns in the application\. To override these limits for a specific campaign, use the Campaign resource to define custom limits for the campaign\.  
 *Required*: No  
 *Type*: [Limits](aws-properties-pinpoint-applicationsettings-limits.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QuietTime`  <a name="cfn-pinpoint-applicationsettings-quiettime"></a>
-The default quiet time for campaigns and journeys in the application\. Quiet time is a specific time range when messages aren't sent to endpoints, if all the following conditions are met:  
-+ The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value\.
-+ The current time in the endpoint's time zone is later than or equal to the time specified by the `QuietTime.Start` property for the application \(or a campaign or journey that has custom quiet time settings\)\.
-+ The current time in the endpoint's time zone is earlier than or equal to the time specified by the `QuietTime.End` property for the application \(or a campaign or journey that has custom quiet time settings\)\.
-If any of the preceding conditions isn't met, the endpoint will receive messages from a campaign or journey, even if quiet time is enabled\.  
-You can override the default quiet time settings for a specific campaign or journey\.  
+The default quiet time for campaigns in the application\. Quiet time is a specific time range when campaigns don't send messages to endpoints, if all the following conditions are met:  
+\- The `EndpointDemographic.Timezone` property of the endpoint is set to a valid value\.  
+\- The current time in the endpoint's time zone is later than or equal to the time specified by the `QuietTime.Start` property for the application \(or a campaign that has custom quiet time settings\)\.  
+\- The current time in the endpoint's time zone is earlier than or equal to the time specified by the `QuietTime.End` property for the application \(or a campaign that has custom quiet time settings\)\.  
+If any of the preceding conditions isn't met, the endpoint will receive messages from a campaign, even if quiet time is enabled\.  
+To override the default quiet time settings for a specific campaign, use the Campaign resource to define a custom quiet time for the campaign\.  
 *Required*: No  
 *Type*: [QuietTime](aws-properties-pinpoint-applicationsettings-quiettime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

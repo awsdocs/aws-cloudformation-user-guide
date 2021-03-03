@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel Mpeg2Settings<a name="aws-properties-medialive-channel-mpeg2settings"></a>
 
-Mpeg2 Settings
+The settings for the MPEG\-2 codec in the output\.
+
+The parent of this entity is VideoCodecSetting\.
 
 ## Syntax<a name="aws-properties-medialive-channel-mpeg2settings-syntax"></a>
 

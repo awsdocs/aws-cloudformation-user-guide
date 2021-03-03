@@ -55,7 +55,7 @@ The name of the main class in the specified Java file\. If not specified, the JA
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StepProperties`  <a name="cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties"></a>
-A list of Java properties that are set when the step runs\. You can use these properties to pass key value pairs to your main function\.  
+A list of Java properties that are set when the step runs\. You can use these properties to pass key\-value pairs to your main function\.  
 *Required*: No  
 *Type*: List of [KeyValue](aws-properties-elasticmapreduce-cluster-keyvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

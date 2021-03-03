@@ -121,6 +121,3 @@ Not currently supported by AWS CloudFormation\.
 
 `Type`  <a name="Type-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.
-
-`Version`  <a name="Version-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.

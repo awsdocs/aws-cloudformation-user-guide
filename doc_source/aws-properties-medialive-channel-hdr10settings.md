@@ -2,6 +2,8 @@
 
 Hdr10 Settings
 
+The parent of this entity is H265ColorSpaceSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-hdr10settings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

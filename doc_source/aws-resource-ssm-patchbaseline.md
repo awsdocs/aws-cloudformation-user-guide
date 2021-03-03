@@ -75,7 +75,7 @@ For information about accepted formats for lists of approved patches and rejecte
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApprovedPatchesComplianceLevel`  <a name="cfn-ssm-patchbaseline-approvedpatchescompliancelevel"></a>
-Defines the compliance level for approved patches\. This means that if an approved patch is reported as missing, this is the severity of the compliance violation\. The default value is UNSPECIFIED\.  
+Defines the compliance level for approved patches\. When an approved patch is reported as missing, this value describes the severity of the compliance violation\. The default value is UNSPECIFIED\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `CRITICAL | HIGH | INFORMATIONAL | LOW | MEDIUM | UNSPECIFIED`  

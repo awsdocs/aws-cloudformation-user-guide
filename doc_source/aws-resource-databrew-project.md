@@ -71,7 +71,7 @@ The Amazon Resource Name \(ARN\) of the role that will be assumed for this proje
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sample`  <a name="cfn-databrew-project-sample"></a>
-The sample size and sampling type to apply to the data\. If this parameter isn't specified, then the sample will consiste of the first 500 rows from the dataset\.  
+The sample size and sampling type to apply to the data\. If this parameter isn't specified, then the sample consists of the first 500 rows from the dataset\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

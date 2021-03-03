@@ -37,7 +37,7 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 
 Not all features of CloudFormation may be available in every region\. For more information on AWS regions, see [Global infrastructure Region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
 + [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following Region:
-  + Asia Pacific \(Osaka\-Local\)
+  + Asia Pacific \(Osaka\)
 + [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following regions:
   + Africa \(Cape Town\)
   + Asia Pacific \(Osaka\)
