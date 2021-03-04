@@ -309,6 +309,7 @@ The following example creates a trail that logs events in all regions, an Amazon
                 },
                 "IsLogging": true,
                 "IsMultiRegionTrail": true
+                "IncludeGlobalServiceEvents": true
             }
         }
     }
@@ -394,4 +395,5 @@ The following example creates a trail that logs events in all regions, an Amazon
             - TopicName
         IsLogging: true
         IsMultiRegionTrail: true
+        IncludeGlobalServiceEvents: true
 ```
