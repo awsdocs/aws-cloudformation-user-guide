@@ -6,7 +6,7 @@ You set the package type to `Image` if the deployment package is a [container im
 
 You set the package type to `Zip` if the deployment package is a [\.zip file archive](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip)\. For a \.zip file archive, the code property specifies the location of the \.zip file\. You must also specify the handler and runtime properties\.
 
-You can use code signing if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with UpdateFunctionCode, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes set set of signing profiles, which define the trusted publishers for this function\.
+You can use code signing if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with UpdateFunctionCode, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes set of signing profiles, which define the trusted publishers for this function\.
 
 ## Syntax<a name="aws-resource-lambda-function-syntax"></a>
 
