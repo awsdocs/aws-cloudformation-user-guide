@@ -143,21 +143,21 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
 #### JSON<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--json"></a>
 
 ```
-"S3Endpoint" : {
-   "Type" : "AWS::EC2::VPCEndpoint",
-   "Properties" : {
-      "PolicyDocument" : {
-         "Version":"2012-10-17",
-         "Statement":[{
-            "Effect":"Allow",
-            "Principal": "*",
-            "Action":["s3:GetObject"],
-            "Resource":["arn:aws:s3:::examplebucket/*"]
-         }]
-       },
-       "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-       "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
-       "VpcId" : {"Ref" : "VPCID"}
+"S3Endpoint": {
+    "Type": "AWS::EC2::VPCEndpoint",
+    "Properties": {
+        "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [{
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": ["s3:GetObject"],
+                "Resource": ["arn:aws:s3:::examplebucket/*"]
+             }]
+        },
+        "RouteTableIds": [ {"Ref": "routetableA"}, {"Ref": "routetableB"} ],
+        "ServiceName": { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
+        "VpcId" : {"Ref": "VPCID"}
     }
 }
 ```
