@@ -154,11 +154,11 @@ The following example specifies a VPC endpoint that allows only the s3:GetObject
             "Action":["s3:GetObject"],
             "Resource":["arn:aws:s3:::examplebucket/*"]
          }]
-   },
-   "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-   "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
-   "VpcId" : {"Ref" : "VPCID"}
- }
+       },
+       "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
+       "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
+       "VpcId" : {"Ref" : "VPCID"}
+    }
 }
 ```
 
