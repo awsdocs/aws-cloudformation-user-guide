@@ -12,7 +12,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Job",
   "Properties" : {
-      "[AllocatedCapacity](#cfn-glue-job-allocatedcapacity)" : Double,
       "[Command](#cfn-glue-job-command)" : JobCommand,
       "[Connections](#cfn-glue-job-connections)" : ConnectionsList,
       "[DefaultArguments](#cfn-glue-job-defaultarguments)" : Json,
@@ -39,7 +38,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Glue::Job
 Properties: 
-  [AllocatedCapacity](#cfn-glue-job-allocatedcapacity): Double
   [Command](#cfn-glue-job-command): 
     JobCommand
   [Connections](#cfn-glue-job-connections): 
@@ -64,12 +62,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-glue-job-properties"></a>
-
-`AllocatedCapacity`  <a name="cfn-glue-job-allocatedcapacity"></a>
-The number of capacity units that are allocated to this job\.  
-*Required*: No  
-*Type*: Double  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Command`  <a name="cfn-glue-job-command"></a>
 The code that executes a job\.  
