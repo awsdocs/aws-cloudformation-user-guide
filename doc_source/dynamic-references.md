@@ -287,7 +287,7 @@ Specifying the following segments would retrieve the `password` value for the ve
 Specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version ID of `EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE`\.
 
 ```
-  '{{resolve:secretsmanager:MySecret:SecretString:password:SecretString:EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE}}'
+  '{{resolve:secretsmanager:MySecret:SecretString:password::EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE}}'
 ```
 
 Specifying the following segments would retrieve the entire SecretString for the version of the MySecret secret with the version stage value of `AWSCURRENT` from another AWS account\. Note that you must specify the complete secret ARN to access secrets in another AWS account\.
