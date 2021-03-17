@@ -1,31 +1,31 @@
 # Change sets for nested stacks<a name="change-sets-for-nested-stacks"></a>
 
-With *change sets for nested stacks* you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you’ve confirmed that all the changes are as intended\. 
+With *change sets for nested stacks* you can preview the changes to your application and infrastructure resources across the entire nested stack hierarchy and proceed with updates when you've confirmed that all the changes are as intended\.
 
 See the following sections for more details about change sets for nested stacks:
-+  [Overview of change sets and nested stacks](#overview-of-change-sets-and-nested-stacks) 
-+  [Working with change sets for nested stacks \(console\)](#change-sets-for-nested-stacks-console) 
-+  [Working with change sets for nested stacks \(AWS CLI\)](#change-sets-for-nested-stacks-cli) 
++ [Overview of change sets and nested stacks](#overview-of-change-sets-and-nested-stacks)
++ [Working with change sets for nested stacks \(console\)](#change-sets-for-nested-stacks-console)
++ [Working with change sets for nested stacks \(AWS CLI\)](#change-sets-for-nested-stacks-cli)
 
 ## Overview of change sets and nested stacks<a name="overview-of-change-sets-and-nested-stacks"></a>
 
 Change sets for nested stacks combines the following features together to expand the scope of previewing changes to the entire stack hierarchy: 
-+ <a name="what_are_change_sets"></a>*Change sets* is an AWS CloudFormation capability that offers a preview of how proposed changes to a stack will impact existing or newly created resources\. Upon creating a change set, AWS CloudFormation provides a list of proposed changes by comparing your stack with the changes to the resources you submitted\. For more information about change sets, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
++ <a name="what_are_change_sets"></a>*Change sets* is an CloudFormation capability that offers a preview of how proposed changes to a stack will impact existing or newly created resources\. Upon creating a change set, CloudFormation provides a list of proposed changes by comparing your stack with the changes to the resources you submitted\. For more information about change sets, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
 + <a name="what_are_nested"></a>*Nested stacks* are stacks created as part of other stacks\. To create a nested stack, specify the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource in the `Resource` section of your template\. For example, you might have networking and security related resources in one nested stack and application resources in another\. Partitioning application models this way helps with code maintainability and reuse\. For more information about nested stacks, see [Working with nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)\.
 
 ## Working with change sets for nested stacks \(console\)<a name="change-sets-for-nested-stacks-console"></a>
-+ **Create a change set** – Creates a change set by submitting changes from any level of the stack hierarchy\. You can submit a modified stack template or modified input parameter values and AWS CloudFormation compares your nested stack with the changes that you submitted to generate a change set\. Change sets for nested stacks is enabled by default in the AWS CloudFormation console\. For more information, see [Creating a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-create.html)\.  
++ **Create a change set** – Creates a change set by submitting changes from any level of the stack hierarchy\. You can submit a modified stack template or modified input parameter values and CloudFormation compares your nested stack with the changes that you submitted to generate a change set\. Change sets for nested stacks is enabled by default in the CloudFormation console\. For more information, see [Creating a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-create.html)\.  
 ![\[Create a change set for nested stacks is Enabled by default.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/change-sets-for-nested-sets-enabled-default.png)
 **Note**  
-A root change set is the change set associated with the stack from which the whole hierarchy of change sets are created\. You must execute or delete change sets for nested stacks from the root change set\. 
+A root change set is the change set associated with the stack from which the whole hierarchy of change sets are created\. You must execute or delete change sets for nested stacks from the root change set\.
 + **View the change set** – Visualize changes to resources inside nested stacks before executing them\. You can view the proposed changes in the **Changes** section of your change set by navigating through the current stack and its nested change sets\. For more information, see [Viewing a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-view.html)\.
 + **Execute the change set** – Execute the changes described in the change set that pertain to the current stack and its descendants\. The execute action must be made from the root change set\. For more information, see [Executing a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-execute.html)\.
-+ **Delete the change set** – Removes the change sets from the current stack\. Deleting a change set helps to prevent you or another user from accidentally initiating a change set that should not be applied\. The delete action must be executed from the root change set\. For more information, see [Deleting a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-delete.html)\.
++ **Delete the change set** – Removes the change sets from the current stack\. Deleting a change set helps to prevent you or another user from accidentally initiating a change set that shouldn't be applied\. The delete action must be executed from the root change set\. For more information, see [Deleting a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-delete.html)\.
 
 ## Working with change sets for nested stacks \(AWS CLI\)<a name="change-sets-for-nested-stacks-cli"></a>
 
 ### create\-change\-set<a name="working-with-change-sets-for-nested-stacks-cli"></a>
-+ [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) – Change sets for nested stacks is not enabled by default for the AWS CLI\. To create a change set for the entire stack hierarchy, specify the `--include-nested-stacks` parameter\. For more information, see [To create a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-create.md)\.
++ [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) – Change sets for nested stacks isn't enabled by default for the AWS CLI\. To create a change set for the entire stack hierarchy, specify the `--include-nested-stacks` parameter\. For more information, see [To create a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-create.md)\.
 
 The following AWS CLI example is of a `create-change-set` input\.
 
@@ -48,7 +48,7 @@ The following AWS CLI example is of a `create-change-set` output\.
 ```
 
 ### describe\-change\-set<a name="working-with-change-set-describe-cli"></a>
-+ [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html) – Returns a list of changes that AWS CloudFormation will make if you execute the change set\. If the change set specified contains child change sets that belong to nested stacks, then `ChangeSetId` will return information about that change set\. For more information, see [To view a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-view.md)\.
++ [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html) – Returns a list of changes that CloudFormation will make if you execute the change set\. If the change set specified contains child change sets that belong to nested stacks, then `ChangeSetId` will return information about that change set\. For more information, see [To view a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-view.md)\.
 
 The following AWS CLI example is of a `describe-change-set` input for the root stack change set\.
 

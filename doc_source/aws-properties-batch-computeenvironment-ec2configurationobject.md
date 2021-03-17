@@ -1,6 +1,6 @@
 # AWS::Batch::ComputeEnvironment Ec2ConfigurationObject<a name="aws-properties-batch-computeenvironment-ec2configurationobject"></a>
 
-Provides information used to select Amazon Machine Images \(AMIs\) for instances in the compute environment\. If the `Ec2Configuration` isn't specified, the default is `ECS_AL1`\.
+Provides information used to select Amazon Machine Images \(AMIs\) for instances in the compute environment\. If `Ec2Configuration` isn't specified, the default is currently `ECS_AL1` \([Amazon Linux](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#alami)\) for non\-GPU, non\-Graviton instances\. Starting on March 31, 2021, this default will be changing to `ECS_AL2` \([Amazon Linux 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)\)\.
 
 **Note**  
 This object isn't applicable to jobs running on Fargate resources\.
@@ -36,7 +36,7 @@ The AMI ID used for instances launched in the compute environment that match the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageType`  <a name="cfn-batch-computeenvironment-ec2configurationobject-imagetype"></a>
-The image type to match with the instance type to select an AMI\. If the `imageIdOverride` parameter isn't specified, then a recent [Amazon ECS\-optimized AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) is used\.    
+The image type to match with the instance type to select an AMI\. If the `imageIdOverride` parameter isn't specified, then a recent [Amazon ECS\-optimized AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) \(`ECS_AL1`\) is used\. Starting on March 31, 2021, this default will be changing to `ECS_AL2` \([Amazon Linux 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)\)\.    
 ECS\_AL2  
  [Amazon Linux 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami)− Default for all AWS Graviton\-based instance families \(for example, `C6g`, `M6g`, `R6g`, and `T4g`\) and can be used for all non\-GPU instance types\.  
 ECS\_AL2\_NVIDIA  

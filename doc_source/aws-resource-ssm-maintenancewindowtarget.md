@@ -104,49 +104,22 @@ The following example creates a Systems Manager maintenance window target that t
 #### JSON<a name="aws-resource-ssm-maintenancewindowtarget--examples--Create_a_maintenance_window_that_targets_instances_by_using_tags--json"></a>
 
 ```
-{
-    "Resources": {
-        "MaintenanceWindowTarget": {
-            "Type": "AWS::SSM::MaintenanceWindowTarget",
-            "Properties": {
-                "WindowId": "MaintenanceWindow",
-                "ResourceType": "INSTANCE",
-                "Targets": [
-                    {
-                        "Key": "tag:ENV",
-                        "Values": [
-                            "DEV"
-                        ]
-                    }
-                ],
-                "OwnerInformation": "SSM Step Function Demo",
-                "Name": "SSMStepFunctionDemo",
-                "Description": "A target for demonstrating maintenance windows and step functions"
-            },
-            "DependsOn": "MaintenanceWindow"
-        }
-    }
-}
+{ "Resources": { "MaintenanceWindowTarget": { "Type":
+        "AWS::SSM::MaintenanceWindowTarget", "Properties": { "WindowId": "MaintenanceWindow",
+        "ResourceType": "INSTANCE", "Targets": [ { "Key": "tag:ENV", "Values": [ "DEV" ] } ],
+        "OwnerInformation": "SSM Step Function Demo", "Name": "SSMStepFunctionDemo", "Description":
+        "A target for demonstrating maintenance windows and step functions" }, "DependsOn":
+        "MaintenanceWindow" } } }
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtarget--examples--Create_a_maintenance_window_that_targets_instances_by_using_tags--yaml"></a>
 
 ```
----
-Resources:
-  MaintenanceWindowTarget:
-    Type: AWS::SSM::MaintenanceWindowTarget
-    Properties:
-      WindowId: MaintenanceWindow
-      ResourceType: INSTANCE
-      Targets:
-      - Key: tag:ENV
-        Values:
-        - DEV
-      OwnerInformation: SSM Step Function Demo
-      Name: SSMStepFunctionDemo
-      Description: A target for demonstrating maintenance windows and step functions
-    DependsOn: MaintenanceWindow
+--- Resources: MaintenanceWindowTarget: Type:
+        AWS::SSM::MaintenanceWindowTarget Properties: WindowId: MaintenanceWindow ResourceType:
+        INSTANCE Targets: - Key: tag:ENV Values: - DEV OwnerInformation: SSM Step Function Demo
+        Name: SSMStepFunctionDemo Description: A target for demonstrating maintenance windows and
+        step functions DependsOn: MaintenanceWindow
 ```
 
 ## See also<a name="aws-resource-ssm-maintenancewindowtarget--seealso"></a>

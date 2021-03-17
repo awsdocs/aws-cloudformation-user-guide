@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification-properties"></a>
 
 `AllocationStrategy`  <a name="cfn-elasticmapreduce-instancefleetconfig-ondemandprovisioningspecification-allocationstrategy"></a>
- Specifies the strategy to use in launching On\-Demand Instance fleets\. Currently, the only option is lowest\-price \(the default\), which launches the lowest price first\.   
+Specifies the strategy to use in launching On\-Demand instance fleets\. Currently, the only option is `lowest-price` \(the default\), which launches the lowest price first\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `lowest-price`  

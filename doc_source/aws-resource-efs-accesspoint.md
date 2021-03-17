@@ -53,6 +53,7 @@ The opaque string specified in the request to ensure idempotent creation\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
+*Pattern*: `.+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemId`  <a name="cfn-efs-accesspoint-filesystemid"></a>

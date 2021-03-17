@@ -11,7 +11,7 @@ After another stack imports an output value, you can't delete the stack that is 
 
 A nested stack is a stack that you create within another stack by using the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource\. With nested stacks, you deploy and manage all resources from a single stack\. You can use outputs from one stack in the nested stack group as inputs to another stack in the group\. This differs from exporting values\.
 
-If you want to isolate information sharing to within a nested stack group, we suggest that you use nested stacks\. To share information with other stacks \(not just within the group of nested stacks\), export values\. For example, you can create a single stack with a subnet and then export its ID\. Other stacks can use that subnet by importing its ID; each stack doesn't need to create its own subnet\. Note that as long as stacks are importing the subnet ID, you can't change or delete it\.
+If you want to isolate information sharing to within a nested stack group, we suggest that you use nested stacks\. To share information with other stacks \(not just within the group of nested stacks\), export values\. For example, you can create a single stack with a subnet and then export its ID\. Other stacks can use that subnet by importing its ID; each stack doesn't need to create its own subnet\. As long as stacks are importing the subnet ID, you can't change or delete it\.
 
 ## Listing exported output values<a name="using-cfn-stack-exports-listing"></a>
 

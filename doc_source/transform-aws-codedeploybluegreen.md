@@ -4,9 +4,9 @@ Use the `AWS::CodeDeployBlueGreen` transform to enable ECS blue/green deployment
 
 ## Usage<a name="aws-codedeploybluegreen-usage"></a>
 
-Use the `AWS::CodeDeployBlueGreen` transform at the top level of the template\. You cannot use `AWS::CodeDeployBlueGreen` as a transform embedded in any other template section\.
+Use the `AWS::CodeDeployBlueGreen` transform at the top level of the template\. You can't use `AWS::CodeDeployBlueGreen` as a transform embedded in any other template section\.
 
-The value for the transform declaration must be a literal string\. You cannot use a parameter or function to specify a transform value\. 
+The value for the transform declaration must be a literal string\. You can't use a parameter or function to specify a transform value\.
 
 ### Syntax at the top level of a template<a name="aws-codedeploybluegreen-syntax-top-level-overview"></a>
 
@@ -31,7 +31,7 @@ To include `AWS::CodeDeployBlueGreen` in the `Transform` section, use the follow
 
 ## Parameters<a name="aws-v-transform-parameters"></a>
 
-The `AWS::CodeDeployBlueGreen` transform does not accept any parameters\. 
+The `AWS::CodeDeployBlueGreen` transform doesn't accept any parameters\.
 
 ## Remarks<a name="aws-codedeploybluegreen-transform-remarks"></a>
 

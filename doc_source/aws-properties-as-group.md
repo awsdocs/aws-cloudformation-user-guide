@@ -271,6 +271,8 @@ When you update the launch template or launch configuration for an Auto Scaling 
 
 You can add an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to your stack to perform rolling updates \(or replace the group\) when a change has been made to the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. Alternatively, you can force a rolling update on your instances at any time after updating the stack by starting an instance refresh\. For more information, see [Replacing Auto Scaling instances based on an instance refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
+Note that Amazon EC2 Auto Scaling provides scaling activities to help you monitor the progress of your Auto Scaling group and to assist in troubleshooting any configuration issues when launching Amazon EC2 instances\. For more information, see [Verifying a scaling activity for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-verify-scaling-activity.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+
 ## Examples<a name="aws-properties-as-group--examples"></a>
 
 The following examples create or make changes to an Auto Scaling group\. 
@@ -281,7 +283,7 @@ For more template snippets, see [Auto scaling template snippets](https://docs.aw
 
 The following example creates an Auto Scaling group with a single instance and an [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) resource that controls the configuration of any instances that are launched by the Auto Scaling group\.
 
-It references [parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) for the `VPCZoneIdentifier` and `Version` \(`LaunchTemplate`\) properties\. Each of these parameters is a variable that you can specify when you create or update the stack\.
+The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. The stack references a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) to specify the launch template version\. Parameters are variables that you can specify when you create or update the stack\.
 
 CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::EC2::LaunchTemplate references the latest Amazon Linux 2 AMI from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
@@ -308,10 +310,13 @@ CloudFormation supports parameters from the AWS Systems Manager Parameter Store\
       "Type":"AWS::EC2::LaunchTemplate",
       "Properties":{
         "LaunchTemplateData":{
+          "CreditSpecification":{
+            "CpuCredits":"unlimited"
+          },
           "ImageId":{
             "Ref":"LatestAmiId"
           },
-          "InstanceType":"t3.micro"
+          "InstanceType":"t2.micro"
         }
       }
     },
@@ -356,8 +361,10 @@ Resources:
     Type: AWS::EC2::LaunchTemplate
     Properties: 
       LaunchTemplateData: 
+        CreditSpecification: 
+          CpuCredits: Unlimited
         ImageId: !Ref LatestAmiId
-        InstanceType: t3.micro
+        InstanceType: t2.micro
   myASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
@@ -374,7 +381,7 @@ Resources:
 
 The following example creates an Auto Scaling group named `myASG` with CloudWatch monitoring \(`MetricsCollection`\) enabled and custom tags\. The first tag, `Environment`=`Production`, is assigned to the Auto Scaling group and to any EC2 instances launched as part of the Auto Scaling group\. The second tag, `Purpose`=`WebServerGroup`, is assigned only to the Auto Scaling group itself\. 
 
-Each instance has 300 seconds to warm up before receiving its first health check\. The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
+Each instance has 300 seconds to warm up before receiving its first health check\. A block device mapping specifies an EBS volume to attach to each instance, in addition to attaching the volumes specified by the AMI\. Because `Monitoring` is enabled, EC2 metric data will be available at 1\-minute intervals \(known as detailed monitoring\) through CloudWatch\. 
 
 This example also uses intrinsic functions to assign values to certain properties dynamically\. To get the version number of the launch template, it specifies the launch template's logical name and the latest version number of the launch template in the format `myLaunchTemplate.LatestVersionNumber` with the intrinsic function [GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. It also uses the [Fn::Sub](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-sub.html) function to customize the name of the launch template to include the stack name and the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function to reference two [AWS::EC2::Subnet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html) resources for the Auto Scaling group that are declared elsewhere in the same template\. 
 
@@ -392,17 +399,14 @@ This example also uses intrinsic functions to assign values to certain propertie
           "BlockDeviceMappings":[{
             "Ebs":{
               "VolumeSize":"22",
-              "VolumeType":"gp2",
+              "VolumeType":"gp3",
               "DeleteOnTermination": true,
               "Encrypted": true
             },
             "DeviceName":"/dev/xvdcz"
           }],
-          "CreditSpecification":{
-            "CpuCredits":"unlimited"
-          },
           "ImageId":"ami-02354e95b39ca8dec",
-          "InstanceType":"t2.micro",
+          "InstanceType":"t3.micro",
           "KeyName":"my-key-pair-useast1",
           "Monitoring":{"Enabled":true},
           "SecurityGroupIds":["sg-7c227019", "sg-903004f8"]
@@ -469,14 +473,12 @@ Resources:
         BlockDeviceMappings: 
           - Ebs:
               VolumeSize: 22
-              VolumeType: gp2
+              VolumeType: gp3
               DeleteOnTermination: true
               Encrypted: true
             DeviceName: /dev/xvdcz
-        CreditSpecification: 
-          CpuCredits: Unlimited
         ImageId: ami-02354e95b39ca8dec
-        InstanceType: t2.micro
+        InstanceType: t3.micro
         KeyName: my-key-pair-useast1
         Monitoring: 
           Enabled: true

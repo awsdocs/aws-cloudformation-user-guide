@@ -76,7 +76,7 @@ The cfn\-hup daemon parses and loads each file in this directory\. If any hooks 
 
 ## Example<a name="cfn-hup-example"></a>
 
-In the following template snippet, AWS CloudFormation triggers the `cfn-auto-reloader.conf` hooks file when you change the `AWS::CloudFormation::Init` resource that is associated with the `LaunchConfig` resource\.
+In the following template snippet, CloudFormation triggers the `cfn-auto-reloader.conf` hooks file when you change the `AWS::CloudFormation::Init` resource that is associated with the `LaunchConfig` resource\.
 
 ### JSON<a name="cfn-hup-example.json"></a>
 
@@ -130,6 +130,6 @@ In the following template snippet, AWS CloudFormation triggers the `cfn-auto-rel
 ...
 ```
 
-### Additional example<a name="w8307ab1c33c42c35c15b8"></a>
+### Additional example<a name="w8424ab1c33c42c35c15b8"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

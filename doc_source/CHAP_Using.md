@@ -1,8 +1,8 @@
 # Walkthroughs<a name="CHAP_Using"></a>
 
- Templates are JSON\- or YAML\-formatted text files that describe the AWS resources that you want to provision or update in your AWS CloudFormation stacks\. To create templates, you can use AWS CloudFormation Designer or a text editor\.
+Templates are JSON\- or YAML\-formatted text files that describe the AWS resources that you want to provision or update in your AWS CloudFormation stacks\. To create templates, you can use AWS CloudFormation Designer or a text editor\.
 
-The following walkthroughs show how to create sample AWS CloudFormation templates using AWS CloudFormation Designer and plain text\.
+The following procedures help you create sample AWS CloudFormation templates using AWS CloudFormation Designer and plain text\.
 
 **Topics**
 + [Walkthrough: Use AWS CloudFormation Designer to create a basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)

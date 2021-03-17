@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders)" : AdditionalAuthenticationProviders,
       "[AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype)" : String,
+      "[LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-lambdaauthorizerconfig)" : LambdaAuthorizerConfig,
       "[LogConfig](#cfn-appsync-graphqlapi-logconfig)" : LogConfig,
       "[Name](#cfn-appsync-graphqlapi-name)" : String,
       "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : OpenIDConnectConfig,
@@ -32,6 +33,8 @@ Properties:
   [AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders): 
     AdditionalAuthenticationProviders
   [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype): String
+  [LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-lambdaauthorizerconfig): 
+    LambdaAuthorizerConfig
   [LogConfig](#cfn-appsync-graphqlapi-logconfig): 
     LogConfig
   [Name](#cfn-appsync-graphqlapi-name): String
@@ -56,6 +59,12 @@ A list of additional authentication providers for the `GraphqlApi` API\.
 Security configuration for your GraphQL API\. For allowed values \(such as `API_KEY`, `AWS_IAM`, or `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LambdaAuthorizerConfig`  <a name="cfn-appsync-graphqlapi-lambdaauthorizerconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [LambdaAuthorizerConfig](aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogConfig`  <a name="cfn-appsync-graphqlapi-logconfig"></a>

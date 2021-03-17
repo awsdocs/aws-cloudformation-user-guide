@@ -1,6 +1,6 @@
 # Using the AWS Command Line Interface<a name="cfn-using-cli"></a>
 
-With the AWS Command Line Interface \(CLI\), you can create, monitor, update and delete stacks from your system's terminal\. You can also use the AWS CLI to automate actions through scripts\. For more information about the AWS CLI, see the [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)\.
+With the AWS Command Line Interface \(AWS CLI\), you can create, monitor, update, and delete stacks from your system's terminal\. You can also use the AWS CLI to automate actions through scripts\. For more information about the AWS CLI, see the [AWS Command Line Interface User Guide](https://docs.aws.amazon.com/cli/latest/userguide/)\.
 
 If you use Windows PowerShell, AWS also offers the [AWS Tools for Windows PowerShell](http://aws.amazon.com/powershell/)\.
 

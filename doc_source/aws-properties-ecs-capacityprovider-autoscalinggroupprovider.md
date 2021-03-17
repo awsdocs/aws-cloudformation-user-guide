@@ -37,7 +37,7 @@ The Amazon Resource Name \(ARN\) or short name that identifies the Auto Scaling 
 The managed scaling settings for the Auto Scaling group capacity provider\.  
 *Required*: No  
 *Type*: [ManagedScaling](aws-properties-ecs-capacityprovider-managedscaling.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedTerminationProtection`  <a name="cfn-ecs-capacityprovider-autoscalinggroupprovider-managedterminationprotection"></a>
 The managed termination protection setting to use for the Auto Scaling group capacity provider\. This determines whether the Auto Scaling group has managed termination protection\.  
@@ -47,4 +47,4 @@ When managed termination protection is disabled, your Amazon EC2 instances are n
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentController](#cfn-ecs-service-deploymentcontroller)" : DeploymentController,
       "[DesiredCount](#cfn-ecs-service-desiredcount)" : Integer,
       "[EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags)" : Boolean,
+      "[EnableExecuteCommand](#cfn-ecs-service-enableexecutecommand)" : Boolean,
       "[HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds)" : Integer,
       "[LaunchType](#cfn-ecs-service-launchtype)" : String,
       "[LoadBalancers](#cfn-ecs-service-loadbalancers)" : [ LoadBalancer, ... ],
@@ -51,6 +52,7 @@ Properties:
     DeploymentController
   [DesiredCount](#cfn-ecs-service-desiredcount): Integer
   [EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags): Boolean
+  [EnableExecuteCommand](#cfn-ecs-service-enableexecutecommand): Boolean
   [HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds): Integer
   [LaunchType](#cfn-ecs-service-launchtype): String
   [LoadBalancers](#cfn-ecs-service-loadbalancers): 
@@ -117,6 +119,12 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
+The `EnableExecuteCommand` property type is not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckGracePeriodSeconds`  <a name="cfn-ecs-service-healthcheckgraceperiodseconds"></a>
 The period of time, in seconds, that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\. This is only used when your service is configured to use a load balancer\. If your service has a load balancer defined and you don't specify a health check grace period value, the default value of `0` is used\.  

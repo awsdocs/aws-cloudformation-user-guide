@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::LaunchTemplate",
   "Properties" : {
       "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : LaunchTemplateData,
-      "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String
+      "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String,
+      "[TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications)" : TagSpecifications
     }
 }
 ```
@@ -26,6 +27,8 @@ Properties:
   [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata): 
     LaunchTemplateData
   [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
+  [TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications): 
+    TagSpecifications
 ```
 
 ## Properties<a name="aws-resource-ec2-launchtemplate-properties"></a>
@@ -44,6 +47,12 @@ A name for the launch template\.
 *Maximum*: `128`  
 *Pattern*: `[a-zA-Z0-9\(\)\.\-/_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`TagSpecifications`  <a name="cfn-ec2-launchtemplate-tagspecifications"></a>
+The tags\.  
+*Required*: No  
+*Type*: [TagSpecifications](aws-properties-ec2-launchtemplate-tagspecifications.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
 

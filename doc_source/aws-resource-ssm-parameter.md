@@ -147,40 +147,18 @@ The following example creates a Systems Manager parameter named command with a `
 #### JSON<a name="aws-resource-ssm-parameter--examples--Create_a_String-type_parameter--json"></a>
 
 ```
-{
-    "Resources": {
-        "BasicParameter": {
-            "Type": "AWS::SSM::Parameter",
-            "Properties": {
-                "Name": "command",
-                "Type": "String",
-                "Value": "date",
-                "Description": "SSM Parameter for running date command.",
-                "AllowedPattern": "^[a-zA-Z]{1,10}$",
-                "Tags": {
-                    "Environment": "DEV"
-                }
-            }
-        }
-    }
-}
+{ "Resources": { "BasicParameter": { "Type": "AWS::SSM::Parameter",
+        "Properties": { "Name": "command", "Type": "String", "Value": "date", "Description": "SSM
+        Parameter for running date command.", "AllowedPattern": "^[a-zA-Z]{1,10}$", "Tags": {
+        "Environment": "DEV" } } } } }
 ```
 
 #### YAML<a name="aws-resource-ssm-parameter--examples--Create_a_String-type_parameter--yaml"></a>
 
 ```
----
-Resources:
-  BasicParameter:
-    Type: AWS::SSM::Parameter
-    Properties:
-      Name: command
-      Type: String
-      Value: date
-      Description: SSM Parameter for running date command.
-      AllowedPattern: "^[a-zA-Z]{1,10}$"
-      Tags:
-        Environment: DEV
+--- Resources: BasicParameter: Type: AWS::SSM::Parameter Properties:
+        Name: command Type: String Value: date Description: SSM Parameter for running date command.
+        AllowedPattern: "^[a-zA-Z]{1,10}$" Tags: Environment: DEV
 ```
 
 ### Create a StringList\-type parameter<a name="aws-resource-ssm-parameter--examples--Create_a_StringList-type_parameter"></a>
@@ -190,35 +168,17 @@ The following example creates a Systems Manager parameter named commands with a 
 #### JSON<a name="aws-resource-ssm-parameter--examples--Create_a_StringList-type_parameter--json"></a>
 
 ```
-{
-    "Resources": {
-        "BasicParameter": {
-            "Type": "AWS::SSM::Parameter",
-            "Properties": {
-                "Name": "commands",
-                "Type": "StringList",
-                "Value": "date,ls",
-                "Description": "SSM Parameter of type StringList.",
-                "AllowedPattern": "^[a-zA-Z]{1,10}$"
-            }
-        }
-    }
-}
+{ "Resources": { "BasicParameter": { "Type": "AWS::SSM::Parameter",
+        "Properties": { "Name": "commands", "Type": "StringList", "Value": "date,ls", "Description":
+        "SSM Parameter of type StringList.", "AllowedPattern": "^[a-zA-Z]{1,10}$" } } } }
 ```
 
 #### YAML<a name="aws-resource-ssm-parameter--examples--Create_a_StringList-type_parameter--yaml"></a>
 
 ```
----
-Resources:
-  BasicParameter:
-    Type: AWS::SSM::Parameter
-    Properties:
-      Name: commands
-      Type: StringList
-      Value: date,ls
-      Description: SSM Parameter of type StringList.
-      AllowedPattern: "^[a-zA-Z]{1,10}$"
+--- Resources: BasicParameter: Type: AWS::SSM::Parameter Properties:
+        Name: commands Type: StringList Value: date,ls Description: SSM Parameter of type
+        StringList. AllowedPattern: "^[a-zA-Z]{1,10}$"
 ```
 
 ### Create an advanced tier parameter and assign a policy<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy"></a>
@@ -228,44 +188,22 @@ The following example creates a Systems Manager advanced tier parameter named co
 #### JSON<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy--json"></a>
 
 ```
-{
-    "Resources": {
-        "BasicParameter": {
-            "Type": "AWS::SSM::Parameter",
-            "Properties": {
-                "Name": "command",
-                "Type": "String",
-                "Value": "date",
-                "Tier": "Advanced",
-                "Policies": "[{\"Type\":\"Expiration\",\"Version\":\"1.0\",\"Attributes\":{\"Timestamp\":\"2020-05-13T00:00:00.000Z\"}},{\"Type\":\"ExpirationNotification\",\"Version\":\"1.0\",\"Attributes\":{\"Before\":\"5\",\"Unit\":\"Days\"}},{\"Type\":\"NoChangeNotification\",\"Version\":\"1.0\",\"Attributes\":{\"After\":\"60\",\"Unit\":\"Days\"}}]",
-                "Description": "SSM Parameter for running date command.",
-                "AllowedPattern": "^[a-zA-Z]{1,10}$",
-                "Tags": {
-                    "Environment": "DEV"
-                }
-            }
-        }
-    }
-}
+{ "Resources": { "BasicParameter": { "Type": "AWS::SSM::Parameter",
+        "Properties": { "Name": "command", "Type": "String", "Value": "date", "Tier": "Advanced",
+        "Policies":
+        "[{\"Type\":\"Expiration\",\"Version\":\"1.0\",\"Attributes\":{\"Timestamp\":\"2020-05-13T00:00:00.000Z\"}},{\"Type\":\"ExpirationNotification\",\"Version\":\"1.0\",\"Attributes\":{\"Before\":\"5\",\"Unit\":\"Days\"}},{\"Type\":\"NoChangeNotification\",\"Version\":\"1.0\",\"Attributes\":{\"After\":\"60\",\"Unit\":\"Days\"}}]",
+        "Description": "SSM Parameter for running date command.", "AllowedPattern":
+        "^[a-zA-Z]{1,10}$", "Tags": { "Environment": "DEV" } } } } }
 ```
 
 #### YAML<a name="aws-resource-ssm-parameter--examples--Create_an_advanced_tier_parameter_and_assign_a_policy--yaml"></a>
 
 ```
----
-Resources:
-  BasicParameter:
-    Type: AWS::SSM::Parameter
-    Properties:
-      Name: command
-      Type: String
-      Value: date
-      Tier: Advanced
-      Policies: '[{"Type":"Expiration","Version":"1.0","Attributes":{"Timestamp":"2020-05-13T00:00:00.000Z"}},{"Type":"ExpirationNotification","Version":"1.0","Attributes":{"Before":"5","Unit":"Days"}},{"Type":"NoChangeNotification","Version":"1.0","Attributes":{"After":"60","Unit":"Days"}}]'
-      Description: SSM Parameter for running date command.
-      AllowedPattern: "^[a-zA-Z]{1,10}$"
-      Tags:
-        Environment: DEV
+--- Resources: BasicParameter: Type: AWS::SSM::Parameter Properties:
+        Name: command Type: String Value: date Tier: Advanced Policies:
+        '[{"Type":"Expiration","Version":"1.0","Attributes":{"Timestamp":"2020-05-13T00:00:00.000Z"}},{"Type":"ExpirationNotification","Version":"1.0","Attributes":{"Before":"5","Unit":"Days"}},{"Type":"NoChangeNotification","Version":"1.0","Attributes":{"After":"60","Unit":"Days"}}]'
+        Description: SSM Parameter for running date command. AllowedPattern: "^[a-zA-Z]{1,10}$"
+        Tags: Environment: DEV
 ```
 
 ## See also<a name="aws-resource-ssm-parameter--seealso"></a>

@@ -47,5 +47,7 @@ Specifies the POSIX user ID to apply to the `RootDirectory`\. Accepts values fro
 Specifies the POSIX permissions to apply to the `RootDirectory`, in the format of an octal number representing the file's mode bits\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `4`  
 *Pattern*: `^[0-7]{3,4}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

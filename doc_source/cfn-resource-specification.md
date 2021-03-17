@@ -4,7 +4,7 @@ The AWS CloudFormation resource specification is a JSON\-formatted text file tha
 
 The resource specification is organized as both a single file and as a series of files, where each file contains the definition of one resource type\. The single and separated files contain identical information\. Depending on the tool and your implementation, use the file or files that work for you\.
 
-To download the resource specification, see the following table\. 
+To download the resource specification, see the following table\.
 
 Resource availability may vary by region\. To check the availability of a resource in a given region, refer to the resource specification for that region\.
 

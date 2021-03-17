@@ -5,7 +5,7 @@ You can author AWS CloudFormation templates in JSON or YAML formats\. We support
 When deciding which format to use, pick the format that you're most comfortable working in\. Also consider that YAML inherently provides some features, such as commenting, that aren't available in JSON\.
 
 **Important**  
-We recommend that you do not add `#` YAML comments to your templates in Designer\. If your YAML template has `#` comments, Designer does not preserve those comments when converting the template to JSON\. In addition, if you modify your template in Designer \(for example, if you move a resource on the canvas\), your comments are lost\. 
+We recommend that you don't add `#` YAML comments to your templates in Designer\. If your YAML template has `#` comments, Designer doesn't preserve those comments when converting the template to JSON\. In addition, if you modify your template in Designer \(for example, if you move a resource on the canvas\), your comments are lost\.
 
 You can add comments to the AWS CloudFormation templates you create outside of Designer\. The following example shows a YAML template with inline comments\.
 

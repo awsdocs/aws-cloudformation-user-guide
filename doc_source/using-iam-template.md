@@ -67,7 +67,7 @@ In addition to AWS CloudFormation actions, IAM users who create or delete stacks
 
 For a list of all AWS CloudFormation actions that you can allow or deny, see the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)\.
 
-### AWS CloudFormation console\-specific actions<a name="w8307ab1c17c21c11c16"></a>
+### AWS CloudFormation console\-specific actions<a name="w8424ab1c17c21c11c16"></a>
 
 IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
@@ -186,7 +186,7 @@ The following list describes the AWS CloudFormation\-specific conditions\. These
 An AWS CloudFormation change set name that you want to associate with a policy\. Use this condition to control which change sets IAM users can execute or delete\.
 
 `cloudformation:ImportResourceTypes`  
-The template resource types that you want to associate with a policy, such as `AWS::EC2::Instance`\. Use this condition to control which resource types IAM users can work with when they import resources into a stack\. This condition is checked against the resource types that users declare in the `ResourcesToImport` parameter, which is currently supported only for CLI and API requests\. When using this parameter, you must specify all the resource types you want users to control during import operations\. For more information about the `ResourcesToImport` parameter, see the [CreateChangeSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html) action in the *AWS CloudFormation API Reference*\.   
+The template resource types that you want to associate with a policy, such as `AWS::EC2::Instance`\. Use this condition to control which resource types IAM users can work with when they import resources into a stack\. This condition is checked against the resource types that users declare in the `ResourcesToImport` parameter, which is currently supported only for CLI and API requests\. When using this parameter, you must specify all the resource types you want users to control during import operations\. For more information about the `ResourcesToImport` parameter, see the [CreateChangeSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html) action in the *AWS CloudFormation API Reference*\.  
 For a list of possible `ResourcesToImport`, see [Resources that support import operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\.  
 Use the three\-part resource naming convention to specify which resource types users can work with, from all resources across an organization, down to an individual resource type\.    
 `organization::*`  
@@ -248,7 +248,7 @@ The following AWS CloudFormation\-specific conditions apply to the API parameter
 + `cloudformation:TemplateUrl`
 For example, `cloudformation:TemplateUrl` only applies to the `TemplateUrl` parameter for `CreateStack`, `UpdateStack`, and `CreateChangeSet` APIs\.
 
-### Examples<a name="w8307ab1c17c21c15c10"></a>
+### Examples<a name="w8424ab1c17c21c15c10"></a>
 
 The following example policy allows users to use only the `https://s3.amazonaws.com/testbucket/test.template` template URL to create or update a stack\.
 

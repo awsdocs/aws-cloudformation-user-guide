@@ -59,7 +59,7 @@ Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-efs-mounttarget-subnetid"></a>
-The ID of the subnet to add the mount target in\.  
+The ID of the subnet to add the mount target in\. For file systems that use One Zone storage classes, use the subnet that is associated with the file system's Availability Zone\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `15`  

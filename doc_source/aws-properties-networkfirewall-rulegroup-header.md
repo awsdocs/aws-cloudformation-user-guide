@@ -63,7 +63,7 @@ The direction of traffic flow to inspect\. If set to `ANY`, the inspection match
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-networkfirewall-rulegroup-header-protocol"></a>
-The protocol to inspect for\. To match with any protocol, specify `ANY`\.   
+The protocol to inspect for\. To specify all, you can use `IP`, because all traffic on AWS and on the internet is IP\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DCERPC | DHCP | DNS | FTP | HTTP | ICMP | IKEV2 | IMAP | IP | KRB5 | MSN | NTP | SMB | SMTP | SSH | TCP | TFTP | TLS | UDP`  

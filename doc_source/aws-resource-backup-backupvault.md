@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessPolicy](#cfn-backup-backupvault-accesspolicy)" : Json,
       "[BackupVaultName](#cfn-backup-backupvault-backupvaultname)" : String,
-      "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : Json,
+      "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : {Key : Value, ...},
       "[EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn)" : String,
       "[Notifications](#cfn-backup-backupvault-notifications)" : NotificationObjectType
     }
@@ -31,7 +31,8 @@ Type: AWS::Backup::BackupVault
 Properties: 
   [AccessPolicy](#cfn-backup-backupvault-accesspolicy): Json
   [BackupVaultName](#cfn-backup-backupvault-backupvaultname): String
-  [BackupVaultTags](#cfn-backup-backupvault-backupvaulttags): Json
+  [BackupVaultTags](#cfn-backup-backupvault-backupvaulttags): 
+    Key : Value
   [EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn): String
   [Notifications](#cfn-backup-backupvault-notifications): 
     NotificationObjectType
@@ -55,7 +56,7 @@ The name of a logical container where backups are stored\. Backup vaults are ide
 `BackupVaultTags`  <a name="cfn-backup-backupvault-backupvaulttags"></a>
 Metadata that you can assign to help organize the resources that you create\. Each tag is a key\-value pair\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionKeyArn`  <a name="cfn-backup-backupvault-encryptionkeyarn"></a>

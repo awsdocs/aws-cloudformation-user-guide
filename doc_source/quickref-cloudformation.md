@@ -1,10 +1,10 @@
 # AWS CloudFormation template snippets<a name="quickref-cloudformation"></a>
 
 **Topics**
-+ [Nested stacks](#w8307ab1c27c22c19b5)
-+ [Wait condition](#w8307ab1c27c22c19b7)
++ [Nested stacks](#w8424ab1c27c22c19b5)
++ [Wait condition](#w8424ab1c27c22c19b7)
 
-## Nested stacks<a name="w8307ab1c27c22c19b5"></a>
+## Nested stacks<a name="w8424ab1c27c22c19b5"></a>
 
 ### Nesting a stack in a template<a name="scenario-stack"></a>
 
@@ -92,7 +92,7 @@ For more information, see [AWS::CloudFormation::Stack](https://docs.aws.amazon.c
 9.         KeyName: mykey
 ```
 
-## Wait condition<a name="w8307ab1c27c22c19b7"></a>
+## Wait condition<a name="w8424ab1c27c22c19b7"></a>
 
 ### Using a wait condition with an Amazon EC2 instance<a name="scenario-waitcondition"></a>
 
@@ -204,7 +204,7 @@ For more information, see [Creating wait conditions in a template](using-cfn-wai
 
 This example shows a cfn\-signal command line that signals success to a wait condition\. You need to define the command line in the `UserData` property of the EC2 instance\.
 
-#### JSON<a name="w8307ab1c27c22c19b7b4b4"></a>
+#### JSON<a name="w8424ab1c27c22c19b7b4b4"></a>
 
 ```
 "UserData": {
@@ -224,7 +224,7 @@ This example shows a cfn\-signal command line that signals success to a wait con
 }
 ```
 
-#### YAML<a name="w8307ab1c27c22c19b7b4b6"></a>
+#### YAML<a name="w8424ab1c27c22c19b7b4b6"></a>
 
 ```
 UserData:
@@ -247,7 +247,7 @@ This example shows a Curl command line that signals success to a wait condition\
 1. curl -T /tmp/a "https://cloudformation-waitcondition-test.s3.amazonaws.com/arn%3Aaws%3Acloudformation%3Aus-east-1%3A034017226601%3Astack%2Fstack-gosar-20110427004224-test-stack-with-WaitCondition--VEYW%2Fe498ce60-70a1-11e0-81a7-5081d0136786%2FmyWaitConditionHandle?Expires=1303976584&AWSAccessKeyId=AKIAIOSFODNN7EXAMPLE&Signature=ik1twT6hpS4cgNAw7wyOoRejVoo%3D"
 ```
 
-where the file /tmp/a contains the following JSON structure:
+Where the file /tmp/a contains the following JSON structure:
 
 ```
 1. {

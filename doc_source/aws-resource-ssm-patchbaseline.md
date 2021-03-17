@@ -177,148 +177,35 @@ The following example creates a Systems Manager patch baseline that approves pat
 #### <a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline--language_owl_wvr_qlb"></a>
 
 ```
-{
-    "Resources": {
-        "myPatchBaseline": {
-            "Type": "AWS::SSM::PatchBaseline",
-            "Properties": {
-                "Name": "myPatchBaseline",
-                "Description": "Baseline containing all updates approved for Windows instances",
-                "OperatingSystem": "WINDOWS",
-                "PatchGroups": [
-                    "myPatchGroup"
-                ],
-                "ApprovalRules": {
-                    "PatchRules": [
-                        {
-                            "PatchFilterGroup": {
-                                "PatchFilters": [
-                                    {
-                                        "Values": [
-                                            "Critical",
-                                            "Important",
-                                            "Moderate"
-                                        ],
-                                        "Key": "MSRC_SEVERITY"
-                                    },
-                                    {
-                                        "Values": [
-                                            "SecurityUpdates",
-                                            "CriticalUpdates"
-                                        ],
-                                        "Key": "CLASSIFICATION"
-                                    },
-                                    {
-                                        "Values": [
-                                            "WindowsServer2019"
-                                        ],
-                                        "Key": "PRODUCT"
-                                    }
-                                ]
-                            },
-                            "ApproveAfterDays": 7,
-                            "ComplianceLevel": "CRITICAL"
-                        },
-                        {
-                            "PatchFilterGroup": {
-                                "PatchFilters": [
-                                    {
-                                        "Values": [
-                                            "Critical",
-                                            "Important",
-                                            "Moderate"
-                                        ],
-                                        "Key": "MSRC_SEVERITY"
-                                    },
-                                    {
-                                        "Values": [
-                                            "*"
-                                        ],
-                                        "Key": "CLASSIFICATION"
-                                    },
-                                    {
-                                        "Values": [
-                                            "APPLICATION"
-                                        ],
-                                        "Key": "PATCH_SET"
-                                    },
-                                    {
-                                        "Values": [
-                                            "Active Directory Rights Management Services Client 2.0"
-                                        ],
-                                        "Key": "PRODUCT"
-                                    },
-                                    {
-                                        "Values": [
-                                            "Active Directory"
-                                        ],
-                                        "Key": "PRODUCT_FAMILY"
-                                    }
-                                ]
-                            },
-                            "ApproveAfterDays": 7,
-                            "ComplianceLevel": "CRITICAL"
-                        }
-                    ]
-                }
-            }
+{ "Resources": { "myPatchBaseline": { "Type":
+        "AWS::SSM::PatchBaseline", "Properties": { "Name": "myPatchBaseline", "Description":
+        "Baseline containing all updates approved for Windows instances", "OperatingSystem":
+        "WINDOWS", "PatchGroups": [ "myPatchGroup" ], "ApprovalRules": { "PatchRules": [ {
+        "PatchFilterGroup": { "PatchFilters": [ { "Values": [ "Critical", "Important", "Moderate" ],
+        "Key": "MSRC_SEVERITY" }, { "Values": [ "SecurityUpdates", "CriticalUpdates" ], "Key":
+        "CLASSIFICATION" }, { "Values": [ "WindowsServer2019" ], "Key": "PRODUCT" } ] },
+        "ApproveAfterDays": 7, "ComplianceLevel": "CRITICAL" }, { "PatchFilterGroup": {
+        "PatchFilters": [ { "Values": [ "Critical", "Important", "Moderate" ], "Key":
+        "MSRC_SEVERITY" }, { "Values": [ "*" ], "Key": "CLASSIFICATION" }, { "Values": [
+        "APPLICATION" ], "Key": "PATCH_SET" }, { "Values": [ "Active Directory Rights Management
+        Services Client 2.0" ], "Key": "PRODUCT" }, { "Values": [ "Active Directory" ], "Key":
+        "PRODUCT_FAMILY" } ] }, "ApproveAfterDays": 7, "ComplianceLevel": "CRITICAL" } ] } } } }
         }
-    }
-}
 ```
 
 #### YAML<a name="aws-resource-ssm-patchbaseline--examples--Create_a_patch_baseline--yaml"></a>
 
 ```
----
-Resources:
-  myPatchBaseline:
-    Type: AWS::SSM::PatchBaseline
-    Properties:
-      Name: myPatchBaseline
-      Description: Baseline containing all updates approved for Windows instances
-      OperatingSystem: WINDOWS
-      PatchGroups:
-      - myPatchGroup
-      ApprovalRules:
-        PatchRules:
-        - PatchFilterGroup:
-            PatchFilters:
-            - Values:
-              - Critical
-              - Important
-              - Moderate
-              Key: MSRC_SEVERITY
-            - Values:
-              - SecurityUpdates
-              - CriticalUpdates
-              Key: CLASSIFICATION
-            - Values:
-              - WindowsServer2019
-              Key: PRODUCT
-          ApproveAfterDays: 7
-          ComplianceLevel: CRITICAL
-        - PatchFilterGroup:
-            PatchFilters:
-            - Values:
-              - Critical
-              - Important
-              - Moderate
-              Key: MSRC_SEVERITY
-            - Values:
-              - "*"
-              Key: CLASSIFICATION
-            - Values:
-              - APPLICATION
-              Key: PATCH_SET
-            - Values:
-              - Active Directory Rights Management Services Client 2.0
-              Key: PRODUCT
-            - Values:
-              - Active Directory
-              Key: PRODUCT_FAMILY
-          ApproveAfterDays: 7
-          ComplianceLevel: CRITICAL
+--- Resources: myPatchBaseline: Type: AWS::SSM::PatchBaseline
+        Properties: Name: myPatchBaseline Description: Baseline containing all updates approved for
+        Windows instances OperatingSystem: WINDOWS PatchGroups: - myPatchGroup ApprovalRules:
+        PatchRules: - PatchFilterGroup: PatchFilters: - Values: - Critical - Important - Moderate
+        Key: MSRC_SEVERITY - Values: - SecurityUpdates - CriticalUpdates Key: CLASSIFICATION -
+        Values: - WindowsServer2019 Key: PRODUCT ApproveAfterDays: 7 ComplianceLevel: CRITICAL -
+        PatchFilterGroup: PatchFilters: - Values: - Critical - Important - Moderate Key:
+        MSRC_SEVERITY - Values: - "*" Key: CLASSIFICATION - Values: - APPLICATION Key: PATCH_SET -
+        Values: - Active Directory Rights Management Services Client 2.0 Key: PRODUCT - Values: -
+        Active Directory Key: PRODUCT_FAMILY ApproveAfterDays: 7 ComplianceLevel: CRITICAL
 ```
 
 ## See also<a name="aws-resource-ssm-patchbaseline--seealso"></a>

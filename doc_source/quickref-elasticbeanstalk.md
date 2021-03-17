@@ -4,7 +4,7 @@ With Elastic Beanstalk, you can quickly deploy and manage applications in AWS wi
 
 ## Elastic Beanstalk sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
 
-The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+The following sample template deploys a sample PHP web application that's stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\.
 
 Replace `solution-stack` with a solution stack name \(platform version\)\. For a list of available solution stacks, use the AWS CLI command `aws elasticbeanstalk list-available-solution-stacks`\.
 

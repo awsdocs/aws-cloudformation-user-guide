@@ -60,7 +60,7 @@ With the principal set to `*`, grant permission to all accounts in the specified
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Principal`  <a name="cfn-lambda-layerversionpermission-principal"></a>
-An account ID, or `*` to grant permission to all AWS accounts\.  
+An account ID, or `*` to grant layer usage permission to all accounts in an organization, or all AWS accounts \(if `organizationId` is not specified\)\. For the last case, make sure that you really do want all AWS accounts to have usage permission to this layer\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `\d{12}|\*|arn:(aws[a-zA-Z-]*):iam::\d{12}:root`  

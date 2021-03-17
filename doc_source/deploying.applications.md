@@ -2,11 +2,11 @@
 
 You can use AWS CloudFormation to automatically install, configure, and start applications on Amazon EC2 instances\. Doing so enables you to easily duplicate deployments and update existing installations without connecting directly to the instance, which can save you a lot of time and effort\.
 
-AWS CloudFormation includes a set of helper scripts \(cfn\-init, cfn\-signal, cfn\-get\-metadata, and cfn\-hup\) that are based on cloud\-init\. You call these helper scripts from your AWS CloudFormation templates to install, configure, and update applications on Amazon EC2 instances that are in the same template\.
+CloudFormation includes a set of helper scripts \(cfn\-init, cfn\-signal, cfn\-get\-metadata, and cfn\-hup\) that are based on cloud\-init\. You call these helper scripts from your CloudFormation templates to install, configure, and update applications on Amazon EC2 instances that are in the same template\.
 
-The following walkthrough describes how to create a template that launches a LAMP stack by using cfn helper scripts to install, configure and start Apache, MySQL, and PHP\. You'll start with a simple template that sets up a basic Amazon EC2 instance running Amazon Linux, and then continue adding to the template until it describes a full LAMP stack\.
+The following walkthrough describes how to create a template that launches a LAMP stack by using cfn helper scripts to install, configure, and start Apache, MySQL, and PHP\. You'll start with a simple template that sets up a basic Amazon EC2 instance running Amazon Linux, and then continue adding to the template until it describes a full LAMP stack\.
 
-For additional strategies and examples about deploying applications with AWS CloudFormation, see the [Bootstrapping applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
+For additional strategies and examples about deploying applications with CloudFormation, see the [Bootstrapping applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
 
 **Topics**
 + [Basic Amazon EC2 instance](#deployment-walkthrough-basic-server)
@@ -216,7 +216,7 @@ You start with a basic template that defines a single Amazon EC2 instance with a
 }
 ```
 
-In addition to the Amazon EC2 instance and security group, we create three input parameters that specify the instance type, an Amazon EC2 key pair to use for SSH access, and an IP address range that can be used to SSH to the instance\. The mapping section ensures that AWS CloudFormation uses the correct AMI ID for the stack's region and the Amazon EC2 instance type\. Finally, the output section outputs the public URL of the web server\.
+In addition to the Amazon EC2 instance and security group, we create three input parameters that specify the instance type, an Amazon EC2 key pair to use for SSH access, and an IP address range that can be used to SSH to the instance\. The mapping section ensures that CloudFormation uses the correct AMI ID for the stack's region and the Amazon EC2 instance type\. Finally, the output section outputs the public URL of the web server\.
 
 ## LAMP installation<a name="deployment-walkthrough-lamp-install"></a>
 
@@ -363,13 +363,13 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
 }
 ```
 
-The `UserData` property runs two shell commands: install the AWS CloudFormation helper scripts and then run the [cfn\-init](cfn-init.md) helper script\. Because the helper scripts are updated periodically, running the `yum install -y aws-cfn-bootstrap` command ensures that you get the latest helper scripts\. When you run cfn\-init, it reads metadata from the [AWS::CloudFormation::Init](aws-resource-init.md) resource, which describes the actions to be carried out by cfn\-init\. For example, you can use cfn\-init and AWS::CloudFormation::Init to install packages, write files to disk, or start a service\. In our case, cfn\-init installs the listed packages \(httpd, mysql, and php\) and creates the `/var/www/html/index.php` file \(a sample PHP application\)\.
+The `UserData` property runs two shell commands: install the CloudFormation helper scripts and then run the [cfn\-init](cfn-init.md) helper script\. Because the helper scripts are updated periodically, running the `yum install -y aws-cfn-bootstrap` command ensures that you get the latest helper scripts\. When you run cfn\-init, it reads metadata from the [AWS::CloudFormation::Init](aws-resource-init.md) resource, which describes the actions to be carried out by cfn\-init\. For example, you can use cfn\-init and AWS::CloudFormation::Init to install packages, write files to disk, or start a service\. In our case, cfn\-init installs the listed packages \(httpd, mysql, and php\) and creates the `/var/www/html/index.php` file \(a sample PHP application\)\.
 
 ## LAMP configuration<a name="deployment-walkthrough-config"></a>
 
 Now that we have a template that installs Linux, Apache, MySQL, and PHP, we'll need to expand the template so that it automatically configures and runs Apache, MySQL, and PHP\. In the following example, we expand on the `Parameters` section, `AWS::CloudFormation::Init` resource, and `UserData` property to complete the configuration\. As with the previous template, sections marked with an ellipsis \(\.\.\.\) are omitted for brevity\. Additions to the template are shown in red italic text\.
 
-Note that the example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
+The example defines the `DBUsername` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
 
 **Important**  
 Using the `NoEcho` attribute does not mask any information stored in the following:  
@@ -557,7 +557,7 @@ For more information, see the [Do not embed credentials in your templates](https
 }
 ```
 
-The example adds more parameters to obtain information for configuring the MySQL database, such as the database name, user name, password, and root password\. The parameters also contain constraints that catch incorrectly formatted values before AWS CloudFormation creates the stack\.
+The example adds more parameters to obtain information for configuring the MySQL database, such as the database name, user name, password, and root password\. The parameters also contain constraints that catch incorrectly formatted values before CloudFormation creates the stack\.
 
 In the `AWS::CloudFormation::Init` resource, we added a MySQL setup file, containing the database name, user name, and password\. The example also adds a `services` property to ensure that the httpd and mysqld services are running \(`ensureRunning` set to `true`\) and to ensure that the services are restarted if the instance is rebooted \(`enabled` set to `true`\)\. A good practice is to also include the [cfn\-hup](cfn-hup.md) helper script, with which you can make configuration updates to running instances by updating the stack template\. For example, you could change the sample PHP application and then run a stack update to deploy the change\.
 
@@ -565,9 +565,9 @@ In order to run the MySQL commands after the installation is complete, the examp
 
 ## CreationPolicy attribute<a name="deployment-walkthrough-cfn-signal"></a>
 
-Finally, you need a way to instruct AWS CloudFormation to complete stack creation only after all the services \(such as Apache and MySQL\) are running and not after all the stack resources are created\. In other words, if you use the template from the previous section to launch a stack, AWS CloudFormation sets the status of the stack as `CREATE_COMPLETE` after it successfully creates all the resources\. However, if one or more services failed to start, AWS CloudFormation still sets the stack status as `CREATE_COMPLETE`\. To prevent the status from changing to `CREATE_COMPLETE` until all the services have successfully started, you can add a [CreationPolicy](aws-attribute-creationpolicy.md) attribute to the instance\. This attribute puts the instance's status in `CREATE_IN_PROGRESS` until AWS CloudFormation receives the required number of success signals or the timeout period is exceeded, so you can control when the instance has been successfully created\.
+Finally, you need a way to instruct CloudFormation to complete stack creation only after all the services \(such as Apache and MySQL\) are running and not after all the stack resources are created\. In other words, if you use the template from the earlier section to launch a stack, CloudFormation sets the status of the stack as `CREATE_COMPLETE` after it successfully creates all the resources\. However, if one or more services failed to start, CloudFormation still sets the stack status as `CREATE_COMPLETE`\. To prevent the status from changing to `CREATE_COMPLETE` until all the services have successfully started, you can add a [CreationPolicy](aws-attribute-creationpolicy.md) attribute to the instance\. This attribute puts the instance's status in `CREATE_IN_PROGRESS` until CloudFormation receives the required number of success signals or the timeout period is exceeded, so you can control when the instance has been successfully created\.
 
-The following example adds a creation policy to the Amazon EC2 instance to ensure that cfn\-init completes the LAMP installation and configuration before the stack creation is completed\. In conjunction with the creation policy, the example needs to run the [cfn\-signal](cfn-signal.md) helper script to signal AWS CloudFormation when all the applications are installed and configured\.
+The following example adds a creation policy to the Amazon EC2 instance to ensure that cfn\-init completes the LAMP installation and configuration before the stack creation is completed\. In conjunction with the creation policy, the example needs to run the [cfn\-signal](cfn-signal.md) helper script to signal CloudFormation when all the applications are installed and configured\.
 
 ```
 {
@@ -625,9 +625,9 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
 }
 ```
 
-The creation policy attribute uses the ISO 8601 format to define a timeout period of 5 minutes\. And because you're waiting for just 1 instance to be configured, you only need to wait for one success signal, which is the default count\.
+The creation policy attribute uses the ISO 8601 format to define a timeout period of 5 minutes\. And because you're waiting for 1 instance to be configured, you only need to wait for one success signal, which is the default count\.
 
-In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails, cfn\-signal sends a failure signal that causes the resource creation to fail\. The resource creation also fails if AWS CloudFormation doesn't receive a success signal within the timeout period\.
+In the `UserData` property, the template runs the cfn\-signal script to send a success signal with an exit code if all the services are configured and started successfully\. When you use the cfn\-signal script, you must include the stack ID or name and the logical ID of the resource that you want to signal\. If the configuration fails, cfn\-signal sends a failure signal that causes the resource creation to fail\. The resource creation also fails if CloudFormation doesn't receive a success signal within the timeout period\.
 
 The following example shows the final complete template\.
 

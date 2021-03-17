@@ -175,7 +175,7 @@ Not all resources support import operations\. See [Resources that support import
    }
    ```
 
-1. Repeat steps 2\-3 to update the source stack again, this time to delete the target resource from the stack\.
+1. Repeat steps 2–3 to update the source stack again, this time to delete the target resource from the stack\.
 
 1. Perform an import operation to add `GamesTable` to the target stack\.
 
@@ -199,7 +199,7 @@ Not all resources support import operations\. See [Resources that support import
 
    1. On the **Specify stack details** page, modify any parameters, and then choose **Next**\. This automatically creates a change set\.
 **Important**  
-The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
+The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
    1. On the **Review *stack\-name*** page, confirm that the correct resource is being imported, and then choose **Import resources**\. This automatically executes the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
 

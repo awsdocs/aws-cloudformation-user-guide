@@ -118,16 +118,15 @@ Example return value for a wait condition with 2 signals:
             "WaitHandle": {
                 "Type": "AWS::CloudFormation::WaitConditionHandle"
             },
-            "WaitCondition": {
-                "Type": "AWS::CloudFormation::WaitCondition",
-                "DependsOn": "WebServerGroup",
-                "Properties":
-                "Handle": {
-                    "Ref": "WaitHandle",
-                    "Timeout": "300",
-                    "Count": {
-                        "Ref": "WebServerCapacity"
-                    }
+            "WaitCondition":
+            "Type": "AWS::CloudFormation::WaitCondition",
+            "DependsOn": "WebServerGroup",
+            "Properties":
+            "Handle": {
+                "Ref": "WaitHandle",
+                "Timeout": "300",
+                "Count": {
+                    "Ref": "WebServerCapacity"
                 }
             }
         }

@@ -4,8 +4,6 @@ The `MaintenanceWindowAutomationParameters` property type specifies the paramete
 
  `MaintenanceWindowAutomationParameters` is a property of the [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html) property type\.
 
-For information about available parameters in Automation runbooks, you can view the content of the runbook itself in the Systems Manager console\. For information, see [View runbook content](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-documents-reference-details.html#view-automation-json) in the *AWS Systems Manager User Guide*\.
-
 ## Syntax<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

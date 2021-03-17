@@ -66,7 +66,7 @@ The Amazon Resource Name \(ARN\) of the AWS IoT policy, such as `arn:aws:iot:us-
 
 ### <a name="aws-resource-iot-policy--examples--"></a>
 
-The following example declares an AWS IoT Policy\. This example grants permission to connect to AWS IoT with client ID client1\.
+The following example declares an AWS IoT policy\. This example grants permission to connect to AWS IoT with client ID client1\.
 
 #### JSON<a name="aws-resource-iot-policy--examples----json"></a>
 

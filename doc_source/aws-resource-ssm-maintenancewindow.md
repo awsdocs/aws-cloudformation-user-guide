@@ -147,39 +147,20 @@ The following example creates a Systems Manager maintenance window that runs for
 #### JSON<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets--json"></a>
 
 ```
-{
-    "Resources": {
-        "MaintenanceWindow": {
-            "Type": "AWS::SSM::MaintenanceWindow",
-            "Properties": {
-                "AllowUnassociatedTargets": false,
-                "Cutoff": 1,
-                "Description": "Maintenance Window to update SSM Agent",
-                "Duration": 2,
-                "Name": "UpdateSSMAgentMaintenanceWindow",
-                "Schedule": "cron(0 4 ? * SUN *)",
-                "ScheduleTimezone": "US/Eastern"
-            }
-        }
-    }
-}
+{ "Resources": { "MaintenanceWindow": { "Type":
+        "AWS::SSM::MaintenanceWindow", "Properties": { "AllowUnassociatedTargets": false, "Cutoff":
+        1, "Description": "Maintenance Window to update SSM Agent", "Duration": 2, "Name":
+        "UpdateSSMAgentMaintenanceWindow", "Schedule": "cron(0 4 ? * SUN *)", "ScheduleTimezone":
+        "US/Eastern" } } } }
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets--yaml"></a>
 
 ```
----
-Resources:
-  MaintenanceWindow:
-    Type: AWS::SSM::MaintenanceWindow
-    Properties:
-      AllowUnassociatedTargets: false
-      Cutoff: 1
-      Description: Maintenance Window to update SSM Agent
-      Duration: 2
-      Name: UpdateSSMAgentMaintenanceWindow
-      Schedule: cron(0 4 ? * SUN *)
-      ScheduleTimezone: US/Eastern
+--- Resources: MaintenanceWindow: Type: AWS::SSM::MaintenanceWindow
+        Properties: AllowUnassociatedTargets: false Cutoff: 1 Description: Maintenance Window to
+        update SSM Agent Duration: 2 Name: UpdateSSMAgentMaintenanceWindow Schedule: cron(0 4 ? *
+        SUN *) ScheduleTimezone: US/Eastern
 ```
 
 ## See also<a name="aws-resource-ssm-maintenancewindow--seealso"></a>

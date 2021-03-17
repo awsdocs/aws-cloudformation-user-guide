@@ -3,10 +3,10 @@
 To make the changes described in a change set to your stack, execute the change set\.
 
 **Important**  
-After you execute a change set, AWS CloudFormation deletes any additional change sets that are associated with the stack because they are no longer valid for the updated stack\. If an update fails, you need to create a new change set\.
+After you execute a change set, CloudFormation deletes any additional change sets that are associated with the stack because they're no longer valid for the updated stack\. If an update fails, you need to create a new change set\.
 
 **Stack Policies and Executing a Change Set**  
-If you execute a change set on a stack that has a stack policy associated with it, AWS CloudFormation enforces the policy when it updates the stack\. You can't specify a temporary stack policy that overrides the existing policy when you execute a change set\. To update a protected resource, you must update the stack policy or use the [direct update](using-cfn-updating-stacks-direct.md) method\.
+If you execute a change set on a stack that has a stack policy associated with it, CloudFormation enforces the policy when it updates the stack\. You can't specify a temporary stack policy that overrides the existing policy when you execute a change set\. To update a protected resource, you must update the stack policy or use the [direct update](using-cfn-updating-stacks-direct.md) method\.
 
 ------
 #### [ Execute a change set for nested stacks \(console\) ]
@@ -21,10 +21,10 @@ If you execute a change set on a stack that has a stack policy associated with i
 
 1. On the change set's details page, choose **Execute**\.
 **Note**  
-AWS CloudFormation executes the changes described in your root change set and nested change sets, if **Enabled** for change sets for nested stacks was selected during the [Creating a change set](using-cfn-updating-stacks-changesets-create.md) process\.   
+CloudFormation executes the changes described in your root change set and nested change sets, if **Enabled** for change sets for nested stacks was selected during the [Creating a change set](using-cfn-updating-stacks-changesets-create.md) process\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-change-sets-delete-and-execute.png)
 
-   AWS CloudFormation immediately starts updating the stack\. The AWS CloudFormation console directs you to the [**Events**](cfn-console-view-stack-data-resources.md) tab, where you can monitor the progress of the stack update\.
+   CloudFormation immediately starts updating the stack\. The CloudFormation console directs you to the [**Events**](cfn-console-view-stack-data-resources.md) tab, where you can monitor the progress of the stack update\.
 
 ------
 #### [ Execute a change set \(console\) ]
@@ -40,7 +40,7 @@ AWS CloudFormation executes the changes described in your root change set and ne
 1. On the change set's details page, choose **Execute**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-change-sets-delete-and-execute.png)
 
-   AWS CloudFormation immediately starts updating the stack\. The AWS CloudFormation console directs you to the [**Events**](cfn-console-view-stack-data-resources.md) tab, where you can monitor the progress of the stack update\.
+   CloudFormation immediately starts updating the stack\. The CloudFormation console directs you to the [**Events**](cfn-console-view-stack-data-resources.md) tab, where you can monitor the progress of the stack update\.
 
 ------
 
@@ -55,4 +55,4 @@ AWS CloudFormation executes the changes described in your root change set and ne
 
   The command in the example executes a change set with the ID `arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet/1a2345b6-0000-00a0-a123-00abc0abc000`\.
 
-  After you run the command, AWS CloudFormation starts updating the stack\. To view the stack's progress, use the [aws cloudformation describe\-stacks](using-cfn-describing-stacks.md) command\.
+  After you run the command, CloudFormation starts updating the stack\. To view the stack's progress, use the [aws cloudformation describe\-stacks](using-cfn-describing-stacks.md) command\.

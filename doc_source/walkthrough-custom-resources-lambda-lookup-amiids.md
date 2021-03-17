@@ -65,7 +65,7 @@ To create the sample Amazon EC2 stack, you'll use a sample template that include
 
 During stack creation, the custom resource invokes the Lambda function and waits until the function sends a response to the pre\-signed Amazon S3 URL\. In the response, the function returns the ID of the latest AMI that corresponds to the EC2 instance type and region in which you are creating the instance\. The data from the function's response is stored as an attribute of the custom resource, which is used to specify the AMI ID of the EC2 instance\.
 
-The following snippets explain relevant parts of the sample template to help you understand how to associate a Lambda function with a custom resource and how to use the function's response\. 
+The following snippets explain relevant parts of the sample template to help you understand how to associate a Lambda function with a custom resource and how to use the function's response\.
 
 To view the entire sample template, see:
 
@@ -326,5 +326,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related information<a name="w8307ab1c27c24c14b7c29"></a>
+## Related information<a name="w8424ab1c27c24c14b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

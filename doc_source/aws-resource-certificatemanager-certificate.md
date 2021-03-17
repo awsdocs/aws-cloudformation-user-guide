@@ -121,26 +121,15 @@ The following example shows how to declare an `AWS::CertificateManager::Certific
 #### JSON<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--json"></a>
 
 ```
-"mycert" : {
-  "Type" : "AWS::CertificateManager::Certificate",
-  "Properties" : {
-    "DomainName" : "example.com",
-    "DomainValidationOptions" : [{
-      "DomainName" : "example.com",
-      "ValidationDomain" : "example.com"
-    }]
-  }
-}
+"mycert" : { "Type" : "AWS::CertificateManager::Certificate",
+            "Properties" : { "DomainName" : "example.com", "DomainValidationOptions" : [{
+            "DomainName" : "example.com", "ValidationDomain" : "example.com" }] } }
 ```
 
 #### YAML<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--yaml"></a>
 
 ```
-mycert:
-  Type: AWS::CertificateManager::Certificate
-  Properties:
-    DomainName: example.com
-    DomainValidationOptions:
-          - DomainName: example.com
+mycert: Type: AWS::CertificateManager::Certificate Properties:
+            DomainName: example.com DomainValidationOptions: - DomainName: example.com
             ValidationDomain: example.com
 ```

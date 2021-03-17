@@ -90,8 +90,8 @@ Contains the Amazon ECS task definition and task count to be used, if the event 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpParameters`  <a name="cfn-events-rule-target-httpparameters"></a>
-Contains the HTTP parameters to use when the target is a API Gateway REST endpoint\.  
-If you specify an API Gateway REST API as a target, you can use this parameter to specify headers, path parameter, query string keys/values as part of your target invoking request\.  
+Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge API destination\.  
+If you specify an API Gateway REST API or Api destination as a target, you can use this parameter to specify headers, path parameter, query string keys/values as part of your target invoking request\.  
 *Required*: No  
 *Type*: [HttpParameters](aws-properties-events-rule-httpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

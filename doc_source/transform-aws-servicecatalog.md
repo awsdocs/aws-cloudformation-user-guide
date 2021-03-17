@@ -4,13 +4,13 @@ The `AWS::ServiceCatalog` transform enables Service Catalog users to reference o
 
 To reference an output from an existing provisioned product, you must include the `AWS::ServiceCatalog` transform at the top of your template\. Where an output value is required, you provide the name of the provisioned product and the output key name\.
 
-You can reference multiple provisioned products and key names in your template, a maximum of 20 per template\. During provisioning, the transform retrieves the value from each referenced provisioned product and key, substituting the output value in your CloudFormation template\. 
+You can reference multiple provisioned products and key names in your template, a maximum of 20 per template\. During provisioning, the transform retrieves the value from each referenced provisioned product and key, substituting the output value in your CloudFormation template\.
 
 ## Usage<a name="tbd"></a>
 
-Use the `AWS::ServiceCatalog` transform at the top of the template\. You cannot use `AWS::ServiceCatalog` as a transform embedded in any other template section\. 
+Use the `AWS::ServiceCatalog` transform at the top of the template\. You can't use `AWS::ServiceCatalog` as a transform embedded in any other template section\.
 
-The value for the transform declaration must be a literal string\. You cannot use a parameter or function to specify a transform value\.
+The value for the transform declaration must be a literal string\. You can't use a parameter or function to specify a transform value\.
 
 ### Syntax at the top level of a template<a name="servicecatalog-top-level-syntax"></a>
 
@@ -33,7 +33,7 @@ Transform: AWS::ServiceCatalog
 
 ## Parameters<a name="servicecatalog-parameters"></a>
 
-The `AWS::ServiceCatalog` transform does not accept any parameters\.
+The `AWS::ServiceCatalog` transform doesn't accept any parameters\.
 
 ## Example<a name="servicecatalog-example-json"></a>
 
@@ -65,9 +65,9 @@ Template versions that don't wrap the value as a string literal will fail\.
 
 ### YAML<a name="servicecatalog-yaml-transform"></a>
 
-Examples 1\-4 are valid templates\. In Examples 1 and 2, the transform and value are string literals\.
+Examples 1–4 are valid templates\. In Examples 1 and 2, the transform and value are string literals\.
 
-Example 5 is not a valid template\. The value must be wrapped in a string ' or " or >\- \. If not, the user receives an error\.
+Example 5 isn't a valid template\. The value must be wrapped in a string `'` or `"` or `>-`\. If not, the user receives an error\.
 
 ```
      // Example 1 

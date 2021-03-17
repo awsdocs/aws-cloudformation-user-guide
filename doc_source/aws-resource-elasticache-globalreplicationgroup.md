@@ -60,7 +60,7 @@ The cache node type of the Global Datastore
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheParameterGroupName`  <a name="cfn-elasticache-globalreplicationgroup-cacheparametergroupname"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the cache parameter group to use with the Global datastore\. It must be compatible with the major engine version used by the Global datastore\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

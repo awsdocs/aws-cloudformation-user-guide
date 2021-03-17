@@ -2,7 +2,7 @@
 
 ## EC2 block device mapping examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 instance with block device mapping<a name="w8307ab1c27c22c39b3b2"></a>
+### EC2 instance with block device mapping<a name="w8424ab1c27c22c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 instance with ephemeral drives<a name="w8307ab1c27c22c39b3b4"></a>
+### EC2 instance with ephemeral drives<a name="w8424ab1c27c22c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -91,7 +91,7 @@ EC2Instance:
 
 ## Assigning an Amazon EC2 elastic IP using AWS::EC2::EIP snippet<a name="scenario-ec2-eip"></a>
 
-This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html)\.
+This example shows how to assign an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html)\.
 
 ### JSON<a name="quickref-ec2-example-3.json"></a>
 
@@ -167,9 +167,9 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ## Elastic network interface \(ENI\) template snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w8307ab1c27c22c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w8424ab1c27c22c39c13b3"></a>
 
-Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
+Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\.
 
 #### JSON<a name="cfn-template-snippets-eni-example-1.json"></a>
 

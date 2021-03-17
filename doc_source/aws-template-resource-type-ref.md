@@ -134,6 +134,7 @@ service-provider::service-name::data-type-name
 + [Route 53](AWS_Route53.md)
 + [Route 53 Resolver](AWS_Route53Resolver.md)
 + [Amazon S3](AWS_S3.md)
++ [S3 on Outposts](AWS_S3Outposts.md)
 + [Amazon SageMaker](AWS_SageMaker.md)
 + [Secrets Manager](AWS_SecretsManager.md)
 + [Service Catalog](AWS_ServiceCatalog.md)

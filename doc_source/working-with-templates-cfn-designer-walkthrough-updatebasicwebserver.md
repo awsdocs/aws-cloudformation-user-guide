@@ -1,6 +1,6 @@
 # Walkthrough: Use AWS CloudFormation Designer to modify a stack's template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver"></a>
 
-You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use AWS CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\. 
+You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\. 
 
 In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\. 
 
@@ -20,7 +20,7 @@ In this walkthrough, we will complete the following steps:
 
    After saving the modifications, we'll update the basic web server stack with the modified template\.
 **Note**  
-AWS CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
+CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
 1. [Delete the stack\.](#working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-delete-stack)
 
@@ -28,7 +28,7 @@ AWS CloudFormation is a free service; however, you are charged for the AWS resou
 
 Prerequisites
 
-This walkthrough assumes that you have a working knowledge of Amazon Virtual Private Cloud \(Amazon VPC\), Auto Scaling, Elastic Load Balancing, and AWS CloudFormation\. For context, each procedure provides some basic information about each resource\.
+This walkthrough assumes that you have a working knowledge of Amazon Virtual Private Cloud \(Amazon VPC\), Auto Scaling, Elastic Load Balancing, and CloudFormation\. For context, each procedure provides some basic information about each resource\.
 
 Additionally, the walkthrough assumes that you completed the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to create a basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)\. From that walkthrough, you should have a running stack named `BasicWebServerStack`\.
 
@@ -38,13 +38,13 @@ In this step, we'll use AWS CloudFormation Designer to get and open a copy of a 
 
 **To get a copy of a running stack's template**
 
-1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation/](https://console.aws.amazon.com/cloudformation/)\.
+1. Open the CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation/](https://console.aws.amazon.com/cloudformation/)\.
 
 1. From the list of stacks, select the `BasicWebServerStack`\.
 
 1. Choose **Actions**, and then **View/Edit template in Designer**\.
 
-AWS CloudFormation gets a copy of the `BasicWebServerStack` stack's template and displays it in AWS CloudFormation Designer, where you can view the template resources and their relationships\. In the following step, we'll use AWS CloudFormation Designer to modify the template\.
+CloudFormation gets a copy of the `BasicWebServerStack` stack's template and displays it in AWS CloudFormation Designer, where you can view the template resources and their relationships\. In the following step, we'll use AWS CloudFormation Designer to modify the template\.
 
 ## Step 2: Modify a template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-modify-template"></a>
 
@@ -64,7 +64,7 @@ We'll modify the basic web server template by using AWS CloudFormation Designer'
 
    The resources are organized by resource categories\. The Auto Scaling group and launch configuration are in the **AutoScaling** category, and the load balancer is in the **ElasticLoadBalancing** category\.
 **Note**  
-These resources do not follow the container model, so AWS CloudFormation Designer doesn't automatically associate them with the subnet\. We'll create connections later on in this step\.
+These resources don't follow the container model, so AWS CloudFormation Designer doesn't automatically associate them with the subnet\. We'll create connections later on in this step\.
 
 1. From the **Resource types** pane in the **EC2** category, add the **SecurityGroup** resource anywhere in the VPC except in the subnet\.
 
@@ -95,7 +95,7 @@ These resources do not follow the container model, so AWS CloudFormation Designe
    1. Define a dependency for the Auto Scaling group to the public route:
       + From the `WebServerFleet` resource, drag the `DependsOn` connection to the `PublicRoute` resource\.
 
-      This dependency means that AWS CloudFormation won't create the `WebServerFleet` resource until the public route is complete\. Otherwise, if the public route isn't available when the web server instances are starting up, they won't be able to send signals \(using the cfn\-signal helper script\) to notify AWS CloudFormation when their configurations and application deployments are complete\.
+      This dependency means that CloudFormation won't create the `WebServerFleet` resource until the public route is complete\. Otherwise, if the public route isn't available when the web server instances are starting up, they won't be able to send signals \(using the cfn\-signal helper script\) to notify CloudFormation when their configurations and application deployments are complete\.
 
 1. Specify the properties for the resources that you added\.
 
@@ -279,7 +279,7 @@ YAML
       ```  
 `WebServerLaunchConfig`  
 The launch configuration has a number of different properties that you need to specify, so we'll highlight just a few of them\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that were already specified in the template\. You specify the instance type as a parameter value when you create a stack\. The `ImageId` value is a mapping that is based on your stack's region and the instance type that you specified\.  
-In the `UserData` property, we specify configurations scripts that run after the instance is up and running\. All of the configuration information is defined in the instance's metadata, which we'll add in the next step\.  
+In the `UserData` property, we specify configurations scripts that run after the instance is up and running\. The configuration information is defined in the instance's metadata, which we'll add in the next step\.  
 JSON  
 
       ```
@@ -463,9 +463,9 @@ YAML
                       ensureRunning: 'true'
       ```
 
-1. Add the `WebServerCount` parameter\. This parameter specifies how many instances to create when AWS CloudFormation creates the Auto Scaling group\.
+1. Add the `WebServerCount` parameter\. This parameter specifies how many instances to create when CloudFormation creates the Auto Scaling group\.
 
-   1. Click on an open area on the AWS CloudFormation Designer canvas\.
+   1. Select on an open area on the AWS CloudFormation Designer canvas\.
 
    1. In the integrated editor pane, choose the **Parameters** tab\.
 
@@ -531,19 +531,19 @@ YAML
 
 1. From the AWS CloudFormation Designer toolbar, save the template locally by choosing **File** \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-file-menu.png)\) and then **Save**\.
 
-You now have a modified AWS CloudFormation template that you can use to update the basic web server stack\. In the next step, we'll use this template to update the basic web server stack\.
+You now have a modified CloudFormation template that you can use to update the basic web server stack\. In the next step, we'll use this template to update the basic web server stack\.
 
 ## Step 3: Update the stack<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-update-stack"></a>
 
-To implement your template changes, we need to update the basic web server stack\. You can launch the AWS CloudFormation Update Stack Wizard directly from AWS CloudFormation Designer\.
+To implement your template changes, we need to update the basic web server stack\. You can launch the CloudFormation Update Stack Wizard directly from AWS CloudFormation Designer\.
 
 **To update the stack**
 
 1. On the AWS CloudFormation Designer toolbar, choose **Create Stack** \(![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-create-stack-icon.png)\)\.
 
-   AWS CloudFormation Designer saves the opened template in an S3 bucket and then launches the AWS CloudFormation Update Stack Wizard\. Because we modified the `BasicWebServerStack` stack's template, AWS CloudFormation launches the Update Stack Wizard for that stack\.
+   AWS CloudFormation Designer saves the opened template in an S3 bucket and then launches the CloudFormation Update Stack Wizard\. Because we modified the `BasicWebServerStack` stack's template, CloudFormation launches the Update Stack Wizard for that stack\.
 
-1. AWS CloudFormation automatically populates the template URL; choose **Next**\.
+1. CloudFormation automatically populates the template URL; choose **Next**\.
 
 1. In the **Stack** section, in the **Name** field, verify that the stack name is `BasicWebServerStack`\.
 
@@ -553,20 +553,20 @@ To implement your template changes, we need to update the basic web server stack
 
 1. Ensure that the stack name is correct, and then choose **Update**\.
 
-It can take several minutes for AWS CloudFormation to update your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. After the stack is updated, view the stack outputs and go to the website URL to verify that the website is running\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. You successfully updated a template and a stack using AWS CloudFormation Designer\.
+It can take several minutes for CloudFormation to update your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. After the stack is updated, view the stack outputs and go to the website URL to verify that the website is running\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. You successfully updated a template and a stack using AWS CloudFormation Designer\.
 
-To ensure that you are not charged for unwanted services, you can delete this stack\.
+To ensure that you aren't charged for unwanted services, you can delete this stack\.
 
 ## Step 4: Clean up resources<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver-delete-stack"></a>
 
-To make sure you are not charged for unwanted services, delete your stack and it's resources\.
+To make sure you aren't charged for unwanted services, delete your stack and it's resources\.
 
 **To delete the stack**
 
-1. From the AWS CloudFormation console, choose the **BasicWebServerStack** stack\.
+1. From the CloudFormation console, choose the **BasicWebServerStack** stack\.
 
 1. Choose **Delete Stack**\.
 
 1. In the confirmation message, choose **Yes, Delete**\.
 
-It can take several minutes for AWS CloudFormation to delete your stack\. To monitor progress, view the stack events\. After the stack is deleted, all the resources that you created are deleted\. Now that you understand how to use AWS CloudFormation Designer, you can use it to build and modify your own templates\. 
+It can take several minutes for CloudFormation to delete your stack\. To monitor progress, view the stack events\. After the stack is deleted, all the resources that you created are deleted\. Now that you understand how to use AWS CloudFormation Designer, you can use it to build and modify your own templates\. 

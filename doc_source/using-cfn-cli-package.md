@@ -4,7 +4,7 @@ For some resource properties that require an Amazon S3 location \(a bucket name 
 
 If you specify a file, the command directly uploads it to the S3 bucket\. After uploading the artifacts, the command returns a copy of your template, replacing references to local artifacts with the S3 location where the command uploaded the artifacts\. Then, you can use the returned template to create or update a stack\.
 
-If you specify a folder, the command creates a \.zip file for the folder, and then uploads the \.zip file\. If you don’t specify a path, the command creates a \.zip file for the working directory, and uploads it\. You can specify an absolute or relative path, where the relative path is relative to your template’s location\.
+If you specify a folder, the command creates a \.zip file for the folder, and then uploads the \.zip file\. If you don't specify a path, the command creates a \.zip file for the working directory, and uploads it\. You can specify an absolute or relative path, where the relative path is relative to your template's location\.
 
 You can use local artifacts only for resource properties that the `package` command supports\. For more information about this command and a list of the supported resource properties, see the `aws cloudformation package` command in the [AWS CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html)\.
 

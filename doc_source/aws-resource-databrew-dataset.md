@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DataBrew::Dataset",
   "Properties" : {
+      "[Format](#cfn-databrew-dataset-format)" : String,
       "[FormatOptions](#cfn-databrew-dataset-formatoptions)" : Json,
       "[Input](#cfn-databrew-dataset-input)" : Json,
       "[Name](#cfn-databrew-dataset-name)" : String,
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DataBrew::Dataset
 Properties: 
+  [Format](#cfn-databrew-dataset-format): String
   [FormatOptions](#cfn-databrew-dataset-formatoptions): Json
   [Input](#cfn-databrew-dataset-input): Json
   [Name](#cfn-databrew-dataset-name): String
@@ -33,6 +35,13 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-databrew-dataset-properties"></a>
+
+`Format`  <a name="cfn-databrew-dataset-format"></a>
+The file format of a dataset that is created from an S3 file or folder\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CSV | EXCEL | JSON | PARQUET`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FormatOptions`  <a name="cfn-databrew-dataset-formatoptions"></a>
 A set of options that define how DataBrew interprets the data in the dataset\.  

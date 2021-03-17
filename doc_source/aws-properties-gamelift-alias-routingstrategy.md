@@ -44,7 +44,7 @@ A type of routing strategy\.
 Possible routing types include the following:  
 +  **SIMPLE** \- The alias resolves to one specific fleet\. Use this type when routing to active fleets\.
 +  **TERMINAL** \- The alias does not resolve to a fleet but instead can be used to display a message to the user\. A terminal alias throws a `TerminalRoutingStrategyException` with the message that you specified in the `Message` property\.
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Allowed values*: `SIMPLE | TERMINAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

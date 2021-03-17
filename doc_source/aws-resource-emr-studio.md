@@ -57,7 +57,7 @@ Specifies whether the Studio authenticates users using single sign\-on \(SSO\) o
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultS3Location`  <a name="cfn-emr-studio-defaults3location"></a>
-The default Amazon S3 location to back up Amazon EMR Studio Workspaces and notebook files\. A Studio user can select an alternative Amazon S3 location when creating a Workspace\.  
+The Amazon S3 location to back up EMR Studio Workspaces and notebook files\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  

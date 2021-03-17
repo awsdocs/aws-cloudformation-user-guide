@@ -70,10 +70,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools specified by the Spot Fleet request\.  
 If the allocation strategy is `lowestPrice`, Spot Fleet launches instances from the Spot Instance pools with the lowest price\. This is the default allocation strategy\.  
 If the allocation strategy is `diversified`, Spot Fleet launches instances from all the Spot Instance pools that you specify\.  
-If the allocation strategy is `capacityOptimized`, Spot Fleet launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching\.  
+If the allocation strategy is `capacityOptimized` \(recommended\), Spot Fleet launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching\. To give certain instance types a higher chance of launching first, use `capacityOptimizedPrioritized`\. Set a priority for each instance type by using the `Priority` parameter for `LaunchTemplateOverrides`\. You can assign the same priority to different `LaunchTemplateOverrides`\. EC2 implements the priorities on a best\-effort basis, but optimizes for capacity first\. `capacityOptimizedPrioritized` is supported only if your Spot Fleet uses a launch template\. Note that if the `OnDemandAllocationStrategy` is set to `prioritized`, the same priority is applied when fulfilling On\-Demand capacity\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `capacityOptimized | diversified | lowestPrice`  
+*Allowed values*: `capacityOptimized | capacityOptimizedPrioritized | diversified | lowestPrice`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExcessCapacityTerminationPolicy`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy"></a>

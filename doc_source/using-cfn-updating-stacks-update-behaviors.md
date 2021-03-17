@@ -16,7 +16,7 @@ The method AWS CloudFormation uses depends on which property you update for a gi
 Depending on the update behavior, you can decide when to modify resources to reduce the impact of these changes on your application\. In particular, you can plan when resources must be *replaced* during an update\. For example, if you update the `Port` property of an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) resource type, AWS CloudFormation replaces the DB instance by creating a new DB instance with the updated port setting and deletes the old DB instance\. Before the update, you might plan to do the following to prepare for the database replacement:
 + Take a snapshot of the current databases\.
 + Prepare a strategy for how applications that use that DB instance will handle an interruption while the DB instance is being replaced\.
-+ Ensure that the applications that use that DB instance take into account the updated port setting and any other updates you have made\.
++ Ensure that the applications that use that DB instance considers the updated port setting and any other updates you have made\.
 + Use the DB snapshot to restore the databases on the new DB instance\.
 
 This example isn't exhaustive, but it's meant to give you an idea of the things to plan for when a resource is replaced during an update\.

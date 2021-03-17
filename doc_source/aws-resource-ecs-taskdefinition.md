@@ -207,13 +207,6 @@ In the following example, the `Ref` function returns the ARN of the `MyTaskDefin
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-### Fn::GetAtt<a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt-fn--getatt"></a>
-
-`TaskDefinitionArn`  <a name="TaskDefinitionArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
-
 ## Examples<a name="aws-resource-ecs-taskdefinition--examples"></a>
 
 

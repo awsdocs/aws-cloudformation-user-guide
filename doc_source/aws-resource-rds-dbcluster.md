@@ -247,7 +247,7 @@ To list all of the available engine versions for `aurora-postgresql`, use the fo
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-dbcluster-globalclusteridentifier"></a>
- If you are configuring an Aurora global database cluster and want your Aurora DB cluster to be a member in the global database cluster, specify the global cluster ID of the global database cluster\.   
+ If you are configuring an Aurora global database cluster and want your Aurora DB cluster to be a secondary member in the global database cluster, specify the global cluster ID of the global database cluster\. To define the primary database cluster of the global cluster, use the [AWS::RDS::GlobalCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html) resource\.   
  If you aren't configuring a global database cluster, don't specify this property\.   
 To remove the DB cluster from a global database cluster, specify an empty value for the `GlobalClusterIdentifier` property\.
 For information about Aurora global databases, see [ Working with Amazon Aurora Global Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html) in the *Amazon Aurora User Guide*\.  

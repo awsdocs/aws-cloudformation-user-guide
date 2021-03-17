@@ -110,6 +110,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `CreationTime`  <a name="CreationTime-fn::getatt"></a>
 The date and time the workgroup was created, as a UNIX timestamp in seconds\. For example: `1582761016`\.
 
+`EffectiveEngineVersion`  <a name="EffectiveEngineVersion-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-athena-workgroup--examples"></a>
 
 ### Creating an Athena WorkGroup<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup"></a>

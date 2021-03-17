@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>
 
 `BlockPublicPolicy`  <a name="cfn-secretsmanager-resourcepolicy-blockpublicpolicy"></a>
-Specifies if you configuired a check for a resource policy that exposes information publicly\.  
+Specifies if you configured a check for a resource policy that exposes information publicly\.  
 For more information on using this parameter, see [Managing a resource\-based policy for a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_secret-policy.html)\.  
 *Required*: No  
 *Type*: Boolean  

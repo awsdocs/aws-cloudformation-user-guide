@@ -81,7 +81,6 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-table-contributorinsightsspecification"></a>
@@ -130,7 +129,7 @@ If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If y
 Specifies the settings to enable server\-side encryption\.  
 *Required*: No  
 *Type*: [SSESpecification](aws-properties-dynamodb-table-ssespecification.md)  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamSpecification`  <a name="cfn-dynamodb-table-streamspecification"></a>
 The settings for the DynamoDB table stream, which capture changes to items stored in the table\.  

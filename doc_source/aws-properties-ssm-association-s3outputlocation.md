@@ -2,6 +2,8 @@
 
 `S3OutputLocation` is a property of the [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html) resource that specifies an Amazon S3 bucket where you want to store the results of this association request\.
 
+For the minimal permissions required to enable Amzaon S3 output for an association, see [Creating associations](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-state-assoc.html) in the *Systems Manager User Guide*\.
+
 ## Syntax<a name="aws-properties-ssm-association-s3outputlocation-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

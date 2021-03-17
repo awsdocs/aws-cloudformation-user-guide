@@ -6,7 +6,7 @@ In this section, you will use the AWS Management Console to create a stack from 
 
 In the following walkthrough, we'll use a sample template to launch, update, and delete a stack\. After you learn the fundamentals, you can learn more about creating more complex templates and stacks\.
 
-AWS CloudFormation makes deploying a set of Amazon Web Services \(AWS\) resources as simple as submitting a template\. A *template* is a simple text file that describes a *stack*, a collection of AWS resources you want to deploy together as a group\. You use the template to define all the AWS resources you want in your stack\. This can include Amazon Elastic Compute Cloud instances, Amazon Relational Database Service DB Instances, and other resources\. For a list of resource types, see [AWS resource and property types reference](aws-template-resource-type-ref.md)\.
+AWS CloudFormation makes deploying a set of Amazon Web Services \(AWS\) resources as simple as submitting a template\. A *template* is a text file that describes a *stack*, a collection of AWS resources you want to deploy together as a group\. You use the template to define all the AWS resources you want in your stack\. This can include Amazon Elastic Compute Cloud instances, Amazon Relational Database Service DB Instances, and other resources\. For a list of resource types, see [AWS resource and property types reference](aws-template-resource-type-ref.md)\.
 
 **Topics**
 + [Get started](GettingStarted.Walkthrough.md)

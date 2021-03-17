@@ -13,7 +13,7 @@ Using private *resource* types, a specific kind of extension, in your CloudForma
 
 ## Registering extensions in CloudFormation<a name="registry-register"></a>
 
-To use private extensions\-\-either ones you develop yourself, or types shared with you\-\-you must first register them with CloudFormation, in the accounts and regions in which you want to use them\. Once you're registered an extension, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
+To use private extensions, either ones you develop yourself, or types shared with you, you must first register them with CloudFormation, in the accounts and regions in which you want to use them\. Once you're registered an extension, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
 
 You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register an extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
 
@@ -31,7 +31,7 @@ For more information, see [Actions, Resources, and Condition Keys for Amazon S3]
 
 1. Use the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command to register the resource provider in your account:
 
-   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\. 
+   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\.
 **Note**  
 If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account\. You can then specify this execution role using the `--execution-role-arn` parameter\. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials\.
 
@@ -87,7 +87,7 @@ Once you've registered an extension in an account, you can view the details of t
 
 ## Record resource types in AWS Config<a name="registry-config-record"></a>
 
-You can specify that AWS Config automatically track your private resource types and record changes to those resources as *configuration items*\. This enables you to view configuration history for these private resource types, as well as write Config rules to verify configuration best practices\. 
+You can specify that AWS Config automatically track your private resource types and record changes to those resources as *configuration items*\. This enables you to view configuration history for these private resource types, as well as write AWS Config Rules rules to verify configuration best practices\.
 
 To have AWS Config automatically track your private resource types:
 + Manage the resources through CloudFormation\. This includes performing all resource create, updated, and delete operations through CloudFormation\.
@@ -97,8 +97,8 @@ If you use an IAM role to perform your stack operations, that IAM role must have
 [DeleteResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteResourceConfig.html)
 + Configure AWS Config to record all resource types\. For more information, see [Record configurations for third\-party resources](https://docs.aws.amazon.com/config/latest/developerguide/customresources.html) in the *AWS Config Developer Guide*\.
 **Note**  
-Config does not support recording of private resources containing properties defined as both required *and* write\-only\.   
-By design, resource properties defined as write\-only are not returned in the schema used to create the Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\. 
+AWS Config does not support recording of private resources containing properties defined as both required *and* write\-only\.   
+By design, resource properties defined as write\-only are not returned in the schema used to create AWS Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\. 
 
 For more information on configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 

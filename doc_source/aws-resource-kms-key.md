@@ -4,7 +4,7 @@ The `AWS::KMS::Key` resource specifies a [symmetric or asymmetric](https://docs.
 
 You can use symmetric CMKs to encrypt and decrypt small amounts of data, but they are more commonly used to generate data keys and data key pairs\. You can also use symmetric CMKs to encrypt data stored in AWS services that are [integrated with AWS KMS](http://aws.amazon.com/kms/features/#AWS_Service_Integration)\. For more information, see [What is AWS Key Management Service?](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html) in the *AWS Key Management Service Developer Guide*\.
 
-You can use asymmetric CMKs to encrypt and decrypt data or sign messages and verify signatures\.
+You can use asymmetric CMKs to encrypt and decrypt data or sign messages and verify signatures\. To create an asymmetric key, you must specify an asymmetric `KeySpec` value and a `KeyUsage` value\.
 
 **Important**  
 If you change the value of a `Replacement` property, such as `KeyUsage` or `KeySpec`, on an existing CMK, the existing CMK is [scheduled for deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) and a new CMK is created with the specified value\.  
@@ -69,8 +69,8 @@ For information about the key states of a CMK, see [Key state: Effect on your CM
 
 `EnableKeyRotation`  <a name="cfn-kms-key-enablekeyrotation"></a>
 Enables automatic rotation of the key material for the specified customer master key \(CMK\)\. By default, automation key rotation is not enabled\.  
-When you enable automatic rotation, AWS KMS automatically creates new key material for the CMK 365 days after the enable \(or reenable\) date and every 365 days thereafter\. AWS KMS retains all key material until you delete the CMK\.  
-For detailed information about automatic key rotation, see [Rotating customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key Management Service Developer Guide*\.  
+Automatic key rotation is not supported on asymmetric CMKs\. For asymmetric CMKs, omit the `EnableKeyRotation` property or set it to `false`\.  
+When you enable automatic rotation, AWS KMS automatically creates new key material for the CMK 365 days after the enable \(or reenable\) date and every 365 days thereafter\. AWS KMS retains all key material until you delete the CMK\. For detailed information about automatic key rotation, see [Rotating customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key Management Service Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -177,6 +177,8 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
   "Type" : "AWS::KMS::Key",
   "Properties" : {
     "Description" : "An example symmetric CMK",
+    "EnableKeyRotation": true,
+    "PendingWindowInDays": 20,
     "KeyPolicy" : {
       "Version": "2012-10-17",
       "Id": "key-default-1",
@@ -191,7 +193,7 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
         {
           "Sid": "Allow administration of the key",
           "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::123456789012:user/Alice" },
+          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Alice" },
           "Action": [
             "kms:Create*",
             "kms:Describe*",
@@ -211,7 +213,7 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
         {
           "Sid": "Allow use of the key",
           "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::123456789012:user/Bob" },
+          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Bob" },
           "Action": [
             "kms:DescribeKey",
             "kms:Encrypt",
@@ -235,6 +237,8 @@ myKey:
   Type: AWS::KMS::Key
   Properties:
     Description: An example symmetric CMK
+    EnableKeyRotation: true
+    PendingWindowInDays: 20
     KeyPolicy:
       Version: '2012-10-17'
       Id: key-default-1
@@ -248,7 +252,7 @@ myKey:
       - Sid: Allow administration of the key
         Effect: Allow
         Principal:
-          AWS: arn:aws:iam::123456789012:user/Alice
+          AWS: arn:aws:iam::111122223333:user/Alice
         Action:
         - kms:Create*
         - kms:Describe*
@@ -266,7 +270,7 @@ myKey:
       - Sid: Allow use of the key
         Effect: Allow
         Principal:
-          AWS: arn:aws:iam::123456789012:user/Bob
+          AWS: arn:aws:iam::111122223333:user/Bob
         Action:
         - kms:DescribeKey
         - kms:Encrypt
@@ -284,9 +288,7 @@ The following example creates a symmetric CMK with one resource tag\.
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag--json"></a>
 
 ```
-{
-  "Resources" : {
-    "myKey" : {
+"myKeyWithTag" : {
       "Type" : "AWS::KMS::Key",
       "Properties" : {
         "KeyPolicy" : {
@@ -327,8 +329,7 @@ The following example creates a symmetric CMK with one resource tag\.
 #### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag--yaml"></a>
 
 ```
-Resources:
-  myKey:
+myKeyWithTag:
     Type: AWS::KMS::Key
     Properties:
       KeyPolicy:
@@ -356,6 +357,115 @@ Parameters:
     Type: String
   Value:
     Type: String
+```
+
+### Create an asymmetric CMK<a name="aws-resource-kms-key--examples--Create_an_asymmetric_CMK"></a>
+
+The following example creates an RSA asymmetric CMK for signing and verification\. For an asymmetric CMK, you must specify `KeySpec` and `KeyUsage` properties\. The `EnableKeyRotation` property must be omitted or set to `false`\.
+
+#### JSON<a name="aws-resource-kms-key--examples--Create_an_asymmetric_CMK--json"></a>
+
+```
+"RSASigningKey" : {
+  "Type" : "AWS::KMS::Key",
+  "Properties" : {
+    "Description" : "RSA-3047 asymmetric CMK for signing and verification",
+    "KeySpec" : "RSA_3072",
+    "KeyUsage" : "SIGN_VERIFY",
+    "KeyPolicy" : {
+      "Version": "2012-10-17",
+      "Id": "key-default-1",
+      "Statement": [
+        {
+          "Sid": "Enable IAM User Permissions",
+          "Effect": "Allow",
+          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
+          "Action": "kms:*",
+          "Resource": "*"
+        },
+        {
+          "Sid": "Allow administration of the key",
+          "Effect": "Allow",
+          "Principal": { "AWS": "arn:aws:iam::111122223333:role/Admin" },
+          "Action": [
+            "kms:Create*",
+            "kms:Describe*",
+            "kms:Enable*",
+            "kms:List*",
+            "kms:Put*",
+            "kms:Update*",
+            "kms:Revoke*",
+            "kms:Disable*",
+            "kms:Get*",
+            "kms:Delete*",
+            "kms:ScheduleKeyDeletion",
+            "kms:CancelKeyDeletion"
+          ],
+          "Resource": "*"
+        },
+        {
+          "Sid": "Allow use of the key",
+          "Effect": "Allow",
+          "Principal": { "AWS": "arn:aws:iam::111122223333:role/Developer" },
+          "Action": [
+            "kms:Sign",
+            "kms:Verify",
+            "kms:DescribeKey"
+          ], 
+          "Resource": "*"
+        }    
+      ]
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-kms-key--examples--Create_an_asymmetric_CMK--yaml"></a>
+
+```
+RSASigningKey:
+  Type: AWS::KMS::Key
+  Properties:
+    Description: RSA-3047 asymmetric CMK for signing and verification
+    KeySpec: RSA_3072
+    KeyUsage: SIGN_VERIFY
+    KeyPolicy:
+      Version: '2012-10-17'
+      Id: key-default-1
+      Statement:
+      - Sid: Enable IAM User Permissions
+        Effect: Allow
+        Principal:
+          AWS: arn:aws:iam::111122223333:root
+        Action: kms:*
+        Resource: '*'
+      - Sid: Allow administration of the key
+        Effect: Allow
+        Principal:
+          AWS: arn:aws:iam::111122223333:role/Admin
+        Action:
+        - kms:Create*
+        - kms:Describe*
+        - kms:Enable*
+        - kms:List*
+        - kms:Put*
+        - kms:Update*
+        - kms:Revoke*
+        - kms:Disable*
+        - kms:Get*
+        - kms:Delete*
+        - kms:ScheduleKeyDeletion
+        - kms:CancelKeyDeletion
+        Resource: '*'
+      - Sid: Allow use of the key
+        Effect: Allow
+        Principal:
+          AWS: arn:aws:iam::111122223333:role/Developer
+        Action:        
+        - kms:Sign
+        - kms:Verify
+        - kms:DescribeKey
+        Resource: '*'
 ```
 
 ## See also<a name="aws-resource-kms-key--seealso"></a>

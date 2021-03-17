@@ -100,7 +100,7 @@ The following example depicts a valid Parameters section declaration in which a 
 
 ## Parameters section with string parameter with regular expression constraint<a name="scenario-constraint-string-parameter"></a>
 
-The following example depicts a valid Parameters section declaration in which a single `String` type parameter is declared\. The AdminUserAccount parameter has a default of admin\. The parameter value must have a minimum length of 1, a maximum length of 16, and contains alphabetic characters and numbers but must begin with an alphabetic character\.
+The following example depicts a valid Parameters section declaration in which a single `String` type parameter is declared\. The AdminUserAccount parameter has a default of admin\. The parameter value must have a minimum length of 1, a maximum length of 16, and contains alphabetical characters and numbers but must begin with an alphabetical character\.
 
 ### JSON<a name="quickref-general-example-4.json"></a>
 

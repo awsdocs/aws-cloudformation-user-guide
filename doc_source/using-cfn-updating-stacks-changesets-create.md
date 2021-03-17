@@ -1,6 +1,6 @@
 # Creating a change set<a name="using-cfn-updating-stacks-changesets-create"></a>
 
-To create a change set for a running stack, submit the changes that you want to make by providing a modified template, new input parameter values, or both\. AWS CloudFormation generates a change set by comparing your stack with the changes you submitted\.
+To create a change set for a running stack, submit the changes that you want to make by providing a modified template, new input parameter values, or both\. CloudFormation generates a change set by comparing your stack with the changes you submitted\.
 
 You can either modify a template [before creating the change set](using-cfn-updating-stacks-get-template.md) or during change set creation\.
 
@@ -18,7 +18,7 @@ You can either modify a template [before creating the change set](using-cfn-upda
 
 1. If your template contains parameters, on the **Specify stack details** page, enter or modify applicable input parameter values, and then choose **Next**\.
 
-   If you're reusing the stack's template, AWS CloudFormation populates each parameter with the current value in the stack, with the exception of parameters declared with the `NoEcho` attribute\. To use existing values for those parameters, select **Use existing value**\.
+   If you're reusing the stack's template, CloudFormation populates each parameter with the current value in the stack, with the exception of parameters declared with the `NoEcho` attribute\. To use existing values for those parameters, select **Use existing value**\.
 
    For more information about using `NoEcho` to mask sensitive information, as well as using dynamic parameters to manage secrets, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
@@ -28,14 +28,14 @@ Change sets for nested stacks are **Enabled** by default, which will create chan
 
 1. On the **Review *stack\-name*** page, review the changes for this change set\.
 
-   If the template includes AWS Identity and Access Management \(IAM\) resources, select **I acknowledge that AWS CloudFormation might create IAM resources**\. IAM resources can modify permissions in your AWS account; review these resources to ensure that you're permitting only the actions that you intend\. For more information, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
+   If the template includes AWS Identity and Access Management \(IAM\) resources, select **I acknowledge that CloudFormation might create IAM resources**\. IAM resources can modify permissions in your AWS account; review these resources to ensure that you're permitting only the actions that you intend\. For more information, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
 1. Choose **Create change set**\. Specify a name for the change set and optionally specify a description of the change set to identify its purpose\. Then, choose **Create change set**\.
 
-   You're redirected to the **Changes** tab of the change set's details page\. While AWS CloudFormation generates the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. After it has created the change set, AWS CloudFormation sets the status to **CREATE\_COMPLETE**\. In the **Changes** section, AWS CloudFormation lists all of the changes that it will make to your stack\. For more information, see [Viewing a change set](using-cfn-updating-stacks-changesets-view.md)\.  
+   You're redirected to the **Changes** tab of the change set's details page\. While CloudFormation generates the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. After it has created the change set, CloudFormation sets the status to **CREATE\_COMPLETE**\. In the **Changes** section, CloudFormation lists all of the changes that it will make to your stack\. For more information, see [Viewing a change set](using-cfn-updating-stacks-changesets-view.md)\.  
 ![\[The details page for the nested change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-nested-stacks-change-sets-details.png)
 
-   If AWS CloudFormation fails to create the change set \(reports `FAILED` status\), fix the error displayed in the **Status** field, and then recreate the change set\.
+   If CloudFormation fails to create the change set \(reports `FAILED` status\), fix the error displayed in the **Status** field, and then recreate the change set\.
 
 ------
 #### [ Create a change set \(console\) ]
@@ -51,9 +51,9 @@ Change sets for nested stacks are **Enabled** by default, which will create chan
 
 1. If your template contains parameters, on the **Specify stack details** page, enter or modify applicable input parameter values, and then choose **Next**\.
 
-   If you're reusing the stack's template, AWS CloudFormation populates each parameter with the current value in the stack, with the exception of parameters declared with the `NoEcho` attribute\. To use existing values for those parameters, select **Use existing value**\.
+   If you're reusing the stack's template, CloudFormation populates each parameter with the current value in the stack, with the exception of parameters declared with the `NoEcho` attribute\. To use existing values for those parameters, select **Use existing value**\.
 
-   For more information about using `NoEcho` to mask sensitive information, as well as using dynamic parameters to manage secrets, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
+   For more information about using `NoEcho` to mask sensitive information, and using dynamic parameters to manage secrets, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 1. On the **Configure stack options** page, update the stack's tags, IAM service role, stack policy, rollback configuration, Amazon SNS notification topic \(if applicable\), or change sets and then choose **Next**\.
 **Note**  
@@ -61,14 +61,14 @@ Change sets for nested stacks are **Enabled** by default, which will create chan
 
 1. On the **Review *stack\-name*** page, review the changes for this change set\.
 
-   If the template includes AWS Identity and Access Management \(IAM\) resources, select **I acknowledge that AWS CloudFormation might create IAM resources**\. IAM resources can modify permissions in your AWS account; review these resources to ensure that you're permitting only the actions that you intend\. For more information, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
+   If the template includes AWS Identity and Access Management \(IAM\) resources, select **I acknowledge that CloudFormation might create IAM resources**\. IAM resources can modify permissions in your AWS account; review these resources to ensure that you're permitting only the actions that you intend\. For more information, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
 1. Choose **Create change set**\. Specify a name for the change set and optionally specify a description of the change set to identify its purpose\. Then, choose **Create change set**\.
 
-   You're redirected to the **Changes** tab of the change set's details page\. While AWS CloudFormation generates the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. After it has created the change set, AWS CloudFormation sets the status to **CREATE\_COMPLETE**\. In the **Changes** section, AWS CloudFormation lists all of the changes that it will make to your stack\. For more information, see [Viewing a change set](using-cfn-updating-stacks-changesets-view.md)\.  
+   You're redirected to the **Changes** tab of the change set's details page\. While CloudFormation generates the change set, the status of the change set is **CREATE\_IN\_PROGRESS**\. After it has created the change set, CloudFormation sets the status to **CREATE\_COMPLETE**\. In the **Changes** section, CloudFormation lists all of the changes that it will make to your stack\. For more information, see [Viewing a change set](using-cfn-updating-stacks-changesets-view.md)\.  
 ![\[The details page for the change set.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-change-sets-details.png)
 
-   If AWS CloudFormation fails to create the change set \(reports `FAILED` status\), fix the error displayed in the **Status** field, and then recreate the change set\.
+   If CloudFormation fails to create the change set \(reports `FAILED` status\), fix the error displayed in the **Status** field, and then recreate the change set\.
 
 ------
 

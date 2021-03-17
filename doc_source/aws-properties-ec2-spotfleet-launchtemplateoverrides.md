@@ -46,7 +46,10 @@ The instance type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-ec2-spotfleet-launchtemplateoverrides-priority"></a>
-The priority for the launch template override\. If **OnDemandAllocationStrategy** is set to `prioritized`, Spot Fleet uses priority to determine which launch template override to use first in fulfilling On\-Demand capacity\. The highest priority is launched first\. Valid values are whole numbers starting at `0`\. The lower the number, the higher the priority\. If no number is set, the launch template override has the lowest priority\.  
+The priority for the launch template override\. The highest priority is launched first\.  
+If `OnDemandAllocationStrategy` is set to `prioritized`, Spot Fleet uses priority to determine which launch template override to use first in fulfilling On\-Demand capacity\.  
+If the Spot `AllocationStrategy` is set to `capacityOptimizedPrioritized`, Spot Fleet uses priority on a best\-effort basis to determine which launch template override to use first in fulfilling Spot capacity, but optimizes for capacity first\.  
+Valid values are whole numbers starting at `0`\. The lower the number, the higher the priority\. If no number is set, the launch template override has the lowest priority\. You can set the same priority for different launch template overrides\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

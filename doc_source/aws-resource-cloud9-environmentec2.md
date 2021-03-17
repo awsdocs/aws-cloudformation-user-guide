@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes)" : Integer,
       "[ConnectionType](#cfn-cloud9-environmentec2-connectiontype)" : String,
       "[Description](#cfn-cloud9-environmentec2-description)" : String,
+      "[ImageId](#cfn-cloud9-environmentec2-imageid)" : String,
       "[InstanceType](#cfn-cloud9-environmentec2-instancetype)" : String,
       "[Name](#cfn-cloud9-environmentec2-name)" : String,
       "[OwnerArn](#cfn-cloud9-environmentec2-ownerarn)" : String,
@@ -33,6 +34,7 @@ Properties:
   [AutomaticStopTimeMinutes](#cfn-cloud9-environmentec2-automaticstoptimeminutes): Integer
   [ConnectionType](#cfn-cloud9-environmentec2-connectiontype): String
   [Description](#cfn-cloud9-environmentec2-description): String
+  [ImageId](#cfn-cloud9-environmentec2-imageid): String
   [InstanceType](#cfn-cloud9-environmentec2-instancetype): String
   [Name](#cfn-cloud9-environmentec2-name): String
   [OwnerArn](#cfn-cloud9-environmentec2-ownerarn): String
@@ -65,6 +67,12 @@ The description of the environment to create\.
 *Type*: String  
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ImageId`  <a name="cfn-cloud9-environmentec2-imageid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-cloud9-environmentec2-instancetype"></a>
 The type of instance to connect to the environment \(for example, `t2.micro`\)\.  

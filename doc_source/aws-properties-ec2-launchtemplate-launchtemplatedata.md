@@ -251,7 +251,7 @@ One or more security group IDs\. You can create a security group using [CreateSe
 `TagSpecifications`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-tagspecifications"></a>
 The tags to apply to the resources during launch\. You can only tag instances and volumes on launch\. The specified tags are applied to all instances or volumes that are created during launch\.  
 *Required*: No  
-*Type*: List of [TagSpecification](aws-properties-ec2-launchtemplate-tagspecification.md)  
+*Type*: [List](aws-properties-ec2-launchtemplate-tagspecifications.md) of [TagSpecification](aws-properties-ec2-launchtemplate-tagspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserData`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-userdata"></a>

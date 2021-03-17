@@ -39,7 +39,7 @@ Properties:
 The Auto Scaling group settings for the capacity provider\.  
 *Required*: Yes  
 *Type*: [AutoScalingGroupProvider](aws-properties-ecs-capacityprovider-autoscalinggroupprovider.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ecs-capacityprovider-name"></a>
 The name of the capacity provider\.  

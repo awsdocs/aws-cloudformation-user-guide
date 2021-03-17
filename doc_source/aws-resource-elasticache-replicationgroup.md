@@ -1,8 +1,8 @@
 # AWS::ElastiCache::ReplicationGroup<a name="aws-resource-elasticache-replicationgroup"></a>
 
-The `AWS::ElastiCache::ReplicationGroup` resource creates an Amazon ElastiCache Redis replication group\. A replication group is a collection of cache clusters, where one of the clusters is a primary read\-write cluster and the others are read\-only replicas\. 
+The `AWS::ElastiCache::ReplicationGroup` resource creates an Amazon ElastiCache Redis replication group\. A Redis \(cluster mode disabled\) replication group is a collection of cache clusters, where one of the clusters is a primary read\-write cluster and the others are read\-only replicas\. 
 
-A Redis cluster\-mode enabled cluster is comprised of from 1 to 90 shards \(API/CLI: node groups\)\. Each shard has a primary node and up to 5 read\-only replica nodes\. The configuration can range from 90 shards and 0 replicas to 15 shards and 5 replicas, which is the maximum number or replicas allowed\. 
+A Redis \(cluster mode enabled\) cluster is comprised of from 1 to 90 shards \(API/CLI: node groups\)\. Each shard has a primary node and up to 5 read\-only replica nodes\. The configuration can range from 90 shards and 0 replicas to 15 shards and 5 replicas, which is the maximum number or replicas allowed\. 
 
 The node or shard limit can be increased to a maximum of 500 per cluster if the Redis engine version is 5\.0\.6 or higher\. For example, you can choose to configure a 500 node cluster that ranges between 83 shards \(one primary and 5 replicas per shard\) and 500 shards \(single primary and no replicas\)\. Make sure there are enough available IP addresses to accommodate the increase\. Common pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are shared and heavily used by other clusters\. For more information, see [Creating a Subnet Group](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.Creating.html)\. For versions below 5\.0\.6, the limit is 250 per cluster\.
 
@@ -458,8 +458,7 @@ The following example declares a replication group with two nodes and automatic 
             "ReplicationGroupDescription": "my description",
             "NumCacheClusters": "2",
             "Engine": "redis",
-            "CacheNodeType": "cache.m3.medium",
-            "AutoMinorVersionUpgrade": "true",
+            "CacheNodeType": "cache.m3.medium",            
             "AutomaticFailoverEnabled": "true",
             "CacheSubnetGroupName": "subnetgroup",
             "EngineVersion": "2.8.6",
@@ -480,8 +479,7 @@ myReplicationGroup:
     ReplicationGroupDescription: my description
     NumCacheClusters: '2'
     Engine: redis
-    CacheNodeType: cache.m3.medium
-    AutoMinorVersionUpgrade: 'true'
+    CacheNodeType: cache.m3.medium    
     AutomaticFailoverEnabled: 'true'
     CacheSubnetGroupName: subnetgroup
     EngineVersion: 2.8.6
@@ -501,8 +499,7 @@ The following example declares a replication group with two nodes groups \(shard
     "BasicReplicationGroup": {
         "Type": "AWS::ElastiCache::ReplicationGroup",
         "Properties": {
-            "AutomaticFailoverEnabled": true,
-            "AutoMinorVersionUpgrade": true,
+            "AutomaticFailoverEnabled": true,            
             "CacheNodeType": "cache.r3.large",
             "CacheSubnetGroupName": {
                 "Ref": "CacheSubnetGroup"
@@ -532,8 +529,7 @@ The following example declares a replication group with two nodes groups \(shard
 BasicReplicationGroup:
   Type: 'AWS::ElastiCache::ReplicationGroup'
   Properties:
-    AutomaticFailoverEnabled: true
-    AutoMinorVersionUpgrade: true
+    AutomaticFailoverEnabled: true    
     CacheNodeType: cache.r3.large
     CacheSubnetGroupName: !Ref CacheSubnetGroup
     Engine: redis

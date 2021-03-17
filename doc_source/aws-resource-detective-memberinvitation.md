@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Detective::MemberInvitation",
   "Properties" : {
+      "[DisableEmailNotification](#cfn-detective-memberinvitation-disableemailnotification)" : Boolean,
       "[GraphArn](#cfn-detective-memberinvitation-grapharn)" : String,
       "[MemberEmailAddress](#cfn-detective-memberinvitation-memberemailaddress)" : String,
       "[MemberId](#cfn-detective-memberinvitation-memberid)" : String,
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Detective::MemberInvitation
 Properties: 
+  [DisableEmailNotification](#cfn-detective-memberinvitation-disableemailnotification): Boolean
   [GraphArn](#cfn-detective-memberinvitation-grapharn): String
   [MemberEmailAddress](#cfn-detective-memberinvitation-memberemailaddress): String
   [MemberId](#cfn-detective-memberinvitation-memberid): String
@@ -32,6 +34,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-detective-memberinvitation-properties"></a>
+
+`DisableEmailNotification`  <a name="cfn-detective-memberinvitation-disableemailnotification"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GraphArn`  <a name="cfn-detective-memberinvitation-grapharn"></a>
 The ARN of the behavior graph to invite the account to contribute data to\.  

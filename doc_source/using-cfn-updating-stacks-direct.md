@@ -13,29 +13,29 @@ When updating a stack, AWS CloudFormation might interrupt resources or replace u
 
 1. In the stack details pane, choose **Update**\.
 
-1. If you *haven't* modified the stack template, select **Use current template**, and then click **Next**\. 
+1. If you *haven't* modified the stack template, select **Use current template**, and then choose **Next**\.
 
    If you have modified the template, select **Replace current template** and specify the location of the updated template in the **Specify template** section:
-   + For a template stored locally on your computer, select **Upload a template file**\. Choose **Choose file** to navigate to the file and select it, and then click **Next**\.
+   + For a template stored locally on your computer, select **Upload a template file**\. Choose **Choose file** to navigate to the file and select it, and then choose **Next**\.
 **Note**  
 If you upload a local template file, AWS CloudFormation uploads it to an Amazon Simple Storage Service \(Amazon S3\) bucket in your AWS account\. If you don't already have an S3 bucket that was created by AWS CloudFormation, it creates a unique bucket for each Region in which you upload a template file\. If you already have an S3 bucket that was created by AWS CloudFormation in your AWS account, AWS CloudFormation adds the template to that bucket\.  
 Considerations to keep in mind about S3 buckets created by AWS CloudFormation  
 The buckets are accessible to anyone with Amazon S3 permissions in your AWS account\.
-AWS CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.   
+AWS CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.  
 You can directly manage encryption options for buckets that AWS CloudFormation has created; for example, using the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/) , or the AWS CLI\. For more information, see [Amazon S3 default encryption for S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *[Amazon Simple Storage Service Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/)*\.
 You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. When you create or update a stack, specify the Amazon S3 URL of a template file\.
-   + For a template stored in an Amazon S3 bucket, choose **Amazon S3 URL**\. Enter or paste the URL for the template, and then click **Next**\.
+   + For a template stored in an Amazon S3 bucket, choose **Amazon S3 URL**\. Enter or paste the URL for the template, and then choose **Next**\.
 
      If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing objects in a versioning\-enabled bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
 
-1. If your template contains parameters, on the **Specify stack details** page you can enter or modify the parameter values, and then click **Next**\.
+1. If your template contains parameters, on the **Specify stack details** page you can enter or modify the parameter values, and then choose **Next**\.
 
-   AWS CloudFormation populates each parameter with the value that is currently set in the stack with the exception of parameters declared with the `NoEcho` attribute; however, you can still use current values by checking **Use existing value**\.
+   AWS CloudFormation populates each parameter with the value that's currently set in the stack with the exception of parameters declared with the `NoEcho` attribute; however, you can still use current values by checking **Use existing value**\.
 
-   For more information about using `NoEcho` to mask sensitive information, as well as using dynamic parameters to manage secrets, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.  
+   For more information about using `NoEcho` to mask sensitive information, in addition to using dynamic parameters to manage secrets, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.  
 ![\[A parameter field with the Use existing value option checked.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-update-stack-parameters-use-existing-value.png)
 
-1. On the **Configure stack options** page, you can update the tags and permissions applied to the stack, as well as modfiy advanced options such as stack policy, rollback configuration, or update the Amazon SNS notification topic\. 
+1. On the **Configure stack options** page, you can update the tags and permissions applied to the stack, and modfiy advanced options such as stack policy, rollback configuration, or update the Amazon SNS notification topic\.
 
    For more information about these options, see [Setting AWS CloudFormation stack options](cfn-console-add-tags.md)\.
 
@@ -47,9 +47,9 @@ You can use your own bucket and manage its permissions by manually uploading tem
 
    In the **Change set preview** section, check that AWS CloudFormation will make all the changes that you expect\. For example, you can check that AWS CloudFormation adds, removes, and modifies the resources that you intended to add, remove, or modify\. AWS CloudFormation generates this preview by creating a change set for the stack\. For more information, see [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md)\.
 
-1. When you are satisifed with your changes, click **Update stack**\.
+1. When you are satisifed with your changes, choose **Update stack**\.
 **Note**  
-At this point, you also have the option to view the change set to review your proposed updates more thoroughly\. To do so, click **View change set** instead of **Update stack**\. CloudFormation displays the change set generated based on your updates\. When you are ready to perform the stack update, click **Execute**\.
+At this point, you also have the option to view the change set to review your proposed updates more thoroughly\. To do so, choose **View change set** instead of **Update stack**\. CloudFormation displays the change set generated based on your updates\. When you are ready to perform the stack update, choose **Execute**\.
 
    CloudFormation displays the stack details page for your stack, with the **Events** pane selected\. Your stack now has a status of **UPDATE\_IN\_PROGRESS**\. After CloudFormation has successfully finished updating the stack, it sets the stack status to **UPDATE\_COMPLETE**\.
 

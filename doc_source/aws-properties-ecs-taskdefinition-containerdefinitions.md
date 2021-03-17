@@ -150,21 +150,21 @@ For tasks using the Fargate launch type, the task or service requires platform v
 
 `DisableNetworking`  <a name="cfn-ecs-taskdefinition-containerdefinition-disablenetworking"></a>
 When this parameter is true, networking is disabled within the container\. This parameter maps to `NetworkDisabled` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/)\.  
-This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
+This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsSearchDomains`  <a name="cfn-ecs-taskdefinition-containerdefinition-dnssearchdomains"></a>
 A list of DNS search domains that are presented to the container\. This parameter maps to `DnsSearch` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--dns-search` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
+This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DnsServers`  <a name="cfn-ecs-taskdefinition-containerdefinition-dnsservers"></a>
 A list of DNS servers that are presented to the container\. This parameter maps to `Dns` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--dns` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
+This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -260,7 +260,7 @@ When this parameter is `true`, this allows you to deploy containerized applicati
 
 `Links`  <a name="cfn-ecs-taskdefinition-containerdefinition-links"></a>
 The `links` parameter allows containers to communicate with each other without the need for port mappings\. This parameter is only supported if the network mode of a task definition is `bridge`\. The `name:internalName` construct is analogous to `name:alias` in Docker links\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. For more information about linking Docker containers, go to [Legacy container links](https://docs.docker.com/network/links/) in the Docker documentation\. This parameter maps to `Links` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--link` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
+This parameter is not supported for Windows containers\.
 Containers that are collocated on a single container instance may be able to communicate with each other without requiring links or host port mappings\. Network isolation is achieved on the container instance using security groups and VPC settings\.
 *Required*: No  
 *Type*: List of String  
@@ -340,7 +340,7 @@ When this parameter is `true`, a TTY is allocated\. This parameter maps to `Tty`
 
 `ReadonlyRootFilesystem`  <a name="cfn-ecs-taskdefinition-containerdefinition-readonlyrootfilesystem"></a>
 When this parameter is true, the container is given read\-only access to its root file system\. This parameter maps to `ReadonlyRootfs` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--read-only` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
-This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
+This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -404,7 +404,7 @@ You can specify the `user` using the following formats\. If specifying a UID or 
 +  `uid:gid` 
 +  `user:gid` 
 +  `uid:group` 
-This parameter is not supported for Windows containers or tasks that use the awsvpc network mode\.
+This parameter is not supported for Windows containers\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

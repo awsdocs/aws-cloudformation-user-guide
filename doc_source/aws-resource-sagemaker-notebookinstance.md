@@ -58,7 +58,8 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-notebookinstance-properties"></a>
 
 `AcceleratorTypes`  <a name="cfn-sagemaker-notebookinstance-acceleratortypes"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of Amazon Elastic Inference \(EI\) instance types to associate with the notebook instance\. Currently, only one instance type can be associated with a notebook instance\. For more information, see [Using Elastic Inference in Amazon SageMaker](https://docs.aws.amazon.com/sagemaker/latest/dg/ei.html)\.  
+*Valid Values:* `ml.eia1.medium | ml.eia1.large | ml.eia1.xlarge | ml.eia2.medium | ml.eia2.large | ml.eia2.xlarge`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

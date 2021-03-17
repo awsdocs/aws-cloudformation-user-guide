@@ -344,8 +344,7 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
     },
     "ElasticacheCluster": {
         "Type": "AWS::ElastiCache::CacheCluster",
-        "Properties": {
-            "AutoMinorVersionUpgrade": "true",
+        "Properties": {            
             "Engine": "memcached",
             "CacheNodeType": "cache.t2.micro",
             "NumCacheNodes": "1",
@@ -376,8 +375,7 @@ ElasticacheSecurityGroup:
         SourceSecurityGroupName: !Ref InstanceSecurityGroup
 ElasticacheCluster:
   Type: 'AWS::ElastiCache::CacheCluster'
-  Properties:
-    AutoMinorVersionUpgrade: 'true'
+  Properties:    
     Engine: memcached
     CacheNodeType: cache.t2.micro
     NumCacheNodes: '1'

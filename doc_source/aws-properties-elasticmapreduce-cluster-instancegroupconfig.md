@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BidPrice`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice"></a>
-The bid price for each EC2 Spot Instance type as defined by `InstanceType`\. Expressed in USD\. If `BidPrice` is not provided, Amazon EMR assumes the On\-Demand purchasing option\.  
+If specified, indicates that the instance group uses Spot Instances\. This is the maximum price you are willing to pay for Spot Instances\. Specify `OnDemandPrice` to set the amount equal to the On\-Demand price, or specify an amount in USD\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
