@@ -172,7 +172,7 @@ The following example declares an Amazon EFS file system with the followiing att
 #### JSON<a name="aws-resource-efs-filesystem--examples--Create_an_encrypted_EFS_file_system_using_EFS_Standard_storage_classes--json"></a>
 
 ```
-"{
+{
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
         "MountTargetVPC": {
@@ -211,7 +211,7 @@ The following example declares an Amazon EFS file system with the followiing att
                 "AvailabilityZone": "us-east-1c"
             }
         },
-       "FileSystemResource": {
+        "FileSystemResource": {
             "Type": "AWS::EFS::FileSystem",
             "Properties": {
                 "PerformanceMode": "maxIO",
@@ -491,7 +491,7 @@ The following example declares an encrypted Amazon EFS file system using One Zon
 #### JSON<a name="aws-resource-efs-filesystem--examples--Create_a_file_system_using_EFS_One_Zone_storage_classes--json"></a>
 
 ```
-"{
+{
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
         "MountTargetVPC": {
@@ -510,7 +510,7 @@ The following example declares an encrypted Amazon EFS file system using One Zon
                 "AvailabilityZone": "us-east-1a"
             }
         },
-       "FileSystemResource": {
+        "FileSystemResource": {
             "Type": "AWS::EFS::FileSystem",
             "Properties": {
                 "AvailabilityZoneName": "us-east-1a",
