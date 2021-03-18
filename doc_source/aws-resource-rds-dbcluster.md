@@ -609,7 +609,7 @@ The following example creates an Amazon Aurora PostgreSQL DB cluster that export
   "Parameters" : {
       "DBUsername" : {
         "NoEcho" : "true",
-        "Description" : "Username for MySQL database access",
+        "Description" : "Username for PostgreSQL database access",
 
         "Type" : "String",
         "MinLength" : "1",
@@ -619,7 +619,7 @@ The following example creates an Amazon Aurora PostgreSQL DB cluster that export
       },
       "DBPassword" : {
         "NoEcho" : "true",
-        "Description" : "Password MySQL database access",
+        "Description" : "Password PostgreSQL database access",
 
         "Type" : "String",
         "MinLength" : "8",
@@ -688,7 +688,7 @@ Description: >-
 Parameters:
   DBUsername:
     NoEcho: 'true'
-    Description: Username for MySQL database access
+    Description: Username for PostgreSQL database access
     Type: String
     MinLength: '1'
     MaxLength: '16'
@@ -696,7 +696,7 @@ Parameters:
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
   DBPassword:
     NoEcho: 'true'
-    Description: Password MySQL database access
+    Description: Password PostgreSQL database access
     Type: String
     MinLength: '8'
     MaxLength: '41'
