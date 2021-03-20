@@ -60,6 +60,17 @@ The type of email sending events to publish to the event destination\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+Valided Values: 
+`BOUNCE`
+`CLICK`
+`COMPLAINT`
+`DELIVERY`
+`OPEN`
+`REJECT`
+`RENDERING_FAILURE`
+`SEND`
+
+
 `Name`  <a name="cfn-ses-configurationseteventdestination-eventdestination-name"></a>
 The name of the event destination\. The name must:  
 + This value can only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
