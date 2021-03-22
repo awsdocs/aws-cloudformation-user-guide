@@ -37,7 +37,7 @@ A list of endpoint types of an API or its custom domain name\. Valid values incl
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`VpcEndpointIds`  <a name="cfn-apigateway-restapi-endpointconfiguration-vpcendpointids"></a>
+`VPCEndpointIds`  <a name="cfn-apigateway-restapi-endpointconfiguration-vpcendpointids"></a>
 A list of VPC endpoint IDs of an API \([AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)\) against which to create Route53 ALIASes\. It is only supported for `PRIVATE` endpoint type\.  
 *Required*: No  
 *Type*: List of String  
