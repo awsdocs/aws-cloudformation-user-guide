@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[GlueVersion](#cfn-glue-job-glueversion)" : String,
       "[LogUri](#cfn-glue-job-loguri)" : String,
       "[MaxCapacity](#cfn-glue-job-maxcapacity)" : Double,
-      "[MaxRetries](#cfn-glue-job-maxretries)" : Double,
+      "[MaxRetries](#cfn-glue-job-maxretries)" : Integer,
       "[Name](#cfn-glue-job-name)" : String,
       "[NotificationProperty](#cfn-glue-job-notificationproperty)" : NotificationProperty,
       "[NumberOfWorkers](#cfn-glue-job-numberofworkers)" : Integer,
@@ -51,7 +51,7 @@ Properties:
   [GlueVersion](#cfn-glue-job-glueversion): String
   [LogUri](#cfn-glue-job-loguri): String
   [MaxCapacity](#cfn-glue-job-maxcapacity): Double
-  [MaxRetries](#cfn-glue-job-maxretries): Double
+  [MaxRetries](#cfn-glue-job-maxretries): Integer
   [Name](#cfn-glue-job-name): String
   [NotificationProperty](#cfn-glue-job-notificationproperty): 
     NotificationProperty
@@ -131,7 +131,7 @@ The value that can be allocated for `MaxCapacity` depends on whether you are run
 `MaxRetries`  <a name="cfn-glue-job-maxretries"></a>
 The maximum number of times to retry this job after a JobRun fails\.  
 *Required*: No  
-*Type*: Double  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-job-name"></a>
