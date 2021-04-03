@@ -163,7 +163,7 @@ Resources:
         ImageTestsEnabled: false
         TimeoutMinutes: 90
       Schedule:
-      ScheduleExpression: 'cron(0 0 * * ? *)'
+        ScheduleExpression: 'cron(0 0 * * ? *)'
         PipelineExecutionStartCondition: 'EXPRESSION_MATCH_ONLY'
       Status: 'DISABLED'
       Tags:
@@ -195,7 +195,7 @@ Resources:
                     "TimeoutMinutes": 90
                 },
                 "Schedule": {
-                "ScheduleExpression": "cron(0 0 * * ? *)",
+                    "ScheduleExpression": "cron(0 0 * * ? *)",
                     "PipelineExecutionStartCondition": "EXPRESSION_MATCH_ONLY"
                 },
                 "Status": "DISABLED",
