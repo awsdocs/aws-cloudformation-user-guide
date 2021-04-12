@@ -146,7 +146,7 @@ The load\-based scaling configuration for the AWS OpsWorks layer\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-opsworks-layer-name"></a>
-The layer name, which is used by the console\.  
+The layer name, which is used by the console\. Layer names can be a maximum of 32 characters\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -158,8 +158,8 @@ An array of `Package` objects that describes the layer packages\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Shortname`  <a name="cfn-opsworks-layer-shortname"></a>
-For custom layers only, use this parameter to specify the layer's short name, which is used internally by AWS OpsWorks Stacks and by Chef recipes\. The short name is also used as the name for the directory where your app files are installed\. It can have a maximum of 200 characters, which are limited to the alphanumeric characters, '\-', '\_', and '\.'\.  
-The built\-in layers' short names are defined by AWS OpsWorks Stacks\. For more information, see the [Layer Reference](https://docs.aws.amazon.com/opsworks/latest/userguide/layers.html)\.  
+For custom layers only, use this parameter to specify the layer's short name, which is used internally by AWS OpsWorks Stacks and by Chef recipes\. The short name is also used as the name for the directory where your app files are installed\. It can have a maximum of 32 characters, which are limited to the alphanumeric characters, '\-', '\_', and '\.'\.  
+Built\-in layer short names are defined by AWS OpsWorks Stacks\. For more information, see the [Layer Reference](https://docs.aws.amazon.com/opsworks/latest/userguide/layers.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

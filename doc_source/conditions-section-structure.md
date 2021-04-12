@@ -9,7 +9,7 @@ Conditions are evaluated based on predefined pseudo parameters or input paramete
 At stack creation or stack update, AWS CloudFormation evaluates all the conditions in your template before creating any resources\. Resources that are associated with a true condition are created\. Resources that are associated with a false condition are ignored\. AWS CloudFormation also re\-evaluates these conditions at each stack update before updating any resources\. Resources that are still associated with a true condition are updated\. Resources that are now associated with a false condition are deleted\.
 
 **Important**  
-During a stack update, you cannot update conditions by themselves\. You can update conditions only when you include changes that add, modify, or delete resources\.
+During a stack update, you can't update conditions by themselves\. You can update conditions only when you include changes that add, modify, or delete resources\.
 
 ## How to use conditions overview<a name="conditions-section-structure-overview"></a>
 
@@ -54,14 +54,14 @@ You can use the following intrinsic functions to define conditions:
 + `Fn::Not`
 + `Fn::Or`
 
-For the syntax and information about each function, see [Condition functions](intrinsic-function-reference-conditions.md)\. 
+For the syntax and information about each function, see [Condition functions](intrinsic-function-reference-conditions.md)\.
 
 **Note**  
 `Fn::If` is only supported in the metadata attribute, update policy attribute, and property values in the `Resources` section and `Outputs` sections of a template\.
 
 ## Examples<a name="conditions-section-structure-examples"></a>
 
-### Simple condition<a name="w8424ab1c27c15c23c17b3"></a>
+### Simple condition<a name="w8676ab1c27c15c23c17b3"></a>
 
 The following sample template includes an `EnvType` input parameter, where you can specify `prod` to create a stack for production or `test` to create a stack for testing\. For a production environment, AWS CloudFormation creates an Amazon EC2 instance and attaches a volume to the instance\. For a test environment, AWS CloudFormation creates only the Amazon EC2 instance\.
 
@@ -170,7 +170,7 @@ Resources:
         - AvailabilityZone
 ```
 
-#### Nested condition<a name="w8424ab1c27c15c23c17b3c11"></a>
+#### Nested condition<a name="w8676ab1c27c15c23c17b3c11"></a>
 
 The following sample template references a condition within another condition\. You can create a stack that creates an s3 bucket\. For a stack deployed in a production environment, AWS CloudFormation creates a policy for the S3 bucket\.
 

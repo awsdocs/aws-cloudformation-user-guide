@@ -5,7 +5,7 @@ To share information between stacks, export a stack's output values\. Other stac
 To export a stack's output value, use the `Export` field in the [Output](outputs-section-structure.md) section of the stack's template\. To import those values, use the [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md) function in the template for the other stacks\. For a walkthrough and sample templates, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)\.
 
 **Note**  
-After another stack imports an output value, you can't delete the stack that is exporting the output value or modify the exported output value\. All of the imports must be removed before you can delete the exporting stack or modify the output value\.
+After another stack imports an output value, you can't delete the stack that is exporting the output value or modify the exported output value\. All the imports must be removed before you can delete the exporting stack or modify the output value\.
 
 ## Exporting stack output values vs\. using nested stacks<a name="output-vs-nested"></a>
 
@@ -15,7 +15,7 @@ If you want to isolate information sharing to within a nested stack group, we su
 
 ## Listing exported output values<a name="using-cfn-stack-exports-listing"></a>
 
-To see the values that you can import, list all of the exported output values by using the AWS CloudFormation console, AWS CLI, or AWS CloudFormation API\. AWS CloudFormation shows the names and values of the exported outputs for the current region and the stack from which the outputs are exported\. To reference an exported output value in a stack's template, use the export name and the [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md) function\.
+To see the values that you can import, list all the exported output values by using the AWS CloudFormation console, AWS CLI, or AWS CloudFormation API\. AWS CloudFormation shows the names and values of the exported outputs for the current region and the stack from which the outputs are exported\. To reference an exported output value in a stack's template, use the export name and the [`Fn::ImportValue`](intrinsic-function-reference-importvalue.md) function\.
 
 **To list exported output values \(console\)**
 + In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** navigation pane, choose **Exports**\.  

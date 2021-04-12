@@ -1,18 +1,18 @@
 # Rules<a name="rules-section-structure"></a>
 
-The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\. 
+The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w8424ab1c27c15c19b5"></a>
+## Working with rules<a name="w8676ab1c27c15c19b5"></a>
 
 Each template rule consists of two properties:
-+ *Rule condition* \(optional\) — determines when a rule takes effect\. 
-+ *Assertions* \(required\) — describes what values users can specify for a particular parameter\. 
++ *Rule condition* \(optional\) — determines when a rule takes effect\.
++ *Assertions* \(required\) — describes what values users can specify for a particular parameter\.
 
-A rule can include a `RuleCondition` property and must include an `Assertions` property\. For each rule, you can define only one rule condition\. You can define one or more asserts within the `Assertions` property\. If you don't define a rule condition, the rule's assertions always take effect\. 
+A rule can include a `RuleCondition` property and must include an `Assertions` property\. For each rule, you can define only one rule condition\. You can define one or more asserts within the `Assertions` property\. If you don't define a rule condition, the rule's assertions always take effect\.
 
 ## Rule\-specific intrinsic functions<a name="rules-specific-intrinsic-section-structure"></a>
 
-To define a rule condition and assertions, use *rule\-specific intrinsic functions*, which are functions that can only be used in the `Rules` section of a template\. You can nest functions, but the final result of a rule condition or assertion must be either true or false\. 
+To define a rule condition and assertions, use *rule\-specific intrinsic functions*, which are functions that can only be used in the `Rules` section of a template\. You can nest functions, but the final result of a rule condition or assertion must be either true or false\.
 
 You can use the following rule\-specific intrinsic functions to define rule conditions and assertions:
 + `[Fn::And](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#fn-and)`
@@ -33,7 +33,7 @@ Rule\-specific intrinsic functions are used in the condition or assertions of a 
 
 ### JSON<a name="rules-section-structure-syntax.json"></a>
 
-The `Rules` section of a template consists of the key name `Rules`, followed by a single colon\. You must use braces to enclose all rule declarations\. If you declare multiple rules, they are delimited by commas\. For each rule, you declare a logical name in quotation marks followed by a colon and braces that enclose the rule condition and assertions\. 
+The `Rules` section of a template consists of the key name `Rules`, followed by a single colon\. You must use braces to enclose all rule declarations\. If you declare multiple rules, they are delimited by commas\. For each rule, you declare a logical name in quotation marks followed by a colon and braces that enclose the rule condition and assertions\.
 
 ```
 {
@@ -185,7 +185,7 @@ Rules:
 
 ## Cross\-parameter validation<a name="template-cross-parameter-rules-example"></a>
 
-The following template example, creates a sample web site that uses Amazon EC2 Auto Scaling and Elastic Load Balancing and is configured to use multiple Availability Zones\. The template also contains CloudWatch alarms that execute scaling policies to add or remove instances from the Auto Scaling group when the defined thresholds are exceeded\. This template creates one or more Amazon EC2 instances\. 
+The following template example, creates a sample web site that uses Amazon EC2 Auto Scaling and Elastic Load Balancing and is configured to use multiple Availability Zones\. The template also contains CloudWatch alarms that execute scaling policies to add or remove instances from the Auto Scaling group when the defined thresholds are exceeded\. This template creates one or more Amazon EC2 instances\.
 
 **Note**  
 You will be billed for the AWS resources used if you create a stack from this template\.

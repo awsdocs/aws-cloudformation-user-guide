@@ -57,7 +57,7 @@ myDynamoDBTable:
     TableName: "SampleTable"
 ```
 
-## Supported resources<a name="w8424ab1c33c10d306b9c13"></a>
+## Supported resources<a name="w8676ab1c33c10d316b9c13"></a>
 
 The following resource types support custom names:
 + [AWS::ApiGateway::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html)

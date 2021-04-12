@@ -4,6 +4,8 @@ The `PatchFilter` property type defines a patch filter for an AWS Systems Manage
 
 The `PatchFilters` property of the [PatchFilterGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html) property type contains a list of `PatchFilter` property types\.
 
+You can view lists of valid values for the patch properties by running the `DescribePatchProperties` command\. For more information, see [DescribePatchProperties](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DescribePatchProperties.html) in the *AWS Systems Manager API Reference*\.
+
 ## Syntax<a name="aws-properties-ssm-patchbaseline-patchfilter-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

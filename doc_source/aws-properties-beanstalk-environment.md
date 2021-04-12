@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix)" : String,
       "[Description](#cfn-beanstalk-environment-description)" : String,
       "[EnvironmentName](#cfn-beanstalk-environment-name)" : String,
+      "[OperationsRole](#cfn-beanstalk-environment-operations-role)" : String,
       "[OptionSettings](#cfn-beanstalk-environment-optionsettings)" : [ OptionSetting, ... ],
       "[PlatformArn](#cfn-beanstalk-environment-platformarn)" : String,
       "[SolutionStackName](#cfn-beanstalk-environment-solutionstackname)" : String,
@@ -36,6 +37,7 @@ Properties:
   [CNAMEPrefix](#cfn-beanstalk-environment-cnameprefix): String
   [Description](#cfn-beanstalk-environment-description): String
   [EnvironmentName](#cfn-beanstalk-environment-name): String
+  [OperationsRole](#cfn-beanstalk-environment-operations-role): String
   [OptionSettings](#cfn-beanstalk-environment-optionsettings): 
     - OptionSetting
   [PlatformArn](#cfn-beanstalk-environment-platformarn): String
@@ -84,6 +86,15 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Minimum*: `4`  
 *Maximum*: `40`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OperationsRole`  <a name="cfn-beanstalk-environment-operations-role"></a>
+The operations role feature of AWS Elastic Beanstalk is in beta release and is subject to change\.
+The Amazon Resource Name \(ARN\) of an existing IAM role to be used as the environment's operations role\. If specified, Elastic Beanstalk uses the operations role for permissions to downstream services during this call and during subsequent calls acting on this environment\. To specify an operations role, you must have the `iam:PassRole` permission for the role\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionSettings`  <a name="cfn-beanstalk-environment-optionsettings"></a>
 Key\-value pairs defining configuration options for this environment, such as the instance type\. These options override the values that are defined in the solution stack or the [configuration template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-beanstalk-configurationtemplate.html)\. If you remove any options during a stack update, the removed options retain their current values\.  

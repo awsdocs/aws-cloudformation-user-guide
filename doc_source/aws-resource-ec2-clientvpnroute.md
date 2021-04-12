@@ -66,11 +66,11 @@ Alternatively, if you're adding a route for the local network, specify `local`\.
 
 ## Examples<a name="aws-resource-ec2-clientvpnroute--examples"></a>
 
-### Adding a route to a Client VPN endpoint<a name="aws-resource-ec2-clientvpnroute--examples--Adding_a_route_to_a_Client_VPN_endpoint"></a>
+### Add a route to a client VPN endpoint<a name="aws-resource-ec2-clientvpnroute--examples--Add_a_route_to_a_client_VPN_endpoint"></a>
 
-The following example adds a route for internet access to a Client VPN endpoint\.
+The following example adds a route for internet access to a client VPN endpoint\.
 
-#### YAML<a name="aws-resource-ec2-clientvpnroute--examples--Adding_a_route_to_a_Client_VPN_endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-clientvpnroute--examples--Add_a_route_to_a_client_VPN_endpoint--yaml"></a>
 
 ```
 myRoute:
@@ -84,7 +84,7 @@ myRoute:
     Description: "myRoute"
 ```
 
-#### JSON<a name="aws-resource-ec2-clientvpnroute--examples--Adding_a_route_to_a_Client_VPN_endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-clientvpnroute--examples--Add_a_route_to_a_client_VPN_endpoint--json"></a>
 
 ```
 "myRoute": {

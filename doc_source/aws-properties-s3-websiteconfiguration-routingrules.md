@@ -1,6 +1,6 @@
 # AWS::S3::Bucket RoutingRule<a name="aws-properties-s3-websiteconfiguration-routingrules"></a>
 
-Specifies the redirect behavior and when a redirect is applied\. For more information about routing rules, see [Configuring advanced conditional redirects](https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html#advanced-conditional-redirects) in the *Amazon Simple Storage Service User Guide*\.
+Specifies the redirect behavior and when a redirect is applied\. For more information about routing rules, see [Configuring advanced conditional redirects](https://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html#advanced-conditional-redirects) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-websiteconfiguration-routingrules-syntax"></a>
 

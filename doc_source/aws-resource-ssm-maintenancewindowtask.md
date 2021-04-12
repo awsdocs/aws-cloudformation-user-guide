@@ -176,33 +176,105 @@ The following example creates a maintenance window Run Command task that install
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_targets_instances_using_a_resource_group_name--json"></a>
 
 ```
-{ "Resources": { "PatchTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "Description": "Apply OS patches on
-        instances in target", "MaxConcurrency": 1, "MaxErrors": 1, "Priority": 0, "TaskType":
-        "RUN_COMMAND", "WindowId": { "Ref": "MaintenanceWindow" }, "TaskArn":
-        "AWS-RunPatchBaseline", "Targets": [ { "Key": "WindowTargetIds", "Values": [ { "Ref":
-        "MaintenanceWindowTarget" } ] } ] } }, "MaintenanceWindow": { "Type":
-        "AWS::SSM::MaintenanceWindow", "Properties": { "Name": "MaintenanceWindow",
-        "AllowUnassociatedTargets": true, "Cutoff": 0, "Description": "Maintenance window for
-        instances", "Duration": 1, "Schedule": "cron(20 17 ? * MON-FRI *)" } },
-        "MaintenanceWindowTarget": { "Type": "AWS::SSM::MaintenanceWindowTarget", "Properties": {
-        "ResourceType": "RESOURCE_GROUP", "Targets": [ { "Key": "resource-groups:Name", "Values": [
-        "TestResourceGroup" ] } ], "WindowId": { "Ref": "MaintenanceWindow" } } } } }
+{
+    "Resources": {
+        "PatchTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "Description": "Apply OS patches on instances in target",
+                "MaxConcurrency": 1,
+                "MaxErrors": 1,
+                "Priority": 0,
+                "TaskType": "RUN_COMMAND",
+                "WindowId": {
+                    "Ref": "MaintenanceWindow"
+                },
+                "TaskArn": "AWS-RunPatchBaseline",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            {
+                                "Ref": "MaintenanceWindowTarget"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "MaintenanceWindow": {
+            "Type": "AWS::SSM::MaintenanceWindow",
+            "Properties": {
+                "Name": "MaintenanceWindow",
+                "AllowUnassociatedTargets": true,
+                "Cutoff": 0,
+                "Description": "Maintenance window for instances",
+                "Duration": 1,
+                "Schedule": "cron(20 17 ? * MON-FRI *)"
+            }
+        },
+        "MaintenanceWindowTarget": {
+            "Type": "AWS::SSM::MaintenanceWindowTarget",
+            "Properties": {
+                "ResourceType": "RESOURCE_GROUP",
+                "Targets": [
+                    {
+                        "Key": "resource-groups:Name",
+                        "Values": [
+                            "TestResourceGroup"
+                        ]
+                    }
+                ],
+                "WindowId": {
+                    "Ref": "MaintenanceWindow"
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_targets_instances_using_a_resource_group_name--yaml"></a>
 
 ```
---- Resources: PatchTask: Type: AWS::SSM::MaintenanceWindowTask
-        Properties: Description: Apply OS patches on instances in target MaxConcurrency: 1
-        MaxErrors: 1 Priority: 0 TaskType: RUN_COMMAND WindowId: Ref: MaintenanceWindow TaskArn:
-        AWS-RunPatchBaseline Targets: - Key: WindowTargetIds Values: - Ref: MaintenanceWindowTarget
-        MaintenanceWindow: Type: AWS::SSM::MaintenanceWindow Properties: Name: MaintenanceWindow
-        AllowUnassociatedTargets: true Cutoff: 0 Description: Maintenance window for instances
-        Duration: 1 Schedule: cron(20 17 ? * MON-FRI *) MaintenanceWindowTarget: Type:
-        AWS::SSM::MaintenanceWindowTarget Properties: ResourceType: RESOURCE_GROUP Targets: - Key:
-        resource-groups:Name Values: - "TestResourceGroup" WindowId: Ref:
-        MaintenanceWindow
+---
+Resources:
+  PatchTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      Description: Apply OS patches on instances in target
+      MaxConcurrency: 1
+      MaxErrors: 1
+      Priority: 0
+      TaskType: RUN_COMMAND
+      WindowId:
+        Ref: MaintenanceWindow
+      TaskArn: AWS-RunPatchBaseline
+      Targets:
+        - Key: WindowTargetIds
+          Values:
+            - Ref: MaintenanceWindowTarget
+
+  MaintenanceWindow:
+    Type: AWS::SSM::MaintenanceWindow
+    Properties:
+      Name: MaintenanceWindow
+      AllowUnassociatedTargets: true
+      Cutoff: 0
+      Description: Maintenance window for instances
+      Duration: 1
+      Schedule: cron(20 17 ? * MON-FRI *)
+
+  MaintenanceWindowTarget:
+    Type: AWS::SSM::MaintenanceWindowTarget
+    Properties: 
+      ResourceType: RESOURCE_GROUP
+      Targets:
+        - Key: resource-groups:Name
+          Values:
+            - "TestResourceGroup"
+      WindowId: 
+        Ref: MaintenanceWindow
 ```
 
 ### Create a Run Command task that targets instances using a maintenance window target ID<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_targets_instances_using_a_maintenance_window_target_ID"></a>
@@ -212,25 +284,71 @@ The following example creates a maintenance window Run Command task that install
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_targets_instances_using_a_maintenance_window_target_ID--json"></a>
 
 ```
-{ "Resources": { "MaintenanceWindowRunCommandTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "WindowId": "MaintenanceWindow",
-        "Targets": [ { "Key": "WindowTargetIds", "Values": [ "MaintenanceWindowTarget" ] } ],
-        "TaskType": "RUN_COMMAND", "TaskArn": "AWS-RunPatchBaseline", "TaskInvocationParameters": {
-        "MaintenanceWindowRunCommandParameters": { "Parameters": { "Operation": [ "Install" ],
-        "RebootOption": [ "NoReboot" ] } }, "MaxConcurrency": 7, "MaxErrors": 7, "Priority": 5 },
-        "DependsOn": "MaintenanceWindowTarget" } } } }
+{
+    "Resources": {
+        "MaintenanceWindowRunCommandTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            "MaintenanceWindowTarget"
+                        ]
+                    }
+                ],
+                "TaskType": "RUN_COMMAND",
+                "TaskArn": "AWS-RunPatchBaseline",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowRunCommandParameters": {
+                        "Parameters": {
+                            "Operation": [
+                                "Install"
+                            ],
+                            "RebootOption": [
+                                "NoReboot"
+                            ]
+                        }
+                    },
+                    "MaxConcurrency": 7,
+                    "MaxErrors": 7,
+                    "Priority": 5
+                },
+                "DependsOn": "MaintenanceWindowTarget"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_targets_instances_using_a_maintenance_window_target_ID--yaml"></a>
 
 ```
---- Resources: MaintenanceWindowRunCommandTask: Type:
-        'AWS::SSM::MaintenanceWindowTask' Properties: WindowId: MaintenanceWindow Targets: - Key:
-        WindowTargetIds Values: - MaintenanceWindowTarget TaskType: RUN_COMMAND TaskArn:
-        AWS-RunPatchBaseline TaskInvocationParameters: MaintenanceWindowRunCommandParameters:
-        Comment: Running security updates for OS with no reboot Parameters: Operation: - Install
-        RebootOption: - NoReboot MaxConcurrency: 7 MaxErrors: 100% Priority: 5 DependsOn:
-        MaintenanceWindowTarget
+---
+Resources:
+  MaintenanceWindowRunCommandTask:
+    Type: 'AWS::SSM::MaintenanceWindowTask'
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+        - Key: WindowTargetIds
+          Values:
+            - MaintenanceWindowTarget
+      TaskType: RUN_COMMAND
+      TaskArn: AWS-RunPatchBaseline
+      TaskInvocationParameters:
+        MaintenanceWindowRunCommandParameters:
+          Comment: Running security updates for OS with no reboot
+          Parameters:
+            Operation:
+              - Install
+            RebootOption:
+              - NoReboot
+      MaxConcurrency: 7
+      MaxErrors: 100%
+      Priority: 5
+    DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a Run Command task that runs a PowerShell script<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_runs_a_PowerShell_script"></a>
@@ -240,28 +358,75 @@ The following example demonstrates running a command with AWS\-RunPowerShellScri
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_runs_a_PowerShell_script--json"></a>
 
 ```
-{ "Resources": { "MaintenanceWindowRunCommandTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "WindowId": "MaintenanceWindow",
-        "Targets": [ { "Key": "WindowTargetIds", "Values": [ "MaintenanceWindowTarget" ] } ],
-        "TaskType": "RUN_COMMAND", "TaskArn": "AWS-RunPowerShellScript", "TaskInvocationParameters":
-        { "MaintenanceWindowRunCommandParameters": { "Comment": "This is a comment", "Parameters": {
-        "executionTimeout": [ "3600" ], "commands": [ "Get-Service myImportantService |
-        Restart-Service\nGet-ExecutionPolicy -List\nSet-ExecutionPolicy -Scope Process AllSigned\n"
-        ] } }, "MaxConcurrency": 7, "MaxErrors": 7, "Priority": 5 }, "DependsOn":
-        "MaintenanceWindowTarget" } } } }
+{
+    "Resources": {
+        "MaintenanceWindowRunCommandTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            "MaintenanceWindowTarget"
+                        ]
+                    }
+                ],
+                "TaskType": "RUN_COMMAND",
+                "TaskArn": "AWS-RunPowerShellScript",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowRunCommandParameters": {
+                        "Comment": "This is a comment",
+                        "Parameters": {
+                            "executionTimeout": [
+                                "3600"
+                            ],
+                            "commands": [
+                                "Get-Service myImportantService | Restart-Service\nGet-ExecutionPolicy -List\nSet-ExecutionPolicy -Scope Process AllSigned\n"
+                            ]
+                        }
+                    },
+                    "MaxConcurrency": 7,
+                    "MaxErrors": 7,
+                    "Priority": 5
+                },
+                "DependsOn": "MaintenanceWindowTarget"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_runs_a_PowerShell_script--yaml"></a>
 
 ```
---- Resources: MaintenanceWindowRunCommandTask: Type:
-        'AWS::SSM::MaintenanceWindowTask' Properties: WindowId: MaintenanceWindow Targets: - Key:
-        WindowTargetIds Values: - MaintenanceWindowTarget TaskType: RUN_COMMAND TaskArn:
-        AWS-RunPowerShellScript TaskInvocationParameters: MaintenanceWindowRunCommandParameters:
-        Comment: This is a comment. Parameters: executionTimeout: - '3600' commands: - | Get-Service
-        myImportantService | Restart-Service Get-ExecutionPolicy -List Set-ExecutionPolicy -Scope
-        Process AllSigned Priority: 1 MaxConcurrency: 5 MaxErrors: 5 Name: StepFunctionsTask
-        DependsOn: MaintenanceWindowTarget
+---
+Resources:
+  MaintenanceWindowRunCommandTask:
+    Type: 'AWS::SSM::MaintenanceWindowTask'
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+        - Key: WindowTargetIds
+          Values:
+            - MaintenanceWindowTarget
+      TaskType: RUN_COMMAND
+      TaskArn: AWS-RunPowerShellScript
+      TaskInvocationParameters:
+        MaintenanceWindowRunCommandParameters:
+          Comment: This is a comment.
+          Parameters:
+            executionTimeout:
+            - '3600'
+            commands: |- 
+              Get-Service myImportantService | Restart-Service
+              Get-ExecutionPolicy -List
+              Set-ExecutionPolicy -Scope Process AllSigned
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: StepFunctionsTask
+      DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a task that runs an Automation runbook<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook"></a>
@@ -271,26 +436,65 @@ The following example creates a Systems Manager maintenance window task that use
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook--json"></a>
 
 ```
-{ "Resources": { "MaintenanceWindowStepFunctionsTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "WindowId": "MaintenanceWindow",
-        "Targets": [ { "Key": "WindowTargetIds", "Values": [ "MaintenanceWindowTarget" ] } ],
-        "TaskArn": "AWS-PatchInstanceWithRollback", "ServiceRoleArn": "AutomationRole.Arn",
-        "TaskType": "AUTOMATION", "TaskInvocationParameters": {
-        "MaintenanceWindowAutomationParameters": { "DocumentVersion": "1", "Parameters": '{
-        \"instanceId\": \"{{RESOURCE_ID}}\" }' } }, "Priority": 1, "MaxConcurrency": 5, "MaxErrors":
-        5, "Name": "AutomationTask" }, "DependsOn": "MaintenanceWindowTarget" } } }
+{
+    "Resources": {
+        "MaintenanceWindowStepFunctionsTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            "MaintenanceWindowTarget"
+                        ]
+                    }
+                ],
+                "TaskArn": "AWS-PatchInstanceWithRollback",
+                "ServiceRoleArn": "AutomationRole.Arn",
+                "TaskType": "AUTOMATION",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowAutomationParameters": {
+                        "DocumentVersion": "1",
+                        "Parameters": '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+                    }
+                },
+                "Priority": 1,
+                "MaxConcurrency": 5,
+                "MaxErrors": 5,
+                "Name": "AutomationTask"
+            },
+            "DependsOn": "MaintenanceWindowTarget"
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook--yaml"></a>
 
 ```
---- Resources: MaintenanceWindowStepFunctionsTask: Type:
-        AWS::SSM::MaintenanceWindowTask Properties: WindowId: MaintenanceWindow Targets: - Key:
-        WindowTargetIds Values: - MaintenanceWindowTarget TaskArn: AWS-PatchInstanceWithRollback
-        ServiceRoleArn: AutomationRole.Arn TaskType: AUTOMATION TaskInvocationParameters:
-        MaintenanceWindowAutomationParameters: DocumentVersion: 1 Parameters: '{ \"instanceId\":
-        \"{{RESOURCE_ID}}\" }' Priority: 1 MaxConcurrency: 5 MaxErrors: 5 Name: AutomationTask
-        DependsOn: MaintenanceWindowTarget
+---
+Resources:
+  MaintenanceWindowStepFunctionsTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+      - Key: WindowTargetIds
+        Values:
+        - MaintenanceWindowTarget
+      TaskArn: AWS-PatchInstanceWithRollback
+      ServiceRoleArn: AutomationRole.Arn
+      TaskType: AUTOMATION
+      TaskInvocationParameters:
+        MaintenanceWindowAutomationParameters:
+    DocumentVersion: 1
+    Parameters: '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: AutomationTask
+    DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a Step Functions task that targets a maintenance window target ID<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Step_Functions_task_that_targets_a_maintenance_window_target_ID"></a>
@@ -300,26 +504,65 @@ The following example creates a Systems Manager maintenance window task that run
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Step_Functions_task_that_targets_a_maintenance_window_target_ID--json"></a>
 
 ```
-{ "Resources": { "MaintenanceWindowStepFunctionsTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "WindowId": "MaintenanceWindow",
-        "Targets": [ { "Key": "WindowTargetIds", "Values": [ "MaintenanceWindowTarget" ] } ],
-        "TaskArn": "SSMStepFunctionDemo", "ServiceRoleArn": "StepFunctionRole.Arn", "TaskType":
-        "STEP_FUNCTIONS", "TaskInvocationParameters": { "MaintenanceWindowStepFunctionsParameters":
-        { "Input": "{\"instanceId\":\"{{TARGET_ID}}\", \"wait_time\": 20}", "Name":
-        "{{INVOCATION_ID}}" } }, "Priority": 1, "MaxConcurrency": 5, "MaxErrors": 5, "Name":
-        "StepFunctionsTask" }, "DependsOn": "MaintenanceWindowTarget" } } }
+{
+    "Resources": {
+        "MaintenanceWindowStepFunctionsTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            "MaintenanceWindowTarget"
+                        ]
+                    }
+                ],
+                "TaskArn": "SSMStepFunctionDemo",
+                "ServiceRoleArn": "StepFunctionRole.Arn",
+                "TaskType": "STEP_FUNCTIONS",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowStepFunctionsParameters": {
+                        "Input": "{\"instanceId\":\"{{TARGET_ID}}\", \"wait_time\": 20}",
+                        "Name": "{{INVOCATION_ID}}"
+                    }
+                },
+                "Priority": 1,
+                "MaxConcurrency": 5,
+                "MaxErrors": 5,
+                "Name": "StepFunctionsTask"
+            },
+            "DependsOn": "MaintenanceWindowTarget"
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Step_Functions_task_that_targets_a_maintenance_window_target_ID--yaml"></a>
 
 ```
---- Resources: MaintenanceWindowStepFunctionsTask: Type:
-        AWS::SSM::MaintenanceWindowTask Properties: WindowId: MaintenanceWindow Targets: - Key:
-        WindowTargetIds Values: - MaintenanceWindowTarget TaskArn: SSMStepFunctionDemo
-        ServiceRoleArn: StepFunctionRole.Arn TaskType: STEP_FUNCTIONS TaskInvocationParameters:
-        MaintenanceWindowStepFunctionsParameters: Input: '{"instanceId":"{{TARGET_ID}}",
-        "wait_time": 20}' Name: "{{INVOCATION_ID}}" Priority: 1 MaxConcurrency: 5 MaxErrors: 5 Name:
-        StepFunctionsTask DependsOn: MaintenanceWindowTarget
+---
+Resources:
+  MaintenanceWindowStepFunctionsTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+      - Key: WindowTargetIds
+        Values:
+        - MaintenanceWindowTarget
+      TaskArn: SSMStepFunctionDemo
+      ServiceRoleArn: StepFunctionRole.Arn
+      TaskType: STEP_FUNCTIONS
+      TaskInvocationParameters:
+        MaintenanceWindowStepFunctionsParameters:
+          Input: '{"instanceId":"{{TARGET_ID}}", "wait_time": 20}'
+          Name: "{{INVOCATION_ID}}"
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: StepFunctionsTask
+    DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a Step Functions task that targets an instance ID<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Step_Functions_task_that_targets_an_instance_ID"></a>
@@ -329,26 +572,65 @@ The following example creates a Systems Manager maintenance window task that run
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Step_Functions_task_that_targets_an_instance_ID--json"></a>
 
 ```
-{ "Resources": { "StepFunctionsTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "WindowId": "MaintenanceWindow",
-        "Targets": [ { "Key": "InstanceIds", "Values": [ "i-012345678912345678" ] } ], "TaskArn":
-        "SSMStepFunctionDemo", "ServiceRoleArn": "StepFunctionRole.Arn", "TaskType":
-        "STEP_FUNCTIONS", "TaskInvocationParameters": { "MaintenanceWindowStepFunctionsParameters":
-        { "Input": "{\"instanceId\":\"{{TARGET_ID}}\", \"wait_time\": 20}", "Name":
-        "{{INVOCATION_ID}}" } }, "Priority": 1, "MaxConcurrency": 5, "MaxErrors": 5, "Name":
-        "StepFunctionsTask" }, "DependsOn": "MaintenanceWindowTarget" } } }
+{
+    "Resources": {
+        "StepFunctionsTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "InstanceIds",
+                        "Values": [
+                            "i-012345678912345678"
+                        ]
+                    }
+                ],
+                "TaskArn": "SSMStepFunctionDemo",
+                "ServiceRoleArn": "StepFunctionRole.Arn",
+                "TaskType": "STEP_FUNCTIONS",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowStepFunctionsParameters": {
+                        "Input": "{\"instanceId\":\"{{TARGET_ID}}\", \"wait_time\": 20}",
+                        "Name": "{{INVOCATION_ID}}"
+                    }
+                },
+                "Priority": 1,
+                "MaxConcurrency": 5,
+                "MaxErrors": 5,
+                "Name": "StepFunctionsTask"
+            },
+            "DependsOn": "MaintenanceWindowTarget"
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Step_Functions_task_that_targets_an_instance_ID--yaml"></a>
 
 ```
---- Resources: StepFunctionsTask: Type:
-        AWS::SSM::MaintenanceWindowTask Properties: WindowId: MaintenanceWindow Targets: - Key:
-        InstanceIds Values: - i-012345678912345678 TaskArn: SSMStepFunctionDemo ServiceRoleArn:
-        StepFunctionRole.Arn TaskType: STEP_FUNCTIONS TaskInvocationParameters:
-        MaintenanceWindowStepFunctionsParameters: Input: '{"instanceId":"{{TARGET_ID}}",
-        "wait_time": 20}' Name: "{{INVOCATION_ID}}" Priority: 1 MaxConcurrency: 5 MaxErrors: 5 Name:
-        StepFunctionsTask DependsOn: MaintenanceWindowTarget
+---
+Resources:
+  StepFunctionsTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+      - Key: InstanceIds
+        Values:
+        - i-012345678912345678
+      TaskArn: SSMStepFunctionDemo
+      ServiceRoleArn: StepFunctionRole.Arn
+      TaskType: STEP_FUNCTIONS
+      TaskInvocationParameters:
+        MaintenanceWindowStepFunctionsParameters:
+          Input: '{"instanceId":"{{TARGET_ID}}", "wait_time": 20}'
+          Name: "{{INVOCATION_ID}}"
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: StepFunctionsTask
+    DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a task that runs a Lambda function<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_a_Lambda_function"></a>
@@ -358,28 +640,67 @@ The following example runs a Lambda function to restart instances\.
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_a_Lambda_function--json"></a>
 
 ```
-{ "Resources": { "MaintenanceWindowStepFunctionsTask": { "Type":
-        "AWS::SSM::MaintenanceWindowTask", "Properties": { "WindowId": "MaintenanceWindow",
-        "Targets": [ { "Key": "WindowTargetIds", "Values": [ "MaintenanceWindowTarget" ] } ],
-        "TaskArn": "SSM_RestartMyInstances", "ServiceRoleArn": "Lambda.Arn", "TaskType": "LAMBDA",
-        "TaskInvocationParameters": { "MaintenanceWindowLambdaParameters": { "ClientContext":
-        "ew0KICAi--truncated--0KIEXAMPLE", "Qualifier": "$LATEST", "Payload": "{ \"instanceId\":
-        \"{{RESOURCE_ID}}\", \"targetType\": \"{{TARGET_TYPE}}\" }" } } }, "Priority": 1,
-        "MaxConcurrency": 5, "MaxErrors": 5, "Name": "LambdaTask" }, "DependsOn":
-        "MaintenanceWindowTarget" } }
+{
+    "Resources": {
+        "MaintenanceWindowStepFunctionsTask": {
+            "Type": "AWS::SSM::MaintenanceWindowTask",
+            "Properties": {
+                "WindowId": "MaintenanceWindow",
+                "Targets": [
+                    {
+                        "Key": "WindowTargetIds",
+                        "Values": [
+                            "MaintenanceWindowTarget"
+                        ]
+                    }
+                ],
+                "TaskArn": "SSM_RestartMyInstances",
+                "ServiceRoleArn": "Lambda.Arn",
+                "TaskType": "LAMBDA",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowLambdaParameters": {
+                        "ClientContext": "ew0KICAi--truncated--0KIEXAMPLE",
+                        "Qualifier": "$LATEST",
+                        "Payload": "{ \"instanceId\": \"{{RESOURCE_ID}}\", \"targetType\": \"{{TARGET_TYPE}}\" }"
+                    }
+                }
+            },
+            "Priority": 1,
+            "MaxConcurrency": 5,
+            "MaxErrors": 5,
+            "Name": "LambdaTask"
+        },
+        "DependsOn": "MaintenanceWindowTarget"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_a_Lambda_function--yaml"></a>
 
 ```
---- Resources: MaintenanceWindowAutomationTask: Type:
-        AWS::SSM::MaintenanceWindowTask Properties: WindowId: MaintenanceWindow Targets: - Key:
-        WindowTargetIds Values: - MaintenanceWindowTarget TaskArn: SSM_RestartMyInstances
-        ServiceRoleArn: Lambda.Arn TaskType: LAMBDA TaskInvocationParameters:
-        MaintenanceWindowAutomationParameters: ClientContext": "ew0KICAi--truncated--0KIEXAMPLE"
-        Qualifier: '$LATEST' Payload: '{ \"instanceId\": \"{{RESOURCE_ID}}\", \"targetType\":
-        \"{{TARGET_TYPE}}\" }' Priority: 1 MaxConcurrency: 5 MaxErrors: 5 Name: LambdaTask
-        DependsOn: MaintenanceWindowTarget
+---
+Resources:
+  MaintenanceWindowAutomationTask:
+    Type: AWS::SSM::MaintenanceWindowTask
+    Properties:
+      WindowId: MaintenanceWindow
+      Targets:
+      - Key: WindowTargetIds
+        Values:
+        - MaintenanceWindowTarget
+      TaskArn: SSM_RestartMyInstances
+      ServiceRoleArn: Lambda.Arn
+      TaskType: LAMBDA
+      TaskInvocationParameters:
+        MaintenanceWindowAutomationParameters:
+			ClientContext": "ew0KICAi--truncated--0KIEXAMPLE"
+			Qualifier: '$LATEST'
+			Payload: '{ \"instanceId\": \"{{RESOURCE_ID}}\", \"targetType\": \"{{TARGET_TYPE}}\" }'
+      Priority: 1
+      MaxConcurrency: 5
+      MaxErrors: 5
+      Name: LambdaTask
+    DependsOn: MaintenanceWindowTarget
 ```
 
 ## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>

@@ -44,6 +44,7 @@ The name that you want to assign to this namespace\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
+*Pattern*: `^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-servicediscovery-publicdnsnamespace-tags"></a>

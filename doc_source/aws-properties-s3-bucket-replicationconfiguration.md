@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-replicationconfiguration-properties"></a>
 
 `Role`  <a name="cfn-s3-bucket-replicationconfiguration-role"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that Amazon S3 assumes when replicating objects\. For more information, see [How to Set Up Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that Amazon S3 assumes when replicating objects\. For more information, see [How to Set Up Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication-how-setup.html) in the *Amazon S3 User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

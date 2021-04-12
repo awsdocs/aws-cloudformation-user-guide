@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ByteMatchStatement](#cfn-wafv2-rulegroup-statementthree-bytematchstatement)" : ByteMatchStatement,
   "[GeoMatchStatement](#cfn-wafv2-rulegroup-statementthree-geomatchstatement)" : GeoMatchStatement,
   "[IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-ipsetreferencestatement)" : IPSetReferenceStatement,
+  "[LabelMatchStatement](#cfn-wafv2-rulegroup-statementthree-labelmatchstatement)" : LabelMatchStatement,
   "[RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-regexpatternsetreferencestatement)" : RegexPatternSetReferenceStatement,
   "[SizeConstraintStatement](#cfn-wafv2-rulegroup-statementthree-sizeconstraintstatement)" : SizeConstraintStatement,
   "[SqliMatchStatement](#cfn-wafv2-rulegroup-statementthree-sqlimatchstatement)" : SqliMatchStatement,
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     GeoMatchStatement
   [IPSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-ipsetreferencestatement): 
     IPSetReferenceStatement
+  [LabelMatchStatement](#cfn-wafv2-rulegroup-statementthree-labelmatchstatement): 
+    LabelMatchStatement
   [RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statementthree-regexpatternsetreferencestatement): 
     RegexPatternSetReferenceStatement
   [SizeConstraintStatement](#cfn-wafv2-rulegroup-statementthree-sizeconstraintstatement): 
@@ -57,6 +60,13 @@ Statement used to identify web requests based on country of origin\.
 Statement that references a set of IP addresses to compare to incoming requests\.   
 *Required*: No  
 *Type*: [IPSetReferenceStatement](aws-properties-wafv2-rulegroup-ipsetreferencestatement.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LabelMatchStatement`  <a name="cfn-wafv2-rulegroup-statementthree-labelmatchstatement"></a>
+A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL\.   
+The label match statement provides the label or namespace string to search for\. The label string can represent a part or all of the fully qualified label name that had been added to the web request\. Fully qualified labels have a prefix, optional namespaces, and label name\. The prefix identifies the rule group or web ACL context of the rule that added the label\. If you do not provide the fully qualified name in your label match string, AWS WAF performs the search for labels that were added in the same context as the label match statement\.   
+*Required*: No  
+*Type*: [LabelMatchStatement](aws-properties-wafv2-rulegroup-labelmatchstatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegexPatternSetReferenceStatement`  <a name="cfn-wafv2-rulegroup-statementthree-regexpatternsetreferencestatement"></a>

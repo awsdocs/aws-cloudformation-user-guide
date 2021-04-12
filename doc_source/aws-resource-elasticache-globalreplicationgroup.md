@@ -1,7 +1,7 @@
 # AWS::ElastiCache::GlobalReplicationGroup<a name="aws-resource-elasticache-globalreplicationgroup"></a>
 
 Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.
-+ The **GlobalReplicationGroupIdSuffix** represents the name of the Global Datastore, which is what you use to associate a secondary cluster\.
++ The **GlobalReplicationGroupIdSuffix** represents the name of the Global datastore, which is what you use to associate a secondary cluster\.
 
 ## Syntax<a name="aws-resource-elasticache-globalreplicationgroup-syntax"></a>
 
@@ -54,7 +54,7 @@ Specifies whether a read\-only replica is automatically promoted to read/write p
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheNodeType`  <a name="cfn-elasticache-globalreplicationgroup-cachenodetype"></a>
-The cache node type of the Global Datastore  
+The cache node type of the Global datastore  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -78,7 +78,7 @@ The number of node groups that comprise the Global Datastore\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalReplicationGroupDescription`  <a name="cfn-elasticache-globalreplicationgroup-globalreplicationgroupdescription"></a>
-The optional description of the Global Datastore  
+The optional description of the Global datastore  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,7 @@ The suffix name of a Global Datastore\. The suffix guarantees uniqueness of the 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Members`  <a name="cfn-elasticache-globalreplicationgroup-members"></a>
-The replication groups that comprise the Global Datastore\.  
+The replication groups that comprise the Global datastore\.  
 *Required*: Yes  
 *Type*: List of [GlobalReplicationGroupMember](aws-properties-elasticache-globalreplicationgroup-globalreplicationgroupmember.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

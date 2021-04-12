@@ -277,43 +277,41 @@ The following example shows how to create a MWAA environment:
 #### YAML<a name="aws-resource-mwaa-environment--examples--Create_a_MWAA_environment_-_YAML--yaml"></a>
 
 ```
-Environment:
-    Type: AWS::MWAA::Environment
-    Properties:
-        Name: "my-airflow-environment"
-        AirflowConfigurationOptions: {
-            "logging.logging_level" : "INFO",
-            "core.default_timezone" : "utc"
-        }
-        Tags: {
-            "Environment" : "Staging",
-            "Team" : "Analytics"
-        }
-        NetworkConfiguration:
-            SubnetIds:
-                - "subnet-123456"
-                - "subnet-789011"
-            SecurityGroupIds:
-                - "sg-0101010"
-        LoggingConfiguration:
-            DagProcessingLogs:
-                Enabled: true
-                LogLevel: INFO
-            SchedulerLogs:
-                Enabled: false
-                LogLevel: INFO
-            TaskLogs:
-                Enabled: true
-                LogLevel: INFO
-            WebserverLogs:
-                Enabled: false
-                LogLevel: INFO
-            WorkerLogs:
-                Enabled: false
-                LogLevel: INFO
-        SourceBucketArn: "arn:aws:s3:::my-dags-bucket"
-        ExecutionRoleArn: "arn:aws:iam::012345678900:role/service-role/my-execution-role"
-        MaxWorkers: 1
-        DagS3Path: "dags"
-        EnvironmentClass: mw1.small
+Environment: 
+    Properties: 
+      AirflowConfigurationOptions: 
+        core.default_timezone: utc
+        logging.logging_level: INFO
+      DagS3Path: dags
+      EnvironmentClass: mw1.small
+      ExecutionRoleArn: "arn:aws:iam::012345678900:role/service-role/my-execution-role"
+      LoggingConfiguration: 
+        DagProcessingLogs: 
+          Enabled: true
+          LogLevel: INFO
+        SchedulerLogs: 
+          Enabled: false
+          LogLevel: INFO
+        TaskLogs: 
+          Enabled: true
+          LogLevel: INFO
+        WebserverLogs: 
+          Enabled: false
+          LogLevel: INFO
+        WorkerLogs: 
+          Enabled: false
+          LogLevel: INFO
+      MaxWorkers: 1
+      Name: my-airflow-environment
+      NetworkConfiguration: 
+        SecurityGroupIds: 
+          - sg-0101010
+        SubnetIds: 
+          - subnet-123456
+          - subnet-789011
+      SourceBucketArn: "arn:aws:s3:::my-dags-bucket"
+      Tags: 
+        Environment: Staging
+        Team: Analytics
+    Type: "AWS::MWAA::Environment"
 ```

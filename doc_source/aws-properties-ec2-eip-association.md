@@ -82,13 +82,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-ec2-eip-association--examples"></a>
 
-### Associating an Elastic IP address to an instance<a name="aws-properties-ec2-eip-association--examples--Associating_an_Elastic_IP_address_to_an_instance"></a>
+### Associate an Elastic IP address to an instance<a name="aws-properties-ec2-eip-association--examples--Associate_an_Elastic_IP_address_to_an_instance"></a>
 
 The following example creates an instance with two elastic network interfaces \(ENI\)\. The example assumes that you have an existing VPC\.
 
 For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#scenario-ec2-eip)\.
 
-#### JSON<a name="aws-properties-ec2-eip-association--examples--Associating_an_Elastic_IP_address_to_an_instance--json"></a>
+#### JSON<a name="aws-properties-ec2-eip-association--examples--Associate_an_Elastic_IP_address_to_an_instance--json"></a>
 
 ```
   "Resources" : {

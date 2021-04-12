@@ -65,7 +65,7 @@ The following example creates a Network ACL in a VPC\.
    "Type" : "AWS::EC2::NetworkAcl",
    "Properties" : {
       "VpcId" : { "Ref" : "myVPC" },
-      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+      "Tags" : [ { "Key" : "stack", "Value" : "production" } ]
    }
 }
 ```
@@ -79,8 +79,8 @@ The following example creates a Network ACL in a VPC\.
          VpcId:
            Ref: myVPC
          Tags:
-         - Key: foo
-           Value: bar
+         - Key: stack
+           Value: production
 ```
 
 ## See also<a name="aws-resource-ec2-network-acl--seealso"></a>

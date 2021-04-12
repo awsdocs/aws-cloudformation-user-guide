@@ -53,11 +53,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Subnet CIDR Block Association<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association"></a>
+### Subnet CIDR block association<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_block_association"></a>
 
 The following example associates an IPv6 CIDR block by using the Ref function to specify the IPv6 of the Ipv6SubnetCidrBlock resource \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\.
 
-#### JSON<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_block_association--json"></a>
 
 ```
 "Ipv6TestSubnetCidrBlock": {
@@ -69,7 +69,7 @@ The following example associates an IPv6 CIDR block by using the Ref function to
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_block_association--yaml"></a>
 
 ```
 Ipv6TestSubnetCidrBlock:

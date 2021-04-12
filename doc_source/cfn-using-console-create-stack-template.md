@@ -12,7 +12,7 @@ Specify a completed template you have ready for creating a stack\.
 In the **Specify template** section, select the appropriate option based on the template's location:  
    + **Amazon S3 URL**
 
-     Specify a URL to a template in an S3 bucket\. 
+     Specify a URL to a template in an S3 bucket\.
 
      Enter the URL in the **Amazon S3 URL** field\.
 **Important**  
@@ -23,7 +23,7 @@ If your template includes nested stacks \(for example, stacks described in other
      The URL must point to a template with a maximum size of 1 MB that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
    + **Upload a template file**
 
-     Select a CloudFormation template on your local computer\. 
+     Select a CloudFormation template on your local computer\.
 
      Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 1 MB\. Once you have chosen your template, CloudFormation uploads the file and displays the S3 URL\.
 
@@ -32,13 +32,13 @@ If your template includes nested stacks \(for example, stacks described in other
 If you upload a local template file, CloudFormation uploads it to an Amazon Simple Storage Service \(Amazon S3\) bucket in your AWS account\. If you don't already have an S3 bucket that was created by CloudFormation, it creates a unique bucket for each Region in which you upload a template file\. If you already have an S3 bucket that was created by AWS CloudFormation in your AWS account, CloudFormation adds the template to that bucket\.  
 Considerations to keep in mind about S3 buckets created by CloudFormation  
 The buckets are accessible to anyone with Amazon S3 permissions in your AWS account\.
-CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.   
+CloudFormation creates the buckets with server\-side encryption enabled by default, thereby encrypting all objects stored in the bucket\.  
 You can directly manage encryption options for buckets that CloudFormation has created; for example, using the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/), or the AWS CLI\. For more information, see [Amazon S3 default encryption for S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html) in the *[Amazon Simple Storage Service Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/)*\.
 You can use your own bucket and manage its permissions by manually uploading templates to Amazon S3\. When you create or update a stack, specify the Amazon S3 URL of a template file\.  
 **Use a sample template**  
    + Select a sample template from a collection of templates provided by CloudFormation to get you started\. For descriptions of the templates, see [Sample templates](cfn-sample-templates.md)\.
 
-     To view more templates samples and snippets, organized by AWS service, click **View more sample templates**\.   
+     To view more templates samples and snippets, organized by AWS service, click **View more sample templates**\.  
 **Create template in Designer**  
 Create or modify a template using AWS CloudFormation Designer, a drag\-and\-drop interface for graphically diagramming your templates\. For more information, see [What is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
 

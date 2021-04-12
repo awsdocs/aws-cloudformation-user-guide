@@ -36,7 +36,7 @@ Modules are distinguishable from resources in a template because they adhere to 
 
 ## Using parameters to specify module values<a name="module-using-params"></a>
 
-Modules can include module parameters\. Much like template parameters, module parameters enable you to input custom values to your module from the template \(or module\) that contains it\. The module can then use these values to set properties of the resources it contains\. 
+Modules can include module parameters\. Much like template parameters, module parameters enable you to input custom values to your module from the template \(or module\) that contains it\. The module can then use these values to set properties of the resources it contains\.
 
 You can also define template parameters that in turn set module properties, so that users can input values that get passed to the module at the time of the stack operation\. For more information about defining template parameters, see [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\.
 
@@ -113,7 +113,7 @@ This first module, `My::S3::SampleBucketPrivate::MODULE`, will be the child modu
 }
 ```
 
-Next, the previous module is nested within a parent module, `My::S3::SampleBucket::MODULE`\. The parent module, `My::S3::SampleBucket::MODULE`, sets the child module parameters in the following ways: 
+Next, the previous module is nested within a parent module, `My::S3::SampleBucket::MODULE`\. The parent module, `My::S3::SampleBucket::MODULE`, sets the child module parameters in the following ways:
 + It sets the AccessControl parameter of `My::S3::SampleBucketPrivate::MODULE` to `Private`\.
 + For `BucketName`, it defines a module parameter, which will enable the bucket name to be specified in the template \(or module\) that contains `My::S3::SampleBucket::MODULE`\.
 

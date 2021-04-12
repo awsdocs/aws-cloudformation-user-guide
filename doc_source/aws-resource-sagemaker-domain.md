@@ -64,12 +64,14 @@ Properties:
 Specifies the VPC used for non\-EFS traffic\. The default value is `PublicInternetOnly`\.  
 + `PublicInternetOnly` \- Non\-EFS traffic is through a VPC managed by Amazon SageMaker, which allows direct internet access
 + `VpcOnly` \- All Studio traffic is through the specified VPC and subnets
+*Valid Values*: `PublicInternetOnly | VpcOnly`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AuthMode`  <a name="cfn-sagemaker-domain-authmode"></a>
 The mode of authentication that members use to access the domain\.  
+*Valid Values*: `SSO | IAM`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -90,25 +92,32 @@ The domain name\.
 
 `KmsKeyId`  <a name="cfn-sagemaker-domain-kmskeyid"></a>
 SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key \(CMK\) by default\. For more control, specify a customer managed CMK\.  
+*Length Constraints*: Maximum length of 2048\.  
+*Pattern*: `.*`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-sagemaker-domain-subnetids"></a>
 The VPC subnets that Studio uses for communication\.  
+*Length Constraints*: Maximum length of 32\.  
+*Array members*: Minimum number of 1 item\. Maximum number of 16 items\.  
+*Pattern*: `[-0-9a-zA-Z]+`  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-domain-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+Tags to associated with the Domain\. Each tag consists of a key and an optional value\. Tag keys must be unique per resource\. Tags are searchable using the Search API\.   
+*Array members*: Minimum number of 0 items\. Maximum number of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-sagemaker-domain-vpcid"></a>
 The ID of the Amazon Virtual Private Cloud \(VPC\) that Studio uses for communication\.  
+*Length Constraints*: Maximum length of 32\.  
+*Pattern*: `[-0-9a-zA-Z]+`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

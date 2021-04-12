@@ -82,7 +82,7 @@ A valid Amazon Resource Name \(ARN\) that identifies an IAM role\. At runtime, D
 The node type for the nodes in the cluster\. \(All nodes in a DAX cluster are of the same type\.\)  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: Updates are not supported\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NotificationTopicARN`  <a name="cfn-dax-cluster-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon SNS topic to which notifications will be sent\.  

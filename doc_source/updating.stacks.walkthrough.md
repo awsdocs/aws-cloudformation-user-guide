@@ -420,7 +420,7 @@ Completing this procedure will deploy live AWS services\. You will be charged th
 
 1. Copy the previous template and save it locally on your system as a text file\. Note the location because you'll need to use the file in a subsequent step\.
 
-1. Log in to the CloudFormation console at [ https://console\.aws\.amazon\.com/cloudformation ](https://console.aws.amazon.com/cloudformation)\.
+1. Log in to the CloudFormation console at [ https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation)\.
 
 1. Choose **Create New Stack**\.
 
@@ -656,7 +656,7 @@ Let's use the template that we modified in the previous section to change the in
 
 1. On the CloudFormation dashboard, choose the stack you created previously, and then choose **Update Stack**\.
 
-1. In the **Update Stack** wizard, on the **Select Template** screen, select **Use current template**, and then choose **Next**\. 
+1. In the **Update Stack** wizard, on the **Select Template** screen, select **Use current template**, and then choose **Next**\.
 
    The Specify Details page appears with the parameters that were used to create the initial stack are pre\-populated in the **Specify Parameters** section\.
 
@@ -674,7 +674,7 @@ To check the instance type from the AWS Management Console, open the Amazon EC2 
 
 ### Update the AMI on an Amazon EC2 instance<a name="update.walkthrough.ami"></a>
 
-Now let's look at how we might change the Amazon Machine Image \(AMI\) running on the instance\. We will initiate the AMI change by updating the stack to use a new Amazon EC2 instance type, such as t2\.medium, which is an HVM64 instance type\. 
+Now let's look at how we might change the Amazon Machine Image \(AMI\) running on the instance\. We will initiate the AMI change by updating the stack to use a new Amazon EC2 instance type, such as t2\.medium, which is an HVM64 instance type\.
 
 As in the previous section, we’ll use our existing template to change the instance type used by our example stack\. In the Stack Update wizard, on the Specify Parameters page, change the value of the Instance Type\.
 
@@ -763,7 +763,7 @@ So far, we've looked at changing existing properties of a resource in a template
 
 ## Change the stack's resources<a name="update.walkthrough.change.resources"></a>
 
-Since application needs can change over time, AWS CloudFormation allows you to change the set of resources that make up the stack\. To demonstrate, we’ll take the single instance application from [Adding resource properties](#update.walkthrough.adding.properties) and convert it to an auto scaled, load\-balanced application by updating the stack\.
+Application needs can change over time, AWS CloudFormation allows you to change the set of resources that make up the stack\. To demonstrate, we’ll take the single instance application from [Adding resource properties](#update.walkthrough.adding.properties) and convert it to an auto scaled, load\-balanced application by updating the stack\.
 
 This will create a simple, single instance PHP application using an Elastic IP address\. We'll now turn the application into a highly available, auto scaled, load balanced application by changing its resources during an update\.
 
@@ -1218,7 +1218,7 @@ For reference, the following sample shows the complete template\. If you use thi
 
 ## Availability and impact considerations<a name="update.walkthrough.impact"></a>
 
-Different properties have different impacts on the resources in the stack\. You can use AWS CloudFormation to update any property; however, before you make any changes, you should consider these questions:
+Different properties have different impacts on the resources in the stack\. You can use CloudFormation to update any property; however, before you make any changes, you should consider these questions:
 
 1. How does the update affect the resource itself? For example, updating an alarm threshold will render the alarm inactive during the update\. As we have seen, changing the instance type requires that the instance be stopped and restarted\. AWS CloudFormation uses the update or modify actions for the underlying resources to make changes to resources\. To understand the impact of updates, you should check the documentation for the specific resources\.
 
@@ -1227,8 +1227,8 @@ Different properties have different impacts on the resources in the stack\. You 
 ## Related resources<a name="update.walkthrough.related"></a>
 
 For more information about using CloudFormation to start applications and on integrating with other configuration and deployment services such as Puppet and Opscode Chef, see the following whitepapers:
-+ [ Bootstrapping applications via AWS CloudFormation](https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf)
-+ [ Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf)
-+ [ Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf)
++ [Bootstrapping applications via AWS CloudFormation](https://s3.amazonaws.com/cloudformation-examples/BoostrappingApplicationsWithAWSCloudFormation.pdf)
++ [Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf)
++ [Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf)
 
 The template used throughout this section is a "Hello, World" PHP application\. The template library also has an Amazon ElastiCache sample template that shows how to integrate a PHP application with ElasticCache using cfn\-hup and cfn\-init to respond to changes in the Amazon ElastiCache Cache Cluster configuration, all of which can be performed by Update Stack\.

@@ -149,20 +149,44 @@ The following example synchronizes Systems Manager Inventory metadata in the US 
 #### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncToDestination_Resource_Data_Sync--json"></a>
 
 ```
-{ "Description": "Create a Resource Data Sync for Systems Manager",
-        "Resources": { "BasicResourceDataSync": { "Type": "AWS::SSM::ResourceDataSync",
-        "Properties": { "SyncName": "test-sync", "SyncType": "SyncToDestination", "S3Destination": {
-        "BucketName": "test-bucket", "BucketRegion": "us-east-2", "SyncFormat": "JsonSerDe",
-        "BucketPrefix": "cfn", "KMSKeyArn": "kmsKeyARN" } } } } }
+{
+    "Description": "Create a Resource Data Sync for Systems Manager",
+    "Resources": {
+        "BasicResourceDataSync": {
+            "Type": "AWS::SSM::ResourceDataSync",
+            "Properties": {
+                "SyncName": "test-sync",
+                "SyncType": "SyncToDestination",
+                "S3Destination": {
+                    "BucketName": "test-bucket",
+                    "BucketRegion": "us-east-2",
+                    "SyncFormat": "JsonSerDe",
+                    "BucketPrefix": "cfn",
+                    "KMSKeyArn": "kmsKeyARN"
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncToDestination_Resource_Data_Sync--yaml"></a>
 
 ```
---- Description: Create a Resource Data Sync for Systems Manager
-        Resources: BasicResourceDataSync: Type: AWS::SSM::ResourceDataSync Properties: SyncName:
-        test-sync SyncType: SyncToDestination S3Destination: BucketName: test-bucket BucketRegion:
-        us-east-2 SyncFormat: JsonSerDe BucketPrefix: cfn KMSKeyArn: kmsKeyARN
+---
+Description: Create a Resource Data Sync for Systems Manager
+Resources:
+  BasicResourceDataSync:
+    Type: AWS::SSM::ResourceDataSync
+    Properties:
+      SyncName: test-sync
+      SyncType: SyncToDestination
+      S3Destination:
+        BucketName: test-bucket
+        BucketRegion: us-east-2
+        SyncFormat: JsonSerDe
+        BucketPrefix: cfn
+        KMSKeyArn: kmsKeyARN
 ```
 
 ### Create a SyncFromSource Resource Data Sync with type SingleAccountMultipleRegions<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_SingleAccountMultipleRegions"></a>
@@ -172,20 +196,46 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 #### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_SingleAccountMultipleRegions--json"></a>
 
 ```
-{ "Description": "Create a Resource Data Sync for Systems Manager
-        Explorer", "Resources": { "BasicResourceDataSync": { "Type": "AWS::SSM::ResourceDataSync",
-        "Properties": { "SyncName": "test-sync", "SyncType": "SyncFromSource", "SyncSource": {
-        "SourceType": "SingleAccountMultiRegions", "SourceRegions": [ "us-east-1", "us-west-1",
-        "us-west-2" ], "IncludeFutureRegions": false } } } } }
+{
+    "Description": "Create a Resource Data Sync for Systems Manager Explorer",
+    "Resources": {
+        "BasicResourceDataSync": {
+            "Type": "AWS::SSM::ResourceDataSync",
+            "Properties": {
+                "SyncName": "test-sync",
+                "SyncType": "SyncFromSource",
+                "SyncSource": {
+                    "SourceType": "SingleAccountMultiRegions",
+                    "SourceRegions": [
+                        "us-east-1",
+                        "us-west-1",
+                        "us-west-2"
+                    ],
+                    "IncludeFutureRegions": false
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_SingleAccountMultipleRegions--yaml"></a>
 
 ```
---- Description: Create a Resource Data Sync for Systems Manager
-        Explorer Resources: BasicResourceDataSync: Type: AWS::SSM::ResourceDataSync Properties:
-        SyncName: test-sync SyncType: SyncFromSource SyncSource: SourceType:
-        SingleAccountMultiRegions SourceRegions: - us-east-1 - us-west-1 - us-west-2
+---
+Description: Create a Resource Data Sync for Systems Manager Explorer
+Resources:
+  BasicResourceDataSync:
+    Type: AWS::SSM::ResourceDataSync
+    Properties:
+      SyncName: test-sync
+      SyncType: SyncFromSource
+      SyncSource:
+        SourceType: SingleAccountMultiRegions
+        SourceRegions:
+        - us-east-1
+        - us-west-1
+        - us-west-2
         IncludeFutureRegions: false
 ```
 
@@ -196,22 +246,48 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 #### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_EntireOrganization--json"></a>
 
 ```
-{ "Description": "Create a Resource Data Sync for Systems Manager
-        Explorer", "Resources": { "BasicResourceDataSync": { "Type": "AWS::SSM::ResourceDataSync",
-        "Properties": { "SyncName": "test-sync", "SyncType": "SyncFromSource", "SyncSource": {
-        "SourceType": "AwsOrganizations", "AwsOrganizationsSource": { "OrganizationSourceType":
-        "EntireOrganization" }, "SourceRegions": [ "us-west-1" ], "IncludeFutureRegions": false } }
-        } } }
+{
+    "Description": "Create a Resource Data Sync for Systems Manager Explorer",
+    "Resources": {
+        "BasicResourceDataSync": {
+            "Type": "AWS::SSM::ResourceDataSync",
+            "Properties": {
+                "SyncName": "test-sync",
+                "SyncType": "SyncFromSource",
+                "SyncSource": {
+                    "SourceType": "AwsOrganizations",
+                    "AwsOrganizationsSource": {
+                        "OrganizationSourceType": "EntireOrganization"
+                    },
+                    "SourceRegions": [
+                        "us-west-1"
+                    ],
+                    "IncludeFutureRegions": false
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncFromSource_Resource_Data_Sync_with_type_EntireOrganization--yaml"></a>
 
 ```
---- Description: Create a Resource Data Sync for Systems Manager
-        Explorer Resources: BasicResourceDataSync: Type: AWS::SSM::ResourceDataSync Properties:
-        SyncName: test-sync SyncType: SyncFromSource SyncSource: SourceType: AwsOrganizations
-        AwsOrganizationsSource: OrganizationSourceType: EntireOrganization SourceRegions: -
-        us-west-1 IncludeFutureRegions: false
+---
+Description: Create a Resource Data Sync for Systems Manager Explorer
+Resources:
+  BasicResourceDataSync:
+    Type: AWS::SSM::ResourceDataSync
+    Properties:
+      SyncName: test-sync
+      SyncType: SyncFromSource
+      SyncSource:
+        SourceType: AwsOrganizations
+        AwsOrganizationsSource:
+          OrganizationSourceType: EntireOrganization
+        SourceRegions:
+        - us-west-1
+        IncludeFutureRegions: false
 ```
 
 ### Creating a SyncFromSource Resource Data Sync with type OrganizationalUnits<a name="aws-resource-ssm-resourcedatasync--examples--Creating_a_SyncFromSource_Resource_Data_Sync_with_type_OrganizationalUnits"></a>
@@ -221,22 +297,53 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 #### JSON<a name="aws-resource-ssm-resourcedatasync--examples--Creating_a_SyncFromSource_Resource_Data_Sync_with_type_OrganizationalUnits--json"></a>
 
 ```
-{ "Description": "Create a Resource Data Sync for Systems Manager
-        Explorer", "Resources": { "BasicResourceDataSync": { "Type": "AWS::SSM::ResourceDataSync",
-        "Properties": { "SyncName": "test-sync", "SyncType": "SyncFromSource", "SyncSource": {
-        "SourceType": "AwsOrganizations", "AwsOrganizationsSource": { "OrganizationSourceType":
-        "OrganizationalUnits", "OrganizationalUnits": [ "ou-12345" ] }, "SourceRegions": [
-        "us-west-1" ], "IncludeFutureRegions": false } } } } }
+{
+    "Description": "Create a Resource Data Sync for Systems Manager Explorer",
+    "Resources": {
+        "BasicResourceDataSync": {
+            "Type": "AWS::SSM::ResourceDataSync",
+            "Properties": {
+                "SyncName": "test-sync",
+                "SyncType": "SyncFromSource",
+                "SyncSource": {
+                    "SourceType": "AwsOrganizations",
+                    "AwsOrganizationsSource": {
+                        "OrganizationSourceType": "OrganizationalUnits",
+                        "OrganizationalUnits": [
+                            "ou-12345"
+                        ]
+                    },
+                    "SourceRegions": [
+                        "us-west-1"
+                    ],
+                    "IncludeFutureRegions": false
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ssm-resourcedatasync--examples--Creating_a_SyncFromSource_Resource_Data_Sync_with_type_OrganizationalUnits--yaml"></a>
 
 ```
---- Description: Create a Resource Data Sync for Systems Manager
-        Explorer Resources: BasicResourceDataSync: Type: AWS::SSM::ResourceDataSync Properties:
-        SyncName: test-sync SyncType: SyncFromSource SyncSource: SourceType: AwsOrganizations
-        AwsOrganizationsSource: OrganizationSourceType: OrganizationalUnits OrganizationalUnits: -
-        ou-12345 SourceRegions: - us-west-1 IncludeFutureRegions: false
+---
+Description: Create a Resource Data Sync for Systems Manager Explorer
+Resources:
+  BasicResourceDataSync:
+    Type: AWS::SSM::ResourceDataSync
+    Properties:
+      SyncName: test-sync
+      SyncType: SyncFromSource
+      SyncSource:
+        SourceType: AwsOrganizations
+        AwsOrganizationsSource:
+          OrganizationSourceType: OrganizationalUnits
+          OrganizationalUnits:
+          - ou-12345
+        SourceRegions:
+        - us-west-1
+        IncludeFutureRegions: false
 ```
 
 ## See also<a name="aws-resource-ssm-resourcedatasync--seealso"></a>

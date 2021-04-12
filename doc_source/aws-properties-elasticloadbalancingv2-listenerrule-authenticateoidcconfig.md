@@ -111,7 +111,7 @@ The token endpoint of the IdP\. This must be a full URL, including the HTTPS pro
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseExistingClientSecret`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret"></a>
-Indicates whether to use the existing client secret when modifying a rule\. If you are creating a rule, you can omit this parameter or set it to false\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

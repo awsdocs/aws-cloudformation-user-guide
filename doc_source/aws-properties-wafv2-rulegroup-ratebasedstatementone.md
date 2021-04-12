@@ -59,7 +59,7 @@ Limit on the web request that match any nested statement criteria in any 5 minut
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScopeDownStatement`  <a name="cfn-wafv2-rulegroup-ratebasedstatementone-scopedownstatement"></a>
-Statement nested inside a rate\-based statement to narrow the scope of the requests that AWS WAF counts\.  
+Statement nested inside a rate\-based statement to narrow the scope of the requests that AWS WAF counts\. AWS WAF only counts requests that match the scope\-down statement\.  
 *Required*: No  
 *Type*: [StatementTwo](aws-properties-wafv2-rulegroup-statementtwo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

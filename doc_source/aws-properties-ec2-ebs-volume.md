@@ -176,9 +176,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Encrypted Amazon EBS Volume with DeletionPolicy to Make a Snapshot on Delete<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_Volume_with_DeletionPolicy_to_Make_a_Snapshot_on_Delete"></a>
+### Encrypted Amazon EBS volume with DeletionPolicy to make a snapshot on delete<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy_to_make_a_snapshot_on_delete"></a>
 
-#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_Volume_with_DeletionPolicy_to_Make_a_Snapshot_on_Delete--json"></a>
+#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy_to_make_a_snapshot_on_delete--json"></a>
 
 ```
 "NewVolume" : {
@@ -196,7 +196,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_Volume_with_DeletionPolicy_to_Make_a_Snapshot_on_Delete--yaml"></a>
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy_to_make_a_snapshot_on_delete--yaml"></a>
 
 ```
 NewVolume:
@@ -211,9 +211,9 @@ NewVolume:
   DeletionPolicy: Snapshot
 ```
 
-### Amazon EBS Volume with 100 Provisioned IOPS<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS"></a>
+### Amazon EBS volume with 100 provisioned IOPS<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_volume_with_100_provisioned_IOPS"></a>
 
-#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS--json"></a>
+#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_volume_with_100_provisioned_IOPS--json"></a>
 
 ```
 "NewVolume" : {
@@ -227,7 +227,7 @@ NewVolume:
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_Volume_with_100_Provisioned_IOPS--yaml"></a>
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_volume_with_100_provisioned_IOPS--yaml"></a>
 
 ```
 NewVolume:

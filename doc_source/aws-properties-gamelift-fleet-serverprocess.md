@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-fleet-serverprocess-properties"></a>
 
 `ConcurrentExecutions`  <a name="cfn-gamelift-fleet-serverprocess-concurrentexecutions"></a>
-The number of server processes that use this configuration to run concurrently on an instance\.  
+The number of server processes using this configuration that run concurrently on each instance\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchPath`  <a name="cfn-gamelift-fleet-serverprocess-launchpath"></a>
-The location of the server executable in a custom game build or the name of the Realtime script file that contains the `Init()` function\. Game builds and Realtime scripts are installed on instances at the root:   
-+ Windows \(for custom game builds only\): `C:\game`\. Example: "`C:\game\MyGame\server.exe`" 
+The location of a game build executable or the Realtime script file that contains the `Init()` function\. Game builds and Realtime scripts are installed on instances at the root:   
++ Windows \(custom game builds only\): `C:\game`\. Example: "`C:\game\MyGame\server.exe`" 
 + Linux: `/local/game`\. Examples: "`/local/game/MyGame/server.exe`" or "`/local/game/MyRealtimeScript.js`"
 *Required*: Yes  
 *Type*: String  
@@ -52,9 +52,9 @@ An optional list of parameters to pass to the server executable or Realtime scri
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-gamelift-fleet-serverprocess--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+  [Deploy a GameLift Fleet for a Custom Game Build](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating.html) in the *Amazon GameLift Developer Guide* 
-+  [Deploy a Realtime Servers Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-fleets-creating.html) in the *Amazon GameLift Developer Guide* 
-+  [Run Multiple Processes on a Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html) in the *Amazon GameLift Developer Guide* 
++ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++  [Deploy a GameLift fleet for a custom game build](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating.html) in the *Amazon GameLift Developer Guide* 
++  [Deploy a Realtime Servers fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-fleets-creating.html) in the *Amazon GameLift Developer Guide* 
++  [Run multiple processes on a fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html) in the *Amazon GameLift Developer Guide* 
 +  [ServerProcess](https://docs.aws.amazon.com/gamelift/latest/apireference/API_ServerProcess.html) in the *Amazon GameLift API Reference* 
 

@@ -208,7 +208,7 @@ The following example declares an Amazon EFS file system with the followiing att
                 "VpcId": {
                     "Ref": "MountTargetVPC"
                 },
-                "AvailabilityZone": "us-east-1c"
+                "AvailabilityZone": "us-east-1c
             }
         },
        "FileSystemResource": {

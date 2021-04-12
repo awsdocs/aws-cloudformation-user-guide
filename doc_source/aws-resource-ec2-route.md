@@ -143,11 +143,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Add a Route<a name="aws-resource-ec2-route--examples--Add_a_Route"></a>
+### Create a route to a gateway<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_gateway"></a>
 
-The following example adds a route that is added to a gateway\.
+The following example adds a route that is added to an internet gateway\.
 
-#### JSON<a name="aws-resource-ec2-route--examples--Add_a_Route--json"></a>
+#### JSON<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_gateway--json"></a>
 
 ```
 "myRoute" : {
@@ -161,7 +161,7 @@ The following example adds a route that is added to a gateway\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-route--examples--Add_a_Route--yaml"></a>
+#### YAML<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_gateway--yaml"></a>
 
 ```
   myRoute:

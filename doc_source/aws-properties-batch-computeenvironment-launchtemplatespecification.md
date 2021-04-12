@@ -5,7 +5,7 @@ An object representing a launch template associated with a compute resource\. Yo
 If security groups are specified using both the `securityGroupIds` parameter of `CreateComputeEnvironment` and the launch template, the values in the `securityGroupIds` parameter of `CreateComputeEnvironment` will be used\.
 
 **Note**  
-This object isn't applicable to jobs running on Fargate resources\.
+This object isn't applicable to jobs that are running on Fargate resources\.
 
 ## Syntax<a name="aws-properties-batch-computeenvironment-launchtemplatespecification-syntax"></a>
 

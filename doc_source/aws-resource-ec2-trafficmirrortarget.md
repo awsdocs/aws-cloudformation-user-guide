@@ -74,11 +74,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrortarget--examples"></a>
 
-### Create a Traffic Mirror Target Associated with a Network Load Balancer<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Load_Balancer"></a>
+### Create a traffic mirror target associated with a Network Load Balancer<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_Network_Load_Balancer"></a>
 
-This is a traffic mirror target associated with a network load balancer\.
+This is a traffic mirror target associated with a Network Load Balancer\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Load_Balancer--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_Network_Load_Balancer--json"></a>
 
 ```
 {
@@ -98,7 +98,7 @@ This is a traffic mirror target associated with a network load balancer\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Load_Balancer--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_Network_Load_Balancer--yaml"></a>
 
 ```
 SampleNLBTrafficMirrorTarget:
@@ -111,11 +111,11 @@ SampleNLBTrafficMirrorTarget:
       Value: "SampleNLBTarget"
 ```
 
-### Create a Traffic Mirror Target Associated with a Network Interface<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Interface"></a>
+### Create a traffic mirror target associated with a network interface<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_network_interface"></a>
 
 This is a traffic mirror target associated with a network interface\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Interface--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_network_interface--json"></a>
 
 ```
 {
@@ -135,7 +135,7 @@ This is a traffic mirror target associated with a network interface\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Interface--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_network_interface--yaml"></a>
 
 ```
 SampleNetworkInterfaceTarget:

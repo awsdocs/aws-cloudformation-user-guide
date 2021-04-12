@@ -9,15 +9,15 @@ You can add as many files as you need to your repository\. For example, you migh
 This topic describes each artifact type\.
 
 **Topics**
-+ [Stack template file](#w8424ab1c21c17c13)
-+ [Template configuration file](#w8424ab1c21c17c15)
-+ [See also](#w8424ab1c21c17c19)
++ [Stack template file](#w8676ab1c21c15c13)
++ [Template configuration file](#w8676ab1c21c15c15)
++ [See also](#w8676ab1c21c15c19)
 
-## Stack template file<a name="w8424ab1c21c17c13"></a>
+## Stack template file<a name="w8676ab1c21c15c13"></a>
 
 A stack template file defines the resources that AWS CloudFormation provisions and configures\. These files are the same template files that you use when you create or update stacks using AWS CloudFormation\. You can use YAML or JSON\-formatted templates\. For more information about templates, see [Template anatomy](template-anatomy.md)\.
 
-## Template configuration file<a name="w8424ab1c21c17c15"></a>
+## Template configuration file<a name="w8676ab1c21c15c15"></a>
 
 A template configuration file is a JSON\-formatted text file that can specify template parameter values, a [stack policy](protect-stack-resources.md), and tags\. Use these configuration files to specify parameter values or a stack policy for a stack\. All of the parameter values that you specify must be declared in the associated template\.
 
@@ -66,7 +66,7 @@ The following example specifies `TestEC2Key` for the `KeyName` parameter, adds a
 }
 ```
 
-## See also<a name="w8424ab1c21c17c19"></a>
+## See also<a name="w8676ab1c21c15c19"></a>
 
 The following related resources can help you as you work with these parameters\.
 + For more information about the AWS CloudFormation action parameters in CodePipeline, see the [AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CloudFormation.html) action configuration reference in the *AWS CodePipeline User Guide*\.

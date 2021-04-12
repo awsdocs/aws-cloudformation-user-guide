@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : LaunchTemplateData,
       "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String,
-      "[TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications)" : TagSpecifications
+      "[TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications)" : [ LaunchTemplateTagSpecification, ... ]
     }
 }
 ```
@@ -28,7 +28,7 @@ Properties:
     LaunchTemplateData
   [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
   [TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications): 
-    TagSpecifications
+    - LaunchTemplateTagSpecification
 ```
 
 ## Properties<a name="aws-resource-ec2-launchtemplate-properties"></a>
@@ -49,9 +49,9 @@ A name for the launch template\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagSpecifications`  <a name="cfn-ec2-launchtemplate-tagspecifications"></a>
-The tags\.  
+The tags to apply to the launch template during creation\.  
 *Required*: No  
-*Type*: [TagSpecifications](aws-properties-ec2-launchtemplate-tagspecifications.md)  
+*Type*: List of [LaunchTemplateTagSpecification](aws-properties-ec2-launchtemplate-launchtemplatetagspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-launchtemplate-return-values"></a>

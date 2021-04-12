@@ -39,7 +39,7 @@ Properties:
 The Connect attachment options\.  
 *Required*: Yes  
 *Type*: [TransitGatewayConnectOptions](aws-properties-ec2-transitgatewayconnect-transitgatewayconnectoptions.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-transitgatewayconnect-tags"></a>
 The tags for the attachment\.  

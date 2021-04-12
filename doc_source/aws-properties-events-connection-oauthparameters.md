@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AuthorizationEndpoint](#cfn-events-connection-oauthparameters-authorizationendpoint)" : String,
   "[ClientParameters](#cfn-events-connection-oauthparameters-clientparameters)" : ClientParameters,
   "[HttpMethod](#cfn-events-connection-oauthparameters-httpmethod)" : String,
-  "[OAuthHttpParameters](#cfn-events-connection-oauthparameters-oauthhttpparameters)" : HttpParameters
+  "[OAuthHttpParameters](#cfn-events-connection-oauthparameters-oauthhttpparameters)" : ConnectionHttpParameters
 }
 ```
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     ClientParameters
   [HttpMethod](#cfn-events-connection-oauthparameters-httpmethod): String
   [OAuthHttpParameters](#cfn-events-connection-oauthparameters-oauthhttpparameters): 
-    HttpParameters
+    ConnectionHttpParameters
 ```
 
 ## Properties<a name="aws-properties-events-connection-oauthparameters-properties"></a>
@@ -51,5 +51,5 @@ The method to use for the authorization request\.
 `OAuthHttpParameters`  <a name="cfn-events-connection-oauthparameters-oauthhttpparameters"></a>
 Contains the OAuth authorization parameters to use for the connection\.   
 *Required*: No  
-*Type*: [HttpParameters](aws-properties-events-connection-httpparameters.md)  
+*Type*: [ConnectionHttpParameters](aws-properties-events-connection-connectionhttpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

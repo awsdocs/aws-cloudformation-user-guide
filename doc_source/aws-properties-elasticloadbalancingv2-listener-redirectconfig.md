@@ -99,15 +99,15 @@ The following example creates a listener with a default action that redirects HT
 HTTPlistener:
    Type: "AWS::ElasticLoadBalancingV2::Listener"
    Properties:
-      DefaultActions:
-        - Type: "redirect"
-          RedirectConfig:
-            Protocol: "HTTPS"
-            Port: 443
-            Host: "#{host}"
-            Path: "/#{path}"
-            Query: "#{query}"
-            StatusCode: "HTTP_301"
+     DefaultActions:
+       - Type: "redirect"
+       RedirectConfig:
+         Protocol: "HTTPS"
+         Port: 443
+         Host: "#{host}"
+         Path: "/#{path}"
+         Query: "#{query}"
+         StatusCode: "HTTP_301"
       LoadBalancerArn: !Ref myLoadBalancer
       Port: 80
       Protocol: "HTTP"
@@ -123,20 +123,20 @@ HTTPlistener:
             {
                "Type": "redirect",
                "RedirectConfig": {
-                   "Protocol": "HTTPS",
-                   "Port": 443,
-                   "Host": "#{host}",
-                   "Path": "/#{path}",
-                   "Query": "#{query}",
-                   "StatusCode": "HTTP_301"
-               }
+               "Protocol": "HTTPS",
+               "Port": 443,
+               "Host": "#{host}",
+               "Path": "/#{path}",
+               "Query": "#{query}",
+               "StatusCode": "HTTP_301"
+              }
             }
-        ],
-        "LoadBalancerArn": {
+          ],
+          "LoadBalancerArn": {
                "Ref": "myLoadBalancer"
-        },
-        "Port": 80,
-        "Protocol": "HTTP"
-    }
-}
+           },
+            "Port": 80,
+            "Protocol": "HTTP"
+       }
+  }
 ```

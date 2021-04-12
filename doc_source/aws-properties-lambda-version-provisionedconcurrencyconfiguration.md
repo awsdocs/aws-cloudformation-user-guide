@@ -1,6 +1,6 @@
 # AWS::Lambda::Version ProvisionedConcurrencyConfiguration<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration"></a>
 
-A provisioned concurrency configuration for a function's version\.
+A [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) configuration for a function's version\.
 
 ## Syntax<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration-syntax"></a>
 

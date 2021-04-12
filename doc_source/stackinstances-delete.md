@@ -28,13 +28,13 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 
    1. For **Deployment regions**, choose the Regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
 
-   1. For **Deployment options**: 
+   1. For **Deployment options**:
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
       + For **Failure tolerance**, keep the defaults of **Number** and **0**\.
 
       In the **Retain stacks** area, keep the default setting of disabled\.
 
-      When you are deleting stacks from a stack set, the **Retain stacks** option lets you choose to remove the stack instances from your stack set, but save the stacks and their associated resources\. When you save stacks from a stack set by choosing the **Retain stacks** option, the stack's resources stay in their current state, but the stack is no longer part of the stack set\. You cannot reassociate a retained stack, or add an existing, saved stack to a new stack set\. The stack is permanently independent of a stack set\. In this procedure, we are deleting all stacks in preparation for deleting the entire stack set, so we are not retaining stacks\.
+      When you are deleting stacks from a stack set, the **Retain stacks** option lets you choose to remove the stack instances from your stack set, but save the stacks and their associated resources\. When you save stacks from a stack set by choosing the **Retain stacks** option, the stack's resources stay in their current state, but the stack is no longer part of the stack set\. You can't reassociate a retained stack, or add an existing, saved stack to a new stack set\. The stack is permanently independent of a stack set\. In this procedure, we are deleting all stacks in preparation for deleting the entire stack set, so we are not retaining stacks\.
 
       Choose **Next**\.
 
@@ -57,7 +57,7 @@ When acting as a delegated administrator, you must set the `--call-as` parameter
 **Note**  
 The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
-   Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you do not want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we are not retaining any stacks\.
+   Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you don't want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we aren't retaining any stacks\.
 
    \[Self\-managed permissions\] Replace *account\_ID* with the accounts you used to create your stack set in [Create a stack set](stacksets-getting-started-create.md)\.
 

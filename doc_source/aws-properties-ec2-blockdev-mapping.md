@@ -62,11 +62,11 @@ You can specify either `VirtualName` or `Ebs`, but not both\.
 
 ## Examples<a name="aws-properties-ec2-blockdev-mapping--examples"></a>
 
-### Block Device Mapping with two EBS Volumes<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_two_EBS_Volumes"></a>
+### Block device mapping with two EBS volumes<a name="aws-properties-ec2-blockdev-mapping--examples--Block_device_mapping_with_two_EBS_volumes"></a>
 
 This example sets the EBS\-backed root device \(/dev/sda1\) size to 50 GiB, and another EBS\-backed device mapped to /dev/sdm that is 100 GiB in size\.
 
-#### JSON<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_two_EBS_Volumes--json"></a>
+#### JSON<a name="aws-properties-ec2-blockdev-mapping--examples--Block_device_mapping_with_two_EBS_volumes--json"></a>
 
 ```
 "BlockDeviceMappings" : [
@@ -81,7 +81,7 @@ This example sets the EBS\-backed root device \(/dev/sda1\) size to 50 GiB, and 
 ]
 ```
 
-#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_two_EBS_Volumes--yaml"></a>
+#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_device_mapping_with_two_EBS_volumes--yaml"></a>
 
 ```
 BlockDeviceMappings:
@@ -93,11 +93,11 @@ BlockDeviceMappings:
       VolumeSize: 100
 ```
 
-### Block Device Mapping with an Ephemeral Drive<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive"></a>
+### Block device mapping with an instance store volume<a name="aws-properties-ec2-blockdev-mapping--examples--Block_device_mapping_with_an_instance_store_volume"></a>
 
-This example maps an ephemeral drive to device /dev/sdc\.
+This example maps an instance store volume to device /dev/sdc\.
 
-#### JSON<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive--json"></a>
+#### JSON<a name="aws-properties-ec2-blockdev-mapping--examples--Block_device_mapping_with_an_instance_store_volume--json"></a>
 
 ```
 "BlockDeviceMappings" : [
@@ -108,7 +108,7 @@ This example maps an ephemeral drive to device /dev/sdc\.
 ]
 ```
 
-#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_Device_Mapping_with_an_Ephemeral_Drive--yaml"></a>
+#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Block_device_mapping_with_an_instance_store_volume--yaml"></a>
 
 ```
 BlockDeviceMappings:
@@ -116,11 +116,11 @@ BlockDeviceMappings:
     VirtualName: ephemeral0
 ```
 
-### Unmapping an AMI\-defined Device<a name="aws-properties-ec2-blockdev-mapping--examples--Unmapping_an_AMI-defined_Device"></a>
+### Unmap an AMI\-defined device<a name="aws-properties-ec2-blockdev-mapping--examples--Unmap_an_AMI-defined_device"></a>
 
 To unmap a device defined in the AMI, set the `NoDevice` property to an empty map, as shown here:
 
-#### JSON<a name="aws-properties-ec2-blockdev-mapping--examples--Unmapping_an_AMI-defined_Device--json"></a>
+#### JSON<a name="aws-properties-ec2-blockdev-mapping--examples--Unmap_an_AMI-defined_device--json"></a>
 
 ```
 "BlockDeviceMappings" : [
@@ -131,7 +131,7 @@ To unmap a device defined in the AMI, set the `NoDevice` property to an empty ma
 ]
 ```
 
-#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Unmapping_an_AMI-defined_Device--yaml"></a>
+#### YAML<a name="aws-properties-ec2-blockdev-mapping--examples--Unmap_an_AMI-defined_device--yaml"></a>
 
 ```
 BlockDeviceMappings:

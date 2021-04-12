@@ -131,8 +131,8 @@ The Amazon Resource Name \(ARN\) of the security profile\.
         ],
         "AlertTargets": {
           "SNS": {
-            "AlertTargetArn": "!Ref SNSTopicForAlertTarget",
-            "RoleArn": "!GetAtt AlertTargetSNSPermissionsRole.Arn"
+            "AlertTargetArn": "arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts",
+            "RoleArn": "arn:aws:iam::123456789012:role/RoleForDefenderAlerts"
           }
         },
         "Behaviors": [
@@ -142,6 +142,7 @@ The Amazon Resource Name \(ARN\) of the security profile\.
             "Criteria": {
               "ConsecutiveDatapointsToAlarm": 1,
               "ConsecutiveDatapointsToClear": 1,
+              "ComparisonOperator": "less-than-equals",
               "Value": {
                 "Count": 5
               }
@@ -154,7 +155,7 @@ The Amazon Resource Name \(ARN\) of the security profile\.
               "DurationSeconds": 300,
               "ComparisonOperator": "less-than-equals",
               "Value": {
-                "count": 50
+                "Count": 50
               }
             }
           },
@@ -174,7 +175,7 @@ The Amazon Resource Name \(ARN\) of the security profile\.
         "SecurityProfileName": "ProfileForConnectedDevices",
         "Tags": [
           {
-            "Key": "Application"
+            "Key": "Application",
             "Value": "SmartHome"
           }
         ],
@@ -190,48 +191,47 @@ The Amazon Resource Name \(ARN\) of the security profile\.
 #### YAML<a name="aws-resource-iot-securityprofile--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: 2010-09-09
 Description: AWS IoT SecurityProfile Sample Template
 Resources:
   MySecurityProfile:
-    Type: AWS::IoT::SecurityProfile
+    Type: 'AWS::IoT::SecurityProfile'
     Properties:
       AdditionalMetricsToRetainV2:
-      - Metric: aws:num-messages-received
-      - Metric: aws:num-disconnects
+        - Metric: 'aws:num-messages-received'
+        - Metric: 'aws:num-disconnects'
       AlertTargets:
         SNS:
-          AlertTargetArn: !Ref 
-            "SnsTopicForAlertTarget"
-          RoleArn: !GetAtt 
-            "AlertTargetSNSPermissionsRole.Arn"
+          AlertTargetArn: 'arn:aws:sns:us-east-1:123456789012:DeviceDefenderDetectAlerts'
+          RoleArn: 'arn:aws:iam::123456789012:role/RoleForDefenderAlerts'
       Behaviors:
-      - Name: MaxMessageSize
-        Metric: aws:message-byte-size
-        Criteria:
-          ConsecutiveDatapointsToAlarm: 1
-          ConsecutiveDatapointsToClear: 1
-          Value:
-            Count: 5
-      - Name: OutboundMessageCount
-        Metric: aws:num-messages-sent
-        Criteria:
-          DurationSeconds: 300
-          ComparisonOperator: less-than-equals
-          Value:
-            count: 50
-      - Name: AuthFailuresStatThreshold
-        Metric: aws:num-authorization-failures
-        Criteria:
-          ComparisonOperator: less-than-equals
-          DurationSeconds: 300
-          StatisticalThreshold:
-            Statistic: p90
+        - Name: MaxMessageSize
+          Metric: 'aws:message-byte-size'
+          Criteria:
+            ConsecutiveDatapointsToAlarm: 1
+            ConsecutiveDatapointsToClear: 1
+            ComparisonOperator: less-than-equals
+            Value:
+              Count: 5
+        - Name: OutboundMessageCount
+          Metric: 'aws:num-messages-sent'
+          Criteria:
+            DurationSeconds: 300
+            ComparisonOperator: less-than-equals
+            Value:
+              Count: 50
+        - Name: AuthFailuresStatThreshold
+          Metric: 'aws:num-authorization-failures'
+          Criteria:
+            ComparisonOperator: less-than-equals
+            DurationSeconds: 300
+            StatisticalThreshold:
+              Statistic: p90
       SecurityProfileDescription: Contains expected behaviors for connected devices
       SecurityProfileName: ProfileForConnectedDevices
       Tags:
-      - Key: "tagKey"
-      - Value: "tagValue"
+        - Key: Application
+          Value: SmartHome
       TargetArns:
-      - "arn:aws:iot:us-east-1:123456789012:all/things"
+        - 'arn:aws:iot:us-east-1:123456789012:all/things'
 ```

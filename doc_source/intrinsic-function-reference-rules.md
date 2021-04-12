@@ -174,7 +174,7 @@ The following example evaluates to `true` if the value for the `EnvironmentType`
 
 ## Fn::Or<a name="fn-or"></a>
 
-Returns `true` if any one of the specified conditions evaluates to `true`; returns `false` if all of the conditions evaluate to `false`\. `Fn::Or` acts as an OR operator\. The minimum number of conditions that you can include is two, and the maximum is ten\.
+Returns `true` if any one of the specified conditions evaluates to `true`; returns `false` if all the conditions evaluate to `false`\. `Fn::Or` acts as an OR operator\. The minimum number of conditions that you can include is two, and the maximum is ten\.
 
 ### Declaration<a name="fn-or-declaration"></a>
 
@@ -269,7 +269,7 @@ Returns a list of all attribute values for a given parameter type and attribute\
 The name of an attribute from which you want to retrieve a value\. For more information about attributes, see [Supported Attributes](#rules-parameter-attributes)\.
 
 *parameter\_type*  
-An AWS\-specific parameter type, such as AWS::EC2::SecurityGroup::Id or AWS::EC2::VPC::Id\. For more information, see [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
+An AWS\-specific parameter type, such as `AWS::EC2::SecurityGroup::Id` or `AWS::EC2::VPC::Id`\. For more information, see [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) in the *AWS CloudFormation User Guide*\.
 
 ### Example<a name="fn-valueofall-example"></a>
 

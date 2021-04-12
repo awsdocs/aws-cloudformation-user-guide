@@ -17,7 +17,7 @@ Performing a drift detection operation on a stack determines whether the stack h
 
 1. Review the drift detection results for the stack and its resources\. With your stack selected, from the **Stack actions** menu select **View drift results**\.
 
-   CloudFormation lists the overall drift status of the stack, as well as the last time drift detection was initiated on the stack or any of its individual resources\. A stack is considered to have drifted if one or more of its resources have drifted\.  
+   CloudFormation lists the overall drift status of the stack, in addition to the last time drift detection was initiated on the stack or any of its individual resources\. A stack is considered to have drifted if one or more of its resources have drifted\.  
 ![\[The Drifts page for the selected stack, showing overall stack drift status, drift detection status, and the last time drift detection was initiated on the stack or any of its individual resources.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-drifts-overview-1.png)
 
    In the **Resource drift status** section, CloudFormation lists each stack resource, its drift status, and the last time drift detection was initiated on the resource\. The logical ID and physical ID of each resource is displayed to help you identify them\. In addition, for resources with a status of **MODIFIED**, CloudFormation displays resource drift details\.

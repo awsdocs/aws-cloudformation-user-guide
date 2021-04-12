@@ -5,7 +5,7 @@
 The following are properties that the custom resource provider includes when it sends the JSON file to the presigned URL\. For more information about uploading objects by using presigned URLs, see the related [topic](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
 
 **Note**  
-The total size of the response body cannot exceed 4096 bytes\. 
+The total size of the response body cannot exceed 4096 bytes\.
 
 Status  <a name="crpg-ref-responses-status"></a>
 The status value sent by the custom resource provider in response to an AWS CloudFormation\-generated request\.  
@@ -19,7 +19,7 @@ Describes the reason for a failure response\.
 *Type*: String
 
 PhysicalResourceId  <a name="crpg-ref-responses-physicalresourceid"></a>
-This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.  
+This value should be an identifier unique to the custom resource vendor, and can be up to 1 KB in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.  
 *Required*: Yes  
 *Type*: String
 

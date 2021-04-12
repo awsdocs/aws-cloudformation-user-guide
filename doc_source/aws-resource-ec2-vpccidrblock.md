@@ -89,11 +89,11 @@ Ipv6VPCCidrBlock:
       VpcId: !Ref TestVPCIpv6
 ```
 
-### Associate an IPv4 CIDR block and Amazon\-provided IPv6 CIDR block<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_Amazon-provided_IPv6_CIDR_block"></a>
+### Associate an IPv4 CIDR block and an Amazon\-provided IPv6 CIDR block<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_an_Amazon-provided_IPv6_CIDR_block"></a>
 
 The following example associates an IPv4 CIDR block and an Amazon\-provided IPv6 CIDR block with a VPC\. It also outputs the list of IPv4 CIDR block association IDs and IPv6 CIDR blocks that are associated with the VPC\. 
 
-#### JSON<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_Amazon-provided_IPv6_CIDR_block--json"></a>
+#### JSON<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_an_Amazon-provided_IPv6_CIDR_block--json"></a>
 
 ```
 {
@@ -167,7 +167,7 @@ The following example associates an IPv4 CIDR block and an Amazon\-provided IPv6
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_Amazon-provided_IPv6_CIDR_block--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_an_Amazon-provided_IPv6_CIDR_block--yaml"></a>
 
 ```
 Resources:

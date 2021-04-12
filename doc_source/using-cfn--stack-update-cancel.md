@@ -2,7 +2,7 @@
 
 After a stack update has begun, you can cancel the stack update if the stack is still in the `UPDATE_IN_PROGRESS` state\. After an update has finished, you can't cancel it\. You can, however, update a stack again with any previous settings\.
 
-If you cancel a stack update, the stack is rolled back to the stack configuration that existed prior to initiating the stack update\.
+If you cancel a stack update, the stack is rolled back to the stack configuration that existed before initiating the stack update\.
 
 **Topics**
 + [To cancel a stack update by using the console](#using-cfn--stack-update-cancel-console)

@@ -1,6 +1,6 @@
 # AWS::S3::Bucket VersioningConfiguration<a name="aws-properties-s3-bucket-versioningconfig"></a>
 
-Describes the versioning state of an Amazon S3 bucket\. For more information, see [PUT Bucket versioning](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTVersioningStatus.html) in the *Amazon Simple Storage Service API Reference*\.
+Describes the versioning state of an Amazon S3 bucket\. For more information, see [PUT Bucket versioning](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTVersioningStatus.html) in the *Amazon S3 API Reference*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-versioningconfig-syntax"></a>
 

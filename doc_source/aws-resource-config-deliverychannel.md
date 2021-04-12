@@ -2,12 +2,12 @@
 
 Specifies a delivery channel object to deliver configuration information to an Amazon S3 bucket and Amazon SNS topic\.
 
-Before you can create a delivery channel, you must create a configuration recorder\.
+Before you can create a delivery channel, you must create a configuration recorder\. You can use this action to change the Amazon S3 bucket or an Amazon SNS topic of the existing delivery channel\. To change the Amazon S3 bucket or an Amazon SNS topic, call this action and specify the changed values for the S3 bucket and the SNS topic\. If you specify a different value for either the S3 bucket or the SNS topic, this action will keep the existing value for the parameter that is not changed\.
 
-You can use this action to change the Amazon S3 bucket or an Amazon SNS topic of the existing delivery channel\. To change the Amazon S3 bucket or an Amazon SNS topic, call this action and specify the changed values for the S3 bucket and the SNS topic\. If you specify a different value for either the S3 bucket or the SNS topic, this action will keep the existing value for the parameter that is not changed\.
+You can have only one delivery channel per region per AWS account, and the delivery channel is required to use AWS Config\.
 
 **Note**  
-You can have only one delivery channel per region in your account\.
+AWS Config does not support the delivery channel to an Amazon S3 bucket bucket where object lock is enabled\. For more information, see [How S3 Object Lock works](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)\.
 
 When you create the delivery channel, you can specify; how often AWS Config delivers configuration snapshots to your Amazon S3 bucket \(for example, 24 hours\), the S3 bucket to which AWS Config sends configuration snapshots and configuration history files, and the Amazon SNS topic to which AWS Config sends notifications about configuration changes, such as updated resources, AWS Config rule evaluations, and when AWS Config delivers the configuration snapshot to your S3 bucket\. For more information, see [Deliver Configuration Items](https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html#delivery-channel) in the AWS Config Developer Guide\. 
 
@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-config-deliverychannel-name)" : String,
       "[S3BucketName](#cfn-config-deliverychannel-s3bucketname)" : String,
       "[S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix)" : String,
+      "[S3KmsKeyArn](#cfn-config-deliverychannel-s3kmskeyarn)" : String,
       "[SnsTopicARN](#cfn-config-deliverychannel-snstopicarn)" : String
     }
 }
@@ -45,6 +46,7 @@ Properties:
   [Name](#cfn-config-deliverychannel-name): String
   [S3BucketName](#cfn-config-deliverychannel-s3bucketname): String
   [S3KeyPrefix](#cfn-config-deliverychannel-s3keyprefix): String
+  [S3KmsKeyArn](#cfn-config-deliverychannel-s3kmskeyarn): String
   [SnsTopicARN](#cfn-config-deliverychannel-snstopicarn): String
 ```
 
@@ -74,6 +76,12 @@ If you specify a bucket that belongs to another AWS account, that bucket must ha
 
 `S3KeyPrefix`  <a name="cfn-config-deliverychannel-s3keyprefix"></a>
 The prefix for the specified Amazon S3 bucket\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`S3KmsKeyArn`  <a name="cfn-config-deliverychannel-s3kmskeyarn"></a>
+The Amazon Resource Name \(ARN\) of the AWS Key Management Service \(KMS\) customer managed key \(CMK\) used to encrypt objects delivered by AWS Config\. Must belong to the same Region as the destination S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

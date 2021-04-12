@@ -2,6 +2,8 @@
 
 The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and port that AWS Elemental MediaConnect sends the ingested video to\. Each flow can have up to 50 outputs\. An output can have the same protocol or a different protocol from the source\.
 
+Note: MediaConnect does not currently support using CloudFormation to add outputs that use the SRT\-listener protocol\.
+
 ## Syntax<a name="aws-resource-mediaconnect-flowoutput-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

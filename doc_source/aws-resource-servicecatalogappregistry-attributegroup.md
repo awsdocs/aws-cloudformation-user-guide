@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ServiceCatalogAppRegistry::AttributeGroup",
   "Properties" : {
-      "[Attributes](#cfn-servicecatalogappregistry-attributegroup-attributes)" : Attributes,
+      "[Attributes](#cfn-servicecatalogappregistry-attributegroup-attributes)" : Json,
       "[Description](#cfn-servicecatalogappregistry-attributegroup-description)" : String,
       "[Name](#cfn-servicecatalogappregistry-attributegroup-name)" : String,
       "[Tags](#cfn-servicecatalogappregistry-attributegroup-tags)" : {Key : Value, ...}
@@ -25,8 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ServiceCatalogAppRegistry::AttributeGroup
 Properties: 
-  [Attributes](#cfn-servicecatalogappregistry-attributegroup-attributes): 
-    Attributes
+  [Attributes](#cfn-servicecatalogappregistry-attributegroup-attributes): Json
   [Description](#cfn-servicecatalogappregistry-attributegroup-description): String
   [Name](#cfn-servicecatalogappregistry-attributegroup-name): String
   [Tags](#cfn-servicecatalogappregistry-attributegroup-tags): 
@@ -38,7 +37,7 @@ Properties:
 `Attributes`  <a name="cfn-servicecatalogappregistry-attributegroup-attributes"></a>
 A JSON string in the form of nested key\-value pairs that represent the attributes in the group and describes an application and its components\.  
 *Required*: Yes  
-*Type*: [Attributes](aws-properties-servicecatalogappregistry-attributegroup-attributes.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-servicecatalogappregistry-attributegroup-description"></a>

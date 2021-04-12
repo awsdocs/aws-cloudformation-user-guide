@@ -102,7 +102,7 @@ Optional deployment parameters that control how many tasks run during the deploy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentController`  <a name="cfn-ecs-service-deploymentcontroller"></a>
-The deployment controller to use for the service\.  
+The deployment controller to use for the service\. If no deployment controller is specified, the default value of `ECS` is used\.  
 *Required*: No  
 *Type*: [DeploymentController](aws-properties-ecs-service-deploymentcontroller.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -121,7 +121,7 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
-The `EnableExecuteCommand` property type is not currently supported by AWS CloudFormation\.  
+Whether or not the execute command functionality is enabled for the service\. If `true`, the execute command functionality is enabled for all containers in tasks as part of the service\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -683,4 +683,36 @@ Resources:
 Outputs:
   Cluster:
     Value: !Ref cluster
+```
+
+### Define a service with ECS Exec enabled<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled"></a>
+
+The following example defines a service with ECS Exec enabled\. For more information, see [Using ECS Exec for debugging](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) in the *Amazon ECS Developer Guide*\.
+
+#### JSON<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled--json"></a>
+
+```
+"ECSService": {
+  "Type": "AWS::ECS::Service",
+  "Properties" : {
+    "Cluster": { "Ref": "ECSCluster" },
+    "DesiredCount": 1,
+    "TaskDefinition" : { "Ref": "ECSTaskDefinition" },
+    "EnableExecuteCommand": "true"
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled--yaml"></a>
+
+```
+ECSService: 
+  Type: AWS::ECS::Service
+  Properties: 
+    Cluster: 
+      Ref: "ECSCluster"
+    DesiredCount: 1
+    TaskDefinition: 
+      Ref: "ECSTaskDefinition"
+    EnableExecuteCommand: true
 ```

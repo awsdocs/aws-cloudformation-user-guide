@@ -150,7 +150,7 @@ Resources:
   MyInstanceRole:
     Type: AWS::IAM::Role
     Properties: 
-      AssumeRolePolicyDocument:                   
+      AssumeRolePolicyDocument:
         Version: 2012-10-17
         Statement:
           - Effect: Allow
@@ -167,6 +167,6 @@ Resources:
   MyInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: 
-      Roles: 
+      Roles:
         - !Ref MyInstanceRole
 ```

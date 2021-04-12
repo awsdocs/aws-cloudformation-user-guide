@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ByteMatchStatement](#cfn-wafv2-webacl-statementtwo-bytematchstatement)" : ByteMatchStatement,
   "[GeoMatchStatement](#cfn-wafv2-webacl-statementtwo-geomatchstatement)" : GeoMatchStatement,
   "[IPSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-ipsetreferencestatement)" : IPSetReferenceStatement,
-  "[ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementtwo-managedrulegroupstatement)" : ManagedRuleGroupStatement,
+  "[LabelMatchStatement](#cfn-wafv2-webacl-statementtwo-labelmatchstatement)" : LabelMatchStatement,
   "[NotStatement](#cfn-wafv2-webacl-statementtwo-notstatement)" : NotStatementTwo,
   "[OrStatement](#cfn-wafv2-webacl-statementtwo-orstatement)" : OrStatementTwo,
   "[RateBasedStatement](#cfn-wafv2-webacl-statementtwo-ratebasedstatement)" : RateBasedStatementTwo,
@@ -37,8 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     GeoMatchStatement
   [IPSetReferenceStatement](#cfn-wafv2-webacl-statementtwo-ipsetreferencestatement): 
     IPSetReferenceStatement
-  [ManagedRuleGroupStatement](#cfn-wafv2-webacl-statementtwo-managedrulegroupstatement): 
-    ManagedRuleGroupStatement
+  [LabelMatchStatement](#cfn-wafv2-webacl-statementtwo-labelmatchstatement): 
+    LabelMatchStatement
   [NotStatement](#cfn-wafv2-webacl-statementtwo-notstatement): 
     NotStatementTwo
   [OrStatement](#cfn-wafv2-webacl-statementtwo-orstatement): 
@@ -83,10 +83,11 @@ Statement that references a set of IP addresses to compare to incoming requests\
 *Type*: [IPSetReferenceStatement](aws-properties-wafv2-webacl-ipsetreferencestatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ManagedRuleGroupStatement`  <a name="cfn-wafv2-webacl-statementtwo-managedrulegroupstatement"></a>
-Statement that references a managed rule group\.  
+`LabelMatchStatement`  <a name="cfn-wafv2-webacl-statementtwo-labelmatchstatement"></a>
+A rule statement that defines a string match search against labels that have been added to the web request by rules that have already run in the web ACL\.   
+The label match statement provides the label or namespace string to search for\. The label string can represent a part or all of the fully qualified label name that had been added to the web request\. Fully qualified labels have a prefix, optional namespaces, and label name\. The prefix identifies the rule group or web ACL context of the rule that added the label\. If you do not provide the fully qualified name in your label match string, AWS WAF performs the search for labels that were added in the same context as the label match statement\.   
 *Required*: No  
-*Type*: [ManagedRuleGroupStatement](aws-properties-wafv2-webacl-managedrulegroupstatement.md)  
+*Type*: [LabelMatchStatement](aws-properties-wafv2-webacl-labelmatchstatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotStatement`  <a name="cfn-wafv2-webacl-statementtwo-notstatement"></a>

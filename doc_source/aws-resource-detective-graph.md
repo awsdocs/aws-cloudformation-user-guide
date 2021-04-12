@@ -1,6 +1,6 @@
 # AWS::Detective::Graph<a name="aws-resource-detective-graph"></a>
 
-The `AWS::Detective::Graph` resource is an Amazon Detective resource type that creates a Detective behavior graph\. The requesting account becomes the master account for the behavior graph\.
+The `AWS::Detective::Graph` resource is an Amazon Detective resource type that creates a Detective behavior graph\. The requesting account becomes the administrator account for the behavior graph\.
 
 ## Syntax<a name="aws-resource-detective-graph-syntax"></a>
 

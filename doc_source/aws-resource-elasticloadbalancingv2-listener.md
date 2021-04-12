@@ -141,22 +141,22 @@ HTTPlistener:
             {
                 "Type": "redirect",
                 "RedirectConfig": {
-                    "Protocol": "HTTPS",
-                    "Port": 443,
-                    "Host": "#{host}",
-                    "Path": "/#{path}",
-                    "Query": "#{query}",
-                    "StatusCode": "HTTP_301"
-                }
-           } 
-        ],
-        "LoadBalancerArn": {
-            "Ref": "myLoadBalancer"
-        },
-        "Port": 80,
-        "Protocol": "HTTP"
-    }
-}
+                       "Protocol": "HTTPS",
+                       "Port": 443,
+                       "Host": "#{host}",
+                       "Path": "/#{path}",
+                       "Query": "#{query}",
+                       "StatusCode": "HTTP_301"
+                   }
+               }
+           ],
+           "LoadBalancerArn": {
+               "Ref": "myLoadBalancer"
+           },
+           "Port": 80,
+           "Protocol": "HTTP"
+       }
+   }
 ```
 
 ## See also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>

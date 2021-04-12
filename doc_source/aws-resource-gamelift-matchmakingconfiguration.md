@@ -56,7 +56,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-matchmakingconfiguration-properties"></a>
 
 `AcceptanceRequired`  <a name="cfn-gamelift-matchmakingconfiguration-acceptancerequired"></a>
-A flag that determines whether a match that was created with this configuration must be accepted by the matched players\. To require acceptance, set to `TRUE`\. With this option enabled, matchmaking tickets use the status `REQUIRES_ACCEPTANCE` to indicate when a completed potential match is waitiing for player accepance\.   
+A flag that determines whether a match that was created with this configuration must be accepted by the matched players\. To require acceptance, set to `TRUE`\. With this option enabled, matchmaking tickets use the status `REQUIRES_ACCEPTANCE` to indicate when a completed potential match is waiting for player acceptance\.   
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,7 +70,7 @@ The length of time \(in seconds\) to wait for players to accept a proposed match
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdditionalPlayerCount`  <a name="cfn-gamelift-matchmakingconfiguration-additionalplayercount"></a>
-The number of player slots in a match to keep open for future players\. For example, assume that the configuration's rule set specifies a match for a single 12\-person team\. If the additional player count is set to 2, only 10 players are initially selected for the match\. This parameter is not used if `FlexMatchMode` is set to `STANDALONE`\.  
+The number of player slots in a match to keep open for future players\. For example, if the configuration's rule set specifies a match for a single 12\-person team, and the additional player count is set to 2, only 10 players are selected for the match\. This parameter is not used if `FlexMatchMode` is set to `STANDALONE`\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -124,7 +124,7 @@ A set of custom game session properties, formatted as a single string value\. Th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GameSessionQueueArns`  <a name="cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns"></a>
-Amazon Resource Name \([ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)\) that is assigned to a GameLift game session queue resource and uniquely identifies it\. ARNs are unique across all Regions\. Queues can be located in any Region\. Queues are used to start new GameLift\-hosted game sessions for matches that are created with this matchmaking configuration\. If `FlexMatchMode` is set to `STANDALONE`, do not set this parameter\.  
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) that is assigned to a GameLift game session queue resource and uniquely identifies it\. ARNs are unique across all Regions\. Format is `arn:aws:gamelift:<region>::gamesessionqueue/<queue name>`\. Queues can be located in any Region\. Queues are used to start new GameLift\-hosted game sessions for matches that are created with this matchmaking configuration\. If `FlexMatchMode` is set to `STANDALONE`, do not set this parameter\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -155,7 +155,7 @@ The maximum duration, in seconds, that a matchmaking ticket can remain in proces
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleSetName`  <a name="cfn-gamelift-matchmakingconfiguration-rulesetname"></a>
-A unique identifier for a matchmaking rule set to use with this configuration\. You can use either the rule set name or ARN value\. A matchmaking configuration can only use rule sets that are defined in the same Region\.  
+A unique identifier for the matchmaking rule set to use with this configuration\. You can use either the rule set name or ARN value\. A matchmaking configuration can only use rule sets that are defined in the same Region\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -381,7 +381,7 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-matchmakingconfiguration--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+  [Setting Up GameLift FlexMatch Matchmakers](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/matchmaker-build.html) in the *Amazon GameLift Developer Guide* 
++ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++  [Setting up GameLift FlexMatch matchmakers](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/matchmaker-build.html) in the *Amazon GameLift Developer Guide* 
 + [MatchmakingConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_MatchmakingConfiguration.html) in the *Amazon GameLift API Reference* 
 

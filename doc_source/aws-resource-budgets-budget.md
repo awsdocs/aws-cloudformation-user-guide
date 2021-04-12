@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget<a name="aws-resource-budgets-budget"></a>
 
-The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the *AWS Billing and Cost Management User Guide*\.
+The `AWS::Budgets::Budget` resource allows customers to take pre\-defined actions that will trigger once a budget threshold has been exceeded\. creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the *AWS Billing and Cost Management User Guide*\.
 
 ## Syntax<a name="aws-resource-budgets-budget-syntax"></a>
 

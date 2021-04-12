@@ -1,6 +1,6 @@
 # AWS::Lambda::CodeSigningConfig<a name="aws-resource-lambda-codesigningconfig"></a>
 
-Details about a Code signing configuration\. 
+Details about a [Code signing configuration](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)\. 
 
 ## Syntax<a name="aws-resource-lambda-codesigningconfig-syntax"></a>
 

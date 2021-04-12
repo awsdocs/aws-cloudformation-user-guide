@@ -4,7 +4,7 @@ You can track the status of the resources AWS CloudFormation is creating and del
 
 In the following example, a sample stack is created from a template file by using the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. After the stack is created, the events that were reported during stack creation are shown by using the aws cloudformation describe\-stack\-events command\.
 
-The following example creates a stack with the name `myteststack` using the `sampletemplate.json` template file: 
+The following example creates a stack with the name `myteststack` using the `sampletemplate.json` template file:
 
 ```
  1. PROMPT> aws cloudformation create-stack --stack-name myteststack --template-body file:///home/local/test/sampletemplate.json  

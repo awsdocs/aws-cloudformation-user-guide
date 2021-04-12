@@ -1,21 +1,30 @@
 # Using the AWS CloudFormation registry<a name="registry"></a>
 
-The CloudFormation registry lists the extensions, both private and public \(AWS\), that are available for use in your CloudFormation account\. An extension is an artifact, registered in the CloudFormation Registry, which augments the functionality of CloudFormation in a native manner\. Extensions can be written by Amazon, APN partners, Marketplace sellers, and the developer community\. Extensions include CloudFormation items such as resource types and modules\.
+The *CloudFormation registry* lists private and public extensions that are available for use in your CloudFormation account\. *Extensions* are artifacts registered in the CloudFormation registry that augments the functionality of CloudFormation resources and properties\. For example, `AWS::MyService::MyResource` can be registered in your account and used like any other CloudFormation resource\. Extensions can be written by Amazon, APN partners, Marketplace sellers, and the developer community\. Extensions include CloudFormation items such as resource types and modules\.
+
+## Getting started<a name="registry-getting-started"></a>
+
+Get started with the CloudFormation registry by:
++ Modeling — Create and validate a schema that acts as the authoritative description of your resource\. For more information, see [Modeling resource types for use in AWS CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)\.
++ Developing — Write a handler that defines your core operations, such as; `Create`, `Read`, `Update`, `Delete`, and `List`, and test it\. For more information, see [Developing resource types for use in AWS CloudFormation templates](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-develop.html)\.
++ Register — Register your provider with CloudFormation so that it can be used in your templates\. For more information, see [Registering resource types for use in AWS CloudFormation templates](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-develop.html)\.
+
+The CloudFormation registry provides per\-account, per\-region storage for your resource providers\.
 
 ## Private and public extensions<a name="registry-public-private"></a>
 
-*Private* extensions are those extensions that you have explicitly registered for use in your AWS account\. These may be extensions you've created yourself, as well as ones shared with you\. You can use the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk), an open\-source tool for resource management, to create private extensions\. For more information, see the [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
+*Private* extensions are those extensions that you have explicitly registered for use in your AWS account\. These may be extensions you've created yourself, in addition to ones shared with you\. You can use the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk), an open\-source tool for resource management, to create private extensions\. For more information, see the [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
 
 **Note**  
 Using private *resource* types, a specific kind of extension, in your CloudFormation stacks incurs charges to your account\. This is because private resource types implement custom logic that runs during resource create, read, update, list, and delete operations\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
 
-*Public* extensions are those provided by AWS to manage specific AWS service resources\. 
+*Public* extensions are those provided by AWS to manage specific AWS service resources\.
 
 ## Registering extensions in CloudFormation<a name="registry-register"></a>
 
 To use private extensions, either ones you develop yourself, or types shared with you, you must first register them with CloudFormation, in the accounts and regions in which you want to use them\. Once you're registered an extension, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
 
-You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register an extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
+You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register an extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\.
 
 ### IAM permissions for registering a resource type<a name="registry-register-permissions"></a>
 
@@ -39,7 +48,7 @@ If your resource type calls AWS APIs in any of its handlers, you must create an 
 
    ```
    aws cloudformation register-type --type-name My::Resource::Example --schema-handler-package [s3 object path] --type RESOURCE
-                   
+   
    {
        "RegistrationToken": "f5525280-104e-4d35-bef5-8f1fexample"
    }
@@ -55,9 +64,9 @@ If your resource type calls AWS APIs in any of its handlers, you must create an 
    aws cloudformation describe-type-registration --registration-token f5525280-104e-4d35-bef5-8f1fexample
    
    {
-       "ProgressStatus": "COMPLETE", 
-       "TypeArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example", 
-       "Description": "Deployment is currently in DEPLOY_STAGE of status COMPLETED; ", 
+       "ProgressStatus": "COMPLETE",
+       "TypeArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example",
+       "Description": "Deployment is currently in DEPLOY_STAGE of status COMPLETED; ",
        "TypeVersionArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example/00000001"
    }
    ```
@@ -97,8 +106,8 @@ If you use an IAM role to perform your stack operations, that IAM role must have
 [DeleteResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteResourceConfig.html)
 + Configure AWS Config to record all resource types\. For more information, see [Record configurations for third\-party resources](https://docs.aws.amazon.com/config/latest/developerguide/customresources.html) in the *AWS Config Developer Guide*\.
 **Note**  
-AWS Config does not support recording of private resources containing properties defined as both required *and* write\-only\.   
-By design, resource properties defined as write\-only are not returned in the schema used to create AWS Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\. 
+AWS Config does not support recording of private resources containing properties defined as both required *and* write\-only\.  
+By design, resource properties defined as write\-only are not returned in the schema used to create AWS Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
 
 For more information on configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 

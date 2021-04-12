@@ -9,6 +9,6 @@ There is no additional charge for AWS CloudFormation\. You pay for AWS resources
 
    This link opens the **AWS Pricing Calculator** in a new browser tab\.
 **Note**  
-Because you launched the calculator from the CloudFormation console, it is pre\-populated with your template configuration and parameter values\. There are many additional configurable values that can provide you with a better estimate if you have an idea of how much data transfer you expect to your Amazon EC2 instance\. 
+Because you launched the calculator from the CloudFormation console, it's pre\-populated with your template configuration and parameter values\. There are many additional configurable values that can provide you with a better estimate if you have an idea of how much data transfer you expect to your Amazon EC2 instance\. 
 
 1. Choose the **Estimate of your Monthly Bill** tab for a monthly estimate of running your stack, along with a categorized display of what factors contributed to the estimate\.

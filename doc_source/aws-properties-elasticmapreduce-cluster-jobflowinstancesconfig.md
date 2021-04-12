@@ -110,7 +110,7 @@ The instance fleet configuration is available only in Amazon EMR versions 4\.8\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EmrManagedMasterSecurityGroup`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup"></a>
-The identifier of the Amazon EC2 security group for the master node\.  
+The identifier of the Amazon EC2 security group for the master node\. If you specify `EmrManagedMasterSecurityGroup`, you must also specify `EmrManagedSlaveSecurityGroup`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -119,7 +119,7 @@ The identifier of the Amazon EC2 security group for the master node\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EmrManagedSlaveSecurityGroup`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup"></a>
-The identifier of the Amazon EC2 security group for the core and task nodes\.  
+The identifier of the Amazon EC2 security group for the core and task nodes\. If you specify `EmrManagedSlaveSecurityGroup`, you must also specify `EmrManagedMasterSecurityGroup`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -137,7 +137,7 @@ Applies only to Amazon EMR release versions earlier than 4\.0\. The Hadoop versi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KeepJobFlowAliveWhenNoSteps`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps"></a>
-Specifies whether the cluster should remain available after completing all steps\.  
+Specifies whether the cluster should remain available after completing all steps\. Defaults to `true`\. For more information about configuring cluster termination, see [Control Cluster Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html) in the *EMR Management Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

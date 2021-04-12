@@ -7,7 +7,7 @@ Custom resource provider requests with `RequestType` set to `"Update"` are sent 
 Update requests contain the following fields:
 
 RequestType  
-Will be "Update"\.
+Will be `Update`\.
 
 RequestId  
 A unique ID for the request\.
@@ -19,7 +19,7 @@ ResourceType
 The template developer\-chosen resource type of the custom resource in the AWS CloudFormation template\. Custom resource type names can be up to 60 characters long and can include alphanumeric and the following characters: `_@-`\. You can't change the type during an update\.
 
 LogicalResourceId  
-The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\. 
+The template developer\-chosen name \(logical ID\) of the custom resource in the AWS CloudFormation template\.
 
 StackId  
 The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\.
@@ -33,7 +33,7 @@ The new resource property values that are declared by the template developer in 
 OldResourceProperties  
 The resource property values that were previously declared by the template developer in the AWS CloudFormation template\.
 
-### Example<a name="w8424ab1c27c24c17c19c16b5b6"></a>
+### Example<a name="w8676ab1c27c23c19c19c16b5b6"></a>
 
 ```
 {
@@ -64,7 +64,7 @@ The resource property values that were previously declared by the template devel
 If the custom resource provider is able to successfully update the resource, AWS CloudFormation expects the status to be set to `"SUCCESS"` in the response\.
 
 Status  
-Must be "SUCCESS"\.
+Must be `SUCCESS`\.
 
 RequestId  
 A unique ID for the request\. This response value should be copied *verbatim* from the request\.
@@ -76,7 +76,7 @@ StackId
 The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
 
 PhysicalResourceId  
-This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
+This value should be an identifier unique to the custom resource vendor, and can be up to 1 KB in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
 NoEcho  
 Optional\. Indicates whether to mask the output of the custom resource when retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\), *except for those stored in the `Metadata` section of the template*\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. The default value is `false`\.  
@@ -86,7 +86,7 @@ Data
 Optional\. The custom resource provider\-defined name\-value pairs to send with the response\. You can access the values provided here by name in the template with `Fn::GetAtt`\.  
 If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.
 
-#### Example<a name="w8424ab1c27c24c17c19c16b7b2b6"></a>
+#### Example<a name="w8676ab1c27c23c19c19c16b7b2b6"></a>
 
 ```
 {
@@ -104,10 +104,10 @@ If the name\-value pairs contain sensitive information, you should use the `NoEc
 
 ### Failed<a name="crpg-ref-requesttypes-responses-failed"></a>
 
-If the resource can't be updated with a new set of properties, AWS CloudFormation expects the status to be set to "FAILED", along with a failure reason in the response\.
+If the resource can't be updated with a new set of properties, AWS CloudFormation expects the status to be set to `"FAILED"`, along with a failure reason in the response\.
 
 Status  
-Must be "FAILED"\.
+Must be `FAILED`\.
 
 Reason  
 Describes the reason for a failure response\.
@@ -122,9 +122,9 @@ StackId
 The Amazon Resource Name \(ARN\) that identifies the stack that contains the custom resource\. This response value should be copied *verbatim* from the request\.
 
 PhysicalResourceId  
-This value should be an identifier unique to the custom resource vendor, and can be up to 1 Kb in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
+This value should be an identifier unique to the custom resource vendor, and can be up to 1 KB in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
-#### Example<a name="w8424ab1c27c24c17c19c16b7b4b6"></a>
+#### Example<a name="w8676ab1c27c23c19c19c16b7b4b6"></a>
 
 ```
 {

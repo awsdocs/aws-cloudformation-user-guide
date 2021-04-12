@@ -71,11 +71,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-host--examples"></a>
 
-### Allocating a Dedicated Host<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host"></a>
+### Allocate a Dedicated Host<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host"></a>
 
 The following example allocates a dedicated host for `c3.large` instances in the `us-east-1a` Availability Zone\.
 
-#### JSON<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host--json"></a>
+#### JSON<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host--json"></a>
 
 ```
 "Host" : {
@@ -88,7 +88,7 @@ The following example allocates a dedicated host for `c3.large` instances in the
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host--yaml"></a>
+#### YAML<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host--yaml"></a>
 
 ```
 Host:

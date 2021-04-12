@@ -44,7 +44,10 @@ Setting that indicates how to aggregate the request counts\. The options are the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ForwardedIPConfig`  <a name="cfn-wafv2-webacl-ratebasedstatementone-forwardedipconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin\. Commonly, this is the X\-Forwarded\-For \(XFF\) header, but you can specify any header name\.   
+If the specified header isn't present in the request, AWS WAF doesn't apply the rule to the web request at all\.
+This configuration is used for `GeoMatchStatement` and `RateBasedStatement`\. For `IPSetReferenceStatement`, use `IPSetForwardedIPConfig` instead\.   
+AWS WAF only evaluates the first IP address found in the specified HTTP header\.   
 *Required*: No  
 *Type*: [ForwardedIPConfiguration](aws-properties-wafv2-webacl-forwardedipconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -56,7 +59,7 @@ Limit on the web request that match any nested statement criteria in any 5 minut
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScopeDownStatement`  <a name="cfn-wafv2-webacl-ratebasedstatementone-scopedownstatement"></a>
-Statement nested inside a rate\-based statement to narrow the scope of the requests that AWS WAF counts\.  
+Statement nested inside a rate\-based statement to narrow the scope of the requests that AWS WAF counts\. AWS WAF only counts requests that match the scope\-down statement\.  
 *Required*: No  
 *Type*: [StatementTwo](aws-properties-wafv2-webacl-statementtwo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

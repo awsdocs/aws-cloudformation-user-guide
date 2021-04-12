@@ -30,16 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The key in a key\-value pair\. For example, in `"Department": "accounting"`, `"Department"` is the key\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConditionType`  <a name="cfn-backup-backupselection-conditionresourcetype-conditiontype"></a>
 An operation, such as `StringEquals`, that is applied to a key\-value pair used to filter resources in a selection\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConditionValue`  <a name="cfn-backup-backupselection-conditionresourcetype-conditionvalue"></a>
 The value in a key\-value pair\. For example, in `"Department": "accounting"`, `"accounting"` is the value\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::ECS::Cluster ExecuteCommandLogConfiguration<a name="aws-properties-ecs-cluster-executecommandlogconfiguration"></a>
 
-The `ExecuteCommandLogConfiguration` property type is not currently supported by AWS CloudFormation\.
+The log configuration for the results of the execute command actions\. The logs can be sent to CloudWatch Logs or an Amazon S3 bucket\.
 
 ## Syntax<a name="aws-properties-ecs-cluster-executecommandlogconfiguration-syntax"></a>
 
@@ -31,31 +31,33 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-cluster-executecommandlogconfiguration-properties"></a>
 
 `CloudWatchEncryptionEnabled`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-cloudwatchencryptionenabled"></a>
-The `CloudWatchEncryptionEnabled` property type is not currently supported by AWS CloudFormation\.  
+Whether or not to enable encryption on the CloudWatch logs\. If not specified, encryption will be disabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudWatchLogGroupName`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-cloudwatchloggroupname"></a>
-The `CloudWatchLogGroupName` property type is not currently supported by AWS CloudFormation\.  
+The name of the CloudWatch log group to send logs to\.  
+The CloudWatch log group must already be created\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketName`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-s3bucketname"></a>
-The `S3BucketName` property type is not currently supported by AWS CloudFormation\.  
+The name of the S3 bucket to send logs to\.  
+The S3 bucket must already be created\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3EncryptionEnabled`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-s3encryptionenabled"></a>
-The `S3EncryptionEnabled` property type is not currently supported by AWS CloudFormation\.  
+Whether or not to enable encryption on the CloudWatch logs\. If not specified, encryption will be disabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3KeyPrefix`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-s3keyprefix"></a>
-The `S3KeyPrefix` property type is not currently supported by AWS CloudFormation\.  
+An optional folder in the S3 bucket to place logs in\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

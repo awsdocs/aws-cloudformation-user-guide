@@ -190,13 +190,13 @@ Constraints to the amount of storage for each storage type are the following:
  **SQL Server**   
 Constraints to the amount of storage for each storage type are the following:   
 + General Purpose \(SSD\) storage \(gp2\):
-  + Enterprise and Standard editions: Must be an integer from 200 to 16384\.
+  + Enterprise and Standard editions: Must be an integer from 20 to 16384\.
   + Web and Express editions: Must be an integer from 20 to 16384\.
 + Provisioned IOPS storage \(io1\):
-  + Enterprise and Standard editions: Must be an integer from 200 to 16384\.
-  + Web and Express editions: Must be an integer from 100 to 16384\.
+  + Enterprise and Standard editions: Must be an integer from 20 to 16384\.
+  + Web and Express editions: Must be an integer from 20 to 16384\.
 + Magnetic storage \(standard\):
-  + Enterprise and Standard editions: Must be an integer from 200 to 1024\.
+  + Enterprise and Standard editions: Must be an integer from 20 to 1024\.
   + Web and Express editions: Must be an integer from 20 to 1024\.
 *Required*: Conditional  
 *Type*: String  
@@ -237,7 +237,7 @@ Not applicable\. The retention period for automated backups is managed by the DB
 Default: 1  
 Constraints:  
 + Must be a value from 0 to 35
-+ Can't be set to 0 if the DB instance is a source to Read Replicas
++ Can't be set to 0 if the DB instance is a source to read replicas
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -334,6 +334,7 @@ The name of an existing DB parameter group or a reference to an [AWS::RDS::DBPar
 To list all of the available DB parameter group names, use the following command:  
 `aws rds describe-db-parameter-groups --query "DBParameterGroups[].DBParameterGroupName" --output text`  
 If any of the data members of the referenced parameter group are changed during an update, the DB instance might need to be restarted, which causes some interruption\. If the parameter group contains static parameters, whether they were changed or not, an update triggers a reboot\.
+If you don't specify a value for the `DBParameterGroupName` property, the default DB parameter group for the specified engine and engine version is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -472,7 +473,7 @@ For more information, see [Using Amazon Performance Insights](https://docs.aws.a
 
 `Engine`  <a name="cfn-rds-dbinstance-engine"></a>
 The name of the database engine that you want to use for this DB instance\.  
-If you don't specify a value for the `DBParameterGroupName` property, the default DBParameterGroup for the specified engine is used\.
+When you are creating a DB instance, the `Engine` property is required\.
 Valid Values:  
 + `aurora` \(for MySQL 5\.6\-compatible Aurora\)
 + `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\)
@@ -522,8 +523,8 @@ If you specify `io1` for the `StorageType` property, then you must also specify 
 
 `KmsKeyId`  <a name="cfn-rds-dbinstance-kmskeyid"></a>
 The ARN of the AWS Key Management Service \(AWS KMS\) master key that's used to encrypt the DB instance, such as `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you enable the StorageEncrypted property but don't specify this property, AWS CloudFormation uses the default master key\. If you specify this property, you must set the StorageEncrypted property to true\.   
-If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the source DB instance if the Read Replica is created in the same region\.  
-If you create an encrypted Read Replica in a different AWS Region, then you must specify a KMS key for the destination AWS Region\. KMS encryption keys are specific to the region that they're created in, and you can't use encryption keys from one region in another region\.  
+If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the source DB instance if the read replica is created in the same region\.  
+If you create an encrypted read replica in a different AWS Region, then you must specify a KMS key for the destination AWS Region\. KMS encryption keys are specific to the region that they're created in, and you can't use encryption keys from one region in another region\.  
 If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify both a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) in the *Amazon RDS User Guide*\.  
  **Amazon Aurora**   
 Not applicable\. The KMS key identifier is managed by the DB cluster\.  
@@ -544,7 +545,7 @@ The master user name for the DB instance\.
 If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
  **Amazon Aurora**   
 Not applicable\. The name for the master user is managed by the DB cluster\.   
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -562,7 +563,7 @@ Constraints: Must contain from 8 to 41 characters\.
 Constraints: Must contain from 8 to 30 characters\.  
  **PostgreSQL**   
 Constraints: Must contain from 8 to 128 characters\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -624,8 +625,7 @@ The port number on which the database accepts connections\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PreferredBackupWindow`  <a name="cfn-rds-dbinstance-preferredbackupwindow"></a>
- The daily time range during which automated backups are created if automated backups are enabled, using the `BackupRetentionPeriod` parameter\. For more information, see [The Backup Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.BackupWindow) in the *Amazon RDS User Guide*\.   
- The default is a 30\-minute window selected at random from an 8\-hour block of time for each AWS Region\. To see the time blocks available, see [ Adjusting the Preferred DB Instance Maintenance Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow) in the *Amazon RDS User Guide*\.   
+ The daily time range during which automated backups are created if automated backups are enabled, using the `BackupRetentionPeriod` parameter\. For more information, see [ Backup Window](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.BackupWindow) in the *Amazon RDS User Guide\.*   
 Constraints:  
 + Must be in the format `hh24:mi-hh24:mi`\.
 + Must be in Universal Coordinated Time \(UTC\)\.
@@ -671,20 +671,20 @@ If you specify DBSecurityGroups, AWS CloudFormation ignores this property\. To s
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBInstanceIdentifier`  <a name="cfn-rds-dbinstance-sourcedbinstanceidentifier"></a>
-If you want to create a Read Replica DB instance, specify the ID of the source DB instance\. Each DB instance can have a limited number of Read Replicas\. For more information, see [Working with Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_ReadRepl.html) in the *Amazon Relational Database Service Developer Guide*\.   
- The `SourceDBInstanceIdentifier` property determines whether a DB instance is a Read Replica\. If you remove the `SourceDBInstanceIdentifier` property from your template and then update your stack, AWS CloudFormation deletes the Read Replica and creates a new DB instance \(not a Read Replica\)\.   
-+ If you specify a source DB instance that uses VPC security groups, we recommend that you specify the `VPCSecurityGroups` property\. If you don't specify the property, the Read Replica inherits the value of the `VPCSecurityGroups` property from the source DB when you create the replica\. However, if you update the stack, AWS CloudFormation reverts the replica's `VPCSecurityGroups` property to the default value because it's not defined in the stack's template\. This change might cause unexpected issues\.
-+ Read Replicas don't support deletion policies\. AWS CloudFormation ignores any deletion policy that's associated with a Read Replica\.
+If you want to create a read replica DB instance, specify the ID of the source DB instance\. Each DB instance can have a limited number of read replicas\. For more information, see [Working with Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/DeveloperGuide/USER_ReadRepl.html) in the *Amazon Relational Database Service Developer Guide*\.   
+ The `SourceDBInstanceIdentifier` property determines whether a DB instance is a read replica\. If you remove the `SourceDBInstanceIdentifier` property from your template and then update your stack, AWS CloudFormation deletes the Read Replica and creates a new DB instance \(not a read replica\)\.   
++ If you specify a source DB instance that uses VPC security groups, we recommend that you specify the `VPCSecurityGroups` property\. If you don't specify the property, the read replica inherits the value of the `VPCSecurityGroups` property from the source DB when you create the replica\. However, if you update the stack, AWS CloudFormation reverts the replica's `VPCSecurityGroups` property to the default value because it's not defined in the stack's template\. This change might cause unexpected issues\.
++ Read replicas don't support deletion policies\. AWS CloudFormation ignores any deletion policy that's associated with a read replica\.
 + If you specify `SourceDBInstanceIdentifier`, don't specify the `DBSnapshotIdentifier` property\. You can't create a Read Replica from a snapshot\.
 + Don't set the `BackupRetentionPeriod`, `DBName`, `MasterUsername`, `MasterUserPassword`, and `PreferredBackupWindow` properties\. The database attributes are inherited from the source DB instance, and backups are disabled for Read Replicas\.
-+ If the source DB instance is in a different region than the Read Replica, specify the source region in `SourceRegion`, and specify an ARN for a valid DB instance in `SourceDBInstanceIdentifier`\. For more information, see [Constructing a Amazon RDS Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN) in the *Amazon RDS User Guide*\.
++ If the source DB instance is in a different region than the read replica, specify the source region in `SourceRegion`, and specify an ARN for a valid DB instance in `SourceDBInstanceIdentifier`\. For more information, see [Constructing a Amazon RDS Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html#USER_Tagging.ARN) in the *Amazon RDS User Guide*\.
 + For DB instances in Amazon Aurora clusters, don't specify this property\. Amazon RDS automatically assigns writer and reader DB instances\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceRegion`  <a name="cfn-rds-dbinstance-sourceregion"></a>
-The ID of the region that contains the source DB instance for the Read Replica\.   
+The ID of the region that contains the source DB instance for the read replica\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -937,7 +937,7 @@ Resources:
 
 ### Creating a cross\-region encrypted read replica<a name="aws-properties-rds-database-instance--examples--Creating_a_cross-region_encrypted_read_replica"></a>
 
-The following example creates an encrypted Read Replica from a cross\-region source DB instance\. 
+The following example creates an encrypted read replica from a cross\-region source DB instance\. 
 
 #### JSON<a name="aws-properties-rds-database-instance--examples--Creating_a_cross-region_encrypted_read_replica--json"></a>
 

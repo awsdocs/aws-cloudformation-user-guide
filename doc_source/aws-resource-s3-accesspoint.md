@@ -56,7 +56,7 @@ The access point policy associated with this access point\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-accesspoint-publicaccessblockconfiguration"></a>
-The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the *Amazon Simple Storage Service Developer Guide*\.   
+The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the *Amazon S3 User Guide*\.   
 *Required*: No  
 *Type*: [PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -90,7 +90,7 @@ Not currently supported by AWS CloudFormation\.
 
 The following example creates an Amazon S3 access point for the given S3 bucket\. This access point allows user `JaneDoe` to make GetObject and PutObject operations only for bucket objects prefixed with `/janedoe`\. You must include `/object` in the resource ARN path\.
 
-For more information, see [Configuring IAM policies for using access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html) and [Managing and using access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html) in the *Amazon Simple Storage Service User Guide*\.
+For more information, see [Configuring IAM policies for using access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html) and [Managing and using access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-access-points.html) in the *Amazon S3 User Guide*\.
 
 #### JSON<a name="aws-resource-s3-accesspoint--examples--Create_an_S3_Access_Point--json"></a>
 
@@ -249,7 +249,7 @@ Outputs:
 
 ### Create an S3 Access Point restricted to a VPC<a name="aws-resource-s3-accesspoint--examples--Create_an_S3_Access_Point_restricted_to_a_VPC"></a>
 
-The following example creates an Amazon S3 access point restricted to a virtual private cloud \(VPC\)\. For more information, see [Configuring IAM policies for using access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html) in the *Amazon Simple Storage Service User Guide*\. 
+The following example creates an Amazon S3 access point restricted to a virtual private cloud \(VPC\)\. For more information, see [Configuring IAM policies for using access points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html) in the *Amazon S3 User Guide*\.
 
 #### JSON<a name="aws-resource-s3-accesspoint--examples--Create_an_S3_Access_Point_restricted_to_a_VPC--json"></a>
 

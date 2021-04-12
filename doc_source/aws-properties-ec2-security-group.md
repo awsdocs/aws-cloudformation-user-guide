@@ -113,11 +113,11 @@ The physical ID of the VPC\. You can obtain the physical ID by using a reference
 
 
 
-### Define Basic Ingress and Egress Rules<a name="aws-properties-ec2-security-group--examples--Define_Basic_Ingress_and_Egress_Rules"></a>
+### Define basic ingress and egress rules<a name="aws-properties-ec2-security-group--examples--Define_basic_ingress_and_egress_rules"></a>
 
 The following example specifies a security group with an ingress and egress rule\. 
 
-#### JSON<a name="aws-properties-ec2-security-group--examples--Define_Basic_Ingress_and_Egress_Rules--json"></a>
+#### JSON<a name="aws-properties-ec2-security-group--examples--Define_basic_ingress_and_egress_rules--json"></a>
 
 ```
 "InstanceSecurityGroup" : {
@@ -141,7 +141,7 @@ The following example specifies a security group with an ingress and egress rule
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-security-group--examples--Define_Basic_Ingress_and_Egress_Rules--yaml"></a>
+#### YAML<a name="aws-properties-ec2-security-group--examples--Define_basic_ingress_and_egress_rules--yaml"></a>
 
 ```
 InstanceSecurityGroup:
@@ -162,11 +162,11 @@ InstanceSecurityGroup:
         CidrIp: 0.0.0.0/0
 ```
 
-### Remove Default Rule<a name="aws-properties-ec2-security-group--examples--Remove_Default_Rule"></a>
+### Remove the default rule<a name="aws-properties-ec2-security-group--examples--Remove_the_default_rule"></a>
 
 When you specify a VPC security group, Amazon EC2 creates a default egress rule that allows egress traffic on all ports and IP protocols to any location\. The default rule is removed only when you specify one or more egress rules\. If you want to remove the default rule and limit egress traffic to just the localhost \(127\.0\.0\.1/32\), use the following example\. 
 
-#### JSON<a name="aws-properties-ec2-security-group--examples--Remove_Default_Rule--json"></a>
+#### JSON<a name="aws-properties-ec2-security-group--examples--Remove_the_default_rule--json"></a>
 
 ```
 "sgwithoutegress": {
@@ -184,7 +184,7 @@ When you specify a VPC security group, Amazon EC2 creates a default egress rule 
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-security-group--examples--Remove_Default_Rule--yaml"></a>
+#### YAML<a name="aws-properties-ec2-security-group--examples--Remove_the_default_rule--yaml"></a>
 
 ```
 sgwithoutegress:

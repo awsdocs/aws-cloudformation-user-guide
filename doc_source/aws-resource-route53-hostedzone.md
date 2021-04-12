@@ -16,6 +16,8 @@ Note the following:
 
 When you submit a `CreateHostedZone` request, the initial status of the hosted zone is `PENDING`\. For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers\. When the NS and SOA records are available, the status of the zone changes to `INSYNC`\.
 
+The `CreateHostedZone` request requires the caller to have an `ec2:DescribeVpcs` permission\.
+
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

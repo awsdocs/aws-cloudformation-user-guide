@@ -154,13 +154,13 @@ The Amazon Resource Name \(ARN\) of an IAM profile that is the default profile f
 
 `DefaultOs`  <a name="cfn-opsworks-stack-defaultos"></a>
 The stack's default operating system, which is installed on every instance unless you specify a different operating system when you create the instance\. You can specify one of the following\.  
-+ A supported Linux operating system: An Amazon Linux version, such as `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`\.
-+ A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`, `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`\.
++ A supported Linux operating system: An Amazon Linux version, such as `Amazon Linux 2`, `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`\.
++ A supported Ubuntu operating system, such as `Ubuntu 18.04 LTS`, `Ubuntu 16.04 LTS`, `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`\.
 +  `CentOS Linux 7` 
 +  `Red Hat Enterprise Linux 7` 
 + A supported Windows operating system, such as `Microsoft Windows Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server Web`\.
 + A custom AMI: `Custom`\. You specify the custom AMI you want to use when you create instances\. For more information, see [ Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)\.
-The default option is the current Amazon Linux version\. For more information about supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
+The default option is the current Amazon Linux version\. Not all operating systems are supported with all versions of Chef\. For more information about supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -217,7 +217,7 @@ To obtain a generated host name, call `GetHostNameSuggestion`, which returns a h
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-opsworks-stack-name"></a>
-The stack name\.  
+The stack name\. Stack names can be a maximum of 64 characters\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

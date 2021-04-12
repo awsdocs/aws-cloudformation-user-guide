@@ -96,11 +96,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### VPC Peering Connection<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection"></a>
+### VPC peering connection<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_peering_connection"></a>
 
 The following example creates two VPCs \(`myVPC` and `myPrivateVPC`\) and a subnet in each VPC\. The subnet in `myVPC` is a public subnet\. The example then creates a VPC peering connection between the VPCs and launches an instance in each VPC\. You can test the peering connection by connecting to the instance in the public subnet and pinging the private IP address of the instance in the subnet of the private VPC\. The security group rules for the instance in the private subnet allow incoming ICMP traffic \(and therefore allow the `ping` command\)\.
 
-#### JSON<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection--json"></a>
+#### JSON<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_peering_connection--json"></a>
 
 ```
 {
@@ -361,7 +361,7 @@ The following example creates two VPCs \(`myVPC` and `myPrivateVPC`\) and a subn
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_Peering_Connection--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpcpeeringconnection--examples--VPC_peering_connection--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

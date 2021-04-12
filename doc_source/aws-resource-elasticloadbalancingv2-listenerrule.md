@@ -74,17 +74,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
-
 #### <a name="aws-resource-elasticloadbalancingv2-listenerrule-return-values-fn--getatt-fn--getatt"></a>
 
 `IsDefault`  <a name="IsDefault-fn::getatt"></a>
-Indicates whether this is the default rule\.
+Not currently supported by AWS CloudFormation\.
 
 `RuleArn`  <a name="RuleArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the rule\.
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-elasticloadbalancingv2-listenerrule--examples"></a>
 

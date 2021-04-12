@@ -112,11 +112,10 @@ The ARN of the scheduled audit\.
       "Properties": {
         "ScheduledAuditName": "MyScheduledAudit",
         "Frequency": "DAILY",
-        "TargetCheckNames": {
-          "LOGGING_DISABLED_CHECK": {
-            "Enabled": true
-          }
-        }
+        "TargetCheckNames": [
+          "CONFLICTING_CLIENT_IDS_CHECK",
+          "LOGGING_DISABLED_CHECK"
+        ]
       }
     }
   }
@@ -126,15 +125,15 @@ The ARN of the scheduled audit\.
 #### YAML<a name="aws-resource-iot-scheduledaudit--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: 2010-09-09
 Description: AWS IoT ScheduledAudit Sample Template
 Resources:
-   MyScheduledAudit:
-      Type: AWS::IoT::ScheduledAudit
-      Properties:
-         ScheduledAuditName: MyScheduledAudit
-         Frequency: DAILY
-         TargetCheckNames:
-            LOGGING_DISABLED_CHECK:
-               Enabled: true
+  MyScheduledAudit:
+    Type: 'AWS::IoT::ScheduledAudit'
+    Properties:
+      ScheduledAuditName: MyScheduledAudit
+      Frequency: DAILY
+      TargetCheckNames:
+        - CONFLICTING_CLIENT_IDS_CHECK
+        - LOGGING_DISABLED_CHECK
 ```

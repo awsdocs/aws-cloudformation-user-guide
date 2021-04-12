@@ -46,3 +46,65 @@ Instructs AWS WAF to count the web request and allow it\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-wafv2-rulegroup-ruleaction--examples"></a>
+
+
+
+### Set an allow action<a name="aws-properties-wafv2-rulegroup-ruleaction--examples--Set_an_allow_action_"></a>
+
+The following shows an example allow action specification\. 
+
+#### YAML<a name="aws-properties-wafv2-rulegroup-ruleaction--examples--Set_an_allow_action_--yaml"></a>
+
+```
+          Action:
+            Allow: {}
+```
+
+#### JSON<a name="aws-properties-wafv2-rulegroup-ruleaction--examples--Set_an_allow_action_--json"></a>
+
+```
+     "Action": 
+      {"Allow": 
+        {}
+         }
+```
+
+### Set an allow action with a custom request setting<a name="aws-properties-wafv2-rulegroup-ruleaction--examples--Set_an_allow_action_with_a_custom_request_setting"></a>
+
+The following shows an example allow action specification with custom request handling\. 
+
+#### YAML<a name="aws-properties-wafv2-rulegroup-ruleaction--examples--Set_an_allow_action_with_a_custom_request_setting--yaml"></a>
+
+```
+        Action:
+            Allow:
+              CustomRequestHandling:
+                InsertHeaders:
+                  - Name: AllowActionHeader1Name
+                    Value: AllowActionHeader1Value
+                  - Name: AllowActionHeader2Name
+                    Value: AllowActionHeader2Value
+```
+
+#### JSON<a name="aws-properties-wafv2-rulegroup-ruleaction--examples--Set_an_allow_action_with_a_custom_request_setting--json"></a>
+
+```
+      "Action": {
+                      "Allow": {
+                          "CustomRequestHandling": {
+                              "InsertHeaders": [
+                                  {
+                                      "Name": "AllowActionHeader1Name",
+                                      "Value": "AllowActionHeader1Value"
+                                  },
+                                  {
+                                      "Name": "AllowActionHeader2Name",
+                                      "Value": "AllowActionHeader2Value"
+                                  }
+                              ]
+                          }
+                      }
+         }
+```

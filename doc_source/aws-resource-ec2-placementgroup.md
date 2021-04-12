@@ -50,11 +50,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Create a Placement Group<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group"></a>
+### Create a placement group<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group"></a>
 
 The following example declares a placement group with a cluster placement strategy\. 
 
-#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--json"></a>
+#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group--json"></a>
 
 ```
 "PlacementGroup" : {
@@ -65,7 +65,7 @@ The following example declares a placement group with a cluster placement strate
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--yaml"></a>
+#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group--yaml"></a>
 
 ```
 PlacementGroup:

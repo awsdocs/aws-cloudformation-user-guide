@@ -36,7 +36,7 @@ If you have nested stacks that are stuck in an in\-progress operation, see Troub
 1. On the change set's details page, choose **Delete**\.  
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-change-sets-delete-and-execute.png)
 
-   CloudFormation immediately starts to delete the change set from the stack's list of change sets, and you're redirected to the **Stacks** page\. 
+   CloudFormation immediately starts to delete the change set from the stack's list of change sets, and you're redirected to the **Stacks** page\.
 
 ------
 

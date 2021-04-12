@@ -1,6 +1,6 @@
 # AWS::ElastiCache::UserGroup<a name="aws-resource-elasticache-usergroup"></a>
 
-For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
+For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
 
 ## Syntax<a name="aws-resource-elasticache-usergroup-syntax"></a>
 

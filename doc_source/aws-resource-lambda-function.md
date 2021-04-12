@@ -6,7 +6,9 @@ You set the package type to `Image` if the deployment package is a [container im
 
 You set the package type to `Zip` if the deployment package is a [\.zip file archive](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip)\. For a \.zip file archive, the code property specifies the location of the \.zip file\. You must also specify the handler and runtime properties\.
 
-You can use code signing if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with UpdateFunctionCode, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes set set of signing profiles, which define the trusted publishers for this function\.
+You can use [code signing](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with `UpdateFunctionCode`, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes a set of signing profiles, which define the trusted publishers for this function\.
+
+For a complete introduction to Lambda functions, see [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/lambda-welcome.html) in the *AWS Lambda developer guide\.*
 
 ## Syntax<a name="aws-resource-lambda-function-syntax"></a>
 
@@ -155,7 +157,7 @@ A list of [function layers](https://docs.aws.amazon.com/lambda/latest/dg/configu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MemorySize`  <a name="cfn-lambda-function-memorysize"></a>
-The amount of memory available to the function at runtime\. Increasing the function's memory also increases its CPU allocation\. The default value is 128 MB\. The value can be any multiple of 1 MB\.  
+The amount of [memory available to the function](https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html) at runtime\. Increasing the function memory also increases its CPU allocation\. The default value is 128 MB\. The value can be any multiple of 1 MB\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `128`  
@@ -197,20 +199,20 @@ A list of [tags](https://docs.aws.amazon.com/lambda/latest/dg/tagging.html) to a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-lambda-function-timeout"></a>
-The amount of time that Lambda allows a function to run before stopping it\. The default is 3 seconds\. The maximum allowed value is 900 seconds\.  
+The amount of time that Lambda allows a function to run before stopping it\. The default is 3 seconds\. The maximum allowed value is 900 seconds\. For additional information, see [Lambda execution environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html)\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TracingConfig`  <a name="cfn-lambda-function-tracingconfig"></a>
-Set `Mode` to `Active` to sample and trace a subset of incoming requests with AWS X\-Ray\.  
+Set `Mode` to `Active` to sample and trace a subset of incoming requests with [AWS X\-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)\.  
 *Required*: No  
 *Type*: [TracingConfig](aws-properties-lambda-function-tracingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfig`  <a name="cfn-lambda-function-vpcconfig"></a>
-For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC\.  
+For network connectivity to AWS resources in a [VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-network.html), specify a list of security groups and subnets in the VPC\.  
 *Required*: No  
 *Type*: [VpcConfig](aws-properties-lambda-function-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

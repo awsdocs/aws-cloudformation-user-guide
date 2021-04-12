@@ -1,6 +1,6 @@
 # AWS::S3::Bucket InventoryConfiguration<a name="aws-properties-s3-bucket-inventoryconfiguration"></a>
 
-Specifies the inventory configuration for an Amazon S3 bucket\. For more information, see [GET Bucket inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon Simple Storage Service API Reference*\. 
+Specifies the inventory configuration for an Amazon S3 bucket\. For more information, see [GET Bucket inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the *Amazon S3 API Reference*\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-inventoryconfiguration-syntax"></a>
 

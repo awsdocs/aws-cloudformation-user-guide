@@ -40,6 +40,7 @@ Properties:
 The API action that grants access to the layer\. For example, `lambda:GetLayerVersion`\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `22`  
 *Pattern*: `lambda:GetLayerVersion`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -56,6 +57,7 @@ The name or Amazon Resource Name \(ARN\) of the layer\.
 With the principal set to `*`, grant permission to all accounts in the specified organization\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `34`  
 *Pattern*: `o-[a-z0-9]{10,32}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

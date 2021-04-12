@@ -1,6 +1,6 @@
 # Get started<a name="GettingStarted.Walkthrough"></a>
 
-With the right template, you can deploy at once all the AWS resources you need for an application\. In this section, you'll examine a template that declares the resources for a WordPress blog, creates a WordPress blog as a stack, monitors the stack creation process, examines the resources on the stack, and then deletes the stack\. You use the AWS Management Console to complete these tasks\. 
+With the right template, you can deploy at once all the AWS resources you need for an application\. In this section, you'll examine a template that declares the resources for a WordPress blog, creates a WordPress blog as a stack, monitors the stack creation process, examines the resources on the stack, and then deletes the stack\. You use the AWS Management Console to complete these tasks\.
 
 ## Step 1: Pick a template<a name="GettingStarted.Walkthrough.PickTemplate"></a>
 
@@ -14,7 +14,7 @@ AWS CloudFormation is free, but the AWS resources that CloudFormation creates ar
 
 A template is a JSON or YAML text file that contains the configuration information about the AWS resources you want to create in the stack\. For this walkthrough, the sample template includes six top\-level sections: `AWSTemplateFormatVersion`, `Description`, `Parameters`, `Mappings`, `Resources`, and `Outputs`; however, only the `Resources` section is required\.
 
-The Resources section contains the definitions of the AWS resources you want to create with the template\. Each resource is listed separately and specifies the properties that are necessary for creating that particular resource\. The following resource declaration is the configuration for the EC2 instance, which in this example has the logical name `WebServer`: 
+The Resources section contains the definitions of the AWS resources you want to create with the template\. Each resource is listed separately and specifies the properties that are necessary for creating that particular resource\. The following resource declaration is the configuration for the EC2 instance, which in this example has the logical name `WebServer`:
 
 **Example JSON**  
 
@@ -271,7 +271,7 @@ The example WordPress template contains an input parameter, `KeyName`, that spec
 
 Make sure you have a valid Amazon EC2 key pair and record the key pair name before you create the stack\.
 
-To see your key pairs, open the Amazon EC2 console, then choose **Key Pairs** in the navigation pane\. 
+To see your key pairs, open the Amazon EC2 console, then choose **Key Pairs** in the navigation pane\.
 
 **Note**  
 If you don't have an Amazon EC2 key pair, you must create the key pair in the same region where you are creating the stack\. For information about creating a key pair, see [Getting an SSH key pair](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in the *Amazon EC2 User Guide for Linux Instances*\.
@@ -300,7 +300,7 @@ AWS CloudFormation templates that are stored in an S3 bucket must be accessible 
 
 1. Choose **Next**\.
 
-1. In this scenario, we won't add any tags\. Choose **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding tags to your CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html)\. 
+1. In this scenario, we won't add any tags\. Choose **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding tags to your CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html)\.
 
 1. Review the information for the stack\. When you're satisfied with the settings, choose **Create**\.
 
@@ -368,6 +368,6 @@ You have completed the CloudFormation getting started tasks\. To make sure you a
 
 The status for `MyWPTestStack` changes to `DELETE_IN_PROGRESS`\. In the same way you monitored the creation of the stack, you can monitor its deletion by using the **Event** tab\. When CloudFormation completes the deletion of the stack, it removes the stack from the list\.
 
-Congratulations\! You successfully picked a template, created a stack, viewed and used its resources, and deleted the stack and its resources\. Not only that, you were able to set up a WordPress blog using a CloudFormation template\. You can find other templates in the [AWS CloudFormation sample template library](http://aws.amazon.com/cloudformation/aws-cloudformation-templates/)\.
+Congratulations\! You successfully picked a template, created a stack, viewed, and used its resources, and deleted the stack and its resources\. Not only that, you were able to set up a WordPress blog using a CloudFormation template\. You can find other templates in the [AWS CloudFormation sample template library](http://aws.amazon.com/cloudformation/aws-cloudformation-templates/)\.
 
 Now it's time to learn more about templates so that you can easily modify existing templates or create your own: [Learn template basics](gettingstarted.templatebasics.md)\.

@@ -56,23 +56,23 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Route Table<a name="aws-resource-ec2-route-table--examples--Route_Table"></a>
+### Route table<a name="aws-resource-ec2-route-table--examples--Route_table"></a>
 
 The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\.
 
-#### JSON<a name="aws-resource-ec2-route-table--examples--Route_Table--json"></a>
+#### JSON<a name="aws-resource-ec2-route-table--examples--Route_table--json"></a>
 
 ```
 "myRouteTable" : {
    "Type" : "AWS::EC2::RouteTable",
    "Properties" : {
       "VpcId" : { "Ref" : "myVPC" },
-      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+      "Tags" : [ { "Key" : "stack", "Value" : "production" } ]
    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-route-table--examples--Route_Table--yaml"></a>
+#### YAML<a name="aws-resource-ec2-route-table--examples--Route_table--yaml"></a>
 
 ```
   myRouteTable:
@@ -81,8 +81,8 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
       VpcId:  
         Ref: myVPC
       Tags:
-      - Key: foo
-        Value: bar
+      - Key: stack
+        Value: production
 ```
 
 ## See also<a name="aws-resource-ec2-route-table--seealso"></a>

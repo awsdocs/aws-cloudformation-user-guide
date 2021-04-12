@@ -55,11 +55,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### VPC DHCP Options Association<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association"></a>
+### VPC DHCP options association<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_options_association"></a>
 
 The following example uses the `Ref` intrinsic function to associate the myDHCPOptions DHCP options with the myVPC VPC\. The VPC and DHCP options can be declared in the same template or added as input parameters\. For more information about the VPC or the DHCP options resources, see AWS::EC2::VPC or AWS::EC2::DHCPOptions\. 
 
-#### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_options_association--json"></a>
 
 ```
 "myVPCDHCPOptionsAssociation" : {
@@ -71,7 +71,7 @@ The following example uses the `Ref` intrinsic function to associate the myDHCPO
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_options_association--yaml"></a>
 
 ```
 myVPCDHCPOptionsAssociation:

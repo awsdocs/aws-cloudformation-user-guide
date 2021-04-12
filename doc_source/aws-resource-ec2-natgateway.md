@@ -64,11 +64,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### NAT Gateway<a name="aws-resource-ec2-natgateway--examples--NAT_Gateway"></a>
+### NAT gateway<a name="aws-resource-ec2-natgateway--examples--NAT_gateway"></a>
 
 The following example creates a NAT gateway and a route that associates the NAT gateway with a route table\. The route table must be associated with an Internet gateway so that the NAT gateway can connect to the Internet\.
 
-#### JSON<a name="aws-resource-ec2-natgateway--examples--NAT_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-natgateway--examples--NAT_gateway--json"></a>
 
 ```
 "NAT" : {
@@ -76,7 +76,7 @@ The following example creates a NAT gateway and a route that associates the NAT 
    "Properties" : {
       "AllocationId" : { "Fn::GetAtt" : ["EIP", "AllocationId"]},
       "SubnetId" : { "Ref" : "Subnet"},
-      "Tags" : [ {"Key" : "foo", "Value" : "bar" } ]
+      "Tags" : [ {"Key" : "stack", "Value" : "production" } ]
      }
 },
 "EIP" : {
@@ -96,7 +96,7 @@ The following example creates a NAT gateway and a route that associates the NAT 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-natgateway--examples--NAT_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-natgateway--examples--NAT_gateway--yaml"></a>
 
 ```
 NAT:
@@ -109,8 +109,8 @@ NAT:
       SubnetId:
          Ref: Subnet
       Tags:
-      - Key: foo
-        Value: bar
+      - Key: stack
+        Value: production
 EIP:
    DependsOn: VPCGatewayAttach
    Type: AWS::EC2::EIP

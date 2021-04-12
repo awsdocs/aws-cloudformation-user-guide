@@ -36,7 +36,7 @@ For additional guidance about organizing your stacks, you can use two common fra
 
 A layered architecture organizes stacks into multiple horizontal layers that build on top of one another, where each layer has a dependency on the layer directly below it\. You can have one or more stacks in each layer, but within each layer, your stacks should have AWS resources with similar lifecycles and ownership\.
 
-With a service\-oriented architecture, you can organize big business problems into manageable parts\. Each of these parts is a service that has a clearly defined purpose and represents a self\-contained unit of functionality\. You can map these services to a stack, where each stack has its own lifecycle and owners\. All of these services \(stacks\) can be wired together so that they can interact with one another\.
+With a service\-oriented architecture, you can organize big business problems into manageable parts\. Each of these parts is a service that has a clearly defined purpose and represents a self\-contained unit of functionality\. You can map these services to a stack, where each stack has its own lifecycle and owners\. These services \(stacks\) can be wired together so that they can interact with one another\.
 
 ## Use cross\-stack references to export shared resources<a name="cross-stack"></a>
 
@@ -100,11 +100,11 @@ For more information, see the [cfn\-guard](https://github.com/aws-cloudformation
 
 ## Manage all stack resources through AWS CloudFormation<a name="donttouch"></a>
 
-After you launch a stack, use the CloudFormation [console](https://console.aws.amazon.com/cloudformation/home), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html) to update resources in your stack\. Do not make changes to stack resources outside of CloudFormation\. Doing so can create a mismatch between your stack's template and the current state of your stack resources, which can cause errors if you update or delete the stack\. For more information, see [Walkthrough: Updating a stack](updating.stacks.walkthrough.md)\.
+After you launch a stack, use the CloudFormation [console](https://console.aws.amazon.com/cloudformation/home), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html) to update resources in your stack\. Don't make changes to stack resources outside of CloudFormation\. Doing so can create a mismatch between your stack's template and the current state of your stack resources, which can cause errors if you update or delete the stack\. For more information, see [Walkthrough: Updating a stack](updating.stacks.walkthrough.md)\.
 
 ## Create change sets before updating your stacks<a name="cfn-best-practices-changesets"></a>
 
- Change sets allow you to see how proposed changes to a stack might impact your running resources before you implement them\. CloudFormation doesn't make any changes to your stack until you run the change set, allowing you to decide whether to proceed with your proposed changes or create another change set\.
+Change sets allow you to see how proposed changes to a stack might impact your running resources before you implement them\. CloudFormation doesn't make any changes to your stack until you run the change set, allowing you to decide whether to proceed with your proposed changes or create another change set\.
 
 Use change sets to check how your changes might impact your running resources, especially for critical resources\. For example, if you change the name of an Amazon RDS database instance, CloudFormation will create a new database and delete the old one; you will lose the data in the old database unless you've already backed it up\. If you generate a change set, you will see that your change will replace your database\. This can help you plan before you update your stack\. For more information, see [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md)\.
 

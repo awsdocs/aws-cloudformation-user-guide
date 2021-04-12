@@ -75,6 +75,7 @@ When set to `true`, enables raw message delivery\. Raw messages don't contain an
 
 `RedrivePolicy`  <a name="cfn-sns-subscription-redrivepolicy"></a>
 When specified, sends undeliverable messages to the specified Amazon SQS dead\-letter queue\. Messages that can't be delivered due to client errors \(for example, when the subscribed endpoint is unreachable\) or server errors \(for example, when the service that powers the subscribed endpoint becomes unavailable\) are held in the dead\-letter queue for further analysis or reprocessing\.  
+For more information about the redrive policy and dead\-letter queues, see [Amazon SQS dead\-letter queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

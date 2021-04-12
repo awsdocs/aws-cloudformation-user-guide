@@ -102,11 +102,11 @@ Example return value for a wait condition with 2 signals:
             "AvailabilityZones": {
                 "Fn::GetAZs": "",
                 "LaunchConfigurationName": {
-                    "Ref": "LaunchConfig",
-                    "MinSize": "1",
-                    "MaxSize": "5"
+                    "Ref": "LaunchConfig"
                 }
             },
+            "MinSize": "1",
+            "MaxSize": "5",
             "DesiredCapacity": {
                 "Ref": "WebServerCapacity"
             },
@@ -114,20 +114,22 @@ Example return value for a wait condition with 2 signals:
                 {
                     "Ref": "ElasticLoadBalancer"
                 }
-            ],
-            "WaitHandle": {
-                "Type": "AWS::CloudFormation::WaitConditionHandle"
-            },
-            "WaitCondition":
-            "Type": "AWS::CloudFormation::WaitCondition",
-            "DependsOn": "WebServerGroup",
-            "Properties":
+            ]
+        }
+    },
+    "WaitHandle": {
+        "Type": "AWS::CloudFormation::WaitConditionHandle"
+    },
+    "WaitCondition": {
+        "Type": "AWS::CloudFormation::WaitCondition",
+        "DependsOn": "WebServerGroup",
+        "Properties": {
             "Handle": {
-                "Ref": "WaitHandle",
-                "Timeout": "300",
-                "Count": {
-                    "Ref": "WebServerCapacity"
-                }
+                "Ref": "WaitHandle"
+            },
+            "Timeout": "300",
+            "Count": {
+                "Ref": "WebServerCapacity"
             }
         }
     }
@@ -138,27 +140,25 @@ Example return value for a wait condition with 2 signals:
 
 ```
 WebServerGroup:
-  Type: 'AWS::AutoScaling::AutoScalingGroup'
+  Type: AWS::AutoScaling::AutoScalingGroup
   Properties:
     AvailabilityZones:
-      'Fn::GetAZs': ''
-      LaunchConfigurationName:
-        Ref: LaunchConfig
-        MinSize: '1'
-        MaxSize: '5'
-    DesiredCapacity: !Ref WebServerCapacity
+      Fn::GetAZs: ''
+      LaunchConfigurationName: !Ref 'LaunchConfig'
+    MinSize: '1'
+    MaxSize: '5'
+    DesiredCapacity: !Ref 'WebServerCapacity'
     LoadBalancerNames:
-      - !Ref ElasticLoadBalancer
-    WaitHandle:
-      Type: 'AWS::CloudFormation::WaitConditionHandle'
-    WaitCondition
-    Type: 'AWS::CloudFormation::WaitCondition'
-    DependsOn: WebServerGroup
-    Properties:
-    Handle:
-      Ref: WaitHandle
-      Timeout: '300'
-      Count: !Ref WebServerCapacity
+      - !Ref 'ElasticLoadBalancer'
+WaitHandle:
+  Type: AWS::CloudFormation::WaitConditionHandle
+WaitCondition:
+  Type: AWS::CloudFormation::WaitCondition
+  DependsOn: WebServerGroup
+  Properties:
+    Handle: !Ref 'WaitHandle'
+    Timeout: '300'
+    Count: !Ref 'WebServerCapacity'
 ```
 
 ## See also<a name="aws-properties-waitcondition--seealso"></a>

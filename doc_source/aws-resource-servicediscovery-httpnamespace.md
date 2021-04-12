@@ -46,6 +46,7 @@ The name that you want to assign to this namespace\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
+*Pattern*: `^[!-~]{1,1024}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-servicediscovery-httpnamespace-tags"></a>

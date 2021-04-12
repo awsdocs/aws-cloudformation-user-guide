@@ -14,7 +14,7 @@ The following example demonstrates the structure of the `Outputs` section\.
 
 ### JSON<a name="outputs-section-structure-syntax.json"></a>
 
-Use braces to enclose all output declarations\. Delimit multiple outputs with commas\. 
+Use braces to enclose all output declarations\. Delimit multiple outputs with commas\.
 
 ```
 "Outputs" : {

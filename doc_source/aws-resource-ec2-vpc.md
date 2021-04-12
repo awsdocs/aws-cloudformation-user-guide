@@ -120,7 +120,7 @@ The following example specifies a VPC\.
       "EnableDnsSupport" : "false",
       "EnableDnsHostnames" : "false",
       "InstanceTenancy" : "dedicated",
-      "Tags" : [ {"Key" : "foo", "Value" : "bar"} ]
+      "Tags" : [ {"Key" : "stack", "Value" : "production"} ]
    }
 }
 ```
@@ -136,8 +136,8 @@ myVPC:
     EnableDnsHostnames: 'false'
     InstanceTenancy: dedicated
     Tags:
-     - Key: foo
-       Value: bar
+     - Key: stack
+       Value: production
 ```
 
 ## See also<a name="aws-resource-ec2-vpc--seealso"></a>

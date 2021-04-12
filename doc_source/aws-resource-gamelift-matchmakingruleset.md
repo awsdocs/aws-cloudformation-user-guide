@@ -30,7 +30,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-matchmakingruleset-properties"></a>
 
 `Name`  <a name="cfn-gamelift-matchmakingruleset-name"></a>
-A unique identifier for a matchmaking rule set\. A matchmaking configuration identifies the rule set it uses by this name value\. Note that the rule set name is different from the optional `name` field in the rule set body\.  
+A unique identifier for the matchmaking rule set\. A matchmaking configuration identifies the rule set it uses by this name value\. Note that the rule set name is different from the optional `name` field in the rule set body\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  

@@ -41,7 +41,7 @@ User\-defined criteria for sending commands that target instances that meet the 
 
 `Values`  <a name="cfn-ssm-maintenancewindowtask-target-values"></a>
 User\-defined criteria that maps to `Key`\. For example, if you specify `InstanceIds`, you can specify `i-1234567890abcdef0,i-9876543210abcdef0` to run a command on two EC2 instances\. For more information about how to target instances within a maintenance window task, see [About 'register\-task\-with\-maintenance\-window' Options and Values](https://docs.aws.amazon.com/systems-manager/latest/userguide/register-tasks-options.html) in the *AWS Systems Manager User Guide*\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

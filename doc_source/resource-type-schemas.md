@@ -1,6 +1,6 @@
 # CloudFormation resource provider schemas<a name="resource-type-schemas"></a>
 
-In addition to the [resource specification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html), CloudFormation makes available the resource provider schemas for the Amazon resources by region\. Each resource provider schema is a JSON\-formatted text file that defines the properties and attributes of a specific resource\. 
+In addition to the [resource specification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html), CloudFormation makes available the resource provider schemas for the Amazon resources by region\. Each resource provider schema is a JSON\-formatted text file that defines the properties and attributes of a specific resource\.
 
 For each region, CloudFormation offers a zip file containing the individual schema files for each resource available in that region\. To download the resource provider schemas for a specific region, see the following table\. You can also view a resource's provider schema using the [CloudFormation registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html)\.
 

@@ -137,7 +137,7 @@ If all goes well, an Elastic IP is used to provide access to the SharePoint inst
 
 Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the auto\-generated temporary Administrator password for the instance\. For more information, see [Connecting to your Windows instance using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## How to manage Windows services<a name="w8424ab1c23c34c15c11"></a>
+## How to manage Windows services<a name="w8676ab1c23c33c15c11"></a>
 
 You manage Windows services in the same way as Linux services, except that you use a `windows` key instead of `sysvinit`\. The following example starts the `cfn-hup` service, sets it to Automatic, and restarts the service if cfn\-init modifies the `c:\cfn\cfn-hup.conf` or `c:\cfn\hooks.d\cfn-auto-reloader.conf` configuration files\.
 
@@ -159,7 +159,7 @@ You can manage other Windows services in the same way by using the name— not t
 
 If your stack fails during creation, the default behavior is to Rollback on failure\. While this is normally a good default because it avoids unnecessary charges, it makes it difficult to debug why your stack creation is failing\.
 
-To turn this behavior off, choose **Show Advanced Options** when creating your stack with the AWS CloudFormation console, and click the **No** selector next to **Rollback on failure**\. This will allow you to log into your instance and view the logfiles to pinpoint issues encountered when running your startup scripts\.
+To turn this behavior off, choose **Show Advanced Options** when creating your stack with the AWS CloudFormation console, and select the **No** selector next to **Rollback on failure**\. This will allow you to log into your instance and view the logfiles to pinpoint issues encountered when running your startup scripts\.
 
 Important logs to look at are:
 + The EC2 configuration log at `C:\Program Files\Amazon\Ec2ConfigService\Logs\Ec2ConfigLog.txt`

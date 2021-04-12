@@ -63,11 +63,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### VPN Gateway Attachment<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment"></a>
+### VPN gateway attachment<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_gateway_attachment"></a>
 
 To attach both an Internet gateway and a VPN gateway to a VPC, you must specify two separate AWS::EC2::VPCGatewayAttachment resources: 
 
-#### JSON<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment--json"></a>
+#### JSON<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_gateway_attachment--json"></a>
 
 ```
 "AttachGateway" : {
@@ -87,7 +87,7 @@ To attach both an Internet gateway and a VPN gateway to a VPC, you must specify 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_gateway_attachment--yaml"></a>
 
 ```
 AttachGateway:

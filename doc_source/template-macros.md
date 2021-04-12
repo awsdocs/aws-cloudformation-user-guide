@@ -18,7 +18,7 @@ To use a macro, reference the macro in your template:
 + To process a section, or *snippet*, of a template, reference the macro in a ``Fn::Transform`` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
 + To process an entire template, reference the macro in the [Transform](transform-section-structure.md) section of the template\.
 
-Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advise that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\.
+Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advice that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\.
 
 After all macros in the template have been called, AWS CloudFormation generates a change set that includes the processed template content\. After you review the change set, execute it to apply the changes\.
 
@@ -39,13 +39,13 @@ For macros, AWS CloudFormation invokes the underlying Lambda functions with the 
 
 ```
 {
-    "region" : "us-east-1", 
-    "accountId" : "$ACCOUNT_ID", 
-    "fragment" : { ... }, 
-    "transformId" : "$TRANSFORM_ID", 
-    "params" : { ... }, 
+    "region" : "us-east-1",
+    "accountId" : "$ACCOUNT_ID",
+    "fragment" : { ... },
+    "transformId" : "$TRANSFORM_ID",
+    "params" : { ... },
     "requestId" : "$REQUEST_ID",
-    "templateParameterValues" : { ... } 
+    "templateParameterValues" : { ... }
 }
 ```
 + **region**
@@ -78,9 +78,9 @@ AWS CloudFormation expects the underlying function to return a response in the f
 
 ```
 {
-    "requestId" : "$REQUEST_ID", 
-    "status" : "$STATUS", 
-    "fragment" : { ... } 
+    "requestId" : "$REQUEST_ID",
+    "status" : "$STATUS",
+    "fragment" : { ... }
 }
 ```
 + **requestId**
@@ -163,30 +163,30 @@ After AWS CloudFormation has successfully created the stack which contains the m
 
 ### AWS CloudFormation macro evaluation order<a name="template-macros-order"></a>
 
- You can reference multiple macros in a given template, including transforms hosted by AWS CloudFormation, such as [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) and [AWS::Serverless transform](transform-aws-serverless.md)\.
+You can reference multiple macros in a given template, including transforms hosted by AWS CloudFormation, such as [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md) and [AWS::Serverless transform](transform-aws-serverless.md)\.
 
 Macros are evaluated in order, based on their location in the template, from the most deeply nested outward to the most general\. Macros at the same location in the template are evaluated serially based on the order in which they are listed\.
 
 Transforms such as `AWS::Include` and `AWS::Transform` are treated the same as any other macros in terms of action order and scope\.
 
-For example, in the template sample below, AWS CloudFormation evaluates the `PolicyAdder` macro first, because it is the most deeply\-nested macro in the template\. AWS CloudFormation then evaluates `MyMacro` before evaluating `AWS::Serverless` because it is listed before `AWS::Serverless` in the `Transform` section\.
+For example, in the template sample below, AWS CloudFormation evaluates the `PolicyAdder` macro first, because it's the most deeply\-nested macro in the template\. AWS CloudFormation then evaluates `MyMacro` before evaluating `AWS::Serverless` because it is listed before `AWS::Serverless` in the `Transform` section\.
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 
+AWSTemplateFormatVersion: 2010-09-09
  Transform: [MyMacro, AWS::Serverless]
  Resources:
     WaitCondition:
       Type: AWS::CloudFormation::WaitCondition
     MyBucket:
-      Type: 'AWS::S3::Bucket'  
+      Type: 'AWS::S3::Bucket'
       Properties:
-        BucketName: MyBucket 
-        Tags: [{"key":"value"}] 
+        BucketName: MyBucket
+        Tags: [{"key":"value"}]
         'Fn::Transform':
           - Name: PolicyAdder
-        CorsConfiguration:[]   
+        CorsConfiguration:[]
     MyEc2Instance:
-      Type: 'AWS::EC2::Instance' 
+      Type: 'AWS::EC2::Instance'
       Properties:
         ImageID: "ami-123"
 ```
@@ -197,7 +197,7 @@ Macros referenced in the `Transform` section of a template can process the entir
 
 Macros referenced in a `Fn::Transform` function can process the contents of any of the sibling elements \(including children\) of that `Fn::Transform` function in the template\.
 
-For example, in the template sample below, `AWS::Include` can process all of the `MyBucket` properties, based on the location of the `Fn::Transform` function that contains it\. `MyMacro` can process the contents of the entire template because of its inclusion in the `Transform` section\.
+For example, in the template sample below, `AWS::Include` can process the `MyBucket` properties, based on the location of the `Fn::Transform` function that contains it\. `MyMacro` can process the contents of the entire template because of its inclusion in the `Transform` section\.
 
 ```
 // Start of processable content for MyMacro
@@ -225,7 +225,7 @@ AWSTemplateFormatVersion: 2010-09-09
 
 ### Change sets and AWS CloudFormation macros<a name="template-macros-change-sets"></a>
 
-To create or update a stack using a template that references macros, you typically create a change set and then execute it\. A change set describes the actions CloudFormation will take based on the processed template\. Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly recommend you use change sets\. After you review the change set, you can execute it to actually apply the changes\.
+To create or update a stack using a template that references macros, you typically create a change set and then execute it\. A change set describes the actions CloudFormation will take based on the processed template\. Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all the changes introduced by macros, we strongly recommend you use change sets\. After you review the change set, you can execute it to actually apply the changes\.
 
 A macro can add IAM resources to your template\. For these resources, AWS CloudFormation requires you to [acknowledge their capabilities](using-iam-template.md#using-iam-capabilities)\. Because AWS CloudFormation can't know which resources are added before processing your template, you might need to acknowledge IAM capabilities when you create the change set, depending on whether the referenced macros contain IAM resources\. That way, when you run the change set, AWS CloudFormation has the necessary capabilities to create IAM resources\.
 
@@ -238,7 +238,7 @@ If you use the AWS CLI, you can use the `package` and `deploy` commands to reduc
 ### Template stage and CloudFormation macros<a name="template-macros-template-stage"></a>
 
 A template's *stage* indicates whether the template is the original user\-submitted template or one in which AWS CloudFormation has processed the macros\.
-+ `Original`: The template that the user originally submitted to create or update the stack\. 
++ `Original`: The template that the user originally submitted to create or update the stack\.
 + `Processed`: The template AWS CloudFormation used to create or update the stack after processing any referenced macros\. The processed template is formatted as JSON, even if the original template was formatted as YAML\.
 
 Use the processed template for troubleshooting stack issues\. If a template doesn't reference macros, the original and processed templates are identical\.

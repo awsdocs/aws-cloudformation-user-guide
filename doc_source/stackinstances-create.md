@@ -33,7 +33,7 @@ If you add an OU that your stack set already targets, StackSets creates new stac
 
       If you add multiple Regions, the order of the Regions under **Specify regions** determines their deployment order\.
 
-   1. For **Deployment options**: 
+   1. For **Deployment options**:
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
 
         This means that AWS CloudFormation deploys your stack in only one account at one time\.

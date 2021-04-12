@@ -96,7 +96,7 @@ The following example creates a SageMaker Project\.
 {
    "Description": "AWS SageMaker Project basic template",
    "Resources": {
-      "CicloTestProject": {
+      "SampleProject": {
          "Type": "AWS::SageMaker::Project",
          "Properties": {
             "ProjectName": "project1",
@@ -122,7 +122,7 @@ Resources:
   CicloTestProject:
     Type: AWS::SageMaker::Project
     Properties:
-      ProjectName: "project1"
+      ProjectName: "SampleProject"
       ProjectDescription: "Project Description"
       ServiceCatalogProvisioningDetails:
         ProductId: "prod-53ibyqbj2cgmo"

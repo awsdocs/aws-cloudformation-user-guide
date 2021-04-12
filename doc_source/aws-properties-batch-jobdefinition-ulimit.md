@@ -3,7 +3,7 @@
 The `ulimit` settings to pass to the container\.
 
 **Note**  
-This object isn't applicable to jobs running on Fargate resources\.
+This object isn't applicable to jobs that are running on Fargate resources\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-ulimit-syntax"></a>
 

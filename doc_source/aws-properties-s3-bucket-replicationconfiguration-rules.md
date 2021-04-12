@@ -75,7 +75,7 @@ Replacement must be made for object keys containing special characters \(such as
 
 `Priority`  <a name="cfn-s3-bucket-replicationrule-priority"></a>
 The priority indicates which rule has precedence whenever two or more replication rules conflict\. Amazon S3 will attempt to replicate objects according to all replication rules\. However, if there are two or more rules with the same destination bucket, then objects will be replicated according to the rule with the highest priority\. The higher the number, the higher the priority\.   
-For more information, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+For more information, see [Replication](https://docs.aws.amazon.com/AmazonS3/latest/dev/replication.html) in the *Amazon S3 User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

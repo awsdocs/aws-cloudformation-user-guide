@@ -1,6 +1,6 @@
 # AWS::Detective::MemberInvitation<a name="aws-resource-detective-memberinvitation"></a>
 
-The `AWS::Detective::MemberInvitation` resource is an Amazon Detective resource type that sends an invitation to join a Detective behavior graph\. The invitation is sent from the master account to the root user email address of an AWS account\.
+The `AWS::Detective::MemberInvitation` resource is an Amazon Detective resource type that creates an invitation to join a Detective behavior graph\. The administrator account can choose whether to send an email notification of the invitation to the root user email address of the AWS account\.
 
 ## Syntax<a name="aws-resource-detective-memberinvitation-syntax"></a>
 
@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-detective-memberinvitation-properties"></a>
 
 `DisableEmailNotification`  <a name="cfn-detective-memberinvitation-disableemailnotification"></a>
-Not currently supported by AWS CloudFormation\.  
+Whether to send an invitation email to the member account\. If set to true, the member account does not receive an invitation email\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -77,7 +77,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Sending a behavior graph invitation to a member account<a name="aws-resource-detective-memberinvitation--examples--Sending_a_behavior_graph_invitation_to_a_member_account"></a>
 
-This example shows how to declare a new `AWS:Detective:MemberInvitation` resource to create a new invitation to a member account\.
+This example shows how to declare a new `AWS:Detective:MemberInvitation` resource to create a new invitation to a member account and send an email notification\.
 
 #### JSON<a name="aws-resource-detective-memberinvitation--examples--Sending_a_behavior_graph_invitation_to_a_member_account--json"></a>
 
@@ -103,4 +103,34 @@ MemberInvitation:
       MemberId: 444455556666
       MemberEmailAddress: mmajor@example.com
       Message: This is Paul Santos. I need to add your account to the data we use for security investigation in Detective. If you have any questions, contact me at psantos@example.com.
+```
+
+### Blocking the email notification of an invitation to a member account<a name="aws-resource-detective-memberinvitation--examples--Blocking_the_email_notification_of_an_invitation_to_a_member_account"></a>
+
+This example shows how to declare a new `AWS:Detective:MemberInvitation` resource to create a new invitation to a member account\. The email notification is blocked\.
+
+#### JSON<a name="aws-resource-detective-memberinvitation--examples--Blocking_the_email_notification_of_an_invitation_to_a_member_account--json"></a>
+
+```
+"MemberInvitation": {
+    "Type": "AWS::Detective::MemberInvitation",
+    "Properties": {
+        "GraphArn": "arn:aws:detective:us-east-1:111122223333:graph:027c7c4610ea4aacaf0b883093cab899",
+        "MemberId": "444455556666",
+        "MemberEmailAddress": "mmajor@example.com",
+        "DisableEmailNotification": "true"
+     }
+}
+```
+
+#### YAML<a name="aws-resource-detective-memberinvitation--examples--Blocking_the_email_notification_of_an_invitation_to_a_member_account--yaml"></a>
+
+```
+MemberInvitation:
+    Type: AWS::Detective::MemberInvitation
+    Properties:
+      GraphArn: "arn:aws:detective:us-east-1:111122223333:graph:027c7c4610ea4aacaf0b883093cab899"
+      MemberId: 444455556666
+      MemberEmailAddress: mmajor@example.com
+      DisableEmailNotification: true
 ```

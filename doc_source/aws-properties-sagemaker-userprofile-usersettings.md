@@ -71,7 +71,7 @@ Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SharingSettings`  <a name="cfn-sagemaker-userprofile-usersettings-sharingsettings"></a>
-The sharing settings\.  
+Specifies options for sharing SageMaker Studio notebooks\.  
 *Required*: No  
 *Type*: [SharingSettings](aws-properties-sagemaker-userprofile-sharingsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

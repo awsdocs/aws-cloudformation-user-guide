@@ -1,7 +1,8 @@
 # UpdatePolicy attribute<a name="aws-attribute-updatepolicy"></a>
 
-Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html), or [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resources\.
-+ For `AWS::AutoScaling::AutoScalingGroup` resources, AWS CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
+Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html), or [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resources\.
++ For `AWS::AppStream::Fleet` resource, CloudFormation can update your image builder with newer AppStream 2\.0 agent software\. For more information see, [Manage AppStream 2\.0 Versions](https://docs.aws.amazon.com/appstream2/latest/developerguide/base-images-agent.html)\.
++ For `AWS::AutoScaling::AutoScalingGroup` resources, CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
   + The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you do one or more of the following:
     + Change the Auto Scaling group's `[AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)`\.
     + Change the Auto Scaling group's `VPCZoneIdentifier` property
@@ -10,7 +11,7 @@ Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updat
 
     If both the `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies are specified, setting the `WillReplace` property to `true` gives `AutoScalingReplacingUpdate` precedence\.
   + The `AutoScalingScheduledAction` policy applies when you update a stack that includes an Auto Scaling group with an associated scheduled action\.
-+ For `AWS::ElastiCache::ReplicationGroup` resources, CloudFormation can modify a replication group's shards by adding or removing shards, rather than replacing the entire resource\. For more information, see [UseOnlineResharding policy](#cfn-attributes-updatepolicy-useonlineresharding)\. 
++ For `AWS::ElastiCache::ReplicationGroup` resources, CloudFormation can modify a replication group's shards by adding or removing shards, rather than replacing the entire resource\. For more information, see [UseOnlineResharding policy](#cfn-attributes-updatepolicy-useonlineresharding)\.
 + For `AWS::Elasticsearch::Domain` resources, CloudFormation can upgrade an Amazon ES domain to a new version of Elasticsearch without replacing the entire resource\. For more information, see [EnableVersionUpgrade policy](#cfn-attributes-updatepolicy-upgradeelasticsearchdomain)\.
 + For `AWS::Lambda::Alias` resources, CloudFormation performs an CodeDeploy deployment when the version changes on the alias\. For more information, see [CodeDeployLambdaAliasUpdate policy](#cfn-attributes-updatepolicy-codedeploylambdaaliasupdate)\.
 
@@ -57,7 +58,7 @@ To specify how CloudFormation handles rolling updates for an Auto Scaling group,
 **Important**  
 During a rolling update, some Auto Scaling processes might make changes to the Auto Scaling group before CloudFormation completes the rolling update\. These changes might cause the rolling update to fail\. To prevent Auto Scaling from running processes during a rolling update, use the `SuspendProcesses` property\. For more information, see [What are some recommended best practices for performing Auto Scaling group rolling updates?](https://aws.amazon.com/premiumsupport/knowledge-center/auto-scaling-group-rolling-updates/)
 
-Be aware that, during stack update rollback operations, CloudFormation uses the `UpdatePolicy` configuration specified in the template before the current stack update operation\. For example, suppose you have updated the `MaxBatchSize` in your stack template's `UpdatePolicy` from 1 to 10\. You then perform a stack update, and that update fails and CloudFormation initiates an update rollback operation\. In such a case, CloudFormation will use 1 as the maximum batch size, rather than 10\. For this reason, we recommend you make changes to the `UpdatePolicy` configuration in a stack update separate from, and prior to, any updates to the `AWS::AutoScaling::AutoScalingGroup` resource that are likely to initiate rolling updates\.
+Be aware that, during stack update rollback operations, CloudFormation uses the `UpdatePolicy` configuration specified in the template before the current stack update operation\. For example, suppose you have updated the `MaxBatchSize` in your stack template's `UpdatePolicy` from 1 to 10\. You then perform a stack update, and that update fails and CloudFormation initiates an update rollback operation\. In such a case, CloudFormation will use 1 as the maximum batch size, rather than 10\. For this reason, we recommend you make changes to the `UpdatePolicy` configuration in a stack update separate from and before any updates to the `AWS::AutoScaling::AutoScalingGroup` resource that are likely to initiate rolling updates\.
 
 ### Syntax<a name="cfn-attributes-updatepolicy-replacingupdate-syntax"></a>
 
@@ -301,7 +302,7 @@ For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::
 
 The following examples show how to add an update policy to an Auto Scaling group and how to maintain availability when updating metadata\.
 
-### Add an UpdatePolicy to an Auto Scaling group<a name="w8424ab1c33c23c23c19b4"></a>
+### Add an UpdatePolicy to an Auto Scaling group<a name="w8676ab1c33c23c23c19b4"></a>
 
 The following example shows how to add an update policy\. During an update, the Auto Scaling group updates instances in batches of two and keeps a minimum of one instance in service\. Because the `WaitOnResourceSignals` flag is set, the Auto Scaling group waits for new instances that are added to the group\. The new instances must signal the Auto Scaling group before it updates the next batch of instances\.
 
@@ -377,7 +378,7 @@ ScheduledAction:
     StartTime: '2017-06-02T20 : 00 : 00Z'
 ```
 
-### AutoScalingReplacingUpdate policy<a name="w8424ab1c33c23c23c19b6"></a>
+### AutoScalingReplacingUpdate policy<a name="w8676ab1c33c23c23c19b6"></a>
 
 The following example declares a policy that forces an associated Auto Scaling group to be replaced during an update\. For the update to succeed, a percentage of instances \(specified by the `MinSuccessfulPercentParameter` parameter\) must signal success within the `Timeout` period\.
 
@@ -414,7 +415,7 @@ CreationPolicy:
     MinSuccessfulInstancesPercent: !Ref 'MinSuccessfulPercentParameter'
 ```
 
-### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w8424ab1c33c23c23c19b8"></a>
+### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w8676ab1c33c23c23c19b8"></a>
 
 When you install software applications on your instances, you might use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html) metadata key and the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script to bootstrap the instances in your Auto Scaling group\. CloudFormation installs the packages, runs the commands, and performs other bootstrapping actions described in the metadata\.
 
@@ -425,7 +426,7 @@ Forcing a rolling update requires CloudFormation to create a new instance and th
 
 To force a rolling update, change the logical ID of the launch configuration resource, and then update the stack and any references pointing to the original logic ID \(such as the associated Auto Scaling group\)\. CloudFormation triggers a rolling update on the Auto Scaling group, replacing all instances\.
 
-### Original template<a name="w8424ab1c33c23c23c19c10"></a>
+### Original template<a name="w8676ab1c33c23c23c19c10"></a>
 
 ```
 "LaunchConfig": {
@@ -439,7 +440,7 @@ To force a rolling update, change the logical ID of the launch configuration res
 }
 ```
 
-### Updated logical ID<a name="w8424ab1c33c23c23c19c12"></a>
+### Updated logical ID<a name="w8676ab1c33c23c23c19c12"></a>
 
 ```
 "LaunchConfigUpdateRubygemsPkg": {

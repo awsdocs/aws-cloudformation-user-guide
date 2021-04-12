@@ -100,6 +100,7 @@ Default: `true`
 
 `AutomatedSnapshotRetentionPeriod`  <a name="cfn-redshift-cluster-automatedsnapshotretentionperiod"></a>
 The number of days that automated snapshots are retained\. If the value is 0, automated snapshots are disabled\. Even if automated snapshots are disabled, you can still create manual snapshots when you want with CreateClusterSnapshot\.   
+You can't disable automated snapshots for RA3 node types\. Set the automated retention period from 1\-35 days\.  
 Default: `1`   
 Constraints: Must be a value from 0 to 35\.  
 *Required*: No  

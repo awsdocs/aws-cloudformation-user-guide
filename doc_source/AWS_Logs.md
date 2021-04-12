@@ -5,4 +5,5 @@
 + [AWS::Logs::LogGroup](aws-resource-logs-loggroup.md)
 + [AWS::Logs::LogStream](aws-resource-logs-logstream.md)
 + [AWS::Logs::MetricFilter](aws-resource-logs-metricfilter.md)
++ [AWS::Logs::QueryDefinition](aws-resource-logs-querydefinition.md)
 + [AWS::Logs::SubscriptionFilter](aws-resource-logs-subscriptionfilter.md)

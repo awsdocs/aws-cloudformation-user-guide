@@ -9,7 +9,7 @@ See the following sections for more details about change sets for nested stacks:
 
 ## Overview of change sets and nested stacks<a name="overview-of-change-sets-and-nested-stacks"></a>
 
-Change sets for nested stacks combines the following features together to expand the scope of previewing changes to the entire stack hierarchy: 
+Change sets for nested stacks combines the following features together to expand the scope of previewing changes to the entire stack hierarchy:
 + <a name="what_are_change_sets"></a>*Change sets* is an CloudFormation capability that offers a preview of how proposed changes to a stack will impact existing or newly created resources\. Upon creating a change set, CloudFormation provides a list of proposed changes by comparing your stack with the changes to the resources you submitted\. For more information about change sets, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
 + <a name="what_are_nested"></a>*Nested stacks* are stacks created as part of other stacks\. To create a nested stack, specify the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource in the `Resource` section of your template\. For example, you might have networking and security related resources in one nested stack and application resources in another\. Partitioning application models this way helps with code maintainability and reuse\. For more information about nested stacks, see [Working with nested stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)\.
 

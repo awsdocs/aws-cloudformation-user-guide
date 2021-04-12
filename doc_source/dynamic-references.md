@@ -154,8 +154,8 @@ Additional considerations to note when using the `ssm-secure` dynamic reference 
 + CloudFormation does store the literal dynamic reference, which contains the plaintext parameter name of the secure string\.
 + For change sets, CloudFormation compares the literal dynamic reference string\. It doesn't resolve and compare the actual values of `ssm-secure` references\.
 + Dynamic references for secure values, such as `ssm-secure` and `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
-+ In cases where CloudFormation must rollback a stack update, that update rollback operation will fail if the previously\-specified version of a secure string parameter is no longer available\. in such cases, do one of the following: 
-  + Use `CONTINUE_UPDATE_ROLLBACK` to skip the resource\. 
++ In cases where CloudFormation must rollback a stack update, that update rollback operation will fail if the previously specified version of a secure string parameter is no longer available\. in such cases, do one of the following:
+  + Use `CONTINUE_UPDATE_ROLLBACK` to skip the resource\.
   + Recreate the secure string parameter in the Systems Manager Parameter Store, and update it until the parameter version reaches the version used in the template\. Then use `CONTINUE_UPDATE_ROLLBACK` without skipping the resource\.
 + Currently, AWS CloudFormation doesn't support cross\-account SSM parameter access\.
 + CloudFormation doesn't support using parameter labels or public parameters in dynamic references\.
@@ -185,7 +185,7 @@ Resources that support the `ssm-secure` dynamic reference pattern currently incl
 
 ## Secrets Manager secrets<a name="dynamic-references-secretsmanager"></a>
 
-Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in AWS Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, and even arbitrary text\. Using Secrets Manager, you can store and control access to these secrets centrally\. Secrets Manager enables you to replace hardcoded credentials in your code \(including passwords\), with an API call to Secrets Manager to retrieve the secret programmatically\. For more information, see see [What is AWS Secrets Manager?](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS Secrets Manager User Guide*\.
+Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in AWS Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, and even arbitrary text\. Using Secrets Manager, you can store and control access to these secrets centrally\. Secrets Manager enables you to replace hardcoded credentials in your code \(including passwords\), with an API call to Secrets Manager to retrieve the secret programmatically\. For more information, see [What is AWS Secrets Manager?](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS Secrets Manager User Guide*\.
 
 ### Important considerations when using dynamic parameters for Secrets Manager secrets<a name="dynamic-references-secretsmanager-considerations"></a>
 
@@ -302,7 +302,7 @@ Specifying the following segments would retrieve the `password` value for the ve
   '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-asd123:SecretString:password}}'
 ```
 
-Specifying the following segments would retrieve the the `password` value for the version of the MySecret secret with the version stage value of `AWSPENDING` from another AWS account\. Note that you must specify the complete secret ARN to access secrets in another AWS account\.
+Specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version stage value of `AWSPENDING` from another AWS account\. Note that you must specify the complete secret ARN to access secrets in another AWS account\.
 
 ```
   '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecretName-asd123:SecretString:password:AWSPENDING}}'

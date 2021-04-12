@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ApiKeyAuthParameters](#cfn-events-connection-authparameters-apikeyauthparameters)" : ApiKeyAuthParameters,
   "[BasicAuthParameters](#cfn-events-connection-authparameters-basicauthparameters)" : BasicAuthParameters,
-  "[InvocationHttpParameters](#cfn-events-connection-authparameters-invocationhttpparameters)" : HttpParameters,
+  "[InvocationHttpParameters](#cfn-events-connection-authparameters-invocationhttpparameters)" : ConnectionHttpParameters,
   "[OAuthParameters](#cfn-events-connection-authparameters-oauthparameters)" : OAuthParameters
 }
 ```
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BasicAuthParameters](#cfn-events-connection-authparameters-basicauthparameters): 
     BasicAuthParameters
   [InvocationHttpParameters](#cfn-events-connection-authparameters-invocationhttpparameters): 
-    HttpParameters
+    ConnectionHttpParameters
   [OAuthParameters](#cfn-events-connection-authparameters-oauthparameters): 
     OAuthParameters
 ```
@@ -47,7 +47,7 @@ Contains the Basic authorization parameters to use for the connection\.
 `InvocationHttpParameters`  <a name="cfn-events-connection-authparameters-invocationhttpparameters"></a>
 Contains the API key authorization parameters to use for the connection\. Note that if you include additional parameters for the target of a rule via HttpParameters, including query strings, the parameters added for the connection take precedence\.   
 *Required*: No  
-*Type*: [HttpParameters](aws-properties-events-connection-httpparameters.md)  
+*Type*: [ConnectionHttpParameters](aws-properties-events-connection-connectionhttpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OAuthParameters`  <a name="cfn-events-connection-authparameters-oauthparameters"></a>

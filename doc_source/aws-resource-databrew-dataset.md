@@ -13,9 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::DataBrew::Dataset",
   "Properties" : {
       "[Format](#cfn-databrew-dataset-format)" : String,
-      "[FormatOptions](#cfn-databrew-dataset-formatoptions)" : Json,
-      "[Input](#cfn-databrew-dataset-input)" : Json,
+      "[FormatOptions](#cfn-databrew-dataset-formatoptions)" : FormatOptions,
+      "[Input](#cfn-databrew-dataset-input)" : Input,
       "[Name](#cfn-databrew-dataset-name)" : String,
+      "[PathOptions](#cfn-databrew-dataset-pathoptions)" : PathOptions,
       "[Tags](#cfn-databrew-dataset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -27,9 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::DataBrew::Dataset
 Properties: 
   [Format](#cfn-databrew-dataset-format): String
-  [FormatOptions](#cfn-databrew-dataset-formatoptions): Json
-  [Input](#cfn-databrew-dataset-input): Json
+  [FormatOptions](#cfn-databrew-dataset-formatoptions): 
+    FormatOptions
+  [Input](#cfn-databrew-dataset-input): 
+    Input
   [Name](#cfn-databrew-dataset-name): String
+  [PathOptions](#cfn-databrew-dataset-pathoptions): 
+    PathOptions
   [Tags](#cfn-databrew-dataset-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -46,13 +51,13 @@ The file format of a dataset that is created from an S3 file or folder\.
 `FormatOptions`  <a name="cfn-databrew-dataset-formatoptions"></a>
 A set of options that define how DataBrew interprets the data in the dataset\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [FormatOptions](aws-properties-databrew-dataset-formatoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Input`  <a name="cfn-databrew-dataset-input"></a>
 Information on how DataBrew can find the dataset, in either the AWS Glue Data Catalog or Amazon S3\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [Input](aws-properties-databrew-dataset-input.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-databrew-dataset-name"></a>
@@ -62,6 +67,12 @@ The unique name of the dataset\.
 *Minimum*: `1`  
 *Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PathOptions`  <a name="cfn-databrew-dataset-pathoptions"></a>
+A set of options that defines how DataBrew interprets an S3 path of the dataset\.  
+*Required*: No  
+*Type*: [PathOptions](aws-properties-databrew-dataset-pathoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-databrew-dataset-tags"></a>
 Metadata tags that have been applied to the dataset\.  

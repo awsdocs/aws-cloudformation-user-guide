@@ -384,7 +384,7 @@ It's not necessary to run drift detection on the parent stack after this import 
        --template-body file://templateToImport.json
    ```
 
-   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\. 
+   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\.
 
    ```
    --resources-to-import: file://resourcesToImport.txt

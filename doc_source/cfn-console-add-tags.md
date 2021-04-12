@@ -16,7 +16,7 @@ Instead of using your account credentials, CloudFormation uses the role's creden
 You can also set the following advanced options for stack creation:
 
 **Stack policy**  
-Defines the resources that you want to protect from unintentional updates during a stack update\. By default, all resources can be updated during a stack update\.   
+Defines the resources that you want to protect from unintentional updates during a stack update\. By default, all resources can be updated during a stack update\.  
 You can enter the stack policy directly as JSON, or upload a JSON file containing the stack policy\. For more information, see [Prevent updates to stack resources](protect-stack-resources.md)\.
 
 **Rollback configuration**  
@@ -31,7 +31,7 @@ The following options are included for stack creation, but aren't available as p
 **Rollback on failure**  
 Specifies whether the stack should be rolled back if stack creation fails\. Typically, you want to accept the default value of **Enabled**\. Select **Disabled** if you want the stack's state retained even if creation fails, such as when you are debugging a stack template\.  
 **Timeout**  
-Specifies the amount of time, in minutes, that CloudFormation should allot before timing out stack creation operations\. If CloudFormation can't create the entire stack in the time allotted, it fails the stack creation due to timeout and rolls back the stack\.   
+Specifies the amount of time, in minutes, that CloudFormation should allot before timing out stack creation operations\. If CloudFormation can't create the entire stack in the time allotted, it fails the stack creation due to timeout and rolls back the stack\.  
 By default, there is no timeout for stack creation\. However, individual resources may have their own timeouts based on the nature of the service they implement\. For example, if an individual resource in your stack times out, stack creation also times out even if the timeout you specified for stack creation hasn't yet been reached\.  
 **Termination protection**  
 Prevents a stack from being accidentally deleted\. If a user attempts to delete a stack with termination protection enabled, the deletion fails and the stack, including its status, remains unchanged\. For more information, see [Protecting a stack from being deleted](using-cfn-protect-stacks.md)\.  

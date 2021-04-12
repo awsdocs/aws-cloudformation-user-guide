@@ -136,33 +136,35 @@ If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries
 
 
 
-### VPC Endpoint<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint"></a>
+### VPC endpoint<a name="aws-resource-ec2-vpcendpoint--examples--VPC_endpoint"></a>
 
 The following example specifies a VPC endpoint that allows only the s3:GetObject action on the examplebucket bucket\. Traffic to S3 within subnets that are associated with the routetableA and routetableB route tables is automatically routed through the VPC endpoint\. 
 
-#### JSON<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-vpcendpoint--examples--VPC_endpoint--json"></a>
 
 ```
-"S3Endpoint": {
-    "Type": "AWS::EC2::VPCEndpoint",
-    "Properties": {
-        "PolicyDocument": {
+{
+   "S3Endpoint": {
+      "Type": "AWS::EC2::VPCEndpoint",
+	  "Properties": {
+         "PolicyDocument": {
             "Version": "2012-10-17",
             "Statement": [{
-                "Effect": "Allow",
-                "Principal": "*",
-                "Action": ["s3:GetObject"],
-                "Resource": ["arn:aws:s3:::examplebucket/*"]
-             }]
-        },
-        "RouteTableIds": [ {"Ref": "routetableA"}, {"Ref": "routetableB"} ],
-        "ServiceName": { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
-        "VpcId" : {"Ref": "VPCID"}
-    }
+               "Effect": "Allow",
+               "Principal": "*",
+               "Action": ["s3:GetObject"],
+               "Resource": ["arn:aws:s3:::examplebucket/*"]
+            }]
+         },
+         "RouteTableIds": [{"Ref": "routetableA"}, {"Ref": "routetableB"}],
+         "ServiceName": {"Fn::Sub": "com.amazonaws.${AWS::Region}.s3"},
+         "VpcId": {"Ref": "VPCID"}
+      }
+   }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_endpoint--yaml"></a>
 
 ```
 S3Endpoint:

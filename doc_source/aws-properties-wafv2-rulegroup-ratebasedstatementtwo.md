@@ -4,7 +4,7 @@ A rate\-based rule tracks the rate of requests for each originating IP address, 
 
  When the rule action triggers, AWS WAF blocks additional requests from the IP address until the request rate falls below the limit\. 
 
- You can optionally nest another statement inside the rate\-based statement, to narrow the scope of the rule so that it only counts requests that match the nested statement\. You can't nest a RateBasedStatement, for example for use inside a NotStatement or OrStatement\. It can only be referenced as a top\-level statement within a rule\.
+ You can optionally nest another statement inside the rate\-based statement, to narrow the scope of the rule so that it only counts requests that match the nested statement\. You can't nest a `RateBasedStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-ratebasedstatementtwo-syntax"></a>
 
@@ -59,7 +59,7 @@ Limit on the web request that match any nested statement criteria in any 5 minut
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScopeDownStatement`  <a name="cfn-wafv2-rulegroup-ratebasedstatementtwo-scopedownstatement"></a>
-Statement nested inside a rate\-based statement to narrow the scope of the requests that AWS WAF counts\.   
+Statement nested inside a rate\-based statement to narrow the scope of the requests that AWS WAF counts\. AWS WAF only counts requests that match the scope\-down statement\.  
 *Required*: No  
 *Type*: [StatementThree](aws-properties-wafv2-rulegroup-statementthree.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

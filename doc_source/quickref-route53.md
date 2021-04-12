@@ -4,12 +4,12 @@
 + [Amazon Route 53 resource record set using hosted zone name or ID](#scenario-route53-recordset-by-host)
 + [Using RecordSetGroup to set up weighted resource record sets](#scenario-recordsetgroup-weighted)
 + [Using RecordSetGroup to set up an alias resource record set](#scenario-recordsetgroup-zoneapex)
-+ [Alias resource record set for a CloudFront distribution](#w8424ab1c27c22c80c11)
++ [Alias resource record set for a CloudFront distribution](#w8676ab1c27c21c80c11)
 
 ## Amazon Route 53 resource record set using hosted zone name or ID<a name="scenario-route53-recordset-by-host"></a>
 
 When you create an Amazon Route 53 resource record set, you must specify the hosted zone where you want to add it\. AWS CloudFormation provides two ways to specify a hosted zone:
-+ You can explicitly specify the hosted zone using the `HostedZoneId` property\. 
++ You can explicitly specify the hosted zone using the `HostedZoneId` property\.
 + You can have AWS CloudFormation find the hosted zone using the `HostedZoneName` property\. If you use the `HostedZoneName` property and there are multiple hosted zones with the same name, AWS CloudFormation doesn't create the stack\.
 
 ### Adding RecordSet using HostedZoneId<a name="scenario-recordset-using-id"></a>
@@ -265,7 +265,7 @@ For more information about alias resource record sets, see [Choosing between ali
 17.         DNSName: !GetAtt 'myELB.DNSName'
 ```
 
-## Alias resource record set for a CloudFront distribution<a name="w8424ab1c27c22c80c11"></a>
+## Alias resource record set for a CloudFront distribution<a name="w8676ab1c27c21c80c11"></a>
 
 The following example creates an alias record set that routes queries to the specified CloudFront distribution\.
 

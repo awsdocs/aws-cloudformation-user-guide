@@ -51,11 +51,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples"></a>
 
-### Associating a target subnet with a Client VPN endpoint<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples--Associating_a_target_subnet_with_a_Client_VPN_endpoint"></a>
+### Associate a target subnet with a client VPN endpoint<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples--Associate_a_target_subnet_with_a_client_VPN_endpoint"></a>
 
-The following example associates a target network with a Client VPN endpoint\.
+The following example associates a target network with a client VPN endpoint\.
 
-#### YAML<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples--Associating_a_target_subnet_with_a_Client_VPN_endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples--Associate_a_target_subnet_with_a_client_VPN_endpoint--yaml"></a>
 
 ```
 myNetworkAssociation:
@@ -67,7 +67,7 @@ myNetworkAssociation:
       Ref: mySubnet
 ```
 
-#### JSON<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples--Associating_a_target_subnet_with_a_Client_VPN_endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-clientvpntargetnetworkassociation--examples--Associate_a_target_subnet_with_a_client_VPN_endpoint--json"></a>
 
 ```
 "myNetworkAssociation": {

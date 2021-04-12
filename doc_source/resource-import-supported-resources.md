@@ -1,6 +1,6 @@
 # Resources that support import and drift detection operations<a name="resource-import-supported-resources"></a>
 
-AWS CloudFormation supports resource import and drift detection operations for the following public \(AWS\) resource types\. 
+AWS CloudFormation supports resource import and drift detection operations for the following public \(AWS\) resource types\.
 
 In addition, CloudFormation supports import and drift detection operations for private resource types that are *provisionable*; that is, whose provisioning type is either `FULLY_MUTABLE` or `IMMUTABLE`\. To import or perform drift detection on a resource of a private resource type, the default version of the resource type *that you have registered in your account* must be provisionable\. For more information on resource provision type, see the `ProvisioningType` parameter of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action in the AWS CloudFormation API Reference and of the [DescribeType](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-type.html) command in the AWS CLI Command Reference\.
 

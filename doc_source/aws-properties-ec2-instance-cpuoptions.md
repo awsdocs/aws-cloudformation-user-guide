@@ -1,6 +1,6 @@
 # AWS::EC2::Instance CpuOptions<a name="aws-properties-ec2-instance-cpuoptions"></a>
 
-The CPU options for the instance\.
+Specifies the CPU options for the instance\. When you specify CPU options, you must specify both the number of CPU cores and threads per core\.
 
 ## Syntax<a name="aws-properties-ec2-instance-cpuoptions-syntax"></a>
 

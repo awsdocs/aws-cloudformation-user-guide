@@ -263,15 +263,15 @@ The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key th
 
 `MasterUsername`  <a name="cfn-rds-dbcluster-masterusername"></a>
 The name of the master user for the DB cluster\.  
-If you specify the `SourceDBInstanceIdentifier` or `SnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
-*Required*: No  
+If you specify the `SourceDBClusterIdentifier` or `SnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-rds-dbcluster-masteruserpassword"></a>
 The master password for the DB instance\.  
-If you specify the `SourceDBInstanceIdentifier` or `SnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
-*Required*: No  
+If you specify the `SourceDBClusterIdentifier` or `SnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -287,8 +287,7 @@ Default:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredBackupWindow`  <a name="cfn-rds-dbcluster-preferredbackupwindow"></a>
-The daily time range during which automated backups are created if automated backups are enabled using the `BackupRetentionPeriod` parameter\.   
-The default is a 30\-minute window selected at random from an 8\-hour block of time for each AWS Region\. To see the time blocks available, see [ Adjusting the Preferred DB Cluster Maintenance Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow.Aurora) in the *Amazon Aurora User Guide\.*   
+The daily time range during which automated backups are created\. For more information, see [ Backup Window](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.Backups.BackupWindow) in the *Amazon Aurora User Guide\.*   
 Constraints:  
 + Must be in the format `hh24:mi-hh24:mi`\.
 + Must be in Universal Coordinated Time \(UTC\)\.
@@ -355,7 +354,7 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBClusterIdentifier`  <a name="cfn-rds-dbcluster-sourcedbclusteridentifier"></a>
-The identifier of the source DB cluster from which to restore\.  
+When restoring a DB cluster to a point in time, the identifier of the source DB cluster from which to restore\.  
 Constraints:  
 + Must match the identifier of an existing DBCluster\.
 *Required*: No  
@@ -370,7 +369,7 @@ The AWS Region which contains the source DB cluster when replicating a DB cluste
 
 `StorageEncrypted`  <a name="cfn-rds-dbcluster-storageencrypted"></a>
 Indicates whether the DB cluster is encrypted\.  
-If you specify the `SnapshotIdentifier` or `SourceDBInstanceIdentifier` property, don't specify this property\. The value is inherited from the snapshot or source DB instance\.   
+If you specify the `SnapshotIdentifier` or `SourceDBClusterIdentifier` property, don't specify this property\. The value is inherited from the snapshot or source DB instance\.   
 If you specify the `KmsKeyId` property, then you must enable encryption\.
 *Required*: No  
 *Type*: Boolean  
@@ -619,7 +618,7 @@ The following example creates an Amazon Aurora PostgreSQL DB cluster that export
       },
       "DBPassword" : {
         "NoEcho" : "true",
-        "Description" : "Password PostgreSQL database access",
+        "Description" : "Password for PostgreSQL database access",
 
         "Type" : "String",
         "MinLength" : "8",
@@ -696,7 +695,7 @@ Parameters:
     ConstraintDescription: must begin with a letter and contain only alphanumeric characters.
   DBPassword:
     NoEcho: 'true'
-    Description: Password PostgreSQL database access
+    Description: Password for PostgreSQL database access
     Type: String
     MinLength: '8'
     MaxLength: '41'

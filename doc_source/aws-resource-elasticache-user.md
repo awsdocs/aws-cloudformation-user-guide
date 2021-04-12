@@ -1,6 +1,6 @@
 # AWS::ElastiCache::User<a name="aws-resource-elasticache-user"></a>
 
-For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\.
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\.
 
 ## Syntax<a name="aws-resource-elasticache-user-syntax"></a>
 

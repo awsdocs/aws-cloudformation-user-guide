@@ -23,7 +23,7 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
     },
     "SubnetId":{
       "Type":"List<AWS::EC2::Subnet::Id>",
-      "Description":"Select at two subnets in your selected VPC."
+      "Description":"Select at least two subnets in your selected VPC."
     },
     "DesiredCapacity":{
       "Type":"Number",
@@ -725,7 +725,7 @@ Parameters:
     Description: Select a VPC that allows instances access to the Internet.
   SubnetId:
     Type: List<AWS::EC2::Subnet::Id>
-    Description: Select at two subnets in your selected VPC.
+    Description: Select at least two subnets in your selected VPC.
   DesiredCapacity:
     Type: Number
     Default: '1'

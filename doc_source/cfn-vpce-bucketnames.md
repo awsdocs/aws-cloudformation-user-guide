@@ -28,4 +28,4 @@ To create the VPC endpoint for the CloudFormation service, use the [Creating an 
 
 **com\.amazonaws\.*region*\.cloudformation**
 
-*region* represents the region identifier for an AWS region supported by CloudFormation, such as `us-east-2` for the US East \(Ohio\) Region\. 
+*region* represents the region identifier for an AWS Region supported by CloudFormation, such as `us-east-2` for the US East \(Ohio\) Region\.

@@ -50,49 +50,48 @@ The following example sets the relative weight of traffic between two traffic gr
 
 ```
 "ListenerRule1": {
-    "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
-    "Properties": {
+      "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+      "Properties": {
         "Actions": [{
-            "Type": "forward",
-            "ForwardConfig": {
-                "TargetGroups": [{
-                    "TargetGroupArn": { "Ref": "TargetGroup1" },
-                    "Weight": 1
-                }, 
-                {
-                    "TargetGroupArn": { "Ref": "TargetGroup2" },
-                    "Weight": 1
-                }]
-            }
+          "Type": "forward",
+          "ForwardConfig": {
+            "TargetGroups": [{
+              "TargetGroupArn": { "Ref": "TargetGroup1" },
+              "Weight": 1
+            }, {
+              "TargetGroupArn": { "Ref": "TargetGroup2" },
+              "Weight": 1
+            }]
+          }
         }],
         "Conditions": [{
-            "Field": "path-pattern",
-            "Values": ["test"]
+          "Field": "path-pattern",
+          "Values": ["foo"]
         }],
         "ListenerArn": { "Ref": "Listener" },
         "Priority": 1
+      }
     }
-}
 ```
 
 #### YAML<a name="aws-properties-elasticloadbalancingv2-listenerrule-forwardconfig--examples--Weighted_Target_Groups_Example--yaml"></a>
 
 ```
 ListenerRule1:
-    Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
-    Properties:
-        Actions:
-          - Type: forward
-            ForwardConfig:
-              TargetGroups:
-                - TargetGroupArn: !Ref TargetGroup1
-                  Weight: 1
-                - TargetGroupArn: !Ref TargetGroup2
-                  Weight: 1
-        Conditions:
-          - Field: path-pattern
-            Values:
-              - test
-        ListenerArn: !Ref Listener
-        Priority: 1
+  Type: 'AWS::ElasticLoadBalancingV2::ListenerRule'
+  Properties:
+    Actions:
+      - Type: forward
+        ForwardConfig:
+          TargetGroups:
+            - TargetGroupArn: !Ref TargetGroup1
+              Weight: 1
+            - TargetGroupArn: !Ref TargetGroup2
+              Weight: 1
+    Conditions:
+      - Field: path-pattern
+        Values:
+          - foo
+    ListenerArn: !Ref Listener
+    Priority: 1
 ```

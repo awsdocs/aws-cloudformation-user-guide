@@ -124,11 +124,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Transit Gateway<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway"></a>
+### Create a transit gateway<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway"></a>
 
 The following example declares a transit gateway\.
 
-#### JSON<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--json"></a>
 
 ```
 "myTransitGateway": {
@@ -152,7 +152,7 @@ The following example declares a transit gateway\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--yaml"></a>
 
 ```
   myTransitGateway:

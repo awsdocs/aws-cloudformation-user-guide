@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource SalesforceKnowledgeArticleConfiguration<a name="aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration"></a>
 
-Specifies configuration information for the knowlege article types that Amazon Kendra indexes\. Amazon Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom knowledge articles, but not both 
+Specifies configuration information for the knowledge article types that Amazon Kendra indexes\. Amazon Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom knowledge articles, but not both 
 
 ## Syntax<a name="aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration-syntax"></a>
 

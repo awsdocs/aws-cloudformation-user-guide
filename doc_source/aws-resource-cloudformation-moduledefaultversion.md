@@ -68,7 +68,7 @@ Conditional: You must specify either `Arn`, or `ModuleName` and `VersionId`\.
 
 ### Ref<a name="aws-resource-cloudformation-moduledefaultversion-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the module version\. 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the module version\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -87,7 +87,7 @@ Considerations when managing the default module version:
 
 ### Specifying the default module version<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version"></a>
 
-The following example registers two versions of a module, and then sets the second version as the default version for CloudFormation to use\. Note that the example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\. 
+The following example registers two versions of a module, and then sets the second version as the default version for CloudFormation to use\. Note that the example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
 
 #### JSON<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--json"></a>
 

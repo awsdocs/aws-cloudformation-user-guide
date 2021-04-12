@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Name](#cfn-wafv2-webacl-rule-name)" : String,
   "[OverrideAction](#cfn-wafv2-webacl-rule-overrideaction)" : OverrideAction,
   "[Priority](#cfn-wafv2-webacl-rule-priority)" : Integer,
+  "[RuleLabels](#cfn-wafv2-webacl-rule-rulelabels)" : [ Label, ... ],
   "[Statement](#cfn-wafv2-webacl-rule-statement)" : StatementOne,
   "[VisibilityConfig](#cfn-wafv2-webacl-rule-visibilityconfig)" : VisibilityConfig
 }
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OverrideAction](#cfn-wafv2-webacl-rule-overrideaction): 
     OverrideAction
   [Priority](#cfn-wafv2-webacl-rule-priority): Integer
+  [RuleLabels](#cfn-wafv2-webacl-rule-rulelabels): 
+    - Label
   [Statement](#cfn-wafv2-webacl-rule-statement): 
     StatementOne
   [VisibilityConfig](#cfn-wafv2-webacl-rule-visibilityconfig): 
@@ -73,6 +76,19 @@ If you define more than one `Rule` in a `WebACL`, AWS WAF evaluates each request
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RuleLabels`  <a name="cfn-wafv2-webacl-rule-rulelabels"></a>
+Labels to apply to web requests that match the rule match statement\. AWS WAF applies fully qualified labels to matching web requests\. A fully qualified label is the concatenation of a label namespace and a rule label\. The rule's rule group or web ACL defines the label namespace\.   
+Rules that run after this rule in the web ACL can match against these labels using a `LabelMatchStatement`\.  
+For each label, provide a case\-sensitive string containing optional namespaces and a label name, according to the following guidelines:  
++ Separate each component of the label with a colon\. 
++ Each namespace or name can have up to 128 characters\.
++ You can specify up to 5 namespaces in a label\.
++ Don't use the following reserved words in your label specification: `aws`, `waf`, `managed`, `rulegroup`, `webacl`, `regexpatternset`, or `ipset`\.
+For example, `myLabelName` or `nameSpace1:nameSpace2:myLabelName`\.   
+*Required*: No  
+*Type*: List of [Label](aws-properties-wafv2-webacl-label.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statement`  <a name="cfn-wafv2-webacl-rule-statement"></a>

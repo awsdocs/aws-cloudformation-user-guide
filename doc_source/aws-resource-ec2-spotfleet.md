@@ -58,11 +58,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Spot Fleet<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet"></a>
+### Create a Spot Fleet<a name="aws-resource-ec2-spotfleet--examples--Create_a_Spot_Fleet"></a>
 
 The following example specifies a Spot Fleet with two launch specifications\. The weighted capacities are the same, so Amazon EC2 launches the same number of instances for each specification\. For more information, see [How Spot Fleet Works](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-#### JSON<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet--json"></a>
+#### JSON<a name="aws-resource-ec2-spotfleet--examples--Create_a_Spot_Fleet--json"></a>
 
 ```
 "SpotFleet": {
@@ -100,7 +100,7 @@ The following example specifies a Spot Fleet with two launch specifications\. Th
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet--yaml"></a>
+#### YAML<a name="aws-resource-ec2-spotfleet--examples--Create_a_Spot_Fleet--yaml"></a>
 
 ```
 SpotFleet:

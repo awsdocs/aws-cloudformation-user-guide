@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destination](#cfn-medialive-channel-framecapturegroupsettings-destination)" : OutputLocationRef
+  "[Destination](#cfn-medialive-channel-framecapturegroupsettings-destination)" : OutputLocationRef,
+  "[FrameCaptureCdnSettings](#cfn-medialive-channel-framecapturegroupsettings-framecapturecdnsettings)" : FrameCaptureCdnSettings
 }
 ```
 
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Destination](#cfn-medialive-channel-framecapturegroupsettings-destination): 
     OutputLocationRef
+  [FrameCaptureCdnSettings](#cfn-medialive-channel-framecapturegroupsettings-framecapturecdnsettings): 
+    FrameCaptureCdnSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-framecapturegroupsettings-properties"></a>
@@ -29,4 +32,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The destination for the frame capture files\. The destination is either the URI for an Amazon S3 bucket and object, plus a file name prefix \(for example, s3ssl://sportsDelivery/highlights/20180820/curling\_\) or the URI for a MediaStore container, plus a file name prefix \(for example, mediastoressl://sportsDelivery/20180820/curling\_\)\. The final file names consist of the prefix from the destination field \(for example, "curling\_"\) \+ name modifier \+ the counter \(5 digits, starting from 00001\) \+ extension \(which is always \.jpg\)\. For example, curlingLow\.00001\.jpg\.  
 *Required*: No  
 *Type*: [OutputLocationRef](aws-properties-medialive-channel-outputlocationref.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FrameCaptureCdnSettings`  <a name="cfn-medialive-channel-framecapturegroupsettings-framecapturecdnsettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [FrameCaptureCdnSettings](aws-properties-medialive-channel-framecapturecdnsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

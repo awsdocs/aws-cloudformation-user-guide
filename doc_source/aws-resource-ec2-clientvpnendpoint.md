@@ -166,11 +166,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-clientvpnendpoint--examples"></a>
 
-### Creating a Client VPN endpoint<a name="aws-resource-ec2-clientvpnendpoint--examples--Creating_a_Client_VPN_endpoint"></a>
+### Client VPN endpoint<a name="aws-resource-ec2-clientvpnendpoint--examples--Client_VPN_endpoint"></a>
 
 The following example creates a Client VPN endpoint that uses Active Directory authentication and assigns client IP addresses from the `10.0.0.0/22` CIDR range\.
 
-#### YAML<a name="aws-resource-ec2-clientvpnendpoint--examples--Creating_a_Client_VPN_endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-clientvpnendpoint--examples--Client_VPN_endpoint--yaml"></a>
 
 ```
 myClientVpnEndpoint:
@@ -195,7 +195,7 @@ myClientVpnEndpoint:
     TransportProtocol: "udp"
 ```
 
-#### JSON<a name="aws-resource-ec2-clientvpnendpoint--examples--Creating_a_Client_VPN_endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-clientvpnendpoint--examples--Client_VPN_endpoint--json"></a>
 
 ```
 "myClientVpnEndpoint": {

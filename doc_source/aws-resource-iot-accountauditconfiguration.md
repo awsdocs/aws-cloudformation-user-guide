@@ -99,14 +99,12 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
         },
         "AuditNotificationTargetConfigurations": {
           "Sns": {
-            "TargetArn": "arn:aws:sns:us-east-1:123456789012:IoTAuditNotifications",
-            "RoleArn": "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTAuditNotifications",
+            "TargetArn": "arn:aws:sns:us-east-1:123456789012:AuditNotifications",
+            "RoleArn": "arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications",
             "Enabled": true
           }
         },
-        "RoleArn": {
-          "Fn::Sub": "${AWS::AccountId}:role/AWSIoTDeviceDefenderAudit"
-        }
+        "RoleArn": "arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit"
       }
     }
   }
@@ -116,24 +114,24 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
 #### YAML<a name="aws-resource-iot-accountauditconfiguration--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: 2010-09-09
 Description: AWS IoT AccountAuditConfiguration Sample Template
 Resources:
-   MyAccountAuditConfiguration:
-      Type: AWS::IoT::AccountAuditConfiguration
-      Properties:
-         AccountId: !Sub "${AWS::AccountId}"
-         AuditCheckConfigurations:
-            LoggingDisabledCheck:
-               Enabled: true
-            ConflictingClientIdsCheck:
-               Enabled: true
-         AuditNotifactionTargetConfigurations: 
-            Sns:
-               TargetArn: "arn:aws:sns:us-east-1:123456789012:IoTAuditNotifications"
-               RoleArn: "arn:aws:us-east-1:123456789012:iam:role/RoleForIoTAuditNotifications"
-               Enabled: true
-         RoleArn: !Sub "${AWS::AccountId}:role/AWSIoTDeviceDefenderAudit"
+  MyAccountAuditConfiguration:
+    Type: 'AWS::IoT::AccountAuditConfiguration'
+    Properties:
+      AccountId: !Sub '${AWS::AccountId}'
+      AuditCheckConfigurations:
+        LoggingDisabledCheck:
+          Enabled: true
+        ConflictingClientIdsCheck:
+          Enabled: true
+      AuditNotificationTargetConfigurations:
+        Sns:
+          TargetArn: 'arn:aws:sns:us-east-1:123456789012:AuditNotifications'
+          RoleArn: 'arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications'
+          Enabled: true
+      RoleArn: 'arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit'
 ```
 
 ## See also<a name="aws-resource-iot-accountauditconfiguration--seealso"></a>

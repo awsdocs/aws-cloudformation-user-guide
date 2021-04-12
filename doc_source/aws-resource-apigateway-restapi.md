@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : S3Location,
       "[CloneFrom](#cfn-apigateway-restapi-clonefrom)" : String,
       "[Description](#cfn-apigateway-restapi-description)" : String,
+      "[DisableExecuteApiEndpoint](#cfn-apigateway-restapi-disableexecuteapiendpoint)" : Boolean,
       "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : EndpointConfiguration,
       "[FailOnWarnings](#cfn-apigateway-restapi-failonwarnings)" : Boolean,
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
@@ -45,6 +46,7 @@ Properties:
     S3Location
   [CloneFrom](#cfn-apigateway-restapi-clonefrom): String
   [Description](#cfn-apigateway-restapi-description): String
+  [DisableExecuteApiEndpoint](#cfn-apigateway-restapi-disableexecuteapiendpoint): Boolean
   [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): 
     EndpointConfiguration
   [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings): Boolean
@@ -95,6 +97,12 @@ The ID of the `RestApi` resource that you want to clone\.
 A description of the `RestApi` resource\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DisableExecuteApiEndpoint`  <a name="cfn-apigateway-restapi-disableexecuteapiendpoint"></a>
+Specifies whether clients can invoke your API by using the default `execute-api` endpoint\. By default, clients can invoke your API with the default https://\{api\_id\}\.execute\-api\.\{region\}\.amazonaws\.com endpoint\. To require that clients use a custom domain name to invoke your API, disable the default endpoint\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointConfiguration`  <a name="cfn-apigateway-restapi-endpointconfiguration"></a>

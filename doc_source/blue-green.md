@@ -4,7 +4,7 @@ You can use CloudFormation to perform ECS blue/green deployments through AWS Cod
 
 When using CloudFormation to perform ECS blue/green deployments, you start by creating a stack template that defines the resources for both your blue and green application environments, including specifying the traffic routing and stabilization settings to use\. Next, you create a stack from that template; this generates your blue \(current\) application\. CloudFormation only creates the blue resources during stack creation\. Resources for a green deployment aren't created until they're required\.
 
-Then, if in a future stack update you update the task definition or task set resources in your blue application, CloudFormation does the following: 
+Then, if in a future stack update you update the task definition or task set resources in your blue application, CloudFormation does the following:
 + Generates all the necessary green application environment resources
 + Shifts the traffic based on the specified traffic routing parameters
 + Deletes the blue resources

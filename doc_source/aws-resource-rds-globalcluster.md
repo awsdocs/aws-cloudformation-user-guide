@@ -51,7 +51,9 @@ Properties:
 
 `Engine`  <a name="cfn-rds-globalcluster-engine"></a>
 The name of the database engine to be used for this DB cluster\.  
-*Required*: No  
+If this property isn't specified, the database engine is derived from the source DB cluster specified by the `SourceDBClusterIdentifier` property\.  
+If the `SourceDBClusterIdentifier` property isn't specified, this property is required\.
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -62,14 +64,15 @@ The engine version of the Aurora global database\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-globalcluster-globalclusteridentifier"></a>
-The cluster identifier of the new global database cluster\.  
-*Required*: No  
+The cluster identifier of the global database cluster\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBClusterIdentifier`  <a name="cfn-rds-globalcluster-sourcedbclusteridentifier"></a>
 The DB cluster identifier or Amazon Resource Name \(ARN\) to use as the primary cluster of the global database\.   
-*Required*: No  
+If the `Engine` property isn't specified, this property is required\.
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

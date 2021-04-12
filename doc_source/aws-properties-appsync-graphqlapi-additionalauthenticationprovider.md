@@ -11,7 +11,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype)" : String,
-  "[LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-lambdaauthorizerconfig)" : LambdaAuthorizerConfig,
   "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig)" : OpenIDConnectConfig,
   "[UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig)" : CognitoUserPoolConfig
 }
@@ -21,8 +20,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AuthenticationType](#cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype): String
-  [LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-lambdaauthorizerconfig): 
-    LambdaAuthorizerConfig
   [OpenIDConnectConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig): 
     OpenIDConnectConfig
   [UserPoolConfig](#cfn-appsync-graphqlapi-additionalauthenticationprovider-userpoolconfig): 
@@ -36,12 +33,6 @@ The authentication type for API key, AWS IAM, OIDC, or Amazon Cognito user pools
 Valid Values: `API_KEY` \| `AWS_IAM` \| `OPENID_CONNECT` \| `AMAZON_COGNITO_USER_POOLS`  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`LambdaAuthorizerConfig`  <a name="cfn-appsync-graphqlapi-additionalauthenticationprovider-lambdaauthorizerconfig"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: [LambdaAuthorizerConfig](aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenIDConnectConfig`  <a name="cfn-appsync-graphqlapi-additionalauthenticationprovider-openidconnectconfig"></a>

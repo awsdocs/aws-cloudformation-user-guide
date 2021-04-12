@@ -220,7 +220,7 @@ The version number of the cache engine to be used for the clusters in this repli
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalReplicationGroupId`  <a name="cfn-elasticache-replicationgroup-globalreplicationgroupid"></a>
-The name of the Global Datastore  
+The name of the Global datastore  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -370,7 +370,7 @@ If you do not specify this parameter, ElastiCache automatically chooses an appro
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-elasticache-replicationgroup-tags"></a>
-A list of cost allocation tags to be added to this resource\. Tags are comma\-separated key,value pairs \(e\.g\. Key=`myKey`, Value=`myKeyValue`\. You can include multiple tags as shown following: Key=`myKey`, Value=`myKeyValue` Key=`mySecondKey`, Value=`mySecondKeyValue`\.  
+A list of tags to be added to this resource\. Tags are comma\-separated key,value pairs \(e\.g\. Key=`myKey`, Value=`myKeyValue`\. You can include multiple tags as shown following: Key=`myKey`, Value=`myKeyValue` Key=`mySecondKey`, Value=`mySecondKeyValue`\. Tags on replication groups will be replicated to all nodes\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -435,10 +435,10 @@ A string with a list of ports for the read\-only replicas\. The order of the por
 A string with a list of ports for the read\-only replicas\. The order of the ports maps to the order of the addresses from the ReadEndPoint\.Addresses attribute\. 
 
 `ReaderEndPoint.Address`  <a name="ReaderEndPoint.Address-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The address of the reader endpoint\.
 
 `ReaderEndPoint.Port`  <a name="ReaderEndPoint.Port-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The port used by the reader endpoint\.
 
 ## Examples<a name="aws-resource-elasticache-replicationgroup--examples"></a>
 

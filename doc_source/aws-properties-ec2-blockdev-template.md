@@ -99,11 +99,11 @@ The volume type\. For more information, see [Amazon EBS volume types](https://do
 
 ## Examples<a name="aws-properties-ec2-blockdev-template--examples"></a>
 
-### Creating an EBS volume from a snapshot<a name="aws-properties-ec2-blockdev-template--examples--Creating_an_EBS_volume_from_a_snapshot"></a>
+### Create an EBS volume from a snapshot<a name="aws-properties-ec2-blockdev-template--examples--Create_an_EBS_volume_from_a_snapshot"></a>
 
 This example creates a 50GB io1 EBS volume from a snapshot, and configures it to support 1000 IOPS and to persist after terminating the instance to which it is attached\.
 
-#### JSON<a name="aws-properties-ec2-blockdev-template--examples--Creating_an_EBS_volume_from_a_snapshot--json"></a>
+#### JSON<a name="aws-properties-ec2-blockdev-template--examples--Create_an_EBS_volume_from_a_snapshot--json"></a>
 
 ```
 {
@@ -118,7 +118,7 @@ This example creates a 50GB io1 EBS volume from a snapshot, and configures it to
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-blockdev-template--examples--Creating_an_EBS_volume_from_a_snapshot--yaml"></a>
+#### YAML<a name="aws-properties-ec2-blockdev-template--examples--Create_an_EBS_volume_from_a_snapshot--yaml"></a>
 
 ```
 BlockDeviceMappings:

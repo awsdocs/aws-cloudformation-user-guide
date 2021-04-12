@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EventBridge](#cfn-appflow-flow-destinationconnectorproperties-eventbridge)" : EventBridgeDestinationProperties,
+  "[LookoutMetrics](#cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics)" : LookoutMetricsDestinationProperties,
   "[Redshift](#cfn-appflow-flow-destinationconnectorproperties-redshift)" : RedshiftDestinationProperties,
   "[S3](#cfn-appflow-flow-destinationconnectorproperties-s3)" : S3DestinationProperties,
   "[Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce)" : SalesforceDestinationProperties,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EventBridge](#cfn-appflow-flow-destinationconnectorproperties-eventbridge): 
     EventBridgeDestinationProperties
+  [LookoutMetrics](#cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics): 
+    LookoutMetricsDestinationProperties
   [Redshift](#cfn-appflow-flow-destinationconnectorproperties-redshift): 
     RedshiftDestinationProperties
   [S3](#cfn-appflow-flow-destinationconnectorproperties-s3): 
@@ -42,6 +45,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The properties required to query Amazon EventBridge\.   
 *Required*: No  
 *Type*: [EventBridgeDestinationProperties](aws-properties-appflow-flow-eventbridgedestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LookoutMetrics`  <a name="cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics"></a>
+ The properties required to query Amazon Lookout for Metrics\.   
+*Required*: No  
+*Type*: [LookoutMetricsDestinationProperties](aws-properties-appflow-flow-lookoutmetricsdestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Redshift`  <a name="cfn-appflow-flow-destinationconnectorproperties-redshift"></a>

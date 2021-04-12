@@ -88,7 +88,7 @@ Note: This feature requires the AWS Certificate Manager \(ACM\) service, which i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-gamelift-fleet-description"></a>
-A human\-readable description of a fleet\.  
+A human\-readable description of the fleet\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -110,21 +110,21 @@ A range of IP addresses and port settings that allow inbound traffic to connect 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InstanceType`  <a name="cfn-gamelift-fleet-ec2instancetype"></a>
-The name of an EC2 instance type that is supported in Amazon GameLift\. A fleet instance type determines the computing resources of each instance in the fleet, including CPU, memory, storage, and networking capacity\. Amazon GameLift supports the following EC2 instance types\. See [Amazon EC2 Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions\.  
+The GameLift\-supported EC2 instance type to use for all fleet instances\. Instance type determines the computing resources that will be used to host your game servers, including CPU, memory, storage, and networking capacity\. See [Amazon EC2 Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions of EC2 instance types\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5a.12xlarge | c5a.16xlarge | c5a.24xlarge | c5a.2xlarge | c5a.4xlarge | c5a.8xlarge | c5a.large | c5a.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FleetType`  <a name="cfn-gamelift-fleet-fleettype"></a>
-Indicates whether to use On\-Demand instances or Spot instances for this fleet\. If empty, the default is `ON_DEMAND`\. Both categories of instances use identical hardware and configurations based on the instance type selected for this fleet\. Learn more about [ On\-Demand versus Spot Instances](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html#gamelift-ec2-instances-spot)\.   
+Indicates whether to use On\-Demand or Spot instances for this fleet\. By default, this property is set to `ON_DEMAND`\. Learn more about when to use [ On\-Demand versus Spot Instances](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-ec2-instances.html#gamelift-ec2-instances-spot)\. This property cannot be changed after the fleet is created\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceRoleARN`  <a name="cfn-gamelift-fleet-instancerolearn"></a>
-A unique identifier for an AWS IAM role that manages access to your AWS services\. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons \(background processes\)\. Create a role or look up a role's ARN from the [IAM dashboard](https://console.aws.amazon.com/iam/) in the AWS Management Console\. Learn more about using on\-box credentials for your game servers at [ Access external resources from a game server](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)\.  
+A unique identifier for an AWS IAM role that manages access to your AWS services\. With an instance role ARN set, any application that runs on an instance in this fleet can assume the role, including install scripts, server processes, and daemons \(background processes\)\. Create a role or look up a role's ARN by using the [IAM dashboard](https://console.aws.amazon.com/iam/) in the AWS Management Console\. Learn more about using on\-box credentials for your game servers at [ Access external resources from a game server](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)\. This property cannot be changed after the fleet is created\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -173,7 +173,7 @@ A game session protection policy to apply to all game sessions hosted on instanc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeerVpcAwsAccountId`  <a name="cfn-gamelift-fleet-peervpcawsaccountid"></a>
-A unique identifier for the AWS account with the VPC that you want to peer your Amazon GameLift fleet with\. You can find your account ID in the AWS Management Console under account settings\.   
+Used when peering your GameLift fleet with a VPC, the unique identifier for the AWS account that owns the VPC\. You can find your account ID in the AWS Management Console under account settings\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -181,7 +181,7 @@ A unique identifier for the AWS account with the VPC that you want to peer your 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PeerVpcId`  <a name="cfn-gamelift-fleet-peervpcid"></a>
-A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet\. The VPC must be in the same Region as your fleet\. To look up a VPC ID, use the [VPC Dashboard](https://console.aws.amazon.com/vpc/) in the AWS Management Console\. Learn more about VPC peering in [VPC Peering with Amazon GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html)\.   
+A unique identifier for a VPC with resources to be accessed by your GameLift fleet\. The VPC must be in the same Region as your fleet\. To look up a VPC ID, use the [VPC Dashboard](https://console.aws.amazon.com/vpc/) in the AWS Management Console\. Learn more about VPC peering in [VPC Peering with GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html)\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -189,7 +189,7 @@ A unique identifier for a VPC with resources to be accessed by your Amazon GameL
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceCreationLimitPolicy`  <a name="cfn-gamelift-fleet-resourcecreationlimitpolicy"></a>
-A policy that limits the number of game sessions an individual player can create over a span of time for this fleet\.  
+A policy that limits the number of game sessions that an individual player can create on instances in this fleet within a specified span of time\.  
 *Required*: No  
 *Type*: [ResourceCreationLimitPolicy](aws-properties-gamelift-fleet-resourcecreationlimitpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -218,7 +218,7 @@ This parameter is no longer used but is retained for backward compatibility\. In
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServerLaunchPath`  <a name="cfn-gamelift-fleet-serverlaunchpath"></a>
-This parameter is no longer used\. Instead, specify a server launch path using the `RuntimeConfiguration` parameter\. Requests that specify a server launch path and launch parameters instead of a runtime configuration will continue to work\.  
+ **This parameter is no longer used\.** Specify a server launch path using the `RuntimeConfiguration` parameter\. Requests that use this parameter instead continue to be valid\.  
 *Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  
@@ -455,7 +455,7 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-fleet--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+  [Setting Up GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html) in the *Amazon GameLift Developer Guide* 
++ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++  [Setting up GameLift fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html) in the *Amazon GameLift Developer Guide* 
 + [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) in the *Amazon GameLift API Reference* 
 

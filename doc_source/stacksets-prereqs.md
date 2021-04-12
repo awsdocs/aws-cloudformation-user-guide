@@ -15,7 +15,7 @@ AWS Regions introduced after March 20, 2019, such as Asia Pacific \(Hong Kong\),
   + The stack set's administrator account or organization's management account must have the same Region enabled as the target account\.
 
 **Important**  
-Be aware that during stack set operations, administrator and target accounts exchange metadata regarding the accounts themselves, as well as the stack set and stack set instances involved\.  
+Be aware that during stack set operations, administrator and target accounts exchange metadata regarding the accounts themselves, in addition to the stack set and stack set instances involved\.  
 In addition, if you disable a Region that contains an account in which stack set instances reside, you are responsible for deleting any such instances or resources, if desired\. In addition, be aware that metadata regarding the target account in the disabled Region will be retained in the administrator account\.
 
 For more information about enabling and disabling regions, see [Managing AWS Regions](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) in the *AWS General Reference*\.
