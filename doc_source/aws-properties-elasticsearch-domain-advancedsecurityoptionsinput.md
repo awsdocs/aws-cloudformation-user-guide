@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-advancedsecurityoptionsinput-properties"></a>
 
 `Enabled`  <a name="cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled"></a>
-True to enable fine\-grained access control\.  
+True to enable fine\-grained access control\.  You will need to enable Encyption to use this\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InternalUserDatabaseEnabled`  <a name="cfn-elasticsearch-domain-advancedsecurityoptionsinput-internaluserdatabaseenabled"></a>
-True to enable the internal user database\.  
+True to enable the internal user database\.  You will need to enable Encyption to use this\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUserOptions`  <a name="cfn-elasticsearch-domain-advancedsecurityoptionsinput-masteruseroptions"></a>
-Specifies information about the master user\.  
+Specifies information about the master user\.  You will need to enable Encyption to use this\. 
 *Required*: No  
 *Type*: [MasterUserOptions](aws-properties-elasticsearch-domain-masteruseroptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
