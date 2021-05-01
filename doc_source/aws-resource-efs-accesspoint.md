@@ -61,7 +61,7 @@ The ID of the EFS file system that the access point applies to\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
-*Pattern*: `^(arn:aws[-a-z]*:elasticfilesystem:[0-9a-z-:]+:file-system/fs-[0-9a-f]{8,40}|fs-[0-9a-f]{8,40})$`  
+*Pattern*: `fs-123456789`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PosixUser`  <a name="cfn-efs-accesspoint-posixuser"></a>
