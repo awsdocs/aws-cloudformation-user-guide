@@ -87,7 +87,7 @@ The following organization namespaces are reserved and cannot be used in your re
 
 ### Ref<a name="aws-resource-cloudformation-resourceversion-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the resource version\. For example: 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the resource version\. For example:
 
 `arn:aws:cloudformation:us-west-2:012345678901:type/resource/Sample-CloudFormation-Resource/00000001`
 

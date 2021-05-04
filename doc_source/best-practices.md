@@ -8,7 +8,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Use IAM to control access](security-best-practices.md#use-iam-to-control-access)
 + [Reuse templates to replicate stacks in multiple environments](#reuse)
 + [Verify quotas for all resource types](#limits) 
-+ [Use nested stacks to reuse common template patterns](#nested)
++ [Use modules to reuse resource configurations](#modules-reuse)
 
 **Creating templates**  
 + [Do not embed credentials in your templates](security-best-practices.md#creds)
@@ -52,11 +52,11 @@ Before launching a stack, ensure that you can create all the resources that you 
 
 After you have your stacks and resources set up, you can reuse your templates to replicate your infrastructure in multiple environments\. For example, you can create environments for development, testing, and production so that you can test changes before implementing them into production\. To make templates reusable, use the parameters, mappings, and conditions sections so that you can customize your stacks when you create them\. For example, for your development environments, you can specify a lower\-cost instance type compared to your production environment, but all other configurations and settings remain the same\. For more information about parameters, mappings, and conditions, see [Template anatomy](template-anatomy.md)\.
 
-## Use nested stacks to reuse common template patterns<a name="nested"></a>
+## Use modules to reuse resource configurations<a name="modules-reuse"></a>
 
-As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. You can separate out these common components and create dedicated templates for them\. That way, you can mix and match different templates but use nested stacks to create a single, unified stack\. Nested stacks are stacks that create other stacks\. To create nested stacks, use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource in your template to reference other templates\.
+As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates\. *Modules* are a way for you to package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way\. Modules can encapsulate common service configurations and best practices as modular, customizable building blocks for you to include in your stack templates\.
 
-For example, assume that you have a load balancer configuration that you use for most of your stacks\. Instead of copying and pasting the same configurations into your templates, you can create a dedicated template for the load balancer\. Then, you just use the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource to reference that template from within other templates\. If the load balancer template is updated, any stack that is referencing it will use the updated load balancer \(only after you update the stack\)\. In addition to simplifying updates, this approach lets you use exports to create and maintain components that you might not be necessarily familiar with\. All you need to do is reference their templates\.
+These building blocks can be for a single resource, like best practices for defining an Amazon Elastic Compute Cloud \(Amazon EC2\) instance, or they can be for multiple resources, to define common patterns of application architecture\. These building blocks can be nested into other modules, so you can stack your best practices into higher\-level building blocks\. CloudFormation modules are available in the [CloudFormation registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html), so you can use them just like a native resource\. When you use a CloudFormation module, the module template is expanded into the consuming template, which makes it possible for you to access the resources inside the module using a [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) or [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. For more information, see [Modules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html)\.
 
 ## Use AWS\-specific parameter types<a name="parmtypes"></a>
 

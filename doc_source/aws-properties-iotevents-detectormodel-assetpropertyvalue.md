@@ -50,6 +50,6 @@ The timestamp associated with the asset property value\. The default is the curr
 
 `Value`  <a name="cfn-iotevents-detectormodel-assetpropertyvalue-value"></a>
 The value to send to an asset property\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [AssetPropertyVariant](aws-properties-iotevents-detectormodel-assetpropertyvariant.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

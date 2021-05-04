@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource ResourcePermission<a name="aws-properties-quicksight-datasource-resourcepermission"></a>
 
-<a name="aws-properties-quicksight-datasource-resourcepermission-description"></a>The `ResourcePermission` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::QuickSight::DataSource](aws-resource-quicksight-datasource.md)\.
+Permission for the resource\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-resourcepermission-syntax"></a>
 
@@ -26,13 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-datasource-resourcepermission-properties"></a>
 
 `Actions`  <a name="cfn-quicksight-datasource-resourcepermission-actions"></a>
-Not currently supported by AWS CloudFormation\.  
+The IAM action to grant or revoke permissions on\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principal`  <a name="cfn-quicksight-datasource-resourcepermission-principal"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) of the principal\. This can be one of the following:  
++ The ARN of an Amazon QuickSight user or group associated with a data source or dataset\. \(This is common\.\)
++ The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme\. \(This is common\.\)
++ The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

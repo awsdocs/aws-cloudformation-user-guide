@@ -1,6 +1,6 @@
 # AWS::IVS::PlaybackKeyPair<a name="aws-resource-ivs-playbackkeypair"></a>
 
-The `AWS::IVS::PlaybackKeyPair` resource is used to sign and validate a playback authorization token\. For more information, see [Setting Up Private Channels](https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html) in the *Amazon Interactive Video Service User Guide*\.
+The `AWS::IVS::PlaybackKeyPair` resource specifies an Amazon IVS playback key pair\. Amazon IVS uses a public playback key to validate playback tokens that have been signed with the corresponding private key\. For more information, see [Setting Up Private Channels](https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html) in the *Amazon Interactive Video Service User Guide*\.
 
 ## Syntax<a name="aws-resource-ivs-playbackkeypair-syntax"></a>
 
@@ -86,7 +86,7 @@ Key\-pair identifier\. For example: `98:0d:1a:a0:19:96:1e:ea:0a:0a:2c:9a:42:19:2
 
 ### Playback Key Pair Template Examples<a name="aws-resource-ivs-playbackkeypair--examples--Playback_Key_Pair_Template_Examples"></a>
 
-The following examples create an Amazon IVS playback key pair\.
+The following examples specify an Amazon IVS playback key pair\.
 
 #### JSON<a name="aws-resource-ivs-playbackkeypair--examples--Playback_Key_Pair_Template_Examples--json"></a>
 

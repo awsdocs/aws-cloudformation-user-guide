@@ -1,8 +1,5 @@
 # AWS::WAFv2::RuleGroup FieldToMatch<a name="aws-properties-wafv2-rulegroup-fieldtomatch"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 The part of a web request that you want AWS WAF to inspect\. Include the `FieldToMatch` types that you want to inspect, with additional specifications as needed, according to the type\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-fieldtomatch-syntax"></a>

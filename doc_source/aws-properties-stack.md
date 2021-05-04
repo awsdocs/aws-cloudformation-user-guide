@@ -114,16 +114,16 @@ The sample template EC2ChooseAMI\.template contains the following Parameters sec
         "InstanceType": {
             "Type": "String",
             "Default": "m1.small",
-            "Description": "EC2 instance type, e.g. m1.small, m1.large, etc.",
-            "WebServerPort": {
-                "Type": "String",
-                "Default": "80",
-                "Description": "TCP/IP port of the web server"
-            },
-            "KeyName": {
-                "Type": "String",
-                "Description": "Name of an existing EC2 KeyPair to enable SSH access to the web server"
-            }
+            "Description": "EC2 instance type, e.g. m1.small, m1.large, etc."
+        },
+        "WebServerPort": {
+            "Type": "String",
+            "Default": "80",
+            "Description": "TCP/IP port of the web server"
+        },
+        "KeyName": {
+            "Type": "String",
+            "Description": "Name of an existing EC2 KeyPair to enable SSH access to the web server"
         }
     }
 }
@@ -137,13 +137,13 @@ Parameters:
     Type: String
     Default: m1.small
     Description: 'EC2 instance type, e.g. m1.small, m1.large, etc.'
-    WebServerPort:
-      Type: String
-      Default: '80'
-      Description: TCP/IP port of the web server
-    KeyName:
-      Type: String
-      Description: Name of an existing EC2 KeyPair to enable SSH access to the web server
+  WebServerPort:
+    Type: String
+    Default: '80'
+    Description: TCP/IP port of the web server
+  KeyName:
+    Type: String
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the web server
 ```
 
 ### Nested stack<a name="aws-properties-stack--examples--Nested_stack"></a>

@@ -11,9 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DisableLocalGroups](#cfn-kendra-datasource-onedriveconfiguration-disablelocalgroups)" : Boolean,
-  "[ExclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
-  "[FieldMappings](#cfn-kendra-datasource-onedriveconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList,
-  "[InclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-inclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
+  "[ExclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns)" : [ String, ... ],
+  "[FieldMappings](#cfn-kendra-datasource-onedriveconfiguration-fieldmappings)" : [ DataSourceToIndexFieldMapping, ... ],
+  "[InclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-inclusionpatterns)" : [ String, ... ],
   "[OneDriveUsers](#cfn-kendra-datasource-onedriveconfiguration-onedriveusers)" : OneDriveUsers,
   "[SecretArn](#cfn-kendra-datasource-onedriveconfiguration-secretarn)" : String,
   "[TenantDomain](#cfn-kendra-datasource-onedriveconfiguration-tenantdomain)" : String
@@ -25,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DisableLocalGroups](#cfn-kendra-datasource-onedriveconfiguration-disablelocalgroups): Boolean
   [ExclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [FieldMappings](#cfn-kendra-datasource-onedriveconfiguration-fieldmappings): 
-    DataSourceToIndexFieldMappingList
+    - DataSourceToIndexFieldMapping
   [InclusionPatterns](#cfn-kendra-datasource-onedriveconfiguration-inclusionpatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [OneDriveUsers](#cfn-kendra-datasource-onedriveconfiguration-onedriveusers): 
     OneDriveUsers
   [SecretArn](#cfn-kendra-datasource-onedriveconfiguration-secretarn): String
@@ -48,14 +48,14 @@ A Boolean value that specifies whether local groups are disabled \(`True`\) or e
 List of regular expressions applied to documents\. Items that match the exclusion pattern are not indexed\. If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't indexed\.   
 The exclusion pattern is applied to the file name\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-onedriveconfiguration-fieldmappings"></a>
 A list of `DataSourceToIndexFieldMapping` objects that map Microsoft OneDrive fields to custom fields in the Amazon Kendra index\. You must first create the index fields before you map OneDrive fields\.  
 *Required*: No  
-*Type*: [DataSourceToIndexFieldMappingList](aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.md)  
+*Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -63,7 +63,7 @@ A list of `DataSourceToIndexFieldMapping` objects that map Microsoft OneDrive fi
 A list of regular expression patterns\. Documents that match the pattern are included in the index\. Documents that don't match the pattern are excluded from the index\. If a document matches both an inclusion pattern and an exclusion pattern, the document is not included in the index\.   
 The exclusion pattern is applied to the file name\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

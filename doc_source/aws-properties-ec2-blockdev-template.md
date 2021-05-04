@@ -74,7 +74,7 @@ You can specify the CMK using any of the following:
 
 `SnapshotId`  <a name="cfn-ec2-blockdev-template-snapshotid"></a>
 The ID of the snapshot\.  
-If you specify both `SnapshotId` and `VolumeSize`,`VolumeSize` must be equal or greater than the size of the snapshot\.  
+If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

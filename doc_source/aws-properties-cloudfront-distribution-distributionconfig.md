@@ -74,10 +74,7 @@ A complex type that contains zero or more `CacheBehavior` elements\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Comment`  <a name="cfn-cloudfront-distribution-distributionconfig-comment"></a>
-Any comments you want to include about the distribution\.  
-If you don't want to specify a comment, include an empty `Comment` element\.  
-To delete an existing comment, update the distribution configuration and include an empty `Comment` element\.  
-To add or change a comment, update the distribution configuration and specify the new comment\.  
+An optional comment to describe the distribution\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

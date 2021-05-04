@@ -80,7 +80,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-s3-accesspoint-return-values-fn--getatt-fn--getatt"></a>
 
 `NetworkOrigin`  <a name="NetworkOrigin-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Indicates whether this access point allows access from the internet\. If `VpcConfiguration` is specified for this access point, then `NetworkOrigin` is `VPC`, and the access point doesn't allow access from the internet\. Otherwise, `NetworkOrigin` is `Internet`, and the access point allows access from the internet, subject to the access point and bucket access policies\.  
+*Allowed values*: `VPC` \| `Internet` 
 
 ## Examples<a name="aws-resource-s3-accesspoint--examples"></a>
 
@@ -237,7 +238,7 @@ Resources:
               - 's3:PutObject'
             Effect: Allow
             Resource:
-              - !Sub >-
+              - !Sub &gt;-
                 arn:${AWS::Partition}:s3:${AWS::Region}:${AWS::AccountId}:accesspoint/my-access-point/object/janedoe/*
             Principal:
               AWS: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:user/JaneDoe'
@@ -353,42 +354,46 @@ The following example creates an Amazon S3 access point restricted to a virtual 
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
   S3BucketPolicy:
-    Type: 'AWS::S3::BucketPolicy'
+    Type: AWS::S3::BucketPolicy
     Properties:
-      Bucket: !Ref S3Bucket
+      Bucket:
+        Ref: S3Bucket
       PolicyDocument:
         Version: 2012-10-17
         Statement:
-          - Action: '*'
+          - Action: "*"
             Effect: Allow
             Resource:
-              - !GetAtt
-                - S3Bucket
-                - Arn
-              - !Join
-                - ''
-                - - !GetAtt
-                    - S3Bucket
-                    - Arn
-                  - /*
+              - Fn::GetAtt:
+                  - S3Bucket
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - S3Bucket
+                        - Arn
+                    - /*
             Principal:
-              AWS: '*'
+              AWS: "*"
             Condition:
               StringEquals:
-                's3:DataAccessPointAccount': !Ref 'AWS::AccountId'
+                s3:DataAccessPointAccount:
+                  Ref: AWS::AccountId
   VPC:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
   S3AccessPoint:
-    Type: 'AWS::S3::AccessPoint'
+    Type: AWS::S3::AccessPoint
     Properties:
-      Bucket: !Ref S3Bucket
+      Bucket:
+        Ref: S3Bucket
       Name: my-access-point
       VpcConfiguration:
-        VpcId: !Ref VPC
+        VpcId:
+          Ref: VPC
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         IgnorePublicAcls: true
@@ -396,6 +401,7 @@ Resources:
         RestrictPublicBuckets: true
 Outputs:
   S3AccessPointArn:
-    Value: !Ref S3AccessPoint
+    Value:
+      Ref: S3AccessPoint
     Description: ARN of the sample Amazon S3 access point.
 ```

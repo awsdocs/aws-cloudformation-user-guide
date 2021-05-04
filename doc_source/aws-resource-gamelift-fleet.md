@@ -20,7 +20,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype)" : String,
       "[FleetType](#cfn-gamelift-fleet-fleettype)" : String,
       "[InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn)" : String,
-      "[LogPaths](#cfn-gamelift-fleet-logpaths)" : [ String, ... ],
       "[MaxSize](#cfn-gamelift-fleet-maxsize)" : Integer,
       "[MetricGroups](#cfn-gamelift-fleet-metricgroups)" : [ String, ... ],
       "[MinSize](#cfn-gamelift-fleet-minsize)" : Integer,
@@ -30,9 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PeerVpcId](#cfn-gamelift-fleet-peervpcid)" : String,
       "[ResourceCreationLimitPolicy](#cfn-gamelift-fleet-resourcecreationlimitpolicy)" : ResourceCreationLimitPolicy,
       "[RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration)" : RuntimeConfiguration,
-      "[ScriptId](#cfn-gamelift-fleet-scriptid)" : String,
-      "[ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters)" : String,
-      "[ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath)" : String
+      "[ScriptId](#cfn-gamelift-fleet-scriptid)" : String
     }
 }
 ```
@@ -52,8 +49,6 @@ Properties:
   [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype): String
   [FleetType](#cfn-gamelift-fleet-fleettype): String
   [InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn): String
-  [LogPaths](#cfn-gamelift-fleet-logpaths): 
-    - String
   [MaxSize](#cfn-gamelift-fleet-maxsize): Integer
   [MetricGroups](#cfn-gamelift-fleet-metricgroups): 
     - String
@@ -67,8 +62,6 @@ Properties:
   [RuntimeConfiguration](#cfn-gamelift-fleet-runtimeconfiguration): 
     RuntimeConfiguration
   [ScriptId](#cfn-gamelift-fleet-scriptid): String
-  [ServerLaunchParameters](#cfn-gamelift-fleet-serverlaunchparameters): String
-  [ServerLaunchPath](#cfn-gamelift-fleet-serverlaunchpath): String
 ```
 
 ## Properties<a name="aws-resource-gamelift-fleet-properties"></a>
@@ -105,13 +98,13 @@ The number of EC2 instances that you want this fleet to host\. When creating a n
 `EC2InboundPermissions`  <a name="cfn-gamelift-fleet-ec2inboundpermissions"></a>
 A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server\.  
 *Required*: No  
-*Type*: List of [IpPermission](aws-properties-gamelift-fleet-ec2inboundpermission.md)  
+*Type*: List of [IpPermission](aws-properties-gamelift-fleet-ippermission.md)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InstanceType`  <a name="cfn-gamelift-fleet-ec2instancetype"></a>
 The GameLift\-supported EC2 instance type to use for all fleet instances\. Instance type determines the computing resources that will be used to host your game servers, including CPU, memory, storage, and networking capacity\. See [Amazon EC2 Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions of EC2 instance types\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5a.12xlarge | c5a.16xlarge | c5a.24xlarge | c5a.2xlarge | c5a.4xlarge | c5a.8xlarge | c5a.large | c5a.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -128,12 +121,6 @@ A unique identifier for an AWS IAM role that manages access to your AWS services
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`LogPaths`  <a name="cfn-gamelift-fleet-logpaths"></a>
-This parameter is no longer used\. When hosting a custom game build, specify where Amazon GameLift should store log files using the Amazon GameLift server API call `ProcessReady()`\. See more information in the [Server API Reference](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api-ref.html#gamelift-sdk-server-api-ref-dataypes-process)\.   
-*Required*: No  
-*Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxSize`  <a name="cfn-gamelift-fleet-maxsize"></a>
@@ -159,7 +146,7 @@ The minimum value allowed for the fleet's instance count\. When creating a new f
 
 `Name`  <a name="cfn-gamelift-fleet-name"></a>
 A descriptive label that is associated with a fleet\. Fleet names do not need to be unique\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -209,22 +196,6 @@ Note: It is not currently possible to use the `!Ref` command to reference a scri
 *Pattern*: `^script-\S+|^arn:.*:script\/script-\S+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServerLaunchParameters`  <a name="cfn-gamelift-fleet-serverlaunchparameters"></a>
-This parameter is no longer used but is retained for backward compatibility\. Instead, specify server launch parameters in the `RuntimeConfiguration` parameter\. A request must specify either a runtime configuration or values for both ServerLaunchParameters and ServerLaunchPath\.  
-*Required*: Conditional  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`ServerLaunchPath`  <a name="cfn-gamelift-fleet-serverlaunchpath"></a>
- **This parameter is no longer used\.** Specify a server launch path using the `RuntimeConfiguration` parameter\. Requests that use this parameter instead continue to be valid\.  
-*Required*: Conditional  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 ## Return values<a name="aws-resource-gamelift-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-gamelift-fleet-return-values-ref"></a>
@@ -232,6 +203,13 @@ This parameter is no longer used but is retained for backward compatibility\. In
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the fleet ID, such as `fleet-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-gamelift-fleet-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-gamelift-fleet-return-values-fn--getatt-fn--getatt"></a>
+
+`FleetId`  <a name="FleetId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-gamelift-fleet--examples"></a>
 

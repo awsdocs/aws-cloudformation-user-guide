@@ -31,7 +31,7 @@ The AppEUI value, with pattern of `[a-fA-F0-9]{16}`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AppKey`  <a name="cfn-iotwireless-wirelessdevice-otaav10x-appkey"></a>
-The AppKey value\.  
+The AppKey value\. TThe AppKey value is The AppKey is a secret key, which you should handle in a similar way as you would an application password\. You can protect the AppKey value by storing it in the AWS Secrets Manager and use the [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager) to reference this value\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

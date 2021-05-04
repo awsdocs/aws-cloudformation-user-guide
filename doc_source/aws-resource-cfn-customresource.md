@@ -52,9 +52,9 @@ Using your own resource type names helps you quickly differentiate the types of 
 
  *Replacing a custom resource during an update* 
 
-You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in a CloudFormation template, CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#crpg-walkthrough-stack-updates)\. 
+You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in a CloudFormation template, CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#crpg-walkthrough-stack-updates)\.
 
-Note the following: 
+Note the following:
 + You can monitor the progress of the update in the Events tab\. For more information, see [Viewing stack data and resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html)\.
 + For more information about resource behavior during updates, see [AWS CloudFormation stacks updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 

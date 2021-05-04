@@ -24,8 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Mode`  <a name="cfn-sagemaker-model-inferenceexecutionconfig-mode"></a>
 How containers in a multi\-container are run\. The following values are valid\.  
-+ `SERIAL` \- Containers run as a serial pipeline\.
-+ `DIRECT` \- Only the individual container that you specify is run\.
++ `Serial` \- Containers run as a serial pipeline\.
++ `Direct` \- Only the individual container that you specify is run\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

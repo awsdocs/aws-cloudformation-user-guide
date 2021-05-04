@@ -57,7 +57,7 @@ For more information about CIDR notation, see the Wikipedia entry [Classless Int
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-wafv2-ipset-description"></a>
-A friendly description of the IP set\. You cannot change the description of an IP set after you create it\.  
+A description of the IP set that helps with identification\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -73,7 +73,7 @@ Specify IPV4 or IPV6\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-ipset-name"></a>
-A friendly name of the IP set\. You cannot change the name of an `IPSet` after you create it\.  
+The descriptive name of the IP set\. You cannot change the name of an `IPSet` after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

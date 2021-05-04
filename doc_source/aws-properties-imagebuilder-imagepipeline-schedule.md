@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImagePipeline Schedule<a name="aws-properties-imagebuilder-imagepipeline-schedule"></a>
 
-A schedule configures how often and when a pipeline will automatically create a new image\. 
+A schedule configures how often and when a pipeline will automatically create a new image\.
 
 ## Syntax<a name="aws-properties-imagebuilder-imagepipeline-schedule-syntax"></a>
 

@@ -93,6 +93,7 @@ A description of the patch baseline\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
+*Pattern*: `^([\s\S]*)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalFilters`  <a name="cfn-ssm-patchbaseline-globalfilters"></a>

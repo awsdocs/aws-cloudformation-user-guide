@@ -15,18 +15,16 @@ To include `AWS::CodeDeployBlueGreen` in the `Transform` section, use the follow
 #### JSON<a name="aws-codedeploybluegreen-syntax-top-level.json"></a>
 
 ```
-1. {
-2.   "Transform": "AWS::CodeDeployBlueGreen",
-3.     . . .
-4. }
+1. "Transform": [
+2.         "AWS::CodeDeployBlueGreen"
+3.     ],
 ```
 
 #### YAML<a name="aws-codedeploybluegreen-syntax-top-level.yaml"></a>
 
 ```
-1. "Transform": [
-2.     "AWS::CodeDeployBlueGreen"
-3. ],
+1. Transform:
+2.   - 'AWS::CodeDeployBlueGreen'
 ```
 
 ## Parameters<a name="aws-v-transform-parameters"></a>

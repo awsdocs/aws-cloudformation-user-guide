@@ -29,6 +29,113 @@ A set of origins and methods \(cross\-origin access that you want to allow\)\. Y
 *Type*: List of [CorsRule](aws-properties-s3-bucket-cors-corsrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See also<a name="aws-properties-s3-bucket-cors--seealso"></a>
-+ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+## Examples<a name="aws-properties-s3-bucket-cors--examples"></a>
 
+
+
+### Enable cross\-origin resource sharing<a name="aws-properties-s3-bucket-cors--examples--Enable_cross-origin_resource_sharing"></a>
+
+The following example template shows a public S3 bucket with two cross\-origin resource sharing rules\.
+
+#### JSON<a name="aws-properties-s3-bucket-cors--examples--Enable_cross-origin_resource_sharing--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "PublicRead",
+                "CorsConfiguration": {
+                    "CorsRules": [
+                        {
+                            "AllowedHeaders": [
+                                "*"
+                            ],
+                            "AllowedMethods": [
+                                "GET"
+                            ],
+                            "AllowedOrigins": [
+                                "*"
+                            ],
+                            "ExposedHeaders": [
+                                "Date"
+                            ],
+                            "Id": "myCORSRuleId1",
+                            "MaxAge": 3600
+                        },
+                        {
+                            "AllowedHeaders": [
+                                "x-amz-*"
+                            ],
+                            "AllowedMethods": [
+                                "DELETE"
+                            ],
+                            "AllowedOrigins": [
+                                "http://www.example.com",
+                                "http://www.example.net"
+                            ],
+                            "ExposedHeaders": [
+                                "Connection",
+                                "Server",
+                                "Date"
+                            ],
+                            "Id": "myCORSRuleId2",
+                            "MaxAge": 1800
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "S3Bucket"
+            },
+            "Description": "Name of the sample Amazon S3 bucket with CORS enabled."
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-cors--examples--Enable_cross-origin_resource_sharing--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: PublicRead
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - '*'
+            ExposedHeaders:
+              - Date
+            Id: myCORSRuleId1
+            MaxAge: 3600
+          - AllowedHeaders:
+              - x-amz-*
+            AllowedMethods:
+              - DELETE
+            AllowedOrigins:
+              - 'http://www.example.com'
+              - 'http://www.example.net'
+            ExposedHeaders:
+              - Connection
+              - Server
+              - Date
+            Id: myCORSRuleId2
+            MaxAge: 1800
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with CORS enabled.
+```

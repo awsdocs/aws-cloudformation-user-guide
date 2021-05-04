@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DocumentDataFieldName](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-documentdatafieldname)" : String,
   "[DocumentTitleFieldName](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-documenttitlefieldname)" : String,
-  "[FieldMappings](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList,
+  "[FieldMappings](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-fieldmappings)" : [ DataSourceToIndexFieldMapping, ... ],
   "[Name](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-name)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DocumentDataFieldName](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-documentdatafieldname): String
   [DocumentTitleFieldName](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-documenttitlefieldname): String
   [FieldMappings](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-fieldmappings): 
-    DataSourceToIndexFieldMappingList
+    - DataSourceToIndexFieldMapping
   [Name](#cfn-kendra-datasource-salesforcestandardobjectconfiguration-name): String
 ```
 
@@ -50,7 +50,7 @@ The name of the field in the standard object table that contains the document ti
 `FieldMappings`  <a name="cfn-kendra-datasource-salesforcestandardobjectconfiguration-fieldmappings"></a>
 One or more objects that map fields in the standard object to Amazon Kendra index fields\. The index field must exist before you can map a Salesforce field to it\.  
 *Required*: No  
-*Type*: [DataSourceToIndexFieldMappingList](aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.md)  
+*Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -1,6 +1,6 @@
 # AWS::S3Outposts::AccessPoint<a name="aws-resource-s3outposts-accesspoint"></a>
 
-The AWS::S3Outposts::AccessPoint resource specifies an Access Point S3 Access Point and associates it with the specified Amazon S3 on Outposts bucket\. For more information, see [Managing data access with Amazon S3 Access Points](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-points.html)\.
+The AWS::S3Outposts::AccessPoint resource specifies an Access Point and associates it with the specified Amazon S3 on Outposts bucket\. For more information, see [Managing data access with Amazon S3 Access Points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html)\.
 
 
 

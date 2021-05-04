@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PageFieldMappings](#cfn-kendra-datasource-confluencepageconfiguration-pagefieldmappings)" : ConfluencePageFieldMappingsList
+  "[PageFieldMappings](#cfn-kendra-datasource-confluencepageconfiguration-pagefieldmappings)" : [ ConfluencePageToIndexFieldMapping, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PageFieldMappings](#cfn-kendra-datasource-confluencepageconfiguration-pagefieldmappings): 
-    ConfluencePageFieldMappingsList
+    - ConfluencePageToIndexFieldMapping
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-confluencepageconfiguration-properties"></a>
@@ -27,6 +27,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Defines how page metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` operation\.  
 If you specify the `PageFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
-*Type*: [ConfluencePageFieldMappingsList](aws-properties-kendra-datasource-confluencepagefieldmappingslist.md)  
+*Type*: List of [ConfluencePageToIndexFieldMapping](aws-properties-kendra-datasource-confluencepagetoindexfieldmapping.md)  
 *Maximum*: `12`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AmiDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration)" : Json,
   "[ContainerDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration)" : Json,
+  "[LaunchTemplateConfigurations](#cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations)" : [ LaunchTemplateConfiguration, ... ],
   "[LicenseConfigurationArns](#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns)" : [ String, ... ],
   "[Region](#cfn-imagebuilder-distributionconfiguration-distribution-region)" : String
 }
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AmiDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration): Json
   [ContainerDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration): Json
+  [LaunchTemplateConfigurations](#cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations): 
+    - LaunchTemplateConfiguration
   [LicenseConfigurationArns](#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns): 
     - String
   [Region](#cfn-imagebuilder-distributionconfiguration-distribution-region): String
@@ -39,6 +42,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Container distribution settings for encryption, licensing, and sharing in a specific Region\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LaunchTemplateConfigurations`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [LaunchTemplateConfiguration](aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LicenseConfigurationArns`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns"></a>

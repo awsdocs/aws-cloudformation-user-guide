@@ -7,9 +7,6 @@ Use an [AWS::WAFv2::RuleGroup](#aws-resource-wafv2-rulegroup) to define a collec
 
 When you create a rule group, you define an immutable capacity limit\. If you update a rule group, you must stay within the capacity\. This allows others to reuse the rule group with confidence in its capacity requirements\. 
 
-**Note**  
-You can only use up to 3 levels of nested rule statements when you manage your web ACLs and rule groups using AWS CloudFormation\. This limitation doesn't exist when you use the API and SDKs\. 
-
 ## Syntax<a name="aws-resource-wafv2-rulegroup-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -70,7 +67,7 @@ For information about the limits on count and size for custom request and respon
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-wafv2-rulegroup-description"></a>
-A friendly description of the rule group\. You cannot change the description of a rule group after you create it\.  
+A description of the rule group that helps with identification\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -79,7 +76,7 @@ A friendly description of the rule group\. You cannot change the description of 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-rulegroup-name"></a>
-A friendly name of the rule group\. You cannot change the name of a rule group after you create it\.  
+The descriptive name of the rule group\. You cannot change the name of a rule group after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -88,7 +85,7 @@ A friendly name of the rule group\. You cannot change the name of a rule group a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rules`  <a name="cfn-wafv2-rulegroup-rules"></a>
-The Rule statements used to identify the web requests that you want to allow, block, or count\. Each rule includes one top\-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\.   
+The rule statements used to identify the web requests that you want to allow, block, or count\. Each rule includes one top\-level statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\.   
 *Required*: No  
 *Type*: List of [Rule](aws-properties-wafv2-rulegroup-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

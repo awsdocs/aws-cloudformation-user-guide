@@ -124,6 +124,10 @@ Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
+`OpenIdConnectIssuerUrl`  <a name="OpenIdConnectIssuerUrl-fn::getatt"></a>
+The issuer URL for the cluster's OIDC identity provider, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E`\. If you need to remove `https://` from this output value, you can include the following code in your template\.  
+ `!Select [1, !Split ["//", !GetAtt EKSCluster.OpenIdConnectIssuerUrl]]`
+
 ## Examples<a name="aws-resource-eks-cluster--examples"></a>
 
 ### Create a Cluster<a name="aws-resource-eks-cluster--examples--Create_a_Cluster"></a>

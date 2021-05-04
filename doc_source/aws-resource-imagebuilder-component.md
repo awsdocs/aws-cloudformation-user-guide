@@ -92,7 +92,7 @@ The platform of the component\. For example, `Windows`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SupportedOsVersions`  <a name="cfn-imagebuilder-component-supportedosversions"></a>
-The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the parent image OS version during image recipe creation\.   
+The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the parent image OS version during image recipe creation\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `25`  
@@ -139,6 +139,9 @@ Returns the Amazon Resource Name \(ARN\) of the component\. The following patter
 `Encrypted`  <a name="Encrypted-fn::getatt"></a>
 Returns the encryption status of the component\. For example `true` or `false`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `Type`  <a name="Type-fn::getatt"></a>
 Returns the component type\. For example, `BUILD` or `TEST`\.
 
@@ -159,10 +162,12 @@ Resources:
     Properties:
       Name: 'component-name'
       Platform: 'Linux'
-      Version: "1.0.0"
+      Version: '1.0.0'
       Description: 'description'
       ChangeDescription: 'change-description'
       KmsKeyId: 'customer-kms-key-id'
+      SupportedOsVersions: 
+        - 'Amazon Linux 2'
       Tags:
         CustomerComponentTagKey1: 'CustomerComponentTagValue1'
         CustomerComponentTagKey2: 'CustomerComponentTagValue2'
@@ -210,6 +215,7 @@ Resources:
                 "Description": "description",
                 "ChangeDescription": "change-description",
                 "KmsKeyId": "customer-kms-key-id",
+                "SupportedOsVersions": ["Amazon Linux 2"],
                 "Tags": {
                     "CustomerComponentTagKey1": "CustomerComponentTagValue1",
                     "CustomerComponentTagKey2": "CustomerComponentTagValue2"
@@ -234,12 +240,15 @@ Resources:
     Properties:
       Name: 'component-name'
       Platform: 'Linux'
-      Version: "1.0.0"
+      Version: '1.0.0'
       # Require one of 'Data' or 'Uri' for Component template
       Uri: 's3://imagebuilder/component_document.yml'
       Description: 'description'
       ChangeDescription: 'change-description'
       KmsKeyId: 'customer-kms-key-id'
+      SupportedOsVersions: 
+      - 'CentOS'
+      - 'Red Hat Enterprise Linux'
       Tags:
         CustomerComponentTagKey1: 'CustomerComponentTagValue1'
         CustomerComponentTagKey2: 'CustomerComponentTagValue2'
@@ -260,6 +269,7 @@ Resources:
                 "Description": "description",
                 "ChangeDescription": "change-description",
                 "KmsKeyId": "customer-kms-key-id",
+                "SupportedOsVersions": ["CentOS", "Red Hat Enterprise Linux"],
                 "Tags": {
                     "CustomerComponentTagKey1": "CustomerComponentTagValue1",
                     "CustomerComponentTagKey2": "CustomerComponentTagValue2"

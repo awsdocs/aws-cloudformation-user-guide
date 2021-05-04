@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass)" : String,
       "[ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier)" : String,
       "[ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier)" : String,
+      "[ResourceIdentifier](#cfn-dms-replicationinstance-resourceidentifier)" : String,
       "[Tags](#cfn-dms-replicationinstance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids)" : [ String, ... ]
     }
@@ -47,6 +48,7 @@ Properties:
   [ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass): String
   [ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier): String
   [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier): String
+  [ResourceIdentifier](#cfn-dms-replicationinstance-resourceidentifier): String
   [Tags](#cfn-dms-replicationinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids): 
@@ -139,6 +141,12 @@ Example: `myrepinstance`
 
 `ReplicationSubnetGroupIdentifier`  <a name="cfn-dms-replicationinstance-replicationsubnetgroupidentifier"></a>
 A subnet group to associate with the replication instance\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ResourceIdentifier`  <a name="cfn-dms-replicationinstance-resourceidentifier"></a>
+A friendly name for the resource identifier at the end of the `EndpointArn` response parameter that is returned in the created `Endpoint` object\. The value for this parameter can have up to 31 characters\. It can contain only ASCII letters, digits, and hyphen \('\-'\)\. Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as `Example-App-ARN1`\. For example, this value might result in the `EndpointArn` value `arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1`\. If you don't specify a `ResourceIdentifier` value, AWS DMS generates a default identifier value for the end of `EndpointArn`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

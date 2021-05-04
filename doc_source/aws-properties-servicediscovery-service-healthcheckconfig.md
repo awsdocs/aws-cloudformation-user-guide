@@ -54,7 +54,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-servicediscovery-service-healthcheckconfig-properties"></a>
 
 `FailureThreshold`  <a name="cfn-servicediscovery-service-healthcheckconfig-failurethreshold"></a>
-The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or vice versa\. For more information, see [How Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Route 53 Developer Guide*\.  
+The number of consecutive health checks that an endpoint must pass or fail for Route 53 to change the current status of the endpoint from unhealthy to healthy or the other way around\. For more information, see [How Route 53 Determines Whether an Endpoint Is Healthy](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-determining-health-of-endpoints.html) in the *Route 53 Developer Guide*\.  
 *Required*: No  
 *Type*: Double  
 *Minimum*: `1`  
@@ -62,7 +62,7 @@ The number of consecutive health checks that an endpoint must pass or fail for R
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcePath`  <a name="cfn-servicediscovery-service-healthcheckconfig-resourcepath"></a>
-The path that you want Route 53 to request when performing health checks\. The path can be any value for which your endpoint will return an HTTP status code of 2xx or 3xx when the endpoint is healthy, such as the file `/docs/route53-health-check.html`\. Route 53 automatically adds the DNS name for the service\. If you don't specify a value for `ResourcePath`, the default value is `/`\.  
+The path that you want Route 53 to request when performing health checks\. The path can be any value for which your endpoint returns an HTTP status code of a 2xx or 3xx format when the endpoint is healthy, such as the file `/docs/route53-health-check.html`\. Route 53 automatically adds the DNS name for the service\. If you don't specify a value for `ResourcePath`, the default value is `/`\.  
 If you specify `TCP` for `Type`, you must *not* specify a value for `ResourcePath`\.  
 *Required*: No  
 *Type*: String  

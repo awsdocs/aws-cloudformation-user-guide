@@ -159,7 +159,7 @@ Optional engine attributes on a specified server\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-opsworkscm-server-engineversion"></a>
- The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `2`\. For a Puppet server, the valid value is `2017`\.   
+ The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `2`\. For a Puppet server, valid values are `2019` or `2017`\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `10000`  

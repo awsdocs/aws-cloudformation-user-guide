@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-volumes-properties"></a>
 
 `EfsVolumeConfiguration`  <a name="cfn-batch-jobdefinition-volumes-efsvolumeconfiguration"></a>
-This is used when you are using an Amazon Elastic File System file system for job storage\. For more information, see [Amazon EFS Volumes](https://docs.aws.amazon.com/batch/latest/ug/efs-volumes.html) in the *AWS Batch User Guide*\.  
+This is used when you are using an Amazon Elastic File System file system for job storage\. For more information, see [Amazon EFS Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: [EfsVolumeConfiguration](aws-properties-batch-jobdefinition-efsvolumeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

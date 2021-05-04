@@ -54,6 +54,6 @@ By default, AWS IoT Events generates a standard payload in JSON for any action\.
 
 `TableName`  <a name="cfn-iotevents-detectormodel-dynamodbv2-tablename"></a>
 The name of the DynamoDB table\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

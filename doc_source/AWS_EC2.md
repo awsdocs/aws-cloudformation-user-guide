@@ -13,6 +13,7 @@
 + [AWS::EC2::EgressOnlyInternetGateway](aws-resource-ec2-egressonlyinternetgateway.md)
 + [AWS::EC2::EIP](aws-properties-ec2-eip.md)
 + [AWS::EC2::EIPAssociation](aws-properties-ec2-eip-association.md)
++ [AWS::EC2::EnclaveCertificateIamRoleAssociation](aws-resource-ec2-enclavecertificateiamroleassociation.md)
 + [AWS::EC2::FlowLog](aws-resource-ec2-flowlog.md)
 + [AWS::EC2::GatewayRouteTableAssociation](aws-resource-ec2-gatewayroutetableassociation.md)
 + [AWS::EC2::Host](aws-resource-ec2-host.md)

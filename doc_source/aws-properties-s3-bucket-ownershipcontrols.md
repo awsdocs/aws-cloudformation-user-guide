@@ -40,34 +40,34 @@ The following examples show object ownership set to `BucketOwnerPreferred`\.
 #### JSON<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_ownership--json"></a>
 
 ```
- {
-     "AWSTemplateFormatVersion": "2010-09-09",
-     "Resources": {
-         "S3Bucket": {
-             "Type": "AWS::S3::Bucket",
-             "Properties": {
-                 "OwnershipControls": {
-                     "Rules": [
-                         {
-                             "ObjectOwnership": "BucketOwnerPreferred"
-                         }
-                     ]
-                 }
-             }
-         }
-     }
- }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "OwnershipControls": {
+                    "Rules": [
+                        {
+                            "ObjectOwnership": "BucketOwnerPreferred"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-properties-s3-bucket-ownershipcontrols--examples--Object_ownership--yaml"></a>
 
 ```
- AWSTemplateFormatVersion: '2010-09-09'
- Resources:
-   S3Bucket:
-     Type: AWS::S3::Bucket
-     Properties:
-       OwnershipControls:
-         Rules:
-         - ObjectOwnership: BucketOwnerPreferred
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: BucketOwnerPreferred
 ```

@@ -152,11 +152,15 @@ Resources in a module can be referenced by logical name\. The fully\-qualified l
 + The logical name specified for the module in the containing template \(or containing module\)\.
 + The logical name for the resource, specified in the module\.
 
+The fully\-qualified logical name for the resource can be specified with or without using a period as a delimiter\. For example, both of the logical names below are valid, and functionaly equivalent:
++ `ModuleLogicalName.ResourceLogicalName`
++ `ModuleLogicalNameResourceLogicalName`
+
 In this way, you can use `GetAtt` and `Ref` intrinsic functions to access property values on module resources\.
 
 In the following example, the template references a property in a module to set a corresponding property on a resource in the template itself\.
 
-Suppose that the `My::S3::SampleBucket::MODULE` module contains an `AWS::S3::Bucket` resource with the logical name of `S3Bucket`\. To reference the bucket name of this resource using the `Ref` intrinsic function, combine the logical name given the module in the template, `MyBucket`, with the logical name of the resource in the module, `S3Bucket`, to get the fully qualified logical name of the resource: `MyBucketS3Bucket`\.
+Suppose that the `My::S3::SampleBucket::MODULE` module contains an `AWS::S3::Bucket` resource with the logical name of `S3Bucket`\. To reference the bucket name of this resource using the `Ref` intrinsic function, combine the logical name given the module in the template, `MyBucket`, with the logical name of the resource in the module, `S3Bucket`, to get the fully qualified logical name of the resource: either `MyBucket.S3Bucket` or `MyBucketS3Bucket`\.
 
 The logical names of resources contained in a module are specified in the module's schema\. You can access that schema in the following ways:
 + Finding the module in the CloudFormation registry\. The **Schema** tab displays the module schema\.
@@ -169,26 +173,56 @@ The logical names of resources contained in a module are specified in the module
     "BucketName": {
       "Description": "Name for your sample bucket",
       "Type": "String"
-    }
-  },
+   }
+ },
   "Resources": {
     "MyBucket": {
       "Type": "My::S3::SampleBucket::MODULE",
       "Properties": {
-        "BucketName": {
-          "Ref": "BucketName"
-        }
+          "BucketName": {
+            "Ref": "BucketName"
+         }
       }
     },
-    "someQueueToMakeItExciting" : {
-      "Type" : "AWS::SQS::Queue",
+    "exampleQueue": {
+      "Type": "AWS::SQS::Queue",
       "Properties": {
-        "QueueName": 
-          { "Fn::GetAtt" : [ "MyBucketS3Bucket", "BucketName" ] }
+          "QueueName": {
+            "Ref": "MyBucket.S3Bucket"
+          }
+      }
+    }
+},
+"Outputs": {
+  "BucketArn": {
+      "Value": {
+          "Fn::GetAtt": [
+             "MyBucket",
+             "S3Bucket.Arn"
+          ]
       }
     }
   }
 }
+```
+
+```
+Parameters:
+  BucketName:
+    Description: Name for your sample bucket
+    Type: String
+Resources:
+  MyBucket:
+    Type: My::S3::SampleBucket::MODULE
+    Properties:
+      BucketName: !Ref BucketName
+  exampleQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Ref MyBucket.S3Bucket
+Outputs:
+  BucketArn:
+    Value: !GetAtt MyBucket.S3Bucket.Arn
 ```
 
 ## Considerations when using modules<a name="module-considerations"></a>

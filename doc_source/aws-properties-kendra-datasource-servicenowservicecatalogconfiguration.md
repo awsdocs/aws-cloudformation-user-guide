@@ -13,9 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CrawlAttachments](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-crawlattachments)" : Boolean,
   "[DocumentDataFieldName](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-documentdatafieldname)" : String,
   "[DocumentTitleFieldName](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-documenttitlefieldname)" : String,
-  "[ExcludeAttachmentFilePatterns](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-excludeattachmentfilepatterns)" : DataSourceInclusionsExclusionsStrings,
-  "[FieldMappings](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList,
-  "[IncludeAttachmentFilePatterns](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-includeattachmentfilepatterns)" : DataSourceInclusionsExclusionsStrings
+  "[ExcludeAttachmentFilePatterns](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-excludeattachmentfilepatterns)" : [ String, ... ],
+  "[FieldMappings](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-fieldmappings)" : [ DataSourceToIndexFieldMapping, ... ],
+  "[IncludeAttachmentFilePatterns](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-includeattachmentfilepatterns)" : [ String, ... ]
 }
 ```
 
@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DocumentDataFieldName](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-documentdatafieldname): String
   [DocumentTitleFieldName](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-documenttitlefieldname): String
   [ExcludeAttachmentFilePatterns](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-excludeattachmentfilepatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [FieldMappings](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-fieldmappings): 
-    DataSourceToIndexFieldMappingList
+    - DataSourceToIndexFieldMapping
   [IncludeAttachmentFilePatterns](#cfn-kendra-datasource-servicenowservicecatalogconfiguration-includeattachmentfilepatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-servicenowservicecatalogconfiguration-properties"></a>
@@ -63,14 +63,14 @@ The name of the ServiceNow field that is mapped to the index document title fiel
 A list of regular expression patterns\. Documents that match the patterns are excluded from the index\. Documents that don't match the patterns are included in the index\. If a document matches both an exclusion pattern and an inclusion pattern, the document is not included in the index\.  
 The regex is applied to the file name of the attachment\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-servicenowservicecatalogconfiguration-fieldmappings"></a>
 Mapping between ServiceNow fields and Amazon Kendra index fields\. You must create the index field before you map the field\.  
 *Required*: No  
-*Type*: [DataSourceToIndexFieldMappingList](aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.md)  
+*Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -78,6 +78,6 @@ Mapping between ServiceNow fields and Amazon Kendra index fields\. You must crea
 A list of regular expression patterns\. Documents that match the patterns are included in the index\. Documents that don't match the patterns are excluded from the index\. If a document matches both an exclusion pattern and an inclusion pattern, the document is not included in the index\.  
 The regex is applied to the file name of the attachment\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

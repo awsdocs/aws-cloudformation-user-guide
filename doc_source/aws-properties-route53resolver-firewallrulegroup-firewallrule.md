@@ -38,7 +38,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule's domain list:  
 +  `ALLOW` \- Permit the request to go through\.
 +  `ALERT` \- Permit the request to go through but send an alert to the logs\.
-+  `BLOCK` \- Disallow the request\. If this is specified, additional handling details are provided in the rule's `BlockResponse` setting\. 
++  `BLOCK` \- Disallow the request\. If this is specified,then `BlockResponse` must also be specified\.
+
+  if `BlockResponse` is `OVERRIDE`, then all of the following `OVERRIDE` attributes must be specified:
+  + `BlockOverrideDnsType` 
+  + `BlockOverrideDomain`
+  + `BlockOverrideTtl`
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `ALERT | ALLOW | BLOCK`  

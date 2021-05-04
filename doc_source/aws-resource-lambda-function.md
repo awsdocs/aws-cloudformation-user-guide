@@ -8,7 +8,7 @@ You set the package type to `Zip` if the deployment package is a [\.zip file arc
 
 You can use [code signing](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with `UpdateFunctionCode`, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes a set of signing profiles, which define the trusted publishers for this function\.
 
-For a complete introduction to Lambda functions, see [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/lambda-welcome.html) in the *AWS Lambda developer guide\.*
+For a complete introduction to Lambda functions, see [What is Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/lambda-welcome.html) in the *Lambda developer guide\.*
 
 ## Syntax<a name="aws-resource-lambda-function-syntax"></a>
 

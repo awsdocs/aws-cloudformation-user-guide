@@ -109,6 +109,7 @@ The VPC subnets that Studio uses for communication\.
 
 `Tags`  <a name="cfn-sagemaker-domain-tags"></a>
 Tags to associated with the Domain\. Each tag consists of a key and an optional value\. Tag keys must be unique per resource\. Tags are searchable using the Search API\.   
+Tags that you specify for the Domain are also added to all Apps that are launched in the Domain\.  
 *Array members*: Minimum number of 0 items\. Maximum number of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  

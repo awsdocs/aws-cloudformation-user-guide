@@ -51,7 +51,7 @@ Properties:
 ## Properties<a name="aws-resource-fsx-filesystem-properties"></a>
 
 `BackupId`  <a name="cfn-fsx-filesystem-backupid"></a>
-The ID of the backup\. Specifies the backup to use if you're creating a file system from an existing backup\.  
+The ID of the source backup\. Specifies the backup you are copying\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

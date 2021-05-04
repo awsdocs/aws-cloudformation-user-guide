@@ -57,7 +57,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `300`  
-*Pattern*: `^[\w\W\s\S]*$`  
+*Pattern*: `^[^\\]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Comment`  <a name="cfn-auditmanager-assessment-delegation-comment"></a>

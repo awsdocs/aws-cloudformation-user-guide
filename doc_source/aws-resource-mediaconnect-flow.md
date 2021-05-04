@@ -44,7 +44,7 @@ The Availability Zone that you want to create the flow in\. These options are li
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-mediaconnect-flow-name"></a>
-The name of the entitlement\. This value must be unique within the current flow\.  
+The name of the flow\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -16,12 +16,12 @@ For sources, CloudFormation looks for authentication information in the `uris` o
 
 **Topics**
 + [Syntax](#aws-resource-cloudformation-authentication-syntax)
-+ [Properties](#w8676ab1c27c15c15c18c19)
++ [Properties](#w8776ab1c27c15c15c18c19)
 + [Examples](#aws-resource-authentication-examples)
 
 ## Syntax<a name="aws-resource-cloudformation-authentication-syntax"></a>
 
-To declare this entity in your AWS CloudFormation template, use the following syntax:
+To declare this entity in your CloudFormation template, use the following syntax:
 
 You should be aware of the following considerations when using the `AWS::CloudFormation::Authentication` type:
 + Unlike most CloudFormation resources, the `AWS::CloudFormation::Authentication` type doesn't contain a block called *Properties*, but instead contains a list of user\-named blocks, each containing its own authentication properties\.
@@ -65,7 +65,7 @@ String:
   roleName: String
 ```
 
-## Properties<a name="w8676ab1c27c15c15c18c19"></a>
+## Properties<a name="w8776ab1c27c15c15c18c19"></a>
 
 `accessKeyId`  <a name="cfn-cloudformation-authentication-accesskeyid"></a>
 Specifies the access key ID for S3 authentication\.  
@@ -115,7 +115,7 @@ This role must be contained within the instance profile that's attached to the E
 **Note**  
 Unlike most resources, the `AWS::CloudFormation::Authentication` type defines a list of user\-named blocks, each of which contains authentication properties that use lower camel case naming\.
 
-### EC2 web server authentication<a name="w8676ab1c27c15c15c18c21b4"></a>
+### EC2 web server authentication<a name="w8776ab1c27c15c15c18c21b4"></a>
 
 This template snippet shows how to get a file from a private S3 bucket within an EC2 instance\. The credentials used for authentication are defined in the `AWS::CloudFormation::Authentication` resource, and referenced by the `AWS::CloudFormation::Init` resource in the *files* section\.
 
@@ -206,7 +206,7 @@ Properties:
   EC2 Resource Properties ...
 ```
 
-### Specifying both basic and S3 authentication<a name="w8676ab1c27c15c15c18c21b6"></a>
+### Specifying both basic and S3 authentication<a name="w8776ab1c27c15c15c18c21b6"></a>
 
 The following example template snippet includes both *basic* and *S3* authentication types\.
 
@@ -251,7 +251,7 @@ AWS::CloudFormation::Authentication:
       - "myawsbucket"
 ```
 
-### IAM roles<a name="w8676ab1c27c15c15c18c21b8"></a>
+### IAM roles<a name="w8776ab1c27c15c15c18c21b8"></a>
 
 The following example shows how to use IAM roles:
 + `myRole` is an [AWS::IAM::Role](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html) resource\.

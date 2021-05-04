@@ -82,7 +82,7 @@ A description for the network interface\.
 
 `DeviceIndex`  <a name="cfn-ec2-launchtemplate-networkinterface-deviceindex"></a>
 The device index for the network interface attachment\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

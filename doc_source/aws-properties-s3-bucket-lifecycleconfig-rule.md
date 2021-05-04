@@ -138,7 +138,7 @@ You must specify at least one of the following properties: `AbortIncompleteMulti
 
 ### Manage the lifecycle for S3 objects<a name="aws-properties-s3-bucket-lifecycleconfig-rule--examples--Manage_the_lifecycle_for_S3_objects"></a>
 
-The following example template shows an S3 bucket with a lifecycle configuration rule\. The rule applies to all objects with the glacier key prefix\. The objects are transitioned to Glacier after one day, and deleted after one year\.
+The following example template shows an S3 bucket with a lifecycle configuration rule\. The rule applies to all objects with the `glacier` key prefix\. The objects are transitioned to Glacier after one day, and deleted after one year\.
 
 #### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule--examples--Manage_the_lifecycle_for_S3_objects--json"></a>
 
@@ -156,10 +156,10 @@ The following example template shows an S3 bucket with a lifecycle configuration
                             "Id": "GlacierRule",
                             "Prefix": "glacier",
                             "Status": "Enabled",
-                            "ExpirationInDays": "365",
+                            "ExpirationInDays": 365,
                             "Transitions": [
                                 {
-                                    "TransitionInDays": "1",
+                                    "TransitionInDays": 1,
                                     "StorageClass": "GLACIER"
                                 }
                             ]
@@ -194,9 +194,9 @@ Resources:
           - Id: GlacierRule
             Prefix: glacier
             Status: Enabled
-            ExpirationInDays: '365'
+            ExpirationInDays: 365
             Transitions:
-              - TransitionInDays: '1'
+              - TransitionInDays: 1
                 StorageClass: GLACIER
 Outputs:
   BucketName:

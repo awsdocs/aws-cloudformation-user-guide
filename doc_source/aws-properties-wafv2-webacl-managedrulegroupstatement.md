@@ -1,9 +1,6 @@
 # AWS::WAFv2::WebACL ManagedRuleGroupStatement<a name="aws-properties-wafv2-webacl-managedrulegroupstatement"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
-A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\. You can retrieve the required names by calling ListAvailableManagedRuleGroups\.
+A rule statement used to run the rules that are defined in a managed rule group\. To use this, provide the vendor name and the name of the rule group in this statement\. 
 
 You can't nest a `ManagedRuleGroupStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.
 
@@ -17,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ ExcludedRule, ... ],
   "[Name](#cfn-wafv2-webacl-managedrulegroupstatement-name)" : String,
-  "[ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement)" : StatementTwo,
+  "[ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement)" : Statement,
   "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String
 }
 ```
@@ -29,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ExcludedRule
   [Name](#cfn-wafv2-webacl-managedrulegroupstatement-name): String
   [ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement): 
-    StatementTwo
+    Statement
   [VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname): String
 ```
 
@@ -53,7 +50,7 @@ The name of the managed rule group\. You use this, along with the vendor name, t
 `ScopeDownStatement`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement"></a>
 Statement nested inside a managed rule group statement to narrow the scope of the requests that AWS WAF evaluates using the rule group\. Requests that match the scope\-down statement are evaluated using the rule group\. Requests that don't match the scope\-down statement are not a match for the managed rule group statement, without any further evaluation\.   
 *Required*: No  
-*Type*: [StatementTwo](aws-properties-wafv2-webacl-statementtwo.md)  
+*Type*: [Statement](aws-properties-wafv2-webacl-statement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VendorName`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-vendorname"></a>

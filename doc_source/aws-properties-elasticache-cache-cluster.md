@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClusterName](#cfn-elasticache-cachecluster-clustername)" : String,
       "[Engine](#cfn-elasticache-cachecluster-engine)" : String,
       "[EngineVersion](#cfn-elasticache-cachecluster-engineversion)" : String,
+      "[LogDeliveryConfigurations](#cfn-elasticache-cachecluster-logdeliveryconfigurations)" : [ LogDeliveryConfigurationRequest, ... ],
       "[NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn)" : String,
       "[NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes)" : Integer,
       "[Port](#cfn-elasticache-cachecluster-port)" : Integer,
@@ -52,6 +53,8 @@ Properties:
   [ClusterName](#cfn-elasticache-cachecluster-clustername): String
   [Engine](#cfn-elasticache-cachecluster-engine): String
   [EngineVersion](#cfn-elasticache-cachecluster-engineversion): String
+  [LogDeliveryConfigurations](#cfn-elasticache-cachecluster-logdeliveryconfigurations): 
+    - LogDeliveryConfigurationRequest
   [NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn): String
   [NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes): Integer
   [Port](#cfn-elasticache-cachecluster-port): Integer
@@ -176,6 +179,12 @@ The version number of the cache engine to be used for this cluster\. To view the
  **Important:** You can upgrade to a newer engine version \(see [Selecting a Cache Engine and Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)\), but you cannot downgrade to an earlier engine version\. If you want to use an earlier engine version, you must delete the existing cluster or replication group and create it anew with the earlier engine version\.   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LogDeliveryConfigurations`  <a name="cfn-elasticache-cachecluster-logdeliveryconfigurations"></a>
+Specifies the destination, format and type of the logs\.  
+*Required*: No  
+*Type*: List of [LogDeliveryConfigurationRequest](aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationTopicArn`  <a name="cfn-elasticache-cachecluster-notificationtopicarn"></a>

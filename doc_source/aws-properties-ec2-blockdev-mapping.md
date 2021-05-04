@@ -1,8 +1,8 @@
 # AWS::EC2::Instance BlockDeviceMapping<a name="aws-properties-ec2-blockdev-mapping"></a>
 
-Specifies a block device mapping for an instance\.
+Specifies a block device mapping for an instance\. You must specify exactly one of the following properties: `VirtualName`, `Ebs`, or `NoDevice`\.
 
- `BlockDeviceMapping` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
+`BlockDeviceMapping` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
 
 ## Syntax<a name="aws-properties-ec2-blockdev-mapping-syntax"></a>
 
@@ -40,21 +40,19 @@ The device name \(for example, `/dev/sdh` or `xvdh`\)\.
 
 `Ebs`  <a name="cfn-ec2-blockdev-mapping-ebs"></a>
 Parameters used to automatically set up EBS volumes when the instance is launched\.  
-You can specify either `VirtualName` or `Ebs`, but not both\.  
 *Required*: Conditional  
 *Type*: [Ebs](aws-properties-ec2-blockdev-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-ec2-blockdev-mapping-nodevice"></a>
 To omit the device from the block device mapping, specify an empty string\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [NoDevice](aws-properties-ec2-instance-nodevice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualName`  <a name="cfn-ec2-blockdev-mapping-virtualname"></a>
 The virtual device name \(`ephemeral`N\)\. The name must be in the form `ephemeral`*X* where *X* is a number starting from zero \(0\)\. For example, an instance type with 2 available instance store volumes can specify mappings for `ephemeral0` and `ephemeral1`\. The number of available instance store volumes depends on the instance type\. After you connect to the instance, you must mount the volume\.  
 NVMe instance store volumes are automatically enumerated and assigned a device name\. Including them in your block device mapping has no effect\.  
-You can specify either `VirtualName` or `Ebs`, but not both\.  
  *Constraints*: For M3 instances, you must specify instance store volumes in the block device mapping for the instance\. When you launch an M3 instance, we ignore any instance store volumes specified in the block device mapping for the AMI\.  
 *Required*: Conditional  
 *Type*: String  

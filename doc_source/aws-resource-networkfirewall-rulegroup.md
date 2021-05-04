@@ -236,34 +236,34 @@ The following shows example stateless rule group specifications\.
 
 ```
 SampleStatelessRulegroup:
-    Type: 'AWS::NetworkFirewall::RuleGroup'
-    Properties:
-      RuleGroupName: SampleStatelessRulegroupName
-      Type: STATELESS
-      RuleGroup:
-        RulesSource:
-          StatelessRulesAndCustomActions:
-            StatelessRules:
-              - RuleDefinition:
-                  MatchAttributes:
-                    Sources:
-                      - AddressDefinition: 0.0.0.0/0
-                    Destinations:
-                      - AddressDefinition: 10.0.0.0/8
-                    SourcePorts:
-                      - FromPort: 15000
-                        ToPort: 30000
-                    DestinationPorts:
-                      - FromPort: 443
-                        ToPort: 443
-                    Protocols:
-                      - 6
-                  Actions:
-                    - 'aws:pass'
-                Priority: 1
-      Capacity: 100
-      Description: Rulegroup description goes here
-      Tags:
-        - Key: Foo
-          Value: Bar
+              Type: 'AWS::NetworkFirewall::RuleGroup'
+              Properties:
+                RuleGroupName: SampleStatelessRulegroupName
+                Type: STATELESS
+                RuleGroup:
+                  RulesSource:
+                    StatelessRulesAndCustomActions:
+                      StatelessRules:
+                        - RuleDefinition:
+                            MatchAttributes:
+                              Sources:
+                                - AddressDefinition: 0.0.0.0/0
+                              Destinations:
+                                - AddressDefinition: 10.0.0.0/8
+                              SourcePorts:
+                                - FromPort: 15000
+                                  ToPort: 30000
+                              DestinationPorts:
+                                - FromPort: 443
+                                  ToPort: 443
+                              Protocols:
+                                - 6
+                            Actions:
+                              - 'aws:pass'
+                          Priority: 1
+                Capacity: 100
+                Description: Rulegroup description goes here
+                Tags:
+                  - Key: Foo
+                    Value: Bar
 ```

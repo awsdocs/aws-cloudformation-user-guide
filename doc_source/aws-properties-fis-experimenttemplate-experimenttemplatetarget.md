@@ -1,6 +1,8 @@
 # AWS::FIS::ExperimentTemplate ExperimentTemplateTarget<a name="aws-properties-fis-experimenttemplate-experimenttemplatetarget"></a>
 
-Describes a target for an experiment template\.
+Specifies a target for an experiment\. You must specify at least one Amazon Resource Name \(ARN\) or at least one resource tag\. You cannot specify both ARNs and tags\.
+
+For more information, see [Targets](https://docs.aws.amazon.com/fis/latest/userguide/targets.html) in the *AWS Fault Injection Simulator User Guide*\.
 
 ## Syntax<a name="aws-properties-fis-experimenttemplate-experimenttemplatetarget-syntax"></a>
 
@@ -10,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Filters](#cfn-fis-experimenttemplate-experimenttemplatetarget-filters)" : ExperimentTemplateTargetFilterList,
-  "[ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns)" : ResourceArnList,
+  "[Filters](#cfn-fis-experimenttemplate-experimenttemplatetarget-filters)" : [ ExperimentTemplateTargetFilter, ... ],
+  "[ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns)" : [ String, ... ],
   "[ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags)" : TagMap,
   "[ResourceType](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype)" : String,
   "[SelectionMode](#cfn-fis-experimenttemplate-experimenttemplatetarget-selectionmode)" : String
@@ -22,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Filters](#cfn-fis-experimenttemplate-experimenttemplatetarget-filters): 
-    ExperimentTemplateTargetFilterList
+    - ExperimentTemplateTargetFilter
   [ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns): 
-    ResourceArnList
+    - String
   [ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags): 
     TagMap
   [ResourceType](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype): String
@@ -36,13 +38,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Filters`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-filters"></a>
 The filters to apply to identify target resources using specific attributes\.  
 *Required*: No  
-*Type*: [ExperimentTemplateTargetFilterList](aws-properties-fis-experimenttemplate-experimenttemplatetargetfilterlist.md)  
+*Type*: List of [ExperimentTemplateTargetFilter](aws-properties-fis-experimenttemplate-experimenttemplatetargetfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArns`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns"></a>
-The Amazon Resource Names \(ARNs\) of the targets\.  
+The Amazon Resource Names \(ARNs\) of the resources\.  
 *Required*: No  
-*Type*: [ResourceArnList](aws-properties-fis-experimenttemplate-resourcearnlist.md)  
+*Type*: List of String  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -53,7 +55,7 @@ The tags for the target resources\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype"></a>
-The resource type\.  
+The AWS resource type\. The resource type must be supported for the specified action\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `64`  
@@ -61,7 +63,10 @@ The resource type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelectionMode`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-selectionmode"></a>
-Scopes the identified resources to a specific count or percentage\.  
+Scopes the identified resources to a specific count of the resources at random, or a percentage of the resources\. All identified resources are included in the target\.  
++ ALL \- Run the action on all identified targets\. This is the default\.
++ COUNT\(n\) \- Run the action on the specified number of targets, chosen from the identified targets at random\. For example, COUNT\(1\) selects one of the targets\.
++ PERCENT\(n\) \- Run the action on the specified percentage of targets, chosen from the identified targets at random\. For example, PERCENT\(25\) selects 25% of the targets\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `64`  

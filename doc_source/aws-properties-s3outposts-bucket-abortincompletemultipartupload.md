@@ -1,6 +1,6 @@
 # AWS::S3Outposts::Bucket AbortIncompleteMultipartUpload<a name="aws-properties-s3outposts-bucket-abortincompletemultipartupload"></a>
 
-Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 on Outposts waits before permanently removing all parts of the upload\. For more information, see [Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)\.
+Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 on Outposts waits before permanently removing all parts of the upload\. For more information, see [Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config)\.
 
 ## Syntax<a name="aws-properties-s3outposts-bucket-abortincompletemultipartupload-syntax"></a>
 

@@ -40,12 +40,15 @@ For information about other options available for your yum repository configurat
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
+*Pattern*: `^([\s\S]*)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-patchbaseline-patchsource-name"></a>
 The name specified to identify the patch source\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `50`  
 *Pattern*: `^[a-zA-Z0-9_\-.]{3,50}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineVersion](#cfn-elasticache-replicationgroup-engineversion)" : String,
       "[GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid)" : String,
       "[KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid)" : String,
+      "[LogDeliveryConfigurations](#cfn-elasticache-replicationgroup-logdeliveryconfigurations)" : [ LogDeliveryConfigurationRequest, ... ],
       "[MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled)" : Boolean,
       "[NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration)" : [ NodeGroupConfiguration, ... ],
       "[NotificationTopicArn](#cfn-elasticache-replicationgroup-notificationtopicarn)" : String,
@@ -73,6 +74,8 @@ Properties:
   [EngineVersion](#cfn-elasticache-replicationgroup-engineversion): String
   [GlobalReplicationGroupId](#cfn-elasticache-replicationgroup-globalreplicationgroupid): String
   [KmsKeyId](#cfn-elasticache-replicationgroup-kmskeyid): String
+  [LogDeliveryConfigurations](#cfn-elasticache-replicationgroup-logdeliveryconfigurations): 
+    - LogDeliveryConfigurationRequest
   [MultiAZEnabled](#cfn-elasticache-replicationgroup-multiazenabled): Boolean
   [NodeGroupConfiguration](#cfn-elasticache-replicationgroup-nodegroupconfiguration): 
     - NodeGroupConfiguration
@@ -230,6 +233,12 @@ The ID of the KMS key used to encrypt the disk on the cluster\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`LogDeliveryConfigurations`  <a name="cfn-elasticache-replicationgroup-logdeliveryconfigurations"></a>
+Specifies the destination, format and type of the logs\.  
+*Required*: No  
+*Type*: List of [LogDeliveryConfigurationRequest](aws-properties-elasticache-replicationgroup-logdeliveryconfigurationrequest.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiAZEnabled`  <a name="cfn-elasticache-replicationgroup-multiazenabled"></a>
 A flag indicating if you have Multi\-AZ enabled to enhance fault tolerance\. For more information, see [Minimizing Downtime: Multi\-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html)\.  

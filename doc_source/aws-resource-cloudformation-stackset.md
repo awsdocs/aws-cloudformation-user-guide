@@ -67,7 +67,7 @@ Use customized administrator roles to control which users or groups can manage s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoDeployment`  <a name="cfn-cloudformation-stackset-autodeployment"></a>
-\[`Service-managed` permissions\] Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to a target organization or organizational unit \(OU\)\.   
+\[`Service-managed` permissions\] Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to a target organization or organizational unit \(OU\)\.  
 *Required*: No  
 *Type*: [AutoDeployment](aws-properties-cloudformation-stackset-autodeployment.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `TimerName`  <a name="cfn-iotevents-detectormodel-resettimer-timername"></a>
 The name of the timer to reset\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

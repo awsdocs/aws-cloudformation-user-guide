@@ -2,7 +2,7 @@
 
 The `AWS::AutoScaling::LaunchConfiguration` resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
-When you update the launch configuration for an Auto Scaling group, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. Existing instances are not affected\. To update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. 
+When you update the launch configuration for an Auto Scaling group, CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. Existing instances are not affected\. To update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. 
 
 For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference* and [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
@@ -422,11 +422,11 @@ For more performance tips, see [Amazon EBS volume performance on Linux instances
         "KeyName":{
           "Ref":"KeyName"
         },
-        "UserData": {"Fn::Join": ["", [
+        "UserData": {"Fn::Base64": {"Fn::Join": ["", [
           "#!/bin/bash -x\n",
           "/opt/aws/bin/cfn-init -v --stack ", {"Ref": "AWS::StackName"}, " --resource myLaunchConfig ", " --configsets default ", " --region ", {"Ref": "AWS::Region"}, "\n",
           "/opt/aws/bin/cfn-signal -e $? --stack ", {"Ref": "AWS::StackName"}, " --resource myASG ", " --region ", {"Ref": "AWS::Region"}, "\n"
-        ]]},
+        ]]}},
         "EbsOptimized":"true"
       }
     }

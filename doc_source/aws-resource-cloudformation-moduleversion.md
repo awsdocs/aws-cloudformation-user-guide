@@ -4,7 +4,7 @@ Registers the specified version of the module with the CloudFormation service\. 
 
 To specify a module version as the default version, use the `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)` resource\.
 
-For more information using modules, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and [Registering extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the *CloudFormation User Guide*\. For information on developing modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\. 
+For more information using modules, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and [Registering extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the *CloudFormation User Guide*\. For information on developing modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\.
 
 ## Syntax<a name="aws-resource-cloudformation-moduleversion-syntax"></a>
 
@@ -144,7 +144,7 @@ Resources:
 
 ### Registering multiple module versions<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions"></a>
 
-The following example registers two versions of a module\. Note the following: 
+The following example registers two versions of a module\. Note the following:
 + The example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
 + CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and region\.\)
 

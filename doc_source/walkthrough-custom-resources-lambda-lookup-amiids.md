@@ -326,5 +326,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related information<a name="w8676ab1c27c23c16b7c29"></a>
+## Related information<a name="w8776ab1c27c23c16b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

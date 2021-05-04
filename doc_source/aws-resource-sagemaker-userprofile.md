@@ -60,6 +60,7 @@ The username of the associated AWS Single Sign\-On User for this UserProfile\. I
 
 `Tags`  <a name="cfn-sagemaker-userprofile-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
+Tags that you specify for the User Profile are also added to all Apps that the User Profile launches\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  

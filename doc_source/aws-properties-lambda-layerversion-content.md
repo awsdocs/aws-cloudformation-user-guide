@@ -1,6 +1,6 @@
 # AWS::Lambda::LayerVersion Content<a name="aws-properties-lambda-layerversion-content"></a>
 
-A ZIP archive that contains the contents of an [AWS Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)\.
+A ZIP archive that contains the contents of an [Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)\.
 
 ## Syntax<a name="aws-properties-lambda-layerversion-content-syntax"></a>
 

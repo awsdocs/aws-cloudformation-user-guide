@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::PrivateDnsNamespace<a name="aws-resource-servicediscovery-privatednsnamespace"></a>
 
-Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service will be `backend.example.com`\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
+Creates a private namespace based on DNS, which is visible only inside a specified Amazon VPC\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service is `backend.example.com`\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
 
 ## Syntax<a name="aws-resource-servicediscovery-privatednsnamespace-syntax"></a>
 
@@ -117,5 +117,5 @@ Properties:
 ```
 
 ## See also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
-+  [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference* 
++ [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference*
 

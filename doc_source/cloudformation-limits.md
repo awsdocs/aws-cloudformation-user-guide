@@ -45,4 +45,4 @@ Not all features of CloudFormation may be available in every Region\. For more i
 
 ## StackSets and macros<a name="stacksets-macros"></a>
 
-StackSets does not currently support templates that use macros\. This includes transforms, which are macros hosted by AWS CloudFormation\. For more information about macros, see [Template macros](template-macros.md)\.
+StackSets does not currently support creating or updating stack sets with service\-managed permissions from templates that contain macros\. This includes transforms, which are macros hosted by AWS CloudFormation\. For more information about macros, see [Template macros](template-macros.md)\.

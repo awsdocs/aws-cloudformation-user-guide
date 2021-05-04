@@ -9,7 +9,7 @@ If you don't have `s3-outposts:PutBucketPolicy` permissions, S3 on Outposts retu
 **Important**  
 The root user of the AWS account that owns an Outposts bucket can *always* use this resource, even if the policy explicitly denies the root user the ability to perform this resource\. 
 
- For more information, see the AWS::IAM::Policy [ PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument) resource description in this guide and [ Access Policy Language Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html)\.
+ For more information, see the AWS::IAM::Policy [ PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument) resource description in this guide and [ Access Policy Language Overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-policy-language-overview.html)\.
 
 ## Syntax<a name="aws-resource-s3outposts-bucketpolicy-syntax"></a>
 
@@ -45,7 +45,7 @@ The name of the Amazon S3 Outposts bucket to which the policy applies\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyDocument`  <a name="cfn-s3outposts-bucketpolicy-policydocument"></a>
- A policy document containing permissions to add to the specified bucket\. In IAM, you must provide policy documents in JSON format\. However, in CloudFormation you can provide the policy in JSON or YAML format because CloudFormation converts YAML to JSON before submitting it to IAM\. For more information, see the AWS::IAM::Policy [ PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument) resource description in this guide and [ Access Policy Language Overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html)\.  
+ A policy document containing permissions to add to the specified bucket\. In IAM, you must provide policy documents in JSON format\. However, in CloudFormation you can provide the policy in JSON or YAML format because CloudFormation converts YAML to JSON before submitting it to IAM\. For more information, see the AWS::IAM::Policy [ PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument) resource description in this guide and [ Access Policy Language Overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-policy-language-overview.html)\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

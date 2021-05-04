@@ -7,7 +7,6 @@ The `AWS::MWAA::Environment` resource creates an Amazon Managed Workflows for Ap
 + [Properties](#aws-resource-mwaa-environment-properties)
 + [Return values](#aws-resource-mwaa-environment-return-values)
 + [Examples](#aws-resource-mwaa-environment--examples)
-+ [AWS::MWAA::Environment AirflowConfigurationOptions](aws-properties-mwaa-environment-airflowconfigurationoptions.md)
 + [AWS::MWAA::Environment LoggingConfiguration](aws-properties-mwaa-environment-loggingconfiguration.md)
 + [AWS::MWAA::Environment ModuleLoggingConfiguration](aws-properties-mwaa-environment-moduleloggingconfiguration.md)
 + [AWS::MWAA::Environment NetworkConfiguration](aws-properties-mwaa-environment-networkconfiguration.md)
@@ -23,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MWAA::Environment",
   "Properties" : {
-      "[AirflowConfigurationOptions](#cfn-mwaa-environment-airflowconfigurationoptions)" : AirflowConfigurationOptions,
+      "[AirflowConfigurationOptions](#cfn-mwaa-environment-airflowconfigurationoptions)" : Json,
       "[AirflowVersion](#cfn-mwaa-environment-airflowversion)" : String,
       "[DagS3Path](#cfn-mwaa-environment-dags3path)" : String,
       "[EnvironmentClass](#cfn-mwaa-environment-environmentclass)" : String,
@@ -31,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KmsKey](#cfn-mwaa-environment-kmskey)" : String,
       "[LoggingConfiguration](#cfn-mwaa-environment-loggingconfiguration)" : LoggingConfiguration,
       "[MaxWorkers](#cfn-mwaa-environment-maxworkers)" : Integer,
+      "[MinWorkers](#cfn-mwaa-environment-minworkers)" : Integer,
       "[Name](#cfn-mwaa-environment-name)" : String,
       "[NetworkConfiguration](#cfn-mwaa-environment-networkconfiguration)" : NetworkConfiguration,
       "[PluginsS3ObjectVersion](#cfn-mwaa-environment-pluginss3objectversion)" : String,
@@ -50,8 +50,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::MWAA::Environment
 Properties: 
-  [AirflowConfigurationOptions](#cfn-mwaa-environment-airflowconfigurationoptions): 
-    AirflowConfigurationOptions
+  [AirflowConfigurationOptions](#cfn-mwaa-environment-airflowconfigurationoptions): Json
   [AirflowVersion](#cfn-mwaa-environment-airflowversion): String
   [DagS3Path](#cfn-mwaa-environment-dags3path): String
   [EnvironmentClass](#cfn-mwaa-environment-environmentclass): String
@@ -60,6 +59,7 @@ Properties:
   [LoggingConfiguration](#cfn-mwaa-environment-loggingconfiguration): 
     LoggingConfiguration
   [MaxWorkers](#cfn-mwaa-environment-maxworkers): Integer
+  [MinWorkers](#cfn-mwaa-environment-minworkers): Integer
   [Name](#cfn-mwaa-environment-name): String
   [NetworkConfiguration](#cfn-mwaa-environment-networkconfiguration): 
     NetworkConfiguration
@@ -77,9 +77,9 @@ Properties:
 ## Properties<a name="aws-resource-mwaa-environment-properties"></a>
 
 `AirflowConfigurationOptions`  <a name="cfn-mwaa-environment-airflowconfigurationoptions"></a>
-A list of key\-value pairs containing your Apache Airflow configuration options\.  
+A list of key\-value pairs containing the Airflow configuration options for your environment\. For example, `core.default_timezone: utc`\. To learn more, see [Apache Airflow configuration options](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html)\.  
 *Required*: No  
-*Type*: [AirflowConfigurationOptions](aws-properties-mwaa-environment-airflowconfigurationoptions.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AirflowVersion`  <a name="cfn-mwaa-environment-airflowversion"></a>
@@ -119,7 +119,13 @@ The Apache Airflow logging settings for the environment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxWorkers`  <a name="cfn-mwaa-environment-maxworkers"></a>
-The maximum number of workers to scale up to in the environment\. For example: `5`\.  
+The maximum number of workers that you want to run in your environment\. MWAA scales the number of Apache Airflow workers up to the number you specify in the `MaxWorkers` field\. For example, `20`\. When there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the one worker that is included with your environment, or the number you specify in `MinWorkers`\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MinWorkers`  <a name="cfn-mwaa-environment-minworkers"></a>
+The minimum number of workers that you want to run in your environment\. MWAA scales the number of Apache Airflow workers up to the number you specify in the `MaxWorkers` field\. When there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the `MinWorkers` field\. For example, `2`\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

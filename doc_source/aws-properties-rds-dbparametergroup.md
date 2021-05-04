@@ -45,7 +45,7 @@ Properties:
 ## Properties<a name="aws-properties-rds-dbparametergroup-properties"></a>
 
 `Description`  <a name="cfn-rds-dbparametergroup-description"></a>
-Provides the customer\-specified description for this DB Parameter Group\.  
+Provides the customer\-specified description for this DB parameter group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,7 +62,7 @@ For more information, see `[CreateDBParameterGroup](https://docs.aws.amazon.com/
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-rds-dbparametergroup-parameters"></a>
-An array of parameter names and values for the parameter update\. At least one parameter name and value must be supplied\. Subsequent arguments are optional\. You can modify a maximum of 20 parameters in a single request\.  
+An array of parameter names and values for the parameter update\. At least one parameter name and value must be supplied\. Subsequent arguments are optional\.  
 For more information about DB parameters and DB parameter groups for Amazon RDS DB engines, see [ Working with DB Parameter Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html) in the *Amazon RDS User Guide*\.  
 For more information about DB cluster and DB instance parameters and parameter groups for Amazon Aurora DB engines, see [ Working with DB Parameter Groups and DB Cluster Parameter Groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html) in the *Amazon Aurora User Guide*\.  
 AWS CloudFormation doesn't support specifying an apply method for each individual parameter\. The default apply method for each parameter is used\.

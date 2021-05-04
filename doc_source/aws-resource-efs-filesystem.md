@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AvailabilityZoneName](#cfn-efs-filesystem-availabilityzonename)" : String,
       "[BackupPolicy](#cfn-efs-filesystem-backuppolicy)" : BackupPolicy,
+      "[BypassPolicyLockoutSafetyCheck](#cfn-efs-filesystem-bypasspolicylockoutsafetycheck)" : Boolean,
       "[Encrypted](#cfn-efs-filesystem-encrypted)" : Boolean,
       "[FileSystemPolicy](#cfn-efs-filesystem-filesystempolicy)" : Json,
       "[FileSystemTags](#cfn-efs-filesystem-filesystemtags)" : [ ElasticFileSystemTag, ... ],
@@ -34,6 +35,7 @@ Properties:
   [AvailabilityZoneName](#cfn-efs-filesystem-availabilityzonename): String
   [BackupPolicy](#cfn-efs-filesystem-backuppolicy): 
     BackupPolicy
+  [BypassPolicyLockoutSafetyCheck](#cfn-efs-filesystem-bypasspolicylockoutsafetycheck): Boolean
   [Encrypted](#cfn-efs-filesystem-encrypted): Boolean
   [FileSystemPolicy](#cfn-efs-filesystem-filesystempolicy): Json
   [FileSystemTags](#cfn-efs-filesystem-filesystemtags): 
@@ -62,6 +64,12 @@ One Zone storage classes are not available in all Availability Zones in AWS Regi
 Use the `BackupPolicy` to turn automatic backups on or off for the file system\.  
 *Required*: No  
 *Type*: [BackupPolicy](aws-properties-efs-filesystem-backuppolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BypassPolicyLockoutSafetyCheck`  <a name="cfn-efs-filesystem-bypasspolicylockoutsafetycheck"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-efs-filesystem-encrypted"></a>

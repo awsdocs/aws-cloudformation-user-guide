@@ -4,6 +4,8 @@ Specifies a route in a route table within a VPC\.
 
 You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock`, plus the ID of one of the target resources\.
 
+If you create a route that references a transit gateway in the same template where you create the transit gateway, you must declare a dependency on the transit gateway attachment\. The route table cannot use the transit gateway until it has successfully attached to the VPC\. Add a [ DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) in the `AWS::EC2::Route` resource to explicitly declare a dependency on the `AWS::EC2::TransitGatewayAttachment` resource\.
+
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

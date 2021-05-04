@@ -41,7 +41,7 @@ Exception: Not supported on Debian Server or Ubuntu Server\.
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
-*Maximum*: `100`  
+*Maximum*: `360`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApproveUntilDate`  <a name="cfn-ssm-patchbaseline-rule-approveuntildate"></a>

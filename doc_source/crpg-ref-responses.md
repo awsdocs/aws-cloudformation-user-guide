@@ -39,7 +39,7 @@ The template developer\-chosen name \(logical ID\) of the custom resource in the
 *Type*: String
 
 NoEcho  <a name="crpg-ref-responses-noecho"></a>
-Optional\. Indicates whether to mask the output of the custom resource when retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\), *except for those stored in the `Metadata` section of the template*\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. The default value is `false`\.  
+Optional\. Indicates whether to mask the output of the custom resource when retrieved by using the `Fn::GetAtt` function\. If set to `true`, all returned values are masked with asterisks \(\*\*\*\*\*\), *except for those stored in the `Metadata` section of the template*\. AWS CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. The default value is `false`\.  
 For more information about using `NoEcho` to mask sensitive information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.  
 *Required*: No  
 *Type*: Boolean

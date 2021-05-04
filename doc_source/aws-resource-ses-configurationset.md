@@ -28,8 +28,8 @@ Properties:
 ## Properties<a name="aws-resource-ses-configurationset-properties"></a>
 
 `Name`  <a name="cfn-ses-configurationset-name"></a>
-The name of the configuration set\. The name must:  
-+ Only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
+The name of the configuration set\. The name must meet the following requirements:  
++ Contain only letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
 + Contain 64 characters or fewer\.
 *Required*: No  
 *Type*: String  
@@ -54,38 +54,17 @@ Specifies a configuration set\.
 #### JSON<a name="aws-resource-ses-configurationset--examples----json"></a>
 
 ```
-{
-    "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ConfigurationSet Sample Template",
-    "Parameters": {
-        "ConfigSetName": {
-            "Type": "String"
-        }
-    },
-    "Resources": {
-        "ConfigSet": {
-            "Type": "AWS::SES::ConfigurationSet",
-            "Properties": {
-                "Name": {
-                    "Ref": "ConfigSetName"
-                }
-            }
-        }
-    }
-}
+{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
+                SES ConfigurationSet Sample Template", "Parameters": { "ConfigSetName": { "Type":
+                "String" } }, "Resources": { "ConfigSet": { "Type": "AWS::SES::ConfigurationSet",
+                "Properties": { "Name": { "Ref": "ConfigSetName" } } } } }
 ```
 
 #### YAML<a name="aws-resource-ses-configurationset--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: AWS SES ConfigurationSet Sample Template
-Parameters:
-  ConfigSetName:
-    Type: String
-Resources:
-  ConfigSet:
-    Type: 'AWS::SES::ConfigurationSet'
-    Properties:
-      Name: !Ref ConfigSetName
+AWSTemplateFormatVersion: 2010-09-09 Description: AWS SES
+                ConfigurationSet Sample Template Parameters: ConfigSetName: Type: String Resources:
+                ConfigSet: Type: 'AWS::SES::ConfigurationSet' Properties: Name: !Ref
+                ConfigSetName
 ```

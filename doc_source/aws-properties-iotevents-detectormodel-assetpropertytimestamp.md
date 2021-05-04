@@ -45,6 +45,6 @@ The nanosecond offset converted from `timeInSeconds`\. The valid range is betwee
 
 `TimeInSeconds`  <a name="cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds"></a>
 The timestamp, in seconds, in the Unix epoch format\. The valid range is between 1\-31556889864403199\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Lambda::LayerVersion<a name="aws-resource-lambda-layerversion"></a>
 
-The `AWS::Lambda::LayerVersion` resource creates an [AWS Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) from a ZIP archive\.
+The `AWS::Lambda::LayerVersion` resource creates an [Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) from a ZIP archive\.
 
 ## Syntax<a name="aws-resource-lambda-layerversion-syntax"></a>
 

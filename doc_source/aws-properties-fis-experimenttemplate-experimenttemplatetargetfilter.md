@@ -1,6 +1,8 @@
 # AWS::FIS::ExperimentTemplate ExperimentTemplateTargetFilter<a name="aws-properties-fis-experimenttemplate-experimenttemplatetargetfilter"></a>
 
-Describes a filter used for the target resources in an experiment template\.
+Specifies a filter used for the target resource input in an experiment template\.
+
+For more information, see [Resource filters](https://docs.aws.amazon.com/fis/latest/userguide/targets.html#target-filters) in the *AWS Fault Injection Simulator User Guide*\.
 
 ## Syntax<a name="aws-properties-fis-experimenttemplate-experimenttemplatetargetfilter-syntax"></a>
 
@@ -11,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Path](#cfn-fis-experimenttemplate-experimenttemplatetargetfilter-path)" : String,
-  "[Values](#cfn-fis-experimenttemplate-experimenttemplatetargetfilter-values)" : ExperimentTemplateTargetFilterValues
+  "[Values](#cfn-fis-experimenttemplate-experimenttemplatetargetfilter-values)" : [ String, ... ]
 }
 ```
 
@@ -20,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Path](#cfn-fis-experimenttemplate-experimenttemplatetargetfilter-path): String
   [Values](#cfn-fis-experimenttemplate-experimenttemplatetargetfilter-values): 
-    ExperimentTemplateTargetFilterValues
+    - String
 ```
 
 ## Properties<a name="aws-properties-fis-experimenttemplate-experimenttemplatetargetfilter-properties"></a>
@@ -36,5 +38,5 @@ The attribute path for the filter\.
 `Values`  <a name="cfn-fis-experimenttemplate-experimenttemplatetargetfilter-values"></a>
 The attribute values for the filter\.  
 *Required*: Yes  
-*Type*: [ExperimentTemplateTargetFilterValues](aws-properties-fis-experimenttemplate-experimenttemplatetargetfiltervalues.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
