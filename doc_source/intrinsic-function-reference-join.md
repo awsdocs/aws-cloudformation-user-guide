@@ -85,7 +85,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 3.   - - 'arn:'
 4.     - !Ref AWS::Partition
 5.     - ':s3:::elasticbeanstalk-*-'
-6.     - !Ref 'AWS::AccountId'
+6.     - !Ref AWS::AccountId
 ```
 
 **Note**  
