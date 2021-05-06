@@ -30,6 +30,9 @@ The following list provides a summary of how a wait condition with a wait condit
 
 1. Declare an AWS::CloudFormation::WaitConditionHandle resource in the stack's template\. A wait condition handle has no properties; however, a reference to a WaitConditionHandle resource resolves to a pre\-signed URL that you can use to signal success or failure to the WaitCondition\. For example:
 
+
+### JSON<a name="aws-properties-waitconditionhandle-syntax.json"></a>
+
    ```
    1. "myWaitHandle" : {
    2.      "Type" : "AWS::CloudFormation::WaitConditionHandle",
@@ -37,12 +40,21 @@ The following list provides a summary of how a wait condition with a wait condit
    4.      }
    5. }
    ```
+   
+### YAML<a name="aws-properties-waitconditionhandle-syntax.yaml"></a>
+
+   ```
+   1. myWaitHandle:
+   2.      Type: AWS::CloudFormation::WaitConditionHandle
+   ```
 
 1. Declare an AWS::CloudFormation::WaitCondition resource in the stack's template\. A WaitCondition resource has two required properties: Handle is a reference to a WaitConditionHandle declared in the template and Timeout is the number seconds for AWS CloudFormation to wait\. You can optionally set the Count property, which determines the number of success signals that the wait condition must receive before AWS CloudFormation can resume creating the stack\.
 
    To control when the wait condition is triggered, you set a DependsOn attribute on the wait condition\. A DependsOn clause associates a resource with the wait condition\. After AWS CloudFormation creates the DependsOn resource, it blocks further stack resource creation until one of the following events occur: a\) the timeout period expires b\) The requisite number of success signals are received c\) A failure signal is received\.
 
    Here is an example of a wait condition that begins after the successful creation of the Ec2Instance resource, uses the myWaitHandle resource as the WaitConditionHandle, has a timeout of 4500 seconds, and has the default Count of 1 \(since no Count property is specified\):
+
+### JSON<a name="aws-properties-waitcondition-example-syntax.json"></a>
 
    ```
    1. "myWaitCondition" : {
@@ -54,10 +66,25 @@ The following list provides a summary of how a wait condition with a wait condit
    7.     }
    8. }
    ```
+   
+### YAML<a name="aws-properties-waitconditionhandle-example-syntax.yaml"></a>
 
+   ```
+   1. myWaitCondition:
+   2.      Type: AWS::CloudFormation::WaitCondition
+   3.      DependsOn: Ec2Instance
+   4.      Properties:
+   5.         Handle:  
+   6.          Ref: myWaitHandle 
+   7.          Timeout: '4500'
+   8.
+   ```
+   
 1. Get the presigned URL to use for signaling\.
 
-   In the template, the presigned URL can be retrieved by passing the logical name of the AWS::CloudFormation::WaitConditionHandle resource to the Ref intrinsic function\. For example, you can use the UserData property on AWS::EC2::Instance resources to pass the presigned URL to the Amazon EC2 instances so that scripts or applications running on those instances can signal success or failure to AWS CloudFormation:
+   In the template, the presigned URL can be retrieved by passing the logical name of the AWS::CloudFormation::WaitConditionHandle resource to the Ref intrinsic function\. For example, you can use the UserData property on AWS::EC2::Instance resources to pass the presigned URL to the Amazon EC2 instances so that scripts or applications running on those instances can signal success or failure to AWS CloudFormation:   
+   
+   ### JSON<a name="aws-properties-userdata-ec2instance.json"></a>
 
    ```
    1. "UserData" : {
@@ -65,6 +92,17 @@ The following list provides a summary of how a wait condition with a wait condit
    3.        "Fn::Join" : [ "", ["SignalURL=", { "Ref" : "myWaitHandle" } ] ]
    4.    }
    5. }
+   ```
+   
+   ### YAML<a name="aws-properties-userdata-ec2instance.yaml"></a>
+
+   ```
+   1. UserData:
+   2.      Fn::Base64:
+   3.         Fn::Join: 
+   4.            - ''
+   5.            - - 'SignalURL='
+   6.              - !Ref myWaitHandle
    ```
 
    Note: In the AWS Management Console or the AWS CloudFormation command line tools, the presigned URL is displayed as the physical ID of the wait condition handle resource\.
