@@ -73,18 +73,52 @@ The following example creates an S3 Action in a SES RuleSet\.
 #### JSON<a name="aws-properties-ses-receiptrule-s3action--examples--S3_Action_in_SES_RuleSet--json"></a>
 
 ```
-{ "SesRuleSet": { "Type": "AWS::SES::ReceiptRuleSet" },
-                "SesRule": { "Type": "AWS::SES::ReceiptRule", "Properties": { "Rule": {
-                "Recipients": [ "String" ], "Actions": [ { "S3Action": { "BucketName": { "Ref":
-                "Bucket" } } } ], "Enabled": true, "ScanEnabled": true }, "RuleSetName": { "Ref":
-                "SesRuleSet" } } } }
+{
+    "SesRuleSet": {
+        "Type": "AWS::SES::ReceiptRuleSet"
+    },
+    "SesRule": {
+        "Type": "AWS::SES::ReceiptRule",
+        "Properties": {
+            "Rule": {
+                "Recipients": [
+                    "String"
+                ],
+                "Actions": [
+                    {
+                        "S3Action": {
+                            "BucketName": {
+                                "Ref": "Bucket"
+                            }
+                        }
+                    }
+                ],
+                "Enabled": true,
+                "ScanEnabled": true
+            },
+            "RuleSetName": {
+                "Ref": "SesRuleSet"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-properties-ses-receiptrule-s3action--examples--S3_Action_in_SES_RuleSet--yaml"></a>
 
 ```
-SesRuleSet: Type: 'AWS::SES::ReceiptRuleSet' SesRule: Type:
-                'AWS::SES::ReceiptRule' Properties: Rule: Recipients: - String Actions: - S3Action:
-                BucketName: !Ref Bucket Enabled: true ScanEnabled: true RuleSetName: !Ref
-                SesRuleSet
+SesRuleSet:
+  Type: 'AWS::SES::ReceiptRuleSet'
+SesRule:
+  Type: 'AWS::SES::ReceiptRule'
+  Properties:
+    Rule:
+      Recipients:
+        - String
+      Actions:
+        - S3Action:
+            BucketName: !Ref Bucket
+      Enabled: true
+      ScanEnabled: true
+    RuleSetName: !Ref SesRuleSet
 ```

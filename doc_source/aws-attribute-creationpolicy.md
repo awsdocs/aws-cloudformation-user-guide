@@ -10,7 +10,7 @@ The creation policy is invoked only when CloudFormation creates the associated r
 
 Use the `CreationPolicy` attribute when you want to wait on resource configuration actions before stack creation proceeds\. For example, if you install and configure software applications on an EC2 instance, you might want those applications to be running before proceeding\. In such cases, you can add a `CreationPolicy` attribute to the instance, and then send a success signal to the instance after the applications are installed and configured\. For a detailed example, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
-## Syntax<a name="w8776ab1c33c23b7c11"></a>
+## Syntax<a name="w8918ab1c33c23b7c11"></a>
 
 ### JSON<a name="aws-attribute-creationpolicy-syntax.json"></a>
 
@@ -61,9 +61,9 @@ The value must be in [ISO8601 duration format](http://en.wikipedia.org/wiki/ISO_
 *Type*: String  
 *Required*: No
 
-## Examples<a name="w8776ab1c33c23b7c15"></a>
+## Examples<a name="w8918ab1c33c23b7c15"></a>
 
-### Auto Scaling group<a name="w8776ab1c33c23b7c15b3"></a>
+### Auto Scaling group<a name="w8918ab1c33c23b7c15b3"></a>
 
 The following example shows how to add a creation policy to an Auto Scaling group\. The creation policy requires three success signals and times out after 15 minutes\.
 
@@ -157,7 +157,7 @@ LaunchConfig:
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```
 
-### WaitCondition<a name="w8776ab1c33c23b7c15b5"></a>
+### WaitCondition<a name="w8918ab1c33c23b7c15b5"></a>
 
 The following example shows how to add a creation policy to a wait condition\.
 

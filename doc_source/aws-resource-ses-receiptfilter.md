@@ -45,20 +45,62 @@ Specifies an IP address filter for incoming email\.
 #### JSON<a name="aws-resource-ses-receiptfilter--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Description": "AWS
-                SES ReceiptFilter Sample Template", "Parameters": { "FilterName": { "Type": "String"
-                }, "Policy": { "Type": "String" }, "Cidr": { "Type": "String" } }, "Resources": {
-                "ReceiptFilter": { "Type": "AWS::SES::ReceiptFilter", "Properties": { "Filter": {
-                "Name": { "Ref": "FilterName" }, "IpFilter": { "Policy": { "Ref": "Policy" },
-                "Cidr": { "Ref": "Cidr" } } } } } } }
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "AWS SES ReceiptFilter Sample Template",
+    "Parameters": {
+        "FilterName": {
+            "Type": "String"
+        },
+        "Policy": {
+            "Type": "String"
+        },
+        "Cidr": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "ReceiptFilter": {
+            "Type": "AWS::SES::ReceiptFilter",
+            "Properties": {
+                "Filter": {
+                    "Name": {
+                        "Ref": "FilterName"
+                    },
+                    "IpFilter": {
+                        "Policy": {
+                            "Ref": "Policy"
+                        },
+                        "Cidr": {
+                            "Ref": "Cidr"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-ses-receiptfilter--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09 Description: AWS SES
-                ReceiptFilter Sample Template Parameters: FilterName: Type: String Policy: Type:
-                String Cidr: Type: String Resources: ReceiptFilter: Type: 'AWS::SES::ReceiptFilter'
-                Properties: Filter: Name: !Ref FilterName IpFilter: Policy: !Ref Policy Cidr: !Ref
-                Cidr
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS SES ReceiptFilter Sample Template
+Parameters:
+  FilterName:
+    Type: String
+  Policy:
+    Type: String
+  Cidr:
+    Type: String
+Resources:
+  ReceiptFilter:
+    Type: 'AWS::SES::ReceiptFilter'
+    Properties:
+      Filter:
+        Name: !Ref FilterName
+        IpFilter:
+          Policy: !Ref Policy
+          Cidr: !Ref Cidr
 ```

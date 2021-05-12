@@ -47,7 +47,7 @@ The settings for an fMP4 container\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameCaptureHlsSettings`  <a name="cfn-medialive-channel-hlssettings-framecapturehlssettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for a frame capture output in an HLS output group\.   
 *Required*: No  
 *Type*: [FrameCaptureHlsSettings](aws-properties-medialive-channel-framecapturehlssettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

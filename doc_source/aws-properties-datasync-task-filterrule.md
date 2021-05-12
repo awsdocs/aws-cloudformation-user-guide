@@ -1,6 +1,6 @@
 # AWS::DataSync::Task FilterRule<a name="aws-properties-datasync-task-filterrule"></a>
 
-Specifies which files, folders and objects to include or exclude when transferring files from source to destination\.
+Specifies which files, folders, and objects to include or exclude when transferring files from source to destination\.
 
 ## Syntax<a name="aws-properties-datasync-task-filterrule-syntax"></a>
 

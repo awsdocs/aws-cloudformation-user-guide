@@ -135,7 +135,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the MediaLive input\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:input:1234567\. MediaLive creates this ARN when it creates the input\. 
 
 `Destinations`  <a name="Destinations-fn::getatt"></a>
-For a push input, the destination or destinations for the input\. The destinations are the IP addresses on MediaLive where the upstream system pushes the content to for this input\. MediaLive creates these IP addresses when it creates the input\. 
+For a push input, the the destination or destinations for the input\. The destinations are the URLs of locations on MediaLive where the upstream system pushes the content to, for this input\. MediaLive creates these addresses when it creates the input\. 
 
 `Sources`  <a name="Sources-fn::getatt"></a>
-For a pull input, the source or sources for the input\. The sources are the IP addresses on the upstream system where MediaLive pulls the content from for this input\. You included these IP addresses in the create request\.
+For a pull input, the source or sources for the input\. The sources are the URLs of locations on the upstream system where MediaLive pulls the content from, for this input\. You included these URLs in the create request\.

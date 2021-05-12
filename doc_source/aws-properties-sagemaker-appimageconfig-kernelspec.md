@@ -32,7 +32,7 @@ The display name of the kernel\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-sagemaker-appimageconfig-kernelspec-name"></a>
-The name of the kernel\.  
+The name of the Jupyter kernel in the image\. This value is case sensitive\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

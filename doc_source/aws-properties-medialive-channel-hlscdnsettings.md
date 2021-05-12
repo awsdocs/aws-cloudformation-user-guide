@@ -56,7 +56,7 @@ Sets up MediaStore as the destination for the HLS output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsS3Settings`  <a name="cfn-medialive-channel-hlscdnsettings-hlss3settings"></a>
-Not currently supported by AWS CloudFormation\.  
+Sets up Amazon S3 as the destination for this HLS output\.  
 *Required*: No  
 *Type*: [HlsS3Settings](aws-properties-medialive-channel-hlss3settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -99,7 +99,7 @@ AWS CloudFormation resource tags to apply to the document\. Use tags to help you
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetType`  <a name="cfn-ssm-document-targettype"></a>
-Specify a target type to define the kinds of resources the document can run on\. For example, to run a document on EC2 instances, specify the following value: /AWS::EC2::Instance\. If you specify a value of '/' the document can run on all types of resources\. If you don't specify a value, the document can't run on any resources\. For a list of valid resource types, see [AWS resource and property types reference](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) in the *AWS CloudFormation User Guide*\.   
+Specify a target type to define the kinds of resources the document can run on\. For example, to run a document on EC2 instances, specify the following value: /AWS::EC2::Instance\. If you specify a value of '/' the document can run on all types of resources\. If you don't specify a value, the document can't run on any resources\. For a list of valid resource types, see [AWS resource and property types reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) in the *AWS CloudFormation User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `200`  

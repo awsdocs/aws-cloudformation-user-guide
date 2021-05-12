@@ -81,7 +81,7 @@ If you are updating a metric stream, specify the name of that stream here\.
 `OutputFormat`  <a name="cfn-cloudwatch-metricstream-outputformat"></a>
 The output format for the stream\. Valid values are `json` and `opentelemetry0.7` For more information about metric stream output formats, see [ Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html)\.  
 This parameter is required\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -101,7 +101,7 @@ The configuration settings that apply to the entire channel\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MotionGraphicsConfiguration`  <a name="cfn-medialive-channel-encodersettings-motiongraphicsconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to enable and configure the motion graphics overlay feature in the channel\.  
 *Required*: No  
 *Type*: [MotionGraphicsConfiguration](aws-properties-medialive-channel-motiongraphicsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

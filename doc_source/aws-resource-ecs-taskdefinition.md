@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ ContainerDefinition, ... ],
       "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
+      "[EphemeralStorage](#cfn-ecs-taskdefinition-ephemeralstorage)" : EphemeralStorage,
       "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
       "[Family](#cfn-ecs-taskdefinition-family)" : String,
       "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ InferenceAccelerator, ... ],
@@ -39,6 +40,8 @@ Properties:
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions): 
     - ContainerDefinition
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
+  [EphemeralStorage](#cfn-ecs-taskdefinition-ephemeralstorage): 
+    EphemeralStorage
   [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
   [InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators): 
@@ -78,6 +81,12 @@ The number of `cpu` units used by the task\. If you are using the EC2 launch typ
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EphemeralStorage`  <a name="cfn-ecs-taskdefinition-ephemeralstorage"></a>
+The ephemeral storage settings to use for tasks run with the task definition\.  
+*Required*: No  
+*Type*: [EphemeralStorage](aws-properties-ecs-taskdefinition-ephemeralstorage.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
 The Amazon Resource Name \(ARN\) of the task execution role that grants the Amazon ECS container agent permission to make AWS API calls on your behalf\. The task execution IAM role is required depending on the requirements of your task\. For more information, see [Amazon ECS task execution IAM role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) in the *Amazon Elastic Container Service Developer Guide*\.  

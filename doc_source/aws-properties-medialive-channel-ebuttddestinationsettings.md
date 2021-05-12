@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-ebuttddestinationsettings-properties"></a>
 
 `CopyrightHolder`  <a name="cfn-medialive-channel-ebuttddestinationsettings-copyrightholder"></a>
-Not currently supported by AWS CloudFormation\.  
+Applies only if you plan to convert these source captions to EBU\-TT\-D or TTML in an output\. Complete this field if you want to include the name of the copyright holder in the copyright metadata tag in the TTML  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

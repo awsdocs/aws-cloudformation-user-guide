@@ -1,9 +1,11 @@
 # AWS::SES::ConfigurationSetEventDestination EventDestination<a name="aws-properties-ses-configurationseteventdestination-eventdestination"></a>
 
-Contains information about the event destination that email sending events are published to\. Event destinations are associated with configuration sets\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch or Amazon Kinesis Data Firehose\.
+Contains information about an event destination\.
 
 **Note**  
-You can't specify Amazon SNS event destinations in CloudFormation templates\.
+When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple Notification Service \(Amazon SNS\)\.
+
+Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-eventdestination-syntax"></a>
 

@@ -39,7 +39,7 @@ Specifies the color space of an input\. This setting works in tandem with colorS
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColorSpaceSettings`  <a name="cfn-medialive-channel-videoselector-colorspacesettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to configure color space settings in the incoming video\.  
 *Required*: No  
 *Type*: [VideoSelectorColorSpaceSettings](aws-properties-medialive-channel-videoselectorcolorspacesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

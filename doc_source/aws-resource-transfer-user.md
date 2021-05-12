@@ -69,7 +69,7 @@ If the target of a logical directory entry does not exist in Amazon S3, the entr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryType`  <a name="cfn-transfer-user-homedirectorytype"></a>
-The type of landing directory \(folder\) you want your users' home directory to be when they log into the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 paths visible to your users\.  
+The type of landing directory \(folder\) you want your users' home directory to be when they log into the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or EFS paths visible to your users\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `LOGICAL | PATH`  

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ComputerAttributes](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes)" : ActiveDirectoryComputerAttributeList,
+  "[ComputerAttributes](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes)" : [ ActiveDirectoryComputerAttribute, ... ],
   "[DirectoryId](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid)" : String,
   "[OrganizationalUnitDistinguishedName](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ComputerAttributes](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes): 
-    ActiveDirectoryComputerAttributeList
+    - ActiveDirectoryComputerAttribute
   [DirectoryId](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid): String
   [OrganizationalUnitDistinguishedName](#cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-organizationalunitdistinguishedname): String
 ```
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `ComputerAttributes`  <a name="cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-computerattributes"></a>
 A collection of custom attributes for an Active Directory computer\.  
 *Required*: No  
-*Type*: [ActiveDirectoryComputerAttributeList](aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattributelist.md)  
+*Type*: List of [ActiveDirectoryComputerAttribute](aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DirectoryId`  <a name="cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid"></a>

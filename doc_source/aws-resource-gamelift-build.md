@@ -51,6 +51,7 @@ The operating system that the game server binaries are built to run on\. This va
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
 Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
+When you specify a storage location in Amazon S3, GameLift will report the `SizeOnDisk` as 0\. The size of the file can be found in Amazon S3\.   
 *Required*: No  
 *Type*: [S3Location](aws-properties-gamelift-build-storagelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Filters](#cfn-fis-experimenttemplate-experimenttemplatetarget-filters)" : [ ExperimentTemplateTargetFilter, ... ],
   "[ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns)" : [ String, ... ],
-  "[ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags)" : TagMap,
+  "[ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags)" : {Key : Value, ...},
   "[ResourceType](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype)" : String,
   "[SelectionMode](#cfn-fis-experimenttemplate-experimenttemplatetarget-selectionmode)" : String
 }
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ResourceArns](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcearns): 
     - String
   [ResourceTags](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags): 
-    TagMap
+    Key : Value
   [ResourceType](#cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype): String
   [SelectionMode](#cfn-fis-experimenttemplate-experimenttemplatetarget-selectionmode): String
 ```
@@ -51,7 +51,7 @@ The Amazon Resource Names \(ARNs\) of the resources\.
 `ResourceTags`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetags"></a>
 The tags for the target resources\.  
 *Required*: No  
-*Type*: [TagMap](aws-properties-fis-experimenttemplate-tagmap.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype"></a>

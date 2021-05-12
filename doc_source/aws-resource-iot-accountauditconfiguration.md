@@ -1,6 +1,6 @@
 # AWS::IoT::AccountAuditConfiguration<a name="aws-resource-iot-accountauditconfiguration"></a>
 
-Use the `AWS::IoT::AccountAuditConfiguration` resource to configure or reconfigure the Device Defender audit settings for your account\. Settings include how audit notifications are sent and which audit checks are enabled or disabled\. For API reference, see [UpdateAccountAuditConfiguration](https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAccountAuditConfiguration.html) and for general information, see [Audit checks](https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-audit-checks.html)\.
+Use the `AWS::IoT::AccountAuditConfiguration` resource to configure or reconfigure the Device Defender audit settings for your account\. Settings include how audit notifications are sent and which audit checks are enabled or disabled\. For API reference, see [UpdateAccountAuditConfiguration](https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAccountAuditConfiguration.html) and for detailed information on all available audit checks, see [Audit checks](https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-audit-checks.html)\.
 
 ## Syntax<a name="aws-resource-iot-accountauditconfiguration-syntax"></a>
 
@@ -46,6 +46,21 @@ Specifies which audit checks are enabled and disabled for this account\.
 Some data collection might start immediately when certain checks are enabled\. When a check is disabled, any data collected so far in relation to the check is deleted\. To disable a check, set the value of the `Enabled:` key to `false`\.  
 If an enabled check is removed from the template, it will also be disabled\.  
 You can't disable a check if it's used by any scheduled audit\. You must delete the check from the scheduled audit or delete the scheduled audit itself to disable the check\.  
+The following checks are currently supported\.  
++ `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
++ `CA_CERTIFICATE_EXPIRING_CHECK`
++ `CA_CERTIFICATE_KEY_QUALITY_CHECK`
++ `CONFLICTING_CLIENT_IDS_CHECK`
++ `DEVICE_CERTIFICATE_EXPIRING_CHECK`
++ `DEVICE_CERTIFICATE_KEY_QUALITY_CHECK`
++ `DEVICE_CERTIFICATE_SHARED_CHECK`
++ `IOT_POLICY_OVERLY_PERMISSIVE_CHECK`
++ `IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK`
++ `IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK`
++ `LOGGING_DISABLED_CHECK`
++ `REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK`
++ `REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK`
++ `UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
 *Required*: Yes  
 *Type*: [AuditCheckConfigurations](aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -136,6 +151,6 @@ Resources:
 
 ## See also<a name="aws-resource-iot-accountauditconfiguration--seealso"></a>
 
-When you use CloudFormation to perform drift detection for `AccountAuditConfiguration`, it won't compare values that aren't part of the stack template\. In `AccountAuditConfiguration`, specifying a configuration for every check is optional, and skipped checks are interpreted as disabled\. To have accurate drift detection with CloudFormation, include configurations \(enabled or disabled\) for all the 14 audit checks in your template\. 
+When you use CloudFormation to perform drift detection for `AccountAuditConfiguration`, it won't compare values that aren't part of the stack template\. In `AccountAuditConfiguration`, specifying a configuration for every check is optional, and skipped checks are interpreted as disabled\. To have accurate drift detection with CloudFormation, include configurations \(enabled or disabled\) for all the 14 audit checks in your template\. For more information on the audit checks see [AWS::IoT::AccountAuditConfiguration AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)\.
 
 For more information, see [Detecting unmanaged configuration changes to stacks and resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) in the *user guide*\.

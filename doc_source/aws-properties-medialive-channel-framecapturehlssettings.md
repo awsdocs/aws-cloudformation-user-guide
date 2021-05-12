@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel FrameCaptureHlsSettings<a name="aws-properties-medialive-channel-framecapturehlssettings"></a>
 
-<a name="aws-properties-medialive-channel-framecapturehlssettings-description"></a>The `FrameCaptureHlsSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+Settings for a frame capture output in an HLS output group\. 
+
+The parent of this entity is HlsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-framecapturehlssettings-syntax"></a>
 

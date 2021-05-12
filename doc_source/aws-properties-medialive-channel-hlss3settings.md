@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel HlsS3Settings<a name="aws-properties-medialive-channel-hlss3settings"></a>
 
-<a name="aws-properties-medialive-channel-hlss3settings-description"></a>The `HlsS3Settings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+Sets up Amazon S3 as the destination for this HLS output\.
+
+The parent of this entity is HlsCdnSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-hlss3settings-syntax"></a>
 
@@ -23,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-hlss3settings-properties"></a>
 
 `CannedAcl`  <a name="cfn-medialive-channel-hlss3settings-cannedacl"></a>
-Not currently supported by AWS CloudFormation\.  
+Specify the canned ACL to apply to each S3 request\. Defaults to none\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

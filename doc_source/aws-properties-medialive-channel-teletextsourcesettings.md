@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-teletextsourcesettings-properties"></a>
 
 `OutputRectangle`  <a name="cfn-medialive-channel-teletextsourcesettings-outputrectangle"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to configure the caption rectangle for an output captions that will be created using this Teletext source captions\.  
 *Required*: No  
 *Type*: [CaptionRectangle](aws-properties-medialive-channel-captionrectangle.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

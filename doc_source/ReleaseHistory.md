@@ -4,19 +4,68 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
+
+ [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
+Use the `KeyStorageSecurityStandard` property to specify the minimum FIPS key security standard\.  | May 6, 2021 | 
+| [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
+
+ [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
+In the [CacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html) and [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) property types, use the `FunctionAssociations` property to specify the CloudFront functions associated with the cache behavior\.  
+For more information, see [Customizing with CloudFront Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html) in the *Amazon CloudFront Developer Guide*\.  | May 6, 2021 | 
+| [Updated resource](AWS_GameLift.md) | The following resources were updated: AWS::GameLift:Fleet, AWS::GameLift::GameSessionQueue\. 
+
+ [AWS::GameLift::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html)   
+In the `LocationCapacity` property type, use `DesiredEc2Instance` to specify the number of desired EC2 instance and `MinSize` and `MaxSize` to specify the minimum and maximum capacity size\.   
+In the `LocationConfiguration` property type, use location `Location` to specify an AWS Region code and `LocationConfiguration` to specify resource capacity settings in a specified fleet\.  
+
+ [AWS::GameLift::GameSessionQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)   
+Use the `PriorityConfiguration` property to specify priority destinations and locations for game session placements\.  
+Use the `FilterConfiguration` property to specify a list of locations where a queue is allowed to place new game sessions\.  | May 6, 2021 | 
+| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
+
+ [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
+You can now create clusters with IAM access control\. This enables you to authenticate clients, as well as to authorize Apache Kafka actions\.  | May 6, 2021 | 
+| [New resources](AWS_FraudDetector.md) | The following resources were added: AWS::FraudDetector::Detector, AWS::FraudDetector::EntityType, AWS::FraudDetector::EventType, AWS::FraudDetector::Label, AWS::FraudDetector::Outcome, and AWS::FraudDetector::Variable 
+
+ [AWS::FraudDetector::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)   
+Use the `AWS::FraudDetector::Detector` resource to manage a detector or associated detector versions in Amazon Fraud Detector\. 
+
+ [AWS::FraudDetector::EntityType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html)   
+Use the `AWS::FraudDetector::EntityType` resource to create or update an entity type in Amazon Fraud Detector\. 
+
+ [AWS::FraudDetector::EventType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html)   
+Use the `AWS::FraudDetector::EventType` resource to create or update an event type in Amazon Fraud Detector\. 
+
+ [AWS::FraudDetector::Label](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-label.html)   
+Use the `AWS::FraudDetector::Label` resource to create or update label in Amazon Fraud Detector\. 
+
+ [AWS::FraudDetector::Outcome](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-outcome.html)   
+Use the `AWS::FraudDetector::Outcome` resource to create or update an outcome in Amazon Fraud Detector\. 
+
+ [AWS::FraudDetector::Variable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html)   
+Use the `AWS::FraudDetector::Variable` resource to create a variable in Amazon Fraud Detector\.  | May 6, 2021 | 
+| [New resources](AWS_XRay.md) | The following resources were added: AWS::XRay::Group and AWS::XRay::SamplingRule\. 
+
+ [AWS::XRay::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html)   
+Use the `AWS::XRay::Group` resource to specify an X\-Ray group\. 
+
+ [AWS::XRay::SamplingRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html)   
+Use the `AWS::XRay::SamplingRule` resource to specify an X\-Ray sampling rule\.  | May 6, 2021 | 
+| [New resource](AWS_CloudFront.md) | The following resource was added: AWS::CloudFront::Function\. 
+
+ [AWS::CloudFront::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html)   
+Use the `AWS::CloudFront::Function` resource to create a function in CloudFront Functions\.  
+For more information, see [Customizing with CloudFront Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html) in the *Amazon CloudFront Developer Guide*\.  | May 6, 2021 | 
+| [New resource](AWS_FinSpace.md) | The following resource was added: AWS::FinSpace::Environment 
+
+ [AWS::FinSpace::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-finspace-environment.html)   
+Use the `AWS::FinSpace::Environment` resource to specify an Amazon FinSpace environment\.  | May 6, 2021 | 
 | [Updated resource](AWS_Detective.md) | The following resource was updated: AWS::Detective::Graph 
 
 [AWS::Detective::Graph](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)  
 Use the `Tags` property to assign tag values to the behavior graph\.  | April 29, 2021 | 
 | [Updated resource](AWS_EKS.md) | The following resource was updated to return the `OpenIdConnectIssuerUrl` when creating a cluster: AWS::EKS::Cluster\. 
-
- [AWS::EKS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)   
-Returns the `OpenIdConnectIssuerUrl` when creating a cluster\.  | April 29, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Detective::Graph 
-
-[AWS::Detective::Graph](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)  
-Use the `Tags` property to assign tag values to the behavior graph\.  | April 29, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated to return the `OpenIdConnectIssuerUrl` when creating a cluster: AWS::EKS::Cluster\. 
 
  [AWS::EKS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)   
 Returns the `OpenIdConnectIssuerUrl` when creating a cluster\.  | April 29, 2021 | 
@@ -28,14 +77,6 @@ Use the `AWS::IoTFleetHub::Application` resource to create a Fleet Hub for AWS I
 
  [AWS::SES::ContactList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html)   
 Use the `AWS::SES::ContactList` resource to create a list that contains contacts that have subscribed to a particular topic or topics\.  | April 29, 2021 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::SES::ContactList 
-
- [AWS::SES::ContactList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html)   
-Use the `AWS::SES::ContactList` resource to create a list that contains contacts that have subscribed to a particular topic or topics\.  | April 29, 2021 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::IoTFleetHub::Application 
-
- [AWS::IoTFleetHub::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleethub-application.html)   
-Use the `AWS::IoTFleetHub::Application` resource to create a Fleet Hub for AWS IoT Device Management web application\.  | April 29, 2021 | 
 | [New resources](AWS_IoTWireless.md) | The following resources were added: AWS::IoTWireless::PartnerAccount, AWS::IoTWireless::TaskDefinition 
 
  [AWS::IoTWireless::PartnerAccount](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)   
@@ -56,13 +97,6 @@ Use the `AWS::NimbleStudio::StreamingImage` resource to configure a machine imag
 
  [AWS::NimbleStudio::LaunchProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)   
 Use the `AWS::NimbleStudio::LaunchProfile` resource to specify user access permissions to studio components\.  | April 26, 2021 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::IoTWireless::PartnerAccount, AWS::IoTWireless::TaskDefinition 
-
- [AWS::IoTWireless::PartnerAccount](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)   
- Gets information about a partner account\. If `PartnerAccountId` and `PartnerType` are `null`, returns all partner accounts\.  
-
- [AWS::IoTWireless::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)   
- Gets information about the gateway task definition for a wireless gateway\.   | April 26, 2021 | 
 | [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::CacheCluster, AWS::ElastiCache::ReplicationGroup\. 
 
  [AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)   
@@ -931,6 +965,11 @@ Use the `CodeSigningConfig` resource to specify code\-signing capability to your
 
  [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
 Use the `CustomHeaders` property to declare custom headers for each HTTP request made to your Amplify Apps\.  | November 19, 2020 | 
+| [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
+
+ [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
+In the [CacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html) and [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) property types, use the `TrustedKeyGroups` property to specify a list of the key groups that CloudFront can use to verify signed URLs or signed cookies\.  
+For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  | November 19, 2020 | 
 | [Updated resource](AWS_EC2.md) | The following resources were updated: AWS::EC2::LaunchTemplate and AWS::EC2::ClientVpnEndpoint\. 
 
  [AWS::EC2::ClientVpnEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)   
@@ -952,11 +991,6 @@ Added the `Statement` property\. Use the `Statement` property to add a statement
 
  [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
 Added support for asymmetric CMKs, including the `KeySpec` property and the SIGN\_VERIFY value for the `KeyUsage` property\.  | November 19, 2020 | 
-| [Update resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
-
- [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
-In the [CacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html) and [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) property types, use the `TrustedKeyGroups` property to specify a list of the key groups that CloudFront can use to verify signed URLs or signed cookies\.  
-For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  | November 19, 2020 | 
 | [New resources](AWS_CloudFront.md) | The following resources were added: AWS::CloudFront::KeyGroup and AWS::CloudFront::PublicKey\. 
 
  [AWS::CloudFront::KeyGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html)   
@@ -1254,7 +1288,7 @@ Use the `AWS::WorkSpaces::ConnectionAlias` resource to specify a connection alia
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-Adding support for SASL/Scram \(Username/ Password access to clusters\.\)  | September 24, 2020 | 
+Adding support for SASL/Scram \(username\- and password\-based client authentication\.\)  | September 24, 2020 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: `AWS::ApiGateway::DomainName`\. 
 
  [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   
@@ -1785,7 +1819,7 @@ Use the `MeshOwner` property to specify the account ID that owns a shared mesh\.
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-Use the `LoggingInfo` to stream broker logs to one or more of the following destination types: Amazon CloudWatch Logs, Amazon S3, Amazon Kinesis Data Firehose\.  | March 12, 2020 | 
+Use `LoggingInfo` to stream broker logs to one or more of the following destination types: Amazon CloudWatch Logs, Amazon S3, Amazon Kinesis Data Firehose\.  | March 12, 2020 | 
 | [New and updated resources](AWS_ApiGatewayV2.md) | The following resources were added or updated: `AWS::ApiGatewayV2::ApiGatewayManagedOverrides`, `AWS::ApiGatewayV2::Integration`, and `AWS::ApiGatewayV2::VpcLink`\. 
 
  [AWS::ApiGatewayV2::ApiGatewayManagedOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html)   

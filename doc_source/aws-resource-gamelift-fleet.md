@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype)" : String,
       "[FleetType](#cfn-gamelift-fleet-fleettype)" : String,
       "[InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn)" : String,
+      "[Locations](#cfn-gamelift-fleet-locations)" : [ LocationConfiguration, ... ],
       "[MaxSize](#cfn-gamelift-fleet-maxsize)" : Integer,
       "[MetricGroups](#cfn-gamelift-fleet-metricgroups)" : [ String, ... ],
       "[MinSize](#cfn-gamelift-fleet-minsize)" : Integer,
@@ -49,6 +50,8 @@ Properties:
   [EC2InstanceType](#cfn-gamelift-fleet-ec2instancetype): String
   [FleetType](#cfn-gamelift-fleet-fleettype): String
   [InstanceRoleARN](#cfn-gamelift-fleet-instancerolearn): String
+  [Locations](#cfn-gamelift-fleet-locations): 
+    - LocationConfiguration
   [MaxSize](#cfn-gamelift-fleet-maxsize): Integer
   [MetricGroups](#cfn-gamelift-fleet-metricgroups): 
     - String
@@ -122,6 +125,13 @@ A unique identifier for an AWS IAM role that manages access to your AWS services
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Locations`  <a name="cfn-gamelift-fleet-locations"></a>
+A set of remote locations to deploy additional instances to and manage as part of the fleet\. This parameter can only be used when creating fleets in AWS Regions that support multiple locations\. You can add any GameLift\-supported AWS Region as a remote location, in the form of an AWS Region code such as `us-west-2`\. To create a fleet with instances in the home Region only, omit this parameter\.   
+*Required*: No  
+*Type*: List of [LocationConfiguration](aws-properties-gamelift-fleet-locationconfiguration.md)  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSize`  <a name="cfn-gamelift-fleet-maxsize"></a>
 The maximum value that is allowed for the fleet's instance count\. When creating a new fleet, GameLift automatically sets this value to "1"\. Once the fleet is active, you can change this value\.  

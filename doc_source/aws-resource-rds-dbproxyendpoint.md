@@ -98,10 +98,10 @@ The Amazon Resource Name \(ARN\) representing the DB proxy endpoint\.
 The custom endpoint for the RDS DB instance or Aurora DB cluster\.
 
 `IsDefault`  <a name="IsDefault-fn::getatt"></a>
-The VPC ID to associate with the new DB proxy endpoint\.
+A value that indicates whether this endpoint is the default endpoint for the associated DB proxy\. Default DB proxy endpoints always have read/write capability\. Other endpoints that you associate with the DB proxy can be either read/write or read\-only\.
 
 `VpcId`  <a name="VpcId-fn::getatt"></a>
-A value that indicates whether this endpoint is the default endpoint for the associated DB proxy\. Default DB proxy endpoints always have read/write capability\. Other endpoints that you associate with the DB proxy can be either read/write or read\-only\.
+The VPC ID of the DB proxy endpoint\.
 
 ## Examples<a name="aws-resource-rds-dbproxyendpoint--examples"></a>
 

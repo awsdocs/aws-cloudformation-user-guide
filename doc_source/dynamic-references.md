@@ -210,7 +210,7 @@ You should take the following important security considerations into account whe
 
 ### Permissions required<a name="dynamic-references-secretsmanager-permissions"></a>
 
-To specify a secret stored in Secrets Manager, you must have access to call `[GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/GetSecretValue.html)` for the specified secret\.
+To specify a secret stored in Secrets Manager, you must have access to call `[GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html)` for the specified secret\.
 
 ### Reference pattern<a name="dynamic-references-secretsmanager-pattern"></a>
 

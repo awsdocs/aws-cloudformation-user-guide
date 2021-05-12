@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel HtmlMotionGraphicsSettings<a name="aws-properties-medialive-channel-htmlmotiongraphicssettings"></a>
 
-<a name="aws-properties-medialive-channel-htmlmotiongraphicssettings-description"></a>The `HtmlMotionGraphicsSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+Settings to configure the motion graphics overlay to use an HTML asset\.
+
+The parent of this entity is MotionGraphicsSetting\.
 
 ## Syntax<a name="aws-properties-medialive-channel-htmlmotiongraphicssettings-syntax"></a>
 

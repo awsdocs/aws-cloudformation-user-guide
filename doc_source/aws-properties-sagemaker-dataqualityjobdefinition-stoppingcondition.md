@@ -1,6 +1,6 @@
 # AWS::SageMaker::DataQualityJobDefinition StoppingCondition<a name="aws-properties-sagemaker-dataqualityjobdefinition-stoppingcondition"></a>
 
-Specifies a limit to how long a model training or compilation job can run\. It also specifies how long you are willing to wait for a managed spot training job to complete\. When the job reaches the time limit, Amazon SageMaker ends the training or compilation job\. Use this API to cap model training costs\.
+Specifies a limit to how long a model training job, model compilation job, or hyperparameter tuning job can run\. It also specifies how long a managed Spot training job has to complete\. When the job reaches the time limit, Amazon SageMaker ends the training or compilation job\. Use this API to cap model training costs\.
 
 To stop a job, Amazon SageMaker sends the algorithm the `SIGTERM` signal, which delays job termination for 120 seconds\. Algorithms can use this 120\-second window to save the model artifacts, so the results of training are not lost\. 
 
@@ -30,7 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-dataqualityjobdefinition-stoppingcondition-properties"></a>
 
 `MaxRuntimeInSeconds`  <a name="cfn-sagemaker-dataqualityjobdefinition-stoppingcondition-maxruntimeinseconds"></a>
-The maximum length of time, in seconds, that the training or compilation job can run\. If job does not complete during this time, Amazon SageMaker ends the job\. If value is not specified, default value is 1 day\. The maximum value is 28 days\.  
+The maximum length of time, in seconds, that a training or compilation job can run\. If the job does not complete during this time, Amazon SageMaker ends the job\.  
+When `RetryStrategy` is specified in the job request, `MaxRuntimeInSeconds` specifies the maximum time for all of the attempts in total, not each individual attempt\.  
+The default value is 1 day\. The maximum value is 28 days\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  

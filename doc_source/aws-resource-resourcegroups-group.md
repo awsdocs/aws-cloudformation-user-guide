@@ -14,9 +14,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ResourceGroups::Group",
   "Properties" : {
+      "[Configuration](#cfn-resourcegroups-group-configuration)" : [ ConfigurationItem, ... ],
       "[Description](#cfn-resourcegroups-group-description)" : String,
       "[Name](#cfn-resourcegroups-group-name)" : String,
       "[ResourceQuery](#cfn-resourcegroups-group-resourcequery)" : ResourceQuery,
+      "[Resources](#cfn-resourcegroups-group-resources)" : [ String, ... ],
       "[Tags](#cfn-resourcegroups-group-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -27,15 +29,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ResourceGroups::Group
 Properties: 
+  [Configuration](#cfn-resourcegroups-group-configuration): 
+    - ConfigurationItem
   [Description](#cfn-resourcegroups-group-description): String
   [Name](#cfn-resourcegroups-group-name): String
   [ResourceQuery](#cfn-resourcegroups-group-resourcequery): 
     ResourceQuery
+  [Resources](#cfn-resourcegroups-group-resources): 
+    - String
   [Tags](#cfn-resourcegroups-group-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-resourcegroups-group-properties"></a>
+
+`Configuration`  <a name="cfn-resourcegroups-group-configuration"></a>
+The service configuration currently associated with the resource group and in effect for the members of the resource group\. A `Configuration` consists of one or more `ConfigurationItem` entries\. For information about service configurations for resource groups and how to construct them, see [Service configurations for resource groups](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html) in the *AWS Resource Groups User Guide*\.  
+You can include either a `Configuration` or a `ResourceQuery`, but not both\.
+*Required*: Conditional  
+*Type*: List of [ConfigurationItem](aws-properties-resourcegroups-group-configurationitem.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-resourcegroups-group-description"></a>
 The description of the resource group\.  
@@ -55,6 +68,14 @@ The resource query structure that is used to dynamically determine which AWS res
 + You can specify the group's membership either by using a `ResourceQuery` or by using a list of `Resources`, but not both\.
 *Required*: Conditional  
 *Type*: [ResourceQuery](aws-properties-resourcegroups-group-resourcequery.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Resources`  <a name="cfn-resourcegroups-group-resources"></a>
+A list of the Amazon Resource Names \(ARNs\) of AWS resources that you want to add to the specified group\.  
++ You can specify the group membership either by using a list of `Resources` or by using a `ResourceQuery`, but not both\.
++ You can include a `Resources` property only if you also specify a `Configuration` property\.
+*Required*: Conditional  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-resourcegroups-group-tags"></a>

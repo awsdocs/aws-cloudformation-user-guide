@@ -29,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ScalingConfig](#cfn-eks-nodegroup-scalingconfig)" : ScalingConfig,
       "[Subnets](#cfn-eks-nodegroup-subnets)" : [ String, ... ],
       "[Tags](#cfn-eks-nodegroup-tags)" : Json,
+      "[Taints](#cfn-eks-nodegroup-taints)" : [ Taint, ... ],
       "[Version](#cfn-eks-nodegroup-version)" : String
     }
 }
@@ -59,6 +60,8 @@ Properties:
   [Subnets](#cfn-eks-nodegroup-subnets): 
     - String
   [Tags](#cfn-eks-nodegroup-tags): Json
+  [Taints](#cfn-eks-nodegroup-taints): 
+    - Taint
   [Version](#cfn-eks-nodegroup-version): String
 ```
 
@@ -68,7 +71,7 @@ Properties:
 The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type\. Non\-GPU instances should use the `AL2_x86_64` AMI type\. Arm instances should use the `AL2_ARM_64` AMI type\. All types use the Amazon EKS optimized Amazon Linux 2 AMI\. If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU`  
+*Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU | CUSTOM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CapacityType`  <a name="cfn-eks-nodegroup-capacitytype"></a>
@@ -155,6 +158,12 @@ The subnets to use for the Auto Scaling group that is created for your node grou
 The metadata to apply to the node group to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Taints`  <a name="cfn-eks-nodegroup-taints"></a>
+The Kubernetes taints to be applied to the nodes in the node group when they are created\. Effect is one of `No_Schedule`, `Prefer_No_Schedule`, or `No_Execute`\. Kubernetes taints can be used together with tolerations to control how workloads are scheduled to your nodes\.  
+*Required*: No  
+*Type*: List of [Taint](aws-properties-eks-nodegroup-taint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-eks-nodegroup-version"></a>

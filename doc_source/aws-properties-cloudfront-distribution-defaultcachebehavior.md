@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl)" : Double,
   "[FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid)" : String,
   "[ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues)" : ForwardedValues,
+  "[FunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations)" : [ FunctionAssociation, ... ],
   "[LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations)" : [ LambdaFunctionAssociation, ... ],
   "[MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl)" : Double,
   "[MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl)" : Double,
@@ -43,6 +44,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid): String
   [ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues): 
     ForwardedValues
+  [FunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations): 
+    - FunctionAssociation
   [LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations): 
     - LambdaFunctionAssociation
   [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl): Double
@@ -113,6 +116,12 @@ A `DefaultCacheBehavior` must include either a `CachePolicyId` or `ForwardedValu
 A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers\.  
 *Required*: Conditional  
 *Type*: [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-functionassociations"></a>
+A list of CloudFront functions that are associated with this cache behavior\. CloudFront functions must be published to the `LIVE` stage to associate them with a cache behavior\.  
+*Required*: No  
+*Type*: List of [FunctionAssociation](aws-properties-cloudfront-distribution-functionassociation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaFunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations"></a>

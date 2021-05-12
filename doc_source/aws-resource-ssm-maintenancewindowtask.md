@@ -692,7 +692,7 @@ Resources:
       ServiceRoleArn: Lambda.Arn
       TaskType: LAMBDA
       TaskInvocationParameters:
-        MaintenanceWindowAutomationParameters:
+        MaintenanceWindowLambdaParameters:
 			ClientContext": "ew0KICAi--truncated--0KIEXAMPLE"
 			Qualifier: '$LATEST'
 			Payload: '{ \"instanceId\": \"{{RESOURCE_ID}}\", \"targetType\": \"{{TARGET_TYPE}}\" }'

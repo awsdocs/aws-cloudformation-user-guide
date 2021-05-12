@@ -71,6 +71,21 @@ Metadata that can be used to manage the scheduled audit\.
 
 `TargetCheckNames`  <a name="cfn-iot-scheduledaudit-targetchecknames"></a>
 Which checks are performed during the scheduled audit\. Checks must be enabled for your account\. \(Use `DescribeAccountAuditConfiguration` to see the list of all checks, including those that are enabled or use `UpdateAccountAuditConfiguration` to select which checks are enabled\.\)  
+ The following checks are currently aviable:   
++ `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
++ `CA_CERTIFICATE_EXPIRING_CHECK`
++ `CA_CERTIFICATE_KEY_QUALITY_CHECK`
++ `CONFLICTING_CLIENT_IDS_CHECK`
++ `DEVICE_CERTIFICATE_EXPIRING_CHECK`
++ `DEVICE_CERTIFICATE_KEY_QUALITY_CHECK`
++ `DEVICE_CERTIFICATE_SHARED_CHECK`
++ `IOT_POLICY_OVERLY_PERMISSIVE_CHECK`
++ `IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK`
++ `IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK`
++ `LOGGING_DISABLED_CHECK`
++ `REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK`
++ `REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK`
++ `UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -137,3 +152,7 @@ Resources:
         - CONFLICTING_CLIENT_IDS_CHECK
         - LOGGING_DISABLED_CHECK
 ```
+
+## See also<a name="aws-resource-iot-scheduledaudit--seealso"></a>
+
+For more information on audit checks see [AWS::IoT::AccountAuditConfiguration AuditCheckConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)\.

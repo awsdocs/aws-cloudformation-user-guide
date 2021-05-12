@@ -1,6 +1,6 @@
 # AWS::SES::ContactList<a name="aws-resource-ses-contactlist"></a>
 
-The contacts that have subscribed to a particular topic or topics\.
+A list that contains contacts that have subscribed to a particular topic or topics\.
 
 ## Syntax<a name="aws-resource-ses-contactlist-syntax"></a>
 
@@ -37,7 +37,7 @@ Properties:
 
 `ContactListName`  <a name="cfn-ses-contactlist-contactlistname"></a>
 The name of the contact list\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

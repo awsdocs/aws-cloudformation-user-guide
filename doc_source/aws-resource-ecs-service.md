@@ -29,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PropagateTags](#cfn-ecs-service-propagatetags)" : String,
       "[Role](#cfn-ecs-service-role)" : String,
       "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
-      "[ServiceArn](#cfn-ecs-service-servicearn)" : String,
       "[ServiceName](#cfn-ecs-service-servicename)" : String,
       "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ ServiceRegistry, ... ],
       "[Tags](#cfn-ecs-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -67,7 +66,6 @@ Properties:
   [PropagateTags](#cfn-ecs-service-propagatetags): String
   [Role](#cfn-ecs-service-role): String
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
-  [ServiceArn](#cfn-ecs-service-servicearn): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
     - ServiceRegistry
@@ -197,12 +195,6 @@ Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deploymen
 *Allowed values*: `DAEMON | REPLICA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServiceArn`  <a name="cfn-ecs-service-servicearn"></a>
-The ARN that identifies the service\. The ARN contains the `arn:aws:ecs` namespace, followed by the Region of the service, the AWS account ID of the service owner, the `service` namespace, and then the service name\. For example, `arn:aws:ecs:region:012345678910:service/my-service`\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `ServiceName`  <a name="cfn-ecs-service-servicename"></a>
 The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
 *Required*: No  
@@ -260,6 +252,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Name`  <a name="Name-fn::getatt"></a>
 The name of the Amazon ECS service, such as `sample-webapp`\.
+
+`ServiceArn`  <a name="ServiceArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-service--examples"></a>
 

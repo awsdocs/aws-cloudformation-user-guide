@@ -35,7 +35,7 @@ The destination for the frame capture files\. The destination is either the URI 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameCaptureCdnSettings`  <a name="cfn-medialive-channel-framecapturegroupsettings-framecapturecdnsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to configure the destination of a Frame Capture output\.  
 *Required*: No  
 *Type*: [FrameCaptureCdnSettings](aws-properties-medialive-channel-framecapturecdnsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

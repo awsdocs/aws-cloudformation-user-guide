@@ -116,7 +116,7 @@ A collection of tags for this channel\. Each tag is a key\-value pair\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vpc`  <a name="cfn-medialive-channel-vpc"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to enable VPC mode in the channel, so that the endpoints for all outputs are in your VPC\.  
 *Required*: No  
 *Type*: [VpcOutputSettings](aws-properties-medialive-channel-vpcoutputsettings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

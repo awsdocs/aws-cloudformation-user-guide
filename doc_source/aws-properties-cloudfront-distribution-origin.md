@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Id](#cfn-cloudfront-distribution-origin-id)" : String,
   "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ OriginCustomHeader, ... ],
   "[OriginPath](#cfn-cloudfront-distribution-origin-originpath)" : String,
-  "[OriginShield](#cfn-cloudfront-distribution-origin-originshield)" : OriginShield,
+  "[OriginShield](#cfn-cloudfront-distribution-origin-originshield)" : ,
   "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig)" : S3OriginConfig
 }
 ```
@@ -46,7 +46,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - OriginCustomHeader
   [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
   [OriginShield](#cfn-cloudfront-distribution-origin-originshield): 
-    OriginShield
   [S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig): 
     S3OriginConfig
 ```
@@ -106,7 +105,7 @@ For more information, see [Origin Path](https://docs.aws.amazon.com/AmazonCloudF
 CloudFront Origin Shield\. Using Origin Shield can help reduce the load on your origin\.  
 For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
-*Type*: [OriginShield](aws-properties-cloudfront-distribution-originshield.md)  
+*Type*:   
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
