@@ -703,6 +703,92 @@ Resources:
     DependsOn: MaintenanceWindowTarget
 ```
 
+### Install a given package through 'MaintenanceWindowRunCommandParameters'<a name="aws-resource-ssm-maintenancewindowtask--examples--Install_A_Given_Package_Through_MaintenanceWindowRunCommandParameters"></a>
+
+The following example install a given package using 'MaintenanceWindowRunCommandParameters'\.
+
+
+#### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Install_A_Given_Package_Through_MaintenanceWindowRunCommandParameters--json"></a>
+
+```
+{
+  "Resources": {
+    "MaintenanceWindowAutomationTask": {
+      "Type": "AWS::SSM::MaintenanceWindowTask",
+      "Properties": {
+        "Name": "<NAME>",
+        "WindowId": "MaintenanceWindow",
+        "TaskType": "RUN_COMMAND",
+        "TaskArn": "AWS-ConfigureAWSPackage",
+        "Priority": 1,
+        "MaxErrors": "5",
+        "MaxConcurrency": "20",
+        "Targets": [
+          {
+            "Key": "WindowTargetIds",
+            "Values": [
+              "MaintenanceWindowTarget"
+            ]
+          }
+        ],
+        "TaskInvocationParameters": {
+          "MaintenanceWindowRunCommandParameters": {
+            "Parameters": {
+              "action": [
+                "Install"
+              ],
+              "name": [
+                "AmazonCloudWatchAgent"
+              ],
+              "installationType": [
+                "In-place update"
+              ],
+              "version": [
+                "latest"
+              ]
+            },
+            "TimeoutSeconds": 600
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-maintenancewindowtask--examples--Install_A_Given_Package_Through_MaintenanceWindowRunCommandParameters--yaml"></a>
+
+```
+---
+Resources:
+    MaintenanceWindowAutomationTask:
+      Type: AWS::SSM::MaintenanceWindowTask
+      Properties:
+        Name: <NAME>
+        WindowId: MaintenanceWindow
+        TaskType: RUN_COMMAND
+        TaskArn: AWS-ConfigureAWSPackage
+        Priority: 1
+        MaxErrors: '5'
+        MaxConcurrency: '20'
+        Targets:
+          - Key: WindowTargetIds
+            Values:
+              - MaintenanceWindowTarget
+        TaskInvocationParameters:
+          MaintenanceWindowRunCommandParameters:
+            Parameters:
+              action:
+                - Install
+              name:
+                - AmazonCloudWatchAgent
+              installationType:
+                - "In-place update"
+              version:
+                - latest
+            TimeoutSeconds: 600
+```
+
 ## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
 +  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
