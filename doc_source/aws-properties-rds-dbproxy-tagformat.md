@@ -1,6 +1,6 @@
 # AWS::RDS::DBProxy TagFormat<a name="aws-properties-rds-dbproxy-tagformat"></a>
 
-Metadata assigned to a DB instance consisting of a key\-value pair\.
+Metadata assigned to a DB proxy consisting of a key\-value pair\.
 
 ## Syntax<a name="aws-properties-rds-dbproxy-tagformat-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 The `AWS::Events::Rule` resource creates a rule that matches incoming events and routes them to one or more targets for processing\. For more information, see [What Is Amazon Eventbridge?](https://docs.aws.amazon.com/eventbridge/latest/userguide/what-is-amazon-eventbridge.html)\. 
 
-A rule must contain at least an `EventPattern` or `ScheduleExpression`\. Rules with `EventPattern` are triggered when a matching event is observed\. Rules with `ScheduleExpression` self\-trigger based on the given schedule\. A rule can have both an `EventPattern` and a `ScheduleExpression`, in which case the rule triggers on matching events as well as on a schedule\.
+A rule must contain at least one `EventPattern` or `ScheduleExpression`\. Rules with `EventPattern` are triggered when a matching event is observed\. Rules with `ScheduleExpression` self\-trigger based on the given schedule\. A rule can have both an `EventPattern` and a `ScheduleExpression`, in which case the rule triggers on matching events as well as on a schedule\.
 
 Most services in AWS treat `:` or `/` as the same character in Amazon Resource Names \(ARNs\)\. However, EventBridge uses an exact match in event patterns and rules\. Be sure to use the correct ARN characters when creating event patterns so that they match the ARN syntax in the event that you want to match\.
 
@@ -54,7 +54,7 @@ The description of the rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventBusName`  <a name="cfn-events-rule-eventbusname"></a>
-The event bus to associate with this rule\. If you omit this, the default event bus is used\.  
+The event bus name or ARN to associate with this rule\. If you omit this, the default event bus is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -66,7 +66,7 @@ The event bus to associate with this rule\. If you omit this, the default event 
 Describes which events are routed to the specified target\. For more information, see [Events and Event Patterns in EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) in the *Amazon EventBridge User Guide*\.  
 When using CloudFormation, you must enclose each part of the event pattern in square brackets, as follows:  
 `"EventPattern": { "source": [ "aws.ec2" ], "detail-type": [ "EC2 Instance State-change Notification" ] }`  
-A rule must contain either `EventPattern` or `ScheduleExpression`\.  
+To create a rule, you must include at least one `EventPattern` or `ScheduleExpression`\. You can create a rule that includes both\.  
 *Required*: Conditional  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -108,6 +108,7 @@ Indicates whether the rule is enabled\.
 `Targets`  <a name="cfn-events-rule-targets"></a>
 The AWS resources that are invoked when the rule is triggered\. For information about valid targets, see [PutTargets](https://docs.aws.amazon.com/AmazonCloudWatchEvents/latest/APIReference/API_PutTargets.html)\.  
 If you're setting the event bus of another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a `RoleArn` with proper permissions in the `Target` structure\. For more information, see [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html) in the *Amazon EventBridge User Guide*\.  
+To learn more using a dead\-letter queue to send events that fail to be delivered to a target, see [Event retry policy and using dead\-letter queues](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html)\.  
 *Required*: No  
 *Type*: List of [Target](aws-properties-events-rule-target.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -129,11 +130,72 @@ The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example
 
 ## Examples<a name="aws-resource-events-rule--examples"></a>
 
-### Regularly Invoke Lambda Function<a name="aws-resource-events-rule--examples--Regularly_Invoke_Lambda_Function"></a>
+
+
+### Create a rule that includes a dead\-letter queue for a target<a name="aws-resource-events-rule--examples--Create_a_rule_that_includes_a_dead-letter_queue_for_a_target"></a>
+
+The following example demonstrates how to send all EC2 events to an SQS queue, and include a dead\-letter queue and retry policy settings for the target of the rule\.
+
+#### JSON<a name="aws-resource-events-rule--examples--Create_a_rule_that_includes_a_dead-letter_queue_for_a_target--json"></a>
+
+```
+{
+   "MyNewEventsRule": {
+      "Type": "AWS::Events::Rule",
+      "Properties": {
+         "Description": "Test Events Rule",
+         "Name": "mynewabc",
+         "EventPattern": {
+            "source": [
+               "aws.ec2"
+            ]
+         },
+         "State": "ENABLED",
+         "Targets": [
+            {
+               "Arn": "arn:aws:sqs:us-west-2:081035103721:demoSQS",
+               "Id": "Id1234",
+               "RetryPolicy": {
+                  "MaximumRetryAttempts": 4,
+                  "MaximumEventAgeInSeconds": 400
+               },
+               "DeadLetterConfig": {
+                  "Arn": "arn:aws:sqs:us-west-2:081035103721:demoDLQ"
+               }
+            }
+         ]
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-events-rule--examples--Create_a_rule_that_includes_a_dead-letter_queue_for_a_target--yaml"></a>
+
+```
+MyNewEventsRule:
+  Type: 'AWS::Events::Rule'
+  Properties:
+    Description: Test Events Rule
+    Name: mynewabc
+    EventPattern:
+      source:
+        - aws.ec2
+    State: ENABLED
+    Targets:
+      - Arn: 'arn:aws:sqs:us-west-2:081035103721:demoSQS'
+        Id: Id1234
+        RetryPolicy:
+          MaximumRetryAttempts: 4
+          MaximumEventAgeInSeconds: 400
+        DeadLetterConfig:
+          Arn: 'arn:aws:sqs:us-west-2:081035103721:demoDLQ'
+```
+
+### Regularly invoke Lambda function<a name="aws-resource-events-rule--examples--Regularly_invoke_Lambda_function"></a>
 
 The following example creates a rule that invokes the specified Lambda function every 10 minutes\. The `PermissionForEventsToInvokeLambda` resource grants EventBridge permission to invoke the associated function\. 
 
-#### JSON<a name="aws-resource-events-rule--examples--Regularly_Invoke_Lambda_Function--json"></a>
+#### JSON<a name="aws-resource-events-rule--examples--Regularly_invoke_Lambda_function--json"></a>
 
 ```
 "ScheduledRule": {
@@ -159,7 +221,7 @@ The following example creates a rule that invokes the specified Lambda function 
 }
 ```
 
-#### YAML<a name="aws-resource-events-rule--examples--Regularly_Invoke_Lambda_Function--yaml"></a>
+#### YAML<a name="aws-resource-events-rule--examples--Regularly_invoke_Lambda_function--yaml"></a>
 
 ```
 ScheduledRule: 
@@ -178,8 +240,7 @@ ScheduledRule:
 PermissionForEventsToInvokeLambda: 
   Type: AWS::Lambda::Permission
   Properties: 
-    FunctionName: 
-      Ref: "LambdaFunction"
+    FunctionName: !Ref "LambdaFunction"
     Action: "lambda:InvokeFunction"
     Principal: "events.amazonaws.com"
     SourceArn: 

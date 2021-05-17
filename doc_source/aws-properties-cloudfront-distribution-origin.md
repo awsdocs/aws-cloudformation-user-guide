@@ -3,11 +3,11 @@
 An origin\.
 
 An origin is the location where content is stored, and from which CloudFront gets content to serve to viewers\. To specify an origin:
-+ Use the `S3OriginConfig` type to specify an Amazon S3 bucket that is * **not** * configured with static website hosting\.
-+ Use the `CustomOriginConfig` type to specify various other kinds of content containers or HTTP servers, including:
++ Use `S3OriginConfig` to specify an Amazon S3 bucket that is not configured with static website hosting\.
++ Use `CustomOriginConfig` to specify all other kinds of origins, including:
   + An Amazon S3 bucket that is configured with static website hosting
   + An Elastic Load Balancing load balancer
-  + An AWS Elemental MediaPackage origin
+  + An AWS Elemental MediaPackage endpoint
   + An AWS Elemental MediaStore container
   + Any other HTTP server, running on an Amazon EC2 instance or any other kind of host
 
@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Id](#cfn-cloudfront-distribution-origin-id)" : String,
   "[OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders)" : [ OriginCustomHeader, ... ],
   "[OriginPath](#cfn-cloudfront-distribution-origin-originpath)" : String,
+  "[OriginShield](#cfn-cloudfront-distribution-origin-originshield)" : ,
   "[S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig)" : S3OriginConfig
 }
 ```
@@ -44,6 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OriginCustomHeaders](#cfn-cloudfront-distribution-origin-origincustomheaders): 
     - OriginCustomHeader
   [OriginPath](#cfn-cloudfront-distribution-origin-originpath): String
+  [OriginShield](#cfn-cloudfront-distribution-origin-originshield): 
   [S3OriginConfig](#cfn-cloudfront-distribution-origin-s3originconfig): 
     S3OriginConfig
 ```
@@ -66,7 +68,7 @@ For more information, see [Origin Connection Timeout](https://docs.aws.amazon.co
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomOriginConfig`  <a name="cfn-cloudfront-distribution-origin-customoriginconfig"></a>
-Use this type to specify an origin that is a content container or HTTP server, including an Amazon S3 bucket that is configured with static website hosting\. To specify an Amazon S3 bucket that is * **not** * configured with static website hosting, use the `S3OriginConfig` type instead\.  
+Use this type to specify an origin that is not an Amazon S3 bucket, with one exception\. If the Amazon S3 bucket is configured with static website hosting, use this type\. If the Amazon S3 bucket is not configured with static website hosting, use the `S3OriginConfig` type instead\.  
 *Required*: Conditional  
 *Type*: [CustomOriginConfig](aws-properties-cloudfront-distribution-customoriginconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,7 +88,7 @@ Use this value to specify the `TargetOriginId` in a `CacheBehavior` or `DefaultC
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OriginCustomHeaders`  <a name="cfn-cloudfront-distribution-origin-origincustomheaders"></a>
-A list of HTTP header names and values that CloudFront adds to requests it sends to the origin\.  
+A list of HTTP header names and values that CloudFront adds to the requests that it sends to the origin\.  
 For more information, see [Adding Custom Headers to Origin Requests](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/add-origin-custom-headers.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of [OriginCustomHeader](aws-properties-cloudfront-distribution-origincustomheader.md)  
@@ -99,11 +101,19 @@ For more information, see [Origin Path](https://docs.aws.amazon.com/AmazonCloudF
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OriginShield`  <a name="cfn-cloudfront-distribution-origin-originshield"></a>
+CloudFront Origin Shield\. Using Origin Shield can help reduce the load on your origin\.  
+For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*:   
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `S3OriginConfig`  <a name="cfn-cloudfront-distribution-origin-s3originconfig"></a>
-Use this type to specify an origin that is an Amazon S3 bucket that is * **not** * configured with static website hosting\. To specify any other type of origin, including an Amazon S3 bucket that is configured with static website hosting, use the `CustomOriginConfig` type instead\.  
+Use this type to specify an origin that is an Amazon S3 bucket that is not configured with static website hosting\. To specify any other type of origin, including an Amazon S3 bucket that is configured with static website hosting, use the `CustomOriginConfig` type instead\.  
 *Required*: Conditional  
 *Type*: [S3OriginConfig](aws-properties-cloudfront-distribution-s3originconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-cloudfront-distribution-origin--seealso"></a>
 +  [Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_Origin.html) in the *Amazon CloudFront API Reference* 
+

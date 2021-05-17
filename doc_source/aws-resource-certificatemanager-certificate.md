@@ -4,7 +4,7 @@ The `AWS::CertificateManager::Certificate` resource requests an AWS Certificate 
 
 **Important**  
 When you use the `AWS::CertificateManager::Certificate` resource in a CloudFormation stack, domain validation is handled automatically if all three of the following are true: The certificate domain is hosted in Amazon Route 53, the domain resides in your AWS account, and you are using DNS validation\.  
-However, if the certificate uses email validation, or if the domain is not hosted in Route 53, then the stack will remain in the `CREATE_IN_PROGRESS` state\. Further stack operations are delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration\. For more information, see [Use Email to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html) and [Use DNS to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html)\.
+However, if the certificate uses email validation, or if the domain is not hosted in Route 53, then the stack will remain in the `CREATE_IN_PROGRESS` state\. Further stack operations are delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration\. For more information, see [Option 1: DNS Validation](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html) and [Option 2: Email Validation](https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html)\.
 
 ## Syntax<a name="aws-resource-certificatemanager-certificate-syntax"></a>
 
@@ -97,6 +97,7 @@ Key\-value pairs that can identify the certificate\.
 
 `ValidationMethod`  <a name="cfn-certificatemanager-certificate-validationmethod"></a>
 The method you want to use to validate that you own or control the domain associated with a public certificate\. You can [validate with DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html) or [validate with email](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html)\. We recommend that you use DNS validation\.  
+If not specified, this property defaults to email validation\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DNS | EMAIL`  
@@ -112,6 +113,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-certificatemanager-certificate--examples"></a>
 
+
+
 ### Declaring an Amazon Certificate Manager Certificate Resource<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource"></a>
 
 The following example shows how to declare an `AWS::CertificateManager::Certificate` resource to create an ACM certificate\.
@@ -119,14 +122,15 @@ The following example shows how to declare an `AWS::CertificateManager::Certific
 #### JSON<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--json"></a>
 
 ```
-"mycert" : {
-  "Type" : "AWS::CertificateManager::Certificate",
-  "Properties" : {
-    "DomainName" : "example.com",
-    "DomainValidationOptions" : [{
-      "DomainName" : "example.com",
-      "ValidationDomain" : "example.com"
-    }]
+{
+  "Resources":{
+    "MyCertificate":{
+      "Type":"AWS::CertificateManager::Certificate",
+      "Properties":{
+        "DomainName":"example.com",
+        "ValidationMethod":"DNS"
+      }
+    }
   }
 }
 ```
@@ -134,11 +138,10 @@ The following example shows how to declare an `AWS::CertificateManager::Certific
 #### YAML<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--yaml"></a>
 
 ```
-mycert:
-  Type: AWS::CertificateManager::Certificate
-  Properties:
-    DomainName: example.com
-    DomainValidationOptions:
-          - DomainName: example.com
-            ValidationDomain: example.com
+Resources:
+  MyCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: example.com
+      ValidationMethod: DNS
 ```

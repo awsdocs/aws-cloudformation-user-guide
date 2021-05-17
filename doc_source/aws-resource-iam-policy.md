@@ -106,6 +106,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-iam-policy--examples"></a>
 
+
+
 ### IAM Policy with policy group<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group"></a>
 
 #### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--json"></a>
@@ -145,7 +147,7 @@ Type: 'AWS::IAM::Policy'
 Properties:
   PolicyName: CFNUsers
   PolicyDocument:
-    Version: 2012-10-17
+    Version: "2012-10-17"
     Statement:
       - Effect: Allow
         Action:
@@ -192,7 +194,7 @@ Type: 'AWS::IAM::Policy'
 Properties:
   PolicyName: root
   PolicyDocument:
-    Version: 2012-10-17
+    Version: "2012-10-17"
     Statement:
       - Effect: Allow
         Action: '*'
@@ -203,3 +205,4 @@ Properties:
 
 ## See also<a name="aws-resource-iam-policy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
+

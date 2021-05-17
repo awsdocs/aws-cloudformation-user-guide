@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::Activity",
   "Properties" : {
-      "[Arn](#cfn-stepfunctions-activity-arn)" : String,
+      "[Name](#cfn-stepfunctions-activity-name)" : String,
       "[Tags](#cfn-stepfunctions-activity-tags)" : [ TagsEntry, ... ]
     }
 }
@@ -25,18 +25,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::StepFunctions::Activity
 Properties: 
-  [Arn](#cfn-stepfunctions-activity-arn): String
+  [Name](#cfn-stepfunctions-activity-name): String
   [Tags](#cfn-stepfunctions-activity-tags): 
     - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-stepfunctions-activity-properties"></a>
 
-`Arn`  <a name="cfn-stepfunctions-activity-arn"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+`Name`  <a name="cfn-stepfunctions-activity-name"></a>
+The name of the activity\.  
+A name must *not* contain:  
++ white space
++ brackets `< > { } [ ]` 
++ wildcard characters `? *` 
++ special characters `" # % \ ^ | ~ ` $ & , ; : /` 
++ control characters \(`U+0000-001F`, `U+007F-009F`\)
+To enable logging with CloudWatch Logs, the name should only contain 0\-9, A\-Z, a\-z, \- and \_\.  
+*Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-stepfunctions-activity-tags"></a>
 The list of tags to add to a resource\.  
@@ -81,28 +88,11 @@ The following examples create a Step Functions activity\.
 #### JSON<a name="aws-resource-stepfunctions-activity--examples----json"></a>
 
 ```
-{
-   "AWSTemplateFormatVersion" : "2010-09-09",
-   "Description" : "An example template for a Step Functions activity.",
-   "Resources" : {
-      "MyActivity" : {
-         "Type" : "AWS::StepFunctions::Activity",
-         "Properties" : {
-            "Name" : "myActivity",
-            "Tags": [
-                    {
-                        "Key": "keyname1",
-                        "Value": "value1"
-                    },
-                    {
-                        "Key": "keyname2",
-                        "Value": "value2"
-                    }
-                ]
-        }
-      }
-   }
-}
+{ "AWSTemplateFormatVersion" : "2010-09-09", "Description" : "An
+            example template for a Step Functions activity.", "Resources" : { "MyActivity" : {
+            "Type" : "AWS::StepFunctions::Activity", "Properties" : { "Name" : "myActivity", "Tags":
+            [ { "Key": "keyname1", "Value": "value1" }, { "Key": "keyname2", "Value": "value2" } ] }
+            } } }
 ```
 
 ### <a name="aws-resource-stepfunctions-activity--examples--"></a>
@@ -110,18 +100,8 @@ The following examples create a Step Functions activity\.
 #### YAML<a name="aws-resource-stepfunctions-activity--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Description: "A sample template for a Step Functions activity"
-Resources: 
-  MyActivity:
-    Type: "AWS::StepFunctions::Activity"
-    Properties: 
-      Name: myActivity
-      Tags:
-        -
-          Key: "keyname1"
-          Value: "value1"
-        -
-          Key: "keyname2"
-          Value: "value2"
+AWSTemplateFormatVersion: "2010-09-09" Description: "A sample
+            template for a Step Functions activity" Resources: MyActivity: Type:
+            "AWS::StepFunctions::Activity" Properties: Name: myActivity Tags: - Key: "keyname1"
+            Value: "value1" - Key: "keyname2" Value: "value2"
 ```

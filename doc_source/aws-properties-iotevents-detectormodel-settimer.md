@@ -38,11 +38,13 @@ The duration of the timer, in seconds\. You can use a string expression that inc
 The number of seconds until the timer expires\. The minimum value is 60 seconds to ensure accuracy\. The maximum value is 31622400 seconds\.   
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `31622400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimerName`  <a name="cfn-iotevents-detectormodel-settimer-timername"></a>
 The name of the timer\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel NielsenConfiguration<a name="aws-properties-medialive-channel-nielsenconfiguration"></a>
 
-Configures for Nielsen watermark handling\. This element belongs to EncoderSettings\.
+The settings to configure Nielsen watermarks\.
+
+The parent of this entity is EncoderSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-nielsenconfiguration-syntax"></a>
 
@@ -31,7 +33,7 @@ Enter the Distributor ID assigned to your organization by Nielsen\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NielsenPcmToId3Tagging`  <a name="cfn-medialive-channel-nielsenconfiguration-nielsenpcmtoid3tagging"></a>
-Enables Nielsen PCM to ID3 tagging\.  
+Enables Nielsen PCM to ID3 tagging  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

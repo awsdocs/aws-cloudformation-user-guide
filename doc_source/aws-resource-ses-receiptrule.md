@@ -2,10 +2,6 @@
 
 Specifies a receipt rule\.
 
-For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html)\.
-
-You can execute this operation no more than once per second\.
-
 ## Syntax<a name="aws-resource-ses-receiptrule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -37,7 +33,7 @@ Properties:
 ## Properties<a name="aws-resource-ses-receiptrule-properties"></a>
 
 `After`  <a name="cfn-ses-receiptrule-after"></a>
-The name of the existing rule that you want to place the current rule after\. If this parameter is `null`, the new rule is added as the first entry in the receipt rule set\.  
+The name of an existing rule after which the new rule is placed\. If this parameter is null, the new rule is inserted at the beginning of the rule list\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -49,7 +45,7 @@ A data structure that contains the specified rule's name, actions, recipients, d
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleSetName`  <a name="cfn-ses-receiptrule-rulesetname"></a>
-The name of the rule set that you want to add the receipt rule to\.  
+The name of the rule set where the receipt rule is added\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -67,6 +63,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 Specifies a receipt rule for incoming email\.
 
 ### <a name="aws-resource-ses-receiptrule--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ses-receiptrule--examples----json"></a>
 
@@ -149,7 +147,7 @@ Specifies a receipt rule for incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRule Sample Template'
+Description: AWS SES ReceiptRule Sample Template
 Parameters:
   RuleSetName:
     Type: String
@@ -163,10 +161,9 @@ Parameters:
     Type: String
   HeaderValue:
     Type: String
-
 Resources:
   ReceiptRule1:
-    Type: AWS::SES::ReceiptRule
+    Type: 'AWS::SES::ReceiptRule'
     Properties:
       RuleSetName: !Ref RuleSetName
       Rule:
@@ -178,9 +175,8 @@ Resources:
           - AddHeaderAction:
               HeaderName: !Ref HeaderName
               HeaderValue: !Ref HeaderValue
-
   ReceiptRule2:
-    Type: AWS::SES::ReceiptRule
+    Type: 'AWS::SES::ReceiptRule'
     Properties:
       RuleSetName: !Ref RuleSetName
       After: !Ref ReceiptRule1

@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CopyTags](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags)" : Boolean,
   "[Encrypted](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted)" : Boolean,
   "[RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule)" : CrossRegionCopyRetainRule,
+  "[Target](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-target)" : String,
   "[TargetRegion](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion)" : String
 }
 ```
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Encrypted](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted): Boolean
   [RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule): 
     CrossRegionCopyRetainRule
+  [Target](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-target): String
   [TargetRegion](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion): String
 ```
 
@@ -58,9 +60,20 @@ The retention rule\.
 *Type*: [CrossRegionCopyRetainRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Target`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-target"></a>
+The Amazon Resource Name \(ARN\) of the target AWS Outpost for the snapshot copies\.  
+If you specify an ARN, you must omit **TargetRegion**\. You cannot specify a target Region and a target Outpost in the same rule\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `^[\w:\-\/\*]+$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TargetRegion`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-targetregion"></a>
-The target Region\.  
-*Required*: Yes  
+The target Region for the snapshot copies\.  
+If you specify a target Region, you must omit **Target**\. You cannot specify a target Region and a target Outpost in the same rule\.  
+*Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `16`  

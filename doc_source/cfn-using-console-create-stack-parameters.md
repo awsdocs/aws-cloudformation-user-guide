@@ -14,16 +14,16 @@ With parameters, you can customize your stack at creation time\. Your parameter 
 
    You can use or change any parameters with default values\.
 
-1. When you are satisfied with the parameter values, click **Next** to proceed with [setting options for your stack](cfn-console-add-tags.md)\.
+1. When you are satisfied with the parameter values, choose **Next** to proceed with [setting options for your stack](cfn-console-add-tags.md)\.
 
 ## AWS\-specific parameter types<a name="cfn-using-console-create-stack-parameters-awstypes"></a>
 
-When you create stacks that contain AWS\-specific parameter types, the AWS CloudFormation console provides drop\-down lists of valid values for those parameters\. Depending on the parameter type, you can search for values by ID, name, or the value of the `Name` tag\. For example, with the `AWS::EC2::VPC::Id` parameter type, you can search for a specific VPC ID, such as `vpc-b47658d1`\. If the VPC was tagged with a name, such as `Name:TestVPC`, you can also search for `TestVPC`\. Currently, you can search only for tag values with the `Name` key\.
+When you create stacks that contain AWS\-specific parameter types, the CloudFormation console provides drop\-down lists of valid values for those parameters\. Depending on the parameter type, you can search for values by ID, name, or the value of the `Name` tag\. For example, with the `AWS::EC2::VPC::Id` parameter type, you can search for a specific VPC ID, such as `vpc-b47658d1`\. If the VPC was tagged with a name, such as `Name:TestVPC`, you can also search for `TestVPC`\. Currently, you can search only for tag values with the `Name` key\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-parameters-name-example.png)
 
 **Note**  
-The console doesn't provide a drop\-down list or enable you to search for values with the `AWS::EC2::Image::Id` parameter type; AWS CloudFormation only verifies if the input values are valid Amazon Elastic Compute Cloud image IDs\.
+The console doesn't provide a drop\-down list or enable you to search for values with the `AWS::EC2::Image::Id` parameter type\. CloudFormation only verifies if the input values are valid Amazon Elastic Compute Cloud image IDs\.
 
 ## Group and sort parameters<a name="cfn-using-console-create-stack-parameters-sort"></a>
 

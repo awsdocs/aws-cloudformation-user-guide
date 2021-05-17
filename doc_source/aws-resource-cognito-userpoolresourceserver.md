@@ -82,6 +82,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-userpoolresourceserver--examples"></a>
 
+
+
 ### Creating a new resource server for a user pool<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool"></a>
 
 The following example creates a resource server "Name" with the identifier "Identifier" in the referenced user pool\.

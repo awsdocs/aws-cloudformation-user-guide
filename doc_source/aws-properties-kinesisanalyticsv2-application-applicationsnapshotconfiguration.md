@@ -30,3 +30,4 @@ Describes whether snapshots are enabled for a Flink\-based Kinesis Data Analytic
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-applicationsnapshotconfiguration--seealso"></a>
 +  [ApplicationSnapshotConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ApplicationSnapshotConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

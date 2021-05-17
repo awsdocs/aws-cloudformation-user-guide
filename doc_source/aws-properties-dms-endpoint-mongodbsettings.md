@@ -19,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[NestingLevel](#cfn-dms-endpoint-mongodbsettings-nestinglevel)" : String,
   "[Password](#cfn-dms-endpoint-mongodbsettings-password)" : String,
   "[Port](#cfn-dms-endpoint-mongodbsettings-port)" : Integer,
+  "[SecretsManagerAccessRoleArn](#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn)" : String,
+  "[SecretsManagerSecretId](#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid)" : String,
   "[ServerName](#cfn-dms-endpoint-mongodbsettings-servername)" : String,
   "[Username](#cfn-dms-endpoint-mongodbsettings-username)" : String
 }
@@ -36,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [NestingLevel](#cfn-dms-endpoint-mongodbsettings-nestinglevel): String
   [Password](#cfn-dms-endpoint-mongodbsettings-password): String
   [Port](#cfn-dms-endpoint-mongodbsettings-port): Integer
+  [SecretsManagerAccessRoleArn](#cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn): String
+  [SecretsManagerSecretId](#cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid): String
   [ServerName](#cfn-dms-endpoint-mongodbsettings-servername): String
   [Username](#cfn-dms-endpoint-mongodbsettings-username): String
 ```
@@ -103,6 +107,18 @@ Default value is `"none"`\. Specify `"none"` to use document mode\. Specify `"on
  The port value for the MongoDB source endpoint\.   
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecretsManagerAccessRoleArn`  <a name="cfn-dms-endpoint-mongodbsettings-secretsmanageraccessrolearn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecretsManagerSecretId`  <a name="cfn-dms-endpoint-mongodbsettings-secretsmanagersecretid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerName`  <a name="cfn-dms-endpoint-mongodbsettings-servername"></a>

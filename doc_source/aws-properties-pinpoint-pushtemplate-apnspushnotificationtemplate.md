@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate APNSPushNotificationTemplate<a name="aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate"></a>
 
-The AWS::Pinpoint::PushTemplate APNSPushNotificationTemplate resource defines channel\-specific content and settings for a message template that can be used in push notifications that are sent through the APNs \(Apple Push Notification service\) channel\.
+Specifies channel\-specific content and settings for a message template that can be used in push notifications that are sent through the APNs \(Apple Push Notification service\) channel\.
 
 ## Syntax<a name="aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate-syntax"></a>
 

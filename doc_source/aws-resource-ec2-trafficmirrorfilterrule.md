@@ -124,11 +124,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorfilterrule--examples"></a>
 
-### Create a Traffic Mirror Filter Rule for inbound UDP Traffic<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_Traffic_Mirror_Filter_Rule_for_inbound_UDP_Traffic"></a>
+### Create a traffic mirror filter rule for inbound UDP traffic<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_traffic_mirror_filter_rule_for_inbound_UDP_traffic"></a>
 
 This is a filter rule for UDP traffic\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_Traffic_Mirror_Filter_Rule_for_inbound_UDP_Traffic--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_traffic_mirror_filter_rule_for_inbound_UDP_traffic--json"></a>
 
 ```
 {
@@ -156,7 +156,7 @@ This is a filter rule for UDP traffic\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_Traffic_Mirror_Filter_Rule_for_inbound_UDP_Traffic--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_traffic_mirror_filter_rule_for_inbound_UDP_traffic--yaml"></a>
 
 ```
 SampleTrafficMirrorFilterRule:
@@ -181,3 +181,4 @@ SampleTrafficMirrorFilterRule:
 ## See also<a name="aws-resource-ec2-trafficmirrorfilterrule--seealso"></a>
 + [Traffic Mirror Filters and Filter Rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-filters) in *Traffic Mirroring*
 + [CreateTrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorFilterRule.html) in the *Amazon EC2 API Reference*
+

@@ -39,7 +39,7 @@ Properties:
 
 `MeshName`  <a name="cfn-appmesh-mesh-meshname"></a>
 The name to use for the service mesh\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -197,3 +197,4 @@ Outputs:
 ## See also<a name="aws-resource-appmesh-mesh--seealso"></a>
 +  [Service Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateMesh](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateMesh.html) in the * AWS App Mesh API Reference *\.
+

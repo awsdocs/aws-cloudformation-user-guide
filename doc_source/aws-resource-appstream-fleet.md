@@ -145,6 +145,7 @@ The name of the image used to create the fleet\.
 
 `InstanceType`  <a name="cfn-appstream-fleet-instancetype"></a>
 The instance type to use when launching fleet instances\. The following instance types are available:  
++ stream\.standard\.small
 + stream\.standard\.medium
 + stream\.standard\.large
 + stream\.compute\.large
@@ -218,3 +219,4 @@ The VPC configuration for the fleet\.
 
 ## See also<a name="aws-resource-appstream-fleet--seealso"></a>
 +  [CreateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 
+

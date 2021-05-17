@@ -38,7 +38,7 @@ The maximum number of container instances that Amazon ECS will scale in or scale
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `10000`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinimumScalingStepSize`  <a name="cfn-ecs-capacityprovider-managedscaling-minimumscalingstepsize"></a>
 The minimum number of container instances that Amazon ECS will scale in or scale out at one time\. If this parameter is omitted, the default value of `1` is used\.  
@@ -46,14 +46,14 @@ The minimum number of container instances that Amazon ECS will scale in or scale
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `10000`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-ecs-capacityprovider-managedscaling-status"></a>
 Whether or not to enable managed scaling for the capacity provider\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetCapacity`  <a name="cfn-ecs-capacityprovider-managedscaling-targetcapacity"></a>
 The target capacity value for the capacity provider\. The specified value must be greater than `0` and less than or equal to `100`\. A value of `100` will result in the Amazon EC2 instances in your Auto Scaling group being completely utilized\.  
@@ -61,4 +61,4 @@ The target capacity value for the capacity provider\. The specified value must b
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

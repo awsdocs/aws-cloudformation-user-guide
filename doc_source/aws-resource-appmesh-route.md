@@ -57,7 +57,7 @@ The AWS IAM account ID of the service mesh owner\. If the account ID is not your
 
 `RouteName`  <a name="cfn-appmesh-route-routename"></a>
 The name to use for the route\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -283,3 +283,4 @@ Outputs:
 ## See also<a name="aws-resource-appmesh-route--seealso"></a>
 +  [Routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateRoute](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html) in the * AWS App Mesh API Reference *\.
+

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CE::CostCategory",
   "Properties" : {
+      "[DefaultValue](#cfn-ce-costcategory-defaultvalue)" : String,
       "[Name](#cfn-ce-costcategory-name)" : String,
       "[Rules](#cfn-ce-costcategory-rules)" : String,
       "[RuleVersion](#cfn-ce-costcategory-ruleversion)" : String
@@ -24,12 +25,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CE::CostCategory
 Properties: 
+  [DefaultValue](#cfn-ce-costcategory-defaultvalue): String
   [Name](#cfn-ce-costcategory-name): String
   [Rules](#cfn-ce-costcategory-rules): String
   [RuleVersion](#cfn-ce-costcategory-ruleversion): String
 ```
 
 ## Properties<a name="aws-resource-ce-costcategory-properties"></a>
+
+`DefaultValue`  <a name="cfn-ce-costcategory-defaultvalue"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ce-costcategory-name"></a>
 The unique name of the Cost Category\.  
@@ -74,6 +82,8 @@ The unique identifier for your Cost Category\.
 The Cost Category's effective start date\.
 
 ## Examples<a name="aws-resource-ce-costcategory--examples"></a>
+
+
 
 ### Cost Category Department with two rules<a name="aws-resource-ce-costcategory--examples--Cost_Category_Department_with_two_rules"></a>
 
@@ -140,9 +150,10 @@ The following example creates a Cost Category "Department" with two rules\.
           "Values": [ "222222222222" ]
           }
         }
-
+      }
     ]'
 ```
 
 ## See also<a name="aws-resource-ce-costcategory--seealso"></a>
 +  [CostCategory](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_CostCategory.html) in the *AWS Billing and Cost Management API Reference*\. 
+

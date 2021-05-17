@@ -162,8 +162,8 @@ Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have mu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordset-hostedzonename"></a>
-The name of the hosted zone that you want to create records in\.  
-When you create a stack using an AWS::Route53::RecordSet that specifies HostedZoneName, AWS CloudFormation attempts to find a hosted zone whose name matches the HostedZoneName\. If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
+The name of the hosted zone that you want to create records in\. You must include a trailing dot \(for example, `www.example.com.`\) as part of the `HostedZoneName`\.  
+When you create a stack using an AWS::Route53::RecordSet that specifies `HostedZoneName`, AWS CloudFormation attempts to find a hosted zone whose name matches the HostedZoneName\. If AWS CloudFormation cannot find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.  
 Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.  
 *Required*: No  
 *Type*: String  
@@ -245,7 +245,7 @@ The resource record cache time to live \(TTL\), in seconds\. Note the following:
 
 `Type`  <a name="cfn-route53-recordset-type"></a>
 The DNS record type\. For information about different record types and how data is encoded for them, see [Supported DNS Resource Record Types](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html) in the *Amazon Route 53 Developer Guide*\.  
-Valid values for basic resource record sets: `A` \| `AAAA` \| `CAA` \| `CNAME` \| `MX` \| `NAPTR` \| `NS` \| `PTR` \| `SOA` \| `SPF` \| `SRV` \| `TXT`   
+Valid values for basic resource record sets: `A` \| `AAAA` \| `CAA` \| `CNAME` \| `DS` \|`MX` \| `NAPTR` \| `NS` \| `PTR` \| `SOA` \| `SPF` \| `SRV` \| `TXT`   
 Values for weighted, latency, geolocation, and failover resource record sets: `A` \| `AAAA` \| `CAA` \| `CNAME` \| `MX` \| `NAPTR` \| `PTR` \| `SPF` \| `SRV` \| `TXT`\. When creating a group of weighted, latency, geolocation, or failover resource record sets, specify the same value for all of the resource record sets in the group\.  
 Valid values for multivalue answer resource record sets: `A` \| `AAAA` \| `MX` \| `NAPTR` \| `PTR` \| `SPF` \| `SRV` \| `TXT`   
 SPF records were formerly used to verify the identity of the sender of email messages\. However, we no longer recommend that you create resource record sets for which the value of `Type` is `SPF`\. RFC 7208, *Sender Policy Framework \(SPF\) for Authorizing Use of Domains in Email, Version 1*, has been updated to say, "\.\.\.\[I\]ts existence and mechanism defined in \[RFC4408\] have led to some interoperability issues\. Accordingly, its use is no longer appropriate for SPF version 1; implementations are not to use it\." In RFC 7208, see section 14\.1, [The SPF DNS Record Type](http://tools.ietf.org/html/rfc7208#section-14.1)\.
@@ -263,7 +263,7 @@ Values for alias resource record sets:
 If you're creating an alias record that has the same name as the hosted zone \(known as the zone apex\), you can't route traffic to a record for which the value of `Type` is `CNAME`\. This is because the alias record must have the same type as the record you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `A | AAAA | CAA | CNAME | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT`  
+*Allowed values*: `A | AAAA | CAA | CNAME | DS | MX | NAPTR | NS | PTR | SOA | SPF | SRV | TXT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Weight`  <a name="cfn-route53-recordset-weight"></a>
@@ -327,7 +327,7 @@ Resources:
       Name: test.example.com
       ResourceRecords:
       - 192.0.2.99
-      TTL: '900'
+      TTL: 900
       Type: A
 ```
 
@@ -410,7 +410,7 @@ Resources:
       Comment: DNS name for my instance.
       Name: !Join ['', [!Ref 'Ec2Instance', ., !Ref 'AWS::Region', ., !Ref 'HostedZone', .]]
       Type: A
-      TTL: '900'
+      TTL: 900
       ResourceRecords:
       - !GetAtt Ec2Instance.PublicIp
 ```

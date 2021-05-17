@@ -2,9 +2,11 @@
 
 Creates a new managed policy for your AWS account\.
 
-This operation creates a policy version with a version identifier of `v1` and sets v1 as the policy's default version\. For more information about policy versions, see [Versioning for Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html) in the *IAM User Guide*\.
+This operation creates a policy version with a version identifier of `v1` and sets v1 as the policy's default version\. For more information about policy versions, see [Versioning for managed policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html) in the *IAM User Guide*\.
 
-For more information about managed policies in general, see [Managed Policies and Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *IAM User Guide*\.
+As a best practice, you can validate your IAM policies\. To learn more, see [Validating IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_policy-validator.html) in the *IAM User Guide*\.
+
+For more information about managed policies in general, see [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-managedpolicy-syntax"></a>
 
@@ -76,7 +78,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 `Path`  <a name="cfn-ec2-dhcpoptions-path"></a>
 The path for the policy\.  
-For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
+For more information about paths, see [IAM identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
 This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
@@ -131,6 +133,8 @@ In the following sample, the `Ref` function returns the ARN of the `CreateTestDB
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iam-managedpolicy--examples"></a>
+
+
 
 ### Create managed policy<a name="aws-resource-iam-managedpolicy--examples--Create_managed_policy"></a>
 
@@ -217,7 +221,7 @@ CreateTestDBPolicy:
     Description: Policy for creating a test database
     Path: /
     PolicyDocument:
-      Version: 2012-10-17
+      Version: "2012-10-17"
       Statement:
         - Effect: Allow
           Action: 'rds:CreateDBInstance'
@@ -249,3 +253,4 @@ CreateTestDBPolicy:
 
 ## See also<a name="aws-resource-iam-managedpolicy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
+

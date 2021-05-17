@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::PublicDnsNamespace<a name="aws-resource-servicediscovery-publicdnsnamespace"></a>
 
-Creates a public namespace based on DNS, which will be visible on the internet\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service will be `backend.example.com`\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
+Creates a public namespace based on DNS, which is visible on the internet\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service is `backend.example.com`\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
 
 ## Syntax<a name="aws-resource-servicediscovery-publicdnsnamespace-syntax"></a>
 
@@ -44,6 +44,7 @@ The name that you want to assign to this namespace\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
+*Pattern*: `^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-servicediscovery-publicdnsnamespace-tags"></a>
@@ -77,6 +78,8 @@ The ID of the public namespace\.
 
 ## Examples<a name="aws-resource-servicediscovery-publicdnsnamespace--examples"></a>
 
+
+
 ### Create a public DNS namespace<a name="aws-resource-servicediscovery-publicdnsnamespace--examples--Create_a_public_DNS_namespace"></a>
 
 The following example creates a public DNS namespace named `example.com`\.
@@ -104,3 +107,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-publicdnsnamespace--seealso"></a>
 +  [CreatePublicDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePublicDnsNamespace.html) in the *AWS Cloud Map API Reference* 
+

@@ -55,3 +55,4 @@ For the current limit on the number of cookie names that you can whitelist for e
 
 ## See also<a name="aws-properties-cloudfront-distribution-cookies--seealso"></a>
 +  [CookiePreference](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CookiePreference.html) in the *Amazon CloudFront API Reference* 
+

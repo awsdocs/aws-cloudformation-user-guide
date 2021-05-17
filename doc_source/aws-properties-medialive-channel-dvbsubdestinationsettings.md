@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel DvbSubDestinationSettings<a name="aws-properties-medialive-channel-dvbsubdestinationsettings"></a>
 
-Configures the output captions encode for the DVB\-Sub format\. This element belongs to CaptionDestinationSettings \.
+The settings for DVB Sub captions in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-dvbsubdestinationsettings-syntax"></a>
 
@@ -56,7 +58,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-dvbsubdestinationsettings-properties"></a>
 
 `Alignment`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-alignment"></a>
-If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output\. Similarly, setting a left alignment will align captions to the bottom left of the output\. If x and y positions are given in conjunction with the alignment parameter, the font will be justified \(either left or centered\) relative to those coordinates\. Selecting "smart" justification will left\-justify live subtitles and center\-justify pre\-recorded subtitles\. This option is not valid for source captions that are STL or 608/embedded\. These source settings are already pre\-defined by the caption stream\. All burn\-in and DVB\-Sub font settings must match\.  
+If no explicit xPosition or yPosition is provided, setting the alignment to centered places the captions at the bottom center of the output\. Similarly, setting a left alignment aligns captions to the bottom left of the output\. If x and y positions are specified in conjunction with the alignment parameter, the font is justified \(either left or centered\) relative to those coordinates\. Selecting "smart" justification left\-justifies live subtitles and center\-justifies pre\-recorded subtitles\. This option is not valid for source captions that are STL or 608/embedded\. These source settings are already pre\-defined by the captions stream\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,19 +70,19 @@ Specifies the color of the rectangle behind the captions\. All burn\-in and DVB\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BackgroundOpacity`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-backgroundopacity"></a>
-Specifies the opacity of the background rectangle\. 255 is opaque; 0 is transparent\. Leaving this parameter blank is equivalent to setting it to 0 \(transparent\)\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the opacity of the background rectangle\. 255 is opaque; 0 is transparent\. Keeping this parameter blank is equivalent to setting it to 0 \(transparent\)\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Font`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-font"></a>
-External font file used for caption burn\-in\. File extension must be 'ttf' or 'tte'\. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system\. Using external fonts with these caption sources could cause unexpected display of proportional fonts\. All burn\-in and DVB\-Sub font settings must match\.  
+The external font file that is used for captions burn\-in\. The file extension must be \.ttf or \.tte\. Although you can select output fonts for many different types of input captions, embedded, STL, and Teletext sources use a strict grid system\. Using external fonts with these captions sources could cause an unexpected display of proportional fonts\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: [InputLocation](aws-properties-medialive-channel-inputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FontColor`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-fontcolor"></a>
-Specifies the color of the burned\-in captions\. This option is not valid for source captions that are STL, 608/embedded or teletext\. These source settings are already pre\-defined by the caption stream\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the color of the burned\-in captions\. This option is not valid for source captions that are STL, 608/embedded, or Teletext\. These source settings are already pre\-defined by the captions stream\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,37 +94,37 @@ Specifies the opacity of the burned\-in captions\. 255 is opaque; 0 is transpare
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FontResolution`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-fontresolution"></a>
-Font resolution in DPI \(dots per inch\); default is 96 dpi\. All burn\-in and DVB\-Sub font settings must match\.  
+The font resolution in DPI \(dots per inch\)\. The default is 96 dpi\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FontSize`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-fontsize"></a>
-When set to auto fontSize will scale depending on the size of the output\. Giving a positive integer will specify the exact font size in points\. All burn\-in and DVB\-Sub font settings must match\.  
+When set to auto, fontSize scales depending on the size of the output\. Providing a positive integer specifies the exact font size in points\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutlineColor`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-outlinecolor"></a>
-Specifies font outline color\. This option is not valid for source captions that are either 608/embedded or teletext\. These source settings are already pre\-defined by the caption stream\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the font outline color\. This option is not valid for source captions that are either 608/embedded or Teletext\. These source settings are already pre\-defined by the captions stream\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutlineSize`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-outlinesize"></a>
-Specifies font outline size in pixels\. This option is not valid for source captions that are either 608/embedded or teletext\. These source settings are already pre\-defined by the caption stream\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the font outline size in pixels\. This option is not valid for source captions that are either 608/embedded or Teletext\. These source settings are already pre\-defined by the captions stream\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShadowColor`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-shadowcolor"></a>
-Specifies the color of the shadow cast by the captions\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the color of the shadow that is cast by the captions\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShadowOpacity`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-shadowopacity"></a>
-Specifies the opacity of the shadow\. 255 is opaque; 0 is transparent\. Leaving this parameter blank is equivalent to setting it to 0 \(transparent\)\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the opacity of the shadow\. 255 is opaque; 0 is transparent\. Keeping this parameter blank is equivalent to setting it to 0 \(transparent\)\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -140,19 +142,19 @@ Specifies the vertical offset of the shadow relative to the captions in pixels\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TeletextGridControl`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-teletextgridcontrol"></a>
-Controls whether a fixed grid size will be used to generate the output subtitles bitmap\. Only applicable for Teletext inputs and DVB\-Sub/Burn\-in outputs\.  
+Controls whether a fixed grid size is used to generate the output subtitles bitmap\. This applies to only Teletext inputs and DVB\-Sub/Burn\-in outputs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `XPosition`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-xposition"></a>
-Specifies the horizontal position of the caption relative to the left side of the output in pixels\. A value of 10 would result in the captions starting 10 pixels from the left of the output\. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter\. This option is not valid for source captions that are STL, 608/embedded or teletext\. These source settings are already pre\-defined by the caption stream\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the horizontal position of the captions relative to the left side of the output in pixels\. A value of 10 would result in the captions starting 10 pixels from the left of the output\. If no explicit xPosition is provided, the horizontal captions position is determined by the alignment parameter\. This option is not valid for source captions that are STL, 608/embedded, or Teletext\. These source settings are already pre\-defined by the captions stream\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `YPosition`  <a name="cfn-medialive-channel-dvbsubdestinationsettings-yposition"></a>
-Specifies the vertical position of the caption relative to the top of the output in pixels\. A value of 10 would result in the captions starting 10 pixels from the top of the output\. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output\. This option is not valid for source captions that are STL, 608/embedded or teletext\. These source settings are already pre\-defined by the caption stream\. All burn\-in and DVB\-Sub font settings must match\.  
+Specifies the vertical position of the captions relative to the top of the output in pixels\. A value of 10 would result in the captions starting 10 pixels from the top of the output\. If no explicit yPosition is provided, the captions are positioned towards the bottom of the output\. This option is not valid for source captions that are STL, 608/embedded, or Teletext\. These source settings are already pre\-defined by the captions stream\. All burn\-in and DVB\-Sub font settings must match\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

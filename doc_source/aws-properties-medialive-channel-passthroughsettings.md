@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel PassThroughSettings<a name="aws-properties-medialive-channel-passthroughsettings"></a>
 
-Sets up the output audio to include the audio from the input as a 'passthrough'\. This element belongs to AudioCodecSettings\.
+The settings for passing through audio to the output\.
+
+The parent of this entity is AudioCodecSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-passthroughsettings-syntax"></a>
 

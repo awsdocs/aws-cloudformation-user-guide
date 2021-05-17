@@ -33,6 +33,8 @@ The Amazon Resource Name \(ARN\) of the destination resource\.
 
 ## Examples<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig-onsuccess--examples"></a>
 
+
+
 ### On\-Success Destination Configuration<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig-onsuccess--examples--On-Success_Destination_Configuration"></a>
 
 Configure a function to send a record of successful asynchronous invocations to an SQS queue\.

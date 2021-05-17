@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget<a name="aws-resource-budgets-budget"></a>
 
-The `AWS::Budgets::Budget` resource creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the *AWS Billing and Cost Management User Guide*\.
+The `AWS::Budgets::Budget` resource allows customers to take pre\-defined actions that will trigger once a budget threshold has been exceeded\. creates, replaces, or deletes budgets for Billing and Cost Management\. For more information, see [Managing Your Costs with Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html) in the *AWS Billing and Cost Management User Guide*\.
 
 ## Syntax<a name="aws-resource-budgets-budget-syntax"></a>
 
@@ -53,6 +53,8 @@ A notification that you want to associate with a budget\. A budget can have up t
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-budgets-budget--examples"></a>
+
+
 
 ### Budget for 100 USD with two notifications<a name="aws-resource-budgets-budget--examples--Budget_for_100_USD_with_two_notifications"></a>
 
@@ -176,3 +178,4 @@ Outputs:
 
 ## See also<a name="aws-resource-budgets-budget--seealso"></a>
 +  [CreateBudget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CreateBudget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

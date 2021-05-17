@@ -52,11 +52,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-subnet-route-table-assoc--examples"></a>
 
-### Subnet Route Table Association<a name="aws-resource-ec2-subnet-route-table-assoc--examples--Subnet_Route_Table_Association"></a>
+
+
+### Subnet route table association<a name="aws-resource-ec2-subnet-route-table-assoc--examples--Subnet_route_table_association"></a>
 
 The following example associates a subnet with a route table\.
 
-#### JSON<a name="aws-resource-ec2-subnet-route-table-assoc--examples--Subnet_Route_Table_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-subnet-route-table-assoc--examples--Subnet_route_table_association--json"></a>
 
 ```
 "mySubnetRouteTableAssociation" : {
@@ -68,7 +70,7 @@ The following example associates a subnet with a route table\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-subnet-route-table-assoc--examples--Subnet_Route_Table_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-subnet-route-table-assoc--examples--Subnet_route_table_association--yaml"></a>
 
 ```
   mySubnetRouteTableAssociation:
@@ -83,3 +85,4 @@ The following example associates a subnet with a route table\.
 ## See also<a name="aws-resource-ec2-subnet-route-table-assoc--seealso"></a>
 +  [AssociateRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateRouteTable.html) in the *Amazon EC2 API Reference*
 + [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon Virtual Private Cloud User Guide*
+

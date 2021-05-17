@@ -90,7 +90,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
 1. On the **Review *stack\-name*** page, review the resources to import, and then choose **Import resources**\. This automatically executes the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
 
-   The **Events** page for the stack displays\.   
+   The **Events** page for the stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 
 1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
@@ -108,7 +108,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
 1. Compose a list of resources to import and their unique identifiers in the following format\.
 
-   "\[\{\\"ResourceType\\":\\"*AWS::DynamoDB::Table*\\",\\"LogicalResourceId\\":\\"*GamesTable*\\",\\"ResourceIdentifier\\":\{\\"*TableName*\\":\\"*Games*\\"\}\}\]"
+   `[{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}}]`
 
 1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` does not support inline YAML\.
 
@@ -120,7 +120,7 @@ The import operation fails if you modify existing parameters that trigger a crea
        --template-body file://templateToImport.json
    ```
 
-   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\. 
+   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\.
 
    ```
    --resources-to-import: file://resourcesToImport.txt
@@ -152,7 +152,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    > aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
-1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
+1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
 
    ```
    > aws cloudformation detect-stack-drift --stack-name TargetStack

@@ -54,4 +54,4 @@ The type of data source for the resource data sync\. `SourceType` is either `Aws
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

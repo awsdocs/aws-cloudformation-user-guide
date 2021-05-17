@@ -1,4 +1,4 @@
-# FMS resource type reference<a name="AWS_FMS"></a>
+# Firewall Manager resource type reference<a name="AWS_FMS"></a>
 
 **Resource types**
 + [AWS::FMS::NotificationChannel](aws-resource-fms-notificationchannel.md)

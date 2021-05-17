@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate<a name="aws-resource-pinpoint-pushtemplate"></a>
 
-The AWS::Pinpoint::PushTemplate resource is a message template that you can use in messages that are sent through a push notification channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for one or more Amazon Pinpoint applications\.
+Creates a message template that you can use in messages that are sent through a push notification channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
 
 ## Syntax<a name="aws-resource-pinpoint-pushtemplate-syntax"></a>
 

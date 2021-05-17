@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn)" : String,
       "[ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier)" : String,
       "[ReplicationTaskSettings](#cfn-dms-replicationtask-replicationtasksettings)" : String,
+      "[ResourceIdentifier](#cfn-dms-replicationtask-resourceidentifier)" : String,
       "[SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn)" : String,
       "[TableMappings](#cfn-dms-replicationtask-tablemappings)" : String,
       "[Tags](#cfn-dms-replicationtask-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -40,6 +41,7 @@ Properties:
   [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn): String
   [ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier): String
   [ReplicationTaskSettings](#cfn-dms-replicationtask-replicationtasksettings): String
+  [ResourceIdentifier](#cfn-dms-replicationtask-resourceidentifier): String
   [SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn): String
   [TableMappings](#cfn-dms-replicationtask-tablemappings): String
   [Tags](#cfn-dms-replicationtask-tags): 
@@ -104,6 +106,12 @@ Overall settings for the task, in JSON format\. For more information, see [Speci
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ResourceIdentifier`  <a name="cfn-dms-replicationtask-resourceidentifier"></a>
+A friendly name for the resource identifier at the end of the `EndpointArn` response parameter that is returned in the created `Endpoint` object\. The value for this parameter can have up to 31 characters\. It can contain only ASCII letters, digits, and hyphen \('\-'\)\. Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as `Example-App-ARN1`\. For example, this value might result in the `EndpointArn` value `arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1`\. If you don't specify a `ResourceIdentifier` value, AWS DMS generates a default identifier value for the end of `EndpointArn`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SourceEndpointArn`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
 An Amazon Resource Name \(ARN\) that uniquely identifies the source endpoint\.  
 *Required*: Yes  
@@ -143,6 +151,8 @@ Not currently supported by AWS CloudFormation\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-dms-replicationtask--examples"></a>
+
+
 
 ### <a name="aws-resource-dms-replicationtask--examples--"></a>
 
@@ -184,3 +194,4 @@ Resources:
 ## See also<a name="aws-resource-dms-replicationtask--seealso"></a>
 +  [CreateReplicationTask](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationTask.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

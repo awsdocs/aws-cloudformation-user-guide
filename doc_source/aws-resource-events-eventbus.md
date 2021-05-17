@@ -69,6 +69,8 @@ The policy for the event bus in JSON form\.
 
 ## Examples<a name="aws-resource-events-eventbus--examples"></a>
 
+
+
 ### Create a partner event bus<a name="aws-resource-events-eventbus--examples--Create_a_partner_event_bus"></a>
 
 The following example creates a partner event bus named `aws.partner/PartnerName/acct1/repo1`\. 

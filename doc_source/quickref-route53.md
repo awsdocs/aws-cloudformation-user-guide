@@ -1,20 +1,20 @@
 # Route 53 template snippets<a name="quickref-route53"></a>
 
 **Topics**
-+ [Amazon Route 53 resource record set using hosted zone name or ID](#scenario-route53-recordset-by-host)
++ [Amazon Route 53 resource record set using hosted zone name or ID](#scenario-route53-recordset-by-host)
 + [Using RecordSetGroup to set up weighted resource record sets](#scenario-recordsetgroup-weighted)
 + [Using RecordSetGroup to set up an alias resource record set](#scenario-recordsetgroup-zoneapex)
-+ [Alias resource record set for a CloudFront distribution](#w6974ab1c27c22c81c11)
++ [Alias resource record set for a CloudFront distribution](#w8918ab1c27c21c80c11)
 
-## Amazon Route 53 resource record set using hosted zone name or ID<a name="scenario-route53-recordset-by-host"></a>
+## Amazon Route 53 resource record set using hosted zone name or ID<a name="scenario-route53-recordset-by-host"></a>
 
-When you create an Amazon Route 53 resource record set, you must specify the hosted zone where you want to add it\. AWS CloudFormation provides two ways to specify a hosted zone:
-+ You can explicitly specify the hosted zone using the `HostedZoneId` property\. 
+When you create an Amazon Route 53 resource record set, you must specify the hosted zone where you want to add it\. AWS CloudFormation provides two ways to specify a hosted zone:
++ You can explicitly specify the hosted zone using the `HostedZoneId` property\.
 + You can have AWS CloudFormation find the hosted zone using the `HostedZoneName` property\. If you use the `HostedZoneName` property and there are multiple hosted zones with the same name, AWS CloudFormation doesn't create the stack\.
 
 ### Adding RecordSet using HostedZoneId<a name="scenario-recordset-using-id"></a>
 
-This example adds an Amazon Route 53 resource record set containing an SPF record for the domain name `mysite.example.com` that uses the `HostedZoneId` property to specify the hosted zone\.
+This example adds an Amazon Route 53 resource record set containing an SPF record for the domain name `mysite.example.com` that uses the `HostedZoneId` property to specify the hosted zone\.
 
 #### JSON<a name="quickref-route53-example-1.json"></a>
 
@@ -48,7 +48,7 @@ This example adds an Amazon Route 53 resource record set containing an SPF recor
 
 ### Adding RecordSet using HostedZoneName<a name="scenario-recordset-using-name"></a>
 
-This example adds an Amazon Route 53 resource record set for the domain name "mysite\.example\.com" using the `HostedZoneName` property to specify the hosted zone\.
+This example adds an Amazon Route 53 resource record set for the domain name "mysite\.example\.com" using the `HostedZoneName` property to specify the hosted zone\.
 
 #### JSON<a name="quickref-route53-example-2.json"></a>
 
@@ -85,7 +85,7 @@ This example adds an Amazon Route 53 resource record set for the domain name "my
 
 ## Using RecordSetGroup to set up weighted resource record sets<a name="scenario-recordsetgroup-weighted"></a>
 
-This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) to set up two CNAME records for the "example\.com\." hosted zone\. The `RecordSets` property contains the CNAME record sets for the "mysite\.example\.com" DNS name\. Each record set contains an identifier \(`SetIdentifier`\) and weight \(`Weight`\)\. The proportion of internet traffic that is routed to the resources is based on the following calculations:
+This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) to set up two CNAME records for the "example\.com\." hosted zone\. The `RecordSets` property contains the CNAME record sets for the "mysite\.example\.com" DNS name\. Each record set contains an identifier \(`SetIdentifier`\) and weight \(`Weight`\)\. The proportion of internet traffic that's routed to the resources is based on the following calculations:
 + `Frontend One`: `140/(140+60)` = `140/200` = 70%
 + `Frontend Two`: `60/(140+60)` = `60/200` = 30%
 
@@ -265,7 +265,7 @@ For more information about alias resource record sets, see [Choosing between ali
 17.         DNSName: !GetAtt 'myELB.DNSName'
 ```
 
-## Alias resource record set for a CloudFront distribution<a name="w6974ab1c27c22c81c11"></a>
+## Alias resource record set for a CloudFront distribution<a name="w8918ab1c27c21c80c11"></a>
 
 The following example creates an alias record set that routes queries to the specified CloudFront distribution\.
 

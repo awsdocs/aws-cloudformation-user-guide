@@ -54,7 +54,7 @@ The reference to an AWS\-managed certificate for use by the edge\-optimized endp
 The custom domain name for your API\. Uppercase letters are not supported\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EndpointConfiguration`  <a name="cfn-apigateway-domainname-endpointconfiguration"></a>
 A list of the endpoint types of the domain name\.  
@@ -117,6 +117,8 @@ The domain name associated with the regional endpoint for this custom domain nam
 The region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\.
 
 ## Examples<a name="aws-resource-apigateway-domainname--examples"></a>
+
+
 
 ### Create Custom Domain<a name="aws-resource-apigateway-domainname--examples--Create_Custom_Domain"></a>
 
@@ -444,3 +446,4 @@ Outputs:
 
 ## See also<a name="aws-resource-apigateway-domainname--seealso"></a>
 + [domainname:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) in the *Amazon API Gateway REST API Reference*
+

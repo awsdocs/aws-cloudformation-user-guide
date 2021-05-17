@@ -46,3 +46,4 @@ Usually the class that implements the SerDe\. An example is `org.apache.hadoop.h
 
 ## See also<a name="aws-properties-glue-table-serdeinfo--seealso"></a>
 +  [SerDeInfo Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SerDeInfo) in the *AWS Glue Developer Guide* 
+

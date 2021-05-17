@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset<a name="aws-resource-iotanalytics-dataset"></a>
 
-The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a "queryAction" \(an SQL query\) or a "containerAction" \(executing a containerized application\)\. The data set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you specify\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
+The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a `queryAction` \(an SQL query\) or a `containerAction` \(executing a containerized application\)\. The data set can be populated manually by calling `CreateDatasetContent` or automatically according to a `trigger` you specify\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
 
 ## Syntax<a name="aws-resource-iotanalytics-dataset-syntax"></a>
 
@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Actions](#cfn-iotanalytics-dataset-actions)" : [ Action, ... ],
       "[ContentDeliveryRules](#cfn-iotanalytics-dataset-contentdeliveryrules)" : [ DatasetContentDeliveryRule, ... ],
       "[DatasetName](#cfn-iotanalytics-dataset-datasetname)" : String,
+      "[LateDataRules](#cfn-iotanalytics-dataset-latedatarules)" : [ LateDataRule, ... ],
       "[RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod)" : RetentionPeriod,
       "[Tags](#cfn-iotanalytics-dataset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Triggers](#cfn-iotanalytics-dataset-triggers)" : [ Trigger, ... ],
@@ -33,6 +34,8 @@ Properties:
   [ContentDeliveryRules](#cfn-iotanalytics-dataset-contentdeliveryrules): 
     - DatasetContentDeliveryRule
   [DatasetName](#cfn-iotanalytics-dataset-datasetname): String
+  [LateDataRules](#cfn-iotanalytics-dataset-latedatarules): 
+    - LateDataRule
   [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod): 
     RetentionPeriod
   [Tags](#cfn-iotanalytics-dataset-tags): 
@@ -68,6 +71,13 @@ The name of the data set\.
 *Pattern*: `^[a-zA-Z0-9_]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`LateDataRules`  <a name="cfn-iotanalytics-dataset-latedatarules"></a>
+A list of data rules that send notifications to Amazon CloudWatch, when data arrives late\. To specify `lateDataRules`, the dataset must use a [DeltaTimer](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html) filter\.  
+*Required*: No  
+*Type*: List of [LateDataRule](aws-properties-iotanalytics-dataset-latedatarule.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RetentionPeriod`  <a name="cfn-iotanalytics-dataset-retentionperiod"></a>
 Optional\. How long, in days, message data is kept for the data set\.  
 *Required*: No  
@@ -96,6 +106,8 @@ Optional\. How many versions of dataset contents are kept\. If not specified or 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-dataset--examples"></a>
+
+
 
 ### Simple SQL Dataset<a name="aws-resource-iotanalytics-dataset--examples--Simple_SQL_Dataset"></a>
 

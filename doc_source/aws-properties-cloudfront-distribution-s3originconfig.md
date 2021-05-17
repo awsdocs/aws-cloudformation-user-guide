@@ -36,3 +36,4 @@ For more information about the origin access identity, see [Serving Private Cont
 
 ## See also<a name="aws-properties-cloudfront-distribution-s3originconfig--seealso"></a>
 +  [S3OriginConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html) in the *Amazon CloudFront API Reference* 
+

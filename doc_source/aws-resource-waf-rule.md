@@ -70,6 +70,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-waf-rule--examples"></a>
 
+
+
 ### Associate an IPSet with a Web ACL Rule<a name="aws-resource-waf-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
 
 The following example associates the `MyIPSetBlacklist` `IPSet` object with a web ACL rule\.

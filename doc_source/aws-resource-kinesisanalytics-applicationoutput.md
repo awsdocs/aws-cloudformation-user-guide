@@ -57,6 +57,8 @@ An array of objects, each describing one output configuration\. In the output co
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationoutput--examples"></a>
 
+
+
 ### Adding an ApplicationOutput Resource<a name="aws-resource-kinesisanalytics-applicationoutput--examples--Adding_an_ApplicationOutput_Resource"></a>
 
 The following example creates an `ApplicationOutput` resource: 

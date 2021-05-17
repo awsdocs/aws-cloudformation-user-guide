@@ -36,6 +36,7 @@ The launch template to use\. You must specify either the launch template ID or l
 
 `Overrides`  <a name="cfn-ec2-ec2fleet-fleetlaunchtemplateconfigrequest-overrides"></a>
 Any parameters that you specify override the same parameters in the launch template\.  
+For fleets of type `request` and `maintain`, a maximum of 300 items is allowed across all launch templates\.  
 *Required*: No  
 *Type*: List of [FleetLaunchTemplateOverridesRequest](aws-properties-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest.md)  
 *Maximum*: `50`  

@@ -2,6 +2,9 @@
 
 The container path, mount options, and size of the tmpfs mount\.
 
+**Note**  
+This object isn't applicable to jobs that are running on Fargate resources\.
+
 ## Syntax<a name="aws-properties-batch-jobdefinition-tmpfs-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -28,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-tmpfs-properties"></a>
 
 `ContainerPath`  <a name="cfn-batch-jobdefinition-tmpfs-containerpath"></a>
-The absolute file path in the container where the tmpfs volume is to be mounted\.  
+The absolute file path in the container where the tmpfs volume is mounted\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

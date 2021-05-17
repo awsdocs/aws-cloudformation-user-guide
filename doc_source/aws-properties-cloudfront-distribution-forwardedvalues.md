@@ -80,3 +80,4 @@ A complex type that contains information about the query string parameters that 
 
 ## See also<a name="aws-properties-cloudfront-distribution-forwardedvalues--seealso"></a>
 +  [ForwardedValues](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ForwardedValues.html) in the *Amazon CloudFront API Reference* 
+

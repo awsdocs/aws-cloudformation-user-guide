@@ -159,7 +159,7 @@ Optional engine attributes on a specified server\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-opsworkscm-server-engineversion"></a>
- The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `2`\. For a Puppet server, the valid value is `2017`\.   
+ The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `2`\. For a Puppet server, valid values are `2019` or `2017`\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `10000`  
@@ -279,6 +279,8 @@ A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.
 Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
+
+
 
 ### Create an AWS OpsWorks for Chef Automate server<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server"></a>
 
@@ -494,3 +496,4 @@ Outputs:
 +  [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [ `CreateServer` ](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference* 
+

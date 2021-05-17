@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BadgeEnabled](#cfn-codebuild-project-badgeenabled)" : Boolean,
       "[BuildBatchConfig](#cfn-codebuild-project-buildbatchconfig)" : ProjectBuildBatchConfig,
       "[Cache](#cfn-codebuild-project-cache)" : ProjectCache,
+      "[ConcurrentBuildLimit](#cfn-codebuild-project-concurrentbuildlimit)" : Integer,
       "[Description](#cfn-codebuild-project-description)" : String,
       "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
       "[Environment](#cfn-codebuild-project-environment)" : Environment,
@@ -49,6 +50,7 @@ Properties:
     ProjectBuildBatchConfig
   [Cache](#cfn-codebuild-project-cache): 
     ProjectCache
+  [ConcurrentBuildLimit](#cfn-codebuild-project-concurrentbuildlimit): Integer
   [Description](#cfn-codebuild-project-description): String
   [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
   [Environment](#cfn-codebuild-project-environment): 
@@ -103,6 +105,13 @@ A `ProjectBuildBatchConfig` object that defines the batch build options for the 
 Settings that AWS CodeBuild uses to store and reuse build dependencies\.   
 *Required*: No  
 *Type*: [ProjectCache](aws-properties-codebuild-project-projectcache.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ConcurrentBuildLimit`  <a name="cfn-codebuild-project-concurrentbuildlimit"></a>
+The maximum number of concurrent builds that are allowed for this project\.  
+New builds are only started if the current number of builds is less than or equal to this limit\. If the current build count meets this limit, new builds are throttled and are not run\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-codebuild-project-description"></a>
@@ -196,7 +205,7 @@ A version of the build input to be built for this project\. If not specified, th
 + For AWS CodeCommit: the commit ID, branch, or Git tag to use\.
 + For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a pull request ID is specified, it must use the format `pr/pull-request-ID` \(for example `pr/25`\)\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
 + For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
-+ For Amazon Simple Storage Service \(Amazon S3\): the version ID of the object that represents the build input ZIP file to use\.
++ For Amazon S3: the version ID of the object that represents the build input ZIP file to use\.
 If `sourceVersion` is specified at the build level, then that version takes precedence over this `sourceVersion` \(at the project level\)\.   
 For more information, see [Source Version Sample with CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html) in the *AWS CodeBuild User Guide*\.   
 *Required*: No  
@@ -249,6 +258,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:123456789012:project/myProjectName`\.
 
 ## Examples<a name="aws-resource-codebuild-project--examples"></a>
+
+
 
 ### Create a project<a name="aws-resource-codebuild-project--examples--Create_a_project"></a>
 

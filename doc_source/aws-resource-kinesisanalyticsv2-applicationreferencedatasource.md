@@ -49,6 +49,8 @@ For a SQL\-based Kinesis Data Analytics application, describes the reference dat
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples"></a>
 
+
+
 ### Create an ApplicationReferenceDataSource resource<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource"></a>
 
 #### JSON<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource--json"></a>
@@ -123,3 +125,4 @@ ApplicationReferenceDataSource:
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
 +  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

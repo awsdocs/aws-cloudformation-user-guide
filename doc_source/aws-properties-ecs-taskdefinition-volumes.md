@@ -32,7 +32,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-volumes-properties"></a>
 
 `DockerVolumeConfiguration`  <a name="cfn-ecs-taskdefinition-volume-dockervolumeconfiguration"></a>
-This parameter is specified when you are using Docker volumes\. Docker volumes are only supported when you are using the EC2 launch type\. Windows containers only support the use of the `local` driver\. To use bind mounts, specify the `host` parameter instead\.  
+This parameter is specified when you are using Docker volumes\.  
+Windows containers only support the use of the `local` driver\. To use bind mounts, specify the `host` parameter instead\.  
+Docker volumes are not supported by tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: [DockerVolumeConfiguration](aws-properties-ecs-taskdefinition-dockervolumeconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -51,7 +53,7 @@ Windows containers can mount whole directories on the same drive as `$env:Progra
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-ecs-taskdefinition-volumes-name"></a>
-The name of the volume\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. This name is referenced in the `sourceVolume` parameter of container definition `mountPoints`\.  
+The name of the volume\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. This name is referenced in the `sourceVolume` parameter of container definition `mountPoints`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

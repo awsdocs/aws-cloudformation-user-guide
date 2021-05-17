@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-flow-dynatracesourceproperties--seealso"></a>
 + [DynatraceSourceProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DynatraceSourceProperties.html) in the *Amazon AppFlow API Reference*\.
+

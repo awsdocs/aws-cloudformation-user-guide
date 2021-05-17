@@ -2,6 +2,9 @@
 
  The `AWS::AppFlow::ConnectorProfile` resource is an Amazon AppFlow resource type that specifies the configuration profile for an instance of a connector\. This includes the provided name, credentials ARN, connection\-mode, and so on\. The fields that are common to all types of connector profiles are explicitly specified under the `Properties` field\. The rest of the connector\-specific properties are specified under `Properties/ConnectorProfileConfig`\. 
 
+**Note**  
+If you want to use AWS CloudFormation to create a connector profile for connectors that implement OAuth \(such as Salesforce, Slack, Zendesk, and Google Analytics\), you must fetch the access and refresh tokens\. You can do this by implementing your own UI for OAuth, or by retrieving the tokens from elsewhere\. Alternatively, you can use the Amazon AppFlow console to create the connector profile, and then use that connector profile in the flow creation CloudFormation template\. 
+
 ## Syntax<a name="aws-resource-appflow-connectorprofile-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -61,7 +64,7 @@ Properties:
  The type of connector, such as Salesforce, Amplitude, and so on\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Amplitude | Datadog | Dynatrace | EventBridge | Googleanalytics | Infornexus | Marketo | Redshift | S3 | Salesforce | Servicenow | Singular | Slack | Snowflake | Trendmicro | Veeva | Zendesk`  
+*Allowed values*: `Amplitude | CustomerProfiles | Datadog | Dynatrace | EventBridge | Googleanalytics | Honeycode | Infornexus | LookoutMetrics | Marketo | Redshift | S3 | Salesforce | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KMSArn`  <a name="cfn-appflow-connectorprofile-kmsarn"></a>
@@ -92,13 +95,14 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-appflow-connectorprofile-return-values-fn--getatt-fn--getatt"></a>
 
 `ConnectorProfileArn`  <a name="ConnectorProfileArn-fn::getatt"></a>
-The unique name of the connector profile\.
+The Amazon Resource Name \(ARN\) of the connector profile\.
 
 `CredentialsArn`  <a name="CredentialsArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the connector profile credentials\.
 
 ## See also<a name="aws-resource-appflow-connectorprofile--seealso"></a>
 + [CreateConnectorProfile](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_CreateConnectorProfile.html) in the *Amazon AppFlow API Reference*\.
 + [DescribeConnectorProfiles](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DescribeConnectorProfiles.html) in the *Amazon AppFlow API Reference*\.
 + [DeleteConnectorProfile](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DeleteConnectorProfile.html) in the *Amazon AppFlow API Reference*\.
 + [UpdateConnectorProfile](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_UpdateConnectorProfile.html) in the *Amazon AppFlow API Reference*\.
+

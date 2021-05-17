@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoT::TopicRule",
   "Properties" : {
       "[RuleName](#cfn-iot-topicrule-rulename)" : String,
+      "[Tags](#cfn-iot-topicrule-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TopicRulePayload](#cfn-iot-topicrule-topicrulepayload)" : TopicRulePayload
     }
 }
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoT::TopicRule
 Properties: 
   [RuleName](#cfn-iot-topicrule-rulename): String
+  [Tags](#cfn-iot-topicrule-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TopicRulePayload](#cfn-iot-topicrule-topicrulepayload): 
     TopicRulePayload
 ```
@@ -35,6 +38,15 @@ The name of the rule\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-iot-topicrule-tags"></a>
+Metadata which can be used to manage the topic rule\.  
+For URI Request parameters use format: \.\.\.key1=value1&key2=value2\.\.\.  
+For the CLI command\-line parameter use format: \-\-tags "key1=value1&key2=value2\.\.\."  
+For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\."
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicRulePayload`  <a name="cfn-iot-topicrule-topicrulepayload"></a>
 The rule payload\.  

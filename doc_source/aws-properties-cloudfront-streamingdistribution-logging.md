@@ -46,3 +46,4 @@ An optional string that you want CloudFront to prefix to the access log filename
 
 ## See also<a name="aws-properties-cloudfront-streamingdistribution-logging--seealso"></a>
 +  [StreamingLoggingConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_StreamingLoggingConfig.html) in the *Amazon CloudFront API Reference* 
+

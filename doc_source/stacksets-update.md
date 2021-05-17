@@ -23,26 +23,26 @@ To override parameter values for specific stack *instances*, see [Override param
 
 1. On the **Specify StackSet details** page, modify parameter values and specify deployment targets\.
 
-   1. \[Self\-managed permissions\] For **Deployment targets**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\. 
+   1. \[Self\-managed permissions\] For **Deployment targets**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
 
-      \[Service\-managed permissions\] For **Deployment targets**, choose the accounts in your organization to deploy to\.   
+      \[Service\-managed permissions\] For **Deployment targets**, choose the accounts in your organization to deploy to\.  
 ![\[Deploy stack set updates to all accounts in select OUs within your organization.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-update-deployment-targets.png)
 
    1. Change the value of the **Frequency** parameter from **24hours** to **12hours**\.
 
       For more information about this and the other parameters, which specify values used by AWS Config, see [Setting up AWS Config with the console](http://docs.aws.amazon.com/config/latest/developerguide/gs-console.html) in the *AWS Config Developer Guide*\.
 
-      Do not make changes to the other parameters\. For the purposes of this walkthrough, we are not configuring Amazon SNS updates\.
+      Don't make changes to the other parameters\. For the purposes of this walkthrough, we are not configuring Amazon SNS updates\.
 
       When done, choose **Next**\.
 
-1. On the **Configure StackSet options** page, no changes are needed, but you can update, delete, or add new tags here if desired\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. 
+1. On the **Configure StackSet options** page, no changes are needed, but you can update, delete, or add new tags here if desired\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.
 
    Leave the **Permissions** unchanged, and choose **Next**\.
 
 1. On the **Set deployment options** page, keep the default value of **1** and **By number** for **Maximum concurrent accounts**\. Keep the default **Failure tolerance** of **0**, and keep the **By number** default option\. Choose **Next**\.
 **Note**  
-You cannot change accounts and Regions here; that is, you cannot deploy stack set changes to stacks in some accounts and Regions, but not others\.
+You can't change accounts and Regions here; that is, you cannot deploy stack set changes to stacks in some accounts and Regions, but not others\.
 
 1. On the **Review** page, review your choices and your stack set's properties\. To make changes, choose **Edit** in the upper\-right corner of an area in which you want to change properties\. Before you can update the stack set, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are updating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM resources in AWS CloudFormation templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready to create your stack set, choose **Submit**\.
 
@@ -52,6 +52,12 @@ You cannot change accounts and Regions here; that is, you cannot deploy stack se
 
 ## Update your stack set using the AWS CLI<a name="stacksets-update-cli"></a>
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
 Run the `update-stack-set` AWS CLI command to make changes to your stack set\. In this walkthrough, we are updating the value of the `MaximumExecutionFrequency` parameter\. For more information about the parameter names and values for creating or updating an AWS Config rule, see [put\-config\-rule](http://docs.aws.amazon.com/cli/latest/reference/configservice/put-config-rule.html) in the AWS CLI reference\. To change template parameter values, add the `--parameters` parameter\. For more information about what you can specify as a value for `--parameters`, see [Parameter](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_Parameter.html) in the AWS CloudFormation API Reference, and [http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) in the *AWS CLI Command Reference*\.
 
 In the example command shown here, we are updating the stack set by using `--parameters`; specifically, we change the default snapshot delivery frequency for delivery channel configuration from **TwentyFour\_Hours** to **Twelve\_Hours**\. Because we are still using the current template, we add the `--use-previous-template` parameter\.
@@ -59,6 +65,8 @@ In the example command shown here, we are updating the stack set by using `--par
 1. Run the following command\. For *stack set name*, specify the stack set name `my-awsconfig-stackset`\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
+**Note**  
+The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
    \[Self\-managed permissions\] Provide the account IDs you want your update to target\.
 

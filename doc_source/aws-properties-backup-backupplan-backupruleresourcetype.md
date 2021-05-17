@@ -12,8 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes)" : Double,
   "[CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions)" : [ CopyActionResourceType, ... ],
+  "[EnableContinuousBackup](#cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup)" : Boolean,
   "[Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle)" : LifecycleResourceType,
-  "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : Json,
+  "[RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)" : {Key : Value, ...},
   "[RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename)" : String,
   "[ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression)" : String,
   "[StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes)" : Double,
@@ -27,9 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CompletionWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-completionwindowminutes): Double
   [CopyActions](#cfn-backup-backupplan-backupruleresourcetype-copyactions): 
     - CopyActionResourceType
+  [EnableContinuousBackup](#cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup): Boolean
   [Lifecycle](#cfn-backup-backupplan-backupruleresourcetype-lifecycle): 
     LifecycleResourceType
-  [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): Json
+  [RecoveryPointTags](#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags): 
+    Key : Value
   [RuleName](#cfn-backup-backupplan-backupruleresourcetype-rulename): String
   [ScheduleExpression](#cfn-backup-backupplan-backupruleresourcetype-scheduleexpression): String
   [StartWindowMinutes](#cfn-backup-backupplan-backupruleresourcetype-startwindowminutes): Double
@@ -50,6 +53,12 @@ An array of CopyAction objects, which contains the details of the copy operation
 *Type*: List of [CopyActionResourceType](aws-properties-backup-backupplan-copyactionresourcetype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EnableContinuousBackup`  <a name="cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Lifecycle`  <a name="cfn-backup-backupplan-backupruleresourcetype-lifecycle"></a>
 The lifecycle defines when a protected resource is transitioned to cold storage and when it expires\. AWS Backup transitions and expires backups automatically according to the lifecycle that you define\.  
 *Required*: No  
@@ -59,7 +68,7 @@ The lifecycle defines when a protected resource is transitioned to cold storage 
 `RecoveryPointTags`  <a name="cfn-backup-backupplan-backupruleresourcetype-recoverypointtags"></a>
 To help organize your resources, you can assign your own metadata to the resources that you create\. Each tag is a key\-value pair\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleName`  <a name="cfn-backup-backupplan-backupruleresourcetype-rulename"></a>

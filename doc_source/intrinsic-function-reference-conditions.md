@@ -9,7 +9,7 @@ You might use conditions when you want to reuse a template that can create resou
 For more information about the Conditions section, see [Conditions](conditions-section-structure.md)\.
 
 **Note**  
-You can only reference other conditions and values from the Parameters and Mappings sections of a template\. For example, you can reference a value from an input parameter, but you cannot reference the logical ID of a resource in a condition\.
+You can only reference other conditions and values from the Parameters and Mappings sections of a template\. For example, you can reference a value from an input parameter, but you can't reference the logical ID of a resource in a condition\.
 
 **Topics**
 + [Fn::And](#intrinsic-function-reference-conditions-and)
@@ -17,8 +17,9 @@ You can only reference other conditions and values from the Parameters and Mappi
 + [Fn::If](#intrinsic-function-reference-conditions-if)
 + [Fn::Not](#intrinsic-function-reference-conditions-not)
 + [Fn::Or](#intrinsic-function-reference-conditions-or)
-+ [Supported functions](#w6974ab1c33c28c21c45)
++ [Supported functions](#w8918ab1c33c28c21c45)
 + [Sample templates](conditions-sample-templates.md)
++ [Condition](intrinsic-function-reference-condition.md)
 
 Associating a Condition
 
@@ -47,7 +48,7 @@ NewVolume:
     AvailabilityZone: !GetAtt EC2Instance.AvailabilityZone
 ```
 
-For the `Fn::If` function, you only need to specify the condition name\. The following snippet shows how to use `Fn::If` to conditionally specify a resource property\. If the `CreateLargeSize` condition is true, AWS CloudFormation sets the volume size to `100`\. If the condition is false, AWS CloudFormation sets the volume size to `10`\.
+For the `Fn::If` function, you only need to specify the condition name\. The following snippet shows how to use `Fn::If` to conditionally specify a resource property\. If the `CreateLargeSize` condition is true, CloudFormation sets the volume size to `100`\. If the condition is false, CloudFormation sets the volume size to `10`\.
 
 **Example JSON**  
 
@@ -126,12 +127,12 @@ Syntax for the short form:
 !And [condition]
 ```
 
-### Parameters<a name="w6974ab1c33c28c21c33b6"></a>
+### Parameters<a name="w8918ab1c33c28c21c33b6"></a>
 
 `condition`  
 A condition that evaluates to `true` or `false`\.
 
-### Example<a name="w6974ab1c33c28c21c33b8"></a>
+### Example<a name="w8918ab1c33c28c21c33b8"></a>
 
 The following `MyAndCondition` evaluates to true if the referenced security group name is equal to `sg-mysggroup` and if `SomeOtherCondition` evaluates to true:
 
@@ -180,12 +181,12 @@ Syntax for the short form:
 !Equals [value_1, value_2]
 ```
 
-### Parameters<a name="w6974ab1c33c28c21c35b6"></a>
+### Parameters<a name="w8918ab1c33c28c21c35b6"></a>
 
 `value`  
 A value of any type that you want to compare\.
 
-### Example<a name="w6974ab1c33c28c21c35b8"></a>
+### Example<a name="w8918ab1c33c28c21c35b8"></a>
 
 The following `UseProdCondition` condition evaluates to true if the value for the `EnvironmentType` parameter is equal to `prod`:
 
@@ -209,7 +210,7 @@ UseProdCondition:
 
 ## Fn::If<a name="intrinsic-function-reference-conditions-if"></a>
 
-Returns one value if the specified condition evaluates to `true` and another value if the specified condition evaluates to `false`\. Currently, AWS CloudFormation supports the `Fn::If` intrinsic function in the metadata attribute, update policy attribute, and property values in the Resources section and Outputs sections of a template\. You can use the `AWS::NoValue` pseudo parameter as a return value to remove the corresponding property\.
+Returns one value if the specified condition evaluates to `true` and another value if the specified condition evaluates to `false`\. Currently, CloudFormation supports the `Fn::If` intrinsic function in the metadata attribute, update policy attribute, and property values in the Resources section and Outputs sections of a template\. You can use the `AWS::NoValue` pseudo parameter as a return value to remove the corresponding property\.
 
 ### Declaration<a name="intrinsic-function-reference-conditions-if-syntax"></a>
 
@@ -233,7 +234,7 @@ Syntax for the short form:
 !If [condition_name, value_if_true, value_if_false]
 ```
 
-### Parameters<a name="w6974ab1c33c28c21c39b6"></a>
+### Parameters<a name="w8918ab1c33c28c21c39b6"></a>
 
 `condition_name`  
 A reference to a condition in the Conditions section\. Use the condition's name to reference it\.
@@ -244,13 +245,13 @@ A value to be returned if the specified condition evaluates to `true`\.
 `value_if_false`  
 A value to be returned if the specified condition evaluates to `false`\.
 
-### Examples<a name="w6974ab1c33c28c21c39b8"></a>
+### Examples<a name="w8918ab1c33c28c21c39b8"></a>
 
 To view additional samples, see [Sample templates](conditions-sample-templates.md)\.
 
-#### Example 1<a name="w6974ab1c33c28c21c39b8b4"></a>
+#### Example 1<a name="w8918ab1c33c28c21c39b8b4"></a>
 
-The following snippet uses an `Fn::If` function in the `SecurityGroups` property for an Amazon EC2 resource\. If the `CreateNewSecurityGroup` condition evaluates to true, AWS CloudFormation uses the referenced value of `NewSecurityGroup` to specify the `SecurityGroups` property; otherwise, AWS CloudFormation uses the referenced value of `ExistingSecurityGroup`\.
+The following snippet uses an `Fn::If` function in the `SecurityGroups` property for an Amazon EC2 resource\. If the `CreateNewSecurityGroup` condition evaluates to true, CloudFormation uses the referenced value of `NewSecurityGroup` to specify the `SecurityGroups` property; otherwise, CloudFormation uses the referenced value of `ExistingSecurityGroup`\.
 
 ##### JSON<a name="intrinsic-function-reference-conditions-if-example1.json"></a>
 
@@ -271,9 +272,9 @@ SecurityGroups:
   - !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]
 ```
 
-#### Example 2<a name="w6974ab1c33c28c21c39b8b6"></a>
+#### Example 2<a name="w8918ab1c33c28c21c39b8b6"></a>
 
-In the Output section of a template, you can use the `Fn::If` function to conditionally output information\. In the following snippet, if the `CreateNewSecurityGroup` condition evaluates to true, AWS CloudFormation outputs the security group ID of the `NewSecurityGroup` resource\. If the condition is false, AWS CloudFormation outputs the security group ID of the `ExistingSecurityGroup` resource\.
+In the Output section of a template, you can use the `Fn::If` function to conditionally output information\. In the following snippet, if the `CreateNewSecurityGroup` condition evaluates to true, CloudFormation outputs the security group ID of the `NewSecurityGroup` resource\. If the condition is false, CloudFormation outputs the security group ID of the `ExistingSecurityGroup` resource\.
 
 ##### JSON<a name="intrinsic-function-reference-conditions-if-example2.json"></a>
 
@@ -301,9 +302,9 @@ Outputs:
     Value: !If [CreateNewSecurityGroup, !Ref NewSecurityGroup, !Ref ExistingSecurityGroup]
 ```
 
-#### Example 3<a name="w6974ab1c33c28c21c39b8b8"></a>
+#### Example 3<a name="w8918ab1c33c28c21c39b8b8"></a>
 
-The following snippet uses the `AWS::NoValue` pseudo parameter in an `Fn::If` function\. The condition uses a snapshot for an Amazon RDS DB instance only if a snapshot ID is provided\. If the `UseDBSnapshot` condition evaluates to true, AWS CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, AWS CloudFormation removes the `DBSnapshotIdentifier` property\.
+The following snippet uses the `AWS::NoValue` pseudo parameter in an `Fn::If` function\. The condition uses a snapshot for an Amazon RDS DB instance only if a snapshot ID is provided\. If the `UseDBSnapshot` condition evaluates to true, CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, CloudFormation removes the `DBSnapshotIdentifier` property\.
 
 ##### JSON<a name="intrinsic-function-reference-conditions-if-example3.json"></a>
 
@@ -346,9 +347,9 @@ MyDB:
       !If [UseDBSnapshot, !Ref DBSnapshotName, !Ref "AWS::NoValue"]
 ```
 
-#### Example 4<a name="w6974ab1c33c28c21c39b8c10"></a>
+#### Example 4<a name="w8918ab1c33c28c21c39b8c10"></a>
 
-The following snippet provides an auto scaling update policy only if the `RollingUpdates` condition evaluates to true\. If the condition evaluates to false, AWS CloudFormation removes the `AutoScalingRollingUpdate` update policy\.
+The following snippet provides an auto scaling update policy only if the `RollingUpdates` condition evaluates to true\. If the condition evaluates to false, CloudFormation removes the `AutoScalingRollingUpdate` update policy\.
 
 ##### JSON<a name="intrinsic-function-reference-conditions-if-example4.json"></a>
 
@@ -410,14 +411,14 @@ Syntax for the short form:
 !Not [condition]
 ```
 
-### Parameters<a name="w6974ab1c33c28c21c41b6"></a>
+### Parameters<a name="w8918ab1c33c28c21c41b6"></a>
 
 `condition`  
 A condition such as `Fn::Equals` that evaluates to `true` or `false`\.
 
-### Example<a name="w6974ab1c33c28c21c41b8"></a>
+### Example<a name="w8918ab1c33c28c21c41b8"></a>
 
-The following `EnvCondition` condition evaluates to true if the value for the `EnvironmentType` parameter is not equal to `prod`:
+The following `EnvCondition` condition evaluates to true if the value for the `EnvironmentType` parameter isn't equal to `prod`:
 
 #### JSON<a name="intrinsic-function-reference-conditions-not-example.json"></a>
 
@@ -441,7 +442,7 @@ MyNotCondition:
 
 ## Fn::Or<a name="intrinsic-function-reference-conditions-or"></a>
 
-Returns `true` if any one of the specified conditions evaluate to true, or returns `false` if all of the conditions evaluates to false\. `Fn::Or` acts as an OR operator\. The minimum number of conditions that you can include is 2, and the maximum is 10\.
+Returns `true` if any one of the specified conditions evaluate to true, or returns `false` if all the conditions evaluates to false\. `Fn::Or` acts as an OR operator\. The minimum number of conditions that you can include is 2, and the maximum is 10\.
 
 ### Declaration<a name="intrinsic-function-reference-conditions-or-syntax"></a>
 
@@ -465,12 +466,12 @@ Syntax for the short form:
 !Or [condition, ...]
 ```
 
-### Parameters<a name="w6974ab1c33c28c21c43b6"></a>
+### Parameters<a name="w8918ab1c33c28c21c43b6"></a>
 
 `condition`  
 A condition that evaluates to `true` or `false`\.
 
-### Example<a name="w6974ab1c33c28c21c43b8"></a>
+### Example<a name="w8918ab1c33c28c21c43b8"></a>
 
 The following `MyOrCondition` evaluates to true if the referenced security group name is equal to `sg-mysggroup` or if `SomeOtherCondition` evaluates to true:
 
@@ -492,7 +493,7 @@ MyOrCondition:
   !Or [!Equals [sg-mysggroup, !Ref ASecurityGroup], Condition: SomeOtherCondition]
 ```
 
-## Supported functions<a name="w6974ab1c33c28c21c45"></a>
+## Supported functions<a name="w8918ab1c33c28c21c45"></a>
 
 You can use the following functions in the `Fn::If` condition:
 + `Fn::Base64`

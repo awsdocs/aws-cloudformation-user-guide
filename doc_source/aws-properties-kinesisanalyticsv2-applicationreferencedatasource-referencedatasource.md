@@ -50,3 +50,4 @@ The name of the in\-application table to create\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource--seealso"></a>
 +  [ReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

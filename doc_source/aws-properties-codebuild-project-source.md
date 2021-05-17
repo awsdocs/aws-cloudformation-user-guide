@@ -102,7 +102,7 @@ Information about the location of the source code to be built\. Valid values inc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceIdentifier`  <a name="cfn-codebuild-project-source-sourceidentifier"></a>
- An identifier for this project source\.   
+An identifier for this project source\. The identifier can only contain alphanumeric characters and underscores, and must be less than 128 characters in length\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -115,7 +115,7 @@ The type of repository that contains the source code to be built\. Valid values 
 +  `GITHUB`: The source code is in a GitHub or GitHub Enterprise Cloud repository\.
 +  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise Server repository\.
 +  `NO_SOURCE`: The project does not have input source code\.
-+  `S3`: The source code is in an Amazon Simple Storage Service \(Amazon S3\) input bucket\.
++  `S3`: The source code is in an Amazon S3 bucket\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `BITBUCKET | CODECOMMIT | CODEPIPELINE | GITHUB | GITHUB_ENTERPRISE | NO_SOURCE | S3`  

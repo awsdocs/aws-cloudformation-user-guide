@@ -64,6 +64,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-logs-logstream--examples"></a>
 
+
+
 ### Create a Log Stream<a name="aws-resource-logs-logstream--examples--Create_a_Log_Stream"></a>
 
 The following example creates a log stream named `MyAppLogStream` in the `exampleLogGroup` log group\.

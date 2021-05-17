@@ -16,6 +16,8 @@ Note the following:
 
 When you submit a `CreateHostedZone` request, the initial status of the hosted zone is `PENDING`\. For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers\. When the NS and SOA records are available, the status of the zone changes to `INSYNC`\.
 
+The `CreateHostedZone` request requires the caller to have an `ec2:DescribeVpcs` permission\.
+
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -143,13 +145,15 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53-hostedzone-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID that Amazon Route 53 assigned to the hosted zone when you created it\.
 
 `NameServers`  <a name="NameServers-fn::getatt"></a>
 Returns the set of name servers for the specific hosted zone\. For example: `ns1.example.com`\.  
 This attribute is not supported for private hosted zones\.
 
 ## Examples<a name="aws-resource-route53-hostedzone--examples"></a>
+
+
 
 ### Creating a private hosted zone<a name="aws-resource-route53-hostedzone--examples--Creating_a_private_hosted_zone"></a>
 
@@ -218,3 +222,4 @@ DNS:
 
 ## See also<a name="aws-resource-route53-hostedzone--seealso"></a>
 +  [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*
+

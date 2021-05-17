@@ -42,3 +42,4 @@ The name of the instance profile\.
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-iaminstanceprofile--seealso"></a>
 +  [ LaunchTemplateIamInstanceProfileSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateIamInstanceProfileSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

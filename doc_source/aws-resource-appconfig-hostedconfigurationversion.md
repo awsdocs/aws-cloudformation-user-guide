@@ -92,6 +92,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-appconfig-hostedconfigurationversion--examples"></a>
 
+
+
 ### AWS AppConfig hosted configuration<a name="aws-resource-appconfig-hostedconfigurationversion--examples--AWS_AppConfig_hosted_configuration"></a>
 
 The following example creates an AWS AppConfig configuration profile named `MyTestProfile` for an application called `MyApplication`\. AppConfig stores the configuration data for this profile in the AppConfig hosted configuration store\.

@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClusterName](#cfn-elasticache-cachecluster-clustername)" : String,
       "[Engine](#cfn-elasticache-cachecluster-engine)" : String,
       "[EngineVersion](#cfn-elasticache-cachecluster-engineversion)" : String,
+      "[LogDeliveryConfigurations](#cfn-elasticache-cachecluster-logdeliveryconfigurations)" : [ LogDeliveryConfigurationRequest, ... ],
       "[NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn)" : String,
       "[NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes)" : Integer,
       "[Port](#cfn-elasticache-cachecluster-port)" : Integer,
@@ -52,6 +53,8 @@ Properties:
   [ClusterName](#cfn-elasticache-cachecluster-clustername): String
   [Engine](#cfn-elasticache-cachecluster-engine): String
   [EngineVersion](#cfn-elasticache-cachecluster-engineversion): String
+  [LogDeliveryConfigurations](#cfn-elasticache-cachecluster-logdeliveryconfigurations): 
+    - LogDeliveryConfigurationRequest
   [NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn): String
   [NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes): Integer
   [Port](#cfn-elasticache-cachecluster-port): Integer
@@ -93,6 +96,8 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + General purpose:
   + Current generation: 
 
+    **M6g node types:** `cache.m6g.large`, `cache.m6g.xlarge`, `cache.m6g.2xlarge`, `cache.m6g.4xlarge`, `cache.m6g.12xlarge`, `cache.m6g.24xlarge` 
+
     **M5 node types:** `cache.m5.large`, `cache.m5.xlarge`, `cache.m5.2xlarge`, `cache.m5.4xlarge`, `cache.m5.12xlarge`, `cache.m5.24xlarge` 
 
     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
@@ -114,6 +119,8 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 + Memory optimized:
   + Current generation: 
 
+    **R6g node types:** `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`, `cache.r6g.4xlarge`, `cache.r6g.12xlarge`, `cache.r6g.24xlarge`
+
     **R5 node types:** `cache.r5.large`, `cache.r5.xlarge`, `cache.r5.2xlarge`, `cache.r5.4xlarge`, `cache.r5.12xlarge`, `cache.r5.24xlarge`
 
     **R4 node types:** `cache.r4.large`, `cache.r4.xlarge`, `cache.r4.2xlarge`, `cache.r4.4xlarge`, `cache.r4.8xlarge`, `cache.r4.16xlarge`
@@ -122,6 +129,7 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
 
     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
+For region availability, see [Supported Node Types by AWS Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)  
 **Additional node type info**  
 + All current generation instance types are created in Amazon VPC by default\.
 + Redis append\-only files \(AOF\) are not supported for T1 or T2 instances\.
@@ -171,6 +179,12 @@ The version number of the cache engine to be used for this cluster\. To view the
  **Important:** You can upgrade to a newer engine version \(see [Selecting a Cache Engine and Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)\), but you cannot downgrade to an earlier engine version\. If you want to use an earlier engine version, you must delete the existing cluster or replication group and create it anew with the earlier engine version\.   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LogDeliveryConfigurations`  <a name="cfn-elasticache-cachecluster-logdeliveryconfigurations"></a>
+Specifies the destination, format and type of the logs\.  
+*Required*: No  
+*Type*: List of [LogDeliveryConfigurationRequest](aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationTopicArn`  <a name="cfn-elasticache-cachecluster-notificationtopicarn"></a>
@@ -261,7 +275,7 @@ This parameter is only valid if the `Engine` parameter is `redis`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-elasticache-cachecluster-tags"></a>
-A list of cost allocation tags to be added to this resource\.  
+A list of tags to be added to this resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -287,6 +301,8 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+
+
 #### <a name="aws-properties-elasticache-cache-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `ConfigurationEndpoint.Address`  <a name="ConfigurationEndpoint.Address-fn::getatt"></a>
@@ -294,7 +310,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `ConfigurationEndpoint.Port`  <a name="ConfigurationEndpoint.Port-fn::getatt"></a>
-The port number of the configuration endpoint for the Memcached cache cluster\.
+The port number of the configuration endpoint for the Memcached cache cluster\.  
+Redis \(cluster mode disabled\) replication groups don't have this attribute\. Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered\. Otherwise, `Fn::GetAtt` fails\.
 
 `RedisEndpoint.Address`  <a name="RedisEndpoint.Address-fn::getatt"></a>
 The DNS address of the configuration endpoint for the Redis cache cluster\.
@@ -303,6 +320,8 @@ The DNS address of the configuration endpoint for the Redis cache cluster\.
 The port number of the configuration endpoint for the Redis cache cluster\.
 
 ## Examples<a name="aws-properties-elasticache-cache-cluster--examples"></a>
+
+
 
 ### Cluster in a Default VPC<a name="aws-properties-elasticache-cache-cluster--examples--Cluster_in_a_Default_VPC"></a>
 
@@ -334,8 +353,7 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
     },
     "ElasticacheCluster": {
         "Type": "AWS::ElastiCache::CacheCluster",
-        "Properties": {
-            "AutoMinorVersionUpgrade": "true",
+        "Properties": {            
             "Engine": "memcached",
             "CacheNodeType": "cache.t2.micro",
             "NumCacheNodes": "1",
@@ -366,8 +384,7 @@ ElasticacheSecurityGroup:
         SourceSecurityGroupName: !Ref InstanceSecurityGroup
 ElasticacheCluster:
   Type: 'AWS::ElastiCache::CacheCluster'
-  Properties:
-    AutoMinorVersionUpgrade: 'true'
+  Properties:    
     Engine: memcached
     CacheNodeType: cache.t2.micro
     NumCacheNodes: '1'

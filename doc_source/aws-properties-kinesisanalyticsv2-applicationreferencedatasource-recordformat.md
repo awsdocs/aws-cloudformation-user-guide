@@ -40,3 +40,4 @@ The type of record format\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordformat--seealso"></a>
 +  [RecordFormat](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordFormat.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

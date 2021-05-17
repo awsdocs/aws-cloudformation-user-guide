@@ -10,3 +10,4 @@
 + [AWS::Config::OrganizationConfigRule](aws-resource-config-organizationconfigrule.md)
 + [AWS::Config::OrganizationConformancePack](aws-resource-config-organizationconformancepack.md)
 + [AWS::Config::RemediationConfiguration](aws-resource-config-remediationconfiguration.md)
++ [AWS::Config::StoredQuery](aws-resource-config-storedquery.md)

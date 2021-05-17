@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery)" : Integer,
   "[EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration)" : Boolean,
+  "[EngineVersion](#cfn-athena-workgroup-workgroupconfigurationupdates-engineversion)" : EngineVersion,
   "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled)" : Boolean,
   "[RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery)" : Boolean,
   "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled)" : Boolean,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-bytesscannedcutoffperquery): Integer
   [EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfigurationupdates-enforceworkgroupconfiguration): Boolean
+  [EngineVersion](#cfn-athena-workgroup-workgroupconfigurationupdates-engineversion): 
+    EngineVersion
   [PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled): Boolean
   [RemoveBytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfigurationupdates-removebytesscannedcutoffperquery): Boolean
   [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfigurationupdates-requesterpaysenabled): Boolean
@@ -44,6 +47,12 @@ This property currently supports integer types\. Support for long values is plan
 If set to "true", the settings for the workgroup override client\-side settings\. If set to "false" client\-side settings are used\. For more information, see [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EngineVersion`  <a name="cfn-athena-workgroup-workgroupconfigurationupdates-engineversion"></a>
+The engine version requested when a workgroup is updated\. After the update, all queries on the workgroup run on the requested engine version\. If no value was previously set, the default is Auto\. Queries on the `AmazonAthenaPreviewFunctionality` workgroup run on the preview engine regardless of this setting\.  
+*Required*: No  
+*Type*: [EngineVersion](aws-properties-athena-workgroup-engineversion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublishCloudWatchMetricsEnabled`  <a name="cfn-athena-workgroup-workgroupconfigurationupdates-publishcloudwatchmetricsenabled"></a>

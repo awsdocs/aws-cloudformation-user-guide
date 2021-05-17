@@ -34,3 +34,4 @@ To specify an earlier version of the Lambda function than the latest, include th
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput--seealso"></a>
 +  [LambdaOutput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_LambdaOutput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

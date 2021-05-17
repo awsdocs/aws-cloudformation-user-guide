@@ -19,7 +19,7 @@ The `Metadata` attribute of a resource definition\. For more information, [Metad
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
 
 **Important**  
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ### JSON<a name="quickref-redshift-example-1.json"></a>
@@ -391,6 +391,6 @@ Outputs:
       Ref: SecurityGroup
 ```
 
-## See also<a name="w6974ab1c27c22c73b7"></a>
+## See also<a name="w8918ab1c27c21c72b7"></a>
 
 [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)

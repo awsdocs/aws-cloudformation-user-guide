@@ -71,6 +71,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-userpooldomain--examples"></a>
 
+
+
 ### Creating a new custom domain for a user pool<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool"></a>
 
 The following example creates a custom domain, "my\-test\-user\-pool\-domain", in the referenced user pool\.

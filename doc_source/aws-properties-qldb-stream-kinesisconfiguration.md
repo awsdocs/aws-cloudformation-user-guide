@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-qldb-stream-kinesisconfiguration-properties"></a>
 
 `AggregationEnabled`  <a name="cfn-qldb-stream-kinesisconfiguration-aggregationenabled"></a>
-Enables QLDB to publish multiple data records in a single Kinesis Data Streams record\. To learn more, see [KPL Key Concepts](https://docs.aws.amazon.com/streams/latest/dev/kinesis-kpl-concepts.html) in the *Amazon Kinesis Data Streams Developer Guide*\.  
+Enables QLDB to publish multiple data records in a single Kinesis Data Streams record, increasing the number of records sent per API call\.  
+ *This option is enabled by default\.* Record aggregation has important implications for processing records and requires de\-aggregation in your stream consumer\. To learn more, see [KPL Key Concepts](https://docs.aws.amazon.com/streams/latest/dev/kinesis-kpl-concepts.html) and [Consumer De\-aggregation](https://docs.aws.amazon.com/streams/latest/dev/kinesis-kpl-consumer-deaggregation.html) in the *Amazon Kinesis Data Streams Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

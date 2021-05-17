@@ -48,7 +48,7 @@ Specifies the path to match requests with\. This parameter must always start wit
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scheme`  <a name="cfn-appmesh-route-httproutematch-scheme"></a>
-The client request scheme to match on\. Specify only one\.  
+The client request scheme to match on\. Specify only one\. Applicable only for HTTP2 routes\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

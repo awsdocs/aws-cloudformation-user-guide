@@ -53,6 +53,7 @@ The opaque string specified in the request to ensure idempotent creation\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
+*Pattern*: `.+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemId`  <a name="cfn-efs-accesspoint-filesystemid"></a>
@@ -102,6 +103,8 @@ The ID of the EFS access point\.
 The Amazon Resource Name \(ARN\) of the access point\.
 
 ## Examples<a name="aws-resource-efs-accesspoint--examples"></a>
+
+
 
 ### Declare an Access Point for an EFS File System<a name="aws-resource-efs-accesspoint--examples--Declare_an_Access_Point_for_an_EFS_File_System"></a>
 
@@ -161,3 +164,4 @@ AccessPointResource:
 ## See also<a name="aws-resource-efs-accesspoint--seealso"></a>
 + [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html)\.
 + [Working with Amazon EFS Access Points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon EFS User Guide*\.
+

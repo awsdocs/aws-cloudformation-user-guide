@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-instancetypeconfig-properties"></a>
 
 `BidPrice`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice"></a>
-The bid price for each EC2 Spot instance type as defined by `InstanceType`\. Expressed in USD\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.   
+The bid price for each EC2 Spot Instance type as defined by `InstanceType`\. Expressed in USD\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -47,7 +47,7 @@ The bid price for each EC2 Spot instance type as defined by `InstanceType`\. Exp
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BidPriceAsPercentageOfOnDemandPrice`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice"></a>
-The bid price, as a percentage of On\-Demand price, for each EC2 Spot instance as defined by `InstanceType`\. Expressed as a number \(for example, 20 specifies 20%\)\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.  
+The bid price, as a percentage of On\-Demand price, for each EC2 Spot Instance as defined by `InstanceType`\. Expressed as a number \(for example, 20 specifies 20%\)\. If neither `BidPrice` nor `BidPriceAsPercentageOfOnDemandPrice` is provided, `BidPriceAsPercentageOfOnDemandPrice` defaults to 100%\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -59,7 +59,7 @@ A configuration classification that applies when provisioning cluster instances,
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration"></a>
-The configuration of Amazon Elastic Block Storage \(EBS\) attached to each instance as defined by `InstanceType`\.   
+The configuration of Amazon Elastic Block Storage \(Amazon EBS\) attached to each instance as defined by `InstanceType`\.   
 *Required*: No  
 *Type*: [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

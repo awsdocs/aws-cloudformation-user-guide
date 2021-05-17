@@ -121,7 +121,7 @@ The type of build output artifact\. Valid values include:
 **Note**  
 The `CODEPIPELINE` type is not supported for `secondaryArtifacts`\.
 +  `NO_ARTIFACTS`: The build project does not produce any build output\.
-+  `S3`: The build project stores build output in Amazon Simple Storage Service \(Amazon S3\)\.
++  `S3`: The build project stores build output in Amazon S3\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CODEPIPELINE | NO_ARTIFACTS | S3`  

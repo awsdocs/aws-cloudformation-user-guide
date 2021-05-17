@@ -1,6 +1,6 @@
 # AWS::Lambda::Function FileSystemConfig<a name="aws-properties-lambda-function-filesystemconfig"></a>
 
-Details about the connection between a Lambda function and an Amazon EFS file system\.
+Details about the connection between a Lambda function and an [Amazon EFS file system](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html)\.
 
 ## Syntax<a name="aws-properties-lambda-function-filesystemconfig-syntax"></a>
 

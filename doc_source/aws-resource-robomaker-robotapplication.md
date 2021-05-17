@@ -94,6 +94,8 @@ The current revision id\.
 
 ## Examples<a name="aws-resource-robomaker-robotapplication--examples"></a>
 
+
+
 ### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application"></a>
 
 The following example creates a robot application\.

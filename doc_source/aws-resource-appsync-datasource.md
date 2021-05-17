@@ -81,7 +81,7 @@ Endpoints for an HTTP data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaConfig`  <a name="cfn-appsync-datasource-lambdaconfig"></a>
-A valid ARN of a Lambda function in your account\.  
+An ARN of a Lambda function in valid ARN format\. This can be the ARN of a Lambda function that exists in the current account or in another account\.  
 *Required*: No  
 *Type*: [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -140,6 +140,8 @@ The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-eas
 Friendly name for you to identify your AppSync data source after creation\.
 
 ## Examples<a name="aws-resource-appsync-datasource--examples"></a>
+
+
 
 ### Data Source Creation Example<a name="aws-resource-appsync-datasource--examples--Data_Source_Creation_Example"></a>
 
@@ -228,3 +230,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-datasource--seealso"></a>
 +  [CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*\.
+

@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-onunauthenticatedrequest)" : String,
   "[Scope](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-scope)" : String,
   "[SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessioncookiename)" : String,
-  "[SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout)" : Long,
+  "[SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout)" : String,
   "[TokenEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint)" : String,
   "[UserInfoEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint)" : String
 }
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-onunauthenticatedrequest): String
   [Scope](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-scope): String
   [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessioncookiename): String
-  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout): Long
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout): String
   [TokenEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint): String
   [UserInfoEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint): String
 ```
@@ -99,7 +99,7 @@ The name of the cookie used to maintain session information\. The default is AWS
 `SessionTimeout`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout"></a>
 The maximum duration of the authentication session, in seconds\. The default is 604800 seconds \(7 days\)\.  
 *Required*: No  
-*Type*: Long  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenEndpoint`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint"></a>

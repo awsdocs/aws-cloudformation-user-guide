@@ -18,7 +18,7 @@ You must use expressions for all parameters in `DynamoDBv2Action`\. The expressi
 
    `'GreenhouseTemperatureTable ' + $input.GreenhouseInput.date` 
 
-For more information, see [Syntax](https://docs.aws.amazon.com/iotevents/latest/developerguide/expression-syntax.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
 
 The value for the `type` parameter in `Payload` must be `JSON`\.
 
@@ -54,6 +54,6 @@ By default, AWS IoT Events generates a standard payload in JSON for any action\.
 
 `TableName`  <a name="cfn-iotevents-detectormodel-dynamodbv2-tablename"></a>
 The name of the DynamoDB table\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

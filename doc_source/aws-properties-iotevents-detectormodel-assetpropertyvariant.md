@@ -13,7 +13,7 @@ You must use expressions for all parameters in `AssetPropertyVariant`\. The expr
 
    `'${$input.TemperatureInput.sensorData.temperature * 6 / 5 + 32}'` 
 
-For more information, see [Syntax](https://docs.aws.amazon.com/iotevents/latest/developerguide/expression-syntax.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
 
 You must specify one of the following value types, depending on the `dataType` of the specified asset property\. For more information, see [AssetProperty](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetProperty.html) in the *AWS IoT SiteWise API Reference*\.
 

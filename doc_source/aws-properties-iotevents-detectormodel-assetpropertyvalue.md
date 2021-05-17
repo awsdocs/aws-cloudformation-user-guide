@@ -8,7 +8,7 @@ You must use expressions for all parameters in `AssetPropertyValue`\. The expres
 + For literal values, the expressions must contain single quotes\. For example, the value for the `quality` parameter can be `'GOOD'`\.
 + For references, you must specify either variables or input values\. For example, the value for the `quality` parameter can be `$input.TemperatureInput.sensorData.quality`\.
 
-For more information, see [Syntax](https://docs.aws.amazon.com/iotevents/latest/developerguide/expression-syntax.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-assetpropertyvalue-syntax"></a>
 
@@ -50,6 +50,6 @@ The timestamp associated with the asset property value\. The default is the curr
 
 `Value`  <a name="cfn-iotevents-detectormodel-assetpropertyvalue-value"></a>
 The value to send to an asset property\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [AssetPropertyVariant](aws-properties-iotevents-detectormodel-assetpropertyvariant.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

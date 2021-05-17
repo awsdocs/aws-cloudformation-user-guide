@@ -1,8 +1,8 @@
 # Pseudo parameters reference<a name="pseudo-parameter-reference"></a>
 
-Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You do not declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
+Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You don't declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
 
-## Example<a name="w6974ab1c33c33b5"></a>
+## Example<a name="w8918ab1c33c33b5"></a>
 
 The following snippet assigns the value of the `AWS::Region` pseudo parameter to an output value:
 
@@ -78,7 +78,7 @@ myASGrpOne:
 
 Removes the corresponding resource property when specified as a return value in the `Fn::If` intrinsic function\.
 
-For example, you can use the `AWS::NoValue` parameter when you want to use a snapshot for an Amazon RDS DB instance only if a snapshot ID is provided\. If the `UseDBSnapshot` condition evaluates to true, AWS CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, AWS CloudFormation removes the `DBSnapshotIdentifier` property\.
+For example, you can use the `AWS::NoValue` parameter when you want to use a snapshot for an Amazon RDS DB instance only if a snapshot ID is provided\. If the `UseDBSnapshot` condition evaluates to true, CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, CloudFormation removes the `DBSnapshotIdentifier` property\.
 
 ### JSON<a name="pseudo-parameter-reference-example-3.json"></a>
 
@@ -129,11 +129,11 @@ MyDB:
 
 ## AWS::Partition<a name="cfn-pseudo-param-partition"></a>
 
-Returns the partition that the resource is in\. For standard AWS regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing and Ningxia\) region is `aws-cn` and the partition for resources in the AWS GovCloud \(US\-West\) region is `aws-us-gov`\.
+Returns the partition that the resource is in\. For standard AWS Regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing and Ningxia\) Region is `aws-cn` and the partition for resources in the AWS GovCloud \(US\-West\) region is `aws-us-gov`\.
 
 ## AWS::Region<a name="cfn-pseudo-param-region"></a>
 
-Returns a string representing the AWS Region in which the encompassing resource is being created, such as `us-west-2`\.
+Returns a string representing the Region in which the encompassing resource is being created, such as `us-west-2`\.
 
 ## AWS::StackId<a name="cfn-pseudo-param-stackid"></a>
 
@@ -145,4 +145,4 @@ Returns the name of the stack as specified with the `aws cloudformation create-s
 
 ## AWS::URLSuffix<a name="cfn-pseudo-param-urlsuffix"></a>
 
-Returns the suffix for a domain\. The suffix is typically `amazonaws.com`, but might differ by region\. For example, the suffix for the China \(Beijing\) region is `amazonaws.com.cn`\.
+Returns the suffix for a domain\. The suffix is typically `amazonaws.com`, but might differ by Region\. For example, the suffix for the China \(Beijing\) Region is `amazonaws.com.cn`\.

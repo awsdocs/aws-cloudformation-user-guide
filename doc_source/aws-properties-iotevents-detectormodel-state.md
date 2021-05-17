@@ -51,7 +51,7 @@ When an input is received and the `condition` is TRUE, perform the specified `ac
 
 `StateName`  <a name="cfn-iotevents-detectormodel-state-statename"></a>
 The name of the state\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

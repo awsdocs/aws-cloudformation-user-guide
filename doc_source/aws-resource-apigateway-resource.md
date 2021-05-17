@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-resource--examples"></a>
 
+
+
 ### Create resource<a name="aws-resource-apigateway-resource--examples--Create_resource"></a>
 
 The following example creates a `stack` resource for the `MyApi` API\.
@@ -100,3 +102,4 @@ Stack:
 
 ## See also<a name="aws-resource-apigateway-resource--seealso"></a>
 + [resource:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/resource-create/) in the *Amazon API Gateway REST API Reference*
+

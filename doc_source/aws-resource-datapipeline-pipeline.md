@@ -520,3 +520,4 @@ DynamoDBInputS3OutputHive:
 ## See also<a name="aws-resource-datapipeline-pipeline--seealso"></a>
 +  [Pipeline Object Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html) in the *AWS Data Pipeline Developer Guide*\.
 +  [PutPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_PutPipelineDefinition.html) in the *AWS Data Pipeline API Reference*\.
+

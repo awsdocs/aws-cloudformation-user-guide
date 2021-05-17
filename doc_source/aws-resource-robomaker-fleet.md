@@ -65,6 +65,8 @@ The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-wes
 
 ## Examples<a name="aws-resource-robomaker-fleet--examples"></a>
 
+
+
 ### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet"></a>
 
 The following example creates a fleet\.

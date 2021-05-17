@@ -13,7 +13,7 @@ You must use expressions for all parameters in `AssetPropertyTimestamp`\. The ex
 
    `'${$input.TemperatureInput.sensorData.timestamp / 1000}'` 
 
-For more information, see [Syntax](https://docs.aws.amazon.com/iotevents/latest/developerguide/expression-syntax.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-assetpropertytimestamp-syntax"></a>
 
@@ -45,6 +45,6 @@ The nanosecond offset converted from `timeInSeconds`\. The valid range is betwee
 
 `TimeInSeconds`  <a name="cfn-iotevents-detectormodel-assetpropertytimestamp-timeinseconds"></a>
 The timestamp, in seconds, in the Unix epoch format\. The valid range is between 1\-31556889864403199\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

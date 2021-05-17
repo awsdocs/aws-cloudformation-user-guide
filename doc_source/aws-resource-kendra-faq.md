@@ -13,11 +13,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Kendra::Faq",
   "Properties" : {
       "[Description](#cfn-kendra-faq-description)" : String,
+      "[FileFormat](#cfn-kendra-faq-fileformat)" : String,
       "[IndexId](#cfn-kendra-faq-indexid)" : String,
       "[Name](#cfn-kendra-faq-name)" : String,
       "[RoleArn](#cfn-kendra-faq-rolearn)" : String,
       "[S3Path](#cfn-kendra-faq-s3path)" : S3Path,
-      "[Tags](#cfn-kendra-faq-tags)" : TagList
+      "[Tags](#cfn-kendra-faq-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -28,19 +29,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Kendra::Faq
 Properties: 
   [Description](#cfn-kendra-faq-description): String
+  [FileFormat](#cfn-kendra-faq-fileformat): String
   [IndexId](#cfn-kendra-faq-indexid): String
   [Name](#cfn-kendra-faq-name): String
   [RoleArn](#cfn-kendra-faq-rolearn): String
   [S3Path](#cfn-kendra-faq-s3path): 
     S3Path
   [Tags](#cfn-kendra-faq-tags): 
-    TagList
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-kendra-faq-properties"></a>
 
 `Description`  <a name="cfn-kendra-faq-description"></a>
 A description of the FAQ\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FileFormat`  <a name="cfn-kendra-faq-fileformat"></a>
+The format of the input file\. You can choose between a basic CSV format, a CSV format that includes customs attributes in a header, and a JSON format that includes custom attributes\.   
+ The format must match the format of the file stored in the S3 bucket identified in the S3Path parameter\.   
+Valid values are:  
++ `CSV`
++ `CSV_WITH_HEADER`
++ `JSON`
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -76,7 +89,7 @@ The Amazon Simple Storage Service \(Amazon S3\) location of the FAQ input data\.
 An array of key\-value pairs to apply to this resource  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-kendra-faq-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-kendra-faq-return-values"></a>

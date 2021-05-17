@@ -182,6 +182,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-codedeploy-deploymentgroup--examples"></a>
 
+
+
 ### Revision in GitHub<a name="aws-resource-codedeploy-deploymentgroup--examples--Revision_in_GitHub"></a>
 
 The following example creates a deployment group that is associated with Auto Scaling groups and uses an application revision that is stored in a GitHub repository\. You specify the repository information as input parameters\.

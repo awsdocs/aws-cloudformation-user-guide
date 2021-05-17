@@ -52,7 +52,7 @@ Indicates whether to assign a public IPv4 address to an instance you launch in a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeleteOnTermination`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-deleteontermination"></a>
-If set to `true`, the interface is deleted when the instance is terminated\. You can specify `true` only if creating a new network interface when launching an instance\.  
+Indicates whether the network interface is deleted when the instance is terminated\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

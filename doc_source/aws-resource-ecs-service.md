@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentController](#cfn-ecs-service-deploymentcontroller)" : DeploymentController,
       "[DesiredCount](#cfn-ecs-service-desiredcount)" : Integer,
       "[EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags)" : Boolean,
+      "[EnableExecuteCommand](#cfn-ecs-service-enableexecutecommand)" : Boolean,
       "[HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds)" : Integer,
       "[LaunchType](#cfn-ecs-service-launchtype)" : String,
       "[LoadBalancers](#cfn-ecs-service-loadbalancers)" : [ LoadBalancer, ... ],
@@ -28,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PropagateTags](#cfn-ecs-service-propagatetags)" : String,
       "[Role](#cfn-ecs-service-role)" : String,
       "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
-      "[ServiceArn](#cfn-ecs-service-servicearn)" : String,
       "[ServiceName](#cfn-ecs-service-servicename)" : String,
       "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ ServiceRegistry, ... ],
       "[Tags](#cfn-ecs-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -51,6 +51,7 @@ Properties:
     DeploymentController
   [DesiredCount](#cfn-ecs-service-desiredcount): Integer
   [EnableECSManagedTags](#cfn-ecs-service-enableecsmanagedtags): Boolean
+  [EnableExecuteCommand](#cfn-ecs-service-enableexecutecommand): Boolean
   [HealthCheckGracePeriodSeconds](#cfn-ecs-service-healthcheckgraceperiodseconds): Integer
   [LaunchType](#cfn-ecs-service-launchtype): String
   [LoadBalancers](#cfn-ecs-service-loadbalancers): 
@@ -65,7 +66,6 @@ Properties:
   [PropagateTags](#cfn-ecs-service-propagatetags): String
   [Role](#cfn-ecs-service-role): String
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
-  [ServiceArn](#cfn-ecs-service-servicearn): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
     - ServiceRegistry
@@ -100,14 +100,14 @@ Optional deployment parameters that control how many tasks run during the deploy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentController`  <a name="cfn-ecs-service-deploymentcontroller"></a>
-The deployment controller to use for the service\.  
+The deployment controller to use for the service\. If no deployment controller is specified, the default value of `ECS` is used\.  
 *Required*: No  
 *Type*: [DeploymentController](aws-properties-ecs-service-deploymentcontroller.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
 The number of instantiations of the specified task definition to place and keep running on your cluster\.  
-This is required if `schedulingStrategy` is `REPLICA` or is not specified\. If `schedulingStrategy` is `DAEMON` then this is not required\.  
+If a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -117,6 +117,12 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
+Whether or not the execute command functionality is enabled for the service\. If `true`, the execute command functionality is enabled for all containers in tasks as part of the service\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckGracePeriodSeconds`  <a name="cfn-ecs-service-healthcheckgraceperiodseconds"></a>
 The period of time, in seconds, that the Amazon ECS service scheduler should ignore unhealthy Elastic Load Balancing target health checks after a task has first started\. This is only used when your service is configured to use a load balancer\. If your service has a load balancer defined and you don't specify a health check grace period value, the default value of `0` is used\.  
@@ -157,10 +163,10 @@ The placement strategy objects to use for tasks in your service\. You can specif
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlatformVersion`  <a name="cfn-ecs-service-platformversion"></a>
-The platform version that your tasks in the service are running on\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used by default\. For more information, see [AWS Fargate Platform Versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The platform version that your tasks in the service are running on\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used by default\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateTags`  <a name="cfn-ecs-service-propagatetags"></a>
 Specifies whether to propagate the tags from the task definition or the service to the tasks in the service\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the tasks within the service during service creation\. To add tags to a task after service creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
@@ -171,8 +177,8 @@ Specifies whether to propagate the tags from the task definition or the service 
 
 `Role`  <a name="cfn-ecs-service-role"></a>
 The name or full Amazon Resource Name \(ARN\) of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf\. This parameter is only permitted if you are using a load balancer with your service and your task definition does not use the `awsvpc` network mode\. If you specify the `role` parameter, you must also specify a load balancer object with the `loadBalancers` parameter\.  
-If your account has already created the Amazon ECS service\-linked role, that role is used by default for your service unless you specify a role here\. The service\-linked role is required if your task definition uses the `awsvpc` network mode or if the service is configured to use service discovery, an external deployment controller, multiple target groups, or Elastic Inference accelerators in which case you should not specify a role here\. For more information, see [Using Service\-Linked Roles for Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.
-If your specified role has a path other than `/`, then you must either specify the full role ARN \(this is recommended\) or prefix the role name with the path\. For example, if a role with the name `bar` has a path of `/foo/` then you would specify `/foo/bar` as the role name\. For more information, see [Friendly Names and Paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names) in the *IAM User Guide*\.  
+If your account has already created the Amazon ECS service\-linked role, that role is used by default for your service unless you specify a role here\. The service\-linked role is required if your task definition uses the `awsvpc` network mode or if the service is configured to use service discovery, an external deployment controller, multiple target groups, or Elastic Inference accelerators in which case you should not specify a role here\. For more information, see [Using service\-linked roles for Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.
+If your specified role has a path other than `/`, then you must either specify the full role ARN \(this is recommended\) or prefix the role name with the path\. For example, if a role with the name `bar` has a path of `/foo/` then you would specify `/foo/bar` as the role name\. For more information, see [Friendly names and paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -189,21 +195,15 @@ Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deploymen
 *Allowed values*: `DAEMON | REPLICA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServiceArn`  <a name="cfn-ecs-service-servicearn"></a>
-The ARN that identifies the service\. The ARN contains the `arn:aws:ecs` namespace, followed by the Region of the service, the AWS account ID of the service owner, the `service` namespace, and then the service name\. For example, `arn:aws:ecs:region:012345678910:service/my-service`\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `ServiceName`  <a name="cfn-ecs-service-servicename"></a>
-The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
+The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRegistries`  <a name="cfn-ecs-service-serviceregistries"></a>
-The details of the service discovery registries to assign to this service\. For more information, see [Service Discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
-Service discovery is supported for Fargate tasks if you are using platform version v1\.1\.0 or later\. For more information, see [AWS Fargate Platform Versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)\.
+The details of the service discovery registry to associate with this service\. For more information, see [Service discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
+Each service may be associated with one service registry\. Multiple service registries per service isn't supported\.
 *Required*: No  
 *Type*: List of [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -253,7 +253,12 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Name`  <a name="Name-fn::getatt"></a>
 The name of the Amazon ECS service, such as `sample-webapp`\.
 
+`ServiceArn`  <a name="ServiceArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-ecs-service--examples"></a>
+
+
 
 ### Define a basic service<a name="aws-resource-ecs-service--examples--Define_a_basic_service"></a>
 
@@ -673,4 +678,36 @@ Resources:
 Outputs:
   Cluster:
     Value: !Ref cluster
+```
+
+### Define a service with ECS Exec enabled<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled"></a>
+
+The following example defines a service with ECS Exec enabled\. For more information, see [Using ECS Exec for debugging](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) in the *Amazon ECS Developer Guide*\.
+
+#### JSON<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled--json"></a>
+
+```
+"ECSService": {
+  "Type": "AWS::ECS::Service",
+  "Properties" : {
+    "Cluster": { "Ref": "ECSCluster" },
+    "DesiredCount": 1,
+    "TaskDefinition" : { "Ref": "ECSTaskDefinition" },
+    "EnableExecuteCommand": "true"
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled--yaml"></a>
+
+```
+ECSService: 
+  Type: AWS::ECS::Service
+  Properties: 
+    Cluster: 
+      Ref: "ECSCluster"
+    DesiredCount: 1
+    TaskDefinition: 
+      Ref: "ECSTaskDefinition"
+    EnableExecuteCommand: true
 ```

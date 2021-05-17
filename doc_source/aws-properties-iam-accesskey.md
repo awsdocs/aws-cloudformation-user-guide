@@ -4,7 +4,7 @@
 
 If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the request\. This operation works for access keys under the AWS account\. Consequently, you can use this operation to manage AWS account root user credentials\. This is true even if the AWS account has no associated users\.
 
- For information about limits on the number of keys you can create, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
+ For information about quotas on the number of keys you can create, see [IAM and STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 **Important**  
 To ensure the security of your AWS account, the secret access key is accessible only during key and user creation\. You must save the key \(for example, in a text file\) if you want to be able to access it again\. If a secret key is lost, you can delete the access keys for the associated user and then create new keys\.
@@ -80,40 +80,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `SecretAccessKey`  <a name="SecretAccessKey-fn::getatt"></a>
 Returns the secret access key for the specified AWS::IAM::AccessKey resource\. For example: wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY\.
 
-## Examples<a name="aws-properties-iam-accesskey--examples"></a>
-
-### Access Key<a name="aws-properties-iam-accesskey--examples--Access_Key"></a>
-
-In this example, create an access key for the user named "MyUser"\.
-
-#### JSON<a name="aws-properties-iam-accesskey--examples--Access_Key--json"></a>
-
-```
-{
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources": {
-      "CFNKeys" : {
-         "Type" : "AWS::IAM::AccessKey",
-         "Properties" : {
-           "UserName" : { "Ref": "MyUser" }
-         }
-      }
-   }            
-}
-```
-
-#### YAML<a name="aws-properties-iam-accesskey--examples--Access_Key--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  CFNKeys:
-    Type: AWS::IAM::AccessKey
-    Properties:
-      UserName:
-        Ref: MyUser
-```
-
 ## See also<a name="aws-properties-iam-accesskey--seealso"></a>
 + To view `AWS::IAM::AccessKey` template example snippets, see [Declaring an IAM Access Key Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-accesskey)\. 
 +  [CreateAccessKey](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateAccessKey.html) in the *AWS Identity and Access Management API Reference* 
+

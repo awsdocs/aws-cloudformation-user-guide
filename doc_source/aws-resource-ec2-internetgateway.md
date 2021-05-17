@@ -44,32 +44,32 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-internetgateway--examples"></a>
 
-### Creating an Internet Gateway<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway"></a>
+### Create an internet gateway<a name="aws-resource-ec2-internetgateway--examples--Create_an_internet_gateway"></a>
 
-The following example creates an Internet gateway and assigns it a tag\.
+The following example creates an internet gateway and assigns it a tag\.
 
-#### JSON<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-internetgateway--examples--Create_an_internet_gateway--json"></a>
 
 ```
 "Resources" : {
    "myInternetGateway" : {
       "Type" : "AWS::EC2::InternetGateway",
       "Properties" : {
-        "Tags" : [ {"Key" : "foo", "Value" : "bar"}]
+        "Tags" : [ {"Key" : "stack", "Value" : "production"}]
       }
    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-internetgateway--examples--Create_an_internet_gateway--yaml"></a>
 
 ```
   myInternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
-      - Key: foo
-        Value: bar
+      - Key: stack
+        Value: production
 ```
 
 ## See also<a name="aws-resource-ec2-internetgateway--seealso"></a>

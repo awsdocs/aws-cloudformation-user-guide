@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-geomatchset--examples"></a>
 
+
+
 ### Define Geographic Constraints<a name="aws-resource-wafregional-geomatchset--examples--Define_Geographic_Constraints"></a>
 
 The following example defines a set of GeoMatchConstraints for a web access control list \(ACL\) rule\.

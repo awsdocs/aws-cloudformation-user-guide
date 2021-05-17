@@ -122,7 +122,7 @@ The email configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailVerificationMessage`  <a name="cfn-cognito-userpool-emailverificationmessage"></a>
-A string representing the email verification message\.  
+A string representing the email verification message\. EmailVerificationMessage is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -131,7 +131,7 @@ A string representing the email verification message\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailVerificationSubject`  <a name="cfn-cognito-userpool-emailverificationsubject"></a>
-A string representing the email verification subject\.  
+A string representing the email verification subject\. EmailVerificationSubject is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -151,6 +151,7 @@ Allowed values: `SMS_MFA` \| `SOFTWARE_TOKEN_MFA`
 `LambdaConfig`  <a name="cfn-cognito-userpool-lambdaconfig"></a>
 The Lambda trigger configuration information for the new user pool\.  
 In a push model, event sources \(such as Amazon S3 and custom applications\) need permission to invoke a function\. So you will need to make an extra call to add permission for these event sources to invoke your Lambda function\.  
+  
 For more information on using the Lambda API to add permission, see [ AddPermission ](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html)\.   
 For adding permission using the AWS CLI, see [ add\-permission ](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html)\.
 *Required*: No  

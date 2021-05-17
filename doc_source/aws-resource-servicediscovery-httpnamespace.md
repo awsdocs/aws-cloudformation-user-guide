@@ -46,6 +46,7 @@ The name that you want to assign to this namespace\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
+*Pattern*: `^[!-~]{1,1024}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-servicediscovery-httpnamespace-tags"></a>
@@ -79,6 +80,8 @@ The ID of the namespace\.
 
 ## Examples<a name="aws-resource-servicediscovery-httpnamespace--examples"></a>
 
+
+
 ### Create an HTTP namespace<a name="aws-resource-servicediscovery-httpnamespace--examples--Create_an_HTTP_namespace"></a>
 
 The following example creates an HTTP namespace named `example-namespace`\.
@@ -106,3 +109,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-httpnamespace--seealso"></a>
 +  [CreateHttpNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateHttpNamespace.html) in the *AWS Cloud Map API Reference* 
+

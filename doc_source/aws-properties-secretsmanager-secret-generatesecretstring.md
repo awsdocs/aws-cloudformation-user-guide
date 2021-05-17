@@ -55,7 +55,7 @@ A string that excludes characters in the generated password\. By default, all ch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeLowercase`  <a name="cfn-secretsmanager-secret-generatesecretstring-excludelowercase"></a>
-Specifies the generated password should not include lowercase letters\. By default, SEcrets Manager disables this parameter, and the generated password can include lowercase `False`, and the generated password can include lowercase letters\.  
+Specifies the generated password should not include lowercase letters\. By default, ecrets Manager disables this parameter, and the generated password can include lowercase `False`, and the generated password can include lowercase letters\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -45,10 +45,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3OutputFormatConfig`  <a name="cfn-appflow-flow-s3destinationproperties-s3outputformatconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+ The configuration that determines how Amazon AppFlow should format the flow output data when Amazon S3 is used as the destination\.   
 *Required*: No  
 *Type*: [S3OutputFormatConfig](aws-properties-appflow-flow-s3outputformatconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-s3destinationproperties--seealso"></a>
 + [S3DestinationProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_S3DestinationProperties.html) in the *Amazon AppFlow API Reference*\.
+

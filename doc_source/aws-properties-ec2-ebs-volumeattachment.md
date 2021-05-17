@@ -57,11 +57,13 @@ The ID of the Amazon EBS volume\. The volume and instance must be within the sam
 
 ## Examples<a name="aws-properties-ec2-ebs-volumeattachment--examples"></a>
 
-### Attach an EBS Volume to a Running Instance<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance"></a>
+
+
+### Attach an EBS volume to a running instance<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_volume_to_a_running_instance"></a>
 
 This example attaches an EC2 EBS volume to the EC2 instance with the logical name "Ec2Instance"\.
 
-#### JSON<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance--json"></a>
+#### JSON<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_volume_to_a_running_instance--json"></a>
 
 ```
 "NewVolume" : {
@@ -86,7 +88,7 @@ This example attaches an EC2 EBS volume to the EC2 instance with the logical nam
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_Volume_to_a_Running_Instance--yaml"></a>
+#### YAML<a name="aws-properties-ec2-ebs-volumeattachment--examples--Attach_an_EBS_volume_to_a_running_instance--yaml"></a>
 
 ```
 NewVolume:

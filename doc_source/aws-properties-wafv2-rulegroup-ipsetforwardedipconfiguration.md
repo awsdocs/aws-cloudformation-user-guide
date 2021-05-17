@@ -35,8 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The match status to assign to the web request if the request doesn't have a valid IP address in the specified position\.  
 If the specified header isn't present in the request, AWS WAF doesn't apply the rule to the web request at all\.
 You can specify the following fallback behaviors:  
-+ MATCH \- Treat the web request as matching the rule statement\. AWS WAF applies the rule action to the request\.
-+ NO\_MATCH \- Treat the web request as not matching the rule statement\.
++  `MATCH` \- Treat the web request as matching the rule statement\. AWS WAF applies the rule action to the request\.
++  `NO_MATCH` \- Treat the web request as not matching the rule statement\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `MATCH | NO_MATCH`  

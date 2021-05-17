@@ -10,7 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ConfluenceConfiguration](#cfn-kendra-datasource-datasourceconfiguration-confluenceconfiguration)" : ConfluenceConfiguration,
   "[DatabaseConfiguration](#cfn-kendra-datasource-datasourceconfiguration-databaseconfiguration)" : DatabaseConfiguration,
+  "[GoogleDriveConfiguration](#cfn-kendra-datasource-datasourceconfiguration-googledriveconfiguration)" : GoogleDriveConfiguration,
   "[OneDriveConfiguration](#cfn-kendra-datasource-datasourceconfiguration-onedriveconfiguration)" : OneDriveConfiguration,
   "[S3Configuration](#cfn-kendra-datasource-datasourceconfiguration-s3configuration)" : S3DataSourceConfiguration,
   "[SalesforceConfiguration](#cfn-kendra-datasource-datasourceconfiguration-salesforceconfiguration)" : SalesforceConfiguration,
@@ -22,8 +24,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kendra-datasource-datasourceconfiguration-syntax.yaml"></a>
 
 ```
+  [ConfluenceConfiguration](#cfn-kendra-datasource-datasourceconfiguration-confluenceconfiguration): 
+    ConfluenceConfiguration
   [DatabaseConfiguration](#cfn-kendra-datasource-datasourceconfiguration-databaseconfiguration): 
     DatabaseConfiguration
+  [GoogleDriveConfiguration](#cfn-kendra-datasource-datasourceconfiguration-googledriveconfiguration): 
+    GoogleDriveConfiguration
   [OneDriveConfiguration](#cfn-kendra-datasource-datasourceconfiguration-onedriveconfiguration): 
     OneDriveConfiguration
   [S3Configuration](#cfn-kendra-datasource-datasourceconfiguration-s3configuration): 
@@ -38,14 +44,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-kendra-datasource-datasourceconfiguration-properties"></a>
 
+`ConfluenceConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-confluenceconfiguration"></a>
+Provides configuration information for connecting to a Confluence data source\.  
+*Required*: No  
+*Type*: [ConfluenceConfiguration](aws-properties-kendra-datasource-confluenceconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DatabaseConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-databaseconfiguration"></a>
 Provides information necessary to create a data source connector for a database\.  
 *Required*: No  
 *Type*: [DatabaseConfiguration](aws-properties-kendra-datasource-databaseconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`GoogleDriveConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-googledriveconfiguration"></a>
+Provides configuration for data sources that connect to Google Drive\.   
+*Required*: No  
+*Type*: [GoogleDriveConfiguration](aws-properties-kendra-datasource-googledriveconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `OneDriveConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-onedriveconfiguration"></a>
-Provided configuration for data sources that connect to Microsoft OneDrive\.  
+Provides configuration for data sources that connect to Microsoft OneDrive\.  
 *Required*: No  
 *Type*: [OneDriveConfiguration](aws-properties-kendra-datasource-onedriveconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

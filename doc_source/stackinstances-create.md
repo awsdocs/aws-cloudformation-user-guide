@@ -33,7 +33,7 @@ If you add an OU that your stack set already targets, StackSets creates new stac
 
       If you add multiple Regions, the order of the Regions under **Specify regions** determines their deployment order\.
 
-   1. For **Deployment options**: 
+   1. For **Deployment options**:
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
 
         This means that AWS CloudFormation deploys your stack in only one account at one time\.
@@ -52,6 +52,12 @@ If you add an OU that your stack set already targets, StackSets creates new stac
 ![\[Operations tab of the StackSets details page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-operations.png)
 
 ## Add stack instances to your stack set using the AWS CLI<a name="stackinstances-create-cli"></a>
+
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
 
 1. Open the AWS CLI\.
 

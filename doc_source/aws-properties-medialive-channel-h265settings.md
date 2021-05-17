@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel H265Settings<a name="aws-properties-medialive-channel-h265settings"></a>
 
-Configures the output video encode to use the H265 codec\. This element belongs to VideoCodecSettings\.
+H265 Settings
+
+The parent of this entity is VideoCodecSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-h265settings-syntax"></a>
 
@@ -117,13 +119,13 @@ Includes colorspace metadata in the output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColorSpaceSettings`  <a name="cfn-medialive-channel-h265settings-colorspacesettings"></a>
-Include this element if you want to include color space metadata in the output video encode\.  
+Color Space settings  
 *Required*: No  
 *Type*: [H265ColorSpaceSettings](aws-properties-medialive-channel-h265colorspacesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterSettings`  <a name="cfn-medialive-channel-h265settings-filtersettings"></a>
-Configure optional filters that apply to an H265 encode in the output\. This element belongs to H265Settings\.  
+Optional filters that you can apply to an encode\.  
 *Required*: No  
 *Type*: [H265FilterSettings](aws-properties-medialive-channel-h265filtersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -183,13 +185,13 @@ Amount of lookahead\. A value of low can decrease latency and memory usage, whil
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxBitrate`  <a name="cfn-medialive-channel-h265settings-maxbitrate"></a>
-For QVBR: See the tooltip for Quality level\.  
+For QVBR: See the tooltip for Quality level  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinIInterval`  <a name="cfn-medialive-channel-h265settings-miniinterval"></a>
-Only meaningful if sceneChangeDetect is set to enabled\. Defaults to 5 if multiplex rate control is used\. Enforces separation between repeated \(cadence\) I\-frames and I\-frames inserted by Scene Change Detection\. If a scene change I\-frame is within I\-interval frames of a cadence I\-frame, the GOP is shrunk and/or stretched to the scene change I\-frame\. GOP stretch requires enabling lookahead as well as setting I\-interval\. The normal cadence resumes for the next GOP\. Note: Maximum GOP stretch = GOP size \+ Min\-I\-interval \- 1\.  
+Only meaningful if sceneChangeDetect is set to enabled\. Defaults to 5 if multiplex rate control is used\. Enforces separation between repeated \(cadence\) I\-frames and I\-frames inserted by Scene Change Detection\. If a scene change I\-frame is within I\-interval frames of a cadence I\-frame, the GOP is shrunk and/or stretched to the scene change I\-frame\. GOP stretch requires enabling lookahead as well as setting I\-interval\. The normal cadence resumes for the next GOP\. Note: Maximum GOP stretch = GOP size \+ Min\-I\-interval \- 1  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -213,7 +215,7 @@ H\.265 Profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QvbrQualityLevel`  <a name="cfn-medialive-channel-h265settings-qvbrqualitylevel"></a>
-Controls the target quality for the video encode\. Applies only when the rate control mode is QVBR\. Set values for the QVBR quality level field and Max bitrate field that suit your most important viewing devices\. Recommended values are: \- Primary screen: Quality level: 8 to 10\. Max bitrate: 4M \- PC or tablet: Quality level: 7\. Max bitrate: 1\.5M to 3M \- Smartphone: Quality level: 6\. Max bitrate: 1M to 1\.5M\.  
+Controls the target quality for the video encode\. Applies only when the rate control mode is QVBR\. Set values for the QVBR quality level field and Max bitrate field that suit your most important viewing devices\. Recommended values are: \- Primary screen: Quality level: 8 to 10\. Max bitrate: 4M \- PC or tablet: Quality level: 7\. Max bitrate: 1\.5M to 3M \- Smartphone: Quality level: 6\. Max bitrate: 1M to 1\.5M  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -249,7 +251,7 @@ H\.265 Tier\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeInsertion`  <a name="cfn-medialive-channel-h265settings-timecodeinsertion"></a>
-Determines how timecodes should be inserted into the video elementary stream\. \- 'disabled': Do not include timecodes \- 'picTimingSei': Pass through picture timing SEI messages from the source specified in Timecode Config\.  
+Determines how timecodes should be inserted into the video elementary stream\. \- 'disabled': Do not include timecodes \- 'picTimingSei': Pass through picture timing SEI messages from the source specified in Timecode Config  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

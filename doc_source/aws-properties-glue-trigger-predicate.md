@@ -39,3 +39,4 @@ An optional field if only one condition is listed\. If multiple conditions are l
 
 ## See also<a name="aws-properties-glue-trigger-predicate--seealso"></a>
 +  [Predicate Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Predicate) in the *AWS Glue Developer Guide* 
+

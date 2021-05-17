@@ -158,6 +158,8 @@ The GraphQL type that invokes this resolver\.
 
 ## Examples<a name="aws-resource-appsync-resolver--examples"></a>
 
+
+
 ### Resolver Creation Example<a name="aws-resource-appsync-resolver--examples--Resolver_Creation_Example"></a>
 
 The following example creates a resolver and associates it with an existing GraphQL API and a data source by passing the GraphQL API ID and data source name as a parameter\. 
@@ -250,3 +252,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-resolver--seealso"></a>
 +  [CreateResolver](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateResolver.html) operation in the *AWS AppSync API Reference*\.
+

@@ -38,3 +38,4 @@ The value for the header that you specified in the `HeaderName` field\.
 
 ## See also<a name="aws-properties-cloudfront-distribution-origincustomheader--seealso"></a>
 +  [OriginCustomHeader](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_OriginCustomHeader.html) in the *Amazon CloudFront API Reference* 
+

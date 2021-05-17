@@ -20,7 +20,7 @@ When creating or updating a stack using a template containing IAM resources, you
 
 This snippet shows how to declare an `[AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)` resource to create an IAM user\. The user is declared with the path \(`"/"`\) and a login profile with the password \(`myP@ssW0rd`\)\.
 
-The policy document named `giveaccesstoqueueonly` gives the user permission to perform all Amazon SQS actions on the Amazon SQS queue resource `myqueue`, and denies access to all other Amazon SQS queue resources\. The `Fn::GetAtt` function gets the Arn attribute of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource `myqueue`\. 
+The policy document named `giveaccesstoqueueonly` gives the user permission to perform all Amazon SQS actions on the Amazon SQS queue resource `myqueue`, and denies access to all other Amazon SQS queue resources\. The `Fn::GetAtt` function gets the Arn attribute of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource `myqueue`\.
 
 The policy document named `giveaccesstotopiconly` is added to the user to give the user permission to perform all Amazon SNS actions on the Amazon SNS topic resource `mytopic` and to deny access to all other Amazon SNS resources\. The [`Ref`](intrinsic-function-reference-ref.md) function gets the ARN of the `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)` resource `mytopic`\.
 
@@ -214,7 +214,7 @@ You can also pass the AWS access key and secret key to an EC2 instance or Auto S
 
 ## Declaring an IAM group resource<a name="scenario-iam-group"></a>
 
-This snippet shows an `[AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)` resource\. The group has a path \(`"/myapplication/"`\)\. The policy document named `myapppolicy` is added to the group to allow the group's users to perform all Amazon SQS actions on the Amazon SQS queue resource myqueue and deny access to all other Amazon SQS resources except `myqueue`\. 
+This snippet shows an `[AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)` resource\. The group has a path \(`"/myapplication/"`\)\. The policy document named `myapppolicy` is added to the group to allow the group's users to perform all Amazon SQS actions on the Amazon SQS queue resource myqueue and deny access to all other Amazon SQS resources except `myqueue`\.
 
 To assign a policy to a resource, IAM requires the Amazon Resource Name \(ARN\) for the resource\. In the snippet, the `Fn::GetAtt` function gets the ARN of the `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource queue\.
 
@@ -348,7 +348,7 @@ The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resou
 
 ## Declaring an Amazon S3 bucket policy<a name="scenario-bucket-policy"></a>
 
-This snippet shows how to create a policy and apply it to an Amazon S3 bucket using the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource\. The `mybucketpolicy` resource declares a policy document that allows the `user1` IAM user to perform the `GetObject` action on all objects in the S3 bucket to which this policy is applied\. In the snippet, the `Fn::GetAtt` function gets the ARN of the `user1` resource\. The `mybucketpolicy` resource applies the policy to the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource mybucket\. The `Ref` function gets the bucket name of the `mybucket` resource\. 
+This snippet shows how to create a policy and apply it to an Amazon S3 bucket using the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource\. The `mybucketpolicy` resource declares a policy document that allows the `user1` IAM user to perform the `GetObject` action on all objects in the S3 bucket to which this policy is applied\. In the snippet, the `Fn::GetAtt` function gets the ARN of the `user1` resource\. The `mybucketpolicy` resource applies the policy to the `[AWS::S3::BucketPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)` resource mybucket\. The `Ref` function gets the bucket name of the `mybucket` resource\.
 
 ### JSON<a name="quickref-iam-example-8.json"></a>
 
@@ -449,7 +449,7 @@ The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resou
 
 ## Declaring an Amazon SQS policy<a name="scenario-sqs-policy"></a>
 
-This snippet shows how to create a policy and apply it to an Amazon SQS queue using the `[AWS::SQS::QueuePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html)` resource\. The `PolicyDocument` property allows the existing user `myapp` \(specified by its ARN\) to perform the `SendMessage` action on an existing queue, which is specified by its URL, and an `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource myqueue\. The [Ref](intrinsic-function-reference-ref.md) function gets the URL for the `myqueue` resource\. 
+This snippet shows how to create a policy and apply it to an Amazon SQS queue using the `[AWS::SQS::QueuePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-policy.html)` resource\. The `PolicyDocument` property allows the existing user `myapp` \(specified by its ARN\) to perform the `SendMessage` action on an existing queue, which is specified by its URL, and an `[AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)` resource myqueue\. The [Ref](intrinsic-function-reference-ref.md) function gets the URL for the `myqueue` resource\.
 
 ### JSON<a name="quickref-iam-example-10.json"></a>
 

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Input InputDeviceSettings<a name="aws-properties-medialive-input-inputdevicesettings"></a>
 
-Settings for an input device\. This element belongs to Input\.
+Settings that apply only if the input is an Elemental Link input\.
+
+The parent of this entity is Input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputdevicesettings-syntax"></a>
 

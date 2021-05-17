@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[DeploymentCircuitBreaker](#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker)" : DeploymentCircuitBreaker,
   "[MaximumPercent](#cfn-ecs-service-deploymentconfiguration-maximumpercent)" : Integer,
   "[MinimumHealthyPercent](#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent)" : Integer
 }
@@ -18,11 +19,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ecs-service-deploymentconfiguration-syntax.yaml"></a>
 
 ```
+  [DeploymentCircuitBreaker](#cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker): 
+    DeploymentCircuitBreaker
   [MaximumPercent](#cfn-ecs-service-deploymentconfiguration-maximumpercent): Integer
   [MinimumHealthyPercent](#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent): Integer
 ```
 
 ## Properties<a name="aws-properties-ecs-service-deploymentconfiguration-properties"></a>
+
+`DeploymentCircuitBreaker`  <a name="cfn-ecs-service-deploymentconfiguration-deploymentcircuitbreaker"></a>
+The deployment circuit breaker can only be used for services using the rolling update \(`ECS`\) deployment type that are not behind a Classic Load Balancer\.
+The **deployment circuit breaker** determines whether a service deployment will fail if the service can't reach a steady state\. If enabled, a service deployment will transition to a failed state and stop launching new tasks\. You can also enable Amazon ECS to roll back your service to the last completed deployment after a failure\. For more information, see [Rolling update](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-ecs.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+*Required*: No  
+*Type*: [DeploymentCircuitBreaker](aws-properties-ecs-service-deploymentcircuitbreaker.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumPercent`  <a name="cfn-ecs-service-deploymentconfiguration-maximumpercent"></a>
 If a service is using the rolling update \(`ECS`\) deployment type, the **maximum percent** parameter represents an upper limit on the number of tasks in a service that are allowed in the `RUNNING` or `PENDING` state during a deployment, as a percentage of the desired number of tasks \(rounded down to the nearest integer\), and while any container instances are in the `DRAINING` state if the service contains tasks using the EC2 launch type\. This parameter enables you to define the deployment batch size\. For example, if your service has a desired number of four tasks and a maximum percent value of 200%, the scheduler may start four new tasks before stopping the four older tasks \(provided that the cluster resources required to do this are available\)\. The default value for maximum percent is 200%\.  

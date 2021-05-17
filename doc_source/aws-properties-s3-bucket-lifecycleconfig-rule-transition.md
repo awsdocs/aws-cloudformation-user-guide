@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Transition<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition"></a>
 
-Specifies when an object transitions to a specified storage class\. For more information about Amazon S3 lifecycle configuration rules, see [Transitioning Objects Using Amazon S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Specifies when an object transitions to a specified storage class\. For more information about Amazon S3 lifecycle configuration rules, see [Transitioning Objects Using Amazon S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax"></a>
 
@@ -47,3 +47,4 @@ Indicates the number of days after creation when objects are transitioned to the
 
 ## See also<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

@@ -12,8 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Aliases](#cfn-cloudfront-distribution-distributionconfig-aliases)" : [ String, ... ],
   "[CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors)" : [ CacheBehavior, ... ],
+  "[CNAMEs](#cfn-cloudfront-distribution-distributionconfig-cnames)" : [ String, ... ],
   "[Comment](#cfn-cloudfront-distribution-distributionconfig-comment)" : String,
   "[CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses)" : [ CustomErrorResponse, ... ],
+  "[CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin)" : CustomOrigin,
   "[DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior)" : DefaultCacheBehavior,
   "[DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject)" : String,
   "[Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled)" : Boolean,
@@ -24,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Origins](#cfn-cloudfront-distribution-distributionconfig-origins)" : [ Origin, ... ],
   "[PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass)" : String,
   "[Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions)" : Restrictions,
+  "[S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin)" : S3Origin,
   "[ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate)" : ViewerCertificate,
   "[WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid)" : String
 }
@@ -36,9 +39,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors): 
     - CacheBehavior
+  [CNAMEs](#cfn-cloudfront-distribution-distributionconfig-cnames): 
+    - String
   [Comment](#cfn-cloudfront-distribution-distributionconfig-comment): String
   [CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses): 
     - CustomErrorResponse
+  [CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin): 
+    CustomOrigin
   [DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior): 
     DefaultCacheBehavior
   [DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject): String
@@ -54,6 +61,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass): String
   [Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions): 
     Restrictions
+  [S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin): 
+    S3Origin
   [ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate): 
     ViewerCertificate
   [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid): String
@@ -73,11 +82,14 @@ A complex type that contains zero or more `CacheBehavior` elements\.
 *Type*: List of [CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CNAMEs`  <a name="cfn-cloudfront-distribution-distributionconfig-cnames"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Comment`  <a name="cfn-cloudfront-distribution-distributionconfig-comment"></a>
-Any comments you want to include about the distribution\.  
-If you don't want to specify a comment, include an empty `Comment` element\.  
-To delete an existing comment, update the distribution configuration and include an empty `Comment` element\.  
-To add or change a comment, update the distribution configuration and specify the new comment\.  
+An optional comment to describe the distribution\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,6 +101,12 @@ A complex type that controls the following:
 For more information about custom error pages, see [Customizing Error Responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of [CustomErrorResponse](aws-properties-cloudfront-distribution-customerrorresponse.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomOrigin`  <a name="cfn-cloudfront-distribution-distributionconfig-customorigin"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: CustomOrigin  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultCacheBehavior`  <a name="cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior"></a>
@@ -169,6 +187,12 @@ A complex type that identifies ways in which you want to restrict distribution o
 *Type*: [Restrictions](aws-properties-cloudfront-distribution-restrictions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`S3Origin`  <a name="cfn-cloudfront-distribution-distributionconfig-s3origin"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: S3Origin  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ViewerCertificate`  <a name="cfn-cloudfront-distribution-distributionconfig-viewercertificate"></a>
 A complex type that determines the distribution’s SSL/TLS configuration for communicating with viewers\.  
 *Required*: No  
@@ -184,3 +208,4 @@ AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS r
 
 ## See also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
 +  [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DistributionConfig.html) in the *Amazon CloudFront API Reference* 
+

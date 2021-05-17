@@ -112,6 +112,8 @@ For an example output preset model in JSON and YAML, see the Examples section of
 
 ## Examples<a name="aws-resource-mediaconvert-preset--examples"></a>
 
+
+
 ### Output Preset Model for SettingsJson<a name="aws-resource-mediaconvert-preset--examples--Output_Preset_Model_for_SettingsJson"></a>
 
 For more information about creating an output preset model in JSON or YAML for the `SettingsJson` property, see the Remarks section of this topic\.

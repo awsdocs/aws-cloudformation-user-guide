@@ -56,13 +56,17 @@ The Amazon Resource Name \(ARN\) of the SNS topic created for event notification
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceIds`  <a name="cfn-rds-eventsubscription-sourceids"></a>
-The list of identifiers of the event sources for which events will be returned\. If not specified, then all sources are included in the response\. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it cannot end with a hyphen or contain two consecutive hyphens\.  
+The list of identifiers of the event sources for which events are returned\. If not specified, then all sources are included in the response\. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens\. It can't end with a hyphen or contain two consecutive hyphens\.  
 Constraints:  
-+ If SourceIds are supplied, SourceType must also be provided\.
-+ If the source type is a DB instance, then a DBInstanceIdentifier must be supplied\.
-+ If the source type is a DB security group, a DBSecurityGroupName must be supplied\.
-+ If the source type is a DB parameter group, a DBParameterGroupName must be supplied\.
-+ If the source type is a DB Snapshot, a DBSnapshotIdentifier must be supplied\.
++ If a `SourceIds` value is supplied, `SourceType` must also be provided\.
++ If the source type is a DB instance, a `DBInstanceIdentifier` value must be supplied\.
++ If the source type is a DB cluster, a `DBClusterIdentifier` value must be supplied\.
+
+  Use a lowercase string when you specify the `DBClusterIdentifier`\. Don't use a `Ref` because it will return the `DBClusterIdentifier` as an uppercase string\.
++ If the source type is a DB parameter group, a `DBParameterGroupName` value must be supplied\.
++ If the source type is a DB security group, a `DBSecurityGroupName` value must be supplied\.
++ If the source type is a DB snapshot, a `DBSnapshotIdentifier` value must be supplied\.
++ If the source type is a DB cluster snapshot, a `DBClusterSnapshotIdentifier` value must be supplied\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,6 +87,8 @@ Valid values: `db-instance` \| `db-cluster` \| `db-parameter-group` \| `db-secur
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-rds-eventsubscription--examples"></a>
+
+
 
 ### <a name="aws-resource-rds-eventsubscription--examples--"></a>
 

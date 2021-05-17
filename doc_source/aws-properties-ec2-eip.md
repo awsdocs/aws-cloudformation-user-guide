@@ -94,11 +94,11 @@ The ID that AWS assigns to represent the allocation of the address for use with 
 
 ## Examples<a name="aws-properties-ec2-eip--examples"></a>
 
-### Allocating an Amazon EC2 Elastic IP Using AWS::EC2::EIP\.<a name="aws-properties-ec2-eip--examples--Allocating_an_Amazon_EC2_Elastic_IP_Using_AWS::EC2::EIP."></a>
+### Allocate an Amazon EC2 Elastic IP address<a name="aws-properties-ec2-eip--examples--Allocate_an_Amazon_EC2_Elastic_IP_address"></a>
 
 This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [ AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource\.
 
-#### JSON<a name="aws-properties-ec2-eip--examples--Allocating_an_Amazon_EC2_Elastic_IP_Using_AWS::EC2::EIP.--json"></a>
+#### JSON<a name="aws-properties-ec2-eip--examples--Allocate_an_Amazon_EC2_Elastic_IP_address--json"></a>
 
 ```
 "MyEIP" : {
@@ -109,7 +109,7 @@ This example shows how to allocate an Amazon EC2 Elastic IP address and assign i
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-eip--examples--Allocating_an_Amazon_EC2_Elastic_IP_Using_AWS::EC2::EIP.--yaml"></a>
+#### YAML<a name="aws-properties-ec2-eip--examples--Allocate_an_Amazon_EC2_Elastic_IP_address--yaml"></a>
 
 ```
 MyEIP:

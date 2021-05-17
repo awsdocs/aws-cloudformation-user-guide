@@ -106,17 +106,37 @@ This example creates a findings filter that suppresses \(automatically archives\
 #### JSON<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID--json"></a>
 
 ```
-{ "Type": "AWS::Macie::FindingsFilter", "DependsOn": "Session",
-                "Properties": { "Action": "ARCHIVE", "Description": "My custom findings filter",
-                "FindingCriteria": { "Criterion": { "AccountId": { "eq": "123456789012" }, "Name":
-                "MyFilterName", "Position": 1 } } } }
+{
+    "Type": "AWS::Macie::FindingsFilter",
+    "DependsOn": "Session",
+    "Properties": {
+        "Action": "ARCHIVE",
+        "Description": "My custom findings filter",
+        "FindingCriteria": {
+            "Criterion": {
+                "AccountId": {
+                    "eq": "123456789012"
+                }
+            }
+        },
+        "Name": "MyFilterName",
+        "Position": 1
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID--yaml"></a>
 
 ```
-Type: AWS::Macie::FindingsFilter DependsOn: "Session"
-                Properties: Action: ARCHIVE Description: "My custom findings filter"
-                FindingCriteria: Criterion: "AccountID": eq: "123456789012" Name: MyFilterName
-                Position: 1
+Type: AWS::Macie::FindingsFilter
+DependsOn: "Session"
+Properties: 
+    Action: ARCHIVE 
+    Description: "My custom findings filter"
+    FindingCriteria:
+        Criterion:
+            "AccountID": 
+                eq: "123456789012" 
+    Name: MyFilterName
+    Position: 1
 ```

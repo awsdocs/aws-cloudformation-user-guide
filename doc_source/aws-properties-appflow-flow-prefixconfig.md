@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-prefixconfig-properties"></a>
 
 `PrefixFormat`  <a name="cfn-appflow-flow-prefixconfig-prefixformat"></a>
- Determines the format of the prefix, and whether it applies to the file name, file path, or both\.   
+ Determines the level of granularity that's included in the prefix\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DAY | HOUR | MINUTE | MONTH | YEAR`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrefixType`  <a name="cfn-appflow-flow-prefixconfig-prefixtype"></a>
- Determines the level of granularity that's included in the prefix\.   
+ Determines the format of the prefix, and whether it applies to the file name, file path, or both\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `FILENAME | PATH | PATH_AND_FILENAME`  
@@ -40,3 +40,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-flow-prefixconfig--seealso"></a>
 + [PrefixConfig](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_PrefixConfig.html) in the *Amazon AppFlow API Reference*\.
+

@@ -5,7 +5,11 @@ The AWS::Config::ConfigurationRecorder resource describes the AWS resource types
 **Note**  
 To enable AWS Config, you must create a configuration recorder and a delivery channel\. AWS Config uses the delivery channel to deliver the configuration changes to your Amazon S3 bucket or Amazon SNS topic\. For more information, see [AWS::Config::DeliveryChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html)\.
 
-AWS CloudFormation starts the recorder as soon as the delivery channel is available\. To stop the recorder, delete the configuration recorder from your stack\. For more information, see [Configuration Recorder](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-recorder) in the AWS Config Developer Guide\. 
+AWS CloudFormation starts the recorder as soon as the delivery channel is available\.
+
+To stop the recorder and delete it, delete the configuration recorder from your stack\. To stop the recorder without deleting it, call the [StopConfigurationRecorder](https://docs.aws.amazon.com/config/latest/APIReference/API_StopConfigurationRecorder.html) action of the AWS Config API directly\.
+
+For more information, see [Configuration Recorder](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-recorder) in the AWS Config Developer Guide\.
 
 ## Syntax<a name="aws-resource-config-configurationrecorder-syntax"></a>
 
@@ -68,6 +72,8 @@ The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-configurationrecorder--examples"></a>
+
+
 
 ### Configuration Recorder<a name="aws-resource-config-configurationrecorder--examples--Configuration_Recorder"></a>
 

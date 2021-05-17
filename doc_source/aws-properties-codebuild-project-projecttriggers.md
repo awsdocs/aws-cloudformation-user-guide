@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BuildType](#cfn-codebuild-project-projecttriggers-buildtype)" : String,
   "[FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups)" : [ FilterGroup, ... ],
   "[Webhook](#cfn-codebuild-project-projecttriggers-webhook)" : Boolean
 }
@@ -18,12 +19,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-projecttriggers-syntax.yaml"></a>
 
 ```
+  [BuildType](#cfn-codebuild-project-projecttriggers-buildtype): String
   [FilterGroups](#cfn-codebuild-project-projecttriggers-filtergroups): 
     - FilterGroup
   [Webhook](#cfn-codebuild-project-projecttriggers-webhook): Boolean
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-projecttriggers-properties"></a>
+
+`BuildType`  <a name="cfn-codebuild-project-projecttriggers-buildtype"></a>
+ Specifies the type of build this webhook will trigger\. Allowed values are:     
+BUILD  
+A single build  
+BUILD\_BATCH  
+A batch build
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterGroups`  <a name="cfn-codebuild-project-projecttriggers-filtergroups"></a>
  A list of lists of `WebhookFilter` objects used to determine which webhook events are triggered\. At least one `WebhookFilter` in the array must specify `EVENT` as its type\.   

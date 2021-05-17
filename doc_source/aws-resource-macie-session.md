@@ -79,13 +79,20 @@ This example enables Amazon Macie for an account\. It also configures Macie to p
 #### JSON<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--json"></a>
 
 ```
-{ "Type": "AWS::Macie::Session", "Properties": {
-                "FindingPublishingFrequency": "ONE_HOUR", "Status": "ENABLED" } }
+{
+    "Type": "AWS::Macie::Session",
+    "Properties": {
+        "FindingPublishingFrequency": "ONE_HOUR",
+        "Status": "ENABLED"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--yaml"></a>
 
 ```
-Type: AWS::Macie::Session Properties:
-                FindingPublishingFrequency: ONE_HOUR Status: ENABLED
+Type: AWS::Macie::Session
+Properties:
+    FindingPublishingFrequency: ONE_HOUR
+    Status: ENABLED
 ```

@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoBranchCreationConfig](#cfn-amplify-app-autobranchcreationconfig)" : AutoBranchCreationConfig,
       "[BasicAuthConfig](#cfn-amplify-app-basicauthconfig)" : BasicAuthConfig,
       "[BuildSpec](#cfn-amplify-app-buildspec)" : String,
+      "[CustomHeaders](#cfn-amplify-app-customheaders)" : String,
       "[CustomRules](#cfn-amplify-app-customrules)" : [ CustomRule, ... ],
       "[Description](#cfn-amplify-app-description)" : String,
       "[EnableBranchAutoDeletion](#cfn-amplify-app-enablebranchautodeletion)" : Boolean,
@@ -40,6 +41,7 @@ Properties:
   [BasicAuthConfig](#cfn-amplify-app-basicauthconfig): 
     BasicAuthConfig
   [BuildSpec](#cfn-amplify-app-buildspec): String
+  [CustomHeaders](#cfn-amplify-app-customheaders): String
   [CustomRules](#cfn-amplify-app-customrules): 
     - CustomRule
   [Description](#cfn-amplify-app-description): String
@@ -80,6 +82,12 @@ Properties:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CustomHeaders`  <a name="cfn-amplify-app-customheaders"></a>
+The custom HTTP headers for an Amplify app\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CustomRules`  <a name="cfn-amplify-app-customrules"></a>
  The custom rewrite and redirect rules for an Amplify app\.   
 *Required*: No  
@@ -111,7 +119,7 @@ Automatically disconnect a branch in the Amplify Console when you delete a branc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-amplify-app-name"></a>
- The name for the Amplify app\.   
+ The name for an Amplify app\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

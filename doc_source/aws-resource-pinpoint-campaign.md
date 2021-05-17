@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign<a name="aws-resource-pinpoint-campaign"></a>
 
-A *campaign* is a messaging initiative that engages a specific segment of users for an Amazon Pinpoint application\. The AWS::Pinpoint::Campaign resource defines the configuration and other settings for a campaign\.
+Specifies the settings for a campaign\. A *campaign* is a messaging initiative that engages a specific segment of users for an Amazon Pinpoint application\.
 
 ## Syntax<a name="aws-resource-pinpoint-campaign-syntax"></a>
 
@@ -154,7 +154,7 @@ A custom name of the default treatment for the campaign, if the campaign has mul
 
 ### Ref<a name="aws-resource-pinpoint-campaign-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the unique identifier for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

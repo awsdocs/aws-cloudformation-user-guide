@@ -33,7 +33,7 @@ You can configure the action payload when you send a message as an Amazon SNS pu
 
 `TargetArn`  <a name="cfn-iotevents-detectormodel-sns-targetarn"></a>
 The ARN of the Amazon SNS target where the message is sent\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  

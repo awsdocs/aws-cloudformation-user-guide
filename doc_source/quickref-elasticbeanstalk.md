@@ -4,7 +4,7 @@ With Elastic Beanstalk, you can quickly deploy and manage applications in AWS wi
 
 ## Elastic Beanstalk sample PHP<a name="quickref-elasticbeanstalk-sampleenv"></a>
 
-The following sample template deploys a sample PHP web application that is stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\. 
+The following sample template deploys a sample PHP web application that's stored in an Amazon S3 bucket\. The environment is also an autoscaling, load\-balancing environment, with a minimum of two Amazon EC2 instances and a maximum of six\.
 
 Replace `solution-stack` with a solution stack name \(platform version\)\. For a list of available solution stacks, use the AWS CLI command `aws elasticbeanstalk list-available-solution-stacks`\.
 
@@ -51,6 +51,11 @@ Replace `solution-stack` with a solution stack name \(platform version\)\. For a
             "Namespace": "aws:elasticbeanstalk:environment",
             "OptionName": "EnvironmentType",
             "Value": "LoadBalanced"
+          },
+          {
+            "Namespace": "aws:autoscaling:launchconfiguration",
+            "OptionName": "IamInstanceProfile",
+            "Value": null
           }
         ],
         "SolutionStackName": "solution-stack"
@@ -63,10 +68,35 @@ Replace `solution-stack` with a solution stack name \(platform version\)\. For a
         "Description": "AWS ElasticBeanstalk Sample Environment",
         "TemplateName": { "Ref": "sampleConfigurationTemplate" },
         "VersionLabel": { "Ref": "sampleApplicationVersion" }
+        }
       }
-    }
-  }
-}
+    },
+    "MyInstanceRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+        "Version": "2012-10-17T00:00:00.000Z",
+        "Statement": [
+            {
+             "Effect": "Allow",
+             "Principal": { "Service": [ "ec2.amazonaws.com" ] },
+             "Action": [ "sts:AssumeRole" ]
+             }
+           ]
+    },
+    "Description": "Beanstalk EC2 role",
+       "ManagedPolicyArns": [
+             "arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier",
+             "arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker",
+             "arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier"
+            ]
+         }
+    },
+    "MyInstanceProfile": {
+        "Type": "AWS::IAM::InstanceProfile",
+        "Properties": { "Roles": [ null ] }
+        }
+   }
 ```
 
 ### YAML<a name="quickref-elasticbeanstalk-example-1.yaml"></a>
@@ -103,6 +133,9 @@ Resources:
       - Namespace: aws:elasticbeanstalk:environment
         OptionName: EnvironmentType
         Value: LoadBalanced
+      - Namespace: aws:autoscaling:launchconfiguration
+        OptionName: IamInstanceProfile
+        Value: !Ref MyInstanceProfile        
       SolutionStackName: solution-stack
   sampleEnvironment:
     Type: AWS::ElasticBeanstalk::Environment
@@ -114,4 +147,26 @@ Resources:
         Ref: sampleConfigurationTemplate
       VersionLabel:
         Ref: sampleApplicationVersion
+  MyInstanceRole:
+    Type: AWS::IAM::Role
+    Properties: 
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Description: Beanstalk EC2 role
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/AWSElasticBeanstalkWebTier
+        - arn:aws:iam::aws:policy/AWSElasticBeanstalkMulticontainerDocker
+        - arn:aws:iam::aws:policy/AWSElasticBeanstalkWorkerTier
+  MyInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties: 
+      Roles:
+        - !Ref MyInstanceRole
 ```

@@ -32,7 +32,7 @@ A list of command line arguments to pass to the bootstrap action script\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path"></a>
-Location of the script to run during a bootstrap action\. Can be either a location in Amazon S3 or on a local file system\.  
+Location in Amazon S3 of the script to run during a bootstrap action\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  

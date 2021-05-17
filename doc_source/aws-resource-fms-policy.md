@@ -7,6 +7,8 @@ Firewall Manager provides the following types of policies:
 + An AWS WAF policy \(type WAFV2\), which defines rule groups to run first in the corresponding AWS WAF web ACL and rule groups to run last in the web ACL\. 
 + An AWS WAF Classic policy, which defines a rule group\. AWS WAF Classic doesn't support rule groups in CloudFormation, so, to create WAF Classic policies through CloudFormation, you first need to create your rule groups outside of CloudFormation\. 
 + A security group policy, which manages VPC security groups across your AWS organization\. 
++ An AWS Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon VPCs\.
++ A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS queries for specified Amazon VPCs\.
 
 Each policy is specific to one of the types\. If you want to enforce more than one policy type across accounts, create multiple policies\. You can create multiple policies for each type\.
 
@@ -81,8 +83,8 @@ Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\)
 You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
 You can specify account IDs, OUs, or a combination:   
 + Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
-+ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
-+ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify OUs by setting the key to `ORGUNIT`\. For example, the following is a valid map: `{“ORGUNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORGUNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,8 +100,8 @@ Specifies the AWS account IDs and AWS Organizations organizational units \(OUs\)
 You can specify inclusions or exclusions, but not both\. If you specify an `IncludeMap`, AWS Firewall Manager applies the policy to all accounts specified by the `IncludeMap`, and does not evaluate any `ExcludeMap` specifications\. If you do not specify an `IncludeMap`, then Firewall Manager applies the policy to all accounts except for those specified by the `ExcludeMap`\.  
 You can specify account IDs, OUs, or a combination:   
 + Specify account IDs by setting the key to `ACCOUNT`\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”]}`\.
-+ Specify OUs by setting the key to `ORG_UNIT`\. For example, the following is a valid map: `{“ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
-+ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORG_UNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify OUs by setting the key to `ORGUNIT`\. For example, the following is a valid map: `{“ORGUNIT” : [“ouid111”, “ouid112”]}`\.
++ Specify accounts and OUs together in a single map, separated with a comma\. For example, the following is a valid map: `{“ACCOUNT” : [“accountID1”, “accountID2”], “ORGUNIT” : [“ouid111”, “ouid112”]}`\.
 *Required*: No  
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -127,7 +129,8 @@ An array of `ResourceTag` objects, used to explicitly include resources in the p
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-fms-policy-resourcetype"></a>
-The type of resource protected by or in scope of the policy\. This is in the format shown in the [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\. For AWS WAF and Shield Advanced, examples include `AWS::ElasticLoadBalancingV2::LoadBalancer` and `AWS::CloudFront::Distribution`\. For a security group common policy, valid values are `AWS::EC2::NetworkInterface` and `AWS::EC2::Instance`\. For a security group content audit policy, valid values are `AWS::EC2::SecurityGroup`, `AWS::EC2::NetworkInterface`, and `AWS::EC2::Instance`\. For a security group usage audit policy, the value is `AWS::EC2::SecurityGroup`\.   
+The type of resource protected by or in scope of the policy\. This is in the format shown in the [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\. To apply this policy to multiple resource types, specify a resource type of `ResourceTypeList` and then specify the resource types in a `ResourceTypeList`\.  
+For AWS WAF and Shield Advanced, example resource types include `AWS::ElasticLoadBalancingV2::LoadBalancer` and `AWS::CloudFront::Distribution`\. For a security group common policy, valid values are `AWS::EC2::NetworkInterface` and `AWS::EC2::Instance`\. For a security group content audit policy, valid values are `AWS::EC2::SecurityGroup`, `AWS::EC2::NetworkInterface`, and `AWS::EC2::Instance`\. For a security group usage audit policy, the value is `AWS::EC2::SecurityGroup`\. For an AWS Network Firewall policy or DNS Firewall policy, the value is `AWS::EC2::VPC`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -136,7 +139,7 @@ The type of resource protected by or in scope of the policy\. This is in the for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceTypeList`  <a name="cfn-fms-policy-resourcetypelist"></a>
-An array of `ResourceType`\.  
+An array of `ResourceType` objects\. Use this only to specify multiple resource types\. To specify a single resource type, use `ResourceType`\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -146,7 +149,7 @@ Details about the security service that is being used to protect the resources\.
 This contains the following settings:   
 + Type \- Indicates the service type that the policy uses to protect the resource\. For security group policies, Firewall Manager supports one security group for each common policy and for each content audit policy\. This is an adjustable limit that you can increase by contacting AWS Support\. 
 
-  Valid values: `WAFV2` \| `WAF` \|`SHIELD_ADVANCED` \| `SECURITY_GROUPS_COMMON` \| `SECURITY_GROUPS_CONTENT_AUDIT` \| `SECURITY_GROUPS_USAGE_AUDIT`\. 
+  Valid values: `WAFV2` \| `WAF` \|`SHIELD_ADVANCED` \| `SECURITY_GROUPS_COMMON` \| `SECURITY_GROUPS_CONTENT_AUDIT` \| `SECURITY_GROUPS_USAGE_AUDIT` \| `NETWORK_FIREWALL` \| `DNS_FIREWALL`\. 
 + ManagedServiceData \- Details about the service that are specific to the service type, in JSON format\. For `SHIELD_ADVANCED`, this is an empty string\.
   + Example: `WAFV2` 
 
@@ -169,6 +172,12 @@ This contains the following settings:
   + Example: `SECURITY_GROUPS_USAGE_AUDIT`
 
     `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_USAGE_AUDIT","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_USAGE_AUDIT\",\"deleteUnusedSecurityGroups\":true,\"coalesceRedundantSecurityGroups\":true}"},"RemediationEnabled":false,"Resou rceType":"AWS::EC2::SecurityGroup"}`
+  + Example: `NETWORK_FIREWALL` 
+
+    `"ManagedServiceData":"{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-east-1:000000000000:stateless-rulegroup\/example\",\"priority\":1}],\"networkFirewallStatelessDefaultActions\":[\"aws:drop\",\"example\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"aws:drop\",\"example\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"example\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"example\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-east-1:000000000000:stateful-rulegroup\/example\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":false,\"allowedIPV4CidrList\":[]}}"`
+  + Example: `DNS_FIREWALL` 
+
+    `"ManagedServiceData": "{ \"type\": \"DNS_FIREWALL\", \"preProcessRuleGroups\": [{\"ruleGroupId\": \"rslvr-frg-123456\", \"priority\": 11}], \"postProcessRuleGroups\": [{\"ruleGroupId\": \"rslvr-frg-123456\", \"priority\": 9902}]}"`
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -200,6 +209,8 @@ The Amazon Resource Name \(ARN\) of the policy\.
 The ID of the policy\.
 
 ## Examples<a name="aws-resource-fms-policy--examples"></a>
+
+
 
 ### Create a Firewall Manager AWS WAF Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy"></a>
 
@@ -496,6 +507,126 @@ PolicySGUsageAudit:
             "Type": "SECURITY_GROUPS_USAGE_AUDIT",
             "ManagedServiceData": {
                 "Fn::Sub": "{\"type\":\"SECURITY_GROUPS_USAGE_AUDIT\",\"deleteUnusedSecurityGroups\":false,\"coalesceRedundantSecurityGroups\":false,\"optionalDelayForUnusedInMinutes\":null}"
+            }
+        }
+    }
+}
+```
+
+### Create a Firewall Manager Network Firewall policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_Network_Firewall_policy"></a>
+
+The following shows an example Firewall Manager Network Firewall policy\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_Network_Firewall_policy--yaml"></a>
+
+```
+PolicyNetworkFirewall:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: PolicyNetworkFirewall
+      RemediationEnabled: true
+      ResourceType: AWS::EC2::VPC
+      DeleteAllPolicyResources: true
+      SecurityServicePolicyData:
+        Type: NETWORK_FIREWALL
+        ManagedServiceData: '
+          {
+            "type": "NETWORK_FIREWALL",
+            "networkFirewallStatelessRuleGroupReferences": [
+              {
+                "resourceARN": "arn:aws:network-firewall:us-east-1:000000000000:stateless-rulegroup/example",
+                "priority": 1
+              }
+            ],
+            "networkFirewallStatelessDefaultActions": [
+              "aws:drop",
+              "example"
+            ],
+            "networkFirewallStatelessFragmentDefaultActions": [
+              "aws:drop",
+              "example"
+            ],
+            "networkFirewallStatelessCustomActions": [
+              {
+                "actionName": "example",
+                "actionDefinition": {
+                  "publishMetricAction": {
+                    "dimensions": [
+                      {
+                        "value": "example"
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            "networkFirewallStatefulRuleGroupReferences": [
+              {
+                "resourceARN": "arn:aws:network-firewall:us-east-1:000000000000:stateful-rulegroup/example"
+              }
+            ],
+            "networkFirewallOrchestrationConfig": {
+              "singleFirewallEndpointPerVPC": false,
+              "allowedIPV4CidrList": []
+            }
+          }'
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_Network_Firewall_policy--json"></a>
+
+```
+"PolicyNetworkFirewall": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+        "ExcludeResourceTags": false,
+        "PolicyName": "PolicyNetworkFirewall",
+        "RemediationEnabled": true,
+        "ResourceType": "AWS::EC2::VPC",
+        "DeleteAllPolicyResources": true,
+        "SecurityServicePolicyData": {
+            "Type": "NETWORK_FIREWALL",
+            "ManagedServiceData": "{\"type\":\"NETWORK_FIREWALL\",\"networkFirewallStatelessRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-east-1:000000000000:stateless-rulegroup\/example\",\"priority\":1}],\"networkFirewallStatelessDefaultActions\":[\"aws:drop\",\"example\"],\"networkFirewallStatelessFragmentDefaultActions\":[\"aws:drop\",\"example\"],\"networkFirewallStatelessCustomActions\":[{\"actionName\":\"example\",\"actionDefinition\":{\"publishMetricAction\":{\"dimensions\":[{\"value\":\"example\"}]}}}],\"networkFirewallStatefulRuleGroupReferences\":[{\"resourceARN\":\"arn:aws:network-firewall:us-east-1:000000000000:stateful-rulegroup\/example\"}],\"networkFirewallOrchestrationConfig\":{\"singleFirewallEndpointPerVPC\":false,\"allowedIPV4CidrList\":[]}}"
+        }
+    }
+}
+```
+
+### Create a Firewall Manager DNS Firewall policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_DNS_Firewall_policy"></a>
+
+The following shows an example Firewall Manager DNS Firewall policy\. 
+
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_DNS_Firewall_policy--yaml"></a>
+
+```
+Policy:
+    Type: AWS::FMS::Policy
+    Properties:
+      ExcludeResourceTags: false
+      PolicyName: DnsFirewallPolicy
+      RemediationEnabled: false
+      ResourceType: AWS::EC2::VPC
+      SecurityServicePolicyData:
+        Type: DNS_FIREWALL
+        ManagedServiceData: !Sub '{"type":"DNS_FIREWALL",
+                                  "preProcessRuleGroups":[{\"ruleGroupId\": \"${PreRuleGroupId}\", \"priority\": 11}],
+                                  "postProcessRuleGroups":[{\"ruleGroupId\": \"${PostRuleGroupId}\", \"priority\": 9902}]}'
+```
+
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_DNS_Firewall_policy--json"></a>
+
+```
+"Policy": {
+    "Type": "AWS::FMS::Policy",
+    "Properties": {
+        "ExcludeResourceTags": false,
+        "PolicyName": "DnsFirewallPolicy",
+        "RemediationEnabled": false,
+        "ResourceType": "AWS::EC2::VPC",
+        "SecurityServicePolicyData": {
+            "Type": "DNS_FIREWALL",
+            "ManagedServiceData": {
+                "Fn::Sub": "{\"type\":\"DNS_FIREWALL\",\"preProcessRuleGroups\":[{\"ruleGroupId\": \"${PreRuleGroupId}\", \"priority\": 11}],\"postProcessRuleGroups\":[{\"ruleGroupId\": \"${PostRuleGroupId}\", \"priority\": 9902}]}"
             }
         }
     }

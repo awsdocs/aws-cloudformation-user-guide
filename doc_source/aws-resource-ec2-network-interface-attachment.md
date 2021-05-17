@@ -67,11 +67,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-network-interface-attachment--examples"></a>
 
-### Network Interface Attachment<a name="aws-resource-ec2-network-interface-attachment--examples--Network_Interface_Attachment"></a>
+
+
+### Network interface attachment<a name="aws-resource-ec2-network-interface-attachment--examples--Network_interface_attachment"></a>
 
 The following example attaches `MyNetworkInterface` to `MyInstance`\.
 
-#### JSON<a name="aws-resource-ec2-network-interface-attachment--examples--Network_Interface_Attachment--json"></a>
+#### JSON<a name="aws-resource-ec2-network-interface-attachment--examples--Network_interface_attachment--json"></a>
 
 ```
 "NetworkInterfaceAttachment" : {
@@ -84,7 +86,7 @@ The following example attaches `MyNetworkInterface` to `MyInstance`\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-interface-attachment--examples--Network_Interface_Attachment--yaml"></a>
+#### YAML<a name="aws-resource-ec2-network-interface-attachment--examples--Network_interface_attachment--yaml"></a>
 
 ```
 NetworkInterfaceAttachment:

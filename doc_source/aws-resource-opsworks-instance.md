@@ -129,7 +129,9 @@ A list of Elastic IP addresses to associate with the instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Hostname`  <a name="cfn-opsworks-instance-hostname"></a>
-The instance host name\.  
+The instance host name\. The following are character limits for instance host names\.  
++ Linux\-based instances: 63 characters
++ Windows\-based instances: 15 characters
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -155,14 +157,14 @@ An array that contains the instance's layer IDs\.
 
 `Os`  <a name="cfn-opsworks-instance-os"></a>
 The instance's operating system, which must be set to one of the following\.  
-+ A supported Linux operating system: An Amazon Linux version, such as `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`\.
-+ A supported Ubuntu operating system, such as `Ubuntu 16.04 LTS`, `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`\.
++ A supported Linux operating system: An Amazon Linux version, such as `Amazon Linux 2`, `Amazon Linux 2018.03`, `Amazon Linux 2017.09`, `Amazon Linux 2017.03`, `Amazon Linux 2016.09`, `Amazon Linux 2016.03`, `Amazon Linux 2015.09`, or `Amazon Linux 2015.03`\.
++ A supported Ubuntu operating system, such as `Ubuntu 18.04 LTS`, `Ubuntu 16.04 LTS`, `Ubuntu 14.04 LTS`, or `Ubuntu 12.04 LTS`\.
 +  `CentOS Linux 7` 
 +  `Red Hat Enterprise Linux 7` 
 + A supported Windows operating system, such as `Microsoft Windows Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server Web`\.
 + A custom AMI: `Custom`\.
-For more information about the supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
-The default option is the current Amazon Linux version\. If you set this parameter to `Custom`, you must use the [CreateInstance](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance) action's AmiId parameter to specify the custom AMI that you want to use\. Block device mappings are not supported if the value is `Custom`\. For more information about supported operating systems, see [Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)For more information about how to use custom AMIs with AWS OpsWorks Stacks, see [Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)\.  
+Not all operating systems are supported with all versions of Chef\. For more information about the supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
+The default option is the current Amazon Linux version\. If you set this parameter to `Custom`, you must use the [CreateInstance](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance) action's AmiId parameter to specify the custom AMI that you want to use\. Block device mappings are not supported if the value is `Custom`\. For more information about how to use custom AMIs with AWS OpsWorks Stacks, see [Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -360,3 +362,4 @@ DBInstance:
 ## See also<a name="aws-resource-opsworks-instance--seealso"></a>
 +  [CreateInstance](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateInstance.html) in the *AWS OpsWorks API Reference*\.
 +  [Adding an Instance to a Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html) in the *AWS OpsWorks User Guide*\.
+

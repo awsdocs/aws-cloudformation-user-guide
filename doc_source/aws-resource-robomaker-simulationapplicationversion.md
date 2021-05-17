@@ -57,6 +57,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-robomaker-simulationapplicationversion--examples"></a>
 
+
+
 ### Create an AWS RoboMaker Simulation Application Version<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an_AWS_RoboMaker_Simulation_Application_Version"></a>
 
 The following example creates a simulation application version\.

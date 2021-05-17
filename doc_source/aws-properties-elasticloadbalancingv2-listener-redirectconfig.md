@@ -61,13 +61,13 @@ The absolute path, starting with the leading "/"\. This component is not percent
 
 `Port`  <a name="cfn-elasticloadbalancingv2-listener-redirectconfig-port"></a>
 The port\. You can specify a value from 1 to 65535 or \#\{port\}\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-elasticloadbalancingv2-listener-redirectconfig-protocol"></a>
 The protocol\. You can specify HTTP, HTTPS, or \#\{protocol\}\. You can redirect HTTP to HTTP, HTTP to HTTPS, and HTTPS to HTTPS\. You cannot redirect HTTPS to HTTP\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Pattern*: `^(HTTPS?|#\{protocol\})$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,3 +86,57 @@ The HTTP redirect code\. The redirect is either permanent \(HTTP 301\) or tempor
 *Type*: String  
 *Allowed values*: `HTTP_301 | HTTP_302`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples"></a>
+
+The following example creates a listener with a default action that redirects HTTP requests on port 80 to HTTPS requests on port 443, retaining the original host name, path, and query string\.
+
+### <a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples--"></a>
+
+#### YAML<a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples----yaml"></a>
+
+```
+HTTPlistener:
+   Type: "AWS::ElasticLoadBalancingV2::Listener"
+   Properties:
+     DefaultActions:
+       - Type: "redirect"
+       RedirectConfig:
+         Protocol: "HTTPS"
+         Port: 443
+         Host: "#{host}"
+         Path: "/#{path}"
+         Query: "#{query}"
+         StatusCode: "HTTP_301"
+      LoadBalancerArn: !Ref myLoadBalancer
+      Port: 80
+      Protocol: "HTTP"
+```
+
+#### JSON<a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples----json"></a>
+
+```
+"HTTPlistener": {
+    "Type": "AWS::ElasticLoadBalancingV2::Listener",
+    "Properties": {
+        "DefaultActions": [
+            {
+               "Type": "redirect",
+               "RedirectConfig": {
+               "Protocol": "HTTPS",
+               "Port": 443,
+               "Host": "#{host}",
+               "Path": "/#{path}",
+               "Query": "#{query}",
+               "StatusCode": "HTTP_301"
+              }
+            }
+          ],
+          "LoadBalancerArn": {
+               "Ref": "myLoadBalancer"
+           },
+            "Port": 80,
+            "Protocol": "HTTP"
+       }
+  }
+```

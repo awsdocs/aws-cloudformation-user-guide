@@ -1,8 +1,5 @@
 # AWS::WAFv2::WebACL TextTransformation<a name="aws-properties-wafv2-webacl-texttransformation"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-texttransformation-syntax"></a>

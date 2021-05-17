@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel StandardHlsSettings<a name="aws-properties-medialive-channel-standardhlssettings"></a>
 
-Configures the HLS output as a transport stream\. This element belongs to HlsSettings\.
+The configuration of an HLS output that is a standard output \(not an audio\-only output\)\.
+
+The parent of this entity is HlsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-standardhlssettings-syntax"></a>
 
@@ -26,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-standardhlssettings-properties"></a>
 
 `AudioRenditionSets`  <a name="cfn-medialive-channel-standardhlssettings-audiorenditionsets"></a>
-List all the audio groups that are used with the video output stream\. Input all the audio GROUP\-IDs that are associated to the video, separate by ','\.  
+Lists all the audio groups that are used with the video output stream\. This inputs all the audio GROUP\-IDs that are associated with the video, separated by a comma \(,\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `M3u8Settings`  <a name="cfn-medialive-channel-standardhlssettings-m3u8settings"></a>
-You must include this element\.  
+Settings for the M3U8 container\.  
 *Required*: No  
 *Type*: [M3u8Settings](aws-properties-medialive-channel-m3u8settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

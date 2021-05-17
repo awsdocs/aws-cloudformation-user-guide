@@ -51,10 +51,10 @@ The unique identifier of the EMR cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceFleetType`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleettype"></a>
-The node type that the instance fleet hosts\. Valid values are MASTER,CORE,and TASK\.  
+The node type that the instance fleet hosts\.  
+*Allowed Values*: TASK  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs"></a>
@@ -99,6 +99,6 @@ If not specified or set to 0, only On\-Demand instances are provisioned for the 
 
 ### Ref<a name="aws-resource-elasticmapreduce-instancefleetconfig-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the instance fleet\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance fleet\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

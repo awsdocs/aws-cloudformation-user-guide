@@ -35,5 +35,5 @@ The connectors in this version\. Only one instance of a given connector can be a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion--seealso"></a>
-+  [ConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connectordefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [ConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connectordefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

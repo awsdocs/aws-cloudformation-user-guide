@@ -1,14 +1,14 @@
 # AWS::SecretsManager transform<a name="transform-aws-secretsmanager"></a>
 
-Use the `AWS::SecretsManager` transform, which is a macro hosted by AWS CloudFormation, to specify a Lambda function to perform secrets rotation\. When [Creating a change set](using-cfn-updating-stacks-changesets-create.md) or [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md), and the templates references `AWS::SecretsManager`, AWS CloudFormation generates a Lambda function to perform secrets rotation\. Use the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resource to specify the attributes of the desired Lambda function\. 
+Use the `AWS::SecretsManager` transform, which is a macro hosted by AWS CloudFormation, to specify a Lambda function to perform secrets rotation\. When [Creating a change set](using-cfn-updating-stacks-changesets-create.md) or [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md), and the templates references `AWS::SecretsManager`, AWS CloudFormation generates a Lambda function to perform secrets rotation\. Use the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resource to specify the attributes of the desired Lambda function\.
 
 The Lambda function is included as a [nested stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html) \(that is, an [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource\) in the processed template\. This resource in turns links to the appropriate function template in the [AWS Secrets Manager Rotation Lambda Functions](https://github.com/aws-samples/aws-secrets-manager-rotation-lambdas) repository, based on the [RotationType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationtype) specified in the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resource\.
 
 ## Usage<a name="aws-secretsmanager-usage"></a>
 
-Use the `AWS::SecretsManager` transform at the top level of the template\. You cannot use `AWS::SecretsManager` as a transform embedded in any other template section\.
+Use the `AWS::SecretsManager` transform at the top level of the template\. You can't use `AWS::SecretsManager` as a transform embedded in any other template section\.
 
-The value for the transform declaration must be a literal string\. You cannot use a parameter or function to specify a transform value\. 
+The value for the transform declaration must be a literal string\. You can't use a parameter or function to specify a transform value\.
 
 ### Syntax at the top level of a template<a name="aws-secretsmanager-syntax-top-level-overview"></a>
 
@@ -31,7 +31,7 @@ To include `AWS::SecretsManager` at the top level of a template, in the `Transfo
 
 ## Parameters<a name="aws-secretsmanager-transform-parameters"></a>
 
-The `AWS::SecretsManager` transform does not accept any parameters\. Instead, specify the properties of the secret rotation Lamdba function you want to create using the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resources in the stack template\.
+The `AWS::SecretsManager` transform doesn't accept any parameters\. Instead, specify the properties of the secret rotation Lamdba function you want to create using the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resources in the stack template\.
 
 ## Remarks<a name="aws-secretsmanager-transform-remarks"></a>
 
@@ -41,7 +41,7 @@ For general considerations about using macros, see [Considerations when creating
 
 The following partial template example shows how to use the `AWS::SecretsManager` transform to specify a Lambda function for secret rotation on a MySQL database for a single user, based on the properties specified in the `HostedRotationLambda` property type of the `AWS::SecretsManager::RotationSchedule` resource\.
 
-For complete template examples illustrating secret rotations for RDS databases, Redshift clusters, and Document DB clusters, see the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#aws-resource-secretsmanager-rotationschedule--examples) section of [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)\.
+For complete template examples illustrating secret rotations for RDS databases, Amazon Redshift clusters, and Document DB clusters, see the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#aws-resource-secretsmanager-rotationschedule--examples) section of [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)\.
 
 ### JSON<a name="aws-secretsmanager-example.json"></a>
 

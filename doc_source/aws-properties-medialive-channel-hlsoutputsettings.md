@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel HlsOutputSettings<a name="aws-properties-medialive-channel-hlsoutputsettings"></a>
 
-Configures one output in an HLS output group\. This element belongs to OutputSettings\.
+The settings for an HLS output\.
+
+The parent of this entity is OutputSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-hlsoutputsettings-syntax"></a>
 
@@ -36,19 +38,19 @@ Only applicable when this output is referencing an H\.265 video description\. Sp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsSettings`  <a name="cfn-medialive-channel-hlsoutputsettings-hlssettings"></a>
-This element configures the stream or container in the HLS output\.  
+The settings regarding the underlying stream\. These settings are different for audio\-only outputs\.  
 *Required*: No  
 *Type*: [HlsSettings](aws-properties-medialive-channel-hlssettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NameModifier`  <a name="cfn-medialive-channel-hlsoutputsettings-namemodifier"></a>
-String concatenated to the end of the destination filename\. Accepts \\"Format Identifiers\\":\#formatIdentifierParameters\.  
+A string that is concatenated to the end of the destination file name\. Accepts \\"Format Identifiers\\":\#formatIdentifierParameters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentModifier`  <a name="cfn-medialive-channel-hlsoutputsettings-segmentmodifier"></a>
-String concatenated to end of segment filenames\.  
+A string that is concatenated to the end of segment file names\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

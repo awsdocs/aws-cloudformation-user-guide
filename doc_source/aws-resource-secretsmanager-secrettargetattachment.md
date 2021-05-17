@@ -76,7 +76,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-secretsmanager-secrettargetattachment--examples"></a>
 
-The following examples create a secret, and then creates an AWS resource as defined by the TargetType by using the credentials found in the secret for the new AWS resource master user and password\. Finally, the code updates the secret with the connection details of the AWS resource by defining the `SecretTargetAttachment` object\.
+The following examples create a secret, and then creates an AWS resource as defined by the TargetType using the credentials found in the secret for the new AWS resource master user and password\. Finally, the code updates the secret with the connection details of the AWS resource by defining the `SecretTargetAttachment` object\.
 
 **Supported AWS Resources**
 + Amazon Aurora on Amazon RDS

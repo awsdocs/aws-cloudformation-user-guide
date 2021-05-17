@@ -12,13 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ChatterFeedConfiguration](#cfn-kendra-datasource-salesforceconfiguration-chatterfeedconfiguration)" : SalesforceChatterFeedConfiguration,
   "[CrawlAttachments](#cfn-kendra-datasource-salesforceconfiguration-crawlattachments)" : Boolean,
-  "[ExcludeAttachmentFilePatterns](#cfn-kendra-datasource-salesforceconfiguration-excludeattachmentfilepatterns)" : DataSourceInclusionsExclusionsStrings,
-  "[IncludeAttachmentFilePatterns](#cfn-kendra-datasource-salesforceconfiguration-includeattachmentfilepatterns)" : DataSourceInclusionsExclusionsStrings,
+  "[ExcludeAttachmentFilePatterns](#cfn-kendra-datasource-salesforceconfiguration-excludeattachmentfilepatterns)" : [ String, ... ],
+  "[IncludeAttachmentFilePatterns](#cfn-kendra-datasource-salesforceconfiguration-includeattachmentfilepatterns)" : [ String, ... ],
   "[KnowledgeArticleConfiguration](#cfn-kendra-datasource-salesforceconfiguration-knowledgearticleconfiguration)" : SalesforceKnowledgeArticleConfiguration,
   "[SecretArn](#cfn-kendra-datasource-salesforceconfiguration-secretarn)" : String,
   "[ServerUrl](#cfn-kendra-datasource-salesforceconfiguration-serverurl)" : String,
   "[StandardObjectAttachmentConfiguration](#cfn-kendra-datasource-salesforceconfiguration-standardobjectattachmentconfiguration)" : SalesforceStandardObjectAttachmentConfiguration,
-  "[StandardObjectConfigurations](#cfn-kendra-datasource-salesforceconfiguration-standardobjectconfigurations)" : SalesforceStandardObjectConfigurationList
+  "[StandardObjectConfigurations](#cfn-kendra-datasource-salesforceconfiguration-standardobjectconfigurations)" : [ SalesforceStandardObjectConfiguration, ... ]
 }
 ```
 
@@ -29,9 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     SalesforceChatterFeedConfiguration
   [CrawlAttachments](#cfn-kendra-datasource-salesforceconfiguration-crawlattachments): Boolean
   [ExcludeAttachmentFilePatterns](#cfn-kendra-datasource-salesforceconfiguration-excludeattachmentfilepatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [IncludeAttachmentFilePatterns](#cfn-kendra-datasource-salesforceconfiguration-includeattachmentfilepatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [KnowledgeArticleConfiguration](#cfn-kendra-datasource-salesforceconfiguration-knowledgearticleconfiguration): 
     SalesforceKnowledgeArticleConfiguration
   [SecretArn](#cfn-kendra-datasource-salesforceconfiguration-secretarn): String
@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [StandardObjectAttachmentConfiguration](#cfn-kendra-datasource-salesforceconfiguration-standardobjectattachmentconfiguration): 
     SalesforceStandardObjectAttachmentConfiguration
   [StandardObjectConfigurations](#cfn-kendra-datasource-salesforceconfiguration-standardobjectconfigurations): 
-    SalesforceStandardObjectConfigurationList
+    - SalesforceStandardObjectConfiguration
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-salesforceconfiguration-properties"></a>
@@ -60,7 +60,7 @@ Indicates whether Amazon Kendra should index attachments to Salesforce objects\.
 A list of regular expression patterns\. Documents that match the patterns are excluded from the index\. Documents that don't match the patterns are included in the index\. If a document matches both an exclusion pattern and an inclusion pattern, the document is not included in the index\.  
 The regex is applied to the name of the attached file\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -68,12 +68,12 @@ The regex is applied to the name of the attached file\.
 A list of regular expression patterns\. Documents that match the patterns are included in the index\. Documents that don't match the patterns are excluded from the index\. If a document matches both an inclusion pattern and an exclusion pattern, the document is not included in the index\.  
 The regex is applied to the name of the attached file\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KnowledgeArticleConfiguration`  <a name="cfn-kendra-datasource-salesforceconfiguration-knowledgearticleconfiguration"></a>
-Specifies configuration information for the knowlege article types that Amazon Kendra indexes\. Amazon Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom knowledge articles, but not both\.  
+Specifies configuration information for the knowledge article types that Amazon Kendra indexes\. Amazon Kendra indexes standard knowledge articles and the standard fields of knowledge articles, or the custom fields of custom knowledge articles, but not both\.  
 *Required*: No  
 *Type*: [SalesforceKnowledgeArticleConfiguration](aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,6 +111,6 @@ Provides configuration information for processing attachments to Salesforce stan
 `StandardObjectConfigurations`  <a name="cfn-kendra-datasource-salesforceconfiguration-standardobjectconfigurations"></a>
 Specifies the Salesforce standard objects that Amazon Kendra indexes\.  
 *Required*: No  
-*Type*: [SalesforceStandardObjectConfigurationList](aws-properties-kendra-datasource-salesforcestandardobjectconfigurationlist.md)  
+*Type*: List of [SalesforceStandardObjectConfiguration](aws-properties-kendra-datasource-salesforcestandardobjectconfiguration.md)  
 *Maximum*: `17`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

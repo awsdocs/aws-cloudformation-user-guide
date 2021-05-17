@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate)" : String,
       "[RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location)" : String,
       "[ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate)" : String,
-      "[ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location)" : String
+      "[ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location)" : String,
+      "[SyncConfig](#cfn-appsync-functionconfiguration-syncconfig)" : SyncConfig
     }
 }
 ```
@@ -43,6 +44,8 @@ Properties:
   [RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location): String
   [ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate): String
   [ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location): String
+  [SyncConfig](#cfn-appsync-functionconfiguration-syncconfig): 
+    SyncConfig
 ```
 
 ## Properties<a name="aws-resource-appsync-functionconfiguration-properties"></a>
@@ -101,6 +104,12 @@ The location of a response mapping template in an Amazon S3 bucket\. Use this if
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SyncConfig`  <a name="cfn-appsync-functionconfiguration-syncconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SyncConfig](aws-properties-appsync-functionconfiguration-syncconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-functionconfiguration-return-values-ref"></a>
@@ -130,6 +139,8 @@ The unique ID of this function\.
 The name of the function\.
 
 ## Examples<a name="aws-resource-appsync-functionconfiguration--examples"></a>
+
+
 
 ### Function Creation Example<a name="aws-resource-appsync-functionconfiguration--examples--Function_Creation_Example"></a>
 
@@ -233,3 +244,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-functionconfiguration--seealso"></a>
 +  [CreateFunction](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateFunction.html) operation in the *AWS AppSync API Reference*\.
+

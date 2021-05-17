@@ -101,6 +101,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-dms-eventsubscription--examples"></a>
 
+
+
 ### <a name="aws-resource-dms-eventsubscription--examples--"></a>
 
 The following snippet creates an event subscription for an existing replication instance `rep-instance-1`, which is declared elsewhere in the same template\.
@@ -153,3 +155,4 @@ Resources:
 ## See also<a name="aws-resource-dms-eventsubscription--seealso"></a>
 +  [CreateEventSubscription](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateEventSubscription.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

@@ -133,6 +133,13 @@ The type of resource data sync\. If `SyncType` is `SyncToDestination`, then the 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ssm-resourcedatasync-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ssm-resourcedatasync-return-values-fn--getatt-fn--getatt"></a>
+
+`SyncName`  <a name="SyncName-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-ssm-resourcedatasync--examples"></a>
 
 ### Create a SyncToDestination Resource Data Sync<a name="aws-resource-ssm-resourcedatasync--examples--Create_a_SyncToDestination_Resource_Data_Sync"></a>
@@ -193,7 +200,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
     "Description": "Create a Resource Data Sync for Systems Manager Explorer",
     "Resources": {
         "BasicResourceDataSync": {
-            "Type": "Dev::SSM::ResourceDataSync",
+            "Type": "AWS::SSM::ResourceDataSync",
             "Properties": {
                 "SyncName": "test-sync",
                 "SyncType": "SyncFromSource",
@@ -219,7 +226,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 Description: Create a Resource Data Sync for Systems Manager Explorer
 Resources:
   BasicResourceDataSync:
-    Type: Dev::SSM::ResourceDataSync
+    Type: AWS::SSM::ResourceDataSync
     Properties:
       SyncName: test-sync
       SyncType: SyncFromSource
@@ -243,7 +250,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
     "Description": "Create a Resource Data Sync for Systems Manager Explorer",
     "Resources": {
         "BasicResourceDataSync": {
-            "Type": "Dev::SSM::ResourceDataSync",
+            "Type": "AWS::SSM::ResourceDataSync",
             "Properties": {
                 "SyncName": "test-sync",
                 "SyncType": "SyncFromSource",
@@ -270,7 +277,7 @@ The following example synchronizes Systems Manager Explorer OpsData and OpsItems
 Description: Create a Resource Data Sync for Systems Manager Explorer
 Resources:
   BasicResourceDataSync:
-    Type: Dev::SSM::ResourceDataSync
+    Type: AWS::SSM::ResourceDataSync
     Properties:
       SyncName: test-sync
       SyncType: SyncFromSource

@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DatastoreName](#cfn-iotanalytics-datastore-datastorename)" : String,
       "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : DatastoreStorage,
+      "[FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration)" : FileFormatConfiguration,
       "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : RetentionPeriod,
       "[Tags](#cfn-iotanalytics-datastore-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -28,6 +29,8 @@ Properties:
   [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
   [DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage): 
     DatastoreStorage
+  [FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration): 
+    FileFormatConfiguration
   [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod): 
     RetentionPeriod
   [Tags](#cfn-iotanalytics-datastore-tags): 
@@ -51,6 +54,14 @@ Where data store data is stored\.
 *Type*: [DatastoreStorage](aws-properties-iotanalytics-datastore-datastorestorage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FileFormatConfiguration`  <a name="cfn-iotanalytics-datastore-fileformatconfiguration"></a>
+Contains the configuration information of file formats\. AWS IoT Analytics data stores support JSON and [Parquet](https://parquet.apache.org/)\.  
+The default file format is JSON\. You can specify only one format\.  
+You can't change the file format after you create the data store\.  
+*Required*: No  
+*Type*: [FileFormatConfiguration](aws-properties-iotanalytics-datastore-fileformatconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RetentionPeriod`  <a name="cfn-iotanalytics-datastore-retentionperiod"></a>
 How long, in days, message data is kept for the data store\. When `customerManagedS3` storage is selected, this parameter is ignored\.  
 *Required*: No  
@@ -66,6 +77,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-datastore--examples"></a>
+
+
 
 ### Simple Datastore<a name="aws-resource-iotanalytics-datastore--examples--Simple_Datastore"></a>
 

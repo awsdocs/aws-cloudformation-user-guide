@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass)" : String,
       "[ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier)" : String,
       "[ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier)" : String,
+      "[ResourceIdentifier](#cfn-dms-replicationinstance-resourceidentifier)" : String,
       "[Tags](#cfn-dms-replicationinstance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids)" : [ String, ... ]
     }
@@ -47,6 +48,7 @@ Properties:
   [ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass): String
   [ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier): String
   [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier): String
+  [ResourceIdentifier](#cfn-dms-replicationinstance-resourceidentifier): String
   [Tags](#cfn-dms-replicationinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids): 
@@ -80,7 +82,7 @@ The Availability Zone that the replication instance will be created in\.
 The default value is a random, system\-chosen Availability Zone in the endpoint's AWS Region, for example: `us-east-1d`   
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-dms-replicationinstance-engineversion"></a>
 The engine version number of the replication instance\.  
@@ -143,6 +145,12 @@ A subnet group to associate with the replication instance\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ResourceIdentifier`  <a name="cfn-dms-replicationinstance-resourceidentifier"></a>
+A friendly name for the resource identifier at the end of the `EndpointArn` response parameter that is returned in the created `Endpoint` object\. The value for this parameter can have up to 31 characters\. It can contain only ASCII letters, digits, and hyphen \('\-'\)\. Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as `Example-App-ARN1`\. For example, this value might result in the `EndpointArn` value `arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1`\. If you don't specify a `ResourceIdentifier` value, AWS DMS generates a default identifier value for the end of `EndpointArn`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-dms-replicationinstance-tags"></a>
 One or more tags to be assigned to the replication instance\.  
 *Required*: No  
@@ -179,6 +187,8 @@ One or more public IP addresses for the replication instance\.
 
 ## Examples<a name="aws-resource-dms-replicationinstance--examples"></a>
 
+
+
 ### <a name="aws-resource-dms-replicationinstance--examples--"></a>
 
 #### JSON<a name="aws-resource-dms-replicationinstance--examples----json"></a>
@@ -211,3 +221,4 @@ Resources:
 ## See also<a name="aws-resource-dms-replicationinstance--seealso"></a>
 +  [CreateReplicationInstance](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

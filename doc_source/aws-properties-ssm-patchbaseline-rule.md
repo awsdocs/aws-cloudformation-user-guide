@@ -37,14 +37,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `ApproveAfterDays`  <a name="cfn-ssm-patchbaseline-rule-approveafterdays"></a>
 The number of days after the release date of each patch matched by the rule that the patch is marked as approved in the patch baseline\. For example, a value of `7` means that patches are approved seven days after they are released\.   
 You must specify a value for `ApproveAfterDays`\.  
+Exception: Not supported on Debian Server or Ubuntu Server\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
-*Maximum*: `100`  
+*Maximum*: `360`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApproveUntilDate`  <a name="cfn-ssm-patchbaseline-rule-approveuntildate"></a>
-The cutoff date for auto approval of released patches\. Any patches released on or before this date are installed automatically\. Not supported on Ubuntu Server\.  
+The cutoff date for auto approval of released patches\. Any patches released on or before this date are installed automatically\. Not supported on Debian Server or Ubuntu Server\.  
 Enter dates in the format `YYYY-MM-DD`\. For example, `2020-12-31`\.  
 *Required*: No  
 *Type*: [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md)  

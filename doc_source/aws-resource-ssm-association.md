@@ -144,7 +144,7 @@ The parameters for the runtime configuration of the document\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-ssm-association-scheduleexpression"></a>
-A cron expression that specifies a schedule when the association runs\.  
+A cron expression that specifies a schedule when the association runs\. The schedule runs in Coordinated Universal Time \(UTC\)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

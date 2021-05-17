@@ -122,11 +122,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-transitgateway--examples"></a>
 
-### Transit Gateway<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway"></a>
+
+
+### Create a transit gateway<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway"></a>
 
 The following example declares a transit gateway\.
 
-#### JSON<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--json"></a>
 
 ```
 "myTransitGateway": {
@@ -150,7 +152,7 @@ The following example declares a transit gateway\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--yaml"></a>
 
 ```
   myTransitGateway:
@@ -169,4 +171,5 @@ The following example declares a transit gateway\.
 
 ## See also<a name="aws-resource-ec2-transitgateway--seealso"></a>
 +  [CreateTransitGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGateway.html) in the *Amazon EC2 API Reference*
-+  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html)
++  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel FeatureActivations<a name="aws-properties-medialive-channel-featureactivations"></a>
 
-Enables those MediaLive features that must be explicitly enabled in order for you to use them\. This element belongs to EncoderSettings\.
+Settings to enable specific features\. You can't configure these features until you have enabled them in the channel\.
+
+The parent of this entity is EncoderSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-featureactivations-syntax"></a>
 

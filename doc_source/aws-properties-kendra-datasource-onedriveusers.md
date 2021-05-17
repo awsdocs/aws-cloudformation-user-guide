@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OneDriveUserList](#cfn-kendra-datasource-onedriveusers-onedriveuserlist)" : OneDriveUserList,
+  "[OneDriveUserList](#cfn-kendra-datasource-onedriveusers-onedriveuserlist)" : [ String, ... ],
   "[OneDriveUserS3Path](#cfn-kendra-datasource-onedriveusers-onedriveusers3path)" : S3Path
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OneDriveUserList](#cfn-kendra-datasource-onedriveusers-onedriveuserlist): 
-    OneDriveUserList
+    - String
   [OneDriveUserS3Path](#cfn-kendra-datasource-onedriveusers-onedriveusers3path): 
     S3Path
 ```
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `OneDriveUserList`  <a name="cfn-kendra-datasource-onedriveusers-onedriveuserlist"></a>
 A list of users whose documents should be indexed\. Specify the user names in email format, for example, `username@tenantdomain`\. If you need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to specify the location of a file containing a list of users\.  
 *Required*: No  
-*Type*: [OneDriveUserList](aws-properties-kendra-datasource-onedriveuserlist.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

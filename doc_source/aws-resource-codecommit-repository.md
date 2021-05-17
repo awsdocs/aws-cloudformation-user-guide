@@ -39,7 +39,8 @@ Properties:
 ## Properties<a name="aws-resource-codecommit-repository-properties"></a>
 
 `Code`  <a name="cfn-codecommit-repository-code"></a>
-Information about code to be committed to a repository after it is created in an AWS CloudFormation stack\.  
+Information about code to be committed to a repository after it is created in an AWS CloudFormation stack\. Information about code is only used in resource creation\. Updates to a stack will not reflect changes made to code properties after initial resource creation\.   
+You can only use this property to add code when creating a repository with a CloudFormation template at creation time\. This property cannot be used for updating code to an existing repository\.
 *Required*: No  
 *Type*: [Code](aws-properties-codecommit-repository-code.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -115,7 +116,7 @@ The following example creates a CodeCommit repository named *MyDemoRepo*\. The n
 ```
 {
     "MyRepo": {
-        "Type": "AWS: : CodeCommit: : Repository",
+        "Type": "AWS::CodeCommit::Repository",
         "Properties": {
             "RepositoryName": "MyDemoRepo",
             "RepositoryDescription": "This is a repository for my project with code from MySourceCodeBucket.",
@@ -141,16 +142,16 @@ MyRepo:
     RepositoryName: MyDemoRepo
     RepositoryDescription: This is a repository for my project with code from MySourceCodeBucket.
     Code:
-        - BranchName: development
-        - S3: 
-          Bucket: MySourceCodeBucket,
-          Key: MyKey,
-          ObjectVersion: 1
+      BranchName: development
+      S3: 
+        Bucket: MySourceCodeBucket,
+        Key: MyKey,
+        ObjectVersion: 1
 ```
 
 ### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
 
-The following example creates a CodeCommit repository with a trigger for all events in the main branch\. 
+The following example creates a CodeCommit repository with a trigger for all events in the *development* branch\. 
 
 #### JSON<a name="aws-resource-codecommit-repository--examples--Example--json"></a>
 
@@ -163,13 +164,13 @@ The following example creates a CodeCommit repository with a trigger for all eve
             "RepositoryDescription": "a description",
             "Triggers": [
                 {
-                    "Name": "MainTrigger",
+                    "Name": "MyTrigger",
                     "CustomData": "Project ID 12345",
                     "DestinationArn": {
                         "Ref": "SNSarn"
                     },
                     "Branches": [
-                        "main"
+                        "development"
                     ],
                     "Events": [
                         "all"
@@ -190,12 +191,12 @@ MyRepo:
     RepositoryName: MyRepoName
     RepositoryDescription: a description
     Triggers:
-    - Name: MainTrigger
+    - Name: MyTrigger
       CustomData: Project ID 12345
       DestinationArn:
         Ref: SNSarn
       Branches:
-      - main
+      - development
       Events:
       - all
 ```

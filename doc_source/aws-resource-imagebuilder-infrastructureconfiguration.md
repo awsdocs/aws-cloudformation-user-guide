@@ -67,7 +67,8 @@ The instance profile of the infrastructure configuration\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `256`  
+*Pattern*: `^[\w+=,.@-]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceTypes`  <a name="cfn-imagebuilder-infrastructureconfiguration-instancetypes"></a>
@@ -156,7 +157,12 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples"></a>
+
+
 
 ### Create an infrastructure configuration<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration"></a>
 

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel CaptionLanguageMapping<a name="aws-properties-medialive-channel-captionlanguagemapping"></a>
 
-Assigns a language code to one embedded caption encode\. This element belongs to HlsGroupSettings\.
+Maps a captions channel to an ISO 693\-2 language code \(http://www\.loc\.gov/standards/iso639\-2\), with an optional description\.
+
+The parent of this entity is HlsGroupSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-captionlanguagemapping-syntax"></a>
 
@@ -33,13 +35,13 @@ The closed caption channel being described by this CaptionLanguageMapping\. Each
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LanguageCode`  <a name="cfn-medialive-channel-captionlanguagemapping-languagecode"></a>
-Three character ISO 639\-2 language code \(see http://www\.loc\.gov/standards/iso639\-2\)\.  
+A three\-character ISO 639\-2 language code \(see http://www\.loc\.gov/standards/iso639\-2\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LanguageDescription`  <a name="cfn-medialive-channel-captionlanguagemapping-languagedescription"></a>
-Textual description of language\.  
+The textual description of language\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -51,7 +51,7 @@ Properties:
 ## Properties<a name="aws-resource-fsx-filesystem-properties"></a>
 
 `BackupId`  <a name="cfn-fsx-filesystem-backupid"></a>
-The ID of the backup\. Specifies the backup to use if you're creating a file system from an existing backup\.  
+The ID of the source backup\. Specifies the backup you are copying\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -83,7 +83,7 @@ A list of IDs specifying the security groups to apply to all network interfaces 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
-Sets the storage capacity of the file system that you're creating\.  
+Sets the storage capacity of the file system that you're creating\. `StorageCapacity` is required if you are creating a new file system\. Do not include `StorageCapacity` if you are creating a file system from a backup\.  
 For Lustre file systems:  
 + For `SCRATCH_2` and `PERSISTENT_1 SSD` deployment types, valid values are 1200 GiB, 2400 GiB, and increments of 2400 GiB\.
 + For `PERSISTENT HDD` file systems, valid values are increments of 6000 GiB for 12 MB/s/TiB file systems and increments of 1800 GiB for 40 MB/s/TiB file systems\.
@@ -91,7 +91,7 @@ For Lustre file systems:
 For Windows file systems:  
 + If `StorageType=SSD`, valid values are 32 GiB \- 65,536 GiB \(64 TiB\)\.
 + If `StorageType=HDD`, valid values are 2000 GiB \- 65,536 GiB \(64 TiB\)\.
-*Required*: No  
+*Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `2147483647`  
@@ -108,7 +108,7 @@ Sets the storage type for the file system you're creating\. Valid values are `SS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\.  
+Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html)\.  
 For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  
@@ -153,6 +153,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
 
 ## Examples<a name="aws-resource-fsx-filesystem--examples"></a>
+
+
 
 ### Create an Amazon FSx for Lustre File System<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Lustre_File_System"></a>
 
@@ -255,7 +257,7 @@ Outputs:
 
 ### Create an Amazon FSx for Windows File Server File System in a Self\-managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory"></a>
 
-The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a Self\-managed active directory\.
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a self\-managed active directory\.
 
 #### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory--json"></a>
 
@@ -289,6 +291,9 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                 ],
                 "WindowsConfiguration": {
                     "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 30,
@@ -366,6 +371,8 @@ Resources:
           Value: windows
       WindowsConfiguration:
         ThroughputCapacity: 8
+        Aliases: 
+            - financials.corp.example.com         
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 30
@@ -433,6 +440,9 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                         "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
                     },
                     "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 90,
@@ -476,6 +486,8 @@ Resources:
       WindowsConfiguration:
         ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
         ThroughputCapacity: 8
+        Aliases: 
+            - financials.corp.example.com
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 90

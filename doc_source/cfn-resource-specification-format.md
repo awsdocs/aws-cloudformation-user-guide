@@ -3,23 +3,23 @@
 AWS CloudFormation creates a specification for each [resource type](aws-template-resource-type-ref.md), such as `AWS::S3::Bucket` or `AWS::EC2::Instance`\. The following sections describe the format and each field within the specification\.
 
 **Topics**
-+ [Specification sections](#w6974ab1c33c14c21b7)
++ [Specification sections](#w8918ab1c33c14c21b7)
 + [Property specification](#cfn-resource-specification-format-propertytypes)
 + [Resource specification](#cfn-resource-specification-format-resourcetype)
-+ [Example resource specification](#w6974ab1c33c14c21c13)
++ [Example resource specification](#w8918ab1c33c14c21c13)
 
-## Specification sections<a name="w6974ab1c33c14c21b7"></a>
+## Specification sections<a name="w8918ab1c33c14c21b7"></a>
 
 The formal definition for each resource type is organized into three main sections: `PropertyTypes`, `ResourceSpecificationVersion`, and `ResourceTypes`, as shown in the following example:
 
 ```
 {
   "PropertyTypes": {
-    Property specifications
+    *Property specifications*
   },
   "ResourceSpecificationVersion": "Specification version number",
   "ResourceTypes": {
-    Resource specification
+    *Resource specification*
   }
 }
 ```
@@ -35,7 +35,7 @@ Backwards incompatible changes increment the major version number\. A backwards 
 
 `ResourceTypes`  
 The list of resources and information about each resource's properties, such as its property names, which properties are required, and their update behavior\. For more information, see [Resource specification](#cfn-resource-specification-format-resourcetype)\.  
-If you view a file that contains the definition of one resource type, this property name is `ResourceType` \(singular\)\. 
+If you view a file that contains the definition of one resource type, this property name is `ResourceType` \(singular\)\.
 
 ## Property specification<a name="cfn-resource-specification-format-propertytypes"></a>
 
@@ -98,7 +98,7 @@ The specification for each resource type includes the following fields\.
   },
   "Documentation": "Link to the relevant documentation",
   "Properties": {
-    Property specifications
+    *Property specifications*
   }
 }
 ```
@@ -122,7 +122,7 @@ A link to the *AWS CloudFormation User Guide* for information about the resource
 `Properties`  
 A list of property specifications for the resource\. For details, see [Property specification](#cfn-resource-specification-format-propertytypes)\.
 
-## Example resource specification<a name="w6974ab1c33c14c21c13"></a>
+## Example resource specification<a name="w8918ab1c33c14c21c13"></a>
 
 The following examples highlight and explain parts of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html) resource specification\.
 

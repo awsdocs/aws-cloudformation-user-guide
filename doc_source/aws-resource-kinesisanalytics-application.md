@@ -72,6 +72,8 @@ To create the in\-application stream, you need to specify a schema to transform 
 
 ## Examples<a name="aws-resource-kinesisanalytics-application--examples"></a>
 
+
+
 ### Creating an Amazon Kinesis Data Analytics Application<a name="aws-resource-kinesisanalytics-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Application"></a>
 
 The following example demonstrates how to create and configure a Kinesis Data Analytics application\.

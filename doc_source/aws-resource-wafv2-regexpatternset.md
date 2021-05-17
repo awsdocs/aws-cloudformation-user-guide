@@ -3,7 +3,7 @@
 **Note**  
 This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
 
-Use an [AWS::WAFv2::RegexPatternSet](#aws-resource-wafv2-regexpatternset) to have AWS WAF inspect a web request component for a specific set of regex patterns\. 
+Use a `RegexPatternSet` to have AWS WAF inspect a web request component for a specific set of regular expression patterns\. 
 
 You use a regex pattern set by providing its Amazon Resource Name \(ARN\) to the rule statement `RegexPatternSetReferenceStatement`, when you add a rule to a rule group or web ACL\. 
 
@@ -43,7 +43,7 @@ Properties:
 ## Properties<a name="aws-resource-wafv2-regexpatternset-properties"></a>
 
 `Description`  <a name="cfn-wafv2-regexpatternset-description"></a>
-A friendly description of the set\. You cannot change the description of a set after you create it\.  
+A description of the set that helps with identification\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -52,13 +52,13 @@ A friendly description of the set\. You cannot change the description of a set a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-regexpatternset-name"></a>
-A friendly name of the set\. You cannot change the name after you create the set\.  
+The descriptive name of the set\. You cannot change the name after you create the set\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
 *Pattern*: `^[\w\-]+$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RegularExpressionList`  <a name="cfn-wafv2-regexpatternset-regularexpressionlist"></a>
 The regular expression patterns in the set\.  
@@ -71,11 +71,11 @@ Specifies whether this is for an AWS CloudFront distribution or for a regional a
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-wafv2-regexpatternset-tags"></a>
 Key:value pairs associated with an AWS resource\. The key:value pair can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each AWS resource\.  
-To modify tags on existing resources, use the AWS WAF console or the APIs\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
+To modify tags on existing resources, use the AWS WAF APIs or command line interface\. With AWS CloudFormation, you can only add tags to AWS WAF resources during resource creation\. 
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,6 +99,8 @@ The Amazon Resource Name \(ARN\) of the regex pattern set\.
 The ID of the regex pattern set\.
 
 ## Examples<a name="aws-resource-wafv2-regexpatternset--examples"></a>
+
+
 
 ### Create a regex pattern set<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set"></a>
 

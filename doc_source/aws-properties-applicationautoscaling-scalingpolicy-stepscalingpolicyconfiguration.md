@@ -58,7 +58,7 @@ For all other scalable targets, the default value is 0:
 + Amazon Comprehend document classification and entity recognizer endpoints
 + Lambda provisioned concurrency
 + Amazon Keyspaces tables
-+ Amazon MSK cluster storage
++ Amazon MSK broker storage
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

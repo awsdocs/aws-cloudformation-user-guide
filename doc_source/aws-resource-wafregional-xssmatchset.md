@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-wafregional-xssmatchset--examples"></a>
 
+
+
 ### Define Which Part of a Request to Check for Cross\-site Scripting<a name="aws-resource-wafregional-xssmatchset--examples--Define_Which_Part_of_a_Request_to_Check_for_Cross-site_Scripting"></a>
 
 The following example looks for cross\-site scripting in the URI or query string of an HTTP request\.

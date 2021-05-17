@@ -76,6 +76,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-cognito-userpooluicustomizationattachment--examples"></a>
 
+
+
 ### Creating a new UI customization attachment for a user pool<a name="aws-resource-cognito-userpooluicustomizationattachment--examples--Creating_a_new_UI_customization_attachment_for_a_user_pool"></a>
 
 The following example sets UI customization settings in the referenced user pool and client\.

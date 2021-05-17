@@ -1,6 +1,6 @@
 # AWS::S3::Bucket PublicAccessBlockConfiguration<a name="aws-properties-s3-bucket-publicaccessblockconfiguration"></a>
 
-The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the Amazon Simple Storage Service Developer Guide\. 
+The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the *Amazon S3 User Guide*\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-publicaccessblockconfiguration-syntax"></a>
 
@@ -53,7 +53,7 @@ Enabling this setting doesn't affect the persistence of any existing ACLs and do
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestrictPublicBuckets`  <a name="cfn-s3-bucket-publicaccessblockconfiguration-restrictpublicbuckets"></a>
-Specifies whether Amazon S3 should restrict public bucket policies for this bucket\. Setting this element to `TRUE` restricts access to this bucket to only AWS services and authorized users within this account if the bucket has a public policy\.  
+Specifies whether Amazon S3 should restrict public bucket policies for this bucket\. Setting this element to `TRUE` restricts access to this bucket to only AWS service principals and authorized users within this account if the bucket has a public policy\.  
 Enabling this setting doesn't affect previously stored bucket policies, except that public and cross\-account access within any public bucket policy, including non\-public delegation to specific accounts, is blocked\.  
 *Required*: No  
 *Type*: Boolean  
@@ -61,3 +61,4 @@ Enabling this setting doesn't affect previously stored bucket policies, except t
 
 ## See also<a name="aws-properties-s3-bucket-publicaccessblockconfiguration--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

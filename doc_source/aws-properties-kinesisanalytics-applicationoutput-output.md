@@ -2,6 +2,8 @@
 
  Describes application output configuration in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be an Amazon Kinesis stream or an Amazon Kinesis Firehose delivery stream\. 
 
+
+
 For limits on how many destinations an application can write and other limitations, see [Limits](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/limits.html)\. 
 
 ## Syntax<a name="aws-properties-kinesisanalytics-applicationoutput-output-syntax"></a>

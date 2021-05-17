@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HealthCheckCustomConfig](#cfn-servicediscovery-service-healthcheckcustomconfig)" : HealthCheckCustomConfig,
       "[Name](#cfn-servicediscovery-service-name)" : String,
       "[NamespaceId](#cfn-servicediscovery-service-namespaceid)" : String,
-      "[Tags](#cfn-servicediscovery-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-servicediscovery-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Type](#cfn-servicediscovery-service-type)" : String
     }
 }
 ```
@@ -46,6 +47,7 @@ Properties:
   [NamespaceId](#cfn-servicediscovery-service-namespaceid): String
   [Tags](#cfn-servicediscovery-service-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [Type](#cfn-servicediscovery-service-type): String
 ```
 
 ## Properties<a name="aws-resource-servicediscovery-service-properties"></a>
@@ -99,6 +101,13 @@ The tags for the service\. Each tag consists of a key and an optional value, bot
 *Maximum*: `200`  
 *Update requires*: Updates are not supported\.
 
+`Type`  <a name="cfn-servicediscovery-service-type"></a>
+If present, specifies that the service instances are only discoverable using the `DiscoverInstances` API operation\. No DNS records will be registered for the service instances\. The only valid value is `HTTP`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `HTTP`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 ## Return values<a name="aws-resource-servicediscovery-service-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-service-return-values-ref"></a>
@@ -125,6 +134,8 @@ The ID of the service\.
 The name that you assigned to the service\.
 
 ## Examples<a name="aws-resource-servicediscovery-service--examples"></a>
+
+
 
 ### Create a service<a name="aws-resource-servicediscovery-service--examples--Create_a_service"></a>
 
@@ -184,3 +195,4 @@ Properties:
 
 ## See also<a name="aws-resource-servicediscovery-service--seealso"></a>
 +  [CreateService](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreateService.html) in the *AWS Cloud Map API Reference* 
+

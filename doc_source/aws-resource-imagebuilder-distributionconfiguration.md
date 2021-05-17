@@ -81,11 +81,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-imagebuilder-distributionconfiguration--examples"></a>
+
+
 
 ### Create a distribution configuration<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration"></a>
 
-The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format \.
+The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format\.
 
 #### YAML<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--yaml"></a>
 
@@ -175,3 +180,4 @@ Resources:
 
 ## See also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
 + [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *EC2 Image Builder User Guide*\.
+

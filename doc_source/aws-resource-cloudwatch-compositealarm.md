@@ -124,6 +124,8 @@ The ARN of the composite alarm, such as `arn:aws:cloudwatch:us-west-2:1234567890
 
 ## Examples<a name="aws-resource-cloudwatch-compositealarm--examples"></a>
 
+
+
 ### Composite alarm based on two metric alarms and another composite alarm<a name="aws-resource-cloudwatch-compositealarm--examples--Composite_alarm_based_on_two_metric_alarms_and_another_composite_alarm"></a>
 
 This example creates composite alarms named "HighResourceUsage" and "DeploymentInProgress", and also creates metrics alarms named "HighCPUUsage" and "HighMemoryUsage"\. "DeploymentInProgress" is an alarm that must be manually set to TRUE or FALSE\. The "HighResourceUsage" alarm goes into ALARM state only if both "HighCPUUsage" and "HighMemoryUsage" are in ALARM state, and if "DeploymentInProgress" is FALSE\. Only "HighResourceUsage" has the alarm action of notifying SNS\. This reduces alarm noise, so that you are alerted only if both CPU usage and memory usage are high, and a deployment is not currently in progress\.
