@@ -191,7 +191,7 @@ The following example creates a crawler for an Amazon S3 target\.
                     "Ref": "AWS::AccountId"
                 },
                 "DatabaseInput": {
-                    "Name": "dbCrawler",
+                    "Name": "dbcrawler",
                     "Description": "TestDatabaseDescription",
                     "LocationUri": "TestLocationUri",
                     "Parameters": {
@@ -292,7 +292,7 @@ Resources:
     Properties:
       CatalogId: !Ref AWS::AccountId
       DatabaseInput:
-        Name: "dbCrawler"
+        Name: "dbcrawler"
         Description: "TestDatabaseDescription"
         LocationUri: "TestLocationUri"
         Parameters:
