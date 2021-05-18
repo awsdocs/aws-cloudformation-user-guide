@@ -72,7 +72,7 @@ Metadata which can be used to manage the fleet provisioning template\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateBody`  <a name="cfn-iot-provisioningtemplate-templatebody"></a>
-The name of the fleet provisioning template\.  
+The JSON formatted contents of the fleet provisioning template version\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -87,7 +87,7 @@ The name of the fleet provisioning template\.
 
 ### Ref<a name="aws-resource-iot-provisioningtemplate-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the thing name\. For example:
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the template name\. For example:
 
  `{ "Ref": "MyTemplate" }` 
 

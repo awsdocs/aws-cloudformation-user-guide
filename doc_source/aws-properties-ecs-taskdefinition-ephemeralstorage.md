@@ -29,4 +29,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The total amount, in GiB, of ephemeral storage to set for the task\. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB\.  
 *Required*: No  
 *Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -70,7 +70,7 @@ The name you configured for your agent\. This value is a text reference that is 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupArns`  <a name="cfn-datasync-agent-securitygrouparns"></a>
-The ARNs of the security groups used to protect your data transfer task subnets\. See CreateAgentRequest$SubnetArns\.  
+The ARNs of the security groups used to protect your data transfer task subnets\. See [SecurityGroupArns](https://docs.aws.amazon.com/datasync/latest/userguide/API_Ec2Config.html#DataSync-Type-Ec2Config-SecurityGroupArns)\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  

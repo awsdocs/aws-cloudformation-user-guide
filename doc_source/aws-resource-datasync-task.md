@@ -56,7 +56,7 @@ For more information about these groups, see [Working with Log Groups and Log St
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationLocationArn`  <a name="cfn-datasync-task-destinationlocationarn"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) of an AWS storage resource's location\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -80,13 +80,13 @@ The name of a task\. This value is a text reference that is used to identify the
 
 `Options`  <a name="cfn-datasync-task-options"></a>
 The set of configuration options that control the behavior of a single execution of the task that occurs when you call `StartTaskExecution`\. You can configure these options to preserve metadata such as user ID \(UID\) and group ID \(GID\), file permissions, data integrity verification, and so on\.  
-For each individual task execution, you can override these options by specifying the `OverrideOptions` before starting the task execution\. For more information, see the API\_StartTaskExecution operation\.   
+For each individual task execution, you can override these options by specifying the `OverrideOptions` before starting the task execution\. For more information, see the [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html) operation\.   
 *Required*: No  
 *Type*: [Options](aws-properties-datasync-task-options.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-datasync-task-schedule"></a>
-Specifies a schedule used to periodically transfer files from a source to a destination location\. The schedule should be specified in UTC time\. For more information, see task\-scheduling\.  
+Specifies a schedule used to periodically transfer files from a source to a destination location\. The schedule should be specified in UTC time\. For more information, see [Scheduling your task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html)\.  
 *Required*: No  
 *Type*: [TaskSchedule](aws-properties-datasync-task-taskschedule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,7 +173,7 @@ Description: Specifies a DataSync task
 Resources:
   Task:
     Type: AWS::DataSync::Task
-      Properties:
-        SourceLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3
-        DestinationLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4
+    Properties:
+      SourceLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3
+      DestinationLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4
 ```

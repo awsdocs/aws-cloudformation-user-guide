@@ -4,6 +4,70 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_CloudFormation.md) | The following resource was updated: AWS::CloudFormation::StackSet\. 
+
+ [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
+Use the `CallAs` property type to specify whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account\.  | May 14, 2021 | 
+| [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::CloudFormation::StackSet\. 
+
+ [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
+Use the `CallAs` property type to specify whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account\.  | May 14, 2021 | 
+| [Updated resource](AWS_ECS.md) | The following resource was updated: AWS::ECS::TaskDefinition 
+
+ [AWS::ECS::TaskDefinition EphemeralStorage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html)   
+Use the `AWS::ECS::TaskDefinition EphemeralStorage` resource to define a custom ephemeral storage setting for your Amazon ECS tasks hosted on AWS Fargate\.  | May 14, 2021 | 
+| [Updated resource](AWS_ECS.md) | The following resource was updated: AWS::ECS::CapacityProvider 
+
+ [AWS::ECS::CapacityProvider ManagedScaling](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html)   
+Use the `AWS::ECS::CapacityProvider ManagedScaling.InstanceWarmupPeriod` resource to set an instance warmup period for newly launched Amazon EC2 instances\.  | May 14, 2021 | 
+| [Updated resource](AWS_Elasticsearch.md) | The following resource was updated: AWS::Elasticsearch::Domain\. 
+
+ [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
+Use the `EncryptionAtRestOptions` property to specify whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\.  
+Use the `NodeToNodeEncryptionOptions` property to specify whether node\-to\-node encryption is enabled\.  | May 14, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::S3::Bucket\. 
+
+ [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)   
+Use the `ExpiredObjectDeleteMarker` property to specify whether Amazon S3 will remove a delete marker with no noncurrent versions\.  | May 14, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Elasticsearch::Domain\. 
+
+ [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
+Use the `EncryptionAtRestOptions` property to specify whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\.  
+Use the `NodeToNodeEncryptionOptions` property to specify whether node\-to\-node encryption is enabled\.  | May 14, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ECS::CapacityProvider 
+
+ [AWS::ECS::CapacityProvider ManagedScaling](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html)   
+Use the `AWS::ECS::CapacityProvider ManagedScaling.InstanceWarmupPeriod` resource to set an instance warmup period for newly launched Amazon EC2 instances\.  | May 14, 2021 | 
+| [New resources](AWS_SSMContacts.md) | The following resources were added: AWS::SSMContacts::Contact and AWS::SSMContacts::ContactChannel 
+
+ [AWS::SSMContacts::Contact](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)   
+Use the `AWS::SSMContacts::Contact` resource to specify an incident manager contact\. 
+
+ [AWS::SSMContacts::ContactChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html)   
+Use the `AWS::SSMContacts::ContactChannel` resource to specify a contact channel as the method that Incident Manager uses to engage your contact\.  | May 14, 2021 | 
+| [New resource](AWS_DynamoDB.md) | The following resource was added: AWS::DynamoDB::GlobalTable 
+
+ [AWS::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)   
+Use the `AWS::DynamoDB::GlobalTable` resource to create DynamoDB global tables\.  | May 14, 2021 | 
+| [New resource](AWS_SSMIncidents.md) | The following resources were added: AWS::SSMIncidents::ReplicationSet and AWS::SSMIncidents::ResponsePlan 
+
+ [AWS::SSMIncidents::ReplicationSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html)   
+Use the `ReplicationSet` resource to specify a set of Regions that Incident Manager data will be replicate and the KMS key used to encrypt the data\. 
+
+ [AWS::SSMIncidents::ResponsePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html)   
+Use the `ResponsePlan` resource to specify the details of the response plan that are used when creating an incident\.  | May 14, 2021 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::DynamoDB::GlobalTable 
+
+ [AWS::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)   
+Use the `AWS::DynamoDB::GlobalTable` resource to create DynamoDB global tables\.  | May 14, 2021 | 
+| [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::Repository 
+
+ [AWS::ECR::Repository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)   
+Use the `AWS::ECR::Repository.EncryptionConfiguration` property to configure encryption for the contents of a private repository\.  | May 13, 2021 | 
+| [Updated resource](AWS_S3.md) | The following resource was updated: AWS::S3::Bucket\. 
+
+ [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)   
+Use the `ExpiredObjectDeleteMarker` property to specify whether Amazon S3 will remove a delete marker with no noncurrent versions\.  | May 13, 2021 | 
 | [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
 
  [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
@@ -22,6 +86,13 @@ In the `LocationConfiguration` property type, use location `Location` to specify
  [AWS::GameLift::GameSessionQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)   
 Use the `PriorityConfiguration` property to specify priority destinations and locations for game session placements\.  
 Use the `FilterConfiguration` property to specify a list of locations where a queue is allowed to place new game sessions\.  | May 6, 2021 | 
+| [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::TopicRule 
+
+ [AWS::IoT::TopicRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html)   
+Use the `CloudwatchLogsAction` property to specify a Cloudwatch logs action\.  
+Use the `TimestreamAction` property to specify a timestream action\.  
+Use the `KafkaAction` property to specify a kafka action\.  
+In the `S3Action` property, use the `CannedAcl` value to specify a canned ACL action\.  | May 6, 2021 | 
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
@@ -84,19 +155,6 @@ Use the `AWS::SES::ContactList` resource to create a list that contains contacts
 
  [AWS::IoTWireless::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)   
  Gets information about the gateway task definition for a wireless gateway\.   | April 26, 2021 | 
-| [New resources](#ReleaseHistory) | The following resources were added: AWS::NimbleStudio::Studio, AWS::NimbleStudio::StudioComponent, AWS::NimbleStudio::StreamingImage, and AWS::NimbleStudio::LaunchProfile\. 
-
- [AWS::NimbleStudio::Studio](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html)   
-Use the `AWS::NimbleStudio::Studio` resource to specify a studio resource\. 
-
- [AWS::NimbleStudio::StudioComponent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html)   
-Use the `AWS::NimbleStudio::StudioComponent` resource to configure studio components, including types of workstations, render farms, license servers, and shared file systems\. 
-
- [AWS::NimbleStudio::StreamingImage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html)   
-Use the `AWS::NimbleStudio::StreamingImage` resource to configure a machine image, including operating system and software, that can be launched as a virtual workstation in a streaming session\. 
-
- [AWS::NimbleStudio::LaunchProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)   
-Use the `AWS::NimbleStudio::LaunchProfile` resource to specify user access permissions to studio components\.  | April 26, 2021 | 
 | [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::CacheCluster, AWS::ElastiCache::ReplicationGroup\. 
 
  [AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)   
@@ -301,6 +359,10 @@ Use the `AWS::ECS::Cluster ExecuteCommandConfiguration` resource to enable ECS E
 [AWS::Detective::MemberInvitation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)  
 Use the `DisableEmailNotification` property to prevent the sending of invitation emails to member accounts\.  
 The term "master account" is changed to "administrator account\."  | March 15, 2021 | 
+| [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::PublicRepository 
+
+ [AWS::ECR::PublicRepository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html)   
+Use the `AWS::ECR::PublicRepository.Tags` property to add tags to your public repositories\.  | March 11, 2021 | 
 | [Updated resource](AWS_CertificateManager.md) | The following resource was updated: AWS::CertificateManager::Account 
 
  [AWS::CertificateManager::Account](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html)   
@@ -358,10 +420,10 @@ Use the `AWS::IoT::Dimension` resource to specify a dimension in AWS IoT Core\.
  [AWS::IoT::MitigationAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html)   
 Use the `AWS::IoT::MitigationAction` resource to specify a mitigation action in AWS IoT Core\. 
 
- [AWS::IoT::ScheduledAudit](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)   
-Use the `AWS::IoT::ScheduledAudit` resource to specify a topic rule destination in AWS IoT Core\. 
+ [AWS::IoT::ScheduledAudit](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html)   
+Use the `AWS::IoT::ScheduledAudit` resource to specify a Scheduled Audit in AWS IoT Core\. 
 
- [AWS::IoT::SecurityProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)   
+ [AWS::IoT::SecurityProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-securityprofile.html)   
 Use the `AWS::IoT::SecurityProfile` resource to specify a security profile in AWS IoT Core\.  | March 4, 2021 | 
 | [New resource](AWS_S3Outposts.md) | The following resources were added: AWS::S3Outposts::Bucket, AWS::S3Outposts::BucketPolicy, AWS::S3Outposts::AccessPoint, and AWS::S3Outposts::EndPoint 
 

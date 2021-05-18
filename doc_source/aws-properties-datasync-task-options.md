@@ -1,8 +1,8 @@
 # AWS::DataSync::Task Options<a name="aws-properties-datasync-task-options"></a>
 
-Represents the options that are available to control the behavior of a StartTaskExecution operation\. Behavior includes preserving metadata such as user ID \(UID\), group ID \(GID\), and file permissions, and also overwriting files in the destination, data integrity verification, and so on\.
+Represents the options that are available to control the behavior of a [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html) operation\. Behavior includes preserving metadata such as user ID \(UID\), group ID \(GID\), and file permissions, and also overwriting files in the destination, data integrity verification, and so on\.
 
-A task has a set of default options associated with it\. If you don't specify an option in StartTaskExecution, the default value is used\. You can override the defaults options on each task execution by specifying an overriding `Options` value to StartTaskExecution\.
+A task has a set of default options associated with it\. If you don't specify an option in [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html), the default value is used\. You can override the defaults options on each task execution by specifying an overriding `Options` value to [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)\.
 
 ## Syntax<a name="aws-properties-datasync-task-options-syntax"></a>
 
@@ -98,7 +98,7 @@ If `Mtime` is set to NONE, `Atime` must also be set to NONE\.
 
 `OverwriteMode`  <a name="cfn-datasync-task-options-overwritemode"></a>
 A value that determines whether files at the destination should be overwritten or preserved when copying files\. If set to `NEVER` a destination file will not be replaced by a source file, even if the destination file differs from the source file\. If you modify files in the destination and you sync the files, you can use this value to protect against overwriting those changes\.   
-Some storage classes have specific behaviors that can affect your S3 storage cost\. For detailed information, see using\-storage\-classes in the *AWS DataSync User Guide*\.  
+Some storage classes have specific behaviors that can affect your S3 storage cost\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the *AWS DataSync User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ALWAYS | NEVER`  
@@ -116,7 +116,7 @@ AWS DataSync can preserve extant permissions of a source location\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreserveDeletedFiles`  <a name="cfn-datasync-task-options-preservedeletedfiles"></a>
-A value that specifies whether files in the destination that don't exist in the source file system should be preserved\. This option can affect your storage cost\. If your task deletes objects, you might incur minimum storage duration charges for certain storage classes\. For detailed information, see using\-storage\-classes in the *AWS DataSync User Guide*\.  
+A value that specifies whether files in the destination that don't exist in the source file system should be preserved\. This option can affect your storage cost\. If your task deletes objects, you might incur minimum storage duration charges for certain storage classes\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the *AWS DataSync User Guide*\.  
 Default value: PRESERVE\.  
 PRESERVE: Ignore such destination files \(recommended\)\.   
 REMOVE: Delete destination files that aren’t present in the source\.  
@@ -138,7 +138,7 @@ PRESERVE: Preserve character and block device metadata\. This option isn't curre
 
 `TaskQueueing`  <a name="cfn-datasync-task-options-taskqueueing"></a>
 A value that determines whether tasks should be queued before executing the tasks\. If set to `ENABLED`, the tasks will be queued\. The default is `ENABLED`\.  
-If you use the same agent to run multiple tasks, you can enable the tasks to run in series\. For more information, see queue\-task\-execution\.  
+If you use the same agent to run multiple tasks, you can enable the tasks to run in series\. For more information, see [Queueing task executions](https://docs.aws.amazon.com/datasync/latest/userguide/run-task.html#queue-task-execution)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
@@ -165,7 +165,7 @@ NONE: Ignore UID and GID\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VerifyMode`  <a name="cfn-datasync-task-options-verifymode"></a>
-A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred\. For more information, see create\-task   
+A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred\. For more information, see [Configure task settings](https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html)\.   
 Default value: POINT\_IN\_TIME\_CONSISTENT\.  
 ONLY\_FILES\_TRANSFERRED \(recommended\): Perform verification only on files that were transferred\.   
 POINT\_IN\_TIME\_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that source and destination are fully synchronized\. This option isn't supported when transferring to S3 Glacier or S3 Glacier Deep Archive storage classes\.  

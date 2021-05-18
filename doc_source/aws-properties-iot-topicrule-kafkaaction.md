@@ -1,6 +1,6 @@
 # AWS::IoT::TopicRule KafkaAction<a name="aws-properties-iot-topicrule-kafkaaction"></a>
 
-<a name="aws-properties-iot-topicrule-kafkaaction-description"></a>The `KafkaAction` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)\.
+Send messages to an Amazon Managed Streaming for Apache Kafka \(Amazon MSK\) or self\-managed Apache Kafka cluster\.
 
 ## Syntax<a name="aws-properties-iot-topicrule-kafkaaction-syntax"></a>
 
@@ -32,31 +32,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-kafkaaction-properties"></a>
 
 `ClientProperties`  <a name="cfn-iot-topicrule-kafkaaction-clientproperties"></a>
-Not currently supported by AWS CloudFormation\.  
+Properties of the Apache Kafka producer client\.  
 *Required*: Yes  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationArn`  <a name="cfn-iot-topicrule-kafkaaction-destinationarn"></a>
-Not currently supported by AWS CloudFormation\.  
+The ARN of Kafka action's VPC `TopicRuleDestination`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-iot-topicrule-kafkaaction-key"></a>
-Not currently supported by AWS CloudFormation\.  
+The Kafka message key\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Partition`  <a name="cfn-iot-topicrule-kafkaaction-partition"></a>
-Not currently supported by AWS CloudFormation\.  
+The Kafka message partition\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Topic`  <a name="cfn-iot-topicrule-kafkaaction-topic"></a>
-Not currently supported by AWS CloudFormation\.  
+The Kafka topic for messages to be sent to the Kafka broker\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

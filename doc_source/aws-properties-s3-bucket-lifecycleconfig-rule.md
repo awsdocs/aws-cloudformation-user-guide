@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload)" : AbortIncompleteMultipartUpload,
   "[ExpirationDate](#cfn-s3-bucket-lifecycleconfig-rule-expirationdate)" : Timestamp,
   "[ExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-expirationindays)" : Integer,
+  "[ExpiredObjectDeleteMarker](#cfn-s3-bucket-rule-expiredobjectdeletemarker)" : Boolean,
   "[Id](#cfn-s3-bucket-lifecycleconfig-rule-id)" : String,
   "[NoncurrentVersionExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays)" : Integer,
   "[NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition)" : NoncurrentVersionTransition,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AbortIncompleteMultipartUpload
   [ExpirationDate](#cfn-s3-bucket-lifecycleconfig-rule-expirationdate): Timestamp
   [ExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-expirationindays): Integer
+  [ExpiredObjectDeleteMarker](#cfn-s3-bucket-rule-expiredobjectdeletemarker): Boolean
   [Id](#cfn-s3-bucket-lifecycleconfig-rule-id): String
   [NoncurrentVersionExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays): Integer
   [NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition): 
@@ -69,6 +71,12 @@ Indicates the number of days after creation when objects are deleted from Amazon
 You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExpiredObjectDeleteMarker`  <a name="cfn-s3-bucket-rule-expiredobjectdeletemarker"></a>
+Indicates whether Amazon S3 will remove a delete marker with no noncurrent versions\. If set to true, the delete marker will be expired\. This cannot be specified with `ExpirationInDays`, `ExpirationDate`, or `TagFilters`\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3-bucket-lifecycleconfig-rule-id"></a>

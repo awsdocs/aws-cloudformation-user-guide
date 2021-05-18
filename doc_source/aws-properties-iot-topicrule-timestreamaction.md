@@ -1,6 +1,6 @@
 # AWS::IoT::TopicRule TimestreamAction<a name="aws-properties-iot-topicrule-timestreamaction"></a>
 
-Describes an action that updates a timestream\.
+Describes an action that writes records into an Amazon Timestream table\.
 
 ## Syntax<a name="aws-properties-iot-topicrule-timestreamaction-syntax"></a>
 
@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-timestreamaction-properties"></a>
 
 `DatabaseName`  <a name="cfn-iot-topicrule-timestreamaction-databasename"></a>
-The name of an Amazon Timestream database that has the table to receive the records this action creates\.  
+The name of an Amazon Timestream database that has the table to write records into\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Dimensions`  <a name="cfn-iot-topicrule-timestreamaction-dimensions"></a>
-Metadata attributes of the time series that are written in each measure record\. For example, the name and Availability Zone of an EC2 instance or the name of the manufacturer of a wind turbine are dimensions\.  
+Metadata attributes of the time series that are written in each measure record\.  
 *Required*: Yes  
 *Type*: List of [TimestreamDimension](aws-properties-iot-topicrule-timestreamdimension.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

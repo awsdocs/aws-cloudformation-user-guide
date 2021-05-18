@@ -88,70 +88,36 @@ The following example declares an AWS IoT rule\.
 #### JSON<a name="aws-resource-iot-topicrule--examples----json"></a>
 
 ```
-            {
-   "AWSTemplateFormatVersion":"2010-09-09",
-   "Resources":{
-      "MyTopicRule":{
-         "Type":"AWS::IoT::TopicRule",
-         "Properties":{
-            "RuleName":{
-               "Ref":"NameParameter"
-            },
-            "TopicRulePayload":{
-               "RuleDisabled":"true",
-               "Sql":"SELECT temp FROM 'SomeTopic' WHERE temp > 60",
-               "Actions":[
-                  {
-                     "S3":{
-                        "BucketName":{
-                           "Ref":"MyBucket"
-                        },
-                        "RoleArn":{
-                           "Fn::GetAtt":[
-                              "MyRole",
-                              "Arn"
-                           ]
-                        },
-                        "Key":"MyKey.txt"
-                     }
-                  }
-               ]
-            },
-            "MyBucket":{
-               "Type":"AWS::S3::Bucket",
-               "Properties":{
-                  
-               }
-            },
-            "MyRole":{
-               "Type":"AWS::IAM::Role",
-               "Properties":{
-                  "AssumeRolePolicyDocument":{
-                     "Version":"2012-10-17",
-                     "Statement":[
-                        {
-                           "Effect":"Allow",
-                           "Principal":{
-                              "Service":[
-                                 "iot.amazonaws.com"
-                              ]
-                           },
-                           "Action":[
-                              "sts:AssumeRole"
-                           ]
-                        }
-                     ]
-                  }
-               }
-            }
-         },
-         "Parameters":{
-            "NameParameter":{
-               "Type":"String"
-            }
-         }
-      }
-   }
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+	"Resources": {
+		"MyTopicRule": {
+			"Type": "AWS::IoT::TopicRule",
+			"Properties": {
+				"RuleName": {
+					"Ref": "NameParameter"
+				},
+				"TopicRulePayload": {
+					"RuleDisabled": "true",
+					"Sql": "SELECT temp FROM 'SomeTopic' WHERE temp > 60",
+					"Actions": [{
+						"S3": {
+							"BucketName": {
+								"Ref": "MyBucket"
+							},
+							"RoleArn": {
+								"Fn::GetAtt": [
+									"MyRole",
+									"Arn"
+								]
+							},
+							"Key": "MyKey.txt"
+						}
+					}]
+				}
+			}
+		}
+	}
 }
 ```
 
@@ -177,22 +143,4 @@ Resources:
               - MyRole
               - Arn
             Key: MyKey.txt
-      MyBucket:
-        Type: AWS::S3::Bucket
-        Properties: {}
-      MyRole:
-        Type: AWS::IAM::Role
-        Properties:
-          AssumeRolePolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-            - Effect: Allow
-              Principal:
-                Service:
-                - iot.amazonaws.com
-              Action:
-              - sts:AssumeRole
-    Parameters:
-      NameParameter:
-        Type: String
 ```

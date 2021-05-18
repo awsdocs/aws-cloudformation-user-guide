@@ -120,7 +120,7 @@ The ARN of the scheduled audit\.
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS IoT ScheduledAudit Sample Template",
+  "Description": "Amazon Web Services IoT ScheduledAudit Sample Template",
   "Resources": {
     "MyScheduledAudit": {
       "Type": "AWS::IoT::ScheduledAudit",
@@ -141,7 +141,7 @@ The ARN of the scheduled audit\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS IoT ScheduledAudit Sample Template
+Description: Amazon Web Services IoT ScheduledAudit Sample Template
 Resources:
   MyScheduledAudit:
     Type: 'AWS::IoT::ScheduledAudit'

@@ -80,22 +80,12 @@ A name to identify the function\.
 
 ## Return values<a name="aws-resource-cloudfront-function-return-values"></a>
 
-### Ref<a name="aws-resource-cloudfront-function-return-values-ref"></a>
-
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the function\. For example: `arn:aws:cloudfront::123456789012:function/ExampleFunction`\.
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
 ### Fn::GetAtt<a name="aws-resource-cloudfront-function-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-cloudfront-function-return-values-fn--getatt-fn--getatt"></a>
 
 `FunctionARN`  <a name="FunctionARN-fn::getatt"></a>
-The ARN of the function\. For example: `arn:aws:cloudfront::123456789012:function/ExampleFunction`\.
-
-`Stage`  <a name="Stage-fn::getatt"></a>
-The stage that the function is in, either `DEVELOPMENT` or `LIVE`\.
+The ARN of the function\. For example:  
+`arn:aws:cloudfront::123456789012:function/ExampleFunction`\.  
+To get the function ARN, use the following syntax:  
+`!GetAtt Function_Logical_ID.FunctionMetadata.FunctionARN`

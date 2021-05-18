@@ -171,72 +171,84 @@ The following example associates a user with a server\.
 #### JSON<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server--json"></a>
 
 ```
-{
-    "Resources": {
-        "transferUser": {
-            "Type": "AWS::Transfer::User",
-            "Properties": {
-                "HomeDirectoryMappings": [
-                    {
-                        "Entry": "/our-personal-report.pdf",
-                        "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf"
-                    }
-                ],
-                "HomeDirectoryType": "LOGICAL",
-                "Policy": {
-                    "Version": "2012-10-17T00:00:00.000Z",
-                    "Statement": {
-                        "Sid": "AllowFullAccessToBucket",
-                        "Action": "s3:*",
-                        "Effect": "Allow",
-                        "Resource": "arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*"
-                    }
-                },
-                "Role": "arn:aws:iam::176354371281:role/Transfer_role",
-                "ServerId": "s-01234567890abcdef",
-                "SshPublicKeys": [
-                    "AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6"
-                ],
-                "Tags": [
-                    {
-                        "Key": "KeyName",
-                        "Value": "ValueName"
-                    }
-                ],
-                "UserName": "username"
+"User": {
+      "Type": "AWS::Transfer::User",
+      "Properties": {
+         "HomeDirectoryMappings": [
+            {
+               "Entry": "/our-personal-report.pdf",
+               "Target": "/my-bucket/customized-reports/${transfer:UserName}.pdf"
             }
-        }
-    }
+         ],
+         "HomeDirectoryType": "LOGICAL",
+         "Policy": {
+           "Fn::Sub": {
+             "Version": "2012-10-17T00:00:00.000Z",
+             "Statement": {
+               "Sid": "AllowFullAccessToBucket",
+               "Action": "s3:*",
+               "Effect": "Allow",
+               "Resource": [
+                  "arn:${AWS::Partition}:s3:::my-bucket",
+                  "arn:${AWS::Partition}:s3:::my-bucket/*"
+               ]
+             }
+          }
+       },
+       "Role": {
+         "Fn::Sub": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/Admin"
+       },
+       "ServerId": {
+         "Fn::GetAtt": "Server.ServerId"
+       },
+       "SshPublicKeys": [
+         "ssh-rsa AAA"
+       ],
+       "Tags": [
+         {
+           "Key": "KeyName",
+           "Value": "ValueName"
+         }
+       ],
+       "UserName": "my-user"
+     }
 }
 ```
 
 #### YAML<a name="aws-resource-transfer-user--examples--Associate_a_user_with_a_server--yaml"></a>
 
 ```
-Resources:
-  transferUser:
-    Type: 'AWS::Transfer::User'
-    Properties:
-      HomeDirectoryMappings:
-        - Entry: /our-personal-report.pdf
-          Target: '/bucket3/customized-reports/${transfer:UserName}.pdf'
-      HomeDirectoryType: LOGICAL
-      Policy:
-        Version: '2012-10-17T00:00:00.000Z'
-        Statement:
-          Sid: AllowFullAccessToBucket
-          Action: 's3:*'
-          Effect: Allow
-          Resource: 'arn:aws:s3:::bucket_name arn:aws:s3:::bucket_name/*'
-      Role: 'arn:aws:iam::176354371281:role/Transfer_role'
-      ServerId: s-01234567890abcdef
-      SshPublicKeys:
-        - >-
-          AAAAB3NzaC1yc2EAAAADAQABAAABAQCOtfCAis3aHfM6yc8KWAlMQxVDBHyccCde9MdLf4DQNXn8HjAHf+Bc1vGGCAREFUL1NO2PEEKING3ALLOWEDfIf+JBecywfO35Cm6IKIV0JF2YOPXvOuQRs80hQaBUvQL9xw6VEb4xzbit2QB6
-      Tags:
-        - Key: KeyName
-          Value: ValueName
-      UserName: username
+User:
+  Type: AWS::Transfer::User
+  Properties:
+  HomeDirectoryMappings:
+    - Entry: /our-personal-report.pdf
+      Target: /my-bucket/customized-reports/${transfer:UserName}.pdf
+  HomeDirectoryType: LOGICAL
+  Policy:
+    Fn::Sub: |
+      {
+        "Version": "2012-10-17T00:00:00.000Z",
+        "Statement": {
+          "Sid": "AllowFullAccessToBucket",
+          "Action": "s3:*",
+          "Effect": "Allow",
+          "Resource": [
+            "arn:${AWS::Partition}:s3:::my-bucket",
+            "arn:${AWS::Partition}:s3:::my-bucket/*"
+          ]
+        }
+      }
+  Role:
+    Fn::Sub: arn:${AWS::Partition}:iam::${AWS::AccountId}:role/Admin
+  ServerId:
+    Fn::GetAtt: Server.ServerId
+  SshPublicKeys:
+    - ssh-rsa AAA
+  Tags:
+    - Key: KeyName
+      Value: ValueName
+  UserName: my-user
 ```
 
 ## See also<a name="aws-resource-transfer-user--seealso"></a>

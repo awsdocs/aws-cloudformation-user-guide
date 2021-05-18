@@ -147,7 +147,7 @@ Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise ass
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Kafka`  <a name="cfn-iot-topicrule-action-kafka"></a>
-Not currently supported by AWS CloudFormation\.  
+Send messages to an Amazon Managed Streaming for Apache Kafka \(Amazon MSK\) or self\-managed Apache Kafka cluster\.  
 *Required*: No  
 *Type*: [KafkaAction](aws-properties-iot-topicrule-kafkaaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -63,6 +63,7 @@ The name of the association\.
 
 `Priority`  <a name="cfn-route53resolver-firewallrulegroupassociation-priority"></a>
 The setting that determines the processing order of the rule group among the rule groups that are associated with a single VPC\. DNS Firewall filters VPC traffic starting from rule group with the lowest numeric priority setting\.   
+This value must equal 100\-9,000\.   
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -88,7 +88,7 @@ The Amazon Resource Number \(ARN\) of the custom metric; for example, `arn:aws-p
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS IoT CustomMetric Sample Template",
+  "Description": "Amazon Web Services IoT CustomMetric Sample Template",
   "Resources": {
     "BatteryPercentageMetric": {
       "Type": "AWS::IoT::CustomMetric",
@@ -106,7 +106,7 @@ The Amazon Resource Number \(ARN\) of the custom metric; for example, `arn:aws-p
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
-Description: AWS IoT CustomMetric Sample Template
+Description: Amazon Web Services IoT CustomMetric Sample Template
 Resources:
   BatteryPercentageMetric:
     Type: AWS::IoT::CustomMetric

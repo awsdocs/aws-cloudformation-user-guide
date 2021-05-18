@@ -10,9 +10,9 @@ Some common scenarios when you might encounter a cooldown period for Amazon EBS 
 + You successfully update an Amazon EBS volume and the update succeeds\. When you attempt another update within the cooldown window, that update will be subject to a cooldown period\.
 + You successfully update an Amazon EBS volume and the update succeeds but another change in your `update-stack` call fails\. The rollback will be subject to a cooldown period\.
 
-For more information on the cooldown period, see [Requirements for Modifying EBS Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/modify-volume-requirements.html)\.
+For more information on the cooldown period, see [Requirements when modifying volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/modify-volume-requirements.html)\.
 
-To control how AWS CloudFormation handles the volume when the stack is deleted, set a deletion policy for your volume\. You can choose to retain the volume, to delete the volume, or to create a snapshot of the volume\. For more information, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
+To control how AWS CloudFormation handles the volume when the stack is deleted, set a deletion policy for your volume\. You can choose to retain the volume, to delete the volume, or to create a snapshot of the volume\. For more information, see [DeletionPolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
 
 **Note**  
 If you set a deletion policy that creates a snapshot, all tags on the volume are included in the snapshot\.

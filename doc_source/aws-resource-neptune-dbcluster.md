@@ -82,7 +82,7 @@ Properties:
 ## Properties<a name="aws-resource-neptune-dbcluster-properties"></a>
 
 `AssociatedRoles`  <a name="cfn-neptune-dbcluster-associatedroles"></a>
-Provides a list of the AWS Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other AWS services on your behalf\.  
+Provides a list of the Amazon Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other Amazon services on your behalf\.  
 *Required*: No  
 *Type*: List of [DBClusterRole](aws-properties-neptune-dbcluster-dbclusterrole.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -138,13 +138,13 @@ Indicates the database engine version\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IamAuthEnabled`  <a name="cfn-neptune-dbcluster-iamauthenabled"></a>
-True if mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.  
+True if mapping of Amazon Identity and Access Management \(IAM\) accounts to database accounts is enabled, and otherwise false\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-neptune-dbcluster-kmskeyid"></a>
-If `StorageEncrypted` is true, the AWS KMS key identifier for the encrypted DB cluster\.  
+If `StorageEncrypted` is true, the Amazon KMS key identifier for the encrypted DB cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

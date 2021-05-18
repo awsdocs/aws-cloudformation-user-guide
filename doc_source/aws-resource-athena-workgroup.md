@@ -58,7 +58,7 @@ The workgroup name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecursiveDeleteOption`  <a name="cfn-athena-workgroup-recursivedeleteoption"></a>
-The option to delete the workgroup and its contents even if the workgroup contains any named queries or query executions\.  
+The option to delete a workgroup and its contents even if the workgroup contains any named queries\. The default is false\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,7 +72,6 @@ The state of the workgroup: ENABLED or DISABLED\.
 
 `Tags`  <a name="cfn-athena-workgroup-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

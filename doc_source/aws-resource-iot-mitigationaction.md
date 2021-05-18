@@ -92,7 +92,7 @@ The ID of the mitigation action\.
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS IoT MitigationAction Sample Template",
+  "Description": "Amazon Web Services IoT MitigationAction Sample Template",
   "Resources": {
     "PublishToSnsMitigationAction": {
       "Type": "AWS::IoT::MitigationAction",
@@ -114,7 +114,7 @@ The ID of the mitigation action\.
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
-Description: AWS IoT MitigationAction Sample Template
+Description: Amazon Web Services IoT MitigationAction Sample Template
 Resources:
   'PublishToSnsMitigationAction':
     Type: AWS::IoT::MitigationAction

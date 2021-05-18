@@ -96,7 +96,7 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS IoT AccountAuditConfiguration Sample Template",
+  "Description": "Amazon Web Services IoT AccountAuditConfiguration Sample Template",
   "Resources": {
     "MyAccountAuditConfiguration": {
       "Type": "AWS::IoT::AccountAuditConfiguration",
@@ -130,7 +130,7 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS IoT AccountAuditConfiguration Sample Template
+Description: Amazon Web Services IoT AccountAuditConfiguration Sample Template
 Resources:
   MyAccountAuditConfiguration:
     Type: 'AWS::IoT::AccountAuditConfiguration'

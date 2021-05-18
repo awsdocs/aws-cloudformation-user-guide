@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-datasync-locations3-s3config-properties"></a>
 
 `BucketAccessRoleArn`  <a name="cfn-datasync-locations3-s3config-bucketaccessrolearn"></a>
-The Amazon S3 bucket to access\. This bucket is used as a parameter in the CreateLocationS3 operation\.   
+The Amazon S3 bucket to access\. This bucket is used as a parameter in the [CreateLocationS3](https://docs.aws.amazon.com/datasync/latest/userguide/API_CreateLocationS3.html) operation\.   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `2048`  

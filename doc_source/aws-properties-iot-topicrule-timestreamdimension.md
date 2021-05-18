@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-timestreamdimension-properties"></a>
 
 `Name`  <a name="cfn-iot-topicrule-timestreamdimension-name"></a>
-The metadata dimension name\. This is the name of the column in the database table record\.  
+The metadata dimension name\. This is the name of the column in the Amazon Timestream database table record\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

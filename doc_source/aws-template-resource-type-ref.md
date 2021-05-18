@@ -152,6 +152,8 @@ service-provider::service-name::data-type-name
 + [SES](AWS_SES.md)
 + [Amazon SimpleDB](AWS_SDB.md)
 + [Signer](AWS_Signer.md)
++ [SSM Contacts](AWS_SSMContacts.md)
++ [SSM Incidents](AWS_SSMIncidents.md)
 + [Amazon SNS](AWS_SNS.md)
 + [Amazon SQS](AWS_SQS.md)
 + [SSO](AWS_SSO.md)
