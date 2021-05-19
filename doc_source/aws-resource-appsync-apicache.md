@@ -106,7 +106,7 @@ The following example creates an ApiCache for your GraphQL API\.
 ```
 Parameters:
   graphQlApiId:
-  Type: String
+    Type: String
 
 Resources:
   ApiCache:
