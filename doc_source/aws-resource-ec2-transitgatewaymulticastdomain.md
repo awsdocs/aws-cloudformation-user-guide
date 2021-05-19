@@ -32,6 +32,12 @@ Properties:
 
 ## Properties<a name="aws-resource-ec2-transitgatewaymulticastdomain-properties"></a>
 
+`Options` <a name="cfn-ec2-transitgatewaymulticastdomain-options"></a>
+The options for the transit gateway multicast domain\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-ec2-transitgatewaymulticastdomain-tags"></a>
 The tags for the transit gateway multicast domain\.  
 *Required*: No  
