@@ -117,7 +117,7 @@ Settings that apply only if the input is an push input where the source is on Am
 
 ### Ref<a name="aws-resource-medialive-input-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the input\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the MediaLive id of the input\.
 
 For example: `{ "Ref": "myInput" }`
 
