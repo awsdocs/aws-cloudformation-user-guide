@@ -611,13 +611,15 @@ Permanent options, such as the TDE option for Oracle Advanced Security TDE, can'
 `PerformanceInsightsKMSKeyId`  <a name="cfn-rds-dbinstance-performanceinsightskmskeyid"></a>
 The AWS KMS key identifier for encryption of Performance Insights data\.  
 The AWS KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the AWS KMS customer master key \(CMK\)\.  
-If you do not specify a value for `PerformanceInsightsKMSKeyId`, then Amazon RDS uses your default CMK\. There is a default CMK for your AWS account\. Your AWS account has a different default CMK for each AWS Region\.  
+If you do not specify a value for `PerformanceInsightsKMSKeyId`, then Amazon RDS uses your default CMK\. There is a default CMK for your AWS account\. Your AWS account has a different default CMK for each AWS Region\. 
+See also `EnablePerformanceInsights` to Enable\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PerformanceInsightsRetentionPeriod`  <a name="cfn-rds-dbinstance-performanceinsightsretentionperiod"></a>
-The amount of time, in days, to retain Performance Insights data\. Valid values are 7 or 731 \(2 years\)\.   
+The amount of time, in days, to retain Performance Insights data\. Valid values are 7 or 731 \(2 years\)\. 
+See also `EnablePerformanceInsights` to Enable\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
