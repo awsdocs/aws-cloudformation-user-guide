@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition ResourceRequirement<a name="aws-properties-ecs-taskdefinition-resourcerequirement"></a>
 
-The `ResourceRequirement` property specifies the type and amount of a resource to assign to a container\. The only supported resource is a GPU\. For more information, see [Working with GPUs on Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-gpu.html) in the *Amazon Elastic Container Service Developer Guide* 
+The `ResourceRequirement` property specifies the type and amount of a resource to assign to a container\. The only supported resources are a GPU or Inference Accelerator\. For more information, see [Working with GPUs on Amazon ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-gpu.html) in the *Amazon Elastic Container Service Developer Guide* 
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-resourcerequirement-syntax"></a>
 
